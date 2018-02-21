@@ -36,67 +36,67 @@ Download and install the latest version of [Lando](https://github.com/lando/land
 
 ### II. Drupal
 Download the latest stable version of [Drupal 8](https://www.drupal.org/download)
+
 Unzip the archive and use the terminal to navigate into the folder `drupal-8.x.x`
+
 In the terminal, run
 
-        lando init
+    lando init
 
   * Select drupal8 from the recipe list
   * Webroot should be this folder `.`
   * You can call the app whatever you want (Ex: Living Style Guide)
 
-Open the .lando.yml file and replace the text with this lando profile (latest version of this profile available on [bitbucket](https://bitbucket.org/wwuweb/lando-profiles/src/223427927f65eba5c4a628f55909e8645e22e990/.lando.yml-shila?at=master&fileviewer=file-view-default)
+Open the .lando.yml file and replace the text with this lando profile (latest version of this profile available on [bitbucket](https://bitbucket.org/wwuweb/lando-profiles/src/223427927f65eba5c4a628f55909e8645e22e990/.lando.yml-shila?at=master&fileviewer=file-view-default))
 
-        name: your-app-name
-        recipe: drupal8
-        config:
-          webroot: .
+    name: your-app-name
+    recipe: drupal8
+    config:
+      webroot: .
 
-        # Additional Services
-        services:
-        # Ruby
-          ruby:
-           type: ruby:2.4
-           globals:
-            bundler: "latest"
+    # Additional Services
+    services:
+    # Ruby
+      ruby:
+       type: ruby:2.4
+       globals:
+        bundler: "latest"
 
-          # Node
-          node:
-            type: node:8
-            globals:
-              gulp-cli: "latest"
+      # Node
+      node:
+        type: node:8
+        globals:
+          gulp-cli: "latest"
 
-        tooling:
-          npm:
-            service: node
-          node:
-            service: node
-          gulp:
-            service: node
-          bundle:
-            service: ruby
+    tooling:
+      npm:
+        service: node
+      node:
+        service: node
+      gulp:
+        service: node
+      bundle:
+        service: ruby
 
-Run
+To spin up a local server and install the services specified in the profile, ie node, npm, gulp, and bundler, run:
 
-        lando start
+    lando start
 
-  * This will spin up a local server and install the services specified in the profile, ie node, npm, gulp, and bundler
 
 Open one of the URLs output to the screen in a browser (something like `http://localhost:32787` or `http://my-app-name.lndo.site`) and follow the on screen instructions to install Drupal
 
-  * When you get to the database screen, run
+  * When you get to the database screen you can get the username, password, and database name (probably all `drupal8`) by running
 
-          lando info
+      lando info
 
-  * This will give you the username, password, and database name (they're probably all `drupal8`)
-  * Under advanced options, the host should be changed to whatever is listed under `internal_connection` likely `database`
+  * Under advanced options, the host should be changed to whatever is listed under `internal_connection` (likely `database`)
   * None of the other installation options really matter at this point so just put anything for site name, username, etc
 
 Run the following install scripts:
 
-        lando composer install
-        lando npm install
-        lando comopser require drush/drush
+    lando composer install
+    lando npm install
+    lando comopser require drush/drush
 
 ### III. Shila
 Download these modules:
@@ -105,60 +105,63 @@ Download these modules:
   * [UI Patterns](https://www.drupal.org/project/ui_patterns)
 
 Extract the module archives into the `drupal-8.x.x/modules` folder
+
 In your browser, enable the modules under the **Extend** tab within Drupal
+
 Clone Shila into the `drupal-8.x.x/themes` folder
 
-        git clone https://bitbucket.org/wwuweb/wwu-shila
+    git clone https://bitbucket.org/wwuweb/wwu-shila
 
 Navigate into `drupal-8.x.x/themes/wwu-shila` and run
 
-        lando npm install
+    lando npm install
 
 Compile the theme
 
-        lando gulp sass        
+    lando gulp sass    
 
-  * At this point you should be able to navigate to the site and see some very basic styles
+At this point you should be able to navigate to the site and see some very basic styles
 
 ### IV. Pattern Lab
 Within `drupal-8.x.x/themes/wwu-shila` run:
 
-        composer create-project -n pattern-lab/edition-twig-standard pattern-lab
-        cd pattern-lab
-        lando composer require aleksip/plugin-data-transform
-        lando php core/console -c --set sourceDir=../dist
-        lando php core/console -c --set twigAutoescape=0
-        lando php core/console --generate
+    composer create-project -n pattern-lab/edition-twig-standard pattern-lab
+    cd pattern-lab
+    lando composer require aleksip/plugin-data-transform
+    lando php core/console -c --set sourceDir=../dist
+    lando php core/console -c --set twigAutoescape=0
+    lando php core/console --generate
 
 To serve the Pattern Lab files locally, you'll need to run PHP directly on your machine
 
-        php core/console --server
+    php core/console --server
 
-    then navigate to http://localhost:8080 in your browser
+Navigate to http://localhost:8080 in your browser
 
 ### Editing the Theme
 Changes to the theme will mostly happen in files contained in `wwu-shila/dist/_patterns`. The `_patterns` folder is organized into the atoms -> molecules -> organisms -> templates -> pages scheme. Sub folders dictate how the static site will nest different components.
 
 After making changes to scss files etc, you'll need to compile the theme  cd `drupal-8.x.x/themes/wwu-shila` using
 
-        lando gulp sass
+    lando gulp sass
 
 To see the changes in Drupal, you'll probably need to clear the registry
 
-        lando drush cr
+    lando drush cr
 
 To see the changes in pattern lab, you'll need to regenerate and reserve the static site
 
-        cd pattern-lab
-        php core/console --generate
-        php core/console --server
+    cd pattern-lab
+    php core/console --generate
+    php core/console --server
 
 
 ### Installing standalone Pattern Lab
-* One thing I found helpful was to install a pre-made Pattern Lab twig edition separately from the whole Drupal installation, to have a different and more complete template to refer to. The easiest way to do this is to download one from [this page](https://github.com/pattern-lab/edition-php-twig-standard/releases)
-* You can view the demo page by running the following within the `twig-standard` folder
+One thing I found helpful was to install a pre-made Pattern Lab twig edition separately from the whole Drupal installation, to have a different and more complete template to refer to. The easiest way to do this is to download one from [this page](https://github.com/pattern-lab/edition-php-twig-standard/releases)
 
-        php core/console --generate
-        php core/console --server --port 8000
+You can view the demo page by running the following within the `twig-standard` folder
+
+    php core/console --generate
+    php core/console --server --port 8000
 
 (note: I specified a port here so that both instances of pattern lab can be served locally at the same time, the default port is 8080)
