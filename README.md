@@ -25,6 +25,7 @@ The static site that Pattern Lab generates isn't meant to be public facing, but 
 The general idea is that you have Pattern Lab installed *inside* of the Shila Theme. This Pattern Lab installation doesn't have any template files of it's own, though. Instead it goes down one folder and grabs all of its templates and styles from the theme to generate things. That way, as you are developing the theme you can generate that handy Pattern Lab static site (which is great for the design development process) while at the same time you're building out the theme for Drupal itself.
 
 This is great because:
+
 * You don't need any content on the Drupal site as you're developing styles
 * But, you *can* check the styles as they'll look on the Drupal site if you DO have content
 * You don't need to clear Drupal caches, you can just look at them on the static site (quick!)
