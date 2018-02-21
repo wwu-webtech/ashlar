@@ -1,0 +1,8 @@
+{
+    "attributes": {
+        "Attribute()": {
+            "class": ["local-tasks__task"]
+        }
+    },
+    "link": "<a href=\"\">Local task</a>"
+}

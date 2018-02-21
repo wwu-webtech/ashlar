@@ -1,0 +1,129 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in Shila theme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Adds a form id based template suggestion for all forms.
+ *
+ * Implements hook_theme_suggestions_HOOK_alter() for form templates.
+ */
+function shila_theme_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'form__' . $variables['element']['#form_id'];
+}
+
+/**
+ * Adds a placeholder attribute to the search block form.
+ *
+ * Implements hook_form_alter().
+ */
+function shila_theme_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'search_block_form') {
+    $form['keys']['#attributes']['placeholder'] = t('Enter your keywords');
+  }
+}
+
+/**
+ * Adds classes to menu links. This cannot be done in Twig templates without
+ * using Drupal specific extensions.
+ *
+ * Implements hook_preprocess_HOOK() for menu.html.twig.
+ */
+function shila_theme_preprocess_menu(&$variables) {
+  _menu_links($variables['items'], 0);
+}
+
+/**
+ * Helper function for adding classes to menu links.
+ */
+function _menu_links(&$items, $menu_level) {
+  foreach ($items as $item) {
+    $classes = ['menu-item'];
+    if ($item['is_expanded']) {
+      $classes[] = 'menu-item--expanded';
+    }
+    if ($item['is_collapsed']) {
+      $classes[] = 'menu-item--collapsed';
+    }
+    if ($item['in_active_trail']) {
+      $classes[] = 'menu-item--active-trail';
+    }
+    $item['attributes']->addClass($classes);
+    if ($item['below']) {
+      _menu_links($item['below'], $menu_level + 1);
+    }
+  }
+}
+
+/**
+ * Removes specific attributes from pagers. This cannot be done in Twig
+ * templates without using Drupal specific extensions.
+ *
+ * Implements hook_preprocess_HOOK() for pager.html.twig.
+ */
+function shila_theme_preprocess_pager(&$variables) {
+  $keys = [
+    'first' => ['href', 'title'],
+    'previous' => ['href', 'title', 'rel'],
+    'next' => ['href', 'title', 'rel'],
+    'last' => ['href', 'title'],
+  ];
+  foreach ($keys as $key => $remove) {
+    _remove_attributes($variables, $key, $remove);
+  }
+  if (isset($variables['items']['pages'])) {
+    foreach ($variables['items']['pages'] as $key => $item) {
+      if (isset($item['attributes'])) {
+        $item['attributes']->removeAttribute('href')->removeAttribute('title');
+      }
+    }
+  }
+}
+
+/**
+ * Helper function for removing attributes.
+ */
+function _remove_attributes(&$variables, $key, $remove) {
+  if (isset($variables['items'][$key]['attributes'])) {
+    foreach ($remove as $attribute) {
+      $variables['items'][$key]['attributes']->removeAttribute($attribute);
+    }
+  }
+}
+
+/**
+ * Adds the entity and possible contextual links to PatternContext when using
+ * UI Patterns Layouts module.
+ *
+ * Implements template_preprocess_ds_entity_view().
+ */
+function shila_theme_preprocess_ds_entity_view(&$variables) {
+  if (isset($variables['content']['#type']) && $variables['content']['#type'] == 'pattern') {
+    $variables['content']['#context']['entity'] = $variables['content']['#entity'];
+    if (isset($variables['title_suffix']['contextual_links'])) {
+      $variables['content']['#context']['contextual_links'] = $variables['title_suffix']['contextual_links'];
+    }
+  }
+}
+
+/**
+ * Adds entity type and view mode BEM modifier classes and contextual links to
+ * shila-cards when using UI Patterns module.
+ *
+ * Implements hook_preprocess_HOOK().
+ */
+function shila_theme_preprocess_pattern_shila_card(&$variables) {
+  $classes = [
+    'card--type-' . $variables['context']->getProperty('bundle'),
+    'card--view-mode-' . $variables['context']->getProperty('view_mode'),
+  ];
+  if ($variables['context']->getProperty('contextual_links')) {
+    $classes[] = 'contextual-region';
+    $variables['contextual_links'] = $variables['context']->getProperty('contextual_links');
+  }
+  $variables['attributes'] = $variables['attributes']->addClass($classes);
+}

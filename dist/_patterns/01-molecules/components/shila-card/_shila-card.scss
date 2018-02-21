@@ -1,0 +1,26 @@
+/**
+ * @file
+ * molecules/components/shila-card/_shila-card.scss
+ */
+
+.card {
+  @include shila-clearfix;
+}
+.card__title {
+  margin-top: 0;
+  a {
+    color: $shila-base-font-color;
+  }
+}
+.card__body {
+  margin-bottom: 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.card--layout-breakpoint {
+  @include card-breakpoint-layout;
+}
+.card--layout-horizontal {
+  @include card-breakpoint-layout('horizontal');
+}
