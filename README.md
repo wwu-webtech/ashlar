@@ -12,9 +12,9 @@ Some tools that we are currently investigating for this process are Lando, Patte
 [Lando](https://docs.devwithlando.io/) is a local development environment build on Docker. It allows you to very quickly spin up Drupal 8 project without needing to have any sort of virtual machines running. Nifty!
 
 ### Pattern Lab
-[Pattern Lab](http://patternlab.io/) is a few things: In one sense, it is a design system and philosophy. It is also a static site generator, specifically for a style guide site.
+[Pattern Lab](http://patternlab.io/) is a few things: In one sense, it is a design system based on the (Atomic Design)[http://bradfrost.com/blog/post/atomic-web-design/] philosophy. It is also a static site generator, specifically for a style guide.
 
-The design system is, broadly, built around the idea of atomic design--starting with small components and putting them together to create larger components. It uses a vocabulary of atoms -> molecules -> organisms -> templates -> pages. To read more about Atomic Design principles, I recommend perusing Brad Frost's [online book about the topic](http://atomicdesign.bradfrost.com/).
+The design system is, broadly, built around the idea of starting with small components and putting them together to create larger components. It uses a vocabulary of atoms -> molecules -> organisms -> templates -> pages. To read more about Atomic Design principles, I recommend perusing Brad Frost's [online book about the topic](http://atomicdesign.bradfrost.com/).
 
 The static site that Pattern Lab generates isn't meant to be public facing, but it is very useful for developing the different levels of the atomic design. The static site itself makes it easy to navigate through different levels of the design, and it has some built in responsive design toggles. Pattern Lab has a number of different editions. One set is run on Node, and one set is PHP based. The PHP based editions have both Mustache templating and Twig templating versions. We are most interested in the Twig templating version. There is a Drupal edition, but it's still under development and not what I would currently recommend using.
 
