@@ -32,12 +32,12 @@ This is great because:
 ## Getting Started
 
 ### I. Lando
-0. Download and install the latest version of [Lando](https://github.com/lando/lando/releases)
+Download and install the latest version of [Lando](https://github.com/lando/lando/releases)
 
 ### II. Drupal
-0. Download the latest stable version of [Drupal 8](https://www.drupal.org/download)
-0. Unzip the archive and use the terminal to navigate into the folder `drupal-8.x.x`
-0. In the terminal, run
+Download the latest stable version of [Drupal 8](https://www.drupal.org/download)
+Unzip the archive and use the terminal to navigate into the folder `drupal-8.x.x`
+In the terminal, run
 
         lando init
 
@@ -45,7 +45,7 @@ This is great because:
   * Webroot should be this folder `.`
   * You can call the app whatever you want (Ex: Living Style Guide)
 
-0. Open the .lando.yml file and replace the text with this lando profile (latest version of this profile available on [bitbucket](https://bitbucket.org/wwuweb/lando-profiles/src/223427927f65eba5c4a628f55909e8645e22e990/.lando.yml-shila?at=master&fileviewer=file-view-default)
+Open the .lando.yml file and replace the text with this lando profile (latest version of this profile available on [bitbucket](https://bitbucket.org/wwuweb/lando-profiles/src/223427927f65eba5c4a628f55909e8645e22e990/.lando.yml-shila?at=master&fileviewer=file-view-default)
 
         name: your-app-name
         recipe: drupal8
@@ -76,13 +76,13 @@ This is great because:
           bundle:
             service: ruby
 
-0. Run
+Run
 
         lando start
 
   * This will spin up a local server and install the services specified in the profile, ie node, npm, gulp, and bundler
 
-0. Open one of the URLs output to the screen in a browser (something like `http://localhost:32787` or `http://my-app-name.lndo.site`) and follow the on screen instructions to install Drupal
+Open one of the URLs output to the screen in a browser (something like `http://localhost:32787` or `http://my-app-name.lndo.site`) and follow the on screen instructions to install Drupal
 
   * When you get to the database screen, run
 
@@ -92,36 +92,36 @@ This is great because:
   * Under advanced options, the host should be changed to whatever is listed under `internal_connection` likely `database`
   * None of the other installation options really matter at this point so just put anything for site name, username, etc
 
-0. Run the following install scripts:
+Run the following install scripts:
 
         lando composer install
         lando npm install
         lando comopser require drush/drush
 
 ### III. Shila
-0. Download these modules:
+Download these modules:
 
   * [Component Libraries](https://www.drupal.org/project/components)
   * [UI Patterns](https://www.drupal.org/project/ui_patterns)
 
-0. Extract the module archives into the `drupal-8.x.x/modules` folder
-0. In your browser, enable the modules under the **Extend** tab within Drupal
-0. Clone Shila into the `drupal-8.x.x/themes` folder
+Extract the module archives into the `drupal-8.x.x/modules` folder
+In your browser, enable the modules under the **Extend** tab within Drupal
+Clone Shila into the `drupal-8.x.x/themes` folder
 
         git clone https://bitbucket.org/wwuweb/wwu-shila
 
-0. Navigate into `drupal-8.x.x/themes/wwu-shila` and run
+Navigate into `drupal-8.x.x/themes/wwu-shila` and run
 
         lando npm install
 
-0. Compile the theme
+Compile the theme
 
         lando gulp sass        
 
   * At this point you should be able to navigate to the site and see some very basic styles
 
 ### IV. Pattern Lab
-0. Within `drupal-8.x.x/themes/wwu-shila` run:
+Within `drupal-8.x.x/themes/wwu-shila` run:
 
         composer create-project -n pattern-lab/edition-twig-standard pattern-lab
         cd pattern-lab
@@ -130,7 +130,7 @@ This is great because:
         lando php core/console -c --set twigAutoescape=0
         lando php core/console --generate
 
-0. To serve the Pattern Lab files locally, you'll need to run PHP directly on your machine
+To serve the Pattern Lab files locally, you'll need to run PHP directly on your machine
 
         php core/console --server
 
@@ -160,5 +160,5 @@ To see the changes in pattern lab, you'll need to regenerate and reserve the sta
 
         php core/console --generate
         php core/console --server --port 8000
-        
+
 (note: I specified a port here so that both instances of pattern lab can be served locally at the same time, the default port is 8080)
