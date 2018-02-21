@@ -12,7 +12,7 @@ Some tools that we are currently investigating for this process are Lando, Patte
 [Lando](https://docs.devwithlando.io/) is a local development environment build on Docker. It allows you to very quickly spin up Drupal 8 project without needing to have any sort of virtual machines running. Nifty!
 
 ### Pattern Lab
-[Pattern Lab](http://patternlab.io/) is a few things: In one sense, it is a design system based on the (Atomic Design)[http://bradfrost.com/blog/post/atomic-web-design/] philosophy. It is also a static site generator, specifically for a style guide.
+[Pattern Lab](http://patternlab.io/) is a few things: In one sense, it is a design system based on the [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/) philosophy. It is also a static site generator, specifically for a style guide.
 
 The design system is, broadly, built around the idea of starting with small components and putting them together to create larger components. It uses a vocabulary of atoms -> molecules -> organisms -> templates -> pages. To read more about Atomic Design principles, I recommend perusing Brad Frost's [online book about the topic](http://atomicdesign.bradfrost.com/).
 
