@@ -7,13 +7,13 @@ p {
   margin: 0 0 1rem;
 }
 a {
-  color: $shila-action-color;
+  color: $wwu-action-color;
   text-decoration: none;
   transition: color $shila-base-duration $shila-base-timing;
   &:active,
   &:focus,
   &:hover {
-    color: shila-shade($shila-action-color, 25%);
+    color: lighten($shila-action-color, 10%);
     text-decoration: underline;
   }
 }
