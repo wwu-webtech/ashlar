@@ -78,25 +78,21 @@ Open the .lando.yml file and replace the text with this lando profile (latest ve
       bundle:
         service: ruby
 
-To spin up a local server and install the services specified in the profile, ie node, npm, gulp, and bundler, run:
+To spin up a local server and install required services run:
 
     lando start
-
+    lando composer install
+    lando composer require drush/drush
+    lando npm install
 
 Open one of the URLs output to the screen in a browser (something like `http://localhost:32787` or `http://my-app-name.lndo.site`) and follow the on screen instructions to install Drupal
 
   * When you get to the database screen you can get the username, password, and database name (probably all `drupal8`) by running
 
-      lando info
+        lando info
 
   * Under advanced options, the host should be changed to whatever is listed under `internal_connection` (likely `database`)
   * None of the other installation options really matter at this point so just put anything for site name, username, etc
-
-Run the following install scripts:
-
-    lando composer install
-    lando npm install
-    lando comopser require drush/drush
 
 ### III. Shila
 Download these modules:
@@ -106,18 +102,15 @@ Download these modules:
 
 Extract the module archives into the `drupal-8.x.x/modules` folder
 
-In your browser, enable the modules under the **Extend** tab within Drupal
+In your browser, enable the modules under the **Extend** tab
 
 Clone Shila into the `drupal-8.x.x/themes` folder
 
     git clone https://bitbucket.org/wwuweb/wwu-shila
 
-Navigate into `drupal-8.x.x/themes/wwu-shila` and run
+Enable the them in Drupal under the **Appearance** tab and set it as default. Navigate into `drupal-8.x.x/themes/wwu-shila` and run
 
     lando npm install
-
-Compile the theme
-
     lando gulp sass    
 
 At this point you should be able to navigate to the site and see some very basic styles
@@ -125,14 +118,14 @@ At this point you should be able to navigate to the site and see some very basic
 ### IV. Pattern Lab
 Within `drupal-8.x.x/themes/wwu-shila` run:
 
-    composer create-project -n pattern-lab/edition-twig-standard pattern-lab
+    lando composer create-project -n pattern-lab/edition-twig-standard pattern-lab
     cd pattern-lab
     lando composer require aleksip/plugin-data-transform
     lando php core/console -c --set sourceDir=../dist
     lando php core/console -c --set twigAutoescape=0
     lando php core/console --generate
 
-To serve the Pattern Lab files locally, you'll need to run PHP directly on your machine
+To serve the Pattern Lab files locally, you'll need to run PHP directly on your machine (it won't work if you try to do it within lando)
 
     php core/console --server
 
