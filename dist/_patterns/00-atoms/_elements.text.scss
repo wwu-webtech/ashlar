@@ -30,3 +30,11 @@ blockquote {
   border-left: 0.33rem solid $shila-light-gray;
   padding-left: 1rem;
 }
+
+.sans-serif {
+  font-family: $sans-serif;
+}
+.serif {
+  font-family: $serif;
+  font-size: 1.2em;
+}
