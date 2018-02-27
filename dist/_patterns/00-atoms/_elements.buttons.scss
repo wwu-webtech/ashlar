@@ -35,3 +35,33 @@
     }
   }
 }
+
+.button {
+  display: inline-block;
+  background-color: $wwu-ocean-blue;
+  color: $wwu-ocean-blue-text;
+  padding: $button-padding;
+  border-radius: $border-radius;
+
+  &:hover, &:focus {
+    background-color: darken($wwu-ocean-blue, 5%);
+  }
+
+  &.disabled {
+    background-color: #eee;
+    color: #333;
+  }
+
+  @each $color, $background, $text in $wwu-colors {
+    &.#{$color} {
+      background-color: $background;
+      color: $text;
+
+      &:hover, &:focus {
+        background-color: darken($background, 5%);
+      }
+    }
+  }
+
+
+}

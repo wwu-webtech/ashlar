@@ -13,6 +13,24 @@ $wwu-red: #cc2d30;
 
 $wwu-action-color: $wwu-ocean-blue;
 
-// this was in a very random spot, putting it here temporarily
-// so that things will compile
-$shila-form-element-background-color: white;
+// Default text colors on background
+// Accessibility - at least AA for normal text, AAA for large text
+$wwu-blue-text: #fff;
+$wwu-ocean-blue-text: #fff;
+$wwu-light-blue-text: #000;
+$wwu-yellow-text: #000;
+$wwu-dark-green-text: #fff;
+$wwu-light-green-text: #000;
+$wwu-red-text: #fff;
+
+// An array of wwu colors, useful for iterating over all colors
+// contains (class-name, $color-variable, $text-variable)
+$wwu-colors: (
+  (blue, $wwu-blue, $wwu-blue-text),
+  (ocean-blue, $wwu-ocean-blue, $wwu-ocean-blue-text),
+  (light-blue, $wwu-light-blue, $wwu-light-blue-text),
+  (yellow, $wwu-yellow, $wwu-yellow-text),
+  (dark-green, $wwu-dark-green, $wwu-dark-green-text),
+  (light-green, $wwu-light-green, $wwu-light-green-text),
+  (red, $wwu-red, $wwu-red-text)
+);
