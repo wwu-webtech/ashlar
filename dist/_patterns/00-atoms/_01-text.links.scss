@@ -1,0 +1,16 @@
+/**
+ * @file
+ * atoms/_01-text.links.scss
+ */
+
+a {
+  color: $wwu-action-color;
+  text-decoration: none;
+  transition: color $shila-base-duration $shila-base-timing;
+  &:active,
+  &:focus,
+  &:hover {
+    color: lighten($shila-action-color, 10%);
+    text-decoration: underline;
+  }
+}
