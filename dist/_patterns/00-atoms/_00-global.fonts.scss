@@ -9,26 +9,26 @@
 $sans-serif: 'Noto Sans', 'Open Sans', sans-serif;
 $serif: 'Crimson Text', serif;
 
-$wwu-heading-font-family: $sans-serif;
-$wwu-body-font-family: $sans-serif;
+$heading-font-family: $sans-serif;
+$body-font-family: $sans-serif;
 
 // Font Weight Variables
 $regular: 400;
 $bold: 700;
 
-$wwu-body-font-weight: $regular;
-$wwu-heading-font-weight: $bold;
-$wwu-button-font-weight: $bold;
+$body-font-weight: $regular;
+$heading-font-weight: $bold;
+$button-font-weight: $bold;
 
 // Font Sizes
-$wwu-base-font-size: 24px;
-$wwu-mobile-font-size: 15px;
-$wwu-h1-font-size: 2.8em;
-$wwu-h2-font-size: 2.5em;
-$wwu-h3-font-size: 2.2em;
-$wwu-h4-font-size: 1.8em;
-$wwu-h5-font-size: 1.5em;
-$wwu-h6-font-size: 1.3em;
+$base-font-size: 24px;
+$mobile-font-size: 15px;
+$h1-font-size: 2.441em;
+$h2-font-size: 1.953em;
+$h3-font-size: 1.563em;
+$h4-font-size: 1.25em;
+$h5-font-size: 1.2em;
+$h6-font-size: 1.1em;
 
 // CSS Classes
 .sans-serif {
