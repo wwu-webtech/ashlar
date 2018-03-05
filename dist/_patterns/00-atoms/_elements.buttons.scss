@@ -38,13 +38,13 @@
 
 .button {
   display: inline-block;
-  background-color: $wwu-ocean-blue;
-  color: $wwu-ocean-blue-text;
+  background-color: $wwu-blue;
+  color: $wwu-blue-text;
   padding: $button-padding;
   border-radius: $border-radius;
 
   &:hover, &:focus {
-    background-color: darken($wwu-ocean-blue, 5%);
+    background-color: darken($wwu-blue, 5%);
   }
 
   &.disabled {
