@@ -3,34 +3,45 @@
  * atoms/_00-global.colors.scss
  */
 
-$wwu-blue: #003f87;
-$wwu-ocean-blue: #0070b6;
-$wwu-light-blue: #0083d6;
-$wwu-yellow: #ffc61e;
+$wwu-white: #ffffff;
+$wwu-black: #262b2f;
+$wwu-light-gray: #eaedef;
+$wwu-gray: #667986;
+
+$wwu-dark-blue: #003f87;
+$wwu-blue: #007ac8;
+$wwu-light-blue: #63c2ff;
 $wwu-dark-green: #006b3f;
-$wwu-light-green: #bad80a;
+$wwu-green: #5da225;
+$wwu-light-green: #8ed752;
+$wwu-yellow: #ffc61e;
 $wwu-red: #cc2d30;
 
-$wwu-action-color: $wwu-ocean-blue;
+$wwu-action-color: $wwu-blue;
 
 // Default text colors on background
 // Accessibility - at least AA for normal text, AAA for large text
-$wwu-blue-text: #fff;
-$wwu-ocean-blue-text: #fff;
-$wwu-light-blue-text: #000;
-$wwu-yellow-text: #000;
-$wwu-dark-green-text: #fff;
-$wwu-light-green-text: #000;
-$wwu-red-text: #fff;
+$wwu-dark-blue-text: $wwu-white;
+$wwu-blue-text: $wwu-white;
+$wwu-light-blue-text: $wwu-black;
+$wwu-light-gray-text: $wwu-black;
+$wwu-gray-text: $wwu-white;
+$wwu-yellow-text: $wwu-black;
+$wwu-dark-green-text: $wwu-white;
+$wwu-green-text: $wwu-black;
+$wwu-light-green-text: $wwu-black;
+$wwu-red-text: $wwu-white;
 
 // An array of wwu colors, useful for iterating over all colors
 // contains (class-name, $color-variable, $text-variable)
 $wwu-colors: (
+  (dark-blue, $wwu-dark-blue, $wwu-blue-text),
   (blue, $wwu-blue, $wwu-blue-text),
-  (ocean-blue, $wwu-ocean-blue, $wwu-ocean-blue-text),
   (light-blue, $wwu-light-blue, $wwu-light-blue-text),
-  (yellow, $wwu-yellow, $wwu-yellow-text),
+  (gray, $wwu-gray, $wwu-gray-text),
+  (light-gray, $wwu-light-gray, $wwu-light-gray-text),
   (dark-green, $wwu-dark-green, $wwu-dark-green-text),
+  (green, $wwu-green, $wwu-green-text),
   (light-green, $wwu-light-green, $wwu-light-green-text),
   (red, $wwu-red, $wwu-red-text)
 );
