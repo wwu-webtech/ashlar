@@ -19,6 +19,33 @@
   cursor: pointer;
 }
 
+.demo-animate {
+  background: #ddd;
+  padding: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  position: relative;
+}
+
+.demo-animate-slide {
+  background: rgba(0, 63, 135, .1);
+  height: 50px;
+  width: 0;
+  height: 79.2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+}
+
+.demo-animate:hover {
+  background-color: #0083d6;
+}
+
+.demo-animate:hover > .demo-animate-slide {
+    width: 100%;
+}
+
 .sg-colors {
   display: -webkit-box;
   display: -ms-flexbox;
