@@ -3,45 +3,31 @@
  * atoms/_00-global.colors.scss
  */
 
-$wwu-white: #ffffff;
-$wwu-black: #262b2f;
-$wwu-light-gray: #eaedef;
-$wwu-gray: #667986;
+ $black: #262b2f;
+ $gray: #667986;
+ $pale-gray: #eaedef;
+ $white: #ffffff;
+ $dark-blue: #003f87;
+ $blue: #007ac8;
+ $light-blue: #52bcff;
+ $dark-green: #006b3f;
+ $green: #5da225;
+ $light-green: #bad80a;
+ $red: #cc2d30;
+ $yellow: #ffd14b;
 
-$wwu-dark-blue: #003f87;
-$wwu-blue: #007ac8;
-$wwu-light-blue: #63c2ff;
-$wwu-dark-green: #006b3f;
-$wwu-green: #5da225;
-$wwu-light-green: #8ed752;
-$wwu-yellow: #ffc61e;
-$wwu-red: #cc2d30;
+ $link-color: $blue;
+ $link-hover-color: $red;
+ $light-link-color: $light-blue;
+ $light-link-hover-color: $light-green;
 
-$wwu-action-color: $wwu-blue;
-
-// Default text colors on background
-// Accessibility - at least AA for normal text, AAA for large text
-$wwu-dark-blue-text: $wwu-white;
-$wwu-blue-text: $wwu-white;
-$wwu-light-blue-text: $wwu-black;
-$wwu-light-gray-text: $wwu-black;
-$wwu-gray-text: $wwu-white;
-$wwu-yellow-text: $wwu-black;
-$wwu-dark-green-text: $wwu-white;
-$wwu-green-text: $wwu-black;
-$wwu-light-green-text: $wwu-black;
-$wwu-red-text: $wwu-white;
-
-// An array of wwu colors, useful for iterating over all colors
-// contains (class-name, $color-variable, $text-variable)
-$wwu-colors: (
-  (dark-blue, $wwu-dark-blue, $wwu-blue-text),
-  (blue, $wwu-blue, $wwu-blue-text),
-  (light-blue, $wwu-light-blue, $wwu-light-blue-text),
-  (gray, $wwu-gray, $wwu-gray-text),
-  (light-gray, $wwu-light-gray, $wwu-light-gray-text),
-  (dark-green, $wwu-dark-green, $wwu-dark-green-text),
-  (green, $wwu-green, $wwu-green-text),
-  (light-green, $wwu-light-green, $wwu-light-green-text),
-  (red, $wwu-red, $wwu-red-text)
-);
+ // An array of main wwu colors, useful for iterating over all colors
+ // contains (class-name, $color-variable, $text-color)
+ $wwu-colors: (
+   (dark-blue, $dark-blue, $white),
+   (blue, $blue, $white),
+   (yellow, $yellow, $black),
+   (dark-green, $dark-green, $white),
+   (light-green, $light-green, $black),
+   (red, $red, $white)
+ );
