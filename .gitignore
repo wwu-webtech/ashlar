@@ -2,7 +2,6 @@
 /dist/css/*
 !/dist/css/hidden.module.css
 !/dist/css/normalize.css
-!/dist/css/pattern-scaffolding.css
 node_modules
 /pattern-lab
 wiki
