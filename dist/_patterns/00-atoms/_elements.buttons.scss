@@ -5,7 +5,7 @@
 
 #{$shila-all-buttons} {
   appearance: none;
-  background-color: $wwu-action-color;
+  background-color: $blue;
   border: 0;
   border-radius: $shila-base-border-radius;
   color: #fff;
@@ -24,32 +24,32 @@
   white-space: nowrap;
   &:hover,
   &:focus {
-    background-color: lighten($wwu-action-color, 10%);
+    background-color: lighten($blue, 10%);
     color: #fff;
   }
   &:disabled {
     cursor: not-allowed;
     opacity: 0.5;
     &:hover {
-      background-color: $wwu-action-color;
+      background-color: $pale-gray;
     }
   }
 }
 
 .button {
   display: inline-block;
-  background-color: $wwu-blue;
-  color: $wwu-blue-text;
+  background-color: $blue;
+  color: $white;
   padding: $button-padding;
   border-radius: $border-radius;
 
   &:hover, &:focus {
-    background-color: darken($wwu-blue, 5%);
+    background-color: darken($blue, 5%);
   }
 
   &.disabled {
-    background-color: #eee;
-    color: #333;
+    background-color: $pale-gray;
+    color: $gray;
   }
 
   @each $color, $background, $text in $wwu-colors {
