@@ -1,0 +1,90 @@
+/**
+* @file
+* atoms/_02-buttons.link-buttons.scss
+*/
+
+.button {
+  appearance: none;
+  background-color: $dark-blue;
+  box-sizing: border-box;
+  border: 2px transparent solid;
+  border-radius: 40px 40px 0 40px;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $shila-base-font-family;
+  font-size: 0.8em;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  line-height: 1;
+  padding: $button-padding ($button-padding * 2);
+  text-decoration: none;
+  @include transition($medium-transition-speed, $standard-ease)
+  user-select: none;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+  max-width: 300px;
+
+  &:hover, &:focus {
+    color: $white;
+    background-color: mix(white, $dark-blue, 20%);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 2px 2px 0px 1px mix(black, $dark-blue, 20%);
+  }
+
+  &.alt {
+    background-color: $white;
+    color: $dark-blue;
+    border-color: $dark-blue;
+    box-shadow: none;
+
+    &:hover, &:focus {
+      border-color: mix(white, $dark-blue, 20%);
+      color: mix(white, $dark-blue, 20%);
+      background-color: transparentize($dark-blue, .95);
+    }
+
+    &:focus {
+      background-color: transparentize($dark-blue, .9);
+      box-shadow: none;
+    }
+  }
+
+  @each $color, $background, $text in $wwu-colors {
+    &.#{$color} {
+      background-color: $background;
+      color: $text;
+
+      &:hover, &:focus {
+        background-color: mix(white, $background, 20%);
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 2px 2px 0px 1px mix(black, $background, 20%);
+      }
+
+      &.alt {
+        background-color: transparent;
+        border-color: $background;
+        color: $background;
+
+        &:hover, &:focus {
+          border-color: mix(white, $background, 20%);
+          color: mix(white, $background, 20%);
+          background-color: transparentize($background, .95);
+        }
+
+        &:focus {
+          background-color: transparentize($background, .9);
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
