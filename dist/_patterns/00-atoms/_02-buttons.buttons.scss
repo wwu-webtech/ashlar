@@ -42,15 +42,4 @@
        background-color: $dark-blue;
      }
    }
-
-   @each $color, $background, $text in $wwu-colors {
-     &.#{$color} {
-       background-color: $background;
-       color: $text;
-
-       &:hover, &:focus {
-         background-color: lighten($background, 20%);
-       }
-     }
-   }
  }
