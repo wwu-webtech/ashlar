@@ -8,9 +8,6 @@ $medium-transition-speed: 400ms;
 $fast-transition-speed: 200ms;
 $standard-ease: ease; //could be ease-in-out etc
 
-$standard-transition: $medium-transition-speed $standard-ease;
-$link-transition: $fast-transition-speed linear;
-
 // Mixins
 @mixin transition-duration($timing) {
   -webkit-transition-duration: $timing;
@@ -25,8 +22,9 @@ $link-transition: $fast-transition-speed linear;
 }
 
 @mixin transition($timing, $ease) {
-  @include transition-duration($timing);
-  @include transition-easing($ease);
+  -webkit-transition: $timing $ease;
+  -o-transition: $timing $ease;
+  transition: $timing $ease;
 }
 
 // General Use CSS Classes
