@@ -5,14 +5,19 @@
 
 a {
   color: $blue;
-  text-decoration: underline;
-  transition: color $shila-base-duration $shila-base-timing;
+  text-decoration: none;
+  @include transition($fast-transition-speed, $standard-ease);
+  transition-property: color;
 
   &:active,
   &:focus,
   &:hover {
     color: $red;
     text-decoration: none;
+  }
+
+  &:focus {
+    outline: 2px dotted;
   }
 }
 
@@ -24,6 +29,26 @@ a {
     &:focus,
     &:hover {
       color: $light-green;
+    }
+  }
+}
+
+p {
+  a {
+    text-decoration: underline;
+
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  a {
+    border-bottom: solid 2px;
+
+    &:hover, &:focus {
+      border-color: transparent;
     }
   }
 }
