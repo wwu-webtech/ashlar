@@ -1,0 +1,43 @@
+/**
+* @file
+* atoms/_03-lists.menu-items.scss
+*/
+
+ul.menu {
+  list-style: none;
+  padding: 0;
+
+  li {
+    background-color: $pale-gray;
+    border-left: solid 3px mix(black, $pale-gray, 50%);
+
+    a {
+      display: inline-block;
+      color: $black;
+      padding: $menu-padding ($menu-padding * 4) $menu-padding ($menu-padding * 2);
+      @include transition($medium-transition-speed, $standard-ease);
+
+      &:hover, &:focus {
+        outline: none;
+        background-color: mix(black, $pale-gray, 10%);
+      }
+    }
+  }
+
+  &.dark-blue {
+    li {
+      background-color: $dark-blue;
+      border-left: solid 3px mix(white, $dark-blue, 20%);
+
+      a {
+        color: $white;
+
+        &:hover, &:focus {
+          outline: none;
+          color: $light-green;
+          background-color: mix(white, $dark-blue, 10%);
+        }
+      }
+    }
+  }
+}
