@@ -1,0 +1,37 @@
+{#
+/**
+ * @see templates/navigation/menu-flyout.html.twig
+ */
+#}
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
+<nav class="flyout">
+  <div class="wrap">
+    {{ menus.menu_links(items, attributes, classes, 0) }}
+    <div class="circle"><span class="icon">«</span></div>
+  </div>
+</nav>
+
+{% macro menu_links(items, attributes, classes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <ul{{ attributes.addClass(classes) }}>
+    {% else %}
+      <ul class="menu stuff">
+    {% endif %}
+    {% for item in items %}
+      <li{{ item.attributes.addClass(class) }}>
+        <a href="{{ item.url }}">{{ item.title }}</a>
+        {% if item.below %}
+          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}
