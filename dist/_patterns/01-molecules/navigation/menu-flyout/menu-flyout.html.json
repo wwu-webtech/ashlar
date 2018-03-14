@@ -1,0 +1,35 @@
+{
+    "classes": [
+      "menu", "dark-blue"
+    ],
+    "items": [
+        {
+            "title": "Menu item 1",
+            "url": ""
+        },
+        {
+            "title": "Menu item 2",
+            "url": ""
+        },
+        {
+            "title": "Menu item three",
+            "url": ""
+        },
+        {
+            "title": "Menu item 4",
+            "url": ""
+        },
+        {
+            "title": "Menu item 5",
+            "url": ""
+        },
+        {
+            "title": "Menu item six",
+            "url": ""
+        },
+        {
+            "title": "Menu item 7",
+            "url": ""
+        }
+    ]
+}

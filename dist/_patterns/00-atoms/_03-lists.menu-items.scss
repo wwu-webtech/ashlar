@@ -4,11 +4,11 @@
 */
 
 ul.menu {
+  background-color: $pale-gray;
   list-style: none;
   padding: 0;
 
   li {
-    background-color: $pale-gray;
     border-left: solid 3px mix(black, $pale-gray, 50%);
 
     a {
@@ -25,8 +25,9 @@ ul.menu {
   }
 
   &.dark-blue {
+    background-color: $dark-blue;
+
     li {
-      background-color: $dark-blue;
       border-left: solid 3px mix(white, $dark-blue, 20%);
 
       a {
