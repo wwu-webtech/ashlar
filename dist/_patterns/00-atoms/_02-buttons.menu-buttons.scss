@@ -3,86 +3,86 @@
 * atoms/_02-buttons.menu-buttons.scss
 */
 
-.main-menu.menu {
-  max-width: $max-content-width;
-  background-color: $pale-gray;
-  display: flex;
-  border: solid $pale-gray;
-  border-width: ($menu-padding * 2) $menu-padding;
+.nav--main {
+  .menu {
+    background-color: initial;
 
-  li {
-    border: none;
-    border: solid $pale-gray;
-    border-width: 0 $menu-padding;
-  }
+    li {
+      border: none;
 
-  .button {
-    position: relative;
-    border-radius: 0;
-    border-width: 0;
-    background-color: $blue;
-    color: $white;
-    padding: $button-padding;
-    height: 86px;
-    white-space: normal;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 1.4em;
+      a {
+        position: relative;
+        max-width: 230px;
+        border-radius: 0;
+        border-width: 0;
+        background-color: $blue;
+        color: $white;
+        padding: $button-padding;
+        height: 86px;
+        white-space: normal;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1.4em;
+        font-size: .8em;
 
-    &:before, &:after {
-      content: "";
-      width: 0;
-      height: 0;
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translatex(-50%);
-      transition: border $medium-transition-speed $standard-ease;
-    }
+        /* Triangular Tab */
+        &:before, &:after {
+          content: "";
+          width: 0;
+          height: 0;
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translatex(-50%);
+          transition: border $fast-transition-speed $standard-ease;
+        }
 
-    &:before {
-      border-top: solid 36px transparent;
-      border-right: solid 68px transparent;
-      border-bottom: solid 0 transparent;
-      border-left: solid 68px transparent;
-    }
+        /* Creates border on tab
+        &:before {
+          border-top: solid 36px transparent;
+          border-right: solid 68px transparent;
+          border-bottom: solid 0 transparent;
+          border-left: solid 68px transparent;
+        }*/
 
-    &:after {
-      border-top: solid 16px transparent;
-      border-right: solid 36px transparent;
-      border-bottom: solid 0 transparent;
-      border-left: solid 36px transparent;
-    }
+        &:after {
+          border-top: solid 16px transparent;
+          border-right: solid 36px transparent;
+          border-bottom: solid 0 transparent;
+          border-left: solid 36px transparent;
+        }
 
-    &:hover, &:focus {
-      background-color: mix(black, $blue, 20%);
-      box-shadow: none;
+        &:hover, &:focus {
+          background-color: mix(black, $blue, 20%);
+          box-shadow: none;
 
-      &:before {
-        border-top: solid 36px $pale-gray;
-      }
+          //&:before {
+          //  border-top: solid 36px $white;
+          //}
 
-      &:after {
-        border-top: solid 16px mix(black, $blue, 20%);
-      }
-    }
+          &:after {
+            border-top: solid 16px mix(black, $blue, 20%);
+          }
+        }
 
-    &.active-trail {
-      background-color: $dark-blue;
+        &.active-trail {
+          background-color: $dark-blue;
 
-      &:before {
-        border-top: solid 36px $pale-gray;
-      }
+          &:before {
+            border-top: solid 36px $white;
+          }
 
-      &::after {
-        border-top: solid 16px $dark-blue;
-      }
+          &::after {
+            border-top: solid 16px $dark-blue;
+          }
 
-      &:hover, &:focus {
-        background-color: mix(white, $dark-blue, 10%);
+          &:hover, &:focus {
+            background-color: mix(white, $dark-blue, 10%);
 
-        &::after {
-          border-top: solid 16px mix(white, $dark-blue, 10%);
+            &::after {
+              border-top: solid 16px mix(white, $dark-blue, 10%);
+            }
+          }
         }
       }
     }
