@@ -1,0 +1,11 @@
+/**
+ * @file
+ * atoms/_logo.horizontal-logo.scss
+ */
+ .logo {
+   &.horizontal {
+    width: 484px;
+    height: 78px;
+    margin: 18px;
+  }
+}
