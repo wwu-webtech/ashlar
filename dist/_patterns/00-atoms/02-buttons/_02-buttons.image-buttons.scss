@@ -1,0 +1,70 @@
+/**
+  * @file
+  * atoms/_02-buttons.image-buttons.scss
+  */
+$button-size: 200px;
+
+.button {
+  &.image {
+    background: none;
+    color: $link-color;
+    padding: 0;
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: $button-size;
+    grid-template-rows: $button-size 2.5em;
+    justify-items: center;
+    align-items: end;
+
+    &:before {
+      content: '»';
+      color: $white;
+      font-size: 3em;
+      grid-column-start: 1;
+      grid-row-start: 1;
+      justify-self: right;
+      margin-right: $button-padding;
+      @include transition($medium-transition-speed, $standard-ease);
+    }
+
+    &:after {
+      content: '';
+      width: $button-size;
+      height: $button-size;
+      box-sizing: border-box;
+      border: solid $dark-blue 3px;
+      border-radius: 50% 50% 0 50%;
+      grid-column-start: 1;
+      grid-row-start: 1;
+      @include transition($medium-transition-speed, $standard-ease);
+    }
+
+    img {
+      border-radius: 50% 50% 0 50%;
+      width: $button-size;
+      height: $button-size;
+      z-index: -1;
+      grid-column-start: 1;
+      grid-row-start: 1;
+      @include transition($medium-transition-speed, $standard-ease);
+    }
+
+    &:hover, &:focus {
+      background: none;
+      box-shadow: none;
+      color: $link-hover-color;
+
+      &:before {
+        color: $dark-blue;
+      }
+
+      &:after {
+        border-color: $blue;
+      }
+
+      img {
+        transform: translate(5%, 5%);
+      }
+    }
+  }
+}
