@@ -4,7 +4,8 @@
     "Attribute()": {}
   },
   "classes": [
-    "field"
+    "field",
+    "accordion-set"
   ],
   "title_attributes": {
     "Attribute()": {}
