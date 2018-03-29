@@ -3,13 +3,20 @@
  * molecules/accordion/_accordion.scss
  */
 $left-col-width: 84px;
+$accordion-border: $dark-blue solid 2px;
 
 .accordion {
   display: grid;
-  border: $dark-blue solid 2px;
+  border-top: $accordion-border;
+  border-right: $accordion-border;
+  border-left: $accordion-border;
 
   grid-template-columns: $left-col-width auto;
   grid-template-rows: auto auto;
+
+  &:last-of-type {
+    border-bottom: $accordion-border;
+  }
 
   .expand {
     display: grid;
