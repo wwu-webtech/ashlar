@@ -1,0 +1,54 @@
+/**
+ * @file
+ * molecules/accordion/_accordion.scss
+ */
+$left-col-width: 84px;
+$accordion-border: $dark-blue solid 2px;
+
+.accordion {
+  display: grid;
+  border-top: $accordion-border;
+  border-right: $accordion-border;
+  border-left: $accordion-border;
+
+  grid-template-columns: $left-col-width auto;
+  grid-template-rows: auto auto;
+
+  &:last-of-type {
+    border-bottom: $accordion-border;
+  }
+
+  .expand {
+    display: grid;
+    width: 100%;
+    padding: $standard-spacing 0;
+    text-align: left;
+    color: initial;
+    border-radius: 0;
+    background: none;
+
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+    grid-template-columns: $left-col-width auto;
+
+    * {
+      display: inline-block;
+      margin: 0;
+    }
+
+    i {
+      padding-left: $standard-spacing;
+      color: $blue;
+      font-size: $h3-font-size;
+    }
+
+    & + .content {
+      display: none;
+      padding: $standard-spacing;
+      padding-left: 0;
+
+      grid-column: 2 / span 1;
+      grid-row: 2 / span 1;
+    }
+  }
+}
