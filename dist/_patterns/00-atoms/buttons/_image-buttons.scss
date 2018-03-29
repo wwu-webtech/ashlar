@@ -1,58 +1,63 @@
 /**
   * @file
-  * atoms/_02-buttons.image-buttons.scss
+  * 00-atoms/buttons/_image-buttons.scss
   */
 $button-size: 200px;
 
 .button {
   &.image {
-    background: none;
-    color: $link-color;
-    padding: 0;
     position: relative;
     display: inline-grid;
+    align-items: end;
+    padding: 0;
+    color: $link-color;
+    background: none;
+
     grid-template-columns: $button-size;
     grid-template-rows: $button-size 2.5em;
     justify-items: center;
-    align-items: end;
 
     &:before {
-      content: '»';
+      @include transition($medium-transition-speed, $standard-ease);
+      margin-right: $button-padding;
+      content: "»";
       color: $white;
       font-size: 3em;
+
       grid-column-start: 1;
       grid-row-start: 1;
       justify-self: right;
-      margin-right: $button-padding;
-      @include transition($medium-transition-speed, $standard-ease);
     }
 
     &:after {
-      content: '';
+      @include transition($medium-transition-speed, $standard-ease);
+      box-sizing: border-box;
       width: $button-size;
       height: $button-size;
-      box-sizing: border-box;
+      content: "";
       border: solid $dark-blue 3px;
       border-radius: 50% 50% 0 50%;
+
       grid-column-start: 1;
       grid-row-start: 1;
-      @include transition($medium-transition-speed, $standard-ease);
     }
 
     img {
-      border-radius: 50% 50% 0 50%;
+      @include transition($medium-transition-speed, $standard-ease);
+      z-index: -1;
       width: $button-size;
       height: $button-size;
-      z-index: -1;
+      border-radius: 50% 50% 0 50%;
+
       grid-column-start: 1;
       grid-row-start: 1;
-      @include transition($medium-transition-speed, $standard-ease);
     }
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
+      color: $link-hover-color;
       background: none;
       box-shadow: none;
-      color: $link-hover-color;
 
       &:before {
         color: $dark-blue;

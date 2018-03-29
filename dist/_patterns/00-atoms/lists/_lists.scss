@@ -1,6 +1,6 @@
 /**
  * @file
- * atoms/_elements.lists.scss
+ * 00-atoms/lists/_lists.scss
  */
 
 ul,
@@ -10,8 +10,8 @@ ol {
 dl {
   margin-bottom: $shila-small-spacing;
   dt {
-    font-weight: 600;
     margin-top: $shila-small-spacing;
+    font-weight: 600;
   }
   dd {
     margin: 0;

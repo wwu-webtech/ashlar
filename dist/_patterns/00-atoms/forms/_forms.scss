@@ -1,18 +1,18 @@
 /**
  * @file
- * atoms/_elements.forms.scss
+ * 00-atoms/forms/_forms.scss
  */
 $shila-form-element-background-color: white;
 fieldset {
-  background-color: transparent;
-  border: 0;
   margin: 0;
   padding: 0;
+  border: 0;
+  background-color: transparent;
 }
 legend {
-  font-weight: 600;
   margin-bottom: $shila-small-spacing / 2;
   padding: 0;
+  font-weight: 600;
 }
 input,
 label,
@@ -23,28 +23,28 @@ select {
 }
 #{$shila-all-text-inputs},
 select[multiple=multiple] {
-  background-color: $shila-form-element-background-color;
-  border: $shila-base-border;
-  border-radius: $shila-base-border-radius;
-  box-shadow: $shila-form-box-shadow;
   box-sizing: border-box;
-  font-family: $shila-base-font-family;
-  font-size: 1rem;
+  width: 100%;
   margin-bottom: $shila-small-spacing;
   padding: $shila-base-spacing / 3;
   transition: border-color $shila-base-duration $shila-base-timing;
-  width: 100%;
+  border: $shila-base-border;
+  border-radius: $shila-base-border-radius;
+  background-color: $shila-form-element-background-color;
+  box-shadow: $shila-form-box-shadow;
+  font-family: $shila-base-font-family;
+  font-size: 1rem;
   &:hover {
     border-color: shila-shade($shila-base-border-color, 20%);
   }
   &:focus {
     border-color: $shila-action-color;
-    box-shadow: $shila-form-box-shadow-focus;
     outline: none;
+    box-shadow: $shila-form-box-shadow-focus;
   }
   &:disabled {
-    background-color: shila-shade($shila-form-element-background-color, 5%);
     cursor: not-allowed;
+    background-color: shila-shade($shila-form-element-background-color, 5%);
     &:hover {
       border: $shila-base-border;
     }

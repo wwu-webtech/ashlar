@@ -1,0 +1,11 @@
+/**
+ * @file
+ * 00-atoms/01-text/_blockquotes.scss
+ */
+
+blockquote {
+  margin-left: 0;
+  padding-left: 1rem;
+  color: $shila-medium-gray;
+  border-left: 0.33rem solid $shila-light-gray;
+}

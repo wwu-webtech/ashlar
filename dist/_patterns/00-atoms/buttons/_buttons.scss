@@ -1,0 +1,47 @@
+/**
+ * @file
+ * 00-atoms/buttons/_buttons.scss
+ */
+
+#{$shila-all-buttons} {
+  @include transition($medium-transition-speed, $standard-ease)
+  display: inline-block;
+  box-sizing: border-box;
+  padding: $button-padding ($button-padding * 2);
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-decoration: none;
+  color: $white;
+  border: 2px transparent solid;
+  border-radius: 40px 40px 0 40px;
+  background-color: $dark-blue;
+  font-family: $body-font-family;
+  font-size: 0.8em;
+  font-weight: 400;
+  line-height: 1;
+
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: mix(white, $dark-blue, 20%);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 2px 2px 0 1px mix(black, $dark-blue, 20%);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    &:hover {
+      background-color: $dark-blue;
+    }
+  }
+}
