@@ -1,0 +1,12 @@
+/**
+ * @file
+ * 00-atoms/01-text/_horizontal-rule.scss
+ */
+
+hr {
+  margin: $shila-base-spacing 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: $shila-base-border;
+  border-left: 0;
+}

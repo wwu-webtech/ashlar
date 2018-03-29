@@ -1,6 +1,6 @@
 /**
  * @file
- * atoms/_01-text.headings.scss
+ * 00-atoms/01-text/_headings.scss
  */
 
 h1,
@@ -14,8 +14,8 @@ h6 {
   line-height: $heading-line-height;
 }
 h1 {
-  font-size: $h1-font-size;
   margin: 0 0 1rem;
+  font-size: $h1-font-size;
 }
 h2,
 h3,

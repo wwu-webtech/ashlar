@@ -1,21 +1,22 @@
 /**
 * @file
-* atoms/_03-lists.menu-items.scss
+* 00-atoms/lists/_menu-items.scss
 */
 
 ul {
   &.menu {
-    list-style: none;
     padding: 0;
+    list-style: none;
 
     li {
       a {
-        display: inline-block;
-        color: $black;
-        padding: $menu-padding ($menu-padding * 4) $menu-padding ($menu-padding * 2);
         @include transition($medium-transition-speed, $standard-ease);
+        display: inline-block;
+        padding: $menu-padding ($menu-padding * 4) $menu-padding ($menu-padding * 2);
+        color: $black;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
           outline: none;
           background-color: mix(black, $pale-gray, 10%);
         }
@@ -39,9 +40,10 @@ ul {
         a {
           color: $white;
 
-          &:hover, &:focus {
-            outline: none;
+          &:hover,
+          &:focus {
             color: $light-green;
+            outline: none;
             background-color: mix(white, $dark-blue, 10%);
           }
         }

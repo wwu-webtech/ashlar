@@ -1,13 +1,13 @@
 /**
  * @file
- * atoms/_elements.images.scss
+ * 00-atoms/images/_images.scss
  */
 
 img,
 picture {
-  margin: 0;
   max-width: 100%;
   height: auto;
+  margin: 0;
 }
 picture source,
 picture img {

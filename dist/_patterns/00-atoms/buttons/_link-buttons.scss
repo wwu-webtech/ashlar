@@ -1,0 +1,95 @@
+/**
+  * @file
+  * 00-atoms/buttons/_link-buttons.scss
+  */
+
+.button {
+  @include transition($medium-transition-speed, $standard-ease)
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 300px;
+  padding: $button-padding ($button-padding * 2);
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-decoration: none;
+  color: $white;
+  border: 2px transparent solid;
+  border-radius: 40px 40px 0 40px;
+  background-color: $dark-blue;
+  font-family: $body-font-family;
+  font-size: 0.8em;
+  font-weight: 400;
+  line-height: 1;
+
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: mix(white, $dark-blue, 20%);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 2px 2px 0 1px mix(black, $dark-blue, 20%);
+  }
+
+  &.alt {
+    color: $dark-blue;
+    border-color: $dark-blue;
+    background-color: $white;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      color: mix(white, $dark-blue, 20%);
+      border-color: mix(white, $dark-blue, 20%);
+      background-color: transparentize($dark-blue, 0.95);
+    }
+
+    &:focus {
+      background-color: transparentize($dark-blue, 0.9);
+      box-shadow: none;
+    }
+  }
+
+  @each $color, $background, $text in $wwu-colors {
+    &.#{$color} {
+      color: $text;
+      background-color: $background;
+
+      &:hover,
+      &:focus {
+        background-color: mix(white, $background, 20%);
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 2px 2px 0 1px mix(black, $background, 20%);
+      }
+
+      &.alt {
+        color: $background;
+        border-color: $background;
+        background-color: transparent;
+
+        &:hover,
+        &:focus {
+          color: mix(white, $background, 20%);
+          border-color: mix(white, $background, 20%);
+          background-color: transparentize($background, 0.95);
+        }
+
+        &:focus {
+          background-color: transparentize($background, 0.9);
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}

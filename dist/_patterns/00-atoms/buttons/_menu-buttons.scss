@@ -1,7 +1,7 @@
 /**
-* @file
-* atoms/_02-buttons.menu-buttons.scss
-*/
+  * @file
+  * 00-atoms/buttons/_menu-buttons.scss
+  */
 
 .nav--main {
   .menu {
@@ -12,31 +12,32 @@
 
       a {
         position: relative;
+        display: table-cell;
         max-width: 230px;
-        border-radius: 0;
-        border-width: 0;
-        background-color: $blue;
-        color: $white;
-        padding: $button-padding;
         height: 86px;
+        padding: $button-padding;
+        text-align: center;
+        vertical-align: middle;
         white-space: normal;
         text-transform: uppercase;
-        text-align: center;
+        color: $white;
+        border-width: 0;
+        border-radius: 0;
+        background-color: $blue;
+        font-size: 0.8em;
         line-height: 1.4em;
-        font-size: .8em;
-        display: table-cell;
-        vertical-align: middle;
 
         /* Triangular Tab */
-        &:before, &:after {
-          content: "";
-          width: 0;
-          height: 0;
+        &:before,
+        &:after {
           position: absolute;
           top: 100%;
           left: 50%;
-          transform: translatex(-50%);
+          width: 0;
+          height: 0;
+          content: "";
           transition: border $fast-transition-speed $standard-ease;
+          transform: translatex(-50%);
         }
 
         /* Creates border on tab
@@ -54,7 +55,8 @@
           border-left: solid 36px transparent;
         }
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
           background-color: mix(black, $blue, 20%);
           box-shadow: none;
 
@@ -78,7 +80,8 @@
             border-top: solid 16px $dark-blue;
           }
 
-          &:hover, &:focus {
+          &:hover,
+          &:focus {
             background-color: mix(white, $dark-blue, 10%);
 
             &::after {

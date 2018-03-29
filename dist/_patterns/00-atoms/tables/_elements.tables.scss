@@ -1,23 +1,23 @@
 /**
  * @file
- * atoms/_elements.tables.scss
+ * 00-atoms/tables/_tables.scss
  */
 
 table {
-  border-collapse: collapse;
+  width: 100%;
   margin: $shila-small-spacing 0;
   table-layout: fixed;
-  width: 100%;
+  border-collapse: collapse;
 }
 th {
-  border-bottom: 1px solid shila-shade($shila-base-border-color, 25%);
-  font-weight: 600;
   padding: $shila-small-spacing 0;
   text-align: left;
+  border-bottom: 1px solid shila-shade($shila-base-border-color, 25%);
+  font-weight: 600;
 }
 td {
-  border-bottom: $shila-base-border;
   padding: $shila-small-spacing 0;
+  border-bottom: $shila-base-border;
 }
 tr,
 td,
