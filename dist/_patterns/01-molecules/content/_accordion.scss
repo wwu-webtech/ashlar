@@ -50,5 +50,10 @@ $accordion-border: $dark-blue solid 2px;
       grid-column: 2 / span 1;
       grid-row: 2 / span 1;
     }
+
+    &:focus {
+      background-color: transparentize($dark-blue, .9);
+      box-shadow: none;
+    }
   }
 }
