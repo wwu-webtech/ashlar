@@ -1,0 +1,51 @@
+/**
+ * @file
+ * 01-molecules/content/switcher.scss
+ */
+
+.content-switcher {
+  display: flex;
+  width: 100%;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    flex: 1;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    border-top: solid $dark-blue 2px;
+    border-bottom: solid $dark-blue 2px;
+    border-left: solid $dark-blue 2px;
+
+    &:last-of-type {
+      border-right: solid $dark-blue 2px;
+    }
+  }
+
+  a {
+    display: block;
+    padding: $button-padding;
+    color: $dark-blue;
+
+    &:hover,
+    &:focus {
+      background-color: transparentize($dark-blue, 0.9);
+    }
+
+    &.active {
+      color: $white;
+      outline: none;
+      background-color: $dark-blue;
+    }
+  }
+}
+
+.content-switcher-container {
+  position: relative;
+
+  .content {
+    display: none;
+    position: absolute;
+  }
+}
