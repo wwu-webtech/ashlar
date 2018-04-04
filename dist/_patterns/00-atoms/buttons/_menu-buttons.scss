@@ -13,7 +13,7 @@
       a {
         position: relative;
         display: table-cell;
-        max-width: 230px;
+        max-width: 280px;
         height: 86px;
         padding: $button-padding;
         text-align: center;
@@ -24,7 +24,6 @@
         border-width: 0;
         border-radius: 0;
         background-color: $blue;
-        font-size: 0.8em;
         line-height: 1.4em;
 
         /* Triangular Tab */

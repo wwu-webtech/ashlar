@@ -1,6 +1,6 @@
 <ul{{ attributes.addClass(classes) }}>
   {% for item in items %}
-  <li><a href="#"{{ item.attributes.addClass(item.classes) }}>{{ item.title }}</a></li>
+  <li><button {{ item.attributes.addClass(item.classes) }}>{{ item.title }}</button></li>
   {% endfor %}
 </ul>
 
