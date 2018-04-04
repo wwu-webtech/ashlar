@@ -42,10 +42,11 @@
 }
 
 .content-switcher-container {
-  position: relative;
+  display: grid;
 
   .content {
     display: none;
-    position: absolute;
+    grid-column-start: 1;
+    grid-row-start: 1;
   }
 }
