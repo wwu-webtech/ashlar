@@ -1,0 +1,11 @@
+<ul{{ attributes.addClass(classes) }}>
+  {% for item in items %}
+  <li><button {{ item.attributes.addClass(item.classes) }}>{{ item.title }}</button></li>
+  {% endfor %}
+</ul>
+
+<div class="content-switcher-container">
+  {% for item in items %}
+  <div{{ item.attributes.addClass("content", item.classes) }}><p>{{ item.content }}</p></div>
+  {% endfor %}
+</div>

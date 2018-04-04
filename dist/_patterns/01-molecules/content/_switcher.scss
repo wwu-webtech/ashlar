@@ -1,0 +1,59 @@
+/**
+ * @file
+ * 01-molecules/content/switcher.scss
+ */
+
+.content-switcher {
+  display: flex;
+  width: 100%;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    flex: 1;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    border-top: solid $dark-blue 2px;
+    border-bottom: solid $dark-blue 2px;
+    border-left: solid $dark-blue 2px;
+
+    &:last-of-type {
+      border-right: solid $dark-blue 2px;
+    }
+  }
+
+  button {
+    width: 100%;
+    max-width: none;
+    color: $black;
+    border-radius: 0;
+    background-color: $white;
+    font-size: $h3-font-size;
+
+    &:hover,
+    &:focus {
+      background-color: transparentize($dark-blue, 0.9);
+      box-shadow: none;
+    }
+
+    &.active,
+    &:disabled {
+      cursor: pointer;
+      opacity: 1;
+      color: $white;
+      background-color: $dark-blue;
+    }
+  }
+}
+
+.content-switcher-container {
+  display: grid;
+
+  .content {
+    display: none;
+
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+}

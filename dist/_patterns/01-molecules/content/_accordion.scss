@@ -1,6 +1,6 @@
 /**
  * @file
- * 01-molecules/content-accordions/_content-accordion.scss
+ * 01-molecules/content/accordion.scss
  */
 $left-col-width: 84px;
 $accordion-border: $dark-blue solid 2px;
@@ -39,7 +39,6 @@ $accordion-border: $dark-blue solid 2px;
     i {
       padding-left: $standard-spacing;
       color: $blue;
-      font-size: $h3-font-size;
     }
 
     & + .content {
@@ -49,6 +48,11 @@ $accordion-border: $dark-blue solid 2px;
 
       grid-column: 2 / span 1;
       grid-row: 2 / span 1;
+    }
+
+    &:focus {
+      background-color: transparentize($dark-blue, .9);
+      box-shadow: none;
     }
   }
 }
