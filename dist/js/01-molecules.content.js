@@ -8,11 +8,13 @@ $(document).ready(function() {
   });
 
   /* switcher */
-  $(".content-switcher a").click(function(){
-    $(".content-switcher a").removeClass("active");
+  $(".content-switcher button").click(function(){
+    $(".content-switcher button").removeClass("active");
+    $(".content-switcher button").attr("disabled", false);
     var $thisSwitch = $(this).attr("class");
     console.log($thisSwitch);
     $(this).addClass("active");
+    $(this).attr("disabled", true);
 
     $(".content-switcher-container .content:not(." + $thisSwitch + ")").fadeOut();
     $(".content-switcher-container .content." + $thisSwitch).fadeIn();
