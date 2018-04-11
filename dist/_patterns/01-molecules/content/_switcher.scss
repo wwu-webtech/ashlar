@@ -14,12 +14,12 @@
     margin: 0;
     list-style: none;
     text-align: center;
-    border-top: solid $dark-blue 2px;
-    border-bottom: solid $dark-blue 2px;
-    border-left: solid $dark-blue 2px;
+    border-top: solid $dark-blue $border-width;
+    border-bottom: solid $dark-blue $border-width;
+    border-left: solid $dark-blue $border-width;
 
     &:last-of-type {
-      border-right: solid $dark-blue 2px;
+      border-right: solid $dark-blue $border-width;
     }
   }
 
