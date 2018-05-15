@@ -1,0 +1,24 @@
+/**
+ * @file
+ * 00-atoms/00-global/_structure-vars.scss
+ */
+
+/* Spacing */
+// Global
+$standard-spacing: 18px;
+
+// Used
+$heading-line-height: $standard-spacing;
+$heading-margin-top: $standard-spacing * 1.5;
+$heading-margin-bottom: $standard-spacing;
+
+$button-padding: $standard-spacing;
+$menu-padding: $standard-spacing / 2;
+
+/* Borders and Lines */
+$border-width: 2px;
+$button-border-radius: 50% 50% 0 50%;
+
+/* Layout */
+$grid-template: 1fr 1fr 1fr;
+$max-content-width: 1100px;
