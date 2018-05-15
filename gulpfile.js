@@ -10,7 +10,6 @@
   const sassGlob = require('gulp-sass-glob');
   const sassLint = require('gulp-sass-lint');
   const sourcemaps = require('gulp-sourcemaps');
-  const browserSync = require('browser-sync').create();
   const runSequence = require('run-sequence');
 
   function isDirectory(dir) {
@@ -23,14 +22,6 @@
   }
 
   var config = {};
-
-  config.browserSync = {
-    proxyTarget: 'localhost:8080',
-    proxyReqHeaders: {
-      host: 'www.shila.test'
-    },
-    open: false
-  };
 
   config.patternsDir = './dist/_patterns';
 
@@ -82,7 +73,6 @@
     if (isDirectory(config.patternLab.dir)) {
       return gulp.src(config.sass.destDir + '/**/*.css')
       .pipe(gulp.dest(config.patternLab.publicCssDir))
-      .pipe(browserSync.stream());
     }
   });
 
@@ -96,13 +86,6 @@
   });
 
   /**
-   * Calls Browsersync reload.
-   */
-  gulp.task('bs:reload', function () {
-    browserSync.reload();
-  });
-
-  /**
    * Processes Sass files and updates Browsersync.
    */
   gulp.task('sass', function () {
@@ -112,7 +95,6 @@
     .pipe(sass(config.sass.options).on('error', sass.logError))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.sass.destDir))
-    .pipe(browserSync.stream({match: '**/*.css'}));
   });
 
   /**
@@ -133,13 +115,6 @@
    * Sets up Browsersync and watchers.
    */
   gulp.task('watch', function () {
-    browserSync.init({
-      proxy: {
-        target: config.browserSync.proxyTarget,
-        reqHeaders: config.browserSync.proxyReqHeaders
-      },
-      open: config.browserSync.open
-    });
     gulp.watch(config.sass.watchFiles, ['sass-change']);
     gulp.watch(config.patternLab.watchFiles, ['patterns-change']);
   });

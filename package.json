@@ -6,7 +6,6 @@
     "shila-css": "1.0.0-alpha.5"
   },
   "devDependencies": {
-    "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
     "gulp-run": "^1.7.1",
     "gulp-sass": "^3.1.0",
