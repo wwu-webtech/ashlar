@@ -36,7 +36,7 @@ $button-size: 200px;
       height: $button-size;
       content: "";
       border: solid $dark-blue 3px;
-      border-radius: $button-border-radius;
+      border-radius: $button-border-radius-alt;
 
       grid-column-start: 1;
       grid-row-start: 1;
@@ -47,7 +47,7 @@ $button-size: 200px;
       z-index: -1;
       width: $button-size;
       height: $button-size;
-      border-radius: $button-border-radius;
+      border-radius: $button-border-radius-alt;
 
       grid-column-start: 1;
       grid-row-start: 1;

@@ -17,7 +17,8 @@ $menu-padding: $standard-spacing / 2;
 
 /* Borders and Lines */
 $border-width: 2px;
-$button-border-radius: 50% 50% 0 50%;
+$button-border-radius: 40px 40px 0 40px;
+$button-border-radius-alt: 50% 50% 0 50%;
 
 /* Layout */
 $grid-template: 1fr 1fr 1fr;
