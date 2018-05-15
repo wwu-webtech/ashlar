@@ -3,10 +3,13 @@
  * 00-atoms/buttons/_buttons.scss
  */
 
-#{$shila-all-buttons} {
-  @include transition($medium-transition-speed, $standard-ease)
+button,
+.button {
+  @include transition($button-transition-speed, $button-transition-ease)
   display: inline-block;
   box-sizing: border-box;
+  width: 100%;
+  max-width: $button-max-width;
   padding: $button-padding ($button-padding * 2);
   cursor: pointer;
   user-select: none;
@@ -14,12 +17,12 @@
   vertical-align: middle;
   white-space: nowrap;
   text-decoration: none;
-  color: $white;
+  color: $text-color-light;
   border: $border-width transparent solid;
-  border-radius: 40px 40px 0 40px;
-  background-color: $dark-blue;
+  border-radius: $button-border-radius;
+  background-color: $default-button-color;
   font-family: $body-font-family;
-  font-weight: 400;
+  font-weight: $regular;
   line-height: 1;
 
   appearance: none;
@@ -27,13 +30,13 @@
 
   &:hover,
   &:focus {
-    color: $white;
-    background-color: mix(white, $dark-blue, 20%);
+    color: $text-color-light;
+    background-color: mix(white, $default-button-color, 20%);
   }
 
   &:focus {
     outline: none;
-    box-shadow: 2px 2px 0 1px mix(black, $dark-blue, 20%);
+    box-shadow: $focus-shadow mix(black, $default-button-color, 20%);
   }
 
   &:disabled {
@@ -41,6 +44,61 @@
     opacity: 0.5;
     &:hover {
       background-color: $dark-blue;
+    }
+  }
+
+  &.alt {
+    color: $default-button-color;
+    border-width: $border-width;
+    border-color: $default-button-color;
+    background-color: $white;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      color: mix(white, $default-button-color, 20%);
+      border-color: mix(white, $default-button-color, 20%);
+      background-color: transparentize($default-button-color, 0.95);
+    }
+
+    &:focus {
+      background-color: transparentize($default-button-color, 0.9);
+      box-shadow: none;
+    }
+  }
+
+  @each $color, $background, $text in $wwu-colors {
+    &.#{$color} {
+      color: $text;
+      background-color: $background;
+
+      &:hover,
+      &:focus {
+        background-color: mix(white, $background, 20%);
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: $focus-shadow mix(black, $background, 20%);
+      }
+
+      &.alt {
+        color: $background;
+        border-color: $background;
+        background-color: transparent;
+
+        &:hover,
+        &:focus {
+          color: mix(white, $background, 20%);
+          border-color: mix(white, $background, 20%);
+          background-color: transparentize($background, 0.95);
+        }
+
+        &:focus {
+          background-color: transparentize($background, 0.9);
+          box-shadow: none;
+        }
+      }
     }
   }
 }
