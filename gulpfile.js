@@ -23,15 +23,18 @@
 
   var config = {};
 
-  config.patternsDir = './dist/_patterns';
+  config.patterns = {
+    dir: './dist/_patterns'
+  };
 
   config.sass = {
-    srcFiles: [
+    src: [
       './dist/sass/*.scss'
     ],
-    watchFiles: [
+    dest: './dist/css',
+    watch: [
       './dist/sass/**/*.scss',
-      config.patternsDir + '/**/*.scss',
+      config.patterns.dir + '/**/*.scss',
     ],
     options: {
       includePaths: [
@@ -42,16 +45,15 @@
         './node_modules/singularitygs/stylesheets'
       ],
       outputStyle: 'expanded'
-    },
-    destDir: './dist/css'
+    }
   };
 
   config.patternLab = {
     dir: './pattern-lab',
-    watchFiles: [
-      config.patternsDir + '/**/*.twig',
-      config.patternsDir + '/**/*.json',
-      config.patternsDir + '/**/*.yml'
+    watch: [
+      config.patterns.dir + '/**/*.twig',
+      config.patterns.dir + '/**/*.json',
+      config.patterns.dir + '/**/*.yml'
     ],
     publicCssDir: './pattern-lab/public/css'
   };
@@ -60,19 +62,19 @@
    * Processes Sass files.
    */
   gulp.task('sass', function () {
-    return gulp.src(config.sass.srcFiles)
+    return gulp.src(config.sass.src)
     .pipe(sassGlob())
     .pipe(sourcemaps.init())
     .pipe(sass(config.sass.options).on('error', sass.logError))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(config.sass.destDir));
+    .pipe(gulp.dest(config.sass.dest));
   });
 
   /**
    * Lints Sass files.
    */
   gulp.task('sass:lint', function () {
-    return gulp.src(config.sass.srcFiles)
+    return gulp.src(config.sass.src)
     .pipe(sassLint())
     .pipe(sassLint.format());
   });
@@ -82,7 +84,7 @@
    */
   gulp.task('pl:css', function () {
     if (isDirectory(config.patternLab.dir)) {
-      return gulp.src(config.sass.destDir + '/**/*.css')
+      return gulp.src(config.sass.dest + '/**/*.css')
       .pipe(gulp.dest(config.patternLab.publicCssDir));
     }
     else {
@@ -106,17 +108,17 @@
    * Sets watch tasks.
    */
   gulp.task('watch', function () {
-    gulp.watch(config.sass.watchFiles, function () {
+    gulp.watch(config.sass.watch, function () {
       runSequence('sass', 'pl:css');
     });
-    gulp.watch(config.patternLab.watchFiles, ['pl:generate']);
+    gulp.watch(config.patternLab.watch, ['pl:generate']);
   });
 
   /**
    * Clean generated CSS files.
    */
   gulp.task('clean:css', function () {
-    return gulp.src([config.sass.destDir, config.patternLab.publicCssDir], {read: false})
+    return gulp.src([config.sass.dest, config.patternLab.publicCssDir], {read: false})
     .pipe(clean());
   });
 
