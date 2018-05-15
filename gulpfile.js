@@ -31,7 +31,7 @@
     src: [
       './source/sass/*.scss'
     ],
-    dest: './dist/css',
+    dest: './build/css',
     watch: [
       './source/sass/**/*.scss',
       config.patterns.dir + '/**/*.scss',
