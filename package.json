@@ -12,6 +12,7 @@
     "gulp-sass-glob": "^1.0.8",
     "gulp-sass-lint": "^1.3.4",
     "gulp-sourcemaps": "^1.12.1",
+    "gulp-clean": "~0.4.0",
     "run-sequence": "^2.2.1"
   },
   "repository": {

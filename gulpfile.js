@@ -3,13 +3,13 @@
   'use strict';
 
   const fs = require('fs');
-  const path = require('path');
   const gulp = require('gulp');
   const run = require('gulp-run');
   const sass = require('gulp-sass');
   const sassGlob = require('gulp-sass-glob');
   const sassLint = require('gulp-sass-lint');
   const sourcemaps = require('gulp-sourcemaps');
+  const clean = require('gulp-clean');
   const runSequence = require('run-sequence');
 
   function isDirectory(dir) {
@@ -31,8 +31,7 @@
     ],
     watchFiles: [
       './dist/sass/**/*.scss',
-      path.join(config.patternsDir, '**/*.scss'),
-      './node_modules/shila-css/**/*.scss'
+      config.patternsDir + '/**/*.scss',
     ],
     options: {
       includePaths: [
@@ -58,9 +57,21 @@
   };
 
   /**
+   * Processes Sass files.
+   */
+  gulp.task('sass', function () {
+    return gulp.src(config.sass.srcFiles)
+    .pipe(sassGlob())
+    .pipe(sourcemaps.init())
+    .pipe(sass(config.sass.options).on('error', sass.logError))
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(config.sass.destDir));
+  });
+
+  /**
    * Lints Sass files.
    */
-  gulp.task('lint:sass', function () {
+  gulp.task('sass:lint', function () {
     return gulp.src(config.sass.srcFiles)
     .pipe(sassLint())
     .pipe(sassLint.format());
@@ -69,10 +80,13 @@
   /**
    * Copies CSS files to Pattern Lab's public dir.
    */
-  gulp.task('copy-css', function () {
+  gulp.task('pl:css', function () {
     if (isDirectory(config.patternLab.dir)) {
       return gulp.src(config.sass.destDir + '/**/*.css')
-      .pipe(gulp.dest(config.patternLab.publicCssDir))
+      .pipe(gulp.dest(config.patternLab.publicCssDir));
+    }
+    else {
+      return false;
     }
   });
 
@@ -83,41 +97,33 @@
     if (isDirectory(config.patternLab.dir)) {
       return run('php ' + config.patternLab.dir + '/core/console --generate').exec();
     }
+    else {
+      return false;
+    }
   });
 
   /**
-   * Processes Sass files and updates Browsersync.
-   */
-  gulp.task('sass', function () {
-    return gulp.src(config.sass.srcFiles)
-    .pipe(sassGlob())
-    .pipe(sourcemaps.init())
-    .pipe(sass(config.sass.options).on('error', sass.logError))
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(config.sass.destDir))
-  });
-
-  /**
-   * Task sequence to run when Sass files have changed.
-   */
-  gulp.task('sass-change', function () {
-    runSequence('sass', 'copy-css');
-  });
-
-  /**
-   * Task sequence to run when pattern files have changed.
-   */
-  gulp.task('patterns-change', function () {
-    runSequence('pl:generate', 'bs:reload');
-  });
-
-  /**
-   * Sets up Browsersync and watchers.
+   * Sets watch tasks.
    */
   gulp.task('watch', function () {
-    gulp.watch(config.sass.watchFiles, ['sass-change']);
-    gulp.watch(config.patternLab.watchFiles, ['patterns-change']);
+    gulp.watch(config.sass.watchFiles, function () {
+      runSequence('sass', 'pl:css');
+    });
+    gulp.watch(config.patternLab.watchFiles, ['pl:generate']);
   });
+
+  /**
+   * Clean generated CSS files.
+   */
+  gulp.task('clean:css', function () {
+    return gulp.src([config.sass.destDir, config.patternLab.publicCssDir], {read: false})
+    .pipe(clean());
+  });
+
+  /**
+   * Run clean tasks.
+   */
+  gulp.task('clean', ['clean:css']);
 
   /**
    * Gulp default task.
