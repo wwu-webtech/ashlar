@@ -1,20 +1,24 @@
 /**
- * @file
- * 00-atoms/00-global/color/_color-used.scss
- */
+* @file
+* 00-atoms/00-global/color/_color-used.scss
+*/
 
- $link-color: $blue;
- $link-color--hover: $red;
- $light-link-color: $light-blue;
- $light-link-color--hover: $light-green;
+// Text Colors
+$link-color: $blue;
+$link-color--hover: $red;
+$link-color-light: $light-blue;
+$link-color-light--hover: $light-green;
 
- // An array of main wwu colors, useful for iterating over all colors
- // contains (class-name, $color-variable, $text-color)
- $wwu-colors: (
-    (dark-blue, $dark-blue, $white),
-    (blue, $blue, $white),
-    (yellow, $yellow, $black),
-    (dark-green, $dark-green, $white),
-    (light-green, $light-green, $black),
-    (red, $red, $white)
-  );
+$heading-color: $black;
+$heading-color-light: $white;
+
+// An array of main wwu colors, useful for iterating over all colors
+// contains (class-name, $color-variable, $text-color)
+$wwu-colors: (
+  (dark-blue, $dark-blue, $white),
+  (blue, $blue, $white),
+  (yellow, $yellow, $black),
+  (dark-green, $dark-green, $white),
+  (light-green, $light-green, $black),
+  (red, $red, $white)
+);

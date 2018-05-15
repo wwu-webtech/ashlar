@@ -1,19 +1,19 @@
 /**
 * @file
-* 00-atoms/01-text/_links.scss
+* 00-atoms/01-text/links/_links.scss
 */
 
 a {
   @include transition($fast-transition-speed, $standard-ease);
   transition-property: color;
   text-decoration: none;
-  color: $blue;
+  color: $link-color;
 
   &:active,
   &:focus,
   &:hover {
     text-decoration: none;
-    color: $red;
+    color: $link-color--hover;
   }
 
   &:focus {
@@ -23,12 +23,12 @@ a {
 
 .dark-bg {
   a {
-    color: $light-blue;
+    color: $link-color-light;
 
     &:active,
     &:focus,
     &:hover {
-      color: $light-green;
+      color: $link-color-light--hover;
     }
   }
 }
