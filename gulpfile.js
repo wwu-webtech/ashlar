@@ -24,21 +24,21 @@
   var config = {};
 
   config.patterns = {
-    dir: './dist/_patterns'
+    dir: './src/_patterns'
   };
 
   config.sass = {
     src: [
-      './dist/sass/*.scss'
+      './src/sass/*.scss'
     ],
     dest: './dist/css',
     watch: [
-      './dist/sass/**/*.scss',
+      './src/sass/**/*.scss',
       config.patterns.dir + '/**/*.scss',
     ],
     options: {
       includePaths: [
-        './dist/sass',
+        './src/sass',
         './node_modules/shila-css',
         './node_modules/breakpoint-sass/stylesheets',
         './node_modules/sass-toolkit/stylesheets',
