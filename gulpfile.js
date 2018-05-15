@@ -66,7 +66,7 @@
     .pipe(sassGlob())
     .pipe(sourcemaps.init())
     .pipe(sass(config.sass.options).on('error', sass.logError))
-    .pipe(sourcemaps.write('./'))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(config.sass.dest));
   });
 
