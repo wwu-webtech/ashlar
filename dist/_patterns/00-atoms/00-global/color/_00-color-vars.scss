@@ -17,6 +17,10 @@ $light-green: #bad80a;
 $red: #cc2d30;
 $yellow: #ffd14b;
 
-// Extra colors
+// Almost brand colors
 $light-blue: #52bcff;
 $green: #5da225;
+
+// Extra colors
+$dark-blue-lighter: mix(white, $dark-blue, 20%);
+$dark-blue-darker: mix(black, $dark-blue, 20%);

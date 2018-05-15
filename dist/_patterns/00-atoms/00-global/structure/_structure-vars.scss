@@ -4,13 +4,15 @@
  */
 
 /* Spacing */
-// Global
+// Global variables
 $standard-spacing: 18px;
 
-// Used
+// Used variables
 $heading-line-height: $standard-spacing;
 $heading-margin-top: $standard-spacing * 1.5;
 $heading-margin-bottom: $standard-spacing;
+
+$paragraph-margin-bottom: $standard-spacing;
 
 $button-padding: $standard-spacing;
 $menu-padding: $standard-spacing / 2;
@@ -20,7 +22,11 @@ $border-width: 2px;
 $button-border-radius: 40px 40px 0 40px;
 $button-border-radius-alt: 50% 50% 0 50%;
 
+$focus-shadow: 2px 2px 0 1px;
+
 /* Layout */
 $grid-template: 1fr 1fr 1fr;
 $max-content-width: 1100px;
 $main-menu-height: 94px;
+
+$button-max-width: 300px;

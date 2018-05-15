@@ -4,7 +4,7 @@
 */
 
 a {
-  @include transition($fast-transition-speed, $standard-ease);
+  @include transition($link-transition-speed, $link-transition-ease);
   transition-property: color;
   text-decoration: none;
   color: $link-color;
@@ -33,17 +33,6 @@ a {
   }
 }
 
-p {
-  a {
-    text-decoration: underline;
-
-    &:hover,
-    &:focus {
-      text-decoration: none;
-    }
-  }
-}
-
 h1,
 h2,
 h3,
@@ -56,6 +45,17 @@ h6 {
     &:hover,
     &:focus {
       border-color: transparent;
+    }
+  }
+}
+
+p {
+  a {
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
     }
   }
 }
