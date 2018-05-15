@@ -52,14 +52,14 @@ Open the .lando.yml file and replace the text with this lando profile
 
         name: wwu-style-guide
         recipe: drupal8
+
         config:
           webroot: .
+          drush: global:8.1.16
 
-        # Additional Services
         services:
           database:
             type: mysql:5.7
-          # Node
           node:
             type: node:8
             globals:
@@ -74,7 +74,6 @@ Open the .lando.yml file and replace the text with this lando profile
             service: node
 
 To spin up a local server and install required services run `lando start`
-
 
 Open one of the URLs output to the screen in a browser (something like `http://localhost:32787` or `http://my-app-name.lndo.site`) and follow the on screen instructions to install Drupal
 
