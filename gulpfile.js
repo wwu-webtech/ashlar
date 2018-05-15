@@ -82,7 +82,7 @@
   /**
    * Copies CSS files to Pattern Lab's public dir.
    */
-  gulp.task('pl:css', function () {
+  gulp.task('patternlab:css', function () {
     if (isDirectory(config.patternLab.dir)) {
       return gulp.src(config.sass.dest + '/**/*.css')
       .pipe(gulp.dest(config.patternLab.publicCssDir));
@@ -95,7 +95,7 @@
   /**
    * Generates Pattern Lab front-end.
    */
-  gulp.task('pl:generate', function () {
+  gulp.task('patternlab:generate', function () {
     if (isDirectory(config.patternLab.dir)) {
       return run('php ' + config.patternLab.dir + '/core/console --generate').exec();
     }
@@ -109,9 +109,9 @@
    */
   gulp.task('watch', function () {
     gulp.watch(config.sass.watch, function () {
-      runSequence('sass', 'pl:css');
+      runSequence('sass', 'patternlab:css');
     });
-    gulp.watch(config.patternLab.watch, ['pl:generate']);
+    gulp.watch(config.patternLab.watch, ['patternlab:generate']);
   });
 
   /**
@@ -131,7 +131,7 @@
    * Gulp default task.
    */
   gulp.task('default', function () {
-    runSequence('sass', 'pl:generate', 'watch');
+    runSequence('sass', 'patternlab:generate', 'watch');
   });
 
 }());
