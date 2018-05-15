@@ -93,25 +93,12 @@
   });
 
   /**
-   * Generates Pattern Lab front-end.
-   */
-  gulp.task('patternlab:generate', function () {
-    if (isDirectory(config.patternLab.dir)) {
-      return run('php ' + config.patternLab.dir + '/core/console --generate').exec();
-    }
-    else {
-      return false;
-    }
-  });
-
-  /**
    * Sets watch tasks.
    */
   gulp.task('watch', function () {
     gulp.watch(config.sass.watch, function () {
       runSequence('sass', 'patternlab:css');
     });
-    gulp.watch(config.patternLab.watch, ['patternlab:generate']);
   });
 
   /**
@@ -131,7 +118,7 @@
    * Gulp default task.
    */
   gulp.task('default', function () {
-    runSequence('sass', 'patternlab:generate', 'watch');
+    runSequence('sass');
   });
 
 }());
