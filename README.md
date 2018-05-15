@@ -33,7 +33,7 @@ This is great because:
 ## Getting Started
 
 ### I. Lando
-Download and install the latest version of [Lando](https://github.com/lando/lando/releases)
+0. Download and install version v3.0.0-beta.39 of lando (or the latest **stable** version. Be sure to read the release notes, some versions contain hot fixes that will cause problems in this installation process) [Lando](https://github.com/lando/lando/releases)
 
 ### II. Drupal
 Download the latest stable version of [Drupal 8](https://www.drupal.org/download)
@@ -48,43 +48,32 @@ In the terminal, run
   * Webroot should be this folder `.`
   * You can call the app whatever you want (Ex: Living Style Guide)
 
-Open the .lando.yml file and replace the text with this lando profile (latest version of this profile available on [bitbucket](https://bitbucket.org/wwuweb/lando-profiles/src/223427927f65eba5c4a628f55909e8645e22e990/.lando.yml-shila?at=master&fileviewer=file-view-default))
+Open the .lando.yml file and replace the text with this lando profile
 
-    name: your-app-name
-    recipe: drupal8
-    config:
-      webroot: .
+        name: wwu-style-guide
+        recipe: drupal8
 
-    # Additional Services
-    services:
-    # Ruby
-      ruby:
-       type: ruby:2.4
-       globals:
-        bundler: "latest"
+        config:
+          webroot: .
+          drush: global:8.1.16
 
-      # Node
-      node:
-        type: node:8
-        globals:
-          gulp-cli: "latest"
+        services:
+          database:
+            type: mysql:5.7
+          node:
+            type: node:8
+            globals:
+              gulp-cli: "latest"
 
-    tooling:
-      npm:
-        service: node
-      node:
-        service: node
-      gulp:
-        service: node
-      bundle:
-        service: ruby
+        tooling:
+          npm:
+            service: node
+          node:
+            service: node
+          gulp:
+            service: node
 
-To spin up a local server and install required services run:
-
-    lando start
-    lando composer install
-    lando composer require drush/drush
-    lando npm install
+To spin up a local server and install required services run `lando start`
 
 Open one of the URLs output to the screen in a browser (something like `http://localhost:32787` or `http://my-app-name.lndo.site`) and follow the on screen instructions to install Drupal
 
@@ -101,7 +90,7 @@ Download these modules:
   * [Component Libraries](https://www.drupal.org/project/components)
   * [UI Patterns](https://www.drupal.org/project/ui_patterns)
 
-Extract the module archives into the `drupal-8.x.x/modules` folder
+Extract the module archives into the `drupal-8.x.x/modules` folder. Note: UI Patterns is optional, but this theme will not work unless Component Libraries is installed and enabled.
 
 In your browser, enable the modules under the **Extend** tab
 
@@ -109,10 +98,10 @@ Clone Shila into the `drupal-8.x.x/themes` folder
 
     git clone https://bitbucket.org/wwuweb/wwu-shila
 
-Enable the them in Drupal under the **Appearance** tab and set it as default. Navigate into `drupal-8.x.x/themes/wwu-shila` and run
+Enable the theme in Drupal under the **Appearance** tab and set it as default. Navigate into `drupal-8.x.x/themes/wwu-shila` and run
 
     lando npm install
-    lando gulp sass    
+    lando gulp sass
 
 At this point you should be able to navigate to the site and see some very basic styles
 
@@ -139,9 +128,7 @@ After making changes to scss files etc, you'll need to compile the theme  cd `dr
 
     lando gulp sass
 
-To see the changes in Drupal, you'll probably need to clear the registry
-
-    lando drush cr
+To see the changes in Drupal, you'll probably need to clear the cache. You can do this within drupal, or you can install drush via composer with `composer require drush/drush` and run `lando drush cr`
 
 To see the changes in pattern lab, you'll need to regenerate and reserve the static site
 

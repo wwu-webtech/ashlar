@@ -13,16 +13,20 @@
       a {
         position: relative;
         display: table-cell;
+        box-sizing: border-box;
         max-width: 280px;
-        height: 86px;
-        padding: $button-padding;
+        height: $main-menu-height;
+        padding: 0 $button-padding;
         text-align: center;
         vertical-align: middle;
         white-space: normal;
         text-transform: uppercase;
         color: $white;
-        border-width: 0;
+        border-width: $menu-padding;
+        border-style: solid;
+        border-color: $white;
         border-radius: 0;
+        outline: none;
         background-color: $blue;
         line-height: 1.4em;
 
@@ -38,15 +42,12 @@
           transition: border $fast-transition-speed $standard-ease;
           transform: translatex(-50%);
         }
-
-        /* Creates border on tab
         &:before {
           border-top: solid 36px transparent;
           border-right: solid 68px transparent;
           border-bottom: solid 0 transparent;
           border-left: solid 68px transparent;
-        }*/
-
+        }
         &:after {
           border-top: solid 16px transparent;
           border-right: solid 36px transparent;
@@ -54,14 +55,15 @@
           border-left: solid 36px transparent;
         }
 
+        /* Button hover & focus styles */
         &:hover,
         &:focus {
           background-color: mix(black, $blue, 20%);
           box-shadow: none;
 
-          //&:before {
-          //  border-top: solid 36px $white;
-          //}
+          &:before {
+            border-top: solid 36px $white;
+          }
 
           &:after {
             border-top: solid 16px mix(black, $blue, 20%);
