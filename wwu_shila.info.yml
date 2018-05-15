@@ -1,11 +1,10 @@
 name: WWU Shila
 type: theme
 description: An atomic design Drupal theme for Western Washington University, based on Shila Theme
-package: Shila
 core: 8.x
 libraries:
   - core/normalize
-  - shila_theme/global-styling
+  - wwu_shila/global-styling
 regions:
   header: Header
   content: Content
