@@ -1,7 +1,7 @@
 /**
-  * @file
-  * 00-atoms/buttons/_image-buttons.scss
-  */
+* @file
+* 00-atoms/buttons/_image-buttons.scss
+*/
 $button-size: 200px;
 
 .button {
@@ -36,7 +36,7 @@ $button-size: 200px;
       height: $button-size;
       content: "";
       border: solid $dark-blue 3px;
-      border-radius: 50% 50% 0 50%;
+      border-radius: $button-border-radius;
 
       grid-column-start: 1;
       grid-row-start: 1;
@@ -47,7 +47,7 @@ $button-size: 200px;
       z-index: -1;
       width: $button-size;
       height: $button-size;
-      border-radius: 50% 50% 0 50%;
+      border-radius: $button-border-radius;
 
       grid-column-start: 1;
       grid-row-start: 1;
@@ -55,7 +55,7 @@ $button-size: 200px;
 
     &:hover,
     &:focus {
-      color: $link-hover-color;
+      color: $link-color--hover;
       background: none;
       box-shadow: none;
 
