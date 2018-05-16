@@ -12,6 +12,7 @@
   const sourcemaps = require('gulp-sourcemaps');
   const uglify = require('gulp-uglify');
   const rename = require('gulp-rename');
+  const concat = require('gulp-concat');
   const wrap = require('gulp-wrap');
   const tap = require('gulp-tap');
   const clean = require('gulp-clean');
@@ -60,7 +61,8 @@
       config.patterns.dir + '/**/*.json',
       config.patterns.dir + '/**/*.yml'
     ],
-    publicCssDir: './pattern-lab/public/css'
+    publicCssDir: './pattern-lab/public/css',
+    publicJsDir: './pattern-lab/public/js'
   };
 
   config.js = {
@@ -112,19 +114,6 @@
   });
 
   /**
-   * Copies CSS files to Pattern Lab's public dir.
-   */
-  gulp.task('patternlab:css', function () {
-    if (isDirectory(config.patternLab.dir)) {
-      return gulp.src(config.sass.dest + '/**/*.css')
-      .pipe(gulp.dest(config.patternLab.publicCssDir));
-    }
-    else {
-      return false;
-    }
-  });
-
-  /**
    * Uglify JavaScript.
    */
   gulp.task('js', function () {
@@ -139,6 +128,40 @@
       .pipe(gulp.dest(config.js.dest));
     }));
   });
+
+  /**
+   * Copies CSS files to Pattern Lab's public dir.
+   */
+  gulp.task('patternlab:css', function () {
+    if (isDirectory(config.patternLab.dir)) {
+      return gulp.src(config.sass.dest + '/**/*.css')
+      .pipe(gulp.dest(config.patternLab.publicCssDir));
+    }
+    else {
+      return false;
+    }
+  });
+
+  /**
+   * Generate Pattern Lab JavaScript.
+   */
+  gulp.task('patternlab:js', function () {
+    if (isDirectory(config.patternLab.dir)) {
+      return gulp.src(config.js.src)
+      .pipe(concat('patterns.js'))
+      .pipe(wrap('$(function () {\n<%= contents %>\n});'))
+      .pipe(uglify(config.uglify))
+      .pipe(gulp.dest(config.patternLab.publicJsDir));
+    }
+    else {
+      return false;
+    }
+  });
+
+  /**
+   * Run Pattern Lab tasks.
+   */
+  gulp.task('patternlab', ['patternlab:css', 'patternlab:js']);
 
   /**
    * Sets watch tasks.
@@ -161,7 +184,7 @@
    * Clean uglified JS files.
    */
   gulp.task('clean:js', function () {
-    return gulp.src([config.js.dest], { read: false })
+    return gulp.src([config.js.dest, config.patternLab.publicJsDir], { read: false })
     .pipe(clean());
   });
 
