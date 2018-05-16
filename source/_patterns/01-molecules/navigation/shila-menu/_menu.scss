@@ -1,0 +1,17 @@
+/**
+* @file
+* 00-molecules/navigation/menu/_menu.scss
+*/
+
+.menu {
+  padding: 0;
+  list-style: none;
+
+  &.gray {
+    background-color: $pale-gray;
+  }
+
+  &.dark-blue {
+    background-color: $dark-blue;
+  }
+}
