@@ -126,7 +126,17 @@ To serve the Pattern Lab files locally, you'll need to run PHP directly on your 
 
 Navigate to http://localhost:8080 in your browser to view the Pattern Lab standalone site. You can leave the server running by opening a new terminal window and running this command, which will allow you to continue working with other commands without needing to repeatedly restart the Pattern Lab server.
 
-### Editing the Theme
+#### Installing standalone Pattern Lab
+One thing I found helpful was to install a pre-made Pattern Lab twig edition separately from the whole Drupal installation, to have a different and more complete template to refer to. The easiest way to do this is to download one from [this page](https://github.com/pattern-lab/edition-php-twig-standard/releases)
+
+You can view the demo page by running the following within the `twig-standard` folder
+
+    php core/console --generate
+    php core/console --server --port 8000
+
+(note: I specified a port here so that both instances of pattern lab can be served locally at the same time, the default port is 8080)
+
+### V. Editing the Theme
 Changes to the theme will mostly happen in files contained in `wwu-shila/dist/_patterns`. The `_patterns` folder is organized into the atoms -> molecules -> organisms -> templates -> pages scheme. Sub folders dictate how the static site will nest different components.
 
 #### Drupal Site
@@ -145,12 +155,3 @@ Then, regenerate the static site:
 
     php pattern-lab/core/console --generate
 
-### Installing standalone Pattern Lab
-One thing I found helpful was to install a pre-made Pattern Lab twig edition separately from the whole Drupal installation, to have a different and more complete template to refer to. The easiest way to do this is to download one from [this page](https://github.com/pattern-lab/edition-php-twig-standard/releases)
-
-You can view the demo page by running the following within the `twig-standard` folder
-
-    php core/console --generate
-    php core/console --server --port 8000
-
-(note: I specified a port here so that both instances of pattern lab can be served locally at the same time, the default port is 8080)
