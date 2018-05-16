@@ -1,0 +1,29 @@
+/**
+* @file
+* 00-atoms/00-global/color/_color-used.scss
+*/
+
+// Text Colors
+$text-color: $black;
+$text-color-light: $white;
+
+$link-color: $blue;
+$link-color--hover: $red;
+$link-color-light: $light-blue;
+$link-color-light--hover: $light-green;
+
+$heading-color: $dark-blue;
+$heading-color-light: $light-green;
+
+$default-button-color: $dark-blue;
+
+// An array of main wwu colors, useful for iterating over all colors
+// contains (class-name, $color-variable, $text-color)
+$wwu-colors: (
+  (dark-blue, $dark-blue, $white),
+  (blue, $blue, $white),
+  (yellow, $yellow, $black),
+  (dark-green, $dark-green, $white),
+  (light-green, $light-green, $black),
+  (red, $red, $white)
+);

@@ -18,35 +18,33 @@ input,
 label,
 select {
   display: block;
-  font-family: $shila-base-font-family;
   font-size: 1rem;
 }
 #{$shila-all-text-inputs},
 select[multiple=multiple] {
   box-sizing: border-box;
   width: 100%;
-  margin-bottom: $shila-small-spacing;
-  padding: $shila-base-spacing / 3;
-  transition: border-color $shila-base-duration $shila-base-timing;
-  border: $shila-base-border;
-  border-radius: $shila-base-border-radius;
-  background-color: $shila-form-element-background-color;
-  box-shadow: $shila-form-box-shadow;
-  font-family: $shila-base-font-family;
+  margin-bottom: $standard-spacing;
+  padding: $standard-spacing;
+  transition: border-color $medium-transition-speed $standard-ease;
+  border: solid $border-width $dark-blue;
+  border-radius: 0;
+  background-color: $white;
+  box-shadow: none;
   font-size: 1rem;
   &:hover {
-    border-color: shila-shade($shila-base-border-color, 20%);
+    border-color: mix(white, $dark-blue, 20%);
   }
   &:focus {
-    border-color: $shila-action-color;
     outline: none;
     box-shadow: $shila-form-box-shadow-focus;
   }
   &:disabled {
     cursor: not-allowed;
-    background-color: shila-shade($shila-form-element-background-color, 5%);
+    background-color: $white;
     &:hover {
-      border: $shila-base-border;
+      border: $gray;
+      border-width: 1px;
     }
   }
 }

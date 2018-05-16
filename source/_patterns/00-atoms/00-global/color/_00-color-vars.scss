@@ -1,0 +1,26 @@
+/**
+ * @file
+ * 00-atoms/00-global/color/_color-vars.scss
+ */
+
+// Shades of gray
+$black: #262b2f;
+$gray: #667986;
+$pale-gray: #eaedef;
+$white: #fff;
+
+// WWU brand colors
+$dark-blue: #003f87;
+$blue: #007ac8;
+$dark-green: #006b3f;
+$light-green: #bad80a;
+$red: #cc2d30;
+$yellow: #ffd14b;
+
+// Almost brand colors
+$light-blue: #52bcff;
+$green: #5da225;
+
+// Extra colors
+$dark-blue-lighter: mix(white, $dark-blue, 20%);
+$dark-blue-darker: mix(black, $dark-blue, 20%);
