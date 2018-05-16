@@ -1,0 +1,38 @@
+/**
+* @file
+* 00-molecules/navigation/wwu-menu/_wwu-menu.scss
+*/
+
+.western-quick-links {
+  font-size: 0.8em;
+
+  .menu {
+    display: flex;
+    margin: 0;
+
+    li {
+      margin: 0;
+
+      a {
+        padding: $large-spacing;
+        border-radius: $button-border-radius;
+
+        &:hover,
+        &:focus {
+          background-color: $light-green;
+        }
+
+        &.highlight {
+          color: $white;
+          background-color: $dark-blue;
+
+          &:hover,
+          &:focus {
+            color: $black;
+            background-color: $light-green;
+          }
+        }
+      }
+    }
+  }
+}
