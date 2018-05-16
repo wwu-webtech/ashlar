@@ -33,7 +33,7 @@ This is great because:
 ## Getting Started
 
 ### I. Lando
-0. Download and install version v3.0.0-beta.39 of lando (or the latest **stable** version. Be sure to read the release notes, some versions contain hot fixes that will cause problems in this installation process) [Lando](https://github.com/lando/lando/releases).
+Download and install version v3.0.0-beta.39 of lando (or the latest **stable** version. Be sure to read the release notes, some versions contain hot fixes that will cause problems in this installation process) [Lando](https://github.com/lando/lando/releases).
 
 ### II. Drupal
 Download the latest stable version of [Drupal 8](https://www.drupal.org/download)
@@ -92,9 +92,18 @@ Download these modules:
   * [Component Libraries](https://www.drupal.org/project/components)
   * [UI Patterns](https://www.drupal.org/project/ui_patterns)
 
-Extract the module archives into the `drupal-8.x.x/modules` folder. Note: UI Patterns is optional, but this theme will not work unless Component Libraries is installed and enabled.
+You can install the required Component Libraries module via composer in the root of your `drupal-8.x.x` directory:
 
-In your browser, enable the modules under the **Extend** tab.
+    lando composer require drupal/components
+
+Enable it through the Drupal interface (under the **Extend** tab) or with drush:
+
+    drush en components
+
+UI Patterns is optional, but the theme will not work unless Component Libraries is installed and enabled. It can be installed with drush:
+
+    drush dl ui_patterns
+    drush en ui_patterns
 
 Clone Shila into the `drupal-8.x.x/themes` folder:
 
@@ -108,7 +117,7 @@ Enable the theme in Drupal under the **Appearance** tab and set it as default. N
 At this point you should be able to navigate to the site and see some very basic styles.
 
 ### IV. Pattern Lab
-Within `drupal-8.x.x/themes/wwu-shila` run:
+Within `drupal-8.x.x/themes/wwu-shila` run (do NOT prefix with `lando`):
 
     ./patternlab-install.sh
 
@@ -120,11 +129,11 @@ To build the pattern lab site for the first time, run:
 
     lando php pattern-lab/core/console --generate
 
-To serve the Pattern Lab files locally, you'll need to run PHP directly on your machine (it won't work if you try to do it within lando):
+To serve the Pattern Lab files locally, you'll need to run PHP directly on your machine (do NOT prefix with `lando`; it won't work if you try to do it within lando):
 
     php pattern-lab/core/console --server
 
-Navigate to http://localhost:8080 in your browser to view the Pattern Lab standalone site. You can leave the server running by opening a new terminal window and running this command, which will allow you to continue working with other commands without needing to repeatedly restart the Pattern Lab server.
+Navigate to `http://localhost:8080` in your browser to view the Pattern Lab standalone site. You can leave the server running by opening a new terminal window and running this command, which will allow you to continue working with other commands without needing to repeatedly restart the Pattern Lab server.
 
 #### Installing standalone Pattern Lab
 One thing I found helpful was to install a pre-made Pattern Lab twig edition separately from the whole Drupal installation, to have a different and more complete template to refer to. The easiest way to do this is to download one from [this page](https://github.com/pattern-lab/edition-php-twig-standard/releases)
