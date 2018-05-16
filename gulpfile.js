@@ -9,6 +9,8 @@
   const sassGlob = require('gulp-sass-glob');
   const sassLint = require('gulp-sass-lint');
   const sourcemaps = require('gulp-sourcemaps');
+  const uglify = require('gulp-uglify');
+  const rename = require('gulp-rename');
   const clean = require('gulp-clean');
   const runSequence = require('run-sequence');
 
@@ -58,6 +60,17 @@
     publicCssDir: './pattern-lab/public/css'
   };
 
+  config.uglify = {
+    src: [
+      './source/js/*.js'
+    ],
+    dest: './dist/js',
+    watch: [
+      './source/js/**/*.js'
+    ],
+    options: {}
+  };
+
   /**
    * Processes Sass files.
    */
@@ -93,6 +106,16 @@
   });
 
   /**
+   * Uglify JavaScript.
+   */
+  gulp.task('js', function () {
+    return gulp.src(config.uglify.src)
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest(config.uglify.dest));
+  });
+
+  /**
    * Sets watch tasks.
    */
   gulp.task('watch', function () {
@@ -110,9 +133,17 @@
   });
 
   /**
+   * Clean uglified JS files.
+   */
+  gulp.task('clean:js', function () {
+    return gulp.src([config.uglify.dest], {read: false})
+    .pipe(clean());
+  });
+
+  /**
    * Run clean tasks.
    */
-  gulp.task('clean', ['clean:css']);
+  gulp.task('clean', ['clean:css', 'clean:js']);
 
   /**
    * Gulp default task.
@@ -121,4 +152,4 @@
     runSequence('sass');
   });
 
-}());
+})();

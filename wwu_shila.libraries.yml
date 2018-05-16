@@ -8,3 +8,15 @@ global-styling:
       build/css/state.css: {}
       build/css/theme.css: {}
       build/css/print.css: { media: print }
+accordion:
+  version: 1.x
+  js:
+    dist/js/01-molecules.content.accordion.js: {}
+  dependencies:
+    - core/jquery
+switcher:
+  version: 1.x
+  js:
+    dist/js/01-molecules.content.switcher.js: {}
+  dependencies:
+    - core/jquery
