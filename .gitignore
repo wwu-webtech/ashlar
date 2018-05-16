@@ -39,6 +39,9 @@ Thumbs.db
 #
 ################################################################################
 
+# Pattern Lab static assets dirrectory
+/source/pattern-lab/
+
 # Build directory
 /build/
 
