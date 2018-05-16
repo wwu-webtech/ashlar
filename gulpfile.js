@@ -3,6 +3,7 @@
   'use strict';
 
   const fs = require('fs');
+  const path = require('path');
   const gulp = require('gulp');
   const run = require('gulp-run');
   const sass = require('gulp-sass');
@@ -11,6 +12,8 @@
   const sourcemaps = require('gulp-sourcemaps');
   const uglify = require('gulp-uglify');
   const rename = require('gulp-rename');
+  const wrap = require('gulp-wrap');
+  const tap = require('gulp-tap');
   const clean = require('gulp-clean');
   const runSequence = require('run-sequence');
 
@@ -60,15 +63,25 @@
     publicCssDir: './pattern-lab/public/css'
   };
 
-  config.uglify = {
+  config.js = {
     src: [
       './source/js/*.js'
     ],
-    dest: './dist/js',
+    dest: './build/js',
     watch: [
       './source/js/**/*.js'
     ],
     options: {}
+  };
+
+  config.uglify = {
+    compress: false,
+    mangle: false,
+    output: {
+      beautify: true,
+      braces: true,
+      indent_level: 2,
+    }
   };
 
   /**
@@ -109,10 +122,17 @@
    * Uglify JavaScript.
    */
   gulp.task('js', function () {
-    return gulp.src(config.uglify.src)
-    .pipe(uglify())
-    .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest(config.uglify.dest));
+    return gulp.src(config.js.src)
+    .pipe(tap(function (file) {
+      var behaviorName = path.basename(file.path, '.js').split('.').pop();
+      var templateVariable = 'behavior';
+
+      return gulp.src(file.path)
+      .pipe(wrap({ src: 'source/js/behavior.lodash' }, { name: behaviorName }, { variable: templateVariable }))
+      .pipe(uglify(config.uglify))
+      .pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest(config.js.dest));
+    }));
   });
 
   /**
