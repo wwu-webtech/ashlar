@@ -21,7 +21,7 @@
     "gulp-wrap": "^0.13.0",
     "jquery": "^3.3.1",
     "run-sequence": "^2.2.1",
-    "vinyl-buffer": "^1.0.1",
+    "through2": "^2.0.3",
     "vinyl-source-stream": "^2.0.0"
   },
   "repository": {

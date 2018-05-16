@@ -1,0 +1,6 @@
+var $ = require("jquery");
+var context = document;
+
+$(function () {
+  <%= contents %>
+});
