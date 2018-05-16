@@ -2,9 +2,9 @@ global-styling:
   version: 1.x
   css:
     theme:
-      dist/css/base.css: {}
-      dist/css/components.css: {}
-      dist/css/layout.css: {}
-      dist/css/state.css: {}
-      dist/css/theme.css: {}
-      dist/css/print.css: { media: print }
+      build/css/base.css: {}
+      build/css/components.css: {}
+      build/css/layout.css: {}
+      build/css/state.css: {}
+      build/css/theme.css: {}
+      build/css/print.css: { media: print }
