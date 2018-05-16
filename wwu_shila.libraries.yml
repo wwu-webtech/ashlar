@@ -11,12 +11,12 @@ global-styling:
 accordion:
   version: 1.x
   js:
-    dist/js/01-molecules.content.accordion.js: {}
+    dist/js/01-molecules.content.accordion.js: { minified: true }
   dependencies:
     - core/jquery
 switcher:
   version: 1.x
   js:
-    dist/js/01-molecules.content.switcher.js: {}
+    dist/js/01-molecules.content.switcher.js: { minified: true }
   dependencies:
     - core/jquery
