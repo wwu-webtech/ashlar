@@ -50,28 +50,30 @@ In the terminal, run:
 
 Open the .lando.yml file and replace the text with this lando profile:
 
-        name: wwu-style-guide
-        recipe: drupal8
+```yaml
+name: wwu-style-guide
+recipe: drupal8
 
-        config:
-          webroot: .
-          drush: global:8.1.16
+config:
+  webroot: .
+  drush: global:8.1.16
 
-        services:
-          database:
-            type: mysql:5.7
-          node:
-            type: node:8
-            globals:
-              gulp-cli: "latest"
+services:
+  database:
+    type: mysql:5.7
+  node:
+    type: node:8
+    globals:
+      gulp-cli: "latest"
 
-        tooling:
-          npm:
-            service: node
-          node:
-            service: node
-          gulp:
-            service: node
+tooling:
+  npm:
+    service: node
+  node:
+    service: node
+  gulp:
+    service: node
+```
 
 To spin up a local server and install required services run `lando start`.
 
