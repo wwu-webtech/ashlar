@@ -18,11 +18,7 @@ $button-size: 200px;
     justify-items: center;
 
     &:before {
-      @include transition($medium-transition-speed, $standard-ease);
-      margin-right: $button-padding;
-      content: "»";
-      color: $white;
-      font-size: 3em;
+      @include transition($button-transition-speed, $button-transition-ease);
 
       grid-column-start: 1;
       grid-row-start: 1;
@@ -30,12 +26,12 @@ $button-size: 200px;
     }
 
     &:after {
-      @include transition($medium-transition-speed, $standard-ease);
+      @include transition($button-transition-speed, $button-transition-ease);
       box-sizing: border-box;
       width: $button-size;
       height: $button-size;
       content: "";
-      border: solid $dark-blue 3px;
+      border: solid $dark-blue $border-width;
       border-radius: $button-border-radius-alt;
 
       grid-column-start: 1;
@@ -43,7 +39,7 @@ $button-size: 200px;
     }
 
     img {
-      @include transition($medium-transition-speed, $standard-ease);
+      @include transition($button-transition-speed, $button-transition-ease);
       z-index: -1;
       width: $button-size;
       height: $button-size;
@@ -59,16 +55,28 @@ $button-size: 200px;
       background: none;
       box-shadow: none;
 
-      &:before {
-        color: $dark-blue;
-      }
-
       &:after {
         border-color: $blue;
       }
 
       img {
         transform: translate(5%, 5%);
+      }
+    }
+
+    &.icon {
+      &:before {
+        margin-right: $button-padding;
+        content: "»";
+        color: $white;
+        font-size: 3em;
+      }
+
+      &:hover,
+      &:focus {
+        &:before {
+          color: $dark-blue;
+        }
       }
     }
   }
