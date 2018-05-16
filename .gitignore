@@ -1,5 +1,72 @@
-.idea
-/dist/css/*
-node_modules
-/pattern-lab
-wiki
+################################################################################
+#
+# FILE EXCLUSIONS
+#
+################################################################################
+
+# Sass cache files
+*.scssc
+
+# Minified JavaScript
+*.min.js
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Packages
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Generated logo and screenshot images
+/logo.png
+/screenshot.png
+
+################################################################################
+#
+# DIRECTORY EXCLUSIONS
+#
+################################################################################
+
+# Build directory
+/build/
+
+# Distribution directory
+/dist/
+
+# Sass cache
+.sass-cache/
+
+# Eclipse project settings
+/.buildpath/
+/.project/
+/.settings/
+
+# Jetbrains project settings
+/.idea/
+
+# node-js modules
+/node_modules/
+
+# composer and ruby artifacts
+/vendor/
+
+# PatternLab
+/pattern-lab/
+
+################################################################################
+#
+# FILE INCLUSIONS
+#
+################################################################################
