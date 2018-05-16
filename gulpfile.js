@@ -2,31 +2,36 @@
 
   'use strict';
 
-  const fs = require('fs');
+  const path = require('path');
   const gulp = require('gulp');
   const run = require('gulp-run');
   const sass = require('gulp-sass');
   const sassGlob = require('gulp-sass-glob');
-  const sassLint = require('gulp-sass-lint');
   const sourcemaps = require('gulp-sourcemaps');
   const uglify = require('gulp-uglify');
   const rename = require('gulp-rename');
+  const concat = require('gulp-concat');
+  const wrap = require('gulp-wrap');
+  const tap = require('gulp-tap');
   const clean = require('gulp-clean');
+  const source = require('vinyl-source-stream');
+  const browserify = require('browserify');
   const runSequence = require('run-sequence');
-
-  function isDirectory(dir) {
-    try {
-      return fs.statSync(dir).isDirectory();
-    }
-    catch (e) {
-      return false;
-    }
-  }
 
   var config = {};
 
   config.patterns = {
     dir: './source/_patterns'
+  };
+
+  config.patternLab = {
+    cssFile: 'wwu-styleguide.css',
+    cssDest: './source/pattern-lab/css',
+    jsFile: 'wwu-styleguide.js',
+    jsDest: './source/pattern-lab/js',
+    jsTemplate: {
+      src: './source/js/patternlab.lodash'
+    }
   };
 
   config.sass = {
@@ -50,29 +55,35 @@
     }
   };
 
-  config.patternLab = {
-    dir: './pattern-lab',
-    watch: [
-      config.patterns.dir + '/**/*.twig',
-      config.patterns.dir + '/**/*.json',
-      config.patterns.dir + '/**/*.yml'
-    ],
-    publicCssDir: './pattern-lab/public/css'
-  };
-
-  config.uglify = {
+  config.js = {
     src: [
       './source/js/*.js'
     ],
-    dest: './dist/js',
+    dest: './build/js',
     watch: [
       './source/js/**/*.js'
     ],
-    options: {}
+    template: {
+      src: './source/js/behavior.lodash'
+    },
+    templateVariable: 'behavior',
+    rename: {
+      suffix: '.min'
+    }
+  };
+
+  config.uglify = {
+    compress: false,
+    mangle: false,
+    output: {
+      beautify: true,
+      braces: true,
+      indent_level: 2,
+    }
   };
 
   /**
-   * Processes Sass files.
+   * Generate CSS.
    */
   gulp.task('sass', function () {
     return gulp.src(config.sass.src)
@@ -84,59 +95,85 @@
   });
 
   /**
-   * Lints Sass files.
-   */
-  gulp.task('sass:lint', function () {
-    return gulp.src(config.sass.src)
-    .pipe(sassLint())
-    .pipe(sassLint.format());
-  });
-
-  /**
-   * Copies CSS files to Pattern Lab's public dir.
-   */
-  gulp.task('patternlab:css', function () {
-    if (isDirectory(config.patternLab.dir)) {
-      return gulp.src(config.sass.dest + '/**/*.css')
-      .pipe(gulp.dest(config.patternLab.publicCssDir));
-    }
-    else {
-      return false;
-    }
-  });
-
-  /**
-   * Uglify JavaScript.
+   * Generate JS.
    */
   gulp.task('js', function () {
-    return gulp.src(config.uglify.src)
-    .pipe(uglify())
-    .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest(config.uglify.dest));
+    return gulp.src(config.js.src)
+    .pipe(tap(function (file) {
+      var behaviorName = path.basename(file.path, '.js').split('.').pop();
+
+      return gulp.src(file.path)
+      .pipe(wrap(config.js.template, { name: behaviorName }, { variable: config.js.templateVariable }))
+      .pipe(uglify(config.uglify))
+      .pipe(rename(config.js.rename))
+      .pipe(gulp.dest(config.js.dest));
+    }));
   });
 
   /**
-   * Sets watch tasks.
+   * Generate Pattern Lab CSS.
+   */
+  gulp.task('patternlab:sass', function () {
+    return gulp.src(config.sass.src)
+    .pipe(concat(config.patternLab.cssFile))
+    .pipe(sassGlob())
+    .pipe(sourcemaps.init())
+    .pipe(sass(config.sass.options).on('error', sass.logError))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(config.patternLab.cssDest));
+  });
+
+  /**
+   * Generate Pattern Lab JS: concatenate, wrap, and format.
+   */
+  gulp.task('patternlab:js:pre', function () {
+    return gulp.src(config.js.src)
+    .pipe(concat(config.patternLab.jsFile))
+    .pipe(wrap(config.patternLab.jsTemplate))
+    .pipe(uglify(config.uglify))
+    .pipe(gulp.dest(config.patternLab.jsDest));
+  });
+
+  /**
+   * Generate Pattern Lab JS: browserify (include "required" libraries).
+   */
+  gulp.task('patternlab:js:post', ['patternlab:js:pre'], function () {
+    return browserify(config.patternLab.jsDest + '/' + config.patternLab.jsFile).bundle()
+    .pipe(source(config.patternLab.jsFile))
+    .pipe(gulp.dest(config.patternLab.jsDest));
+  });
+
+  /**
+   * Generate Pattern Lab JS: wrapper task.
+   */
+  gulp.task('patternlab:js', ['patternlab:js:post']);
+
+  /**
+   * Run Pattern Lab tasks.
+   */
+  gulp.task('patternlab', ['patternlab:sass', 'patternlab:js']);
+
+  /**
+   * Set watch tasks.
    */
   gulp.task('watch', function () {
-    gulp.watch(config.sass.watch, function () {
-      runSequence('sass', 'patternlab:css');
-    });
+    gulp.watch(config.sass.watch, ['sass', 'patternlab:sass']);
+    gulp.watch(config.js.watch, ['js', 'patternlab:js']);
   });
 
   /**
    * Clean generated CSS files.
    */
   gulp.task('clean:css', function () {
-    return gulp.src([config.sass.dest, config.patternLab.publicCssDir], {read: false})
+    return gulp.src([config.sass.dest], { read: false })
     .pipe(clean());
   });
 
   /**
-   * Clean uglified JS files.
+   * Clean generated JS files.
    */
   gulp.task('clean:js', function () {
-    return gulp.src([config.uglify.dest], {read: false})
+    return gulp.src([config.js.dest], { read: false })
     .pipe(clean());
   });
 
@@ -149,7 +186,7 @@
    * Gulp default task.
    */
   gulp.task('default', function () {
-    runSequence('sass');
+    runSequence('sass', 'js');
   });
 
 })();

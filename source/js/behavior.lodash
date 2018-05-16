@@ -1,0 +1,11 @@
+(function ($, Drupal, window, document, undefined) {
+
+  Drupal.behaviors.<%= behavior.name %> = {
+
+    attach: function (context, settings) {
+      <%= behavior.contents %>
+    }
+
+  };
+
+})(jQuery, Drupal, this, this.document);
