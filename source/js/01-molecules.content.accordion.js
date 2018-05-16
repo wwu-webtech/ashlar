@@ -1,5 +1,7 @@
 (function ($, Drupal, window, document, undefined) {
 
+  'use strict';
+
   Drupal.behaviors.accordion = {
 
     attach: function (context) {

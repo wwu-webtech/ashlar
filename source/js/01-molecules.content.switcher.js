@@ -1,5 +1,7 @@
 (function ($, Drupal, window, document, undefined) {
 
+  'use strict';
+
   Drupal.behaviors.switcher = {
 
     attach: function (context) {
