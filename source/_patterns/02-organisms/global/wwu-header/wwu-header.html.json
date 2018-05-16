@@ -1,0 +1,13 @@
+{
+    "attributes": {
+        "Attribute()": {
+            "class": ["region", "region--header"]
+        }
+    },
+    "content": {
+        "join()": [
+            "organisms-shila-branding-html",
+            "molecules-shila-navigation-html-main"
+        ]
+    }
+}
