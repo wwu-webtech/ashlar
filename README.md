@@ -118,11 +118,11 @@ Once the install script has completed, run:
 
 To build the pattern lab site for the first time, run:
 
-    lando php core/console --generate
+    lando php pattern-lab/core/console --generate
 
 To serve the Pattern Lab files locally, you'll need to run PHP directly on your machine (it won't work if you try to do it within lando):
 
-    php core/console --server
+    php pattern-lab/core/console --server
 
 Navigate to http://localhost:8080 in your browser to view the Pattern Lab standalone site. You can leave the server running by opening a new terminal window and running this command, which will allow you to continue working with other commands without needing to repeatedly restart the Pattern Lab server.
 
