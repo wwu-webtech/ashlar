@@ -71,7 +71,13 @@
     watch: [
       './source/js/**/*.js'
     ],
-    options: {}
+    template: {
+      src: 'source/js/behavior.lodash'
+    },
+    templateVariable: 'behavior',
+    rename: {
+      suffix: '.min'
+    }
   };
 
   config.uglify = {
@@ -125,12 +131,11 @@
     return gulp.src(config.js.src)
     .pipe(tap(function (file) {
       var behaviorName = path.basename(file.path, '.js').split('.').pop();
-      var templateVariable = 'behavior';
 
       return gulp.src(file.path)
-      .pipe(wrap({ src: 'source/js/behavior.lodash' }, { name: behaviorName }, { variable: templateVariable }))
+      .pipe(wrap(config.js.template, { name: behaviorName }, { variable: config.js.templateVariable }))
       .pipe(uglify(config.uglify))
-      .pipe(rename({suffix: '.min'}))
+      .pipe(rename(config.js.rename))
       .pipe(gulp.dest(config.js.dest));
     }));
   });
@@ -148,7 +153,7 @@
    * Clean generated CSS files.
    */
   gulp.task('clean:css', function () {
-    return gulp.src([config.sass.dest, config.patternLab.publicCssDir], {read: false})
+    return gulp.src([config.sass.dest, config.patternLab.publicCssDir], { read: false })
     .pipe(clean());
   });
 
@@ -156,7 +161,7 @@
    * Clean uglified JS files.
    */
   gulp.task('clean:js', function () {
-    return gulp.src([config.uglify.dest], {read: false})
+    return gulp.src([config.js.dest], { read: false })
     .pipe(clean());
   });
 
@@ -169,7 +174,7 @@
    * Gulp default task.
    */
   gulp.task('default', function () {
-    runSequence('sass');
+    runSequence('sass', 'js');
   });
 
 })();
