@@ -36,9 +36,7 @@ This is great because:
 Download and install version v3.0.0-beta.39 of lando (or the latest **stable** version. Be sure to read the release notes, some versions contain hot fixes that will cause problems in this installation process) [Lando](https://github.com/lando/lando/releases).
 
 ### II. Drupal
-Download the latest stable version of [Drupal 8](https://www.drupal.org/download)
-
-Unzip the archive and use the terminal to navigate into the folder `drupal-8.x.x`.
+Download the latest stable version of [Drupal 8](https://www.drupal.org/download). Unzip the archive and use the terminal to navigate into the folder `drupal-8.x.x`.
 
 In the terminal, run:
 
@@ -124,6 +122,10 @@ Within `drupal-8.x.x/themes/wwu-shila` run (do NOT prefix with `lando`):
 Once the install script has completed, run:
 
     ./patternlab-provision.sh
+
+Compile the theme static assets to the Pattern Lab source directory:
+
+    lando gulp patternlab
 
 To build the pattern lab site for the first time, run:
 
