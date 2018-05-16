@@ -1,0 +1,43 @@
+/**
+* @file
+* 01-molecules/content/search/_search.scss
+*/
+
+.western-search-widget {
+  display: flex;
+
+  form {
+    display: flex;
+  }
+
+  i {
+    font-size: 36px;
+  }
+
+  .toggle {
+    border-radius: 0;
+    width: initial;
+    padding: 18px;
+    border-right: 0;
+  }
+
+  .search-box {
+    input {
+      margin: 0;
+      height: 100%;
+    }
+  }
+
+  .search-label {
+    font-size: 0;
+    margin: 0;
+  }
+
+  .submit-search {
+    .button{
+      border-radius: 0;
+      width: initial;
+      padding: 18px;
+    }
+  }
+}
