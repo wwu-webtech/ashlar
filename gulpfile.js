@@ -26,8 +26,10 @@
 
   config.patternLab = {
     cssFile: 'wwu-styleguide.css',
+    cssSrc: './source/sass/*.scss',
     cssDest: './source/pattern-lab/css',
     jsFile: 'wwu-styleguide.js',
+    jsSrc: './source/js/*.js',
     jsDest: './source/pattern-lab/js',
     jsTemplate: {
       src: './source/js/patternlab.lodash'
@@ -36,7 +38,8 @@
 
   config.sass = {
     src: [
-      './source/sass/*.scss'
+      './source/sass/*.scss',
+      '!./source/sass/styleguide/*'
     ],
     dest: './build/css',
     watch: [
@@ -114,7 +117,7 @@
    * Generate Pattern Lab CSS.
    */
   gulp.task('patternlab:sass', function () {
-    return gulp.src(config.sass.src)
+    return gulp.src(config.patternLab.cssSrc)
     .pipe(concat(config.patternLab.cssFile))
     .pipe(sassGlob())
     .pipe(sourcemaps.init())
@@ -127,7 +130,7 @@
    * Generate Pattern Lab JS: concatenate, wrap, and format.
    */
   gulp.task('patternlab:js:pre', function () {
-    return gulp.src(config.js.src)
+    return gulp.src(config.patternLab.jsSrc)
     .pipe(sourcemaps.init())
     .pipe(concat(config.patternLab.jsFile))
     .pipe(wrap(config.patternLab.jsTemplate))
