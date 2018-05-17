@@ -128,9 +128,11 @@
    */
   gulp.task('patternlab:js:pre', function () {
     return gulp.src(config.js.src)
+    .pipe(sourcemaps.init())
     .pipe(concat(config.patternLab.jsFile))
     .pipe(wrap(config.patternLab.jsTemplate))
     .pipe(uglify(config.uglify))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(config.patternLab.jsDest));
   });
 
@@ -138,7 +140,7 @@
    * Generate Pattern Lab JS: browserify (include "required" libraries).
    */
   gulp.task('patternlab:js:post', ['patternlab:js:pre'], function () {
-    return browserify(config.patternLab.jsDest + '/' + config.patternLab.jsFile).bundle()
+    return browserify(config.patternLab.jsDest + '/' + config.patternLab.jsFile, { debug: true }).bundle()
     .pipe(source(config.patternLab.jsFile))
     .pipe(gulp.dest(config.patternLab.jsDest));
   });
