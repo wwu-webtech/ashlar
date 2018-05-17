@@ -10,6 +10,7 @@
   const run = require('gulp-run');
   const tap = require('gulp-tap');
   const wrap = require('gulp-wrap');
+  const iife = require('gulp-iife');
   const concat = require('gulp-concat');
   const rename = require('gulp-rename');
   const uglify = require('gulp-uglify');
@@ -76,6 +77,12 @@
     templateVariable: 'behavior',
     rename: {
       suffix: '.min'
+    },
+    iife: {
+      useStrict: true,
+      trimCode: true,
+      params: ['$', 'Drupal', 'window', 'document', 'undefined'],
+      args: ['jQuery', 'Drupal', 'this', 'this.document']
     }
   };
 
@@ -111,6 +118,7 @@
 
       return gulp.src(file.path)
       .pipe(wrap(config.js.template, { name: behaviorName }, { variable: config.js.templateVariable }))
+      .pipe(iife(config.js.iife))
       .pipe(uglify(config.uglify))
       .pipe(rename(config.js.rename))
       .pipe(gulp.dest(config.js.dest));
