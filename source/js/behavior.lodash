@@ -1,4 +1,3 @@
-(function ($, Drupal, window, document, undefined) {
 
   Drupal.behaviors.<%= behavior.name %> = {
 
@@ -8,4 +7,3 @@
 
   };
 
-})(jQuery, Drupal, this, this.document);
