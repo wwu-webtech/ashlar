@@ -3,20 +3,20 @@
   'use strict';
 
   const path = require('path');
+  const sequence = require('run-sequence');
+  const browserify = require('browserify');
+  const source = require('vinyl-source-stream');
   const gulp = require('gulp');
   const run = require('gulp-run');
+  const tap = require('gulp-tap');
+  const wrap = require('gulp-wrap');
+  const concat = require('gulp-concat');
+  const rename = require('gulp-rename');
+  const uglify = require('gulp-uglify');
+  const sourcemaps = require('gulp-sourcemaps');
   const sass = require('gulp-sass');
   const sassGlob = require('gulp-sass-glob');
-  const sourcemaps = require('gulp-sourcemaps');
-  const uglify = require('gulp-uglify');
-  const rename = require('gulp-rename');
-  const concat = require('gulp-concat');
-  const wrap = require('gulp-wrap');
-  const tap = require('gulp-tap');
   const clean = require('gulp-clean');
-  const source = require('vinyl-source-stream');
-  const browserify = require('browserify');
-  const runSequence = require('run-sequence');
 
   var config = {};
 
@@ -25,9 +25,15 @@
   };
 
   config.patternLab = {
-    cssFile: 'wwu-styleguide.css',
-    cssDest: './source/pattern-lab/css',
+    sassFile: 'wwu-styleguide.css',
+    sassSrc: [
+      './source/sass/**/*.scss'
+    ],
+    sassDest: './source/pattern-lab/css',
     jsFile: 'wwu-styleguide.js',
+    jsSrc: [
+      './source/js/*.js'
+    ],
     jsDest: './source/pattern-lab/js',
     jsTemplate: {
       src: './source/js/patternlab.lodash'
@@ -36,7 +42,8 @@
 
   config.sass = {
     src: [
-      './source/sass/*.scss'
+      './source/sass/*.scss',
+      '!./source/sass/styleguide/*'
     ],
     dest: './build/css',
     watch: [
@@ -114,20 +121,20 @@
    * Generate Pattern Lab CSS.
    */
   gulp.task('patternlab:sass', function () {
-    return gulp.src(config.sass.src)
-    .pipe(concat(config.patternLab.cssFile))
+    return gulp.src(config.patternLab.sassSrc)
     .pipe(sassGlob())
     .pipe(sourcemaps.init())
     .pipe(sass(config.sass.options).on('error', sass.logError))
+    .pipe(concat(config.patternLab.sassFile))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(config.patternLab.cssDest));
+    .pipe(gulp.dest(config.patternLab.sassDest));
   });
 
   /**
    * Generate Pattern Lab JS: concatenate, wrap, and format.
    */
   gulp.task('patternlab:js:pre', function () {
-    return gulp.src(config.js.src)
+    return gulp.src(config.patternLab.jsSrc)
     .pipe(sourcemaps.init())
     .pipe(concat(config.patternLab.jsFile))
     .pipe(wrap(config.patternLab.jsTemplate))
@@ -188,7 +195,7 @@
    * Gulp default task.
    */
   gulp.task('default', function () {
-    runSequence('sass', 'js');
+    sequence('sass', 'js');
   });
 
 })();
