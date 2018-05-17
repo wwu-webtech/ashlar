@@ -25,11 +25,15 @@
   };
 
   config.patternLab = {
-    cssFile: 'wwu-styleguide.css',
-    cssSrc: './source/sass/*.scss',
-    cssDest: './source/pattern-lab/css',
+    sassFile: 'wwu-styleguide.css',
+    sassSrc: [
+      './source/sass/**/*.scss'
+    ],
+    sassDest: './source/pattern-lab/css',
     jsFile: 'wwu-styleguide.js',
-    jsSrc: './source/js/*.js',
+    jsSrc: [
+      './source/js/*.js'
+    ],
     jsDest: './source/pattern-lab/js',
     jsTemplate: {
       src: './source/js/patternlab.lodash'
@@ -117,13 +121,13 @@
    * Generate Pattern Lab CSS.
    */
   gulp.task('patternlab:sass', function () {
-    return gulp.src(config.patternLab.cssSrc)
-    .pipe(concat(config.patternLab.cssFile))
+    return gulp.src(config.patternLab.sassSrc)
     .pipe(sassGlob())
     .pipe(sourcemaps.init())
     .pipe(sass(config.sass.options).on('error', sass.logError))
+    .pipe(concat(config.patternLab.sassFile))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(config.patternLab.cssDest));
+    .pipe(gulp.dest(config.patternLab.sassDest));
   });
 
   /**
