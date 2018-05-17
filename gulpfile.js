@@ -3,20 +3,20 @@
   'use strict';
 
   const path = require('path');
+  const sequence = require('run-sequence');
+  const browserify = require('browserify');
+  const source = require('vinyl-source-stream');
   const gulp = require('gulp');
   const run = require('gulp-run');
+  const tap = require('gulp-tap');
+  const wrap = require('gulp-wrap');
+  const concat = require('gulp-concat');
+  const rename = require('gulp-rename');
+  const uglify = require('gulp-uglify');
+  const sourcemaps = require('gulp-sourcemaps');
   const sass = require('gulp-sass');
   const sassGlob = require('gulp-sass-glob');
-  const sourcemaps = require('gulp-sourcemaps');
-  const uglify = require('gulp-uglify');
-  const rename = require('gulp-rename');
-  const concat = require('gulp-concat');
-  const wrap = require('gulp-wrap');
-  const tap = require('gulp-tap');
   const clean = require('gulp-clean');
-  const source = require('vinyl-source-stream');
-  const browserify = require('browserify');
-  const runSequence = require('run-sequence');
 
   var config = {};
 
@@ -195,7 +195,7 @@
    * Gulp default task.
    */
   gulp.task('default', function () {
-    runSequence('sass', 'js');
+    sequence('sass', 'js');
   });
 
 })();
