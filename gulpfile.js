@@ -223,8 +223,6 @@
   /**
    * Gulp default task.
    */
-  gulp.task('default', function () {
-    sequence('sass', 'js');
-  });
+  gulp.task('default', ['sass', 'js']);
 
 })();
