@@ -94,18 +94,19 @@ You can install the required Component Libraries module via composer in the root
 
     lando composer require drupal/components
 
-Enable it through the Drupal interface (under the **Extend** tab) or with drush:
+Enable it through the Drupal interface (under the **Extend** tab) or with drush.
 
-    drush en components
+    lando composer require drush/drush
+    lando drush en components
 
 UI Patterns is optional, but the theme will not work unless Component Libraries is installed and enabled. It can be installed with drush:
 
-    drush dl ui_patterns
-    drush en ui_patterns
+    lando drush dl ui_patterns
+    lando drush en ui_patterns
 
 Clone Shila into the `drupal-8.x.x/themes` folder:
 
-    git clone https://bitbucket.org/wwuweb/wwu-shila
+    git clone https://bitbucket.org/wwuweb/wwu_shila
 
 Enable the theme in Drupal under the **Appearance** tab and set it as default. Navigate into `drupal-8.x.x/themes/wwu-shila` and run:
 
@@ -115,7 +116,7 @@ Enable the theme in Drupal under the **Appearance** tab and set it as default. N
 At this point you should be able to navigate to the site and see some very basic styles.
 
 ### IV. Pattern Lab
-Within `drupal-8.x.x/themes/wwu-shila` run (do NOT prefix with `lando`):
+Within `drupal-8.x.x/themes/wwu_shila` run (do NOT prefix with `lando`):
 
     ./patternlab-install.sh
 
@@ -148,7 +149,7 @@ You can view the demo page by running the following within the `twig-standard` f
 (note: I specified a port here so that both instances of pattern lab can be served locally at the same time, the default port is 8080)
 
 ### V. Editing the Theme
-Changes to the theme will mostly happen in files contained in `wwu-shila/dist/_patterns`. The `_patterns` folder is organized into the atoms -> molecules -> organisms -> templates -> pages scheme. Sub folders dictate how the static site will nest different components.
+Changes to the theme will mostly happen in files contained in `wwu-shila/source/_patterns`. The `_patterns` folder is organized into the atoms -> molecules -> organisms -> templates -> pages scheme. Sub folders dictate how the static site will nest different components.
 
 #### Drupal Site
 After making changes to static assets (CSS and JS), recompile the theme:
@@ -165,4 +166,3 @@ To see the changes in Pattern Lab, you'll need to first compile the static asset
 Then, regenerate the static site:
 
     php pattern-lab/core/console --generate
-
