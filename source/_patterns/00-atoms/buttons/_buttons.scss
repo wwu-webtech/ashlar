@@ -2,6 +2,10 @@
  * @file
  * 00-atoms/buttons/_buttons.scss
  */
+$button-border-radius: 40px 40px 0 40px;
+$button-border-radius-alt: 50% 50% 0 50%;
+$button-max-width: 300px;
+$button-padding: $standard-spacing;
 
 button,
 .button {
