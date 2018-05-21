@@ -30,6 +30,8 @@
     patterns: 'source/_patterns',
     sassFile: 'wwu-styleguide.css',
     sassSrc: [
+      'source/sass/styleguide/normalize.scss',
+      'source/sass/styleguide/pattern-scaffolding.scss',
       'source/sass/**/*.scss'
     ],
     sassDest: 'source/pattern-lab/css',
