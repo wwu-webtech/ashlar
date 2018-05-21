@@ -108,7 +108,7 @@ Clone Shila into the `drupal-8.x.x/themes` folder:
 
     git clone https://bitbucket.org/wwuweb/wwu_shila
 
-Enable the theme in Drupal under the **Appearance** tab and set it as default. Navigate into `drupal-8.x.x/themes/wwu-shila` and run:
+Enable the theme in Drupal under the **Appearance** tab and set it as default. Navigate into `drupal-8.x.x/themes/wwu_shila` and run:
 
     lando npm install
     lando gulp
@@ -149,7 +149,7 @@ You can view the demo page by running the following within the `twig-standard` f
 (note: I specified a port here so that both instances of pattern lab can be served locally at the same time, the default port is 8080)
 
 ### V. Editing the Theme
-Changes to the theme will mostly happen in files contained in `wwu-shila/source/_patterns`. The `_patterns` folder is organized into the atoms -> molecules -> organisms -> templates -> pages scheme. Sub folders dictate how the static site will nest different components.
+Changes to the theme will mostly happen in files contained in `wwu_shila/source/_patterns`. The `_patterns` folder is organized into the atoms -> molecules -> organisms -> templates -> pages scheme. Sub folders dictate how the static site will nest different components.
 
 #### Drupal Site
 After making changes to static assets (CSS and JS), recompile the theme:
