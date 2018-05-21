@@ -2,16 +2,20 @@
  * @file
  * 00-atoms/logo/_logo.scss
  */
+ $logo-width: 282px;
+ $logo-height: 142px;
+ $logo-width--horizontal: 484px;
+ $logo-height--horiztonal: 78px;
 
 .logo {
-  width: 282px;
-  height: 142px;
+  width: $logo-width;
+  height: $logo-height;
   padding: $standard-spacing;
   background-color: $dark-blue;
 
   &.horizontal {
-    width: 484px;
-    height: 78px;
+    width: $logo-width--horizontal;
+    height: $logo-height--horiztonal;
   }
 
   svg {
