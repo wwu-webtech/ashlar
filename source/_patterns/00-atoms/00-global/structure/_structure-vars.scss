@@ -4,25 +4,22 @@
  */
 
 /* Spacing */
-// Global variables
 $standard-spacing: 18px;
 $large-spacing: 24px;
-
-// Used variables
-$heading-line-height: $standard-spacing;
-$heading-margin-top: $standard-spacing * 1.5;
-$heading-margin-bottom: $standard-spacing;
-$paragraph-margin-bottom: $standard-spacing;
 $menu-padding: $standard-spacing / 2;
 
 /* Borders and Lines */
 $border-width: 3px;
 $focus-shadow: 2px 2px 0 1px;
 
-/* Layout */
+/* Content Area */
 $max-content-width: 1200px;
 
 /* Breakpoints */
 $small: 581px;
 $medium: 971px;
 $large: $max-content-width;
+
+/* Grid */
+$small-screen-columns: $standard-spacing 1fr $standard-spacing;
+$large-screen-columns: 1fr $max-content-width 1fr;

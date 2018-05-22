@@ -3,6 +3,8 @@
  * 00-atoms/01-text/_paragraphs.scss
  */
 
+$paragraph-margin-bottom: $standard-spacing;
+
 p {
   margin: 0 0 $paragraph-margin-bottom;
 }
