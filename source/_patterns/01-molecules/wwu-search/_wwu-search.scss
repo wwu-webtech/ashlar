@@ -17,7 +17,7 @@
   .toggle {
     border-radius: 0;
     width: initial;
-    padding: 18px;
+    padding: $standard-spacing;
     border-right: 0;
   }
 
@@ -37,7 +37,7 @@
     .button{
       border-radius: 0;
       width: initial;
-      padding: 18px;
+      padding: $standard-spacing;
     }
   }
 }

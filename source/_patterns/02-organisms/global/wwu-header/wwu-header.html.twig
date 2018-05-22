@@ -5,14 +5,19 @@
 #}
 
 <div class="western-header">
-  <div class="western-logo">
-    <a href="http://www.wwu.edu">
-      <span class="university-name">Western Washington University</span>
-      {% include "atoms-logo" %}
-    </a>
+  <div class="wrap">
+    <div class="western-logo">
+      <a href="http://www.wwu.edu">
+        <span class="university-name">Western Washington University</span>
+        {% include "atoms-logo" %}
+      </a>
+      <span class="site-name">
+        College of Having a Very Long Name to Take Up Much Space
+      </span>
+    </div>
+
+    {% include "molecules-wwu-menu" %}
+
+    {% include "molecules-wwu-search" %}
   </div>
-
-  {% include "molecules-wwu-menu" %}
-
-  {% include "molecules-wwu-search" %}
 </div>

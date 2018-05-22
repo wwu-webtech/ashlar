@@ -2,3 +2,63 @@
  * @file
  * organisms/global/shila-page-header/_shila-page-header.scss
  */
+
+// Ends of gradients
+$white-gradient: transparentize($white, 0.2);
+$dark-blue-gradient: transparentize($dark-blue, 0.2);
+
+.western-header {
+  @include breakpoint($small) {
+    display: grid;
+
+    grid-template-columns: $small-screen-columns;
+    grid-template-rows: auto;
+  }
+  background: linear-gradient(to left, $white 0%, $white-gradient 100%);
+
+  .wrap {
+    @include breakpoint($small) {
+      display: grid;
+
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 1;
+      grid-template-areas: "logo quick-links search";
+      grid-template-columns: 306px 1fr 77px;
+      grid-template-rows: 80px;
+    }
+
+    .western-logo {
+      grid-area: logo;
+    }
+
+    .western-quick-links {
+      align-self: center;
+
+      grid-area: quick-links;
+      justify-self: end;
+    }
+
+    .western-search-widget {
+      overflow: hidden;
+      width: 500px;
+
+      grid-area: search;
+      justify-self: end;
+    }
+
+    .university-name {
+      display: block;
+      font-size: 0;
+    }
+
+    .site-name {
+      display: block;
+      padding: $standard-spacing / 2;
+      text-align: center;
+      color: $white;
+      border-top: 1px solid $blue;
+      background: linear-gradient(to right, $dark-blue 0%, $dark-blue-gradient 100%);
+      font-size: 0.8em;
+    }
+  }
+}
