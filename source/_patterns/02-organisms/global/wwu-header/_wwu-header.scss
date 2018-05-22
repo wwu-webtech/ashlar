@@ -29,7 +29,7 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
       grid-row: 1 / span 1;
       grid-template-areas: "logo quick-links search";
       grid-template-columns: $header-columns;
-      grid-template-rows: 80px;
+      grid-template-rows: $toggle-size;
     }
 
     .western-logo {
@@ -45,7 +45,6 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
 
     .western-search-widget {
       align-self: center;
-      width: 500px;
 
       grid-area: search;
       justify-self: end;
@@ -58,12 +57,13 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
 
     .site-name {
       display: block;
-      padding: $half-spacing;
+      padding: $half-spacing $standard-spacing;
       text-align: center;
       color: $white;
       border-top: 1px solid $blue;
       background: linear-gradient(to right, $dark-blue 0%, $dark-blue-gradient 100%);
       font-size: $small-font-size;
+      line-height: 1.5em;
     }
   }
 }

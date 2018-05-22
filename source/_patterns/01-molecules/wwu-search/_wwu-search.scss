@@ -2,9 +2,15 @@
 * @file
 * 01-molecules/content/search/_search.scss
 */
+$search-widget-width: 438px;
 
 .western-search-widget {
   display: flex;
+  justify-content: end;
+
+  &.is-expanded {
+    width: $search-widget-width;
+  }
 
   form {
     display: flex;
@@ -12,16 +18,13 @@
 
   .search-box {
     input {
-      margin: 0;
       height: 100%;
-      border-color: $blue;
-      border-left: 0;
-      border-right: 0;
+      margin: 0;
     }
   }
 
   .search-label {
-    font-size: 0;
     margin: 0;
+    font-size: 0;
   }
 }
