@@ -8,7 +8,7 @@
     a {
       @include transition($medium-transition-speed, $standard-ease);
       display: inline-block;
-      padding: $menu-padding ($menu-padding * 4) $menu-padding ($menu-padding * 2);
+      padding: $half-spacing ($half-spacing * 4) $half-spacing ($half-spacing * 2);
       color: $black;
 
       &:hover,

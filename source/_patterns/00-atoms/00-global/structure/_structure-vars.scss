@@ -5,19 +5,19 @@
 
 /* Spacing */
 $standard-spacing: 18px;
+$half-spacing: $standard-spacing / 2;
 $large-spacing: 24px;
-$menu-padding: $standard-spacing / 2;
 
 /* Borders and Lines */
 $border-width: 3px;
-$focus-shadow: 2px 2px 0 1px;
+$focus-shadow: 0 1px 3px transparentize($blue, .2);
 
 /* Content Area */
 $max-content-width: 1200px;
 
 /* Breakpoints */
 $small: 581px;
-$medium: 971px;
+$medium: 981px;
 $large: $max-content-width;
 
 /* Grid */

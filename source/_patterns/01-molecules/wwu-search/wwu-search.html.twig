@@ -1,14 +1,14 @@
 <div class="western-search-widget" role="search" aria-label="University and Site Search">
-  <button class="toggle toggle-search alt" role="button" aria-pressed="false" aria-label="Open the search box"><i class="material-icons">close</i></button>
-  <form method="get" action="https://search2.wwu.edu/texis/search">
+  <button class="open-search blue" role="button" aria-pressed="false" aria-label="Open the search box"><i class="material-icons">search</i></button>
+  <button class="close-search blue" role="button" aria-pressed="false" aria-label="Open the search box"><i class="material-icons">close</i></button>
+  <form class="search-area" method="get" action="https://search2.wwu.edu/texis/search">
     <div class="search-box">
       <input id="search-box" placeholder="Search this site" name="query">
       <label for="search-box" class="search-label">Enter the terms you wish to search for.</label>
     </div>
 
-    <div class="submit-search">
-      <button class="blue button" role="button" aria-pressed="false" aria-label="Submit search"><i class="material-icons">search</i></button>
-      <input type="hidden" name="pr" value="Default-WWU">
-    </div>
+    <button class="submit-search dark-blue" role="button" aria-pressed="false" aria-label="Submit search"><i class="material-icons">chevron_right</i></button>
+
+    <input type="hidden" name="pr" value="Default-WWU">
   </form>
 </div>

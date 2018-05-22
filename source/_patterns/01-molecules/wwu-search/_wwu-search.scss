@@ -10,34 +10,22 @@
     display: flex;
   }
 
-  i {
-    font-size: 36px;
-  }
-
-  .toggle {
+  .open-search,
+  .close-search,
+  .submit-search {
     border-radius: 0;
     width: initial;
-    padding: $standard-spacing;
-    border-right: 0;
+    padding: $half-spacing;
   }
 
   .search-box {
     input {
       margin: 0;
-      height: 100%;
     }
   }
 
   .search-label {
     font-size: 0;
     margin: 0;
-  }
-
-  .submit-search {
-    .button{
-      border-radius: 0;
-      width: initial;
-      padding: $standard-spacing;
-    }
   }
 }

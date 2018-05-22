@@ -4,3 +4,9 @@
  */
 
 $icon-size: 36px;
+$icon-size--small: 18px;
+$icon-size--large: 48px;
+
+.material-icons {
+  font-size: $icon-size;
+}

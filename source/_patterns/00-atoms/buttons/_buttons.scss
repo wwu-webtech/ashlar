@@ -40,7 +40,7 @@ button,
 
   &:focus {
     outline: none;
-    box-shadow: $focus-shadow mix(black, $default-button-color, 20%);
+    box-shadow: $focus-shadow;
   }
 
   &:disabled {
@@ -83,7 +83,7 @@ button,
 
       &:focus {
         outline: none;
-        box-shadow: $focus-shadow mix(black, $background, 20%);
+        box-shadow: $focus-shadow;
       }
 
       &.alt {

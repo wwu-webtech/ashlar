@@ -1,6 +1,6 @@
 /**
  * @file
- * atoms/forms/shila-input/_shila-input.scss
+ * atoms/forms/input/_input.scss
  */
 
 input[type="search"] {
@@ -9,12 +9,12 @@ input[type="search"] {
 input[type="checkbox"],
 input[type="radio"] {
   display: inline;
-  margin-right: $shila-small-spacing / 2;
+  margin-right: $half-spacing;
   + label {
     display: inline-block;
   }
 }
 input[type="file"] {
-  margin-bottom: $shila-small-spacing;
+  margin-bottom: $half-spacing;
   width: 100%;
 }
