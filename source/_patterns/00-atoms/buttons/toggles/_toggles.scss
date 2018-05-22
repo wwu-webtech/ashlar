@@ -1,0 +1,13 @@
+/**
+  * @file
+  * 00-atoms/buttons/toggles/_toggles.scss
+  */
+
+$toggle-size: 72px;
+
+.toggle {
+  border-radius: 0;
+  padding: 0;
+  width: $toggle-size;
+  height: $toggle-size;
+}

@@ -10,17 +10,13 @@
     display: flex;
   }
 
-  .open-search,
-  .close-search,
-  .submit-search {
-    border-radius: 0;
-    width: initial;
-    padding: $half-spacing;
-  }
-
   .search-box {
     input {
       margin: 0;
+      height: 100%;
+      border-color: $blue;
+      border-left: 0;
+      border-right: 0;
     }
   }
 

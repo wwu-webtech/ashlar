@@ -2,6 +2,8 @@
  * @file
  * organisms/global/shila-page-header/_shila-page-header.scss
  */
+$header-columns: $logo-width 1fr $toggle-size;
+$header-rows: $toggle-size;
 
 // Ends of gradients
 $white-gradient: transparentize($white, 0.2);
@@ -26,7 +28,7 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
       grid-column: 2 / span 1;
       grid-row: 1 / span 1;
       grid-template-areas: "logo quick-links search";
-      grid-template-columns: 306px 1fr 77px;
+      grid-template-columns: $header-columns;
       grid-template-rows: 80px;
     }
 
@@ -42,7 +44,7 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
     }
 
     .western-search-widget {
-      overflow: hidden;
+      align-self: center;
       width: 500px;
 
       grid-area: search;
