@@ -6,7 +6,7 @@
                 "page": {
                     "header": {
                         "include()": {
-                            "pattern": "organisms-shila-page-header-html",
+                            "pattern": "organisms-page-header-html",
                             "with": {
                                 "content": {
                                     "join()": [

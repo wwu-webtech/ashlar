@@ -1,6 +1,6 @@
 /**
  * @file
- * organisms/global/shila-page-header/_shila-page-header.scss
+ * organisms/global/page-header/_page-header.scss
  */
 $header-columns: $logo-width 1fr $toggle-size;
 $header-columns--larger: $logo-width--larger 1fr $toggle-size--larger;
@@ -78,5 +78,8 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
       font-size: $font-size--smaller;
       line-height: 1.5em;
     }
+  }
+
+  .splash {
   }
 }

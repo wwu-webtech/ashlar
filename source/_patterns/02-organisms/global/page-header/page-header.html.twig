@@ -4,11 +4,14 @@
  */
 #}
 <header role="banner" class="page-header">
+  <!-- original shila
   <div class="region-wrapper">
     <div{{ attributes }}>
-      {% block page_header %}
+      {#{% block page_header %}
         {{ content }}
-      {% endblock %}
+      {% endblock %}#}
     </div>
-  </div>
+  </div> -->
+
+  {% include "@organisms/global/wwu-header/wwu-header.html.twig" %}
 </header>

@@ -1,0 +1,14 @@
+/**
+ * @file
+ * molecules/media/splash/_splash-image.scss
+ */
+
+.splash {
+  width: 100vw;
+  max-height: 70vh;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+}
