@@ -15,7 +15,7 @@
     },
     "content": {
         "include()": {
-            "pattern": "molecules-shila-menu-html",
+            "pattern": "molecules-menu-html",
             "with": {
                 "items": [
                     {
