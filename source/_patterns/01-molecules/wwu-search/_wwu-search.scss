@@ -18,8 +18,12 @@ $search-widget-width: 438px;
 
   .search-box {
     input {
+      @include breakpoint($large) {
+        padding: $standard-spacing;
+      }
       height: 100%;
       margin: 0;
+      padding: $half-spacing;
     }
   }
 

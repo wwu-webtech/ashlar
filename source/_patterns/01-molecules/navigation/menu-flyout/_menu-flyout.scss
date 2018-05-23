@@ -25,7 +25,7 @@ $circle-diameter: 300px;
     flex-flow: column wrap;
     height: 100%;
     margin: auto;
-    font-size: $small-font-size;
+    font-size: $font-size--smaller;
   }
 
   &.has-circle {

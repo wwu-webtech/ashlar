@@ -18,7 +18,7 @@ input,
 label,
 select {
   display: block;
-  font-size: $small-font-size;
+  font-size: $font-size--smaller;
 }
 input {
   box-sizing: border-box;
@@ -30,7 +30,7 @@ input {
   border-radius: 0;
   background-color: $white;
   box-shadow: none;
-  font-size: $small-font-size;
+  font-size: $font-size--smaller;
   &:hover {
     border-color: mix(white, $dark-blue, 20%);
   }

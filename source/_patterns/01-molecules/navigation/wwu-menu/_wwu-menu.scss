@@ -4,7 +4,7 @@
 */
 
 .western-quick-links {
-  font-size: $small-font-size;
+  font-size: $font-size--smaller;
 
   .menu {
     display: flex;
@@ -14,8 +14,12 @@
       margin: 0;
 
       a {
-        padding: $large-spacing;
+        @include breakpoint($large) {
+          height: $toggle-size--larger;
+          padding: $large-spacing;
+        }
         height: $toggle-size;
+        padding: $standard-spacing;
 
         &:hover,
         &:focus {
