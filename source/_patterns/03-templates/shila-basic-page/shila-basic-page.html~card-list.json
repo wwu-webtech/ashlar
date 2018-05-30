@@ -4,7 +4,7 @@
             "pattern": "organisms-shila-page-html",
             "with": {
                 "page": {
-                    "header": "organisms-page-header-html",
+                    "header": "organisms-site-header-html",
                     "content": {
                         "include()": {
                             "pattern": "organisms-shila-page-content-html",

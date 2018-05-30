@@ -1,6 +1,6 @@
 {
     "page": {
-        "header": "organisms-page-header-html",
+        "header": "organisms-site-header-html",
         "content": "organisms-shila-page-content-html",
         "footer": "organisms-shila-page-footer-html"
     }

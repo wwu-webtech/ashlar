@@ -73,7 +73,7 @@ $off-canvas-transition-duration: .4s !default;
     overflow: visible;
     transition: $off-canvas-side $off-canvas-transition-duration;
   }
-  .page-header {
+  .site-header {
     position: fixed;
     z-index: $off-canvas-z-index;
     height: $off-canvas-header-height;
@@ -88,7 +88,7 @@ $off-canvas-transition-duration: .4s !default;
       position: fixed;
       height: 100%;
       overflow: hidden;
-      .page-header {
+      .site-header {
         position: static;
       }
       .page-content {

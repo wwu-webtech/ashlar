@@ -6,7 +6,7 @@
                 "page": {
                     "header": {
                         "include()": {
-                            "pattern": "organisms-page-header-html",
+                            "pattern": "organisms-site-header-html",
                             "with": {
                                 "content": {
                                     "join()": [

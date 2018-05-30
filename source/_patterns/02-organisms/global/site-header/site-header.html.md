@@ -1,5 +1,5 @@
 ---
-title: Page header
+title: Site header
 ---
 Header region.
 
