@@ -4,16 +4,11 @@
  */
 #}
 <header role="banner" class="site-header">
-  {% include "@organisms/global/wwu-header/wwu-header.html.twig" %}
+  {% block page_header %}
+    {% include "@organisms/global/wwu-header/wwu-header.html.twig" %}
 
-  {% include "@molecules/splash/splash-image/splash-image.html.twig" %}
+    {% include "@molecules/splash/splash-image/splash-image.html.twig" %}
+
+    {{ content }}
+  {% endblock %}
 </header>
-
-{# /* This is where the blocks placed in the header region go. */ #}
-<div class="region-wrapper">
-  <div{{ attributes }}>
-    {% block page_header %}
-      {{ content }}
-    {% endblock %}
-  </div>
-</div>
