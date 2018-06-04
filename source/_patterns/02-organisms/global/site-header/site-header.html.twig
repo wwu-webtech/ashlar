@@ -5,4 +5,14 @@
 #}
 <header role="banner" class="site-header">
   {% include "@organisms/global/wwu-header/wwu-header.html.twig" %}
+
+  {% include "@molecules/splash/splash-image/splash-image.html.twig" %}
 </header>
+
+<div class="region-wrapper">
+  <div{{ attributes }}>
+    {#{% block page_header %}
+      {{ content }}
+    {% endblock %}#}
+  </div>
+</div>

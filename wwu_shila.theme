@@ -127,3 +127,10 @@ function wwu_shila_preprocess_pattern_shila_card(&$variables) {
   }
   $variables['attributes'] = $variables['attributes']->addClass($classes);
 }
+
+/**
+ * Set splash image location
+ */
+function wwu_shila_preprocess_region(&$variables) {
+  $variables['splash']['src'] = '/themes/wwu_shila/source/images/sampleheader.jpg';
+}

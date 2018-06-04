@@ -4,9 +4,12 @@
  */
 
 .splash {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  overflow: hidden;
   width: 100vw;
   max-height: 70vh;
-  overflow: hidden;
 
   img {
     width: 100%;
