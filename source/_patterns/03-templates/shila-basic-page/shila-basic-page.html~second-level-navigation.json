@@ -11,10 +11,10 @@
                                 "content": {
                                     "join()": [
                                         "organisms-shila-branding-html",
-                                        "molecules-shila-navigation-html-main",
+                                        "molecules-main-navigation-html-main",
                                         {
                                             "include()": {
-                                                "pattern": "molecules-shila-navigation-html",
+                                                "pattern": "molecules-main-navigation-html",
                                                 "with": {
                                                     "configuration": {
                                                         "label_display": false

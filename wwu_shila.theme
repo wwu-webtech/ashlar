@@ -129,8 +129,10 @@ function wwu_shila_preprocess_pattern_shila_card(&$variables) {
 }
 
 /**
- * Set splash image location
+ * Get variables for site header
+ *
  */
 function wwu_shila_preprocess_region(&$variables) {
-  $variables['splash']['src'] = '/themes/wwu_shila/source/images/sampleheader.jpg';
+  $variables['site_name'] = \Drupal::config('system.site')->get('name');
+  $variables['splash_img'] = theme_get_setting('logo.url');
 }

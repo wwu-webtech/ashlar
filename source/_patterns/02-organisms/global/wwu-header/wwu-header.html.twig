@@ -1,6 +1,6 @@
 {#
 /**
- *
+ * Western header - includes logo, campus links, search, and site name
  */
 #}
 <div class="western-header">
@@ -11,7 +11,9 @@
         {% include "@atoms/logo/logo.twig" %}
       </a>
       <span class="site-name">
-        College of Having a Very Long Name to Take Up Much Space
+        {% if site_name %}
+          {{ site_name }}
+        {% endif %}
       </span>
     </div>
 

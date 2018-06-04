@@ -9,10 +9,11 @@
   {% include "@molecules/splash/splash-image/splash-image.html.twig" %}
 </header>
 
+{# /* This is where the blocks placed in the header region go. */ #}
 <div class="region-wrapper">
   <div{{ attributes }}>
-    {#{% block page_header %}
+    {% block page_header %}
       {{ content }}
-    {% endblock %}#}
+    {% endblock %}
   </div>
 </div>
