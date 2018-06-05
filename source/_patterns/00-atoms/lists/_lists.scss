@@ -5,12 +5,12 @@
 
 ul,
 ol {
-  margin: 0 0 1rem;
+  margin: 0;
 }
 dl {
-  margin-bottom: $shila-small-spacing;
+  margin-bottom: $half-spacing;
   dt {
-    margin-top: $shila-small-spacing;
+    margin-top: $half-spacing;
     font-weight: 600;
   }
   dd {

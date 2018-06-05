@@ -1,0 +1,14 @@
+/**
+ * @file
+ * 01-molecules/navigation/main-navigation/_main-navigation.scss
+ */
+
+.nav--main {
+  transform: translatey(-50%);
+
+  .menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+}

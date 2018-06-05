@@ -31,5 +31,8 @@
         ]
       }
     }
+  },
+  "require": {
+    "aleksip/plugin-data-transform": "dev-master"
   }
 }
