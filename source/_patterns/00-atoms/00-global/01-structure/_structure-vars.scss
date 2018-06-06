@@ -10,7 +10,7 @@ $large-spacing: 24px;
 
 /* Borders and Lines */
 $border-width: 3px;
-$focus-shadow: 0 1px 3px transparentize($blue, .2);
+$focus-shadow: 2px 2px 4px 2px transparentize($dark-blue, .5);
 
 /* Content Area */
 $max-content-width: 1200px;

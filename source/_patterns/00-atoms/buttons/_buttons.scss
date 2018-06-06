@@ -35,7 +35,7 @@ button,
   &:hover,
   &:focus {
     color: $text-color-light;
-    background-color: mix(white, $default-button-color, 20%);
+    background-color: mix(white, $default-button-color, 40%);
   }
 
   &:focus {
@@ -56,7 +56,6 @@ button,
     border-width: $border-width;
     border-color: $default-button-color;
     background-color: $white;
-    box-shadow: none;
 
     &:hover,
     &:focus {
@@ -67,7 +66,6 @@ button,
 
     &:focus {
       background-color: transparentize($default-button-color, 0.9);
-      box-shadow: none;
     }
   }
 
@@ -78,7 +76,7 @@ button,
 
       &:hover,
       &:focus {
-        background-color: mix(white, $background, 20%);
+        background-color: mix(white, $background, 40%);
       }
 
       &:focus {
@@ -100,7 +98,6 @@ button,
 
         &:focus {
           background-color: transparentize($background, 0.9);
-          box-shadow: none;
         }
       }
     }
