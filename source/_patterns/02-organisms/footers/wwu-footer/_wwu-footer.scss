@@ -3,8 +3,38 @@
  * organisms/global/wwu-footer/_wwu-footer.scss
  */
 
-.page-footer {
-  .region-wrapper {
-    background-color: $shila-content-background-color;
+.wwu-footer {
+  padding: $large-spacing * 2;
+  text-align: center;
+  background-color: $dark-blue;
+  font-size: $font-size--smaller;
+
+  .logo {
+    margin: 0 auto $standard-spacing;
+  }
+
+  .social-media-links {
+    margin: $large-spacing auto;
+
+    a {
+      outline: none;
+
+      svg {
+        fill: $white;
+      }
+
+      &:hover,
+      &:focus {
+        svg {
+          fill: $light-green;
+        }
+      }
+
+      &:focus {
+        svg {
+          outline: dotted $light-blue;
+        }
+      }
+    }
   }
 }

@@ -1,6 +1,5 @@
 attributes:
   Attribute():
     class:
-    - region
-    - region--footer
-content: ''
+    - wwu-footer
+    - dark-bg

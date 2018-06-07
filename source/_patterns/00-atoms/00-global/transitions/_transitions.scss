@@ -18,20 +18,14 @@ $button-transition-ease: $standard-ease;
 
 // Mixins
 @mixin transition-duration($timing) {
-  -webkit-transition-duration: $timing;
-  -o-transition-duration: $timing;
   transition-duration: $timing;
 }
 
 @mixin transition-easing($ease) {
-  -webkit-transition-timing-function: $ease;
-  -o-transition-timing-function: $ease;
   transition-timing-function: $ease;
 }
 
 @mixin transition($timing, $ease) {
-  -webkit-transition: $timing $ease;
-  -o-transition: $timing $ease;
   transition: $timing $ease;
 }
 
