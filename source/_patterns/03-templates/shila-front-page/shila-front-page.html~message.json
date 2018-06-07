@@ -35,7 +35,7 @@
                     },
                     "footer": {
                         "include()": {
-                            "pattern": "organisms-shila-page-footer-html",
+                            "pattern": "organisms-wwu-footer-html",
                             "with": {
                                 "content": "organisms-shila-block-html-system-powered-by-block"
                             }
