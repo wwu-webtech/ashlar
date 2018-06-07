@@ -1,0 +1,16 @@
+{#
+/**
+ * @see templates/layout/region--footer.html.twig
+ */
+#}
+<div class="site-footer">
+  {% if page.footer_left %}
+    {{ page.footer_left }}
+  {% endif %}
+  {% if page.footer_center %}
+    {{ page.footer_center }}
+  {% endif %}
+  {% if page.footer_right %}
+    {{ page.footer_right }}
+  {% endif %}
+</div>

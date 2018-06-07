@@ -8,7 +8,9 @@ libraries:
 regions:
   header: Header
   content: Content
-  footer: Footer
+  footer_left: Left Footer
+  footer_center: Center Footer
+  footer_right: Right Footer
   off_canvas: Off Canvas
 component-libraries:
   atoms:
