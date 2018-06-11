@@ -9,7 +9,7 @@ $button-padding: $standard-spacing;
 
 button,
 .button {
-  @include transition($button-transition-speed, $button-transition-ease)
+  transition: $button-transition-speed $button-transition-ease background-color;
   display: inline-block;
   box-sizing: border-box;
   width: 100%;
@@ -35,7 +35,7 @@ button,
   &:hover,
   &:focus {
     color: $text-color-light;
-    background-color: mix(white, $default-button-color, 40%);
+    background-color: mix(white, $default-button-color, $percent-change);
   }
 
   &:focus {
@@ -59,8 +59,8 @@ button,
 
     &:hover,
     &:focus {
-      color: mix(white, $default-button-color, 20%);
-      border-color: mix(white, $default-button-color, 20%);
+      color: mix(white, $default-button-color, $percent-change);
+      border-color: mix(white, $default-button-color, $percent-change);
       background-color: transparentize($default-button-color, 0.95);
     }
 
@@ -76,7 +76,7 @@ button,
 
       &:hover,
       &:focus {
-        background-color: mix(white, $background, 40%);
+        background-color: mix(white, $background, $percent-change);
       }
 
       &:focus {
@@ -91,8 +91,8 @@ button,
 
         &:hover,
         &:focus {
-          color: mix(white, $background, 20%);
-          border-color: mix(white, $background, 20%);
+          color: mix(white, $background, $percent-change);
+          border-color: mix(white, $background, $percent-change);
           background-color: transparentize($background, 0.95);
         }
 

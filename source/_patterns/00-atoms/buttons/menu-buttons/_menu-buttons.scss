@@ -89,7 +89,7 @@
           /* Button hover & focus styles */
           &:hover,
           &:focus {
-            background-color: mix(white, $dark-blue, 20%);
+            background-color: mix(white, $dark-blue, $percent-change);
             color: $white;
             box-shadow: none;
 
@@ -98,7 +98,7 @@
             }
 
             &:after {
-              border-top: solid 16px mix(black, $blue, 20%);
+              border-top: solid 16px mix(black, $blue, $percent-change);
             }
           }
         }
@@ -118,10 +118,10 @@
 
             &:hover,
             &:focus {
-              background-color: mix(white, $dark-blue, 10%);
+              background-color: mix(white, $dark-blue, $percent-change);
 
               &::after {
-                border-top: solid 16px mix(white, $dark-blue, 10%);
+                border-top: solid 16px mix(white, $dark-blue, $percent-change);
               }
             }
           }

@@ -27,3 +27,6 @@ $wwu-colors: (
   (light-green, $light-green, $black),
   (red, $red, $white)
 );
+
+// Amount to lighten or darken things by on hover/focus
+$percent-change: 20%;

@@ -32,7 +32,7 @@ input {
   box-shadow: none;
   font-size: $font-size--smaller;
   &:hover {
-    border-color: mix(white, $dark-blue, 20%);
+    border-color: mix(white, $dark-blue, $percent-change);
   }
   &:focus {
     outline: none;
