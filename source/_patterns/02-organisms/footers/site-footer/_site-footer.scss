@@ -4,5 +4,27 @@
  */
 
 .site-footer {
+  @include breakpoint($large) {
+    grid-template-columns: 1fr repeat(3, ($max-content-width / 3)) 1fr;
+  }
+  display: grid;
+  padding: ($large-spacing * 2) 0;
+  color: $white;
   background-color: $blue;
+
+  grid-template-areas: ". footer_left footer_center footer_right .";
+  grid-template-columns: $standard-spacing 1fr 1fr 1fr $standard-spacing;
+  grid-template-rows: auto;
+
+  .region--footer_left {
+      grid-area: footer_left;
+  }
+
+  .region--footer_center {
+    grid-area: footer_center;
+  }
+
+  .region--footer_right {
+    grid-area: footer_right;
+  }
 }

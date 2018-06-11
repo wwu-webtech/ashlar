@@ -1,4 +1,4 @@
 page:
-  footer_left: "left"
-  footer_center: "center"
-  footer_right: "right"
+  footer_left: '<div class="region region--footer_left"><a href="#" class="button">Action Button</a></div>'
+  footer_center: '<div class="region region--footer_center"><ul class="menu blue"> <li><a href="#">one</a></li> <li><a href="#">two</a></li> <li><a href="#">three</a></li></ul></div>'
+  footer_right: '<div class="region region--footer_right">Content for the right footer.</div>'
