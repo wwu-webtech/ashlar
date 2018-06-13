@@ -11,13 +11,14 @@
   padding: ($large-spacing * 2) 0;
   color: $white;
   background-color: $blue;
+  font-size: $font-size--smaller;
 
   grid-template-areas: ". footer_left footer_center footer_right .";
   grid-template-columns: $standard-spacing 1fr 1fr 1fr $standard-spacing;
   grid-template-rows: auto;
 
   .region--footer_left {
-      grid-area: footer_left;
+    grid-area: footer_left;
   }
 
   .region--footer_center {
