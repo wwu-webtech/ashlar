@@ -21,9 +21,9 @@
         position: relative;
         display: table-cell;
         box-sizing: border-box;
-        max-width: 280px;
+        max-width: 320px;
         height: 80px;
-        padding: 0 $button-padding;
+        padding: 0 $large-spacing;
         text-align: center;
         vertical-align: middle;
         white-space: normal;
@@ -53,6 +53,7 @@
       li {
         a {
           height: 94px;
+          min-width: 132px;
           text-transform: uppercase;
           border-width: $half-spacing;
           border-style: solid;
@@ -81,9 +82,9 @@
           }
           &:after {
             border-top: solid 16px transparent;
-            border-right: solid 36px transparent;
+            border-right: solid 38px transparent;
             border-bottom: solid 0 transparent;
-            border-left: solid 36px transparent;
+            border-left: solid 38px transparent;
           }
 
           /* Button hover & focus styles */
@@ -94,11 +95,11 @@
             box-shadow: none;
 
             &:before {
-              border-top: solid 36px $white;
+              border-top: solid 28px $white;
             }
 
             &:after {
-              border-top: solid 16px mix(black, $blue, $percent-change);
+              border-top: solid 16px mix(white, $dark-blue, $percent-change);
             }
           }
         }
@@ -109,7 +110,7 @@
             background-color: $dark-blue;
 
             &:before {
-              border-top: solid 36px $white;
+              border-top: solid 28px $white;
             }
 
             &::after {
@@ -124,6 +125,12 @@
                 border-top: solid 16px mix(white, $dark-blue, $percent-change);
               }
             }
+          }
+        }
+
+        &:first-of-type {
+          a {
+            border-left-width: $half-spacing;
           }
         }
       }
