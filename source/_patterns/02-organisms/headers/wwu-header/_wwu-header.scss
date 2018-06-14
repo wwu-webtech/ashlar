@@ -1,0 +1,82 @@
+/**
+ * @file
+ * organisms/global/site-header/_site-header.scss
+ */
+$header-columns: $logo-width 1fr $toggle-size;
+$header-columns--larger: $logo-width--larger 1fr $toggle-size--larger;
+$header-rows: $toggle-size;
+$header-rows--larger: $toggle-size--larger;
+
+// Ends of gradients
+$white-gradient: transparentize($white, 0.2);
+$dark-blue-gradient: transparentize($dark-blue, 0.2);
+
+.western-header {
+  @include breakpoint($medium) {
+    display: grid;
+
+    grid-template-columns: $small-screen-columns;
+    grid-template-rows: auto;
+  }
+  @include breakpoint ($large) {
+    grid-template-columns: $large-screen-columns;
+  }
+  background: linear-gradient(to left, $white 0%, $white-gradient 100%);
+
+  .wrap {
+    @include breakpoint($medium) {
+      display: grid;
+
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 1;
+      grid-template-areas: "logo quick-links search";
+      grid-template-columns: $header-columns;
+      grid-template-rows: $header-rows;
+    }
+    @include breakpoint($large) {
+      grid-template-columns: $header-columns--larger;
+      grid-template-rows: $header-rows--larger;
+    }
+
+    .western-logo {
+      grid-area: logo;
+
+      .logo {
+        @include breakpoint($large) {
+          width: $logo-width--larger;
+          height: $logo-height--larger;
+        }
+      }
+    }
+
+    .western-quick-links {
+      align-self: center;
+
+      grid-area: quick-links;
+      justify-self: end;
+    }
+
+    .western-search-widget {
+      align-self: center;
+
+      grid-area: search;
+      justify-self: end;
+    }
+
+    .university-name {
+      display: block;
+      font-size: 0;
+    }
+
+    .site-name {
+      display: block;
+      padding: $half-spacing $standard-spacing;
+      text-align: center;
+      color: $white;
+      border-top: 1px solid $blue;
+      background: linear-gradient(to right, $dark-blue 0%, $dark-blue-gradient 100%);
+      font-size: $font-size--smaller;
+      line-height: 1.5em;
+    }
+  }
+}

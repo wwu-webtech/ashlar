@@ -2,6 +2,10 @@
  * @file
  * 00-atoms/buttons/_buttons.scss
  */
+$button-border-radius: 40px 40px 0 40px;
+$button-border-radius-alt: 50% 50% 0 50%;
+$button-max-width: 300px;
+$button-padding: $standard-spacing;
 
 button,
 .button {
@@ -31,12 +35,12 @@ button,
   &:hover,
   &:focus {
     color: $text-color-light;
-    background-color: mix(white, $default-button-color, 20%);
+    background-color: mix(white, $default-button-color, 40%);
   }
 
   &:focus {
     outline: none;
-    box-shadow: $focus-shadow mix(black, $default-button-color, 20%);
+    box-shadow: $focus-shadow;
   }
 
   &:disabled {
@@ -52,7 +56,6 @@ button,
     border-width: $border-width;
     border-color: $default-button-color;
     background-color: $white;
-    box-shadow: none;
 
     &:hover,
     &:focus {
@@ -63,7 +66,6 @@ button,
 
     &:focus {
       background-color: transparentize($default-button-color, 0.9);
-      box-shadow: none;
     }
   }
 
@@ -74,12 +76,12 @@ button,
 
       &:hover,
       &:focus {
-        background-color: mix(white, $background, 20%);
+        background-color: mix(white, $background, 40%);
       }
 
       &:focus {
         outline: none;
-        box-shadow: $focus-shadow mix(black, $background, 20%);
+        box-shadow: $focus-shadow;
       }
 
       &.alt {
@@ -96,7 +98,6 @@ button,
 
         &:focus {
           background-color: transparentize($background, 0.9);
-          box-shadow: none;
         }
       }
     }

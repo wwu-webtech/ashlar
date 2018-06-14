@@ -4,11 +4,29 @@
  */
 
 html {
-  font-family: $sans-serif;
-  font-size: $base-font-size;
+  @include breakpoint($small) {
+    font-size: $small-font-base;
+  }
+  @include breakpoint($medium) {
+    font-size: $medium-font-base;
+  }
+  @include breakpoint($large) {
+    font-size: $large-font-base;
+  }
   color: $text-color;
+  font-family: $sans-serif;
+  font-size: $mobile-font-base;
 }
 
 .dark-bg {
   color: $text-color-light;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px,1px,1px,1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
 }

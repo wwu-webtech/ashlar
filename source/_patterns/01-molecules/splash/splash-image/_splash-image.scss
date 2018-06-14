@@ -1,0 +1,20 @@
+/**
+ * @file
+ * molecules/media/splash/_splash-image.scss
+ */
+
+.splash {
+  @include breakpoint($large) {
+    margin-top: -$toggle-size--larger;
+  }
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
+  width: 100vw;
+  max-height: 70vh;
+  margin-top: -$toggle-size;
+
+  img {
+    width: 100%;
+  }
+}

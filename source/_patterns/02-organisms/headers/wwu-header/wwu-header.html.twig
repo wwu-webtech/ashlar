@@ -1,0 +1,24 @@
+{#
+/**
+ * Western header - includes logo, campus links, search, and site name
+ */
+#}
+<div class="western-header">
+  <div class="wrap">
+    <div class="western-logo">
+      <a href="http://www.wwu.edu">
+        <span class="university-name">Western Washington University</span>
+        {% include "@atoms/logo/logo.twig" %}
+      </a>
+      <span class="site-name">
+        {% if site_name %}
+          {{ site_name }}
+        {% endif %}
+      </span>
+    </div>
+
+    {% include "@molecules/navigation/wwu-menu/wwu-menu.html.twig" %}
+
+    {% include "@molecules/wwu-search/wwu-search.html.twig" %}
+  </div>
+</div>

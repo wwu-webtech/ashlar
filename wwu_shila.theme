@@ -127,3 +127,12 @@ function wwu_shila_preprocess_pattern_shila_card(&$variables) {
   }
   $variables['attributes'] = $variables['attributes']->addClass($classes);
 }
+
+/**
+ * Get variables for site header
+ *
+ */
+function wwu_shila_preprocess_region(&$variables) {
+  $variables['site_name'] = \Drupal::config('system.site')->get('name');
+  $variables['splash_img'] = theme_get_setting('logo.url');
+}

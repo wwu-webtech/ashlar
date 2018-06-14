@@ -1,0 +1,14 @@
+{#
+/**
+ * @see templates/layout/region--header.html.twig
+ */
+#}
+<header role="banner" class="site-header">
+  {% block page_header %}
+    {% include "@organisms/headers/wwu-header/wwu-header.html.twig" %}
+
+    {% include "@molecules/splash/splash-image/splash-image.html.twig" %}
+
+    {{ content }}
+  {% endblock %}
+</header>

@@ -8,6 +8,7 @@ global-styling:
       build/css/state.css: {}
       build/css/theme.css: {}
       build/css/print.css: { media: print }
+      https://fonts.googleapis.com/icon?family=Material+Icons: {}
 accordion:
   version: 1.x
   js:

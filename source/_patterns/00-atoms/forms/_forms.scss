@@ -2,7 +2,7 @@
  * @file
  * 00-atoms/forms/_forms.scss
  */
-$shila-form-element-background-color: white;
+
 fieldset {
   margin: 0;
   padding: 0;
@@ -10,7 +10,7 @@ fieldset {
   background-color: transparent;
 }
 legend {
-  margin-bottom: $shila-small-spacing / 2;
+  margin-bottom: $half-spacing;
   padding: 0;
   font-weight: 600;
 }
@@ -18,10 +18,9 @@ input,
 label,
 select {
   display: block;
-  font-size: 1rem;
+  font-size: $font-size--smaller;
 }
-#{$shila-all-text-inputs},
-select[multiple=multiple] {
+input {
   box-sizing: border-box;
   width: 100%;
   margin-bottom: $standard-spacing;
@@ -31,13 +30,13 @@ select[multiple=multiple] {
   border-radius: 0;
   background-color: $white;
   box-shadow: none;
-  font-size: 1rem;
+  font-size: $font-size--smaller;
   &:hover {
     border-color: mix(white, $dark-blue, 20%);
   }
   &:focus {
     outline: none;
-    box-shadow: $shila-form-box-shadow-focus;
+    box-shadow: $focus-shadow;
   }
   &:disabled {
     cursor: not-allowed;

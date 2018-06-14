@@ -1,0 +1,25 @@
+/**
+ * @file
+ * 00-atoms/00-global/_structure-vars.scss
+ */
+
+/* Spacing */
+$standard-spacing: 18px;
+$half-spacing: $standard-spacing / 2;
+$large-spacing: 24px;
+
+/* Borders and Lines */
+$border-width: 3px;
+$focus-shadow: 2px 2px 4px 2px transparentize($dark-blue, .5);
+
+/* Content Area */
+$max-content-width: 1200px;
+
+/* Breakpoints */
+$small: 581px;
+$medium: 841px;
+$large: $max-content-width;
+
+/* Grid */
+$small-screen-columns: $standard-spacing 1fr $standard-spacing;
+$large-screen-columns: 1fr $max-content-width 1fr;

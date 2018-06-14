@@ -1,0 +1,18 @@
+/**
+  * @file
+  * 00-atoms/buttons/toggles/_toggles.scss
+  */
+
+$toggle-size: 58px;
+$toggle-size--larger: 72px;
+
+.toggle {
+  @include breakpoint($large) {
+    width: $toggle-size--larger;
+    height: $toggle-size--larger;
+  }
+  width: $toggle-size;
+  height: $toggle-size;
+  padding: 0;
+  border-radius: 0;
+}
