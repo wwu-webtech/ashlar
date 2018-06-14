@@ -4,8 +4,7 @@
 */
 
 a {
-  @include transition($link-transition-speed, $link-transition-ease);
-  transition-property: color;
+  transition: $link-transition-speed $link-transition-ease color;
   text-decoration: none;
   color: $link-color;
 

@@ -18,7 +18,7 @@ $button-size: 200px;
     justify-items: center;
 
     &:before {
-      @include transition($button-transition-speed, $button-transition-ease);
+      transition: $button-transition-speed $button-transition-ease;
 
       grid-column-start: 1;
       grid-row-start: 1;
@@ -26,7 +26,7 @@ $button-size: 200px;
     }
 
     &:after {
-      @include transition($button-transition-speed, $button-transition-ease);
+      transition: $button-transition-speed $button-transition-ease;
       box-sizing: border-box;
       width: $button-size;
       height: $button-size;
@@ -39,7 +39,7 @@ $button-size: 200px;
     }
 
     img {
-      @include transition($button-transition-speed, $button-transition-ease);
+      transition: $button-transition-speed $button-transition-ease;
       z-index: -1;
       width: $button-size;
       height: $button-size;

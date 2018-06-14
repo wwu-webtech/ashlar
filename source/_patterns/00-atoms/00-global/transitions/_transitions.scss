@@ -17,31 +17,6 @@ $button-transition-speed: $medium-transition-speed;
 $button-transition-ease: $standard-ease;
 
 // Mixins
-@mixin transition-duration($timing) {
-  transition-duration: $timing;
-}
-
-@mixin transition-easing($ease) {
-  transition-timing-function: $ease;
-}
-
 @mixin transition($timing, $ease) {
   transition: $timing $ease;
-}
-
-// General Use CSS Classes
-.slow {
-  @include transition-duration($slow-transition-speed);
-}
-.medium {
-  @include transition-duration($medium-transition-speed);
-}
-.fast {
-  @include transition-duration($fast-transition-speed);
-}
-.linear {
-  @include transition-easing(linear);
-}
-.ease {
-  @include transition-easing($standard-ease);
 }
