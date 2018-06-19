@@ -17,7 +17,7 @@
                                                 "with": {
                                                     "content": {
                                                         "include()": {
-                                                            "pattern": "molecules-shila-page-title-html",
+                                                            "pattern": "molecules-page-title-html",
                                                             "with": {
                                                                 "title": "Basic page"
                                                             }
