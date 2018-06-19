@@ -8,6 +8,7 @@
     grid-template-columns: $large-screen-columns;
   }
   display: grid;
+  margin: $standard-spacing 0;
 
   grid-template-areas:
   " . skip_to_content . "

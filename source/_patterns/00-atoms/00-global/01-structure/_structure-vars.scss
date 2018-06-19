@@ -23,3 +23,7 @@ $large: $max-content-width;
 /* Grid */
 $small-screen-columns: $standard-spacing 1fr $standard-spacing;
 $large-screen-columns: 1fr $max-content-width 1fr;
+
+/* Toggle/Menu Button Sizes */
+$toggle-size: 58px;
+$toggle-size--larger: 72px;

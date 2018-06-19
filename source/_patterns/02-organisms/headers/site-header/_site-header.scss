@@ -2,3 +2,13 @@
  * @file
  * organisms/global/site-header/_site-header.scss
  */
+
+.site-header {
+  .nav--main {
+    @include breakpoint($large) {
+      margin-bottom: -($toggle-size--larger / 2);
+    }
+    transform: translatey(-50%);
+    margin-bottom: -($toggle-size / 2);
+  }
+}
