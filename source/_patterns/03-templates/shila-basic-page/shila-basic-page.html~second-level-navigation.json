@@ -29,7 +29,7 @@
                     },
                     "content": {
                         "include()": {
-                            "pattern": "organisms-shila-page-content-html",
+                            "pattern": "organisms-content-region-html",
                             "with": {
                                 "content": {
                                     "join()": [

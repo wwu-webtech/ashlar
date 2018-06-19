@@ -1,4 +1,4 @@
 page:
   header: organisms-site-header-html
-  content: organisms-shila-page-content-html
+  content: organisms-content-region-html
   footer: organisms-site-footer-html
