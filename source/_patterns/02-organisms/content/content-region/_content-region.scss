@@ -4,5 +4,23 @@
  */
 
 .page-content {
+  @include breakpoint($large) {
+    grid-template-columns: $large-screen-columns;
+  }
+  display: grid;
 
+  grid-template-areas:
+  " . skip_to_content . "
+  " . content         . ";
+
+
+  #main-content {
+    grid-area: skip_to_content;
+  }
+  grid-template-columns: $small-screen-columns;
+  grid-template-rows: auto;
+
+  .region-wrapper {
+    grid-area: content;
+  }
 }
