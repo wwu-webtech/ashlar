@@ -4,6 +4,16 @@
  */
 
 .wwu-footer {
+  @include breakpoint($small) {
+    grid-template-areas:
+    ". .... ..... ."
+    ". logo info  ."
+    ". logo icons ."
+    ". .... ..... .";
+    grid-template-columns: $standard-spacing 1fr 2fr $standard-spacing;
+    grid-template-rows: ($large-spacing * 2) auto auto ($large-spacing * 2);
+    justify-items: end;
+  }
   @include breakpoint($large) {
     grid-template-columns: 1fr ($max-content-width * (1 / 3)) ($max-content-width * (2 / 3)) 1fr;
   }
@@ -13,12 +23,15 @@
   font-size: $font-size--smaller;
 
   grid-template-areas:
-  ". .... ..... ."
-  ". logo info  ."
-  ". logo icons ."
-  ". .... ..... .";
-  grid-template-columns: $standard-spacing 1fr 2fr $standard-spacing;
-  grid-template-rows: ($large-spacing * 2) auto auto ($large-spacing * 2);
+  ". ....  ."
+  ". logo  ."
+  ". ....  ."
+  ". info  ."
+  ". ..... ."
+  ". icons .";
+  grid-template-columns: $standard-spacing 1fr $standard-spacing;
+  grid-template-rows: repeat(3, $standard-spacing auto) $standard-spacing;
+  justify-items: center;
 
   a {
     color: $white;
@@ -34,14 +47,20 @@
   }
 
   .western-info {
-    text-align: right;
+    @include breakpoint($small) {
+      text-align: right;
+    }
+    text-align: center;
 
     grid-area: info;
   }
 
   .social-media-links {
+    @include breakpoint($small) {
+      justify-self: end;
+    }
+
     grid-area: icons;
-    justify-self: end;
 
     a {
       outline: none;
