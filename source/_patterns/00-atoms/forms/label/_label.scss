@@ -1,0 +1,12 @@
+/**
+ * @file
+ * atoms/forms/label/_label.scss
+ */
+
+label {
+  font-weight: $bold;
+  margin-bottom: $half-spacing;
+  &.required::after {
+    content: "*";
+  }
+}
