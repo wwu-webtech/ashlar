@@ -2,3 +2,19 @@
  * @file
  * atoms/forms/textarea/_textarea.scss
  */
+ textarea {
+   width: 100%;
+   margin-bottom: $standard-spacing;
+   padding: $standard-spacing;
+   border: solid $dark-blue $border-width;
+   -moz-appearance: none;
+   appearance: none;
+   -webkit-appearnce: none;
+
+   &:disabled {
+     color: $gray;
+     border-width: 1px;
+     border-color: $gray;
+     background-color: $light-gray;
+   }
+ }
