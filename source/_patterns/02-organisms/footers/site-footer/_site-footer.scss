@@ -4,8 +4,13 @@
  */
 
 .site-footer {
+  @include breakpoint($small) {
+    grid-template-areas: ". footer_left . footer_center . footer_right .";
+    grid-template-columns: $standard-spacing 1fr $standard-spacing 1fr $standard-spacing 1fr $standard-spacing;
+    grid-template-rows: auto;
+  }
   @include breakpoint($large) {
-    grid-template-columns: 1fr repeat(3, ($max-content-width / 3)) 1fr;
+    grid-template-columns: 1fr ($max-content-width / 3) $standard-spacing ($max-content-width / 3) $standard-spacing ($max-content-width / 3) 1fr;
   }
   display: grid;
   padding: ($large-spacing * 2) 0;
@@ -13,9 +18,14 @@
   background-color: $blue;
   font-size: $font-size--smaller;
 
-  grid-template-areas: ". footer_left footer_center footer_right .";
-  grid-template-columns: $standard-spacing 1fr 1fr 1fr $standard-spacing;
-  grid-template-rows: auto;
+  grid-template-areas:
+  ". footer_left   ."
+  ". ............. ."
+  ". footer_center ."
+  ". ............. ."
+  ". footer_right  .";
+  grid-template-columns: $standard-spacing 1fr $standard-spacing;
+  grid-template-rows: auto $standard-spacing auto $standard-spacing auto;
 
   .region--footer_left {
     grid-area: footer_left;
