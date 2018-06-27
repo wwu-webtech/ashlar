@@ -1,0 +1,14 @@
+/**
+ * @file
+ * molecules/forms/form/_form.scss
+ */
+
+.form {
+  .form-item {
+    margin-bottom: $half-spacing;
+  }
+  .description {
+    font-size: $font-size--smaller;
+    color: $gray;
+  }
+}
