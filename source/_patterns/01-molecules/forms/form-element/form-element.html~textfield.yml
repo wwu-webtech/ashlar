@@ -1,4 +1,4 @@
-type: texfield
+type: textfield
 name: name
 title_display: before
 attributes:
