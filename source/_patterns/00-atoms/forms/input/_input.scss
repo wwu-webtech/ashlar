@@ -6,14 +6,16 @@
 input[type="search"] {
   appearance: none;
 }
+
 input[type="checkbox"],
 input[type="radio"] {
   display: inline;
-  margin-right: $half-spacing;
+  width: initial;
   + label {
     display: inline-block;
   }
 }
+
 input[type="file"] {
   margin-bottom: $half-spacing;
   width: 100%;
