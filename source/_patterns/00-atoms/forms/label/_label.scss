@@ -4,8 +4,8 @@
  */
 
 label {
-  font-weight: $bold;
   margin-bottom: $half-spacing;
+  font-weight: $bold;
   &.required::after {
     content: "*";
   }
