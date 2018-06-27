@@ -1,0 +1,8 @@
+attributes:
+  Attribute():
+    type:
+    - radio
+    value:
+    - option
+    name:
+    - Radio

@@ -1,16 +1,14 @@
 /**
  * @file
- * atoms/forms/select/_select.scss
+ * atoms/forms/textarea/_textarea.scss
  */
-
-select {
+textarea {
   width: 100%;
   margin-bottom: $standard-spacing;
   padding: $standard-spacing;
+  resize: vertical;
   border: solid $dark-blue $border-width;
-  background-image: url("../../images/forms/dropdown-arrows.png");
-  background-repeat: no-repeat;
-  background-position: calc(100% - 18px);
+  font-size: $font-size--smaller;
 
   -moz-appearance: none;
   appearance: none;
@@ -20,6 +18,5 @@ select {
     color: $gray;
     border-color: $gray;
     background-color: $light-gray;
-    background-image: url("../../images/forms/dropdown-arrows-disabled.png");
   }
 }
