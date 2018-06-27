@@ -18,7 +18,6 @@ input,
 label,
 select {
   display: block;
-  font-size: $font-size--smaller;
 }
 input {
   box-sizing: border-box;
@@ -46,4 +45,7 @@ input {
       border-width: 1px;
     }
   }
+}
+select {
+  font-size: $font-size--smaller;
 }

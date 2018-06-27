@@ -8,6 +8,7 @@ textarea {
   padding: $standard-spacing;
   resize: vertical;
   border: solid $dark-blue $border-width;
+  font-size: $font-size--smaller;
 
   -moz-appearance: none;
   appearance: none;

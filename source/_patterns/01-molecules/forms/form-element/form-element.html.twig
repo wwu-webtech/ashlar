@@ -3,7 +3,7 @@
  * @see templates/form/form-element.html.twig
  */
 #}
-<div{{ attributes }}>
+<div{{ attributes.addClass(type) }}>
   {% if label_display in ['before', 'invisible'] %}
     {{ label }}
   {% endif %}
