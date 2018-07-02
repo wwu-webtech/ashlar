@@ -6,7 +6,9 @@
 <header role="banner" class="site-header">
   {% include "@organisms/headers/wwu-header/wwu-header.html.twig" %}
 
-  {{ page.header }}
+  <div class="splash">
+    {{ page.header }}
+  </div>
 
   {% block main_navigation %}
     {{ page.main_navigation }}
