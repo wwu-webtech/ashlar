@@ -4,11 +4,13 @@
  */
 #}
 <header role="banner" class="site-header">
-  {% block page_header %}
-    {% include "@organisms/headers/wwu-header/wwu-header.html.twig" %}
+  {% include "@organisms/headers/wwu-header/wwu-header.html.twig" %}
 
-    {% include "@molecules/splash/splash-image/splash-image.html.twig" %}
+  <div class="splash">
+    {{ page.header }}
+  </div>
 
-    {{ content }}
+  {% block main_navigation %}
+    {{ page.main_navigation }}
   {% endblock %}
 </header>

@@ -17,7 +17,9 @@
       </span>
     </div>
 
-    {% include "@molecules/navigation/wwu-menu/wwu-menu.html.twig" %}
+    {% block quick_links %}
+      {{ page.quick_links }}
+    {% endblock %}
 
     {% include "@molecules/wwu-search/wwu-search.html.twig" %}
   </div>

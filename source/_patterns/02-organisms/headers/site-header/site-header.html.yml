@@ -1,1 +1,3 @@
-content: molecules-main-navigation-html
+page:
+  header: molecules-splash-image-html
+  main_navigation: molecules-main-navigation-html

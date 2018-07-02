@@ -3,7 +3,7 @@
 * 00-molecules/navigation/wwu-menu/_wwu-menu.scss
 */
 
-.western-quick-links {
+.region--quick_links {
   font-size: $font-size--smaller;
 
   .menu {
@@ -25,8 +25,10 @@
         &:focus {
           background-color: $light-green;
         }
+      }
 
-        &.highlight {
+      &:nth-of-type(1) {
+        a {
           color: $white;
           background-color: $dark-blue;
 

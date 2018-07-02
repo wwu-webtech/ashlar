@@ -4,10 +4,10 @@
  */
 #}
 <div class="page">
-  {% if page.header %}
-    {{ page.header }}
-  {% endif %}
+  {% include "@organisms/headers/site-header/site-header.html.twig" %}
+
   {{ page.content }}
+
   <footer role="contentinfo" class="page-footer region region--footer">
     {% include "@organisms/footers/site-footer/site-footer.html.twig" %}
     {% include "@organisms/footers/wwu-footer/wwu-footer.html.twig" %}
