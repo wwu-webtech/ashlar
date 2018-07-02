@@ -7,6 +7,8 @@ libraries:
   - wwu_shila/global-styling
 regions:
   header: Header
+  quick_links: Quick Links
+  main_navigation: Main Navigation
   content: Content
   footer_left: Left Footer
   footer_center: Center Footer

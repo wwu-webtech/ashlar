@@ -1,0 +1,6 @@
+attributes:
+  Attribute():
+    class:
+    - region
+    - region--header
+content: molecules-splash-image-html
