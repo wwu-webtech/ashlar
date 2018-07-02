@@ -132,6 +132,6 @@ function wwu_shila_preprocess_pattern_shila_card(&$variables) {
  * Get variables for site header
  *
  */
-function wwu_shila_preprocess_region(&$variables) {
+function wwu_shila_preprocess_page(&$variables) {
   $variables['site_name'] = \Drupal::config('system.site')->get('name');
 }
