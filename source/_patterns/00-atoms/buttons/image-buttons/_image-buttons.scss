@@ -4,6 +4,11 @@
 */
 $button-size: 200px;
 
+.block--image-button {
+  display: inline-block;
+  margin: 0 ($large-spacing * 2);
+}
+
 .button {
   &.image {
     position: relative;

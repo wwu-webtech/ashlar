@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Theme override to display image button blocks.
+ */
+#}
+{%
+  set classes = [
+    'block',
+    'block--image-button',
+    'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
+  ]
+%}
+{% set attributes = attributes.addClass(classes) %}
+{% set title_attributes = title_attributes.addClass('block__title') %}
+{% block template %}
+  <div{{ attributes }}>
+    {{ title_prefix }}
+    {% if label %}
+      <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+
+    {% block content %}
+      <a href="{{ block_content.field_link.0.url }}" class="image button">
+        <img src="{{ file_url(block_content.field_image.entity.fileuri) }}" alt="{{ block_content.field_image.0.alt }}">
+        {{ block_content.field_link.0.title }}
+      </a>
+    {% endblock %}
+  </div>
+{% endblock %}

@@ -15,6 +15,15 @@ function wwu_shila_preprocess_page(&$variables) {
 }
 
 /**
+ * Get site name variable for site header
+ */
+function wwu_shila_preprocess_block(&$variables) {
+  if (isset($variables['elements']['content']['#block_content'])) {
+    $variables['block_content'] = $variables['elements']['content']['#block_content'];
+  }
+}
+
+/**
  * Adds a form id based template suggestion for all forms.
  *
  * Implements hook_theme_suggestions_HOOK_alter() for form templates.
