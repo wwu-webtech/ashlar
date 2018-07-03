@@ -32,7 +32,7 @@
   {% if card_list_views[css_name] %}
     {% set attributes = attributes.addClass('card-list--layout-' ~ card_list_views[css_name]) %}
   {% endif %}
-  {% embed "@organisms/sections/shila-card-list/shila-card-list.html.twig" %}
+  {% embed "@organisms/sections/card-list/card-list.html.twig" %}
     {% block cards %}
       {% for row in rows %}
         {{ row.content }}

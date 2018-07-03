@@ -1,0 +1,8 @@
+attributes:
+  Attribute():
+    class:
+    - card-list--layout-default
+cards:
+- molecules-card-html
+- molecules-card-html
+- molecules-card-html

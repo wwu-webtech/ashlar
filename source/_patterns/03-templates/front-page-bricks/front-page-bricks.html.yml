@@ -1,0 +1,17 @@
+page:
+  include():
+    pattern: organisms-page-html
+    with:
+      page:
+        header: organisms-site-header-html
+        content:
+          include():
+            pattern: organisms-content-region-html
+            with:
+              content: organisms-shila-teaser-list-html
+        footer:
+          include():
+            pattern: organisms-wwu-footer-html
+            with:
+              content: organisms-shila-block-html-system-powered-by-block
+off_canvas: organisms-shila-off-canvas-html

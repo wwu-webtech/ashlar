@@ -32,7 +32,7 @@
                                                 "with": {
                                                     "content": {
                                                         "include()": {
-                                                            "pattern": "organisms-shila-card-list-html",
+                                                            "pattern": "organisms-card-list-html",
                                                             "with": {
                                                                 "attributes": {
                                                                     "Attribute()": {

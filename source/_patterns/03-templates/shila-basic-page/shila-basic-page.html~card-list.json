@@ -30,7 +30,7 @@
                                             "include()": {
                                                 "pattern": "organisms-shila-block-html-main",
                                                 "with": {
-                                                    "content": "organisms-shila-card-list-html"
+                                                    "content": "organisms-card-list-html"
                                                 }
                                             }
                                         }
