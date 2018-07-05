@@ -1,0 +1,18 @@
+<div{{ attributes }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% block content %}
+    {{ image }}
+    <div class="body">
+      {{ body }}
+    </div>
+    <div class="credit">
+      <span class="name"> {{ name }}</span>
+      <span class="description">{{ description }}</span>
+    </div>
+  {% endblock %}
+</div>

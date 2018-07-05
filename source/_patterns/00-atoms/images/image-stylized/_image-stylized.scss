@@ -42,6 +42,7 @@ $image-size: 300px;
       z-index: -1;
       width: $image-size;
       height: $image-size;
+      object-fit: cover;
       transition: $button-transition-speed $button-transition-ease;
       transform: translate(5%, 5%);
       border-radius: $button-border-radius-alt;

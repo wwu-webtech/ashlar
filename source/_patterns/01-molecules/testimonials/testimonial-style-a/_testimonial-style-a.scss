@@ -1,0 +1,36 @@
+/**
+* @file
+* 01-molecules/testimonials/testimonial-style-a/_testimonial-style-a.scss
+*/
+
+.block--testimonial {
+  display: grid;
+
+  grid-column-gap: ($large-spacing * 2);
+  grid-template-areas: "image body"
+  "image credit";
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  .image {
+    grid-area: image;
+  }
+
+  .body {
+    align-self: center;
+
+    grid-area: body;
+  }
+
+  .credit {
+    grid-area: credit;
+    .name {
+      display: block;
+      font-weight: bold;
+    }
+
+    .description {
+      font-style: italic;
+    }
+  }
+}
