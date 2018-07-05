@@ -7,7 +7,7 @@
   .card {
     display: grid;
 
-    grid-column-gap: 18px;
+    grid-column-gap: $standard-spacing;
     grid-template-areas:
     "image title"
     "image body";
