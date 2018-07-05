@@ -1,0 +1,14 @@
+<div{{ attributes }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% block content %}
+    <a href="{{ url }}" class="image button stylized">
+      {{ image }}
+      {{ link_text }}
+    </a>
+  {% endblock %}
+</div>

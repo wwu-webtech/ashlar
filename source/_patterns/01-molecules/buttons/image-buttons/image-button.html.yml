@@ -1,0 +1,12 @@
+attributes:
+  Attribute():
+    class:
+    - block
+    - block--image-button
+title_attributes:
+  Attribute():
+    class:
+    - block__title
+url: "#"
+image: atoms-landscape-3x2
+link_text: "Image Button"

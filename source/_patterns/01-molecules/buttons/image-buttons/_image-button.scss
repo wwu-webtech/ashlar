@@ -1,0 +1,27 @@
+/**
+* @file
+* 01-molecules/buttons/image-buttons/_image-buttons.scss
+*/
+$button-size: 200px;
+
+.block--image-button {
+  display: inline-block;
+  margin: 0 ($large-spacing * 2);
+
+  .stylized {
+    &.image {
+      grid-template-columns: $button-size;
+      grid-template-rows: $button-size 2.5em;
+    }
+
+    &:after {
+      width: $button-size;
+      height: $button-size;
+    }
+
+    img {
+      width: $button-size;
+      height: $button-size;
+    }
+  }
+}

@@ -1,15 +1,10 @@
 /**
 * @file
-* 00-atoms/buttons/image-buttons/_image-buttons.scss
+* 00-atoms/images/image-stylized/_image-stylized.scss
 */
-$button-size: 200px;
+$image-size: 300px;
 
-.block--image-button {
-  display: inline-block;
-  margin: 0 ($large-spacing * 2);
-}
-
-.button {
+.stylized {
   &.image {
     position: relative;
     display: inline-grid;
@@ -18,8 +13,8 @@ $button-size: 200px;
     color: $link-color;
     background: none;
 
-    grid-template-columns: $button-size;
-    grid-template-rows: $button-size 2.5em;
+    grid-template-columns: $image-size;
+    grid-template-rows: $image-size 2.5em;
     justify-items: center;
 
     &:before {
@@ -32,8 +27,8 @@ $button-size: 200px;
 
     &:after {
       box-sizing: border-box;
-      width: $button-size;
-      height: $button-size;
+      width: $image-size;
+      height: $image-size;
       content: "";
       transition: $button-transition-speed $button-transition-ease;
       border: solid $dark-blue $border-width;
@@ -45,8 +40,8 @@ $button-size: 200px;
 
     img {
       z-index: -1;
-      width: $button-size;
-      height: $button-size;
+      width: $image-size;
+      height: $image-size;
       transition: $button-transition-speed $button-transition-ease;
       transform: translate(5%, 5%);
       border-radius: $button-border-radius-alt;
@@ -67,22 +62,6 @@ $button-size: 200px;
 
       img {
         transform: translate(0, 0);
-      }
-    }
-
-    &.icon {
-      &:before {
-        margin-right: $button-padding;
-        content: "»";
-        color: $white;
-        font-size: 3em;
-      }
-
-      &:hover,
-      &:focus {
-        &:before {
-          color: $dark-blue;
-        }
       }
     }
   }
