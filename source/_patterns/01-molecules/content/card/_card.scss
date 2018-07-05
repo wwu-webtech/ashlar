@@ -23,5 +23,14 @@
 
   .body {
     order: 3;
+
+    .date {
+      font-style: italic;
+      font-size: $h6-font-size;
+    }
+
+    .location {
+      margin: $half-spacing 0;
+    }
   }
 }
