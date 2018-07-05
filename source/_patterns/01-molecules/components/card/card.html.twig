@@ -1,9 +1,13 @@
 <div class="card">
-  {{ image }}
+  <div class="title"><a href="{{ link_url }}">{{ title }}</a></div>
 
-  <a href="{{ link_url }}">{{ title }}</a>
+  <div class="image">
+    {{ image }}
+  </div>
 
-  {% block content %}
-  {{ content }}
-  {% endblock %}
+  <div class="body">
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
 </div>

@@ -4,10 +4,24 @@
  */
 
 .card {
-  a {
-    display: inline-block;
-    margin-bottom: $half-spacing;
-    font-size: $h4-font-size;
-    font-weight: $bold;
+  display: flex;
+  flex-flow: column nowrap;
+
+  .image {
+    order: 1;
+  }
+
+  .title {
+    a {
+      display: inline-block;
+      margin-bottom: $half-spacing;
+      font-size: $h4-font-size;
+      font-weight: $bold;
+    }
+    order: 2;
+  }
+
+  .body {
+    order: 3;
   }
 }

@@ -2,3 +2,29 @@
  * @file
  * organisms/sections/card-list/_card-list.scss
  */
+
+.card-list {
+  .card {
+    display: grid;
+
+    grid-column-gap: 18px;
+    grid-template-areas:
+    "image title"
+    "image body";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+
+    .image {
+      grid-area: image;
+    }
+
+    .title {
+      grid-area: title;
+      margin-top: -.35em;
+    }
+
+    .body {
+      grid-area: body;
+    }
+  }
+}
