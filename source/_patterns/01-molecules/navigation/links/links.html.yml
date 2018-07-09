@@ -1,0 +1,10 @@
+attributes:
+  Attribute():
+    class:
+    - links
+    - inline
+links:
+  comment-reply:
+    link: <a href="">Reply</a>
+    attributes:
+      Attribute(): {}
