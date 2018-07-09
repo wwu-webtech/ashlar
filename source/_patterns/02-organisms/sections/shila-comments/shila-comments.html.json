@@ -12,11 +12,11 @@
     "label": "Comments",
     "comments": {
         "join()": [
-            "organisms-shila-comment-html",
+            "organisms-comment-html",
             "<div class=\"indented\">",
-            "organisms-shila-comment-html",
+            "organisms-comment-html",
             "</div>",
-            "organisms-shila-comment-html"
+            "organisms-comment-html"
         ]
     },
     "comment_form_title": "Add new comment",

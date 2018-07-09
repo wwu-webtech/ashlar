@@ -1,0 +1,11 @@
+attributes:
+  Attribute():
+    class:
+    - block
+    - block--search-form-block
+title_attributes:
+  Attribute():
+    class:
+    - block__title
+label: Search
+content: molecules-form-html-search-block
