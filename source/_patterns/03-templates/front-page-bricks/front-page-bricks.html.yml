@@ -8,7 +8,7 @@ page:
           include():
             pattern: organisms-content-region-html
             with:
-              content: organisms-shila-teaser-list-html
+              content: organisms-teaser-list-html
         footer:
           include():
             pattern: organisms-wwu-footer-html

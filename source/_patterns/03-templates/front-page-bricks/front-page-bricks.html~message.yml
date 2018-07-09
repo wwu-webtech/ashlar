@@ -21,7 +21,7 @@ page:
                         status:
                         - Front page with a status message
                     only: true
-                - organisms-shila-teaser-list-html
+                - organisms-teaser-list-html
         footer:
           include():
             pattern: organisms-wwu-footer-html
