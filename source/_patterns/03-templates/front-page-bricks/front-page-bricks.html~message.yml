@@ -27,4 +27,4 @@ page:
             pattern: organisms-wwu-footer-html
             with:
               content: organisms-block-html-system-powered-by-block
-off_canvas: organisms-shila-off-canvas-html
+off_canvas: organisms-off-canvas-html
