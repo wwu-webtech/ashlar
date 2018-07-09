@@ -4,8 +4,12 @@
  */
 
 blockquote {
-  margin-left: 0;
-  padding-left: 1rem;
-  color: $shila-medium-gray;
-  border-left: 0.33rem solid $shila-light-gray;
+  margin: $standard-spacing 0;
+  padding: $large-spacing;
+  background-color: $light-gray;
+
+  &.dark-bg {
+    background-color: $dark-blue;
+    color: $white;
+  }
 }
