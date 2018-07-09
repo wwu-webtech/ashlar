@@ -1,27 +1,27 @@
-shila_theme.xs:
+wwu_shila.xsmall:
   label: XS
-  mediaQuery: 'all and (max-width: 524px)'
+  mediaQuery: 'all and (max-width: 580px)'
   weight: 0
   multipliers:
     - 1x
     - 2x
-shila_theme.s:
+wwu_shila.small:
   label: S
-  mediaQuery: 'all and (min-width: 525px) and (max-width: 800px)'
+  mediaQuery: 'all and (min-width: 581px) and (max-width: 840px)'
   weight: 1
   multipliers:
     - 1x
     - 2x
-shila_theme.m:
+wwu_shila.medium:
   label: M
-  mediaQuery: 'all and (min-width: 801px) and (max-width: 1024px)'
+  mediaQuery: 'all and (min-width: 841px) and (max-width: 1200px)'
   weight: 2
   multipliers:
     - 1x
     - 2x
-shila_theme.l:
+wwu_shila.large:
   label: L
-  mediaQuery: 'all and (min-width: 1025px)'
+  mediaQuery: 'all and (min-width: 1201px)'
   weight: 3
   multipliers:
     - 1x

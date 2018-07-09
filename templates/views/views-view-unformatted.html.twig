@@ -44,7 +44,7 @@
   {% if teaser_list_views[css_name] %}
     {% set attributes = attributes.addClass('teaser-list--layout-' ~ teaser_list_views[css_name]) %}
   {% endif %}
-  {% embed "@organisms/sections/shila-teaser-list/shila-teaser-list.html.twig" %}
+  {% embed "@organisms/sections/teaser-list/teaser-list.html.twig" %}
     {% block cards %}
       {% for row in rows %}
         {{ row.content }}
