@@ -11,7 +11,7 @@ page:
               content:
                 join():
                 - include():
-                    pattern: molecules-shila-messages-html
+                    pattern: molecules-messages-html
                     with:
                       attributes:
                         Attribute():

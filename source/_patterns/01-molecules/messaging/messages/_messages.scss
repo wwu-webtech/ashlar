@@ -1,19 +1,19 @@
 /**
  * @file
- * molecules/messaging/shila-messages/_shila-messages.scss
+ * molecules/messaging/messages/_messages.scss
  */
 
-$status-color: #e5edf8 !default;
-$warning-color: #fff6bf !default;
-$error-color: #fbe3e4 !default;
-$success-color: #e6efc2 !default;
+$status-color: #e5edf8;
+$warning-color: #fff6bf;
+$error-color: #fbe3e4;
+$success-color: #e6efc2;
 
 @mixin message($color) {
   background-color: $color;
   color: darken($color, 60%);
   display: block;
-  margin-bottom: $shila-small-spacing;
-  padding: $shila-small-spacing;
+  margin-bottom: $half-spacing;
+  padding: $half-spacing;
   text-align: center;
   a {
     color: darken($color, 70%);
