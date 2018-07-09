@@ -4,9 +4,7 @@
  */
 
 hr {
-  margin: $shila-base-spacing 0;
-  border-top: 0;
-  border-right: 0;
-  border-bottom: $shila-base-border;
-  border-left: 0;
+  margin: $standard-spacing 0;
+  border: 0;
+  border-bottom: $border-width solid $light-gray;
 }
