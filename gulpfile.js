@@ -58,7 +58,6 @@
     options: {
       includePaths: [
         'source/sass',
-        'node_modules/shila-css',
         'node_modules/breakpoint-sass/stylesheets',
         'node_modules/sass-toolkit/stylesheets',
         'node_modules/singularitygs/stylesheets'
