@@ -36,19 +36,11 @@
  * - page.footer_left
  * - page.footer_center
  * - page.footer_right
- * - page.off_canvas
  *
  * @see template_preprocess_page()
  * @see html.html.twig
  */
 #}
 <div class="layout-container">
-  {% if page.off_canvas %}
-    <input type="checkbox" id="off-canvas-checkbox">
-    <label for="off-canvas-checkbox" id="off-canvas-label"></label>
-  {% endif %}
   {% include "@organisms/page/page/page.html.twig" %}
-  {% if page.off_canvas %}
-    {{ page.off_canvas }}
-  {% endif %}
 </div>{# /.layout-container #}

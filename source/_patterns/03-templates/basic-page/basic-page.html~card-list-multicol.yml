@@ -30,4 +30,4 @@ page:
                                 class:
                                 - card-list--layout-multicol
         footer: organisms-wwu-footer-html
-off_canvas: organisms-off-canvas-html
+

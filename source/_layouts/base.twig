@@ -7,12 +7,7 @@
   </head>
   <body class="{{ bodyClass }}">
     <div class="layout-container">
-      {% if off_canvas %}
-        <input type="checkbox" id="off-canvas-checkbox">
-        <label for="off-canvas-checkbox" id="off-canvas-label"></label>
-      {% endif %}
       {{ page }}
-      {{ off_canvas }}
     </div>{# /.layout-container #}
   </body>
 </html>
