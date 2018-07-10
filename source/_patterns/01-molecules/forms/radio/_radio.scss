@@ -1,72 +1,8 @@
 /**
  * @file
  * molecules/forms/radio/_radio.scss
+ * radio buttons inherit some styles from molecules/forms/checkbox/_checbox.scss
  */
-
-.radio {
-  position: relative;
-  margin-bottom: $half-spacing;
-}
-
-input[type="radio"] {
-  position: absolute;
-  top: 0;
-  left: 0;
-  box-sizing: border-box;
-  width: $select-input-size;
-  height: $select-input-size;
-  margin: 0;
-  padding: 0;
-  opacity: 0;
-  border: 0;
-  outline: 0;
-
-  + label {
-    @include breakpoint($small) {
-      margin-left: $select-input-size--smaller;
-      line-height: $select-input-size--smaller;
-    }
-    @include breakpoint($medium) {
-      margin-left: $select-input-size;
-      line-height: $select-input-size;
-    }
-    display: inline-block;
-    align-self: center;
-    margin: 0;
-    margin-left: $select-input-size;
-    padding-left: $half-spacing;
-    font-weight: $regular;
-    line-height: $select-input-size;
-
-    &:before {
-      @include breakpoint($small) {
-        width: $select-input-size--smaller;
-        height: $select-input-size--smaller;
-      }
-      @include breakpoint($medium) {
-        width: $select-input-size;
-        height: $select-input-size;
-      }
-      position: absolute;
-      left: 0;
-      display: inline-block;
-      display: grid;
-      align-items: center;
-      box-sizing: border-box;
-      width: $select-input-size;
-      height: $select-input-size;
-      content: "";
-      border-width: $border-width;
-      border-style: solid;
-      border-color: $dark-blue;
-      background-color: $white;
-      background-repeat: no-repeat;
-      background-position: 50%;
-
-      justify-items: center;
-    }
-  }
-}
 
 input[type="radio"] {
   + label {
@@ -75,14 +11,16 @@ input[type="radio"] {
     }
   }
   &:checked {
-    + label:before {
-      @include breakpoint($small) {
-        background-image: url("../../images/forms/radio--smaller.png");
-      }
-      @include breakpoint($medium) {
+    + label {
+      &:before {
+        @include breakpoint($small) {
+          background-image: url("../../images/forms/radio--smaller.png");
+        }
+        @include breakpoint($medium) {
+          background-image: url("../../images/forms/radio.png");
+        }
         background-image: url("../../images/forms/radio.png");
       }
-      background-image: url("../../images/forms/radio.png");
     }
   }
 }

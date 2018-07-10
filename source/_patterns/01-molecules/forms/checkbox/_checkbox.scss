@@ -2,12 +2,14 @@
  * @file
  * molecules/forms/checkbox/_checkbox.scss
  */
-.checkbox {
+.checkbox,
+.radio {
   position: relative;
   margin-bottom: $half-spacing;
 }
 
-input[type="checkbox"] {
+input[type="checkbox"],
+input[type="radio"] {
   position: absolute;
   top: 0;
   left: 0;
@@ -64,18 +66,28 @@ input[type="checkbox"] {
       justify-items: center;
     }
   }
+
+  &:focus {
+    + label {
+      &:before {
+        box-shadow: $focus-shadow;
+      }
+    }
+  }
 }
 
 input[type="checkbox"] {
   &:checked {
-    + label:before {
-      @include breakpoint($small) {
-        background-image: url("../../images/forms/check--smaller.png");
-      }
-      @include breakpoint($medium) {
+    + label {
+      &:before {
+        @include breakpoint($small) {
+          background-image: url("../../images/forms/check--smaller.png");
+        }
+        @include breakpoint($medium) {
+          background-image: url("../../images/forms/check.png");
+        }
         background-image: url("../../images/forms/check.png");
       }
-      background-image: url("../../images/forms/check.png");
     }
   }
 }
