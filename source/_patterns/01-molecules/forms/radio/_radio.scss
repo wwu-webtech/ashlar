@@ -1,4 +1,26 @@
 /**
  * @file
  * molecules/forms/radio/_radio.scss
+ * radio buttons inherit some styles from molecules/forms/checkbox/_checbox.scss
  */
+
+input[type="radio"] {
+  + label {
+    &:before {
+      border-radius: 50%;
+    }
+  }
+  &:checked {
+    + label {
+      &:before {
+        @include breakpoint($small) {
+          background-image: url("../../images/forms/radio--smaller.png");
+        }
+        @include breakpoint($medium) {
+          background-image: url("../../images/forms/radio.png");
+        }
+        background-image: url("../../images/forms/radio.png");
+      }
+    }
+  }
+}

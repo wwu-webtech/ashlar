@@ -19,4 +19,16 @@ textarea {
     border-color: $gray;
     background-color: $light-gray;
   }
+  &:focus {
+    outline: none;
+    box-shadow: $focus-shadow;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    background-color: $white;
+    &:hover {
+      border: $gray;
+      border-width: 1px;
+    }
+  }
 }
