@@ -1,8 +1,0 @@
-attributes:
-  Attribute():
-    type:
-    - checkbox
-    value:
-    - option
-    name:
-    - Checkbox
