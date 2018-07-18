@@ -1,5 +1,6 @@
 {
   "name": "aleksip/shila-drupal-theme",
+  "type": "drupal-theme",
   "description": "Shila theme for Drupal 8",
   "keywords": [
     "drupal",
@@ -33,6 +34,7 @@
     }
   },
   "require": {
-    "aleksip/plugin-data-transform": "dev-master"
+    "aleksip/plugin-data-transform": "dev-master",
+    "composer/installers": "^1.2"
   }
 }
