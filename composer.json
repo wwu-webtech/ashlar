@@ -1,5 +1,6 @@
 {
   "name": "wwuweb/wwu_shila",
+  "type": "drupal-theme",
   "description": "Shila theme for Drupal 8",
   "keywords": [
     "drupal",
@@ -10,7 +11,6 @@
   ],
   "homepage": "https://github.com/aleksip/shila-drupal-theme",
   "license": "GPL-2.0",
-  "type": "drupal-theme",
   "authors": [
     {
       "name": "Aleksi Peebles"
