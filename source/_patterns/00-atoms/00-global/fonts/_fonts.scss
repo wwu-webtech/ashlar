@@ -19,10 +19,6 @@ $body-font-weight: $regular;
 $heading-font-weight: $bold;
 $button-font-weight: $bold;
 
-// Font Sizes
-$font-size--smaller: calc($p-font-size*.8);
-
-
 // Fluid Typography: Major Second scale
 $min-h1-font-size: 27.03px;
 $max-h1-font-size: 51.145px;
@@ -61,6 +57,7 @@ $h5-font-size: calc(#{$min-h5-font-size} + #{strip-unit($max-h5-font-size - $min
 
 $p-font-size: calc(#{$min-p-font-size} + #{strip-unit($max-p-font-size - $min-p-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 
+$font-size--smaller: 0.8em;
 
 // CSS Classes
 .sans-serif {
