@@ -1,0 +1,19 @@
+layout_twocol_75_25:
+  label: 'Two column 75/25'
+  path: templates/layout/twocol_75_25
+  template: layout--twocol-75-25
+  category: 'Columns: 2'
+  default_region: first
+  icon_map:
+    - [top]
+    - [first, first, first, second]
+    - [bottom]
+  regions:
+    top:
+      label: Top
+    first:
+      label: First
+    second:
+      label: Second
+    bottom:
+      label: Bottom
