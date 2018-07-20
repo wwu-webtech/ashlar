@@ -11,8 +11,7 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
   margin: $heading-margin-top 0 $heading-margin-bottom;
   color: $heading-color;
   font-family: $heading-font-family;
@@ -34,9 +33,6 @@ h4 {
 }
 h5 {
   font-size: $h5-font-size;
-}
-h6 {
-  font-size: $h6-font-size;
 }
 
 .dark-bg {

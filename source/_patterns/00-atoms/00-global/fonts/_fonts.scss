@@ -5,6 +5,7 @@
 
 @import url("https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700,700i|Noto+Sans:400,400i,700,700i");
 
+
 // Font Family Variables
 $sans-serif: "Noto Sans", "Open Sans", sans-serif;
 $serif: "Crimson Text", serif;
@@ -15,21 +16,46 @@ $body-font-family: $sans-serif;
 $regular: 400;
 $bold: 700;
 $body-font-weight: $regular;
-$heading-font-weight: $regular;
+$heading-font-weight: $bold;
 $button-font-weight: $bold;
 
 // Font Sizes
-$large-font-base: 24px;
-$medium-font-base: 21px;
-$small-font-base: 18px;
-$mobile-font-base: 21px;
-$h1-font-size: 2.441em;
-$h2-font-size: 1.953em;
-$h3-font-size: 1.563em;
-$h4-font-size: 1.25em;
-$h5-font-size: 1.2em;
-$h6-font-size: 1.1em;
-$font-size--smaller: 0.8em;
+$font-size--smaller: calc($p-font-size*.8);
+
+
+// Fluid Typography: Major Second scale
+$min-h1-font-size: 25.228px;
+$max-h1-font-size: 51.145px;
+$min-h2-font-size: 22.425px;
+$max-h2-font-size: 45.462px;
+$min-h3-font-size: 19.934px;
+$max-h3-font-size: 40.411px;
+$min-h4-font-size: 17.719px;
+$max-h4-font-size: 35.921px;
+$min-h5-font-size: 15.75px;
+$max-h5-font-size: 31.93px;
+$min-p-font-size: 14px;
+$max-p-font-size: 28.382px;
+
+
+/*View width for fluid typography*/
+$min-vw: 300px;
+$max-vw: 1600px;
+
+
+// Font Sizes
+$h1-font-size: calc(#{$min-h1-font-size} + #{strip-unit($max-h1-font-size - $min-h1-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+
+$h2-font-size: calc(#{$min-h2-font-size} + #{strip-unit($max-h2-font-size - $min-h2-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+
+$h3-font-size: calc(#{$min-h3-font-size} + #{strip-unit($max-h3-font-size - $min-h3-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+
+$h4-font-size: calc(#{$min-h4-font-size} + #{strip-unit($max-h4-font-size - $min-h4-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+
+$h5-font-size: calc(#{$min-h5-font-size} + #{strip-unit($max-h5-font-size - $min-h5-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+
+$p-font-size: calc(#{$min-p-font-size} + #{strip-unit($max-p-font-size - $min-p-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+
 
 // CSS Classes
 .sans-serif {
