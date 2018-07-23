@@ -34,8 +34,8 @@ button,
 
   &:hover,
   &:focus {
-    color: $text-color-light;
-    background-color: mix(white, $default-button-color, $percent-change);
+    color: $black;
+    background-color: $light-green;
   }
 
   &:focus {
@@ -51,6 +51,7 @@ button,
     }
   }
 
+  /* Alternate Button Styles */
   &.alt {
     color: $default-button-color;
     border-width: $border-width;
@@ -59,30 +60,26 @@ button,
 
     &:hover,
     &:focus {
-      color: mix(white, $default-button-color, $percent-change);
-      border-color: mix(white, $default-button-color, $percent-change);
-      background-color: transparentize($default-button-color, 0.95);
-    }
-
-    &:focus {
-      background-color: transparentize($default-button-color, 0.9);
+      background-color: transparentize($dark-blue, 0.7);
     }
   }
 
-  @each $color, $background, $text in $wwu-colors {
+  @each $color, $background, $text, $hover-color, $hover-text in $wwu-colors {
     &.#{$color} {
       color: $text;
       background-color: $background;
 
       &:hover,
       &:focus {
-        background-color: mix(white, $background, $percent-change);
+        background-color: $hover-color;
+        color: $hover-text;
       }
 
       &:focus {
         outline: none;
       }
 
+      /* Alternate Button Styles */
       &.alt {
         color: $background;
         border-color: $background;
@@ -90,13 +87,7 @@ button,
 
         &:hover,
         &:focus {
-          color: mix(white, $background, $percent-change);
-          border-color: mix(white, $background, $percent-change);
-          background-color: transparentize($background, 0.95);
-        }
-
-        &:focus {
-          background-color: transparentize($background, 0.9);
+          background-color: transparentize($background, 0.7);
         }
       }
     }

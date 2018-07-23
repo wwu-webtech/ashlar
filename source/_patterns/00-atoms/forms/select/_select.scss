@@ -12,9 +12,7 @@ select {
   background-repeat: no-repeat;
   background-position: calc(100% - 18px);
 
-  -moz-appearance: none;
   appearance: none;
-  -webkit-appearnce: none;
 
   &:disabled {
     color: $gray;

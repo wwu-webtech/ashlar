@@ -31,7 +31,6 @@
         vertical-align: middle;
         white-space: normal;
         color: $white;
-        outline: none;
         background-color: $dark-blue;
         line-height: 1.4em;
         font-size: $font-size--smaller;
@@ -39,7 +38,7 @@
         &:hover,
         &:focus {
           background-color: $light-green;
-          color: $dark-blue;
+          color: $black;
         }
       }
 
