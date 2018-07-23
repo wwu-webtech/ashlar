@@ -40,7 +40,7 @@ button,
 
   &:focus {
     outline: none;
-    box-shadow: $focus-shadow;
+    border: $focus-outline;
   }
 
   &:disabled {
@@ -81,7 +81,6 @@ button,
 
       &:focus {
         outline: none;
-        box-shadow: $focus-shadow;
       }
 
       &.alt {
