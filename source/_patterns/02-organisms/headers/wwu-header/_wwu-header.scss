@@ -22,6 +22,7 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
     grid-template-columns: $large-screen-columns;
   }
   background: linear-gradient(to left, $white 0%, $white-gradient 100%);
+  font-size: $wwu-header-font-size;
 
   .wrap {
     @include breakpoint($medium) {

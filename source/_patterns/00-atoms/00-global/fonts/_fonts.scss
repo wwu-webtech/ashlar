@@ -19,10 +19,6 @@ $body-font-weight: $regular;
 $heading-font-weight: $bold;
 $button-font-weight: $bold;
 
-// Font Sizes
-$font-size--smaller: calc($p-font-size*.8);
-
-
 // Fluid Typography: Major Second scale
 $min-h1-font-size: 27.03px;
 $max-h1-font-size: 51.145px;
@@ -42,6 +38,9 @@ $max-h5-font-size: 31.93px;
 $min-p-font-size: 15px;
 $max-p-font-size: 28.382px;
 
+$min-wwu-header-font-size: 18px;
+$max-wwu-header-font-size: 24px;
+
 
 /*View width for fluid typography*/
 $min-vw: 300px;
@@ -50,17 +49,14 @@ $max-vw: 1600px;
 
 // Font Sizes
 $h1-font-size: calc(#{$min-h1-font-size} + #{strip-unit($max-h1-font-size - $min-h1-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-
 $h2-font-size: calc(#{$min-h2-font-size} + #{strip-unit($max-h2-font-size - $min-h2-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-
 $h3-font-size: calc(#{$min-h3-font-size} + #{strip-unit($max-h3-font-size - $min-h3-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-
 $h4-font-size: calc(#{$min-h4-font-size} + #{strip-unit($max-h4-font-size - $min-h4-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-
 $h5-font-size: calc(#{$min-h5-font-size} + #{strip-unit($max-h5-font-size - $min-h5-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-
 $p-font-size: calc(#{$min-p-font-size} + #{strip-unit($max-p-font-size - $min-p-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+$wwu-header-font-size: calc(#{$min-wwu-header-font-size} + #{strip-unit($max-wwu-header-font-size - $min-wwu-header-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 
+$font-size--smaller: 0.8em;
 
 // CSS Classes
 .sans-serif {
