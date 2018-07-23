@@ -15,24 +15,29 @@
     min-width: $toggle-size;
   }
 
-  form {
+  .toggle-search {
+    order: 2;
+  }
+
+  .search-area {
     display: flex;
-  }
+    order: 1;
 
-  .search-box {
-    input {
-      @include breakpoint($large) {
-        padding: $standard-spacing;
+    .search-box {
+      input {
+        @include breakpoint($large) {
+          padding: $standard-spacing;
+        }
+        min-width: 280px;
+        height: 100%;
+        margin: 0;
+        padding: $half-spacing;
       }
-      min-width: 280px;
-      height: 100%;
-      margin: 0;
-      padding: $half-spacing;
     }
-  }
 
-  .search-label {
-    margin: 0;
-    font-size: 0;
+    .search-label {
+      margin: 0;
+      font-size: 0;
+    }
   }
 }
