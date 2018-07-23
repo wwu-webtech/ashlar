@@ -6,8 +6,6 @@ $(".toggle-search").click(function() {
   }
 
   $(this).toggleClass('is-expanded');
-  //$(this).toggleClass('blue');
-  //$(this).toggleClass('dark-blue');
   $(this).siblings('.search-area').animate({width: 'toggle'});
   $(this).children('.material-icons').text('search');
   $(this).filter('.is-expanded').children('.material-icons').text('close');

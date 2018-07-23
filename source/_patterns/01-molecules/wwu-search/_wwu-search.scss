@@ -2,14 +2,17 @@
 * @file
 * 01-molecules/content/search/_search.scss
 */
-$search-widget-width: 438px;
 
 .western-search-widget {
+  z-index: 0;
   display: flex;
   justify-content: end;
 
-  &.is-expanded {
-    width: $search-widget-width;
+  .toggle {
+    @include breakpoint($large) {
+      min-width: $toggle-size--larger;
+    }
+    min-width: $toggle-size;
   }
 
   form {
@@ -21,6 +24,7 @@ $search-widget-width: 438px;
       @include breakpoint($large) {
         padding: $standard-spacing;
       }
+      min-width: 280px;
       height: 100%;
       margin: 0;
       padding: $half-spacing;
