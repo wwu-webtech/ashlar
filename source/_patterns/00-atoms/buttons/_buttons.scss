@@ -6,12 +6,19 @@ $button-border-radius: 100px;
 $button-border-radius-alt: 50%;
 $button-padding: $standard-spacing;
 
+.button {
+  @include breakpoint($small) {
+    width: auto;
+    min-width: 300px;
+  }
+  width: 100%;
+}
+
 .button,
 button {
   transition: $button-transition-speed $button-transition-ease background-color;
   display: inline-block;
   box-sizing: border-box;
-  width: 100%;
   padding: $button-padding ($button-padding * 2);
   cursor: pointer;
   user-select: none;
@@ -91,13 +98,5 @@ button {
         }
       }
     }
-  }
-}
-
-@include breakpoint($small) {
-  .button,
-  button {
-    width: auto;
-    min-width: 300px;
   }
 }
