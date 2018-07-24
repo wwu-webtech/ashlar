@@ -34,7 +34,7 @@
     &:hover,
     &:focus {
       svg {
-        fill: mix(white, $default-button-color, $percent-change);
+        fill: $light-green;
       }
     }
   }

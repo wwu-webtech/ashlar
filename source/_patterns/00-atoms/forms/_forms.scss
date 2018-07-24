@@ -30,9 +30,6 @@ input {
   background-color: $white;
   box-shadow: none;
   font-size: $font-size--smaller;
-  &:hover {
-    border-color: mix(white, $dark-blue, $percent-change);
-  }
   &:focus {
     outline: none;
     box-shadow: $focus-shadow;
@@ -46,6 +43,13 @@ input {
     }
   }
 }
+
+input[type="submit"] {
+  &:focus {
+    box-shadow: none;
+  }
+}
+
 select {
   font-size: $font-size--smaller;
 }
