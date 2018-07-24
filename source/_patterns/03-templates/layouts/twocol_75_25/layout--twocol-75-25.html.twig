@@ -2,9 +2,17 @@
 /**
  * @see templates/layouts/twocol_75_25/layout--twocol-75-25.html.twig
  */
-#}
+ * This layout over rides the layout from the theme discovery module.
+ */
+ #}
+ {%
+  set classes = [
+    'layout',
+    'layout--twocol-75-25'
+  ]
+ %}
 {% if content %}
-  <div{{ attributes.addClass('layout', 'layout--twocol-75-25') }}>
+  <div{{ attributes.addClass(classes) }}>
     {% if content.top %}
       <div {{ region_attributes.top.addClass('layout__region', 'layout__region--top') }}>
         {{ content.top }}

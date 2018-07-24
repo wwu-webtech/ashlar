@@ -3,11 +3,15 @@
  * @file
  * Default theme implementation for a three column layout.
  *
- * This layout is included in the layout discovery module, and is not imported
- * into Drupal from pattern lab. Therefore, changes made to this file will
- * not be reflected in Drupal.
+ * This layout over rides the layout from the theme discovery module.
  */
-#}
+ #}
+ {%
+  set classes = [
+    'layout',
+    'layout--threecol-33-34-33'
+  ]
+ %}
 {% if content %}
   <div{{ attributes.addClass(classes) }}>
     {% if content.top %}
