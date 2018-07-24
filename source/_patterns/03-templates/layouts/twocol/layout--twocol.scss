@@ -13,9 +13,16 @@
 }
 
 
-.layout--twocol > .layout__region--first,
+.layout--twocol > .layout__region--first {
+  @include breakpoint($medium) {
+    flex: 0 1 50%;
+    padding-right: $standard-spacing;
+  }
+}
+
 .layout--twocol > .layout__region--second {
   @include breakpoint($medium) {
     flex: 0 1 50%;
+    padding-left: $standard-spacing;
   }
 }
