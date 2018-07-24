@@ -1,0 +1,26 @@
+/*
+ * @file
+ * templates/layouts/threecol_33_34_33/_layout--threecol-33-34-33.scss
+ */
+
+.layout--threecol-33-34-33 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.layout--threecol-33-34-33 > .layout__region {
+  flex: 0 1 100%;
+}
+
+.layout--threecol-33-34-33 > .layout__region--first,
+.layout--threecol-33-34-33 > .layout__region--third {
+  @include breakpoint($medium) {
+    flex: 0 1 33%;
+  }
+}
+
+.layout--threecol-33-34-33 > .layout__region--second {
+  @include breakpoint($medium) {
+    flex: 0 1 34%;
+  }
+}
