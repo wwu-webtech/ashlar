@@ -16,7 +16,7 @@ a {
   }
 
   &:focus {
-    outline: $border-width dotted;
+    outline: $focus-outline;
   }
 }
 

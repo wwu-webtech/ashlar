@@ -18,15 +18,15 @@ $heading-color-light: $light-green;
 $default-button-color: $dark-blue;
 
 // An array of main wwu colors, useful for iterating over all colors
-// contains (class-name, $color-variable, $text-color)
+// contains (class-name, $color-variable, $text-color, $hover-color, $hover-text-color)
 $wwu-colors: (
-  (dark-blue, $dark-blue, $white),
-  (blue, $blue, $white),
-  (yellow, $yellow, $black),
-  (dark-green, $dark-green, $white),
-  (light-green, $light-green, $black),
-  (red, $red, $white)
+  (dark-blue, $dark-blue, $white, $light-green, $black),
+  (blue, $blue, $white, $light-green, $black),
+  (yellow, $yellow, $black, $dark-blue, $white),
+  (dark-green, $dark-green, $white, $light-green, $black),
+  (light-green, $light-green, $black, $dark-blue, $white),
+  (red, $red, $white, $yellow, $black)
 );
 
-// Amount to lighten or darken things by on hover/focus
+// Amount to shade items by
 $percent-change: 20%;

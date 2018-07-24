@@ -2,33 +2,42 @@
 * @file
 * 01-molecules/content/search/_search.scss
 */
-$search-widget-width: 438px;
 
 .western-search-widget {
+  z-index: 0;
   display: flex;
   justify-content: end;
 
-  &.is-expanded {
-    width: $search-widget-width;
-  }
-
-  form {
-    display: flex;
-  }
-
-  .search-box {
-    input {
-      @include breakpoint($large) {
-        padding: $standard-spacing;
-      }
-      height: 100%;
-      margin: 0;
-      padding: $half-spacing;
+  .toggle {
+    @include breakpoint($large) {
+      min-width: $toggle-size--larger;
     }
+    min-width: $toggle-size;
   }
 
-  .search-label {
-    margin: 0;
-    font-size: 0;
+  .toggle-search {
+    order: 2;
+  }
+
+  .search-area {
+    display: flex;
+    order: 1;
+
+    .search-box {
+      input {
+        @include breakpoint($large) {
+          padding: $standard-spacing;
+        }
+        min-width: 280px;
+        height: 100%;
+        margin: 0;
+        padding: $half-spacing;
+      }
+    }
+
+    .search-label {
+      margin: 0;
+      font-size: 0;
+    }
   }
 }
