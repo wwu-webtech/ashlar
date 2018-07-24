@@ -32,7 +32,7 @@ $image-size: 300px;
       content: "";
       transition: $button-transition-speed $button-transition-ease;
       border: solid $dark-blue $border-width;
-      border-radius: $button-border-radius-alt;
+      border-radius: $button-border-radius-alt-droplet;
 
       grid-column-start: 1;
       grid-row-start: 1;
@@ -45,7 +45,7 @@ $image-size: 300px;
       object-fit: cover;
       transition: $button-transition-speed $button-transition-ease;
       transform: translate(5%, 5%);
-      border-radius: $button-border-radius-alt;
+      border-radius: $button-border-radius-alt-droplet;
 
       grid-column-start: 1;
       grid-row-start: 1;
