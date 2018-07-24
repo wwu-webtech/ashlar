@@ -8,12 +8,6 @@
  * not be reflected in Drupal.
  */
 #}
-{%
-  set classes = [
-    'layout',
-    'layout--twocol-bricks',
-  ]
-%}
 {% if content %}
   <div{{ attributes.addClass(classes) }}>
     {% if content.top %}
