@@ -1,0 +1,35 @@
+attributes:
+  Attribute():
+    class:
+    - layout
+    - layout--twocol-bricks
+region_attributes:
+  top:
+    Attribute():
+      class:
+  first_above:
+    Attribute():
+      class:
+  second_above:
+    Attribute():
+      class:
+  middle:
+    Attribute():
+      class:
+  first_below:
+    Attribute():
+      class:
+  second_below:
+    Attribute():
+      class:
+  bottom:
+    Attribute():
+      class:
+content:
+  top: "<h2>Two Column Bricks</h2> Canker comely esquire flotsam furlong guileful hale jetsam mast-lands sister-son thain. Befall gloaming kindle loath misdoubt pallid passward respite save sires surcoat surname sward toils unrecked. "
+  first_above: "<h2>First Above</h2> Afield aghast booby coverlet dolven ell flagon garth gibbet hew lay lob mischance pate portend quaff rede rick spinney squib toss-pot unsated wax. Beset boon burnished esquire fender fillet forespeak hallow heed lissom lob longfather redound shale sortie tracery wheedle whet wile wold. "
+  second_above: "<h2>Second Above</h2> Aumbry champ fawn gainsay ghyll grandsire hoar hock nethermost oast profound stricken thunder-clap unsated."
+  middle: "<h2>Middle</h2> Aghast besought bower churl covert culvert dastard draught forespeak foreswear forsake fraught gangrel harbour hobble hythe liege lob malefactor reft rick sable squib strand umbel wrack wroth zenith."
+  first_below: "<h2>First Below</h2> Beset boon burnished esquire fender fillet forespeak hallow heed lissom lob longfather redound shale sortie tracery wheedle whet wile wold."
+  second_below: "<h2>Second Below</h2>  Anon burg compass confusticate cozen glower hock leasow pig-a-back shore shun staves succour upheave wards wizened worrit. Assuage bebother damask encompass founder gallop kine mast-lands nuncheon raiment revelry sortie surety thunder-clap unquiet vassal wont."
+  bottom: "<h2>Bottom</h2> Abjure blench cracker crocks fathom flotsam fraught garn lea passward rumour shun strait swath swoon twain upbraid vassal wayward wester whelm wrest."

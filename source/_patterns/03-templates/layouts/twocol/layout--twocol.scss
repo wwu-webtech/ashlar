@@ -1,0 +1,28 @@
+/*
+ * @file
+ * templates/layouts/onecol/_layout--twocol.scss
+ */
+
+.layout--twocol {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.layout--twocol > .layout__region {
+  flex: 0 1 100%;
+}
+
+
+.layout--twocol > .layout__region--first {
+  @include breakpoint($medium) {
+    flex: 0 1 50%;
+    padding-right: $standard-spacing;
+  }
+}
+
+.layout--twocol > .layout__region--second {
+  @include breakpoint($medium) {
+    flex: 0 1 50%;
+    padding-left: $standard-spacing;
+  }
+}

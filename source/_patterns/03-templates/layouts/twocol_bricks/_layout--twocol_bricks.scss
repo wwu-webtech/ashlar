@@ -1,0 +1,36 @@
+/*
+ * @file
+ * templates/layouts/twocol_75_25/_layout--twocol_bricks.scss
+ */
+
+.layout--twocol-bricks {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.layout--twocol-bricks > .layout__region {
+  flex: 0 1 100%;
+}
+
+.layout--twocol-bricks > .layout__region--first-above,
+.layout--twocol-bricks > .layout__region--second-above,
+.layout--twocol-bricks > .layout__region--first-below,
+.layout--twocol-bricks > .layout__region--second-below {
+  @include breakpoint($medium) {
+    flex: 0 1 50%;
+  }
+}
+
+.layout--twocol-bricks > .layout__region--first-above,
+.layout--twocol-bricks > .layout__region--first-below {
+  @include breakpoint($medium) {
+    padding-right: $standard-spacing;
+  }
+}
+
+.layout--twocol-bricks > .layout__region--second-above,
+.layout--twocol-bricks > .layout__region--second-below {
+  @include breakpoint($medium) {
+    padding-left: $standard-spacing;
+  }
+}

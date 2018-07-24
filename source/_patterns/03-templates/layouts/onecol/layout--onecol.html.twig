@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a one-column layout.
+ *
+ * This layout over rides the layout from the theme discovery module.
+ */
+ #}
+ {%
+  set classes = [
+    'layout',
+    'layout--onecol'
+  ]
+ %}
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content') }}>
+      {{ content.content }}
+    </div>
+  </div>
+{% endif %}
