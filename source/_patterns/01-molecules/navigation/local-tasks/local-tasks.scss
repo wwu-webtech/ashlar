@@ -4,7 +4,7 @@
  */
 #block-wwu-shila-local-tasks {
   font-size: $font-size--smaller;
-  ul {
+  ul:not(.contextual-links) {
     display: flex;
     padding-left: 0;
     list-style: none;
@@ -15,20 +15,20 @@
       margin-left: $standard-spacing;
       border-bottom-color: $light-gray;
     }
-  }
 
-  a {
-    display: block;
-    padding: $half-spacing $standard-spacing;
-    color: black;
-    border-right: solid $border-width $white;
-    background-color: $light-gray;
+    a {
+      display: block;
+      padding: $half-spacing $standard-spacing;
+      color: black;
+      border-right: solid $border-width $white;
+      background-color: $light-gray;
 
-    &:hover,
-    &:focus,
-    &.is-active {
-      color: $white;
-      background-color: $gray;
+      &:hover,
+      &:focus,
+      &.is-active {
+        color: $white;
+        background-color: $gray;
+      }
     }
   }
 }
