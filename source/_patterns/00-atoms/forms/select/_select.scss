@@ -8,7 +8,7 @@ select {
   margin-bottom: $standard-spacing;
   padding: $standard-spacing;
   border: solid $dark-blue $border-width;
-  background-image: url("../../images/forms/dropdown-arrows.png");
+  background-image: url("../images/forms/dropdown-arrows.png");
   background-repeat: no-repeat;
   background-position: calc(100% - 18px);
 
@@ -18,6 +18,6 @@ select {
     color: $gray;
     border-color: $gray;
     background-color: $light-gray;
-    background-image: url("../../images/forms/dropdown-arrows-disabled.png");
+    background-image: url("../images/forms/dropdown-arrows-disabled.png");
   }
 }
