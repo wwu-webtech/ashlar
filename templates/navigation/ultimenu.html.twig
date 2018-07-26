@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ * Default theme implementation for Ultimenu block (the UL list or container).
+ * If you need to customize the actual Flyout, use region.html.twig instead.
+ *
+ * Available variables:
+ * - items: The renderable array containing the menu.
+ * - attributes.class: A string containing the CSS classes for the SECTION tag:
+ *   - ultimenu ultimenu--ORIENTATION ultimenu--MENU-NAME SKIN-NAME.
+ *   - ultimenu ultimenu--horizontal ultimenu--htb ultimenu--main ultimenu--blue
+ *
+ * The following variables are provided for contextual information.
+ * - delta: (string) The ultimenu's block delta which is the cleaned menu name.
+ * - config: An array of the block's configuration settings. Includes
+ *   - menu_name: main-menu
+ *   - skin: modules/custom/ultimenu/skins/ultimenu--htb-tabs-blue.css
+ *   - skin_name: ultimenu--htb-tabs-blue (based on safe CSS file name)
+ *   - orientation:
+ *     - ultimenu--htb: horizontal to bottom
+ *     - ultimenu--htt: horizontal to top
+ *     - ultimenu--vtr: vertical to right
+ *     - ultimenu--vtl: vertical to left
+ *
+ * @see template_preprocess_ultimenu()
+ */
+#}
+{%
+  set classes = [
+    'ultimenu',
+    'ultimenu--' ~ delta,
+    config.orientation ? config.orientation|clean_class,
+    'v' in config.orientation ? 'ultimenu--vertical' : 'ultimenu--horizontal',
+    config.skin_name ? config.skin_name|clean_class,
+  ]
+%}
+{%
+  set item_classes = [
+    'ultimenu__item',
+    'uitem',
+  ]
+%}
+{% set id_attributes = attributes.id|clean_id %}
+{% spaceless %}
+  {% include '@organisms/navigation/ulti-menu/ulti-menu.html.twig' %}
+{% endspaceless %}

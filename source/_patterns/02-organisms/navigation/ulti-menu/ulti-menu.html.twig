@@ -1,0 +1,21 @@
+{#
+/**
+ * @see templates/navigation/ultimenu.html.twig
+ */
+#}
+{% if items -%}
+  <ul id="{{ id_attributes }}"{{ attributes.addClass(classes) }}>
+    {%- for item in items -%}
+      <li{{ item.attributes.addClass(item_classes, item.flyout ? 'has-ultimenu') }}>
+        {%- if item.link -%}
+          {{ item.link }}
+        {%- endif -%}
+        {%- if item.flyout -%}
+          <section{{ item.flyout_attributes.addClass('ultimenu__flyout') }}>
+            {{ item.flyout }}
+          </section>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+{%- endif %}
