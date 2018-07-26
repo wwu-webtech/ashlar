@@ -1,22 +1,34 @@
-var expanded = false;
+var $toggle_search = $('.toggle-search', context);
+var $icon = $toggle_search.children('.material-icons');
 
-$(".toggle-search", context).click(function() {
-  if (!expanded) {
-    $(this).parent().addClass('is-expanded');
-  }
+function toggle_search(event) {
+  $toggle_search.off('click', toggle_search);
 
-  $(this).toggleClass('is-expanded');
-  $(this).siblings('.search-area').animate({width: 'toggle'});
-  $(this).children('.material-icons').text('search');
-  $(this).filter('.is-expanded').children('.material-icons').text('close');
+  $toggle_search.siblings('.search-area').animate(
+    {
+      width: 'toggle'
+    },
+    {
+      duration: 'normal',
+      easing: 'swing',
+      complete: function () {
+        $toggle_search.toggleClass('.is-expanded');
 
-  if (expanded) {
-    $(this).parent().removeClass('is-expanded');
-    $(this).attr('aria-label', 'Open the search box');
-    expanded = false;
-  }
-  else {
-    $(this).attr('aria-label', 'Close the search box');
-    expanded = true;
-  }
-});
+        if ($toggle_search.hasClass('.is-expanded')) {
+          $icon.text('close');
+          $toggle_search.attr('aria-label', 'Close the search box.');
+        }
+        else {
+          $icon.text('search');
+          $toggle_search.attr('aria-label', 'Open the search box.');
+        }
+
+        $toggle_search.on('click', toggle_search);
+      }
+    }
+  );
+
+  event.stopPropagation();
+}
+
+$toggle_search.on('click', toggle_search);
