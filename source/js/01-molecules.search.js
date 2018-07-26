@@ -1,12 +1,11 @@
 var expanded = false;
 
-$(".toggle-search").click(function() {
+$(".toggle-search", context).click(function() {
   if (!expanded) {
     $(this).parent().addClass('is-expanded');
   }
 
   $(this).toggleClass('is-expanded');
-
   $(this).siblings('.search-area').animate({width: 'toggle'});
   $(this).children('.material-icons').text('search');
   $(this).filter('.is-expanded').children('.material-icons').text('close');
