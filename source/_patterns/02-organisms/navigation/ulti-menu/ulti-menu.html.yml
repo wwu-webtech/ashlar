@@ -3,10 +3,18 @@ attributes:
   Attribute():
     class:
     - ultimenu
+    - menu
     - ultimenu--main
     - ultimenu--htb
     - ultimenu--horizontal
     - ultimenu--basic
+configuration:
+  label_display: false
+  label: Main navigation
+title_attributes:
+  Attribute():
+    class:
+    - block__title
 items:
 - link: '<a href=#">Menu Item 1</a>'
 - link: '<a href=#">Menu Item 2</a>'

@@ -4,6 +4,19 @@
  */
 #}
 {% if items -%}
+<nav role="navigation" class="nav--main">
+  {{ title_prefix }}
+  {# Label. Not displayed, but provided for screen readers. #}
+  {% if not configuration.label_display %}
+    <div class="visually-hidden">
+  {% endif %}
+  <h2{{ title_attributes }}>{{ configuration.label }}</h2>
+
+  {% if not configuration.label_display %}
+    </div>
+  {% endif %}
+  {{ title_suffix }}
+
   <ul id="{{ id_attributes }}"{{ attributes.addClass(classes) }}>
     {%- for item in items -%}
       <li{{ item.attributes.addClass(item_classes, item.flyout ? 'has-ultimenu') }}>
@@ -18,4 +31,5 @@
       </li>
     {%- endfor -%}
   </ul>
+</nav>
 {%- endif %}
