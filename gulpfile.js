@@ -19,6 +19,7 @@
   const sourcemaps = require('gulp-sourcemaps');
   const sass = require('gulp-sass');
   const sassGlob = require('gulp-sass-glob');
+  const imagemin = require('gulp-imagemin');
 
   function drupalBehaviorName(file) {
     return path.basename(file.path, '.js').split('.').pop();
@@ -99,6 +100,13 @@
     }
   };
 
+  config.images = {
+    src: [
+      'source/images/**/*.{jpg,jpeg,gif,png,svg}'
+    ],
+    dest: 'build/images'
+  };
+
   /**
    * Generate CSS.
    */
@@ -130,6 +138,17 @@
         );
       }),
       callback
+    );
+  });
+
+  /**
+   * Minify images.
+   */
+  gulp.task('images', function (callback) {
+    pump(
+      gulp.src(config.images.src),
+      imagemin(),
+      gulp.dest(config.images.dest)
     );
   });
 
@@ -224,6 +243,6 @@
   /**
    * Gulp default task.
    */
-  gulp.task('default', ['sass', 'js']);
+  gulp.task('default', ['sass', 'js', 'images']);
 
 })();
