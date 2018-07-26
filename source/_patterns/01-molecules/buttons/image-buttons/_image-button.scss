@@ -9,8 +9,6 @@ $button-size: 200px;
   margin: 0 ($large-spacing * 2);
 
   .stylized {
-    outline: none;
-
     &.image {
       grid-template-columns: $button-size;
       grid-template-rows: $button-size 2.5em;
