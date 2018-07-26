@@ -5,6 +5,7 @@ core: 8.x
 libraries:
   - core/normalize
   - wwu_shila/global-styling
+  - wwu_shila/global-scripts
 regions:
   header: Header
   quick_links: Quick Links
