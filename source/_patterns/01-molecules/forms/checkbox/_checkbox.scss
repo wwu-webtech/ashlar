@@ -81,12 +81,12 @@ input[type="checkbox"] {
     + label {
       &:before {
         @include breakpoint($small) {
-          background-image: url("../../images/forms/check--smaller.png");
+          background-image: url("../images/forms/check--smaller.png");
         }
         @include breakpoint($medium) {
-          background-image: url("../../images/forms/check.png");
+          background-image: url("../images/forms/check.png");
         }
-        background-image: url("../../images/forms/check.png");
+        background-image: url("../images/forms/check.png");
       }
     }
   }

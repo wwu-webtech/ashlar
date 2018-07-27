@@ -14,12 +14,12 @@ input[type="radio"] {
     + label {
       &:before {
         @include breakpoint($small) {
-          background-image: url("../../images/forms/radio--smaller.png");
+          background-image: url("../images/forms/radio--smaller.png");
         }
         @include breakpoint($medium) {
-          background-image: url("../../images/forms/radio.png");
+          background-image: url("../images/forms/radio.png");
         }
-        background-image: url("../../images/forms/radio.png");
+        background-image: url("../images/forms/radio.png");
       }
     }
   }

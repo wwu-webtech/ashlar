@@ -19,6 +19,7 @@
   const sourcemaps = require('gulp-sourcemaps');
   const sass = require('gulp-sass');
   const sassGlob = require('gulp-sass-glob');
+  const imagemin = require('gulp-imagemin');
 
   function drupalBehaviorName(file) {
     return path.basename(file.path, '.js').split('.').pop();
@@ -42,7 +43,11 @@
     jsDest: 'source/pattern-lab/js',
     jsTemplate: {
       src: 'source/js/patternlab.lodash'
-    }
+    },
+    imagesSrc: [
+      'source/images/**/*.{jpg,jpeg,gif,png,svg}'
+    ],
+    imagesDest: 'source/pattern-lab/images'
   };
 
   config.sass = {
@@ -99,6 +104,13 @@
     }
   };
 
+  config.images = {
+    src: [
+      'source/images/**/*.{jpg,jpeg,gif,png,svg}'
+    ],
+    dest: 'build/images'
+  };
+
   /**
    * Generate CSS.
    */
@@ -129,6 +141,18 @@
           gulp.dest(config.js.dest)
         );
       }),
+      callback
+    );
+  });
+
+  /**
+   * Minify images.
+   */
+  gulp.task('images', function (callback) {
+    pump(
+      gulp.src(config.images.src),
+      imagemin(),
+      gulp.dest(config.images.dest),
       callback
     );
   });
@@ -183,9 +207,21 @@
   gulp.task('patternlab:js', ['patternlab:js:post']);
 
   /**
+   * Generate Pattern Lab images.
+   */
+  gulp.task('patternlab:images', function (callback) {
+    pump(
+      gulp.src(config.patternLab.imagesSrc),
+      imagemin(),
+      gulp.dest(config.patternLab.imagesDest),
+      callback
+    );
+  });
+
+  /**
    * Run Pattern Lab tasks.
    */
-  gulp.task('patternlab', ['patternlab:sass', 'patternlab:js']);
+  gulp.task('patternlab', ['patternlab:sass', 'patternlab:js', 'patternlab:images']);
 
   /**
    * Set watch tasks.
@@ -210,20 +246,27 @@
   });
 
   /**
+   * Clean generated image files.
+   */
+  gulp.task('clean:images', function () {
+    return del([config.images.dest]);
+  });
+
+  /**
    * Clean generated Pattern Lab files.
    */
   gulp.task('clean:patternlab', function () {
-    return del([config.patternLab.sassDest, config.patternLab.jsDest]);
+    return del([config.patternLab.sassDest, config.patternLab.jsDest, config.patternLab.imagesDest]);
   });
 
   /**
    * Run clean tasks.
    */
-  gulp.task('clean', ['clean:css', 'clean:js', 'clean:patternlab']);
+  gulp.task('clean', ['clean:css', 'clean:js', 'clean:images', 'clean:patternlab']);
 
   /**
    * Gulp default task.
    */
-  gulp.task('default', ['sass', 'js']);
+  gulp.task('default', ['sass', 'js', 'images']);
 
 })();
