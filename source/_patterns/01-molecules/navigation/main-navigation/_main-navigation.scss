@@ -4,6 +4,7 @@
  */
 
 .nav--main {
+  z-index: 1;
   & > .menu {
     display: flex;
     flex-flow: row nowrap;
