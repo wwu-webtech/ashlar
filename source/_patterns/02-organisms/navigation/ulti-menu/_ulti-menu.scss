@@ -2,12 +2,21 @@
 * @file
 * 00-molecules/navigation/ulti-menu/_ulti-menu.scss
 */
+
+/* Overrides for ultimenu styles & functionality */
 .ultimenu__flyout {
   padding: 0;
+  margin: 0;
 }
 
 .ultimenu--basic {
   .region {
     padding: 0;
   }
+}
+
+/* Adobe Accessible Mega Menu specific styles */
+.open {
+  opacity: 1;
+  visibility: visible;
 }
