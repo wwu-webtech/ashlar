@@ -2,3 +2,12 @@
 * @file
 * 00-molecules/navigation/ulti-menu/_ulti-menu.scss
 */
+.ultimenu__flyout {
+  padding: 0;
+}
+
+.ultimenu--basic {
+  .region {
+    padding: 0;
+  }
+}

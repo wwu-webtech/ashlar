@@ -4,10 +4,10 @@
   */
 
 .nav--main {
-  .menu {
+  & > .menu {
     background-color: initial;
 
-    li {
+    & > li {
       border: none;
 
       /* Keep borders even */
@@ -17,7 +17,7 @@
         }
       }
 
-      a {
+      & > a {
         @include breakpoint($large) {
           height: $toggle-size--larger;
         }
@@ -43,7 +43,7 @@
       }
 
       &.menu-item--active-trail {
-        a {
+        & > a {
           color: $dark-blue;
           background-color: $light-green;
         }
