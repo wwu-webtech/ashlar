@@ -4,29 +4,47 @@
 */
 
 /* Overrides for ultimenu styles & functionality */
-.ultimenu__flyout {
-  @include breakpoint($large) {
-    transform: translatey(-($toggle-size--larger/2));
-  }
-  @include transition($medium-transition-speed, $standard-ease);
-  z-index: 0;
-  margin: 0;
-  padding: 0;
-  transform: translatey(-($toggle-size/2));
-  box-shadow: none;
+.ultimenu {
+  .ultimenu__flyout {
+    @include breakpoint($large) {
+      transform: translatey(-($toggle-size--larger/2));
+    }
+    @include transition($medium-transition-speed, $standard-ease);
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    transform: translatey(-($toggle-size/2));
+    box-shadow: none;
 
-  .flyout {
-    .wrap {
-      @include breakpoint($large) {
-        padding-top: ($toggle-size--larger/2) + ($standard-spacing);
+    .flyout {
+      .wrap {
+        @include breakpoint($large) {
+          padding-top: ($toggle-size--larger/2) + ($standard-spacing);
+        }
+        padding-top: ($toggle-size/2) + ($standard-spacing);
       }
-      padding-top: ($toggle-size/2) + ($standard-spacing);
     }
   }
-}
 
-.ultimenu__link {
-  z-index: 1;
+  li {
+    &:hover {
+      & > .ultimenu__flyout {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+
+        &.open {
+          display: block;
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .ultimenu__link {
+    z-index: 1;
+  }
 }
 
 .ultimenu--basic {
