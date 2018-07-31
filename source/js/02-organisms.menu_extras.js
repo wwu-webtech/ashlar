@@ -4,13 +4,13 @@ $(".nav--main").accessibleMegaMenu({
     uuidPrefix: "accessible-megamenu",
 
     /* css class used to define the megamenu styling */
-    menuClass: "nav-menu",
+    menuClass: "ultimenu",
 
     /* css class for a top-level navigation item in the megamenu */
-    topNavItemClass: "nav-item",
+    topNavItemClass: "ultimenu__item",
 
     /* css class for a megamenu panel */
-    panelClass: "sub-nav",
+    panelClass: "ultimenu__flyout",
 
     /* css class for a group of items within a megamenu panel */
     panelGroupClass: "sub-nav-group",

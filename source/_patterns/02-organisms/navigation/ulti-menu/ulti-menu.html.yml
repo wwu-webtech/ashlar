@@ -20,14 +20,17 @@ items:
   attributes:
     Attribute():
       class:
+        - ultimenu__item
 - link: '<a href=#">Menu Item 2</a>'
   attributes:
     Attribute():
       class:
+        - ultimenu__item
 - link: '<a href=#">Menu Item 3</a>'
   attributes:
     Attribute():
       class:
+        - ultimenu__item
   flyout: molecules-menu-flyout-html
   flyout_attributes:
     Attribute():
