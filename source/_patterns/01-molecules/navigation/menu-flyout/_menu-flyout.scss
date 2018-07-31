@@ -5,7 +5,18 @@
 
 .flyout {
   width: 100%;
-  background-color: #003f87;
+
+  &.dark-blue {
+    background-color: $dark-blue;
+  }
+
+  &.light-blue {
+    background-color: $light-blue;
+  }
+
+  &.gray {
+    background-color: $light-gray;
+  }
 
   .wrap {
     position: relative;
