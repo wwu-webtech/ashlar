@@ -8,7 +8,6 @@ attributes:
     - ultimenu--htb
     - ultimenu--horizontal
     - ultimenu--basic
-    - nav-menu
 configuration:
   label_display: false
   label: Main navigation
@@ -21,19 +20,15 @@ items:
   attributes:
     Attribute():
       class:
-        - nav-item
 - link: '<a href=#">Menu Item 2</a>'
   attributes:
     Attribute():
       class:
-        - nav-item
 - link: '<a href=#">Menu Item 3</a>'
   attributes:
     Attribute():
       class:
-        - nav-item
   flyout: molecules-menu-flyout-html
   flyout_attributes:
     Attribute():
       class:
-        - sub-nav

@@ -7,6 +7,7 @@
 .ultimenu__flyout {
   padding: 0;
   margin: 0;
+  @include transition($medium-transition-speed, $standard-ease);
 }
 
 .ultimenu--basic {

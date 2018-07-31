@@ -17,14 +17,14 @@
   {% endif %}
   {{ title_suffix }}
 
-  <ul id="{{ id_attributes }}"{{ attributes.addClass(classes) }}>
+  <ul id="{{ id_attributes }}"{{ attributes.addClass(classes, 'nav-menu') }}>
     {%- for item in items -%}
-      <li{{ item.attributes.addClass(item_classes, item.flyout ? 'has-ultimenu') }}>
+      <li{{ item.attributes.addClass(item_classes, 'nav-item', item.flyout ? 'has-ultimenu') }}>
         {%- if item.link -%}
           {{ item.link }}
         {%- endif -%}
         {%- if item.flyout -%}
-          <section{{ item.flyout_attributes.addClass('ultimenu__flyout') }}>
+          <section{{ item.flyout_attributes.addClass('sub-nav', 'ultimenu__flyout') }}>
             {{ item.flyout }}
           </section>
         {%- endif -%}
