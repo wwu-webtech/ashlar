@@ -40,13 +40,17 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
     }
 
     .western-logo {
+      background-color: $dark-blue;
+
       grid-area: logo;
 
-      .logo {
-        @include breakpoint($large) {
-          width: $logo-width--larger;
-          height: $logo-height--larger;
+      a {
+        @include breakpoint($medium) {
+          padding-right: 0;
         }
+        display: flex;
+        justify-content: center;
+        padding-right: $toggle-size--larger;
       }
     }
 
@@ -57,7 +61,7 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
       justify-self: end;
     }
 
-    .western-search-widget {
+    .search {
       align-self: center;
 
       grid-area: search;

@@ -26,12 +26,12 @@ items:
     Attribute():
       class:
         - ultimenu__item
+  flyout: molecules-menu-flyout-html
+  flyout_attributes:
+    Attribute():
+      class:
 - link: '<a href=#" class="ultimenu__link">Menu Item 3</a>'
   attributes:
     Attribute():
       class:
         - ultimenu__item
-  flyout: molecules-menu-flyout-html
-  flyout_attributes:
-    Attribute():
-      class:

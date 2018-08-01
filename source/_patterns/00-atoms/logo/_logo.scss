@@ -10,6 +10,10 @@ $logo-width--horizontal: 400px;
 $logo-height--horiztonal: 100px;
 
 .logo {
+  @include breakpoint($large) {
+    width: $logo-width--larger;
+    height: $logo-height--larger;
+  }
   width: $logo-width;
   height: $logo-height;
   padding: $standard-spacing;
