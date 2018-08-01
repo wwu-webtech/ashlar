@@ -7,6 +7,9 @@
   font-size: $font-size--smaller;
 
   .menu {
+    @include breakpoint($small) {
+      flex-flow: row nowrap;
+    }
     @include breakpoint($medium) {
       border: none;
       background-color: transparent;
@@ -50,8 +53,10 @@
 
       &:nth-of-type(1) {
         a {
-          color: $white;
-          background-color: $dark-blue;
+          @include breakpoint($medium) {
+            color: $white;
+            background-color: $dark-blue;
+          }
 
           &:hover,
           &:focus {

@@ -5,13 +5,44 @@
 
 .nav--main {
   & > .menu {
+    @include breakpoint($medium) {
+      flex-flow: row nowrap;
+    }
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: center;
 
-    a {
-      &:focus {
-        outline: none;
+    li {
+      @include breakpoint($medium) {
+        width: inherit;
+      }
+
+      width: 100%;
+
+      a {
+        display: block;
+        width: 100%;
+        text-align: left;
+        height: inherit;
+        padding: $standard-spacing;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &:nth-of-type(even) {
+        a {
+          @include breakpoint($medium) {
+            background-color: $dark-blue;
+          }
+          background-color: mix($darkest-blue, $dark-blue, 50%);
+
+          &:hover,
+          &:focus {
+            background-color: $light-green;
+          }
+        }
       }
     }
   }

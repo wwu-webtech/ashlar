@@ -6,6 +6,9 @@
 /* Overrides for ultimenu styles & functionality */
 .ultimenu {
   .ultimenu__flyout {
+    @include breakpoint($medium) {
+      transform: translatey(-($toggle-size/2));
+    }
     @include breakpoint($large) {
       transform: translatey(-($toggle-size--larger/2));
     }
@@ -13,7 +16,6 @@
     z-index: 0;
     margin: 0;
     padding: 0;
-    transform: translatey(-($toggle-size/2));
     box-shadow: none;
 
     .flyout {
@@ -27,6 +29,9 @@
   }
 
   li {
+    display: inherit;
+    margin: 0;
+
     &:hover {
       & > .ultimenu__flyout {
         display: none;
