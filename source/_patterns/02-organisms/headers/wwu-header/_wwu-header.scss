@@ -54,20 +54,6 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
       }
     }
 
-    .region--quick_links {
-      align-self: center;
-
-      grid-area: quick-links;
-      justify-self: end;
-    }
-
-    .search {
-      align-self: center;
-
-      grid-area: search;
-      justify-self: end;
-    }
-
     .university-name {
       display: block;
       font-size: 0;
@@ -87,6 +73,29 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
       background: linear-gradient(to right, $dark-blue 0%, $dark-blue-gradient 100%);
       font-size: $font-size--smaller;
       line-height: 1.5em;
+    }
+
+    .search {
+      align-self: center;
+
+      grid-area: search;
+      justify-self: end;
+    }
+
+    .quick-links {
+      align-self: center;
+
+      grid-area: quick-links;
+      justify-self: end;
+    }
+
+    .toggle-menu {
+      @include breakpoint($medium) {
+        display: none;
+      }
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   }
 }

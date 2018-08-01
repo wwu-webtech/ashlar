@@ -18,6 +18,7 @@
     </div>
 
     {% block quick_links %}
+      <button class="toggle toggle-menu" aria-label="Open the menu"><i class="material-icons">menu</i></button>
       {% include "@molecules/navigation/wwu-menu/wwu-menu.html.twig" %}
       {{ page.quick_links }}
     {% endblock %}
