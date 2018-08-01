@@ -74,11 +74,16 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
     }
 
     .site-name {
+      @include breakpoint($medium) {
+        border-top: 1px solid $blue;
+        border-bottom: none;
+      }
       display: block;
       padding: $half-spacing $standard-spacing;
       text-align: center;
       color: $white;
-      border-top: 1px solid $blue;
+      border-top: 1px solid $lightest-green;
+      border-bottom: 1px solid $lightest-green;
       background: linear-gradient(to right, $dark-blue 0%, $dark-blue-gradient 100%);
       font-size: $font-size--smaller;
       line-height: 1.5em;
