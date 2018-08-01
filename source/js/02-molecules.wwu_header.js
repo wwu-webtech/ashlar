@@ -4,28 +4,6 @@ var $menu_icon = $toggle_menu.children('.material-icons');
 function toggle_menu(event) {
   $toggle_menu.off('click', toggle_menu);
 
-  $('.splash').animate(
-    {
-      height: 'toggle',
-    },
-    {
-      duration: 'normal',
-      easing: 'swing',
-      complete: function () {}
-    }
-  );
-
-  $('.site-name').animate(
-    {
-      height: 'toggle',
-    },
-    {
-      duration: 'normal',
-      easing: 'swing',
-      complete: function () { }
-    }
-  );
-
   $('.nav--main').animate(
     {
       height: 'toggle',

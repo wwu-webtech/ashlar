@@ -7,18 +7,14 @@
   font-size: $font-size--smaller;
 
   .menu {
-    @include breakpoint($small) {
-      flex-flow: row nowrap;
-    }
     @include breakpoint($medium) {
       border: none;
       background-color: transparent;
     }
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     margin: 0;
-    border-top: solid 1px $lightest-green;
-    border-bottom: solid 1px $lightest-green;
+    border-bottom: solid 1px $blue;
     background-color: $darkest-blue;
 
     li {

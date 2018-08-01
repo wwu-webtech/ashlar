@@ -4,9 +4,6 @@
  */
 
 .splash {
-  @include breakpoint($medium) {
-    display: block !important;
-  }
   @include breakpoint($large) {
     margin-top: -($toggle-size--larger);
   }
@@ -15,7 +12,20 @@
   overflow: hidden;
   width: 100%;
   max-height: 70vh;
-  margin-top: -$toggle-size;
+  margin-top: -($toggle-size);
+
+  &.small-screen-splash {
+    @include breakpoint($medium) {
+      display: none;
+    }
+  }
+
+  &.large-screen-splash {
+    @include breakpoint($medium) {
+      display: inherit;
+    }
+    display: none;
+  }
 
   img {
     width: 100%;
