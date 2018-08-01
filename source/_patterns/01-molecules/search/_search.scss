@@ -3,8 +3,14 @@
 * 01-molecules/content/search/_search.scss
 */
 
-.western-search-widget {
+.search {
+  @include breakpoint($medium) {
+    position: inherit;
+  }
+  position: absolute;
   z-index: 0;
+  top: $toggle-size--larger;
+  right: 0;
   display: flex;
   justify-content: end;
 
