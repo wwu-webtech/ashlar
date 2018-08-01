@@ -4,16 +4,20 @@
  */
 
 .nav--main {
+  @include breakpoint($medium) {
+    display: inherit !important;
+  }
   z-index: 1;
+  display: none;
   & > .menu {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
 
     a {
-        &:focus {
-          outline: none;
-        }
+      &:focus {
+        outline: none;
+      }
     }
   }
 }

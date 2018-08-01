@@ -1,5 +1,5 @@
 var $toggle_menu = $('.toggle-menu', context);
-var $icon = $toggle_menu.children('.material-icons');
+var $menu_icon = $toggle_menu.children('.material-icons');
 
 function toggle_menu(event) {
   $toggle_menu.off('click', toggle_menu);
@@ -48,11 +48,11 @@ function toggle_menu(event) {
         $toggle_menu.toggleClass('.is-expanded');
 
         if ($toggle_menu.hasClass('.is-expanded')) {
-          $icon.text('close');
+          $menu_icon.text('close');
           $toggle_menu.attr('aria-label', 'Close the menu.');
         }
         else {
-          $icon.text('menu');
+          $menu_icon.text('menu');
           $toggle_menu.attr('aria-label', 'Open the menu.');
         }
 

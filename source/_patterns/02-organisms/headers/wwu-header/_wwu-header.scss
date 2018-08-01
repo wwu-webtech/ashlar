@@ -61,6 +61,7 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
 
     .site-name {
       @include breakpoint($medium) {
+        display: block !important;
         border-top: 1px solid $blue;
         border-bottom: none;
       }

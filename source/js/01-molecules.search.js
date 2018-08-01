@@ -1,5 +1,5 @@
 var $toggle_search = $('.toggle-search', context);
-var $icon = $toggle_search.children('.material-icons');
+var $search_icon = $toggle_search.children('.material-icons');
 
 function toggle_search(event) {
   $toggle_search.off('click', toggle_search);
@@ -15,11 +15,11 @@ function toggle_search(event) {
         $toggle_search.toggleClass('.is-expanded');
 
         if ($toggle_search.hasClass('.is-expanded')) {
-          $icon.text('close');
+          $search_icon.text('close');
           $toggle_search.attr('aria-label', 'Close the search box.');
         }
         else {
-          $icon.text('search');
+          $search_icon.text('search');
           $toggle_search.attr('aria-label', 'Open the search box.');
         }
 

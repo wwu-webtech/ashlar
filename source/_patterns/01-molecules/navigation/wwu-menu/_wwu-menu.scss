@@ -4,6 +4,10 @@
 */
 
 .quick-links {
+  @include breakpoint($medium) {
+    display: block !important;
+  }
+  display: none;
   font-size: $font-size--smaller;
 
   .menu {
@@ -23,8 +27,8 @@
 
         &:hover,
         &:focus {
-          background-color: $light-green;
           outline: none;
+          background-color: $light-green;
         }
       }
 

@@ -4,8 +4,11 @@
  */
 
 .splash {
+  @include breakpoint($medium) {
+    display: block !important;
+  }
   @include breakpoint($large) {
-    margin-top: -$toggle-size--larger;
+    margin-top: -($toggle-size--larger);
   }
   position: relative;
   z-index: -1;
