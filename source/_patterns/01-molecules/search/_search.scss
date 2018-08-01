@@ -15,10 +15,20 @@
   justify-content: end;
 
   .toggle {
+    @include breakpoint($medium) {
+      &:hover,
+      &:focus {
+        background-color: $dark-blue;
+      }
+    }
     @include breakpoint($large) {
       min-width: $toggle-size--larger;
     }
     min-width: $toggle-size;
+    &:hover,
+    &:focus {
+      background-color: $darkest-blue;
+    }
   }
 
   .toggle-search {
@@ -38,6 +48,7 @@
         height: 100%;
         margin: 0;
         padding: $half-spacing;
+        border-color: $blue;
       }
     }
 
