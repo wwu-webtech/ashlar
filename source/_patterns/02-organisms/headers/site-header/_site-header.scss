@@ -5,10 +5,17 @@
 
 .site-header {
   .nav--main {
+    @include breakpoint($medium) {
+      position: inherit;
+      display: inherit !important;
+      margin-bottom: -($toggle-size / 2);
+      transform: translatey(-50%);
+    }
     @include breakpoint($large) {
       margin-bottom: -($toggle-size--larger / 2);
     }
-    transform: translatey(-50%);
-    margin-bottom: -($toggle-size / 2);
+    position: relative;
+    z-index: 1;
+    display: none;
   }
 }

@@ -84,6 +84,10 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
     }
 
     .quick-links {
+      @include breakpoint($medium) {
+        display: block !important;
+      }
+      display: none;
       align-self: center;
 
       grid-area: quick-links;

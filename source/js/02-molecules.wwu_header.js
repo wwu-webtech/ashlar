@@ -4,7 +4,7 @@ var $menu_icon = $toggle_menu.children('.material-icons');
 function toggle_menu(event) {
   $toggle_menu.off('click', toggle_menu);
 
-  $('.quick-links').animate(
+  $('.splash').animate(
     {
       height: 'toggle',
     },
@@ -12,17 +12,6 @@ function toggle_menu(event) {
       duration: 'normal',
       easing: 'swing',
       complete: function () {}
-    }
-  );
-
-  $('.nav--main').animate(
-    {
-      height: 'toggle',
-    },
-    {
-      duration: 'normal',
-      easing: 'swing',
-      complete: function () { }
     }
   );
 
@@ -37,7 +26,18 @@ function toggle_menu(event) {
     }
   );
 
-  $('.splash').animate(
+  $('.nav--main').animate(
+    {
+      height: 'toggle',
+    },
+    {
+      duration: 'normal',
+      easing: 'swing',
+      complete: function () { }
+    }
+  );
+
+  $('.quick-links').animate(
     {
       height: 'toggle',
     },

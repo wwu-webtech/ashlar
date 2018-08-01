@@ -4,29 +4,45 @@
 */
 
 .quick-links {
-  @include breakpoint($medium) {
-    display: block !important;
-  }
-  display: none;
   font-size: $font-size--smaller;
 
   .menu {
+    @include breakpoint($medium) {
+      border: none;
+      background-color: transparent;
+    }
     display: flex;
+    flex-flow: row wrap;
     margin: 0;
+    border-top: solid 1px $lightest-green;
+    border-bottom: solid 1px $lightest-green;
+    background-color: $darkest-blue;
 
     li {
+      flex: 1;
       margin: 0;
 
       a {
+        @include breakpoint($medium) {
+          height: $toggle-size;
+          padding: $standard-spacing;
+          color: inherit;
+          background-color: inherit;
+        }
         @include breakpoint($large) {
           height: $toggle-size--larger;
           padding: $large-spacing;
         }
-        height: $toggle-size;
-        padding: $standard-spacing;
+        width: 100%;
+        height: inherit;
+        padding: $standard-spacing $half-spacing;
+        text-align: center;
+        color: $white;
+        background-color: $darkest-blue;
 
         &:hover,
         &:focus {
+          color: $black;
           outline: none;
           background-color: $light-green;
         }
