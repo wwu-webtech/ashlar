@@ -12,14 +12,14 @@
     flex-flow: row wrap;
     justify-content: center;
 
-    li {
+    > li {
       @include breakpoint($medium) {
         width: inherit;
       }
 
       width: 100%;
 
-      a {
+      > a {
         display: block;
         width: 100%;
         text-align: left;
@@ -32,7 +32,7 @@
       }
 
       &:nth-of-type(even) {
-        a {
+        > a {
           @include breakpoint($medium) {
             background-color: $dark-blue;
           }

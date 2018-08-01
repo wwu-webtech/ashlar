@@ -29,22 +29,23 @@
   }
 
   li {
-    display: inherit;
-    margin: 0;
+    @include breakpoint($medium) {
+      &:hover {
+        & > .ultimenu__flyout {
+          display: none;
+          visibility: hidden;
+          opacity: 0;
 
-    &:hover {
-      & > .ultimenu__flyout {
-        display: none;
-        visibility: hidden;
-        opacity: 0;
-
-        &.open {
-          display: block;
-          visibility: visible;
-          opacity: 1;
+          &.open {
+            display: block;
+            visibility: visible;
+            opacity: 1;
+          }
         }
       }
     }
+    display: inherit;
+    margin: 0;
   }
 
   .ultimenu__link {
