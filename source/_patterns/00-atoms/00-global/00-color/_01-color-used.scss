@@ -17,6 +17,9 @@ $heading-color-light: $light-green;
 
 $default-button-color: $blue;
 
+$warning-color: $yellow;
+$alert-color: $red;
+
 // An array of main wwu colors, useful for iterating over all colors
 // contains (class-name, $color-variable, $text-color, $hover-color, $hover-text-color)
 $wwu-colors: (
