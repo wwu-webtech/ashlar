@@ -6,62 +6,48 @@
 .quick-links {
   font-size: $font-size--smaller;
 
-  &.mobile {
-    background-color: $dark-blue;
-  }
-
-  .menu {
-    @include breakpoint($medium) {
+  &.desktop {
+    .menu {
+      display: flex;
+      flex-flow: row nowrap;
+      margin: 0;
       border: none;
       background-color: transparent;
-    }
-    display: flex;
-    flex-flow: row nowrap;
-    margin: 0;
-    border-bottom: solid 1px $blue;
-    background-color: $darkest-blue;
 
-    li {
-      flex: 1;
-      margin: 0;
+      li {
+        flex: 1;
+        margin: 0;
 
-      a {
-        @include breakpoint($medium) {
+        a {
+          @include breakpoint($large) {
+            height: $toggle-size--larger;
+            padding: $large-spacing;
+          }
+          width: 100%;
           height: $toggle-size;
           padding: $standard-spacing;
-          color: inherit;
-          background-color: inherit;
-        }
-        @include breakpoint($large) {
-          height: $toggle-size--larger;
-          padding: $large-spacing;
-        }
-        width: 100%;
-        height: inherit;
-        padding: $standard-spacing $half-spacing;
-        text-align: center;
-        color: $white;
-        background-color: $darkest-blue;
-
-        &:hover,
-        &:focus {
-          color: $black;
-          outline: none;
-          background-color: $light-green;
-        }
-      }
-
-      &:nth-of-type(1) {
-        a {
-          @include breakpoint($medium) {
-            color: $white;
-            background-color: $dark-blue;
-          }
+          text-align: center;
 
           &:hover,
           &:focus {
             color: $black;
+            outline: none;
             background-color: $light-green;
+          }
+        }
+
+        &:nth-of-type(1) {
+          a {
+            @include breakpoint($medium) {
+              color: $white;
+              background-color: $dark-blue;
+            }
+
+            &:hover,
+            &:focus {
+              color: $black;
+              background-color: $light-green;
+            }
           }
         }
       }
