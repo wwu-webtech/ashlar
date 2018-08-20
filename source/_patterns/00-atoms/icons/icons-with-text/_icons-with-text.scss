@@ -1,0 +1,25 @@
+/**
+ * @file
+ * 00-atoms/icons/icons-with-text/_icons-with-text.scss
+ */
+$icon-text: 14px;
+$icon-text--small: 8px;
+$icon-text--large: 16px;
+
+.icon-with-text {
+  display: inline-block;
+  text-align: center;
+
+  .icon-text {
+    display: block;
+    font-size: $icon-text;
+
+    &.small {
+      font-size: $icon-text--small;
+    }
+
+    &.large {
+      font-size: $icon-text--large;
+    }
+  }
+}
