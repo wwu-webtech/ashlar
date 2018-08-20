@@ -4,9 +4,16 @@
  */
 
 .nav--main {
-  .menu {
+  z-index: 1;
+  & > .menu {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
+
+    a {
+        &:focus {
+          outline: none;
+        }
+    }
   }
 }

@@ -1,4 +1,4 @@
-var $ = require("jquery/dist/jquery.min");
+var $ = global.jQuery = require("jquery/dist/jquery.min");
 var context = document;
 
 $(function () {

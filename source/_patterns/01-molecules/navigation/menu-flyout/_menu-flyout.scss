@@ -2,13 +2,21 @@
  * @file
  * 01-molecules/navigation/menu-flyout/_menu-flyout.scss
  */
-$flyout-height: 220px;
-$circle-diameter: 300px;
 
 .flyout {
   width: 100%;
-  height: $flyout-height;
-  background-color: #003f87;
+
+  &.dark-blue {
+    background-color: $dark-blue;
+  }
+
+  &.light-blue {
+    background-color: $light-blue;
+  }
+
+  &.gray {
+    background-color: $light-gray;
+  }
 
   .wrap {
     position: relative;
@@ -24,34 +32,12 @@ $circle-diameter: 300px;
     display: flex;
     flex-flow: column wrap;
     height: 100%;
+    max-height: 30vh;
     margin: auto;
     font-size: $font-size--smaller;
-  }
 
-  &.has-circle {
-    .wrap {
-      padding: 44px ($circle-diameter / 2) 18px 18px;
-      transform: translatex(0 - ($circle-diameter / 4));
-    }
-
-    .circle {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: $circle-diameter;
-      height: $circle-diameter;
-      transform: translate(50%, -14%);
-      color: $dark-blue;
-      border-radius: 50%;
-      background-color: mix(white, $dark-blue, 10%);
-      font-size: 10em;
-
-      .icon {
-        display: block;
-        transform: translatey(-10%);
-        text-align: center;
-        line-height: $circle-diameter;
-      }
+    li {
+      width: 33%;
     }
   }
 }

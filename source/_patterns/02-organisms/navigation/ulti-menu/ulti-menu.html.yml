@@ -1,0 +1,37 @@
+id_attributes: ultimenu-main
+attributes:
+  Attribute():
+    class:
+    - ultimenu
+    - menu
+    - ultimenu--main
+    - ultimenu--htb
+    - ultimenu--horizontal
+    - ultimenu--basic
+configuration:
+  label_display: false
+  label: Main navigation
+title_attributes:
+  Attribute():
+    class:
+    - block__title
+items:
+- link: '<a href=#" class="ultimenu__link">Menu Item 1</a>'
+  attributes:
+    Attribute():
+      class:
+        - ultimenu__item
+- link: '<a href=#" class="ultimenu__link">Menu Item 2</a>'
+  attributes:
+    Attribute():
+      class:
+        - ultimenu__item
+- link: '<a href=#" class="ultimenu__link">Menu Item 3</a>'
+  attributes:
+    Attribute():
+      class:
+        - ultimenu__item
+  flyout: molecules-menu-flyout-html
+  flyout_attributes:
+    Attribute():
+      class:
