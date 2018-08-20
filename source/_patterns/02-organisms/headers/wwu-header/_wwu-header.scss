@@ -101,6 +101,11 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
       position: absolute;
       top: 0;
       right: 0;
+
+      &:hover,
+      &:focus {
+        background-color: $darkest-blue;
+      }
     }
   }
 }
