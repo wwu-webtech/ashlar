@@ -14,8 +14,11 @@
     @include breakpoint($large) {
       margin-bottom: -($toggle-size--larger / 2);
     }
-    position: relative;
+    position: absolute;
     z-index: 1;
+    top: 0;
+    left: 0;
     display: none;
+    width: 100%;
   }
 }

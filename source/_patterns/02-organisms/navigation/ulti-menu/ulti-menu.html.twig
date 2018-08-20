@@ -17,6 +17,9 @@
   {% endif %}
   {{ title_suffix }}
 
+  {# On small screens, Western menu shows here. Otherwise it is hidden and appears earlier in DOM #}
+  {% include "@molecules/navigation/wwu-mobile-menu/wwu-mobile-menu.html.twig" %}
+
   <ul id="{{ id_attributes }}"{{ attributes.addClass(classes) }}>
     {%- for item in items -%}
       <li{{ item.attributes.addClass(item_classes, item.flyout ? 'has-ultimenu') }}>
