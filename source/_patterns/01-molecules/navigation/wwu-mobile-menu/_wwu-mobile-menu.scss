@@ -7,8 +7,38 @@
   &.mobile {
     background-color: $dark-blue;
 
-    .menu {
+    .top-links {
+      display: grid;
+      align-items: center;
 
+      grid-template-areas: "close links . login";
+      grid-template-columns: auto auto 1fr auto;
+      grid-template-rows: auto;
+    }
+
+    .menu {
+      display: flex;
+      flex-flow: row nowrap;
+      margin: 0;
+
+      li {
+        flex: 1;
+        margin: 0;
+
+        a {
+          width: 100%;
+          padding: $half-spacing;
+          text-align: center;
+          color: $white;
+
+          &:hover,
+          &:focus {
+            color: $black;
+            outline: none;
+            background-color: $light-green;
+          }
+        }
+      }
     }
   }
 }
