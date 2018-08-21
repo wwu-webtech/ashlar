@@ -5,6 +5,9 @@
 
 .quick-links {
   &.mobile {
+    @include breakpoint($medium) {
+      display: none;
+    }
     background-color: $dark-blue;
 
     .top-links {
