@@ -24,3 +24,24 @@ $(".nav--main").accessibleMegaMenu({
     /* css class for the open state */
     openClass: "open"
 });
+
+var $ultimenu_link = $('.ultimenu__link', context);
+
+function open_mobile_flyout(event) {
+  $ultimenu_link.siblings('.ultimenu__flyout').animate(
+    {
+      right: '0'
+    },
+    {
+      duration: 'normal',
+      easing: 'swing',
+      complete: function () {
+        $(this).addClass('test');
+      }
+    }
+  );
+
+  event.stopPropagation();
+}
+
+$ultimenu_link.on('click', open_mobile_flyout);

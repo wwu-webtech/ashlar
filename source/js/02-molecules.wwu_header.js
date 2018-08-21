@@ -13,7 +13,7 @@ function toggle_open_menu(event) {
       duration: 'normal',
       easing: 'swing',
       complete: function () {
-        $toggle_open_menu.addClass('.is-expanded');
+        $toggle_open_menu.addClass('is-expanded');
 
         $toggle_open_menu.on('click', toggle_open_menu);
       }
@@ -35,7 +35,7 @@ function toggle_close_menu(event) {
       duration: 'normal',
       easing: 'swing',
       complete: function () {
-        $toggle_close_menu.removeClass('.is-expanded');
+        $toggle_close_menu.removeClass('is-expanded');
 
         $toggle_close_menu.on('click', toggle_close_menu);
       }

@@ -5,15 +5,23 @@
 
 /* Overrides for ultimenu styles & functionality */
 .ultimenu {
+  overflow: visible;
+
   .ultimenu__flyout {
     @include breakpoint($medium) {
+      z-index: 0;
+      top: 100%;
       transform: translatey(-($toggle-size/2));
     }
     @include breakpoint($large) {
       transform: translatey(-($toggle-size--larger/2));
     }
     @include transition($medium-transition-speed, $standard-ease);
-    z-index: 0;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: -100%;
+    display: initial;
     margin: 0;
     padding: 0;
     box-shadow: none;
