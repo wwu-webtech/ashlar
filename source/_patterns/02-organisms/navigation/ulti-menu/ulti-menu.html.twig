@@ -28,6 +28,7 @@
         {%- endif -%}
         {%- if item.flyout -%}
           <section{{ item.flyout_attributes.addClass('ultimenu__flyout') }}>
+            <div class="close-flyout">< Back</div>
             {{ item.flyout }}
           </section>
         {%- endif -%}

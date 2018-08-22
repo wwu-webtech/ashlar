@@ -19,8 +19,6 @@ function toggle_open_menu(event) {
       }
     }
   );
-
-  event.stopPropagation();
 }
 
 function toggle_close_menu(event) {
@@ -41,8 +39,6 @@ function toggle_close_menu(event) {
       }
     }
   );
-
-  event.stopPropagation();
 }
 
 $toggle_open_menu.on('click', toggle_open_menu);

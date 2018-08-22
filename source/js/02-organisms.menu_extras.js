@@ -24,24 +24,42 @@ $(".nav--main").accessibleMegaMenu({
     /* css class for the open state */
     openClass: "open"
 });
-
 var $ultimenu_link = $('.ultimenu__link', context);
+var $close_flyout = $('.close-flyout', context);
 
 function open_mobile_flyout(event) {
-  $ultimenu_link.siblings('.ultimenu__flyout').animate(
-    {
-      right: '0'
-    },
-    {
-      duration: 'normal',
-      easing: 'swing',
-      complete: function () {
-        $(this).addClass('test');
+  if ($(window).width() < 841) {
+    $ultimenu_link.siblings('.ultimenu__flyout').animate(
+      {
+        right: '0',
+        opacity: 1
+      },
+      {
+        duration: 'fast',
+        easing: 'linear',
+        complete: function () {
+        }
       }
-    }
-  );
+    );
+  }
+}
 
-  event.stopPropagation();
+function close_mobile_flyout(event) {
+  if ($(window).width() < 841) {
+    $ultimenu_link.siblings('.ultimenu__flyout').animate(
+      {
+        right: '-100%',
+        opacity: 0
+      },
+      {
+        duration: 'fast',
+        easing: 'linear',
+        complete: function () {
+        }
+      }
+    );
+  }
 }
 
 $ultimenu_link.on('click', open_mobile_flyout);
+$close_flyout.on('click', close_mobile_flyout);

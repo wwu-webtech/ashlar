@@ -11,6 +11,7 @@
     @include breakpoint($medium) {
       z-index: 0;
       top: 100%;
+      right: 0 !important;
       transform: translatey(-($toggle-size/2));
     }
     @include breakpoint($large) {
@@ -24,6 +25,7 @@
     display: initial;
     margin: 0;
     padding: 0;
+    opacity: 0;
     box-shadow: none;
 
     .flyout {
@@ -33,6 +35,16 @@
         }
         padding-top: ($toggle-size/2) + ($standard-spacing);
       }
+    }
+
+    .close-flyout {
+      @include breakpoint($medium) {
+        display: none;
+      }
+      padding: ($half-spacing / 2) $standard-spacing;
+      cursor: pointer;
+      color: $white;
+      background-color: $darkest-blue;
     }
   }
 
