@@ -6,6 +6,7 @@ libraries:
   - core/normalize
   - wwu_shila/global-styling
   - wwu_shila/global-scripts
+  - wwu_shila/wwu-header
   - wwu_shila/accessible-mega-menu
   - wwu_shila/menu-extras
 regions:
