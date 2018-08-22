@@ -28,6 +28,11 @@
     opacity: 0;
     box-shadow: none;
 
+    &.open {
+      visibility: visible;
+      opacity: 1;
+    }
+
     .flyout {
       .wrap {
         @include breakpoint($large) {
@@ -55,12 +60,12 @@
           display: none;
           visibility: hidden;
           opacity: 0;
+        }
 
-          &.open {
-            display: block;
-            visibility: visible;
-            opacity: 1;
-          }
+        & > .ultimenu__flyout.open {
+          display: block;
+          visibility: visible;
+          opacity: 1;
         }
       }
     }
