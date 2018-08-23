@@ -84,8 +84,34 @@
   }
 }
 
-/* Adobe Accessible Mega Menu specific styles */
+.ultimenu--main {
+  .ultimenu__link {
+    &.is-active {
+      @include breakpoint(max-width $medium) {
+        background: inherit;
+      }
+    }
+    .caret {
+      display: none;
+    }
+  }
+}
+
 .open {
   visibility: visible;
   opacity: 1;
+}
+
+/* Prevent a region in Drupal from getting position relative, which pushes menu below header area */
+#block-ultimenumainnavigation {
+  &.contextual-region {
+    position: inherit;
+  }
+}
+
+/* Hide the default ultimenu mobile menu toggle */
+.button {
+  &.button--ultimenu {
+    display: none;
+  }
 }
