@@ -41,10 +41,12 @@
 
     .search-box {
       input {
+        @include breakpoint($small) {
+          min-width: 280px;
+        }
         @include breakpoint($large) {
           padding: $standard-spacing;
         }
-        min-width: 280px;
         height: 100%;
         margin: 0;
         padding: $half-spacing;
