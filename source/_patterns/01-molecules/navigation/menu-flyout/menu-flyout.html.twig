@@ -9,7 +9,7 @@
   We call a macro which calls itself to render the full tree.
   @see http://twig.sensiolabs.org/doc/tags/macro.html
 #}
-<div class="gray flyout">
+<div{{ attributes.addClass(flyout_classes) }}>
   <div class="wrap">
     {{ menus.menu_links(items, attributes, classes, 0) }}
   </div>

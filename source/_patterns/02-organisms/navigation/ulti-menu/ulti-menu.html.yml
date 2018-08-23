@@ -21,7 +21,19 @@ items:
     Attribute():
       class:
         - ultimenu__item
-  flyout: molecules-menu-flyout-html
+  flyout:
+    include():
+      pattern: molecules-menu-flyout-html
+      with:
+          flyout_classes:
+            - flyout
+            - dark-blue
+          classes:
+            - menu
+            - dark-blue
+          items:
+            - title: Alt Menu Item
+              url: ''
   flyout_attributes:
     Attribute():
       class:

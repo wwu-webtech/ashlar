@@ -19,13 +19,18 @@
   }
 
   .wrap {
+    @include breakpoint($medium) {
+      padding-top: ($toggle-size/2) + ($standard-spacing);
+    }
+    @include breakpoint($large) {
+      padding-top: ($toggle-size--larger/2) + ($standard-spacing);
+    }
     position: relative;
     width: 100%;
     max-width: $max-content-width;
     height: 100%;
     margin: auto;
     padding: $standard-spacing;
-    padding-top: $standard-spacing * 2;
   }
 
   .menu {

@@ -19,7 +19,7 @@
     }
     @include transition($medium-transition-speed, $standard-ease);
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     right: -100%;
     display: initial;
@@ -33,23 +33,19 @@
       opacity: 1;
     }
 
-    .flyout {
-      .wrap {
-        @include breakpoint($large) {
-          padding-top: ($toggle-size--larger/2) + ($standard-spacing);
-        }
-        padding-top: ($toggle-size/2) + ($standard-spacing);
-      }
-    }
-
     .close-flyout {
       @include breakpoint($medium) {
         display: none;
       }
+      display: block;
       padding: ($half-spacing / 2) $standard-spacing;
-      cursor: pointer;
       color: $white;
-      background-color: $darkest-blue;
+      background-color: $blue;
+
+      &:hover,
+      &:focus {
+        background-color: $darkest-blue;
+      }
     }
   }
 

@@ -4,7 +4,7 @@ var $close_flyout = $('.close-flyout', context);
 
 function open_mobile_flyout(event) {
   if ($(window).width() < 841) {
-    $ultimenu_link.siblings('.ultimenu__flyout').animate(
+    $(this).siblings('.ultimenu__flyout').animate(
       {
         right: '0',
         opacity: 1
@@ -13,6 +13,15 @@ function open_mobile_flyout(event) {
         duration: 'fast',
         easing: 'linear',
         complete: function () {
+          $ultimenu_link.not(this).siblings('.ultimen__flyout').animate(
+            {
+              right: '100%',
+              opacity: 0
+            },
+            {
+              duration: 0
+            }
+          );
         }
       }
     );

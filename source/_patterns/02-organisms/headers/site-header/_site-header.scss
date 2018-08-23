@@ -11,6 +11,7 @@
       margin-bottom: -($toggle-size / 2);
       transform: translatey(-50%);
       opacity: 1 !important;
+      overflow-x: visible;
     }
     @include breakpoint($large) {
       margin-bottom: -($toggle-size--larger / 2);
@@ -19,6 +20,7 @@
     z-index: 1;
     top: 0;
     left: -100%;
+    overflow-x: hidden;
     width: 100%;
     opacity: 0;
   }
