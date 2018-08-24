@@ -1,3 +1,55 @@
+/* Mobile menu scripts */
+var $ultimenu_link = $('.ultimenu__link', context);
+var $close_flyout = $('.close-flyout', context);
+
+function open_mobile_flyout(event) {
+  if ($(window).width() < 841) {
+    $(this).siblings('.ultimenu__flyout').animate(
+      {
+        right: '0',
+        opacity: 1
+      },
+      {
+        duration: 'fast',
+        easing: 'linear',
+        complete: function () {
+          $ultimenu_link.not(this).siblings('.ultimen__flyout').animate(
+            {
+              right: '100%',
+              opacity: 0
+            },
+            {
+              duration: 0
+            }
+          );
+        }
+      }
+    );
+  }
+}
+
+function close_mobile_flyout(event) {
+  if ($(window).width() < 841) {
+    $ultimenu_link.siblings('.ultimenu__flyout').animate(
+      {
+        right: '-100%',
+        opacity: 0
+      },
+      {
+        duration: 'fast',
+        easing: 'linear',
+        complete: function () {
+        }
+      }
+    );
+  }
+}
+
+$ultimenu_link.on('click', open_mobile_flyout);
+$close_flyout.on('click', close_mobile_flyout);
+
+/* Ultimenu variable declarations */
+
 $(".nav--main").accessibleMegaMenu({
     /* prefix for generated unique id attributes, which are required
        to indicate aria-owns, aria-controls and aria-labelledby */

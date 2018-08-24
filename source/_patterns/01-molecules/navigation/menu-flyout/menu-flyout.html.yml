@@ -1,3 +1,6 @@
+flyout_classes:
+- flyout
+- gray
 classes:
 - menu
 - gray

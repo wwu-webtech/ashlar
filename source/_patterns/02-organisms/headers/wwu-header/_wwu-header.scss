@@ -40,28 +40,18 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
     }
 
     .western-logo {
+      background-color: $dark-blue;
+
       grid-area: logo;
 
-      .logo {
-        @include breakpoint($large) {
-          width: $logo-width--larger;
-          height: $logo-height--larger;
+      a {
+        @include breakpoint($medium) {
+          padding-right: 0;
         }
+        display: flex;
+        justify-content: center;
+        padding-right: $toggle-size--larger;
       }
-    }
-
-    .region--quick_links {
-      align-self: center;
-
-      grid-area: quick-links;
-      justify-self: end;
-    }
-
-    .western-search-widget {
-      align-self: center;
-
-      grid-area: search;
-      justify-self: end;
     }
 
     .university-name {
@@ -70,14 +60,52 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
     }
 
     .site-name {
+      @include breakpoint($medium) {
+        display: block !important;
+        border-top: 1px solid $blue;
+        border-bottom: none;
+      }
       display: block;
       padding: $half-spacing $standard-spacing;
       text-align: center;
       color: $white;
       border-top: 1px solid $blue;
+      border-bottom: 1px solid $blue;
       background: linear-gradient(to right, $dark-blue 0%, $dark-blue-gradient 100%);
       font-size: $font-size--smaller;
       line-height: 1.5em;
+    }
+
+    .search {
+      align-self: center;
+
+      grid-area: search;
+      justify-self: end;
+    }
+
+    .quick-links {
+      @include breakpoint($medium) {
+        display: block !important;
+      }
+      display: none;
+      align-self: center;
+
+      grid-area: quick-links;
+      justify-self: end;
+    }
+
+    .toggle-menu {
+      @include breakpoint($medium) {
+        display: none;
+      }
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      &:hover,
+      &:focus {
+        background-color: $darkest-blue;
+      }
     }
   }
 }

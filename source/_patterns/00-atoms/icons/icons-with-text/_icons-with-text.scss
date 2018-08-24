@@ -1,0 +1,13 @@
+/**
+ * @file
+ * 00-atoms/icons/icons-with-text/_icons-with-text.scss
+ */
+.icon-with-text {
+  display: inline-block;
+  text-align: center;
+
+  .icon-text {
+    display: block;
+    font-size: $font-size--smaller;
+  }
+}

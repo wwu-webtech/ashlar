@@ -3,16 +3,32 @@
 * 01-molecules/content/search/_search.scss
 */
 
-.western-search-widget {
+.search {
+  @include breakpoint($medium) {
+    position: inherit;
+  }
+  position: absolute;
   z-index: 0;
+  top: $toggle-size--larger;
+  right: 0;
   display: flex;
   justify-content: end;
 
   .toggle {
+    @include breakpoint($medium) {
+      &:hover,
+      &:focus {
+        background-color: $dark-blue;
+      }
+    }
     @include breakpoint($large) {
       min-width: $toggle-size--larger;
     }
     min-width: $toggle-size;
+    &:hover,
+    &:focus {
+      background-color: $darkest-blue;
+    }
   }
 
   .toggle-search {
@@ -25,13 +41,16 @@
 
     .search-box {
       input {
+        @include breakpoint($small) {
+          min-width: 280px;
+        }
         @include breakpoint($large) {
           padding: $standard-spacing;
         }
-        min-width: 280px;
         height: 100%;
         margin: 0;
         padding: $half-spacing;
+        border-color: $blue;
       }
     }
 

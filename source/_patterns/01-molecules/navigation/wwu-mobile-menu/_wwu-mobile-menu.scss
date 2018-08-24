@@ -1,0 +1,70 @@
+/**
+* @file
+* 00-molecules/navigation/wwu-menu/_wwu-menu.scss
+*/
+
+.quick-links {
+  &.mobile {
+    @include breakpoint($medium) {
+      display: none;
+    }
+    background-color: $dark-blue;
+
+    .top-links {
+      display: grid;
+      align-items: center;
+
+      grid-column-gap: 9px;
+      grid-template-areas: "close links . login";
+      grid-template-columns: auto auto 1fr auto;
+      grid-template-rows: auto;
+    }
+
+    a {
+      color: $white;
+
+      &.button {
+        padding: 9px 18px;
+        border-width: 2px;
+      }
+
+      &.mywestern {
+        margin-right: $standard-spacing;
+
+        grid-area: login;
+
+        &:hover,
+        &:focus {
+          color: $light-blue;
+        }
+      }
+    }
+
+    .menu {
+      display: flex;
+      flex-flow: row nowrap;
+      margin: 0;
+      border-top: solid 1px white;
+      border-bottom: solid 1px white;
+
+      li {
+        flex: 1;
+        margin: 0;
+
+        a {
+          width: 100%;
+          padding: $half-spacing;
+          text-align: center;
+          color: $white;
+
+          &:hover,
+          &:focus {
+            color: $black;
+            outline: none;
+            background-color: $light-green;
+          }
+        }
+      }
+    }
+  }
+}

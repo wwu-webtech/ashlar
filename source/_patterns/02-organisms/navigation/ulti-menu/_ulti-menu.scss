@@ -5,41 +5,68 @@
 
 /* Overrides for ultimenu styles & functionality */
 .ultimenu {
+  overflow: visible;
+
   .ultimenu__flyout {
+    @include breakpoint($medium) {
+      z-index: 0;
+      top: 100%;
+      right: 0 !important;
+      transform: translatey(-($toggle-size/2));
+    }
     @include breakpoint($large) {
       transform: translatey(-($toggle-size--larger/2));
     }
     @include transition($medium-transition-speed, $standard-ease);
-    z-index: 0;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: -100%;
+    display: initial;
     margin: 0;
     padding: 0;
-    transform: translatey(-($toggle-size/2));
+    opacity: 0;
     box-shadow: none;
 
-    .flyout {
-      .wrap {
-        @include breakpoint($large) {
-          padding-top: ($toggle-size--larger/2) + ($standard-spacing);
-        }
-        padding-top: ($toggle-size/2) + ($standard-spacing);
+    &.open {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .close-flyout {
+      @include breakpoint($medium) {
+        display: none;
+      }
+      display: block;
+      padding: ($half-spacing / 2) $standard-spacing;
+      color: $white;
+      background-color: $blue;
+
+      &:hover,
+      &:focus {
+        background-color: $darkest-blue;
       }
     }
   }
 
   li {
-    &:hover {
-      & > .ultimenu__flyout {
-        display: none;
-        visibility: hidden;
-        opacity: 0;
+    @include breakpoint($medium) {
+      &:hover {
+        & > .ultimenu__flyout {
+          display: none;
+          visibility: hidden;
+          opacity: 0;
+        }
 
-        &.open {
+        & > .ultimenu__flyout.open {
           display: block;
           visibility: visible;
           opacity: 1;
         }
       }
     }
+    display: inherit;
+    margin: 0;
   }
 
   .ultimenu__link {
@@ -53,8 +80,34 @@
   }
 }
 
-/* Adobe Accessible Mega Menu specific styles */
+.ultimenu--main {
+  .ultimenu__link {
+    &.is-active {
+      @include breakpoint(max-width $medium) {
+        background: inherit;
+      }
+    }
+    .caret {
+      display: none;
+    }
+  }
+}
+
 .open {
   visibility: visible;
   opacity: 1;
+}
+
+/* Prevent a region in Drupal from getting position relative, which pushes menu below header area */
+#block-ultimenumainnavigation {
+  &.contextual-region {
+    position: inherit;
+  }
+}
+
+/* Hide the default ultimenu mobile menu toggle */
+.button {
+  &.button--ultimenu {
+    display: none;
+  }
 }

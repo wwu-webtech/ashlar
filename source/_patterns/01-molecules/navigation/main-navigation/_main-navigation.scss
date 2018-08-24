@@ -4,16 +4,57 @@
  */
 
 .nav--main {
-  z-index: 1;
+  @include breakpoint($medium) {
+    height: inherit;
+    min-height: 0;
+    background: transparent;
+  }
+  min-height: 100vh;
+  background: $dark-blue;
+
   & > .menu {
+    @include breakpoint($medium) {
+      flex-flow: row nowrap;
+    }
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: center;
 
-    a {
+    > li {
+      @include breakpoint($medium) {
+        width: inherit;
+      }
+      width: 100%;
+
+      > a {
+        @include breakpoint($medium) {
+          border-bottom: none;
+        }
+        display: block;
+        width: 100%;
+        height: inherit;
+        padding: $standard-spacing;
+        text-align: left;
+        border-bottom: 1px solid $darkest-blue;
+
         &:focus {
           outline: none;
         }
+      }
+
+      &.has-ultimenu {
+        > a {
+          &:after {
+            @include breakpoint($medium) {
+              content: '';
+            }
+            position: absolute;
+            right: $standard-spacing;
+            display: inline-block;
+            content: ">";
+          }
+        }
+      }
     }
   }
 }

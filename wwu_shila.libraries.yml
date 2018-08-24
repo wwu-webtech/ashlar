@@ -25,6 +25,12 @@ switcher:
     build/js/01-molecules.content.switcher.js: {}
   dependencies:
     - core/jquery
+wwu-header:
+  version: 1.x
+  js:
+    build/js/02-organisms.wwu_header.js: {}
+  dependencies:
+    - core/jquery
 accessible-mega-menu:
   version: 1.x
   js:

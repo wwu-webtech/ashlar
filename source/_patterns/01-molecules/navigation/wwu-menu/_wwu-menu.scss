@@ -3,40 +3,51 @@
 * 00-molecules/navigation/wwu-menu/_wwu-menu.scss
 */
 
-.region--quick_links {
+.quick-links {
   font-size: $font-size--smaller;
 
-  .menu {
-    display: flex;
-    margin: 0;
-
-    li {
+  &.desktop {
+    .menu {
+      display: flex;
+      flex-flow: row nowrap;
       margin: 0;
+      border: none;
+      background-color: transparent;
 
-      a {
-        @include breakpoint($large) {
-          height: $toggle-size--larger;
-          padding: $large-spacing;
-        }
-        height: $toggle-size;
-        padding: $standard-spacing;
+      li {
+        flex: 1;
+        margin: 0;
 
-        &:hover,
-        &:focus {
-          background-color: $light-green;
-          outline: none;
-        }
-      }
-
-      &:nth-of-type(1) {
         a {
-          color: $white;
-          background-color: $dark-blue;
+          @include breakpoint($large) {
+            height: $toggle-size--larger;
+            padding: $large-spacing;
+          }
+          width: 100%;
+          height: $toggle-size;
+          padding: $standard-spacing;
+          text-align: center;
 
           &:hover,
           &:focus {
             color: $black;
+            outline: none;
             background-color: $light-green;
+          }
+        }
+
+        &:nth-of-type(1) {
+          a {
+            @include breakpoint($medium) {
+              color: $white;
+              background-color: $dark-blue;
+            }
+
+            &:hover,
+            &:focus {
+              color: $black;
+              background-color: $light-green;
+            }
           }
         }
       }
