@@ -4,9 +4,6 @@
 */
 
 .search {
-  @include breakpoint($medium) {
-    position: inherit;
-  }
   position: absolute;
   z-index: 0;
   top: $toggle-size--larger;
