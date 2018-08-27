@@ -6,12 +6,16 @@
 .site-footer {
   @include breakpoint($small) {
     grid-template-areas: ". footer_left . footer_center . footer_right .";
+    -ms-grid-columns: $standard-spacing 1fr $standard-spacing 1fr $standard-spacing 1fr $standard-spacing;
+    -ms-grid-rows: auto;
     grid-template-columns: $standard-spacing 1fr $standard-spacing 1fr $standard-spacing 1fr $standard-spacing;
     grid-template-rows: auto;
   }
   @include breakpoint($large) {
+    -ms-grid-columns: 1fr ($max-content-width / 3) $standard-spacing ($max-content-width / 3) $standard-spacing ($max-content-width / 3) 1fr;
     grid-template-columns: 1fr ($max-content-width / 3) $standard-spacing ($max-content-width / 3) $standard-spacing ($max-content-width / 3) 1fr;
   }
+  display: -ms-grid;
   display: grid;
   padding: ($large-spacing * 2) 0;
   color: $white;
@@ -24,18 +28,50 @@
   ". footer_center ."
   ". ............. ."
   ". footer_right  .";
-  grid-template-columns: $standard-spacing 1fr $standard-spacing;
+  -ms-grid-columns: $small-screen-columns;
+  -ms-grid-rows: auto $standard-spacing auto $standard-spacing auto;
+  grid-template-columns: $small-screen-columns;
   grid-template-rows: auto $standard-spacing auto $standard-spacing auto;
 
   .region--footer_left {
+    @include breakpoint($small) {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 1;
+    }
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
     grid-area: footer_left;
   }
 
   .region--footer_center {
+    @include breakpoint($small) {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 4;
+      -ms-grid-column-span: 1;
+    }
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
     grid-area: footer_center;
   }
 
   .region--footer_right {
+    @include breakpoint($small) {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 6;
+      -ms-grid-column-span: 1;
+    }
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
     grid-area: footer_right;
   }
 }
