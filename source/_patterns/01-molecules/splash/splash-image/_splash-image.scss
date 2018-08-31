@@ -4,6 +4,9 @@
  */
 
 .splash {
+  @include breakpoint($medium) {
+    min-height: 300px;
+  }
   @include breakpoint($large) {
     margin-top: -($toggle-size--larger);
   }
