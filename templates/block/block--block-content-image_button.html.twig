@@ -39,7 +39,7 @@
     {% block content %}
       <a href="{{ block_content.field_link.0.url }}" class="image button stylized">
         <img src="{{ file_url(block_content.field_image.entity.fileuri) }}" alt="{{ block_content.field_image.0.alt }}">
-        {{ block_content.field_link.0.title }}
+        <div class="text">{{ block_content.field_link.0.title }}</div>
       </a>
     {% endblock %}
   {% endembed %}

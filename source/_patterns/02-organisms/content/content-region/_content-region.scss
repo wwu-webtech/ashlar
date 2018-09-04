@@ -5,8 +5,10 @@
 
 .page-content {
   @include breakpoint($large) {
+    -ms-grid-columns: $large-screen-columns;
     grid-template-columns: $large-screen-columns;
   }
+  display: -ms-grid;
   display: grid;
   margin: $standard-spacing 0;
 
@@ -16,12 +18,22 @@
 
 
   #main-content {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
     grid-area: skip_to_content;
   }
+  -ms-grid-columns: $small-screen-columns;
+  -ms-grid-rows: auto;
   grid-template-columns: $small-screen-columns;
   grid-template-rows: auto;
 
   .region-wrapper {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
     grid-area: content;
   }
 }

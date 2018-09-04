@@ -13,12 +13,16 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
 
 .western-header {
   @include breakpoint($medium) {
+    display: -ms-grid;
     display: grid;
 
+    -ms-grid-columns: $small-screen-columns;
+    -ms-grid-rows: auto;
     grid-template-columns: $small-screen-columns;
     grid-template-rows: auto;
   }
   @include breakpoint ($large) {
+    -ms-grid-columns: $large-screen-columns;
     grid-template-columns: $large-screen-columns;
   }
   background: linear-gradient(to left, $white 0%, $white-gradient 100%);
@@ -26,15 +30,27 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
 
   .wrap {
     @include breakpoint($medium) {
+      display: -ms-grid;
       display: grid;
+      position: relative;
 
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 1;
       grid-column: 2 / span 1;
+
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
       grid-row: 1 / span 1;
+
       grid-template-areas: "logo quick-links search";
+      -ms-grid-columns: $logo-width $standard-spacing 1fr $toggle-size;
+      -ms-grid-rows: $header-rows;
       grid-template-columns: $header-columns;
       grid-template-rows: $header-rows;
     }
     @include breakpoint($large) {
+      -ms-grid-columns: $logo-width--larger $standard-spacing 1fr $toggle-size--larger;
+      -ms-grid-rows: $header-rows--larger;
       grid-template-columns: $header-columns--larger;
       grid-template-rows: $header-rows--larger;
     }
@@ -42,6 +58,10 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
     .western-logo {
       background-color: $dark-blue;
 
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 1;
       grid-area: logo;
 
       a {
@@ -76,22 +96,20 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
       line-height: 1.5em;
     }
 
-    .search {
-      align-self: center;
-
-      grid-area: search;
-      justify-self: end;
-    }
-
     .quick-links {
       @include breakpoint($medium) {
         display: block !important;
       }
       display: none;
-      align-self: center;
 
-      grid-area: quick-links;
+      align-self: center;
       justify-self: end;
+
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      -ms-grid-column: 3;
+      -ms-grid-column-span: 1;
+      grid-area: quick-links;
     }
 
     .toggle-menu {
@@ -106,6 +124,16 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
       &:focus {
         background-color: $darkest-blue;
       }
+    }
+
+    .search {
+      @include breakpoint($medium) {
+        right: 0;
+        top: 0;
+      }
+      grid-area: search;
+      align-self: center;
+      justify-self: end;
     }
   }
 }

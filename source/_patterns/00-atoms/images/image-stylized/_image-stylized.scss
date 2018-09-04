@@ -7,12 +7,15 @@ $image-size: 300px;
 .stylized {
   &.image {
     position: relative;
+    display: -ms-inline-grid;
     display: inline-grid;
     align-items: end;
     padding: 0;
     color: $link-color;
     background: none;
 
+    -ms-grid-columns: $image-size;
+    -ms-grid-rows: $image-size 2.5em;
     grid-template-columns: $image-size;
     grid-template-rows: $image-size 2.5em;
     justify-items: center;
@@ -20,12 +23,15 @@ $image-size: 300px;
     &:before {
       transition: $button-transition-speed $button-transition-ease;
 
+      -ms-grid-column-start: 1;
+      -ms-grid-row-start: 1;
       grid-column-start: 1;
       grid-row-start: 1;
       justify-self: right;
     }
 
     &:after {
+      display: block;
       box-sizing: border-box;
       width: $image-size;
       height: $image-size;
@@ -34,6 +40,8 @@ $image-size: 300px;
       border: solid $dark-blue $border-width;
       border-radius: $button-border-radius-alt-droplet;
 
+      -ms-grid-column-start: 1;
+      -ms-grid-row-start: 1;
       grid-column-start: 1;
       grid-row-start: 1;
     }
@@ -47,6 +55,8 @@ $image-size: 300px;
       transform: translate(5%, 5%);
       border-radius: $button-border-radius-alt-droplet;
 
+      -ms-grid-column-start: 1;
+      -ms-grid-row-start: 1;
       grid-column-start: 1;
       grid-row-start: 1;
     }

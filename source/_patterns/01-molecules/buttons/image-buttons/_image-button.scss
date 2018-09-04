@@ -8,10 +8,26 @@ $button-size: 200px;
   display: inline-block;
   margin: 0 ($large-spacing * 2);
 
+  .button {
+    min-width: initial;
+    border: none;
+
+    &:focus {
+      border: none;
+    }
+  }
+
   .stylized {
     &.image {
+      -ms-grid-columns: $button-size;
+      -ms-grid-rows: $button-size 2.5em;
       grid-template-columns: $button-size;
       grid-template-rows: $button-size 2.5em;
+
+      .text {
+        -ms-grid-row: 2;
+        -ms-grid-row-align: end;
+      }
     }
 
     &:after {
