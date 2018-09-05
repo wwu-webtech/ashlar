@@ -11,8 +11,10 @@
     order: 1;
   }
 
-  .taxonomy-term {
+  .taxonomy-terms {
     order: 2;
+    margin-top: $half-spacing;
+    margin-bottom: $standard-spacing;
   }
 
   .title {
