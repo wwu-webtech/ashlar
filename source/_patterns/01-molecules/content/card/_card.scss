@@ -11,6 +11,10 @@
     order: 1;
   }
 
+  .taxonomy-term {
+    order: 2;
+  }
+
   .title {
     a {
       display: inline-block;
@@ -18,11 +22,11 @@
       font-size: $h4-font-size;
       font-weight: $bold;
     }
-    order: 2;
+    order: 3;
   }
 
   .body {
-    order: 3;
+    order: 4;
 
     .date {
       font-style: italic;

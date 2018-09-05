@@ -5,9 +5,17 @@
     {{ image }}
   </div>
 
-  <div class="body">
-    {% block content %}
-      {{ content }}
-    {% endblock %}
-  </div>
+  {% for term in taxonomy_terms %}
+    <span class="taxonomy-term">
+      {{ term }}
+    </span>
+  {% endfor %}
+
+  {% if content %}
+    <div class="body">
+      {% block content %}
+        {{ content }}
+      {% endblock %}
+    </div>
+  {% endif %}
 </div>
