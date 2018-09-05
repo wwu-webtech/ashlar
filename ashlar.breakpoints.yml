@@ -1,25 +1,25 @@
-wwu_shila.xsmall:
+ashlar.xsmall:
   label: XS
   mediaQuery: 'all and (max-width: 580px)'
   weight: 0
   multipliers:
     - 1x
     - 2x
-wwu_shila.small:
+ashlar.small:
   label: S
   mediaQuery: 'all and (min-width: 581px) and (max-width: 840px)'
   weight: 1
   multipliers:
     - 1x
     - 2x
-wwu_shila.medium:
+ashlar.medium:
   label: M
   mediaQuery: 'all and (min-width: 841px) and (max-width: 1200px)'
   weight: 2
   multipliers:
     - 1x
     - 2x
-wwu_shila.large:
+ashlar.large:
   label: L
   mediaQuery: 'all and (min-width: 1201px)'
   weight: 3

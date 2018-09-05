@@ -1,7 +1,7 @@
 {
-  "name": "wwuweb/wwu_shila",
+  "name": "wwuweb/ashlar",
   "type": "drupal-theme",
-  "description": "Shila theme for Drupal 8",
+  "description": "Ashlar theme for Drupal 8",
   "keywords": [
     "drupal",
     "theme",
@@ -9,16 +9,16 @@
     "pattern lab",
     "starterkit"
   ],
-  "homepage": "https://github.com/aleksip/shila-drupal-theme",
+  "homepage": "https://bitbucket.org/wwuweb/ashlar/",
   "license": "GPL-2.0",
   "authors": [
     {
-      "name": "Aleksi Peebles"
+      "name": "WebTech - Western Washington University"
     }
   ],
   "support": {
-    "issues": "https://github.com/aleksip/shila-drupal-theme/issues",
-    "source": "https://github.com/aleksip/shila-drupal-theme/releases"
+    "issues": "https://wp.wwu.edu/webtech/",
+    "source": "https://bitbucket.org/wwuweb/ashlar/"
   },
   "minimum-stability": "dev",
   "extra": {
