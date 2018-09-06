@@ -1,7 +1,7 @@
 {
-  "name": "shila-drupal-theme",
+  "name": "ashlar-drupal-theme",
   "version": "1.0.0",
-  "description": "Shila theme for Drupal 8",
+  "description": "Ashlar theme for Drupal 8",
   "devDependencies": {
     "browserify": "^16.2.2",
     "del": "^3.0.0",
@@ -25,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/aleksip/shila-drupal-theme"
+    "url": "https://bitbucket.org/wwuweb/ashlar/"
   },
   "license": "GPL-2.0",
   "scripts": {

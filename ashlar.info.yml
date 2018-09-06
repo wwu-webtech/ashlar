@@ -1,14 +1,14 @@
-name: WWU Shila
+name: Ashlar
 type: theme
-description: An atomic design Drupal theme for Western Washington University, based on Shila Theme
+description: An atomic design Drupal theme for Western Washington University
 core: 8.x
 libraries:
   - core/normalize
-  - wwu_shila/global-styling
-  - wwu_shila/global-scripts
-  - wwu_shila/wwu-header
-  - wwu_shila/accessible-mega-menu
-  - wwu_shila/menu-extras
+  - ashlar/global-styling
+  - ashlar/global-scripts
+  - ashlar/wwu-header
+  - ashlar/accessible-mega-menu
+  - ashlar/menu-extras
 regions:
   header: Header
   quick_links: Quick Links
