@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a flex container as a layout.
+ *
+ * This layout over rides the layout from the theme discovery module.
+ */
+ #}
+ {%
+  set classes = [
+    'layout',
+    'layout--flex'
+  ]
+ %}
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    <div {{ region_attributes.flex.addClass('layout__region', 'layout__region--content') }}>
+      {{ content.flex }}
+    </div>
+  </div>
+{% endif %}

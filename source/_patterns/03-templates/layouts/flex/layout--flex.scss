@@ -1,0 +1,10 @@
+/*
+ * @file
+ * templates/layouts/onecol/_layout--flex.scss
+ */
+.layout--flex .layout__region {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
