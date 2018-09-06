@@ -5,12 +5,17 @@
 $button-size: 200px;
 
 .block--image-button {
+  @include breakpoint($medium) {
+    flex: 1 1 auto;
+  }
   display: inline-block;
-  margin: 0 ($large-spacing * 2);
+  margin: 0 $standard-spacing;
+  text-align: center;
 
   .button {
     min-width: initial;
     border: none;
+    margin: $standard-spacing 0;
 
     &:focus {
       border: none;
