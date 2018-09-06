@@ -11,18 +11,23 @@
     order: 1;
   }
 
+  .taxonomy-terms {
+    order: 2;
+    margin-top: $half-spacing;
+    margin-bottom: $standard-spacing;
+  }
+
   .title {
     a {
       display: inline-block;
       margin-bottom: $half-spacing;
-      font-size: $h4-font-size;
       font-weight: $bold;
     }
-    order: 2;
+    order: 3;
   }
 
   .body {
-    order: 3;
+    order: 4;
 
     .date {
       font-style: italic;

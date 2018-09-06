@@ -22,7 +22,7 @@ page:
               content:
                 join():
                 - include():
-                    pattern: organisms-block-html-page-title
+                    pattern: organisms-block-template-html-page-title
                     with:
                       content:
                         include():
@@ -30,7 +30,7 @@ page:
                           with:
                             title: Page with second level navigation
                 - include():
-                    pattern: organisms-block-html-main
+                    pattern: organisms-block-template-html-main
                     with:
                       content: organisms-node-html-page
         footer: organisms-wwu-footer-html

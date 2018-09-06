@@ -4,6 +4,8 @@
  */
 #block-ashlar-local-tasks {
   font-size: $font-size--smaller;
+  margin-bottom: $standard-spacing;
+
   ul:not(.contextual-links) {
     display: flex;
     padding-left: 0;

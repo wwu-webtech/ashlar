@@ -19,7 +19,7 @@ region_attributes:
 content:
   top:
     include():
-        pattern: organisms-block-html-page-title
+        pattern: organisms-block-template-html-page-title
         with:
           content:
             include():

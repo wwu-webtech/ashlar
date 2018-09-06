@@ -17,7 +17,7 @@ a {
 
   &:focus {
     outline: $focus-outline;
-    outline-offset: $half-spacing;
+    outline-offset: $border-width;
   }
 }
 

@@ -1,0 +1,20 @@
+/**
+ * @file
+ * 00-atoms/01-text/_taxonomy-term.scss
+ */
+
+.taxonomy-term {
+  margin-right: $half-spacing;
+  padding: $half-spacing $standard-spacing;
+  color: $dark-blue;
+  background-color: $light-green;
+  font-size: $font-size--smaller;
+}
+
+a {
+  &.taxonomy-term:hover,
+  &.taxonomy-term:focus {
+    color: $light-green;
+    background-color: $dark-blue;
+  }
+}
