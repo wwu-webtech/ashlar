@@ -1,0 +1,26 @@
+  /**
+ * @file
+ * organisms/sections/card-list/_card-row.scss
+ */
+
+.card-row {
+  @include breakpoint($small) {
+    flex-direction: row;
+  }
+  display: flex;
+  flex-direction: column;
+
+  .card {
+    margin: $standard-spacing 0;
+
+    .title,
+    .body,
+    .taxonomy-terms, {
+      padding: 0 $half-spacing;
+    }
+
+    &:nth-last-child(even) {
+      background-color: $light-gray;
+    }
+  }
+}
