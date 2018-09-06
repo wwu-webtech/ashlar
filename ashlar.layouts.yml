@@ -1,3 +1,14 @@
+layout_flex:
+  label: 'Flex Container'
+  path: templates/layout/flex
+  template: layout--flex
+  category: 'Columns: 1'
+  default_region: flex
+  icon_map:
+    - [flex]
+  regions:
+    flex:
+      label: Flex
 layout_twocol_75_25:
   label: 'Two column 75/25'
   path: templates/layout/twocol_75_25
