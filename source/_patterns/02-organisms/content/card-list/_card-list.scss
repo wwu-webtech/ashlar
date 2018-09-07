@@ -6,7 +6,6 @@
 .card-list {
   .card {
     display: grid;
-    margin-bottom: $standard-spacing;
 
     grid-column-gap: $standard-spacing;
     grid-template-areas:

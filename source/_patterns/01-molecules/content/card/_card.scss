@@ -6,6 +6,7 @@
 .card {
   display: flex;
   flex-flow: column nowrap;
+  margin-bottom: $standard-spacing;
 
   .image {
     order: 1;
