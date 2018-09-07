@@ -11,12 +11,19 @@
   flex-direction: column;
 
   .card {
-    margin: $standard-spacing 0;
+    padding-bottom: $half-spacing;
 
+    .taxonomy-terms,
     .title,
-    .body,
-    .taxonomy-terms, {
+    .body {
       padding: 0 $half-spacing;
+    }
+
+    &:nth-last-child(odd) {
+      @include breakpoint($small) {
+        background-color: $white;
+      }
+      background-color: mix($white, $light-gray, 70%);
     }
 
     &:nth-last-child(even) {

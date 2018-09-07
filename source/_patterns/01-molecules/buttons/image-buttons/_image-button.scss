@@ -2,7 +2,8 @@
 * @file
 * 01-molecules/buttons/image-buttons/_image-buttons.scss
 */
-$button-size: 200px;
+$button-size: 130px;
+$button-size--larger: 200px;
 
 .block--image-button {
   @include breakpoint($medium) {
@@ -14,8 +15,8 @@ $button-size: 200px;
 
   .button {
     min-width: initial;
-    border: none;
     margin: $standard-spacing 0;
+    border: none;
 
     &:focus {
       border: none;
@@ -24,10 +25,23 @@ $button-size: 200px;
 
   .stylized {
     &.image {
-      -ms-grid-columns: $button-size;
-      -ms-grid-rows: $button-size 2.5em;
-      grid-template-columns: $button-size;
-      grid-template-rows: $button-size 2.5em;
+      @include breakpoint($small) {
+        -ms-grid-columns: $button-size;
+        -ms-grid-rows: $button-size 2.5em;
+        grid-template-columns: $button-size;
+        grid-template-rows: $button-size 2.5em;
+      }
+      @include breakpoint($medium) {
+        -ms-grid-columns: $button-size--larger;
+        -ms-grid-rows: $button-size--larger 2.5em;
+        grid-template-columns: $button-size--larger;
+        grid-template-rows: $button-size--larger 2.5em;
+      }
+
+      -ms-grid-columns: $button-size--larger;
+      -ms-grid-rows: $button-size--larger 2.5em;
+      grid-template-columns: $button-size--larger;
+      grid-template-rows: $button-size--larger 2.5em;
 
       .text {
         -ms-grid-row: 2;
@@ -35,14 +49,18 @@ $button-size: 200px;
       }
     }
 
-    &:after {
-      width: $button-size;
-      height: $button-size;
-    }
-
+    &:after,
     img {
-      width: $button-size;
-      height: $button-size;
+      @include breakpoint($small) {
+        width: $button-size;
+        height: $button-size;
+      }
+      @include breakpoint($medium) {
+        width: $button-size--larger;
+        height: $button-size--larger;
+      }
+      width: $button-size--larger;
+      height: $button-size--larger;
     }
   }
 }

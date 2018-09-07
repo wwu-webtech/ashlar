@@ -2,6 +2,6 @@ attributes:
   Attribute():
     class:
 cards:
-- molecules-card-html
-- molecules-card-html
+- molecules-card-html-tag
+- molecules-card-html-event
 - molecules-card-html

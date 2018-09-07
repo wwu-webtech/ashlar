@@ -4,7 +4,9 @@
  */
 
 .taxonomy-term {
-  margin-right: $half-spacing;
+  display: inline-block;
+  float: left;
+  margin: 0 $half-spacing $half-spacing 0;
   padding: $half-spacing $standard-spacing;
   color: $dark-blue;
   background-color: $light-green;
