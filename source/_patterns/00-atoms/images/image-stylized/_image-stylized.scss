@@ -15,9 +15,9 @@ $image-size: 300px;
     background: none;
 
     -ms-grid-columns: $image-size;
-    -ms-grid-rows: $image-size 2.5em;
+    -ms-grid-rows: $image-size;
     grid-template-columns: $image-size;
-    grid-template-rows: $image-size 2.5em;
+    grid-template-rows: $image-size;
     justify-items: center;
 
     &:before {
