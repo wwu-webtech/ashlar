@@ -25,26 +25,26 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
     -ms-grid-columns: $large-screen-columns;
     grid-template-columns: $large-screen-columns;
   }
+  position: relative;
+  z-index: 1;
   background: linear-gradient(to left, $white 0%, $white-gradient 100%);
   font-size: $wwu-header-font-size;
 
   .wrap {
     @include breakpoint($medium) {
+      position: relative;
       display: -ms-grid;
       display: grid;
-      position: relative;
 
       -ms-grid-column: 2;
-      -ms-grid-column-span: 1;
       grid-column: 2 / span 1;
-
-      -ms-grid-row: 1;
-      -ms-grid-row-span: 1;
-      grid-row: 1 / span 1;
-
-      grid-template-areas: "logo quick-links search";
+      -ms-grid-column-span: 1;
       -ms-grid-columns: $logo-width $standard-spacing 1fr $toggle-size;
+      -ms-grid-row: 1;
+      grid-row: 1 / span 1;
+      -ms-grid-row-span: 1;
       -ms-grid-rows: $header-rows;
+      grid-template-areas: "logo quick-links search";
       grid-template-columns: $header-columns;
       grid-template-rows: $header-rows;
     }
@@ -58,11 +58,11 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
     .western-logo {
       background-color: $dark-blue;
 
-      -ms-grid-row: 1;
-      -ms-grid-row-span: 1;
+      grid-area: logo;
       -ms-grid-column: 1;
       -ms-grid-column-span: 1;
-      grid-area: logo;
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
 
       a {
         @include breakpoint($medium) {
@@ -101,15 +101,14 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
         display: block !important;
       }
       display: none;
-
       align-self: center;
-      justify-self: end;
 
-      -ms-grid-row: 1;
-      -ms-grid-row-span: 1;
+      grid-area: quick-links;
       -ms-grid-column: 3;
       -ms-grid-column-span: 1;
-      grid-area: quick-links;
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+      justify-self: end;
     }
 
     .toggle-menu {
@@ -128,11 +127,12 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
 
     .search {
       @include breakpoint($medium) {
-        right: 0;
         top: 0;
+        right: 0;
       }
-      grid-area: search;
       align-self: center;
+
+      grid-area: search;
       justify-self: end;
     }
   }
