@@ -6,6 +6,7 @@
 .card-list {
   .card {
     display: grid;
+    margin-bottom: $standard-spacing;
 
     grid-column-gap: $standard-spacing;
     grid-template-areas:
@@ -19,8 +20,9 @@
     }
 
     .title {
+      margin-top: -0.35em;
+
       grid-area: title;
-      margin-top: -.35em;
     }
 
     .body {

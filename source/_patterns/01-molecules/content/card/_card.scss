@@ -9,18 +9,20 @@
 
   .image {
     order: 1;
+    margin-bottom: $half-spacing;
+
+    img {
+      display: block;
+    }
   }
 
   .taxonomy-terms {
     order: 2;
-    margin-top: $half-spacing;
-    margin-bottom: $standard-spacing;
   }
 
   .title {
     a {
       display: inline-block;
-      margin-bottom: $half-spacing;
       font-weight: $bold;
     }
     order: 3;
@@ -35,7 +37,7 @@
     }
 
     .location {
-      margin: $half-spacing 0;
+
     }
   }
 }
