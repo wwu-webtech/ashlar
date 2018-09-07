@@ -51,6 +51,12 @@
 
   li {
     @include breakpoint($medium) {
+      min-width: initial;
+
+      a {
+        background-color: $dark-blue;
+      }
+
       &:hover {
         & > .ultimenu__flyout {
           display: none;
@@ -83,9 +89,7 @@
 .ultimenu--main {
   .ultimenu__link {
     &.is-active {
-      @include breakpoint(max-width $medium) {
-        background: inherit;
-      }
+      background: $dark-blue;
     }
     .caret {
       display: none;
