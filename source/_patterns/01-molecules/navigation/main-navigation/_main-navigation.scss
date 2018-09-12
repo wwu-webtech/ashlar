@@ -12,7 +12,9 @@
   min-height: 100vh;
   background: $dark-blue;
 
-  & > .menu {
+  & > .menu,
+  .ultimenu--main,
+  .ultimenu-main-menu {
     @include breakpoint($medium) {
       flex-flow: row nowrap;
     }
