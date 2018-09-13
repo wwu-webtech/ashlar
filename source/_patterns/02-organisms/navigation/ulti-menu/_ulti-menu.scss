@@ -26,6 +26,7 @@
     margin: 0;
     padding: 0;
     opacity: 0;
+    background-color: $white;
     box-shadow: none;
 
     &.open {
@@ -52,10 +53,6 @@
   li {
     @include breakpoint($medium) {
       min-width: initial;
-
-      a {
-        background-color: $dark-blue;
-      }
 
       &:hover {
         & > .ultimenu__flyout {
