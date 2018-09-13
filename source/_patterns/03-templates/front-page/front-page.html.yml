@@ -11,14 +11,6 @@ page:
               content:
                 join():
                 - include():
-                    pattern: organisms-block-template-html-page-title
-                    with:
-                      content:
-                        include():
-                          pattern: molecules-page-title-html
-                          with:
-                            title: Front page
-                - include():
                     pattern: organisms-block-template-html-main
                     with:
                       content:
@@ -32,6 +24,7 @@ page:
                                   - include():
                                       pattern: organisms-card-row-html
                                       with:
+                                        label: "Spotlight"
                                         cards:
                                         - molecules-card-html-tag
                                         - molecules-card-html-tag
@@ -82,15 +75,9 @@ page:
                                 second_above:
                                   join():
                                   - include():
-                                      pattern: organisms-block-template-html-page-title
-                                      with:
-                                        content:
-                                          include():
-                                            pattern: molecules-page-title-html
-                                            with:
-                                              title: In the News
-                                  - include():
                                       pattern: organisms-card-list-html
+                                      with:
+                                        label: "In the News"
                                   - include():
                                       pattern: organisms-block-template-html
                                       with:
@@ -119,20 +106,13 @@ page:
                                       pattern: organisms-block-template-html
                                       with:
                                         label: ""
-                                        content: "<a class='button alt'>More Stories</a>"
+                                        content: "<a class='button alt'>Learn More</a>"
                                 second_below:
                                   join():
                                   - include():
-                                      pattern: organisms-block-template-html-page-title
-                                      with:
-                                        content:
-                                          include():
-                                            pattern: molecules-page-title-html
-                                            with:
-                                              title: In the News
-                                  - include():
                                       pattern: organisms-card-list-html
                                       with:
+                                        label: "Upcoming Events"
                                         cards:
                                           - molecules-card-html-event
                                           - molecules-card-html-event
