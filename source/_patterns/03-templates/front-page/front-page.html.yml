@@ -104,7 +104,16 @@ page:
                                         label: ""
                                         content:
                                           include():
-                                            pattern: atoms-landscape-3x2
+                                              pattern: organisms-block-template-html
+                                              with:
+                                                attributes:
+                                                  Attribute():
+                                                    class:
+                                                    - block--block-contentimagefield-image
+                                                label: ""
+                                                content:
+                                                  include():
+                                                    pattern: atoms-landscape-3x2
                                   - include():
                                       pattern: organisms-block-template-html
                                       with:

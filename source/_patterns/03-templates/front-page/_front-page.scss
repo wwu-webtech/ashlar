@@ -64,15 +64,24 @@ $dark-shade-bg-2: mix($white, $blue, 80%);
         font-weight: $bold;
       }
 
+      .block--block-contentimagefield-image {
+        img {
+          @include breakpoint($large) {
+            max-width: calc((100% + #{$standard-spacing}) + ((100vw - #{$max-content-width}) / 2));
+            transform: translatex(calc((100vw - #{$max-content-width}) / -2));
+          }
+        }
+      }
+
       &:before {
         @include breakpoint($large) {
-          display: block;
-          content: '';
-          width: calc((100vw - #{$max-content-width})/2);
-          height: 100%;
           position: absolute;
           top: 0;
           left: 0;
+          display: block;
+          width: calc((100vw - #{$max-content-width})/2);
+          height: 100%;
+          content: "";
           transform: translatex(-100%);
         }
       }
@@ -86,13 +95,13 @@ $dark-shade-bg-2: mix($white, $blue, 80%);
 
       &:after {
         @include breakpoint($large) {
-          display: block;
-          content: '';
-          width: calc((100vw - #{$max-content-width})/2);
-          height: 100%;
           position: absolute;
           top: 0;
           right: 0;
+          display: block;
+          width: calc((100vw - #{$max-content-width})/2);
+          height: 100%;
+          content: "";
           transform: translatex(100%);
         }
       }
