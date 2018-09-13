@@ -1,0 +1,101 @@
+/**
+* @file
+* templates/front-page/_front-page.scss
+*/
+$light-shade-bg-1: mix($white, $light-gray, 60%);
+$dark-shade-bg-1: mix($white, $light-gray, 10%);
+$light-shade-bg-2: mix($white, $blue, 90%);
+$dark-shade-bg-2: mix($white, $blue, 80%);
+
+.path-frontpage {
+  main {
+    overflow-x: hidden;
+  }
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: $title-font-size;
+    font-weight: $regular;
+  }
+
+  .layout--twocol-bricks {
+    .layout__region {
+      position: relative;
+    }
+
+    .layout__region--first-above {
+      background-color: $light-shade-bg-1;
+
+      &:before {
+        background-color: $light-shade-bg-1;
+      }
+    }
+
+    .layout__region--second-above {
+      margin-top: $large-spacing;
+      background-color: $dark-shade-bg-1;
+
+      &:after {
+        background-color: $dark-shade-bg-1;
+      }
+    }
+
+    .layout__region--first-below {
+      background-color: $light-shade-bg-2;
+
+      &:before {
+        background-color: $light-shade-bg-2;
+      }
+    }
+    .layout__region--second-below {
+      margin-top: $large-spacing;
+      background-color: $dark-shade-bg-2;
+
+      &:after {
+        background-color: $dark-shade-bg-2;
+      }
+    }
+
+    .layout__region--first-above,
+    .layout__region--first-below {
+      h2 {
+        text-align: left;
+        font-size: $h2-font-size;
+        font-weight: $bold;
+      }
+
+      &:before {
+        @include breakpoint($large) {
+          display: block;
+          content: '';
+          width: calc((100vw - #{$max-content-width})/2);
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translatex(-100%);
+        }
+      }
+    }
+
+    .layout__region--second-above,
+    .layout__region--second-below {
+      h2 {
+        text-align: left;
+      }
+
+      &:after {
+        @include breakpoint($large) {
+          display: block;
+          content: '';
+          width: calc((100vw - #{$max-content-width})/2);
+          height: 100%;
+          position: absolute;
+          top: 0;
+          right: 0;
+          transform: translatex(100%);
+        }
+      }
+    }
+  }
+}
