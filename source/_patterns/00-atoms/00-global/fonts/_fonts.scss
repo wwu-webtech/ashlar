@@ -19,7 +19,10 @@ $body-font-weight: $regular;
 $heading-font-weight: $bold;
 $button-font-weight: $bold;
 
-// Fluid Typography: Major Second scale
+// Fluid Typography: Major Second scale for headings/paragraphs
+$min-title-font-size: 38px;
+$max-title-font-size: 92px;
+
 $min-h1-font-size: 27.03px;
 $max-h1-font-size: 51.145px;
 
@@ -48,6 +51,7 @@ $max-vw: 1600px;
 
 
 // Font Sizes
+$title-font-size: calc(#{$min-title-font-size} + #{strip-unit($max-title-font-size - $min-title-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 $h1-font-size: calc(#{$min-h1-font-size} + #{strip-unit($max-h1-font-size - $min-h1-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 $h2-font-size: calc(#{$min-h2-font-size} + #{strip-unit($max-h2-font-size - $min-h2-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 $h3-font-size: calc(#{$min-h3-font-size} + #{strip-unit($max-h3-font-size - $min-h3-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
