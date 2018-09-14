@@ -77,6 +77,8 @@ page:
                                         content:
                                           include():
                                             pattern: molecules-card-html
+                                            with:
+                                              image: atoms-image-featured
                                   - include():
                                       pattern: organisms-block-template-html
                                       with:
@@ -121,6 +123,8 @@ page:
                                         content:
                                           include():
                                             pattern: molecules-card-html-event
+                                            with:
+                                              image: atoms-image-featured
                                   - include():
                                       pattern: organisms-block-template-html
                                       with:
