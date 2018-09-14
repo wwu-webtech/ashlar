@@ -14,14 +14,14 @@ ashlar.small:
     - 2x
 ashlar.medium:
   label: M
-  mediaQuery: 'all and (min-width: 841px) and (max-width: 1200px)'
+  mediaQuery: 'all and (min-width: 841px) and (max-width: 1400px)'
   weight: 2
   multipliers:
     - 1x
     - 2x
 ashlar.large:
   label: L
-  mediaQuery: 'all and (min-width: 1201px)'
+  mediaQuery: 'all and (min-width: 1401px)'
   weight: 3
   multipliers:
     - 1x

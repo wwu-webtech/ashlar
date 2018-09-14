@@ -18,6 +18,7 @@
 .layout--twocol-bricks > .layout__region--second-below {
   @include breakpoint($medium) {
     flex: 0 1 50%;
+    max-width: 50%;
   }
 }
 

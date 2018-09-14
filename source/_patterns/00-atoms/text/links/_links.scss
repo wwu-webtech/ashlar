@@ -49,13 +49,14 @@ h6 {
   }
 }
 
-p {
+p,
+blockquote {
   a {
-    text-decoration: underline;
+    text-decoration: none;
 
     &:hover,
     &:focus {
-      text-decoration: none;
+      text-decoration: underline;
     }
   }
 }
