@@ -10,12 +10,28 @@ $dark-shade-bg-2: mix($white, $blue, 80%);
 .path-frontpage {
   main {
     overflow-x: hidden;
+    margin-bottom: 0;
   }
+
   h2 {
     text-align: center;
     text-transform: uppercase;
     font-size: $title-font-size;
     font-weight: $regular;
+  }
+
+  .layout--flex .layout__region,
+  .layout__region--top,
+  .layout__region--middle,
+  .layout__region--bottom {
+    @include breakpoint($medium) {
+      padding-top: $standard-spacing * 2;
+      padding-bottom: $standard-spacing * 4;
+    }
+    @include breakpoint($large) {
+      padding-top: $large-spacing * 2;
+      padding-bottom: $large-spacing * 4;
+    }
   }
 
   .layout--twocol-bricks {
@@ -58,6 +74,10 @@ $dark-shade-bg-2: mix($white, $blue, 80%);
 
     .layout__region--first-above,
     .layout__region--first-below {
+      @include breakpoint($large) {
+        padding-right: $large-spacing * 2;
+        padding-bottom: $large-spacing * 4;
+      }
       h2 {
         text-align: left;
         font-size: $h2-font-size;
@@ -65,44 +85,68 @@ $dark-shade-bg-2: mix($white, $blue, 80%);
       }
 
       .block--block-contentimagefield-image {
+        position: relative;
+
         img {
+          @include breakpoint($medium) {
+            max-width: calc(115% + (#{$standard-spacing} * 3));
+            transform: translatex(-$standard-spacing);
+          }
           @include breakpoint($large) {
-            max-width: calc((100% + #{$standard-spacing}) + ((100vw - #{$max-content-width}) / 2));
+            max-width: calc(125% + ((100vw - #{$max-content-width}) / 2));
             transform: translatex(calc((100vw - #{$max-content-width}) / -2));
           }
+          display: block;
         }
       }
 
+      /* fake the full width background for color block bg sections */
       &:before {
-        @include breakpoint($large) {
+        @include breakpoint($medium) {
           position: absolute;
+          z-index: -1;
           top: 0;
           left: 0;
           display: block;
-          width: calc((100vw - #{$max-content-width})/2);
+          width: $standard-spacing + 3px;
           height: 100%;
           content: "";
-          transform: translatex(-100%);
+          transform: translatex(calc(-100% + 3px));
+        }
+        @include breakpoint($large) {
+          width: calc((100vw - #{$max-content-width})/2);
+          transform: translatex(calc(-100% + 3px));
         }
       }
     }
 
     .layout__region--second-above,
     .layout__region--second-below {
+      @include breakpoint($large) {
+        padding-top: $standard-spacing * 2;
+        padding-bottom: $large-spacing * 4;
+        padding-left: $large-spacing * 2;
+      }
       h2 {
         text-align: left;
       }
 
+      /* fake the full width background for color block bg sections */
       &:after {
-        @include breakpoint($large) {
+        @include breakpoint($medium) {
           position: absolute;
+          z-index: -1;
           top: 0;
           right: 0;
           display: block;
-          width: calc((100vw - #{$max-content-width})/2);
+          width: $standard-spacing + 3px;
           height: 100%;
           content: "";
-          transform: translatex(100%);
+          transform: translatex(calc(100% - 3px));
+        }
+        @include breakpoint($large) {
+          width: calc((100vw - #{$max-content-width})/2);
+          transform: translatex(calc(100% - 3px));
         }
       }
     }
