@@ -4,9 +4,9 @@
  */
 
 /* Spacing */
-$standard-spacing: 18px;
+$standard-spacing: 16px;
 $half-spacing: $standard-spacing / 2;
-$large-spacing: 24px;
+$large-spacing: $standard-spacing * 2;
 
 /* Borders and Lines */
 $border-width: 3px;
