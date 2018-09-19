@@ -7,7 +7,8 @@ $dark-shade-bg-1: mix($white, $light-gray, 10%);
 $light-shade-bg-2: mix($white, $blue, 90%);
 $dark-shade-bg-2: mix($white, $blue, 80%);
 
-.path-frontpage {
+.path-frontpage,
+.front {
   main {
     overflow-x: hidden;
     margin-bottom: 0;
