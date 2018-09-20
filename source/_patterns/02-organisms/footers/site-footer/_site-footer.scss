@@ -33,6 +33,15 @@
   grid-template-columns: $small-screen-columns;
   grid-template-rows: auto $standard-spacing auto $standard-spacing auto;
 
+  a {
+    color: $white;
+
+    &:hover,
+    &:focus {
+      color: $lightest-green;
+    }
+  }
+
   .region--footer_left {
     @include breakpoint($small) {
       -ms-grid-row: 1;
