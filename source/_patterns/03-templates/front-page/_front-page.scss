@@ -90,11 +90,12 @@ $dark-shade-bg-2: mix($white, $blue, 80%);
 
         img {
           @include breakpoint($medium) {
-            max-width: calc(115% + (#{$standard-spacing} * 3));
+            width: calc(115% + (#{$standard-spacing} * 3));
+            max-width: none;
             transform: translatex(-$standard-spacing);
           }
           @include breakpoint($large) {
-            max-width: calc(125% + ((100vw - #{$max-content-width}) / 2));
+            width: calc(125% + ((100vw - #{$max-content-width}) / 2));
             transform: translatex(calc((100vw - #{$max-content-width}) / -2));
           }
           display: block;
