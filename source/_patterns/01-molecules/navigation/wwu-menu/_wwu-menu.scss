@@ -21,12 +21,13 @@
         a {
           @include breakpoint($large) {
             height: $toggle-size--larger;
-            padding: $large-spacing;
+            line-height: $toggle-size--larger;
           }
           width: 100%;
           height: $toggle-size;
-          padding: $standard-spacing;
+          padding: 0 $standard-spacing;
           text-align: center;
+          line-height: $toggle-size;
 
           &:hover,
           &:focus {
