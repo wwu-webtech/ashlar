@@ -5,7 +5,6 @@
  * place to support the Drupal 7 sites using the ashlar_d7 theme.
  */
 $expand-toggle-size: 40px;
-
 .ui-accordion {
   .ui-accordion-header {
     box-sizing: border-box;
@@ -78,6 +77,10 @@ $expand-toggle-size: 40px;
   .no-children {
     .ui-icon {
       display: none;
+    }
+
+    & + .ui-accordion-content {
+      padding: 0;
     }
   }
 }
