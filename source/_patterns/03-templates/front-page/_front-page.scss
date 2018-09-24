@@ -19,6 +19,11 @@ $dark-shade-bg-2: mix($white, $blue, 80%);
     text-transform: uppercase;
     font-size: $title-font-size;
     font-weight: $regular;
+    color: $blue;
+  }
+
+  a {
+    color: $dark-blue;
   }
 
   .layout--flex .layout__region,
