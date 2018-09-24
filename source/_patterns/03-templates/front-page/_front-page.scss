@@ -12,18 +12,23 @@ $dark-shade-bg-2: mix($white, $blue, 80%);
   main {
     overflow-x: hidden;
     margin-bottom: 0;
-  }
 
-  h2 {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: $title-font-size;
-    font-weight: $regular;
-    color: $blue;
-  }
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: $title-font-size;
+      font-weight: $regular;
+      color: $blue;
+    }
 
-  a {
-    color: $dark-blue;
+    a {
+      color: $dark-blue;
+
+      &:hover,
+      &:focus {
+        color: $green;
+      }
+    }
   }
 
   .layout--flex .layout__region,
