@@ -16,18 +16,9 @@ $dark-shade-bg-2: mix($white, $blue, 80%);
     h2 {
       text-align: center;
       text-transform: uppercase;
+      color: $blue;
       font-size: $title-font-size;
       font-weight: $regular;
-      color: $blue;
-    }
-
-    a {
-      color: $dark-blue;
-
-      &:hover,
-      &:focus {
-        color: $green;
-      }
     }
   }
 
@@ -91,6 +82,7 @@ $dark-shade-bg-2: mix($white, $blue, 80%);
       }
       h2 {
         text-align: left;
+        color: $dark-blue;
         font-size: $h2-font-size;
         font-weight: $bold;
       }
@@ -142,6 +134,7 @@ $dark-shade-bg-2: mix($white, $blue, 80%);
 
       h2 {
         text-align: left;
+        color: $dark-blue;
       }
 
       /* fake the full width background for color block bg sections */
