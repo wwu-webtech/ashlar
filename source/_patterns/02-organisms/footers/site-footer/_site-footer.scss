@@ -108,4 +108,19 @@
       }
     }
   }
+
+  .social-media-links {
+    a {
+      svg {
+        fill: $white;
+      }
+
+      &:hover,
+      &:focus {
+        svg {
+          fill: $lightest-green;
+        }
+      }
+    }
+  }
 }
