@@ -40,6 +40,15 @@
     &:focus {
       color: $lightest-green;
     }
+
+    &.button {
+      background-color: $dark-blue;
+
+      &:hover {
+        background-color: $light-blue;
+        color: $dark-blue;
+      }
+    }
   }
 
   .region--footer_left {

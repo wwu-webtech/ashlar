@@ -42,6 +42,7 @@ button {
   &:hover {
     color: $white;
     background-color: $dark-blue;
+    text-decoration: none;
   }
 
   &:focus {
