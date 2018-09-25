@@ -4,18 +4,6 @@
  */
 
 .splash {
-  @include breakpoint($medium) {
-    min-height: 300px;
-    margin-top: -($toggle-size);
-  }
-  @include breakpoint($large) {
-    margin-top: -($toggle-size--larger);
-  }
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  max-height: 70vh;
-
   img {
     display: block;
     width: 100%;

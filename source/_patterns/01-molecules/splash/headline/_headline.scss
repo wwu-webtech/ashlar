@@ -1,0 +1,22 @@
+/**
+ * @file
+ * molecules/media/splash/_headline.scss
+ */
+.headline {
+  @include breakpoint($medium) {
+    background-color: transparentize($black, 0.2);
+  }
+  background-color: $blue;
+  padding: $standard-spacing;
+
+  h2 {
+    margin-top: $standard-spacing;
+    text-transform: uppercase;
+    color: $white;
+  }
+
+  .button {
+    width: inherit;
+    margin: $standard-spacing 0 0 0;
+  }
+}
