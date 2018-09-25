@@ -86,6 +86,7 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
         border-bottom: none;
       }
       display: block;
+      margin: 0;
       padding: $half-spacing $standard-spacing;
       text-align: center;
       color: $white;
@@ -93,6 +94,7 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
       border-bottom: 1px solid $blue;
       background: linear-gradient(to right, $dark-blue 0%, $dark-blue-gradient 100%);
       font-size: $font-size--smaller;
+      font-weight: normal;
       line-height: 1.5em;
     }
 
