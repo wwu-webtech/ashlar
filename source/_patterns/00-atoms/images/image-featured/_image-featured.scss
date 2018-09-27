@@ -7,9 +7,11 @@ $border-offset: 12px;
 .featured {
   &.image {
     position: relative;
+    margin-top: $border-offset;
 
     img {
-      width: 100%;
+      width: calc(100% - #{$border-offset});
+      margin-left: $border-offset;
     }
 
     &:after {
@@ -18,10 +20,10 @@ $border-offset: 12px;
       left: 0;
       display: block;
       box-sizing: border-box;
-      width: 100%;
+      width: calc(100% - #{$border-offset});
       height: 100%;
       content: "";
-      transform: translate(-$border-offset, -$border-offset);
+      transform: translate(0, -$border-offset);
       border: solid $border-width $dark-blue;
     }
   }
