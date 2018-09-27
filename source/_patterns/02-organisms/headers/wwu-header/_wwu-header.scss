@@ -7,9 +7,11 @@ $header-columns--larger: $logo-width--larger 1fr $toggle-size--larger;
 $header-rows: $toggle-size;
 $header-rows--larger: $toggle-size--larger;
 
-// Ends of gradients
-$white-gradient: transparentize($white, 0.2);
-$dark-blue-gradient: transparentize($dark-blue, 0.2);
+// gradients
+$header-gradient-start: $white;
+$header-gradient-end: transparentize($white, 0.2);
+$site-name-gradient-start: $dark-blue;
+$site-name-gradient-end: transparentize($dark-blue, 0.2);
 
 .western-header {
   @include breakpoint($medium) {
@@ -27,7 +29,7 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
   }
   position: relative;
   z-index: 1;
-  background: linear-gradient(to left, $white 0%, $white-gradient 100%);
+  background: linear-gradient(to left, $white 0%, $header-gradient-end 100%);
   font-size: $wwu-header-font-size;
 
   .wrap {
@@ -92,7 +94,7 @@ $dark-blue-gradient: transparentize($dark-blue, 0.2);
       color: $white;
       border-top: 1px solid $blue;
       border-bottom: 1px solid $blue;
-      background: linear-gradient(to right, $dark-blue 0%, $dark-blue-gradient 100%);
+      background: linear-gradient(to right, $site-name-gradient-start 0%, $site-name-gradient-end 100%);
       font-size: $font-size--smaller;
       font-weight: normal;
       line-height: 1.5em;
