@@ -4,7 +4,7 @@
  */
 
 .site-footer {
-  @include breakpoint($small) {
+  @include breakpoint($medium) {
     grid-template-areas: ". footer_left . footer_center . footer_right .";
     -ms-grid-columns: $standard-spacing 1fr $standard-spacing 1fr $standard-spacing 1fr $standard-spacing;
     -ms-grid-rows: auto;
