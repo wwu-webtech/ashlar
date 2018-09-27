@@ -10,15 +10,16 @@ $expand-toggle-size: 40px;
     box-sizing: border-box;
     margin-top: $border-width;
     padding: 0;
-    border-right: $expand-toggle-size;
     border: none;
+    border-right: $expand-toggle-size;
     border-radius: 0;
     background-image: none;
     font-size: $font-size--smaller;
 
     a {
-      display: block;
-      padding: $half-spacing $standard-spacing;
+      display: table-cell;
+      padding: $half-spacing ($standard-spacing + $expand-toggle-size) $half-spacing $standard-spacing;
+      vertical-align: middle;
       color: $black;
       border: none;
       background-color: $light-gray;
