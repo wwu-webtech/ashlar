@@ -18,6 +18,7 @@ html {
   top: 0;
   left: 0;
   overflow-x: hidden;
+  width: 100vw;
 }
 
 .dark-bg {
@@ -26,9 +27,9 @@ html {
 
 .visually-hidden {
   position: absolute !important;
-  clip: rect(1px,1px,1px,1px);
   overflow: hidden;
-  height: 1px;
+  clip: rect(1px,1px,1px,1px);
   width: 1px;
+  height: 1px;
   word-wrap: normal;
 }
