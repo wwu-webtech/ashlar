@@ -22,6 +22,12 @@ $dark-shade-bg-2: mix($white, $blue, 80%);
     }
   }
 
+  .splash {
+    @include breakpoint($medium) {
+      max-height: 70vh;
+    }
+  }
+
   .layout--flex .layout__region,
   .layout__region--top,
   .layout__region--middle,
