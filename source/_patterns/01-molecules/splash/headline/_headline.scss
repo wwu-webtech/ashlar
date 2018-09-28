@@ -7,8 +7,7 @@ $headline-gradient-end: transparentize($black, 0.5);
 
 .headline {
   @include breakpoint($medium) {
-    background-color: transparentize($black, 0.2);
-    background-color: linear-gradient(to right, $headline-gradient-start 0%, $headline-gradient-end 100%);
+    background: linear-gradient(to right, $headline-gradient-start 0%, $headline-gradient-end 100%);
   }
   padding: $standard-spacing;
   background-color: $blue;

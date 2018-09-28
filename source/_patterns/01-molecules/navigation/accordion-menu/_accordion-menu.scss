@@ -17,9 +17,10 @@ $expand-toggle-size: 40px;
     font-size: $font-size--smaller;
 
     a {
-      display: table-cell;
+      display: grid;
+      align-content: center;
+      min-height: 40px;
       padding: $half-spacing ($standard-spacing + $expand-toggle-size) $half-spacing $standard-spacing;
-      vertical-align: middle;
       color: $black;
       border: none;
       background-color: $light-gray;
