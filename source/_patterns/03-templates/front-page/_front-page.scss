@@ -34,11 +34,11 @@ $dark-shade-bg-2: mix($white, $blue, 80%);
   .layout__region--bottom {
     @include breakpoint($medium) {
       padding-top: $standard-spacing * 2;
-      padding-bottom: $standard-spacing * 4;
+      padding-bottom: $standard-spacing * 2;
     }
     @include breakpoint($large) {
       padding-top: $large-spacing * 2;
-      padding-bottom: $large-spacing * 4;
+      padding-bottom: $large-spacing * 2;
     }
     padding-top: $standard-spacing;
     padding-bottom: $large-spacing;
