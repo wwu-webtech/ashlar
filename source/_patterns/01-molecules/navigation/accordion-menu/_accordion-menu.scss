@@ -5,6 +5,11 @@
  * place to support the Drupal 7 sites using the ashlar_d7 theme.
  */
 $expand-toggle-size: 40px;
+
+.block-accordion-menu {
+  margin-bottom: $standard-spacing;
+}
+
 .ui-accordion {
   .ui-accordion-header {
     box-sizing: border-box;
