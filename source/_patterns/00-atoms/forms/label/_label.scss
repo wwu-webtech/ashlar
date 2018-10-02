@@ -5,7 +5,7 @@
 
 label {
   margin-bottom: $half-spacing;
-  font-weight: $bold;
+  font-weight: $font-weight--bold;
   &.required::after {
     content: "*";
   }

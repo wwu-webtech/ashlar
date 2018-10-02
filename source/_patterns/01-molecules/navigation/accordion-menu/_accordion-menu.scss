@@ -8,6 +8,14 @@ $expand-toggle-size: 40px;
 
 .block-accordion-menu {
   margin-bottom: $standard-spacing;
+
+  .block-title {
+    display: none;
+  }
+
+  h3 {
+    text-transform: none;
+  }
 }
 
 .ui-accordion {

@@ -17,8 +17,9 @@ $dark-shade-bg-2: mix($white, $blue, 80%);
       text-align: center;
       text-transform: uppercase;
       color: $blue;
+      border-bottom: none;
       font-size: $title-font-size;
-      font-weight: $regular;
+      font-weight: $font-weight--regular;
     }
   }
 
@@ -119,7 +120,7 @@ $dark-shade-bg-2: mix($white, $blue, 80%);
         text-align: left;
         color: $dark-blue;
         font-size: $h2-font-size;
-        font-weight: $bold;
+        font-weight: $font-weight--bold;
       }
 
       .block--block-contentimagefield-image {

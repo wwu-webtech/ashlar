@@ -35,7 +35,7 @@ input[type="radio"] {
     margin: 0;
     margin-left: $select-input-size;
     padding-left: $half-spacing;
-    font-weight: $regular;
+    font-weight: $font-weight--regular;
     line-height: $select-input-size;
 
     &:before {

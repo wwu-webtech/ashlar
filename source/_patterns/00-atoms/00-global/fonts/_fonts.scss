@@ -3,21 +3,21 @@
  * 00-atoms/00-global/_fonts.scss
  */
 
-@import url("https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700,700i|Noto+Sans:400,400i,700,700i");
-
+@import url("https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700,700i|Noto+Sans+KR:400,500,700,900");
 
 // Font Family Variables
-$sans-serif: "Noto Sans", "Open Sans", sans-serif;
+$sans-serif: "Noto Sans KR", "Open Sans", sans-serif;
 $serif: "Crimson Text", serif;
 $heading-font-family: $sans-serif;
 $body-font-family: $sans-serif;
 
 // Font Weight Variables
-$regular: 400;
-$bold: 700;
-$body-font-weight: $regular;
-$heading-font-weight: $bold;
-$button-font-weight: $bold;
+$font-weight--regular: 400;
+$font-weight--medium: 500;
+$font-weight--bold: 700;
+$font-weight--black: 900;
+$body-font-weight: $font-weight--regular;
+$button-font-weight: $font-weight--bold;
 
 // Fluid Typography: Major Second scale for headings/paragraphs
 $min-title-font-size: 38px;
