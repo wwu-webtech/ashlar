@@ -19,28 +19,29 @@ $body-font-weight: $regular;
 $heading-font-weight: $bold;
 $button-font-weight: $bold;
 
-// Fluid Typography: Major Second scale for headings/paragraphs
+// Fluid Typography: Major third scale for headings/paragraphs
 $min-title-font-size: 38px;
 $max-title-font-size: 82px;
 
-$min-h1-font-size: 27.03px;
-$max-h1-font-size: 51.145px;
+$min-h1-font-size: 45px;
+$max-h1-font-size: 76.15px;
 
-$min-h2-font-size: 24.027px;
-$max-h2-font-size: 45.462px;
+$min-h2-font-size: 36.62px;
+$max-h2-font-size: 61.96px;
 
-$min-h3-font-size: 21.358px;
-$max-h3-font-size: 40.411px;
+$min-h3-font-size: 29.30px;
+$max-h3-font-size: 49.57px;
 
-$min-h4-font-size: 18.985px;
-$max-h4-font-size: 35.921px;
+$min-h4-font-size: 23.45px;
+$max-h4-font-size: 39.67px;
 
-$min-h5-font-size: 16.875px;
-$max-h5-font-size: 31.93px;
+$min-h5-font-size: 18.75px;
+$max-h5-font-size: 31.73px;
 
 $min-p-font-size: 15px;
 $max-p-font-size: 25.382px;
 
+/* Western header (ie site name or tagline) */
 $min-wwu-header-font-size: 18px;
 $max-wwu-header-font-size: 24px;
 
