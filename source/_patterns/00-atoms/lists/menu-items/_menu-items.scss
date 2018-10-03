@@ -13,6 +13,7 @@
 
       &:hover,
       &:focus {
+        text-decoration: none;
         background-color: mix(black, $light-gray, $percent-change);
       }
     }

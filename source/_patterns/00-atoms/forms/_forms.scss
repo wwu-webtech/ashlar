@@ -45,6 +45,8 @@ input {
 }
 
 input[type="submit"] {
+  width: inherit;
+  
   &:focus {
     box-shadow: none;
   }

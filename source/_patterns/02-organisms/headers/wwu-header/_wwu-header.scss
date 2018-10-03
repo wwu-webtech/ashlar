@@ -98,6 +98,7 @@ $site-name-gradient-end: transparentize($dark-blue, 0.2);
       font-size: $font-size--smaller;
       font-weight: normal;
       line-height: 1.5em;
+      text-transform: none;
     }
 
     .quick-links {

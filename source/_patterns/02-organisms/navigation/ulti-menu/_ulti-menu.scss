@@ -70,6 +70,13 @@
     }
     display: inherit;
     margin: 0;
+
+    a {
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
   }
 
   .ultimenu__link {
