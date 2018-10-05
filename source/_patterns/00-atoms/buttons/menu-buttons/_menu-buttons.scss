@@ -4,7 +4,9 @@
   */
 
 .nav--main {
-  & > .menu {
+  & > .menu,
+  .ultimenu--main,
+  .ultimenu-main-menu {
     background-color: initial;
 
     & > li {

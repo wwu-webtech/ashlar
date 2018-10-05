@@ -34,3 +34,34 @@
     }
   }
 }
+
+/* Drupal 7 Version */
+.tabs-primary {
+  font-size: $font-size--smaller;
+  margin-bottom: $standard-spacing;
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-bottom: solid $border-width $gray;
+
+  &:nth-of-type(2) {
+    margin-top: $half-spacing;
+    margin-left: $standard-spacing;
+    border-bottom-color: $light-gray;
+  }
+
+  a {
+    display: block;
+    padding: $half-spacing $standard-spacing;
+    color: black;
+    border-right: solid $border-width $white;
+    background-color: $light-gray;
+
+    &:hover,
+    &:focus,
+    &.is-active {
+      color: $white;
+      background-color: $gray;
+    }
+  }
+}

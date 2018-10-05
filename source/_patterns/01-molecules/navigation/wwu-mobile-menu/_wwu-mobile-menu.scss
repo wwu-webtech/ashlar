@@ -14,24 +14,32 @@
       display: grid;
       align-items: center;
 
-      grid-column-gap: 9px;
-      grid-template-areas: "close links . login";
-      grid-template-columns: auto auto 1fr auto;
+      grid-column-gap: $half-spacing;
+
+      grid-template-areas: "login . apply close";
+      grid-template-columns: auto 1fr 1fr auto;
       grid-template-rows: auto;
+    }
+
+    .toggle-close-menu {
+      grid-area: close;
     }
 
     a {
       color: $white;
 
       &.button {
-        padding: 9px 18px;
+        padding: $half-spacing $standard-spacing;
         border-width: 2px;
       }
 
-      &.mywestern {
-        float: right;
-        margin-right: $standard-spacing;
+      &.apply {
+        width: 100%;
+        grid-area: apply;
+      }
 
+      &.mywestern {
+        margin-left: $standard-spacing;
         grid-area: login;
 
         &:hover,

@@ -4,9 +4,9 @@
  */
 
 /* Spacing */
-$standard-spacing: 18px;
+$standard-spacing: 16px;
 $half-spacing: $standard-spacing / 2;
-$large-spacing: 24px;
+$large-spacing: $standard-spacing * 2;
 
 /* Borders and Lines */
 $border-width: 3px;
@@ -14,7 +14,7 @@ $focus-shadow: 2px 2px 4px 2px transparentize($dark-blue, .5);
 $focus-outline: $border-width dotted;
 
 /* Content Area */
-$max-content-width: 1200px;
+$max-content-width: 1400px;
 
 /* Breakpoints */
 $small: 581px;

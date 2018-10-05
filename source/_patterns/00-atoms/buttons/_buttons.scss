@@ -8,22 +8,15 @@ $button-border-radius-droplet: 40px 40px 0 40px;
 $button-border-radius-alt-droplet: 50% 50% 0 50%;
 $button-padding: $standard-spacing;
 
-.button {
-  @include breakpoint($small) {
-    width: auto;
-    min-width: 300px;
-  }
-  width: 100%;
-}
-
 .button,
-button {
-  transition: $button-transition-speed $button-transition-ease background-color;
+button,
+input[type="submit"] {
   display: inline-block;
   box-sizing: border-box;
   padding: $button-padding ($button-padding * 2);
   cursor: pointer;
   user-select: none;
+  transition: $button-transition-speed $button-transition-ease background-color;
   text-align: center;
   vertical-align: middle;
   white-space: nowrap;
@@ -33,26 +26,28 @@ button {
   border-radius: $button-border-radius;
   background-color: $default-button-color;
   font-family: $body-font-family;
-  font-weight: $regular;
+  font-weight: $font-weight--regular;
   line-height: 1;
+
   appearance: none;
   -webkit-font-smoothing: antialiased;
 
   &:focus,
   &:hover {
+    text-decoration: none;
     color: $white;
     background-color: $dark-blue;
   }
 
   &:focus {
-    outline: none;
     border: $focus-outline;
+    outline: none;
   }
 
   &:disabled {
-    background-color: $gray;
-    color: $light-gray;
     cursor: not-allowed;
+    color: $light-gray;
+    background-color: $gray;
 
     &:hover {
       background-color: darken($gray, 10%);
@@ -61,15 +56,15 @@ button {
   /* Alternate Button Styles */
   &.alt {
     color: $dark-blue;
-    background-color: transparent;
     border-width: $border-width;
     border-color: $dark-blue;
+    background-color: transparent;
 
     &:focus,
     &:hover {
-      background-color: $white;
-      border-color: $blue;
       color: $blue;
+      border-color: $blue;
+      background-color: $white;
     }
   }
   @each $color, $background, $text, $hover-color, $hover-text in $wwu-colors {
@@ -79,8 +74,8 @@ button {
 
       &:focus,
       &:hover {
-        background-color: $hover-color;
         color: $hover-text;
+        background-color: $hover-color;
       }
 
       &:focus {
@@ -94,9 +89,9 @@ button {
 
         &:focus,
         &:hover {
-          background-color: $white;
-          border-color: $blue;
           color: $blue;
+          border-color: $blue;
+          background-color: $white;
         }
       }
     }

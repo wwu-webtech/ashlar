@@ -4,7 +4,7 @@
  */
 #}
 {% if items -%}
-<nav role="navigation" class="nav--main">
+<nav class="nav--main" aria-label="Main navigation">
   {{ title_prefix }}
   {# Label. Not displayed, but provided for screen readers. #}
   {% if not configuration.label_display %}

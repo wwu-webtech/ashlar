@@ -1,6 +1,7 @@
 attributes:
   Attribute():
     class:
+label: "Card Row"
 cards:
 - molecules-card-html-tag
 - molecules-card-html-event

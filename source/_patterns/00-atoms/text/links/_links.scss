@@ -33,29 +33,16 @@ a {
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+p,
+blockquote,
+ul,
+ol {
   a {
-    border-bottom: solid $border-width;
+    text-decoration: none;
 
     &:hover,
     &:focus {
-      border-color: transparent;
-    }
-  }
-}
-
-p {
-  a {
-    text-decoration: underline;
-
-    &:hover,
-    &:focus {
-      text-decoration: none;
+      text-decoration: underline;
     }
   }
 }

@@ -4,7 +4,7 @@
  */
 
 .site-footer {
-  @include breakpoint($small) {
+  @include breakpoint($medium) {
     grid-template-areas: ". footer_left . footer_center . footer_right .";
     -ms-grid-columns: $standard-spacing 1fr $standard-spacing 1fr $standard-spacing 1fr $standard-spacing;
     -ms-grid-rows: auto;
@@ -32,6 +32,24 @@
   -ms-grid-rows: auto $standard-spacing auto $standard-spacing auto;
   grid-template-columns: $small-screen-columns;
   grid-template-rows: auto $standard-spacing auto $standard-spacing auto;
+
+  a {
+    color: $white;
+
+    &:hover,
+    &:focus {
+      color: $lightest-green;
+    }
+
+    &.button {
+      background-color: $dark-blue;
+
+      &:hover {
+        background-color: $light-blue;
+        color: $dark-blue;
+      }
+    }
+  }
 
   .region--footer_left {
     @include breakpoint($small) {
@@ -86,6 +104,21 @@
         &:focus {
           color: $white;
           background-color: mix(black, $blue, $percent-change);
+        }
+      }
+    }
+  }
+
+  .social-media-links {
+    a {
+      svg {
+        fill: $white;
+      }
+
+      &:hover,
+      &:focus {
+        svg {
+          fill: $lightest-green;
         }
       }
     }

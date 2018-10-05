@@ -24,7 +24,13 @@
   .title {
     a {
       display: inline-block;
-      font-weight: $bold;
+      font-weight: $font-weight--bold;
+
+      &:hover,
+      &:focus {
+        color: $green;
+        text-decoration: underline;
+      }
     }
     order: 3;
   }
@@ -34,7 +40,6 @@
 
     .date {
       font-style: italic;
-      font-size: $h5-font-size;
     }
 
     .location {

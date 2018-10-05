@@ -25,7 +25,7 @@ th {
   text-align: left;
   border-left: $border-width solid mix(black, $light-gray, $percent-change);
   background-color: mix(black, $light-gray, $percent-change);
-  font-weight: $bold;
+  font-weight: $font-weight--bold;
 
   &:last-of-type {
     border-right: $border-width solid mix(black, $light-gray, $percent-change);

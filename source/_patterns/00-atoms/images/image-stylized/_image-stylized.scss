@@ -31,6 +31,7 @@ $image-size: 300px;
     }
 
     &:after {
+      z-index: 0;
       display: block;
       box-sizing: border-box;
       width: $image-size;
@@ -47,7 +48,6 @@ $image-size: 300px;
     }
 
     img {
-      z-index: -1;
       width: $image-size;
       height: $image-size;
       object-fit: cover;

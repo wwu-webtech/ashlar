@@ -6,7 +6,7 @@ function toggle_open_menu(event) {
 
   $('.nav--main').animate(
     {
-      left: '0',
+      right: '0',
       opacity: '1'
     },
     {
@@ -26,7 +26,7 @@ function toggle_close_menu(event) {
 
   $('.nav--main').animate(
     {
-      left: '-100%',
+      right: '-100%',
       opacity: '0'
     },
     {

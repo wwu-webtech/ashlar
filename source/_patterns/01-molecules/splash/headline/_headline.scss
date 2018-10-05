@@ -1,0 +1,35 @@
+/**
+ * @file
+ * molecules/media/splash/_headline.scss
+ */
+$headline-gradient-start: transparentize($black, 0.2);
+$headline-gradient-end: transparentize($black, 0.5);
+
+.headline {
+  @include breakpoint($medium) {
+    background: linear-gradient(to right, $headline-gradient-start 0%, $headline-gradient-end 100%);
+  }
+  padding: $standard-spacing;
+  background-color: $blue;
+
+  h2 {
+    margin-top: $standard-spacing;
+    text-transform: uppercase;
+    color: $white;
+    border-bottom: none;
+  }
+
+  .button {
+    margin: $standard-spacing 0 0 0;
+  }
+}
+
+/* Special breakpoint, prevents the headline text from getting too close to the
+ * top on large screens
+ */
+
+@media screen and (min-height: 900px) and (min-width: $max-content-width) {
+  .splash > :nth-of-type(2) {
+    transform: none;
+  }
+}

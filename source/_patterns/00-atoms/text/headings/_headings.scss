@@ -13,28 +13,38 @@ h3,
 h4,
 h5 {
   margin: $heading-margin-top 0 $heading-margin-bottom;
-  color: $heading-color;
   font-family: $heading-font-family;
-  font-weight: $heading-font-weight;
   line-height: $heading-line-height;
 }
 
+/* Default heading set */
 h1 {
-  font-size: $h1-font-size;
+  text-transform: uppercase;
+  color: $blue;
+  font-weight: $font-weight--bold;
 }
 h2 {
-  font-size: $h2-font-size;
+  padding-bottom: $half-spacing;
+  color: $dark-blue;
+  border-bottom: $border-width solid $green;
+  font-weight: $font-weight--bold;
 }
 h3 {
-  font-size: $h3-font-size;
+  text-transform: uppercase;
+  color: $green;
+  font-weight: $font-weight--medium;
 }
 h4 {
-  font-size: $h4-font-size;
+  text-transform: uppercase;
+  color: $dark-green;
+  font-weight: $font-weight--medium;
 }
 h5 {
-  font-size: $h5-font-size;
+  text-transform: uppercase;
+  font-weight: $font-weight--medium;
 }
 
+/* Dark background headings */
 .dark-bg {
   h1,
   h2,
@@ -42,6 +52,6 @@ h5 {
   h4,
   h5,
   h6 {
-    color: $heading-color-light;
+    color: $light-blue;
   }
 }

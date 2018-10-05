@@ -3,7 +3,8 @@
  * organisms/sections/card-list/_card-row.scss
  */
 
-.card-row {
+.card-row,
+.card-row .view-content {
   @include breakpoint($small) {
     flex-direction: row;
   }
@@ -11,6 +12,7 @@
   flex-direction: column;
 
   .card {
+    flex: 1;
     padding-bottom: $half-spacing;
 
     .taxonomy-terms,

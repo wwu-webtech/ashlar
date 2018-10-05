@@ -34,7 +34,7 @@
   ". ..... ."
   ". icons .";
   -ms-grid-columns: $small-screen-columns;
-  -ms-grid-rows: ($standard-spacing auto)[3] $standard-spacing;
+  -ms-grid-rows: $standard-spacing auto $standard-spacing auto $standard-spacing auto $standard-spacing;
   grid-template-columns: $small-screen-columns;
   grid-template-rows: repeat(3, $standard-spacing auto) $standard-spacing;
   justify-items: center;
