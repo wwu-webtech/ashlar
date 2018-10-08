@@ -4,6 +4,9 @@
  */
 
 hr {
+  @include breakpoint($medium) {
+    border-width: $border-width--thicker;
+  }
   margin: $standard-spacing 0;
   border: 0;
   border-bottom: $border-width solid $light-gray;

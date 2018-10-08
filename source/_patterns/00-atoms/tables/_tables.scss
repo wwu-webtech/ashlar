@@ -17,26 +17,26 @@ tr {
     background-color: $light-gray;
   }
   &:last-of-type {
-    border-bottom: $border-width solid $light-gray;
+    border-bottom: $border-width--thicker solid $light-gray;
   }
 }
 th {
   padding: $standard-spacing;
   text-align: left;
-  border-left: $border-width solid mix(black, $light-gray, $percent-change);
+  border-left: $border-width--thicker solid mix(black, $light-gray, $percent-change);
   background-color: mix(black, $light-gray, $percent-change);
   font-weight: $font-weight--bold;
 
   &:last-of-type {
-    border-right: $border-width solid mix(black, $light-gray, $percent-change);
+    border-right: $border-width--thicker solid mix(black, $light-gray, $percent-change);
   }
 }
 td {
   padding: $standard-spacing;
-  border-left: $border-width solid $light-gray;
+  border-left: $border-width--thicker solid $light-gray;
 
   &:last-of-type {
-    border-right: $border-width solid $light-gray;
+    border-right: $border-width--thicker solid $light-gray;
   }
 }
 tr,

@@ -3,6 +3,9 @@
  * atoms/forms/textarea/_textarea.scss
  */
 textarea {
+  @include breakpoint($medium) {
+    border-width: $border-width--thicker;
+  }
   width: 100%;
   margin-bottom: $standard-spacing;
   padding: $standard-spacing;

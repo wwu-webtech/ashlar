@@ -16,6 +16,10 @@ a {
   }
 
   &:focus {
+    @include breakpoint($medium) {
+      outline: $focus-outline--thicker;
+      outline-offset: $border-width--thicker;
+    }
     outline: $focus-outline;
     outline-offset: $border-width;
   }

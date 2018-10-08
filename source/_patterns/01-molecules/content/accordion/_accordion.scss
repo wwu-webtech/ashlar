@@ -3,7 +3,7 @@
  * 01-molecules/content/accordion.scss
  */
 $left-col-width: 84px;
-$accordion-border: $dark-blue solid $border-width;
+$accordion-border: $dark-blue solid $border-width--thicker;
 
 .accordion {
   display: grid;

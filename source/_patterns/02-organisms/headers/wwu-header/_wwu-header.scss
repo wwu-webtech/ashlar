@@ -84,7 +84,7 @@ $site-name-gradient-end: transparentize($dark-blue, 0.2);
     .site-name {
       @include breakpoint($medium) {
         display: block !important;
-        border-top: 1px solid $blue;
+        border-top: $border-width--thinner solid $blue;
         border-bottom: none;
       }
       display: block;
@@ -92,8 +92,8 @@ $site-name-gradient-end: transparentize($dark-blue, 0.2);
       padding: $half-spacing $standard-spacing;
       text-align: center;
       color: $white;
-      border-top: 1px solid $blue;
-      border-bottom: 1px solid $blue;
+      border-top: $border-width--thinner solid $blue;
+      border-bottom: $border-width--thinner solid $blue;
       background: linear-gradient(to right, $site-name-gradient-start 0%, $site-name-gradient-end 100%);
       font-size: $font-size--smaller;
       font-weight: normal;

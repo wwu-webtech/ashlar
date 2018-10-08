@@ -10,7 +10,7 @@
     display: flex;
     padding-left: 0;
     list-style: none;
-    border-bottom: solid $border-width $gray;
+    border-bottom: solid $border-width--thicker $gray;
 
     &:nth-of-type(2) {
       margin-top: $half-spacing;
@@ -22,7 +22,7 @@
       display: block;
       padding: $half-spacing $standard-spacing;
       color: black;
-      border-right: solid $border-width $white;
+      border-right: solid $border-width--thicker $white;
       background-color: $light-gray;
 
       &:hover,
@@ -42,7 +42,7 @@
   display: flex;
   padding-left: 0;
   list-style: none;
-  border-bottom: solid $border-width $gray;
+  border-bottom: solid $border-width--thicker $gray;
 
   &:nth-of-type(2) {
     margin-top: $half-spacing;
@@ -54,7 +54,7 @@
     display: block;
     padding: $half-spacing $standard-spacing;
     color: black;
-    border-right: solid $border-width $white;
+    border-right: solid $border-width--thicker $white;
     background-color: $light-gray;
 
     &:hover,

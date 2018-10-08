@@ -11,6 +11,9 @@ $button-padding: $standard-spacing;
 .button,
 button,
 input[type="submit"] {
+  @include breakpoint($medium) {
+    border-width: $border-width--thicker;
+  }
   display: inline-block;
   box-sizing: border-box;
   padding: $button-padding ($button-padding * 2);
@@ -40,6 +43,9 @@ input[type="submit"] {
   }
 
   &:focus {
+    @include breakpoint($medium) {
+      border: $focus-outline--thicker;
+    }
     border: $focus-outline;
     outline: none;
   }
@@ -55,6 +61,9 @@ input[type="submit"] {
   }
   /* Alternate Button Styles */
   &.alt {
+    @include breakpoint($medium) {
+      border-width: $border-width--thicker;
+    }
     color: $dark-blue;
     border-width: $border-width;
     border-color: $dark-blue;

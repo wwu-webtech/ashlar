@@ -30,7 +30,7 @@
 
       &.button {
         padding: $half-spacing $standard-spacing;
-        border-width: 2px;
+        border-width: $border-width;
       }
 
       &.apply {
@@ -53,8 +53,8 @@
       display: flex;
       flex-flow: row nowrap;
       margin: 0;
-      border-top: solid 1px white;
-      border-bottom: solid 1px white;
+      border-top: solid $border-width--thinner white;
+      border-bottom: solid $border-width--thinner white;
 
       li {
         flex: 1;

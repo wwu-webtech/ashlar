@@ -25,6 +25,9 @@ h1 {
   font-weight: $font-weight--bold;
 }
 h2 {
+  @include breakpoint($medium) {
+    border-width: $border-width--thicker;
+  }
   padding-bottom: $half-spacing;
   color: $dark-blue;
   border-bottom: $border-width solid $dark-green;
