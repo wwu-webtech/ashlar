@@ -43,7 +43,8 @@
         }
       }
 
-      &.menu-item--active-trail {
+      &.menu-item--active-trail,
+      &.active {
         & > a {
           color: $dark-blue;
           background-color: $light-green;
