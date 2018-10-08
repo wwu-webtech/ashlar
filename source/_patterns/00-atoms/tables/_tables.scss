@@ -10,6 +10,9 @@ table {
   border-collapse: collapse;
 }
 tr {
+  @include breakpoint($medium) {
+    border-width: $border-width--thicker;
+  }
   &:nth-of-type(even) {
     background-color: mix(white, $light-gray, 80%);
   }
@@ -17,26 +20,32 @@ tr {
     background-color: $light-gray;
   }
   &:last-of-type {
-    border-bottom: $border-width--thicker solid $light-gray;
+    border-bottom: $border-width solid mix(white, $light-gray, 80%);
   }
 }
 th {
+  @include breakpoint($medium) {
+    border-width: $border-width--thicker;
+  }
   padding: $standard-spacing;
   text-align: left;
-  border-left: $border-width--thicker solid mix(black, $light-gray, $percent-change);
+  border-left: $border-width solid mix(black, $light-gray, $percent-change);
   background-color: mix(black, $light-gray, $percent-change);
   font-weight: $font-weight--bold;
 
   &:last-of-type {
-    border-right: $border-width--thicker solid mix(black, $light-gray, $percent-change);
+    border-right: $border-width solid mix(black, $light-gray, $percent-change);
   }
 }
 td {
+  @include breakpoint($medium) {
+    border-width: $border-width--thicker;
+  }
   padding: $standard-spacing;
-  border-left: $border-width--thicker solid $light-gray;
+  border-left: $border-width solid mix(white, $light-gray, 80%);
 
   &:last-of-type {
-    border-right: $border-width--thicker solid $light-gray;
+    border-right: $border-width solid mix(white, $light-gray, 80%);
   }
 }
 tr,
