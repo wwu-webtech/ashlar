@@ -17,6 +17,7 @@ $headline-gradient-end: transparentize($black, 0.5);
     text-transform: uppercase;
     color: $white;
     border-bottom: none;
+    font-family: $sans-serif;
   }
 
   .button {
