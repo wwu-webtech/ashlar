@@ -18,6 +18,7 @@ $dark-shade-bg-2: mix($white, $blue, 80%);
       text-transform: uppercase;
       color: $blue;
       border-bottom: none;
+      font-family: $sans-serif;
       font-size: $title-font-size;
       font-weight: $font-weight--regular;
     }

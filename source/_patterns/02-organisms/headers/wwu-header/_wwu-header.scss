@@ -8,8 +8,8 @@ $header-rows: $toggle-size;
 $header-rows--larger: $toggle-size--larger;
 
 // gradients
-$header-gradient-start: $white;
-$header-gradient-end: transparentize($white, 0.2);
+$header-gradient-start: transparentize($white, 0.3);
+$header-gradient-end: transparentize($white, 0.8);
 $site-name-gradient-start: $dark-blue;
 $site-name-gradient-end: transparentize($dark-blue, 0.2);
 
@@ -29,7 +29,7 @@ $site-name-gradient-end: transparentize($dark-blue, 0.2);
   }
   position: relative;
   z-index: 1;
-  background: linear-gradient(to left, $white 0%, $header-gradient-end 100%);
+  background: linear-gradient(to left, $white 50%, $header-gradient-end 100%);
   font-size: $wwu-header-font-size;
 
   .wrap {
@@ -91,14 +91,14 @@ $site-name-gradient-end: transparentize($dark-blue, 0.2);
       margin: 0;
       padding: $half-spacing $standard-spacing;
       text-align: center;
+      text-transform: none;
       color: $white;
       border-top: $border-width--thinner solid $blue;
       border-bottom: $border-width--thinner solid $blue;
       background: linear-gradient(to right, $site-name-gradient-start 0%, $site-name-gradient-end 100%);
-      font-size: $font-size--smaller;
+      font-family: $serif;
       font-weight: normal;
       line-height: 1.5em;
-      text-transform: none;
     }
 
     .quick-links {
