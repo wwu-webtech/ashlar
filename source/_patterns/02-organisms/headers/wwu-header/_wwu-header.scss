@@ -29,8 +29,7 @@ $site-name-gradient-end: transparentize($dark-blue, 0.2);
   }
   position: relative;
   z-index: 1;
-  background: linear-gradient(to left, $white 50%, $header-gradient-end 100%);
-  font-size: $wwu-header-font-size;
+  background: linear-gradient(to left, $header-gradient-start 50%, $header-gradient-end 100%);
 
   .wrap {
     @include breakpoint($medium) {
@@ -97,8 +96,9 @@ $site-name-gradient-end: transparentize($dark-blue, 0.2);
       border-bottom: $border-width--thinner solid $blue;
       background: linear-gradient(to right, $site-name-gradient-start 0%, $site-name-gradient-end 100%);
       font-family: $serif;
-      font-weight: normal;
+      font-weight: $font-weight--regular;
       line-height: 1.5em;
+      font-size: $splash-font-size;
     }
 
     .quick-links {
