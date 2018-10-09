@@ -2,6 +2,7 @@
   * @file
   * 00-atoms/buttons/_menu-buttons.scss
   */
+$max-button-width: 250px;
 
 .nav--main {
   & > .menu,
@@ -10,6 +11,10 @@
     background-color: initial;
 
     & > li {
+      @include breakpoint($medium) {
+        width: inherit;
+      }
+      width: 100%;
       border: none;
 
       /* Keep borders even */
@@ -20,26 +25,35 @@
       }
 
       & > a {
+        @include breakpoint($medium) {
+          display: grid;
+          align-content: center;
+          max-width: $max-button-width;
+          padding: 0 $large-spacing;
+          text-align: center;
+          border-bottom: none;
+        }
         @include breakpoint($large) {
           height: $toggle-size--larger;
         }
-
         position: relative;
-        display: table-cell;
+        display: block;
         box-sizing: border-box;
+        width: 100%;
         height: $toggle-size;
-        padding: 0 $large-spacing;
-        text-align: center;
-        vertical-align: middle;
+        padding: $standard-spacing;
+        text-align: left;
         white-space: normal;
         color: $white;
+        border-bottom: 1px solid $darkest-blue;
         background-color: $dark-blue;
         line-height: 1.4em;
 
         &:hover,
         &:focus {
-          background-color: $light-green;
           color: $black;
+          outline: none;
+          background-color: $light-green;
         }
       }
 
