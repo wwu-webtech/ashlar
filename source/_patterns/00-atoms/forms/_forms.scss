@@ -24,9 +24,8 @@ input {
     border-width: $border-width--thicker;
   }
   box-sizing: border-box;
-  width: 100%;
   margin-bottom: $standard-spacing;
-  padding: $standard-spacing;
+  padding: $half-spacing;
   transition: border-color $medium-transition-speed $standard-ease;
   border: solid $border-width $dark-blue;
   border-radius: 0;

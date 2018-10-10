@@ -6,9 +6,8 @@ textarea {
   @include breakpoint($medium) {
     border-width: $border-width--thicker;
   }
-  width: 100%;
   margin-bottom: $standard-spacing;
-  padding: $standard-spacing;
+  padding: $half-spacing;
   resize: vertical;
   border: solid $dark-blue $border-width;
   font-size: $font-size--smaller;
