@@ -20,6 +20,10 @@ tr {
   &:nth-of-type(even) {
     background-color: $light-gray;
   }
+  &.even,
+  &.odd {
+    border-bottom: none;
+  }
 }
 th {
   padding: $half-spacing;
