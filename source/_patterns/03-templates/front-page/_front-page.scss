@@ -153,7 +153,7 @@ $dark-shade-bg-2: mix($white, $blue, 80%);
           width: $standard-spacing + 3px;
         }
         @include breakpoint($large) {
-          width: calc((100vw - #{$max-content-width})/2);
+          width: calc(((100vw - #{$max-content-width})/2) + 3px);
           transform: translatex(calc(-100% + 3px));
         }
         left: 0;
@@ -195,7 +195,7 @@ $dark-shade-bg-2: mix($white, $blue, 80%);
           width: $standard-spacing + 3px;
         }
         @include breakpoint($large) {
-          width: calc((100vw - #{$max-content-width})/2);
+          width: calc(((100vw - #{$max-content-width})/2) + 3px);
           transform: translatex(calc(100% - 3px));
         }
         right: 0;
