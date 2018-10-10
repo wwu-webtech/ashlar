@@ -7,6 +7,7 @@ select {
   @include breakpoint($medium) {
     border-width: $border-width--thicker;
   }
+  max-width: 100%;
   margin-bottom: $standard-spacing;
   padding: $half-spacing;
   border: solid $dark-blue $border-width;

@@ -4,8 +4,16 @@
  * Styles specifically for the Drupal Webform module
  */
 
-/* Grids */
+/* File Input */
+.form-managed-file {
+  .form-file {
+    display: inline-block;
+    margin-right: 16px;
+    margin-bottom: 16px;
+  }
+}
 
+/* Grids */
 // Overwrite our radio button styles for default radio buttons
 .webform-grid {
   input[type="radio"] {

@@ -24,6 +24,7 @@ input {
     border-width: $border-width--thicker;
   }
   box-sizing: border-box;
+  max-width: 100%;
   margin-bottom: $standard-spacing;
   padding: $half-spacing;
   transition: border-color $medium-transition-speed $standard-ease;
@@ -32,6 +33,7 @@ input {
   background-color: $white;
   box-shadow: none;
   font-size: $font-size--smaller;
+
   &:focus {
     outline: none;
     box-shadow: $focus-shadow;
