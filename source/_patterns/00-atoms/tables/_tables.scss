@@ -9,6 +9,9 @@ table {
   table-layout: fixed;
   border-collapse: collapse;
 }
+tbody {
+  border: none;
+}
 tr {
   border-top: none;
   border-right: none;

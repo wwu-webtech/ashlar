@@ -21,8 +21,7 @@ input[type="submit"] {
   user-select: none;
   transition: $button-transition-speed $button-transition-ease background-color;
   text-align: center;
-  vertical-align: middle;
-  white-space: nowrap;
+  vertical-align: middle;  
   text-decoration: none;
   color: $text-color-light;
   border: $border-width transparent solid;

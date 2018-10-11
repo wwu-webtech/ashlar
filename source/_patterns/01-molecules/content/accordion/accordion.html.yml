@@ -15,7 +15,7 @@ items:
     yet far too little for the next 10.
   attributes:
     Attribute(): {}
-- title: Another Item Resides Within
+- title: Another Item Resides Within, with a title that may extend multiple lines
   content: If you could see the earth illuminated when you were in a place as dark
     as night, it would look to you more splendid than the moon. Curious that we spend
     more time congratulating people who have succeeded than encouraging people who

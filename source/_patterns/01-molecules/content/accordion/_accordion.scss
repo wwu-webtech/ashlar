@@ -5,54 +5,57 @@
 $left-col-width: 84px;
 $accordion-border: $dark-blue solid $border-width--thicker;
 
-.accordion {
-  display: grid;
-  border-top: $accordion-border;
-  border-right: $accordion-border;
-  border-left: $accordion-border;
-
-  grid-template-columns: $left-col-width auto;
-  grid-template-rows: auto auto;
-
-  &:last-of-type {
-    border-bottom: $accordion-border;
-  }
-
-  .expand {
+.accordion-set {
+  .item {
     display: grid;
-    width: 100%;
-    padding: $standard-spacing 0;
-    text-align: left;
-    color: initial;
-    border-radius: 0;
-    background: none;
+    border-top: $accordion-border;
+    border-right: $accordion-border;
+    border-left: $accordion-border;
 
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 1;
     grid-template-columns: $left-col-width auto;
+    grid-template-rows: auto auto;
 
-    * {
-      display: inline-block;
-      margin: 0;
+    &:last-of-type {
+      border-bottom: $accordion-border;
     }
 
-    i {
-      padding-left: $standard-spacing;
-      color: $blue;
-    }
+    .expand {
+      display: grid;
+      align-items: center;
+      width: 100%;
+      padding: $standard-spacing 0;
+      text-align: left;
+      color: initial;
+      border-radius: 0;
+      background: none;
 
-    & + .content {
-      display: none;
-      padding: $standard-spacing;
-      padding-left: 0;
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 1;
+      grid-template-columns: $left-col-width auto;
 
-      grid-column: 2 / span 1;
-      grid-row: 2 / span 1;
-    }
+      * {
+        display: inline-block;
+        margin: 0;
+      }
 
-    &:focus {
-      background-color: transparentize($dark-blue, .9);
-      box-shadow: none;
+      i {
+        padding-left: $standard-spacing;
+        color: $blue;
+      }
+
+      & + .content {
+        display: none;
+        padding: $standard-spacing;
+        padding-left: 0;
+
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+      }
+
+      &:focus {
+        background-color: transparentize($dark-blue, 0.9);
+        box-shadow: none;
+      }
     }
   }
 }
