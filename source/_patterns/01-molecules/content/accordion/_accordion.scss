@@ -6,6 +6,7 @@ $left-col-width: 84px;
 $accordion-border: $dark-blue solid $border-width--thicker;
 
 .accordion-set {
+  margin-bottom: $standard-spacing;
   .item {
     display: grid;
     border-top: $accordion-border;
@@ -23,11 +24,12 @@ $accordion-border: $dark-blue solid $border-width--thicker;
       display: grid;
       align-items: center;
       width: 100%;
-      padding: $standard-spacing 0;
+      padding: $standard-spacing $standard-spacing $standard-spacing 0;
       text-align: left;
       color: initial;
       border-radius: 0;
       background: none;
+      line-height: 1.5em;
 
       grid-column: 1 / span 2;
       grid-row: 1 / span 1;
