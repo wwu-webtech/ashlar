@@ -8,6 +8,7 @@ table {
   margin: $standard-spacing 0;
   table-layout: fixed;
   border-collapse: collapse;
+  word-wrap: break-word;
 }
 tbody {
   border: none;
