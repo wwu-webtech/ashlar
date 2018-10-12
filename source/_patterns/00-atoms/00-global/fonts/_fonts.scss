@@ -61,6 +61,7 @@ $p-font-size: calc(#{$min-p-font-size} + #{strip-unit($max-p-font-size - $min-p-
 $splash-font-size: calc(#{$min-splash-font-size} + #{strip-unit($max-splash-font-size - $min-splash-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 
 $font-size--smaller: 0.8em;
+$font-size--smallest: 0.6em;
 
 // CSS Classes
 .sans-serif {
