@@ -11,6 +11,9 @@ $button-padding: $standard-spacing;
 .button,
 button,
 input[type="submit"] {
+  @include breakpoint($medium) {
+    border-width: $border-width--thicker;
+  }
   display: inline-block;
   box-sizing: border-box;
   padding: $button-padding ($button-padding * 2);
@@ -18,8 +21,7 @@ input[type="submit"] {
   user-select: none;
   transition: $button-transition-speed $button-transition-ease background-color;
   text-align: center;
-  vertical-align: middle;
-  white-space: nowrap;
+  vertical-align: middle;  
   text-decoration: none;
   color: $text-color-light;
   border: $border-width transparent solid;
@@ -40,6 +42,9 @@ input[type="submit"] {
   }
 
   &:focus {
+    @include breakpoint($medium) {
+      border: $focus-outline--thicker;
+    }
     border: $focus-outline;
     outline: none;
   }
@@ -55,6 +60,9 @@ input[type="submit"] {
   }
   /* Alternate Button Styles */
   &.alt {
+    @include breakpoint($medium) {
+      border-width: $border-width--thicker;
+    }
     color: $dark-blue;
     border-width: $border-width;
     border-color: $dark-blue;

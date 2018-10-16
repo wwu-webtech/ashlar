@@ -46,6 +46,7 @@ input[type="radio"] {
       @include breakpoint($medium) {
         width: $select-input-size;
         height: $select-input-size;
+        border-width: $border-width--thicker;
       }
       position: absolute;
       left: 0;

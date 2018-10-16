@@ -3,9 +3,12 @@
  * atoms/forms/textarea/_textarea.scss
  */
 textarea {
-  width: 100%;
+  @include breakpoint($medium) {
+    border-width: $border-width--thicker;
+  }
+  max-width: 100%;
   margin-bottom: $standard-spacing;
-  padding: $standard-spacing;
+  padding: $half-spacing;
   resize: vertical;
   border: solid $dark-blue $border-width;
   font-size: $font-size--smaller;

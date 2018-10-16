@@ -20,16 +20,20 @@ select {
   display: block;
 }
 input {
+  @include breakpoint($medium) {
+    border-width: $border-width--thicker;
+  }
   box-sizing: border-box;
-  width: 100%;
+  max-width: 100%;
   margin-bottom: $standard-spacing;
-  padding: $standard-spacing;
+  padding: $half-spacing;
   transition: border-color $medium-transition-speed $standard-ease;
   border: solid $border-width $dark-blue;
   border-radius: 0;
   background-color: $white;
   box-shadow: none;
   font-size: $font-size--smaller;
+
   &:focus {
     outline: none;
     box-shadow: $focus-shadow;
@@ -45,6 +49,8 @@ input {
 }
 
 input[type="submit"] {
+  width: inherit;
+
   &:focus {
     box-shadow: none;
   }

@@ -24,7 +24,7 @@ $border-offset: 12px;
       height: 100%;
       content: "";
       transform: translate(0, -$border-offset);
-      border: solid $border-width $dark-blue;
+      border: solid $border-width--thicker $dark-blue;
     }
   }
 }

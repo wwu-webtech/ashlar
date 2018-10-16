@@ -3,56 +3,55 @@
  * 01-molecules/content/accordion.scss
  */
 $left-col-width: 84px;
-$accordion-border: $dark-blue solid $border-width;
+$accordion-border: $dark-blue solid $border-width--thicker;
 
-.accordion {
-  display: grid;
-  border-top: $accordion-border;
-  border-right: $accordion-border;
-  border-left: $accordion-border;
+.accordion-set {
+  margin-bottom: $standard-spacing;
+  .item {
+    border-top: $accordion-border;
+    border-right: $accordion-border;
+    border-left: $accordion-border;
 
-  grid-template-columns: $left-col-width auto;
-  grid-template-rows: auto auto;
-
-  &:last-of-type {
-    border-bottom: $accordion-border;
-  }
-
-  .expand {
-    display: grid;
-    width: 100%;
-    padding: $standard-spacing 0;
-    text-align: left;
-    color: initial;
-    border-radius: 0;
-    background: none;
-
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 1;
-    grid-template-columns: $left-col-width auto;
-
-    * {
-      display: inline-block;
-      margin: 0;
+    &:last-of-type {
+      border-bottom: $accordion-border;
     }
 
-    i {
-      padding-left: $standard-spacing;
-      color: $blue;
-    }
+    .expand {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      width: 100%;
+      padding: $half-spacing;
+      text-align: left;
+      color: initial;
+      border-radius: 0;
+      background: none;
+      line-height: 1.5em;
 
-    & + .content {
-      display: none;
-      padding: $standard-spacing;
-      padding-left: 0;
+      * {
+        display: inline-block;
+        margin: 0;
+      }
 
-      grid-column: 2 / span 1;
-      grid-row: 2 / span 1;
-    }
+      i {
+        color: $dark-blue;
+      }
 
-    &:focus {
-      background-color: transparentize($dark-blue, .9);
-      box-shadow: none;
+      .field__title {
+        padding-left: $standard-spacing;
+      }
+
+      & + .content {
+        display: none;
+        padding: $standard-spacing;
+        padding-top: 0;
+        word-wrap: break-word;
+      }
+
+      &:focus {
+        background-color: transparentize($dark-blue, 0.9);
+        box-shadow: none;
+      }
     }
   }
 }

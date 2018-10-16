@@ -2,6 +2,7 @@
   * @file
   * 00-atoms/buttons/_menu-buttons.scss
   */
+$max-button-width: 250px;
 
 .nav--main {
   & > .menu,
@@ -10,6 +11,10 @@
     background-color: initial;
 
     & > li {
+      @include breakpoint($medium) {
+        width: inherit;
+      }
+      width: 100%;
       border: none;
 
       /* Keep borders even */
@@ -20,123 +25,43 @@
       }
 
       & > a {
+        @include breakpoint($medium) {
+          display: grid;
+          align-content: center;
+          max-width: $max-button-width;
+          padding: 0 $large-spacing;
+          text-align: center;
+          border-bottom: none;
+        }
         @include breakpoint($large) {
           height: $toggle-size--larger;
         }
-
         position: relative;
-        display: table-cell;
+        display: block;
         box-sizing: border-box;
+        width: 100%;
         height: $toggle-size;
-        padding: 0 $large-spacing;
-        text-align: center;
-        vertical-align: middle;
+        padding: $standard-spacing;
+        text-align: left;
         white-space: normal;
         color: $white;
+        border-bottom: 1px solid $darkest-blue;
         background-color: $dark-blue;
         line-height: 1.4em;
-        font-size: $font-size--smaller;
 
         &:hover,
         &:focus {
-          background-color: $light-green;
           color: $black;
+          outline: none;
+          background-color: $light-green;
         }
       }
 
-      &.menu-item--active-trail {
+      &.menu-item--active-trail,
+      &.active {
         & > a {
           color: $dark-blue;
           background-color: $light-green;
-        }
-      }
-    }
-  }
-
-  &.alt {
-    .menu {
-      li {
-        a {
-          height: 94px;
-          min-width: 132px;
-          text-transform: uppercase;
-          border-width: $half-spacing;
-          border-style: solid;
-          border-color: $white;
-          border-left-width: 0;
-          border-radius: 0;
-          background-color: $blue;
-
-          /* Triangular Tab */
-          &:before,
-          &:after {
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            content: "";
-            transition: border $fast-transition-speed $standard-ease;
-            transform: translatex(-50%);
-          }
-          &:before {
-            border-top: solid 36px transparent;
-            border-right: solid 68px transparent;
-            border-bottom: solid 0 transparent;
-            border-left: solid 68px transparent;
-          }
-          &:after {
-            border-top: solid 16px transparent;
-            border-right: solid 38px transparent;
-            border-bottom: solid 0 transparent;
-            border-left: solid 38px transparent;
-          }
-
-          /* Button hover & focus styles */
-          &:hover,
-          &:focus {
-            background-color: mix(white, $dark-blue, $percent-change);
-            color: $white;
-            box-shadow: none;
-
-            &:before {
-              border-top: solid 28px $white;
-            }
-
-            &:after {
-              border-top: solid 16px mix(white, $dark-blue, $percent-change);
-            }
-          }
-        }
-
-        &.menu-item--active-trail {
-          a {
-            color: $white;
-            background-color: $dark-blue;
-
-            &:before {
-              border-top: solid 28px $white;
-            }
-
-            &::after {
-              border-top: solid 16px $dark-blue;
-            }
-
-            &:hover,
-            &:focus {
-              background-color: mix(white, $dark-blue, $percent-change);
-
-              &::after {
-                border-top: solid 16px mix(white, $dark-blue, $percent-change);
-              }
-            }
-          }
-        }
-
-        &:first-of-type {
-          a {
-            border-left-width: $half-spacing;
-          }
         }
       }
     }

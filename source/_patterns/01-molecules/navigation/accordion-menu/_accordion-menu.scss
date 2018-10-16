@@ -21,12 +21,13 @@ $expand-toggle-size: 40px;
 .ui-accordion {
   .ui-accordion-header {
     box-sizing: border-box;
-    margin-top: $border-width;
+    margin-top: $border-width--thicker;
     padding: 0;
     border: none;
     border-right: $expand-toggle-size;
     border-radius: 0;
     background-image: none;
+    font-family: $sans-serif;
     font-size: $font-size--smaller;
 
     a {
@@ -85,7 +86,7 @@ $expand-toggle-size: 40px;
     }
 
     a {
-      border-left: solid $border-width $gray;
+      border-left: solid $border-width--thicker $gray;
     }
   }
 

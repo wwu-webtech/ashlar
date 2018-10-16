@@ -8,8 +8,8 @@ $header-rows: $toggle-size;
 $header-rows--larger: $toggle-size--larger;
 
 // gradients
-$header-gradient-start: $white;
-$header-gradient-end: transparentize($white, 0.2);
+$header-gradient-start: transparentize($white, 0.3);
+$header-gradient-end: transparentize($white, 0.8);
 $site-name-gradient-start: $dark-blue;
 $site-name-gradient-end: transparentize($dark-blue, 0.2);
 
@@ -29,8 +29,7 @@ $site-name-gradient-end: transparentize($dark-blue, 0.2);
   }
   position: relative;
   z-index: 1;
-  background: linear-gradient(to left, $white 0%, $header-gradient-end 100%);
-  font-size: $wwu-header-font-size;
+  background: linear-gradient(to left, $header-gradient-start 50%, $header-gradient-end 100%);
 
   .wrap {
     @include breakpoint($medium) {
@@ -84,20 +83,22 @@ $site-name-gradient-end: transparentize($dark-blue, 0.2);
     .site-name {
       @include breakpoint($medium) {
         display: block !important;
-        border-top: 1px solid $blue;
+        border-top: $border-width--thinner solid $blue;
         border-bottom: none;
       }
       display: block;
       margin: 0;
       padding: $half-spacing $standard-spacing;
       text-align: center;
+      text-transform: none;
       color: $white;
-      border-top: 1px solid $blue;
-      border-bottom: 1px solid $blue;
+      border-top: $border-width--thinner solid $blue;
+      border-bottom: $border-width--thinner solid $blue;
       background: linear-gradient(to right, $site-name-gradient-start 0%, $site-name-gradient-end 100%);
-      font-size: $font-size--smaller;
-      font-weight: normal;
+      font-family: $serif;
+      font-weight: $font-weight--regular;
       line-height: 1.5em;
+      font-size: $splash-font-size;
     }
 
     .quick-links {

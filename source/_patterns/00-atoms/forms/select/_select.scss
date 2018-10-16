@@ -4,11 +4,13 @@
  */
 
 select {
-  width: 100%;
+  @include breakpoint($medium) {
+    border-width: $border-width--thicker;
+  }
+  max-width: 100%;
   margin-bottom: $standard-spacing;
-  padding: $standard-spacing;
+  padding: $half-spacing;
   border: solid $dark-blue $border-width;
-  background-image: url("../images/forms/dropdown-arrows.png");
   background-repeat: no-repeat;
   background-position: calc(100% - 18px);
 
@@ -18,6 +20,5 @@ select {
     color: $gray;
     border-color: $gray;
     background-color: $light-gray;
-    background-image: url("../images/forms/dropdown-arrows-disabled.png");
   }
 }
