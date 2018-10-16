@@ -1,0 +1,48 @@
+/**
+ * @file
+ * molecules/messaging/announcement/_announcement.scss
+ */
+
+.block--announcement {
+  @include breakpoint($medium) {
+    max-width: 50%;
+  }
+  display: grid;
+  align-items: center;
+  background-color: $light-green;
+
+  grid-template-areas: "image text";
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: auto;
+  justify-items: center;
+
+  .image {
+    height: 100%;
+    background-color: $dark-blue;
+
+    grid-area: image;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      opacity: 0.3;
+
+      object-fit: cover;
+    }
+  }
+
+  i {
+    @include breakpoint($medium) {
+      font-size: 48px;
+    }
+    color: $light-green;
+
+    grid-area: image;
+  }
+
+  .body {
+    padding: $half-spacing;
+
+    grid-area: text;
+  }
+}
