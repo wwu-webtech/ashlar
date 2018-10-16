@@ -6,9 +6,10 @@
 .menu {
   li {
     a {
-      transition: $medium-transition-speed $standard-ease background-color;
       display: inline-block;
+      width: 100%;
       padding: $half-spacing ($half-spacing * 4) $half-spacing ($half-spacing * 2);
+      transition: $medium-transition-speed $standard-ease background-color;
       color: $black;
 
       &:hover,
