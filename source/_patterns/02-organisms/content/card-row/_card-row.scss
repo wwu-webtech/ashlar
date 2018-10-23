@@ -2,6 +2,7 @@
  * @file
  * organisms/sections/card-list/_card-row.scss
  */
+$card-height: 300px;
 
 .card-row,
 .card-row .view-content {
@@ -12,8 +13,22 @@
   flex-direction: column;
 
   .card {
-    flex: 1;
+    @include breakpoint($small) {
+      flex: 0 1 33.333%;
+      max-width: 33.333%;
+    }
+
     padding-bottom: $half-spacing;
+
+    .image {
+      width: 100%;
+      height: $card-height;
+
+      img {
+        object-fit: cover;
+        height: 100%;
+      }
+    }
 
     .taxonomy-terms,
     .title,
