@@ -28,3 +28,22 @@ layout_twocol_75_25:
       label: Second
     bottom:
       label: Bottom
+layout_twocol_34_66:
+  label: 'Two column 34/66'
+  path: templates/layout/twocol_34_66
+  template: layout--twocol-34-66
+  category: 'Columns: 2'
+  default_region: first
+  icon_map:
+    - [top]
+    - [first, second, second]
+    - [bottom]
+  regions:
+    top:
+      label: Top
+    first:
+      label: First
+    second:
+      label: Second
+    bottom:
+      label: Bottom
