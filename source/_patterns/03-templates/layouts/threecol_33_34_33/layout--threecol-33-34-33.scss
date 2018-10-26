@@ -15,6 +15,7 @@
 .layout--threecol-33-34-33 > .layout__region--first{
   @include breakpoint($medium) {
     flex: 0 1 33%;
+    max-width: 33%;
     padding-right: $standard-spacing;
   }
 }
@@ -22,6 +23,7 @@
 .layout--threecol-33-34-33 > .layout__region--second {
   @include breakpoint($medium) {
     flex: 0 1 34%;
+    max-width: 34%;
     padding: 0 $standard-spacing;
   }
 }
@@ -29,6 +31,7 @@
 .layout--threecol-33-34-33 > .layout__region--third {
   @include breakpoint($medium) {
     flex: 0 1 33%;
+    max-width: 33%;
     padding-left: $standard-spacing;
   }
 }

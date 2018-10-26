@@ -14,9 +14,10 @@
 }
 
 
-.layout--threecol-25-50-25 > .layout__region--first{
+.layout--threecol-25-50-25 > .layout__region--first {
   @include breakpoint($medium) {
     flex: 0 1 25%;
+    max-width: 25%;
     padding-right: $standard-spacing;
   }
 }
@@ -24,6 +25,7 @@
 .layout--threecol-25-50-25 > .layout__region--second {
   @include breakpoint($medium) {
     flex: 0 1 50%;
+    max-width: 50%;
     padding: 0 $standard-spacing;
   }
 }
@@ -31,6 +33,7 @@
 .layout--threecol-25-50-25 > .layout__region--third {
   @include breakpoint($medium) {
     flex: 0 1 25%;
+    max-width: 25%;
     padding-left: $standard-spacing;
   }
 }
