@@ -1,0 +1,49 @@
+/**
+ * @file
+ * organisms/global/page/_alerts.scss
+ */
+
+ .alert{
+    border-radius:8px;
+    outline:3px solid white;
+ 	background-color:#cc2d30;
+	min-height:100px;
+	width:100%;
+	display:flex;
+	flex-wrap:wrap;
+	align-items:center;
+	color:white;
+ }
+
+.alert_header{
+	flex: 0 0 100%;
+	padding-left:15px;
+	padding-top:15px;
+	font-size:1.5em;
+}
+
+.alert_body {
+	
+}
+
+.alert_icon{
+	padding-left:15px;
+	padding-right:15px;
+}
+
+.alert_footer{
+	flex: 0 0 100%;
+	padding-left:15px;
+	padding-bottom:15px;
+}
+
+.alertIcon{
+	max-width:100px;
+	height:auto;
+	align-self: flex-start;
+}
+
+svg{
+	position:relative;
+	align-self: flex-start;
+}
