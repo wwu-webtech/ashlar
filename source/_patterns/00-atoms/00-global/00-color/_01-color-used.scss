@@ -18,15 +18,15 @@ $warning-color: $yellow;
 $alert-color: $red;
 
 // An array of main wwu colors, useful for iterating over all colors
-// contains (class-name, $color-variable, $text-color, $hover-color, $hover-text-color)
+// contains (class-name, $color-variable, $text-color, $hover-color, $hover-text, $alt-hover-text)
 $wwu-colors: (
-  (dark-blue, $dark-blue, $white, $blue, $white),
-  (blue, $blue, $white, $dark-blue, $white),
-  (dark-green, $dark-green, $white, $green, $white),
-  (green, $green, $white, $dark-blue, $white),
-  (light-green, $light-green, $black, $dark-blue, $white),
-  (light-blue, $light-blue, $black, $white, $light-blue),
-  (white, $white, $white, $white, $dark-blue)
+  (dark-blue, $dark-blue, $white, $blue, $white, $dark-blue),
+  (blue, $blue, $white, $dark-blue, $white, $blue),
+  (dark-green, $dark-green, $white, $green, $white, $dark-green),
+  (green, $green, $white, $dark-blue, $white, $green),
+  (light-green, $light-green, $black, $dark-blue, $white, $green),
+  (light-blue, $light-blue, $black, $white, $light-blue, $blue),
+  (white, $white, $white, $white, $dark-blue, $blue)
 );
 
 // Amount to shade items by

@@ -21,7 +21,7 @@ input[type="submit"] {
   user-select: none;
   transition: $button-transition-speed $button-transition-ease background-color;
   text-align: center;
-  vertical-align: middle;  
+  vertical-align: middle;
   text-decoration: none;
   color: $text-color-light;
   border: $border-width transparent solid;
@@ -70,12 +70,11 @@ input[type="submit"] {
 
     &:focus,
     &:hover {
-      color: $blue;
-      border-color: $blue;
+      color: $dark-blue;
       background-color: $white;
     }
   }
-  @each $color, $background, $text, $hover-color, $hover-text in $wwu-colors {
+  @each $color, $background, $text, $hover-color, $hover-text, $alt-hover-text in $wwu-colors {
     &.#{$color} {
       color: $text;
       background-color: $background;
@@ -97,8 +96,7 @@ input[type="submit"] {
 
         &:focus,
         &:hover {
-          color: $blue;
-          border-color: $blue;
+          color: $alt-hover-text;
           background-color: $white;
         }
       }
