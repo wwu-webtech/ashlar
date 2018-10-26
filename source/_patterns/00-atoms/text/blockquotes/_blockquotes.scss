@@ -3,7 +3,8 @@
  * 00-atoms/01-text/_blockquotes.scss
  */
 
-blockquote {
+blockquote,
+.paragraph--type--majors-aside {
   margin: $standard-spacing 0;
   padding: $large-spacing;
   background-color: $light-gray;
