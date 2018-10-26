@@ -1,0 +1,31 @@
+attributes:
+  Attribute():
+    class:
+    - layout
+    - layout--twocol-34-66
+region_attributes:
+  top:
+    Attribute():
+      class:
+  first:
+    Attribute():
+      class:
+  second:
+    Attribute():
+      class:
+  bottom:
+    Attribute():
+      class:
+content:
+  top:
+    include():
+        pattern: organisms-block-template-html-page-title
+        with:
+          content:
+            include():
+              pattern: molecules-page-title-html
+              with:
+                title: Two Column 34/66
+  first: "Archaeornis blancocerosaurus crosbysaurus didanodon erliansaurus galtonia kentrosaurus melanorosaurus nemegtia tetragonosaurus. Abrictosaurus achillobator adeopapposaurus albalophosaurus amazonsaurus banji brachylophosaurus capitalsaurus draconyx epicampodon gigantosaurus glishades hanssuesia huaxiasaurus ischyrosaurus libycosaurus limnornis losillasaurus micropachycephalosaurus proiguanodon rapator raptorex rhabdodon riojasuchus streptospondylus szechuanosaurus tatankacephalus. Abdallahsaurus astrophocaudia cetiosaurus dinheirosaurus einiosaurus glishades gryposaurus hypsibema kosmoceratops kulceratops loncosaurus prenoceratops proiguanodon siamotyrannus streptospondylus xuanhuasaurus."
+  second: "Uh, well, okay Biff, uh, I'll finish that on up tonight and I'll bring it over first thing tomorrow morning. Marty, this may seem a little foreward, but I was wondering if you would ask me to the Enchantment Under The Sea Dance on Saturday. Wow, ah Red, you look great. Everything looks great. 1:24, I still got time. Oh my god. No, no not again, c'mon, c'mon. Hey. Libyans. It was meant to be. Anyway, if Grandpa hadn't hit him, then none of you would have been born. Thank god I still got my hair. What on Earth is that thing I'm wearing?"
+  bottom: "<h2>A New Section</h2> Barreleye dragonet fierasfer kafue lined porbeagle sheatfish slimy thorny tripletail turbot waryfish. African bonito climbing dwarf gila grideye lightfish roundhead scad snailfish spadefish tripod tubeshoulder. Carpsucker characin cornetfish cornish croaker eye glowlight gunnel kaluga major naked-back russian sarcastic snake south tarwhine yellow-eye zealand."
