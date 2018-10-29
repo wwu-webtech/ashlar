@@ -10,13 +10,13 @@ $image-size--smaller: 180px;
     display: grid;
     text-align: left;
 
-    grid-column-gap: ($large-spacing * 2);
+    grid-column-gap: ($double-spacing * 2);
     grid-template-areas: "image body"
     "image credit";
     grid-template-columns: auto 1fr;
     grid-template-rows: auto;
   }
-  margin: $standard-spacing 0;
+  margin: $standard-spacing 0 $double-spacing 0;
   text-align: center;
 
   .image,

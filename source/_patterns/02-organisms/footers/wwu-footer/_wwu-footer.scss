@@ -11,9 +11,9 @@
     ". logo icons ."
     ". .... ..... .";
     -ms-grid-columns: $standard-spacing 1fr 2fr $standard-spacing;
-    -ms-grid-rows: ($large-spacing * 2) auto auto ($large-spacing * 2);
+    -ms-grid-rows: ($double-spacing * 2) auto auto ($double-spacing * 2);
     grid-template-columns: $standard-spacing 1fr 2fr $standard-spacing;
-    grid-template-rows: ($large-spacing * 2) auto auto ($large-spacing * 2);
+    grid-template-rows: ($double-spacing * 2) auto auto ($double-spacing * 2);
     justify-items: end;
   }
   @include breakpoint($large) {
