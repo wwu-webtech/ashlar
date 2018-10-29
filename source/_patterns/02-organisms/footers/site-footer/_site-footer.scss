@@ -110,16 +110,16 @@
   }
 
   .social-media-links {
-    a {
+    .social-icon {
+      background-color: $white;
+
       svg {
-        fill: $white;
+        fill: $blue;
       }
 
       &:hover,
       &:focus {
-        svg {
-          fill: $lightest-green;
-        }
+        background-color: $light-green;
       }
     }
   }

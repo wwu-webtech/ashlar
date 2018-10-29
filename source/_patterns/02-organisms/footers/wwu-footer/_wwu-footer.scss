@@ -99,22 +99,19 @@
 
     a {
       outline: none;
+      background-color: $white;
 
       svg {
-        fill: $white;
+        fill: $dark-blue;
       }
 
       &:hover,
       &:focus {
-        svg {
-          fill: $light-green;
-        }
+        background-color: $light-green;
       }
 
       &:focus {
-        svg {
-          outline: dotted $light-blue;
-        }
+        outline: dotted $light-blue;
       }
     }
   }
