@@ -1,0 +1,60 @@
+/**
+ * @file
+ * organisms/global/page/_alerts.scss
+ */
+$logo-size: 100px;
+
+.alert {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  padding: $standard-spacing;
+}
+
+.emergency {
+  color: $white;
+  background-color: $red;
+
+  .alert_header {
+    color: $white;
+  }
+
+  svg {
+    fill: $white;
+  }
+}
+
+.weather {
+  color: $dark-blue;
+  background-color: $yellow;
+
+  svg {
+    fill: $dark-blue;
+  }
+}
+
+.alert_header {
+  flex: 0 0 100%;
+  font-family: $sans-serif;
+  border-bottom: none;
+}
+
+.alert_icon {
+  align-self: flex-start;
+  width: $logo-size;
+  margin-right: $standard-spacing;
+  margin-bottom: $standard-spacing;
+
+  svg {
+    position: relative;
+    align-self: flex-start;
+    width: $logo-size;
+    height: auto;
+  }
+}
+
+
+.alert_footer {
+  flex: 0 0 100%;
+}
