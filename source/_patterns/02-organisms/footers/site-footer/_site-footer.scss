@@ -5,9 +5,9 @@
 
 .site-footer {
   @include breakpoint($medium) {
-    grid-template-areas: ". footer_left . footer_center . footer_right .";
     -ms-grid-columns: $standard-spacing 1fr $standard-spacing 1fr $standard-spacing 1fr $standard-spacing;
     -ms-grid-rows: auto;
+    grid-template-areas: ". footer_left . footer_center . footer_right .";
     grid-template-columns: $standard-spacing 1fr $standard-spacing 1fr $standard-spacing 1fr $standard-spacing;
     grid-template-rows: auto;
   }
@@ -17,19 +17,18 @@
   }
   display: -ms-grid;
   display: grid;
-  padding: ($large-spacing * 2) 0;
+  padding: ($double-spacing * 2) 0;
   color: $white;
   background-color: $blue;
   font-size: $font-size--smaller;
 
-  grid-template-areas:
-  ". footer_left   ."
+  -ms-grid-columns: $small-screen-columns;
+  -ms-grid-rows: auto $standard-spacing auto $standard-spacing auto;
+  grid-template-areas: ". footer_left   ."
   ". ............. ."
   ". footer_center ."
   ". ............. ."
   ". footer_right  .";
-  -ms-grid-columns: $small-screen-columns;
-  -ms-grid-rows: auto $standard-spacing auto $standard-spacing auto;
   grid-template-columns: $small-screen-columns;
   grid-template-rows: auto $standard-spacing auto $standard-spacing auto;
 
@@ -45,52 +44,55 @@
       background-color: $dark-blue;
 
       &:hover {
-        background-color: $light-blue;
         color: $dark-blue;
+        background-color: $light-blue;
       }
     }
   }
 
   .region--footer_left {
     @include breakpoint($small) {
-      -ms-grid-row: 1;
-      -ms-grid-row-span: 1;
       -ms-grid-column: 2;
       -ms-grid-column-span: 1;
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
     }
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
+
+    grid-area: footer_left;
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
-    grid-area: footer_left;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
   }
 
   .region--footer_center {
     @include breakpoint($small) {
-      -ms-grid-row: 1;
-      -ms-grid-row-span: 1;
       -ms-grid-column: 4;
       -ms-grid-column-span: 1;
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
     }
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
+
+    grid-area: footer_center;
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
-    grid-area: footer_center;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
   }
 
   .region--footer_right {
     @include breakpoint($small) {
-      -ms-grid-row: 1;
-      -ms-grid-row-span: 1;
       -ms-grid-column: 6;
       -ms-grid-column-span: 1;
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
     }
-    -ms-grid-row: 5;
-    -ms-grid-row-span: 1;
+
+    grid-area: footer_right;
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
-    grid-area: footer_right;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
   }
 
   .menu {
@@ -110,16 +112,17 @@
   }
 
   .social-media-links {
-    a {
+    justify-content: space-around;
+    .social-icon {
+      background-color: $white;
+
       svg {
-        fill: $white;
+        fill: $blue;
       }
 
       &:hover,
       &:focus {
-        svg {
-          fill: $lightest-green;
-        }
+        background-color: $light-green;
       }
     }
   }

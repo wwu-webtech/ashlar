@@ -16,6 +16,7 @@ input[type="submit"] {
   }
   display: inline-block;
   box-sizing: border-box;
+  margin-bottom: $standard-spacing;
   padding: $button-padding ($button-padding * 2);
   cursor: pointer;
   user-select: none;

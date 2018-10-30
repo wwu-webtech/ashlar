@@ -3,39 +3,39 @@
  * 00-atoms/icons/social-media-icons/_social-media-icons.scss
  */
 
+.social-icon {
+  display: block;
+  width: $toggle-size;
+  height: $toggle-size;
+  transition: $standard-ease $button-transition-speed;
+  background-color: $blue;
+
+  svg {
+    width: 100%;
+    margin-top: (($toggle-size - $icon-size) / 2) - 1;
+    margin-left: (($toggle-size - $icon-size) / 2) - 1;
+    transition: fill $standard-ease $button-transition-speed;
+
+    fill: $white;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $light-green;
+  }
+}
+
 .social-media-links {
   @include breakpoint($large) {
     max-width: 500px;
   }
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
   max-width: 400px;
   padding: 0;
   list-style: none;
 
-  a {
-    @include breakpoint($large) {
-      width: $icon-size--large;
-      height: $icon-size--large;
-    }
-    display: block;
-    width: $icon-size;
-    height: $icon-size;
+  .social-icon {
     margin: $half-spacing;
-
-    svg {
-      transition: fill $standard-ease $button-transition-speed;
-      width: 100%;
-
-      fill: $default-button-color;
-    }
-
-    &:hover,
-    &:focus {
-      svg {
-        fill: $light-green;
-      }
-    }
   }
 }

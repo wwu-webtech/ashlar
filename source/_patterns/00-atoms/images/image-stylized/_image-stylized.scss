@@ -4,8 +4,10 @@
 */
 $image-size: 300px;
 
-.stylized {
-  &.image {
+.stylized,
+.paragraph--type--majors-profile {
+  &.image,
+  .field__item:nth-of-type(3) {
     position: relative;
     display: -ms-inline-grid;
     display: inline-grid;

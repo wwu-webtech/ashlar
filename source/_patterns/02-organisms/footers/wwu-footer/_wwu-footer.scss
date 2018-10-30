@@ -5,15 +5,14 @@
 
 .wwu-footer {
   @include breakpoint($small) {
-    grid-template-areas:
-    ". .... ..... ."
+    -ms-grid-columns: $standard-spacing 1fr 2fr $standard-spacing;
+    -ms-grid-rows: ($double-spacing * 2) auto auto ($double-spacing * 2);
+    grid-template-areas: ". .... ..... ."
     ". logo info  ."
     ". logo icons ."
     ". .... ..... .";
-    -ms-grid-columns: $standard-spacing 1fr 2fr $standard-spacing;
-    -ms-grid-rows: ($large-spacing * 2) auto auto ($large-spacing * 2);
     grid-template-columns: $standard-spacing 1fr 2fr $standard-spacing;
-    grid-template-rows: ($large-spacing * 2) auto auto ($large-spacing * 2);
+    grid-template-rows: ($double-spacing * 2) auto auto ($double-spacing * 2);
     justify-items: end;
   }
   @include breakpoint($large) {
@@ -26,15 +25,14 @@
   background-color: $dark-blue;
   font-size: $font-size--smaller;
 
-  grid-template-areas:
-  ". ....  ."
+  -ms-grid-columns: $small-screen-columns;
+  -ms-grid-rows: $standard-spacing auto $standard-spacing auto $standard-spacing auto $standard-spacing;
+  grid-template-areas: ". ....  ."
   ". logo  ."
   ". ....  ."
   ". info  ."
   ". ..... ."
   ". icons .";
-  -ms-grid-columns: $small-screen-columns;
-  -ms-grid-rows: $standard-spacing auto $standard-spacing auto $standard-spacing auto $standard-spacing;
   grid-template-columns: $small-screen-columns;
   grid-template-rows: repeat(3, $standard-spacing auto) $standard-spacing;
   justify-items: center;
@@ -50,71 +48,69 @@
 
   .logo {
     @include breakpoint($small) {
-      -ms-grid-row: 2;
-      -ms-grid-row-span: 2;
       -ms-grid-column: 2;
       -ms-grid-column-span: 1;
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 2;
     }
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
+    margin: auto;
+
+    grid-area: logo;
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
-    grid-area: logo;
-    margin: auto;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
   }
 
   .western-info {
     @include breakpoint($small) {
       text-align: right;
 
-      -ms-grid-row: 2;
-      -ms-grid-row-span: 1;
       -ms-grid-column: 3;
       -ms-grid-column-span: 1;
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 1;
     }
     text-align: center;
 
-    -ms-grid-row: 4;
-    -ms-grid-row-span: 1;
+    grid-area: info;
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
-    grid-area: info;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
   }
 
   .social-media-links {
     @include breakpoint($small) {
-      justify-self: end;
-
-      -ms-grid-row: 3;
-      -ms-grid-row-span: 1;
       -ms-grid-column: 3;
       -ms-grid-column-span: 1;
+      -ms-grid-row: 3;
+      -ms-grid-row-span: 1;
+      justify-self: end;
     }
+    justify-content: space-around;
 
-    -ms-grid-row: 6;
-    -ms-grid-row-span: 1;
+    grid-area: icons;
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
-    grid-area: icons;
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 1;
 
     a {
       outline: none;
+      background-color: $white;
 
       svg {
-        fill: $white;
+        fill: $dark-blue;
       }
 
       &:hover,
       &:focus {
-        svg {
-          fill: $light-green;
-        }
+        background-color: $light-green;
       }
 
       &:focus {
-        svg {
-          outline: dotted $light-blue;
-        }
+        outline: dotted $light-blue;
       }
     }
   }
