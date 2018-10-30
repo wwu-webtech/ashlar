@@ -42,3 +42,7 @@
     }
   }
 }
+
+.block-system-main-menu ul ul {
+  display: none; // hide nested menus on non ultimenu main nav blocks
+}
