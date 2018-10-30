@@ -1,0 +1,9 @@
+alerts:
+  emergency:
+    header: Emergency Alert
+    body: "There is a bad guy running around."
+  weather:
+    header: Weather Alert
+    body: "Important weather alert for Bellingham, Washington: The big orange ball is out in the sky again, so be careful!"
+
+
