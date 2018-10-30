@@ -3,7 +3,8 @@
  * 01-molecules/navigation/main-navigation/_main-navigation.scss
  */
 
-.nav--main {
+.nav--main,
+.block-system-main-menu {
   @include breakpoint($medium) {
     height: inherit;
     min-height: 0;
