@@ -9,6 +9,7 @@
   }
   display: grid;
   align-items: center;
+  margin: auto;
   background-color: $light-green;
 
   grid-template-areas: "image text";
