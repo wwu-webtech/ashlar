@@ -1,0 +1,80 @@
+bodyClass: "page-node-type-major"
+page:
+  include():
+    pattern: organisms-page-html
+    with:
+      page:
+        header: organisms-site-header-html
+        content:
+          include():
+            pattern: organisms-content-region-html
+            with:
+              content:
+                join():
+                - include():
+                    pattern: organisms-block-template-html-main
+                    with:
+                      content:
+                        join():
+                        - include():
+                            pattern: templates-layout--twocol-34-66-html
+                            with:
+                              content:
+                                top: "<h1>English—Creative Writing Emphasis, BA</h1>"
+                                first:
+                                  join():
+                                  - include():
+                                      pattern: organisms-block-template-html
+                                      with:
+                                        label:
+                                        content:
+                                          include():
+                                              pattern: organisms-block-template-html
+                                              with:
+                                                attributes:
+                                                  Attribute():
+                                                    class:
+                                                    - field__item
+                                                label: ""
+                                                content:
+                                                  include():
+                                                    pattern: molecules-menu-html
+                                                    with:
+                                                      items:
+                                                      - title: Introduction
+                                                        url: '#introduction'
+                                                      - title: Beyond the Classroom
+                                                        url: '#beyond-the-clasroom'
+                                                      - title: Careers and Graduate Studies
+                                                        url: '#careers-graduate-studies'
+                                  - include():
+                                      pattern: organisms-block-template-html
+                                      with:
+                                        label: "Share this Major"
+                                        content:
+                                          include():
+                                            pattern: molecules-card-html
+                                            with:
+                                              image: atoms-image-featured
+                                  - include():
+                                      pattern: organisms-block-template-html
+                                      with:
+                                        label: ""
+                                        content: "<a class='button alt'>More Stories</a>"
+                                second:
+                                  join():
+                                  - include():
+                                      pattern: organisms-card-list-html
+                                      with:
+                                        label: "In the News"
+                                  - include():
+                                      pattern: organisms-block-template-html
+                                      with:
+                                        label: ""
+                                        content: "<a class='button alt'>More News</a>"
+                                middle:
+                                  include():
+                                    pattern: molecules-testimonial-style-a-html
+                                bottom: ""
+
+        footer: organisms-wwu-footer-html
