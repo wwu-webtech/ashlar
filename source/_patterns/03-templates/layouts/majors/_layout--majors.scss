@@ -1,0 +1,34 @@
+/**
+ * @file
+ * templates/layouts/majors/_layout--majors.scss
+ */
+
+.layout--majors {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.layout--majors > .layout__region {
+  flex: 0 1 100%;
+}
+
+
+.layout--majors > .layout__region--first {
+  @include breakpoint($medium) {
+    flex: 0 1 34%;
+    order: 1;
+    max-width: 34%;
+    padding-right: $standard-spacing;
+  }
+  order: 2;
+}
+
+.layout--majors > .layout__region--second {
+  @include breakpoint($medium) {
+    flex: 0 1 66%;
+    order: 2;
+    max-width: 66%;
+    padding-left: $standard-spacing;
+  }
+  order: 1;
+}
