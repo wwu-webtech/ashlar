@@ -32,7 +32,7 @@ First, clone this repository to your local machine.
 
     git clone git@bitbucket.org:wwuweb/ashlar.git
 
-### II. Lando
+### III. Lando
 Download and install the latest **stable** version of [Lando](https://github.com/lando/lando/releases).
 
 In the terminal, navigate into the ashlar director `cd ashlar`, then run `lando init`
@@ -77,7 +77,7 @@ Then run the following commmands:
 
 These steps will each take a few moments to complete. `lando start` initiates the lando container. `lando npm install` installs npm locally within the ashlar folder. `lando gulp` runs various tasks, including compiling the theme files.
 
-### III. Pattern Lab   
+### IV. Pattern Lab   
 Within `ashlar` run (do NOT prefix with `lando`):
 
     ./patternlab-install.sh
