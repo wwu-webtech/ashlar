@@ -17,64 +17,101 @@ page:
                       content:
                         join():
                         - include():
-                            pattern: templates-layout--twocol-34-66-html
+                            pattern: templates-layout--majors-html
                             with:
                               content:
-                                top: "<h1>English—Creative Writing Emphasis, BA</h1>"
-                                first:
-                                  join():
-                                  - include():
-                                      pattern: organisms-block-template-html
-                                      with:
-                                        label:
-                                        content:
-                                          include():
-                                              pattern: organisms-block-template-html
-                                              with:
-                                                attributes:
-                                                  Attribute():
-                                                    class:
-                                                    - field__item
-                                                label: ""
-                                                content:
-                                                  include():
-                                                    pattern: molecules-menu-html
-                                                    with:
-                                                      items:
-                                                      - title: Introduction
-                                                        url: '#introduction'
-                                                      - title: Beyond the Classroom
-                                                        url: '#beyond-the-clasroom'
-                                                      - title: Careers and Graduate Studies
-                                                        url: '#careers-graduate-studies'
-                                  - include():
-                                      pattern: organisms-block-template-html
-                                      with:
-                                        label: "Share this Major"
-                                        content:
-                                          include():
-                                            pattern: molecules-card-html
-                                            with:
-                                              image: atoms-image-featured
-                                  - include():
-                                      pattern: organisms-block-template-html
-                                      with:
-                                        label: ""
-                                        content: "<a class='button alt'>More Stories</a>"
+                                top:
+                                  include():
+                                    pattern: molecules-page-title-html
+                                    with:
+                                      title: 'Some major, BA'
                                 second:
                                   join():
                                   - include():
-                                      pattern: organisms-card-list-html
+                                      pattern: organisms-block-template-html
                                       with:
-                                        label: "In the News"
+                                        label: ''
+                                        content: >-
+                                          <h2 id="Introduction">Introduction</h2>
+
+                                          <p>Biology is the study of living things and encompasses areas ranging from molecular biology to ecosystem ecology. This breadth is reflected in Western's curriculum and in faculty and student research.</p>
+
+                                          <p>Western’s biology department employs a high concentration of faculty who are actively engaged in both teaching and research. Students in the Biology Department receive quality instruction from experts in the field who are committed to the education of the next generation. Modest class sizes enable faculty to facilitate small group discussions and student-centered learning activities in class. All upper level labs are taught by the faculty themselves, not graduate students. </p>
+
+                                          <p>The B.A. in Biology is designed for students who want to make biology the focus of a liberal arts education and may not be directly interested in post-graduate study or professional careers in biology or teaching. The number of required courses in the B.A. Biology degree has been kept low to permit you to add other areas of study and courses suited to your needs and interests. Thus, it is relatively easy to pair this major with a second major or minor.</p>
+
+                                          <p>Western’s Biology Department is part of the College of Science and Engineering.</p>
+
+                                          <blockquote>Western's 82,000-square-foot Biology Building features teaching labs, research labs, environmental control rooms, a seawater lab, image analysis labs, and multimedia lecture halls. The Biology department also maintains a greenhouse on campus that supports teaching and research activities.</blockquote>
                                   - include():
                                       pattern: organisms-block-template-html
                                       with:
-                                        label: ""
-                                        content: "<a class='button alt'>More News</a>"
-                                middle:
-                                  include():
-                                    pattern: molecules-testimonial-style-a-html
-                                bottom: ""
+                                        label: ''
+                                        content: >-
+                                          <h2 id="beyond-the-classroom">Beyond the Classroom</h2>
+                                          <p>The Biology program provides a wide variety of opportunities for applied practice of knowledge and skills gained in lectures and labs. Undergraduates are encouraged to engage in research alongside faculty, serve as teaching assistants for biology courses, join the Biology club, and/or develop their own extracurricular experience through the independent study option. Additionally, some upper level labs follow a project-based curriculum that resemble research experiences. </p>
 
+                                          <p>The Biology Department works with Career Services to promote internships for external organizations to students and alumni. If students want to make these types of internships even more meaningful, they may elect to earn credit under BIOL 496. Students enrolled in BIOL 496 while completing their internship will be encouraged to reflect on their learning through journaling and other assignments under the direction of their faculty advisor, and the credit they earn upon completion may be applied to their program requirements.</p>
+                                  - include():
+                                      pattern: molecules-testimonial-style-a-html
+                                  - include():
+                                      pattern: organisms-block-template-html
+                                      with:
+                                        label: ''
+                                        content: >-
+                                          <h2 id="careers-graduate-studies">Careers and Graduate Studies</h2>
+
+                                          <p>Careers and Graduate Studies</p>
+
+                                          <p>Notable Alumni</p>
+
+                                          <p>Dr. E. Peter Greenberg - Professor of Microbiology, University of Washington </p>
+
+                                          <p>Dr. Laurie Vitt - Professor of Zoology, University of Oklahoma</p>
+
+                                          <p>George Lynn Cross - Research Professor & Curator of Reptiles, Sam Noble Oklahoma Museum of Natural History, and Member of the Brazilian Academy of Sciences</p>
+                                bottom_first:
+                                  join():
+                                  - include():
+                                      pattern: organisms-block-template-html
+                                      with:
+                                        label: 'Related Majors'
+                                        content: 'List of related majors'
+                                bottom_second:
+                                  join():
+                                  - include():
+                                      pattern: organisms-block-template-html
+                                      with:
+                                        label: 'Jobs with this Degree'
+                                        content: >-
+                                          <ul>
+                                            <li>Social Media Coordinator</li>
+                                            <li>Videogame Plotting/Design</li>
+                                            <li>Web Content Creator</li>
+                                            <li>Editor</li>
+                                            <li>Journalist</li>
+                                            <li>Screenwriter</li>
+                                            <li>Copywriter</li>
+                                            <li>Research Analyst</li>
+                                            <li>Technical Writer</li>
+                                            <li>Advertising Copy Writer Public Relations Specialist</li>
+                                            <li>User Experience Expert (UX)</li>
+                                            <li>Usability Tester</li>
+                                            <li>Book Buyer/Seller</li>
+                                            <li>Web Content Developer/Writer</li>
+                                            <li>Human Resource Manager</li>
+                                            <li>Market Research Analyst</li>
+                                            <li>Special Events Coordinator/Speech Writer</li>
+                                            <li>Lobbyist</li>
+                                            <li>Grant Writer</li>
+                                            <li>Fundraising Coordinator</li>
+                                            <li>Legislative Assistant</li>
+                                            <li>Archivist</li>
+                                          </ul>
+                                bottom_third:
+                                  include():
+                                    pattern: organisms-block-template-html
+                                    with:
+                                      label: 'Department'
+                                      content: 'Department contact info'
         footer: organisms-wwu-footer-html

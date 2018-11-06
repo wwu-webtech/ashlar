@@ -7,10 +7,5 @@ blockquote,
 .paragraph--type--majors-aside {
   margin: $standard-spacing 0;
   padding: $double-spacing;
-  background-color: $light-gray;
-
-  &.dark-bg {
-    background-color: $dark-blue;
-    color: $white;
-  }
+  background-color: $light-gray;  
 }
