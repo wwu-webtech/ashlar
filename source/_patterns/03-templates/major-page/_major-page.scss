@@ -2,3 +2,52 @@
 * @file
 * templates/major-page/_major-page.scss
 */
+.page-node-type-major {
+  .layout--majors {
+    .layout__region--first {
+      padding: 0 $standard-spacing;
+    }
+  }
+
+  .majors-menu {
+    @include breakpoint($medium) {
+      display: inherit;
+    }
+    margin-top: $h2-font-size;
+    display: none;
+  }
+
+  .majors-call-to-action {
+    @include breakpoint(max-width $medium) {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      width: 100vw;
+      padding: $half-spacing $standard-spacing;
+      background: $dark-blue;
+
+      .button {
+        margin: 0 $standard-spacing 0 0;
+        padding: $half-spacing $standard-spacing;
+        border-width: $border-width;
+        font-size: $font-size--smaller;
+      }
+
+      .close {
+        position: absolute;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        margin: 0;
+        background: $dark-blue;
+      }
+    }
+    @include breakpoint($medium) {
+      .close {
+        display: none;
+      }
+    }
+  }
+}
