@@ -2,19 +2,22 @@
  * @file
  * 01-molecules/navigation/main-navigation/_main-navigation.scss
  */
-
+.nav--main {
+  @include breakpoint($medium) {
+    display: block !important;
+  }
+  display: none;
+}
 .nav--main,
 .block-system-main-menu {
   @include breakpoint($medium) {
     height: inherit;
     min-height: 0;
     background: transparent;
-    display: block !important;
   }
   min-height: 100vh;
   background: $dark-blue;
-  font-size: $splash-font-size;  
-  display: none;
+  font-size: $splash-font-size;
 
   & > .menu,
   .ultimenu--main,
