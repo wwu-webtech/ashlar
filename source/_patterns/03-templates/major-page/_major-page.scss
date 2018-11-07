@@ -5,7 +5,23 @@
 .page-node-type-major {
   .layout--majors {
     .layout__region--first {
-      padding: 0 $standard-spacing;
+      @include breakpoint($medium) {
+        padding: 0 $double-spacing;
+      }
+      width: 100%;
+      margin: $standard-spacing 0 0 0;
+      padding: $standard-spacing;
+      font-size: $font-size--smaller;
+
+      h2 {
+        font-size: $h4-font-size;
+      }
+    }
+
+    .layout__region--second {
+      @include breakpoint($medium) {
+        padding: 0 $double-spacing;
+      }
     }
   }
 
@@ -13,8 +29,8 @@
     @include breakpoint($medium) {
       display: inherit;
     }
-    margin-top: $h2-font-size;
     display: none;
+    margin-top: $h2-font-size;
   }
 
   .majors-call-to-action {

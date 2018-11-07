@@ -24,7 +24,7 @@ page:
                                   include():
                                     pattern: molecules-page-title-html
                                     with:
-                                      title: 'Some major, BA'
+                                      title: 'Early Childhood Special Education P-3 and Early Childhood Education P-3 (Dual Endorsement)'
                                 second:
                                   join():
                                   - include():
@@ -114,4 +114,4 @@ page:
                                     with:
                                       label: 'Department'
                                       content: 'Department contact info'
-        footer: organisms-wwu-footer-html
+        site_footer: organisms-site-footer-html
