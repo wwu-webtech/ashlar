@@ -3,10 +3,6 @@
 * templates/major-page/_major-page.scss
 */
 .page-node-type-major {
-  .page-content {
-    margin-bottom: 0;
-  }
-
   .layout--majors {
     .layout__region--first {
       @include breakpoint($medium) {
@@ -20,27 +16,6 @@
 
       h2 {
         font-size: $h4-font-size;
-      }
-
-      &:before,
-      &:after {
-        @include breakpoint($medium) {
-          display: none;
-        }
-        position: absolute;
-        top: 0;
-        left: -$standard-spacing;
-        display: block;
-        width: $standard-spacing;
-        height: 100%;
-        content: "";
-        background-color: $dark-blue;
-      }
-
-      &:after {
-        top: 0;
-        right: -$standard-spacing;
-        left: inherit;
       }
 
       .majors-menu {
@@ -104,5 +79,27 @@
         text-align: center;
       }
     }
+  }
+}
+
+/* Sloppy for now, fixing this with js updates */
+.introduction-anchor-link {
+  position: relative;
+
+  &:after {
+    display: block;
+    content: '';
+
+    border-width: 20px;
+    border-color: transparent;
+    border-style: solid;
+
+    position: absolute;
+    right: -32px;
+    top: -2px;
+
+    width: 0;
+    height: 0;
+    border-right-color: white;
   }
 }

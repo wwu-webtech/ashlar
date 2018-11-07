@@ -77,7 +77,7 @@ page:
                                       with:
                                         label: ''
                                         content: >-
-                                          <img src="/images/icons/related_majors.png" alt="icon of a clipboard">
+                                          <img src="../../images/icons/related_majors.png" alt="icon of a clipboard">
                                           <h2>Related Majors</h2>
                                           <p>List of related majors</p>
                                 bottom_second:
@@ -87,7 +87,7 @@ page:
                                       with:
                                         label: ''
                                         content: >-
-                                          <img src="/images/icons/sample_careers.png" alt="icon of a speach bubble">
+                                          <img src="../../images/icons/sample_careers.png" alt="icon of a speach bubble">
                                           <h2>Sample Jobs</h2>
                                           <ul>
                                             <li>Social Media Coordinator</li>
@@ -119,7 +119,7 @@ page:
                                     with:
                                       label: ''
                                       content: >-
-                                        <img src="/images/icons/department.png" alt="icon of some hexagons clustered together">
+                                        <img src="../../images/icons/department.png" alt="icon of some hexagons clustered together">
                                         <h2>Department</h2>
                                         <p>Department contact info</p>
         site_footer:
