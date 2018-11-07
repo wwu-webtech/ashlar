@@ -75,15 +75,20 @@ page:
                                   - include():
                                       pattern: organisms-block-template-html
                                       with:
-                                        label: 'Related Majors'
-                                        content: 'List of related majors'
+                                        label: ''
+                                        content: >-
+                                          <img src="/images/icons/related_majors.png" alt="icon of a clipboard">
+                                          <h2>Related Majors</h2>
+                                          <p>List of related majors</p>
                                 bottom_second:
                                   join():
                                   - include():
                                       pattern: organisms-block-template-html
                                       with:
-                                        label: 'Jobs with this Degree'
+                                        label: ''
                                         content: >-
+                                          <img src="/images/icons/sample_careers.png" alt="icon of a speach bubble">
+                                          <h2>Sample Jobs</h2>
                                           <ul>
                                             <li>Social Media Coordinator</li>
                                             <li>Videogame Plotting/Design</li>
@@ -112,6 +117,41 @@ page:
                                   include():
                                     pattern: organisms-block-template-html
                                     with:
-                                      label: 'Department'
-                                      content: 'Department contact info'
-        site_footer: organisms-site-footer-html
+                                      label: ''
+                                      content: >-
+                                        <img src="/images/icons/department.png" alt="icon of some hexagons clustered together">
+                                        <h2>Department</h2>
+                                        <p>Department contact info</p>
+        site_footer:
+          include():
+            pattern: organisms-site-footer-html
+            with:
+              footer_left:
+                '
+                <div class="region region--footer_left">
+                  <span class="badge">Badge of Recognition</span>
+                </div>
+                '
+              footer_center:
+                '
+                <div class="region region--footer_center">
+                  <ul class="blue menu">
+                    <li><a href="#">Campus Safety Resources</a></li>
+                    <li><a href="#">Together Against Sexual Violence</a></li>
+                    <li><a href="#">Regarding Public Expression and Assembly</a></li>
+                    <li><a href="#">Emergency and Weather Information</a></li>
+                    <li><a href="#">Disclosure of Consumer Information</a></li>
+                  </ul>
+                </div>
+                '
+              footer_right:
+                '
+                <div class="region region--footer_right">
+                  <h2>Related Links</h2>
+                  <ul class="blue menu">
+                    <li><a href="#">Western Washington University</a></li>
+                    <li><a href="#">Campus Directory</a></li>
+                    <li><a href="#">Alphabetic Index</a></li>
+                  </ul>
+                </div>
+                '

@@ -3,18 +3,85 @@
 * templates/major-page/_major-page.scss
 */
 .page-node-type-major {
+  .page-content {
+    margin-bottom: 0;
+  }
+
   .layout--majors {
     .layout__region--first {
       @include breakpoint($medium) {
-        padding: 0 $double-spacing;
+        margin: $standard-spacing 0;
+        padding: $double-spacing;
       }
-      width: 100%;
+      position: relative;
       margin: $standard-spacing 0 0 0;
-      padding: $standard-spacing;
+      padding: 0 $standard-spacing;
       font-size: $font-size--smaller;
 
       h2 {
         font-size: $h4-font-size;
+      }
+
+      &:before,
+      &:after {
+        @include breakpoint($medium) {
+          display: none;
+        }
+        position: absolute;
+        top: 0;
+        left: -$standard-spacing;
+        display: block;
+        width: $standard-spacing;
+        height: 100%;
+        content: "";
+        background-color: $dark-blue;
+      }
+
+      &:after {
+        top: 0;
+        right: -$standard-spacing;
+        left: inherit;
+      }
+
+      .majors-menu {
+        @include breakpoint($medium) {
+          display: inherit;
+        }
+        display: none;
+      }
+
+      .majors-call-to-action {
+        @include breakpoint(max-width $medium) {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          display: flex;
+          align-items: center;
+          width: 100vw;
+          padding: $half-spacing $standard-spacing;
+          background: $dark-blue;
+
+          .button {
+            margin: 0 $standard-spacing 0 0;
+            padding: $half-spacing $standard-spacing;
+            border-width: $border-width;
+            font-size: $font-size--smaller;
+          }
+
+          .close {
+            position: absolute;
+            right: 0;
+            width: 40px;
+            height: 40px;
+            margin: 0;
+            background: $dark-blue;
+          }
+        }
+        @include breakpoint($medium) {
+          .close {
+            display: none;
+          }
+        }
       }
     }
 
@@ -23,46 +90,17 @@
         padding: 0 $double-spacing;
       }
     }
-  }
 
-  .majors-menu {
-    @include breakpoint($medium) {
-      display: inherit;
-    }
-    display: none;
-    margin-top: $h2-font-size;
-  }
-
-  .majors-call-to-action {
-    @include breakpoint(max-width $medium) {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      display: flex;
-      align-items: center;
-      width: 100vw;
-      padding: $half-spacing $standard-spacing;
-      background: $dark-blue;
-
-      .button {
-        margin: 0 $standard-spacing 0 0;
-        padding: $half-spacing $standard-spacing;
-        border-width: $border-width;
-        font-size: $font-size--smaller;
+    .layout__region--bottom-first,
+    .layout__region--bottom-second,
+    .layout__region--bottom-third {
+      img {
+        display: block;
+        margin: auto;
       }
 
-      .close {
-        position: absolute;
-        right: 0;
-        width: 40px;
-        height: 40px;
-        margin: 0;
-        background: $dark-blue;
-      }
-    }
-    @include breakpoint($medium) {
-      .close {
-        display: none;
+      h2 {
+        text-align: center;
       }
     }
   }
