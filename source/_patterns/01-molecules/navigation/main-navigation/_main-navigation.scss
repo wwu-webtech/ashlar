@@ -9,10 +9,12 @@
     height: inherit;
     min-height: 0;
     background: transparent;
+    display: block !important;
   }
   min-height: 100vh;
   background: $dark-blue;
-  font-size: $splash-font-size;
+  font-size: $splash-font-size;  
+  display: none;
 
   & > .menu,
   .ultimenu--main,
