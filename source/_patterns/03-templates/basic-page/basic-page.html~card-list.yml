@@ -22,5 +22,5 @@ page:
                     pattern: organisms-block-template-html-main
                     with:
                       content: organisms-card-list-html
-        footer: organisms-wwu-footer-html
+        site_footer: organisms-site-footer-html
 

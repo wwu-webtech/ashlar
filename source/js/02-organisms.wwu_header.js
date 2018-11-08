@@ -3,7 +3,7 @@ var $toggle_close_menu = $('.toggle-close-menu', context);
 
 function toggle_open_menu(event) {
   $toggle_open_menu.off('click', toggle_open_menu);
-
+  $('.nav--main').show();
   $('.nav--main').animate(
     {
       right: '0',
@@ -33,6 +33,7 @@ function toggle_close_menu(event) {
       duration: 'normal',
       easing: 'swing',
       complete: function () {
+        $('.nav--main').hide();
         $toggle_close_menu.removeClass('is-expanded');
 
         $toggle_close_menu.on('click', toggle_close_menu);

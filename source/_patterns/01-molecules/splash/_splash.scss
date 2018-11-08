@@ -5,14 +5,15 @@
 
 .splash {
   @include breakpoint($medium) {
+    align-content: center;
     min-height: 300px;
     max-height: 50vh;
     margin-top: -($toggle-size);
 
     -ms-grid-columns: $standard-spacing 7fr 1fr $standard-spacing;
-    -ms-grid-rows: 280px auto $double-spacing;
+    -ms-grid-rows: 280px 1fr $double-spacing;
     grid-template-columns: $standard-spacing 7fr 1fr $standard-spacing;
-    grid-template-rows: 280px auto $double-spacing;
+    grid-template-rows: 280px 1fr $double-spacing;
   }
   @include breakpoint($large) {
     margin-top: -($toggle-size--larger);
@@ -42,7 +43,7 @@
     -ms-grid-column-span: all;
     -ms-grid-row: 1;
     grid-row: 1 / span 1;
-    -ms-grid-row-span: 1;
+    -ms-grid-row-span: 1;    
   }
 
   & > :nth-of-type(2) {

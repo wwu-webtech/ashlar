@@ -26,9 +26,6 @@
 }
 
 .social-media-links {
-  @include breakpoint($large) {
-    max-width: 500px;
-  }
   display: flex;
   flex-flow: row wrap;
   max-width: 400px;
@@ -36,6 +33,6 @@
   list-style: none;
 
   .social-icon {
-    margin: $half-spacing;
+    margin: $standard-spacing $standard-spacing 0 0;
   }
 }

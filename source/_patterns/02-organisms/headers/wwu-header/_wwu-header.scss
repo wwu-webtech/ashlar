@@ -65,7 +65,7 @@ $site-name-gradient-end: transparentize($dark-blue, 0.2);
       -ms-grid-row: 1;
       -ms-grid-row-span: 1;
 
-      a {
+      .western-home-link {
         @include breakpoint($medium) {
           padding-right: 0;
         }

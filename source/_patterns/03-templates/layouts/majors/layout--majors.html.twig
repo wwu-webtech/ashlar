@@ -1,0 +1,56 @@
+{#
+/**
+* @see templates/layouts/majors/layout--majors.html.twig
+*/
+#}
+{%
+set classes = [
+'layout',
+'layout--majors'
+]
+%}
+{% if content %}
+<div{{ attributes.addClass(classes) }}>
+
+  {% if content.top %}
+  <div {{ region_attributes.top.addClass('layout__region', 'layout__region--top') }}>
+    {{ content.top }}
+  </div>
+  {% endif %}
+
+  <div {{ region_attributes.first.addClass('layout__region', 'layout__region--first') }}>
+    <div class="majors-menu">
+      <ul class="dark-blue menu">
+        <li><a class="introduction-anchor-link" href="#introduction">Introduction</a></li>
+        <li><a class="beyond-anchor-link" href="#beyond-the-classroom">Beyond the Classroom</a></li>
+        <li><a class="careers-anchor-link" href="#careers-graduate-studies">Careers and Graduate Studies</a></li>
+      </ul>
+    </div>
+  </div>
+
+  {% if content.second %}
+  <div {{ region_attributes.second.addClass('layout__region', 'layout__region--second') }}>
+    {{ content.second }}
+  </div>
+  {% endif %}
+
+  {% if content.bottom_first %}
+  <div {{ region_attributes.bottom_first.addClass('layout__region', 'layout__region--bottom-first') }}>
+    {{ content.bottom_first }}
+  </div>
+  {% endif %}
+
+  {% if content.bottom_second %}
+  <div {{ region_attributes.bottom_second.addClass('layout__region', 'layout__region--bottom-second') }}>
+    {{ content.bottom_second }}
+  </div>
+  {% endif %}
+
+  {% if content.bottom_third %}
+  <div {{ region_attributes.bottom_third.addClass('layout__region', 'layout__region--bottom-third') }}>
+    {{ content.bottom_third }}
+  </div>
+  {% endif %}
+
+</div>
+{% endif %}
