@@ -1,0 +1,11 @@
+/**
+* @file
+* 00-molecules/navigation/horizontal-menu/_horizontal-menu.scss
+*/
+
+.menu  {
+  &.horizontal {
+    display: flex;
+    justify-content: center;
+  }
+}
