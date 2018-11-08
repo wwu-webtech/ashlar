@@ -9,7 +9,7 @@
   display: none;
 }
 .nav--main,
-.block-system-main-menu {
+#block-system-main-menu {
   @include breakpoint($medium) {
     height: inherit;
     min-height: 0;
@@ -48,6 +48,6 @@
   }
 }
 
-.block-system-main-menu ul ul {
+#block-system-main-menu ul ul {
   display: none; // hide nested menus on non ultimenu main nav blocks
 }
