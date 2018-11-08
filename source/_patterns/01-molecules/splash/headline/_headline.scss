@@ -11,11 +11,12 @@ $headline-gradient-end: transparentize($black, 0.5);
   }
   padding: $standard-spacing;
   background-color: $blue;
+  color: $text-color-light;
 
   h2 {
     margin-top: $standard-spacing;
     text-transform: uppercase;
-    color: $white;
+    color: $text-color-light;
     border-bottom: none;
     font-family: $sans-serif;
   }
