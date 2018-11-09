@@ -1,7 +1,7 @@
-  /**
- * @file
- * organisms/sections/card-list/_card-row.scss
- */
+/**
+* @file
+* organisms/sections/card-list/_card-row.scss
+*/
 $card-height: 300px;
 
 .card-row,
@@ -27,6 +27,7 @@ $card-height: 300px;
       img {
         object-fit: cover;
         height: 100%;
+        width: 100%;
       }
     }
 

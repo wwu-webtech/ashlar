@@ -1,12 +1,8 @@
-# WWU Living Style Guide
-This is all a work in progress. If you figure out a better way to do something/explain something, please do not hesitate edit this guide.
-
+# Ashlar and the WWU Design System
 ## Overview
-We are developing a living style guide for Western's campus sites. Because we are planning on transitioning into Drupal 8 soon, this seems like the perfect opportunity to use some of the newer tools available for both making development within Drupal 8 easier, as well as tools created specifically for the purpose of making living style guides.
+We are developing a design system for Western's campus sites. Because we are planning on transitioning into Drupal 8, this is the perfect opportunity to use some of the newer tools available for both making development within Drupal 8 easier, as well as tools created specifically for the purpose of making design systems and living style guides.
 
-The general idea is that we will be developing a component based Drupal 8 theme that will serve both as a public facing style guide as well as a base theme for future sites.
-
-Some tools that we are currently utilizing for this process are Lando, Pattern Lab, and Shila.
+The general idea is that we will be developing a component based Drupal 8 theme that will serve both as a public facing style guide as well as a base theme for future Drupal and static sites.
 
 ### Lando
 [Lando](https://docs.devwithlando.io/) is a local development environment build on Docker. It allows you to very quickly spin up Drupal 8 project without needing to have any sort of virtual machines running. Nifty!
@@ -22,35 +18,35 @@ The static site that Pattern Lab generates isn't meant to be public facing, but 
 [Shila](https://github.com/aleksip/shila-drupal-theme) is a Drupal 8 starter theme created by [Alek Sip](https://www.aleksip.net/projects), which ties together Pattern Lab with a functional Drupal 8 theme. It uses a plugin by the same author called [Data Transform Plugin](https://github.com/aleksip/plugin-data-transform) that is very useful for keeping patterns consistent between Pattern Lab and Drupal while allowing for unique data at each level. Our Drupal 8 theme, Ashlar, was originally built from Shila.
 
 ### Developing with Pattern Lab and Ashlar
-The general idea is that you have Pattern Lab installed *inside* of the Ashlar Theme. This Pattern Lab installation doesn't have any template files of it's own, though. Instead it goes down one folder and grabs all of its templates and styles from the theme to generate things. That way, as you are developing the theme you can generate that handy Pattern Lab static site (which is great for the design development process) while at the same time you're building out the theme for Drupal itself.
-
-This is great because:
-
-* You don't need any content on the Drupal site as you're developing styles
-* But, you *can* check the styles as they'll look on the Drupal site if you DO have content
-* You don't need to clear Drupal caches, you can just look at them on the static site (quick!)
+The general idea is that you have Pattern Lab installed *inside* of the Ashlar Theme. This Pattern Lab installation doesn't have any template files of it's own. Instead it goes down one folder and grabs all of its templates and styles from the theme to generate patterns. This theme has been developed for Drupal 8, so many of the twig templates use the structure of a Drupal 8 site. However, the stylesheets and templates that are output by pattern lab are also useful for building static sites with these components.
 
 ## Getting Started
 
-### I. Lando
-Download and install version v3.0.0-beta.39 of lando (or the latest **stable** version. Be sure to read the release notes, some versions contain hot fixes that will cause problems in this installation process) [Lando](https://github.com/lando/lando/releases).
+### I. Drupal
+If you are installing Ashlar & Pattern Lab as part of developing a Drupal 8 site, follow the instructions for our [composer installation](https://bitbucket.org/wwuweb/wwu_drupal8_composer). Then, skip to step IV. Pattern Lab below.
 
-### II. Drupal
-Download the latest stable version of [Drupal 8](https://www.drupal.org/download). Unzip the archive and use the terminal to navigate into the folder `drupal-8.x.x`.
+If you are not planning on developing a Drupal 8 site, then proceed with the instructions below.
 
-In the terminal, run:
+### II. Ashlar
+First, clone this repository to your local machine.
 
-    lando init
+    git clone git@bitbucket.org:wwuweb/ashlar.git
 
-  * Select drupal8 from the recipe list
+### III. Lando
+Download and install the latest **stable** version of [Lando](https://github.com/lando/lando/releases).
+
+In the terminal, navigate into the ashlar director `cd ashlar`, then run `lando init`
+
+  * Select custom from the recipe list
+  * Don't enter anything for Pantheon machine token (just hit enter)
   * Webroot should be this folder `.`
-  * You can call the app whatever you want (Ex: Living Style Guide)
+  * You can call the app whatever you want
 
-Open the .lando.yml file and replace the text with this lando profile:
+Open the .lando.yml file in a text editor and replace the text with this lando profile:
 
 ```yaml
-name: wwu-style-guide
-recipe: drupal8
+name: your-app-name
+recipe: custom
 
 config:
   webroot: .
@@ -73,52 +69,16 @@ tooling:
     service: node
 ```
 
-To spin up a local server and install required services run `lando start`.
+Then run the following commmands:
 
-Open one of the URLs output to the screen in a browser (something like `http://localhost:32787` or `http://my-app-name.lndo.site`) and follow the on screen instructions to install Drupal.
-
-  * When you get to the database screen you can get the username, password, and database name (probably all `drupal8`) by running
-
-        lando info
-
-  * Under advanced options, the host should be changed to whatever is listed under `internal_connection` (likely `database`)
-  * None of the other installation options really matter at this point so just put anything for site name, username, etc
-
-### III. Ashlar
-Download these modules:
-
-  * [Component Libraries](https://www.drupal.org/project/components)
-  * [UI Patterns](https://www.drupal.org/project/ui_patterns)
-
-**The theme will not work unless Component Libraries is installed and enabled.** UI Paterns is Optional.
-
-You can install the required Component Libraries module via composer in the root of your `drupal-8.x.x` directory:
-
-    lando composer require drupal/components
-
-Enable it through the Drupal interface (under the **Extend** tab) or with drush.
-
-    lando composer require drush/drush
-    lando drush en components
-
-UI Patterns can be installed with drush:
-
-    lando drush dl ui_patterns
-    lando drush en ui_patterns
-
-Clone Ashlar into the `drupal-8.x.x/themes` folder:
-
-    git clone https://bitbucket.org/wwuweb/ashlar
-
-Enable the theme in Drupal under the **Appearance** tab and set it as default. Navigate into `drupal-8.x.x/themes/ashlar` and run:
-
+    lando start
     lando npm install
     lando gulp
 
-At this point you should be able to navigate to the site and see some very basic styles.
+These steps will each take a few moments to complete. `lando start` initiates the lando container. `lando npm install` installs npm locally within the ashlar folder. `lando gulp` runs various tasks, including compiling the theme files.
 
-### IV. Pattern Lab
-Within `drupal-8.x.x/themes/ashlar` run (do NOT prefix with `lando`):
+### IV. Pattern Lab   
+Within `ashlar` run (do NOT prefix with `lando`):
 
     ./patternlab-install.sh
 
@@ -126,11 +86,14 @@ Once the install script has completed, run:
 
     ./patternlab-provision.sh
 
+These commands install and provision pattern lab inside of the Ashlar folder.
+
+#### Running Patternlab
 Compile the theme static assets to the Pattern Lab source directory:
 
     lando gulp patternlab
 
-To build the pattern lab site for the first time, run:
+To build the pattern lab site run:
 
     lando php pattern-lab/core/console --generate
 
@@ -140,31 +103,28 @@ To serve the Pattern Lab files locally, you'll need to run PHP directly on your 
 
 Navigate to `http://localhost:8080` in your browser to view the Pattern Lab standalone site. You can leave the server running by opening a new terminal window and running this command, which will allow you to continue working with other commands without needing to repeatedly restart the Pattern Lab server.
 
-#### Installing standalone Pattern Lab
-One thing I found helpful was to install a pre-made Pattern Lab twig edition separately from the whole Drupal installation, to have a different and more complete template to refer to. The easiest way to do this is to download one from [this page](https://github.com/pattern-lab/edition-php-twig-standard/releases)
-
-You can view the demo page by running the following within the `twig-standard` folder
-
-    php core/console --generate
-    php core/console --server --port 8000
-
-(note: I specified a port here so that both instances of pattern lab can be served locally at the same time, the default port is 8080)
-
-### V. Editing the Theme
+#### Developing Patterns
 Changes to the theme will mostly happen in files contained in `ashlar/source/_patterns`. The `_patterns` folder is organized into the atoms -> molecules -> organisms -> templates -> pages scheme. Sub folders dictate how the static site will nest different components.
 
-#### Drupal Site
-After making changes to static assets (CSS and JS), recompile the theme:
+After making changes to twig, sass, and yaml files, you can review you changes in patternlab by running the three above commands in sequence:
+
+    lando gulp patternlab
+    lando php pattern-lab/core/console --generate
+    php pattern-lab/core/console --server
+
+It can be helpful to put these commands into a small bash script to speed up your workflow.
+
+#### Compiling changes for an external stylesheet
+Running the following compile the ashlar `\_pattern files` into the `build` directory.
 
     lando gulp
 
-To see the changes in Drupal, you'll probably need to clear the cache. You can do this within the Drupal interface or run `lando drush cr`.
+If you are developing a Drupal 8 site, you will need to run this command along with `lando drush cr` to see your changes reflected in your local Drupal site.
 
-#### Pattern Lab
-To see the changes in Pattern Lab, you'll need to first compile the static assets so that they are available to Pattern Lab:
+If you are devloping outside of Drupal, there are a handful of files in `ashlar\build\css`, but the two most useful for developing external sites are `components.css` and `layout.css`
 
-    lando gulp patternlab
+Eventually we would like to have these compiled css files hosted somewhere that can be referenced by campus sites. In the interim, any sites that are built to utilize ashlar should reference these two css files.
 
-Then, regenerate the static site:
+`components.css` is the main stylesheet, and contains the styles for the majority of the patterns.
 
-    php pattern-lab/core/console --generate
+`layout.css` contains the styles for the `_patterns/03-templates/layouts`
