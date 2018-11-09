@@ -63,7 +63,7 @@ $splash-font-size: calc(#{$min-splash-font-size} + #{strip-unit($max-splash-font
 $font-size--smaller: 0.8em;
 $font-size--smallest: 0.6em;
 
-// CSS Classes
+// CSS Classes for font formatting
 .sans-serif {
   font-family: $sans-serif;
 }
@@ -71,4 +71,24 @@ $font-size--smallest: 0.6em;
 .serif {
   font-family: $serif;
   font-size: 1.2em;
+}
+
+.semi-bold {
+  font-weight: $font-weight--medium;
+}
+
+.bold {
+  font-weight: $font-weight--bold;
+}
+
+.bolder {
+  font-weight: $font-weight--black;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }

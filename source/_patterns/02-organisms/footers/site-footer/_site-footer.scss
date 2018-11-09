@@ -133,4 +133,8 @@
       }
     }
   }
+
+  .ribbon {
+    transform: translatey(-($double-spacing * 2));
+  }
 }
