@@ -4,13 +4,13 @@
  */
 #}
 <div class="site-footer">
-  {% if footer_left %}
-    {{ footer_left }}
+  {% if page.footer_left %}
+    {{ page.footer_left }}
   {% endif %}
-  {% if footer_center %}
-    {{ footer_center }}
+  {% if page.footer_center %}
+    {{ page.footer_center }}
   {% endif %}
-  {% if footer_right %}
-    {{ footer_right }}
+  {% if page.footer_right %}
+    {{ page.footer_right }}
   {% endif %}
 </div>
