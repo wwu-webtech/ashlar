@@ -4,6 +4,10 @@
 */
 
 .search {
+  @include breakpoint($medium) {
+    right: inherit;
+    left: inherit;
+  }
   position: absolute;
   z-index: 0;
   top: $toggle-size--larger;
@@ -38,13 +42,15 @@
 
     .search-box {
       input {
-        @include breakpoint($small) {
-          min-width: 280px;
+        @include breakpoint($medium) {
+          height: $toggle-size;
         }
         @include breakpoint($large) {
+          height: $toggle-size--larger;
           padding: $standard-spacing;
         }
-        height: 100%;
+        max-width: calc(100vw - (#{$toggle-size--larger} * 2));
+        height: $toggle-size--larger;
         margin: 0;
         padding: $half-spacing;
         border-color: $blue;

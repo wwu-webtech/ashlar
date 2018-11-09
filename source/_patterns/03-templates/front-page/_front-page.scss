@@ -30,7 +30,20 @@ $dark-shade-bg-2: mix($white, $blue, 80%);
 
   .splash {
     @include breakpoint($medium) {
+      min-height: 600px;
       max-height: 70vh;
+    }
+
+    & > :nth-of-type(1) {
+      div {
+        height: 100%;
+      }
+
+      img {
+        height: 100%;
+
+        object-fit: cover;
+      }
     }
   }
 

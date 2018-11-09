@@ -147,4 +147,4 @@ page:
                                         content: "<a class='button alt'>More News</a>"
                                 bottom: ""
 
-        footer: organisms-wwu-footer-html
+        site_footer: organisms-site-footer-html

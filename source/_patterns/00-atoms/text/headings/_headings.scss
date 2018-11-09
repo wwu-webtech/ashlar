@@ -55,6 +55,19 @@ h5 {
   h4,
   h5,
   h6 {
-    color: $light-blue;
+    color: $white;
+    font-family: $sans-serif;
+  }
+
+  h2 {
+    border-bottom-color: $light-green;
+  }
+
+  h3 {
+    color: $lightest-green
+  }
+
+  h4 {
+    color: $light-green;
   }
 }

@@ -1,0 +1,68 @@
+/**
+ * @file
+ * templates/layouts/majors/_layout--majors.scss
+ */
+
+.layout--majors {
+  display: flex;
+  flex-wrap: wrap;
+
+
+  > .layout__region {
+    flex: 0 1 100%;
+  }
+
+  > .layout__region--top {
+    order: 1;
+  }
+
+  > .layout__region--first {
+    @include breakpoint($medium) {
+      flex: 0 1 30%;
+      order: 2;
+      max-width: 30%;
+      padding-right: $standard-spacing;
+    }
+    order: 6;
+  }
+
+  > .layout__region--second {
+    @include breakpoint($medium) {
+      flex: 0 1 70%;
+      order: 3;
+      max-width: 70%;
+      padding-left: $standard-spacing;
+    }
+    order: 2;
+  }
+
+  > .layout__region--bottom-first {
+    @include breakpoint($medium) {
+      flex: 0 1 33%;
+      order: 4;
+      max-width: 33%;
+      padding-right: $standard-spacing;
+    }
+    order: 3;
+  }
+
+  > .layout__region--bottom-second {
+    @include breakpoint($medium) {
+      flex: 0 1 34%;
+      order: 5;
+      max-width: 34%;
+      padding: 0 $standard-spacing;
+    }
+    order: 4;
+  }
+
+  > .layout__region--bottom-third {
+    @include breakpoint($medium) {
+      flex: 0 1 33%;
+      order: 6;
+      max-width: 33%;
+      padding-left: $standard-spacing;
+    }
+    order: 5;
+  }
+}

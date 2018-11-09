@@ -4,24 +4,17 @@ var $close_flyout = $('.close-flyout', context);
 
 function open_mobile_flyout(event) {
   if ($(window).width() < 841) {
+    $(this).siblings('.ultimenu__flyout').show();
     $(this).siblings('.ultimenu__flyout').animate(
       {
         right: '0',
-        opacity: 1
+        opacity: '1'
       },
       {
         duration: 'fast',
         easing: 'linear',
         complete: function () {
-          $ultimenu_link.not(this).siblings('.ultimen__flyout').animate(
-            {
-              right: '100%',
-              opacity: 0
-            },
-            {
-              duration: 0
-            }
-          );
+
         }
       }
     );
@@ -33,12 +26,13 @@ function close_mobile_flyout(event) {
     $ultimenu_link.siblings('.ultimenu__flyout').animate(
       {
         right: '-100%',
-        opacity: 0
+        opacity: '0'
       },
       {
         duration: 'fast',
         easing: 'linear',
         complete: function () {
+          $('.ultimenu__flyout').hide(400);
         }
       }
     );

@@ -87,8 +87,9 @@
       -ms-grid-row: 3;
       -ms-grid-row-span: 1;
       justify-self: end;
+      justify-content: right;
     }
-    justify-content: space-around;
+    justify-content: center;
 
     grid-area: icons;
     -ms-grid-column: 2;
@@ -96,9 +97,10 @@
     -ms-grid-row: 6;
     -ms-grid-row-span: 1;
 
-    a {
+    .social-icon {
       outline: none;
       background-color: $white;
+      margin: $standard-spacing 0 0 $standard-spacing;
 
       svg {
         fill: $dark-blue;

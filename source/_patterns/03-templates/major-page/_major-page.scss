@@ -1,0 +1,48 @@
+/**
+* @file
+* templates/major-page/_major-page.scss
+*/
+.page-node-type-major {
+  .layout--majors {
+    .layout__region--first {
+      @include breakpoint($medium) {
+        margin: $standard-spacing 0;
+        padding: $double-spacing;
+      }
+      position: relative;
+      margin: $standard-spacing 0 0 0;
+      padding: 0 $standard-spacing;
+      font-size: $font-size--smaller;
+
+      h2 {
+        font-size: $h4-font-size;
+      }
+
+      .majors-menu {
+        @include breakpoint($medium) {
+          display: inherit;
+        }
+        display: none;
+      }
+    }
+
+    .layout__region--second {
+      @include breakpoint($medium) {
+        padding: 0 $double-spacing;
+      }
+    }
+
+    .layout__region--bottom-first,
+    .layout__region--bottom-second,
+    .layout__region--bottom-third {
+      img {
+        display: block;
+        margin: auto;
+      }
+
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+}

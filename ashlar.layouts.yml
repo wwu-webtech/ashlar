@@ -47,3 +47,22 @@ layout_twocol_34_66:
       label: Second
     bottom:
       label: Bottom
+layout_majors:
+  label: 'Majors'
+  path: templates/layout/majors
+  template: layout--majors
+  category: 'Columns: 2'
+  default_region: first
+  icon_map:
+    - [top]
+    - [first, second, second]
+    - [bottom]
+  regions:
+    top:
+      label: Top
+    first:
+      label: First
+    second:
+      label: Second
+    bottom:
+      label: Bottom
