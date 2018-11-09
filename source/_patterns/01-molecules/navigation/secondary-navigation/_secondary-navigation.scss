@@ -1,7 +1,44 @@
 /**
- * @file
- * 01-molecules/navigation/secondary-navigation/_secondary-navigation.scss
- */
+* @file
+* 01-molecules/navigation/secondary-navigation/_secondary-navigation.scss
+*/
+$small-triangle-size: $half-spacing;
+$large-triangle-size: $standard-spacing;
+
 .nav--secondary {
-  background: purple;
+    li {
+      margin: 0 $half-spacing;
+
+      a {
+        position: relative;
+        border-bottom: solid $border-width $dark-blue;
+        font-family: $serif;
+        font-size: $h4-font-size;
+
+        &:hover:after,
+        &.active:after {
+          position: absolute;
+          bottom: -($small-triangle-size + $half-spacing + $border-width); // triangle + padding + border
+          left: 50%;
+          display: block;
+          width: 0;
+          height: 0;
+          content: "";
+          transform: translatex(-50%);
+          border-width: $half-spacing;
+          border-style: solid;
+          border-color: transparent;
+          border-top-color: $dark-blue;
+        }
+
+        &.active:after {
+          bottom: -($large-triangle-size + $standard-spacing + $border-width);
+          border-width: $large-triangle-size;
+        }
+
+        &.active {
+          background: $light-gray;
+        }
+      }
+    }
 }
