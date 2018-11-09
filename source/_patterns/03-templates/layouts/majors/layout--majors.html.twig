@@ -15,18 +15,18 @@ set classes = [
   {% if content.top %}
   <div {{ region_attributes.top.addClass('layout__region', 'layout__region--top') }}>
     {{ content.top }}
-  </div>
-  {% endif %}
 
-  <div {{ region_attributes.first.addClass('layout__region', 'layout__region--first') }}>
     <div class="majors-menu">
-      <ul class="dark-blue menu">
+      <ul class="horizontal blue menu">
         <li><a class="introduction-anchor-link" href="#introduction">Introduction</a></li>
         <li><a class="beyond-anchor-link" href="#beyond-the-classroom">Beyond the Classroom</a></li>
         <li><a class="careers-anchor-link" href="#careers-graduate-studies">Careers and Graduate Studies</a></li>
+        <li><a href="">Hypothetical Fourth Item</a></li>
+        <li><a href="">Fifth</a></li>
       </ul>
     </div>
   </div>
+  {% endif %}
 
   {% if content.second %}
   <div {{ region_attributes.second.addClass('layout__region', 'layout__region--second') }}>

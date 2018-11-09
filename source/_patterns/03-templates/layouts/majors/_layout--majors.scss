@@ -16,7 +16,7 @@
     order: 1;
   }
 
-  > .layout__region--first {
+  /*> .layout__region--first {
     @include breakpoint($medium) {
       flex: 0 1 30%;
       order: 2;
@@ -24,13 +24,13 @@
       padding-right: $standard-spacing;
     }
     order: 6;
-  }
+  }*/
 
   > .layout__region--second {
     @include breakpoint($medium) {
-      flex: 0 1 70%;
+      flex: 0 1 100%;
       order: 3;
-      max-width: 70%;
+      max-width: 100%;
       padding-left: $standard-spacing;
     }
     order: 2;

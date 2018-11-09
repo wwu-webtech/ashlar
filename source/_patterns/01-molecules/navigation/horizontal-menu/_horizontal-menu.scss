@@ -7,5 +7,9 @@
   &.horizontal {
     display: flex;
     justify-content: center;
+
+    li {
+      border-left: none;
+    }
   }
 }
