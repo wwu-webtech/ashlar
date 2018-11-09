@@ -1,0 +1,64 @@
+/**
+ * @file
+ * molecules/graphic-treatments/ribbon/_ribbon.scss
+ */
+$ribbon-width: 300px;
+$ribbon-tail-height: 50px;
+
+.ribbon {
+  @include transition($medium-transition-speed, $standard-ease);
+  position: relative;
+  display: block;
+  width: $ribbon-width;
+  padding: $double-spacing;
+  text-align: center;
+  letter-spacing: ($half-spacing) / 2;
+  background: $white;
+
+
+  &:before,
+  &:after {
+    @include transition($medium-transition-speed, $standard-ease);
+    transition-property: border-color;
+    position: absolute;
+    bottom: -$ribbon-tail-height;
+    display: block;
+    width: 0;
+    height: 0;
+    content: "";
+    border-top: $ribbon-tail-height solid $white;
+  }
+
+  &:before {
+    left: 0;
+    border-right: ($ribbon-width / 2) solid transparent;
+  }
+
+  &:after {
+    right: 0;
+    border-left: ($ribbon-width / 2) solid transparent;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background-color: $light-gray;
+  }
+
+  &:hover:after,
+  &:hover:before {
+    border-top-color: $light-gray;
+  }
+
+  .above {
+    display: block;
+    color: $blue;
+    border-bottom: $dark-blue $border-width solid;
+    font-size: 32px;
+  }
+
+  .below {
+    color: $dark-blue;
+    font-size: 22px;
+  }
+}
