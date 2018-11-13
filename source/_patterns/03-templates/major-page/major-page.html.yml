@@ -20,19 +20,19 @@ page:
                             pattern: templates-layout--majors-html
                             with:
                               content:
-                                top:
+                                title: >-
+                                  <div class="block block--nodemajortitle">
+                                    <span>Accounting</span>
+                                  </div>
+                                  <div class="block block--nodemajorfield-degree">
+                                    <div class="field__item">BA</div>
+                                  </div>
+                                introduction:
                                   include():
-                                    pattern: molecules-page-title-html
-                                    with:
-                                      title: 'Early Childhood Special Education P-3 and Early Childhood Education P-3 (Dual Endorsement)'
-                                second:
-                                  join():
-                                  - include():
                                       pattern: organisms-block-template-html
                                       with:
                                         label: ''
                                         content: >-
-                                          <div class="content active switch-01">
                                           <h2>Introduction</h2>
                                           <p>Biology is the study of living things and encompasses areas ranging from molecular biology to ecosystem ecology. This breadth is reflected in Western's curriculum and in faculty and student research.</p>
 
@@ -43,13 +43,12 @@ page:
                                           <p>Western’s Biology Department is part of the College of Science and Engineering.</p>
 
                                           <blockquote>Western's 82,000-square-foot Biology Building features teaching labs, research labs, environmental control rooms, a seawater lab, image analysis labs, and multimedia lecture halls. The Biology department also maintains a greenhouse on campus that supports teaching and research activities.</blockquote>
-                                          </div>
-                                  - include():
+                                beyond:
+                                  include():
                                       pattern: organisms-block-template-html
                                       with:
                                         label: ''
                                         content: >-
-                                          <div class="content switch-02">
                                           <h2 id="beyond-the-classroom">Beyond the Classroom</h2>
                                           <p>The Biology program provides a wide variety of opportunities for applied practice of knowledge and skills gained in lectures and labs. Undergraduates are encouraged to engage in research alongside faculty, serve as teaching assistants for biology courses, join the Biology club, and/or develop their own extracurricular experience through the independent study option. Additionally, some upper level labs follow a project-based curriculum that resemble research experiences. </p>
 
@@ -68,13 +67,12 @@ page:
                                               <span class="description">First Officer: USS Enterprise-D</span>
                                             </div>
                                           </div>
-                                          </div>
-                                  - include():
+                                careers:
+                                  include():
                                       pattern: organisms-block-template-html
                                       with:
                                         label: ''
                                         content: >-
-                                          <div class="content switch-03">
                                           <h2 id="careers-graduate-studies">Careers and Graduate Studies</h2>
 
                                           <p>Careers and Graduate Studies</p>
@@ -86,7 +84,6 @@ page:
                                           <p>Dr. Laurie Vitt - Professor of Zoology, University of Oklahoma</p>
 
                                           <p>George Lynn Cross - Research Professor & Curator of Reptiles, Sam Noble Oklahoma Museum of Natural History, and Member of the Brazilian Academy of Sciences</p>
-                                          </div>
                                 bottom_first:
                                   join():
                                   - include():
