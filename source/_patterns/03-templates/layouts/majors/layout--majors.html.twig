@@ -18,11 +18,9 @@ set classes = [
 
     <div class="majors-menu">
       <ul class="horizontal blue menu">
-        <li><a class="introduction-anchor-link" href="#introduction">Introduction</a></li>
-        <li><a class="beyond-anchor-link" href="#beyond-the-classroom">Beyond the Classroom</a></li>
-        <li><a class="careers-anchor-link" href="#careers-graduate-studies">Careers and Graduate Studies</a></li>
-        <li><a href="">Hypothetical Fourth Item</a></li>
-        <li><a href="">Fifth</a></li>
+        <li><button class="switch-01" href="#introduction">Introduction</button></li>
+        <li><button class="switch-02" href="#beyond-the-classroom">Beyond the Classroom</button></li>
+        <li><button class="switch-03" href="#careers-graduate-studies">Careers and Graduate Studies</button></li>
       </ul>
     </div>
   </div>
@@ -30,7 +28,9 @@ set classes = [
 
   {% if content.second %}
   <div {{ region_attributes.second.addClass('layout__region', 'layout__region--second') }}>
-    {{ content.second }}
+    <div class="content-switcher-container">
+      {{ content.second }}
+    </div>
   </div>
   {% endif %}
 
