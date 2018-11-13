@@ -32,7 +32,8 @@ page:
                                       with:
                                         label: ''
                                         content: >-
-                                          <div class="content switch-01">
+                                          <div class="content active switch-01">
+                                          <h2>Introduction</h2>
                                           <p>Biology is the study of living things and encompasses areas ranging from molecular biology to ecosystem ecology. This breadth is reflected in Western's curriculum and in faculty and student research.</p>
 
                                           <p>Western’s biology department employs a high concentration of faculty who are actively engaged in both teaching and research. Students in the Biology Department receive quality instruction from experts in the field who are committed to the education of the next generation. Modest class sizes enable faculty to facilitate small group discussions and student-centered learning activities in class. All upper level labs are taught by the faculty themselves, not graduate students. </p>
@@ -53,9 +54,21 @@ page:
                                           <p>The Biology program provides a wide variety of opportunities for applied practice of knowledge and skills gained in lectures and labs. Undergraduates are encouraged to engage in research alongside faculty, serve as teaching assistants for biology courses, join the Biology club, and/or develop their own extracurricular experience through the independent study option. Additionally, some upper level labs follow a project-based curriculum that resemble research experiences. </p>
 
                                           <p>The Biology Department works with Career Services to promote internships for external organizations to students and alumni. If students want to make these types of internships even more meaningful, they may elect to earn credit under BIOL 496. Students enrolled in BIOL 496 while completing their internship will be encouraged to reflect on their learning through journaling and other assignments under the direction of their faculty advisor, and the credit they earn upon completion may be applied to their program requirements.</p>
+
+                                          <div class="block block--testimonial">
+                                            <div class="image stylized">
+                                              <img src="../../images/pattern-lab/placeholder.png" alt="gray placeholder">
+                                            </div>
+
+                                            <div class="body">
+                                              Not if I weaken first. I'd like to think that I haven't changed those things, sir. You enjoyed that. I am your worst nightmare!
+                                            </div>
+                                            <div class="credit">
+                                              <span class="name"> William Riker</span>
+                                              <span class="description">First Officer: USS Enterprise-D</span>
+                                            </div>
                                           </div>
-                                  - include():
-                                      pattern: molecules-testimonial-style-a-html
+                                          </div>
                                   - include():
                                       pattern: organisms-block-template-html
                                       with:

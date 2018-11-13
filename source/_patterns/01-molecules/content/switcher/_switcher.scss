@@ -7,6 +7,7 @@
   display: flex;
   width: 100%;
   padding: 0;
+  margin: 0;
 
   li {
     display: inline-block;
@@ -24,12 +25,17 @@
   }
 
   button {
+    @include breakpoint($medium) {
+      padding: $standard-spacing $double-spacing;
+    }
     width: 100%;
+    height: 100%;
     max-width: none;
     color: $black;
     border-radius: 0;
     background-color: $white;
     margin-bottom: 0;
+    padding: $half-spacing;
 
     &:hover,
     &:focus {
@@ -49,12 +55,16 @@
 
 .content-switcher-container {
   display: grid;
-  margin: $double-spacing 0;
+  margin: $standard-spacing 0;
 
   .content {
     display: none;
 
     grid-column-start: 1;
     grid-row-start: 1;
+
+    &.active {
+      display: block;
+    }
   }
 }
