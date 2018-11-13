@@ -58,6 +58,7 @@ layout_majors:
     - [introduction]
     - [beyond]
     - [careers]
+    - [catalog]
     - [bottom_first, bottom_second, bottom_third]
   regions:
     title:
@@ -68,6 +69,8 @@ layout_majors:
       label: Beyond the Classroom
     careers:
       label: Careers & Graduate Studies
+    catalog:
+      label: Catalog Link
     bottom_first:
       label: Bottom Left
     bottom_second:
