@@ -38,7 +38,6 @@ th {
   border-left: none;
   background-color: mix(black, $light-gray, $percent-change);
   font-size: $font-size--smallest;
-  font-weight: $font-weight--medium;
 }
 td {
   @include breakpoint($medium) {
