@@ -31,6 +31,7 @@ $expand-toggle-size: 40px;
     font-size: $font-size--smaller;
 
     a {
+      display: -ms-grid;
       display: grid;
       align-content: center;
       min-height: 40px;
@@ -38,6 +39,8 @@ $expand-toggle-size: 40px;
       color: $black;
       border: none;
       background-color: $light-gray;
+
+      -ms-flex-line-pack: center;
 
       &:hover,
       &:focus {
