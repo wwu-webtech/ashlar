@@ -52,17 +52,25 @@ layout_majors:
   path: templates/layout/majors
   template: layout--majors
   category: 'Columns: 2'
-  default_region: first
+  default_region: top
   icon_map:
-    - [top]
-    - [first, second, second]
-    - [bottom]
+    - [title]
+    - [introduction]
+    - [beyond]
+    - [careers]
+    - [bottom_first, bottom_second, bottom_third]
   regions:
-    top:
-      label: Top
-    first:
-      label: First
-    second:
-      label: Second
-    bottom:
-      label: Bottom
+    title:
+      label: Title
+    introduction:
+      label: Introduction
+    beyond:
+      label: Beyond the Classroom
+    careers:
+      label: Careers & Graduate Studies
+    bottom_first:
+      label: Bottom Left
+    bottom_second:
+      label: Bottom Center
+    bottom_third:
+      label: Bottom Right

@@ -12,45 +12,60 @@ set classes = [
 {% if content %}
 <div{{ attributes.addClass(classes) }}>
 
-  {% if content.top %}
-  <div {{ region_attributes.top.addClass('layout__region', 'layout__region--top') }}>
-    {{ content.top }}
+{% if content.title %}
+<div {{ region_attributes.title.addClass('layout__region', 'layout__region--title') }}>
+  <h1>
+    {{ content.title }}
+  </h1>
 
-    <div class="majors-menu">
-      <ul class="content-switcher">
-        <li><button disabled="disabled" class="active switch-01">Introduction</button></li>
-        <li><button class="switch-02">Beyond the Classroom</button></li>
-        <li><button class="switch-03">Careers and Graduate Studies</button></li>
-      </ul>
+  <div class="majors-menu">
+    <ul class="content-switcher">
+      <li><button disabled="disabled" class="active switch-introduction">Introduction</button></li>
+      <li><button class="switch-beyond">Beyond the Classroom</button></li>
+      <li><button class="switch-careers">Careers and Graduate Studies</button></li>
+    </ul>
+  </div>
+</div>
+{% endif %}
+
+<div class="content-switcher-container">
+  {% if content.introduction %}
+  <div {{ region_attributes.introduction.addClass('layout__region', 'layout__region--introduction', 'content', 'switch-introduction', 'active') }}>
+    {{ content.introduction }}
+  </div>
+  {% endif %}
+
+  {% if content.beyond %}
+  <div {{ region_attributes.beyond.addClass('layout__region', 'layout__region--beyond', 'content', 'switch-beyond') }}>
+    {{ content.beyond }}
+  </div>
+  {% endif %}
+
+    {% if content.careers %}
+    <div {{ region_attributes.careers.addClass('layout__region', 'layout__region--careers', 'content', 'switch-careers') }}>
+      {{ content.careers }}
     </div>
-  </div>
-  {% endif %}
+    {% endif %}
+</div>
 
-  {% if content.second %}
-  <div {{ region_attributes.second.addClass('layout__region', 'layout__region--second') }}>
-    <div class="content-switcher-container">
-      {{ content.second }}
-    </div>
-  </div>
-  {% endif %}
 
-  {% if content.bottom_first %}
-  <div {{ region_attributes.bottom_first.addClass('layout__region', 'layout__region--bottom-first') }}>
-    {{ content.bottom_first }}
-  </div>
-  {% endif %}
+{% if content.bottom_first %}
+<div {{ region_attributes.bottom_first.addClass('layout__region', 'layout__region--bottom-first') }}>
+  {{ content.bottom_first }}
+</div>
+{% endif %}
 
-  {% if content.bottom_second %}
-  <div {{ region_attributes.bottom_second.addClass('layout__region', 'layout__region--bottom-second') }}>
-    {{ content.bottom_second }}
-  </div>
-  {% endif %}
+{% if content.bottom_second %}
+<div {{ region_attributes.bottom_second.addClass('layout__region', 'layout__region--bottom-second') }}>
+  {{ content.bottom_second }}
+</div>
+{% endif %}
 
-  {% if content.bottom_third %}
-  <div {{ region_attributes.bottom_third.addClass('layout__region', 'layout__region--bottom-third') }}>
-    {{ content.bottom_third }}
-  </div>
-  {% endif %}
+{% if content.bottom_third %}
+<div {{ region_attributes.bottom_third.addClass('layout__region', 'layout__region--bottom-third') }}>
+  {{ content.bottom_third }}
+</div>
+{% endif %}
 
 </div>
 {% endif %}
