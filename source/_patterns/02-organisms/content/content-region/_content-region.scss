@@ -12,28 +12,31 @@
   display: grid;
   margin: $standard-spacing 0;
 
-  grid-template-areas:
-  " . skip_to_content . "
+  -ms-grid-columns: $small-screen-columns;
+  -ms-grid-rows: auto;
+  grid-template-areas: " . skip_to_content . "
   " . content         . ";
+  grid-template-columns: $small-screen-columns;
+  grid-template-rows: auto;
 
 
   #main-content {
+    margin: inherit;
+    padding: 0;
+    border: none;
+
+    grid-area: skip_to_content;
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
-    grid-area: skip_to_content;
   }
-  -ms-grid-columns: $small-screen-columns;
-  -ms-grid-rows: auto;
-  grid-template-columns: $small-screen-columns;
-  grid-template-rows: auto;
 
   .region-wrapper {
+    grid-area: content;
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
-    grid-area: content;
   }
 }

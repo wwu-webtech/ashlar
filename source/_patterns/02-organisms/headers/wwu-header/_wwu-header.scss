@@ -71,7 +71,16 @@ $site-name-gradient-end: transparentize($dark-blue, 0.2);
         }
         display: flex;
         justify-content: center;
+        margin: inherit;
+        padding: 0;
         padding-right: $toggle-size--larger;
+        border: none;
+
+        &:active,
+        &:hover,
+        &:focus {
+          background: transparent;
+        }
       }
     }
 
@@ -96,9 +105,9 @@ $site-name-gradient-end: transparentize($dark-blue, 0.2);
       border-bottom: $border-width--thinner solid $blue;
       background: linear-gradient(to right, $site-name-gradient-start 0%, $site-name-gradient-end 100%);
       font-family: $serif;
+      font-size: $splash-font-size;
       font-weight: $font-weight--regular;
       line-height: 1.5em;
-      font-size: $splash-font-size;
     }
 
     .quick-links {

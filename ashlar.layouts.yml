@@ -59,7 +59,7 @@ layout_majors:
     - [beyond]
     - [careers]
     - [catalog]
-    - [bottom_first, bottom_second, bottom_third]
+    - [related_majors, sample_jobs, department]
   regions:
     title:
       label: Title
@@ -71,9 +71,9 @@ layout_majors:
       label: Careers & Graduate Studies
     catalog:
       label: Catalog Link
-    bottom_first:
+    related_majors:
       label: Bottom Left
-    bottom_second:
+    sample_jobs:
       label: Bottom Center
-    bottom_third:
+    department:
       label: Bottom Right
