@@ -25,12 +25,7 @@
     a {
       display: inline-block;
       font-weight: $font-weight--bold;
-
-      &:hover,
-      &:focus {
-        color: $green;
-        text-decoration: underline;
-      }
+      border: none;      
     }
     order: 3;
   }
