@@ -6,10 +6,12 @@
 .site-footer {
   @include breakpoint($medium) {
     -ms-grid-columns: $standard-spacing 1fr $standard-spacing 1fr $standard-spacing 1fr $standard-spacing;
-    -ms-grid-rows: auto;
-    grid-template-areas: ". footer_left . footer_center . footer_right .";
+    -ms-grid-rows: auto auto;
+    grid-template-areas:
+    ". footer_left . footer_center . footer_right ."
+    ". footer_bottom footer_bottom footer_bottom footer_bottom footer_bottom .";
     grid-template-columns: $standard-spacing 1fr $standard-spacing 1fr $standard-spacing 1fr $standard-spacing;
-    grid-template-rows: auto;
+    grid-template-rows: auto auto;
   }
   @include breakpoint($large) {
     -ms-grid-columns: 1fr ($max-content-width / 3) $standard-spacing ($max-content-width / 3) $standard-spacing ($max-content-width / 3) 1fr;
@@ -24,11 +26,13 @@
 
   -ms-grid-columns: $small-screen-columns;
   -ms-grid-rows: auto $standard-spacing auto $standard-spacing auto;
-  grid-template-areas: ". footer_left   ."
+  grid-template-areas:
+  ". footer_left   ."
   ". ............. ."
   ". footer_center ."
   ". ............. ."
-  ". footer_right  .";
+  ". footer_right  ."
+  ". footer_bottom .";
   grid-template-columns: $small-screen-columns;
   grid-template-rows: auto $standard-spacing auto $standard-spacing auto;
 
@@ -99,6 +103,20 @@
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+  }
+
+  .region--footer_bottom {
+    @include breakpoint($small) {
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 5;
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 1;
+    }
+    grid-area: footer_bottom;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 6;
     -ms-grid-row-span: 1;
   }
 
