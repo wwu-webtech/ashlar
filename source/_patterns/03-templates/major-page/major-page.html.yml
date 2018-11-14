@@ -84,7 +84,7 @@ page:
                                           <p>Dr. Laurie Vitt - Professor of Zoology, University of Oklahoma</p>
 
                                           <p>George Lynn Cross - Research Professor & Curator of Reptiles, Sam Noble Oklahoma Museum of Natural History, and Member of the Brazilian Academy of Sciences</p>
-                                bottom_first:
+                                related_majors:
                                   join():
                                   - include():
                                       pattern: organisms-block-template-html
@@ -94,7 +94,7 @@ page:
                                           <img src="../../images/icons/related_majors.png" alt="icon of a clipboard">
                                           <h2>Related Majors</h2>
                                           <p>List of related majors</p>
-                                bottom_second:
+                                sample_jobs:
                                   join():
                                   - include():
                                       pattern: organisms-block-template-html
@@ -127,7 +127,7 @@ page:
                                             <li>Legislative Assistant</li>
                                             <li>Archivist</li>
                                           </ul>
-                                bottom_third:
+                                department:
                                   include():
                                     pattern: organisms-block-template-html
                                     with:

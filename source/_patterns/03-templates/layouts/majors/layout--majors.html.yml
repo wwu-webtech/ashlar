@@ -19,13 +19,13 @@ region_attributes:
   catalog:
     Attribute():
       class:
-  bottom_first:
+  related_majors:
     Attribute():
       class:
-  bottom_second:
+  sample_jobs:
     Attribute():
       class:
-  bottom_third:
+  department:
     Attribute():
       class:
 content:
@@ -35,6 +35,6 @@ content:
   careers: "nemegtia tetragonosaurus. Abrictosaurus achillobator adeopapposaurus albalophosaurus amazonsaurus banji brachylophosaurus capitalsaurus draconyx epicampodon gigantosaurus"
   catalog: "<h2>Requirements and Course Details </h2>
   <p>To learn more about this program, including grade requirements, a course listing, how to declare the major, and more, see the <a href='#'>Program of Study Details.</a></p>"
-  bottom_first: "<h2>A New Section</h2> Barreleye dragonet fierasfer kafue lined porbeagle sheatfish slimy thorny tripletail turbot waryfish. African bonito climbing dwarf gila grideye lightfish roundhead scad snailfish spadefish tripod tubeshoulder. Carpsucker characin cornetfish cornish croaker eye glowlight gunnel kaluga major naked-back russian sarcastic snake south tarwhine yellow-eye zealand."
-  bottom_second: "<h2>A New Section</h2> Barreleye dragonet fierasfer kafue lined porbeagle sheatfish slimy thorny tripletail turbot waryfish. African bonito climbing dwarf gila grideye lightfish roundhead scad snailfish spadefish tripod tubeshoulder. Carpsucker characin cornetfish cornish croaker eye glowlight gunnel kaluga major naked-back russian sarcastic snake south tarwhine yellow-eye zealand."
-  bottom_third: "<h2>A New Section</h2> Barreleye dragonet fierasfer kafue lined porbeagle sheatfish slimy thorny tripletail turbot waryfish. African bonito climbing dwarf gila grideye lightfish roundhead scad snailfish spadefish tripod tubeshoulder. Carpsucker characin cornetfish cornish croaker eye glowlight gunnel kaluga major naked-back russian sarcastic snake south tarwhine yellow-eye zealand."
+  related_majors: "<h2>A New Section</h2> Barreleye dragonet fierasfer kafue lined porbeagle sheatfish slimy thorny tripletail turbot waryfish. African bonito climbing dwarf gila grideye lightfish roundhead scad snailfish spadefish tripod tubeshoulder. Carpsucker characin cornetfish cornish croaker eye glowlight gunnel kaluga major naked-back russian sarcastic snake south tarwhine yellow-eye zealand."
+  sample_jobs: "<h2>A New Section</h2> Barreleye dragonet fierasfer kafue lined porbeagle sheatfish slimy thorny tripletail turbot waryfish. African bonito climbing dwarf gila grideye lightfish roundhead scad snailfish spadefish tripod tubeshoulder. Carpsucker characin cornetfish cornish croaker eye glowlight gunnel kaluga major naked-back russian sarcastic snake south tarwhine yellow-eye zealand."
+  department: "<h2>A New Section</h2> Barreleye dragonet fierasfer kafue lined porbeagle sheatfish slimy thorny tripletail turbot waryfish. African bonito climbing dwarf gila grideye lightfish roundhead scad snailfish spadefish tripod tubeshoulder. Carpsucker characin cornetfish cornish croaker eye glowlight gunnel kaluga major naked-back russian sarcastic snake south tarwhine yellow-eye zealand."

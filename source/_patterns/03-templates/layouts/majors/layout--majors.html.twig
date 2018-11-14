@@ -54,21 +54,21 @@ set classes = [
 </div>
 {% endif %}
 
-{% if content.bottom_first %}
-<div {{ region_attributes.bottom_first.addClass('layout__region', 'layout__region--bottom-first') }}>
-  {{ content.bottom_first }}
+{% if content.related_majors %}
+<div {{ region_attributes.related_majors.addClass('layout__region', 'layout__region--related-majors') }}>
+  {{ content.related_majors }}
 </div>
 {% endif %}
 
-{% if content.bottom_second %}
-<div {{ region_attributes.bottom_second.addClass('layout__region', 'layout__region--bottom-second') }}>
-  {{ content.bottom_second }}
+{% if content.sample_jobs %}
+<div {{ region_attributes.sample_jobs.addClass('layout__region', 'layout__region--sample-jobs') }}>
+  {{ content.sample_jobs }}
 </div>
 {% endif %}
 
-{% if content.bottom_third %}
-<div {{ region_attributes.bottom_third.addClass('layout__region', 'layout__region--bottom-third') }}>
-  {{ content.bottom_third }}
+{% if content.department %}
+<div {{ region_attributes.department.addClass('layout__region', 'layout__region--department') }}>
+  {{ content.department }}
 </div>
 {% endif %}
 

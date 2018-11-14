@@ -12,7 +12,7 @@
     flex: 0 1 100%;
   }
 
-  > .layout__region--bottom-first {
+  > .layout__region--related-majors {
     @include breakpoint($medium) {
       flex: 0 1 33%;
       max-width: 33%;
@@ -22,7 +22,7 @@
     margin-top: $double-spacing;
   }
 
-  > .layout__region--bottom-second {
+  > .layout__region--sample-jobs {
     @include breakpoint($medium) {
       flex: 0 1 34%;
       max-width: 34%;
@@ -32,7 +32,7 @@
     margin-top: $double-spacing;
   }
 
-  > .layout__region--bottom-third {
+  > .layout__region--department {
     @include breakpoint($medium) {
       flex: 0 1 33%;
       max-width: 33%;

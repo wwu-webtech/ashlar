@@ -4,9 +4,9 @@
 */
 .page-node-type-major {
   .layout--majors {
-    .layout__region--bottom-first,
-    .layout__region--bottom-second,
-    .layout__region--bottom-third {
+    .layout__region--related-majors,
+    .layout__region--sample-jobs,
+    .layout__region--department {
       img {
         display: block;
         margin: auto;
