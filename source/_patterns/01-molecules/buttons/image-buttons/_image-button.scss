@@ -3,7 +3,7 @@
 * 01-molecules/buttons/image-buttons/_image-buttons.scss
 */
 $button-size: 130px;
-$button-size--larger: 200px;
+$button-size--larger: 240px;
 
 .block--image-button {
   @include breakpoint($medium) {
@@ -27,25 +27,26 @@ $button-size--larger: 200px;
     &.image {
       @include breakpoint($small) {
         -ms-grid-columns: $button-size;
-        -ms-grid-rows: $button-size 2.5em;
+        -ms-grid-rows: $button-size $double-spacing auto;
         grid-template-columns: $button-size;
-        grid-template-rows: $button-size 2.5em;
+        grid-template-rows: $button-size $double-spacing auto;
       }
       @include breakpoint($medium) {
         -ms-grid-columns: $button-size--larger;
-        -ms-grid-rows: $button-size--larger 2.5em;
+        -ms-grid-rows: $button-size--larger $double-spacing auto;
         grid-template-columns: $button-size--larger;
-        grid-template-rows: $button-size--larger 2.5em;
+        grid-template-rows: $button-size--larger $double-spacing auto;
       }
 
       -ms-grid-columns: $button-size--larger;
-      -ms-grid-rows: $button-size--larger 2.5em;
+      -ms-grid-rows: $button-size--larger $double-spacing auto;
       grid-template-columns: $button-size--larger;
-      grid-template-rows: $button-size--larger 2.5em;
+      grid-template-rows: $button-size--larger $double-spacing auto;
 
       .text {
-        -ms-grid-row: 2;
+        -ms-grid-row: 3;
         -ms-grid-row-align: end;
+        grid-row: 3 / span 1;
       }
     }
 
