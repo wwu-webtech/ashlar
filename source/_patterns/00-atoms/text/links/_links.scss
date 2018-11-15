@@ -6,6 +6,7 @@ $link-padding: $half-spacing / 2;
 
 a {
   display: inline-block;
+  vertical-align: middle;
   margin-right: -$link-padding;
   margin-left: -$link-padding;
   padding: $link-padding;
