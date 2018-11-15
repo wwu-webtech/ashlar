@@ -13,20 +13,21 @@ $ribbon-tail-height: 50px;
   padding: $double-spacing;
   text-align: center;
   letter-spacing: ($half-spacing) / 2;
-  background: $white;
+  border: none;
+  background: mix($white, $light-gray, 50%);
 
 
   &:before,
   &:after {
     @include transition($medium-transition-speed, $standard-ease);
-    transition-property: border-color;
     position: absolute;
     bottom: -$ribbon-tail-height;
     display: block;
     width: 0;
     height: 0;
     content: "";
-    border-top: $ribbon-tail-height solid $white;
+    transition-property: border-color;
+    border-top: $ribbon-tail-height solid mix($white, $light-gray, 50%);
   }
 
   &:before {
@@ -46,13 +47,15 @@ $ribbon-tail-height: 50px;
   }
 
   &:hover:after,
-  &:hover:before {
+  &:focus:after,
+  &:hover:before,
+  &:focus:before {
     border-top-color: $light-gray;
   }
 
   .above {
     display: block;
-    color: $blue;
+    color: $link-blue;
     border-bottom: $dark-blue $border-width solid;
     font-size: 32px;
   }

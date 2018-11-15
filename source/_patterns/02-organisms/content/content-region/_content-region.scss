@@ -10,7 +10,7 @@
   }
   display: -ms-grid;
   display: grid;
-  margin: $standard-spacing 0;
+  margin: $standard-spacing 0 $double-spacing 0;
 
   -ms-grid-columns: $small-screen-columns;
   -ms-grid-rows: auto;

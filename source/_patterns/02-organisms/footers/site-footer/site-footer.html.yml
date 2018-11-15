@@ -1,5 +1,12 @@
 page:
-  footer_left: '<div class="region region--footer_left"><p><a href="#" class="button">Button Default</a></p><p><a href="#" class="button alt white">White Button Alt</a></p></div>'
+  footer_left: '
+  <div class="region region--footer_left">
+  <a class="ribbon" href="">
+    <span class="above">Thing <span class="bold">Above</span></span>
+    <span class="below">Things <span class="italic serif">appearing</span> below</span>
+  </a>
+  <p><a href="#" class="button">Button Default</a></p><p><a href="#" class="button alt white">White Button Alt</a></p>
+  </div>'
   footer_center: '<div class="region region--footer_center"><ul class="menu blue"> <li><a href="#">one</a></li> <li><a href="#">two</a></li> <li><a href="#">three</a></li></ul></div>'
   footer_right: '<div class="region region--footer_right">Content for the right footer.</div>'
   footer_bottom: '<div class="region region--footer_bottom">Related links: <a href="#">one</a> <a href="#">two</a> <a href="#">three</a></div>'
