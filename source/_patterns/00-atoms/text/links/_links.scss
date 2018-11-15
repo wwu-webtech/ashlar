@@ -81,12 +81,20 @@ blockquote {
 
 table {
   a {
-    padding: 0;
     margin: inherit;
+    padding: 0;
     border: none;
 
     &:hover {
       text-decoration: underline;
     }
+  }
+}
+
+/* Remove specialized link styles from the admin toolbar */
+#toolbar-bar {
+  a {
+    margin: 0;
+    border: none;
   }
 }
