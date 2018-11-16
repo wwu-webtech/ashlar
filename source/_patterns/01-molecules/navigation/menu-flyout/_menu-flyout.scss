@@ -51,8 +51,10 @@
 .ultimenusub {
   @include breakpoint($medium) {
     height: inherit;
-    padding: $double-spacing;
     padding-top: (($toggle-size--larger / 2) + $standard-spacing);
+    padding-left: calc(((100vw - #{$max-content-width}) / 2) + #{$double-spacing});
+    padding-right: calc(((100vw - #{$max-content-width}) / 2) + #{$double-spacing});
+    padding-bottom: $double-spacing;
   }
   height: 100vh;
   padding: $standard-spacing;
