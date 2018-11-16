@@ -60,3 +60,22 @@
     }
   }
 }
+
+/* Ultimenu sub menus get same styling as blue menu above */
+.ultimenusub {
+  .menu {
+    li {
+      border-left: solid 3px mix(black, $blue, $percent-change);
+
+      a {
+        color: $white;
+
+        &:hover,
+        &:focus {
+          color: $white;
+          background-color: mix(black, $blue, $percent-change);
+        }
+      }
+    }
+  }
+}

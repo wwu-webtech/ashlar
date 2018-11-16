@@ -46,3 +46,16 @@
     }
   }
 }
+
+/* Standard Drupal menu output flyout styles */
+.ultimenusub {
+  @include breakpoint($medium) {
+    padding: $double-spacing;
+    padding-top: (($toggle-size--larger / 2) + $standard-spacing);
+  }
+  background: $blue;
+
+  .menu {
+    max-width: 50%;
+  }
+}
