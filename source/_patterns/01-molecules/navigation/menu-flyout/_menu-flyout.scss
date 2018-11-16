@@ -50,12 +50,11 @@
 /* Standard Drupal menu output flyout styles */
 .ultimenusub {
   @include breakpoint($medium) {
+    height: inherit;
     padding: $double-spacing;
     padding-top: (($toggle-size--larger / 2) + $standard-spacing);
   }
+  height: 100vh;
+  padding: $standard-spacing;
   background: $blue;
-
-  .menu {
-    max-width: 50%;
-  }
 }
