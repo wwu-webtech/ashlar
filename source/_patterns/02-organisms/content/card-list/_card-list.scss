@@ -5,27 +5,41 @@
 
 .card-list {
   .card {
+    display: -ms-grid;
     display: grid;
 
     grid-column-gap: $standard-spacing;
-    grid-template-areas:
-    "image title"
+    -ms-grid-columns: 1fr 1fr;
+    -ms-grid-rows: auto 1fr;
+    grid-template-areas: "image title"
     "image body";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
 
     .image {
       grid-area: image;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 1;
+      -ms-grid-row: 1;
+      -ms-grid-row-span: all;
     }
 
     .title {
       margin-top: -0.35em;
 
       grid-area: title;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 1;
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
     }
 
     .body {
       grid-area: body;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 1;
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 1;
     }
   }
 }

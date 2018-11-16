@@ -25,7 +25,7 @@
   overflow: hidden;
   width: 100%;
 
-  -ms-grd-columns: $small-screen-columns;
+  -ms-grid-columns: $small-screen-columns;
   -ms-grid-rows: auto auto;
   grid-template-columns: $small-screen-columns;
   grid-template-rows: auto auto;

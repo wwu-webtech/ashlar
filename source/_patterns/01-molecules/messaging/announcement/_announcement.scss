@@ -7,11 +7,14 @@
   @include breakpoint($medium) {
     max-width: 50%;
   }
+  display: -ms-grid;
   display: grid;
   align-items: center;
   margin: auto;
   background-color: $light-green;
 
+  -ms-grid-columns: 1fr 5fr;
+  -ms-grid-rows: auto;
   grid-template-areas: "image text";
   grid-template-columns: 1fr 5fr;
   grid-template-rows: auto;
@@ -22,6 +25,10 @@
     background-color: $dark-blue;
 
     grid-area: image;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
     img {
       display: block;
       width: 100%;
@@ -39,11 +46,19 @@
     color: $light-green;
 
     grid-area: image;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
   }
 
   .body {
     padding: $half-spacing;
 
     grid-area: text;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
   }
 }
