@@ -22,12 +22,30 @@
   const sassGlob = require('gulp-sass-glob');
   const imagemin = require('gulp-imagemin');
 
+  /**
+   * Process the name of the input JS file to be used as the object key for a
+   * Drupal JS Behavior.
+   */
   function drupalBehaviorName(file) {
     return path.basename(file.path, '.js').split('.').pop().replace(/-/g, '_');
   }
 
   var config = {};
 
+  /**
+   * Pattern Lab configuration.
+   *
+   * patterns: The patterns source directory.
+   * sassFile: The file name to be used for compiled CSS.
+   * sassSrc: The source patterns for Sass to be compiled for Pattern Lab.
+   * SassDest: The outpt directory for compiled CSS.
+   * jsFile: The file name to be used for compiled JS.
+   * jsSrc: The source patterns for JS to be compiled for Pattern Lab.
+   * jsDest: The output directory for compiled JS.
+   * jsTemplate: The template used to wrap all compiled JS.
+   * imagesSrc: The source patterns for image files.
+   * imagesDest: The destination directory for image files.
+   */
   config.patternLab = {
     patterns: 'source/_patterns',
     sassFile: 'wwu-styleguide.css',
@@ -51,6 +69,14 @@
     imagesDest: 'source/pattern-lab/images'
   };
 
+  /**
+   * Sass configuration.
+   *
+   * src: The source patterns for Sass files.
+   * dest: The output directory for compiled CSS.
+   * watch: The watch pattern for Sass file changes.
+   * options: Options map to pass to the Sass compiler.
+   */
   config.sass = {
     src: [
       'source/sass/*.scss',
@@ -72,6 +98,19 @@
     }
   };
 
+  /**
+   * JS configuration.
+   *
+   * src: The source patterns for JS files.
+   * dest: The output directory for compiled JS files.
+   * watch: The watch pattern for JS file changes.
+   * template: The template file for Drupal JS behaviors.
+   * templateVariable: The variable used in the template file to store all
+   *   properties.
+   * rename: Options map to pass to the rename plugin.
+   * iife: Options map to pass to the iife plugin.
+   * uglify: Options map to pass to the uglify plugin.
+   */
   config.js = {
     src: [
       'source/js/**/*.js',
@@ -79,7 +118,8 @@
     ],
     dest: 'build/js',
     watch: [
-      'source/js/**/*.js'
+      'source/js/**/*.js',
+      'source/_patterns/**/*.js'
     ],
     template: {
       src: 'source/js/behavior.lodash'
@@ -106,6 +146,12 @@
     }
   };
 
+  /**
+   * Images configuration.
+   *
+   * src: Source pattern for image files.
+   * dest: Output pattern for image files.
+   */
   config.images = {
     src: [
       'source/images/**/*.{jpg,jpeg,gif,png,svg}'
@@ -119,9 +165,13 @@
   gulp.task('sass', function (callback) {
     pump(
       gulp.src(config.sass.src),
+      // Parse globbing patterns in @include statements.
       sassGlob(),
+      // Initialize source maps.
       sourcemaps.init(),
+      // Compile Sass.
       sass(config.sass.options),
+      // Output source maps.
       sourcemaps.write(),
       gulp.dest(config.sass.dest),
       callback
@@ -134,14 +184,19 @@
   gulp.task('js', function (callback) {
     pump(
       gulp.src(config.js.src),
+      // Process each file in the source stream.
       flatmap(function (stream, file) {
         return pump(
           stream,
+          // Wrap the JS in Drupal JS Behavior boilerplate.
           wrap(config.js.template, { name: drupalBehaviorName(file) }, { variable: config.js.templateVariable }),
+          // Wrap the JS in an immediately-invoked function expression.
           iife(config.js.iife),
+          // Format the source.
           uglify(config.js.uglify)
         );
       }),
+      // Flatten file path globs.
       flatten(),
       gulp.dest(config.js.dest),
       callback
