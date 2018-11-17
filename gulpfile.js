@@ -10,7 +10,8 @@
   const del = require('del');
   const gulp = require('gulp');
   const run = require('gulp-run');
-  const tap = require('gulp-tap');
+  const flatten = require('gulp-flatten');
+  const flatmap = require('gulp-flatmap');
   const wrap = require('gulp-wrap');
   const iife = require('gulp-iife');
   const concat = require('gulp-concat');
@@ -22,7 +23,7 @@
   const imagemin = require('gulp-imagemin');
 
   function drupalBehaviorName(file) {
-    return path.basename(file.path, '.js').split('.').pop();
+    return path.basename(file.path, '.js').split('.').pop().replace(/-/g, '_');
   }
 
   var config = {};
@@ -73,7 +74,8 @@
 
   config.js = {
     src: [
-      'source/js/*.js'
+      'source/js/**/*.js',
+      'source/_patterns/**/*.js'
     ],
     dest: 'build/js',
     watch: [
@@ -132,15 +134,16 @@
   gulp.task('js', function (callback) {
     pump(
       gulp.src(config.js.src),
-      tap(function (file) {
+      flatmap(function (stream, file) {
         return pump(
-          gulp.src(file.path),
+          stream,
           wrap(config.js.template, { name: drupalBehaviorName(file) }, { variable: config.js.templateVariable }),
           iife(config.js.iife),
-          uglify(config.js.uglify),
-          gulp.dest(config.js.dest)
+          uglify(config.js.uglify)
         );
       }),
+      flatten(),
+      gulp.dest(config.js.dest),
       callback
     );
   });

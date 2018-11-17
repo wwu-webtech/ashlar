@@ -12,34 +12,34 @@ global-styling:
 global-scripts:
   version: 1.x
   js:
-    build/js/01-molecules.search.js: {}
+    build/js/search.js: {}
 accordion:
   version: 1.x
   js:
-    build/js/01-molecules.content.accordion.js: {}
+    build/js/accordion.js: {}
   dependencies:
     - core/jquery
 switcher:
   version: 1.x
   js:
-    build/js/01-molecules.content.switcher.js: {}
+    build/js/switcher.js: {}
   dependencies:
     - core/jquery
 wwu-header:
   version: 1.x
   js:
-    build/js/02-organisms.wwu_header.js: {}
+    build/js/wwu_header.js: {}
   dependencies:
     - core/jquery
 accessible-mega-menu:
   version: 1.x
   js:
-    build/js/02-organisms.accessible_mega_menu.js: {}
+    dist/js/accessible_mega_menu.js: {}
   dependencies:
     - core/jquery
 menu-extras:
   version: 1.x
   js:
-    build/js/02-organisms.menu_extras.js: {}
+    build/js/menu_extras.js: {}
   dependencies:
     - core/jquery
