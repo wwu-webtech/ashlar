@@ -33,6 +33,10 @@ Thumbs.db
 /logo.png
 /screenshot.png
 
+# Lando config file
+.lando.yml
+
+
 ################################################################################
 #
 # DIRECTORY EXCLUSIONS
@@ -44,9 +48,6 @@ Thumbs.db
 
 # Build directory
 /build/
-
-# Distribution directory
-/dist/
 
 # Sass cache
 .sass-cache/

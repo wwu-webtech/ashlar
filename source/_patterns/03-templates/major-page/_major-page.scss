@@ -3,6 +3,10 @@
 * templates/major-page/_major-page.scss
 */
 .page-node-type-major {
+  #block-pagetitle {
+    display: none;
+  }
+  
   .layout--majors {
     .layout__region--related-majors,
     .layout__region--sample-jobs,

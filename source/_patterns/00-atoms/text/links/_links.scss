@@ -7,9 +7,13 @@ $link-padding: $half-spacing / 2;
 a {
   display: inline-block;
   vertical-align: middle;
+  margin-top: -($link-padding / 2);
   margin-right: -$link-padding;
   margin-left: -$link-padding;
-  padding: $link-padding;
+  padding-left: $link-padding;
+  padding-right: $link-padding;
+  padding-top: 0px;
+  padding-bottom: $link-padding / 2;
   transition: $link-transition-speed $link-transition-ease all;
   text-decoration: none;
   color: $link-color;
@@ -92,8 +96,9 @@ table {
   }
 }
 
-/* Remove specialized link styles from the admin toolbar */
-#toolbar-bar {
+/* Remove specialized link styles from the admin toolbar and site configuration links */
+#toolbar-bar,
+.contextual {
   a {
     margin: 0;
     border: none;
