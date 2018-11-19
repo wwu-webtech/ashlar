@@ -43,7 +43,7 @@
     {{ title_suffix }}
 
     {% block content %}
-      <a href="{{ block_content.field_link.0.url }}" class="button {{ block_content.field_button_style.0.value }}">
+      <a href="{{ block_content.field_link.0.url }}" class="button {{ block_content.field_button_style.0.value|clean_class }}">
         {{ block_content.field_link.0.title }}
       </a>
     {% endblock %}
