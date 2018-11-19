@@ -96,8 +96,9 @@ table {
   }
 }
 
-/* Remove specialized link styles from the admin toolbar */
-#toolbar-bar {
+/* Remove specialized link styles from the admin toolbar and site configuration links */
+#toolbar-bar,
+.contextual {
   a {
     margin: 0;
     border: none;
