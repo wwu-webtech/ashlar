@@ -2,3 +2,221 @@
 * @file
 * 01-molecules/org-charts/_org-charts.scss
 */
+.org-chart {
+  font-size: 0.8em;
+  background: whitesmoke;
+  max-width: 1300px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+}
+
+li {
+  position: relative;
+}
+
+span {
+  display: block;
+  position: relative;
+  background: lightgray;
+  text-align: center;
+  padding: 8px;
+  margin: 0;
+  margin-top: 16px;
+  margin-left: 16px;
+  max-width: 300px;
+}
+@media (min-width: 841px) {
+  span {
+    max-width: none;
+  }
+}
+
+.level-a,
+.level-b,
+.level-c,
+.level-d,
+.level-e,
+.level-f {
+  display: flex;
+  flex-flow: column;
+  margin-left: 16px;
+}
+
+.level-a {
+  margin-left: 0;
+}
+.level-b {
+  margin-bottom: 16px;
+  margin-left: 0;
+}
+
+.item-level-a > span {
+  max-width: none;
+  margin: 0;
+}
+
+@media (min-width: 841px) {
+  .level-a {
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    margin-left: 0;
+  }
+  .level-b {
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    margin-top: 16px;
+    margin-left: 0;
+  }
+  .level-c {
+    display: flex;
+    flex-flow: column;
+    margin-left: 8px;
+  }
+
+  .item-level-a > span {
+     margin: auto;
+     max-width: 300px;
+  }
+
+  .item-level-b > span {
+    max-width: none;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
+
+/* LINES */
+/* vertical bar for nested items */
+.item-level-b,
+.item-level-c,
+.item-level-d,
+.item-level-e,
+.item-level-f {
+  border-left: solid 2px gold;
+}
+
+/* horizontal bar for nested items */
+.item-level-b > span:before,
+.item-level-c > span:before,
+.item-level-d > span:before,
+.item-level-e > span:before,
+.item-level-f > span:before {
+  display: block;
+  content: '';
+  background: transparent;
+  width: 18px; /* $standard-spacing + $border-width */
+  border-top: solid orange 2px;
+  height: 50%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translate(-100%);
+}
+
+/* mask vertical bar for end items */
+.item-level-b:last-of-type > span:before,
+.item-level-c:last-of-type > span:before,
+.item-level-d:last-of-type > span:before,
+.item-level-e:last-of-type > span:before,
+.item-level-f:last-of-type > span:before {
+  background: whitesmoke;
+}
+
+.item-level-b:last-child > .level-c:before,
+.item-level-c:last-child > .level-d:before,
+.item-level-d:last-child > .level-e:before,
+.item-level-e:last-child > .level-f:before {
+  display: block;
+  content: '';
+  background: whitesmoke;
+  width: 18px; /* $standard-spacing + $border-width */
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translate(-100%);
+}
+
+@media (min-width: 841px) {
+  /* remove second level lines */
+  .item-level-b {
+    border-left: none;
+  }
+
+  .item-level-b > span:before,
+  .item-level-b:last-of-type > span:before,
+  .item-level-b:last-child > .level-c:before {
+    display: none;
+  }
+
+  /* vertical bar for top level items */
+  .item-level-a > span:before {
+    display: block;
+    content: '';
+    width: 2px;
+    height: 16px;
+    background: magenta;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 16px);
+  }
+
+  .item-level-a.no-children > span:before {
+    display: none;
+  }
+
+  /* horizontal bar for second level items */
+  .item-level-b:before {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: pink;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .item-level-b:first-child:before {
+    display: block;
+    content: '';
+    width: 50%;
+    height: 2px;
+    background: greenyellow;
+    left: 50%;
+  }
+
+  .item-level-b:last-child:before {
+    display: block;
+    content: '';
+    width: 50%;
+    height: 2px;
+    background: maroon;
+  }
+
+  .item-level-b:only-child:before {
+    display: none;
+  }
+
+  /* vertical bar for second level items */
+  .item-level-b > span:before,
+  .item-level-b:last-of-type > span:before {
+    display: block;
+    content: '';
+    width: 2px;
+    height: 16px;
+    border: none;
+    background: turquoise;
+    position: absolute;
+    left: 50%;
+    top: -16px;
+    transform: translate(-1px); /* 1/2 $border-width */
+  }
+}
