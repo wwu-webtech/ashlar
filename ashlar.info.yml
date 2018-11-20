@@ -6,6 +6,7 @@ libraries:
   - core/normalize
   - ashlar/accessible-mega-menu
   - ashlar/accordion
+  - ashlar/featherlight
   - ashlar/global-styling
   - ashlar/global-scripts
   - ashlar/menu-extras

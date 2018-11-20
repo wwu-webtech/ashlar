@@ -43,3 +43,12 @@ menu-extras:
     build/js/menu-extras.js: {}
   dependencies:
     - core/jquery
+featherlight:
+  version: 1.7.13
+  css:
+    theme:
+      node_modules/featherlight/src/featherlight.css: {}
+  js:
+    node_modules/featherlight/src/featherlight.js: {}
+  dependencies:
+    - core/jquery
