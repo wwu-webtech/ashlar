@@ -43,6 +43,12 @@ menu-extras:
     build/js/menu-extras.js: {}
   dependencies:
     - core/jquery
+event-tracking:
+  version: 1.x
+  js:
+    build/js/event-tracking.js: {}
+  dependencies:
+    - core/jquery
 featherlight:
   version: 1.7.13
   css:
@@ -50,5 +56,3 @@ featherlight:
       node_modules/featherlight/src/featherlight.css: {}
   js:
     node_modules/featherlight/src/featherlight.js: {}
-  dependencies:
-    - core/jquery
