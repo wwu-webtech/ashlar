@@ -15,12 +15,10 @@
     margin: 0;
     list-style: none;
     text-align: center;
-    border-top: solid $dark-blue $border-width--thicker;
-    border-bottom: solid $dark-blue $border-width--thicker;
-    border-left: solid $dark-blue $border-width--thicker;
+    border-left: solid $white $border-width--thicker;
 
-    &:last-of-type {
-      border-right: solid $dark-blue $border-width--thicker;
+    &:first-of-type {
+      border-left: none;
     }
   }
 
@@ -33,13 +31,14 @@
     height: 100%;
     margin-bottom: 0;
     padding: $half-spacing;
-    color: $black;
+    color: $white;
     border-radius: 0;
-    background-color: $white;
+    background-color: $blue;
 
     &:hover,
     &:focus {
-      background-color: transparentize($dark-blue, 0.9);
+      color: $dark-blue;
+      background-color: $light-green;
       box-shadow: none;
     }
 
@@ -47,8 +46,8 @@
     &:disabled {
       cursor: pointer;
       opacity: 1;
-      color: $white;
-      background-color: $dark-blue;
+      color: $black;
+      background-color: $light-green;
     }
   }
 }
