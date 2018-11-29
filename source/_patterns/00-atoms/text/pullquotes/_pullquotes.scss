@@ -1,0 +1,16 @@
+/**
+ * @file
+ * 00-atoms/01-text/_pullquotes.scss
+ */
+
+.pullquote,
+.paragraph--type--majors-pull-quote {
+  margin: 0 $standard-spacing;
+  padding: $standard-spacing;
+  font-style: italic;
+  border-left: solid 3px $green;
+
+  &.dark-bg {
+    border-left: solid 3px $light-green;
+  }
+}
