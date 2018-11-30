@@ -2,3 +2,134 @@
 * @file
 * 01-molecules/content/search/mabel-search/_mabel-search.scss
 */
+$simple-search-button: 120px;
+$advanced-search-button: 300px;
+
+#block-islandora-solr-simple {
+  background: transparentize($black, 0.2);
+
+  > h2,
+  label[for="edit-islandora-simple-search-query"] {
+    display: block;
+    margin: 0;
+    padding: $standard-spacing $double-spacing;
+    color: $text-color-light;
+    border: none;
+  }
+
+  > h2 {
+    font-family: $sans-serif;
+    font-size: $title-font-size;
+    font-weight: $font-weight--bold;
+  }
+
+  label[for="edit-islandora-simple-search-query"] {
+    font-size: $h3-font-size;
+    font-style: italic;
+    font-family: $serif;
+    font-weight: $font-weight--regular;
+  }
+
+  .form-wrapper {
+    position: relative;
+  }
+}
+
+#edit-islandora-simple-search-query {
+  width: calc(100% - #{$simple-search-button} - #{$double-spacing});
+  height: $toggle-size--larger;
+  margin: 0;
+  margin-left: $double-spacing;
+  padding: $standard-spacing;
+  border-color: $blue;
+}
+
+.form-item-islandora-simple-search-query {
+  + .form-submit {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+    width: $simple-search-button;
+    height: $toggle-size--larger;
+    margin: 0;
+    margin-right: $double-spacing;
+    padding: $standard-spacing;
+    border-radius: 0;
+    font-size: $p-font-size;
+  }
+}
+
+
+#block-islandora-solr-advanced {
+  padding: $double-spacing;
+  padding-top: 0;
+  background: transparentize($black, 0.2);
+
+  label {
+    color: $text-color-light;
+  }
+
+  > h2 {
+    position: relative;
+    display: block;
+    margin: 0;
+    margin-bottom: $standard-spacing;
+    padding: $standard-spacing;
+    transition: $button-transition-speed $standard-ease;
+    color: $text-color-light;
+    border: none;
+    background: $dark-blue;
+    font-size: $p-font-size;
+    font-family: $sans-serif;
+
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      width: 54px;
+      height: 100%;
+      content: "-";
+    }
+
+    &:hover,
+    &:focus {
+      background: $blue;
+    }
+  }
+}
+
+#islandora-solr-advanced-terms {
+  .form-item {
+    display: inline-block;
+    margin-right: $standard-spacing;
+  }
+}
+
+input[title="Add field"],
+input[title="Remove field"] {
+  width: $toggle-size;
+  height: $toggle-size;
+  padding: 0;
+  border-radius: 0;
+  font-size: $p-font-size;
+}
+
+.islandora-solr-advanced-controls {
+  position: relative;
+  margin-top: $standard-spacing;
+
+  .form-item,
+  .form-submit {
+    display: inline-block;
+    margin-right: $standard-spacing;
+  }
+
+  .form-submit {
+    width: $advanced-search-button;
+    font-size: $p-font-size;
+  }
+}
