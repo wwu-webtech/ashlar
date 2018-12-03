@@ -2,11 +2,21 @@
 * @file
 * templates/major-page/_major-page.scss
 */
+/* Major list */
+.view--majors-list {
+  .menu {
+    @include breakpoint($small) {
+        column-count: 2;
+    }
+  }
+}
+
+/* Individual major */
 .page-node-type-major {
   #block-pagetitle {
     display: none;
   }
-  
+
   .layout--majors {
     .layout__region--related-majors,
     .layout__region--sample-jobs,
