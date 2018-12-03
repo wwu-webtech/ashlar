@@ -25,6 +25,12 @@ accordion:
     build/js/accordion.js: {}
   dependencies:
     - core/jquery
+bright-edge:
+  version: 1.x
+  js:
+    build/js/bright-edge.js: {}
+  dependencies:
+    - core/jquery
 event-tracking:
   version: 1.x
   js:
