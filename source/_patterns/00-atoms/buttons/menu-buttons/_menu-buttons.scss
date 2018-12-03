@@ -30,7 +30,7 @@ $max-button-width: 250px;
           display: grid;
           align-content: center;
           max-width: $max-button-width;
-          padding: 0 $double-spacing;
+          padding: 0 ($standard-spacing * 1.5);
           text-align: center;
           border-bottom: none;
         }
