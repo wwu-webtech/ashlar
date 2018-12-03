@@ -13,10 +13,28 @@ global-scripts:
   version: 1.x
   js:
     build/js/search.js: {}
+accessible-mega-menu:
+  version: 1.x
+  js:
+    dist/js/accessible-mega-menu.js: {}
+  dependencies:
+    - core/jquery
 accordion:
   version: 1.x
   js:
     build/js/accordion.js: {}
+  dependencies:
+    - core/jquery
+event-tracking:
+  version: 1.x
+  js:
+    build/js/event-tracking.js: {}
+  dependencies:
+    - core/jquery
+menu-extras:
+  version: 1.x
+  js:
+    build/js/menu-extras.js: {}
   dependencies:
     - core/jquery
 switcher:
@@ -31,18 +49,6 @@ wwu-header:
     build/js/wwu-header.js: {}
   dependencies:
     - core/jquery
-accessible-mega-menu:
-  version: 1.x
-  js:
-    dist/js/accessible-mega-menu.js: {}
-  dependencies:
-    - core/jquery
-menu-extras:
-  version: 1.x
-  js:
-    build/js/menu-extras.js: {}
-  dependencies:
-    - core/jquery
 featherlight:
   version: 1.7.13
   css:
@@ -50,5 +56,3 @@ featherlight:
       node_modules/featherlight/src/featherlight.css: {}
   js:
     node_modules/featherlight/src/featherlight.js: {}
-  dependencies:
-    - core/jquery

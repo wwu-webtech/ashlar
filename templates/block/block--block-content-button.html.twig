@@ -43,9 +43,7 @@
     {{ title_suffix }}
 
     {% block content %}
-      <a href="{{ block_content.field_link.0.url }}" class="button {{ block_content.field_button_style.0.value }}">
-        {{ block_content.field_link.0.title }}
-      </a>
+      {{ content.field_link }}
     {% endblock %}
   </div>
 {% endblock %}
