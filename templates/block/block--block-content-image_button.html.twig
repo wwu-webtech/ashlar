@@ -34,12 +34,20 @@
 %}
 {% set attributes = attributes.addClass(classes) %}
 {% set title_attributes = title_attributes.addClass('block__title') %}
-{% set url = block_content.field_link.0.url %}
-{% set image %}
-  <img src="{{ file_url(block_content.field_image.entity.fileuri) }}" alt="{{ block_content.field_image.0.alt }}">
-{% endset %}
-{% set link_text = block_content.field_link.0.title %}
+{% set link_classes = ['image', 'button', 'stylized'] %}
+{% set link_attributes = create_attribute() %}
+{% set link_attributes = link_attributes.addClass(link_classes) %}
+{% if block_content.field_tracking_event_category is not empty %}
+  {{ attach_library('ashlar/event-tracking') }}
+  {% set link_attributes = link_attributes.setAttribute('data-event-tracking-category', block_content.field_tracking_event_category.0.value) %}
+{% endif %}
 {% block template %}
   {% embed "@molecules/buttons/image-buttons/image-button.html.twig" %}
+    {% block content %}
+      <a href="{{ block_content.field_link.0.uri }}" {{ link_attributes }}>
+        <img src="{{ file_url(block_content.field_image.entity.fileuri) }}" alt="{{ block_content.field_image.0.alt }}">
+        <div class="text">{{ block_content.field_link.0.title }}</div>
+      </a>
+    {% endblock %}
   {% endembed %}
 {% endblock %}

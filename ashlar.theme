@@ -20,12 +20,6 @@ function ashlar_preprocess_page(&$variables) {
 function ashlar_preprocess_block(&$variables) {
   if (isset($variables['elements']['content']['#block_content'])) {
     $variables['block_content'] = $variables['elements']['content']['#block_content'];
-    kint_require();
-    Kint::$maxLevels = 6;
-
-    if ($variables['block_content']->hasField('field_link')) {
-      kint($variables['block_content']->field_link);
-    }
   }
 }
 
@@ -39,8 +33,6 @@ function ashlar_preprocess_field(&$variables) {
   $element = $variables['element'];
   $object = $element['#object'];
   $bundle = $element['#bundle'];
-
-  $variables['object'] = $object;
 
   if ($field_type === 'link') {
     if ($object->hasField('field_tracking_event_category')) {
