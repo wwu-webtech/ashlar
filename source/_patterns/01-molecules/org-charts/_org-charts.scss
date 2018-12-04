@@ -44,16 +44,26 @@ $max-box-size: 300px;
       }
 
       a {
-        background: $blue;
         color: white;
         border-bottom: none;
+        background: $blue;
 
         &:hover,
         &:focus {
-          background-color: $light-green;
           color: $dark-blue;
+          background-color: $light-green;
         }
       }
+    }
+
+    &.level-sub-a {
+      @include breakpoint($medium) {
+        display: grid;
+        margin-left: 0;
+
+        grid-template-columns: repeat(10, auto);
+      }
+      margin-left: 0;
     }
 
     &.level-a {
@@ -76,8 +86,8 @@ $max-box-size: 300px;
           }
           max-width: none;
           margin: 0;
-          background: $gray;
           color: $white;
+          background: $gray;
         }
 
         > a {
@@ -85,8 +95,8 @@ $max-box-size: 300px;
 
           &:hover,
           &:focus {
-            background-color: $light-green;
             color: $dark-blue;
+            background-color: $light-green;
           }
         }
       }
@@ -103,8 +113,7 @@ $max-box-size: 300px;
       margin-left: 0;
 
       .item-level-b {
-        > span
-        > a {
+        > span > a {
           max-width: none;
           margin-right: $half-spacing;
           margin-left: $standard-spacing;
