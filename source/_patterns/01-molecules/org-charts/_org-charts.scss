@@ -2,11 +2,14 @@
 * @file
 * 01-molecules/org-charts/_org-charts.scss
 */
-$chart-background-color: whitesmoke;
-$line-color: $gray;
+$chart-background-color: $white;
+$line-color: mix($light-gray, $gray, 50%);
 $max-box-size: 300px;
 
 .org-chart {
+  @include breakpoint($medium) {
+    font-size: $font-size--smallest;
+  }
   position: relative;
   max-width: $max-content-width;
   background: $chart-background-color;
@@ -37,7 +40,7 @@ $max-box-size: 300px;
         margin-left: $standard-spacing;
         padding: $half-spacing;
         text-align: center;
-        background: lightgray;
+        background: $light-gray;
       }
 
       a {
@@ -47,7 +50,8 @@ $max-box-size: 300px;
 
         &:hover,
         &:focus {
-          background: $dark-blue;
+          background-color: $light-green;
+          color: $dark-blue;
         }
       }
     }
@@ -72,6 +76,12 @@ $max-box-size: 300px;
           }
           max-width: none;
           margin: 0;
+          background: $gray;
+          color: $white;
+        }
+
+        > a {
+          background: $dark-blue;
         }
       }
     }
@@ -114,7 +124,7 @@ $max-box-size: 300px;
   .item-level-e,
   .item-level-f {
     /* vertical bar for nested items */
-    border-left: solid $border-width gold;
+    border-left: solid $border-width $line-color;
 
     /* horizontal bar for nested items */
     > span:before,
@@ -127,7 +137,7 @@ $max-box-size: 300px;
       height: 50%;
       content: "";
       transform: translate(-100%);
-      border-top: solid orange $border-width;
+      border-top: solid $line-color $border-width;
       background: transparent;
     }
 
@@ -171,7 +181,7 @@ $max-box-size: 300px;
         height: $standard-spacing;
         content: "";
         transform: translate(-50%, $standard-spacing);
-        background: magenta;
+        background: $line-color;
       }
       &.no-children {
         > span:before,
@@ -202,7 +212,7 @@ $max-box-size: 300px;
         width: 100%;
         height: $border-width;
         content: "";
-        background: pink;
+        background: $line-color;
       }
 
       &:first-child {
@@ -212,7 +222,7 @@ $max-box-size: 300px;
           width: 50%;
           height: $border-width;
           content: "";
-          background: greenyellow;
+          background: $line-color;
         }
       }
 
@@ -222,7 +232,7 @@ $max-box-size: 300px;
           width: 50%;
           height: $border-width;
           content: "";
-          background: maroon;
+          background: $line-color;
         }
       }
 
@@ -246,7 +256,7 @@ $max-box-size: 300px;
         content: "";
         transform: translate(-($half-spacing + ($border-width / 2)));
         border: none;
-        background: turquoise;
+        background: $line-color;
       }
     }
   }
