@@ -3,6 +3,7 @@
 * 01-molecules/org-charts/_org-charts.scss
 */
 $chart-background-color: whitesmoke;
+$line-color: $gray;
 $max-box-size: 300px;
 
 .org-chart {
@@ -23,7 +24,8 @@ $max-box-size: 300px;
     li {
       position: relative;
 
-      span {
+      span,
+      a {
         @include breakpoint($medium) {
           max-width: none;
         }
@@ -36,6 +38,17 @@ $max-box-size: 300px;
         padding: $half-spacing;
         text-align: center;
         background: lightgray;
+      }
+
+      a {
+        background: $blue;
+        color: white;
+        border-bottom: none;
+
+        &:hover,
+        &:focus {
+          background: $dark-blue;
+        }
       }
     }
 
@@ -51,7 +64,8 @@ $max-box-size: 300px;
       .item-level-a {
         margin-bottom: $standard-spacing;
 
-        > span {
+        > span,
+        > a {
           @include breakpoint($medium) {
             max-width: $max-box-size;
             margin: auto;
@@ -73,7 +87,8 @@ $max-box-size: 300px;
       margin-left: 0;
 
       .item-level-b {
-        > span {
+        > span
+        > a {
           max-width: none;
           margin-right: $half-spacing;
           margin-left: $standard-spacing;
@@ -102,7 +117,8 @@ $max-box-size: 300px;
     border-left: solid $border-width gold;
 
     /* horizontal bar for nested items */
-    > span:before {
+    > span:before,
+    > a:before {
       position: absolute;
       bottom: 0;
       left: 0;
@@ -117,7 +133,8 @@ $max-box-size: 300px;
 
     /* mask vertical bar for end items */
     &:last-of-type {
-      > span:before {
+      > span:before,
+      > a:before {
         background: $chart-background-color;
       }
     }
@@ -144,7 +161,8 @@ $max-box-size: 300px;
   .org-chart {
     /* vertical bar for top level items */
     .item-level-a {
-      > span:before {
+      > span:before,
+      > a:before {
         position: absolute;
         bottom: 0;
         left: 50%;
@@ -156,7 +174,8 @@ $max-box-size: 300px;
         background: magenta;
       }
       &.no-children {
-        > span:before {
+        > span:before,
+        > a:before {
           display: none;
         }
       }
@@ -167,7 +186,9 @@ $max-box-size: 300px;
 
       /* remove second level lines */
       > span:before,
+      > a:before,
       &:last-of-type > span:before,
+      &:last-of-type > a:before,
       &:last-child > .level-c:before {
         display: none;
       }
@@ -213,7 +234,9 @@ $max-box-size: 300px;
 
       /* vertical bar for second level items */
       > span:before,
-      &:last-of-type > span:before {
+      > a:before,
+      &:last-of-type > span:before,
+      &:last-of-type > a:before {
         position: absolute;
         top: -$standard-spacing;
         left: 50%;
@@ -221,7 +244,7 @@ $max-box-size: 300px;
         width: $border-width;
         height: $standard-spacing;
         content: "";
-        transform: translate(-(($half-spacing / 2) + ($border-width / 2)));
+        transform: translate(-($half-spacing + ($border-width / 2)));
         border: none;
         background: turquoise;
       }
