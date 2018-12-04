@@ -23,6 +23,8 @@
       {{ page.quick_links }}
     {% endblock %}
 
-    {% include "@molecules/search/search.html.twig" %}
+    {% block search %}
+      {% include "@molecules/search/search.html.twig" %}
+    {% endblock %}
   </div>
 </div>
