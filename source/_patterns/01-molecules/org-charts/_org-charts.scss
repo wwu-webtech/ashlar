@@ -2,221 +2,229 @@
 * @file
 * 01-molecules/org-charts/_org-charts.scss
 */
+$chart-background-color: whitesmoke;
+$max-box-size: 300px;
+
 .org-chart {
-  font-size: 0.8em;
-  background: whitesmoke;
-  max-width: 1300px;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
   position: relative;
-}
+  max-width: $max-content-width;
+  background: $chart-background-color;
+  font-size: $font-size--smaller;
 
-li {
-  position: relative;
-}
-
-span {
-  display: block;
-  position: relative;
-  background: lightgray;
-  text-align: center;
-  padding: 8px;
-  margin: 0;
-  margin-top: 16px;
-  margin-left: 16px;
-  max-width: 300px;
-}
-@media (min-width: 841px) {
-  span {
-    max-width: none;
-  }
-}
-
-.level-a,
-.level-b,
-.level-c,
-.level-d,
-.level-e,
-.level-f {
-  display: flex;
-  flex-flow: column;
-  margin-left: 16px;
-}
-
-.level-a {
-  margin-left: 0;
-}
-.level-b {
-  margin-bottom: 16px;
-  margin-left: 0;
-}
-
-.item-level-a > span {
-  max-width: none;
-  margin: 0;
-}
-
-@media (min-width: 841px) {
-  .level-a {
-    display: grid;
-    grid-template-columns: repeat(10, auto);
-    margin-left: 0;
-  }
-  .level-b {
-    display: grid;
-    grid-template-columns: repeat(10, auto);
-    margin-top: 16px;
-    margin-left: 0;
-  }
-  .level-c {
+  ul {
+    position: relative;
     display: flex;
     flex-flow: column;
-    margin-left: 8px;
+    margin-bottom: 0;
+    margin-left: $standard-spacing;
+    padding: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+
+      span {
+        @include breakpoint($medium) {
+          max-width: none;
+        }
+        position: relative;
+        display: block;
+        max-width: $max-box-size;
+        margin: 0;
+        margin-top: $standard-spacing;
+        margin-left: $standard-spacing;
+        padding: $half-spacing;
+        text-align: center;
+        background: lightgray;
+      }
+    }
+
+    &.level-a {
+      @include breakpoint($medium) {
+        display: grid;
+        margin-left: 0;
+
+        grid-template-columns: repeat(10, auto);
+      }
+      margin-left: 0;
+
+      .item-level-a {
+        margin-bottom: $standard-spacing;
+
+        > span {
+          @include breakpoint($medium) {
+            max-width: $max-box-size;
+            margin: auto;
+          }
+          max-width: none;
+          margin: 0;
+        }
+      }
+    }
+
+    &.level-b {
+      @include breakpoint($medium) {
+        display: grid;
+        margin-top: $standard-spacing;
+        margin-left: 0;
+
+        grid-template-columns: repeat(10, auto);
+      }
+      margin-left: 0;
+
+      .item-level-b {
+        > span {
+          max-width: none;
+          margin-right: $half-spacing;
+          margin-left: $standard-spacing;
+        }
+      }
+    }
+
+    &.level-c {
+      @include breakpoint($medium) {
+        .level-c {
+          display: flex;
+          flex-flow: column;
+          margin-left: $half-spacing;
+        }
+      }
+    }
   }
 
-  .item-level-a > span {
-     margin: auto;
-     max-width: 300px;
+  /* LINES */
+  .item-level-b,
+  .item-level-c,
+  .item-level-d,
+  .item-level-e,
+  .item-level-f {
+    /* vertical bar for nested items */
+    border-left: solid $border-width gold;
+
+    /* horizontal bar for nested items */
+    > span:before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: $standard-spacing + $border-width;
+      height: 50%;
+      content: "";
+      transform: translate(-100%);
+      border-top: solid orange $border-width;
+      background: transparent;
+    }
+
+    /* mask vertical bar for end items */
+    &:last-of-type {
+      > span:before {
+        background: $chart-background-color;
+      }
+    }
   }
 
-  .item-level-b > span {
-    max-width: none;
-    margin-left: 8px;
-    margin-right: 8px;
-  }
-}
-
-
-/* LINES */
-/* vertical bar for nested items */
-.item-level-b,
-.item-level-c,
-.item-level-d,
-.item-level-e,
-.item-level-f {
-  border-left: solid 2px gold;
-}
-
-/* horizontal bar for nested items */
-.item-level-b > span:before,
-.item-level-c > span:before,
-.item-level-d > span:before,
-.item-level-e > span:before,
-.item-level-f > span:before {
-  display: block;
-  content: '';
-  background: transparent;
-  width: 18px; /* $standard-spacing + $border-width */
-  border-top: solid orange 2px;
-  height: 50%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  transform: translate(-100%);
-}
-
-/* mask vertical bar for end items */
-.item-level-b:last-of-type > span:before,
-.item-level-c:last-of-type > span:before,
-.item-level-d:last-of-type > span:before,
-.item-level-e:last-of-type > span:before,
-.item-level-f:last-of-type > span:before {
-  background: whitesmoke;
-}
-
-.item-level-b:last-child > .level-c:before,
-.item-level-c:last-child > .level-d:before,
-.item-level-d:last-child > .level-e:before,
-.item-level-e:last-child > .level-f:before {
-  display: block;
-  content: '';
-  background: whitesmoke;
-  width: 18px; /* $standard-spacing + $border-width */
-  height: 100%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  transform: translate(-100%);
-}
-
-@media (min-width: 841px) {
-  /* remove second level lines */
-  .item-level-b {
-    border-left: none;
-  }
-
-  .item-level-b > span:before,
-  .item-level-b:last-of-type > span:before,
-  .item-level-b:last-child > .level-c:before {
-    display: none;
-  }
-
-  /* vertical bar for top level items */
-  .item-level-a > span:before {
-    display: block;
-    content: '';
-    width: 2px;
-    height: 16px;
-    background: magenta;
+  /* mask vertical bar for end items */
+  .item-level-b:last-child > .level-c:before,
+  .item-level-c:last-child > .level-d:before,
+  .item-level-d:last-child > .level-e:before,
+  .item-level-e:last-child > .level-f:before {
     position: absolute;
-    left: 50%;
     bottom: 0;
-    transform: translate(-50%, 16px);
-  }
-
-  .item-level-a.no-children > span:before {
-    display: none;
-  }
-
-  /* horizontal bar for second level items */
-  .item-level-b:before {
-    display: block;
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: pink;
-    position: absolute;
     left: 0;
-    top: 0;
-  }
-
-  .item-level-b:first-child:before {
     display: block;
-    content: '';
-    width: 50%;
-    height: 2px;
-    background: greenyellow;
-    left: 50%;
+    width: $standard-spacing + $border-width;
+    height: 100%;
+    content: "";
+    transform: translate(-100%);
+    background: $chart-background-color;
   }
+}
 
-  .item-level-b:last-child:before {
-    display: block;
-    content: '';
-    width: 50%;
-    height: 2px;
-    background: maroon;
-  }
+@include breakpoint($medium) {
+  .org-chart {
+    /* vertical bar for top level items */
+    .item-level-a {
+      > span:before {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        display: block;
+        width: $border-width;
+        height: $standard-spacing;
+        content: "";
+        transform: translate(-50%, $standard-spacing);
+        background: magenta;
+      }
+      &.no-children {
+        > span:before {
+          display: none;
+        }
+      }
+    }
 
-  .item-level-b:only-child:before {
-    display: none;
-  }
+    .item-level-b {
+      border-left: none;
 
-  /* vertical bar for second level items */
-  .item-level-b > span:before,
-  .item-level-b:last-of-type > span:before {
-    display: block;
-    content: '';
-    width: 2px;
-    height: 16px;
-    border: none;
-    background: turquoise;
-    position: absolute;
-    left: 50%;
-    top: -16px;
-    transform: translate(-1px); /* 1/2 $border-width */
+      /* remove second level lines */
+      > span:before,
+      &:last-of-type > span:before,
+      &:last-child > .level-c:before {
+        display: none;
+      }
+
+      /* horizontal bar for second level items */
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: $border-width;
+        content: "";
+        background: pink;
+      }
+
+      &:first-child {
+        &:before {
+          left: 50%;
+          display: block;
+          width: 50%;
+          height: $border-width;
+          content: "";
+          background: greenyellow;
+        }
+      }
+
+      &:last-child {
+        &:before {
+          display: block;
+          width: 50%;
+          height: $border-width;
+          content: "";
+          background: maroon;
+        }
+      }
+
+      &:only-child {
+        &:before {
+          display: none;
+        }
+      }
+
+      /* vertical bar for second level items */
+      > span:before,
+      &:last-of-type > span:before {
+        position: absolute;
+        top: -$standard-spacing;
+        left: 50%;
+        display: block;
+        width: $border-width;
+        height: $standard-spacing;
+        content: "";
+        transform: translate(-(($half-spacing / 2) + ($border-width / 2)));
+        border: none;
+        background: turquoise;
+      }
+    }
   }
 }
