@@ -28,6 +28,7 @@ input {
   margin-bottom: $standard-spacing;
   padding: $half-spacing;
   transition: border-color $medium-transition-speed $standard-ease;
+  color: $black;
   border: solid $border-width $dark-blue;
   border-radius: 0;
   background-color: $white;
