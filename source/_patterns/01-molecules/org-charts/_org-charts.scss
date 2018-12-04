@@ -82,6 +82,12 @@ $max-box-size: 300px;
 
         > a {
           background: $dark-blue;
+
+          &:hover,
+          &:focus {
+            background-color: $light-green;
+            color: $dark-blue;
+          }
         }
       }
     }
