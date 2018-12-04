@@ -34,13 +34,12 @@
 %}
 {% set attributes = attributes.addClass(classes) %}
 {% set title_attributes = title_attributes.addClass('block__title') %}
+{% set url = block_content.field_link.0.url %}
+{% set image %}
+  <img src="{{ file_url(block_content.field_image.entity.fileuri) }}" alt="{{ block_content.field_image.0.alt }}">
+{% endset %}
+{% set link_text = block_content.field_link.0.title %}
 {% block template %}
   {% embed "@molecules/buttons/image-buttons/image-button.html.twig" %}
-    {% block content %}
-      <a href="{{ block_content.field_link.0.url }}" class="image button stylized">
-        <img src="{{ file_url(block_content.field_image.entity.fileuri) }}" alt="{{ block_content.field_image.0.alt }}">
-        <div class="text">{{ block_content.field_link.0.title }}</div>
-      </a>
-    {% endblock %}
   {% endembed %}
 {% endblock %}

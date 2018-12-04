@@ -20,6 +20,12 @@ function ashlar_preprocess_page(&$variables) {
 function ashlar_preprocess_block(&$variables) {
   if (isset($variables['elements']['content']['#block_content'])) {
     $variables['block_content'] = $variables['elements']['content']['#block_content'];
+    kint_require();
+    Kint::$maxLevels = 6;
+
+    if ($variables['block_content']->hasField('field_link')) {
+      kint($variables['block_content']->field_link);
+    }
   }
 }
 
@@ -34,14 +40,16 @@ function ashlar_preprocess_field(&$variables) {
   $object = $element['#object'];
   $bundle = $element['#bundle'];
 
-  if ($entity_type === 'block_content' && $field_type === 'link') {
+  $variables['object'] = $object;
+
+  if ($field_type === 'link') {
     if ($object->hasField('field_tracking_event_category')) {
       $variables['element']['#attached']['library'][] = 'ashlar/event-tracking';
-      _ashlar_set_tracking_event_category($variables, $object);
+      _ashlar_set_tracking_event_category($variables['items'], $object);
     }
 
     if ($object->hasField('field_button_style')) {
-      _ashlar_set_button_style($variables, $object);
+      _ashlar_set_button_style($variables['items'], $object);
     }
   }
 }
@@ -49,9 +57,9 @@ function ashlar_preprocess_field(&$variables) {
 /**
  * Helper function to add tracking event class attribute to field.
  */
-function _ashlar_set_tracking_event_category(&$variables, $object) {
+function _ashlar_set_tracking_event_category(&$items, $object) {
   if (!$object->field_tracking_event_category->isEmpty()) {
-    foreach ($variables['items'] as &$item) {
+    foreach ($items as &$item) {
       $item['content']['#options']['attributes']['data-tracking-event-category'] = $object->field_tracking_event_category->value;
     }
   }
@@ -60,9 +68,9 @@ function _ashlar_set_tracking_event_category(&$variables, $object) {
 /**
  * Helper function to add button style classes to field.
  */
-function _ashlar_set_button_style(&$variables, $object) {
+function _ashlar_set_button_style(&$items, $object) {
   if (!$object->field_button_style->isEmpty()) {
-    foreach ($variables['items'] as &$item) {
+    foreach ($items as &$item) {
       $item['content']['#options']['attributes']['class'][] = 'button';
       $item['content']['#options']['attributes']['class'][] = $object->field_button_style->value;
     }
