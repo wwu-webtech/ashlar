@@ -8,14 +8,14 @@
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Get site name variable for site header
+ * Implements hook_preprocess_page().
  */
 function ashlar_preprocess_page(&$variables) {
   $variables['site_name'] = \Drupal::config('system.site')->get('name');
 }
 
 /**
- * Get site name variable for site header
+ * Implements hook_preprocess_block().
  */
 function ashlar_preprocess_block(&$variables) {
   if (isset($variables['elements']['content']['#block_content'])) {
@@ -24,19 +24,65 @@ function ashlar_preprocess_block(&$variables) {
 }
 
 /**
- * Adds a form id based template suggestion for all forms.
- *
+ * Implements hook_preprocess_field().
+ */
+function ashlar_preprocess_field(&$variables) {
+  $entity_type = $variables['entity_type'];
+  $field_type = $variables['field_type'];
+  $field_name = $variables['field_name'];
+  $element = $variables['element'];
+  $object = $element['#object'];
+  $bundle = $element['#bundle'];
+
+  if ($entity_type === 'block_content' && $field_type === 'link') {
+    if ($object->hasField('field_tracking_event_category')) {
+      $variables['element']['#attached']['library'][] = 'ashlar/event-tracking';
+      _ashlar_set_tracking_event_category($variables, $object);
+    }
+
+    if ($object->hasField('field_button_style')) {
+      _ashlar_set_button_style($variables, $object);
+    }
+  }
+}
+
+/**
+ * Helper function to add tracking event class attribute to field.
+ */
+function _ashlar_set_tracking_event_category(&$variables, $object) {
+  if (!$object->field_tracking_event_category->isEmpty()) {
+    foreach ($variables['items'] as &$item) {
+      $item['content']['#options']['attributes']['data-tracking-event-category'] = $object->field_tracking_event_category->value;
+    }
+  }
+}
+
+/**
+ * Helper function to add button style classes to field.
+ */
+function _ashlar_set_button_style(&$variables, $object) {
+  if (!$object->field_button_style->isEmpty()) {
+    foreach ($variables['items'] as &$item) {
+      $item['content']['#options']['attributes']['class'][] = 'button';
+      $item['content']['#options']['attributes']['class'][] = $object->field_button_style->value;
+    }
+  }
+}
+
+/**
  * Implements hook_theme_suggestions_HOOK_alter() for form templates.
+ *
+ * Adds a form id based template suggestion for all forms.
  */
 function ashlar_theme_suggestions_form_alter(array &$suggestions, array $variables) {
   $suggestions[] = 'form__' . $variables['element']['#form_id'];
 }
 
 /**
+ * Implements hook_preprocess_HOOK() for menu.html.twig.
+ *
  * Adds classes to menu links. This cannot be done in Twig templates without
  * using Drupal specific extensions.
- *
- * Implements hook_preprocess_HOOK() for menu.html.twig.
  */
 function ashlar_preprocess_menu(&$variables) {
   _menu_links($variables['items'], 0);
@@ -65,10 +111,10 @@ function _menu_links(&$items, $menu_level) {
 }
 
 /**
+ * Implements hook_preprocess_HOOK() for pager.html.twig.
+ *
  * Removes specific attributes from pagers. This cannot be done in Twig
  * templates without using Drupal specific extensions.
- *
- * Implements hook_preprocess_HOOK() for pager.html.twig.
  */
 function ashlar_preprocess_pager(&$variables) {
   $keys = [
@@ -101,10 +147,10 @@ function _remove_attributes(&$variables, $key, $remove) {
 }
 
 /**
+ * Implements template_preprocess_ds_entity_view().
+ *
  * Adds the entity and possible contextual links to PatternContext when using
  * UI Patterns Layouts module.
- *
- * Implements template_preprocess_ds_entity_view().
  */
 function ashlar_preprocess_ds_entity_view(&$variables) {
   if (isset($variables['content']['#type']) && $variables['content']['#type'] == 'pattern') {
