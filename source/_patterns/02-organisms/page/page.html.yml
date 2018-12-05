@@ -1,4 +1,6 @@
 page:
+  top: organisms-top-region-html
   header: organisms-header-region-html
   content: organisms-content-region-html
   site_footer: organisms-site-footer-html
+  bottom: organisms-bottom-region-html

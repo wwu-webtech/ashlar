@@ -25,6 +25,12 @@ accordion:
     build/js/accordion.js: {}
   dependencies:
     - core/jquery
+alerts:
+  version: 1.x
+  js:
+    build/js/alerts.js: {}
+  dependencies:
+    - core/jquery
 event-tracking:
   version: 1.x
   js:
