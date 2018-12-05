@@ -1,9 +1,15 @@
-bodyClass: "path-frontpage"
+bodyClass: "page-islandora"
 page:
   include():
     pattern: organisms-page-html
     with:
-      page:        
+      page:
+        header:
+          include():
+            pattern: organisms-block-template-html
+            with:
+              label: ""
+              content: molecules-splash-image-html
         content:
           include():
             pattern: organisms-content-region-html
@@ -15,6 +21,8 @@ page:
                     with:
                       content:
                         join():
+                        - include():
+                            pattern: molecules-mabel-search-html
                         - include():
                             pattern: templates-layout--onecol-html
                             with:
