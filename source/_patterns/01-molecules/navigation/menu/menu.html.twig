@@ -21,7 +21,11 @@
     {% endif %}
     {% for item in items %}
       <li{{ item.attributes }}>
-        <a href="{{ item.url }}">{{ item.title }}</a>
+        {% if item.title == 'home-icon' %}
+          <a href="{{ item.url }}"><i class="material-icons">home</i></a>
+        {% else %}
+          <a href="{{ item.url }}">{{ item.title }}</a>
+        {% endif %}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}

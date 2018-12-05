@@ -31,12 +31,6 @@ event-tracking:
     build/js/event-tracking.js: {}
   dependencies:
     - core/jquery
-menu-buttons:
-  version: 1.x
-  js:
-    build/js/menu-buttons.js: {}
-  dependencies:
-    - core/jquery
 menu-extras:
   version: 1.x
   js:

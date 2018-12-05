@@ -10,7 +10,6 @@ libraries:
   - ashlar/accordion
   - ashlar/event-tracking
   - ashlar/featherlight
-  - ashlar/menu-buttons
   - ashlar/menu-extras
   - ashlar/switcher
   - ashlar/wwu-header
