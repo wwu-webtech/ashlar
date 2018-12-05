@@ -22,7 +22,6 @@ $search-block-height: 250px;
   }
   background: $black;
 
-  /* MABEL title on main search */
   > h2,
   label[for="edit-islandora-simple-search-query"] {
     display: block;
@@ -30,8 +29,10 @@ $search-block-height: 250px;
     padding: $standard-spacing $double-spacing;
     color: $text-color-light;
     border: none;
+    text-align: left;
   }
 
+  /* MABEL title on main search */
   > h2 {
     font-family: $sans-serif;
     font-size: $h1-font-size;
@@ -107,7 +108,8 @@ $search-block-height: 250px;
     color: $text-color-light;
   }
 
-  > h2 {
+  > h2,
+  .toggle-advanced-search {
     position: relative;
     display: block;
     margin: 0;
@@ -116,11 +118,13 @@ $search-block-height: 250px;
     transition: $button-transition-speed $standard-ease;
     color: $text-color-light;
     border: none;
+    border-radius: 0;
     background: $dark-blue;
     font-size: $p-font-size;
     font-family: $sans-serif;
+    width: 100%;
 
-    &:after {
+    .material-icons {
       position: absolute;
       top: 0;
       right: 0;
@@ -129,13 +133,24 @@ $search-block-height: 250px;
       align-content: center;
       width: $toggle-size;
       height: 100%;
-      content: "-";
+      font-size: 18px;
     }
 
     &:hover,
     &:focus {
       background: $blue;
     }
+
+    &:focus {
+      @include breakpoint($medium) {
+        outline: $focus-outline--thicker
+      }
+      outline: $focus-outline;
+    }
+  }
+
+  #islandora-solr-advanced-search-form {
+    display: none;
   }
 }
 
