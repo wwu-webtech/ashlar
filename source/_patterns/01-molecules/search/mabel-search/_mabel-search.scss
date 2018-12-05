@@ -85,6 +85,7 @@ $search-block-height: 250px;
   }
 }
 
+
 #block-islandora-solr-advanced {
   @include breakpoint($medium) {
     position: absolute;
@@ -92,7 +93,7 @@ $search-block-height: 250px;
     top: calc(#{$toggle-size} + #{$double-spacing} + #{$search-block-height});
     width: 55vw;
     z-index: 3;
-    background: transparentize($black, 0.15);
+    background: linear-gradient(to bottom, #{transparentize($black, 0.15)} 0%, $black 25%);
   }
   @include breakpoint($large) {
     left: calc(((100vw - #{$max-content-width}) / 2) + #{$logo-width--larger} + #{$double-spacing});
