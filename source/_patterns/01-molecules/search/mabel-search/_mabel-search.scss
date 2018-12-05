@@ -4,10 +4,25 @@
 */
 $simple-search-button: 120px;
 $advanced-search-button: 300px;
+$search-block-height: 250px;
 
 #block-islandora-solr-simple {
-  background: transparentize($black, 0.2);
+  @include breakpoint($medium) {
+    position: absolute;
+    z-index: 3;
+    top: calc(#{$toggle-size} + #{$double-spacing});
+    left: calc(#{$standard-spacing} + #{$logo-width} + #{$double-spacing});
+    width: 55vw;
+    height: $search-block-height;
+    background: transparentize($black, 0.15);
+  }
+  @include breakpoint($large) {
+    top: calc(#{$toggle-size--larger} + #{$double-spacing});
+    left: calc(((100vw - #{$max-content-width}) / 2) + #{$logo-width--larger} + #{$double-spacing});
+  }
+  background: $black;
 
+  /* MABEL title on main search */
   > h2,
   label[for="edit-islandora-simple-search-query"] {
     display: block;
@@ -19,19 +34,29 @@ $advanced-search-button: 300px;
 
   > h2 {
     font-family: $sans-serif;
-    font-size: $title-font-size;
+    font-size: $h1-font-size;
     font-weight: $font-weight--bold;
   }
 
+  /* Subtitle, eg the acronym spelled out */
   label[for="edit-islandora-simple-search-query"] {
-    font-size: $h3-font-size;
-    font-style: italic;
     font-family: $serif;
+    font-size: $h4-font-size;
     font-weight: $font-weight--regular;
+    font-style: italic;
   }
 
   .form-wrapper {
     position: relative;
+  }
+}
+
+
+#islandora-solr-simple-search-form {
+  @include breakpoint($medium) {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
   }
 }
 
@@ -60,11 +85,22 @@ $advanced-search-button: 300px;
   }
 }
 
-
 #block-islandora-solr-advanced {
+  @include breakpoint($medium) {
+    position: absolute;
+    left: calc(#{$standard-spacing} + #{$logo-width} + #{$double-spacing});
+    top: calc(#{$toggle-size} + #{$double-spacing} + #{$search-block-height});
+    width: 55vw;
+    z-index: 3;
+    background: transparentize($black, 0.15);
+  }
+  @include breakpoint($large) {
+    left: calc(((100vw - #{$max-content-width}) / 2) + #{$logo-width--larger} + #{$double-spacing});
+    top: calc(#{$toggle-size--larger} + #{$double-spacing} + #{$search-block-height});
+  }
   padding: $double-spacing;
   padding-top: 0;
-  background: transparentize($black, 0.2);
+  background: $black;
 
   label {
     color: $text-color-light;
@@ -90,7 +126,7 @@ $advanced-search-button: 300px;
       display: grid;
       justify-content: center;
       align-content: center;
-      width: 54px;
+      width: $toggle-size;
       height: 100%;
       content: "-";
     }
