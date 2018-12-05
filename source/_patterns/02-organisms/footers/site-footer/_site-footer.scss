@@ -42,6 +42,7 @@
     &:hover,
     &:focus {
       color: $lightest-green;
+      background-color: mix(black, $blue, $percent-change);
     }
 
     &.button {
@@ -135,17 +136,6 @@
       }
     }
   }
-
-  .site-footer {
-    a {
-      color: $white;
-
-      &:hover, &:active, &:focus {
-        color: $lightest-green;
-        background-color: mix(black, $blue, $percent-change);
-     }
-    }
-   }
 
   .social-media-links {
     justify-content: space-around;
