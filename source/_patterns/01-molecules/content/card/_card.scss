@@ -25,8 +25,13 @@
     a {
       display: inline-block;
       font-weight: $font-weight--bold;
-      border: none;      
+      border: none;
+
+      &:hover, &:focus {
+        color: #5d9925; /*ups contrast to 3:1*/
+      }      
     }
+
     order: 3;
   }
 
