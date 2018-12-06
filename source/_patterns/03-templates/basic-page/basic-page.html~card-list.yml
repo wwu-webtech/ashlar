@@ -2,8 +2,7 @@ page:
   include():
     pattern: organisms-page-html
     with:
-      page:
-        header: organisms-site-header-html
+      page:        
         content:
           include():
             pattern: organisms-content-region-html
@@ -23,4 +22,3 @@ page:
                     with:
                       content: organisms-card-list-html
         site_footer: organisms-site-footer-html
-

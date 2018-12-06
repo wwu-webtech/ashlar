@@ -4,7 +4,17 @@
  */
 #}
 <div class="page">
-  {% include "@organisms/headers/site-header/site-header.html.twig" %}
+  <header class="site-header">
+    {% include "@organisms/headers/wwu-header/wwu-header.html.twig" %}
+
+    <div class="splash">
+      {{ page.header }}
+    </div>
+
+    {% block main_navigation %}
+      {{ page.main_navigation }}
+    {% endblock %}
+  </header>
 
   {{ page.content }}
 
