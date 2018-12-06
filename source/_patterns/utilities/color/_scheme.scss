@@ -1,24 +1,30 @@
 /**
 * @file
-* 00-atoms/00-global/color/_color-used.scss
+* utilities/color/_color-used.scss
 */
 
 // Text Colors
 $text-color: $black;
 $text-color-light: $white;
 
+// Link Colors
 $link-color: $link-blue;
 $link-color--hover: $green;
 $link-color-light: $light-blue;
 $link-color-light--hover: $light-green;
 
+// Button Colors
 $default-button-color: $blue;
 
+// State Colors
+$focus-shadow: 2px 2px 4px 2px transparentize($dark-blue, .5);
+
+// Accent Colors
 $warning-color: $yellow;
 $alert-color: $red;
 
-// An array of main wwu colors, useful for iterating over all colors
-// contains (class-name, $color-variable, $text-color, $hover-color, $hover-text, $alt-hover-text)
+// An array of main wwu colors, useful for iterating over all colors.
+// (class-name, $color-variable, $text-color, $hover-color, $hover-text, $alt-hover-text)
 $wwu-colors: (
   (dark-blue, $dark-blue, $white, $blue, $white, $dark-blue),
   (blue, $blue, $white, $dark-blue, $white, $blue),
