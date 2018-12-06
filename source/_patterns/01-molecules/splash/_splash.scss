@@ -47,7 +47,7 @@
     grid-row: 1 / span 1;
     -ms-grid-row-span: 1;
 
-    div {
+    div:not(.headline) {
       height: 100%;
     }
   }
@@ -71,9 +71,23 @@
 }
 
 .featured-major-splash-area {
+  @include breakpoint($medium) {
+    min-height: 600px;
+    max-height: 70vh;
+  }
   margin-top: 0;
 
   > :nth-of-type(2) {
     margin-bottom: 0;
+  }
+}
+
+/* Larger splash used on article content type */
+.page-node-type-article {
+  .splash {
+    @include breakpoint($medium) {
+      min-height: 600px;
+      max-height: 70vh;
+    }
   }
 }
