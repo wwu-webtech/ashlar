@@ -67,15 +67,7 @@ $image-size: 300px;
     &:focus {
       color: $link-color--hover;
       background: none;
-      box-shadow: none;
-
-      &:after {
-        border-color: $blue;
-      }
-
-      img {
-        transform: translate(0, 0);
-      }
+      box-shadow: none;      
     }
   }
 }
