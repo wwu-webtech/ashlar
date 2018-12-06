@@ -63,5 +63,16 @@ $button-size--larger: 240px;
       width: $button-size--larger;
       height: $button-size--larger;
     }
+
+    &:hover,
+    &:focus {
+      &:after {
+        border-color: $blue;
+      }
+      
+      img {
+        transform: translate(0, 0);
+      }
+    }
   }
 }
