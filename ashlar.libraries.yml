@@ -9,10 +9,6 @@ global-styling:
       build/css/theme.css: {}
       build/css/print.css: { media: print }
       https://fonts.googleapis.com/icon?family=Material+Icons: {}
-global-scripts:
-  version: 1.x
-  js:
-    build/js/search.js: {}
 accessible-mega-menu:
   version: 1.x
   js:
@@ -41,6 +37,12 @@ menu-extras:
   version: 1.x
   js:
     build/js/menu-extras.js: {}
+  dependencies:
+    - core/jquery
+search:
+  version: 1.x
+  js:
+    build/js/search.js: {}
   dependencies:
     - core/jquery
 switcher:

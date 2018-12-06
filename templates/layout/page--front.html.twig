@@ -1,0 +1,11 @@
+{#
+/**
+ * @file
+ * Front page template.
+ */
+#}
+{% extends 'page.html.twig' %}
+{% block top %}
+  {{ attach_library('ashlar/alerts') }}
+  {% include '@molecules/alerts/alert.html.twig' %}
+{% endblock %}

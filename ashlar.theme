@@ -5,13 +5,12 @@
  * Functions to support theming in Ashlar.
  */
 
-use Drupal\Core\Form\FormStateInterface;
-
 /**
  * Implements hook_preprocess_page().
  */
 function ashlar_preprocess_page(&$variables) {
   $variables['site_name'] = \Drupal::config('system.site')->get('name');
+  $variables['alert_display'] = (bool) theme_get_setting('alert_display');
 }
 
 /**

@@ -80,7 +80,7 @@
    */
   config.sass = {
     src: [
-      'source/sass/*.scss',
+      'source/sass/**/*.scss',
       '!source/sass/styleguide/*'
     ],
     dest: 'build/css',
@@ -90,7 +90,6 @@
     ],
     options: {
       includePaths: [
-        'source/sass',
         'node_modules/breakpoint-sass/stylesheets',
         'node_modules/sass-toolkit/stylesheets',
         'node_modules/singularitygs/stylesheets'

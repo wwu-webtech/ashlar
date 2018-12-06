@@ -5,7 +5,6 @@
 #}
 <div class="page">
   {% block top %}
-    {{ page.top }}
   {% endblock %}
 
   {% block header %}
@@ -17,13 +16,12 @@
   {% endblock %}
 
   {% block footer %}
-  <footer class="page-footer region region--footer">
-    {% include "@organisms/footers/site-footer/site-footer.html.twig" %}
-    {% include "@organisms/footers/wwu-footer/wwu-footer.html.twig" %}
-  </footer>
+    <footer class="page-footer region region--footer">
+      {% include "@organisms/footers/site-footer/site-footer.html.twig" %}
+      {% include "@organisms/footers/wwu-footer/wwu-footer.html.twig" %}
+    </footer>
   {% endblock %}
 
   {% block bottom %}
-    {{ page.bottom }}
   {% endblock %}
 </div>

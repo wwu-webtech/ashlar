@@ -4,7 +4,9 @@
  */
 #}
 <header class="site-header">
-  {% include "@organisms/headers/wwu-header/wwu-header.html.twig" %}
+  {% block wwu_header %}
+    {% include "@organisms/headers/wwu-header/wwu-header.html.twig" %}
+  {% endblock %}
 
   {% block splash %}
   <div class="splash">
