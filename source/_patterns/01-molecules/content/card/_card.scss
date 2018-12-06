@@ -28,8 +28,8 @@
       border: none;
 
       &:hover, &:focus {
-        color: #5d9925; /*ups contrast to 3:1*/
-      }      
+        color: $dark-green;
+      }
     }
 
     order: 3;
