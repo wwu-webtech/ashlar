@@ -3,6 +3,8 @@
  * utilities/_fonts.scss
  */
 
+@import 'strip-unit';
+
 // Font Family Variables
 $sans-serif: "Noto Sans", "Open Sans", sans-serif;
 $serif: "Crimson Text", serif;
