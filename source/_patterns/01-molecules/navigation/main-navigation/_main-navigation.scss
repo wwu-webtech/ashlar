@@ -47,6 +47,29 @@
     }
   }
 }
+/* Reposition nav in context of the site header */
+.site-header {
+  .nav--main {
+    @include breakpoint($medium) {
+      position: inherit;
+      left: 0 !important;
+      margin-bottom: -($toggle-size / 2);
+      transform: translatey(-50%);
+      opacity: 1 !important;
+      overflow-x: visible;
+    }
+    @include breakpoint($large) {
+      margin-bottom: -($toggle-size--larger / 2);
+    }
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: -100%;
+    overflow-x: hidden;
+    width: 100%;
+    opacity: 0;
+  }
+}
 
 #block-system-main-menu ul ul {
   display: none; // hide nested menus on non ultimenu main nav blocks

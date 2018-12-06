@@ -7,9 +7,21 @@
   {% block top %}
   {% endblock %}
 
-  {% block header %}
-    {% include "@organisms/headers/site-header/site-header.html.twig" %}
-  {% endblock %}
+  <header class="site-header">
+    {% block wwu_header %}
+      {% include "@organisms/headers/wwu-header/wwu-header.html.twig" %}
+    {% endblock %}
+
+    {% block splash %}
+      <div class="splash">
+        {{ page.header }}
+      </div>
+    {% endblock %}
+
+    {% block main_navigation %}
+      {{ page.main_navigation }}
+    {% endblock %}
+  </header>
 
   {% block content %}
     {{ page.content }}
