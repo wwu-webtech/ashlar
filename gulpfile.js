@@ -173,6 +173,8 @@
       sass(config.sass.options),
       // Output source maps.
       sourcemaps.write(),
+      // Flatten filepath globs.
+      flatten(),
       gulp.dest(config.sass.dest),
       callback
     );

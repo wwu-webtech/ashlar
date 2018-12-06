@@ -23,6 +23,9 @@ accordion:
     - core/jquery
 alerts:
   version: 1.x
+  css:
+    theme:
+      build/css/alerts.css: {}
   js:
     build/js/alerts.js: {}
   dependencies:
