@@ -41,8 +41,10 @@
     color: $white;
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
       color: $light-green;
+      background-color: transparentize($blue, .8);
     }
   }
 
