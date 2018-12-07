@@ -1,0 +1,28 @@
+/**
+ * @file
+ * 00-atoms/global/fonts/_styles.scss
+ */
+.sans-serif {
+  font-family: $sans-serif;
+}
+
+.serif {
+  font-family: $serif;
+  font-size: 1.2em;
+}
+
+.bold {
+  font-weight: $font-weight--bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}

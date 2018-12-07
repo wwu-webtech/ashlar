@@ -6,6 +6,7 @@
  */
 
 @import 'partials/imports';
+@import '../_patterns/utilities/**/*.scss';
 @import '../_patterns/00-atoms/**/*.scss';
 @import '../_patterns/01-molecules/**/*.scss';
 @import '../_patterns/02-organisms/**/*.scss';
