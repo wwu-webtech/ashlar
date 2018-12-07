@@ -11,6 +11,8 @@ $max-box-size: 300px;
     font-size: $font-size--smallest;
   }
   position: relative;
+  display: grid;
+  justify-content: center;
   max-width: $max-content-width;
   background: $chart-background-color;
   font-size: $font-size--smaller;
