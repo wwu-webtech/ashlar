@@ -4,6 +4,12 @@
 */
 
 .page-islandora {
+  .western-header {
+    .search {
+      display: none;
+    }
+  }
+  
   &.front {
     .splash {
       @include breakpoint($medium) {
