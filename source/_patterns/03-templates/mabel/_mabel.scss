@@ -9,7 +9,7 @@
       display: none;
     }
   }
-  
+
   &.front {
     .splash {
       @include breakpoint($medium) {
@@ -22,7 +22,7 @@
 
   .splash {
     @include breakpoint($medium) {
-      min-height: 500px;
+      min-height: 450px;
       max-height: 30vh;
     }
   }
