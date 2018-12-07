@@ -2,8 +2,7 @@ page:
   include():
     pattern: organisms-page-html
     with:
-      page:
-        header: organisms-site-header-html
+      page:        
         content:
           include():
             pattern: organisms-content-region-html

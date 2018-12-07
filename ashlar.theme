@@ -5,13 +5,12 @@
  * Functions to support theming in Ashlar.
  */
 
-use Drupal\Core\Form\FormStateInterface;
-
 /**
  * Implements hook_preprocess_page().
  */
 function ashlar_preprocess_page(&$variables) {
   $variables['site_name'] = \Drupal::config('system.site')->get('name');
+  $variables['alert_display'] = (bool) theme_get_setting('alert_display');
 }
 
 /**
@@ -39,14 +38,14 @@ function ashlar_preprocess_field(&$variables) {
   $object = $element['#object'];
   $bundle = $element['#bundle'];
 
-  if ($entity_type === 'block_content' && $field_type === 'link') {
+  if ($field_type === 'link') {
     if ($object->hasField('field_tracking_event_category')) {
       $variables['element']['#attached']['library'][] = 'ashlar/event-tracking';
-      _ashlar_set_tracking_event_category($variables, $object);
+      _ashlar_set_tracking_event_category($variables['items'], $object);
     }
 
     if ($object->hasField('field_button_style')) {
-      _ashlar_set_button_style($variables, $object);
+      _ashlar_set_button_style($variables['items'], $object);
     }
   }
 }
@@ -54,9 +53,9 @@ function ashlar_preprocess_field(&$variables) {
 /**
  * Helper function to add tracking event class attribute to field.
  */
-function _ashlar_set_tracking_event_category(&$variables, $object) {
+function _ashlar_set_tracking_event_category(&$items, $object) {
   if (!$object->field_tracking_event_category->isEmpty()) {
-    foreach ($variables['items'] as &$item) {
+    foreach ($items as &$item) {
       $item['content']['#options']['attributes']['data-tracking-event-category'] = $object->field_tracking_event_category->value;
     }
   }
@@ -65,9 +64,9 @@ function _ashlar_set_tracking_event_category(&$variables, $object) {
 /**
  * Helper function to add button style classes to field.
  */
-function _ashlar_set_button_style(&$variables, $object) {
+function _ashlar_set_button_style(&$items, $object) {
   if (!$object->field_button_style->isEmpty()) {
-    foreach ($variables['items'] as &$item) {
+    foreach ($items as &$item) {
       $item['content']['#options']['attributes']['class'][] = 'button';
       $item['content']['#options']['attributes']['class'][] = $object->field_button_style->value;
     }

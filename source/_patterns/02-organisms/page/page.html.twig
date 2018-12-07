@@ -4,14 +4,36 @@
  */
 #}
 <div class="page">
-  {% include "@organisms/headers/site-header/site-header.html.twig" %}
+  {% block top %}
+  {% endblock %}
 
-  {{ page.content }}
+  <header class="site-header">
+    {% block wwu_header %}
+      {% include "@organisms/headers/wwu-header/wwu-header.html.twig" %}
+    {% endblock %}
+
+    {% block splash %}
+      <div class="splash">
+        {{ page.header }}
+      </div>
+    {% endblock %}
+
+    {% block main_navigation %}
+      {{ page.main_navigation }}
+    {% endblock %}
+  </header>
+
+  {% block content %}
+    {{ page.content }}
+  {% endblock %}
 
   {% block footer %}
-  <footer class="page-footer region region--footer">
-    {% include "@organisms/footers/site-footer/site-footer.html.twig" %}
-    {% include "@organisms/footers/wwu-footer/wwu-footer.html.twig" %}
-  </footer>
+    <footer class="page-footer region region--footer">
+      {% include "@organisms/footers/site-footer/site-footer.html.twig" %}
+      {% include "@organisms/footers/wwu-footer/wwu-footer.html.twig" %}
+    </footer>
+  {% endblock %}
+
+  {% block bottom %}
   {% endblock %}
 </div>

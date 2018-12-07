@@ -4,16 +4,10 @@
  */
 #}
 {% if items -%}
-<nav class="nav--main" aria-label="Main navigation">
+<nav class="nav--main" aria-label="Main">
   {{ title_prefix }}
-  {# Label. Not displayed, but provided for screen readers. #}
-  {% if not configuration.label_display %}
-    <div class="visually-hidden">
-  {% endif %}
-  <h2{{ title_attributes }}>{{ configuration.label }}</h2>
-
-  {% if not configuration.label_display %}
-    </div>
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
   {% endif %}
   {{ title_suffix }}
 
@@ -24,7 +18,14 @@
     {%- for item in items -%}
       <li{{ item.attributes.addClass(item_classes, item.flyout ? 'has-ultimenu') }}>
         {%- if item.link -%}
-          {{ item.link }}
+          {% if item.title == 'home-icon' %}
+            <a class="ultimenu__link" href="{{ item.link.uri }}"><i class="material-icons">home</i></a>
+          {% else %}
+            <a class="ultimenu__link" href="{{ item.link.uri }}">{{ item.title }}</a>
+          {% endif %}
+          {% if item.below %}
+            {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+          {% endif %}
         {%- endif -%}
         {%- if item.flyout -%}
           <section{{ item.flyout_attributes.addClass('ultimenu__flyout') }}>

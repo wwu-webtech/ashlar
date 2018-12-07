@@ -1,6 +1,6 @@
 /**
  * @file
- * 00-atoms/00-global/_structure-vars.scss
+ * utilities/structure.scss
  */
 
 /* Spacing */
@@ -12,7 +12,6 @@ $double-spacing: $standard-spacing * 2;
 $border-width--thinner: 1px;
 $border-width: 2px;
 $border-width--thicker: 3px;
-$focus-shadow: 2px 2px 4px 2px transparentize($dark-blue, .5);
 $focus-outline: $border-width dotted;
 $focus-outline--thicker: $border-width--thicker dotted;
 

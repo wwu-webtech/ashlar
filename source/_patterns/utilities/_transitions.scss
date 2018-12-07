@@ -1,6 +1,6 @@
 /**
  * @file
- * 00-atoms/00-global/_transitions.scss
+ * utilities/_transitions.scss
  */
 
 // Global variables
@@ -18,26 +18,4 @@ $button-transition-ease: $standard-ease;
 // Mixins
 @mixin transition($timing, $ease) {
   transition: $timing $ease;
-}
-
-// General Use CSS Classes
-
-.slow {
-  transition-duration: $slow-transition-speed;
-}
-
-.medium {
-  transition-duration: $medium-transition-speed;
-}
-
-.fast {
-  transition-duration: $fast-transition-speed;
-}
-
-.linear {
-  transition-timing-function: linear;
-}
-
-.ease {
-  transition-timing-function: $standard-ease;
 }

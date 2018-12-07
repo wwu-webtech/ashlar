@@ -1,0 +1,280 @@
+/**
+* @file
+* 01-molecules/org-charts/_org-charts.scss
+*/
+$chart-background-color: $white;
+$line-color: mix($light-gray, $gray, 50%);
+$max-box-size: 300px;
+
+.org-chart {
+  @include breakpoint($medium) {
+    font-size: $font-size--smallest;
+  }
+  position: relative;
+  display: grid;
+  justify-content: center;
+  max-width: $max-content-width;
+  background: $chart-background-color;
+  font-size: $font-size--smaller;
+
+  ul {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 0;
+    margin-left: $standard-spacing;
+    padding: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+
+      span,
+      a {
+        @include breakpoint($medium) {
+          max-width: none;
+        }
+        position: relative;
+        display: block;
+        max-width: $max-box-size;
+        margin: 0;
+        margin-top: $standard-spacing;
+        margin-left: $standard-spacing;
+        padding: $half-spacing;
+        text-align: center;
+        background: $light-gray;
+      }
+
+      a {
+        color: white;
+        border-bottom: none;
+        background: $blue;
+
+        &:hover,
+        &:focus {
+          color: $dark-blue;
+          background-color: $light-green;
+        }
+      }
+    }
+
+    &.level-sub-a {
+      @include breakpoint($medium) {
+        display: grid;
+        margin-left: 0;
+
+        grid-template-columns: repeat(10, auto);
+      }
+      margin-left: 0;
+    }
+
+    &.level-a {
+      @include breakpoint($medium) {
+        display: grid;
+        margin-left: 0;
+
+        grid-template-columns: repeat(10, auto);
+      }
+      margin-left: 0;
+
+      .item-level-a {
+        margin-bottom: $standard-spacing;
+
+        > span,
+        > a {
+          @include breakpoint($medium) {
+            max-width: $max-box-size;
+            margin: auto;
+          }
+          max-width: none;
+          margin: 0;
+          color: $white;
+          background: $gray;
+        }
+
+        > a {
+          background: $dark-blue;
+
+          &:hover,
+          &:focus {
+            color: $dark-blue;
+            background-color: $light-green;
+          }
+        }
+      }
+    }
+
+    &.level-b {
+      @include breakpoint($medium) {
+        display: grid;
+        margin-top: $standard-spacing;
+        margin-left: 0;
+
+        grid-template-columns: repeat(10, auto);
+      }
+      margin-left: 0;
+
+      .item-level-b {
+        > span > a {
+          max-width: none;
+          margin-right: $half-spacing;
+          margin-left: $standard-spacing;
+        }
+      }
+    }
+
+    &.level-c {
+      @include breakpoint($medium) {
+        .level-c {
+          display: flex;
+          flex-flow: column;
+          margin-left: $half-spacing;
+        }
+      }
+    }
+  }
+
+  /* LINES */
+  .item-level-b,
+  .item-level-c,
+  .item-level-d,
+  .item-level-e,
+  .item-level-f {
+    /* vertical bar for nested items */
+    border-left: solid $border-width $line-color;
+
+    /* horizontal bar for nested items */
+    > span:before,
+    > a:before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: $standard-spacing + $border-width;
+      height: 50%;
+      content: "";
+      transform: translate(-100%);
+      border-top: solid $line-color $border-width;
+      background: transparent;
+    }
+
+    /* mask vertical bar for end items */
+    &:last-of-type {
+      > span:before,
+      > a:before {
+        background: $chart-background-color;
+      }
+    }
+  }
+
+  /* mask vertical bar for end items */
+  .item-level-b:last-child > .level-c:before,
+  .item-level-c:last-child > .level-d:before,
+  .item-level-d:last-child > .level-e:before,
+  .item-level-e:last-child > .level-f:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: $standard-spacing + $border-width;
+    height: 100%;
+    content: "";
+    transform: translate(-100%);
+    background: $chart-background-color;
+  }
+}
+
+@include breakpoint($medium) {
+  .org-chart {
+    /* vertical bar for top level items */
+    .item-level-a {
+      > span:before,
+      > a:before {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        display: block;
+        width: $border-width;
+        height: $standard-spacing;
+        content: "";
+        transform: translate(-50%, $standard-spacing);
+        background: $line-color;
+      }
+      &.no-children {
+        > span:before,
+        > a:before {
+          display: none;
+        }
+      }
+    }
+
+    .item-level-b {
+      border-left: none;
+
+      /* remove second level lines */
+      > span:before,
+      > a:before,
+      &:last-of-type > span:before,
+      &:last-of-type > a:before,
+      &:last-child > .level-c:before {
+        display: none;
+      }
+
+      /* horizontal bar for second level items */
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: $border-width;
+        content: "";
+        background: $line-color;
+      }
+
+      &:first-child {
+        &:before {
+          left: 50%;
+          display: block;
+          width: 50%;
+          height: $border-width;
+          content: "";
+          background: $line-color;
+        }
+      }
+
+      &:last-child {
+        &:before {
+          display: block;
+          width: 50%;
+          height: $border-width;
+          content: "";
+          background: $line-color;
+        }
+      }
+
+      &:only-child {
+        &:before {
+          display: none;
+        }
+      }
+
+      /* vertical bar for second level items */
+      > span:before,
+      > a:before,
+      &:last-of-type > span:before,
+      &:last-of-type > a:before {
+        position: absolute;
+        top: -$standard-spacing;
+        left: 50%;
+        display: block;
+        width: $border-width;
+        height: $standard-spacing;
+        content: "";
+        transform: translate(-($half-spacing + ($border-width / 2)));
+        border: none;
+        background: $line-color;
+      }
+    }
+  }
+}

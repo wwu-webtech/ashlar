@@ -42,6 +42,7 @@
     &:hover,
     &:focus {
       color: $lightest-green;
+      background-color: mix(black, $blue, $percent-change);
     }
 
     &.button {
@@ -154,5 +155,10 @@
 
   .ribbon {
     transform: translatey(-($double-spacing * 2));
+
+    &:hover,
+    &:focus {
+      background-color: $light-gray;
+    }
   }
 }

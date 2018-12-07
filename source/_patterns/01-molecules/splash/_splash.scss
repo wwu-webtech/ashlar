@@ -3,7 +3,8 @@
 * molecules/media/splash/_splash.scss
 */
 
-.splash {
+.splash,
+.featured-major-splash-area {
   @include breakpoint($medium) {
     min-height: 300px;
     max-height: 50vh;
@@ -37,6 +38,7 @@
       -ms-grid-row-span: all;
     }
     align-self: center;
+    height: 100%;
 
     -ms-grid-column: 1;
     grid-column: 1 / span all;
@@ -44,7 +46,10 @@
     -ms-grid-row: 1;
     grid-row: 1 / span 1;
     -ms-grid-row-span: 1;
-    height: 100%;
+
+    div:not(.headline) {
+      height: 100%;
+    }
   }
 
   & > :nth-of-type(2) {
@@ -62,5 +67,27 @@
     -ms-grid-row: 2;
     grid-row: 2 / span 1;
     -ms-grid-row-span: 1;
+  }
+}
+
+.featured-major-splash-area {
+  @include breakpoint($medium) {
+    min-height: 600px;
+    max-height: 70vh;
+  }
+  margin-top: 0;
+
+  > :nth-of-type(2) {
+    margin-bottom: 0;
+  }
+}
+
+/* Larger splash used on article content type */
+.page-node-type-article {
+  .splash {
+    @include breakpoint($medium) {
+      min-height: 600px;
+      max-height: 70vh;
+    }
   }
 }
