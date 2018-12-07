@@ -4,13 +4,14 @@ description: An atomic design Drupal theme for Western Washington University
 core: 8.x
 libraries:
   - core/normalize
-  - ashlar/global-scripts
   - ashlar/global-styling
   - ashlar/accessible-mega-menu
   - ashlar/accordion
+  - ashlar/alerts
   - ashlar/event-tracking
   - ashlar/featherlight
   - ashlar/menu-extras
+  - ashlar/search
   - ashlar/switcher
   - ashlar/wwu-header
 regions:

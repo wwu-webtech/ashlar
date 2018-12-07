@@ -16,7 +16,7 @@ $logo-size: 100px;
   color: $white;
   background-color: $red;
 
-  .alert_header {
+  .alert-header {
     color: $white;
   }
 
@@ -34,13 +34,13 @@ $logo-size: 100px;
   }
 }
 
-.alert_header {
+.alert-header {
   flex: 0 0 100%;
   font-family: $sans-serif;
   border-bottom: none;
 }
 
-.alert_icon {
+.alert-icon {
   align-self: flex-start;
   width: $logo-size;
   margin-right: $standard-spacing;
@@ -55,6 +55,6 @@ $logo-size: 100px;
 }
 
 
-.alert_footer {
+.alert-footer {
   flex: 0 0 100%;
 }

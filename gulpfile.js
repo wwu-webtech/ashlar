@@ -80,7 +80,7 @@
    */
   config.sass = {
     src: [
-      'source/sass/*.scss',
+      'source/sass/**/*.scss',
       '!source/sass/styleguide/*'
     ],
     dest: 'build/css',
@@ -90,7 +90,6 @@
     ],
     options: {
       includePaths: [
-        'source/sass',
         'node_modules/breakpoint-sass/stylesheets',
         'node_modules/sass-toolkit/stylesheets',
         'node_modules/singularitygs/stylesheets'
@@ -174,6 +173,8 @@
       sass(config.sass.options),
       // Output source maps.
       sourcemaps.write(),
+      // Flatten filepath globs.
+      flatten(),
       gulp.dest(config.sass.dest),
       callback
     );
