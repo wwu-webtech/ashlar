@@ -1,4 +1,4 @@
-bodyClass: "page-islandora"
+bodyClass: "page-islandora front"
 page:
   include():
     pattern: organisms-page-html

@@ -4,9 +4,10 @@
 */
 
 .page-islandora {
-  .front {
+  &.front {
     .splash {
       @include breakpoint($medium) {
+        min-height: 670px;
         max-height: 70vh;
       }
     }

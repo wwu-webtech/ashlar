@@ -185,3 +185,35 @@ input[title="Remove field"] {
     font-size: $p-font-size;
   }
 }
+
+/* Search box is positioned more prominently on front page */
+$site-name-height: 60px;
+
+.front {
+  #block-islandora-solr-simple {
+    @include breakpoint($medium) {
+      top: calc(#{$logo-height} + #{$site-name-height} + #{$double-spacing});
+      left: calc(#{$standard-spacing});
+      width: calc(100vw - #{$double-spacing});
+    }
+    @include breakpoint($large) {
+      top: calc(#{$logo-height--larger} + #{$site-name-height} + #{$double-spacing});
+      left: calc(((100vw - #{$max-content-width}) / 2));
+      width: $max-content-width;
+    }
+  }
+
+  #block-islandora-solr-advanced {
+    @include breakpoint($medium) {
+      position: absolute;
+      top: calc(#{$logo-height} + #{$site-name-height} + #{$double-spacing} + #{$search-block-height});
+      left: calc(#{$standard-spacing});
+      width: calc(100vw - #{$double-spacing});
+    }
+    @include breakpoint($large) {
+      top: calc(#{$logo-height--larger} + #{$site-name-height} + #{$double-spacing} + #{$search-block-height});
+      left: calc(((100vw - #{$max-content-width}) / 2));
+      width: $max-content-width;
+    }
+  }
+}
