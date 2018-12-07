@@ -4,7 +4,19 @@
 */
 
 .page-islandora {
+  .front {
+    .splash {
+      @include breakpoint($medium) {
+        max-height: 70vh;
+      }
+    }
+  }
+
+
   .splash {
-    max-height: 420px
+    @include breakpoint($medium) {
+      min-height: 500px;
+      max-height: 30vh;
+    }
   }
 }
