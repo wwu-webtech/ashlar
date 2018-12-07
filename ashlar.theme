@@ -20,10 +20,11 @@ function ashlar_preprocess_page(&$variables) {
 function ashlar_preprocess_block(&$variables) {
   if (isset($variables['elements']['content']['#block_content'])) {
     $variables['block_content'] = $variables['elements']['content']['#block_content'];
-  }
-  //Invoke BrightEdge code only where block is present
-  if (isset($variables['elements']['#id'] == 'brightedgelinkequitymanagerlemhtml')) {
-    $variables['#attached']['library'][] = 'ashlar/bright-edge';
+
+    //Invoke BrightEdge code only where block is present
+    if ($variables['elements']['#id'] == 'brightedgelinkequitymanagerlemhtml') {
+      $variables['#attached']['library'][] = 'ashlar/bright-edge';
+    }
   }
 }
 
