@@ -32,7 +32,7 @@ function close_mobile_flyout(event) {
         duration: 'fast',
         easing: 'linear',
         complete: function () {
-          $('.ultimenu__flyout').hide(400);
+          
         }
       }
     );

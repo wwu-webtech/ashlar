@@ -7,7 +7,7 @@
 .ultimenu {
   overflow: visible;
 
-  .ultimenu__flyout {
+  section.ultimenu__flyout {
     @include breakpoint($medium) {
       z-index: 0;
       top: 100%;

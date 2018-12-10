@@ -54,12 +54,13 @@
       position: inherit;
       left: 0 !important;
       margin-bottom: -($toggle-size / 2);
-      transform: translatey(-50%);
+      margin-top: -($toggle-size / 2);
       opacity: 1 !important;
       overflow-x: visible;
     }
     @include breakpoint($large) {
       margin-bottom: -($toggle-size--larger / 2);
+      margin-top: -($toggle-size--larger / 2);
     }
     position: absolute;
     z-index: 3;
