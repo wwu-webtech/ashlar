@@ -54,6 +54,12 @@ switcher:
     build/js/switcher.js: {}
   dependencies:
     - core/jquery
+user-login:
+  version: 1.x
+  js:
+    build/js/user-login.js: {}
+  dependencies:
+    - core/jquery
 wwu-header:
   version: 1.x
   js:

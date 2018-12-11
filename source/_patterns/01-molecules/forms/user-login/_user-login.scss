@@ -8,7 +8,7 @@
   grid-template-rows: auto auto auto auto;
   grid-template-columns: 2fr 1fr 2fr;
   grid-template-areas:
-  "login cancel ."
+  "login manual ."
   "username  username ."
   "password  password ."
   "submit  submit .";
@@ -18,8 +18,14 @@
   -ms-grid-rows: auto auto auto auto;
   -ms-grid-columns: 2fr $double-spacing 1fr $double-spacing 2fr;
 
-  .cancel-cas {
+  .manual-login {
     background-color: $dark-blue;
+    grid-area: manual;
+
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
   }
   .cas-login-link {
     grid-area: login;

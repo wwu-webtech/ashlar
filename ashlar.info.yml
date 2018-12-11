@@ -13,6 +13,7 @@ libraries:
   - ashlar/menu-extras
   - ashlar/search
   - ashlar/switcher
+  - ashlar/user-login
   - ashlar/wwu-header
 regions:
   header: Header
