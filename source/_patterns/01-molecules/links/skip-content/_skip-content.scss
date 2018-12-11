@@ -1,0 +1,20 @@
+/**
+ * @file
+ * molecules/links/skip-content/_skip-content.scss
+ */
+
+.visually-hidden {
+  &.focusable {
+    &:focus {
+      position: absolute !important;
+      z-index: 10;
+      top: 0;
+      left: $standard-spacing;
+      clip: initial;
+      padding: $standard-spacing;
+      color: $black;
+      outline-color: $white;
+      background: $light-green;
+    }
+  }
+}
