@@ -3,7 +3,7 @@
  * molecules/links/skip-content/_skip-content.scss
  */
 
-.visually-hidden {
+.skip-link {
   &.focusable {
     &:focus {
       position: absolute !important;
