@@ -30,6 +30,15 @@ alerts:
     build/js/alerts.js: {}
   dependencies:
     - core/jquery
+bright-edge:
+  version: 1.x
+  header: true
+  js:
+    //cdn.bc0a.com/be_ixf_js_sdk.js: {type: external, minified: true }
+    build/js/bright-edge.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
 event-tracking:
   version: 1.x
   js:

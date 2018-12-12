@@ -18,7 +18,14 @@
     {%- for item in items -%}
       <li{{ item.attributes.addClass(item_classes, item.flyout ? 'has-ultimenu') }}>
         {%- if item.link -%}
-          {{ item.link }}
+          {% if item.title == 'home-icon' %}
+            <a class="ultimenu__link" href="{{ url('<front>') }}"><i class="material-icons">home</i></a>
+          {% else %}
+            {{ item.link }}
+          {% endif %}
+          {% if item.below %}
+            {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+          {% endif %}
         {%- endif -%}
         {%- if item.flyout -%}
           <section{{ item.flyout_attributes.addClass('ultimenu__flyout') }}>
