@@ -94,6 +94,11 @@
   .ultimenu__link {
     &.is-active {
       background: $dark-blue;
+
+      &.open {
+        background: $light-green;
+        color: $dark-blue;
+      }
     }
     .caret {
       display: none;
