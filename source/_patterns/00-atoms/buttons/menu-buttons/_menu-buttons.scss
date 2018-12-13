@@ -56,13 +56,10 @@ $max-button-width: 250px;
           outline: none;
           background-color: $light-green;
         }
-      }
 
-      &.menu-item--active-trail,
-      &.active {
-        & > a {
-          color: $dark-blue;
+        &.active {
           background-color: $light-green;
+          color: $dark-blue;
         }
       }
     }

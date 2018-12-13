@@ -4,7 +4,26 @@
 */
 
 .page-islandora {
+  .western-header {
+    .search {
+      display: none;
+    }
+  }
+
+  &.front {
+    .splash {
+      @include breakpoint($medium) {
+        min-height: 670px;
+        max-height: 70vh;
+      }
+    }
+  }
+
+
   .splash {
-    max-height: 420px
+    @include breakpoint($medium) {
+      min-height: 450px;
+      max-height: 30vh;
+    }
   }
 }
