@@ -57,7 +57,8 @@
     sassDest: 'source/pattern-lab/css',
     jsFile: 'wwu-styleguide.js',
     jsSrc: [
-      'source/js/*.js',
+      'source/js/**/*.js',
+      'source/_patterns/**/*.js',
       'dist/js/*.js'
     ],
     jsDest: 'source/pattern-lab/js',
