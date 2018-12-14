@@ -19,6 +19,27 @@
   }
 }
 
+/* listnav.js styles */
+// Any result with both classes should be shown
+.listNavShow {
+  &.quickSearchShow {
+    display: list-item;
+  }
+}
+
+// Any result with either class should be hidden
+.listNavHide,
+.quickSearchHide {
+  display: none;
+}
+
+// Show the "no results" message even if the inline style is set to display
+// none
+.listNavShow.ln-no-match {
+  display: list-item !important;
+}
+/* END listnav.js styles */
+
 .view--majors-list {
   .menu {
     @include breakpoint($small) {
