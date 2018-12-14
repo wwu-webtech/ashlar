@@ -127,11 +127,6 @@ $input.quicksearch('.majors-list li a', {
 $form.submit(function (event) {
   // Prevent the form from submitting as normal.
   event.preventDefault();
-
-  // Scroll down to the results.
-  $('html, body').animate({
-    'scrollTop': $form.offset().top
-  }, 400);
 });
 
 // Check that the no results message is displayed correctly.
