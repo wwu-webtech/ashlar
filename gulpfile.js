@@ -58,7 +58,8 @@
     jsFile: 'wwu-styleguide.js',
     jsSrc: [
       'source/_patterns/**/*.js',
-      'dist/js/*.js'
+      'dist/js/*.js',
+      'source/js/menu-extras.js'
     ],
     jsDest: 'source/pattern-lab/js',
     jsTemplate: {
