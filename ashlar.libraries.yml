@@ -45,6 +45,12 @@ event-tracking:
     build/js/event-tracking.js: {}
   dependencies:
     - core/jquery
+majors-landing:
+  version: 1.x
+  js:
+    build/js/majors-landing.js: {}
+  dependencies:
+    - core/jquery
 menu-extras:
   version: 1.x
   js:
