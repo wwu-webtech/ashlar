@@ -2,11 +2,27 @@
 * @file
 * templates/major-page/_major-page.scss
 */
-/* Major list */
+/* Majors landing page */
+#majors-list-nav {
+  .ln-letters {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      color: $text-color-light;
+
+      &.ln-disabled {
+        color: $dark-blue;
+        border-bottom-color: transparent;
+      }
+    }
+  }
+}
+
 .view--majors-list {
   .menu {
     @include breakpoint($small) {
-        column-count: 2;
+      column-count: 2;
     }
   }
 }
