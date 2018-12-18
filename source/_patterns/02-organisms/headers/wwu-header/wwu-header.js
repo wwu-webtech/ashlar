@@ -5,25 +5,6 @@ var $mobile_nav = $('.quick-links .mobile');
 var $inputs = $(document).find('select, button, a, input, textarea')
 var $page = $('.western-header, .splash, .toggle-open-menu, .search, .page-content, .region--footer');
 
-
-// function restrict_focus_mobile(event) {
-  // var $mywestern = $('.mywestern');
-  // var $last_nav_item = $('.ultimenu li').last();
-  //
-  //   $last_nav_item.on('keydown', function (event) {
-  //     if (e.which === 9 && !e.shiftKey) {
-  //       e.preventDefault();
-  //       $mywestern.focus();
-  //     }
-  //   });
-  //
-  //   $mywestern.on('keydown', function (event) {
-  //     if (e.which === 9 && e.shiftKey) {
-  //       e.preventDefault();
-  //       $last_nav_item.focus();
-  //     }
-  //   });
-  // }
 function toggle_open_menu(event) {
   $last_focused = document.activeElement;
   $toggle_open_menu.off('click', toggle_open_menu);
@@ -45,7 +26,6 @@ function toggle_open_menu(event) {
       }
     }
   );
-    // restrict_focus_mobile();
 }
 
 function toggle_close_menu(event) {
