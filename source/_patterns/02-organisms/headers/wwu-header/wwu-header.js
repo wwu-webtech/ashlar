@@ -1,9 +1,9 @@
 var $toggle_open_menu = $('.toggle-open-menu', context);
 var $toggle_close_menu = $('.toggle-close-menu', context);
 var $last_focused;
-var $mobile_nav = $('.quick-links .mobile');
-var $inputs = $(document).find('select, button, a, input, textarea')
-var $page = $('.western-header, .splash, .toggle-open-menu, .search, .page-content, .region--footer');
+var $mobile_nav = $('.quick-links .mobile', context);
+var $inputs = $(document).find('select, button, a, input, textarea', context)
+var $page = $('.western-header, .splash, .toggle-open-menu, .search, .page-content, .region--footer', context);
 
 function toggle_open_menu(event) {
   $last_focused = document.activeElement;
