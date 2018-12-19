@@ -21,7 +21,7 @@ function ashlar_preprocess_block(&$variables) {
     $variables['block_content'] = $variables['elements']['content']['#block_content'];
 
     //Invoke BrightEdge code only where block is present
-    if ($variables['elements']['#id'] == 'brightedgelinkequitymanagerlemhtml') {
+    if (isset($variables['elements']['#id']) && $variables['elements']['#id'] === 'brightedgelinkequitymangerlemhtml') {
       $variables['#attached']['library'][] = 'ashlar/bright-edge';
     }
   }

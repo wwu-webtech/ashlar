@@ -1,29 +1,19 @@
-facebook:
-  url: http://www.facebook.com/westernwashingtonuniversity
+facebook: http://www.facebook.com/westernwashingtonuniversity
 
-flickr:
-  url: http://www.flickr.com/wwu
+flickr: http://www.flickr.com/wwu
 
-instagram:
-  url: https://www.instagram.com/westernwashingtonuniversity/
+instagram: https://www.instagram.com/westernwashingtonuniversity/
 
-twitter:
-  url: https://twitter.com/WWU
+twitter: https://twitter.com/WWU
 
-western_today:
-  url: https://westerntoday.wwu.edu/
+western_today: https://westerntoday.wwu.edu/
 
-wwu_social:
-  url: https://social.wwu.edu/
+wwu_social: https://social.wwu.edu/
 
-youtube:
-  url: http://www.youtube.com/wwu
+youtube: http://www.youtube.com/wwu
 
 linkedin:
-  url:
 
 pinterest:
-  url:
 
 email:
-  url:
