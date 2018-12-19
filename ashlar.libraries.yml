@@ -48,7 +48,8 @@ event-tracking:
 majors-landing:
   version: 1.x
   js:
-    node_modules/jquery-listnav/jquery-listnav.js: {}    
+    node_modules/jquery-listnav/jquery-listnav.js: {}
+    node_modules/jquery.quicksearch/src/jquery.quicksearch.js: {}    
     build/js/majors-landing.js: {}
   dependencies:
     - core/jquery
