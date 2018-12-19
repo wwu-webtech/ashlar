@@ -2,9 +2,9 @@
 var $ = global.jQuery = require("jquery/dist/jquery.min");
 
 /* jQuery plugins. */
-require('jquery-listnav');
+require('jquery-listnav/jquery-listnav.js');
+require('jquery.quicksearch/src/jquery.quicksearch.js');
 require('jquery-once');
-require('jquery-quicksearch');
 
 /* REQUIRED BY DRUPAL. Define the context variable. */
 var context = document;
