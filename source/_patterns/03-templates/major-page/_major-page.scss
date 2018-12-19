@@ -2,44 +2,6 @@
 * @file
 * templates/major-page/_major-page.scss
 */
-/* Majors landing page */
-#majors-list-nav {
-  .ln-letters {
-    display: flex;
-    justify-content: space-between;
-
-    a {
-      color: $text-color-light;
-
-      &.ln-disabled {
-        color: $dark-blue;
-        border-bottom-color: transparent;
-      }
-    }
-  }
-}
-
-/* listnav.js styles */
-// Any result with both classes should be shown
-.listNavShow {
-  &.quickSearchShow {
-    display: list-item;
-  }
-}
-
-// Any result with either class should be hidden
-.listNavHide,
-.quickSearchHide {
-  display: none;
-}
-
-// Show the "no results" message even if the inline style is set to display
-// none
-.listNavShow.ln-no-match {
-  display: list-item !important;
-}
-/* END listnav.js styles */
-
 .view--majors-list {
   .menu {
     @include breakpoint($small) {

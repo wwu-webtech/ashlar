@@ -1,6 +1,6 @@
 /**
 * @file
-* Majors page search and filter functions.
+* Quick search and filter functions.
 *
 * Some logic to get listnav and quicksearch to play nice together. We want
 * them to share the same "no results" message, as well as properly function
@@ -12,35 +12,37 @@
 * ".quickSearchShow" classes. In addition, the "no results" message is only
 * shown if there are no results matching this selector.
 *
-* This code relies on the id attribute attached to the "majors_index" view in
+* This code relies on the TODO: id attribute attached to the "majors_index" view in
 * the views_view_list preprocessor function.
 */
 
-// Majors index.
-var $list = $('.majors-list', context);
-// Majors search form.
-var $form = $('#majors-search-form', context);
-// Majors search box.
-var $input = $('#majors-search-input', context);
+// The ul element to be filtered
+var $list = $('#quick-search-list', context);
+// Search form.
+var $form = $('#quick-search-form', context);
+// Search box (input).
+var $input = $('#quick-search-input', context);
 // Container to use as role="status" to announce live changes.
-var $wrapper = $(".item-list");
+var $wrapper = $(".quick-search-container");
 // Letter selection menu.
-var $letterMenu = $("#majors-list-nav");
+var $letterMenu = $("#quick-search-list-nav");
 
-// ===Functions and attributes to enhance UX of majors filter===
+// ===Functions and attributes to enhance UX of filter===
 // Insert aria attr's to make div accessible:
 $list.attr('aria-live', 'assertive');
 $list.attr('aria-atomic', 'true');
 $wrapper.attr('role', 'status');
-$list.attr('aria-labelledby', 'majors-search-input');
+$list.attr('aria-labelledby', 'quick-search-input');
 
-// Prevent a disabled letter from being selected through tab-navigation.
-/* The interval is used because the buttons are added dynamically, so
-we must wait for them to be present.*/
+/* Prevent a disabled letter from being selected through tab-navigation or
+ * scrolling to top of page on click.
+ * The interval is used because the buttons are added dynamically, so
+ * we must wait for them to be present.*/
 var checkForLetters = setInterval(function () {
   var letterDisabled = $(".ln-disabled");
 
   if (letterDisabled.length) {
+    letterDisabled.removeAttr("href");
     letterDisabled.attr("tabindex", "-1").attr("aria-disabled", "true");
     clearTimeout(checkForLetters);
   }
@@ -85,17 +87,16 @@ function showResults(){
 }
 
 /* ====End of UX features===*/
-
 // Initialize index.
-$list.listnav({
+$('#quick-search-list').listnav({
   'includeAll': true,
   'includeNums': false,
-  'noMatchText': 'No matching majors.',
+  'noMatchText': 'No matching results.',
   'showCounts': false,
   'onClick': noResultsCheck
 });
 
-$("#majors-list-nav .ln-letters > a").on("click touchstart", function () {
+$("#quick-search-list-nav .ln-letters > a").on("click touchstart", function () {
   $(this).focus();
 });
 
@@ -103,7 +104,7 @@ $("#majors-list-nav .ln-letters > a").on("click touchstart", function () {
 $list.children('li').addClass('listNavShow');
 
 // Initialize search.
-$input.quicksearch('.majors-list li a', {
+$input.quicksearch('#quick-search-list li a', {
   'delay': 100,
   'noResults': 'li.ln-no-match',
   'show': function () {
