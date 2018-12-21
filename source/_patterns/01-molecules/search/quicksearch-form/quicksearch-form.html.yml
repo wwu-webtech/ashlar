@@ -4,6 +4,7 @@ attributes:
     - block
     - block--quicksearch-form
     - quicksearch-form-container
+    - dark-bg
 title_attributes:
   Attribute():
     class:

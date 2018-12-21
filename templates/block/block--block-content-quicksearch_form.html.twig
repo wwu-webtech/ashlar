@@ -25,12 +25,14 @@
  * @see template_preprocess_block()
  */
 #}
+{{ attach_library('ashlar/quicksearch') }}
 {%
   set classes = [
     'block',
     'block--quicksearch-form',
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
     'quicksearch-form-container',
+    'dark-bg',
   ]
 %}
 {% set attributes = attributes.addClass(classes) %}
@@ -39,7 +41,9 @@
 {% block template %}
   {% embed "@molecules/search/quicksearch-form/quicksearch-form.html.twig" %}
     {% block content %}
-      {{ content.body.0['#text']|raw }}      
+      <div class="body">
+        {{ content.body.0['#text']|raw }}
+      </div>
     {% endblock %}
 
     {% block form %}
