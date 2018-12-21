@@ -10,4 +10,4 @@ title_attributes:
     - block__title
 label: Quick Search Form
 content: 'Optional content here'
-input_text: 'Enter a search term to filter results'
+field_input_text: 'Enter a search term to filter results'

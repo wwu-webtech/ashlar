@@ -35,17 +35,18 @@
 %}
 {% set attributes = attributes.addClass(classes) %}
 {% set title_attributes = title_attributes.addClass('block__title') %}
-{% set link_classes = ['image', 'button', 'stylized'] %}
-{% set link_attributes = create_attribute() %}
-{% set link_attributes = link_attributes.addClass(link_classes) %}
 
 {% block template %}
-  {% embed "@molecules/buttons/image-buttons/image-button.html.twig" %}
+  {% embed "@molecules/search/quicksearch-form/quicksearch-form.html.twig" %}
     {% block content %}
-      <a href="{{ block_content.field_link.0.uri }}" {{ link_attributes }}>
-        <img src="{{ file_url(block_content.field_image.entity.fileuri) }}" alt="{{ block_content.field_image.0.alt }}">
-        <div class="text">{{ block_content.field_link.0.title }}</div>
-      </a>
+      {{ content.body.0['#text']|raw }}      
+    {% endblock %}
+
+    {% block form %}
+      <form autocomplete="off" id="quick-search-form">
+        <label for="quick-search-input">{{ content.field_input_text }}</label>
+        <input id="quick-search-input" type="search" />
+      </form>
     {% endblock %}
   {% endembed %}
 {% endblock %}
