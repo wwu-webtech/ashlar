@@ -23,3 +23,21 @@
     }
   }
 }
+
+/* Form block styles */
+.quicksearch-form-container {
+  padding: $double-spacing;
+  background: $blue;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  #quick-search-form {
+    margin: $double-spacing 0;
+  }
+
+  #quick-search-input {
+    width: calc(100% - #{$standard-spacing});
+  }
+}
