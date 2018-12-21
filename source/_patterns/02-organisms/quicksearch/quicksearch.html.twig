@@ -1,12 +1,7 @@
-<form autocomplete="off" id="quick-search-form">
-  <label for="quick-search-input">Enter a search term to filter results</label>
-  <input id="quick-search-input" type="search" />
-</form>
-
-<div id="quick-search-list-nav"></div>
+{% include "@molecules/search/quicksearch-form/quicksearch-form.html.twig" %}
 
 <div class="quick-search-container">
-  <ul id="quick-search-list">
+  <ul class="quick-search-list">
     <li><a href="#">Alpha</a></li>
     <li><a href="#">Bravo</a></li>
     <li><a href="#">Charlie</a></li>
