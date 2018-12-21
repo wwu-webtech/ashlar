@@ -1,0 +1,13 @@
+attributes:
+  Attribute():
+    class:
+    - block
+    - block--quicksearch-form
+    - quicksearch-form-container
+title_attributes:
+  Attribute():
+    class:
+    - block__title
+label: Quick Search Form
+content: 'Optional content here'
+input_text: 'Enter a search term to filter results'

@@ -1,6 +1,22 @@
-<form autocomplete="off" id="quick-search-form">
-  <label for="quick-search-input">Enter a search term to filter results</label>
-  <input id="quick-search-input" type="search" />
-</form>
+<div{{ attributes }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
 
-<div id="quick-search-list-nav"></div>
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+
+  {% block form %}
+    <form autocomplete="off" id="quick-search-form">
+      <label for="quick-search-input">{{ input_text }}</label>
+      <input id="quick-search-input" type="search" />
+    </form>
+  {% endblock %}
+
+  {% block list_nav %}
+    <div id="quick-search-list-nav"></div>
+  {% endblock %}
+</div>
