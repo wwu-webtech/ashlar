@@ -12,7 +12,7 @@ libraries:
   - ashlar/event-tracking
   - ashlar/featherlight
   - ashlar/menu-extras
-  - ashlar/majors-landing
+  - ashlar/quicksearch  
   - ashlar/search
   - ashlar/switcher
   - ashlar/user-login

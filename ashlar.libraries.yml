@@ -45,12 +45,12 @@ event-tracking:
     build/js/event-tracking.js: {}
   dependencies:
     - core/jquery
-majors-landing:
+quicksearch:
   version: 1.x
   js:
     node_modules/jquery-listnav/jquery-listnav.js: {}
-    node_modules/jquery.quicksearch/src/jquery.quicksearch.js: {}    
-    build/js/majors-landing.js: {}
+    node_modules/jquery.quicksearch/src/jquery.quicksearch.js: {}
+    build/js/quicksearch.js: {}
   dependencies:
     - core/jquery
 menu-extras:
