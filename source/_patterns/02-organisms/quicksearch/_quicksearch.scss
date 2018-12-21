@@ -2,28 +2,6 @@
  * @file
  * organisms/quicksearch/_quicksearch.scss
  */
-/* style listnav letters */
-#quick-search-list-nav {
-  .ln-letters {
-    display: flex;
-    justify-content: space-between;
-
-    a {
-      &.ln-disabled {
-        color: $light-gray;
-        border-bottom-color: transparent;
-
-        &:hover,
-        &:focus,
-        &:active {
-          background: transparent;
-          outline: none;
-        }
-      }
-    }
-  }
-}
-
 /* listnav.js styles, which are needed for functionality */
 // Any result with both classes should be shown
 .listNavShow {
