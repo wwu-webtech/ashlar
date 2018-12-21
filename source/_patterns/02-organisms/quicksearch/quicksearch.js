@@ -17,7 +17,7 @@
 */
 
 // The ul element to be filtered
-var $list = $('.quick-search-list:first', context);
+var $list = $('#quick-search-list', context);
 // Search form.
 var $form = $('#quick-search-form', context);
 // Search box (input).
@@ -88,7 +88,7 @@ function showResults(){
 
 /* ====End of UX features===*/
 // Initialize index.
-$('.quick-search-list:first').listnav({
+$('#quick-search-list').listnav({
   'includeAll': true,
   'includeNums': false,
   'noMatchText': 'No matching results.',
@@ -104,7 +104,7 @@ $("#quick-search-list-nav .ln-letters > a").on("click touchstart", function () {
 $list.children('li').addClass('listNavShow');
 
 // Initialize search.
-$input.quicksearch('.quick-search-list:first li a', {
+$input.quicksearch('#quick-search-list li a', {
   'delay': 100,
   'noResults': 'li.ln-no-match',
   'show': function () {
