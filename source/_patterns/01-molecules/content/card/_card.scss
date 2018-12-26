@@ -1,7 +1,7 @@
 /**
- * @file
- * molecules/components/card/_card.scss
- */
+* @file
+* molecules/components/card/_card.scss
+*/
 
 .card {
   display: flex;
@@ -22,28 +22,30 @@
   }
 
   .title {
+    order: 3;
+
     a {
       display: inline-block;
-      font-weight: $font-weight--bold;
       border: none;
+      font-family: $sans-serif;
+      font-size: $p-font-size;
+      font-weight: $font-weight--bold;
+      line-height: initial;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         color: $dark-green;
+        background-color: transparentize($lightest-green, 0.8);
       }
     }
-
-    order: 3;
   }
+
 
   .body {
     order: 4;
 
     .date {
       font-style: italic;
-    }
-
-    .location {
-
     }
   }
 }
