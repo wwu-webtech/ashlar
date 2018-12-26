@@ -35,6 +35,7 @@
       &:hover,
       &:focus {
         color: $dark-green;
+        background-color: transparentize($lightest-green, 0.8);
       }
     }
   }
