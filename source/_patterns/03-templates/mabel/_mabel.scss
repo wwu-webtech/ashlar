@@ -145,3 +145,61 @@
     }
   }
 }
+
+/* Object page styles */
+body.page-islandora-object {
+  a {
+    border-bottom: none;
+  }
+
+  #islandora-bookmark {
+    margin-bottom: $half-spacing;
+    font-size: $font-size--smaller;
+    h3 {
+      margin: 0;
+      margin-right: $standard-spacing;
+      font-size: $h4-font-size;
+    }
+    select {
+      margin: 0;
+    }
+    input {
+      margin: 0;
+      padding: $half-spacing $standard-spacing;
+    }
+  }
+
+  .islandora-objects {
+    .islandora-objects-display-switch {
+      float: none;
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+
+      li {
+        &:first-child:after {
+          display: inline-block;
+          margin-left: $half-spacing;
+          content: "|";
+        }
+        &:last-child {
+          margin-left: $half-spacing;
+        }
+      }
+    }
+  }
+
+  /* grid view */
+  .islandora-objects-grid-item {
+    font-size: $font-size--smaller;
+  }
+
+  /* image viewer on single object page */
+  .islandora-large-image-content {
+    float: none;
+    width: 100%;
+  }
+}
