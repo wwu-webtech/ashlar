@@ -3,6 +3,7 @@
 * templates/front-page/_mabel.scss
 */
 
+/* General Mabel Styles */
 .page-islandora {
   .western-header {
     .search {
@@ -24,6 +25,123 @@
     @include breakpoint($medium) {
       min-height: 450px;
       max-height: 30vh;
+    }
+  }
+
+  /* Date picker resets */
+  .ui-datepicker {
+    a {
+      margin: initial;
+      border-bottom: none;
+    }
+    select {
+      display: inline;
+      padding: initial;
+      border: initial;
+      font-weight: normal;
+    }
+  }
+}
+
+/* Search Results Styles */
+.page-islandora-search {
+  .page-content {
+    margin-bottom: 0;
+  }
+
+  .islandora-solr-search-result {
+    padding: 0 $standard-spacing $double-spacing;
+    border-bottom: solid 1px $gray;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    a {
+      margin: initial;
+      padding: 0;
+      border-bottom: none;
+    }
+
+    dl.solr-fields {
+      border: none;
+    }
+    .solr-fields dt,
+    .solr-fields dd {
+      border-color: $light-gray;
+    }
+
+    dl {
+      &.solr-thumb,
+      &.solr-fields {
+        @include breakpoint(max-width $medium) {
+          float: none;
+          width: 100%;
+        }
+
+        &.solr-thumb {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  /* Sidebar blocks */
+
+  .layout__region--second {
+    .panel-pane {
+      margin-bottom: $standard-spacing;
+      padding: $standard-spacing;
+      background: mix($white, $light-gray, 50%);
+      font-size: $font-size--smaller;
+    }
+
+    a {
+      border-bottom-color: transparent;
+    }
+
+    a:hover {
+      color: $dark-green;
+      border-bottom-color: $dark-green;
+    }
+
+
+    h2 {
+      margin: 0;
+      border-bottom-color: transparent;
+      font-size: $h4-font-size;
+    }
+
+    h3 {
+      color: $dark-green;
+      font-size: $h5-font-size;
+    }
+
+    .islandora-solr-facet-wrapper:nth-of-type(1) {
+      h3 {
+        margin-top: 0;
+      }
+    }
+
+    input {
+      border-width: $border-width;
+    }
+
+    input[type="submit"] {
+      padding: $half-spacing $standard-spacing;
+    }
+
+    label {
+      font-weight: normal;
+    }
+
+    .islandora-solr-range-slider {
+      text-align: right;
+    }
+
+    .range-slider-fromto,
+    .date-range-slider-gap {
+      display: inline;
     }
   }
 }
