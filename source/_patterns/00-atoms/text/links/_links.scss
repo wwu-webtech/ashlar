@@ -53,6 +53,19 @@ a {
       background-color: transparentize($blue, 0.8);
     }
   }
+
+  ul,
+  ol {
+    a {
+      border-bottom-color: transparent;
+
+      &:active,
+      &:focus,
+      &:hover {
+        border-bottom-color: $link-color-light--hover;
+      }
+    }
+  }
 }
 
 ul,
