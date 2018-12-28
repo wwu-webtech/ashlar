@@ -48,6 +48,7 @@ event-tracking:
 quicksearch:
   version: 1.x
   js:
+    build/js/quicksearch-init.js: { header: true }
     node_modules/jquery-listnav/jquery-listnav.js: {}
     node_modules/jquery.quicksearch/src/jquery.quicksearch.js: {}
     build/js/quicksearch.js: {}
