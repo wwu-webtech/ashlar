@@ -22,7 +22,7 @@ tr {
     background-color: mix(white, $light-gray, 80%);
   }
   &:nth-of-type(even) {
-    background-color: $light-gray;
+    background-color: mix(white, $light-gray, 40%);
   }
   &.even,
   &.odd {
