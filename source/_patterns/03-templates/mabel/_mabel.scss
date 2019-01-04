@@ -203,3 +203,41 @@ body.page-islandora-object {
     width: 100%;
   }
 }
+
+/* Compound objects JAIL */
+$jail-height: 600px;
+
+#block-islandora-compound-object-compound-jail-display {
+  @include breakpoint($medium) {
+    border: solid $light-gray $border-width--thicker;
+  }
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: $jail-height;
+  margin-top: $standard-spacing;
+  padding: $standard-spacing;
+  border: solid $light-gray $border-width;
+  font-size: inherit;
+
+
+  .form-item {
+    flex: 0 0 100%;
+    max-width: none;
+  }
+
+  & > div {
+    max-width: 50%;
+    border: none;
+
+    &:not(.form-item) {
+      display: inline-block;
+      vertical-align: top;
+
+      a:first-of-type {
+        margin-bottom: $half-spacing;
+        font-size: $font-size--smallest;
+      }
+    }
+  }
+}
