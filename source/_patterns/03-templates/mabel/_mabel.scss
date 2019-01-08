@@ -28,6 +28,17 @@
     }
   }
 
+  /* Breadcrumb styles */
+  .breadcrumb {
+    margin-top: $standard-spacing;
+    font-size: $font-size--smaller;
+
+    .breadcrumb ol li,
+    .breadcrumb ol li:before {
+      margin-right: $half-spacing;  
+    }
+  }
+
   /* Date picker resets */
   .ui-datepicker {
     a {
