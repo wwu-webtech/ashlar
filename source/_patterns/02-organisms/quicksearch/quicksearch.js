@@ -87,14 +87,18 @@ function showResults(){
 }
 
 /* ====End of UX features===*/
+var $init_check = $('.ln-letters').length;
+
 // Initialize index.
-$('#quick-search-list').listnav({
-  'includeAll': true,
-  'includeNums': false,
-  'noMatchText': 'No matching results.',
-  'showCounts': false,
-  'onClick': noResultsCheck
-});
+if ( !$init_check ) {
+  $('#quick-search-list').listnav({
+    'includeAll': true,
+    'includeNums': false,
+    'noMatchText': 'No matching results.',
+    'showCounts': false,
+    'onClick': noResultsCheck
+  });
+}
 
 $("#quick-search-list-nav .ln-letters > a").on("click touchstart", function () {
   $(this).focus();
@@ -104,25 +108,27 @@ $("#quick-search-list-nav .ln-letters > a").on("click touchstart", function () {
 $list.children('li').addClass('listNavShow');
 
 // Initialize search.
-$input.quicksearch('#quick-search-list li a', {
-  'delay': 100,
-  'noResults': 'li.ln-no-match',
-  'show': function () {
-    var $item = $(this).closest('li');
+if ( !$init_check ){
+  $input.quicksearch('#quick-search-list li a', {
+    'delay': 100,
+    'noResults': 'li.ln-no-match',
+    'show': function () {
+      var $item = $(this).closest('li');
 
-    // Provide a custom class for quicksearch matches.
-    $item.addClass('quickSearchShow');
-    $item.removeClass('quickSearchHide');
-  },
-  'hide': function () {
-    var $item = $(this).closest('li');
+      // Provide a custom class for quicksearch matches.
+      $item.addClass('quickSearchShow');
+      $item.removeClass('quickSearchHide');
+    },
+    'hide': function () {
+      var $item = $(this).closest('li');
 
-    // Provide a custom class for quicksearch non-matches.
-    $item.removeClass('quickSearchShow');
-    $item.addClass('quickSearchHide');
-  },
-  'onAfter': noResultsCheck
-});
+      // Provide a custom class for quicksearch non-matches.
+      $item.removeClass('quickSearchShow');
+      $item.addClass('quickSearchHide');
+    },
+    'onAfter': noResultsCheck
+  });
+}
 
 // Handle form submission behavior.
 $form.submit(function (event) {
