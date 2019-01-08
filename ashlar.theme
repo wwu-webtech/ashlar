@@ -171,18 +171,3 @@ function ashlar_preprocess_ds_entity_view(&$variables) {
 function ashlar_form_user_login_form_alter(&$form, &$form_state, $form_id) {
   $form['cas_login_link']['#title'] = 'Universal Login';
 }
-
-/**
- * Implements hook_theme_suggestions_HOOK_alter().
- */
-function ashlar_theme_suggestions_page_alter(array &$suggestions, array $variables) {
-  $path = \Drupal::service('path.current')->getPath();
-
-  if ($path) {
-    $alias = \Drupal::service('path.alias_manager')->getAliasByPath($path);
-  }
-
-  if ($alias) {
-    $suggestions += theme_get_suggestions($alias, 'page');
-  }
-}
