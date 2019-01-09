@@ -1,0 +1,24 @@
+<div{{ attributes }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% block content %}
+  <div class="body">
+    {{ content }}
+  </div>
+  {% endblock %}
+
+  {% block form %}
+    <form autocomplete="off" id="quick-search-form">
+      <label for="quick-search-input">{{ field_input_text }}</label>
+      <input id="quick-search-input" type="search" />
+    </form>
+  {% endblock %}
+
+  {% block list_nav %}
+    <div id="quick-search-list-nav"></div>
+  {% endblock %}
+</div>
