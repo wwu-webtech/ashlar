@@ -22,7 +22,7 @@
     {% for item in items %}
       <li{{ item.attributes }}>
         {% if item.title == 'home-icon' %}
-          <a href="{{ item.url }}"><i class="material-icons">home</i></a>
+          <a href="{{ item.url }}"><span class="material-icons">home</span></a>
         {% else %}
           <a href="{{ item.url }}">{{ item.title }}</a>
         {% endif %}
