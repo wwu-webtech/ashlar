@@ -3,7 +3,7 @@ var $advanced_search_form = $('#islandora-solr-advanced-search-form', context);
 
 $advanced_search_form.removeClass('is-expanded');
 /* Turn h2 into a button */
-$advanced_h2.replaceWith('<button aria-label="open advanced search" class="toggle-advanced-search">Advanced search<span class="material-icons">add</span></button>');
+$advanced_h2.replaceWith('<button aria-label="open advanced search" class="toggle-advanced-search">Advanced search<span class="material-icons" aria-hidden="true">add</span></button>');
 
 var $toggle_advanced_search = $('.toggle-advanced-search');
 var $advanced_search_icon = $toggle_advanced_search.children('.material-icons');
