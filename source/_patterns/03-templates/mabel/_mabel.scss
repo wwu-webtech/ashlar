@@ -33,9 +33,11 @@
     margin-top: $standard-spacing;
     font-size: $font-size--smaller;
 
-    .breadcrumb ol li,
-    .breadcrumb ol li:before {
-      margin-right: $half-spacing;  
+    ol {
+      li,
+      li:before {
+        margin-right: $half-spacing;
+      }
     }
   }
 
@@ -251,4 +253,14 @@ $jail-height: 600px;
       }
     }
   }
+}
+
+/* Compound object primary tabs navigation */
+#islandora-compound-sequence-position,
+#islandora-compound-previous-link,
+#islandora-compound-next-link {
+  float: none;
+  margin-bottom: 0;
+  padding: $half-spacing $standard-spacing;
+  line-height: inherit;
 }
