@@ -208,6 +208,7 @@ body.page-islandora-object {
   /* grid view */
   .islandora-objects-grid-item {
     font-size: $font-size--smaller;
+    break-word: break-all;
   }
 
   /* image viewer on single object page */
