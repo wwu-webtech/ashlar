@@ -253,19 +253,19 @@
   /**
    * Generate Pattern Lab JS post.
    */
-  gulp.task('patternlab:js:post', ['patternlab:js:pre'], function (callback) {
+  gulp.task('patternlab:js:post', gulp.series(['patternlab:js:pre'], function (callback) {
     pump(
       browserify(config.patternLab.jsDest + '/' + config.patternLab.jsFile, { debug: true }).bundle(),
       source(config.patternLab.jsFile),
       gulp.dest(config.patternLab.jsDest),
       callback
     );
-  });
+  }));
 
   /**
    * Generate Pattern Lab JS.
    */
-  gulp.task('patternlab:js', ['patternlab:js:post']);
+  gulp.task('patternlab:js', gulp.series(['patternlab:js:post']));
 
   /**
    * Generate Pattern Lab images.
@@ -282,7 +282,7 @@
   /**
    * Run Pattern Lab tasks.
    */
-  gulp.task('patternlab', ['patternlab:sass', 'patternlab:js', 'patternlab:images']);
+  gulp.task('patternlab', gulp.series(gulp.parallel(['patternlab:sass', 'patternlab:js', 'patternlab:images'])));
 
   /**
    * Set watch tasks.
@@ -323,11 +323,11 @@
   /**
    * Run clean tasks.
    */
-  gulp.task('clean', ['clean:css', 'clean:js', 'clean:images', 'clean:patternlab']);
+  gulp.task('clean', gulp.series(gulp.parallel(['clean:css', 'clean:js', 'clean:images', 'clean:patternlab'])));
 
   /**
    * Gulp default task.
    */
-  gulp.task('default', ['sass', 'js', 'images']);
+  gulp.task('default', gulp.series(gulp.parallel(['sass', 'js', 'images'])));
 
 })();

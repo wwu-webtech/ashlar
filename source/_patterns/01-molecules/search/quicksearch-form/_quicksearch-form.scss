@@ -1,0 +1,46 @@
+/**
+* @file
+* 01-molecules/content/search/quicksearch-form/_search.scss
+*/
+/* style listnav letters */
+#quick-search-list-nav {
+  .ln-letters {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      color: $white;
+
+      &.ln-disabled {
+        color: mix(black, $blue, 30%);
+        border-bottom-color: transparent;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background: transparent;
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+/* Form block styles */
+.quicksearch-form-container {
+  padding: $double-spacing;
+  background: $blue;
+
+  h2 {
+    margin-top: 0;
+    border-bottom-color: $lightest-green;
+  }
+
+  #quick-search-form {
+    margin: $double-spacing 0;
+  }
+
+  #quick-search-input {
+    width: calc(100% - #{$standard-spacing});
+  }
+}

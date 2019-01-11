@@ -2,11 +2,10 @@
 * @file
 * templates/major-page/_major-page.scss
 */
-/* Major list */
 .view--majors-list {
   .menu {
     @include breakpoint($small) {
-        column-count: 2;
+      column-count: 2;
     }
   }
 }

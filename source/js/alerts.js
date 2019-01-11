@@ -33,16 +33,13 @@ function log_error(jqXHR, textStatus, errorThrown) {
 }
 
 function display_alert($alert, data) {
-  var $title = $alert.children('.alert-header').find('h2');
-  var $content = $alert.children('.alert-content');
+  var $title = $alert.children('.alert-header');
+  var $content = $alert.children('.alert-body');
 
   if (!is_all_clear(data.Title)) {
     $title.text(data.Title);
     $content.text(data.Content);
-    $alert.slideDown({
-      'duration': 1400,
-      'easing': 'easeOutElastic'
-    });
+    $alert.show();
   }
 }
 

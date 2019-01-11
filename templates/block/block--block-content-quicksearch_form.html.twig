@@ -25,25 +25,32 @@
  * @see template_preprocess_block()
  */
 #}
+{{ attach_library('ashlar/quicksearch') }}
 {%
   set classes = [
     'block',
-    'block--announcement',
+    'block--quicksearch-form',
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
+    'quicksearch-form-container',
+    'dark-bg',
   ]
 %}
 {% set attributes = attributes.addClass(classes) %}
 {% set title_attributes = title_attributes.addClass('block__title') %}
+
 {% block template %}
-  {% embed "@molecules/messaging/announcement/announcement.html.twig" %}
+  {% embed "@molecules/search/quicksearch-form/quicksearch-form.html.twig" %}
     {% block content %}
-      <div class="image">
-        <img src="{{ file_url(block_content.field_image.entity.fileuri) }}" alt="{{ block_content.field_image.0.alt }}">
-      </div>
-      <span class="material-icons">{{ block_content.field_icon.0.value }}</span>
       <div class="body">
-        {{ block_content.field_text.0.value }}
+        {{ content.body.0['#text']|raw }}
       </div>
+    {% endblock %}
+
+    {% block form %}
+      <form autocomplete="off" id="quick-search-form">
+        <label for="quick-search-input">{{ content.field_input_text }}</label>
+        <input id="quick-search-input" type="search" />
+      </form>
     {% endblock %}
   {% endembed %}
 {% endblock %}
