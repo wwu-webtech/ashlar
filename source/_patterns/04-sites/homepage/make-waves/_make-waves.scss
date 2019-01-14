@@ -2,3 +2,36 @@
 * @file
 * templates/major-page/_make-waves.scss
 */
+$min-title-font-size: 80px;
+$max-title-font-size: 200px;
+$title-font-size: calc(#{$min-title-font-size} + #{strip-unit($max-title-font-size - $min-title-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+
+.page-node-type-campaign {
+  .splash {
+    @include breakpoint($medium) {
+      min-height: 80vh;
+      -ms-grid-rows: $logo-height 1fr $double-spacing;
+      -ms-grid--columns: $double-spacing 1fr $double-spacing;
+      grid-template-rows: $logo-height 1fr $double-spacing;
+      grid-template-columns: $double-spacing 1fr $double-spacing;
+    }
+    -ms-grid-rows: $double-spacing auto $double-spacing;
+    grid-template-rows: $double-spacing auto $double-spacing;
+  }
+}
+
+.page-node-type-campaign .splash > div:nth-of-type(1) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: all;
+  grid-row: 1 / span all;
+}
+.page-node-type-campaign .splash > div:nth-of-type(2) {
+  align-self: center;
+}
+
+.make-waves-header {
+  color: $white;
+  text-align: center;
+  font-family: $sans-serif;
+  font-size: $title-font-size;
+}
