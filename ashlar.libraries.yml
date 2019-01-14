@@ -4,7 +4,6 @@ global-styling:
     theme:
       build/css/base.css: {}
       build/css/components.css: {}
-      build/css/layout.css: {}
       build/css/state.css: {}
       build/css/theme.css: {}
       build/css/print.css: { media: print }
