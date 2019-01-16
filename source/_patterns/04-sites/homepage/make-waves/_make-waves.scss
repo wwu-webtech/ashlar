@@ -2,9 +2,18 @@
 * @file
 * templates/major-page/_make-waves.scss
 */
-$min-title-font-size: 80px;
+$heading-font: "Knockout";
+$min-title-font-size: 54px;
 $max-title-font-size: 200px;
+$min-h2-font-size: 42px;
+$max-h2-font-size: 72px;
+$min-button-font-size: 48px;
+$max-button-font-size: 60px;
+$play-icon-size: 200px;
+
 $title-font-size: calc(#{$min-title-font-size} + #{strip-unit($max-title-font-size - $min-title-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+$h2-font-size: calc(#{$min-h2-font-size} + #{strip-unit($max-h2-font-size - $min-h2-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+$button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font-size - $min-button-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 
 .page-node-type-campaign {
   .splash {
@@ -15,23 +24,141 @@ $title-font-size: calc(#{$min-title-font-size} + #{strip-unit($max-title-font-si
       grid-template-rows: $logo-height 1fr $double-spacing;
       grid-template-columns: $double-spacing 1fr $double-spacing;
     }
-    -ms-grid-rows: $double-spacing auto $double-spacing;
-    grid-template-rows: $double-spacing auto $double-spacing;
+    -ms-grid-rows: ($double-spacing * 2) 1fr;
+    grid-template-rows: ($double-spacing * 2) 1fr;
+
+    & > div:nth-of-type(1) {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: all;
+      grid-row: 1 / span all;
+    }
+
+    & > div:nth-of-type(2) {
+      align-self: center;
+    }
   }
-}
 
-.page-node-type-campaign .splash > div:nth-of-type(1) {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: all;
-  grid-row: 1 / span all;
-}
-.page-node-type-campaign .splash > div:nth-of-type(2) {
-  align-self: center;
-}
+  .site-footer {
+    display: none;
+  }
 
-.make-waves-header {
-  color: $white;
-  text-align: center;
-  font-family: $sans-serif;
-  font-size: $title-font-size;
+  h2 {
+    font-size: $h2-font-size;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    border-bottom: none;
+    font-family: $heading-font;
+  }
+
+  .make-waves-header {
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    font-family: $heading-font;
+    font-size: $title-font-size;
+  }
+
+  .button {
+    padding: $double-spacing * 2;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border-radius: 0;
+    font-family: $heading-font;
+    font-size: $button-font-size;
+  }
+
+  .play-link {
+    position: relative;
+    display: block;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: $white;
+    border: none;
+  }
+
+  .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: $play-icon-size;
+  }
+
+  .play-link:hover {
+    color: $light-blue;
+  }
+
+  .page-content {
+    grid-template-columns: 0 100% 0;
+    margin-bottom: 0;
+
+    .layout__region {
+      max-width: none;
+    }
+
+    .layout--onecol {
+      @include breakpoint($medium) {
+        max-width: $max-content-width;
+        margin: ($double-spacing * 4) auto;
+      }
+      margin: $double-spacing $standard-spacing;
+    }
+
+    .layout--twocol-bricks {
+      & > .layout__region--middle {
+        @include breakpoint($medium) {
+          margin: ($double-spacing * 4) 0;
+        }
+        margin: $double-spacing * 2;
+        text-align: center;
+      }
+
+      & > .layout__region--first-above,
+      & > .layout__region--second-below {
+        padding: 0;
+        background-size: cover;
+
+        div,
+        p {
+          height: 100%;
+          margin-bottom: 0;
+        }
+
+        img {
+          @include breakpoint($medium) {
+            width: 50vw;
+          }
+          height: 100%;
+          width: 100vw;
+          object-fit: cover;
+          display: block;
+        }
+      }
+
+      & > .layout__region--second-above {
+        @include breakpoint($medium) {
+          order: inherit;
+        }
+        order: -1;
+      }
+
+      & > .layout__region--second-above,
+      & > .layout__region--first-below {
+        @include breakpoint($medium) {
+          padding: $double-spacing;
+        }
+        @include breakpoint($large) {
+          padding: $double-spacing * 2;
+        }
+        background-color: $blue;
+        color: $white;
+        padding: $standard-spacing;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+  }
 }
