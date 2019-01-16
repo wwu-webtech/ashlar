@@ -63,6 +63,10 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
     font-size: $title-font-size;
   }
 
+  .block--button {
+    text-align: center;
+    margin-bottom: $double-spacing;
+  }
   .button {
     @include breakpoint($medium) {
       padding: $double-spacing * 2;
@@ -103,6 +107,15 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
     grid-template-columns: 0 100% 0;
     margin-bottom: 0;
 
+    p {
+      @include breakpoint($medium) {
+        margin-bottom: $double-spacing;
+      }
+      max-width: $max-content-width;
+      margin: auto;
+      margin-bottom: $standard-spacing;
+    }
+
     a:not(.button) {
       font-family: $url-font;
     }
@@ -117,23 +130,16 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
         margin: ($double-spacing * 4) auto;
       }
       margin: $double-spacing $standard-spacing;
-      text-align: center;
-
-      p {
-        @include breakpoint($medium) {
-          margin-bottom: $standard-spacing;
-        }
-        margin-bottom: $double-spacing;
-      }
     }
 
     .layout--twocol-bricks {
+      & > .layout__region--content,
       & > .layout__region--middle {
         @include breakpoint($medium) {
           margin: ($double-spacing * 4) 0;
+          padding: 0 $double-spacing;
         }
         margin: $double-spacing;
-        text-align: center;
       }
 
       & > .layout__region--first-above,
