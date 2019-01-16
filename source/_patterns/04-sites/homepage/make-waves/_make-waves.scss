@@ -2,7 +2,11 @@
 * @file
 * templates/major-page/_make-waves.scss
 */
-$heading-font: "Knockout";
+@import url('https://cloud.typography.com/6968476/7999012/css/fonts.css');
+
+$heading-font: "Knockout 94 A", "Knockout 94 B";
+$copy-font: "Knockout 30 A", "Knockout 30 B";
+$url-font: "Knockout 31 A", "Knockout 31 B";
 $min-title-font-size: 54px;
 $max-title-font-size: 200px;
 $min-h2-font-size: 42px;
@@ -95,8 +99,13 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
   }
 
   .page-content {
+    font-family: $copy-font;
     grid-template-columns: 0 100% 0;
     margin-bottom: 0;
+
+    a:not(.button) {
+      font-family: $url-font;
+    }
 
     .layout__region {
       max-width: none;
