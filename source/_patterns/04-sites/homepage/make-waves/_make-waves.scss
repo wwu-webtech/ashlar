@@ -80,6 +80,16 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
     font-size: $button-font-size;
   }
 
+  .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: $play-icon-size;
+    opacity: 0.8;
+    transition: $medium-transition-speed $standard-ease opacity;
+  }
+
   .play-link {
     position: relative;
     display: block;
@@ -88,18 +98,12 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
     padding: 0;
     color: $white;
     border: none;
-  }
 
-  .play-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: $play-icon-size;
-  }
-
-  .play-link:hover {
-    color: $light-blue;
+    &:hover {
+      .play-icon {
+        opacity: 1;
+      }
+    }
   }
 
   .page-content {
