@@ -130,10 +130,17 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
         margin: ($double-spacing * 4) auto;
       }
       margin: $double-spacing $standard-spacing;
+
+      & > .layout__region--content {
+        @include breakpoint($medium) {
+          margin: ($double-spacing * 4) 0;
+          padding: 0 $double-spacing;
+        }
+        margin: $double-spacing;
+      }
     }
 
     .layout--twocol-bricks {
-      & > .layout__region--content,
       & > .layout__region--middle {
         @include breakpoint($medium) {
           margin: ($double-spacing * 4) 0;
