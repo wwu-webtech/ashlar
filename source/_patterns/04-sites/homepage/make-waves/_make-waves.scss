@@ -22,11 +22,14 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
 .page-node-type-campaign {
   .splash {
     @include breakpoint($medium) {
-      min-height: 80vh;
+      min-height: 60vh;
       -ms-grid-rows: $logo-height 1fr $double-spacing;
       -ms-grid--columns: $double-spacing 1fr $double-spacing;
       grid-template-rows: $logo-height 1fr $double-spacing;
       grid-template-columns: $double-spacing 1fr $double-spacing;
+    }
+    @include breakpoint($medium (max-height 610px)) {
+      min-height: 400px;
     }
     -ms-grid-rows: ($double-spacing * 2) 1fr;
     grid-template-rows: ($double-spacing * 2) 1fr;
