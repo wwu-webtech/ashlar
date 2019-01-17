@@ -24,7 +24,7 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
     @include breakpoint($medium) {
       min-height: 60vh;
       -ms-grid-rows: $logo-height 1fr $double-spacing;
-      -ms-grid--columns: $double-spacing 1fr $double-spacing;
+      -ms-grid-columns: $double-spacing 1fr $double-spacing;
       grid-template-rows: $logo-height 1fr $double-spacing;
       grid-template-columns: $double-spacing 1fr $double-spacing;
     }
@@ -111,6 +111,7 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
 
   .page-content {
     font-family: $copy-font;
+    -ms-grid-columns: 0 100%
     grid-template-columns: 0 100% 0;
     margin-bottom: 0;
 
@@ -191,5 +192,27 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
       }
     }
 
+  }
+}
+
+/* IE Alternate Styles */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .layout--twocol-bricks > .layout__region--first-above,
+  .layout--twocol-bricks > .layout__region--second-above,
+  .layout--twocol-bricks > .layout__region--first-below,
+  .layout--twocol-bricks > .layout__region--second-below {
+    flex: 0 1 100%;
+  }
+
+  .page-node-type-campaign .page-content .layout--twocol-bricks > .layout__region--first-above img,
+  .page-node-type-campaign .page-content .layout--twocol-bricks > .layout__region--second-below img {
+    width: 100vw;
+  }
+
+  .splash > :nth-of-type(2), .featured-major-splash-area > :nth-of-type(2) {
+    position: absolute;
+    top: $logo-height + $double-spacing;
+    left: 50%;
+    transform: translatex(-50%);
   }
 }

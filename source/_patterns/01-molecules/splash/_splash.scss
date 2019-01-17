@@ -56,7 +56,7 @@
     @include breakpoint($medium) {
       -ms-grid-row: 2;
       grid-row: 2 / span 1;
-      -ms-grid-span: 1;
+      -ms-grid-row-span: 1;
     }
     transform: translatey(-$double-spacing);
 
