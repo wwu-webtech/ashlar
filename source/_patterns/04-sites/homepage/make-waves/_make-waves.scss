@@ -8,7 +8,7 @@ $heading-font: "Knockout 94 A", "Knockout 94 B";
 $copy-font: "Knockout 30 A", "Knockout 30 B";
 $url-font: "Knockout 31 A", "Knockout 31 B";
 $min-title-font-size: 54px;
-$max-title-font-size: 200px;
+$max-title-font-size: 140px;
 $min-h2-font-size: 42px;
 $max-h2-font-size: 72px;
 $min-button-font-size: 32px;
@@ -22,11 +22,14 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
 .page-node-type-campaign {
   .splash {
     @include breakpoint($medium) {
-      min-height: 80vh;
+      min-height: 60vh;
       -ms-grid-rows: $logo-height 1fr $double-spacing;
       -ms-grid--columns: $double-spacing 1fr $double-spacing;
       grid-template-rows: $logo-height 1fr $double-spacing;
       grid-template-columns: $double-spacing 1fr $double-spacing;
+    }
+    @include breakpoint($medium (max-height 610px)) {
+      min-height: 400px;
     }
     -ms-grid-rows: ($double-spacing * 2) 1fr;
     grid-template-rows: ($double-spacing * 2) 1fr;
