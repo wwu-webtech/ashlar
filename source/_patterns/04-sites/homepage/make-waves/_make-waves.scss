@@ -111,7 +111,7 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
 
   .page-content {
     font-family: $copy-font;
-    -ms-grid-columns: 0 100%
+    -ms-grid-columns: 0 100%;
     grid-template-columns: 0 100% 0;
     margin-bottom: 0;
 
