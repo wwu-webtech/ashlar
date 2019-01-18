@@ -147,7 +147,10 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
         @include breakpoint($medium) {
           margin: $double-spacing 0 ($double-spacing * 2);
         }
-        margin: 0 0 $standard-spacing;
+        margin: $standard-spacing 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
       }
 
       & > .layout__region--top,
@@ -158,7 +161,8 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
         order: 0;
       }
 
-      & > .layout__region--middle {
+      & > .layout__region--middle,
+      & > .layout__region--bottom {
         @include breakpoint($medium) {
           margin: ($double-spacing * 4) 0;
           padding: 0 $double-spacing;
