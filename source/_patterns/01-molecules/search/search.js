@@ -16,11 +16,11 @@ function toggle_search(event) {
 
         if ($toggle_search.hasClass('.is-expanded')) {
           $search_icon.text('close');
-          $toggle_search.attr('aria-label', 'Close the search box.');
+          $toggle_search.attr('aria-label', 'Close the search box');
         }
         else {
           $search_icon.text('search');
-          $toggle_search.attr('aria-label', 'Open the search box.');
+          $toggle_search.attr('aria-label', 'Open the search box');
         }
 
         $toggle_search.on('click', toggle_search);
