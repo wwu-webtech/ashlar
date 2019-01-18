@@ -77,18 +77,6 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
     text-align: center;
     margin-bottom: $double-spacing;
   }
-  .button {
-    @include breakpoint($medium) {
-      padding: $double-spacing * 2;
-    }
-    margin: 0 $standard-spacing;
-    padding: $double-spacing;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    border-radius: 0;
-    font-family: $heading-font;
-    font-size: $button-font-size;
-  }
 
   .play-icon {
     position: absolute;
@@ -121,6 +109,19 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
     -ms-grid-columns: 0 100%;
     grid-template-columns: 0 100% 0;
     margin-bottom: 0;
+
+    .button {
+      @include breakpoint($medium) {
+        padding: $double-spacing * 2;
+      }
+      margin: 0 $standard-spacing;
+      padding: $double-spacing;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      border-radius: 0;
+      font-family: $heading-font;
+      font-size: $button-font-size;
+    }
 
     p {
       @include breakpoint($medium) {
