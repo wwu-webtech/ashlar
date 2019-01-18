@@ -139,6 +139,25 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
     }
 
     .layout--twocol-bricks {
+      & > .layout__region {
+        order: 1;
+      }
+
+      & > .layout__region--top {
+        @include breakpoint($medium) {
+          margin: $double-spacing 0 ($double-spacing * 2);
+        }
+        margin: 0 0 $standard-spacing;
+      }
+
+      & > .layout__region--top,
+      & > .layout__region--second-above {
+        @include breakpoint($medium) {
+          order: 1;
+        }
+        order: 0;
+      }
+
       & > .layout__region--middle {
         @include breakpoint($medium) {
           margin: ($double-spacing * 4) 0;
@@ -167,13 +186,6 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
           object-fit: cover;
           display: block;
         }
-      }
-
-      & > .layout__region--second-above {
-        @include breakpoint($medium) {
-          order: inherit;
-        }
-        order: -1;
       }
 
       & > .layout__region--second-above,
