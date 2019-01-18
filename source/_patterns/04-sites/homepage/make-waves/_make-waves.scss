@@ -11,12 +11,15 @@ $min-title-font-size: 54px;
 $max-title-font-size: 140px;
 $min-h2-font-size: 42px;
 $max-h2-font-size: 72px;
+$min-p-font-size: 17px;
+$max-p-font-size: 23px;
 $min-button-font-size: 32px;
 $max-button-font-size: 60px;
 $play-icon-size: 200px;
 
 $title-font-size: calc(#{$min-title-font-size} + #{strip-unit($max-title-font-size - $min-title-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 $h2-font-size: calc(#{$min-h2-font-size} + #{strip-unit($max-h2-font-size - $min-h2-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+$p-font-size: calc(#{$min-p-font-size} + #{strip-unit($max-p-font-size - $min-p-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font-size - $min-button-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 
 .page-node-type-campaign {
@@ -56,6 +59,10 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
     color: white;
     border-bottom: none;
     font-family: $heading-font;
+  }
+
+  p {
+    font-size: $p-font-size;
   }
 
   .make-waves-header {
