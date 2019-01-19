@@ -48,6 +48,12 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
     }
   }
 
+  .nav--main {
+    @include breakpoint($medium) {
+      display: none !important;
+    }
+  }
+
   .site-footer {
     display: none;
   }
