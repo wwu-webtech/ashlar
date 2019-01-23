@@ -1,0 +1,248 @@
+/**
+* @file
+* templates/major-page/_make-waves.scss
+*/
+@import url('https://cloud.typography.com/6968476/7999012/css/fonts.css');
+
+$heading-font: "Knockout 94 A", "Knockout 94 B";
+$copy-font: "Knockout 30 A", "Knockout 30 B";
+$url-font: "Knockout 31 A", "Knockout 31 B";
+$min-title-font-size: 54px;
+$max-title-font-size: 140px;
+$min-h2-font-size: 42px;
+$max-h2-font-size: 72px;
+$min-p-font-size: 17px;
+$max-p-font-size: 23px;
+$min-button-font-size: 32px;
+$max-button-font-size: 60px;
+$play-icon-size: 200px;
+
+$title-font-size: calc(#{$min-title-font-size} + #{strip-unit($max-title-font-size - $min-title-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+$h2-font-size: calc(#{$min-h2-font-size} + #{strip-unit($max-h2-font-size - $min-h2-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+$p-font-size: calc(#{$min-p-font-size} + #{strip-unit($max-p-font-size - $min-p-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+$button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font-size - $min-button-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+
+.page-node-type-campaign {
+  .splash {
+    @include breakpoint($medium) {
+      min-height: 60vh;
+      -ms-grid-rows: $logo-height 1fr $double-spacing;
+      -ms-grid-columns: $double-spacing 1fr $double-spacing;
+      grid-template-rows: $logo-height 1fr $double-spacing;
+      grid-template-columns: $double-spacing 1fr $double-spacing;
+    }
+    @include breakpoint($medium (max-height 610px)) {
+      min-height: 400px;
+    }
+    -ms-grid-rows: ($double-spacing * 2) 1fr;
+    grid-template-rows: ($double-spacing * 2) 1fr;
+
+    & > div:nth-of-type(1) {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: all;
+      grid-row: 1 / span all;
+    }
+
+    & > div:nth-of-type(2) {
+      align-self: center;
+    }
+  }
+
+  .nav--main {
+    @include breakpoint($medium) {
+      display: none !important;
+    }
+  }
+
+  .site-footer {
+    display: none;
+  }
+
+  h2 {
+    font-size: $h2-font-size;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    border-bottom: none;
+    font-family: $heading-font;
+  }
+
+  p {
+    font-size: $p-font-size;
+  }
+
+  .make-waves-header {
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    font-family: $heading-font;
+    font-size: $title-font-size;
+  }
+
+  .block--button {
+    text-align: center;
+    margin-bottom: $double-spacing;
+  }
+
+  .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: $play-icon-size;
+    opacity: 0.8;
+    transition: $medium-transition-speed $standard-ease opacity;
+  }
+
+  .play-link {
+    position: relative;
+    display: block;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: $white;
+    border: none;
+
+    &:hover {
+      .play-icon {
+        opacity: 1;
+      }
+    }
+  }
+
+  .page-content {
+    font-family: $copy-font;
+    -ms-grid-columns: 0 100%;
+    grid-template-columns: 0 100% 0;
+    margin-bottom: 0;
+
+    .button {
+      @include breakpoint($medium) {
+        padding: $double-spacing * 2;
+      }
+      margin: 0 $standard-spacing;
+      padding: $double-spacing;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      border-radius: 0;
+      font-family: $heading-font;
+      font-size: $button-font-size;
+    }
+
+    p {
+      @include breakpoint($medium) {
+        margin-bottom: $double-spacing;
+      }
+      max-width: $max-content-width;
+      margin: auto;
+      margin-bottom: $standard-spacing;
+    }
+
+    a:not(.button) {
+      font-family: $url-font;
+    }
+
+    .layout__region {
+      max-width: none;
+    }
+
+    .layout--onecol {
+      .layout__region--content {
+        padding: $double-spacing;
+      }
+    }
+
+    .layout--twocol-bricks {
+      & > .layout__region {
+        order: 1;
+      }
+
+      & > .layout__region--top {
+        @include breakpoint($medium) {
+          margin: $double-spacing 0 ($double-spacing * 2);
+        }
+        margin: $standard-spacing 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+      }
+
+      & > .layout__region--top,
+      & > .layout__region--second-above {
+        @include breakpoint($medium) {
+          order: 1;
+        }
+        order: 0;
+      }
+
+      & > .layout__region--middle,
+      & > .layout__region--bottom {
+        @include breakpoint($medium) {
+          margin: ($double-spacing * 4) 0;
+          padding: 0 $double-spacing;
+        }
+        margin: $double-spacing;
+      }
+
+      & > .layout__region--first-above,
+      & > .layout__region--second-below {
+        padding: 0;
+        background-size: cover;
+
+        div,
+        p {
+          height: 100%;
+          margin-bottom: 0;
+        }
+
+        img {
+          @include breakpoint($medium) {
+            width: 50vw;
+          }
+          height: 100%;
+          width: 100vw;
+          object-fit: cover;
+          display: block;
+        }
+      }
+
+      & > .layout__region--second-above,
+      & > .layout__region--first-below {
+        @include breakpoint($medium) {
+          padding: $double-spacing;
+        }
+        @include breakpoint($large) {
+          padding: $double-spacing * 2;
+        }
+        background-color: $blue;
+        color: $white;
+        padding: $standard-spacing;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+  }
+}
+
+/* IE Alternate Styles */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .layout--twocol-bricks > .layout__region--first-above,
+  .layout--twocol-bricks > .layout__region--second-above,
+  .layout--twocol-bricks > .layout__region--first-below,
+  .layout--twocol-bricks > .layout__region--second-below {
+    flex: 0 1 100%;
+  }
+
+  .page-node-type-campaign .page-content .layout--twocol-bricks > .layout__region--first-above img,
+  .page-node-type-campaign .page-content .layout--twocol-bricks > .layout__region--second-below img {
+    width: 100vw;
+  }
+
+  .splash > :nth-of-type(2), .featured-major-splash-area > :nth-of-type(2) {
+    position: absolute;
+    top: $logo-height + $double-spacing;
+    left: 50%;
+    transform: translatex(-50%);
+  }
+}

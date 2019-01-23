@@ -37,7 +37,7 @@ Download and install the latest **stable** version of [Lando](https://github.com
 
 In the terminal, navigate into the ashlar director `cd ashlar`, then run `lando init`
 
-  * Select custom from the recipe list
+  * Select drupal8 from the recipe list (even though we are not utilizing Drupal in this instance, selecting drupal8 as a recipe will allow composer to be installed)
   * Don't enter anything for Pantheon machine token (just hit enter)
   * Webroot should be this folder `.`
   * You can call the app whatever you want
@@ -46,7 +46,7 @@ Open the .lando.yml file in a text editor and replace the text with this lando p
 
 ```yaml
 name: your-app-name
-recipe: custom
+recipe: drupal8
 
 config:
   webroot: .
@@ -121,10 +121,4 @@ Running the following compile the ashlar `\_pattern files` into the `build` dire
 
 If you are developing a Drupal 8 site, you will need to run this command along with `lando drush cr` to see your changes reflected in your local Drupal site.
 
-If you are devloping outside of Drupal, there are a handful of files in `ashlar\build\css`, but the two most useful for developing external sites are `components.css` and `layout.css`
-
-Eventually we would like to have these compiled css files hosted somewhere that can be referenced by campus sites. In the interim, any sites that are built to utilize ashlar should reference these two css files.
-
-`components.css` is the main stylesheet, and contains the styles for the majority of the patterns.
-
-`layout.css` contains the styles for the `_patterns/03-templates/layouts`
+Eventually we would like to have these compiled css files hosted somewhere that can be referenced by campus sites. In the interim, any sites that are built to utilize ashlar should reference the `components.css` stylesheet.
