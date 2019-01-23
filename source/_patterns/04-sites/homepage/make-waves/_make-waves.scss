@@ -70,7 +70,9 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
 
   p {
     font-size: $p-font-size;
-    line-height: 1.5em;
+    line-height: 1.5em;    
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
   }
 
   .make-waves-header {
