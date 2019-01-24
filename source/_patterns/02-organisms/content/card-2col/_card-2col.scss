@@ -3,7 +3,8 @@
  * organisms/sections/card-list/_card-2col.scss
  */
 
-.card-2col {
+.card-2col,
+.card-2col--view .view-content {
   @include breakpoint($small) {
     grid-column-gap: $standard-spacing;
   }
