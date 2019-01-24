@@ -56,6 +56,17 @@
   }
 }
 
+.islandora-audio-content,
+.islandora-basic-image-content,
+.islandora-large-image-content,
+.islandora-oralhistories-content,
+.islandora-pdf-content,
+.islandora-video-content {
+  border: none;
+  border-radius: 0;
+  background: $light-gray;
+}
+
 /* Search Results Styles */
 .page-islandora-search {
   .page-content {
@@ -208,6 +219,7 @@ body.page-islandora-object {
   /* grid view */
   .islandora-objects-grid-item {
     font-size: $font-size--smaller;
+
     break-word: break-all;
   }
 
@@ -218,8 +230,42 @@ body.page-islandora-object {
   }
 }
 
-/* Compound objects JAIL */
-$jail-height: 600px;
+/* Compound object page styles */
+$jail-height: 750px;
+
+a#clip {
+  margin-bottom: $standard-spacing;
+  margin-left: 0;
+  font-size: $font-size--smaller;
+}
+
+.compound-navigation {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: end;
+  font-size: $font-size--smallest;
+}
+
+#islandora-compound-previous-link,
+#islandora-compound-next-link {
+  margin: 0;
+  color: $black;
+  background: $light-gray;
+
+  &:hover,
+  &:focus {
+    background: $gray;
+  }
+}
+
+#islandora-compound-previous-link:before {
+  content: "\2039  ";
+}
+
+#islandora-compound-next-link:after {
+  content: " \203A";
+}
 
 #block-islandora-compound-object-compound-jail-display {
   @include breakpoint($medium) {
@@ -229,15 +275,19 @@ $jail-height: 600px;
   flex-flow: row wrap;
   justify-content: space-between;
   height: $jail-height;
-  margin-top: $standard-spacing;
   padding: $standard-spacing;
   border: solid $light-gray $border-width;
-  font-size: inherit;
+  font-size: $font-size--smallest;
 
 
   .form-item {
     flex: 0 0 100%;
     max-width: none;
+  }
+
+  .form-type-item:nth-child(2) {
+    margin: 0;
+    border-bottom: none;
   }
 
   & > div {
@@ -250,7 +300,6 @@ $jail-height: 600px;
 
       a:first-of-type {
         margin-bottom: $half-spacing;
-        font-size: $font-size--smallest;
       }
     }
   }
