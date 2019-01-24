@@ -31,7 +31,7 @@
   /* Breadcrumb styles */
   .breadcrumb {
     margin-top: $standard-spacing;
-    font-size: $font-size--smaller;
+    font-size: $font-size--smallest;
 
     ol {
       li,
@@ -52,6 +52,48 @@
       padding: initial;
       border: initial;
       font-weight: normal;
+    }
+  }
+
+  /* Search navigation */
+  .pane-islandora-solr-search-navigation {
+    display: grid;
+    margin-top: $double-spacing;
+
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-rows: auto;
+
+    div {
+      display: inline-block;
+      font-size: $font-size--smallest;
+    }
+
+    .button {
+      margin-bottom: 0;
+    }
+
+    #islandora-solr-search-prev-link,
+    #islandora-solr-search-next-link {
+      justify-self: end;
+    }
+
+    #islandora-solr-search-return-link,
+    #islandora-solr-search-prev-link {
+      a {
+        &:before {
+          content: "\2039  ";
+          font-size: 1em;
+        }
+      }
+    }
+
+    #islandora-solr-search-next-link {
+      a {
+        &:after {
+          content: " \203A";
+          font-size: 1em;
+        }
+      }
     }
   }
 }
@@ -236,7 +278,7 @@ $jail-height: 750px;
 a#clip {
   margin-bottom: $standard-spacing;
   margin-left: 0;
-  font-size: $font-size--smaller;
+  font-size: $font-size--smallest;
 }
 
 .compound-navigation {
@@ -247,15 +289,24 @@ a#clip {
   font-size: $font-size--smallest;
 }
 
+#islandora-compound-sequence-position {
+  float: none;
+  margin: 0;
+}
+
 #islandora-compound-previous-link,
 #islandora-compound-next-link {
+  float: none;
   margin: 0;
+  padding: $half-spacing $standard-spacing;
   color: $black;
   background: $light-gray;
+  line-height: inherit;
 
   &:hover,
   &:focus {
     background: $gray;
+    color: $white;
   }
 }
 
@@ -303,14 +354,4 @@ a#clip {
       }
     }
   }
-}
-
-/* Compound object primary tabs navigation */
-#islandora-compound-sequence-position,
-#islandora-compound-previous-link,
-#islandora-compound-next-link {
-  float: none;
-  margin-bottom: 0;
-  padding: $half-spacing $standard-spacing;
-  line-height: inherit;
 }
