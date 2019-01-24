@@ -28,10 +28,35 @@
     }
   }
 
+  /* Sidebar goes below main content area on 25/75 layouts */
+  .layout--twocol-25-75 {
+    .layout__region--top {
+      order: 0;
+    }
+    .layout__region--first {
+      @include breakpoint($medium) {
+        order: 1;
+      }
+      order: 2;
+    }
+    .layout__region--second {
+      @include breakpoint($medium) {
+        order: 2;
+      }
+      order: 1;
+    }
+    .layout__region--bottom {
+      order: 3;
+    }
+  }
+
   /* Breadcrumb styles */
   .breadcrumb {
+    @include breakpoint($medium) {
+      font-size: $font-size--smallest;
+    }
     margin-top: $standard-spacing;
-    font-size: $font-size--smallest;
+    font-size: $font-size--smaller;
 
     ol {
       li,
@@ -57,19 +82,30 @@
 
   /* Search navigation */
   .pane-islandora-solr-search-navigation {
-    display: grid;
+    @include breakpoint($small) {
+      display: grid;
+
+      grid-template-columns: 3fr 1fr 1fr;
+      grid-template-rows: auto;
+    }
+    display: flex;
+    justify-content: space-between;
     margin-top: $double-spacing;
 
-    grid-template-columns: 3fr 1fr 1fr;
-    grid-template-rows: auto;
-
     div {
+      @include breakpoint($medium) {
+        font-size: $font-size--smallest;
+      }
       display: inline-block;
-      font-size: $font-size--smallest;
+      font-size: $font-size--smaller;
     }
 
     .button {
+      @include breakpoint($medium) {
+        padding: $standard-spacing;
+      }
       margin-bottom: 0;
+      padding: $half-spacing;
     }
 
     #islandora-solr-search-prev-link,
@@ -150,10 +186,24 @@
         }
       }
     }
+
+    .islandora-inline-metadata {
+      dt {
+        font-weight: $font-weight--regular;
+      }
+    }
+  }
+
+  .islandora-solr-grid {
+    a {
+      margin: 0;
+      padding: 0;
+      border: none;
+      font-size: $font-size--smaller;
+    }
   }
 
   /* Sidebar blocks */
-
   .layout__region--first {
     .panel-pane {
       margin-bottom: $standard-spacing;
@@ -276,9 +326,12 @@ body.page-islandora-object {
 $jail-height: 750px;
 
 a#clip {
+  @include breakpoint($medium) {
+    font-size: $font-size--smallest;
+  }
   margin-bottom: $standard-spacing;
   margin-left: 0;
-  font-size: $font-size--smallest;
+  font-size: $font-size--smaller;
 }
 
 .compound-navigation {
@@ -305,8 +358,8 @@ a#clip {
 
   &:hover,
   &:focus {
-    background: $gray;
     color: $white;
+    background: $gray;
   }
 }
 
