@@ -62,6 +62,7 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
     font-size: $h2-font-size;
     text-transform: uppercase;
     text-align: center;
+    line-height: 0.8em;
     color: white;
     border-bottom: none;
     font-family: $heading-font;
@@ -69,6 +70,9 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
 
   p {
     font-size: $p-font-size;
+    line-height: 1.5em;    
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
   }
 
   .make-waves-header {
