@@ -20,16 +20,16 @@ $site-name-spacer: 120px;
   @include breakpoint($large) {
     margin-top: -$toggle-size--larger;
 
-    -ms-grid-columns: 1fr $max-content-width 1fr;
+    -ms-grid-columns: $large-screen-columns;
     -ms-grid-rows: ($logo-height--larger + $site-name-spacer) auto $toggle-size;
 
-    grid-template-columns: 1fr $max-content-width 1fr;
+    grid-template-columns: $large-screen-columns;
     grid-template-rows: ($logo-height--larger + $site-name-spacer) auto $toggle-size;
   }
   display: -ms-grid;
   display: grid;
 
-  -ms-grid-columns: $standard-spacing 1fr $standard-spacing;
+  -ms-grid-columns: $small-screen-columns;
   -ms-grid-rows: 25vh 1fr 1fr $double-spacing;
 
   grid-template-areas:
@@ -37,7 +37,7 @@ $site-name-spacer: 120px;
   ". content ."
   ". content ."
   ". ....... .";
-  grid-template-columns: $standard-spacing 1fr $standard-spacing;
+  grid-template-columns: $small-screen-columns;
   grid-template-rows: 25vh 1fr 1fr $standard-spacing;
 
   > div {
