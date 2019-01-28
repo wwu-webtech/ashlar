@@ -29,6 +29,30 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
     }
   }
 
+  .splash {
+    @include breakpoint($medium) {
+      grid-template-rows: ($logo-height--larger + $double-spacing) 1fr $toggle-size;
+      min-height: 450px;
+    }
+    @include breakpoint($large) {
+      min-height: 380px;
+    }
+    max-height: 50vh;
+    min-height: 300px;
+    overflow: hidden;
+    grid-template-columns: $standard-spacing 1fr $standard-spacing;
+    grid-template-rows: $double-spacing auto 0px;
+
+    > div {
+      &:nth-of-type(1) {
+        @include breakpoint($medium) {
+          display: grid;
+          align-content: center;
+        }
+      }
+    }
+  }
+
   .site-footer {
     display: none;
   }

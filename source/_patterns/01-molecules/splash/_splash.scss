@@ -4,9 +4,12 @@
 */
 $site-name-spacer: 120px;
 
-.splash {
+.splash,
+.featured-major-splash-area {
   @include breakpoint($medium) {
     margin-top: -$toggle-size;
+
+    -ms-grid-rows: ($logo-height + $site-name-spacer) auto $toggle-size;
 
     grid-template-areas:
     ". ....... ."
@@ -16,10 +19,18 @@ $site-name-spacer: 120px;
   }
   @include breakpoint($large) {
     margin-top: -$toggle-size--larger;
+
+    -ms-grid-columns: 1fr $max-content-width 1fr;
+    -ms-grid-rows: ($logo-height--larger + $site-name-spacer) auto $toggle-size;
+
     grid-template-columns: 1fr $max-content-width 1fr;
     grid-template-rows: ($logo-height--larger + $site-name-spacer) auto $toggle-size;
   }
+  display: -ms-grid;
   display: grid;
+
+  -ms-grid-columns: $standard-spacing 1fr $standard-spacing;
+  -ms-grid-rows: 25vh 1fr 1fr $double-spacing;
 
   grid-template-areas:
   ". ....... ."
@@ -27,24 +38,50 @@ $site-name-spacer: 120px;
   ". content ."
   ". ....... .";
   grid-template-columns: $standard-spacing 1fr $standard-spacing;
-  grid-template-rows: 25vh 1fr 1fr $double-spacing;
+  grid-template-rows: 25vh 1fr 1fr $standard-spacing;
 
-  div {
-    &:nth-of-type(1) { /* Splash image is the first div in splash region */
+  > div {
+    &:nth-of-type(1) {
+      /* Splash image is the first div in splash region */
       @include breakpoint($medium) {
         grid-row: 1 / span all;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 3;
       }
+
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 2;
+
       grid-column: 1 / span all;
       grid-row: 1 / span 2;
 
-      div,
-      p {
+      div {
         height: 100%;
       }
     }
 
     &:nth-of-type(2) {
+      @include breakpoint($medium) {
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 1;
+        -ms-grid-column: 2;
+      }
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 2;
+      -ms-grid-column: 2;
+
       grid-area: content;
     }
+  }
+}
+
+/* Featured major pages have some overwrites */
+.featured-major-splash-area {
+  margin-top: 0;
+}
+
+.page-node-type-article {
+  .splash {
+    grid-template-rows: 1fr;
   }
 }
