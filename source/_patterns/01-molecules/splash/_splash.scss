@@ -2,7 +2,49 @@
 * @file
 * molecules/media/splash/_splash.scss
 */
+$site-name-spacer: 120px;
 
 .splash {
-  
+  @include breakpoint($medium) {
+    margin-top: -$toggle-size;
+
+    grid-template-areas:
+    ". ....... ."
+    ". content ."
+    ". ....... .";
+    grid-template-rows: ($logo-height + $site-name-spacer) auto $toggle-size;
+  }
+  @include breakpoint($large) {
+    margin-top: -$toggle-size--larger;
+    grid-template-columns: 1fr $max-content-width 1fr;
+    grid-template-rows: ($logo-height--larger + $site-name-spacer) auto $toggle-size;
+  }
+  display: grid;
+
+  grid-template-areas:
+  ". ....... ."
+  ". content ."
+  ". content ."
+  ". ....... .";
+  grid-template-columns: $standard-spacing 1fr $standard-spacing;
+  grid-template-rows: 25vh 1fr 1fr $double-spacing;
+
+  div {
+    &:nth-of-type(1) { /* Splash image is the first div in splash region */
+      @include breakpoint($medium) {
+        grid-row: 1 / span all;
+      }
+      grid-column: 1 / span all;
+      grid-row: 1 / span 2;
+
+      div,
+      p {
+        height: 100%;
+      }
+    }
+
+    &:nth-of-type(2) {
+      grid-area: content;
+    }
+  }
 }
