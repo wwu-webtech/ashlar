@@ -1,0 +1,30 @@
+/*
+ * @file
+ * templates/layouts/_layout--timeline.scss
+ */
+
+.layout--timeline {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.layout--timeline > .layout__region {
+  flex: 0 1 100%;
+}
+
+
+.layout--timeline > .layout__region--first {
+  @include breakpoint($medium) {
+    flex: 0 1 50%;
+    max-width: 50%;
+    padding-right: $standard-spacing;
+  }
+}
+
+.layout--timeline > .layout__region--second {
+  @include breakpoint($medium) {
+    flex: 0 1 50%;
+    max-width: 50%;
+    padding-left: $standard-spacing;
+  }
+}

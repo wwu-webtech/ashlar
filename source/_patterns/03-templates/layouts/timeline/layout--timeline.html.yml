@@ -1,0 +1,21 @@
+attributes:
+  Attribute():
+    class:
+    - layout
+    - layout--timeline
+region_attributes:
+  top:
+    Attribute():
+      class:
+  first:
+    Attribute():
+      class:
+  second:
+    Attribute():
+      class:
+  bottom:
+    Attribute():
+      class:
+content:
+  first: "<h2>First</h2> Afield aghast booby coverlet dolven ell flagon garth gibbet hew lay lob mischance pate portend quaff rede rick spinney squib toss-pot unsated wax. Beset boon burnished esquire fender fillet forespeak hallow heed lissom lob longfather redound shale sortie tracery wheedle whet wile wold. "
+  second: "<h2>Second</h2> Aumbry champ fawn gainsay ghyll grandsire hoar hock nethermost oast profound stricken thunder-clap unsated."
