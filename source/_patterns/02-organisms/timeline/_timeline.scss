@@ -1,0 +1,97 @@
+/**
+* @file
+* organisms/timeline/_timeline.scss
+*/
+$reserved-header-space--smaller: 65px;
+$reserved-header-space: 75px;
+$reserved-header-space--larger: 85px;
+
+.timeline-block {
+  position: relative;
+
+  &:nth-of-type(odd) {
+    @include breakpoint($small) {
+      margin-left: calc(50% - #{$reserved-header-space--larger});
+    }
+    @include breakpoint($medium) {
+      border-left: $dark-blue solid $reserved-header-space;
+    }
+    @include breakpoint($large) {
+      border-left: $dark-blue solid $reserved-header-space--larger;
+    }
+    border-left: $dark-blue solid $reserved-header-space--smaller;
+
+    .timeline-header {
+      position: absolute;
+      left: 0;
+      transform: translate(-100%, -100%) rotate(-90deg);
+      transform-origin: bottom right;
+    }
+
+    .timeline-item--highlighted {
+      @include breakpoint($small) {
+        position: absolute;
+        left: 0;
+        float: left;
+        transform: translatex(calc(-100% - #{$reserved-header-space--smaller}));
+      }
+      @include breakpoint($medium) {
+        transform: translatex(calc(-100% - #{$reserved-header-space}));
+      }
+      @include breakpoint($large) {
+        transform: translatex(calc(-100% - #{$reserved-header-space--larger}));
+      }
+    }
+  }
+
+  &:nth-of-type(even) {
+    @include breakpoint($small) {
+      margin-right: calc(50% - #{$reserved-header-space--larger});
+    }
+    @include breakpoint($medium) {
+      border-right: $dark-blue solid $reserved-header-space;
+    }
+    @include breakpoint($large) {
+      border-right: $dark-blue solid $reserved-header-space--larger;
+    }
+    border-right: $dark-blue solid $reserved-header-space--smaller;
+    text-align: right;
+
+    .timeline-header {
+      position: absolute;
+      right: 0;
+      transform: translate(100%, -100%) rotate(90deg);
+      transform-origin: bottom left;
+    }
+
+    .timeline-item--highlighted {
+      @include breakpoint($small) {
+        position: absolute;
+        right: 0;
+        float: right;
+        transform: translatex(calc(100% + #{$reserved-header-space--smaller}));
+      }
+      @include breakpoint($medium) {
+        transform: translatex(calc(100% + #{$reserved-header-space}));
+      }
+      @include breakpoint($large) {
+        transform: translatex(calc(100% + #{$reserved-header-space--larger}));
+      }
+    }
+  }
+
+  .timeline-header {
+    display: inline-block;
+    margin: 0;
+    padding: $standard-spacing;
+    white-space: nowrap;
+    color: $white;
+    background: $blue;
+    font-family: $sans-serif;
+  }
+
+  .timeline-item {
+    margin: 0;
+    padding: $standard-spacing;
+  }
+}
