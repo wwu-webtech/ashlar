@@ -15,7 +15,6 @@ libraries:
   - ashlar/quicksearch
   - ashlar/search
   - ashlar/switcher
-  - ashlar/timeline-block
   - ashlar/user-login
   - ashlar/wwu-header
 regions:
