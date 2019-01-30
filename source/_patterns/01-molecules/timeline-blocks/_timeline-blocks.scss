@@ -2,3 +2,106 @@
 * @file
 * 01-molecules/timeline-blocks/_timeline-blocks.scss
 */
+$min-timeline-font-size: 20px;
+$max-timeline-font-size: 28px;
+$timeline-font-size: calc(#{$min-timeline-font-size} + #{strip-unit($max-timeline-font-size - $min-timeline-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+$timeline-border-width: calc(#{$min-timeline-font-size} + #{strip-unit($max-timeline-font-size - $min-timeline-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}) + #{$double-spacing});
+$timeline-margin: calc(50% - (#{$min-timeline-font-size} + #{strip-unit($max-timeline-font-size - $min-timeline-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}) + #{$double-spacing}));
+$timeline-translate-pos: calc(100% + (#{$min-timeline-font-size} + #{strip-unit($max-timeline-font-size - $min-timeline-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}) + #{$double-spacing}));
+$timeline-translate-neg: calc(-100% - (#{$min-timeline-font-size} + #{strip-unit($max-timeline-font-size - $min-timeline-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}) + #{$double-spacing}));
+
+.timeline-block {
+  position: relative;
+
+  .timeline-header {
+    display: inline-block;
+    margin: 0;
+    padding: $standard-spacing $double-spacing;
+    white-space: nowrap;
+    color: $white;
+    background: $blue;
+    font-family: $sans-serif;
+    font-size: $timeline-font-size;
+    line-height: 1em;
+    border: none;
+  }
+
+  .timeline-item {
+    margin: 0;
+    padding: $standard-spacing;
+
+    &:first-of-type {
+      padding-top: $double-spacing;
+    }
+
+    &:last-of-type {
+      padding-bottom: $double-spacing;
+    }
+  }
+
+  .timeline-item--highlighted {
+    margin: 0;
+    padding: $standard-spacing;
+    line-height: 1em;
+  }
+
+  &:nth-of-type(odd) {
+    @include breakpoint($small) {
+      margin-left: $timeline-margin;
+    }
+    border-left: $blue solid;
+    border-left-width: $timeline-border-width;
+
+    .timeline-header {
+      position: absolute;
+      left: 0;
+      transform: translate(-100%, -100%) rotate(-90deg);
+      transform-origin: bottom right;
+    }
+
+    .timeline-item {
+      padding-left: $double-spacing;
+    }
+
+    .timeline-item--highlighted {
+      @include breakpoint($small) {
+        position: absolute;
+        left: 0;
+        float: left;
+        transform: translatex($timeline-translate-neg);
+        padding-right: $double-spacing * 2;
+      }
+    }
+  }
+
+  &:nth-of-type(even) {
+    @include breakpoint($small) {
+      margin-right: $timeline-margin;
+    }
+    border-right: $blue solid;
+    border-right-width: $timeline-border-width;
+    text-align: right;
+
+    .timeline-header {
+      position: absolute;
+      right: 0;
+      transform: translate(100%, -100%) rotate(90deg);
+      transform-origin: bottom left;
+    }
+
+    .timeline-item {
+      padding-right: $double-spacing;
+    }
+
+    .timeline-item--highlighted {
+      @include breakpoint($small) {
+        position: absolute;
+        right: 0;
+        float: right;
+        transform: translatex($timeline-translate-pos);
+        padding-left: $double-spacing * 2;
+      }
+
+    }
+  }
+}
