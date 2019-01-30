@@ -25,6 +25,7 @@
  * @see template_preprocess_block()
  */
 #}
+{{ attach_library('ashlar/timeline-block.js') }}
 {%
   set classes = [
     'block',
@@ -35,5 +36,30 @@
 {% set attributes = attributes.addClass(classes) %}
 {% set title_attributes = title_attributes.addClass('timeline-header') %}
 {% block template %}
-  {% include "@molecules/timeline-blocks/timeline-blocks.html.twig" %}
+  {% embed "@molecules/timeline-block/timeline-block.html.twig" %}
+    {% block heading %}
+      {{ title_prefix }}
+      {% if label %}
+        {% if block_content.field_title_tag.0.value == 'h2' %}
+          <h2{{ title_attributes }}>{{ label }}</h2>
+        {% elseif block_content.field_title_tag.0.value == 'h3' %}
+          <h3{{ title_attributes }}>{{ label }}</h3>
+        {% endif %}
+      {% endif %}
+      {{ title_suffix }}
+    {% endblock %}
+
+    {% block content %}
+      {{ kint(block_content) }}
+
+      {% for item in items %}
+        {% if item.highlight == true %}
+          <aside class="timeline-item--highlighted">{{ item.text }}</aside>
+
+        {% else %}
+          <p class="timeline-item">{{ item.text }}</p>
+        {% endif %}
+      {% endfor %}
+    {% endblock %}
+  {% endembed %}
 {% endblock %}

@@ -1,6 +1,6 @@
 /**
 * @file
-* 01-molecules/timeline-blocks/_timeline-blocks.scss
+* 01-molecules/timeline-block/_timeline-block.scss
 */
 $min-timeline-font-size: 20px;
 $max-timeline-font-size: 28px;
@@ -19,7 +19,6 @@ $timeline-translate-neg: calc(-100% - (#{$min-timeline-font-size} + #{strip-unit
     padding: $standard-spacing $double-spacing;
     white-space: nowrap;
     color: $white;
-    background: $blue;
     font-family: $sans-serif;
     font-size: $timeline-font-size;
     line-height: 1em;

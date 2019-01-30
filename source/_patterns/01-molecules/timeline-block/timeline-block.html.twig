@@ -1,13 +1,15 @@
 <div{{ attributes }}>
   {{ title_prefix }}
-  {% if label %}
-    {% if label_tag == 'h2' %}
-      <h2{{ title_attributes }}>{{ label }}</h2>
-    {% elseif label_tag == 'h3' %}
-      <h3{{ title_attributes }}>{{ label }}</h3>
+  {% block heading %}
+    {% if label %}
+      {% if label_tag == 'h2' %}
+        <h2{{ title_attributes }}>{{ label }}</h2>
+      {% elseif label_tag == 'h3' %}
+        <h3{{ title_attributes }}>{{ label }}</h3>
+      {% endif %}
     {% endif %}
-  {% endif %}
-  {{ title_suffix }}
+    {{ title_suffix }}
+  {% endblock %}
 
   {% block content %}
     {% for item in items %}
@@ -18,6 +20,5 @@
         <p class="timeline-item">{{ item.text }}</p>
       {% endif %}
     {% endfor %}
-
   {% endblock %}
 </div>

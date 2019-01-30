@@ -6,7 +6,7 @@ title_attributes:
   Attribute():
     class:
     - timeline-header
-label_tag: 'h2'
+label_tag: 'h3'
 label: 'January 2019'
 items:
 - text: 'Go to the zoo'

@@ -12,9 +12,10 @@ libraries:
   - ashlar/event-tracking
   - ashlar/featherlight
   - ashlar/menu-extras
-  - ashlar/quicksearch  
+  - ashlar/quicksearch
   - ashlar/search
   - ashlar/switcher
+  - ashlar/timeline-block
   - ashlar/user-login
   - ashlar/wwu-header
 regions:

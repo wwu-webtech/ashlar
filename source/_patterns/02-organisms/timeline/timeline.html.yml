@@ -1,0 +1,30 @@
+content:
+  join():
+  - include():
+      pattern: molecules-timeline-block-html
+      with:
+        items:
+        - text: 'Go to the zoo'
+          highlight: false
+        - text: 'Eat some <a href="#">ice cream</a>'
+          highlight: false
+        - text: 'See a zebra!'
+          highlight: true
+        - text: 'Visit the gift shop'
+          highlight: false
+        - text: 'Go home'
+          highlight: false
+  - include():
+      pattern: molecules-timeline-block-html
+      with:
+        items:
+        - text: Browse the stacks
+          highlight: false
+        - text: Pick out a book
+          highlight: false
+        - text: Favorite new author found
+          highlight: true
+        - text: Checkout
+          highlight: false
+        - text: Go home
+          highlight: false
