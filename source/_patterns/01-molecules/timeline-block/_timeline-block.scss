@@ -13,7 +13,7 @@ $timeline-translate-neg: calc(-100% - (#{$min-timeline-font-size} + #{strip-unit
 .timeline-block {
   position: relative;
 
-  .timeline-header {
+  .timeline-heading {
     display: inline-block;
     margin: 0;
     padding: $standard-spacing $double-spacing;
@@ -51,7 +51,7 @@ $timeline-translate-neg: calc(-100% - (#{$min-timeline-font-size} + #{strip-unit
     border-left: $blue solid;
     border-left-width: $timeline-border-width;
 
-    .timeline-header {
+    .timeline-heading {
       position: absolute;
       left: 0;
       transform: translate(-100%, -100%) rotate(-90deg);
@@ -81,7 +81,7 @@ $timeline-translate-neg: calc(-100% - (#{$min-timeline-font-size} + #{strip-unit
     border-right-width: $timeline-border-width;
     text-align: right;
 
-    .timeline-header {
+    .timeline-heading {
       position: absolute;
       right: 0;
       transform: translate(100%, -100%) rotate(90deg);

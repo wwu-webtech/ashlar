@@ -5,7 +5,7 @@ attributes:
 title_attributes:
   Attribute():
     class:
-    - timeline-header
+    - timeline-heading
 label_tag: 'h3'
 label: 'January 2019'
 items:
