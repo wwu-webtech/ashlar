@@ -105,3 +105,12 @@ table {
     border: none;
   }
 }
+
+.back-to-top {
+  > .material-icons {
+    font-size: inherit;
+    position: relative;
+    top: 2px;
+    right: ($half-spacing / 2);
+  }
+}
