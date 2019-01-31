@@ -13,6 +13,11 @@ $timeline-translate-neg: calc(-100% - (#{$min-timeline-font-size} + #{strip-unit
 .timeline-block {
   position: relative;
 
+  ul {
+    margin-left: $double-spacing;
+    margin-bottom: 0;
+  }
+
   .timeline-heading {
     display: inline-block;
     margin: 0;
@@ -39,9 +44,15 @@ $timeline-translate-neg: calc(-100% - (#{$min-timeline-font-size} + #{strip-unit
   }
 
   .timeline-item--highlighted {
+    @include breakpoint($small) {
+      max-width: calc(50vw - #{$timeline-border-width} - #{$standard-spacing});
+    }
     margin: 0;
     padding: $standard-spacing;
-    line-height: 1em;
+
+    ul {
+      margin-left: 0;
+    }
   }
 
   &:nth-of-type(odd) {
@@ -68,6 +79,12 @@ $timeline-translate-neg: calc(-100% - (#{$min-timeline-font-size} + #{strip-unit
         left: 0;
         float: left;
         transform: translatex($timeline-translate-neg);
+        padding-right: $standard-spacing;
+      }
+      @include breakpoint($medium) {
+        padding-right: $double-spacing;
+      }
+      @include breakpoint($large) {
         padding-right: $double-spacing * 2;
       }
     }
@@ -97,10 +114,16 @@ $timeline-translate-neg: calc(-100% - (#{$min-timeline-font-size} + #{strip-unit
         position: absolute;
         right: 0;
         float: right;
+        text-align: left;
         transform: translatex($timeline-translate-pos);
+        padding-left: $standard-spacing;
+      }
+      @include breakpoint($medium) {
+        padding-left: $double-spacing;
+      }
+      @include breakpoint($large) {
         padding-left: $double-spacing * 2;
       }
-
     }
   }
 }
