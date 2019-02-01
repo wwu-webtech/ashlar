@@ -23,6 +23,10 @@ $focus-shadow: 2px 2px 4px 2px transparentize($dark-blue, .5);
 $warning-color: $yellow;
 $alert-color: $red;
 
+// Additional shades of blue use as backgrounds only
+$light-bg-blue: mix($white, $blue, 80%);
+$lightest-bg-blue: mix($white, $blue, 90%);
+
 // An array of main wwu colors, useful for iterating over all colors.
 // (class-name, $color-variable, $text-color, $hover-color, $hover-text, $alt-hover-text)
 $wwu-colors: (
