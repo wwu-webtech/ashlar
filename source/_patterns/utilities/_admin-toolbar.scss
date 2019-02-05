@@ -1,0 +1,17 @@
+/**
+ * @file
+ * utilities/_admin-toolbar.scss
+ */
+
+/* Create a margin at the top of the page so the toolbar doesn't overlap */
+/* Drupal 8 */
+.toolbar-horizontal .page {
+  margin-top: 39px;
+}
+.toolbar-horizontal.toolbar-tray-open .page {
+  margin-top: 79px;
+}
+/* Drupal 7 */
+.admin-menu .page {
+  margin-top: 28px;
+}
