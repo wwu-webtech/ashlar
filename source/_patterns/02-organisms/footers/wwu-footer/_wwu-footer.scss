@@ -19,10 +19,9 @@
     -ms-grid-columns: 1fr ($max-content-width * (1 / 3)) ($max-content-width * (2 / 3)) 1fr;
     grid-template-columns: 1fr ($max-content-width * (1 / 3)) ($max-content-width * (2 / 3)) 1fr;
   }
+  @extend .dark-blue-bg;
   display: -ms-grid;
   display: grid;
-  color: $white;
-  background-color: $dark-blue;
   font-size: $font-size--smaller;
 
   -ms-grid-columns: $small-screen-columns;
@@ -36,17 +35,6 @@
   grid-template-columns: $small-screen-columns;
   grid-template-rows: repeat(3, $standard-spacing auto) $standard-spacing;
   justify-items: center;
-
-  a {
-    color: $white;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: $light-green;
-      background-color: transparentize($blue, .8);
-    }
-  }
 
   .logo {
     @include breakpoint($small) {
@@ -84,12 +72,13 @@
 
   .social-media-links {
     @include breakpoint($small) {
+      justify-content: flex-end;
+
       -ms-grid-column: 3;
       -ms-grid-column-span: 1;
       -ms-grid-row: 3;
       -ms-grid-row-span: 1;
       justify-self: end;
-      justify-content: flex-end;
     }
     justify-content: center;
 
@@ -100,9 +89,9 @@
     -ms-grid-row-span: 1;
 
     .social-icon {
+      margin: $standard-spacing 0 0 $standard-spacing;
       outline: none;
       background-color: $white;
-      margin: $standard-spacing 0 0 $standard-spacing;
 
       svg {
         fill: $dark-blue;

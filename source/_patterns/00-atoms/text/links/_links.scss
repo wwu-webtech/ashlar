@@ -61,7 +61,6 @@ ol {
     text-decoration: none;
     border-bottom-color: transparent;
 
-    &:active,
     &:focus,
     &:hover {
       border-bottom-color: $link-color--hover;
