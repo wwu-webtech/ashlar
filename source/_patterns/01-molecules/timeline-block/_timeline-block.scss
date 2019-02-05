@@ -33,6 +33,13 @@ $timeline-translate-neg: calc(-100% - (#{$min-timeline-font-size} + #{strip-unit
   .timeline-item {
     margin: 0;
     padding: $standard-spacing;
+    position: relative;
+
+    .material-icons {
+      position: absolute;
+      top: 50%;
+      transform: translatey(-50%);
+    }
 
     &:first-of-type {
       padding-top: $double-spacing;
@@ -70,7 +77,11 @@ $timeline-translate-neg: calc(-100% - (#{$min-timeline-font-size} + #{strip-unit
     }
 
     .timeline-item {
-      padding-left: $double-spacing;
+      padding-left: $double-spacing * 2;
+
+      .material-icons {
+        left: $standard-spacing;
+      }
     }
 
     .timeline-item--highlighted {
@@ -106,7 +117,11 @@ $timeline-translate-neg: calc(-100% - (#{$min-timeline-font-size} + #{strip-unit
     }
 
     .timeline-item {
-      padding-right: $double-spacing;
+      padding-right: $double-spacing * 2;
+
+      .material-icons {
+        right: $standard-spacing;
+      }
     }
 
     .timeline-item--highlighted {
