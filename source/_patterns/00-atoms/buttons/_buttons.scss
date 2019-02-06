@@ -73,8 +73,8 @@ input[type="submit"],
     &:focus,
     &:hover {
       color: $dark-blue;
-      background-color: $white;
       border-color: $dark-blue;
+      background-color: $white;
     }
   }
   @each $color, $background, $text, $hover-color, $hover-text, $alt-hover-text in $wwu-colors {
@@ -100,10 +100,17 @@ input[type="submit"],
         &:focus,
         &:hover {
           color: $alt-hover-text;
-          background-color: $white;
           border-color: $background;
+          background-color: $white;
         }
       }
     }
+  }
+
+  > .material-icons {
+    position: relative;
+    top: 2px;
+    right: $half-spacing / 2;
+    font-size: inherit;
   }
 }
