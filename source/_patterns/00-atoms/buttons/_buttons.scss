@@ -107,10 +107,9 @@ input[type="submit"],
     }
   }
 
-  > .material-icons {
+  .material-icons {
     position: relative;
     top: 2px;
-    right: $half-spacing / 2;
     font-size: inherit;
   }
 }
