@@ -43,6 +43,7 @@ $wwu-colors: (
 $percent-change: 20%;
 
 // Base styles for different color backgrounds. Use @extend to utilize these styles inside of other components.
+// Note the cascade here, as the blue styles inherit from the gray styles of same shades (EG Dark blue inherits from black, blue inherits from gray, etc.)
 .black-bg {
   color: $white;
   background: $black;
@@ -117,6 +118,19 @@ $percent-change: 20%;
   color: $white;
   background: $gray;
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5, {
+    a {
+      @include breakpoint($medium) {
+        border-bottom-width: $border-width--thicker;
+      }
+      border-bottom: dotted $border-width;
+    }
+  }
+
   a {
     color: $white;
     border-bottom-color: $light-green;
@@ -145,6 +159,7 @@ $percent-change: 20%;
     @include breakpoint($medium) {
       border-bottom-width: $border-width--thicker;
     }
+    padding-bottom: $half-spacing;
     border-bottom: $border-width solid $light-gray;
   }
 
@@ -171,6 +186,19 @@ $percent-change: 20%;
   color: $black;
   background: $light-gray;
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5, {
+    a {
+      @include breakpoint($medium) {
+        border-bottom-width: $border-width--thicker;
+      }
+      border-bottom: dotted $border-width;
+    }
+  }
+
   a {
     color: mix($dark-blue, $link-blue, 50%);
     border-bottom-color: $dark-green;
@@ -178,8 +206,8 @@ $percent-change: 20%;
     &:hover,
     &:focus {
       color: $black;
-      background-color: mix(black, $light-gray, 20%);
       border-bottom-color: transparent;
+      background-color: mix(black, $light-gray, 20%);
     }
   }
 
@@ -199,7 +227,6 @@ $percent-change: 20%;
 
 .dark-blue-bg {
   @extend .black-bg;
-
   background: $dark-blue;
 
   ul {
@@ -208,7 +235,6 @@ $percent-change: 20%;
         border-left-color: solid $border-width mix(black, $dark-blue, 20%);
 
         a {
-
           &:hover,
           &:focus {
             background-color: mix(black, $dark-blue, 20%);
@@ -221,7 +247,6 @@ $percent-change: 20%;
 
 .blue-bg {
   @extend .gray-bg;
-
   background: $blue;
 
   h2 {
@@ -257,7 +282,6 @@ $percent-change: 20%;
 
 .light-blue-bg {
   @extend .light-gray-bg;
-
   background: $light-bg-blue;
 
   a {
@@ -290,7 +314,6 @@ $percent-change: 20%;
 
 .lightest-blue-bg {
   @extend .lightest-gray-bg;
-
   background: $lightest-bg-blue;
 
   a {
