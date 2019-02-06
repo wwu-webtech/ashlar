@@ -66,10 +66,7 @@ h5 {
 table {
   a {
     @extend %strip-link-defaults;
-
-    &:hover {
-      text-decoration: underline;
-    }
+    text-decoration: underline;
   }
 }
 
