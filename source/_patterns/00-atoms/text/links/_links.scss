@@ -35,7 +35,7 @@ a {
     text-decoration: none;
     color: $link-color--hover;
     border-bottom-color: transparent;
-    background-color: transparentize($light-gray, 0.5);
+    background-color: $light-gray;
   }
 
   &:focus {
