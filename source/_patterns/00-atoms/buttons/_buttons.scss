@@ -74,6 +74,7 @@ input[type="submit"],
     &:hover {
       color: $dark-blue;
       background-color: $white;
+      border-color: $dark-blue;
     }
   }
   @each $color, $background, $text, $hover-color, $hover-text, $alt-hover-text in $wwu-colors {
@@ -100,6 +101,7 @@ input[type="submit"],
         &:hover {
           color: $alt-hover-text;
           background-color: $white;
+          border-color: $background;
         }
       }
     }
