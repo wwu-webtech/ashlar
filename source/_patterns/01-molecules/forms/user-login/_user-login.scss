@@ -28,6 +28,7 @@
     -ms-grid-row-span: 1;
   }
   .cas-login-link {
+    @extend .button;
     grid-area: login;
 
     -ms-grid-column: 1;

@@ -39,9 +39,6 @@ $wwu-colors: (
 (white, $white, $white, $white, $dark-blue, $blue)
 );
 
-// Amount to shade items by
-$percent-change: 20%;
-
 // Base styles for different color backgrounds. Use @extend to utilize these styles inside of other components.
 // Note the cascade here, as the blue styles inherit from the gray styles of same shades (EG Dark blue inherits from black, blue inherits from gray, etc.)
 .black-bg {
@@ -78,6 +75,11 @@ $percent-change: 20%;
       color: $lightest-green;
       border-bottom-color: transparent;
       background-color: $darkest-blue;
+    }
+
+    &.button {
+      color: $white;
+      border-color: transparent;
     }
   }
 
@@ -140,6 +142,11 @@ $percent-change: 20%;
       color: $light-green;
       border-bottom-color: transparent;
       background: $black;
+    }
+
+    &.button {
+      color: $white;
+      border-color: transparent;
     }
   }
 
@@ -208,6 +215,21 @@ $percent-change: 20%;
       color: $black;
       border-bottom-color: transparent;
       background-color: mix(black, $light-gray, 20%);
+    }
+
+    &.button {
+      color: $white;
+      border-color: transparent;
+
+      &:hover {
+        color: $white;
+        background: $dark-blue;
+      }
+
+      &.alt {
+        background-color: inherit;
+        border-color: inherit;
+      }
     }
   }
 

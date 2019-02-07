@@ -10,8 +10,7 @@ $button-padding: $standard-spacing;
 
 .button,
 button,
-input[type="submit"],
-.cas-login-link {
+input[type="submit"] {
   @include breakpoint($medium) {
     border-width: $border-width--thicker;
   }
@@ -81,6 +80,7 @@ input[type="submit"],
     &.#{$color} {
       color: $text;
       background-color: $background;
+      border-color: transparent;
 
       &:focus,
       &:hover {

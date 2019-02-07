@@ -38,14 +38,18 @@ $card-height: 300px;
     }
 
     &:nth-last-child(odd) {
+      @extend .lightest-gray-bg;
       @include breakpoint($small) {
         background-color: $white;
       }
-      background-color: mix($white, $light-gray, 70%);
     }
 
     &:nth-last-child(even) {
-      background-color: $light-gray;
+      @extend .light-gray-bg;
+    }
+
+    .taxonomy-term {
+      @extend .taxonomy-term;
     }
   }
 }
