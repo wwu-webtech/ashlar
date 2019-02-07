@@ -8,6 +8,17 @@ $button-border-radius-droplet: 40px 40px 0 40px;
 $button-border-radius-alt-droplet: 50% 50% 0 50%;
 $button-padding: $standard-spacing;
 
+// (class-name, $color-variable, $text-color, $hover-color, $hover-text, $alt-hover-text)
+$button-colors: (
+(dark-blue, $dark-blue, $white, $blue, $white, $dark-blue),
+(blue, $blue, $white, $dark-blue, $white, $blue),
+(dark-green, $dark-green, $white, $green, $white, $dark-green),
+(green, $green, $white, $dark-blue, $white, $green),
+(light-green, $light-green, $black, $dark-blue, $white, $green),
+(light-blue, $light-blue, $black, $white, $light-blue, $blue),
+(white, $white, $white, $white, $dark-blue, $blue)
+);
+
 .button,
 button,
 input[type="submit"] {
@@ -76,7 +87,7 @@ input[type="submit"] {
       background-color: $white;
     }
   }
-  @each $color, $background, $text, $hover-color, $hover-text, $alt-hover-text in $wwu-colors {
+  @each $color, $background, $text, $hover-color, $hover-text, $alt-hover-text in $button-colors {
     &.#{$color} {
       color: $text;
       background-color: $background;
