@@ -254,12 +254,12 @@ $wwu-colors: (
   ul {
     &.menu {
       li {
-        border-left-color: solid $border-width mix(black, $dark-blue, 20%);
+        border-left: solid $border-width $darkest-blue;
 
         a {
           &:hover,
           &:focus {
-            background-color: mix(black, $dark-blue, 20%);
+            background-color: $darkest-blue;
           }
         }
       }
