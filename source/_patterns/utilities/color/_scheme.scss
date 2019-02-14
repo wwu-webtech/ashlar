@@ -13,9 +13,6 @@ $link-color--hover: $dark-blue;
 $link-color-light: $light-blue;
 $link-color-light--hover: $light-green;
 
-// Button Colors
-$default-button-color: $blue;
-
 // State Colors
 $focus-shadow: 2px 2px 4px 2px transparentize($dark-blue, 0.5);
 
@@ -65,9 +62,14 @@ $lightest-bg-blue: mix($white, $blue, 90%);
       background-color: $darkest-blue;
     }
 
-    &.button {
+    &.button:not(.alt) {
       color: $white;
-      border-color: transparent;
+      border: transparent;
+
+      &:hover,
+      &:focus {
+        background-color: $darkest-blue;
+      }
     }
   }
 
@@ -132,9 +134,9 @@ $lightest-bg-blue: mix($white, $blue, 90%);
       background: $black;
     }
 
-    &.button {
-      color: $white;
+    &.button:not(.alt) {
       border-color: transparent;
+      color: $white;
     }
   }
 
@@ -205,18 +207,13 @@ $lightest-bg-blue: mix($white, $blue, 90%);
       background-color: mix(black, $light-gray, 20%);
     }
 
-    &.button {
-      color: $white;
+    &.button:not(.alt) {
       border-color: transparent;
+      color: $white;
 
-      &:hover {
-        color: $white;
-        background: $dark-blue;
-      }
-
-      &.alt {
-        background-color: inherit;
-        border-color: inherit;
+      &:hover,
+      &:focus {
+        background-color: $dark-blue;
       }
     }
   }

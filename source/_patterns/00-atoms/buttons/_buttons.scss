@@ -60,8 +60,8 @@ $button-colors: (
 }
 
 %button-color {
-  color: $text-color-light;
-  background-color: $default-button-color;
+  color: $white;
+  background-color: $blue;
 
   &:focus,
   &:hover {
@@ -79,7 +79,9 @@ $button-colors: (
       background-color: darken($gray, 10%);
     }
   }
+}
 
+%button-color-extended {
   @each $color, $background, $text, $hover-color, $hover-text, $alt-hover-text in $button-colors {
     &.#{$color} {
       color: $text;
@@ -112,7 +114,9 @@ $button-colors: (
       background-color: $white;
     }
   }
+}
 
+%button-alt-color-extended {
   @each $color, $background, $text, $hover-color, $hover-text, $alt-hover-text in $button-colors {
     &.#{$color} {
       &.alt {
@@ -137,7 +141,7 @@ input[type="submit"],
 .cas-login-link {
   @extend %button-structure;
   @extend %button-color;
+  @extend %button-color-extended;
   @extend %button-alt-color;
-
-
+  @extend %button-alt-color-extended;
 }
