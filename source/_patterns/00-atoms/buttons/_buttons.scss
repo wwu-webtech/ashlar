@@ -137,8 +137,7 @@ $button-colors: (
 
 .button,
 button,
-input[type="submit"],
-.cas-login-link {
+input[type="submit"] {
   @extend %button-structure;
   @extend %button-color;
   @extend %button-color-extended;
