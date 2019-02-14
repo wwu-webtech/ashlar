@@ -1,7 +1,7 @@
 /**
- * @file
- * 00-atoms/buttons/_buttons.scss
- */
+* @file
+* 00-atoms/buttons/_buttons.scss
+*/
 $button-border-radius: 100px;
 $button-border-radius-alt: 50%;
 $button-border-radius-droplet: 40px 40px 0 40px;
@@ -19,9 +19,7 @@ $button-colors: (
 (white, $white, $white, $white, $dark-blue, $blue)
 );
 
-.button,
-button,
-input[type="submit"] {
+%button-structure {
   @include breakpoint($medium) {
     border-width: $border-width--thicker;
   }
@@ -35,10 +33,10 @@ input[type="submit"] {
   text-align: center;
   vertical-align: middle;
   text-decoration: none;
-  color: $text-color-light;
-  border: $border-width transparent solid;
+  border-width: $border-width;
+  border-color: transparent;
+  border-style: solid;
   border-radius: $button-border-radius;
-  background-color: $default-button-color;
   font-family: $body-font-family;
   font-weight: $font-weight--regular;
   line-height: 1;
@@ -46,19 +44,30 @@ input[type="submit"] {
   appearance: none;
   -webkit-font-smoothing: antialiased;
 
-  &:focus,
-  &:hover {
-    text-decoration: none;
-    color: $white;
-    background-color: $dark-blue;
-  }
-
   &:focus {
     @include breakpoint($medium) {
       border: $focus-outline--thicker;
     }
     border: $focus-outline;
     outline: none;
+  }
+
+  .material-icons {
+    position: relative;
+    top: 2px;
+    font-size: inherit;
+  }
+}
+
+%button-color {
+  color: $text-color-light;
+  background-color: $default-button-color;
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: $white;
+    background-color: $dark-blue;
   }
 
   &:disabled {
@@ -70,13 +79,11 @@ input[type="submit"] {
       background-color: darken($gray, 10%);
     }
   }
-  /* Alternate Button Styles */
+}
+
+%button-alt-color {
   &.alt {
-    @include breakpoint($medium) {
-      border-width: $border-width--thicker;
-    }
     color: $dark-blue;
-    border-width: $border-width;
     border-color: $dark-blue;
     background-color: transparent;
 
@@ -87,6 +94,16 @@ input[type="submit"] {
       background-color: $white;
     }
   }
+}
+
+.button,
+button,
+input[type="submit"],
+.cas-login-link {
+  @extend %button-structure;
+  @extend %button-color;
+  @extend %button-alt-color;
+
   @each $color, $background, $text, $hover-color, $hover-text, $alt-hover-text in $button-colors {
     &.#{$color} {
       color: $text;
@@ -116,11 +133,5 @@ input[type="submit"] {
         }
       }
     }
-  }
-
-  .material-icons {
-    position: relative;
-    top: 2px;
-    font-size: inherit;
   }
 }
