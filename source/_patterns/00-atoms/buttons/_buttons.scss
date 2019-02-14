@@ -79,30 +79,6 @@ $button-colors: (
       background-color: darken($gray, 10%);
     }
   }
-}
-
-%button-alt-color {
-  &.alt {
-    color: $dark-blue;
-    border-color: $dark-blue;
-    background-color: transparent;
-
-    &:focus,
-    &:hover {
-      color: $dark-blue;
-      border-color: $dark-blue;
-      background-color: $white;
-    }
-  }
-}
-
-.button,
-button,
-input[type="submit"],
-.cas-login-link {
-  @extend %button-structure;
-  @extend %button-color;
-  @extend %button-alt-color;
 
   @each $color, $background, $text, $hover-color, $hover-text, $alt-hover-text in $button-colors {
     &.#{$color} {
@@ -119,7 +95,26 @@ input[type="submit"],
       &:focus {
         outline: none;
       }
-      /* Alternate Button Styles */
+    }
+  }
+}
+
+%button-alt-color {
+  &.alt {
+    color: $dark-blue;
+    border-color: $dark-blue;
+    background-color: transparent;
+
+    &:focus,
+    &:hover {
+      color: $dark-blue;
+      border-color: $dark-blue;
+      background-color: $white;
+    }
+  }
+
+  @each $color, $background, $text, $hover-color, $hover-text, $alt-hover-text in $button-colors {
+    &.#{$color} {
       &.alt {
         color: $background;
         border-color: $background;
@@ -134,4 +129,15 @@ input[type="submit"],
       }
     }
   }
+}
+
+.button,
+button,
+input[type="submit"],
+.cas-login-link {
+  @extend %button-structure;
+  @extend %button-color;
+  @extend %button-alt-color;
+
+
 }
