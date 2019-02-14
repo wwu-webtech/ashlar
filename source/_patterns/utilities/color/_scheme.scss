@@ -26,7 +26,7 @@ $lightest-bg-blue: mix($white, $blue, 90%);
 
 // Base styles for different color backgrounds. Use @extend to utilize these styles inside of other components.
 // Note the cascade here, as the blue styles inherit from the gray styles of same shades (EG Dark blue inherits from black, blue inherits from gray, etc.)
-.black-bg {
+%black-bg {
   color: $white;
   background: $black;
 
@@ -106,7 +106,7 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   }
 }
 
-.gray-bg {
+%gray-bg {
   color: $white;
   background: $gray;
 
@@ -179,7 +179,7 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   }
 }
 
-.light-gray-bg {
+%light-gray-bg {
   color: $black;
   background: $light-gray;
 
@@ -223,8 +223,8 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   }
 }
 
-.lightest-gray-bg {
-  @extend .light-gray-bg;
+%lightest-gray-bg {
+  @extend %light-gray-bg;
   background: $lightest-gray;
 
   a {
@@ -232,8 +232,8 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   }
 }
 
-.dark-blue-bg {
-  @extend .black-bg;
+%dark-blue-bg {
+  @extend %black-bg;
   background: $dark-blue;
 
   ul {
@@ -252,8 +252,8 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   }
 }
 
-.blue-bg {
-  @extend .gray-bg;
+%blue-bg {
+  @extend %gray-bg;
   background: $blue;
 
   h2 {
@@ -287,8 +287,8 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   }
 }
 
-.light-blue-bg {
-  @extend .light-gray-bg;
+%light-blue-bg {
+  @extend %light-gray-bg;
   background: $light-bg-blue;
 
   a {
@@ -319,8 +319,8 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   }
 }
 
-.lightest-blue-bg {
-  @extend .lightest-gray-bg;
+%lightest-blue-bg {
+  @extend %lightest-gray-bg;
   background: $lightest-bg-blue;
 
   a {
@@ -348,3 +348,12 @@ $lightest-bg-blue: mix($white, $blue, 90%);
     }
   }
 }
+
+.black-bg { @extend %black-bg; }
+.gray-bg { @extend %gray-bg; }
+.light-gray-bg { @extend %light-gray-bg; }
+.lightest-gray-bg { @extend %lightest-gray-bg; }
+.dark-blue-bg { @extend %dark-blue-bg; }
+.blue-bg { @extend %blue-bg; }
+.light-blue-bg { @extend %light-blue-bg; }
+.lightest-blue-bg { @extend %lightest-blue-bg; }

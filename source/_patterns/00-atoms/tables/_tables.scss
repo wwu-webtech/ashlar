@@ -19,10 +19,10 @@ tr {
   border-bottom: none;
   border-left: none;
   &:nth-of-type(odd) {
-    @extend .light-gray-bg;
+    @extend %light-gray-bg;
   }
   &:nth-of-type(even) {
-    @extend .lightest-gray-bg;
+    @extend %lightest-gray-bg;
   }
   &.even,
   &.odd {
@@ -30,7 +30,7 @@ tr {
   }
 }
 th {
-  @extend .light-gray-bg;
+  @extend %light-gray-bg;
   padding: $half-spacing;
   text-align: left;
   border-top: none;

@@ -2,10 +2,6 @@
 * @file
 * templates/front-page/_front-page.scss
 */
-$light-shade-bg-1: mix($white, $light-gray, 60%);
-$dark-shade-bg-1: mix($white, $light-gray, 10%);
-$light-shade-bg-2: mix($white, $blue, 90%);
-$dark-shade-bg-2: mix($white, $blue, 80%);
 
 .path-frontpage,
 .front {
@@ -62,46 +58,52 @@ $dark-shade-bg-2: mix($white, $blue, 80%);
   .layout--twocol-bricks {
     .layout__region {
       position: relative;
+      .button {
+        @extend %button-color;
+        @extend %button-color-extended;
+        @extend %button-alt-color;
+        @extend %button-alt-color-extended;
+      }
     }
 
     .layout__region--first-above {
-      background-color: $light-shade-bg-1;
+      @extend %lightest-gray-bg;
 
       &:before,
       &:after {
-        background-color: $light-shade-bg-1;
+        background-color: $lightest-gray;
       }
     }
 
     .layout__region--second-above {
+      @extend %light-gray-bg;
       @include breakpoint($medium) {
         margin-top: $double-spacing;
       }
-      background-color: $dark-shade-bg-1;
 
       &:before,
       &:after {
-        background-color: $dark-shade-bg-1;
+        background-color: $light-gray;
       }
     }
 
     .layout__region--first-below {
-      background-color: $light-shade-bg-2;
+      @extend %lightest-blue-bg;
 
       &:before,
       &:after {
-        background-color: $light-shade-bg-2;
+        background-color: $lightest-bg-blue;
       }
     }
     .layout__region--second-below {
       @include breakpoint($medium) {
         margin-top: $double-spacing;
       }
-      background-color: $dark-shade-bg-2;
+      @extend %light-blue-bg;
 
       &:before,
       &:after {
-        background-color: $dark-shade-bg-2;
+        background-color: $light-bg-blue;
       }
     }
 

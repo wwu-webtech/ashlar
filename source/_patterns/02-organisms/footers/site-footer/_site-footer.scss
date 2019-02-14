@@ -4,7 +4,7 @@
  */
 
 .site-footer {
-  @extend .blue-bg;
+  @extend %blue-bg;
   @include breakpoint($medium) {
     -ms-grid-columns: $standard-spacing 1fr $standard-spacing 1fr $standard-spacing 1fr $standard-spacing;
     -ms-grid-rows: auto auto;
