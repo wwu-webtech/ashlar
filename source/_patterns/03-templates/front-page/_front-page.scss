@@ -37,13 +37,6 @@ $dark-shade-bg-2: mix($white, $blue, 80%);
     }
   }
 
-  .splash {
-    @include breakpoint($medium) {
-      min-height: 600px;
-      max-height: 70vh;
-    }
-  }
-
   .layout__region--top,
   .layout__region--middle,
   .layout__region--bottom {

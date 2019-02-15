@@ -3,7 +3,17 @@ page:
   include():
     pattern: organisms-page-html
     with:
-      page:        
+      page:
+        header:
+          include():
+            pattern: organisms-header-region-html
+            with:
+              content:
+                join():
+                - include():
+                    pattern: molecules-splash-image-html
+                - include():
+                    pattern: molecules-headline-html
         content:
           include():
             pattern: organisms-content-region-html

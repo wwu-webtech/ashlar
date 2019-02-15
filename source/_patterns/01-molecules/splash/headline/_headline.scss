@@ -9,9 +9,10 @@ $headline-gradient-end: transparentize($black, 0.5);
   @include breakpoint($medium) {
     background: linear-gradient(to right, $headline-gradient-start 0%, $headline-gradient-end 100%);
   }
+  max-width: $max-content-width / 2;
   padding: $standard-spacing;
-  background-color: $blue;
   color: $text-color-light;
+  background-color: $blue;
 
   h2 {
     margin-top: $standard-spacing;
