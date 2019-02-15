@@ -7,7 +7,7 @@ $image-size: 300px;
 .stylized,
 .paragraph--type--majors-profile {
   &.image,
-  .field__item:nth-of-type(3) {
+  .field__item:nth-of-type(1) {
     position: relative;
     display: -ms-inline-grid;
     display: inline-grid;
@@ -67,7 +67,7 @@ $image-size: 300px;
     &:focus {
       color: $link-color--hover;
       background: none;
-      box-shadow: none;      
+      box-shadow: none;
     }
   }
 }

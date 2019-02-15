@@ -1,0 +1,21 @@
+attributes:
+  Attribute():
+    class:
+    - timeline-block
+title_attributes:
+  Attribute():
+    class:
+    - timeline-heading
+label_tag: 'h3'
+label: 'January 2019'
+items:
+- text: 'Go to the zoo'
+  highlight: false
+- text: 'Eat some <a href="#">ice cream</a>'
+  highlight: false
+- text: 'See a zebra!'
+  highlight: true
+- text: 'Visit the gift shop'
+  highlight: false
+- text: 'Go home'
+  highlight: false

@@ -6,6 +6,30 @@
  */
 
 /**
+ * Implements hook_page_attachments().
+ */
+function ashlar_page_attachments_alter(array &$attachments) {
+  $facebook = <<<FACEBOOK
+!function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window,document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '1839973826107796'); fbq('track', 'PageView');
+FACEBOOK;
+
+  $host = \Drupal::request()->getHost();
+
+  switch ($host) {
+    case 'www.wwu.edu':
+      $attachments['#attached']['html_head'][] = array(
+        array(
+          '#type' => 'html_tag',
+          '#tag' => 'script',
+          '#value' => $facebook,
+        ),
+        'facebook',
+      );
+      break;
+  }
+}
+
+/**
  * Implements hook_preprocess_page().
  */
 function ashlar_preprocess_page(&$variables) {
