@@ -1,30 +1,50 @@
 /**
 * @file
-* templates/front-page/_mabel.scss
+* sites/mabel/_mabel.scss
 */
 
 /* General Mabel Styles */
 .page-islandora {
+  /* Hide WWU Search as it's confusing to have multiple searches */
   .western-header {
     .search {
       display: none;
     }
   }
 
-  &.front {
-    .splash {
-      @include breakpoint($medium) {
-        min-height: 670px;
-        max-height: 70vh;
-      }
-    }
+  .splash {
+    min-height: 380px;
   }
 
-
-  .splash {
+  .region-header {
     @include breakpoint($medium) {
-      min-height: 450px;
-      max-height: 30vh;
+      position: absolute;
+      top: $toggle-size + $standard-spacing;
+      left: $standard-spacing + $logo-width + $standard-spacing;
+      width: calc(100vw - #{$logo-width} - (#{$standard-spacing} * 3));
+    }
+    @include breakpoint($large) {
+      top: $toggle-size--larger + $double-spacing;
+      left: calc(((100vw - #{$max-content-width}) / 2) + #{$logo-width--larger} + #{$standard-spacing});
+      width: $max-content-width - $logo-width--larger - $double-spacing;
+    }
+    z-index: 1;
+  }
+
+  &.front {
+    .splash {
+      min-height: 508px;
+    }
+
+    .region-header {
+      @include breakpoint($medium) {
+        top: $logo-height + 42px + $standard-spacing;
+        left: $standard-spacing;
+      }
+      @include breakpoint($large) {
+        top: $logo-height--larger + 44px + $double-spacing;
+        left: calc((100vw - #{$max-content-width}) / 2);
+      }
     }
   }
 
