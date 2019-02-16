@@ -12,8 +12,7 @@ $advanced-search-button: 300px;
   }
   background: $black;
 
-  > h2,
-  label[for="edit-islandora-simple-search-query"] {
+  > h2 {
     display: block;
     margin: 0;
     padding: $standard-spacing $double-spacing;
@@ -27,14 +26,6 @@ $advanced-search-button: 300px;
     font-family: $sans-serif;
     font-size: $h4-font-size;
     font-weight: $font-weight--bold;
-  }
-
-  /* Subtitle, eg the acronym spelled out */
-  label[for="edit-islandora-simple-search-query"] {
-    font-family: $sans-serif;
-    font-size: $p-font-size;
-    font-weight: $font-weight--regular;
-    font-style: italic;
   }
 
   .form-wrapper {
@@ -72,13 +63,9 @@ $advanced-search-button: 300px;
   @include breakpoint($medium) {
     background: linear-gradient(to bottom, #{transparentize($black, 0.15)} 0%, $black 25%);
   }
-  padding: $double-spacing;
+  padding: $standard-spacing $double-spacing;
   padding-top: 0;
   background: $black;
-
-  label {
-    color: $text-color-light;
-  }
 
   > h2,
   .toggle-advanced-search {
@@ -167,12 +154,6 @@ $site-name-height: 60px;
     > h2 {
       @include breakpoint($medium) {
         font-size: $h3-font-size;
-      }
-    }
-
-    label[for="edit-islandora-simple-search-query"] {
-      @include breakpoint($medium) {
-        font-size: $h4-font-size;
       }
     }
   }
