@@ -4,6 +4,7 @@ page:
     pattern: organisms-page-html
     with:
       page:
+<<<<<<< HEAD
         header:
           include():
             pattern: organisms-header-region-html
@@ -14,6 +15,8 @@ page:
                     pattern: molecules-splash-image-html
                 - include():
                     pattern: molecules-headline-html
+=======
+>>>>>>> master
         content:
           include():
             pattern: organisms-content-region-html

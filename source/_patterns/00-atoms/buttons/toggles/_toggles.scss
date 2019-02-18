@@ -15,4 +15,8 @@
   height: $toggle-size--larger;
   padding: 0;
   border-radius: 0;
+
+  .material-icons {
+    top: inherit;
+  }
 }

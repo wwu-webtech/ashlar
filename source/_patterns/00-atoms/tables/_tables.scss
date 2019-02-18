@@ -7,8 +7,8 @@ table {
   width: 100%;
   margin: $standard-spacing 0;
   table-layout: fixed;
-  border-collapse: collapse;
   word-wrap: break-word;
+  border-collapse: collapse;
 }
 tbody {
   border: none;
@@ -19,10 +19,10 @@ tr {
   border-bottom: none;
   border-left: none;
   &:nth-of-type(odd) {
-    background-color: mix(white, $light-gray, 80%);
+    @extend %light-gray-bg;
   }
   &:nth-of-type(even) {
-    background-color: mix(white, $light-gray, 40%);
+    @extend %lightest-gray-bg;
   }
   &.even,
   &.odd {
@@ -30,13 +30,14 @@ tr {
   }
 }
 th {
+  @extend %light-gray-bg;
   padding: $half-spacing;
   text-align: left;
   border-top: none;
   border-right: none;
   border-bottom: none;
   border-left: none;
-  background-color: mix(black, $light-gray, $percent-change);
+  background-color: mix(black, $light-gray, 20%);
   font-size: $font-size--smallest;
 }
 td {
@@ -46,7 +47,7 @@ td {
   padding: $half-spacing;
   border-top: none;
   border-bottom: none;
-  border-left: $border-width solid mix(white, $light-gray, 80%);
+  border-left: $border-width solid $lightest-gray;
   font-size: $font-size--smallest;
 
   &:first-of-type {
@@ -54,11 +55,16 @@ td {
   }
 
   &:last-of-type {
-    border-right: $border-width solid mix(white, $light-gray, 80%);
+    border-right: $border-width solid $lightest-gray;
   }
 }
 tr,
 td,
 th {
   vertical-align: middle;
+}
+caption {
+  padding-bottom: $standard-spacing;
+  font-size: $font-size--smaller;
+  font-weight: $font-weight--bold;
 }

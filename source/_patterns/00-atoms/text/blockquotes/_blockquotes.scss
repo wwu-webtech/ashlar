@@ -4,7 +4,7 @@
  */
 
 blockquote {
+  @extend %light-gray-bg;
   margin: $standard-spacing 0;
   padding: $double-spacing;
-  background-color: $light-gray;
 }

@@ -15,6 +15,9 @@
 }
 
 a {
+  &.taxonomy-term {
+    color: $dark-blue;
+  }
   &.taxonomy-term:hover,
   &.taxonomy-term:focus {
     color: $light-green;
