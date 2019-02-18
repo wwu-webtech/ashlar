@@ -32,8 +32,15 @@
   }
 
   &.islandora-front-page {
-    h2 {
-      text-align: center;
+    .page-content {
+      h2 {
+        text-align: center;
+        text-transform: uppercase;
+        color: $blue;
+        border-bottom: none;
+        font-family: $sans-serif;
+        font-size: $h1-font-size;
+      }
     }
 
     .splash {
@@ -59,11 +66,11 @@
 
   .browse-by-icons {
     @include breakpoint($medium) {
-      max-width: 80%
+      max-width: 80%;
     }
-    margin: $double-spacing auto;
     display: flex;
     justify-content: space-around;
+    margin: $double-spacing auto;
 
 
     .icon-with-text {

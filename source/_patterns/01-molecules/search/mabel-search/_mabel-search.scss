@@ -147,9 +147,7 @@ input[title="Remove field"] {
 }
 
 /* Search box is positioned more prominently on front page */
-$site-name-height: 60px;
-
-.front {
+.islandora-front-page {
   #block-islandora-solr-simple {
     > h2 {
       @include breakpoint($medium) {
