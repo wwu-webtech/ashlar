@@ -58,16 +58,10 @@
   .layout--twocol-bricks {
     .layout__region {
       position: relative;
-      .button {
-        @extend %button-color;
-        @extend %button-color-extended;
-        @extend %button-alt-color;
-        @extend %button-alt-color-extended;
-      }
     }
 
     .layout__region--first-above {
-      @extend %lightest-gray-bg;
+      background-color: $lightest-gray;
 
       &:before,
       &:after {
@@ -76,10 +70,10 @@
     }
 
     .layout__region--second-above {
-      @extend %light-gray-bg;
       @include breakpoint($medium) {
         margin-top: $double-spacing;
       }
+      background-color: $light-gray;
 
       &:before,
       &:after {
@@ -88,7 +82,7 @@
     }
 
     .layout__region--first-below {
-      @extend %lightest-blue-bg;
+      background-color: $lightest-bg-blue;
 
       &:before,
       &:after {
@@ -99,7 +93,7 @@
       @include breakpoint($medium) {
         margin-top: $double-spacing;
       }
-      @extend %light-blue-bg;
+      background-color: $light-bg-blue;
 
       &:before,
       &:after {
@@ -213,5 +207,17 @@
         transform: translatex(calc(100% - 3px));
       }
     }
+  }
+}
+
+/* Bright Edge styles */
+.be-ix-link-block {
+  a {
+    margin: 0;
+    border-bottom: none;
+  }
+
+  h4 {
+    border-bottom: none;
   }
 }
