@@ -4,22 +4,22 @@
 */
 $link-padding: $half-spacing / 2;
 
+%strip-link-defaults {
+  margin: inherit;
+  padding: 0;
+  border: none;
+}
+
 a {
-  display: inline-block;
-  vertical-align: middle;
-  margin-top: -($link-padding / 2);
   margin-right: -$link-padding;
   margin-left: -$link-padding;
-  padding-left: $link-padding;
   padding-right: $link-padding;
-  padding-top: 0px;
-  padding-bottom: $link-padding / 2;
+  padding-left: $link-padding;
   transition: $link-transition-speed $link-transition-ease;
   transition-property: background, color, border;
   text-decoration: none;
   color: $link-color;
   border-bottom: solid $lightest-green $border-width;
-
 
   &:active,
   &:focus,
@@ -27,7 +27,7 @@ a {
     text-decoration: none;
     color: $link-color--hover;
     border-bottom-color: transparent;
-    background-color: transparentize($light-gray, 0.5);
+    background-color: $light-gray;
   }
 
   &:focus {
@@ -40,28 +40,12 @@ a {
   }
 }
 
-.dark-bg {
-  a {
-    color: $link-color-light;
-    border-bottom-color: $lightest-green;
-
-    &:active,
-    &:focus,
-    &:hover {
-      color: $link-color-light--hover;
-      border-bottom-color: transparent;
-      background-color: transparentize($blue, 0.8);
-    }
-  }
-}
-
 ul,
 ol {
   a {
     text-decoration: none;
     border-bottom-color: transparent;
 
-    &:active,
     &:focus,
     &:hover {
       border-bottom-color: $link-color--hover;
@@ -75,25 +59,14 @@ h3,
 h4,
 h5 {
   a {
-    border-bottom: none;
-  }
-}
-
-blockquote {
-  a {
-    border-bottom-color: $dark-blue;
+    @extend %strip-link-defaults;
   }
 }
 
 table {
   a {
-    margin: inherit;
-    padding: 0;
-    border: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
+    @extend %strip-link-defaults;
+    text-decoration: underline;
   }
 }
 
@@ -101,16 +74,7 @@ table {
 #toolbar-bar,
 .contextual {
   a {
-    margin: 0;
     border: none;
-  }
-}
-
-.back-to-top {
-  > .material-icons {
-    font-size: inherit;
-    position: relative;
-    top: 2px;
-    right: ($half-spacing / 2);
+    margin: inherit;
   }
 }

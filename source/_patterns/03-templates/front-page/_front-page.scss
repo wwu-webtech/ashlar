@@ -2,10 +2,6 @@
 * @file
 * templates/front-page/_front-page.scss
 */
-$light-shade-bg-1: mix($white, $light-gray, 60%);
-$dark-shade-bg-1: mix($white, $light-gray, 10%);
-$light-shade-bg-2: mix($white, $blue, 90%);
-$dark-shade-bg-2: mix($white, $blue, 80%);
 
 .path-frontpage,
 .front {
@@ -65,11 +61,11 @@ $dark-shade-bg-2: mix($white, $blue, 80%);
     }
 
     .layout__region--first-above {
-      background-color: $light-shade-bg-1;
+      background-color: $lightest-gray;
 
       &:before,
       &:after {
-        background-color: $light-shade-bg-1;
+        background-color: $lightest-gray;
       }
     }
 
@@ -77,31 +73,31 @@ $dark-shade-bg-2: mix($white, $blue, 80%);
       @include breakpoint($medium) {
         margin-top: $double-spacing;
       }
-      background-color: $dark-shade-bg-1;
+      background-color: $light-gray;
 
       &:before,
       &:after {
-        background-color: $dark-shade-bg-1;
+        background-color: $light-gray;
       }
     }
 
     .layout__region--first-below {
-      background-color: $light-shade-bg-2;
+      background-color: $lightest-bg-blue;
 
       &:before,
       &:after {
-        background-color: $light-shade-bg-2;
+        background-color: $lightest-bg-blue;
       }
     }
     .layout__region--second-below {
       @include breakpoint($medium) {
         margin-top: $double-spacing;
       }
-      background-color: $dark-shade-bg-2;
+      background-color: $light-bg-blue;
 
       &:before,
       &:after {
-        background-color: $dark-shade-bg-2;
+        background-color: $light-bg-blue;
       }
     }
 
@@ -211,5 +207,17 @@ $dark-shade-bg-2: mix($white, $blue, 80%);
         transform: translatex(calc(100% - 3px));
       }
     }
+  }
+}
+
+/* Bright Edge styles */
+.be-ix-link-block {
+  a {
+    margin: 0;
+    border-bottom: none;
+  }
+
+  h4 {
+    border-bottom: none;
   }
 }

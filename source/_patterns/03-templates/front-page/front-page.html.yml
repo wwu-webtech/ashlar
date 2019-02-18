@@ -3,7 +3,7 @@ page:
   include():
     pattern: organisms-page-html
     with:
-      page:        
+      page:
         content:
           include():
             pattern: organisms-content-region-html

@@ -4,6 +4,7 @@
  */
 
 .site-footer {
+  @extend %blue-bg;
   @include breakpoint($medium) {
     -ms-grid-columns: $standard-spacing 1fr $standard-spacing 1fr $standard-spacing 1fr $standard-spacing;
     -ms-grid-rows: auto auto;
@@ -20,8 +21,6 @@
   display: -ms-grid;
   display: grid;
   padding: ($double-spacing * 2) 0;
-  color: $white;
-  background-color: $blue;
   font-size: $font-size--smaller;
 
   -ms-grid-columns: $small-screen-columns;
@@ -36,29 +35,8 @@
   grid-template-columns: $small-screen-columns;
   grid-template-rows: auto $standard-spacing auto $standard-spacing auto;
 
-  a {
-    color: $white;
-
-    &:hover,
-    &:focus {
-      color: $lightest-green;
-      background-color: mix(black, $blue, $percent-change);
-    }
-
-    &.button {
-      background-color: $dark-blue;
-
-      &:hover {
-        color: $dark-blue;
-        background-color: $light-blue;
-      }
-    }
-  }
-
   h1, h2, h3, h4, h5 {
     font-family: $sans-serif;
-    color: $text-color-light;
-    border: none;
     margin-top: 0;
   }
 
@@ -121,24 +99,9 @@
     -ms-grid-row-span: 1;
   }
 
-  .menu {
-    li {
-      border-left: solid 3px mix(black, $blue, $percent-change);
-
-      a {
-        color: $white;
-
-        &:hover,
-        &:focus {
-          color: $white;
-          background-color: mix(black, $blue, $percent-change);
-        }
-      }
-    }
-  }
-
   .social-media-links {
     justify-content: flex-start;
+
     .social-icon {
       background-color: $white;
 

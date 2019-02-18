@@ -13,69 +13,9 @@
       transition: $medium-transition-speed $standard-ease background-color;
       color: $black;
       border: none;
-
-      &:hover,
-      &:focus {
-        text-decoration: none;
-        background-color: mix(black, $light-gray, $percent-change);
-      }
-    }
-  }
-
-  &.gray {
-    li {
-      border-left: solid 3px mix(black, $light-gray, $percent-change);
-    }
-  }
-
-  &.dark-blue {
-    li {
-      border-left: solid 3px mix(white, $dark-blue, $percent-change);
-
-      a {
-        color: $white;
-
-        &:hover,
-        &:focus {
-          color: $light-green;
-          background-color: mix(white, $dark-blue, $percent-change);
-        }
-      }
-    }
-  }
-
-  &.blue {
-    li {
-      border-left: solid 3px mix(black, $blue, $percent-change);
-
-      a {
-        color: $white;
-
-        &:hover,
-        &:focus {
-          color: $white;
-          background-color: mix(black, $blue, $percent-change);
-        }
-      }
     }
   }
 }
-
-/* Ultimenu sub menus get same styling as blue menu above */
 .ultimenusub {
-  .menu {
-    li {
-      border-left: solid 3px mix(black, $blue, $percent-change);
-
-      a {
-        color: $white;
-
-        &:hover,
-        &:focus {
-          color: $white;
-          background-color: mix(black, $blue, $percent-change);
-        }
-      }
-    }
-  }
+  @extend %blue-bg;
 }
