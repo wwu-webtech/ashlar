@@ -269,6 +269,14 @@ $lightest-bg-blue: mix($white, $blue, 90%);
     &:focus {
       background: $dark-blue;
     }
+
+    &.dark-blue.button {
+      &:hover,
+      &:focus {
+        background-color: $light-blue;
+        color: $dark-blue;
+      }
+    }
   }
 
   ul {
