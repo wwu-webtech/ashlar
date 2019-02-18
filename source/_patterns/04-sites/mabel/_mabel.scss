@@ -16,7 +16,7 @@
     min-height: 380px;
   }
 
-  .region-header {
+  .search-container {
     @include breakpoint($medium) {
       position: absolute;
       top: $toggle-size + $standard-spacing;
