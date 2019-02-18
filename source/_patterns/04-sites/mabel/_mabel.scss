@@ -12,23 +12,34 @@
     }
   }
 
-  .splash {
-    min-height: 380px;
+  #islandora-search-container {
+    position: absolute;
+    z-index: 1;
+    max-width: 100%;
   }
 
-  .search-container {
-    @include breakpoint($medium) {
-      position: absolute;
-      top: $toggle-size + $standard-spacing;
-      left: $standard-spacing + $logo-width + $standard-spacing;
-      max-width: calc(100vw - #{$logo-width} - (#{$standard-spacing} * 3));
+  .splash {
+    > div:nth-of-type(2) {
+      min-height: 240px;
     }
-    @include breakpoint($large) {
-      top: $toggle-size--larger + $double-spacing;
-      left: calc(((100vw - #{$max-content-width}) / 2) + #{$logo-width--larger} + #{$standard-spacing});
-      max-width: $max-content-width - $logo-width--larger - $double-spacing;
+  }
+
+  &.not-front {
+    .splash {
+      @include breakpoint($medium) {
+        grid-template-columns: ($standard-spacing + $logo-width + $standard-spacing) 1fr $standard-spacing;
+        grid-template-rows: ($toggle-size + $standard-spacing) 240px ($standard-spacing + ($toggle-size / 2));
+      }
+      @include breakpoint($large) {
+        grid-template-columns: 1fr ($logo-width--larger + $standard-spacing) ($max-content-width - $logo-width--larger - $standard-spacing) 1fr;
+        grid-template-rows: ($toggle-size--larger + $standard-spacing) 265px ($standard-spacing + ($toggle-size--larger / 2));
+
+        grid-template-areas:
+        ". . ....... ."
+        ". . content ."
+        ". . ....... .";
+      }
     }
-    z-index: 1;
   }
 
   &.islandora-front-page {
@@ -44,19 +55,12 @@
     }
 
     .splash {
-      min-height: 508px;
-    }
-
-    .region-header {
       @include breakpoint($medium) {
-        top: $logo-height + 42px + $standard-spacing;
-        left: $standard-spacing;
+        grid-template-rows: ($logo-height + $standard-spacing + 40px) 220px (($toggle-size / 2) + $standard-spacing);
       }
       @include breakpoint($large) {
-        top: $logo-height--larger + 44px + $double-spacing;
-        left: calc((100vw - #{$max-content-width}) / 2);
+        grid-template-rows: ($logo-height--larger + $standard-spacing +44px) 240px (($toggle-size--larger / 2) + $standard-spacing);
       }
-      max-width: none;
     }
 
     .layout__region--top {
