@@ -31,21 +31,14 @@
     order: 3;
 
     a {
-      display: inline-block;
       border: none;
       font-family: $sans-serif;
       font-size: $p-font-size;
       font-weight: $font-weight--bold;
       line-height: initial;
-
-      &:hover,
-      &:focus {
-        color: $dark-green;
-        background-color: transparentize($lightest-green, 0.8);
-      }
+      display: inline-block;
     }
   }
-
 
   .body {
     order: 4;
