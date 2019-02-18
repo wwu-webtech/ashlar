@@ -12,7 +12,7 @@ $advanced-search-button: 300px;
   }
   background: $black;
 
-  > h2 {
+  h2 {
     display: block;
     margin: 0;
     padding: $standard-spacing $double-spacing;
@@ -22,7 +22,7 @@ $advanced-search-button: 300px;
   }
 
   /* MABEL title on main search */
-  > h2 {
+  h2 {
     font-family: $sans-serif;
     font-size: $h4-font-size;
     font-weight: $font-weight--bold;
@@ -67,7 +67,7 @@ $advanced-search-button: 300px;
   padding-top: 0;
   background: $black;
 
-  > h2,
+  h2,
   .toggle-advanced-search {
     position: relative;
     display: block;
@@ -149,7 +149,7 @@ input[title="Remove field"] {
 /* Search box is positioned more prominently on front page */
 .islandora-front-page {
   #block-islandora-solr-simple {
-    > h2 {
+    h2 {
       @include breakpoint($medium) {
         font-size: $h3-font-size;
       }
@@ -157,7 +157,7 @@ input[title="Remove field"] {
   }
 
   #block-islandora-solr-advanced {
-    > h2,
+    h2,
     .toggle-advanced-search {
       @include breakpoint($medium) {
         font-size: $p-font-size;
