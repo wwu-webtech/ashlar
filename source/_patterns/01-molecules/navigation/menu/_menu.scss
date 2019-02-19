@@ -6,4 +6,17 @@
 .menu {
   padding: 0;
   list-style: none;
+
+  /* nested menus */
+  .menu {
+    margin: 0;
+
+    li {
+      border-left: none;
+    }
+
+    a {
+      padding-left: $double-spacing;
+    }
+  }
 }
