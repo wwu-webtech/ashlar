@@ -339,12 +339,11 @@
   .form-wrapper {
     position: relative;
     display: grid;
-    grid-column-gap: $half-spacing;
     align-items: end;
     width: 100%;
 
-    grid-template-areas:
-    "menu menu"
+    grid-column-gap: $half-spacing;
+    grid-template-areas: "menu menu"
     "text   go";
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto auto;
@@ -376,7 +375,15 @@
   }
 }
 
+#islandora_solr_results_limit {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
 
+  li {
+    margin: 0;
+  }
+}
 
 /* Object page styles */
 body.page-islandora-object {
