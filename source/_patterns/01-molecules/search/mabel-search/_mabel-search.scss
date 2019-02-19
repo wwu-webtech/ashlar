@@ -5,6 +5,9 @@
 $simple-search-button--width: 120px;
 $simple-search-button--height: 64px;
 $advanced-search-button: 300px;
+$mabel-label-min-font-size: 18px;
+$mabel-label-max-font-size: 28px;
+$mabel-label-font-size: calc(#{$mabel-label-min-font-size} + #{strip-unit($mabel-label-max-font-size - $mabel-label-min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 
 #block-islandora-solr-simple {
   @include breakpoint($medium) {
@@ -12,19 +15,15 @@ $advanced-search-button: 300px;
   }
   background: $black;
 
-  h2 {
+  .block-title {
     display: block;
     margin: 0;
     padding: $standard-spacing $double-spacing;
     color: $text-color-light;
     border: none;
     text-align: left;
-  }
-
-  /* MABEL title on main search */
-  h2 {
     font-family: $sans-serif;
-    font-size: $h4-font-size;
+    font-size: $mabel-label-font-size;
     font-weight: $font-weight--bold;
   }
 
@@ -148,12 +147,8 @@ input[title="Remove field"] {
 
 /* Search box is positioned more prominently on front page */
 .islandora-front-page {
-  #block-islandora-solr-simple {
-    h2 {
-      @include breakpoint($medium) {
-        font-size: $h3-font-size;
-      }
-    }
+  #islandora-search-container {
+    width: 100%;
   }
 
   #block-islandora-solr-advanced {
