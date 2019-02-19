@@ -28,16 +28,19 @@
     .splash {
       @include breakpoint($medium) {
         grid-template-columns: ($standard-spacing + $logo-width + $standard-spacing) 1fr $standard-spacing;
-        grid-template-rows: ($toggle-size + $standard-spacing) 240px ($standard-spacing + ($toggle-size / 2));
+        grid-template-rows: ($toggle-size + $standard-spacing) 220px ($standard-spacing + ($toggle-size / 2));
       }
       @include breakpoint($large) {
         grid-template-columns: 1fr ($logo-width--larger + $standard-spacing) ($max-content-width - $logo-width--larger - $standard-spacing) 1fr;
-        grid-template-rows: ($toggle-size--larger + $standard-spacing) 265px ($standard-spacing + ($toggle-size--larger / 2));
+        grid-template-rows: ($toggle-size--larger + $standard-spacing) 220px ($standard-spacing + ($toggle-size--larger / 2));
 
         grid-template-areas:
         ". . ....... ."
         ". . content ."
         ". . ....... .";
+      }
+      @include breakpoint(min-width 2420px) {
+        grid-template-rows: ($toggle-size--larger + $standard-spacing) 260px ($standard-spacing + ($toggle-size--larger / 2));        
       }
     }
   }
