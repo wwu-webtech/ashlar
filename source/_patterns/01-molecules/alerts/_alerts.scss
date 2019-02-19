@@ -12,9 +12,14 @@ $logo-size: 100px;
   padding: $standard-spacing;
 }
 
+.alert-body {
+  width:80%;
+}
+
 .emergency {
   color: $white;
   background-color: $red;
+  padding-left:2em;
 
   .alert-header {
     color: $white;
@@ -28,6 +33,7 @@ $logo-size: 100px;
 .weather {
   color: $dark-blue;
   background-color: $yellow;
+  padding-left:2em;
 
   svg {
     fill: $dark-blue;
@@ -57,4 +63,5 @@ $logo-size: 100px;
 
 .alert-footer {
   flex: 0 0 100%;
+  margin-top:1.5em;
 }
