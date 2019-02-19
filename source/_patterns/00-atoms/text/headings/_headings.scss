@@ -7,6 +7,7 @@ $heading-line-height: 1.2em;
 $heading-margin-top: $standard-spacing * 1.5;
 $heading-margin-bottom: $standard-spacing;
 
+/* Default heading styles, serif with blues/darker greens */
 h1,
 h2,
 h3,
@@ -17,8 +18,6 @@ h5 {
   line-height: $heading-line-height;
   font-weight: $font-weight--regular;
 }
-
-/* Default heading set */
 h1 {
   color: $dark-blue;
   font-size: $h1-font-size;
@@ -47,27 +46,13 @@ h5 {
   font-size: $h5-font-size;
 }
 
-/* Dark background headings */
-.dark-bg {
+/* .sans-serif-headings heading styles, same as default but with Noto Sans */
+.sans-serif-headings {
   h1,
   h2,
   h3,
   h4,
-  h5,
-  h6 {
-    color: $white;
-    font-family: $sans-serif;
-  }
-
-  h2 {
-    border-bottom-color: $light-green;
-  }
-
-  h3 {
-    color: $lightest-green
-  }
-
-  h4 {
-    color: $light-green;
+  h5 {
+    font-family: 'Noto Sans', sans-serif;
   }
 }

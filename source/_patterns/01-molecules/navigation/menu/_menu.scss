@@ -6,16 +6,4 @@
 .menu {
   padding: 0;
   list-style: none;
-
-  &.gray {
-    background-color: $light-gray;
-  }
-
-  &.dark-blue {
-    background-color: $dark-blue;
-  }
-
-  &.blue {
-    background-color: $blue;
-  }
 }

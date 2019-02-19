@@ -121,15 +121,20 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
 
     .button {
       @include breakpoint($medium) {
-        padding: $double-spacing * 2;
+        padding: $double-spacing;
       }
       margin: 0 $standard-spacing;
-      padding: $double-spacing;
+      padding: ($standard-spacing * 1.5);
       letter-spacing: 3px;
       text-transform: uppercase;
-      border-radius: 0;
+      border-radius: 20px;
       font-family: $heading-font;
       font-size: $button-font-size;
+      box-shadow: 6px 6px 0px $dark-blue;
+
+      &:hover {
+        box-shadow: 6px 6px 0px $blue;
+      }
     }
 
     p {

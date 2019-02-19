@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Theme override to display an image button custom block type
+ * Theme override to display a block.
  *
  * Available variables:
  * - plugin_id: The ID of the block implementation.
@@ -25,32 +25,16 @@
  * @see template_preprocess_block()
  */
 #}
-{{ attach_library('ashlar/quicksearch') }}
+{{ attach_library('ashlar/timeline-block') }}
 {%
   set classes = [
     'block',
-    'block--quicksearch-form',
+    'block--timeline',
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
-    'quicksearch-form-container',
-    'blue-bg',
   ]
 %}
 {% set attributes = attributes.addClass(classes) %}
 {% set title_attributes = title_attributes.addClass('block__title') %}
-
 {% block template %}
-  {% embed "@molecules/search/quicksearch-form/quicksearch-form.html.twig" %}
-    {% block content %}
-      <div class="body">
-        {{ content.body.0['#text']|raw }}
-      </div>
-    {% endblock %}
-
-    {% block form %}
-      <form autocomplete="off" id="quick-search-form">
-        <label for="quick-search-input">{{ content.field_input_text }}</label>
-        <input id="quick-search-input" type="search" />
-      </form>
-    {% endblock %}
-  {% endembed %}
+  {% include "@organisms/blocks/block-template/block-template.html.twig" %}
 {% endblock %}

@@ -20,7 +20,7 @@ $image-size--smaller: 180px;
   text-align: center;
 
   .image,
-  .field__item:nth-of-type(3) {
+  .field__item:nth-of-type(1) {
     @include breakpoint(max-width $medium) {
       -ms-grid-columns: $image-size--smaller;
       -ms-grid-rows: $image-size--smaller;
@@ -42,7 +42,7 @@ $image-size--smaller: 180px;
   }
 
   .body,
-  .field__item:nth-of-type(4) {
+  .field__item:nth-of-type(2) {
     align-self: center;
     margin: $standard-spacing 0;
 
@@ -62,11 +62,11 @@ $image-size--smaller: 180px;
     }
   }
 
-  .field__item:nth-of-type(1) {
+  .field__item:nth-of-type(3) {
     grid-area: credit;
     font-weight: bold;
   }
-  .field__item:nth-of-type(2) {
+  .field__item:nth-of-type(4) {
     grid-area: credit;
     transform: translatey(1.5em);
     font-style: italic;

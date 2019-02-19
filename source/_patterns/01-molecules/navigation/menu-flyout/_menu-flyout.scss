@@ -4,19 +4,8 @@
  */
 
 .flyout {
+  @extend .blue-bg;
   width: 100%;
-
-  &.dark-blue {
-    background-color: $dark-blue;
-  }
-
-  &.light-blue {
-    background-color: $light-blue;
-  }
-
-  &.gray {
-    background-color: $light-gray;
-  }
 
   .wrap {
     @include breakpoint($medium) {
@@ -58,5 +47,4 @@
   }
   height: 100vh;
   padding: $standard-spacing;
-  background: $blue;
 }

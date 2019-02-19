@@ -1,9 +1,7 @@
 flyout_classes:
 - flyout
-- gray
 classes:
 - menu
-- gray
 items:
 - title: Menu item 1
   url: ''
