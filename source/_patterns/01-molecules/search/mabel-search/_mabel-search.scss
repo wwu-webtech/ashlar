@@ -32,31 +32,32 @@ $mabel-label-font-size: calc(#{$mabel-label-min-font-size} + #{strip-unit($mabel
   }
 }
 
-.form-item-islandora-simple-search-query {
-  + .form-submit {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    display: inline-block;
-    width: $simple-search-button--width;
-    height: $simple-search-button--height;
-    margin: 0;
-    margin-right: $double-spacing;
-    padding: $standard-spacing;
-    border-radius: 0;
-    font-size: $font-size--smaller;
-  }
+#islandora-solr-simple-search-form {
+  .form-item-islandora-simple-search-query {
+    + .form-submit {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: inline-block;
+      width: $simple-search-button--width;
+      height: $simple-search-button--height;
+      margin: 0;
+      margin-right: $double-spacing;
+      padding: $standard-spacing;
+      border-radius: 0;
+      font-size: $font-size--smaller;
+    }
 
-  .form-text {
-    width: calc(100% - #{$simple-search-button--width} - #{$double-spacing});
-    height: $simple-search-button--height;
-    margin: 0;
-    margin-left: $double-spacing;
-    padding: $standard-spacing;
-    border-color: $blue;
+    .form-text {
+      width: calc(100% - #{$simple-search-button--width} - #{$double-spacing});
+      height: $simple-search-button--height;
+      margin: 0;
+      margin-left: $double-spacing;
+      padding: $standard-spacing;
+      border-color: $blue;
+    }
   }
 }
-
 
 #block-islandora-solr-advanced {
   @include breakpoint($medium) {
