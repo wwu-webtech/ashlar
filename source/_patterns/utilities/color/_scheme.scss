@@ -135,8 +135,8 @@ $lightest-bg-blue: mix($white, $blue, 90%);
     }
 
     &.button:not(.alt) {
-      border-color: transparent;
       color: $white;
+      border-color: transparent;
     }
   }
 
@@ -164,7 +164,10 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   ul {
     &.menu {
       li {
-        border-left: solid 3px $black;
+        @include breakpoint($medium) {
+          border-left-width: $border-width--thicker;
+        }
+        border-left: solid $border-width $black;
 
         a {
           color: $white;
@@ -208,8 +211,8 @@ $lightest-bg-blue: mix($white, $blue, 90%);
     }
 
     &.button:not(.alt) {
-      border-color: transparent;
       color: $white;
+      border-color: transparent;
 
       &:hover,
       &:focus {
@@ -220,6 +223,24 @@ $lightest-bg-blue: mix($white, $blue, 90%);
 
   h3 {
     color: $dark-green;
+  }
+
+  .menu {
+    li {
+      @include breakpoint($medium) {
+        border-left-width: $border-width--thicker;
+      }
+      border-left: solid $border-width mix(black, $light-gray, 20%);
+
+      a {
+        color: $black;
+
+        &:hover,
+        &:focus {
+          background: mix(black, $light-gray, 20%);
+        }
+      }
+    }
   }
 }
 
@@ -239,7 +260,7 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   ul {
     &.menu {
       li {
-        border-left: solid $border-width $darkest-blue;
+        border-left-color: $darkest-blue;
 
         a {
           &:hover,
@@ -273,8 +294,8 @@ $lightest-bg-blue: mix($white, $blue, 90%);
     &.dark-blue.button {
       &:hover,
       &:focus {
-        background-color: $light-blue;
         color: $dark-blue;
+        background-color: $light-blue;
       }
     }
   }
@@ -310,10 +331,7 @@ $lightest-bg-blue: mix($white, $blue, 90%);
 
   .menu {
     li {
-      @include breakpoint($medium) {
-        border-left-width: $border-width--thicker;
-      }
-      border-left: solid $border-width mix(white, $dark-blue, 60%);
+      border-left-color: mix(white, $dark-blue, 60%);
 
       a {
         color: $black;
@@ -340,10 +358,7 @@ $lightest-bg-blue: mix($white, $blue, 90%);
 
   .menu {
     li {
-      @include breakpoint($medium) {
-        border-left-width: $border-width--thicker;
-      }
-      border-left: solid $border-width mix(white, $dark-blue, 70%);
+      border-left-color: mix(white, $dark-blue, 70%);
 
       a {
         color: $black;
@@ -356,6 +371,7 @@ $lightest-bg-blue: mix($white, $blue, 90%);
     }
   }
 }
+
 
 .black-bg { @extend %black-bg; }
 .gray-bg { @extend %gray-bg; }
