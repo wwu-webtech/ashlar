@@ -43,6 +43,8 @@ a {
 ul,
 ol {
   a {
+    display: inline-block;
+    vertical-align: middle;
     text-decoration: none;
     border-bottom-color: transparent;
 
