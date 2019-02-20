@@ -329,6 +329,58 @@
       display: inline;
     }
   }
+
+  .islandora-solr-facet {
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      display: grid;
+      grid-template-rows: auto auto;
+      grid-template-columns: 70px auto;
+      grid-template-areas:
+      "plusminus link"
+      "count    count";
+
+      justify-items: start;
+      align-items: center;
+
+      > a {
+        margin: 0;
+        padding: $half-spacing 0 $half-spacing $standard-spacing;
+        border-bottom: none;
+
+        grid-area: link;
+      }
+    }
+
+    .count {
+      grid-area: count;
+      justify-self: end;
+    }
+
+    .plusminus {
+      grid-area: plusminus;
+
+      a {
+        background: $blue;
+        color: $white;
+        margin-right: $half-spacing / 2;
+        width: 30px;
+        height: 30px;
+        display: inline-grid;
+        justify-content: center;
+        align-content: center;
+        border: none;
+
+        &:hover,
+        &:focus {
+          background-color: $dark-blue;
+          color: $white;
+        }
+      }
+    }
+  }
 }
 
 #islandora-collection-search-form {
