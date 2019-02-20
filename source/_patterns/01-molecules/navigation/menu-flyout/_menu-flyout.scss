@@ -63,6 +63,9 @@
   }
 
   > div {
+    @include breakpoint($medium) {
+      flex: 0 1 33%;
+    }
     margin: 0 $standard-spacing;
   }
 }
