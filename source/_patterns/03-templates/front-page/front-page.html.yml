@@ -4,6 +4,18 @@ page:
     pattern: organisms-page-html
     with:
       page:
+        header:
+          join():
+          - include():
+              pattern: organisms-block-template-html
+              with:
+                label: ""
+                content: molecules-splash-image-html
+          - include():
+              pattern: organisms-block-template-html
+              with:
+                label: ""
+                content: molecules-headline-html
         content:
           include():
             pattern: organisms-content-region-html
