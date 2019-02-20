@@ -61,4 +61,8 @@
     margin-top: 0;
     font-size: $h4-font-size;
   }
+
+  > div {
+    margin: 0 $standard-spacing;
+  }
 }
