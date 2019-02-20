@@ -35,11 +35,11 @@
 {% set attributes = attributes|without('role', 'aria-labelledby') %}
 {%
   set classes = [
-    'nav',
-    'nav--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
+    'block--menu',
+    'menu--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
   ]
 %}
 {% set attributes = attributes.addClass(classes) %}
 {% block template %}
-  {% include "@molecules/navigation/main-navigation/main-navigation.html.twig" %}
+  {% include "@molecules/navigation/menu-block/menu-block.html.twig" %}
 {% endblock %}

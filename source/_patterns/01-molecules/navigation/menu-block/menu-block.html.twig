@@ -3,7 +3,7 @@
  * @see templates/block/block--system-menu-block.html.twig
  */
 #}
-<nav aria-labelledby="{{ heading_id }}"{{ attributes }}>
+<div aria-labelledby="{{ heading_id }}"{{ attributes }}>
   {{ title_prefix }}
   {# Label. Not displayed, but provided for screen readers. #}
   {% if not configuration.label_display %}
@@ -19,4 +19,4 @@
   {% block content %}
     {{ content }}
   {% endblock %}
-</nav>
+</div>
