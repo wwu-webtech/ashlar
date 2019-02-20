@@ -66,6 +66,7 @@ $mabel-label-font-size: calc(#{$mabel-label-min-font-size} + #{strip-unit($mabel
   padding: $standard-spacing $double-spacing;
   padding-top: 0;
   background: $black;
+  color: $white;
 
   h2,
   .toggle-advanced-search {
