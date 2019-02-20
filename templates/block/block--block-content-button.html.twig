@@ -43,7 +43,9 @@
     {{ title_suffix }}
 
     {% block content %}
-      {{ content.field_link }}
+      <a href="{{ block_content.field_link.0.url }}" data-tracking-event-category="{{ block_content.field_tracking_event_category.0.value }}" class="button {{ block_content.field_button_style.0.value|clean_class }}">
+        {{ block_content.field_link.0.title }}
+      </a>
     {% endblock %}
   </div>
 {% endblock %}
