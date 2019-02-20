@@ -41,7 +41,7 @@
   @extend %blue-bg;
   @include breakpoint($medium) {
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: start;
     height: inherit;
     padding-top: (($toggle-size--larger / 2) + $standard-spacing);
     padding-right: calc(((100vw - #{$max-content-width}) / 2) + #{$double-spacing});
