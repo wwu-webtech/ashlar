@@ -23,34 +23,33 @@ $p-font-size: calc(#{$min-p-font-size} + #{strip-unit($max-p-font-size - $min-p-
 $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font-size - $min-button-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 
 .page-node-type-campaign {
-  .splash {
-    @include breakpoint($medium) {
-      min-height: 60vh;
-      -ms-grid-rows: $logo-height 1fr $double-spacing;
-      -ms-grid-columns: $double-spacing 1fr $double-spacing;
-      grid-template-rows: $logo-height 1fr $double-spacing;
-      grid-template-columns: $double-spacing 1fr $double-spacing;
-    }
-    @include breakpoint($medium (max-height 610px)) {
-      min-height: 400px;
-    }
-    -ms-grid-rows: ($double-spacing * 2) 1fr;
-    grid-template-rows: ($double-spacing * 2) 1fr;
-
-    & > div:nth-of-type(1) {
-      -ms-grid-row: 1;
-      -ms-grid-row-span: all;
-      grid-row: 1 / span all;
-    }
-
-    & > div:nth-of-type(2) {
-      align-self: center;
-    }
-  }
-
   .nav--main {
     @include breakpoint($medium) {
       display: none !important;
+    }
+  }
+
+  .splash {
+    @include breakpoint($medium) {
+      grid-template-rows: ($logo-height--larger + $double-spacing) 1fr $toggle-size;
+      min-height: 450px;
+    }
+    @include breakpoint($large) {
+      min-height: 380px;
+    }
+    max-height: 50vh;
+    min-height: 300px;
+    overflow: hidden;
+    grid-template-columns: $standard-spacing 1fr $standard-spacing;
+    grid-template-rows: $double-spacing auto 0px;
+
+    > div {
+      &:nth-of-type(1) {
+        @include breakpoint($medium) {
+          display: grid;
+          align-content: center;
+        }
+      }
     }
   }
 
@@ -246,12 +245,5 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
   .page-node-type-campaign .page-content .layout--twocol-bricks > .layout__region--first-above img,
   .page-node-type-campaign .page-content .layout--twocol-bricks > .layout__region--second-below img {
     width: 100vw;
-  }
-
-  .splash > :nth-of-type(2), .featured-major-splash-area > :nth-of-type(2) {
-    position: absolute;
-    top: $logo-height + $double-spacing;
-    left: 50%;
-    transform: translatex(-50%);
   }
 }
