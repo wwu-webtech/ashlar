@@ -50,7 +50,3 @@ items:
     Attribute():
       class:
         - ultimenu__item
-  flyout: molecules-menu-flyout-html
-  flyout_attributes:
-    Attribute():
-      class:

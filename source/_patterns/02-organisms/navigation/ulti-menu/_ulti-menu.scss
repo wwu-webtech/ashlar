@@ -50,9 +50,10 @@
     }
   }
 
-  li {
+  .ultimenu__item {
     @include breakpoint($medium) {
       min-width: initial;
+      position: initial;
 
       &:hover {
         & > .ultimenu__flyout {
@@ -68,13 +69,33 @@
         }
       }
     }
+    position: relative;
     display: inherit;
     margin: 0;
+
+    &.has-ultimenu {
+      .expand-icon {
+        @include breakpoint($medium) {
+          display: none;
+        }
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        right: $standard-spacing;
+        display: inline-block;
+        transform: translatey(-50%);
+        color: white;
+      }
+    }
 
     a {
       &:hover,
       &:focus {
         text-decoration: none;
+
+        + .expand-icon {
+          color: $black;
+        }
       }
     }
   }

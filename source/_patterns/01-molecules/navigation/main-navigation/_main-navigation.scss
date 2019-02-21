@@ -28,23 +28,6 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-
-    > li {
-      &.has-ultimenu {
-        > a {
-          &:after {
-            @include breakpoint($medium) {
-              content: "";
-            }
-            position: absolute;
-            right: $standard-spacing;
-            display: inline-block;
-            content: "›";
-            font-size: 1.8em;
-          }
-        }
-      }
-    }
   }
 }
 /* Reposition nav in context of the site header */
