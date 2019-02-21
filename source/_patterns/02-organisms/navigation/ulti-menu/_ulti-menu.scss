@@ -17,11 +17,13 @@
     @include breakpoint($large) {
       transform: translatey(-($toggle-size--larger/2));
     }
-    @include transition($medium-transition-speed, $standard-ease);
-    display: none;
+    transition: $medium-transition-speed $standard-ease;
+    display: block;
+    max-height: 0;
     margin: 0;
     padding: 0;
     box-shadow: none;
+    overflow: hidden;
 
     grid-area: flyout;
     -ms-grid-column: 1;
@@ -29,7 +31,7 @@
     -ms-grid-row: 2;
 
     &.open {
-      display: block;
+      max-height: 200vh;
     }
   }
 
