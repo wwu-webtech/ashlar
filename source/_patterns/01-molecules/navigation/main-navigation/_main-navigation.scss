@@ -15,7 +15,7 @@
     min-height: 0;
     background: transparent;
   }
-  min-height: 100vh;
+  height: 100vh;
   background: $dark-blue;
   font-size: $splash-font-size;
 
@@ -40,16 +40,18 @@
       margin-top: -($toggle-size / 2);
       opacity: 1 !important;
       overflow-x: visible;
+      overflow-y: visible;
     }
     @include breakpoint($large) {
       margin-bottom: ($toggle-size--larger / 2);
       margin-top: -($toggle-size--larger / 2);
     }
-    position: absolute;
+    position: fixed;
     z-index: 3;
     top: 0;
     right: -100%;
     overflow-x: hidden;
+    overflow-y: scroll;
     width: 100%;
     opacity: 0;
   }
