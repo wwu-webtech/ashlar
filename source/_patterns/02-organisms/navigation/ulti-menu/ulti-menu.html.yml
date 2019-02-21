@@ -25,11 +25,9 @@ items:
       pattern: molecules-menu-flyout-html
       with:
           flyout_classes:
-            - flyout
-            - dark-blue
+            - ultimenu__region
           classes:
             - menu
-            - dark-blue
           items:
             - title: Alt Menu Item
               url: ''

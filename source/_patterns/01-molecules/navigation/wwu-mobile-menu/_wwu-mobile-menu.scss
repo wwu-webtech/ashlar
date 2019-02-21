@@ -44,7 +44,8 @@
 
         &:hover,
         &:focus {
-          color: $light-blue;
+          color: $blue;
+          background-color: $white;
         }
       }
     }

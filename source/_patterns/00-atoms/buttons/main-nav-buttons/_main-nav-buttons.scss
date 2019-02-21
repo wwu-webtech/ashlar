@@ -1,7 +1,7 @@
 /**
-  * @file
-  * 00-atoms/buttons/_main-nav-buttons.scss
-  */
+* @file
+* 00-atoms/buttons/_main-nav-buttons.scss
+*/
 $max-button-width: 250px;
 
 .nav--main,
@@ -14,9 +14,11 @@ $max-button-width: 250px;
     & > li {
       @include breakpoint($medium) {
         width: inherit;
+        border-bottom: none;
       }
       width: 100%;
       border: none;
+      border-bottom: 1px solid $darkest-blue;
 
       /* Keep borders even */
       &:first-of-type {
@@ -42,11 +44,12 @@ $max-button-width: 250px;
         box-sizing: border-box;
         width: 100%;
         height: $toggle-size;
+        margin: 0;
         padding: $standard-spacing;
         text-align: left;
         white-space: normal;
         color: $white;
-        border-bottom: 1px solid $darkest-blue;
+        border: none;
         background-color: $dark-blue;
         line-height: 1.4em;
 
@@ -57,9 +60,23 @@ $max-button-width: 250px;
           background-color: $light-green;
         }
 
+        &:after {
+          @include breakpoint($medium) {
+            display: none;
+          }
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: block;
+          width: $toggle-size;
+          height: 100%;
+          content: "";
+          transform: translatex(100%);
+        }
+
         &.active {
-          background-color: $light-green;
           color: $dark-blue;
+          background-color: $light-green;
         }
       }
     }

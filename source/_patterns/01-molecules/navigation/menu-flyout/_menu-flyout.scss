@@ -2,41 +2,6 @@
  * @file
  * 01-molecules/navigation/menu-flyout/_menu-flyout.scss
  */
-
-.flyout {
-  @extend .blue-bg;
-  width: 100%;
-
-  .wrap {
-    @include breakpoint($medium) {
-      padding-top: ($toggle-size/2) + ($standard-spacing);
-    }
-    @include breakpoint($large) {
-      padding-top: ($toggle-size--larger/2) + ($standard-spacing);
-    }
-    position: relative;
-    width: 100%;
-    max-width: $max-content-width;
-    height: 100%;
-    margin: auto;
-    padding: $standard-spacing;
-  }
-
-  .menu {
-    display: flex;
-    flex-flow: column wrap;
-    height: 100%;
-    max-height: 30vh;
-    margin: auto;
-    font-size: $font-size--smaller;
-
-    li {
-      width: 33%;
-    }
-  }
-}
-
-/* Standard Drupal menu output flyout styles */
 .ultimenu__region {
   @extend %blue-bg;
   @include breakpoint($medium) {
@@ -47,10 +12,10 @@
     padding-right: calc(((100vw - #{$max-content-width}) / 2) + #{$double-spacing});
     padding-bottom: $double-spacing;
     padding-left: calc(((100vw - #{$max-content-width}) / 2) + #{$double-spacing});
+    width: 100%;
   }
   display: flex;
   flex-flow: column;
-  height: 100vh;
   padding: $standard-spacing;
 
   .menu .menu li {
@@ -67,5 +32,6 @@
       flex: 0 1 33%;
     }
     margin: 0 $standard-spacing;
+    flex: 0 1 100%;
   }
 }
