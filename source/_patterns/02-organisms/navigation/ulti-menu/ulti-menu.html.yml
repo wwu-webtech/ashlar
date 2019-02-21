@@ -24,10 +24,6 @@ items:
     include():
       pattern: molecules-menu-flyout-html
       with:
-          flyout_classes:
-            - ultimenu__region
-          classes:
-            - menu
           items:
             - title: Alt Menu Item
               url: ''
