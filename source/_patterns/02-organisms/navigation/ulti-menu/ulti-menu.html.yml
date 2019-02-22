@@ -3,7 +3,6 @@ attributes:
   Attribute():
     class:
     - ultimenu
-    - menu
     - ultimenu--main
     - ultimenu--htb
     - ultimenu--horizontal

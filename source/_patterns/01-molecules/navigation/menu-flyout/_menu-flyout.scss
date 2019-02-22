@@ -37,14 +37,35 @@
 }
 
 /* Standard Drupal menu output flyout styles */
-.ultimenusub {
+.ultimenu__region {
+  @extend %blue-bg;
   @include breakpoint($medium) {
+    flex-flow: row nowrap;
+    justify-content: start;
     height: inherit;
     padding-top: (($toggle-size--larger / 2) + $standard-spacing);
-    padding-left: calc(((100vw - #{$max-content-width}) / 2) + #{$double-spacing});
     padding-right: calc(((100vw - #{$max-content-width}) / 2) + #{$double-spacing});
     padding-bottom: $double-spacing;
+    padding-left: calc(((100vw - #{$max-content-width}) / 2) + #{$double-spacing});
   }
+  display: flex;
+  flex-flow: column;
   height: 100vh;
   padding: $standard-spacing;
+
+  .menu .menu li {
+    border-left: none;
+  }
+
+  h2 {
+    margin-top: 0;
+    font-size: $h4-font-size;
+  }
+
+  > div {
+    @include breakpoint($medium) {
+      flex: 0 1 33%;
+    }
+    margin: 0 $standard-spacing;
+  }
 }
