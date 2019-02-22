@@ -277,7 +277,7 @@
     .panel-pane {
       margin-bottom: $standard-spacing;
       padding: $standard-spacing;
-      background: mix($white, $light-gray, 50%);
+      background: $lightest-gray;
       font-size: $font-size--smaller;
     }
 
@@ -290,8 +290,8 @@
       border-bottom-color: $dark-green;
     }
 
-
     h2 {
+      margin-top: 0;
       font-family: $sans-serif;
       font-size: $p-font-size;
     }
@@ -494,6 +494,32 @@ body.page-islandora-object {
   .islandora-large-image-content {
     float: none;
     width: 100%;
+  }
+
+  /* Sidebar panels */
+  .layout__region--first {
+    .panel-pane {
+      margin-bottom: $standard-spacing;
+      padding: $standard-spacing;
+      background: $lightest-gray;
+      font-size: $font-size--smaller;
+    }
+
+    a {
+      border-bottom-color: transparent;
+    }
+
+    a:hover {
+      color: $dark-green;
+      border-bottom-color: $dark-green;
+    }
+
+
+    h2 {
+      margin-top: 0;
+      font-family: $sans-serif;
+      font-size: $p-font-size;
+    }
   }
 }
 
