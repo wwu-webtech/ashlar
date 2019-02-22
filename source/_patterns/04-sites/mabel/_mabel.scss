@@ -3,7 +3,7 @@
 * sites/mabel/_mabel.scss
 */
 
-/* General Mabel Styles */
+/** General Mabel Styles **/
 .page-islandora {
   /* Hide WWU Search as it's confusing to have multiple searches */
   .western-header {
@@ -214,7 +214,14 @@
   background: $light-gray;
 }
 
-/* Search Results Styles */
+.islandora-object-thumb,
+.islandora-object-caption {
+  a {
+    display: inline-block;
+  }
+}
+
+/** Search Results Styles **/
 .page-islandora-search {
   .page-content {
     margin-bottom: 0;
@@ -383,6 +390,7 @@
   }
 }
 
+/** Islandora Blocks **/
 #islandora-collection-search-form {
   label {
     margin: 0;
@@ -437,7 +445,7 @@
   }
 }
 
-/* Object page styles */
+/** Object page styles **/
 body.page-islandora-object {
   a {
     border-bottom: none;
@@ -523,7 +531,7 @@ body.page-islandora-object {
   }
 }
 
-/* Compound object page styles */
+/** Compound object page styles **/
 $jail-height: 750px;
 
 a#clip {
