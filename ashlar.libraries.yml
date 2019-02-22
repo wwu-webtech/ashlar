@@ -79,6 +79,10 @@ user-login:
     build/js/user-login.js: {}
   dependencies:
     - core/jquery
+vimeo-tracking:
+  remote: https://extend.vimeocdn.com
+  js:
+    //extend.vimeocdn.com/ga/30954810.js: { type: external, attributes: { defer: true }}
 wwu-header:
   version: 1.x
   js:
