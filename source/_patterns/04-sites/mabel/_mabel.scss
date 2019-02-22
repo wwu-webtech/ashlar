@@ -10,6 +10,12 @@
     .search {
       display: none;
     }
+
+    .wrap {
+      .site-name {
+        text-transform: uppercase;
+      }
+    }
   }
 
   #islandora-search-container {
