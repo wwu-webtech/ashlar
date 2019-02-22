@@ -15,7 +15,7 @@
   #islandora-search-container {
     position: absolute;
     z-index: 1;
-    max-width: 100%;
+    max-width: $max-content-width;
   }
 
   .splash {
