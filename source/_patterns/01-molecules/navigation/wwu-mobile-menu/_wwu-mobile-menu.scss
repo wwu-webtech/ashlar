@@ -2,6 +2,7 @@
 * @file
 * 00-molecules/navigation/wwu-menu/_wwu-menu.scss
 */
+$close-toggle-size: 64px;
 
 .quick-links {
   &.mobile {
@@ -10,61 +11,33 @@
     }
     background-color: $dark-blue;
 
-    .top-links {
-      display: grid;
-      align-items: center;
-
-      grid-column-gap: $half-spacing;
-
-      grid-template-areas: "login . apply close";
-      grid-template-columns: auto 1fr 1fr auto;
-      grid-template-rows: auto;
-    }
-
     .toggle-close-menu {
-      grid-area: close;
-    }
-
-    a {
-      color: $white;
-
-      &.button {
-        padding: $half-spacing $standard-spacing;
-        border-width: $border-width;
-      }
-
-      &.apply {
-        width: 100%;
-        grid-area: apply;
-      }
-
-      &.mywestern {
-        margin-left: $standard-spacing;
-        grid-area: login;
-
-        &:hover,
-        &:focus {
-          color: $blue;
-          background-color: $white;
-        }
-      }
+      position: absolute;
+      right: 0;
+      width: $close-toggle-size;
+      height: $close-toggle-size;
     }
 
     .menu {
-      display: flex;
-      flex-flow: row nowrap;
+      display: grid;
+      align-items: end;
       margin: 0;
-      border-top: solid $border-width--thinner white;
-      border-bottom: solid $border-width--thinner white;
+      border-bottom: solid $border-width--thinner $white;
+
+      grid-template-areas:
+      "apply . . ."
+      "calendar directory map mywestern";
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: $close-toggle-size auto;
+      justify-items: center;
 
       li {
-        flex: 1;
-        margin: 0;
+        width: 100%;
+        border-top: solid $border-width--thinner $white;
 
         a {
           width: 100%;
           padding: $half-spacing;
-          text-align: center;
           color: $white;
 
           &:hover,
@@ -73,6 +46,40 @@
             outline: none;
             background-color: $light-green;
           }
+        }
+
+        &.apply {
+          align-self: center;
+          margin-left: $standard-spacing;
+          border-top: none;
+
+          grid-area: apply;
+
+          .button {
+            padding: ($standard-spacing * 0.75);
+            border: solid $border-width $white;
+
+            &:hover,
+            &:focus {
+              border-color: transparent;
+            }
+          }
+        }
+
+        &.calendar {
+          grid-area: calendar;
+        }
+
+        &.directory {
+          grid-area: directory;
+        }
+
+        &.map {
+          grid-area: map;
+        }
+
+        &.mywestern {
+          grid-area: mywestern;
         }
       }
     }
