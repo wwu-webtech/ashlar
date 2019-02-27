@@ -11,10 +11,6 @@ $site-name-spacer: 120px;
 
     -ms-grid-rows: ($logo-height + $site-name-spacer) auto $toggle-size;
 
-    grid-template-areas:
-    ". ....... ."
-    ". content ."
-    ". ....... .";
     grid-template-rows: ($logo-height + $site-name-spacer) auto $toggle-size;
   }
   @include breakpoint($large) {
@@ -35,25 +31,17 @@ $site-name-spacer: 120px;
   grid-template-areas:
   ". ....... ."
   ". content ."
-  ". content ."
   ". ....... .";
   grid-template-columns: $small-screen-columns;
-  grid-template-rows: 25vh 1fr 1fr $standard-spacing;
+  grid-template-rows: $standard-spacing 1fr $standard-spacing;
 
   > div {
     &:nth-of-type(1) {
-      /* Splash image is the first div in splash region */
-      @include breakpoint($medium) {
-        grid-row: 1 / span all;
-        -ms-grid-row: 1;
-        -ms-grid-row-span: 3;
-      }
-
       -ms-grid-row: 1;
-      -ms-grid-row-span: 2;
+      -ms-grid-row-span: 3;
 
       grid-column: 1 / span all;
-      grid-row: 1 / span 2;
+      grid-row: 1 / span all;
 
       div {
         height: 100%;
@@ -61,14 +49,10 @@ $site-name-spacer: 120px;
     }
 
     &:nth-of-type(2) {
-      @include breakpoint($medium) {
-        -ms-grid-row: 2;
-        -ms-grid-row-span: 1;
-        -ms-grid-column: 2;
-      }
       -ms-grid-row: 2;
-      -ms-grid-row-span: 2;
+      -ms-grid-row-span: 1;
       -ms-grid-column: 2;
+      -ms-grid-column-span: 1;
 
       grid-area: content;
     }

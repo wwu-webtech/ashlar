@@ -6,23 +6,46 @@ $headline-gradient-start: transparentize($black, 0.2);
 $headline-gradient-end: transparentize($black, 0.5);
 
 .headline {
-  @include breakpoint($medium) {
-    background: linear-gradient(to right, $headline-gradient-start 0%, $headline-gradient-end 100%);
-  }
-  max-width: $max-content-width / 2;
-  padding: $standard-spacing;
-  color: $text-color-light;
-  background-color: $blue;
-
-  h2 {
-    margin-top: $standard-spacing;
-    text-transform: uppercase;
+  /* Style Option 1: Black overlay */
+  &.black-overlay {
+    @include breakpoint($medium) {
+      background: linear-gradient(to right, $headline-gradient-start 0%, $headline-gradient-end 100%);
+    }
+    max-width: $max-content-width / 2;
+    padding: $standard-spacing;
     color: $text-color-light;
-    border-bottom: none;
-    font-family: $sans-serif;
+    background-color: transparentize($black, 0.5);
+
+    h2 {
+      margin-top: $standard-spacing;
+      text-transform: uppercase;
+      color: $text-color-light;
+      border-bottom: none;
+      font-family: $sans-serif;
+    }
+
+    .button {
+      margin: $standard-spacing 0 0 0;
+      background-color: transparent;
+      border-color: $white;
+      color: $white;
+
+      &:hover,
+      &:focus {
+        background-color: $white;
+        color: $blue;
+      }
+    }
   }
 
-  .button {
-    margin: $standard-spacing 0 0 0;
+  /* Style Option 2: Black overlay */
+  &.left-aligned-bar {
+
+  }
+
+  &.right-aligned-bar {
+  }
+
+  &.simple-centered {
   }
 }
