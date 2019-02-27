@@ -12,10 +12,7 @@ page:
                 label: ""
                 content: molecules-splash-image-html
           - include():
-              pattern: organisms-block-template-html
-              with:
-                label: ""
-                content: molecules-headline-html
+              pattern: molecules-headline-html
         content:
           include():
             pattern: organisms-content-region-html

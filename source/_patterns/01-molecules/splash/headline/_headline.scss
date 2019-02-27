@@ -57,8 +57,8 @@ $headline-gradient-end: transparentize($black, 0.5);
       justify-items: end;
     }
     @include breakpoint($large) {
-      margin-left: calc(((100vw - #{$max-content-width}) / -2));
       max-width: 70vw;
+      margin-left: calc(((100vw - #{$max-content-width}) / -2));
     }
     position: relative;
     width: 90vw;
@@ -111,5 +111,16 @@ $headline-gradient-end: transparentize($black, 0.5);
         background: $white;
       }
     }
+  }
+
+  &.right-aligned-bar {
+    @extend .left-aligned-bar;
+    @include breakpoint($large) {
+      margin-right: calc(((100vw - #{$max-content-width}) / -2) - #{$half-spacing} - #{$border-width--thicker});
+    }
+    margin-right: -$standard-spacing - $half-spacing - $border-width--thicker;
+    margin-left: initial;
+
+    justify-self: end;
   }
 }
