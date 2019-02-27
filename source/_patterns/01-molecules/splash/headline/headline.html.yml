@@ -4,13 +4,14 @@ attributes:
     - headline
     - block
     - block--headline
+    - black-overlay
 title_attributes:
   Attribute():
     class:
     - block__title
 label: Headline block
 content:
-  body: Headline material can go here. Try using different classes to style this headline in different ways.
+  body: <p>Headline material can go here. Try using different classes to style this headline in different ways.</p>
   link:
     url: '#'
     text: 'Basic link'

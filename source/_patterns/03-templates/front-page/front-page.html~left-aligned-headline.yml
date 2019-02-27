@@ -13,6 +13,14 @@ page:
                 content: molecules-splash-image-html
           - include():
               pattern: molecules-headline-html
+              with:
+                attributes:
+                  Attribute():
+                    class:
+                    - headline
+                    - block
+                    - block--headline
+                    - left-aligned-bar
         content:
           include():
             pattern: organisms-content-region-html
