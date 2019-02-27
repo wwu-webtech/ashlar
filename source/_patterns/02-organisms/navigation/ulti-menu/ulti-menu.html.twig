@@ -24,6 +24,9 @@
             {% endblock %}
           {% else %}
             {{ item.link }}
+            {% if item.flyout %}
+              <span class="material-icons expand-icon" aria-hidden="true">keyboard_arrow_right</span>
+            {% endif %}
           {% endif %}
           {% if item.below %}
             {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
@@ -31,7 +34,6 @@
         {%- endif -%}
         {%- if item.flyout -%}
           <section{{ item.flyout_attributes.addClass('ultimenu__flyout') }}>
-            <a class="close-flyout">< Back</a>
             {{ item.flyout }}
           </section>
         {%- endif -%}

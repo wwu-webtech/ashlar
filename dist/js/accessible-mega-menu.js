@@ -836,8 +836,7 @@ limitations under the License.
                         topnavitempanel.attr({
                             "aria-expanded": false,
                             "aria-hidden": true
-                        })
-                            .addClass(settings.panelClass)
+                        })                            
                             .not("[aria-labelledby]")
                             .attr("aria-labelledby", topnavitemlink.attr("id"));
                     }

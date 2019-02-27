@@ -17,41 +17,32 @@
     @include breakpoint($large) {
       transform: translatey(-($toggle-size--larger/2));
     }
-    @include transition($medium-transition-speed, $standard-ease);
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    right: -100%;
+    transition: $medium-transition-speed $standard-ease;
     display: block;
+    max-height: 0;
+    visibility: hidden;
+    opacity: 0;
     margin: 0;
     padding: 0;
-    opacity: 0;
-    background-color: $white;
     box-shadow: none;
+    overflow: hidden;
+
+    grid-area: flyout;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    -ms-grid-row: 2;
 
     &.open {
-      visibility: visible;
+      max-height: 200vh;
       opacity: 1;
-    }
-
-    .close-flyout {
-      @include breakpoint($medium) {
-        display: none;
-      }
-      display: block;
-      padding: ($half-spacing / 2) $standard-spacing;
-      color: $white;
-      background-color: $blue;
-
-      &:hover,
-      &:focus {
-        background-color: $darkest-blue;
-      }
+      visibility: visible;
     }
   }
 
-  li {
+  .ultimenu__item {
     @include breakpoint($medium) {
+      position: initial;
+      display: block;
       min-width: initial;
 
       &:hover {
@@ -68,19 +59,60 @@
         }
       }
     }
-    display: inherit;
+    position: relative;
+    display: grid;
     margin: 0;
 
-    a {
+    -ms-grid-columns: 1fr $toggle-size;
+    -ms-grid-rows: auto auto;
+    grid-template-areas: "link     icon"
+    "flyout flyout";
+    grid-template-columns: 1fr $toggle-size;
+    grid-template-rows: auto auto;
+
+
+    .ultimenu__link {
+      z-index: 1;
+      transition: $medium-transition-speed $standard-ease;
+
+      -ms-grid-column: 1;
+      grid-column: 1 / span 2;
+      -ms-grid-column-span: 2;
+
       &:hover,
       &:focus {
         text-decoration: none;
+
+        + .expand-icon {
+          color: $black;
+          background-color: $light-green;
+        }
       }
     }
-  }
 
-  .ultimenu__link {
-    z-index: 1;
+    &.has-ultimenu {
+      .ultimenu__link {
+        grid-area: link;
+      }
+    }
+
+    .expand-icon {
+      @include breakpoint($medium) {
+        display: none;
+      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      transition: $medium-transition-speed $standard-ease;
+      color: $white;
+      border: none;
+
+      grid-area: icon;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 1;
+    }
   }
 }
 
@@ -96,8 +128,8 @@
       background: $dark-blue;
 
       &.open {
-        background: $light-green;
         color: $dark-blue;
+        background: $light-green;
       }
     }
     .caret {
@@ -122,16 +154,5 @@
 .button {
   &.button--ultimenu {
     display: none;
-  }
-}
-
-/* Fix ultimenu display: block !important; issue. Only affects screens between $medium and 943px*/
-@media all and (min-width: $medium) and (max-width: 943px) {
-  .ultimenu__flyout {
-    display: none !important;
-  }
-
-  .ultimenu__flyout.open {
-    display: block !important;
   }
 }

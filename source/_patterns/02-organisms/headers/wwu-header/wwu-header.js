@@ -3,7 +3,7 @@ var $toggle_close_menu = $('.toggle-close-menu', context);
 var $last_focused;
 var $mobile_nav = $('.quick-links .mobile', context);
 var $inputs = $(document).find('select, button, a, input, textarea', context)
-var $page = $('.western-header, .splash, .toggle-open-menu, .search, .page-content, .region--footer', context);
+var $page = $('.skip-link, .western-header, .splash, .toggle-open-menu, .search, .page-content, .region--footer', context);
 
 function toggle_open_menu(event) {
   $last_focused = document.activeElement;
@@ -21,7 +21,7 @@ function toggle_open_menu(event) {
         $toggle_open_menu.addClass('is-expanded');
         $toggle_open_menu.on('click', toggle_open_menu);
         $toggle_close_menu.focus();
-        $inputs.not('.nav--main :focusable').attr('tabindex', '-1');
+        $inputs.not('.nav--main :focusable, .ultimenu__flyout a').attr('tabindex', '-1');
         $page.not('.nav--main').attr('aria-hidden', 'true');
       }
     }
