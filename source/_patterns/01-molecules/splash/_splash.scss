@@ -9,24 +9,24 @@ $site-name-spacer: 120px;
   @include breakpoint($medium) {
     margin-top: -$toggle-size;
 
-    -ms-grid-rows: ($logo-height + $site-name-spacer) auto $toggle-size;
+    -ms-grid-rows: ($logo-height + $site-name-spacer) 1fr $toggle-size;
 
-    grid-template-rows: ($logo-height + $site-name-spacer) auto $toggle-size;
+    grid-template-rows: ($logo-height + $site-name-spacer) 1fr $toggle-size;
   }
   @include breakpoint($large) {
     margin-top: -$toggle-size--larger;
 
     -ms-grid-columns: $large-screen-columns;
-    -ms-grid-rows: ($logo-height--larger + $site-name-spacer) auto $toggle-size;
+    -ms-grid-rows: ($logo-height--larger + $site-name-spacer) 1fr $toggle-size;
 
     grid-template-columns: $large-screen-columns;
-    grid-template-rows: ($logo-height--larger + $site-name-spacer) auto $toggle-size;
+    grid-template-rows: ($logo-height--larger + $site-name-spacer) 1fr $toggle-size;
   }
   display: -ms-grid;
   display: grid;
 
   -ms-grid-columns: $small-screen-columns;
-  -ms-grid-rows: 25vh 1fr 1fr $double-spacing;
+  -ms-grid-rows: 25vh 1fr $double-spacing;
 
   grid-template-areas:
   ". ....... ."
@@ -55,6 +55,7 @@ $site-name-spacer: 120px;
       -ms-grid-column-span: 1;
 
       grid-area: content;
+      align-self: end;
     }
   }
 }

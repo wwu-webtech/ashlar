@@ -26,26 +26,90 @@ $headline-gradient-end: transparentize($black, 0.5);
 
     .button {
       margin: $standard-spacing 0 0 0;
-      background-color: transparent;
-      border-color: $white;
       color: $white;
+      border-color: $white;
+      background-color: transparent;
 
       &:hover,
       &:focus {
-        background-color: $white;
         color: $blue;
+        background-color: $white;
       }
     }
   }
 
   /* Style Option 2: Black overlay */
   &.left-aligned-bar {
+    @include breakpoint($small) {
+      display: grid;
 
-  }
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      justify-items: end;
+    }
+    @include breakpoint($medium) {
+      align-items: end;
+      margin-top: inherit;
 
-  &.right-aligned-bar {
-  }
+      grid-auto-flow: column;
+      grid-template-columns: 1fr auto;
+      grid-template-rows: auto;
+      justify-items: end;
+    }
+    @include breakpoint($large) {
+      margin-left: calc(((100vw - #{$max-content-width}) / -2));
+      max-width: 70vw;
+    }
+    position: relative;
+    width: 90vw;
+    margin-top: 25vh;
+    margin-left: -$standard-spacing;
+    padding: $standard-spacing;
+    color: $white;
+    background: transparentize($blue, 0.1);
 
-  &.simple-centered {
+
+    &:before {
+      @include breakpoint($medium) {
+        border-width: $border-width--thicker;
+      }
+      position: absolute;
+      right: $half-spacing;
+      bottom: $half-spacing;
+      display: block;
+      width: 100%;
+      height: 100%;
+      content: "";
+      border: solid $border-width $dark-blue;
+    }
+
+    h2 {
+      @include breakpoint($medium) {
+        grid-column: initial;
+      }
+      padding: 0;
+      color: $white;
+      border-bottom: none;
+      font-family: $sans-serif;
+
+      grid-column: 1 / span 2;
+      justify-self: start;
+    }
+
+    .body {
+      display: none;
+    }
+
+    .button {
+      margin-right: $standard-spacing;
+      border-color: $white;
+      background-color: transparent;
+
+      &:hover,
+      &:focus {
+        color: $blue;
+        background: $white;
+      }
+    }
   }
 }
