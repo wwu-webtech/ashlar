@@ -12,6 +12,7 @@ $headline-gradient-end: transparentize($black, 0.5);
       margin-top: 0;
       background: linear-gradient(to right, $headline-gradient-start 0%, $headline-gradient-end 100%);
     }
+    align-self: start;
     max-width: $max-content-width * (2/3);
     margin-top: 25vh;
     padding: $standard-spacing;
@@ -40,7 +41,7 @@ $headline-gradient-end: transparentize($black, 0.5);
     }
   }
 
-  /* Style Option 2: Black overlay */
+  /* Style Option 2: Left aligned bottom bar */
   &.left-aligned-bar {
     @include breakpoint($small) {
       display: grid;
@@ -63,6 +64,7 @@ $headline-gradient-end: transparentize($black, 0.5);
       margin-left: calc(((100vw - #{$max-content-width}) / -2));
     }
     position: relative;
+    align-self: end;
     width: 90vw;
     margin-top: 25vh;
     margin-left: -$standard-spacing;
@@ -115,6 +117,7 @@ $headline-gradient-end: transparentize($black, 0.5);
     }
   }
 
+  /* Style Option 3: Right aligned bottom bar */
   &.right-aligned-bar {
     @extend .left-aligned-bar;
     @include breakpoint($large) {
@@ -124,5 +127,48 @@ $headline-gradient-end: transparentize($black, 0.5);
     margin-left: initial;
 
     justify-self: end;
+  }
+
+  /* Style Option 4: Simple centered */
+  &.simple-centered {
+    @include breakpoint($medium) {
+      align-self: start;
+      margin: 0;
+    }
+    align-self: center;
+    margin: 10vh 0;
+    text-align: center;
+
+    justify-self: center;
+
+
+    .body {
+      display: none;
+    }
+
+    h2 {
+      @include breakpoint($medium) {
+        font-size: 4.5em;
+      }
+      margin-top: 0;
+      color: $white;
+      border: none;
+      text-shadow: 1px 1px 4px transparentize($black, 0.1);
+      font-family: $sans-serif;
+      font-size: 3.5em;
+      font-weight: bold;
+    }
+
+    .button {
+      margin: $half-spacing;
+      border-color: white;
+      background: transparentize($black, 0.3);
+
+      &:hover,
+      &:focus {
+        color: $blue;
+        background: $white;
+      }
+    }
   }
 }
