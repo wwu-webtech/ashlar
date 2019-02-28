@@ -6,23 +6,170 @@ $headline-gradient-start: transparentize($black, 0.2);
 $headline-gradient-end: transparentize($black, 0.5);
 
 .headline {
-  @include breakpoint($medium) {
-    background: linear-gradient(to right, $headline-gradient-start 0%, $headline-gradient-end 100%);
-  }
-  max-width: $max-content-width / 2;
-  padding: $standard-spacing;
-  color: $text-color-light;
-  background-color: $blue;
-
-  h2 {
-    margin-top: $standard-spacing;
-    text-transform: uppercase;
+  /* Style Option 1: Black overlay */
+  &.black-overlay {
+    @include breakpoint($medium) {
+      margin-top: 0;
+      background: linear-gradient(to right, $headline-gradient-start 0%, $headline-gradient-end 100%);
+    }
+    align-self: start;
+    max-width: $max-content-width * (2/3);
+    margin-top: 25vh;
+    padding: $standard-spacing;
     color: $text-color-light;
-    border-bottom: none;
-    font-family: $sans-serif;
+    background-color: transparentize($black, 0.3);
+
+    h2 {
+      margin-top: $standard-spacing;
+      text-transform: uppercase;
+      color: $text-color-light;
+      border-bottom: none;
+      font-family: $sans-serif;
+    }
+
+    .button {
+      margin: $standard-spacing 0 0 0;
+      color: $white;
+      border-color: $white;
+      background-color: transparent;
+
+      &:hover,
+      &:focus {
+        color: $blue;
+        background-color: $white;
+      }
+    }
   }
 
-  .button {
-    margin: $standard-spacing 0 0 0;
+  /* Style Option 2: Left aligned bottom bar */
+  &.left-aligned-bar {
+    @include breakpoint($small) {
+      display: grid;
+
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      justify-items: end;
+    }
+    @include breakpoint($medium) {
+      align-items: end;
+      margin-top: inherit;
+
+      grid-auto-flow: column;
+      grid-template-columns: 1fr auto;
+      grid-template-rows: auto;
+      justify-items: end;
+    }
+    @include breakpoint($large) {
+      max-width: 70vw;
+      margin-left: calc(((100vw - #{$max-content-width}) / -2));
+    }
+    position: relative;
+    align-self: end;
+    width: 90vw;
+    margin-top: 25vh;
+    margin-left: -$standard-spacing;
+    padding: $standard-spacing;
+    color: $white;
+    background: transparentize($blue, 0.1);
+
+    &:before {
+      @include breakpoint($medium) {
+        border-width: $border-width--thicker;
+      }
+      position: absolute;
+      right: $half-spacing;
+      bottom: $half-spacing;
+      display: block;
+      width: 100%;
+      height: 100%;
+      content: "";
+      border: solid $border-width $dark-blue;
+    }
+
+    h2 {
+      @include breakpoint($medium) {
+        grid-column: initial;
+      }
+      position: relative;
+      padding: 0;
+      color: $white;
+      border-bottom: none;
+      font-family: $sans-serif;
+
+      grid-column: 1 / span 2;
+      justify-self: start;
+    }
+
+    .body {
+      display: none;
+    }
+
+    .button {
+      position: relative;
+      margin-right: $standard-spacing;
+      border-color: $white;
+      background-color: transparent;
+
+      &:hover,
+      &:focus {
+        color: $blue;
+        background: $white;
+      }
+    }
+  }
+
+  /* Style Option 3: Right aligned bottom bar */
+  &.right-aligned-bar {
+    @extend .left-aligned-bar;
+    @include breakpoint($large) {
+      margin-right: calc(((100vw - #{$max-content-width}) / -2) - #{$half-spacing} - #{$border-width--thicker});
+    }
+    margin-right: -$standard-spacing - $half-spacing - $border-width--thicker;
+    margin-left: initial;
+
+    justify-self: end;
+  }
+
+  /* Style Option 4: Simple centered */
+  &.simple-centered {
+    @include breakpoint($medium) {
+      align-self: start;
+      margin: 0;
+    }
+    align-self: center;
+    margin: 10vh 0;
+    text-align: center;
+
+    justify-self: center;
+
+
+    .body {
+      display: none;
+    }
+
+    h2 {
+      @include breakpoint($medium) {
+        font-size: 4.5em;
+      }
+      margin-top: 0;
+      color: $white;
+      border: none;
+      text-shadow: 1px 1px 4px transparentize($black, 0.1);
+      font-family: $sans-serif;
+      font-size: 3.5em;
+      font-weight: bold;
+    }
+
+    .button {
+      margin: $half-spacing;
+      border-color: white;
+      background: transparentize($black, 0.3);
+
+      &:hover,
+      &:focus {
+        color: $blue;
+        background: $white;
+      }
+    }
   }
 }

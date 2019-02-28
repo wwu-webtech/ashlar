@@ -74,7 +74,7 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
     -webkit-font-smoothing: antialiased;
   }
 
-  .make-waves-header {
+  .simple-centered h2 {
     text-align: center;
     text-transform: uppercase;
     color: $white;
