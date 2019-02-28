@@ -82,6 +82,10 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
     font-size: $title-font-size;
   }
 
+  .headline.simple-centered .body {
+    display: block;
+  }
+
   .block--button {
     text-align: center;
     margin-bottom: $double-spacing;
