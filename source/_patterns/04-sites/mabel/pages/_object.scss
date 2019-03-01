@@ -35,6 +35,13 @@ body.page-islandora-object {
     border-bottom: none;
   }
 
+  .pane-page-title {
+    h1 {
+      display: inline-block;
+      margin-right: $standard-spacing;
+    }
+  }
+
   #islandora-bookmark {
     margin-bottom: $half-spacing;
     font-size: $font-size--smaller;
@@ -89,5 +96,10 @@ body.page-islandora-object {
       font-family: $sans-serif;
       font-size: $p-font-size;
     }
+  }
+
+  .layout__region--second {
+    position: relative;
+    padding-top: $double-spacing;
   }
 }

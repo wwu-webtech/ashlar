@@ -1,3 +1,32 @@
+/* Result limit, sort, and display drop down functionality */
+var $search_options_container = $('<div class="search-options-container"></div>');
+var $results_limit = $('.pane-islandora-solr-result-limit');
+var $sort = $('.pane-islandora-solr-sort');
+var $display_switch = $('.pane-islandora-solr-display-switch');
+var $pane_titles = $('.pane-islandora-solr-result-limit .pane-title, .pane-islandora-solr-sort .pane-title, .pane-islandora-solr-display-switch .pane-title');
+
+$('.layout__region--second').prepend($search_options_container);
+$search_options_container.append($results_limit);
+$search_options_container.append($sort);
+$search_options_container.append($display_switch);
+
+$pane_titles.each(function() {
+  $(this).replaceWith($('<button class="expand-solr-panel" aria-expanded="false">' + this.innerText + '<span class="material-icons" aria-hidden="true">add</span></button>'));
+})
+
+$('.expand-solr-panel').click(function() {
+  $(this).next('.item-list').slideToggle();
+
+  if ($(this).attr('aria-expanded') == 'false' ) {
+    $(this).attr('aria-expanded', 'true')
+    $(this).children('.material-icons').text('close');
+  }
+  else {
+    $(this).attr('aria-expanded', 'false')
+    $(this).children('.material-icons').text('add');
+  }
+});
+
 /* Move compound object navigation out of tabs and next to JAIL display */
 var $jail = $('#block-islandora-compound-object-compound-jail-display');
 var $jail_prev = $('#islandora-compound-previous-link');
@@ -13,22 +42,17 @@ $nav_container.append($jail_prev);
 $nav_container.append($jail_seq);
 $nav_container.append($jail_next);
 
-/* Give the manage parent link button styles */
-var $manage_parent = $('#block-islandora-compound-object-compound-jail-display a:contains("manage parent")');
 
-$manage_parent.addClass("button");
+/* Remove clip icon from object pages and make it a descriptive link */
+$('#clip').html("Download and Print Options");
 
-/* Remove clip icon and make it a descriptive link */
-var $clip = $('#clip');
+/* Add button styles to islandora navigation links */
+$('#islandora-solr-search-return-link a').addClass('green button');
+$('#islandora-solr-search-next-link a').addClass('button');
+$('#islandora-solr-search-prev-link a').addClass('button');
+$('#block-islandora-compound-object-compound-jail-display a:contains("manage parent")').addClass("button");
 
-$clip.html("Download and Print Options");
 
-
-/* Add button styles to search navigation links */
-var $search_return = $('#islandora-solr-search-return-link a');
-var $search_next = $('#islandora-solr-search-next-link a');
-var $search_prev = $('#islandora-solr-search-prev-link a');
-
-$search_return.addClass('green button');
-$search_next.addClass('button');
-$search_prev.addClass('button');
+/* Move search results count to after H1 */
+var $search_count = $('#islandora-solr-result-count');
+$('.pane-page-title').append($search_count);

@@ -101,6 +101,7 @@
   .splash {
     > div:nth-of-type(2) {
       min-height: 240px;
+      z-index: 1;
     }
   }
 
@@ -111,8 +112,7 @@
         grid-template-rows: ($toggle-size + $standard-spacing) 220px ($standard-spacing + ($toggle-size / 2));
       }
       @include breakpoint($large) {
-        grid-template-areas:
-        ". . ....... ."
+        grid-template-areas: ". . ....... ."
         ". . content ."
         ". . ....... .";
         grid-template-columns: 1fr ($logo-width--larger + $standard-spacing) ($max-content-width - $logo-width--larger - $standard-spacing) 1fr;
@@ -133,5 +133,5 @@
         grid-template-rows: ($logo-height--larger + $standard-spacing +44px) 240px (($toggle-size--larger / 2) + $standard-spacing);
       }
     }
-  }  
+  }
 }
