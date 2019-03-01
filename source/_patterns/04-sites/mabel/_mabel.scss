@@ -96,10 +96,8 @@
       font-weight: normal;
     }
   }
-}
 
-/* MABEL Splash */
-.page-islandora {
+  /* MABEL Splash */
   .splash {
     > div:nth-of-type(2) {
       min-height: 240px;
@@ -135,5 +133,5 @@
         grid-template-rows: ($logo-height--larger + $standard-spacing +44px) 240px (($toggle-size--larger / 2) + $standard-spacing);
       }
     }
-  }
+  }  
 }
