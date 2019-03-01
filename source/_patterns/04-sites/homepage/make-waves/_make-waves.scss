@@ -230,6 +230,21 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
       }
     }
 
+    .layout--twocol {
+      .layout__region--second {
+        @include breakpoint($medium) {
+          padding: $double-spacing;
+        }
+        @include breakpoint($large) {
+          padding: $double-spacing * 2;
+        }
+        background-color: $blue;
+        color: $white;
+        padding: $standard-spacing;
+        display: flex;
+        align-items: center;
+      }
+    }
   }
 }
 
