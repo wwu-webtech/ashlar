@@ -2,77 +2,23 @@
 * @file
 * sites/mabel/_mabel.scss
 */
-
-/** General Mabel Styles **/
-.page-islandora {
-  /* Hide WWU Search as it's confusing to have multiple searches */
-  .western-header {
-    .search {
-      display: none;
-    }
-
-    .wrap {
-      .site-name {
-        text-transform: uppercase;
-      }
-    }
-  }
-
-  #islandora-search-container {
-    position: absolute;
-    z-index: 1;
-    max-width: $max-content-width;
-  }
-
-  .splash {
-    > div:nth-of-type(2) {
-      min-height: 240px;
+/*******************************************************************************
+ Front page styles
+*******************************************************************************/
+.islandora-front-page {
+  .page-content {
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+      color: $blue;
+      border-bottom: none;
+      font-family: $sans-serif;
+      font-size: $h1-font-size;
     }
   }
 
-  &.not-front {
-    .splash {
-      @include breakpoint($medium) {
-        grid-template-columns: ($standard-spacing + $logo-width + $standard-spacing) 1fr $standard-spacing;
-        grid-template-rows: ($toggle-size + $standard-spacing) 220px ($standard-spacing + ($toggle-size / 2));
-      }
-      @include breakpoint($large) {
-        grid-template-areas: ". . ....... ."
-        ". . content ."
-        ". . ....... .";
-        grid-template-columns: 1fr ($logo-width--larger + $standard-spacing) ($max-content-width - $logo-width--larger - $standard-spacing) 1fr;
-        grid-template-rows: ($toggle-size--larger + $standard-spacing) 220px ($standard-spacing + ($toggle-size--larger / 2));
-      }
-      @include breakpoint(min-width 2420px) {
-        grid-template-rows: ($toggle-size--larger + $standard-spacing) 260px ($standard-spacing + ($toggle-size--larger / 2));
-      }
-    }
-  }
-
-  &.islandora-front-page {
-    .page-content {
-      h2 {
-        text-align: center;
-        text-transform: uppercase;
-        color: $blue;
-        border-bottom: none;
-        font-family: $sans-serif;
-        font-size: $h1-font-size;
-      }
-    }
-
-    .splash {
-      @include breakpoint($medium) {
-        grid-template-rows: ($logo-height + $standard-spacing + 40px) 220px (($toggle-size / 2) + $standard-spacing);
-      }
-      @include breakpoint($large) {
-        grid-template-rows: ($logo-height--larger + $standard-spacing +44px) 240px (($toggle-size--larger / 2) + $standard-spacing);
-      }
-    }
-
-    .layout__region--top {
-      padding-top: 0;
-    }
+  .layout__region--top {
+    padding-top: 0;
   }
 
   .browse-by-icons {
@@ -102,6 +48,65 @@
       }
     }
   }
+}
+
+/*******************************************************************************
+ Splash
+*******************************************************************************/
+.page-islandora {
+  .splash {
+    > div:nth-of-type(2) {
+      min-height: 240px;
+    }
+  }
+
+  &.not-front {
+    .splash {
+      @include breakpoint($medium) {
+        grid-template-columns: ($standard-spacing + $logo-width + $standard-spacing) 1fr $standard-spacing;
+        grid-template-rows: ($toggle-size + $standard-spacing) 220px ($standard-spacing + ($toggle-size / 2));
+      }
+      @include breakpoint($large) {
+        grid-template-areas: ". . ....... ."
+        ". . content ."
+        ". . ....... .";
+        grid-template-columns: 1fr ($logo-width--larger + $standard-spacing) ($max-content-width - $logo-width--larger - $standard-spacing) 1fr;
+        grid-template-rows: ($toggle-size--larger + $standard-spacing) 220px ($standard-spacing + ($toggle-size--larger / 2));
+      }
+      @include breakpoint(min-width 2420px) {
+        grid-template-rows: ($toggle-size--larger + $standard-spacing) 260px ($standard-spacing + ($toggle-size--larger / 2));
+      }
+    }
+  }
+
+  &.islandora-front-page {
+    .splash {
+      @include breakpoint($medium) {
+        grid-template-rows: ($logo-height + $standard-spacing + 40px) 220px (($toggle-size / 2) + $standard-spacing);
+      }
+      @include breakpoint($large) {
+        grid-template-rows: ($logo-height--larger + $standard-spacing +44px) 240px (($toggle-size--larger / 2) + $standard-spacing);
+      }
+    }
+  }
+}
+
+/*******************************************************************************
+ General MABEL Styles
+*******************************************************************************/
+.page-islandora {
+  /* Hide WWU Search as it's confusing to have multiple searches */
+  .western-header {
+    .search {
+      display: none;
+    }
+
+    .wrap {
+      .site-name {
+        text-transform: uppercase;
+      }
+    }
+  }
 
   /* Sidebar goes below main content area on 25/75 layouts */
   .layout--twocol-25-75 {
@@ -125,22 +130,6 @@
     }
   }
 
-  /* Breadcrumb styles */
-  .breadcrumb {
-    @include breakpoint($medium) {
-      font-size: $font-size--smallest;
-    }
-    margin-top: $standard-spacing;
-    font-size: $font-size--smaller;
-
-    ol {
-      li,
-      li:before {
-        margin-right: $half-spacing;
-      }
-    }
-  }
-
   /* Date picker resets */
   .ui-datepicker {
     a {
@@ -152,59 +141,6 @@
       padding: initial;
       border: initial;
       font-weight: normal;
-    }
-  }
-
-  /* Search navigation */
-  .pane-islandora-solr-search-navigation {
-    @include breakpoint($small) {
-      display: grid;
-
-      grid-template-columns: 3fr 1fr 1fr;
-      grid-template-rows: auto;
-    }
-    display: flex;
-    justify-content: space-between;
-    margin-top: $double-spacing;
-
-    div {
-      @include breakpoint($medium) {
-        font-size: $font-size--smallest;
-      }
-      display: inline-block;
-      font-size: $font-size--smaller;
-    }
-
-    .button {
-      @include breakpoint($medium) {
-        padding: $standard-spacing;
-      }
-      margin-bottom: 0;
-      padding: $half-spacing;
-    }
-
-    #islandora-solr-search-prev-link,
-    #islandora-solr-search-next-link {
-      justify-self: end;
-    }
-
-    #islandora-solr-search-return-link,
-    #islandora-solr-search-prev-link {
-      a {
-        &:before {
-          content: "\2039  ";
-          font-size: 1em;
-        }
-      }
-    }
-
-    #islandora-solr-search-next-link {
-      a {
-        &:after {
-          content: " \203A";
-          font-size: 1em;
-        }
-      }
     }
   }
 
@@ -258,6 +194,10 @@
 
     .islandora-solr-range-slider {
       text-align: right;
+    }
+
+    #edit-range-slider-submit {
+      margin-top: $half-spacing;
     }
 
     .range-slider-fromto,
@@ -319,21 +259,56 @@
   }
 }
 
-.islandora-audio-content,
-.islandora-basic-image-content,
-.islandora-large-image-content,
-.islandora-oralhistories-content,
-.islandora-pdf-content,
-.islandora-video-content {
-  border: none;
-  border-radius: 0;
-  background: $light-gray;
-}
+/* Search navigation */
+.pane-islandora-solr-search-navigation {
+  @include breakpoint($small) {
+    display: grid;
 
-.islandora-object-thumb,
-.islandora-object-caption {
-  a {
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  display: flex;
+  justify-content: space-between;
+  margin-top: $double-spacing;
+
+  div {
+    @include breakpoint($medium) {
+      font-size: $font-size--smallest;
+    }
     display: inline-block;
+    font-size: $font-size--smaller;
+  }
+
+  .button {
+    @include breakpoint($medium) {
+      padding: $standard-spacing;
+    }
+    margin-bottom: 0;
+    padding: $half-spacing;
+  }
+
+  #islandora-solr-search-prev-link,
+  #islandora-solr-search-next-link {
+    justify-self: end;
+  }
+
+  #islandora-solr-search-return-link,
+  #islandora-solr-search-prev-link {
+    a {
+      &:before {
+        content: "\2039  ";
+        font-size: 1em;
+      }
+    }
+  }
+
+  #islandora-solr-search-next-link {
+    a {
+      &:after {
+        content: " \203A";
+        font-size: 1em;
+      }
+    }
   }
 }
 
@@ -534,6 +509,25 @@ body.page-islandora-object {
       font-family: $sans-serif;
       font-size: $p-font-size;
     }
+  }
+}
+
+/* Style the gray box around objects on their pages */
+.islandora-audio-content,
+.islandora-basic-image-content,
+.islandora-large-image-content,
+.islandora-oralhistories-content,
+.islandora-pdf-content,
+.islandora-video-content {
+  border: none;
+  border-radius: 0;
+  background: $light-gray;
+}
+
+.islandora-object-thumb,
+.islandora-object-caption {
+  a {
+    display: inline-block;
   }
 }
 
