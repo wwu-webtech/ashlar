@@ -2,98 +2,8 @@
 * @file
 * sites/mabel/_mabel.scss
 */
-/*******************************************************************************
- Front page styles
-*******************************************************************************/
-.islandora-front-page {
-  .page-content {
-    h2 {
-      text-align: center;
-      text-transform: uppercase;
-      color: $blue;
-      border-bottom: none;
-      font-family: $sans-serif;
-      font-size: $h1-font-size;
-    }
-  }
 
-  .layout__region--top {
-    padding-top: 0;
-  }
-
-  .browse-by-icons {
-    @include breakpoint($medium) {
-      max-width: 80%;
-    }
-    display: flex;
-    justify-content: space-around;
-    margin: $double-spacing auto;
-
-
-    .icon-with-text {
-      font-size: $h5-font-size;
-
-      .material-icons {
-        @include breakpoint($medium) {
-          font-size: $double-spacing * 2;
-        }
-        color: $dark-blue;
-        font-size: $standard-spacing * 1.5;
-      }
-
-      &:hover {
-        .material-icons {
-          color: $green;
-        }
-      }
-    }
-  }
-}
-
-/*******************************************************************************
- Splash
-*******************************************************************************/
-.page-islandora {
-  .splash {
-    > div:nth-of-type(2) {
-      min-height: 240px;
-    }
-  }
-
-  &.not-front {
-    .splash {
-      @include breakpoint($medium) {
-        grid-template-columns: ($standard-spacing + $logo-width + $standard-spacing) 1fr $standard-spacing;
-        grid-template-rows: ($toggle-size + $standard-spacing) 220px ($standard-spacing + ($toggle-size / 2));
-      }
-      @include breakpoint($large) {
-        grid-template-areas: ". . ....... ."
-        ". . content ."
-        ". . ....... .";
-        grid-template-columns: 1fr ($logo-width--larger + $standard-spacing) ($max-content-width - $logo-width--larger - $standard-spacing) 1fr;
-        grid-template-rows: ($toggle-size--larger + $standard-spacing) 220px ($standard-spacing + ($toggle-size--larger / 2));
-      }
-      @include breakpoint(min-width 2420px) {
-        grid-template-rows: ($toggle-size--larger + $standard-spacing) 260px ($standard-spacing + ($toggle-size--larger / 2));
-      }
-    }
-  }
-
-  &.islandora-front-page {
-    .splash {
-      @include breakpoint($medium) {
-        grid-template-rows: ($logo-height + $standard-spacing + 40px) 220px (($toggle-size / 2) + $standard-spacing);
-      }
-      @include breakpoint($large) {
-        grid-template-rows: ($logo-height--larger + $standard-spacing +44px) 240px (($toggle-size--larger / 2) + $standard-spacing);
-      }
-    }
-  }
-}
-
-/*******************************************************************************
- General MABEL Styles
-*******************************************************************************/
+/* General MABEL styles */
 .page-islandora {
   /* Hide WWU Search as it's confusing to have multiple searches */
   .western-header {
@@ -108,7 +18,7 @@
     }
   }
 
-  /* Sidebar goes below main content area on 25/75 layouts */
+  /* Reorder so left sidebar goes below main content area on 25/75 layouts */
   .layout--twocol-25-75 {
     .layout__region--top {
       order: 0;
@@ -130,21 +40,7 @@
     }
   }
 
-  /* Date picker resets */
-  .ui-datepicker {
-    a {
-      margin: initial;
-      border-bottom: none;
-    }
-    select {
-      display: inline;
-      padding: initial;
-      border: initial;
-      font-weight: normal;
-    }
-  }
-
-  /* Sidebar blocks */
+  /* Style sidebar blocks */
   .layout__region--first {
     .panel-pane {
       margin-bottom: $standard-spacing;
@@ -155,11 +51,11 @@
 
     a {
       border-bottom-color: transparent;
-    }
 
-    a:hover {
-      color: $dark-green;
-      border-bottom-color: $dark-green;
+      &:hover {
+        color: $dark-green;
+        border-bottom-color: $dark-green;
+      }
     }
 
     h2 {
@@ -172,12 +68,6 @@
       color: $dark-green;
       font-family: $sans-serif;
       font-size: $p-font-size;
-    }
-
-    .islandora-solr-facet-wrapper:nth-of-type(1) {
-      h3 {
-        margin-top: 0;
-      }
     }
 
     input {
@@ -191,428 +81,58 @@
     label {
       font-weight: normal;
     }
-
-    .islandora-solr-range-slider {
-      text-align: right;
-    }
-
-    #edit-range-slider-submit {
-      margin-top: $half-spacing;
-    }
-
-    .range-slider-fromto,
-    .date-range-slider-gap {
-      display: inline;
-    }
   }
 
-  .islandora-solr-facet {
-    padding-left: 0;
-    list-style: none;
-
-    li {
-      display: grid;
-      grid-template-rows: auto auto;
-      grid-template-columns: 70px auto;
-      grid-template-areas:
-      "plusminus link"
-      "count    count";
-
-      justify-items: start;
-      align-items: center;
-
-      > a {
-        margin: 0;
-        padding: $half-spacing 0 $half-spacing $standard-spacing;
-        border-bottom: none;
-
-        grid-area: link;
-      }
-    }
-
-    .count {
-      grid-area: count;
-      justify-self: end;
-    }
-
-    .plusminus {
-      grid-area: plusminus;
-
-      a {
-        background: $blue;
-        color: $white;
-        margin-right: $half-spacing / 2;
-        width: 30px;
-        height: 30px;
-        display: inline-grid;
-        justify-content: center;
-        align-content: center;
-        border: none;
-
-        &:hover,
-        &:focus {
-          background-color: $dark-blue;
-          color: $white;
-        }
-      }
-    }
-  }
-}
-
-/* Search navigation */
-.pane-islandora-solr-search-navigation {
-  @include breakpoint($small) {
-    display: grid;
-
-    grid-template-columns: 3fr 1fr 1fr;
-    grid-template-rows: auto;
-  }
-  display: flex;
-  justify-content: space-between;
-  margin-top: $double-spacing;
-
-  div {
-    @include breakpoint($medium) {
-      font-size: $font-size--smallest;
-    }
-    display: inline-block;
-    font-size: $font-size--smaller;
-  }
-
-  .button {
-    @include breakpoint($medium) {
-      padding: $standard-spacing;
-    }
-    margin-bottom: 0;
-    padding: $half-spacing;
-  }
-
-  #islandora-solr-search-prev-link,
-  #islandora-solr-search-next-link {
-    justify-self: end;
-  }
-
-  #islandora-solr-search-return-link,
-  #islandora-solr-search-prev-link {
-    a {
-      &:before {
-        content: "\2039  ";
-        font-size: 1em;
-      }
-    }
-  }
-
-  #islandora-solr-search-next-link {
-    a {
-      &:after {
-        content: " \203A";
-        font-size: 1em;
-      }
-    }
-  }
-}
-
-/** Search Results Styles **/
-.page-islandora-search {
-  .page-content {
-    margin-bottom: 0;
-  }
-
-  .islandora-solr-search-result {
-    padding: 0 $standard-spacing $double-spacing;
-    border-bottom: solid 1px $gray;
-
-    &:last-of-type {
-      border-bottom: none;
-    }
-
+  /* Date picker resets */
+  .ui-datepicker {
     a {
       margin: initial;
-      padding: 0;
       border-bottom: none;
     }
-
-    dl.solr-fields {
-      border: none;
-    }
-    .solr-fields dt,
-    .solr-fields dd {
-      border-color: $light-gray;
-    }
-
-    dl {
-      &.solr-thumb,
-      &.solr-fields {
-        @include breakpoint(max-width $medium) {
-          float: none;
-          width: 100%;
-        }
-
-        &.solr-thumb {
-          text-align: center;
-        }
-      }
-    }
-
-    .islandora-inline-metadata {
-      dt {
-        font-weight: $font-weight--regular;
-      }
-    }
-  }
-
-  .islandora-solr-grid {
-    a {
-      margin: 0;
-      padding: 0;
-      border: none;
-      font-size: $font-size--smaller;
-    }
-  }
-}
-
-/** Islandora Blocks **/
-#islandora-collection-search-form {
-  label {
-    margin: 0;
-  }
-
-  .form-wrapper {
-    position: relative;
-    display: grid;
-    align-items: end;
-    width: 100%;
-
-    grid-column-gap: $half-spacing;
-    grid-template-areas: "menu menu"
-    "text   go";
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto auto;
-  }
-
-  .form-type-select {
-    width: 100%;
-    margin: 0;
-
-    grid-area: menu;
-  }
-
-  .form-type-textfield {
-    margin: 0;
-
-    grid-area: text;
-  }
-
-  .form-text {
-    width: 100%;
-    margin: 0;
-    padding: $half-spacing;
-  }
-
-  .form-submit {
-    margin: 0;
-
-    grid-area: go;
-  }
-}
-
-#islandora_solr_results_limit {
-  display: flex;
-  justify-content: space-evenly;
-  list-style: none;
-
-  li {
-    margin: 0;
-  }
-}
-
-/** Object page styles **/
-body.page-islandora-object {
-  a {
-    border-bottom: none;
-  }
-
-  #islandora-bookmark {
-    margin-bottom: $half-spacing;
-    font-size: $font-size--smaller;
-    h3 {
-      margin: 0;
-      margin-right: $standard-spacing;
-      font-size: $h4-font-size;
-    }
     select {
-      margin: 0;
+      display: inline;
+      padding: initial;
+      border: initial;
+      font-weight: normal;
     }
-    input {
-      margin: 0;
-      padding: $half-spacing $standard-spacing;
+  }
+}
+
+/* MABEL Splash */
+.page-islandora {
+  .splash {
+    > div:nth-of-type(2) {
+      min-height: 240px;
     }
   }
 
-  .islandora-objects {
-    .islandora-objects-display-switch {
-      float: none;
-    }
-
-    .links {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-
-      li {
-        &:first-child:after {
-          display: inline-block;
-          margin-left: $half-spacing;
-          content: "|";
-        }
-        &:last-child {
-          margin-left: $half-spacing;
-        }
+  &.not-front {
+    .splash {
+      @include breakpoint($medium) {
+        grid-template-columns: ($standard-spacing + $logo-width + $standard-spacing) 1fr $standard-spacing;
+        grid-template-rows: ($toggle-size + $standard-spacing) 220px ($standard-spacing + ($toggle-size / 2));
+      }
+      @include breakpoint($large) {
+        grid-template-areas:
+        ". . ....... ."
+        ". . content ."
+        ". . ....... .";
+        grid-template-columns: 1fr ($logo-width--larger + $standard-spacing) ($max-content-width - $logo-width--larger - $standard-spacing) 1fr;
+        grid-template-rows: ($toggle-size--larger + $standard-spacing) 220px ($standard-spacing + ($toggle-size--larger / 2));
+      }
+      @include breakpoint(min-width 2420px) {
+        grid-template-rows: ($toggle-size--larger + $standard-spacing) 260px ($standard-spacing + ($toggle-size--larger / 2));
       }
     }
   }
 
-  /* grid view */
-  .islandora-objects-grid-item {
-    font-size: $font-size--smaller;
-
-    break-word: break-all;
-  }
-
-  /* image viewer on single object page */
-  .islandora-large-image-content {
-    float: none;
-    width: 100%;
-  }
-
-  /* Sidebar panels */
-  .layout__region--first {
-    .panel-pane {
-      margin-bottom: $standard-spacing;
-      padding: $standard-spacing;
-      background: $lightest-gray;
-      font-size: $font-size--smaller;
-    }
-
-    a {
-      border-bottom-color: transparent;
-    }
-
-    a:hover {
-      color: $dark-green;
-      border-bottom-color: $dark-green;
-    }
-
-
-    h2 {
-      margin-top: 0;
-      font-family: $sans-serif;
-      font-size: $p-font-size;
-    }
-  }
-}
-
-/* Style the gray box around objects on their pages */
-.islandora-audio-content,
-.islandora-basic-image-content,
-.islandora-large-image-content,
-.islandora-oralhistories-content,
-.islandora-pdf-content,
-.islandora-video-content {
-  border: none;
-  border-radius: 0;
-  background: $light-gray;
-}
-
-.islandora-object-thumb,
-.islandora-object-caption {
-  a {
-    display: inline-block;
-  }
-}
-
-/** Compound object page styles **/
-$jail-height: 750px;
-
-a#clip {
-  @include breakpoint($medium) {
-    font-size: $font-size--smallest;
-  }
-  margin-bottom: $standard-spacing;
-  margin-left: 0;
-  font-size: $font-size--smaller;
-}
-
-.compound-navigation {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: end;
-  font-size: $font-size--smallest;
-}
-
-#islandora-compound-sequence-position {
-  float: none;
-  margin: 0;
-}
-
-#islandora-compound-previous-link,
-#islandora-compound-next-link {
-  float: none;
-  margin: 0;
-  padding: $half-spacing $standard-spacing;
-  color: $black;
-  background: $light-gray;
-  line-height: inherit;
-
-  &:hover,
-  &:focus {
-    color: $white;
-    background: $gray;
-  }
-}
-
-#islandora-compound-previous-link:before {
-  content: "\2039  ";
-}
-
-#islandora-compound-next-link:after {
-  content: " \203A";
-}
-
-#block-islandora-compound-object-compound-jail-display {
-  @include breakpoint($medium) {
-    border: solid $light-gray $border-width--thicker;
-  }
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  height: $jail-height;
-  padding: $standard-spacing;
-  border: solid $light-gray $border-width;
-  font-size: $font-size--smallest;
-
-
-  .form-item {
-    flex: 0 0 100%;
-    max-width: none;
-  }
-
-  .form-type-item:nth-child(2) {
-    margin: 0;
-    border-bottom: none;
-  }
-
-  & > div {
-    max-width: 50%;
-    border: none;
-
-    &:not(.form-item) {
-      display: inline-block;
-      vertical-align: top;
-
-      a:first-of-type {
-        margin-bottom: $half-spacing;
+  &.islandora-front-page {
+    .splash {
+      @include breakpoint($medium) {
+        grid-template-rows: ($logo-height + $standard-spacing + 40px) 220px (($toggle-size / 2) + $standard-spacing);
+      }
+      @include breakpoint($large) {
+        grid-template-rows: ($logo-height--larger + $standard-spacing +44px) 240px (($toggle-size--larger / 2) + $standard-spacing);
       }
     }
   }

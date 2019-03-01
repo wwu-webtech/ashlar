@@ -1,0 +1,27 @@
+/**
+* @file
+* sites/mabel/panes/_displays.scss
+*/
+
+
+/* This is not the display pane, but the grid/list switcher that appears on object pages */
+.islandora-objects-display-switch {
+  float: none;
+
+  .links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+
+    li {
+      &:first-child:after {
+        display: inline-block;
+        margin-left: $half-spacing;
+        content: "|";
+      }
+      &:last-child {
+        margin-left: $half-spacing;
+      }
+    }
+  }
+}

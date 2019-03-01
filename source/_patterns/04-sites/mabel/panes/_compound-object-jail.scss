@@ -1,0 +1,42 @@
+/**
+* @file
+* sites/mabel/panes/_compound-object-jail.scss
+*/
+$jail-height: 750px;
+
+#block-islandora-compound-object-compound-jail-display {
+  @include breakpoint($medium) {
+    border: solid $light-gray $border-width--thicker;
+  }
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: $jail-height;
+  padding: $standard-spacing;
+  border: solid $light-gray $border-width;
+  font-size: $font-size--smallest;
+
+  .form-item {
+    flex: 0 0 100%;
+    max-width: none;
+  }
+
+  .form-type-item:nth-child(2) {
+    margin: 0;
+    border-bottom: none;
+  }
+
+  & > div {
+    max-width: 50%;
+    border: none;
+
+    &:not(.form-item) {
+      display: inline-block;
+      vertical-align: top;
+
+      a:first-of-type {
+        margin-bottom: $half-spacing;
+      }
+    }
+  }
+}
