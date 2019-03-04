@@ -8,6 +8,7 @@ var $page = $('.skip-link, .western-header, .splash, .toggle-open-menu, .search,
 function toggle_open_menu(event) {
   $last_focused = document.activeElement;
   $toggle_open_menu.off('click', toggle_open_menu);
+  $('.nav--main').css('visibility', 'visible');
   $('.nav--main').show();
   $('.nav--main').animate(
     {
