@@ -80,8 +80,7 @@ user-login:
   dependencies:
     - core/jquery
 vimeo-tracking:
-  version: 3095.48.10
-  remote: https://extend.vimeocdn.com
+  version: 309.54.810
   js:
     //extend.vimeocdn.com/ga/30954810.js: { type: external, attributes: { defer: true }}
 wwu-header:
