@@ -5,10 +5,7 @@
 .nav--main {
   @include breakpoint($medium) {
     display: block !important;
-    visibility: visible !important;
   }
-
-  visibility: hidden;
 }
 .nav--main,
 #block-system-main-menu {
