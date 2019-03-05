@@ -2,21 +2,20 @@
  * @file
  * molecules/links/link-list/_link-list.scss
  */
- $medium: 841px;
 
 .link-list {
   @include breakpoint($medium) {
-    padding: 20px;
+    padding: $standard-spacing;
     display: flex;
   }
-  padding: 0 20px;
+  padding: 0 $standard-spacing;
 }
 
 .col {
   @include breakpoint($medium) {
     float: left;
     width: 48%;
-    padding: 5px;
+    padding: $half-spacing;
   }
-  padding: 5px;
+  padding: $half-spacing;
 }
