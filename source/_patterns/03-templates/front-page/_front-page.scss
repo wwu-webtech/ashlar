@@ -9,6 +9,19 @@
     font-size: $splash-font-size;
   }
 
+  .splash {
+    img {
+      object-position: 100%;
+    }
+
+    .right-aligned-bar {
+      @include breakpoint($medium) {
+        margin-top: inherit;
+      }
+      margin-top: 40vh;
+    }
+  }
+
   main {
     overflow-x: hidden;
     margin-bottom: 0;
