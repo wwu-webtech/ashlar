@@ -1,7 +1,7 @@
 /**
- * @file
- * molecules/media/splash/_headline.scss
- */
+* @file
+* molecules/media/splash/_headline.scss
+*/
 $headline-gradient-start: transparentize($black, 0.2);
 $headline-gradient-end: transparentize($black, 0.5);
 
@@ -95,6 +95,7 @@ $headline-gradient-end: transparentize($black, 0.5);
       color: $white;
       border-bottom: none;
       font-family: $sans-serif;
+      font-size: $h5-font-size;
 
       grid-column: 1 / span 2;
       justify-self: start;
@@ -106,7 +107,9 @@ $headline-gradient-end: transparentize($black, 0.5);
 
     .button {
       position: relative;
+      align-self: end;
       margin-right: $standard-spacing;
+      margin-left: $standard-spacing;
       border-color: $white;
       background-color: transparent;
 
