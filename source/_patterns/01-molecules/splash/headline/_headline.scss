@@ -107,7 +107,9 @@ $headline-gradient-end: transparentize($black, 0.5);
 
     .button {
       position: relative;
+      align-self: end;
       margin-right: $standard-spacing;
+      margin-left: $standard-spacing;
       border-color: $white;
       background-color: transparent;
 
