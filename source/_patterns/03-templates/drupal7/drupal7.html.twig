@@ -29,10 +29,46 @@
   {% endblock %}
 
   {% block main_navigation %}
-    <nav class="navi--main" aria-label="Main">
+    <nav class="nav--main" aria-label="Main">
       {% include "@molecules/navigation/wwu-mobile-menu/wwu-mobile-menu.html.twig" %}
 
       <div id="main-menu"><?php print render($page['navigation']); ?></div>
     </nav>
   {% endblock %}
+
+  {% block content %}
+    {% embed "@organisms/content/content-region/content-region.html.twig" %}
+      {% block page_content %}
+        <?php print render($page['highlighted']); ?>
+        <?php print render($title_suffix); ?>
+        <?php print $messages; ?>
+        <?php print render($tabs); ?>
+        <?php print render($page['help']); ?>
+        <?php if ($action_links): ?>
+          <ul class="action-links"><?php print render($action_links); ?></ul>
+        <?php endif; ?>
+        <?php print render($page['content']); ?>
+        <?php print $feed_icons; ?>
+      {% endblock %}
+    {% endembed %}
+  {% endblock %}
+
+  {% block site_footer %}
+    {% embed "@organisms/footers/site-footer/site-footer.html.twig" %}
+      {% block footer_regions %}
+        <div class="region region--footer_left">
+          <?php print render($page['footer_left']); ?>
+        </div>
+
+        <div class="region region--footer_center">
+          <?php print render($page['footer_center']); ?>
+        </div>
+
+        <div class="region region--footer_right">
+          <?php print render($page['footer_right']); ?>
+        </div>
+      {% endblock %}
+    {% endembed %}
+  {% endblock %}
+
 {% endembed %}
