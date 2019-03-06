@@ -1,0 +1,12 @@
+/**
+* @file
+* sites/gradschool/_gradschool.scss
+*/
+
+.graduate-school {
+  .quick-links {
+    li:first-child {
+      display: none;
+    }
+  }
+}
