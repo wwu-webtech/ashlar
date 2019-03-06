@@ -1,0 +1,38 @@
+{% embed "@organisms/page/page.html.twig" %}
+  {% block wwu_header %}
+    {% embed "@organisms/headers/wwu-header/wwu-header.html.twig" %}
+
+      {% block site_name %}
+        <?php
+          if (drupal_is_front_page()) {
+            ?><h1 class="site-name">
+              <?php if ($site_name): ?>
+                <?php print $site_name; ?>
+              <?php endif; ?>
+            </h1><?php
+          } else {
+            ?><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="site-name">
+              <?php if ($site_name): ?>
+                <?php print $site_name; ?>
+              <?php endif; ?>
+            </a><?php
+          }
+        ?>
+      {% endblock %}
+
+    {% endembed %}
+  {% endblock %}
+
+
+  {% block splash %}
+    <?php print render($page['header']); ?>
+  {% endblock %}
+
+  {% block main_navigation %}
+    <nav class="navi--main" aria-label="Main">
+      {% include "@molecules/navigation/wwu-mobile-menu/wwu-mobile-menu.html.twig" %}
+
+      <div id="main-menu"><?php print render($page['navigation']); ?></div>
+    </nav>
+  {% endblock %}
+{% endembed %}
