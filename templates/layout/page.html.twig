@@ -42,6 +42,15 @@
  */
 #}
 {{ attach_library('ashlar/search') }}
+{#
+/**
+ * Add vimeo google analytics code if video is present.
+ */
+#}
+{% if attributes.hasClass('play-link') %}
+   {{ attach_library('ashlar/vimeo-tracking') }}
+{% endif %}
+
 <div class="layout-container">
   {% include '@organisms/page/page.html.twig' %}
 </div>{# /.layout-container #}
