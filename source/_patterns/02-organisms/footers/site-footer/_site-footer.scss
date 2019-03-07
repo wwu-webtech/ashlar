@@ -40,6 +40,10 @@
     margin-top: 0;
   }
 
+  .block-title {
+    border-bottom: none;
+  }
+
   .region--footer_left {
     @include breakpoint($small) {
       -ms-grid-column: 2;

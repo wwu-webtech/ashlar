@@ -4,12 +4,23 @@
  */
 
 .breadcrumb {
+  @include breakpoint($medium) {
+    font-size: $font-size--smallest;
+  }
+  margin-top: $standard-spacing;
+  font-size: $font-size--smaller;
+
   ol {
     list-style: none;
     padding: 0;
 
     li {
       display: inline-block;
+      margin-right: $half-spacing;
+
+      &:before {
+        margin-right: $half-spacing;
+      }
     }
   }
   li + li::before {

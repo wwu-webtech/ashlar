@@ -1,0 +1,48 @@
+/**
+* @file
+* sites/mabel/panes/_collection-search.scss
+*/
+
+#islandora-collection-search-form {
+  label {
+    margin: 0;
+  }
+
+  .form-wrapper {
+    position: relative;
+    display: grid;
+    align-items: end;
+    width: 100%;
+
+    grid-column-gap: $half-spacing;
+    grid-template-areas: "menu menu"
+    "text   go";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .form-type-select {
+    width: 100%;
+    margin: 0;
+
+    grid-area: menu;
+  }
+
+  .form-type-textfield {
+    margin: 0;
+
+    grid-area: text;
+  }
+
+  .form-text {
+    width: 100%;
+    margin: 0;
+    padding: $half-spacing;
+  }
+
+  .form-submit {
+    margin: 0;
+
+    grid-area: go;
+  }
+}

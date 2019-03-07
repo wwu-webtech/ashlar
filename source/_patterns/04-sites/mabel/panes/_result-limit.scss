@@ -1,0 +1,15 @@
+/**
+* @file
+* sites/mabel/panes/_result-limit.scss
+*/
+
+#islandora_solr_results_limit {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 0;
+  list-style: none;
+
+  li {
+    margin: 0;
+  }
+}

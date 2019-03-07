@@ -1,0 +1,41 @@
+/**
+* @file
+* sites/mabel/panes/_compound-object-navigation.scss
+*/
+
+.compound-navigation {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: end;
+  font-size: $font-size--smallest;
+}
+
+#islandora-compound-sequence-position {
+  float: none;
+  margin: 0;
+}
+
+#islandora-compound-previous-link,
+#islandora-compound-next-link {
+  float: none;
+  margin: 0;
+  padding: $half-spacing $standard-spacing;
+  color: $black;
+  background: $light-gray;
+  line-height: inherit;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background: $gray;
+  }
+}
+
+#islandora-compound-previous-link:before {
+  content: "\2039  ";
+}
+
+#islandora-compound-next-link:after {
+  content: " \203A";
+}

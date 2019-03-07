@@ -1,5 +1,12 @@
 var $advanced_h2 = $('#block-islandora-solr-advanced > h2', context);
+var $search_container = $('#islandora-search-container' , context);
+var $simple_search = $('#block-islandora-solr-simple', context);
+var $advanced_search = $('#block-islandora-solr-advanced', context);
 var $advanced_search_form = $('#islandora-solr-advanced-search-form', context);
+
+/* Move search blocks into splash search container */
+$search_container.append($simple_search);
+$search_container.append($advanced_search);
 
 $advanced_search_form.removeClass('is-expanded');
 /* Turn h2 into a button */
