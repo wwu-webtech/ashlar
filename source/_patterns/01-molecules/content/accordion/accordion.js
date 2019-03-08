@@ -1,5 +1,8 @@
 /* Add aria labels to all buttons */
-$('.accordion-set .expand').attr('aria-label', 'Open item');
+
+  $('.accordion-set .expand').filter('.is-expanded').attr('aria-expanded', 'true');
+  $('.accordion-set .expand').not('.is-expanded').attr('aria-expanded', 'false');
+
 
 /* Toggle expansion */
 $('.accordion-set .expand', context).click(function () {
@@ -9,6 +12,6 @@ $('.accordion-set .expand', context).click(function () {
   $(this).children('.material-icons').text('add');
   $(this).filter('.is-expanded').children('.material-icons').text('clear');
 
-  $(this).filter('.is-expanded').attr('aria-label', 'Close item');
-  $(this).not('.is-expanded').attr('aria-label', 'Open item');
+  $(this).filter('.is-expanded').attr('aria-expanded', 'true');
+  $(this).not('.is-expanded').attr('aria-expanded', 'false');
 });
