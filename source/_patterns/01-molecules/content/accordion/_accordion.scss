@@ -39,7 +39,7 @@ $accordion-border: $dark-blue solid $border-width--thicker;
       width: 100%;
       box-sizing: border-box;
       text-align: left;
-      padding-left: $standard-spacing;
+      padding: $half-spacing + 2px;
       background: none;
       color: $green;
       font-family: $serif;
