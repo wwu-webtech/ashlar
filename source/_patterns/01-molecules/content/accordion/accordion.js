@@ -1,17 +1,34 @@
 /* Add aria labels to all buttons */
+var accordionButton = $('.accordion-set .field__title .expand');
 
-  $('.accordion-set .expand').filter('.is-expanded').attr('aria-expanded', 'true');
-  $('.accordion-set .expand').not('.is-expanded').attr('aria-expanded', 'false');
+  accordionButton.filter('.is-expanded').attr('aria-expanded', 'true');
+  accordionButton.not('.is-expanded').attr('aria-expanded', 'false');
 
 
 /* Toggle expansion */
-$('.accordion-set .expand', context).click(function () {
-  $(this).toggleClass('is-expanded');
-  $(this).siblings('.content').slideToggle();
+$('.accordion-set .field__title .expand', context).click(function () {
+  accordionButtonClicked = $(this);
+  accordionContent = $(this).parent().siblings('.content');
 
-  $(this).children('.material-icons').text('add');
-  $(this).filter('.is-expanded').children('.material-icons').text('clear');
+  accordionButtonClicked.toggleClass('is-expanded');
+  accordionContent.slideToggle();
 
-  $(this).filter('.is-expanded').attr('aria-expanded', 'true');
-  $(this).not('.is-expanded').attr('aria-expanded', 'false');
+  accordionButtonClicked.children('.material-icons').text('add');
+  accordionButtonClicked.filter('.is-expanded').children('.material-icons').text('clear');
+
+  accordionButtonClicked.filter('.is-expanded').attr('aria-expanded', 'true');
+  accordionButtonClicked.not('.is-expanded').attr('aria-expanded', 'false');
+});
+
+// Close with Esc key
+$('.accordion-set .field__title .expand', context).keydown(function (e) {
+  accordionButtonClicked = $(this);
+  accordionContent = accordionButtonClicked.parent().siblings('.content');
+
+  if (e.keyCode === 27) {
+    accordionContent.slideUp();
+    accordionButtonClicked.removeClass('is-expanded');
+    accordionButtonClicked.children('.material-icons').text('add');
+    accordionButtonClicked.attr('aria-expanded', 'false');
+  }
 });
