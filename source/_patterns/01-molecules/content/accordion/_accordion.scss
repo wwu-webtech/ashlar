@@ -40,23 +40,35 @@ $accordion-border: $dark-blue solid $border-width--thicker;
       box-sizing: border-box;
       text-align: left;
       padding: $half-spacing + 2px;
+      margin-bottom: 0;
       background: none;
       color: $green;
       font-family: $serif;
       border-radius: 0;
       border: $border-width solid transparent;
 
+      @media (max-width: $medium) {
+        padding-left: ($half-spacing / 4);
+      }
+
       &:focus {
         background-color: transparentize($dark-blue, 0.9);
         box-shadow: none;
         border: $border-width dotted $dark-blue;
        }
-    }
 
     * {
-      display: inline-block;
+      @media (max-width: $medium) {
+        top: ($half-spacing / 2);
+
+      }
+
+      display: inline;
       margin: 0;
       color: $black;
+      font-size: inherit;
+      position: relative;
+      top: $half-spacing;
     }
 
     i {
@@ -64,4 +76,5 @@ $accordion-border: $dark-blue solid $border-width--thicker;
     }
    }
  }
+}
 }
