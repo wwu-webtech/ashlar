@@ -39,6 +39,8 @@ $site-name-spacer: 120px;
     &:nth-of-type(1) {
       -ms-grid-row: 1;
       -ms-grid-row-span: 3;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 3;
 
       grid-column: 1 / span all;
       grid-row: 1 / span all;
