@@ -5,13 +5,9 @@
 
 .card-4col,
 .card-4col--view .view-header {
-  @include breakpoint($small) {
-    grid-column-gap: $standard-spacing;
-  }
   display: -ms-grid;
   display: grid;
 
-  grid-column-gap: $half-spacing;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
   -ms-grid-rows: auto;
   grid-template-columns: 1fr 1fr 1fr 1fr;
