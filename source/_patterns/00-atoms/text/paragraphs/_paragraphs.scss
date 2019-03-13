@@ -7,5 +7,6 @@ $paragraph-margin-bottom: $standard-spacing;
 
 p {
   font-size: $p-font-size;
+  line-height: 1.5em;
   margin: 0 0 $paragraph-margin-bottom;
 }
