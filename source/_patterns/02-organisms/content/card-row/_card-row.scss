@@ -18,6 +18,7 @@ $card-height: 300px;
       max-width: 33.333%;
     }
     flex-flow: column nowrap;
+    padding: 0;
     padding-bottom: $half-spacing;
 
     .image {
@@ -36,6 +37,13 @@ $card-height: 300px;
     .title,
     .body {
       padding: 0 $half-spacing;
+
+      a:hover,
+      a:focus {
+        background: none;
+        outline: none;
+        color: initial;        
+      }
     }
 
     &:nth-last-child(odd) {
