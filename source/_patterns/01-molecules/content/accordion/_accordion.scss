@@ -60,7 +60,7 @@ $accordion-border: $dark-blue solid $border-width--thicker;
     * {
       @media (max-width: $medium) {
         top: ($half-spacing / 2);
-
+        font-size: inherit;
       }
 
       display: inline;
