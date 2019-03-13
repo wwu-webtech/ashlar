@@ -16,43 +16,65 @@ $accordion-border: $dark-blue solid $border-width--thicker;
       border-bottom: $accordion-border;
     }
 
-    .expand {
+    .field__title {
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
       width: 100%;
+      margin-top: 0;
       margin-bottom: 0;
-      padding: $half-spacing;
+      padding: ($half-spacing / 2);
       text-align: left;
-      color: initial;
       border-radius: 0;
-      background: none;
       line-height: 1.5em;
 
-      * {
-        display: inline-block;
-        margin: 0;
-      }
+    & + .content {
+      display: none;
+      padding: $standard-spacing;
+      padding-top: 0;
+      word-wrap: break-word;
+    }
 
-      i {
-        color: $dark-blue;
-      }
+    .expand {
+      width: 100%;
+      box-sizing: border-box;
+      text-align: left;
+      padding: $half-spacing + 2px;
+      margin-bottom: 0;
+      background: none;
+      color: $green;
+      font-family: $serif;
+      border-radius: 0;
+      border: $border-width solid transparent;
 
-      .field__title {
-        padding-left: $standard-spacing;
-      }
-
-      & + .content {
-        display: none;
-        padding: $standard-spacing;
-        padding-top: 0;
-        word-wrap: break-word;
+      @media (max-width: $medium) {
+        padding-left: ($half-spacing / 4);
       }
 
       &:focus {
         background-color: transparentize($dark-blue, 0.9);
         box-shadow: none;
+        border: $border-width dotted $dark-blue;
+       }
+
+    * {
+      @include breakpoint($medium){
+        top: $half-spacing;
       }
+      
+      top: ($half-spacing / 2);
+      font-size: inherit;
+      display: inline;
+      margin: 0;
+      color: $black;
+      position: relative;
+
     }
-  }
+
+    i {
+      color: $dark-blue;
+    }
+   }
+ }
+}
 }
