@@ -46,13 +46,13 @@ h5 {
   font-size: $h5-font-size;
 }
 
-/* .sans-serif-headings heading styles, same as default but with Noto Sans */
+/* .sans-serif-headings heading styles, same as default but without serifs */
 .sans-serif-headings {
   h1,
   h2,
   h3,
   h4,
   h5 {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: $sans-serif;
   }
 }
