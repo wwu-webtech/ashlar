@@ -17,7 +17,6 @@ $card-height: 300px;
       flex: 0 1 33.333%;
       max-width: 33.333%;
     }
-    flex-flow: column nowrap;
     padding: 0;
     padding-bottom: $half-spacing;
 
@@ -40,9 +39,9 @@ $card-height: 300px;
 
       a:hover,
       a:focus {
-        background: none;
+        color: $dark-blue;
         outline: none;
-        color: initial;        
+        background: none;
       }
     }
 
