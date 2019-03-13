@@ -4,6 +4,9 @@
 */
 
 .quick-links {
+  @include breakpoint($medium) {
+    font-family: $condensed;
+  }
   font-size: $splash-font-size;
 
   &.desktop {

@@ -12,7 +12,7 @@
   @include breakpoint($medium) {
     height: inherit;
     min-height: 0;
-    background: transparent;
+    background: transparent;    
   }
   height: 100vh;
   background: $dark-blue;
@@ -35,15 +35,15 @@
     @include breakpoint($medium) {
       position: inherit;
       left: 0 !important;
-      margin-bottom: ($toggle-size / 2);
-      margin-top: -($toggle-size / 2);
-      opacity: 1 !important;
       overflow-x: visible;
       overflow-y: visible;
+      margin-top: -($toggle-size / 2);
+      margin-bottom: ($toggle-size / 2);
+      opacity: 1 !important;
     }
     @include breakpoint($large) {
-      margin-bottom: ($toggle-size--larger / 2);
       margin-top: -($toggle-size--larger / 2);
+      margin-bottom: ($toggle-size--larger / 2);
     }
     position: fixed;
     z-index: 3;
