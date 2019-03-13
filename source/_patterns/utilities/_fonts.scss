@@ -14,8 +14,11 @@ $heading-font-family: $serif;
 $body-font-family: $sans-serif;
 
 // Font Weight Variables
+$font-weight--light: 300;
 $font-weight--regular: 400;
+$font-weight--semibold: 600;
 $font-weight--bold: 700;
+$font-weight--black: 900;
 $body-font-weight: $font-weight--regular;
 $button-font-weight: $font-weight--bold;
 
