@@ -64,7 +64,7 @@ page:
                                                 attributes:
                                                   Attribute():
                                                     class:
-                                                    - block--block-contentimagefield-image
+                                                    - block--image
                                                 label: ""
                                                 content:
                                                   include():
@@ -110,7 +110,7 @@ page:
                                                 attributes:
                                                   Attribute():
                                                     class:
-                                                    - block--block-contentimagefield-image
+                                                    - block--image
                                                 label: ""
                                                 content:
                                                   include():
