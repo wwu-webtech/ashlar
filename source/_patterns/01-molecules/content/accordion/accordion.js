@@ -1,12 +1,12 @@
 /* Add aria labels to all buttons */
-var accordionButton = $('.accordion-set .field__title .expand');
+var $accordionButton = $('.accordion-set .field__title .expand', context);
 
-  accordionButton.filter('.is-expanded').attr('aria-expanded', 'true');
-  accordionButton.not('.is-expanded').attr('aria-expanded', 'false');
+  $accordionButton.filter('.is-expanded').attr('aria-expanded', 'true');
+  $accordionButton.not('.is-expanded').attr('aria-expanded', 'false');
 
 
 /* Toggle expansion */
-$('.accordion-set .field__title .expand', context).click(function () {
+$accordionButton.click(function () {
   accordionButtonClicked = $(this);
   accordionContent = $(this).parent().siblings('.content');
 
@@ -21,7 +21,7 @@ $('.accordion-set .field__title .expand', context).click(function () {
 });
 
 // Close with Esc key
-$('.accordion-set .field__title .expand', context).keydown(function (e) {
+$accordionButton.keydown(function (e) {
   accordionButtonClicked = $(this);
   accordionContent = accordionButtonClicked.parent().siblings('.content');
 
