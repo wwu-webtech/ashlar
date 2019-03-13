@@ -10,3 +10,7 @@ p {
   line-height: 1.5em;
   margin: 0 0 $paragraph-margin-bottom;
 }
+
+.intro {
+  font-size: calc((#{$min-p-font-size} + #{strip-unit($max-p-font-size - $min-p-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}))*1.2);
+}
