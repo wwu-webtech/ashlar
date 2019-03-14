@@ -11,14 +11,15 @@ $card-height: 300px;
   }
   display: flex;
   flex-direction: column;
+  grid-column-gap: $standard-spacing;
 
   .card {
     @include breakpoint($small) {
       flex: 0 1 33.333%;
       max-width: 33.333%;
     }
-    flex-flow: column nowrap;
-    padding-bottom: $half-spacing;
+    padding: 0;
+    padding-bottom: $standard-spacing;
 
     .image {
       width: 100%;
@@ -32,10 +33,20 @@ $card-height: 300px;
       }
     }
 
-    .taxonomy-terms,
+    .taxonomy-terms {
+      padding: 0 $half-spacing;
+    }
+
     .title,
     .body {
       padding: 0 $half-spacing;
+
+      a:hover,
+      a:focus {
+        color: $dark-blue;
+        outline: none;
+        background: none;
+      }
     }
 
     &:nth-last-child(odd) {

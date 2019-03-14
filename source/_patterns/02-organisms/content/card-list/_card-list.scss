@@ -18,6 +18,8 @@
     grid-template-rows: auto 1fr;
 
     .image {
+      margin-bottom: 0;
+
       grid-area: image;
       -ms-grid-column: 1;
       -ms-grid-column-span: 1;
