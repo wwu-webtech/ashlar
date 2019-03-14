@@ -4,45 +4,39 @@
  */
 
 $heading-line-height: 1.2em;
-$heading-margin-top: $standard-spacing * 1.5;
+$heading-margin-top: $triple-spacing;
 $heading-margin-bottom: $standard-spacing;
 
-/* Default heading styles, serif with blues/darker greens */
+/* Default heading styles, serif with blues */
 h1,
 h2,
 h3,
 h4,
 h5 {
+  color: $dark-blue;
   margin: $heading-margin-top 0 $heading-margin-bottom;
   font-family: $heading-font-family;
   line-height: $heading-line-height;
-  font-weight: $font-weight--regular;
+  font-weight: $font-weight--bold;
 }
 h1 {
-  color: $dark-blue;
+  color: $darkest-blue;
   font-size: $h1-font-size;
   font-weight: $font-weight--bold;
 }
 h2 {
-  @include breakpoint($medium) {
-    border-width: $border-width--thicker;
-  }
-  padding-bottom: $half-spacing;
-  color: $dark-blue;
-  border-bottom: $border-width solid $dark-green;
+  color: $darkest-blue;
+  padding-bottom: 12px;
+  border-bottom: $border-width--thickest solid $dark-blue;
   font-size: $h2-font-size;
 }
 h3 {
-  color: $green;
   font-size: $h3-font-size;
 }
 h4 {
-  text-transform: uppercase;
-  color: $dark-green;
   font-size: $h4-font-size;
 }
 h5 {
-  text-transform: uppercase;
   font-size: $h5-font-size;
 }
 

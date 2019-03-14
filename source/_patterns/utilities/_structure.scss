@@ -4,14 +4,18 @@
  */
 
 /* Spacing */
-$standard-spacing: 16px;
+$standard-spacing: 12px;
 $half-spacing: $standard-spacing / 2;
 $double-spacing: $standard-spacing * 2;
+$triple-spacing: $standard-spacing * 3;
 
 /* Borders and Lines */
 $border-width--thinner: 1px;
 $border-width: 2px;
 $border-width--thicker: 3px;
+$min-border-width--thickest: 5px;
+$max-border-width--thickest: 10px;
+$border-width--thickest: calc(#{$min-border-width--thickest} + #{strip-unit($max-border-width--thickest - $min-border-width--thickest)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 $focus-outline: $border-width dotted;
 $focus-outline--thicker: $border-width--thicker dotted;
 
