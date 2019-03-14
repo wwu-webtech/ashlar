@@ -12,10 +12,16 @@
 }
 
 .col {
-  @include breakpoint($medium) {
-    float: left;
-    width: 48%;
-    padding: $half-spacing;
+  &.left {
+    @include breakpoint($medium) {
+      flex: 1;
+    }
+  }
+
+  &.right {
+    @include breakpoint($medium) {
+      flex: 2;
+    }
   }
   padding: $half-spacing;
 }
