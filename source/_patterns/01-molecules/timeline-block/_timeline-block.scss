@@ -84,6 +84,7 @@ $timeline-translate-neg: calc(-100% - (#{$min-timeline-font-size} + #{strip-unit
       left: 0;
       transform: translate(-100%, -100%) rotate(-90deg);
       transform-origin: bottom right;
+      font-weight: $font-weight--regular;
     }
 
     .timeline-item {
