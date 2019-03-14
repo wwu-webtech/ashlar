@@ -27,12 +27,14 @@ page:
                       <p>Widows and orphans occur when the first line of a paragraph is the last line in a column or page, or when the last line of a paragraph is the first line of a new column or page.</p>
                       <h3 class="sans-serif">Paragraph Break</h3>
                       <p>In word processing and desktop publishing, a hard return or paragraph break indicates a new paragraph, to be distinguished from the soft return at the end of a line internal to a paragraph. This distinction allows word wrap to automatically re-flow text as it is edited, without losing paragraph breaks. The software may apply vertical whitespace or indenting at paragraph breaks, depending on the selected style.</p>
+                      <h3 class="sans-serif">Writing Good Paragraphs</h3>
                       <h4 class="sans-serif">Style advice</h4>
                       <p>Crafting of clear, coherent paragraphs is the subject of considerable stylistic debate</p>
                       <ul>
-                      <li>form varies among different types of writing</li>
-                      <li>a topic sentence or "main idea", preferably first</li>
-                      <li>multiple "supporting" or "detail" sentences which explain or supply evidence</li>
+                      <li>Form varies among different types of writing</li>
+                      <li>A common English usage misconception is that a paragraph has three to five sentences; single-word paragraphs can be seen in some professional writing, and journalists often use single-sentence paragraphs.</li>
+                      <li>A topic sentence or "main idea", preferably first</li>
+                      <li>Multiple "supporting" or "detail" sentences which explain or supply evidence</li>
                       </ul>
                       </div>'
         site_footer: organisms-site-footer-html
