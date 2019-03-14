@@ -2,7 +2,7 @@
 * @file
 * 00-atoms/01-text/links/_links.scss
 */
-$link-padding: $half-spacing / 2;
+$link-padding: $quarter-spacing;
 
 %strip-link-defaults {
   margin: inherit;
