@@ -22,7 +22,7 @@
   }
   display: -ms-grid;
   display: grid;
-  font-size: $font-size--smaller;
+  font-size: $p-font-size--smaller;
 
   -ms-grid-columns: $small-screen-columns;
   -ms-grid-rows: $standard-spacing auto $standard-spacing auto $standard-spacing auto $standard-spacing;

@@ -21,7 +21,7 @@
   display: -ms-grid;
   display: grid;
   padding: ($double-spacing * 2) 0;
-  font-size: $font-size--smaller;
+  font-size: $p-font-size--smaller;
 
   -ms-grid-columns: $small-screen-columns;
   -ms-grid-rows: auto $standard-spacing auto $standard-spacing auto;

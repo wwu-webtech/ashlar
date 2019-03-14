@@ -33,7 +33,7 @@ input {
   border-radius: 0;
   background-color: $white;
   box-shadow: none;
-  font-size: $font-size--smaller;
+  font-size: $p-font-size--smaller;
 
   &:focus {
     outline: none;
@@ -58,7 +58,7 @@ input[type="submit"] {
 }
 
 select {
-  font-size: $font-size--smaller;
+  font-size: $p-font-size--smaller;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */

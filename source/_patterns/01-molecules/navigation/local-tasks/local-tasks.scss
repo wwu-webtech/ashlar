@@ -4,7 +4,7 @@
  */
 .block--local-tasks-block {
   margin-bottom: $standard-spacing;
-  font-size: $font-size--smaller;
+  font-size: $p-font-size--smaller;
 
   ul:not(.contextual-links) {
     display: flex;
@@ -48,7 +48,7 @@
   padding-left: 0;
   list-style: none;
   border-bottom: solid $border-width--thicker $gray;
-  font-size: $font-size--smaller;
+  font-size: $p-font-size--smaller;
 
   &:nth-of-type(2) {
     margin-top: $half-spacing;

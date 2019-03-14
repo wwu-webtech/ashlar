@@ -106,7 +106,7 @@ $site-name-gradient-end: transparentize($dark-blue, 0.2);
       border-bottom: $border-width--thinner solid $blue;
       background: linear-gradient(to right, $site-name-gradient-start 0%, $site-name-gradient-end 100%);
       font-family: $serif;
-      font-size: $font-size--smaller;
+      font-size: $p-font-size--smaller;
       font-weight: $font-weight--regular;
       line-height: 1.5em;
     }
