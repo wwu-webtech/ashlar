@@ -40,7 +40,8 @@ $max-button-width: 250px;
           height: $toggle-size--larger;
         }
         position: relative;
-        display: block;
+        display: grid;
+        align-items: center;
         box-sizing: border-box;
         width: 100%;
         height: $toggle-size;
