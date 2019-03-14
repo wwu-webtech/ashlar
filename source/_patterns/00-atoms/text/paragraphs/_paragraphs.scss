@@ -12,5 +12,6 @@ p {
 }
 
 .intro {
+  color: $dark-blue;
   font-size: calc((#{$min-p-font-size} + #{strip-unit($max-p-font-size - $min-p-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}))*1.2);
 }
