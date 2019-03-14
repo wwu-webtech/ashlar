@@ -11,13 +11,13 @@ $card-height: 300px;
   }
   display: flex;
   flex-direction: column;
-  grid-column-gap: $standard-spacing;
 
   .card {
     @include breakpoint($small) {
       flex: 0 1 33.333%;
       max-width: 33.333%;
     }
+    margin: $half-spacing;
     padding: 0;
     padding-bottom: $standard-spacing;
 
