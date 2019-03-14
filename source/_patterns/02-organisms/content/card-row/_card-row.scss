@@ -17,7 +17,7 @@ $card-height: 300px;
       flex: 0 1 33.333%;
       max-width: 33.333%;
     }
-
+    flex-flow: column nowrap;
     padding-bottom: $half-spacing;
 
     .image {
@@ -25,9 +25,10 @@ $card-height: 300px;
       height: $card-height;
 
       img {
-        object-fit: cover;
-        height: 100%;
         width: 100%;
+        height: 100%;
+
+        object-fit: cover;
       }
     }
 
