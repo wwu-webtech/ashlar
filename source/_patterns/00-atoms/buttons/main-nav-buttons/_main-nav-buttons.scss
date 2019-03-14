@@ -29,8 +29,8 @@ $max-button-width: 250px;
 
       & > a {
         @include breakpoint($medium) {
-          display: grid;
-          align-content: center;
+          display: flex;
+          align-items: center;
           max-width: $max-button-width;
           padding: 0 ($standard-spacing * 1.5);
           text-align: center;

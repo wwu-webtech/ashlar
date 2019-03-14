@@ -19,6 +19,8 @@ $headline-gradient-end: transparentize($black, 0.5);
     color: $text-color-light;
     background-color: transparentize($black, 0.3);
 
+    -ms-grid-row-align: start;
+
     h2 {
       margin-top: $standard-spacing;
       text-transform: uppercase;
@@ -71,6 +73,8 @@ $headline-gradient-end: transparentize($black, 0.5);
     padding: $standard-spacing;
     color: $white;
     background: transparentize($blue, 0.1);
+
+    -ms-grid-row-align: end;
 
     &:before {
       @include breakpoint($medium) {
@@ -130,6 +134,7 @@ $headline-gradient-end: transparentize($black, 0.5);
     margin-right: -$standard-spacing - $half-spacing - $border-width--thicker;
     margin-left: initial;
 
+    -ms-grid-column-align: end;
     justify-self: end;
   }
 
