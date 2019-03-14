@@ -8,10 +8,9 @@ textarea {
   }
   max-width: 100%;
   margin-bottom: $standard-spacing;
-  padding: $half-spacing;
+  padding: $standard-spacing;
   resize: vertical;
   border: solid $dark-blue $border-width;
-  font-size: $p-font-size--smaller;
 
   -moz-appearance: none;
   appearance: none;
