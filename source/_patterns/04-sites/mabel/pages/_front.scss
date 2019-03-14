@@ -32,7 +32,7 @@
 
       .material-icons {
         @include breakpoint($medium) {
-          font-size: $double-spacing * 2;
+          font-size: $triple-spacing;
         }
         color: $dark-blue;
         font-size: $standard-spacing * 1.5;

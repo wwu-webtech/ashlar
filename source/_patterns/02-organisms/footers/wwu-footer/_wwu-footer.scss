@@ -7,13 +7,13 @@
   @extend %dark-blue-bg;
   @include breakpoint($small) {
     -ms-grid-columns: $standard-spacing 1fr 2fr $standard-spacing;
-    -ms-grid-rows: ($double-spacing * 2) auto auto ($double-spacing * 2);
+    -ms-grid-rows: $triple-spacing auto auto $triple-spacing;
     grid-template-areas: ". .... ..... ."
     ". logo info  ."
     ". logo icons ."
     ". .... ..... .";
     grid-template-columns: $standard-spacing 1fr 2fr $standard-spacing;
-    grid-template-rows: ($double-spacing * 2) auto auto ($double-spacing * 2);
+    grid-template-rows: $triple-spacing auto auto $triple-spacing;
     justify-items: end;
   }
   @include breakpoint($large) {
@@ -22,7 +22,6 @@
   }
   display: -ms-grid;
   display: grid;
-  font-size: $p-font-size--smaller;
 
   -ms-grid-columns: $small-screen-columns;
   -ms-grid-rows: $standard-spacing auto $standard-spacing auto $standard-spacing auto $standard-spacing;

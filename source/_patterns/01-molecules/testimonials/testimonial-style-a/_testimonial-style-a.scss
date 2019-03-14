@@ -10,7 +10,7 @@ $image-size--smaller: 180px;
     display: grid;
     text-align: left;
 
-    grid-column-gap: ($double-spacing * 2);
+    grid-column-gap: $triple-spacing;
     grid-template-areas: "image body"
     "image credit";
     grid-template-columns: auto 1fr;
