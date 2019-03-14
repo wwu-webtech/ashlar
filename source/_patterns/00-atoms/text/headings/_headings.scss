@@ -13,11 +13,11 @@ h2,
 h3,
 h4,
 h5 {
-  color: $dark-blue;
   margin: $heading-margin-top 0 $heading-margin-bottom;
+  color: $dark-blue;
   font-family: $heading-font-family;
-  line-height: $heading-line-height;
   font-weight: $font-weight--bold;
+  line-height: $heading-line-height;
 }
 h1 {
   color: $darkest-blue;
@@ -25,8 +25,8 @@ h1 {
   font-weight: $font-weight--bold;
 }
 h2 {
-  color: $darkest-blue;
   padding-bottom: 12px;
+  color: $darkest-blue;
   border-bottom: $border-width--thickest solid $dark-blue;
   font-size: $h2-font-size;
 }
@@ -49,4 +49,33 @@ h5 {
   h5 {
     font-family: $sans-serif;
   }
+}
+
+/* Helper to resize headings. Only applies at medium breakpoints. */
+%headings--smaller {
+  @include breakpoint($medium) {
+    h1 {
+      font-size: $h1-font-size--smaller;
+    }
+
+    h2 {
+      font-size: $h2-font-size--smaller;
+    }
+
+    h3 {
+      font-size: $h3-font-size--smaller;
+    }
+
+    h4 {
+      font-size: $h4-font-size--smaller;
+    }
+
+    h5 {
+      font-size: $h5-font-size--smaller;
+    }
+  }
+}
+
+.headings--smaller {
+  @extend %headings--smaller;
 }
