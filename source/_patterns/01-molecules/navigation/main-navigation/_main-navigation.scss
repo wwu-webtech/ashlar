@@ -12,11 +12,10 @@
   @include breakpoint($medium) {
     height: inherit;
     min-height: 0;
-    background: transparent;    
+    background: transparent;
   }
   height: 100vh;
   background: $dark-blue;
-  font-size: $splash-font-size;
 
   & > .menu,
   .ultimenu--main,

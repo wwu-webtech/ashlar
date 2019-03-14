@@ -45,9 +45,6 @@ $max-h5-font-size: 31.93px;
 $min-p-font-size: 16px;
 $max-p-font-size: 20px;
 
-$min-splash-font-size: 15px;
-$max-splash-font-size: 18px;
-
 // View width for fluid typography
 $min-vw: 300px;
 $max-vw: 1300px;
@@ -60,7 +57,6 @@ $h3-font-size: calc(#{$min-h3-font-size} + #{strip-unit($max-h3-font-size - $min
 $h4-font-size: calc(#{$min-h4-font-size} + #{strip-unit($max-h4-font-size - $min-h4-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 $h5-font-size: calc(#{$min-h5-font-size} + #{strip-unit($max-h5-font-size - $min-h5-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 $p-font-size: calc(#{$min-p-font-size} + #{strip-unit($max-p-font-size - $min-p-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-$splash-font-size: calc(#{$min-splash-font-size} + #{strip-unit($max-splash-font-size - $min-splash-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 
 $font-size--smaller: 0.8em;
 $font-size--smallest: 0.6em;
