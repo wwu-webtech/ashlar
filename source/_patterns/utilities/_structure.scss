@@ -12,6 +12,9 @@ $double-spacing: $standard-spacing * 2;
 $border-width--thinner: 1px;
 $border-width: 2px;
 $border-width--thicker: 3px;
+$min-border-width--thickest: 5px;
+$max-border-width--thickest: 11px;
+$border-width--thickest: calc(#{$min-border-width--thickest} + #{strip-unit($max-border-width--thickest - $min-border-width--thickest)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 $focus-outline: $border-width dotted;
 $focus-outline--thicker: $border-width--thicker dotted;
 
