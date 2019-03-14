@@ -1,14 +1,13 @@
 /* Add aria labels to all buttons */
 var $accordionButton = $('.accordion-set .field__title .expand', context);
-
-  $accordionButton.filter('.is-expanded').attr('aria-expanded', 'true');
-  $accordionButton.not('.is-expanded').attr('aria-expanded', 'false');
+$accordionButton.filter('.is-expanded').attr('aria-expanded', 'true');
+$accordionButton.not('.is-expanded').attr('aria-expanded', 'false');
 
 
 /* Toggle expansion */
 $accordionButton.click(function () {
-  accordionButtonClicked = $(this);
-  accordionContent = $(this).parent().siblings('.content');
+  var accordionButtonClicked = $(this);
+  var accordionContent = $(this).parent().siblings('.content');
 
   accordionButtonClicked.toggleClass('is-expanded');
   accordionContent.slideToggle();
@@ -22,8 +21,8 @@ $accordionButton.click(function () {
 
 // Close with Esc key
 $accordionButton.keydown(function (e) {
-  accordionButtonClicked = $(this);
-  accordionContent = accordionButtonClicked.parent().siblings('.content');
+  var accordionButtonClicked = $(this);
+  var accordionContent = accordionButtonClicked.parent().siblings('.content');
 
   if (e.keyCode === 27) {
     accordionContent.slideUp();
