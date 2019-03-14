@@ -67,7 +67,7 @@ $headline-gradient-end: transparentize($black, 0.5);
     width: 90vw;
     margin-top: 25vh;
     margin-left: -$standard-spacing;
-    padding: $standard-spacing;
+    padding: $double-spacing;
     color: $white;
     background: transparentize($blue, 0.1);
 
@@ -90,11 +90,13 @@ $headline-gradient-end: transparentize($black, 0.5);
         grid-column: initial;
       }
       position: relative;
+      margin-top: 0;
       padding: 0;
       color: $white;
       border-bottom: none;
       font-family: $sans-serif;
       font-size: $h5-font-size;
+      font-weight: $font-weight--regular;
 
       grid-column: 1 / span 2;
       justify-self: start;
