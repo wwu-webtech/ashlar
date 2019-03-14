@@ -18,9 +18,13 @@
       border-bottom-color: $light-gray;
     }
 
+    li {
+      margin-bottom: 0;
+    }
+
     a {
       display: block;
-      margin: inherit;
+      margin: 0;
       padding: $half-spacing $standard-spacing;
       color: black;
       border-right: solid $border-width--thicker $white;
