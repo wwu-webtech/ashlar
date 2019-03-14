@@ -38,6 +38,7 @@ $timeline-translate-neg: calc(-100% - (#{$min-timeline-font-size} + #{strip-unit
     font-size: $timeline-font-size;
     line-height: 1em;
     border: none;
+    font-weight: $font-weight--regular;
   }
 
   .timeline-item {
@@ -84,11 +85,10 @@ $timeline-translate-neg: calc(-100% - (#{$min-timeline-font-size} + #{strip-unit
       left: 0;
       transform: translate(-100%, -100%) rotate(-90deg);
       transform-origin: bottom right;
-      font-weight: $font-weight--regular;
     }
 
     .timeline-item {
-      padding-left: $triple-spacing;
+      padding-left: calc(#{$icon-size} + #{$double-spacing});
 
       .material-icons {
         left: $standard-spacing;
@@ -128,7 +128,7 @@ $timeline-translate-neg: calc(-100% - (#{$min-timeline-font-size} + #{strip-unit
     }
 
     .timeline-item {
-      padding-right: $triple-spacing;
+      padding-right: calc(#{$icon-size} + #{$double-spacing});
 
       .material-icons {
         right: $standard-spacing;
