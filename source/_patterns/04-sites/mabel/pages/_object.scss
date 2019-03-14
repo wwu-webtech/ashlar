@@ -4,7 +4,7 @@
 */
 a#clip {
   @include breakpoint($medium) {
-    font-size: $font-size--smallest;
+    font-size: $p-font-size--smaller;
   }
   margin-bottom: $standard-spacing;
   margin-left: 0;

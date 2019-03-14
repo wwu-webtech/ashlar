@@ -8,7 +8,7 @@ $max-box-size: 300px;
 
 .org-chart {
   @include breakpoint($medium) {
-    font-size: $font-size--smallest;
+    font-size: $p-font-size--smaller;
   }
   position: relative;
   display: grid;

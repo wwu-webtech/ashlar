@@ -16,7 +16,7 @@
 
   div {
     @include breakpoint($medium) {
-      font-size: $font-size--smallest;
+      font-size: $p-font-size--smaller;
     }
     display: inline-block;
     font-size: $p-font-size--smaller;

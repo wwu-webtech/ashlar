@@ -66,6 +66,3 @@ $h3-font-size--smaller: calc((#{$min-h3-font-size} + #{strip-unit($max-h3-font-s
 $h4-font-size--smaller: calc((#{$min-h4-font-size} + #{strip-unit($max-h4-font-size - $min-h4-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.8);
 $h5-font-size--smaller: calc((#{$min-h5-font-size} + #{strip-unit($max-h5-font-size - $min-h5-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.8);
 $p-font-size--smaller: calc((#{$min-p-font-size} + #{strip-unit($max-p-font-size - $min-p-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.8);
-
-$font-size--smaller: 0.8em;
-$font-size--smallest: 0.6em;

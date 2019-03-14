@@ -38,7 +38,7 @@ th {
   border-bottom: none;
   border-left: none;
   background-color: mix(black, $light-gray, 20%);
-  font-size: $font-size--smallest;
+  font-size: $p-font-size--smaller;
 }
 td {
   @include breakpoint($medium) {
@@ -48,7 +48,7 @@ td {
   border-top: none;
   border-bottom: none;
   border-left: $border-width solid $lightest-gray;
-  font-size: $font-size--smallest;
+  font-size: $p-font-size--smaller;
 
   &:first-of-type {
     border-left: none;

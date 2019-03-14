@@ -14,7 +14,7 @@ $jail-height: 750px;
   height: $jail-height;
   padding: $standard-spacing;
   border: solid $light-gray $border-width;
-  font-size: $font-size--smallest;
+  font-size: $p-font-size--smaller;
 
   .form-item {
     flex: 0 0 100%;
