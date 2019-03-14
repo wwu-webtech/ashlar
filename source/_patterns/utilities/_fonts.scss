@@ -58,5 +58,14 @@ $h4-font-size: calc(#{$min-h4-font-size} + #{strip-unit($max-h4-font-size - $min
 $h5-font-size: calc(#{$min-h5-font-size} + #{strip-unit($max-h5-font-size - $min-h5-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 $p-font-size: calc(#{$min-p-font-size} + #{strip-unit($max-p-font-size - $min-p-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 
+// Font Sizes --smaller
+$title-font-size--smaller: calc((#{$min-title-font-size} + #{strip-unit($max-title-font-size - $min-title-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.8);
+$h1-font-size--smaller: calc((#{$min-h1-font-size} + #{strip-unit($max-h1-font-size - $min-h1-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.8);
+$h2-font-size--smaller: calc((#{$min-h2-font-size} + #{strip-unit($max-h2-font-size - $min-h2-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.8);
+$h3-font-size--smaller: calc((#{$min-h3-font-size} + #{strip-unit($max-h3-font-size - $min-h3-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.8);
+$h4-font-size--smaller: calc((#{$min-h4-font-size} + #{strip-unit($max-h4-font-size - $min-h4-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.8);
+$h5-font-size--smaller: calc((#{$min-h5-font-size} + #{strip-unit($max-h5-font-size - $min-h5-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.8);
+$p-font-size--smaller: calc((#{$min-p-font-size} + #{strip-unit($max-p-font-size - $min-p-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.8);
+
 $font-size--smaller: 0.8em;
 $font-size--smallest: 0.6em;
