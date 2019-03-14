@@ -4,11 +4,27 @@
 */
 
 .card {
+  position: relative;
   display: flex;
   flex-flow: row wrap;
+  align-content: start;
   margin-bottom: $standard-spacing;
+  padding: $half-spacing;
+  transition: $fast-transition-speed $standard-ease;
+
+  &:hover,
+  &:focus-within {
+    @include breakpoint($medium) {
+      transform: translate(-$border-width--thicker, -$border-width--thicker);
+      box-shadow: 0 0 0 $border-width--thicker $dark-blue;
+    }
+    z-index: 1;
+    transform: translate(-$border-width, -$border-width);
+    box-shadow: 0 0 0 $border-width $dark-blue;
+  }
 
   .image {
+    flex: 0 1 100%;
     order: 1;
     margin-bottom: $half-spacing;
 
@@ -24,23 +40,44 @@
   }
 
   .taxonomy-terms {
+    position: relative;
+    z-index: 1;
+    flex: 0 1 100%;
     order: 2;
   }
 
   .title {
+    flex: 0 1 100%;
     order: 3;
 
     a {
+      display: inline-block;
       border: none;
       font-family: $sans-serif;
       font-size: $p-font-size;
       font-weight: $font-weight--bold;
       line-height: initial;
-      display: inline-block;
+
+      &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: "";
+      }
+
+      &:hover,
+      &:focus {
+        color: $link-blue;
+        outline: none;
+        background: none;
+      }
     }
   }
 
   .body {
+    flex: 0 1 100%;
     order: 4;
 
     .date {
