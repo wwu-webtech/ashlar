@@ -13,4 +13,55 @@
     font-family: $sans-serif;
     font-size: $p-font-size;
   }
+
+  .search {
+    position: relative;
+    top: initial;
+    right: initial;
+    display: block;
+  }
+
+  .simple-search {
+    .search-area {
+      display: flex;
+    }
+
+    .search-query {
+      flex: 1;
+    }
+
+    .search-submit {
+      flex: 0;
+      border-radius: 0;
+    }
+  }
+
+  .result-number {
+    margin-right: $half-spacing;
+  }
+
+  .result-title {
+    display: inline;
+    margin-left: $half-spacing;
+
+    a {
+      border-bottom: solid $border-width $light-green;
+    }
+  }
+
+  .search-results-summary {
+    @extend %light-gray-bg;
+    margin-top: $double-spacing;
+    padding: $standard-spacing;
+  }
+
+  .number-of-results a {
+    margin-left: $standard-spacing;
+  }
+
+  .search-pager {
+    display: flex;
+    justify-content: space-between;
+    margin-top: $standard-spacing;
+  }
 }
