@@ -2,3 +2,29 @@
  * @file
  * molecules/text/page-title/_page-title.scss
  */
+.page-title {
+  font-family: $title-font-family;
+  font-size: $title-font-size;
+}
+
+/* Page titles placed in splash area */
+.splash {
+  .block--page-title-block {
+    @include breakpoint($medium) {
+      padding-top: calc($toggle-height + $standard-spacing);
+      padding-right: $standard-spacing;
+      padding-bottom: calc(($toggle-height / 2) + $standard-spacing);
+      padding-left: $standard-spacing + $logo-width + $standard-spacing;
+    }
+    @include breakpoint($large) {
+      padding-top: calc($toggle-height--larger + $standard-spacing);
+      padding-right: calc((100vw - #{$max-content-width}) / 2 + $double-spacing);
+      padding-bottom: calc(($toggle-height--larger / 2) + $standard-spacing);
+      padding-left: calc((100vw - #{$max-content-width}) / 2 + $logo-width--larger + $double-spacing);
+    }
+    background-image: linear-gradient(255deg, transparentize($dark-blue, 0.5), transparentize($blue, 0.25), transparentize($light-green, 0.55));
+
+    grid-column: 1/ span all !important;
+    grid-row: 1 / span all !important;
+  }
+}
