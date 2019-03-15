@@ -1,0 +1,34 @@
+{% embed "base.twig" %}
+  {% block body %}
+  <body class="search">
+  {% endblock %}
+
+  {% block page %}
+    {% embed "@organisms/page/page.html.twig" %}
+
+      {% block splash %}
+        <div class="splash">
+          <div class="block block--page-title-block">
+            <h1 class="page-title">Search</h1>
+          </div>
+        </div>
+      {% endblock %}
+
+      {% block content %}
+        {% embed "@organisms/content/content-region/content-region.html.twig" %}
+
+        {% block page_content %}
+          Search results here
+        {% endblock %}
+
+        {% endembed %}
+      {% endblock %}
+
+      {% block footer %}
+        <footer role="contentinfo" class="page-footer region region--footer">
+          {% include "@organisms/footers/wwu-footer/wwu-footer.html.twig" %}
+        </footer>
+      {% endblock %}
+    {% endembed %}
+  {% endblock %}
+{% endembed %}

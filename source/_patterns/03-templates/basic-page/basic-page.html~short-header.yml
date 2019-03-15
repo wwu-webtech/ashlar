@@ -23,4 +23,3 @@ page:
                     pattern: organisms-block-template-html-main
                     with:
                       content: organisms-node-html-page
-        site_footer: organisms-site-footer-html
