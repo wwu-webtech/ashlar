@@ -1,112 +1,16 @@
 .search2 {
-  .site-name {
-    display: none;
+  .western-header .wrap .site-name {
+    display: none !important;
+  }
+
+  .splash {
+    grid-template-rows: 170px;
   }
 }
 
-
-/* from custom-search-styles.css */
-/*------------------------------------------------------------------------------
-SEARCH AREA STYLES
-------------------------------------------------------------------------------*/
 .search-wrapper {
-  max-width: 1140px;
-  margin: 80px auto;
-}
-table {
-  width: 95%;
-  margin: auto;
-  background: transparent;
-}
-table table {
-  width: 100%;
-}
-table a {
-  white-space: normal !important;
-}
-/*----------
-SEARCH BOX
-----------*/
-#ThunderstoneSearchForm {
-  position: relative;
-}
-/* Hide "Search for this" text */
-#ThunderstoneSearchForm th {
-  width: 0;
-}
-#ThunderstoneSearchForm th font {
-  font-size: 0;
-}
-#query {
-  width: calc(60% - 44px);
-  height: 50px;
-  padding-left: 10px;
-  border: solid #ccc 3px;
-  font-size: 1em;
-  font-weight: 300;
-  vertical-align: top;
-}
-input[value="Submit"] {
-  background-image: url('https://fairhaven.wwu.edu/sites/all/themes/wwuzen/images/icons/standard-sffd081bd62.png');
-  border: solid #ccc 3px;
-  border-left: 0;
-  width: 50px;
-  height: 50px;
-  color: transparent;
-}
-input[value="Advanced"],
-input[value="Hide Advanced"] {
-  position: absolute;
-  right: 0;
-  right: 12px;
-  width: calc(40% - 30px);
-  height: 50px;
-  border: 0;
-  background-color: #ccc;
-  font-size: 1em;
-  font-family: 'Muli', sans-serif;
-}
-/* Hidden Fields */
-label[for="query"],
-label[for="refine"],
-#refine {
-  display: none;
-}
-/* Advanced Search Styles */
-#ThunderstoneSearchForm > table:first-of-type td[width="5%"] {
-  width: calc(70% - 30px);
-}
-#ThunderstoneSearchForm > table:first-of-type td[width="5%"] #query {
-  width: 100%;
-}
-input[value="Hide Advanced"] {
-  width: calc(25% - 30px);
-}
-[name="notq"],
-[name="sq"]{
-  width: 50%;
-  margin: 10px 0;
-  border: solid #ccc 3px;
-  height: 50px;
-  padding: 0 10px;
-  font-size: 1em;
-}
-[name="sq"] {
-  margin: 0 0 10px;
-}
-
-/*---------------------
-SEARCH RESULTS EXTRAS
----------------------*/
-/* Info about matching results and sort link */
-#ThunderstoneSearchResults {
-  margin-top: 20px;
-}
-#ThunderstoneSearchResults > table:first-of-type {
-  margin-bottom: 30px;
-}
-#ThunderstoneSearchResults > table:first-of-type td {
-  border-top: #0083d6 solid 2px;
-  border-bottom: #0083d6 solid 2px;
-  padding: 12px;
+  * {
+    font-family: $sans-serif;
+    font-size: $p-font-size;
+  }
 }
