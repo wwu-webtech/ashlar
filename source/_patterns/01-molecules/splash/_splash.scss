@@ -22,7 +22,7 @@ $site-name-spacer: 120px;
   }
   display: -ms-grid;
   display: grid;
-  background-image: linear-gradient(transparentize($dark-blue, 0.5), transparentize($blue, 0.25), transparentize($light-green, 0.55));
+  background-image: linear-gradient($dark-blue, $blue);
 
   -ms-grid-columns: $small-screen-columns;
   -ms-grid-rows: 25vh 1fr $double-spacing;
