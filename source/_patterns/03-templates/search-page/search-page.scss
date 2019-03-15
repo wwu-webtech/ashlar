@@ -4,11 +4,18 @@
   }
 
   .splash {
-    grid-template-rows: 170px;
+    @include breakpoint($medium) {
+      grid-template-rows: 170px;
+    }
+
+    grid-template-rows: 100px;
   }
 }
 
 .search-wrapper {
+  margin-top: $double-spacing;
+  max-width: calc(100vw - #{$double-spacing});
+
   * {
     font-family: $sans-serif;
     font-size: $p-font-size;
@@ -27,7 +34,11 @@
     }
 
     .search-query {
+      @include breakpoint($large) {
+        max-width: none;
+      }
       flex: 1;
+      max-width: calc(100vw - #{$double-spacing} - 120px);
     }
 
     .search-submit {

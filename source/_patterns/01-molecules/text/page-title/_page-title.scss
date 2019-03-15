@@ -10,6 +10,7 @@
 .splash {
   .block--page-title-block {
     @include breakpoint($medium) {
+      display: block;
       padding-top: calc(#{$toggle-size} + #{$standard-spacing});
       padding-right: $standard-spacing;
       padding-bottom: calc((#{$toggle-size} / 2) + #{$standard-spacing});
@@ -21,6 +22,9 @@
       padding-bottom: calc((#{$toggle-size--larger} / 2) + #{$standard-spacing});
       padding-left: calc((100vw - #{$max-content-width}) / 2 + #{$logo-width--larger} + #{$double-spacing});
     }
+    display: grid;
+    justify-content: center;
+    align-content: center;
     background-image: linear-gradient(215deg, transparentize($dark-blue, 0.5), transparentize($blue, 0.25));
 
     grid-column: 1/ span all !important;
@@ -28,9 +32,9 @@
 
     h1 {
       margin: 0;
+      text-transform: none;
       color: $white;
       font-family: $sans-serif;
-      text-transform: none;
     }
   }
 }
