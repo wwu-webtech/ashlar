@@ -156,3 +156,15 @@
     display: none;
   }
 }
+
+/* Fix ultimenu display: block !important; issue. Only affects screens between $medium and 943px*/
+@media all and (min-width: $medium) and (max-width: 943px) {
+  .ultimenu__flyout {
+    display: none !important;
+  }
+
+  .ultimenu__flyout.open {
+    display: block !important;
+    position: absolute;
+  }
+}
