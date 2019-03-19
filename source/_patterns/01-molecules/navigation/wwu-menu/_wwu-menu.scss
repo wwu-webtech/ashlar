@@ -27,7 +27,7 @@
           }
           width: 100%;
           height: $toggle-size;
-          padding: 0 $standard-spacing;
+          padding: 0 ($standard-spacing * 1.5);
           text-align: center;
           line-height: $toggle-size;
 
