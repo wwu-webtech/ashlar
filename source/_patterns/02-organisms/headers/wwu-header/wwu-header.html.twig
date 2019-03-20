@@ -10,11 +10,13 @@
         <span class="university-name">Western Washington University</span>
         {% include "@atoms/logo/logo.twig" %}
       </a>
-      {% if site_name != "Western Washington University" %}
-      <a href="/" class="site-name">
-          {{ site_name }}
-      </a>
-      {% endif %}
+      {% block site_name %}
+        {% if site_name != "Western Washington University" %}
+          <a href="/" class="site-name">
+              {{ site_name }}
+          </a>
+        {% endif %}
+      {% endblock %}
     </div>
 
     {% block quick_links %}
