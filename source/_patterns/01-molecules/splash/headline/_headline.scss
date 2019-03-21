@@ -15,9 +15,11 @@ $headline-gradient-end: transparentize($black, 0.5);
     align-self: start;
     max-width: $max-content-width * (2/3);
     margin-top: 25vh;
-    padding: $standard-spacing;
+    padding: $double-spacing;
     color: $text-color-light;
     background-color: transparentize($black, 0.3);
+
+    -ms-grid-row-align: start;
 
     h2 {
       margin-top: $standard-spacing;
@@ -67,9 +69,11 @@ $headline-gradient-end: transparentize($black, 0.5);
     width: 90vw;
     margin-top: 25vh;
     margin-left: -$standard-spacing;
-    padding: $standard-spacing;
+    padding: $double-spacing;
     color: $white;
     background: transparentize($blue, 0.1);
+
+    -ms-grid-row-align: end;
 
     &:before {
       @include breakpoint($medium) {
@@ -90,11 +94,13 @@ $headline-gradient-end: transparentize($black, 0.5);
         grid-column: initial;
       }
       position: relative;
+      margin-top: 0;
       padding: 0;
       color: $white;
       border-bottom: none;
       font-family: $sans-serif;
       font-size: $h5-font-size;
+      font-weight: $font-weight--regular;
 
       grid-column: 1 / span 2;
       justify-self: start;
@@ -129,6 +135,7 @@ $headline-gradient-end: transparentize($black, 0.5);
     margin-right: -$standard-spacing - $half-spacing - $border-width--thicker;
     margin-left: initial;
 
+    -ms-grid-column-align: end;
     justify-self: end;
   }
 

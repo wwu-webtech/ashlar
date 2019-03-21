@@ -29,8 +29,8 @@ $max-button-width: 250px;
 
       & > a {
         @include breakpoint($medium) {
-          display: grid;
-          align-content: center;
+          display: flex;
+          align-items: center;
           max-width: $max-button-width;
           padding: 0 ($standard-spacing * 1.5);
           text-align: center;
@@ -40,7 +40,8 @@ $max-button-width: 250px;
           height: $toggle-size--larger;
         }
         position: relative;
-        display: block;
+        display: grid;
+        align-items: center;
         box-sizing: border-box;
         width: 100%;
         height: $toggle-size;
@@ -51,6 +52,7 @@ $max-button-width: 250px;
         color: $white;
         border: none;
         background-color: $dark-blue;
+        font-family: $condensed;
         line-height: 1.4em;
 
         &:hover,

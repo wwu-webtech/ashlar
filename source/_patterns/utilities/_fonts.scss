@@ -24,8 +24,8 @@ $body-font-weight: $font-weight--regular;
 $button-font-weight: $font-weight--bold;
 
 // Fluid Typography: Major Second scale for headings/paragraphs
-$min-title-font-size: 38px;
-$max-title-font-size: 82px;
+$min-title-font-size: 42px;
+$max-title-font-size: 70px;
 
 $min-h1-font-size: 27.03px;
 $max-h1-font-size: 51.145px;
@@ -45,9 +45,6 @@ $max-h5-font-size: 31.93px;
 $min-p-font-size: 16px;
 $max-p-font-size: 20px;
 
-$min-splash-font-size: 15px;
-$max-splash-font-size: 18px;
-
 // View width for fluid typography
 $min-vw: 300px;
 $max-vw: 1300px;
@@ -60,7 +57,12 @@ $h3-font-size: calc(#{$min-h3-font-size} + #{strip-unit($max-h3-font-size - $min
 $h4-font-size: calc(#{$min-h4-font-size} + #{strip-unit($max-h4-font-size - $min-h4-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 $h5-font-size: calc(#{$min-h5-font-size} + #{strip-unit($max-h5-font-size - $min-h5-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 $p-font-size: calc(#{$min-p-font-size} + #{strip-unit($max-p-font-size - $min-p-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-$splash-font-size: calc(#{$min-splash-font-size} + #{strip-unit($max-splash-font-size - $min-splash-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 
-$font-size--smaller: 0.8em;
-$font-size--smallest: 0.6em;
+// Font Sizes --smaller
+$title-font-size--smaller: calc((#{$min-title-font-size} + #{strip-unit($max-title-font-size - $min-title-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.8);
+$h1-font-size--smaller: calc((#{$min-h1-font-size} + #{strip-unit($max-h1-font-size - $min-h1-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.8);
+$h2-font-size--smaller: calc((#{$min-h2-font-size} + #{strip-unit($max-h2-font-size - $min-h2-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.8);
+$h3-font-size--smaller: calc((#{$min-h3-font-size} + #{strip-unit($max-h3-font-size - $min-h3-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.8);
+$h4-font-size--smaller: calc((#{$min-h4-font-size} + #{strip-unit($max-h4-font-size - $min-h4-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.8);
+$h5-font-size--smaller: calc((#{$min-h5-font-size} + #{strip-unit($max-h5-font-size - $min-h5-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.8);
+$p-font-size--smaller: calc((#{$min-p-font-size} + #{strip-unit($max-p-font-size - $min-p-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.8);

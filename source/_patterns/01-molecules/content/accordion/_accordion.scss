@@ -1,7 +1,7 @@
 /**
- * @file
- * 01-molecules/content/accordion.scss
- */
+* @file
+* 01-molecules/content/accordion.scss
+*/
 $left-col-width: 84px;
 $accordion-border: $dark-blue solid $border-width--thicker;
 
@@ -16,30 +16,41 @@ $accordion-border: $dark-blue solid $border-width--thicker;
       border-bottom: $accordion-border;
     }
 
-    .expand {
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
-      width: 100%;
-      margin-bottom: 0;
-      padding: $half-spacing;
-      text-align: left;
-      color: initial;
-      border-radius: 0;
-      background: none;
-      line-height: 1.5em;
+    .field__title {
+      margin: 0;
 
-      * {
-        display: inline-block;
-        margin: 0;
-      }
+      .expand {
+        display: grid;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 0;
+        padding: $standard-spacing;
+        text-align: left;
+        color: $darkest-blue;
+        border: $border-width solid transparent;
+        border-radius: 0;
+        background: none;
+        font-size: $p-font-size;
+        font-weight: $font-weight--semibold;
+        line-height: 1.2em;
 
-      i {
-        color: $dark-blue;
-      }
+        grid-column-gap: $standard-spacing;
+        grid-template-columns: $icon-size--medium auto;
 
-      .field__title {
-        padding-left: $standard-spacing;
+        @media (max-width: $medium) {
+          padding-left: ($half-spacing / 4);
+        }
+
+        &:focus {
+          border: $border-width dotted $dark-blue;
+          background-color: transparentize($dark-blue, 0.9);
+          box-shadow: none;
+        }
+
+        .material-icons {
+          color: $dark-blue;
+          font-size: $icon-size--medium;
+        }
       }
 
       & + .content {
@@ -47,11 +58,6 @@ $accordion-border: $dark-blue solid $border-width--thicker;
         padding: $standard-spacing;
         padding-top: 0;
         word-wrap: break-word;
-      }
-
-      &:focus {
-        background-color: transparentize($dark-blue, 0.9);
-        box-shadow: none;
       }
     }
   }

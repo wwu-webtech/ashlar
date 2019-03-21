@@ -4,8 +4,15 @@
  */
 
 aside,
+.aside,
 .paragraph--type--majors-aside {
   margin: $standard-spacing 0;
   padding: $double-spacing;
   background-color: $light-gray;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: $double-spacing;
+    font-size: $h3-font-size;
+  }
 }

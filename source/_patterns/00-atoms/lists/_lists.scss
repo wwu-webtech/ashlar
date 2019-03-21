@@ -9,11 +9,11 @@ ol {
 }
 
 li {
-  line-height: 1.5em;
-  margin-bottom: 8px;
   @include breakpoint($medium) {
-    margin-bottom: 12px;
+    margin-bottom: $standard-spacing;
   }
+  margin-bottom: $half-spacing;
+  line-height: 1.5em;
 }
 
 dl {
