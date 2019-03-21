@@ -6,7 +6,7 @@ $headline-gradient-start: transparentize($darkest-blue, 0.2);
 $headline-gradient-end: transparentize($darkest-blue, 0.5);
 
 .headline {
-  /* Style Option 1: Black overlay */
+  /* Style Option 1: Darkest Blue overlay */
   &.black-overlay {
     @include breakpoint($medium) {
       margin-top: 0;
