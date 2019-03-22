@@ -6,8 +6,8 @@ var $display_switch = $('.pane-islandora-solr-display-switch');
 var $pane_titles = $('.pane-islandora-solr-result-limit .pane-title, .pane-islandora-solr-sort .pane-title, .pane-islandora-solr-display-switch .pane-title');
 
 $('.layout__region--second').prepend($search_options_container);
-$search_options_container.append($results_limit);
 $search_options_container.append($sort);
+$search_options_container.append($results_limit);
 $search_options_container.append($display_switch);
 
 $pane_titles.each(function() {

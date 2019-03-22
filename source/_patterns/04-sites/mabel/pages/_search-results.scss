@@ -108,12 +108,28 @@
       }
 
       .item-list {
-        @include breakpoint($medium) {
-          border-width: $border-width--thicker;
-        }
         display: none;
         padding: $half-spacing;
-        border: solid $border-width $light-gray;
+        padding: 0 !important;
+        font-size: $p-font-size--smaller;
+
+
+        ul {
+          margin-bottom: 0;
+        }
+
+        li {
+          margin: 0;
+          padding: $half-spacing $standard-spacing;
+          list-style: none;
+
+          a {
+            display: block;
+            margin: (-$half-spacing) (-$standard-spacing);
+            padding: $half-spacing $standard-spacing;
+            border-bottom: none;
+          }
+        }
       }
     }
   }
@@ -126,13 +142,13 @@
   padding: $half-spacing $standard-spacing;
   text-align: left;
   color: $black;
+  color: $white;
   border-radius: 0;
-  background: $light-gray;
+  background-color: $green;
 
   &:hover,
   &:focus {
-    color: $white;
-    background: $gray;
+    background-color: $dark-green;
   }
 
   .material-icons {

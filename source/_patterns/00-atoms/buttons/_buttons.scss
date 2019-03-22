@@ -34,10 +34,11 @@ $button-colors: (
   vertical-align: middle;
   text-decoration: none;
   border-width: $border-width;
-  border-color: transparent;
   border-style: solid;
+  border-color: transparent;
   border-radius: $button-border-radius;
   font-family: $body-font-family;
+  font-size: $p-font-size--smaller;
   font-weight: $font-weight--regular;
   line-height: 1;
 
@@ -85,8 +86,8 @@ $button-colors: (
   @each $color, $background, $text, $hover-color, $hover-text, $alt-hover-text in $button-colors {
     &.#{$color} {
       color: $text;
-      background-color: $background;
       border-color: transparent;
+      background-color: $background;
 
       &:focus,
       &:hover {
