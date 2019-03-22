@@ -11,30 +11,42 @@ $card-height: 300px;
   }
   display: flex;
   flex-direction: column;
+  grid-column-gap: $standard-spacing;
 
   .card {
     @include breakpoint($small) {
       flex: 0 1 33.333%;
       max-width: 33.333%;
     }
-
-    padding-bottom: $half-spacing;
+    padding: 0;
+    padding-bottom: $standard-spacing;
 
     .image {
       width: 100%;
       height: $card-height;
 
       img {
-        object-fit: cover;
-        height: 100%;
         width: 100%;
+        height: 100%;
+
+        object-fit: cover;
       }
     }
 
-    .taxonomy-terms,
+    .taxonomy-terms {
+      padding: 0 $half-spacing;
+    }
+
     .title,
     .body {
       padding: 0 $half-spacing;
+
+      a:hover,
+      a:focus {
+        color: $dark-blue;
+        outline: none;
+        background: none;
+      }
     }
 
     &:nth-last-child(odd) {

@@ -1,0 +1,21 @@
+/**
+ * @file
+ * molecules/links/link-list/_link-list.scss
+ */
+
+.link-list {
+  @include breakpoint($medium) {
+    padding: $standard-spacing;
+    display: flex;
+  }
+  padding: 0 $standard-spacing;
+}
+
+.col {
+  @include breakpoint($medium) {
+    float: left;
+    width: 48%;
+    padding: $half-spacing;
+  }
+  padding: $half-spacing;
+}

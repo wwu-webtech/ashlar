@@ -41,7 +41,7 @@
 
   .ultimenu__item {
     @include breakpoint($medium) {
-      position: initial;
+      position: static;
       display: block;
       min-width: initial;
 

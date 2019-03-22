@@ -1,14 +1,33 @@
 /* Add aria labels to all buttons */
-$('.accordion-set .expand').attr('aria-label', 'Open item');
+var $accordionButton = $('.accordion-set .field__title .expand', context);
+$accordionButton.filter('.is-expanded').attr('aria-expanded', 'true');
+$accordionButton.not('.is-expanded').attr('aria-expanded', 'false');
+
 
 /* Toggle expansion */
-$('.accordion-set .expand', context).click(function () {
-  $(this).toggleClass('is-expanded');
-  $(this).siblings('.content').slideToggle();
+$accordionButton.click(function () {
+  var accordionButtonClicked = $(this);
+  var accordionContent = $(this).parent().siblings('.content');
 
-  $(this).children('.material-icons').text('add');
-  $(this).filter('.is-expanded').children('.material-icons').text('clear');
+  accordionButtonClicked.toggleClass('is-expanded');
+  accordionContent.slideToggle();
 
-  $(this).filter('.is-expanded').attr('aria-label', 'Close item');
-  $(this).not('.is-expanded').attr('aria-label', 'Open item');
+  accordionButtonClicked.children('.material-icons').text('add');
+  accordionButtonClicked.filter('.is-expanded').children('.material-icons').text('clear');
+
+  accordionButtonClicked.filter('.is-expanded').attr('aria-expanded', 'true');
+  accordionButtonClicked.not('.is-expanded').attr('aria-expanded', 'false');
+});
+
+// Close with Esc key
+$accordionButton.keydown(function (e) {
+  var accordionButtonClicked = $(this);
+  var accordionContent = accordionButtonClicked.parent().siblings('.content');
+
+  if (e.keyCode === 27) {
+    accordionContent.slideUp();
+    accordionButtonClicked.removeClass('is-expanded');
+    accordionButtonClicked.children('.material-icons').text('add');
+    accordionButtonClicked.attr('aria-expanded', 'false');
+  }
 });
