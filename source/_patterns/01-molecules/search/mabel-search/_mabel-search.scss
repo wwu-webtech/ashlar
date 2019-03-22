@@ -5,15 +5,15 @@
 $simple-search-button--width: 120px;
 $simple-search-button--height: 64px;
 $advanced-search-button: 300px;
-$mabel-label-min-font-size: 18px;
-$mabel-label-max-font-size: 28px;
+$mabel-label-min-font-size: 17px;
+$mabel-label-max-font-size: 25px;
 $mabel-label-font-size: calc(#{$mabel-label-min-font-size} + #{strip-unit($mabel-label-max-font-size - $mabel-label-min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 
 #block-islandora-solr-simple {
   @include breakpoint($medium) {
-    background: transparentize($black, 0.15);
+    background: linear-gradient(to left, #{transparentize($darkest-blue, 0.10)} 0%, $darkest-blue 75%);
   }
-  background: $black;
+  background: $darkest-blue;
   padding-bottom: $double-spacing;
 
   .block-title {
@@ -63,11 +63,11 @@ $mabel-label-font-size: calc(#{$mabel-label-min-font-size} + #{strip-unit($mabel
 
 #block-islandora-solr-advanced {
   @include breakpoint($medium) {
-    background: linear-gradient(to bottom, #{transparentize($black, 0.15)} 0%, $black 25%);
+    background: linear-gradient(to bottom, #{transparentize($darkest-blue, 0.15)} 0%, $darkest-blue 10%);
   }
   padding: $standard-spacing $double-spacing;
   padding-top: 0;
-  background: $black;
+  background: $darkest-blue;
   color: $white;
 
   h2,
