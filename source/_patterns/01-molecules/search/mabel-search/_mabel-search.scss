@@ -56,6 +56,7 @@ $mabel-label-font-size: calc(#{$mabel-label-min-font-size} + #{strip-unit($mabel
       margin-left: $double-spacing;
       padding: $standard-spacing;
       border-color: $blue;
+      font-size: $p-font-size;
     }
   }
 }

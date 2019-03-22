@@ -28,20 +28,24 @@
 
 
     .icon-with-text {
-      font-size: $h5-font-size;
+      padding: $standard-spacing;
+      border: solid $border-width transparent;
 
-      .material-icons {
-        @include breakpoint($medium) {
-          font-size: $triple-spacing;
-        }
-        color: $dark-blue;
-        font-size: $standard-spacing * 1.5;
+      .icon-text {
+        font-size: $h5-font-size;
       }
 
-      &:hover {
-        .material-icons {
-          color: $green;
-        }
+      .material-icons {
+        color: $dark-blue;
+        font-size: $h1-font-size;
+      }
+
+      &:hover,
+      &:focus-within {
+        transform: translate(-2px, -2px);
+        border-color: $dark-blue;
+        outline: none;
+        background: transparent;
       }
     }
   }
