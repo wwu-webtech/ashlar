@@ -4,16 +4,18 @@
  */
 #}
 <section aria-label="Site Footer" class="site-footer">
-  {% if page.footer_left %}
-    {{ page.footer_left }}
-  {% endif %}
-  {% if page.footer_center %}
-    {{ page.footer_center }}
-  {% endif %}
-  {% if page.footer_right %}
-    {{ page.footer_right }}
-  {% endif %}
-  {% if page.footer_bottom %}
-    {{ page.footer_bottom }}
-  {% endif %}
+  {% block footer_regions %}
+    {% if page.footer_left %}
+      {{ page.footer_left }}
+    {% endif %}
+    {% if page.footer_center %}
+      {{ page.footer_center }}
+    {% endif %}
+    {% if page.footer_right %}
+      {{ page.footer_right }}
+    {% endif %}
+    {% if page.footer_bottom %}
+      {{ page.footer_bottom }}
+    {% endif %}
+  {% endblock footer_regions %}
 </section>
