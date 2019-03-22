@@ -134,4 +134,36 @@
       }
     }
   }
+
+  .site-footer {
+    #block-user-login {
+      text-align: right;
+      
+      .form-submit {
+        background: $dark-blue;
+        font-size: 1em;
+
+        &:hover,
+        &:focus {
+          background: $darkest-blue;
+        }
+      }
+
+      .item-list {
+        display: none;
+      }
+
+      h2 {
+        font-size: $h4-font-size;
+      }
+    }
+
+    #edit-cas-login-redirection-message {
+      margin: 0;
+    }
+
+    #edit-actions {
+      margin-bottom: 0;
+    }
+  }
 }
