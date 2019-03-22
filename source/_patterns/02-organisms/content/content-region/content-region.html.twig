@@ -6,10 +6,10 @@
 <main class="page-content">
   <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
   <div class="region-wrapper">
-    <div{{ attributes }}>
-      {% block page_content %}
-        {{ content }}
-      {% endblock %}
-    </div>
+    {% block page_content %}
+      <div{{ attributes }}>
+          {{ content }}
+      </div>
+    {% endblock %}
   </div>
 </main>

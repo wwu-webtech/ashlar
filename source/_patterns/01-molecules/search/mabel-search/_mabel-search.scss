@@ -14,6 +14,7 @@ $mabel-label-font-size: calc(#{$mabel-label-min-font-size} + #{strip-unit($mabel
     background: transparentize($black, 0.15);
   }
   background: $black;
+  padding-bottom: $double-spacing;
 
   .block-title {
     display: block;
