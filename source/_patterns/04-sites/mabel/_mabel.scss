@@ -109,17 +109,17 @@
     .splash {
       @include breakpoint($medium) {
         grid-template-columns: ($standard-spacing + $logo-width + $standard-spacing) 1fr $standard-spacing;
-        grid-template-rows: ($toggle-size + $standard-spacing) 220px ($standard-spacing + ($toggle-size / 2));
+        grid-template-rows: ($toggle-size + $standard-spacing) 180px ($standard-spacing + ($toggle-size / 2));
       }
       @include breakpoint($large) {
         grid-template-areas: ". . ....... ."
         ". . content ."
         ". . ....... .";
         grid-template-columns: 1fr ($logo-width--larger + $standard-spacing) ($max-content-width - $logo-width--larger - $standard-spacing) 1fr;
-        grid-template-rows: ($toggle-size--larger + $standard-spacing) 220px ($standard-spacing + ($toggle-size--larger / 2));
+        grid-template-rows: ($toggle-size--larger + $standard-spacing) 180px ($standard-spacing + ($toggle-size--larger / 2));
       }
       @include breakpoint(min-width 2420px) {
-        grid-template-rows: ($toggle-size--larger + $standard-spacing) 260px ($standard-spacing + ($toggle-size--larger / 2));
+        grid-template-rows: ($toggle-size--larger + $standard-spacing) 220px ($standard-spacing + ($toggle-size--larger / 2));
       }
     }
   }
@@ -127,10 +127,10 @@
   &.islandora-front-page {
     .splash {
       @include breakpoint($medium) {
-        grid-template-rows: ($logo-height + $standard-spacing + 40px) 220px (($toggle-size / 2) + $standard-spacing);
+        grid-template-rows: ($logo-height + $standard-spacing + 40px) 160px (($toggle-size / 2) + $standard-spacing);
       }
       @include breakpoint($large) {
-        grid-template-rows: ($logo-height--larger + $standard-spacing +44px) 240px (($toggle-size--larger / 2) + $standard-spacing);
+        grid-template-rows: ($logo-height--larger + $standard-spacing +44px) 180px (($toggle-size--larger / 2) + $standard-spacing);
       }
     }
   }

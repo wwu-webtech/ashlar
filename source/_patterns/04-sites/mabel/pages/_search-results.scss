@@ -74,45 +74,47 @@
 }
 
 /* The following are for the resul limit/sort/display options, which also affect object 'result' pages, ie 'browse the collection' */
-.search-options-container {
-  @include breakpoint($small) {
-    position: absolute;
-    top: 0;
-    flex-flow: row nowrap;
-    margin-top: 0;
-  }
-  position: relative;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-between;
-  align-items: start;
-  width: 100%;
-  margin-top: -$double-spacing;
-
-  > div {
+.page-islandora {
+  .search-options-container {
     @include breakpoint($small) {
-      flex: 0 1 33%;
-      margin-bottom: none;
+      position: absolute;
+      top: 0;
+      flex-flow: row nowrap;
+      margin-top: 0;
     }
-    display: inline-block;
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: start;
     width: 100%;
-    margin-bottom: $half-spacing;
-    vertical-align: top;
-    background: $lightest-gray;
+    margin-top: -$double-spacing;
 
-    .pane-title {
-      display: block;
-      padding: $half-spacing $standard-spacing;
-      background: $light-gray;
-    }
-
-    .item-list {
-      @include breakpoint($medium) {
-        border-width: $border-width--thicker;
+    > div {
+      @include breakpoint($small) {
+        flex: 0 1 33%;
+        margin-bottom: none;
       }
-      display: none;
-      padding: $half-spacing;
-      border: solid $border-width $light-gray;
+      display: inline-block;
+      width: 100%;
+      margin-bottom: $half-spacing;
+      vertical-align: top;
+      background: $lightest-gray;
+
+      .pane-title {
+        display: block;
+        padding: $half-spacing $standard-spacing;
+        background: $light-gray;
+      }
+
+      .item-list {
+        @include breakpoint($medium) {
+          border-width: $border-width--thicker;
+        }
+        display: none;
+        padding: $half-spacing;
+        border: solid $border-width $light-gray;
+      }
     }
   }
 }
