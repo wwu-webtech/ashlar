@@ -17,8 +17,8 @@
 }
 
 .search-wrapper {
-  margin-top: $double-spacing;
   max-width: calc(100vw - #{$double-spacing});
+  margin-top: $double-spacing;
 
   * {
     font-family: $sans-serif;
@@ -53,15 +53,14 @@
 
   .result-number {
     margin-right: $half-spacing;
+    color: $black;
+    font-weight: $font-weight--bold;
   }
 
   .result-title {
     display: inline;
     margin-left: $half-spacing;
-
-    a {
-      border-bottom: solid $border-width $light-green;
-    }
+    font-weight: $font-weight--bold;
   }
 
   .search-results-summary {
@@ -77,6 +76,14 @@
   .search-pager {
     display: flex;
     justify-content: space-between;
+    max-width: 80%;
+    margin: auto;
     margin-top: $standard-spacing;
+
+    a {
+      padding: $half-spacing;
+      border: none;
+      font-weight: $font-weight--bold;
+    }
   }
 }
