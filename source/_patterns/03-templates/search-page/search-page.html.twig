@@ -6,6 +6,19 @@
   {% block page %}
     {% embed "@organisms/page/page.html.twig" %}
 
+      {% block wwu_header %}
+        {% embed "@organisms/headers/wwu-header/wwu-header.html.twig" %}
+
+          {% block quick_links %}
+            {% include "@molecules/navigation/wwu-menu/wwu-menu.html.twig" %}
+          {% endblock %}
+
+          {% block search %}
+          {% endblock %}
+          
+        {% endembed %}
+      {% endblock %}
+
       {% block splash %}
         <div class="splash">
           <div class="block block--page-title-block">
