@@ -25,9 +25,8 @@ h1 {
   font-weight: $font-weight--bold;
 }
 h2 {
-  padding-bottom: 12px;
+  padding-bottom: $standard-spacing;
   color: $darkest-blue;
-  border-bottom: $border-width--thickest solid $dark-blue;
   font-size: $h2-font-size;
 }
 h3 {
@@ -38,6 +37,12 @@ h4 {
 }
 h5 {
   font-size: $h5-font-size;
+}
+
+main {
+  h2 {
+    border-bottom: $border-width--thickest solid $dark-blue;
+  }
 }
 
 /* .sans-serif-headings heading styles, same as default but without serifs */
