@@ -97,14 +97,6 @@
     }
   }
 
-  /* MABEL Splash */
-  .splash {
-    > div:nth-of-type(2) {
-      min-height: 240px;
-      z-index: 1;
-    }
-  }
-
   &.not-front {
     .splash {
       @include breakpoint($medium) {
@@ -138,7 +130,7 @@
   .site-footer {
     #block-user-login {
       text-align: right;
-      
+
       .form-submit {
         background: $dark-blue;
         font-size: 1em;
