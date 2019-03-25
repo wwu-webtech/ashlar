@@ -30,7 +30,7 @@ page:
                       <h3 class="sans-serif">Writing Good Paragraphs</h3>
                       <h4 class="sans-serif">Style advice</h4>
                       <p>Crafting of clear, coherent paragraphs is the subject of considerable stylistic debate</p>
-                      <ul>
+                      <ul class="spaced">
                       <li>Form varies among different types of writing</li>
                       <li>A common English usage misconception is that a paragraph has three to five sentences; single-word paragraphs can be seen in some professional writing, and journalists often use single-sentence paragraphs.</li>
                       <li>A topic sentence or "main idea", preferably first</li>
