@@ -13,6 +13,7 @@
       top: 100%;
       right: 0 !important;
       transform: translatey(-($toggle-size/2));
+      display: none !important;
     }
     @include breakpoint($large) {
       transform: translatey(-($toggle-size--larger/2));
@@ -33,6 +34,10 @@
     -ms-grid-row: 2;
 
     &.open {
+      @include breakpoint($medium) {
+        display: block !important;
+        position: absolute;
+      }
       max-height: 200vh;
       opacity: 1;
       visibility: visible;
