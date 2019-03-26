@@ -1,0 +1,51 @@
+{% embed "base.twig" %}
+  {% block body %}
+  <body class="search2">
+  {% endblock %}
+
+  {% block page %}
+    {% embed "@organisms/page/page.html.twig" %}
+
+      {% block wwu_header %}
+        {% embed "@organisms/headers/wwu-header/wwu-header.html.twig" %}
+
+          {% block quick_links %}
+            {% include "@molecules/navigation/wwu-menu/wwu-menu.html.twig" %}
+          {% endblock %}
+
+          {% block search %}
+          {% endblock %}
+          
+        {% endembed %}
+      {% endblock %}
+
+      {% block splash %}
+        <div class="splash">
+          <div class="block block--page-title-block">
+            <h1 class="page-title">Search</h1>
+          </div>
+        </div>
+      {% endblock %}
+
+      {% block content %}
+      <main class="page-content">
+        <div class="region-wrapper">
+          <div class="region region--content">
+            <section class="search-wrapper">
+
+              XLS goes here. Everything above this goes in the "Top HTML" section of thunderstone, everything below this goes in the "Bottom HTML" section.
+
+            </section>
+          </div>
+        </div>
+      </main>
+      {% endblock %}
+
+      {% block footer %}
+        <footer role="contentinfo" class="page-footer region region--footer">
+          {% include "@organisms/footers/wwu-footer/wwu-footer.html.twig" %}
+        </footer>
+      {% endblock %}
+    {% endembed %}
+  {% endblock %}
+{% endembed %}

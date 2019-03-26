@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
   </head>
+  {% block body %}
   <body class="{{ bodyClass }}">
+  {% endblock %}
     <div class="layout-container">
+      {% block page %}
       {{ page }}
+      {% endblock %}
     </div>{# /.layout-container #}
   </body>
 </html>
