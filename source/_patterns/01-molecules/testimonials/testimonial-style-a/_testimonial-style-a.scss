@@ -2,7 +2,9 @@
 * @file
 * 01-molecules/testimonials/testimonial-style-a/_testimonial-style-a.scss
 */
-$image-size--smaller: 180px;
+$image-size: 180px;
+$image-size--medium: 220px;
+$image-size--large: 300px;
 
 .block--testimonial,
 .paragraph--type--majors-profile {
@@ -11,7 +13,8 @@ $image-size--smaller: 180px;
     text-align: left;
 
     grid-column-gap: $triple-spacing;
-    grid-template-areas: "image body"
+    grid-template-areas:
+    "image body"
     "image credit";
     grid-template-columns: auto 1fr;
     grid-template-rows: auto;
@@ -21,21 +24,47 @@ $image-size--smaller: 180px;
 
   .image,
   .field__item:nth-of-type(1) {
-    @include breakpoint(max-width $medium) {
-      -ms-grid-columns: $image-size--smaller;
-      -ms-grid-rows: $image-size--smaller;
-      grid-template-columns: $image-size--smaller;
-      grid-template-rows: $image-size--smaller;
+    @include breakpoint($medium) {
+      -ms-grid-columns: $image-size--medium;
+      -ms-grid-rows: $image-size--medium;
+      grid-template-columns: $image-size--medium;
+      grid-template-rows: $image-size--medium;
+    }
+    @include breakpoint($large) {
+      -ms-grid-columns: $image-size--large;
+      -ms-grid-rows: $image-size--large;
+      grid-template-columns: $image-size--large;
+      grid-template-rows: $image-size--large;
+    }
+    -ms-grid-columns: $image-size;
+    -ms-grid-rows: $image-size;
+    grid-template-columns: $image-size;
+    grid-template-rows: $image-size;
 
-      &:after {
-        width: $image-size--smaller;
-        height: $image-size--smaller;
+    &:after {
+      @include breakpoint($medium) {
+        width: $image-size--medium;
+        height: $image-size--medium;
       }
+      @include breakpoint($large) {
+        width: $image-size--large;
+        height: $image-size--large;
+      }
+      width: $image-size;
+      height: $image-size;
+    }
 
-      img {
-        width: $image-size--smaller;
-        height: $image-size--smaller;
+    img {
+      @include breakpoint($medium) {
+        width: $image-size--medium;
+        height: $image-size--medium;
       }
+      @include breakpoint($large) {
+        width: $image-size--large;
+        height: $image-size--large;
+      }
+      width: $image-size;
+      height: $image-size;
     }
 
     grid-area: image;

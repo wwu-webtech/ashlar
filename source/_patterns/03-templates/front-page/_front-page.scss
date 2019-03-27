@@ -179,6 +179,9 @@
 
     .layout__region--second-above,
     .layout__region--second-below {
+      @include breakpoint($medium) {
+        padding-left: $double-spacing;
+      }
       @include breakpoint($large) {
         padding-top: $standard-spacing * 2;
         padding-bottom: $double-spacing * 4;
