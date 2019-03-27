@@ -28,12 +28,6 @@
     order: 1;
     margin-bottom: $half-spacing;
 
-    a {
-      margin: 0;
-      padding: 0;
-      border: 0;
-    }
-
     img {
       display: block;
     }
@@ -52,8 +46,7 @@
 
     a {
       display: inline-block;
-      border: none;
-      font-family: $sans-serif;
+      text-decoration: none;
       font-size: $p-font-size;
       font-weight: $font-weight--bold;
       line-height: initial;

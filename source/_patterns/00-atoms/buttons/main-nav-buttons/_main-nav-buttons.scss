@@ -34,7 +34,6 @@ $max-button-width: 250px;
           max-width: $max-button-width;
           padding: 0 ($standard-spacing * 1.5);
           text-align: center;
-          border-bottom: none;
         }
         @include breakpoint($large) {
           height: $toggle-size--larger;
@@ -49,6 +48,7 @@ $max-button-width: 250px;
         padding: $standard-spacing;
         text-align: left;
         white-space: normal;
+        text-decoration: none;
         color: $white;
         border: none;
         background-color: $dark-blue;

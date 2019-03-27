@@ -36,10 +36,11 @@ $expand-toggle-size: 40px;
       align-content: center;
       min-height: 40px;
       margin: inherit;
-      padding: $half-spacing ($standard-spacing + $expand-toggle-size) $half-spacing $standard-spacing;      
+      padding: $half-spacing ($standard-spacing + $expand-toggle-size) $half-spacing $standard-spacing;
       color: $black;
       border: none;
       background-color: $light-gray;
+      font-size: $p-font-size;
 
       &:hover,
       &:focus {
@@ -49,7 +50,7 @@ $expand-toggle-size: 40px;
     }
 
     .ui-accordion-header-icon {
-      top: $half-spacing;
+      top: $half-spacing + $border-width;
       right: 0;
       left: inherit;
       width: inherit;

@@ -100,6 +100,7 @@ $site-name-gradient-end: transparentize($dark-blue, 0.2);
       margin: 0;
       padding: $half-spacing $standard-spacing;
       text-align: center;
+      text-decoration: none;
       text-transform: none;
       color: $white;
       border-top: $border-width--thinner solid $blue;
