@@ -41,7 +41,13 @@ h5 {
 
 main {
   h2 {
-    border-bottom: $border-width--thickest solid $dark-blue;
+    &:after {
+      border-bottom: $border-width--thickest solid $dark-blue;
+      content: "";
+      display: block;
+      padding-bottom: $standard-spacing;
+      width: 150px;
+    }
   }
 }
 
