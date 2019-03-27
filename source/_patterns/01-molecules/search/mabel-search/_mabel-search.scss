@@ -4,7 +4,6 @@
 */
 $simple-search-button--width: 120px;
 $simple-search-button--height: 64px;
-$advanced-search-button: 300px;
 $mabel-label-min-font-size: 17px;
 $mabel-label-max-font-size: 25px;
 $mabel-label-font-size: calc(#{$mabel-label-min-font-size} + #{strip-unit($mabel-label-max-font-size - $mabel-label-min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
@@ -61,69 +60,6 @@ $mabel-label-font-size: calc(#{$mabel-label-min-font-size} + #{strip-unit($mabel
   }
 }
 
-#block-islandora-solr-advanced {
-  @include breakpoint($medium) {
-    background: linear-gradient(to bottom, #{transparentize($darkest-blue, 0.15)} 0%, $darkest-blue 10%);
-  }
-  padding: $standard-spacing $double-spacing;
-  padding-top: 0;
-  background: $darkest-blue;
-  color: $white;
-
-  h2,
-  .toggle-advanced-search {
-    position: relative;
-    display: block;
-    margin: 0;
-    margin-bottom: $standard-spacing;
-    padding: $standard-spacing;
-    transition: $button-transition-speed $standard-ease;
-    color: $text-color-light;
-    border: none;
-    border-radius: 0;
-    background: $dark-blue;
-    font-size: $p-font-size--smaller;
-    font-family: $sans-serif;
-    text-align: left;
-    width: 100%;
-
-    .material-icons {
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: grid;
-      justify-content: center;
-      align-content: center;
-      width: $toggle-size;
-      height: 100%;
-      font-size: 18px;
-    }
-
-    &:hover,
-    &:focus {
-      background: $blue;
-    }
-
-    &:focus {
-      @include breakpoint($medium) {
-        outline: $focus-outline--thicker
-      }
-      outline: $focus-outline;
-    }
-  }
-
-  #islandora-solr-advanced-search-form {
-    display: none;
-  }
-}
-
-#islandora-solr-advanced-terms {
-  .form-item {
-    display: inline-block;
-    margin-right: $standard-spacing;
-  }
-}
-
 input[title="Add field"],
 input[title="Remove field"] {
   width: $toggle-size;
@@ -153,15 +89,6 @@ input[title="Remove field"] {
 .islandora-front-page {
   #islandora-search-container {
     width: 100%;
-  }
-
-  #block-islandora-solr-advanced {
-    h2,
-    .toggle-advanced-search {
-      @include breakpoint($medium) {
-        font-size: $p-font-size;
-      }
-    }
   }
 
   .form-item-islandora-simple-search-query {
