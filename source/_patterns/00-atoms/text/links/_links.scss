@@ -17,9 +17,8 @@ a {
   padding-left: $link-padding;
   transition: $link-transition-speed $link-transition-ease;
   transition-property: background, color, border;
-  text-decoration: none;
+  text-decoration: underline;
   color: $link-color;
-  border-bottom: solid $lightest-green $border-width;
 
   &:active,
   &:focus,
