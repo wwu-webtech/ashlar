@@ -8,17 +8,18 @@ $mabel-label-min-font-size: 17px;
 $mabel-label-max-font-size: 25px;
 $mabel-label-font-size: calc(#{$mabel-label-min-font-size} + #{strip-unit($mabel-label-max-font-size - $mabel-label-min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 
-#block-islandora-solr-simple {
+#islandora-search-container {
   @include breakpoint($medium) {
-    background: linear-gradient(to left, #{transparentize($darkest-blue, 0.10)} 0%, $darkest-blue 75%);
+    background: linear-gradient(to right, transparentize($darkest-blue, 0.1) 0%, transparentize($darkest-blue, 0.2) 100%);
   }
   background: $darkest-blue;
-  padding-bottom: $double-spacing;
+  padding: $double-spacing;
+  display: flex;
+  flex-flow: column;
 
   .block-title {
     display: block;
     margin: 0;
-    padding: $standard-spacing $double-spacing;
     color: $text-color-light;
     border: none;
     text-align: left;
@@ -29,6 +30,18 @@ $mabel-label-font-size: calc(#{$mabel-label-min-font-size} + #{strip-unit($mabel
 
   .form-wrapper {
     position: relative;
+  }
+
+  .advanced-search-link {
+    align-self: end;
+    color: $white;
+    margin-top: $standard-spacing;
+
+    &:hover,
+    &:focus {
+      background-color: $darkest-blue;
+      color: $lightest-green;
+    }
   }
 }
 
@@ -42,18 +55,14 @@ $mabel-label-font-size: calc(#{$mabel-label-min-font-size} + #{strip-unit($mabel
       width: $simple-search-button--width;
       height: $simple-search-button--height;
       margin: 0;
-      margin-right: $double-spacing;
       padding: $standard-spacing;
       border-radius: 0;
-      font-size: $p-font-size--smaller;
     }
 
     .form-text {
-      width: calc(100% - #{$simple-search-button--width} - #{$double-spacing});
+      width: calc(100% - #{$simple-search-button--width});
       height: $simple-search-button--height;
       margin: 0;
-      margin-left: $double-spacing;
-      padding: $standard-spacing;
       border-color: $blue;
       font-size: $p-font-size;
     }
@@ -66,7 +75,6 @@ input[title="Remove field"] {
   height: $toggle-size;
   padding: 0;
   border-radius: 0;
-  font-size: $p-font-size;
 }
 
 .islandora-solr-advanced-controls {
@@ -78,24 +86,11 @@ input[title="Remove field"] {
     display: inline-block;
     margin-right: $standard-spacing;
   }
-
-  .form-submit {
-    width: $advanced-search-button;
-    font-size: $p-font-size;
-  }
 }
 
 /* Search box is positioned more prominently on front page */
 .islandora-front-page {
   #islandora-search-container {
     width: 100%;
-  }
-
-  .form-item-islandora-simple-search-query {
-    + .form-submit {
-      @include breakpoint($medium) {
-        font-size: $p-font-size;
-      }
-    }
   }
 }
