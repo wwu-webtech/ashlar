@@ -37,7 +37,6 @@
       > a {
         margin: 0;
         padding: $half-spacing 0 $half-spacing $standard-spacing;
-        border-bottom: none;
 
         grid-area: link;
       }
@@ -57,7 +56,7 @@
         align-content: center;
         width: 30px;
         height: 30px;
-        margin-right: $half-spacing / 2;
+        margin-right: $quarter-spacing;
         color: $white;
         border: none;
         background: $blue;

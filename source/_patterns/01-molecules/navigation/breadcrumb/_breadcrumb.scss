@@ -4,11 +4,8 @@
  */
 
 .breadcrumb {
-  @include breakpoint($medium) {
-    font-size: $font-size--smallest;
-  }
   margin-top: $standard-spacing;
-  font-size: $font-size--smaller;
+  font-size: $p-font-size--smaller;
 
   ol {
     list-style: none;

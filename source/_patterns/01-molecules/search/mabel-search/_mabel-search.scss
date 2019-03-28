@@ -46,7 +46,7 @@ $mabel-label-font-size: calc(#{$mabel-label-min-font-size} + #{strip-unit($mabel
       margin-right: $double-spacing;
       padding: $standard-spacing;
       border-radius: 0;
-      font-size: $font-size--smaller;
+      font-size: $p-font-size--smaller;
     }
 
     .form-text {
@@ -81,7 +81,7 @@ $mabel-label-font-size: calc(#{$mabel-label-min-font-size} + #{strip-unit($mabel
     border: none;
     border-radius: 0;
     background: $dark-blue;
-    font-size: $font-size--smaller;
+    font-size: $p-font-size--smaller;
     font-family: $sans-serif;
     text-align: left;
     width: 100%;

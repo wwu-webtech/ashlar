@@ -14,6 +14,7 @@
 
 
 .layout--twocol-34-66 > .layout__region--first {
+  @extend %headings--smaller;
   @include breakpoint($medium) {
     flex: 0 1 34%;
     max-width: 34%;

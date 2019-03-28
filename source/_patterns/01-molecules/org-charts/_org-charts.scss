@@ -8,14 +8,14 @@ $max-box-size: 300px;
 
 .org-chart {
   @include breakpoint($medium) {
-    font-size: $font-size--smallest;
+    font-size: $p-font-size--smaller;
   }
   position: relative;
   display: grid;
   justify-content: center;
   max-width: $max-content-width;
   background: $chart-background-color;
-  font-size: $font-size--smaller;
+  font-size: $p-font-size--smaller;
 
   ul {
     position: relative;
@@ -42,12 +42,12 @@ $max-box-size: 300px;
         margin-left: $standard-spacing;
         padding: $half-spacing;
         text-align: center;
+        text-decoration: none;
         background: $light-gray;
       }
 
       a {
         color: white;
-        border-bottom: none;
         background: $blue;
 
         &:hover,

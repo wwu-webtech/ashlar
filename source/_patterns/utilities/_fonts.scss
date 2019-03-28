@@ -6,45 +6,48 @@
 @import 'strip-unit';
 
 // Font Family Variables
-$sans-serif: "Noto Sans", "Open Sans", sans-serif;
-$serif: "Crimson Text", serif;
+$sans-serif: "Fira Sans", sans-serif;
+$serif: "PT Serif", serif;
+$title: "Montserrat", sans-serif;
+$condensed: "Fira Sans Extra Condensed", sans-serif;
+$title-font-family: $title;
 $heading-font-family: $serif;
 $body-font-family: $sans-serif;
 
 // Font Weight Variables
+$font-weight--light: 300;
 $font-weight--regular: 400;
+$font-weight--semibold: 600;
 $font-weight--bold: 700;
+$font-weight--black: 900;
 $body-font-weight: $font-weight--regular;
 $button-font-weight: $font-weight--bold;
 
 // Fluid Typography: Major Second scale for headings/paragraphs
-$min-title-font-size: 38px;
-$max-title-font-size: 82px;
+$min-title-font-size: 42px;
+$max-title-font-size: 70px;
 
 $min-h1-font-size: 27.03px;
-$max-h1-font-size: 51.145px;
+$max-h1-font-size: 52.145px;
 
 $min-h2-font-size: 24.027px;
-$max-h2-font-size: 45.462px;
+$max-h2-font-size: 47.462px;
 
 $min-h3-font-size: 21.358px;
-$max-h3-font-size: 40.411px;
+$max-h3-font-size: 39.411px;
 
 $min-h4-font-size: 18.985px;
-$max-h4-font-size: 35.921px;
+$max-h4-font-size: 32.921px;
 
 $min-h5-font-size: 16.875px;
-$max-h5-font-size: 31.93px;
+$max-h5-font-size: 28.93px;
 
-$min-p-font-size: 15px;
-$max-p-font-size: 23px;
-
-$min-splash-font-size: 15px;
-$max-splash-font-size: 18px;
+$min-p-font-size: 16px;
+$max-p-font-size: 20px;
 
 // View width for fluid typography
 $min-vw: 300px;
-$max-vw: 1600px;
+$max-vw: 1300px;
 
 // Font Sizes
 $title-font-size: calc(#{$min-title-font-size} + #{strip-unit($max-title-font-size - $min-title-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
@@ -54,7 +57,12 @@ $h3-font-size: calc(#{$min-h3-font-size} + #{strip-unit($max-h3-font-size - $min
 $h4-font-size: calc(#{$min-h4-font-size} + #{strip-unit($max-h4-font-size - $min-h4-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 $h5-font-size: calc(#{$min-h5-font-size} + #{strip-unit($max-h5-font-size - $min-h5-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 $p-font-size: calc(#{$min-p-font-size} + #{strip-unit($max-p-font-size - $min-p-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-$splash-font-size: calc(#{$min-splash-font-size} + #{strip-unit($max-splash-font-size - $min-splash-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 
-$font-size--smaller: 0.8em;
-$font-size--smallest: 0.6em;
+// Font Sizes --smaller
+$title-font-size--smaller: calc((#{$min-title-font-size} + #{strip-unit($max-title-font-size - $min-title-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.8);
+$h1-font-size--smaller: calc((#{$min-h1-font-size} + #{strip-unit($max-h1-font-size - $min-h1-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.8);
+$h2-font-size--smaller: calc((#{$min-h2-font-size} + #{strip-unit($max-h2-font-size - $min-h2-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.8);
+$h3-font-size--smaller: calc((#{$min-h3-font-size} + #{strip-unit($max-h3-font-size - $min-h3-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.8);
+$h4-font-size--smaller: calc((#{$min-h4-font-size} + #{strip-unit($max-h4-font-size - $min-h4-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.8);
+$h5-font-size--smaller: calc((#{$min-h5-font-size} + #{strip-unit($max-h5-font-size - $min-h5-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.8);
+$p-font-size--smaller: calc((#{$min-p-font-size} + #{strip-unit($max-p-font-size - $min-p-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.8);

@@ -5,63 +5,58 @@
 $logo-size: 100px;
 
 .alert {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   width: 100%;
-  padding: $standard-spacing;
-}
-
-.alert-body {
-  width:80%;
-}
-
-.emergency {
-  color: $white;
-  background-color: $red;
-  padding-left:2em;
+  padding: $double-spacing;
 
   .alert-header {
-    color: $white;
+    font-family: $sans-serif;
+    border-bottom: none;
+    margin-top: 0;
   }
 
-  svg {
-    fill: $white;
+  .alert-body {
+    margin: $double-spacing 0;
   }
-}
 
-.weather {
-  color: $dark-blue;
-  background-color: $yellow;
-  padding-left:2em;
-
-  svg {
-    fill: $dark-blue;
-  }
-}
-
-.alert-header {
-  flex: 0 0 100%;
-  font-family: $sans-serif;
-  border-bottom: none;
-}
-
-.alert-icon {
-  align-self: flex-start;
-  width: $logo-size;
-  margin-right: $standard-spacing;
-  margin-bottom: $standard-spacing;
-
-  svg {
-    position: relative;
-    align-self: flex-start;
+  .alert-icon {
     width: $logo-size;
-    height: auto;
+    float: left;
+    margin-right: $double-spacing;
+
+    svg {
+      position: relative;
+      width: $logo-size;
+      height: auto;
+    }
   }
-}
 
+  .alert-footer {
+    text-align: right;
+  }
 
-.alert-footer {
-  flex: 0 0 100%;
-  margin-top:1.5em;
+  &.emergency {
+    color: $white;
+    background-color: $red;
+
+    .alert-header {
+      color: $white;
+    }
+
+    svg {
+      fill: $white;
+    }
+  }
+
+  &.weather {
+    color: $dark-blue;
+    background-color: $yellow;
+
+    .alert-header {
+      color: $dark-blue;
+    }
+
+    svg {
+      fill: $dark-blue;
+    }
+  }
 }

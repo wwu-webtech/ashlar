@@ -1,7 +1,7 @@
 /**
- * @file
- * 01-molecules/content/accordion.scss
- */
+* @file
+* 01-molecules/content/accordion.scss
+*/
 $left-col-width: 84px;
 $accordion-border: $dark-blue solid $border-width--thicker;
 
@@ -17,64 +17,48 @@ $accordion-border: $dark-blue solid $border-width--thicker;
     }
 
     .field__title {
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
-      width: 100%;
-      margin-top: 0;
-      margin-bottom: 0;
-      padding: ($half-spacing / 2);
-      text-align: left;
-      border-radius: 0;
-      line-height: 1.5em;
-
-    & + .content {
-      display: none;
-      padding: $standard-spacing;
-      padding-top: 0;
-      word-wrap: break-word;
-    }
-
-    .expand {
-      width: 100%;
-      box-sizing: border-box;
-      text-align: left;
-      padding: $half-spacing + 2px;
-      margin-bottom: 0;
-      background: none;
-      color: $green;
-      font-family: $serif;
-      border-radius: 0;
-      border: $border-width solid transparent;
-
-      @media (max-width: $medium) {
-        padding-left: ($half-spacing / 4);
-      }
-
-      &:focus {
-        background-color: transparentize($dark-blue, 0.9);
-        box-shadow: none;
-        border: $border-width dotted $dark-blue;
-       }
-
-    * {
-      @include breakpoint($medium){
-        top: $half-spacing;
-      }
-      
-      top: ($half-spacing / 2);
-      font-size: inherit;
-      display: inline;
       margin: 0;
-      color: $black;
-      position: relative;
 
-    }
+      .expand {
+        display: grid;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 0;
+        padding: $standard-spacing;
+        text-align: left;
+        color: $darkest-blue;
+        border: $border-width solid transparent;
+        border-radius: 0;
+        background: none;
+        font-size: $p-font-size;
+        font-weight: $font-weight--semibold;
+        line-height: 1.2em;
 
-    i {
-      color: $dark-blue;
+        grid-column-gap: $standard-spacing;
+        grid-template-columns: $icon-size--medium auto;
+
+        @media (max-width: $medium) {
+          padding-left: ($half-spacing / 4);
+        }
+
+        &:focus {
+          border: $border-width dotted $dark-blue;
+          background-color: transparentize($dark-blue, 0.9);
+          box-shadow: none;
+        }
+
+        .material-icons {
+          color: $dark-blue;
+          font-size: $icon-size--medium;
+        }
+      }
+
+      & + .content {
+        display: none;
+        padding: $standard-spacing;
+        padding-top: 0;
+        word-wrap: break-word;
+      }
     }
-   }
- }
-}
+  }
 }

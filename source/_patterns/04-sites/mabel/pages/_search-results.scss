@@ -26,7 +26,6 @@
     a {
       margin: initial;
       padding: 0;
-      border-bottom: none;
     }
 
     dl.solr-fields {
@@ -63,7 +62,7 @@
       margin: 0;
       padding: 0;
       border: none;
-      font-size: $font-size--smaller;
+      font-size: $p-font-size--smaller;
     }
   }
 
@@ -137,7 +136,7 @@
 
   .material-icons {
     position: absolute;
-    top: $half-spacing / 2;
+    top: $quarter-spacing;
     top: 50%;
     right: 0;
     transform: translate(-4px, -50%);

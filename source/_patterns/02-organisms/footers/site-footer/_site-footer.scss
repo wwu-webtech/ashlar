@@ -20,8 +20,7 @@
   }
   display: -ms-grid;
   display: grid;
-  padding: ($double-spacing * 2) 0;
-  font-size: $font-size--smaller;
+  padding: $triple-spacing 0;
 
   -ms-grid-columns: $small-screen-columns;
   -ms-grid-rows: auto $standard-spacing auto $standard-spacing auto;
@@ -121,7 +120,7 @@
   }
 
   .ribbon {
-    transform: translatey(-($double-spacing * 2));
+    transform: translatey(-($triple-spacing));
 
     &:hover,
     &:focus {

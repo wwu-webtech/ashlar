@@ -5,10 +5,10 @@
 .icon-with-text {
   display: inline-block;
   text-align: center;
-  border-bottom: none;
+  text-decoration: none;
 
   .icon-text {
     display: block;
-    font-size: $font-size--smaller;
+    font-size: $p-font-size--smaller;
   }
 }

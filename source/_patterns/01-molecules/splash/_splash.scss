@@ -22,6 +22,7 @@ $site-name-spacer: 120px;
   }
   display: -ms-grid;
   display: grid;
+  max-height: 80vh;
   background-image: linear-gradient($dark-blue, $blue);
 
   -ms-grid-columns: $small-screen-columns;

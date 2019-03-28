@@ -39,7 +39,7 @@
     }
   }
 
-  i {
+  .material-icons {
     @include breakpoint($medium) {
       font-size: 48px;
     }

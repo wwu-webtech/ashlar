@@ -86,8 +86,8 @@ $site-name-gradient-end: transparentize($dark-blue, 0.2);
 
     .university-name {
       display: block;
-      font-size: 0;
       color: $white;
+      font-size: 0;
     }
 
     .site-name {
@@ -100,13 +100,14 @@ $site-name-gradient-end: transparentize($dark-blue, 0.2);
       margin: 0;
       padding: $half-spacing $standard-spacing;
       text-align: center;
+      text-decoration: none;
       text-transform: none;
       color: $white;
       border-top: $border-width--thinner solid $blue;
       border-bottom: $border-width--thinner solid $blue;
       background: linear-gradient(to right, $site-name-gradient-start 0%, $site-name-gradient-end 100%);
       font-family: $serif;
-      font-size: $splash-font-size;
+      font-size: $p-font-size--smaller;
       font-weight: $font-weight--regular;
       line-height: 1.5em;
     }

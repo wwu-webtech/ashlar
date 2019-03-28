@@ -46,7 +46,7 @@
       margin-bottom: $standard-spacing;
       padding: $standard-spacing;
       background: $lightest-gray;
-      font-size: $font-size--smaller;
+      font-size: $p-font-size--smaller;
     }
 
     a {
@@ -87,7 +87,6 @@
   .ui-datepicker {
     a {
       margin: initial;
-      border-bottom: none;
     }
     select {
       display: inline;

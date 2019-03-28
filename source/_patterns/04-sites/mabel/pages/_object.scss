@@ -4,11 +4,11 @@
 */
 a#clip {
   @include breakpoint($medium) {
-    font-size: $font-size--smallest;
+    font-size: $p-font-size--smaller;
   }
   margin-bottom: $standard-spacing;
   margin-left: 0;
-  font-size: $font-size--smaller;
+  font-size: $p-font-size--smaller;
 }
 
 .islandora-object-thumb,
@@ -31,10 +31,6 @@ a#clip {
 }
 
 body.page-islandora-object {
-  a {
-    border-bottom: none;
-  }
-
   .pane-page-title {
     h1 {
       display: inline-block;
@@ -44,7 +40,7 @@ body.page-islandora-object {
 
   #islandora-bookmark {
     margin-bottom: $half-spacing;
-    font-size: $font-size--smaller;
+    font-size: $p-font-size--smaller;
     h3 {
       margin: 0;
       margin-right: $standard-spacing;
@@ -61,7 +57,7 @@ body.page-islandora-object {
 
   /* grid view */
   .islandora-objects-grid-item {
-    font-size: $font-size--smaller;
+    font-size: $p-font-size--smaller;
 
     break-word: break-all;
   }
@@ -78,7 +74,7 @@ body.page-islandora-object {
       margin-bottom: $standard-spacing;
       padding: $standard-spacing;
       background: $lightest-gray;
-      font-size: $font-size--smaller;
+      font-size: $p-font-size--smaller;
     }
 
     a {
