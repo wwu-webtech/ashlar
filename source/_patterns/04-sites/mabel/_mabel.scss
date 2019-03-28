@@ -2,6 +2,7 @@
 * @file
 * sites/mabel/_mabel.scss
 */
+$mabel-site-name-height: 44px;
 
 /* General MABEL styles */
 .page-islandora {
@@ -72,7 +73,8 @@
       font-size: $p-font-size;
     }
 
-    input {
+    input,
+    select {
       border-width: $border-width;
     }
 
@@ -102,17 +104,18 @@
     .splash {
       @include breakpoint($medium) {
         grid-template-columns: ($standard-spacing + $logo-width + $standard-spacing) 1fr $standard-spacing;
-        grid-template-rows: ($toggle-size + $standard-spacing) 200px ($standard-spacing + ($toggle-size / 2));
+        grid-template-rows: ($toggle-size + $standard-spacing) 1fr ($standard-spacing + ($toggle-size / 2));
       }
       @include breakpoint($large) {
-        grid-template-areas: ". . ....... ."
+        grid-template-areas:
+        ". . ....... ."
         ". . content ."
         ". . ....... .";
         grid-template-columns: 1fr ($logo-width--larger + $double-spacing) ($max-content-width - $logo-width--larger - $standard-spacing) 1fr;
-        grid-template-rows: ($toggle-size--larger + $standard-spacing) 200px ($standard-spacing + ($toggle-size--larger / 2));
+        grid-template-rows: ($toggle-size--larger + $standard-spacing) 1fr ($standard-spacing + ($toggle-size--larger / 2));
       }
       @include breakpoint(min-width 2420px) {
-        grid-template-rows: ($toggle-size--larger + $double-spacing) 220px ($standard-spacing + ($toggle-size--larger / 2));
+        grid-template-rows: ($toggle-size--larger + $double-spacing) 1fr ($standard-spacing + ($toggle-size--larger / 2));
       }
     }
   }
@@ -120,10 +123,10 @@
   &.islandora-front-page {
     .splash {
       @include breakpoint($medium) {
-        grid-template-rows: ($logo-height + $standard-spacing + 40px) 160px (($toggle-size / 2) + $standard-spacing);
+        grid-template-rows: ($logo-height + $standard-spacing + $mabel-site-name-height) 1fr (($toggle-size--larger / 2) + $standard-spacing);
       }
       @include breakpoint($large) {
-        grid-template-rows: ($logo-height--larger + $standard-spacing +44px) 180px (($toggle-size--larger / 2) + $standard-spacing);
+        grid-template-rows: ($logo-height--larger + $standard-spacing + $mabel-site-name-height) 1fr (($toggle-size--larger / 2) + $standard-spacing);
       }
     }
   }

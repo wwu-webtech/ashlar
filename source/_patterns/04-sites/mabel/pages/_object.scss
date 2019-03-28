@@ -35,23 +35,7 @@ body.page-islandora-object {
     h1 {
       display: inline-block;
       margin-right: $standard-spacing;
-    }
-  }
-
-  #islandora-bookmark {
-    margin-bottom: $half-spacing;
-    font-size: $p-font-size--smaller;
-    h3 {
-      margin: 0;
-      margin-right: $standard-spacing;
       font-size: $h4-font-size;
-    }
-    select {
-      margin: 0;
-    }
-    input {
-      margin: 0;
-      padding: $half-spacing $standard-spacing;
     }
   }
 
