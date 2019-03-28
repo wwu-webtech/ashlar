@@ -73,51 +73,6 @@
 }
 
 /* The following are for the resul limit/sort/display options, which also affect object 'result' pages, ie 'browse the collection' */
-.page-islandora {
-  .search-options-container {
-    @include breakpoint($small) {
-      position: absolute;
-      top: 0;
-      flex-flow: row nowrap;
-      margin-top: 0;
-    }
-    position: relative;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
-    align-items: start;
-    width: 100%;
-    margin-top: -$double-spacing;
-
-    > div {
-      @include breakpoint($small) {
-        flex: 0 1 33%;
-        margin-bottom: none;
-      }
-      display: inline-block;
-      width: 100%;
-      margin-bottom: $half-spacing;
-      vertical-align: top;
-      background: $lightest-gray;
-
-      .pane-title {
-        display: block;
-        padding: $half-spacing $standard-spacing;
-        background: $light-gray;
-      }
-
-      .item-list {
-        @include breakpoint($medium) {
-          border-width: $border-width--thicker;
-        }
-        display: none;
-        padding: $half-spacing;
-        border: solid $border-width $light-gray;
-      }
-    }
-  }
-}
-
 .expand-solr-panel {
   position: relative;
   width: 100%;
@@ -126,13 +81,7 @@
   text-align: left;
   color: $black;
   border-radius: 0;
-  background: $light-gray;
-
-  &:hover,
-  &:focus {
-    color: $white;
-    background: $gray;
-  }
+  background-color: $light-gray;
 
   .material-icons {
     position: absolute;
@@ -145,6 +94,7 @@
 }
 #islandora-solr-result-count {
   display: inline-block;
+  margin-right: $double-spacing;
 }
 #secondary-display-profiles {
   display: none;
