@@ -42,12 +42,12 @@ $max-box-size: 300px;
         margin-left: $standard-spacing;
         padding: $half-spacing;
         text-align: center;
+        text-decoration: none;
         background: $light-gray;
       }
 
       a {
         color: white;
-        border-bottom: none;
         background: $blue;
 
         &:hover,

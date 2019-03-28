@@ -20,7 +20,7 @@ $accordion-border: $dark-blue solid $border-width--thicker;
       margin: 0;
 
       .expand {
-        display: grid;
+        display: flex;
         align-items: center;
         width: 100%;
         margin-bottom: 0;
@@ -34,13 +34,6 @@ $accordion-border: $dark-blue solid $border-width--thicker;
         font-weight: $font-weight--semibold;
         line-height: 1.2em;
 
-        grid-column-gap: $standard-spacing;
-        grid-template-columns: $icon-size--medium auto;
-
-        @media (max-width: $medium) {
-          padding-left: ($half-spacing / 4);
-        }
-
         &:focus {
           border: $border-width dotted $dark-blue;
           background-color: transparentize($dark-blue, 0.9);
@@ -50,6 +43,7 @@ $accordion-border: $dark-blue solid $border-width--thicker;
         .material-icons {
           color: $dark-blue;
           font-size: $icon-size--medium;
+          margin-right: $standard-spacing;
         }
       }
 

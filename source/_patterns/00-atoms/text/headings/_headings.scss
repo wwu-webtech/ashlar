@@ -25,7 +25,6 @@ h1 {
   font-weight: $font-weight--bold;
 }
 h2 {
-  padding-bottom: $standard-spacing;
   color: $darkest-blue;
   font-size: $h2-font-size;
 }
@@ -41,6 +40,7 @@ h5 {
 
 main {
   h2 {
+    padding-bottom: ($standard-spacing * 1.5);
     border-bottom: $border-width--thickest solid $dark-blue;
   }
 }

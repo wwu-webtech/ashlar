@@ -2,24 +2,11 @@
 * @file
 * 00-atoms/01-text/links/_links.scss
 */
-$link-padding: $quarter-spacing;
-
-%strip-link-defaults {
-  margin: inherit;
-  padding: 0;
-  border: none;
-}
-
 a {
-  margin-right: -$link-padding;
-  margin-left: -$link-padding;
-  padding-right: $link-padding;
-  padding-left: $link-padding;
   transition: $link-transition-speed $link-transition-ease;
   transition-property: background, color, border;
-  text-decoration: none;
+  text-decoration: underline;
   color: $link-color;
-  border-bottom: solid $lightest-green $border-width;
 
   &:active,
   &:focus,
@@ -37,46 +24,5 @@ a {
     }
     outline: $focus-outline;
     outline-offset: $border-width;
-  }
-}
-
-ul,
-ol {
-  a {
-    display: inline-block;
-    vertical-align: middle;
-    text-decoration: none;
-    border-bottom-color: transparent;
-
-    &:focus,
-    &:hover {
-      border-bottom-color: $link-color--hover;
-    }
-  }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  a {
-    @extend %strip-link-defaults;
-  }
-}
-
-table {
-  a {
-    @extend %strip-link-defaults;
-    text-decoration: underline;
-  }
-}
-
-/* Remove specialized link styles from the admin toolbar and site configuration links */
-#toolbar-bar,
-.contextual {
-  a {
-    border: none;
-    margin: inherit;
   }
 }

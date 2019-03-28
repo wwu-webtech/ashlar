@@ -53,18 +53,15 @@ $lightest-bg-blue: mix($white, $blue, 90%);
 
   a {
     color: $light-blue;
-    border-bottom-color: $lightest-green;
 
     &:hover,
     &:focus {
       color: $lightest-green;
-      border-bottom-color: transparent;
       background-color: $darkest-blue;
     }
 
     &.button:not(.alt) {
       color: $white;
-      border: transparent;
 
       &:hover,
       &:focus {
@@ -110,33 +107,17 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   color: $white;
   background: $gray;
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5, {
-    a {
-      @include breakpoint($medium) {
-        border-bottom-width: $border-width--thicker;
-      }
-      border-bottom: dotted $border-width;
-    }
-  }
-
   a {
     color: $white;
-    border-bottom-color: $light-green;
 
     &:hover,
     &:focus {
       color: $light-green;
-      border-bottom-color: transparent;
       background: $black;
     }
 
     &.button:not(.alt) {
       color: $white;
-      border-color: transparent;
     }
   }
 
@@ -148,9 +129,6 @@ $lightest-bg-blue: mix($white, $blue, 90%);
     color: $white;
   }
 
-  h2 {
-    border-bottom-color: $black;
-  }
 
   h4 {
     @include breakpoint($medium) {
@@ -186,33 +164,17 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   color: $black;
   background: $light-gray;
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5, {
-    a {
-      @include breakpoint($medium) {
-        border-bottom-width: $border-width--thicker;
-      }
-      border-bottom: dotted $border-width;
-    }
-  }
-
   a {
     color: mix($dark-blue, $link-blue, 50%);
-    border-bottom-color: $dark-green;
 
     &:hover,
     &:focus {
       color: $black;
-      border-bottom-color: transparent;
       background-color: mix(black, $light-gray, 20%);
     }
 
     &.button:not(.alt) {
       color: $white;
-      border-color: transparent;
 
       &:hover,
       &:focus {

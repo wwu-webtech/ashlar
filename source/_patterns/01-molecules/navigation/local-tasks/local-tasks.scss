@@ -24,11 +24,10 @@
 
     a {
       display: block;
-      margin: 0;
       padding: $half-spacing $standard-spacing;
+      text-decoration: none;
       color: black;
       border-right: solid $border-width--thicker $white;
-      border-bottom: none;
       background-color: $light-gray;
 
       &:hover,
