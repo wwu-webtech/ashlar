@@ -2,3 +2,54 @@
 * @file
 * sites/mabel/panes/_sort.scss
 */
+.pane-islandora-solr-sort {
+  align-items: center;
+  margin-top: -$double-spacing;
+
+  .pane-title {
+    display: none;
+  }
+
+  .item-list {
+    flex: 1;
+
+    ul {
+      display: grid;
+      margin: 0;
+      list-style: none;
+
+      grid-column-gap: $half-spacing;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    li {
+      flex: 1;
+      margin: 0;
+      text-align: center;
+
+      a {
+        display: block;
+        padding: $quarter-spacing;
+        text-decoration: none;
+        color: $white;
+        background: $blue;
+
+        &:hover,
+        &:focus {
+          background: $dark-blue;
+        }
+
+        &.active {
+          color: $dark-blue;
+          background: $light-green;
+
+          &:hover,
+          &:focus {
+            color: $light-green;
+            background: $dark-blue;
+          }
+        }
+      }
+    }
+  }
+}
