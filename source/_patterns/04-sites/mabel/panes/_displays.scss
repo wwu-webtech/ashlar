@@ -2,8 +2,54 @@
 * @file
 * sites/mabel/panes/_displays.scss
 */
+.pane-islandora-solr-display-switch {
+  @include breakpoint ($medium) {
+    width: 180px;
+  }
+  @include breakpoint ($large) {
+    width: 200px;
+  }
+  position: absolute;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 100%;
+  width: calc(50% - #{$standard-spacing});
+  margin-right: $standard-spacing;
+  margin-bottom: $standard-spacing;
+  background: $lightest-gray;
 
-/* This is not the display pane, but the grid/list switcher that appears on objects */
+  .item-list {
+    position: absolute;
+    z-index: 1;
+    display: none;
+    width: 100%;
+    padding: 0;
+    background: $lightest-gray;
+    font-size: $p-font-size--smaller;
+
+
+    ul {
+      margin-bottom: 0;
+    }
+
+    li {
+      margin: 0;
+      padding: $half-spacing $standard-spacing;
+      list-style: none;
+
+      a {
+        display: block;
+        margin: (-$half-spacing) (-$standard-spacing);
+        padding: $half-spacing $standard-spacing;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+/* This is not the display pane, but the grid/list switcher that appears automatically on objects */
 .islandora-objects-display-switch {
   display: none;
 }

@@ -60,6 +60,8 @@
 
     h2 {
       margin-top: 0;
+      padding-bottom: $standard-spacing;
+      border-bottom-width: $border-width--thicker;
       font-family: $sans-serif;
       font-size: $p-font-size;
     }

@@ -2,6 +2,7 @@
 * @file
 * sites/mabel/panes/_facets.scss
 */
+$plus-minus-size: 30px;
 
 .pane-islandora-solr-basic-facets {
   /* Date range slider */
@@ -35,9 +36,9 @@
     .slider-popup-from-wrapper,
     .slider-popup-to-wrapper {
       position: absolute;
-      width: 120px;
       top: -30px;
       left: 50%;
+      width: 120px;
       margin-left: -60px;
       text-align: center;
 
@@ -45,10 +46,10 @@
       .slider-popup-to {
         padding: 0 $standard-spacing $border-width $standard-spacing;
         color: $black;
+        color: $white;
         border: none;
         border-radius: 10px;
         background-color: $gray;
-        color: $white;
         font-size: 12px;
       }
     }
@@ -74,7 +75,7 @@
 
       grid-template-areas: "plusminus link"
       "count    count";
-      grid-template-columns: 70px auto;
+      grid-template-columns: ($plus-minus-size*2 + $standard-spacing) auto;
       grid-template-rows: auto auto;
       justify-items: start;
 
@@ -98,11 +99,11 @@
         display: inline-grid;
         justify-content: center;
         align-content: center;
-        width: 30px;
-        height: 30px;
+        width: $plus-minus-size;
+        height: $plus-minus-size;
         margin-right: $quarter-spacing;
+        text-decoration: none;
         color: $white;
-        border: none;
         background: $blue;
 
         &:hover,
