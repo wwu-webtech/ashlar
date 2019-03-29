@@ -56,7 +56,8 @@ $max-button-width: 250px;
         line-height: 1em;
 
         &:hover,
-        &:focus {
+        &:focus,
+        &:active {
           color: $black;
           outline: none;
           background-color: $light-green;

@@ -107,7 +107,8 @@ $plus-minus-size: 30px;
         background: $blue;
 
         &:hover,
-        &:focus {
+        &:focus,
+        &:active {
           color: $white;
           background-color: $dark-blue;
         }

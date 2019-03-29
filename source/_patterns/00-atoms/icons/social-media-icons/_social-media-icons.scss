@@ -20,7 +20,8 @@
   }
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     background-color: $light-green;
   }
 }

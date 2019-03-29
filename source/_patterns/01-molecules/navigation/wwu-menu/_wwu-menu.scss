@@ -32,7 +32,8 @@
           line-height: $toggle-size;
 
           &:hover,
-          &:focus {
+          &:focus,
+          &:active {
             color: $black;
             outline: none;
             background-color: $light-green;
@@ -47,7 +48,8 @@
             }
 
             &:hover,
-            &:focus {
+            &:focus,
+            &:active {
               color: $black;
               background-color: $light-green;
             }

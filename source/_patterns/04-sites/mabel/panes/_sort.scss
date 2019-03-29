@@ -38,7 +38,8 @@
         background: $blue;
 
         &:hover,
-        &:focus {
+        &:focus,
+        &:active {
           outline-color: $dark-blue;
           background: $dark-blue;
         }
@@ -48,7 +49,8 @@
           background: $light-green;
 
           &:hover,
-          &:focus {
+          &:focus,
+          &:active {
             color: $light-green;
             background: $dark-blue;
           }

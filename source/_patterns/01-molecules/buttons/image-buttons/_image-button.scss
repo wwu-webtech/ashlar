@@ -76,7 +76,8 @@ $button-size--large: 240px;
     }
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
       &:after {
         border-color: $blue;
       }

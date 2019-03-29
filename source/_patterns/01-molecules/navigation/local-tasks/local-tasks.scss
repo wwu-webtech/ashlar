@@ -32,6 +32,7 @@
 
       &:hover,
       &:focus,
+      &:active,
       &.is-active {
         color: $white;
         background-color: $gray;
@@ -66,6 +67,7 @@
 
     &:hover,
     &:focus,
+    &:active,
     &.is-active {
       color: $white;
       background-color: $gray;

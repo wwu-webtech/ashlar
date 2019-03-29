@@ -53,7 +53,9 @@ $mabel-site-name-height: 44px;
     a {
       border-bottom-color: transparent;
 
-      &:hover {
+      &:hover,
+      &:focus,
+      &:active {
         color: $dark-green;
         border-bottom-color: $dark-green;
       }
@@ -140,7 +142,8 @@ $mabel-site-name-height: 44px;
         font-size: 1em;
 
         &:hover,
-        &:focus {
+        &:focus,
+        &:active {
           background: $darkest-blue;
         }
       }

@@ -62,7 +62,8 @@
       }
 
       &:hover,
-      &:focus {
+      &:focus,
+      &:active {
         color: $link-blue;
         outline: none;
         background: none;

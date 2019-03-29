@@ -35,7 +35,8 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
       background-color: transparent;
 
       &:hover,
-      &:focus {
+      &:focus,
+      &:active {
         color: $blue;
         background-color: $white;
       }
@@ -119,7 +120,8 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
       background-color: transparent;
 
       &:hover,
-      &:focus {
+      &:focus,
+      &:active {
         color: $blue;
         background: $white;
       }
@@ -175,7 +177,8 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
       background: transparentize($darkest-blue, 0.3);
 
       &:hover,
-      &:focus {
+      &:focus,
+      &:active {
         color: $blue;
         background: $white;
       }

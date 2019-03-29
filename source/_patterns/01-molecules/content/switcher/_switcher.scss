@@ -36,7 +36,8 @@
     background-color: $blue;
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
       color: $dark-blue;
       background-color: $light-green;
       box-shadow: none;
