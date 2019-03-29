@@ -58,6 +58,7 @@ $site-name-gradient-end: transparentize($dark-blue, 0.2);
 
     .western-logo {
       background-color: $dark-blue;
+      color: $white;
 
       grid-area: logo;
       -ms-grid-column: 1;
