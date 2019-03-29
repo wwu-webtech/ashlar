@@ -34,6 +34,7 @@ body.page-islandora-object {
   .pane-page-title {
     h1 {
       display: inline-block;
+      margin-top: 0;
       margin-right: $standard-spacing;
       font-size: $h4-font-size;
     }
@@ -81,5 +82,9 @@ body.page-islandora-object {
   .layout__region--second {
     position: relative;
     padding-top: $double-spacing;
+  }
+
+  .pane-pm-existing-pages {
+    margin-top: -$double-spacing;
   }
 }

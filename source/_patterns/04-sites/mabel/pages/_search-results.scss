@@ -7,6 +7,7 @@
   .pane-page-title {
     h1 {
       display: inline-block;
+      margin-top: 0;
       margin-right: $standard-spacing;
     }
   }
@@ -115,9 +116,9 @@
 }
 
 #edit-date-filter-date-filter-submit {
-  border-radius: 0;
   margin-left: 100%;
   transform: translatex(-100%);
+  border-radius: 0;
 }
 #edit-date-filter-date-filter-from,
 #edit-date-filter-date-filter-to {
