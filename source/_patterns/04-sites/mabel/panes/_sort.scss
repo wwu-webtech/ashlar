@@ -28,7 +28,9 @@
       text-align: center;
 
       a {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding: $quarter-spacing;
         text-decoration: none;
         color: $white;
@@ -36,6 +38,7 @@
 
         &:hover,
         &:focus {
+          outline-color: $dark-blue;
           background: $dark-blue;
         }
 
@@ -49,6 +52,22 @@
             background: $dark-blue;
           }
         }
+      }
+    }
+
+    .sort-asc {
+      margin-left: $standard-spacing;
+      transform: rotate(-90deg);
+      &.material-icons {
+        font-size: $double-spacing;
+      }
+    }
+
+    .sort-desc {
+      margin-left: $standard-spacing;
+      transform: rotate(90deg);
+      &.material-icons {
+        font-size: $double-spacing;
       }
     }
   }
