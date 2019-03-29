@@ -37,5 +37,5 @@ var $sort = $('.pane-islandora-solr-sort');
 $('.layout__region--second').prepend($sort);
 
 /* Replace asc/desc images with html & css */
-$('img[title="sort ascending"]').replaceWith('<span class="sort-asc material-icons" aria-hidden="true">change_history</span>');
-$('img[title="sort descending"]').replaceWith('<span class="sort-desc material-icons" aria-hidden="true">details</span>');
+$('img[title="sort ascending"]').replaceWith('<span class="sort-asc material-icons" aria-hidden="true">play_arrow</span>');
+$('img[title="sort descending"]').replaceWith('<span class="sort-desc material-icons" aria-hidden="true">play_arrow</span>');
