@@ -34,6 +34,7 @@ body.page-islandora-object {
   .pane-page-title {
     h1 {
       display: inline-block;
+      margin-top: 0;
       margin-right: $standard-spacing;
       font-size: $h4-font-size;
     }
