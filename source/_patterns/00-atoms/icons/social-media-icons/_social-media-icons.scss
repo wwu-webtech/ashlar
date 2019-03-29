@@ -9,6 +9,7 @@
   height: $toggle-size;
   transition: $standard-ease $button-transition-speed;
   background-color: $blue;
+  color: $white;
 
   svg {
     width: 100%;
@@ -22,6 +23,7 @@
   &:hover,
   &:focus,
   &:active {
+    color: $dark-blue;
     background-color: $light-green;
   }
 }
