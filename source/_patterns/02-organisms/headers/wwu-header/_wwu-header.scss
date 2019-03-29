@@ -58,6 +58,7 @@ $site-name-gradient-end: transparentize($dark-blue, 0.2);
 
     .western-logo {
       background-color: $dark-blue;
+      color: $white;
 
       grid-area: logo;
       -ms-grid-column: 1;
@@ -76,9 +77,9 @@ $site-name-gradient-end: transparentize($dark-blue, 0.2);
         padding-right: $toggle-size--larger;
         border: none;
 
-        &:active,
         &:hover,
-        &:focus {
+        &:focus,
+        &:active {
           background: transparent;
         }
       }
@@ -136,7 +137,8 @@ $site-name-gradient-end: transparentize($dark-blue, 0.2);
       right: 0;
 
       &:hover,
-      &:focus {
+      &:focus,
+      &:active {
         background-color: $darkest-blue;
       }
     }

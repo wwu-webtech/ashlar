@@ -43,7 +43,8 @@ $expand-toggle-size: 40px;
       font-size: $p-font-size;
 
       &:hover,
-      &:focus {
+      &:focus,
+      &:active {
         color: $white;
         background-color: $gray;
       }

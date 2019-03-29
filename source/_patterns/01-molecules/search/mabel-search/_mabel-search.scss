@@ -8,7 +8,7 @@ $mabel-label-min-font-size: 17px;
 $mabel-label-max-font-size: 25px;
 $mabel-label-font-size: calc(#{$mabel-label-min-font-size} + #{strip-unit($mabel-label-max-font-size - $mabel-label-min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 
-#islandora-search-container {  
+#islandora-search-container {
   background: linear-gradient(to right, transparentize($darkest-blue, 0.1) 0%, transparentize($darkest-blue, 0.2) 100%);
   padding: $double-spacing;
   display: flex;
@@ -36,7 +36,8 @@ $mabel-label-font-size: calc(#{$mabel-label-min-font-size} + #{strip-unit($mabel
     margin-top: $standard-spacing;
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
       background-color: $darkest-blue;
       color: $lightest-green;
     }

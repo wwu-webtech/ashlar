@@ -85,7 +85,8 @@
       -ms-grid-column-span: 2;
 
       &:hover,
-      &:focus {
+      &:focus,
+      &:active {
         text-decoration: none;
 
         + .expand-icon {

@@ -64,11 +64,13 @@ body.page-islandora-object {
 
     a {
       border-bottom-color: transparent;
-    }
 
-    a:hover {
-      color: $dark-green;
-      border-bottom-color: $dark-green;
+      &:hover,
+      &:focus,
+      &:active {
+        color: $dark-green;
+        border-bottom-color: $dark-green;
+      }
     }
 
 

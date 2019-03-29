@@ -51,7 +51,8 @@ $max-box-size: 300px;
         background: $blue;
 
         &:hover,
-        &:focus {
+        &:focus,
+        &:active {
           color: $dark-blue;
           background-color: $light-green;
         }
@@ -96,7 +97,8 @@ $max-box-size: 300px;
           background: $dark-blue;
 
           &:hover,
-          &:focus {
+          &:focus,
+          &:active {
             color: $dark-blue;
             background-color: $light-green;
           }

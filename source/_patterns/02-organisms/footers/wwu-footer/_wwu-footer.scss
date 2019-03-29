@@ -40,7 +40,8 @@
     border-bottom-color: $light-green;
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
       color: $light-blue;
       border-bottom-color: transparent;
     }
@@ -108,7 +109,8 @@
       }
 
       &:hover,
-      &:focus {
+      &:focus,
+      &:active {
         background-color: $light-green;
       }
 

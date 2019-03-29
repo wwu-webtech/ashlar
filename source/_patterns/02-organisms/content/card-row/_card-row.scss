@@ -46,7 +46,8 @@ $card-height--large: 300px;
       padding: 0 $half-spacing;
 
       a:hover,
-      a:focus {
+      a:focus,
+      &:active {
         color: $dark-blue;
         outline: none;
         background: none;

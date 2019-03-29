@@ -42,15 +42,18 @@ $ribbon-tail-height: 50px;
   }
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     text-decoration: none;
     background-color: $light-gray;
   }
 
   &:hover:after,
   &:focus:after,
+  &:active:after,
   &:hover:before,
-  &:focus:before {
+  &:focus:before,
+  &:active:before {
     border-top-color: $light-gray;
   }
 

@@ -106,7 +106,9 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
     color: $white;
     border: none;
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active {
       .play-icon {
         opacity: 1;
       }
@@ -132,7 +134,9 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
       font-size: $button-font-size;
       box-shadow: 6px 6px 0px $dark-blue;
 
-      &:hover {
+      &:hover,
+      &:focus,
+      &:active {
         box-shadow: 6px 6px 0px $blue;
       }
     }

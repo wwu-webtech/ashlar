@@ -41,7 +41,8 @@ $close-toggle-size: 64px;
           color: $white;
 
           &:hover,
-          &:focus {
+          &:focus,
+          &:active {
             color: $black;
             outline: none;
             background-color: $light-green;
@@ -60,7 +61,8 @@ $close-toggle-size: 64px;
             border: solid $border-width $white;
 
             &:hover,
-            &:focus {
+            &:focus,
+            &:active {
               border-color: transparent;
             }
           }

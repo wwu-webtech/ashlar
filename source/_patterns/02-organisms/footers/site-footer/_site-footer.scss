@@ -107,13 +107,15 @@
 
     .social-icon {
       background-color: $white;
+      color: $dark-blue;
 
       svg {
         fill: $blue;
       }
 
       &:hover,
-      &:focus {
+      &:focus,
+      &:active {
         background-color: $light-green;
       }
     }
@@ -123,7 +125,8 @@
     transform: translatey(-($triple-spacing));
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
       background-color: $light-gray;
     }
   }

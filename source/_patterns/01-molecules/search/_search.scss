@@ -18,7 +18,8 @@
   .toggle {
     @include breakpoint($medium) {
       &:hover,
-      &:focus {
+      &:focus,
+      &:active {
         background-color: $dark-blue;
       }
     }
@@ -27,7 +28,8 @@
     }
     min-width: $toggle-size;
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
       background-color: $darkest-blue;
     }
   }
