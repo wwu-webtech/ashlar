@@ -25,7 +25,7 @@ $('.expand-solr-panel').click(function() {
     $(this).attr('aria-expanded', 'true')
     $(this).children('.material-icons').text('close');
   }
-  else {s
+  else {
     $(this).attr('aria-expanded', 'false')
     $(this).children('.material-icons').text('add');
   }
