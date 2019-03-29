@@ -3,11 +3,12 @@
 * sites/mabel/panes/_sort.scss
 */
 .pane-islandora-solr-sort {
+  display: flex;
   align-items: center;
   margin-top: -$double-spacing;
 
   .pane-title {
-    display: none;
+    margin-right: $standard-spacing;
   }
 
   .item-list {
