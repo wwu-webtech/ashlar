@@ -92,10 +92,34 @@
     font-size: 18px;
   }
 }
+
+.date-filter-toggle-text {
+  display: none;
+}
+
+.date-range-filter-wrapper {
+  display: block !important;
+}
+
 #islandora-solr-result-count {
   display: inline-block;
   margin-right: $double-spacing;
 }
+
 #secondary-display-profiles {
   display: none;
+}
+
+#edit-range-slider-submit {
+  border-radius: 0;
+}
+
+#edit-date-filter-date-filter-submit {
+  border-radius: 0;
+  margin-left: 100%;
+  transform: translatex(-100%);
+}
+#edit-date-filter-date-filter-from,
+#edit-date-filter-date-filter-to {
+  padding: $half-spacing;
 }
