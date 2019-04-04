@@ -282,7 +282,7 @@
   /**
    * Run Pattern Lab tasks.
    */
-  gulp.task('patternlab', gulp.series(gulp.parallel(['patternlab:sass', 'patternlab:js', 'patternlab:images'])));
+  gulp.task('patternlab', gulp.parallel(['patternlab:sass', 'patternlab:js', 'patternlab:images']));
 
   /**
    * Set watch tasks.
@@ -323,11 +323,11 @@
   /**
    * Run clean tasks.
    */
-  gulp.task('clean', gulp.series(gulp.parallel(['clean:css', 'clean:js', 'clean:images', 'clean:patternlab'])));
+  gulp.task('clean', gulp.parallel(['clean:css', 'clean:js', 'clean:images', 'clean:patternlab']));
 
   /**
    * Gulp default task.
    */
-  gulp.task('default', gulp.series(gulp.parallel(['sass', 'js', 'images'])));
+  gulp.task('default', gulp.parallel(['sass', 'js', 'images']));
 
 })();
