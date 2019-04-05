@@ -9,11 +9,10 @@
   @include breakpoint ($large) {
     width: 200px;
   }
-  position: absolute;
   position: relative;
   z-index: 1;
+  top: -$half-spacing;
   display: inline-block;
-  width: 100%;
   width: calc(50% - #{$standard-spacing});
   margin-right: $standard-spacing;
   margin-bottom: $standard-spacing;
