@@ -288,8 +288,8 @@
    * Set watch tasks.
    */
   gulp.task('watch', function () {
-    gulp.watch(config.sass.watch, ['sass', 'patternlab:sass']);
-    gulp.watch(config.js.watch, ['js', 'patternlab:js']);
+    gulp.watch(config.sass.watch, gulp.series(['sass', 'patternlab:sass']));
+    gulp.watch(config.js.watch, gulp.series(['js', 'patternlab:js']));
   });
 
   /**
