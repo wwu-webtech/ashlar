@@ -56,3 +56,40 @@ $accordion-border: $dark-blue solid $border-width--thicker;
     }
   }
 }
+
+// VU Accordion Styles
+.quick-accordion {
+  .ui-accordion-content {
+    height: auto !important;
+
+    // Affects VU generated content
+    .view {
+      .view-content {
+        .views-row {
+          article {
+            header {
+              h2 {
+                font-size: 25px;
+              }
+
+              p {
+                font-size: $p-font-size;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Affects RSS feed 
+  ul {
+    p {
+      font-size: $p-font-size
+    }
+  
+    a {
+      font-size: $p-font-size
+    }
+  }
+}

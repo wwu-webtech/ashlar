@@ -18,3 +18,11 @@
     border-radius: 0;
   }
 }
+
+body.page-islandora-object {
+  .layout__region--first {
+    .pane-islandora-bookmark-islandora-bookmark {
+      margin-bottom: 0;
+    }
+  }
+}
