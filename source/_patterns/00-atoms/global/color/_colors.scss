@@ -1,11 +1,35 @@
 /**
- * @file
- * 00-atoms/global/color/_color.scss
- */
+* @file
+* 00-atoms/global/color/_color.scss
+*/
 
 /* These styles are only for the color swatches. See utilities/color for color definitions. */
+$swatch-min-width: 150px;
+$swatch-max-width: 20%;
+$swatch-height: 100px;
 
 .sg-colors {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sg-colors li {
+  flex: auto;
+  padding: $half-spacing;
+  margin: $half-spacing;
+  min-width: $swatch-min-width;
+  max-width: $swatch-max-width;
+  border: $border-width solid $lightest-gray;
+}
+
+.sg-swatch {
+  display: block;
+  margin-bottom: $standard-spacing;
+  height: $swatch-height;
+
   &.dark-blue {
     background: $dark-blue;
   }
