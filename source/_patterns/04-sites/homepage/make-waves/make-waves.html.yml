@@ -1,7 +1,7 @@
 bodyClass: "make-waves"
 page:
   include():
-    pattern: organisms-page-html
+    pattern: organisms-page-template-html
     with:
       page:
         content:

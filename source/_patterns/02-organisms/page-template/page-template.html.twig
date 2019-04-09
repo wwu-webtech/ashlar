@@ -1,6 +1,6 @@
 {#
 /**
- * @see templates/layout/page.html.twig
+ * @see templates/layout/page-template.html.twig
  */
 #}
 
@@ -9,9 +9,6 @@
  * Add vimeo google analytics code if video is present.
  */
 #}
-{% if attributes.hasClass('play-link') %}
-   {{ attach_library('ashlar/vimeo-tracking') }}
-{% endif %}
 
 <div class="page">
   {% block top %}

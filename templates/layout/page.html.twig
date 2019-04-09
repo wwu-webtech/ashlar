@@ -41,8 +41,10 @@
  * @see html.html.twig
  */
 #}
-{{ attach_library('ashlar/search') }}
+{% if attributes.hasClass('play-link') %}
+   {{ attach_library('ashlar/vimeo-tracking') }}
+{% endif %}
 
 <div class="layout-container">
-  {% include '@organisms/page/page.html.twig' %}
+  {% include '@organisms/page/page-template.html.twig' %}
 </div>{# /.layout-container #}
