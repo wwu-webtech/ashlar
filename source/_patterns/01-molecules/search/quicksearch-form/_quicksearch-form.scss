@@ -8,7 +8,6 @@
     display: flex;
     justify-content: flex-start;
     flex-flow: row wrap;
-    width: 100%;
     margin: 0 auto;
 
     @include breakpoint($medium) {
