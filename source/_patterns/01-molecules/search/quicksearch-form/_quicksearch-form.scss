@@ -6,10 +6,20 @@
 #quick-search-list-nav {
   .ln-letters {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    width: 100%;
+    margin: 0 auto;
+
+    @include breakpoint($medium) {
+      margin: auto;
+      justify-content: space-between;
+    }
 
     a {
       color: $white;
+      margin-right: $standard-spacing;
+      margin-bottom: $half-spacing;
 
       &.ln-disabled {
         color: mix(black, $blue, 30%);
@@ -22,9 +32,15 @@
           outline: none;
         }
       }
+
+        @include breakpoint($medium) {
+          margin-right: 0;
+          margin-bottom: 0;
+        }
+      }
+
     }
   }
-}
 
 /* Form block styles */
 .quicksearch-form-container {
