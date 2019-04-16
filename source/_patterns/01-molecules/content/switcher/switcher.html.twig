@@ -1,10 +1,10 @@
-<ul{{ attributes.addClass(classes) }}>
+<ul role="tablist" aria-label="Content Switcher" {{ attributes.addClass(classes) }}>
   {% for item in items %}
-  <li><button {{ item.attributes.addClass(item.classes) }}>{{ item.title }}</button></li>
+  <li><button role="tab" {{ item.attributes.addClass(item.classes) }}>{{ item.title }}</button></li>
   {% endfor %}
 </ul>
 
-<div class="content-switcher-container">
+<div role="tabpanel" class="content-switcher-container">
   {% for item in items %}
   <div{{ item.attributes.addClass("content", item.classes) }}><p>{{ item.content }}</p></div>
   {% endfor %}
