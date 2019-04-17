@@ -78,11 +78,8 @@ $min-h2-font-size--make-waves: 42px;
 $max-h2-font-size--make-waves: 72px;
 $min-p-font-size--make-waves: 17px;
 $max-p-font-size--make-waves: 23px;
-$min-button-font-size--make-waves: 32px;
-$max-button-font-size--make-waves: 60px;
 $play-icon-size--make-waves: 200px;
 
 $title-font-size--make-waves: calc(#{$min-title-font-size--make-waves} + #{strip-unit($max-title-font-size--make-waves - $min-title-font-size--make-waves)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 $h2-font-size--make-waves: calc(#{$min-h2-font-size--make-waves} + #{strip-unit($max-h2-font-size--make-waves - $min-h2-font-size--make-waves)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 $p-font-size--make-waves: calc(#{$min-p-font-size--make-waves} + #{strip-unit($max-p-font-size--make-waves - $min-p-font-size--make-waves)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-$button-font-size--make-waves: calc(#{$min-button-font-size--make-waves} + #{strip-unit($max-button-font-size--make-waves - $min-button-font-size--make-waves)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
