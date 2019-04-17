@@ -27,7 +27,9 @@ $switchButton.click(function () {
 });
 
 $switchButton.keydown(function (event) {
-  if (event.keyCode === 37) {
+  var $key = event.keyCode;
+
+  if ($key === 37) {
     // find previous tab, if we are on first => activate last
     var $selected = $('.content-switcher button.active', context);
     $thisPanel.removeClass('active');
@@ -42,7 +44,7 @@ $switchButton.keydown(function (event) {
     event.preventDefault();
   }
 
-  if (event.keyCode === 39) {
+  if ($key === 39) {
   // find next tab, if we are on last => activate first
     var $selected = $('.content-switcher button.active', context);
     var $selectedPanel = $('#' + $selected.attr('aria-controls'));
@@ -57,6 +59,4 @@ $switchButton.keydown(function (event) {
     }
    event.preventDefault();
   }
-  //event.stopPropagation();
-  //return false;
 });
