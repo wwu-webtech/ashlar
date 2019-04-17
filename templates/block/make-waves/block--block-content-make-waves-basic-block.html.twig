@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Theme override to display a headline custom block type
+ * Theme override to display a block.
  *
  * Available variables:
  * - plugin_id: The ID of the block implementation.
@@ -27,23 +27,16 @@
 #}
 {%
   set classes = [
-    'headline--make-waves',
     'block',
-    'block--headline--make-waves',
+    'block--mave-waves',
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
   ]
 %}
-{% set attributes = attributes.addClass(classes, block_content.field_headline_style.0.value) %}
+{% set attributes = attributes.addClass(classes, block_content.field_mw_block_color.0.value) %}
 {% set title_attributes = title_attributes.addClass('block__title') %}
 
 {{ attach_library('ashlar/make-waves-fonts') }}
 
-{% embed "@molecules/headline/headline.html.twig" %}
-  {% block container %}
-  <div{{ attributes }}>
-  {% endblock %}
-
-  {% block title %}
-    <h2{{ title_attributes }}>{{ block_content.info.0.value }}</h2>
-  {% endblock %}
-{% endembed %}
+{% block template %}
+  {% include "@organisms/blocks/block-template/block-template.html.twig" %}
+{% endblock %}
