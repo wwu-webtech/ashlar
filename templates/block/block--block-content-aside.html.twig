@@ -40,11 +40,16 @@
   {% if block_content.field_semantic_markup.0.value == 'div' %}
     <div {{ attributes }}>
   {% else %}
-    <aside {{ attributes }}>
+    {% if label %}
+      <aside{{ attributes}}>   
+    {% else %}
+      <aside {{ attributes }} aria-label="{{ block_content.info.0.value }}">
+    {% endif %}
   {% endif %}
-    {% block title %}
-      <h2{{ title_attributes }}>{{ block_content.info.0.value }}</h2>
-    {% endblock %}
+
+    {% if label %}
+      <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endif %}
 
     {{ content.body.0['#text']|raw }}
 
