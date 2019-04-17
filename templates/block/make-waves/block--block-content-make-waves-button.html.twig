@@ -27,7 +27,6 @@
 #}
 {%
   set classes = [
-    'button--make-waves',
     'block',
     'block--button--make-waves',
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
@@ -44,7 +43,7 @@
     {{ title_suffix }}
 
     {% block content %}
-      <a href="{{ block_content.field_link.0.url }}" class="button {{ block_content.field_button_size.0.value|clean_class }}">
+      <a href="{{ block_content.field_link.0.url }}" class="button button--make-waves {{ block_content.field_button_size.0.value|clean_class }}">
         {{ block_content.field_link.0.title }}
         <span aria-hidden="true" class="material-icons">{{ block_content.field_material_icon.0.value }}</span>
       </a>
