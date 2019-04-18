@@ -17,6 +17,7 @@ items:
     Attribute(): {}
   classes:
   - switch-01
+  - active
   id:
   - switch-button-1
   - switch-content-1
