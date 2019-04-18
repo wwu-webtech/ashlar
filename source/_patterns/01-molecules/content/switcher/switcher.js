@@ -8,7 +8,7 @@ $switchButton.attr('role', 'tab');
 
 $('.content-switcher button.active').attr('aria-selected', 'true');
 $('.content-switcher button:not(.active)').attr({'aria-selected' : 'false', 'tabindex' : '-1'});
-$panels.attr('tabindex', '0');
+$panels.attr({'tabindex' : '0', 'role' : 'tabpanel'});
 
 
 $switchButton.click(function () {
