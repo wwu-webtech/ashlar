@@ -13,13 +13,13 @@
   padding-bottom: ($toggle-size * 0.5) + $standard-spacing;
   text-align: center;
   color: white;
-  font-family: $heading-font--make-waves;
+  font-family: $copy-font--make-waves;
 
   h2 {
     margin: 0;
     text-transform: uppercase;
     color: white;
-    font-family: $copy-font--make-waves;
+    font-family: $heading-font--make-waves;
     font-size: $title-font-size--make-waves;
   }
 }
