@@ -23,3 +23,10 @@
     font-size: $title-font-size--make-waves;
   }
 }
+
+.splash {
+  > div:nth-of-type(2).headline--make-waves {
+    grid-column: 1 / span all;
+    grid-row: 1 / span all;
+  }
+}
