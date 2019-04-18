@@ -11,6 +11,7 @@ libraries:
   - ashlar/bright-edge
   - ashlar/event-tracking
   - ashlar/featherlight
+  - ashlar/make-waves-fonts
   - ashlar/menu-extras
   - ashlar/quicksearch
   - ashlar/search
