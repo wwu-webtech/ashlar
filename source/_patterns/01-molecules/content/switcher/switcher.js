@@ -15,13 +15,12 @@ $switchButton.click(function () {
   $switchButton.removeClass('active');
   $switchButton.attr('aria-selected', 'false');
   $switchButton.attr('tabindex', '-1');
-  // $switchButton.attr('disabled', false);
 
   var $thisSwitch = $(this).attr('class');
   $(this).addClass('active');
   $(this).attr('aria-selected', 'true');
   $(this).removeAttr('tabindex');
-  // $(this).attr('disabled', true);
+
 
   $('.content-switcher-container .content:not(.' + $thisSwitch + ')').fadeOut();
   $('.content-switcher-container .content.' + $thisSwitch).fadeIn();
