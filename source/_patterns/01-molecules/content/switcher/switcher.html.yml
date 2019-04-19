@@ -17,6 +17,8 @@ items:
     Attribute(): {}
   classes:
   - switch-01
+  button_id: switch-button-1
+  content_id: switch-content-1
 - title: Content 2
   content: If you could see the earth illuminated when you were in a place as dark
     as night, it would look to you more splendid than the moon. Curious that we spend
@@ -26,6 +28,8 @@ items:
     Attribute(): {}
   classes:
   - switch-02
+  button_id: switch-button-2
+  content_id: switch-content-2
 - title: Content 3
   content: Astronomy compels the soul to look upward, and leads us from this world
     to another.
@@ -33,3 +37,5 @@ items:
     Attribute(): {}
   classes:
   - switch-03
+  button_id: switch-button-3
+  content_id: switch-content-3
