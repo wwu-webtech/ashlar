@@ -38,16 +38,17 @@ $tabButton.keydown(function (event) {
     }
     event.preventDefault();
   }
+
   if ($key === 39) {
   // find next tab, if we are on last => activate first
-  $selectedPanel.removeClass('active');
-  if ($selected.parent().is('.content-switcher li:last-child')) {
-    $('.content-switcher li:first-child button').click().focus();
-    $selectedPanel.addClass('active');
+    $selectedPanel.removeClass('active');
+    if ($selected.parent().is('.content-switcher li:last-child')) {
+      $('.content-switcher li:first-child button').click().focus();
+      $selectedPanel.addClass('active');
+    }
+    else {
+      $selected.parent().next().children($tabButton).click().focus();
+    }
+    event.preventDefault();
   }
-  else {
-   $selected.parent().next().children($tabButton).click().focus();
-  }
-  event.preventDefault();
-  }
- });
+});
