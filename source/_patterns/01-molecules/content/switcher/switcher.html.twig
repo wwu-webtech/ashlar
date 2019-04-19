@@ -1,6 +1,6 @@
 <ul{{ attributes.addClass(classes) }} role="tablist">
   {% for item in items %}
-  <li role="presentation"><button {{ item.attributes.addClass(item.classes) }} id="{{ item.button_id }}" role="tab" aria-controls="{{ item.content_id }}">{{ item.title }}</button></li>
+  <li><button {{ item.attributes.addClass(item.classes) }} id="{{ item.button_id }}" role="tab" aria-controls="{{ item.content_id }}">{{ item.title }}</button></li>
   {% endfor %}
 </ul>
 
