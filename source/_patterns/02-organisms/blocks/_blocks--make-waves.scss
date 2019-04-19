@@ -1,0 +1,22 @@
+/**
+ * @file
+ * organisms/blocks/_blocks--make-waves.scss
+ */
+.block--mave-waves {
+  padding: $standard-spacing;
+  font-family: $copy-font--make-waves;
+  font-size: $p-font-size--make-waves;
+
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: none;
+    font-family: $heading-font--make-waves;
+    font-size: $h2-font-size--make-waves;
+    line-height: 0.8em;
+  }
+
+  a {
+    font-family: $url-font--make-waves;
+  }
+}

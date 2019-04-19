@@ -66,3 +66,20 @@ $h3-font-size--smaller: calc((#{$min-h3-font-size} + #{strip-unit($max-h3-font-s
 $h4-font-size--smaller: calc((#{$min-h4-font-size} + #{strip-unit($max-h4-font-size - $min-h4-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.8);
 $h5-font-size--smaller: calc((#{$min-h5-font-size} + #{strip-unit($max-h5-font-size - $min-h5-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.8);
 $p-font-size--smaller: calc((#{$min-p-font-size} + #{strip-unit($max-p-font-size - $min-p-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.8);
+
+
+// Font styles for Make Waves campaign
+$heading-font--make-waves: "Knockout 94 A", "Knockout 94 B";
+$copy-font--make-waves: "Knockout 30 A", "Knockout 30 B";
+$url-font--make-waves: "Knockout 31 A", "Knockout 31 B";
+$min-title-font-size--make-waves: 54px;
+$max-title-font-size--make-waves: 140px;
+$min-h2-font-size--make-waves: 42px;
+$max-h2-font-size--make-waves: 72px;
+$min-p-font-size--make-waves: 17px;
+$max-p-font-size--make-waves: 23px;
+$play-icon-size--make-waves: 200px;
+
+$title-font-size--make-waves: calc(#{$min-title-font-size--make-waves} + #{strip-unit($max-title-font-size--make-waves - $min-title-font-size--make-waves)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+$h2-font-size--make-waves: calc(#{$min-h2-font-size--make-waves} + #{strip-unit($max-h2-font-size--make-waves - $min-h2-font-size--make-waves)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+$p-font-size--make-waves: calc(#{$min-p-font-size--make-waves} + #{strip-unit($max-p-font-size--make-waves - $min-p-font-size--make-waves)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));

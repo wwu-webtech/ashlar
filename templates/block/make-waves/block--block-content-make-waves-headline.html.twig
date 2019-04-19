@@ -27,34 +27,25 @@
 #}
 {%
   set classes = [
-    'headline',
+    'headline--make-waves',
     'block',
-    'block--headline',
+    'block--headline--make-waves',
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
   ]
 %}
 {% set attributes = attributes.addClass(classes, block_content.field_headline_style.0.value) %}
 {% set title_attributes = title_attributes.addClass('block__title') %}
+
+{{ attach_library('ashlar/make-waves-fonts') }}
+
 {% embed "@molecules/headline/headline.html.twig" %}
   {% block container %}
   <div{{ attributes }}>
   {% endblock %}
 
   {% block title %}
+    {{ title_prefix }}
     <h2{{ title_attributes }}>{{ block_content.info.0.value }}</h2>
-  {% endblock %}
-
-  {% block links %}
-    {% if block_content.field_link.0.url > 0 %}
-      <a class="button" href="{{ block_content.field_link.0.url }}" class="button">{{ block_content.field_link.0.title }}</a>
-    {% endif %}
-
-    {% if block_content.field_video_selection.0.value == "YouTube" %}
-      <a class="button" data-featherlight="iframe" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-style="display:block;border:none;height:50vh;width:50vw;" href="https://www.youtube.com/embed/{{ block_content.field_video_embed.0.value }}?rel=0&amp;autoplay=1">Watch Video <i aria-hidden="true" class="material-icons" style="font-size: 18px">play_arrow</i></a>
-
-    {% elseif block_content.field_video_selection.0.value == "Vimeo" %}
-      <a class="button" data-featherlight="iframe" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-style="display:block;border:none;height:50vh;width:50vw;" href="https://player.vimeo.com/video/{{ block_content.field_video_embed.0.value }}?rel=0&amp;autoplay=1">Watch Video <i aria-hidden="true" class="material-icons" style="font-size: 18px">play_arrow</i></a>
-
-    {% endif %}
+    {{ title_suffix }}    
   {% endblock %}
 {% endembed %}

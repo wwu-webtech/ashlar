@@ -2,8 +2,6 @@
 * @file
 * templates/major-page/_make-waves.scss
 */
-@import url('https://cloud.typography.com/6968476/7999012/css/fonts.css');
-
 $heading-font: "Knockout 94 A", "Knockout 94 B";
 $copy-font: "Knockout 30 A", "Knockout 30 B";
 $url-font: "Knockout 31 A", "Knockout 31 B";
@@ -201,7 +199,7 @@ $button-font-size: calc(#{$min-button-font-size} + #{strip-unit($max-button-font
         padding: 0;
         background-size: cover;
 
-        div,
+        .block,
         p {
           height: 100%;
           margin-bottom: 0;
