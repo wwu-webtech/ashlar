@@ -4,7 +4,6 @@ description: An atomic design Drupal theme for Western Washington University
 core: 8.x
 libraries:
   - core/normalize
-  - ashlar/make-waves-fonts
   - ashlar/global-styling
   - ashlar/accessible-mega-menu
   - ashlar/accordion
