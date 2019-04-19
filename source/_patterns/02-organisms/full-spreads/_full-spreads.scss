@@ -13,17 +13,28 @@ $play-icon-size: 200px;
   transform: translatex(-$standard-spacing);
 
   .container {
+    @include breakpoint($medium) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+    }
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-areas:
+    "image"
+    "content";
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr;
 
     &.copy-left {
-      grid-template-areas: "content image";
+      @include breakpoint($medium) {
+        grid-template-areas: "content image";
+      }
     }
 
     &.copy-right {
-      grid-template-areas: "image content";
+      @include breakpoint($medium) {
+        grid-template-areas: "image content";
+      }
     }
   }
 
