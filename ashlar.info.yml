@@ -17,6 +17,7 @@ libraries:
   - ashlar/search
   - ashlar/switcher
   - ashlar/user-login
+  - ashlar/vimeo-tracking
   - ashlar/wwu-header
 regions:
   header: Header
