@@ -11,6 +11,7 @@ $jail-height: 750px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  align-content: start;
   height: $jail-height;
   padding: $standard-spacing;
   border: solid $light-gray $border-width;
