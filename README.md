@@ -50,7 +50,7 @@ The composer installation automatically fetches a copy of Ashlar. However, this 
 To get started with this, use the following commands (starting in the `wwu_drupal` directory from above):
 
     # Delete the existing ashlar directory
-    cd themes/contrib/
+    cd web/themes/contrib/
     rm -rf ashlar
 
     # Clone this repo in its place
