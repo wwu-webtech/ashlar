@@ -3,6 +3,12 @@
  * organisms/blocks/_blocks--make-waves.scss
  */
 .block--mave-waves {
+  @include breakpoint($medium) {
+    padding: $double-spacing;
+  }
+  @include breakpoint($large) {
+    padding: $triple-spacing;
+  }
   padding: $standard-spacing;
   font-family: $copy-font--make-waves;
   font-size: $p-font-size--make-waves;
