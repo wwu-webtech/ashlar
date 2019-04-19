@@ -29,6 +29,7 @@
 set classes = [
 'make-waves-full-spread',
 'block',
+'block--make-waves',
 'block--full-spread',
 'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
 ]
@@ -70,7 +71,7 @@ set classes = [
 
     </div>
 
-    <div class="content block--mave-waves blue-bg">
+    <div class="content block--mave-waves block--make-waves-basic-block blue-bg">
       {{ title_prefix }}
       {% if label %}
         <h2{{ title_attributes }}>{{ label }}</h2>
