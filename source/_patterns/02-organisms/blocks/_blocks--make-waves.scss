@@ -21,6 +21,12 @@
   a {
     font-family: $url-font--make-waves;
   }
+
+  &.white-bg {
+    h2 {
+      color: $blue;
+    }
+  }
 }
 
 .block--make-waves-basic-block {
