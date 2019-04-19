@@ -1,4 +1,4 @@
-<ul{{ attributes.addClass(classes) }} role="tablist">
+<ul{{ attributes.addClass(classes) }} role="tablist" aria-label="Content Switcher">
   {% for item in items %}
   <li><button {{ item.attributes.addClass(item.classes) }} id="{{ item.button_id }}" role="tab" aria-controls="{{ item.content_id }}">{{ item.title }}</button></li>
   {% endfor %}
