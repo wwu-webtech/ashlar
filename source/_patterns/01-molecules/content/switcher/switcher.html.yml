@@ -17,6 +17,7 @@ items:
     Attribute(): {}
   classes:
   - switch-01
+  - active
   button_id: switch-button-1
   content_id: switch-content-1
 - title: Content 2
