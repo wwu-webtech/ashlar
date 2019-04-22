@@ -8,8 +8,6 @@ $logo-width--larger: 306px;
 $logo-height--larger: 154px;
 $logo-width--horizontal: 400px;
 $logo-height--horiztonal: 100px;
-$logo-width--make-waves: $logo-width--larger;
-$logo-height--make-waves: $logo-width--larger;
 
 .logo {
   @include breakpoint($large) {
@@ -41,7 +39,11 @@ $logo-height--make-waves: $logo-width--larger;
   }
 
   &.make-waves {
-    width: $logo-width--make-waves;
-    height: $logo-height--make-waves;
+    @include breakpoint($large) {
+      width: $logo-width--larger;
+      height: $logo-width--larger;
+    }
+    width: $logo-width;
+    height: $logo-width;
   }
 }
