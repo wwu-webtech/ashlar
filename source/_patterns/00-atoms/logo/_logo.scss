@@ -8,6 +8,8 @@ $logo-width--larger: 306px;
 $logo-height--larger: 154px;
 $logo-width--horizontal: 400px;
 $logo-height--horiztonal: 100px;
+$logo-width--make-waves: $logo-width--larger;
+$logo-height--make-waves: $logo-width--larger;
 
 .logo {
   @include breakpoint($large) {
@@ -36,5 +38,10 @@ $logo-height--horiztonal: 100px;
 
   &.reversed {
     background-color: $black;
+  }
+
+  &.make-waves {
+    width: $logo-width--make-waves;
+    height: $logo-height--make-waves;
   }
 }
