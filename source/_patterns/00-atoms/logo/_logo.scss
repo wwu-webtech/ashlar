@@ -37,4 +37,13 @@ $logo-height--horiztonal: 100px;
   &.reversed {
     background-color: $black;
   }
+
+  &.make-waves {
+    @include breakpoint($large) {
+      width: $logo-width--larger;
+      height: $logo-width--larger;
+    }
+    width: $logo-width;
+    height: $logo-width;
+  }
 }
