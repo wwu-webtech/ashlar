@@ -10,9 +10,6 @@
   padding: 0;
 
   button {
-    @include breakpoint($small) {
-      padding: $standard-spacing;
-    }
     @include breakpoint($medium) {
       padding: $standard-spacing $double-spacing;
     }
