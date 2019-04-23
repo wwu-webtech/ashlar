@@ -69,9 +69,10 @@ When developing in Ashlar with a Drupal 8 site directly, the only thing you'll n
 ### IV. Pattern Lab
 
 #### Installation
-While still in the `ashlar` folder, install pattern lab with this script:
+While still in the `ashlar` folder, install and provision pattern lab with these scripts:
 
     ./patternlab-install.sh
+    ./patternlab-provision.sh
 
 #### Development
 The commands you will need to run, from the `ashlar` folder, to get a pattern lab site generated and served locally are:
