@@ -13,9 +13,15 @@
   flex: 0 1 100%;
 }
 
+.layout--threecol-25-50-25 > .layout__region--top,
+.layout--threecol-25-50-25 > .layout__region--bottom {
+  @extend %heading-size--larger;
+  @extend %font-size--larger;
+}
 
 .layout--threecol-25-50-25 > .layout__region--first {
   @extend %heading-size--smaller;
+  @extend %font-size--smaller;
   @include breakpoint($medium) {
     flex: 0 1 25%;
     max-width: 25%;
@@ -33,6 +39,7 @@
 
 .layout--threecol-25-50-25 > .layout__region--third {
   @extend %heading-size--smaller;
+  @extend %font-size--smaller;
   @include breakpoint($medium) {
     flex: 0 1 25%;
     max-width: 25%;
