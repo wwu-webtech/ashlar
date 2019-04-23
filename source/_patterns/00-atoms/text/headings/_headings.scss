@@ -1,7 +1,7 @@
 /**
- * @file
- * 00-atoms/01-text/_headings.scss
- */
+* @file
+* 00-atoms/01-text/_headings.scss
+*/
 
 $heading-line-height: 1.2em;
 $heading-margin-top: $triple-spacing;
@@ -65,51 +65,69 @@ main {
 
 /* Helper to resize headings. Only applies at medium breakpoints. */
 %heading-size--smaller {
-  @include breakpoint($medium) {
-    h1 {
+  h1 {
+    @include breakpoint($medium) {
       font-size: $h1-font-size--smaller;
     }
+  }
 
-    h2 {
+  h2 {
+    @include breakpoint($medium) {
       font-size: $h2-font-size--smaller;
     }
+  }
 
-    h3 {
-      font-size: $h3-font-size--smaller;
+  h3 {
+    @include breakpoint($medium) {
+      font-size: $h1-font-size--smaller;
     }
+  }
 
-    h4 {
-      font-size: $h4-font-size--smaller;
+  h4 {
+    @include breakpoint($medium) {
+      font-size: $h1-font-size--smaller;
     }
+  }
 
-    h5 {
-      font-size: $h5-font-size--smaller;
+  h5 {
+    @include breakpoint($medium) {
+      font-size: $h1-font-size--smaller;
     }
   }
 }
-%heading-size--larger {
-  @include breakpoint($medium) {
-    h1 {
-      font-size: $h1-font-size--smaller;
-    }
 
-    h2 {
-      font-size: $h2-font-size--smaller;
+%heading-size--larger {  
+  h1 {
+    @include breakpoint($medium) {
+      font-size: $h1-font-size--larger;
     }
+  }
 
-    h3 {
-      font-size: $h3-font-size--smaller;
+  h2 {
+    @include breakpoint($medium) {
+      font-size: $h2-font-size--larger;
     }
+  }
 
-    h4 {
-      font-size: $h4-font-size--smaller;
+  h3 {
+    @include breakpoint($medium) {
+      font-size: $h1-font-size--larger;
     }
+  }
 
-    h5 {
-      font-size: $h5-font-size--smaller;
+  h4 {
+    @include breakpoint($medium) {
+      font-size: $h1-font-size--larger;
+    }
+  }
+
+  h5 {
+    @include breakpoint($medium) {
+      font-size: $h1-font-size--larger;
     }
   }
 }
+
 
 .heading-size--smaller {
   @extend %heading-size--smaller;
