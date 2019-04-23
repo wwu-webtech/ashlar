@@ -87,7 +87,33 @@ main {
     }
   }
 }
+%heading-size--larger {
+  @include breakpoint($medium) {
+    h1 {
+      font-size: $h1-font-size--smaller;
+    }
+
+    h2 {
+      font-size: $h2-font-size--smaller;
+    }
+
+    h3 {
+      font-size: $h3-font-size--smaller;
+    }
+
+    h4 {
+      font-size: $h4-font-size--smaller;
+    }
+
+    h5 {
+      font-size: $h5-font-size--smaller;
+    }
+  }
+}
 
 .heading-size--smaller {
   @extend %heading-size--smaller;
+}
+.heading-size--larger {
+  @extend %heading-size--larger;
 }
