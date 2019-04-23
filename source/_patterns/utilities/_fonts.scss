@@ -42,49 +42,59 @@ $max-h4-font-size: 23px;
 $min-h5-font-size: 14px;
 $max-h5-font-size: 16px;
 
-$min-p-font-size: 16px;
-$max-p-font-size: 20px;
+$title-scale: 3.583;
+$h1-scale: 2.986;
+$h2-scale: 2.488;
+$h3-scale: 2.074;
+$h4-scale: 1.728;
+$h5-scale: 1.44;
+$h6-scale: 1.2;
+$p-scale: 1;
 
-$min-p-font-size--smaller: 12px;
-$max-p-font-size--smaller: 16px;
-
-$min-p-font-size--larger: 22px;
-$max-p-font-size--larger: 30px;
+$min-font-size: 16px;
+$max-font-size: 20px;
+$min-font-size--smaller: 12px;
+$max-font-size--smaller: 16px;
+$min-font-size--larger: 22px;
+$max-font-size--larger: 30px;
 
 // View width for fluid typography
 $min-vw: 300px;
 $max-vw: 1300px;
 
-@function calc-font-size($min, $max) {
+@function calc-font-size($min, $max, $scale) {
+  $min: $min * $scale;
+  $max: $max * $scale;
   @return calc(#{$min} + #{strip-unit($max - $min)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 }
 
 // Font Sizes
-$title-font-size: calc-font-size($min-title-font-size, $max-title-font-size);
-$h1-font-size: calc-font-size($min-h1-font-size, $max-h1-font-size);
-$h2-font-size: calc-font-size($min-h2-font-size, $max-h2-font-size);
-$h3-font-size: calc-font-size($min-h3-font-size, $max-h3-font-size);
-$h4-font-size: calc-font-size($min-h4-font-size, $max-h4-font-size);
-$h5-font-size: calc-font-size($min-h5-font-size, $max-h5-font-size);
-$p-font-size: calc-font-size($min-p-font-size, $max-p-font-size);
+$title-font-size: calc-font-size($min-font-size, $max-font-size, $title-scale);
+$h1-font-size: calc-font-size($min-font-size, $max-font-size, $h1-scale);
+$h2-font-size: calc-font-size($min-font-size, $max-font-size, $h2-scale);
+$h3-font-size: calc-font-size($min-font-size, $max-font-size, $h3-scale);
+$h4-font-size: calc-font-size($min-font-size, $max-font-size, $h4-scale);
+$h5-font-size: calc-font-size($min-font-size, $max-font-size, $h5-scale);
+$h6-font-size: calc-font-size($min-font-size, $max-font-size, $h6-scale);
+$p-font-size:  calc-font-size($min-font-size, $max-font-size, $p-scale);
 
 // Font Sizes --smaller
-$title-font-size--smaller: calc-font-size($min-title-font-size, $max-title-font-size);
-$h1-font-size--smaller: calc-font-size($min-h1-font-size, $max-h1-font-size);
-$h2-font-size--smaller: calc-font-size($min-h2-font-size, $max-h2-font-size);
-$h3-font-size--smaller: calc-font-size($min-h3-font-size, $max-h3-font-size);
-$h4-font-size--smaller: calc-font-size($min-h4-font-size, $max-h4-font-size);
-$h5-font-size--smaller: calc-font-size($min-h5-font-size, $max-h5-font-size);
-$p-font-size--smaller: calc-font-size($min-p-font-size, $max-p-font-size);
+$title-font-size--smaller: 0px;
+$h1-font-size--smaller: 0px;
+$h2-font-size--smaller: 0px;
+$h3-font-size--smaller: 0px;
+$h4-font-size--smaller: 0px;
+$h5-font-size--smaller: 0px;
+$p-font-size--smaller: 0px;
 
 // Font Sizes --larger
-$title-font-size--larger: calc-font-size($min-title-font-size, $max-title-font-size);
-$h1-font-size--larger: calc-font-size($min-h1-font-size, $max-h1-font-size);
-$h2-font-size--larger: calc-font-size($min-h2-font-size, $max-h2-font-size);
-$h3-font-size--larger: calc-font-size($min-h3-font-size, $max-h3-font-size);
-$h4-font-size--larger: calc-font-size($min-h4-font-size, $max-h4-font-size);
-$h5-font-size--larger: calc-font-size($min-h5-font-size, $max-h5-font-size);
-$p-font-size--larger: calc-font-size($min-p-font-size, $max-p-font-size);
+$title-font-size--larger: 0px;
+$h1-font-size--larger: 0px;
+$h2-font-size--larger: 0px;
+$h3-font-size--larger: 0px;
+$h4-font-size--larger: 0px;
+$h5-font-size--larger: 0px;
+$p-font-size--larger: 0px;
 
 
 // Font styles for Make Waves campaign
