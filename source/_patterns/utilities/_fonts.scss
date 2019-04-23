@@ -23,25 +23,7 @@ $font-weight--black: 900;
 $body-font-weight: $font-weight--regular;
 $button-font-weight: $font-weight--bold;
 
-// Fluid Typography: Major Second(ish) scale for headings/paragraphs
-$min-title-font-size: 42px;
-$max-title-font-size: 70px;
-
-$min-h1-font-size: 22px;
-$max-h1-font-size: 38px;
-
-$min-h2-font-size: 17px;
-$max-h2-font-size: 31px;
-
-$min-h3-font-size: 16px;
-$max-h3-font-size: 26px;
-
-$min-h4-font-size: 15px;
-$max-h4-font-size: 23px;
-
-$min-h5-font-size: 14px;
-$max-h5-font-size: 16px;
-
+// Fluid Typography: Minor Third scale for headings/paragraphs
 $title-scale: 3.583;
 $h1-scale: 2.986;
 $h2-scale: 2.488;
@@ -62,40 +44,54 @@ $max-font-size--larger: 30px;
 $min-vw: 300px;
 $max-vw: 1300px;
 
-@function calc-font-size($min, $max, $scale) {
-  $min: $min * $scale;
-  $max: $max * $scale;
+// Functions to calculate responsive font sizes
+@function calc-font-size($scale) {
+  $min: $min-font-size * $scale;
+  $max: $max-font-size * $scale;
+  @return calc(#{$min} + #{strip-unit($max - $min)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+}
+
+@function calc-font-size--smaller($scale) {
+  $min: $min-font-size--smaller * $scale;
+  $max: $max-font-size--smaller * $scale;
+  @return calc(#{$min} + #{strip-unit($max - $min)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+}
+
+@function calc-font-size--larger($scale) {
+  $min: $min-font-size--larger * $scale;
+  $max: $max-font-size--larger * $scale;
   @return calc(#{$min} + #{strip-unit($max - $min)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 }
 
 // Font Sizes
-$title-font-size: calc-font-size($min-font-size, $max-font-size, $title-scale);
-$h1-font-size: calc-font-size($min-font-size, $max-font-size, $h1-scale);
-$h2-font-size: calc-font-size($min-font-size, $max-font-size, $h2-scale);
-$h3-font-size: calc-font-size($min-font-size, $max-font-size, $h3-scale);
-$h4-font-size: calc-font-size($min-font-size, $max-font-size, $h4-scale);
-$h5-font-size: calc-font-size($min-font-size, $max-font-size, $h5-scale);
-$h6-font-size: calc-font-size($min-font-size, $max-font-size, $h6-scale);
-$p-font-size:  calc-font-size($min-font-size, $max-font-size, $p-scale);
+$title-font-size: calc-font-size($title-scale);
+$h1-font-size: calc-font-size($h1-scale);
+$h2-font-size: calc-font-size($h2-scale);
+$h3-font-size: calc-font-size($h3-scale);
+$h4-font-size: calc-font-size($h4-scale);
+$h5-font-size: calc-font-size($h5-scale);
+$h6-font-size: calc-font-size($h6-scale);
+$p-font-size:  calc-font-size($p-scale);
 
 // Font Sizes --smaller
-$title-font-size--smaller: 0px;
-$h1-font-size--smaller: 0px;
-$h2-font-size--smaller: 0px;
-$h3-font-size--smaller: 0px;
-$h4-font-size--smaller: 0px;
-$h5-font-size--smaller: 0px;
-$p-font-size--smaller: 0px;
+$title-font-size--smaller: calc-font-size--smaller($title-scale);
+$h1-font-size--smaller: calc-font-size--smaller($h1-scale);
+$h2-font-size--smaller: calc-font-size--smaller($h2-scale);
+$h3-font-size--smaller: calc-font-size--smaller($h3-scale);
+$h4-font-size--smaller: calc-font-size--smaller($h4-scale);
+$h5-font-size--smaller: calc-font-size--smaller($h5-scale);
+$h6-font-size--smaller: calc-font-size--smaller($h6-scale);
+$p-font-size--smaller:  calc-font-size--smaller($p-scale);
 
 // Font Sizes --larger
-$title-font-size--larger: 0px;
-$h1-font-size--larger: 0px;
-$h2-font-size--larger: 0px;
-$h3-font-size--larger: 0px;
-$h4-font-size--larger: 0px;
-$h5-font-size--larger: 0px;
-$p-font-size--larger: 0px;
-
+$title-font-size--larger: calc-font-size--larger($title-scale);
+$h1-font-size--larger: calc-font-size--larger($h1-scale);
+$h2-font-size--larger: calc-font-size--larger($h2-scale);
+$h3-font-size--larger: calc-font-size--larger($h3-scale);
+$h4-font-size--larger: calc-font-size--larger($h4-scale);
+$h5-font-size--larger: calc-font-size--larger($h5-scale);
+$h6-font-size--larger: calc-font-size--larger($h6-scale);
+$p-font-size--larger:  calc-font-size--larger($p-scale);
 
 // Font styles for Make Waves campaign
 $heading-font--make-waves: "Knockout 94 A", "Knockout 94 B";
