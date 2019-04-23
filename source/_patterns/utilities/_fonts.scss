@@ -97,8 +97,4 @@ $p-font-size--larger:  calc-font-size--larger($p-scale);
 $heading-font--make-waves: "Knockout 94 A", "Knockout 94 B";
 $copy-font--make-waves: "Knockout 30 A", "Knockout 30 B";
 $url-font--make-waves: "Knockout 31 A", "Knockout 31 B";
-$min-title-font-size--make-waves: 54px;
-$max-title-font-size--make-waves: 140px;
 $play-icon-size--make-waves: 200px;
-
-$title-font-size--make-waves: calc(#{$min-title-font-size--make-waves} + #{strip-unit($max-title-font-size--make-waves - $min-title-font-size--make-waves)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
