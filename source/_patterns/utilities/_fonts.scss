@@ -14,6 +14,11 @@ $title-font-family: $title;
 $heading-font-family: $serif;
 $body-font-family: $sans-serif;
 
+// Font styles for Make Waves campaign
+$heading-font--make-waves: "Knockout 94 A", "Knockout 94 B";
+$copy-font--make-waves: "Knockout 30 A", "Knockout 30 B";
+$url-font--make-waves: "Knockout 31 A", "Knockout 31 B";
+
 // Font Weight Variables
 $font-weight--light: 300;
 $font-weight--regular: 400;
@@ -33,66 +38,89 @@ $h5-scale: 1.44;
 $h6-scale: 1.2;
 $p-scale: 1;
 
-$min-font-size: 16px;
-$max-font-size: 20px;
-$max-font-size--smaller: 18px;
-$max-font-size--larger: 24px;
+$min-base-font-size: 16px;
+$max-base-font-size: 22px;
+$max-base-font-size--smaller: 18px;
+$max-base-font-size--larger: 28px;
 
 // View width for fluid typography
 $min-vw: 300px;
 $max-vw: 1300px;
 
 // Functions to calculate responsive font sizes
-@function calc-font-size($scale) {
-  $min: $min-font-size * $scale;
-  $max: $max-font-size * $scale;
+@function responsive-font-size($scale) {
+  $min: $min-base-font-size * $scale;
+  $max: $max-base-font-size * $scale;
   @return calc(#{$min} + #{strip-unit($max - $min)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 }
 
-@function calc-font-size--smaller($scale) {
-  $min: $min-font-size * $scale;
-  $max: $max-font-size--smaller * $scale;
+@function responsive-font-size--smaller($scale) {
+  $min: $min-base-font-size * $scale;
+  $max: $max-base-font-size--smaller * $scale;
   @return calc(#{$min} + #{strip-unit($max - $min)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 }
 
-@function calc-font-size--larger($scale) {
-  $min: $min-font-size * $scale;
-  $max: $max-font-size--larger * $scale;
+@function responsive-font-size--larger($scale) {
+  $min: $min-base-font-size * $scale;
+  $max: $max-base-font-size--larger * $scale;
   @return calc(#{$min} + #{strip-unit($max - $min)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 }
 
-// Font Sizes
-$title-font-size: calc-font-size($title-scale);
-$h1-font-size: calc-font-size($h1-scale);
-$h2-font-size: calc-font-size($h2-scale);
-$h3-font-size: calc-font-size($h3-scale);
-$h4-font-size: calc-font-size($h4-scale);
-$h5-font-size: calc-font-size($h5-scale);
-$h6-font-size: calc-font-size($h6-scale);
-$p-font-size:  calc-font-size($p-scale);
+// Responsive Font Sizes
+$title-font-size: responsive-font-size($title-scale);
+$h1-font-size: responsive-font-size($h1-scale);
+$h2-font-size: responsive-font-size($h2-scale);
+$h3-font-size: responsive-font-size($h3-scale);
+$h4-font-size: responsive-font-size($h4-scale);
+$h5-font-size: responsive-font-size($h5-scale);
+$h6-font-size: responsive-font-size($h6-scale);
+$p-font-size:  responsive-font-size($p-scale);
 
-// Font Sizes --smaller
-$title-font-size--smaller: calc-font-size--smaller($title-scale);
-$h1-font-size--smaller: calc-font-size--smaller($h1-scale);
-$h2-font-size--smaller: calc-font-size--smaller($h2-scale);
-$h3-font-size--smaller: calc-font-size--smaller($h3-scale);
-$h4-font-size--smaller: calc-font-size--smaller($h4-scale);
-$h5-font-size--smaller: calc-font-size--smaller($h5-scale);
-$h6-font-size--smaller: calc-font-size--smaller($h6-scale);
-$p-font-size--smaller:  calc-font-size--smaller($p-scale);
+// Responisve Font Sizes --smaller
+$title-font-size--smaller: responsive-font-size--smaller($title-scale);
+$h1-font-size--smaller: responsive-font-size--smaller($h1-scale);
+$h2-font-size--smaller: responsive-font-size--smaller($h2-scale);
+$h3-font-size--smaller: responsive-font-size--smaller($h3-scale);
+$h4-font-size--smaller: responsive-font-size--smaller($h4-scale);
+$h5-font-size--smaller: responsive-font-size--smaller($h5-scale);
+$h6-font-size--smaller: responsive-font-size--smaller($h6-scale);
+$p-font-size--smaller:  responsive-font-size--smaller($p-scale);
 
-// Font Sizes --larger
-$title-font-size--larger: calc-font-size--larger($title-scale);
-$h1-font-size--larger: calc-font-size--larger($h1-scale);
-$h2-font-size--larger: calc-font-size--larger($h2-scale);
-$h3-font-size--larger: calc-font-size--larger($h3-scale);
-$h4-font-size--larger: calc-font-size--larger($h4-scale);
-$h5-font-size--larger: calc-font-size--larger($h5-scale);
-$h6-font-size--larger: calc-font-size--larger($h6-scale);
-$p-font-size--larger:  calc-font-size--larger($p-scale);
+// Responsive Font Sizes --larger
+$title-font-size--larger: responsive-font-size--larger($title-scale);
+$h1-font-size--larger: responsive-font-size--larger($h1-scale);
+$h2-font-size--larger: responsive-font-size--larger($h2-scale);
+$h3-font-size--larger: responsive-font-size--larger($h3-scale);
+$h4-font-size--larger: responsive-font-size--larger($h4-scale);
+$h5-font-size--larger: responsive-font-size--larger($h5-scale);
+$h6-font-size--larger: responsive-font-size--larger($h6-scale);
+$p-font-size--larger:  responsive-font-size--larger($p-scale);
 
-// Font styles for Make Waves campaign
-$heading-font--make-waves: "Knockout 94 A", "Knockout 94 B";
-$copy-font--make-waves: "Knockout 30 A", "Knockout 30 B";
-$url-font--make-waves: "Knockout 31 A", "Knockout 31 B";
-$play-icon-size--make-waves: 200px;
+// After the viewport reaches the $max-content-width, the fonts shouldn't scale
+// These are the variables for use after the $large breakpoint
+$title-font-size--max: $max-base-font-size * $title-scale;
+$h1-font-size--max:    $max-base-font-size * $h1-scale;
+$h2-font-size--max:    $max-base-font-size * $h2-scale;
+$h3-font-size--max:    $max-base-font-size * $h3-scale;
+$h4-font-size--max:    $max-base-font-size * $h4-scale;
+$h5-font-size--max:    $max-base-font-size * $h5-scale;
+$h6-font-size--max:    $max-base-font-size * $h6-scale;
+$p-font-size--max:     $max-base-font-size * $p-scale;
+
+$title-font-size--max--smaller: $max-base-font-size--smaller * $title-scale;
+$h1-font-size--max--smaller:    $max-base-font-size--smaller * $h1-scale;
+$h2-font-size--max--smaller:    $max-base-font-size--smaller * $h2-scale;
+$h3-font-size--max--smaller:    $max-base-font-size--smaller * $h3-scale;
+$h4-font-size--max--smaller:    $max-base-font-size--smaller * $h4-scale;
+$h5-font-size--max--smaller:    $max-base-font-size--smaller * $h5-scale;
+$h6-font-size--max--smaller:    $max-base-font-size--smaller * $h6-scale;
+$p-font-size--max--smaller:     $max-base-font-size--smaller * $p-scale;
+
+$title-font-size--max--larger: $max-base-font-size--larger * $title-scale;
+$h1-font-size--max--larger:    $max-base-font-size--larger * $h1-scale;
+$h2-font-size--max--larger:    $max-base-font-size--larger * $h2-scale;
+$h3-font-size--max--larger:    $max-base-font-size--larger * $h3-scale;
+$h4-font-size--max--larger:    $max-base-font-size--larger * $h4-scale;
+$h5-font-size--max--larger:    $max-base-font-size--larger * $h5-scale;
+$h6-font-size--max--larger:    $max-base-font-size--larger * $h6-scale;
+$p-font-size--max--larger:     $max-base-font-size--larger * $p-scale;
