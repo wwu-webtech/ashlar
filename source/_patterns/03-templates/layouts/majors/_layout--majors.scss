@@ -13,7 +13,6 @@
   }
 
   > .layout__region--sample-jobs {
-    @extend %heading-size--smaller;
     @extend %font-size--smaller;
     @include breakpoint($medium) {
       flex: 0 1 25%;
@@ -43,12 +42,10 @@
   }
 
   > .layout__region--catalog {
-    @extend %heading-size--larger;
     @extend %font-size--larger;
   }
 
   > .layout__region--related-majors {
-    @extend %heading-size--smaller;
     @include breakpoint($medium) {
       flex: 0 1 50%;
       max-width: 50%;
@@ -58,7 +55,6 @@
   }
 
   > .layout__region--department {
-    @extend %heading-size--smaller;
     @include breakpoint($medium) {
       flex: 0 1 50%;
       max-width: 50%;
