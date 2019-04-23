@@ -12,7 +12,8 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   margin: $heading-margin-top 0 $heading-margin-bottom;
   color: $dark-blue;
   font-family: $heading-font-family;
@@ -37,6 +38,9 @@ h4 {
 h5 {
   font-size: $h5-font-size;
 }
+h6 {
+  font-size: $h6-font-size;
+}
 
 h2 + h3,
 h3 + h4,
@@ -58,7 +62,8 @@ main {
   h2,
   h3,
   h4,
-  h5 {
+  h5,
+  h6 {
     font-family: $sans-serif;
   }
 }
@@ -94,9 +99,15 @@ main {
       font-size: $h1-font-size--smaller;
     }
   }
+
+  h6 {
+    @include breakpoint($medium) {
+      font-size: $h6-font-size--smaller;
+    }
+  }
 }
 
-%heading-size--larger {  
+%heading-size--larger {
   h1 {
     @include breakpoint($medium) {
       font-size: $h1-font-size--larger;
@@ -124,6 +135,12 @@ main {
   h5 {
     @include breakpoint($medium) {
       font-size: $h1-font-size--larger;
+    }
+  }
+
+  h6 {
+    @include breakpoint($medium) {
+      font-size: $h6-font-size--larger;
     }
   }
 }
