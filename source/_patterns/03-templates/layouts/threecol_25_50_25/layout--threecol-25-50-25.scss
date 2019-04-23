@@ -15,7 +15,7 @@
 
 
 .layout--threecol-25-50-25 > .layout__region--first {
-  @extend %headings--smaller;
+  @extend %heading-size--smaller;
   @include breakpoint($medium) {
     flex: 0 1 25%;
     max-width: 25%;
@@ -32,7 +32,7 @@
 }
 
 .layout--threecol-25-50-25 > .layout__region--third {
-  @extend %headings--smaller;
+  @extend %heading-size--smaller;
   @include breakpoint($medium) {
     flex: 0 1 25%;
     max-width: 25%;

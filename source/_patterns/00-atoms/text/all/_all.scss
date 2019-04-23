@@ -1,0 +1,22 @@
+/**
+ * @file
+ * 00-atoms/text/_all.scss
+ */
+
+ html {
+   color: $text-color;
+   font-family: $sans-serif;
+   font-size: $p-font-size;
+ }
+
+ /* Helper to resize text. Only applies at medium breakpoints.
+ *  Useful for things like smaller columns */
+ %font-size--smaller {
+   @include breakpoint($medium) {
+     font-size: $p-font-size--smaller;
+   }
+ }
+
+ .font-size--smaller {
+   @extend %font-size--smaller;
+ }

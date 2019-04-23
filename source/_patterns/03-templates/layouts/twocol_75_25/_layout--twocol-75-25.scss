@@ -22,7 +22,7 @@
 }
 
 .layout--twocol-75-25 > .layout__region--second {
-  @extend %headings--smaller;
+  @extend %heading-size--smaller;
   @include breakpoint($medium) {
     flex: 0 1 25%;
     max-width: 25%;

@@ -64,7 +64,7 @@ main {
 }
 
 /* Helper to resize headings. Only applies at medium breakpoints. */
-%headings--smaller {
+%heading-size--smaller {
   @include breakpoint($medium) {
     h1 {
       font-size: $h1-font-size--smaller;
@@ -88,6 +88,6 @@ main {
   }
 }
 
-.headings--smaller {
-  @extend %headings--smaller;
+.heading-size--smaller {
+  @extend %heading-size--smaller;
 }
