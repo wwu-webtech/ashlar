@@ -191,10 +191,6 @@ $lightest-bg-blue: mix($white, $blue, 90%);
     }
   }
 
-  h3 {
-    color: $dark-green;
-  }
-
   .menu {
     li {
       @include breakpoint($medium) {
