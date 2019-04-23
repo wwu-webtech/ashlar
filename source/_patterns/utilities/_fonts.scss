@@ -35,10 +35,8 @@ $p-scale: 1;
 
 $min-font-size: 16px;
 $max-font-size: 20px;
-$min-font-size--smaller: 12px;
-$max-font-size--smaller: 16px;
-$min-font-size--larger: 22px;
-$max-font-size--larger: 30px;
+$max-font-size--smaller: 18px;
+$max-font-size--larger: 24px;
 
 // View width for fluid typography
 $min-vw: 300px;
@@ -52,13 +50,13 @@ $max-vw: 1300px;
 }
 
 @function calc-font-size--smaller($scale) {
-  $min: $min-font-size--smaller * $scale;
+  $min: $min-font-size * $scale;
   $max: $max-font-size--smaller * $scale;
   @return calc(#{$min} + #{strip-unit($max - $min)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 }
 
 @function calc-font-size--larger($scale) {
-  $min: $min-font-size--larger * $scale;
+  $min: $min-font-size * $scale;
   $max: $max-font-size--larger * $scale;
   @return calc(#{$min} + #{strip-unit($max - $min)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 }

@@ -1,7 +1,7 @@
 /**
- * @file
- * 00-atoms/text/_all.scss
- */
+* @file
+* 00-atoms/text/_all.scss
+*/
 
 html {
   color: $text-color;
@@ -11,14 +11,11 @@ html {
 
 /* Helpers to resize text. Only applies at medium breakpoints. */
 %font-size--smaller {
-  @include breakpoint($medium) {
-    font-size: $p-font-size--smaller;
-  }
+  font-size: $p-font-size--smaller;
+
 }
 %font-size--larger {
-  @include breakpoint($medium) {
-    font-size: $p-font-size--larger;
-  }
+  font-size: $p-font-size--larger;
 }
 
 .font-size--smaller {

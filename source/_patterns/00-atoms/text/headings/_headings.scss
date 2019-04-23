@@ -71,77 +71,59 @@ main {
 /* Helper to resize headings. Only applies at medium breakpoints. */
 %heading-size--smaller {
   h1 {
-    @include breakpoint($medium) {
-      font-size: $h1-font-size--smaller;
-    }
+    font-size: $h1-font-size--smaller;
   }
+
 
   h2 {
-    @include breakpoint($medium) {
-      font-size: $h2-font-size--smaller;
-    }
+    border-bottom-width: $border-width--thicker;
+    font-size: $h2-font-size--smaller;
   }
+
 
   h3 {
-    @include breakpoint($medium) {
-      font-size: $h1-font-size--smaller;
-    }
+    font-size: $h1-font-size--smaller;
   }
+
 
   h4 {
-    @include breakpoint($medium) {
-      font-size: $h1-font-size--smaller;
-    }
+    font-size: $h1-font-size--smaller;
   }
+
 
   h5 {
-    @include breakpoint($medium) {
-      font-size: $h1-font-size--smaller;
-    }
+    font-size: $h1-font-size--smaller;
   }
 
+
   h6 {
-    @include breakpoint($medium) {
-      font-size: $h6-font-size--smaller;
-    }
+    font-size: $h6-font-size--smaller;
   }
 }
 
 %heading-size--larger {
   h1 {
-    @include breakpoint($medium) {
-      font-size: $h1-font-size--larger;
-    }
+    font-size: $h1-font-size--larger;
   }
 
   h2 {
-    @include breakpoint($medium) {
-      font-size: $h2-font-size--larger;
-    }
+    font-size: $h2-font-size--larger;
   }
 
   h3 {
-    @include breakpoint($medium) {
-      font-size: $h1-font-size--larger;
-    }
+    font-size: $h1-font-size--larger;
   }
 
   h4 {
-    @include breakpoint($medium) {
-      font-size: $h1-font-size--larger;
-    }
+    font-size: $h1-font-size--larger;
   }
 
   h5 {
-    @include breakpoint($medium) {
-      font-size: $h1-font-size--larger;
-    }
+    font-size: $h1-font-size--larger;
   }
 
   h6 {
-    @include breakpoint($medium) {
-      font-size: $h6-font-size--larger;
-    }
+    font-size: $h6-font-size--larger;
   }
 }
 
