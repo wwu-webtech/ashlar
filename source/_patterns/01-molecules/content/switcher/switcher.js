@@ -5,13 +5,13 @@ var $selectedPanel = $('.content-switcher-container .content.active', context);
 
 
 $('.content-switcher button.active').attr('aria-selected', 'true');
-$('.content-switcher button:not(.active)').attr({'aria-selected' : 'false', 'tabindex' : '-1'});
+$('.content-switcher button:not(.active)').attr('aria-selected', 'false');
 
 $tabButton.click(function () {
   var $otherButtons = $('.content-switcher button');
   $otherButtons.removeClass('active');
   $otherButtons.attr('aria-selected', 'false');
-  $otherButtons.attr('tabindex', '-1');
+  // $otherButtons.attr('tabindex', '-1');
   var $thisSwitch = $(this).attr('class');
   $(this).addClass('active');
   $(this).attr('aria-selected', 'true');
@@ -29,12 +29,12 @@ $tabButton.keydown(function (event) {
   if ($key === 37) {
     // find previous tab, if we are on first => activate last
     $selectedPanel.removeClass('active');
-    if ($selected.parent().is('.content-switcher li:first-child')) {
-      $('.content-switcher li:last-child button').click().focus();
+    if ($selected.is('.content-switcher button:first-child')) {
+      $('.content-switcher button:last-child').click().focus();
       $('.content-switcher-container:last-child').addClass('active');
     }
     else {
-      $selected.parent().prev().children($tabButton).click().focus();
+      $selected.prev($tabButton).click().focus();
     }
     event.preventDefault();
   }
@@ -42,12 +42,12 @@ $tabButton.keydown(function (event) {
   if ($key === 39) {
   // find next tab, if we are on last => activate first
     $selectedPanel.removeClass('active');
-    if ($selected.parent().is('.content-switcher li:last-child')) {
-      $('.content-switcher li:first-child button').click().focus();
+    if ($selected.is('.content-switcher button:last-child')) {
+      $('.content-switcher button:first-child').click().focus();
       $selectedPanel.addClass('active');
     }
     else {
-      $selected.parent().next().children($tabButton).click().focus();
+      $selected.next($tabButton).click().focus();
     }
     event.preventDefault();
   }
