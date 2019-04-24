@@ -38,10 +38,18 @@
   {% embed "@molecules/messaging/announcement/announcement.html.twig" %}
     {% block content %}
       <div class="image">
-        <img src="{{ file_url(block_content.field_image.entity.fileuri) }}" alt="{{ block_content.field_image.0.alt }}">
+        {% if block_content.field_image.entity.fileuri %}
+          <img src="{{ file_url(block_content.field_image.entity.fileuri) }}" alt="{{ block_content.field_image.0.alt }}">
+        {% endif %}
       </div>
       <span class="material-icons">{{ block_content.field_icon.0.value }}</span>
       <div class="body">
+        {{ title_prefix }}
+        {% if label %}
+          <h2{{ title_attributes }}>{{ label }}</h2>
+        {% endif %}
+        {{ title_suffix }}
+
         {{ block_content.field_text.0.value }}
       </div>
     {% endblock %}
