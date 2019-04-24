@@ -97,6 +97,6 @@ featherlight:
   version: 1.7.13
   css:
     theme:
-      node_modules/featherlight/src/featherlight.css: {}
+      dist/js/featherlight/featherlight.css: {}
   js:
-    node_modules/featherlight/src/featherlight.js: {}
+    dist/js/featherlight/featherlight.js: {}
