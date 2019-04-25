@@ -11,7 +11,7 @@ content:
         with:
           content:
             include():
-              pattern: molecules-page-title-html
+              pattern: molecules-page-title-template-html
               with:
                 title: One Column Layout
     - include():

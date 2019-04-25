@@ -2,9 +2,12 @@
 * @file
 * molecules/text/page-title/_page-title.scss
 */
-.page-title {
-  font-family: $title-font-family;
-  font-size: $title-font-size;
+.page-title,
+.pane-page-title h1 {
+  @include breakpoint($large) {
+    font-size: $h1-font-size--max--larger;
+  }
+  font-size: $h1-font-size--larger;
 }
 
 /* Page titles placed in splash area */
@@ -32,10 +35,14 @@
     grid-row: 1 / span all !important;
 
     h1 {
+      @include breakpoint($large) {
+        font-size: $h1-font-size--max;
+      }
       margin: 0;
       text-transform: none;
       color: $white;
       font-family: $sans-serif;
+      font-size: $h1-font-size;
     }
   }
 }

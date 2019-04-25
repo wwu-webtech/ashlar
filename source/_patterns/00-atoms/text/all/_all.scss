@@ -11,24 +11,3 @@ html {
   font-family: $sans-serif;
   font-size: $p-font-size;
 }
-
-/* Helpers to resize text. Only applies at medium breakpoints. */
-%font-size--smaller {
-  @include breakpoint($large) {
-    font-size: $p-font-size--max--smaller;
-  }
-  font-size: $p-font-size--smaller;
-}
-%font-size--larger {
-  @include breakpoint($large) {
-    font-size: $p-font-size--max--larger;
-  }
-  font-size: $p-font-size--larger;
-}
-
-.font-size--smaller {
-  @extend %font-size--smaller;
-}
-.font-size--larger {
-  @extend %font-size--larger;
-}

@@ -11,6 +11,10 @@
   font-size: 1.2em;
 }
 
+.title-font {
+  font-family: $title-font;
+}
+
 .bold {
   font-weight: $font-weight--bold;
 }
@@ -25,4 +29,24 @@
 
 .lowercase {
   text-transform: lowercase;
+}
+
+%font-size--smaller {
+  @include breakpoint($large) {
+    font-size: $p-font-size--max--smaller;
+  }
+  font-size: $p-font-size--smaller;
+}
+.font-size--smaller {
+  @extend %font-size--smaller;
+}
+
+%font-size--larger {
+  @include breakpoint($large) {
+    font-size: $p-font-size--max--larger;
+  }
+  font-size: $p-font-size--larger;
+}
+.font-size--larger {
+  @extend %font-size--larger;
 }
