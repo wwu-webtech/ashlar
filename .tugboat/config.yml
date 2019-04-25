@@ -13,7 +13,7 @@ commands:
         - ./patternlab-install.sh
         - ./patternlab-provision.sh
         - php pattern-lab/core/console --generate
-        - ln -snf "${TUGBOAT_ROOT}/ashlar/pattern-lab/public" "${DOCROOT}"
+        - ln -snf "${TUGBOAT_ROOT}/pattern-lab/public" "${DOCROOT}"
       update:
         - gulp patternlab
       build:
