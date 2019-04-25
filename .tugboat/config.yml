@@ -8,16 +8,15 @@ services:
             - apt-get install -y nodejs
             - apt-get install -y npm
             - apt-get install -y gcc g++ make
+            - npm -g install gulp
             - apt-get install -y curl php-cli php-mbstring git unzip
             - apt-get install bsdtar -y
             - curl -sS https://getcomposer.org/installer -o composer-setup.php
             - php composer-setup.php --install-dir=/usr/local/bin --filename=composer
-            - npm install gulp
             - composer create-project -n pattern-lab/edition-twig-standard pattern-lab
             - cd pattern-lab
             - composer require aleksip/plugin-data-transform
             - cd ../
-            - apt-get install php
             - php pattern-lab/core/console -c --set sourceDir=../source
             - php pattern-lab/core/console -c --set twigAutoescape=0
             - php pattern-lab/core/console --generate
