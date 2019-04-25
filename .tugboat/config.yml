@@ -18,4 +18,4 @@ commands:
       build:
         - gulp patternlab
         - php pattern-lab/core/console --generate
-        - php pattern-lab/core/console --server --port 8000
+        - php pattern-lab/core/console --server --port 80
