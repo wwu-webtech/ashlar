@@ -4,7 +4,6 @@
 */
 .block--mave-waves {
   font-family: $copy-font--make-waves;
-  font-size: $p-font-size--make-waves;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 
@@ -14,7 +13,6 @@
     text-transform: uppercase;
     border-bottom: none;
     font-family: $heading-font--make-waves;
-    font-size: $h2-font-size--make-waves;
     line-height: 0.8em;
   }
 
@@ -42,12 +40,4 @@
     padding: $triple-spacing;
   }
   padding: $standard-spacing;
-}
-
-.layout--twocol {
-  .block--make-waves-basic-block {
-    h2 {
-      font-size: $h2-font-size;
-    }
-  }
 }

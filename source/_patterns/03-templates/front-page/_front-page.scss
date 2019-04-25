@@ -36,8 +36,8 @@
       text-transform: uppercase;
       color: $blue;
       border-bottom: none;
-      font-family: $title;
-      font-size: $title-font-size;
+      font-family: $title-font;
+      font-size: $title-font-size !important;
       font-weight: $font-weight--regular;
       line-height: 0.9em;
     }

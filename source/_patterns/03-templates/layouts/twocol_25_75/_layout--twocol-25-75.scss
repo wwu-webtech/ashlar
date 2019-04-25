@@ -12,9 +12,13 @@
   flex: 0 1 100%;
 }
 
+.layout--twocol-25-75 > .layout__region--top,
+.layout--twocol-25-75 > .layout__region--bottom {
+  @extend %font-size--larger;
+}
 
 .layout--twocol-25-75 > .layout__region--first {
-  @extend %headings--smaller;
+  @extend %font-size--smaller;
   @include breakpoint($medium) {
     flex: 0 1 25%;
     max-width: 25%;

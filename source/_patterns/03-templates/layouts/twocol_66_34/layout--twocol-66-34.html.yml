@@ -23,7 +23,7 @@ content:
         with:
           content:
             include():
-              pattern: molecules-page-title-html
+              pattern: molecules-page-title-template-html
               with:
                 title: Two Column 66/34
   first: "Archaeornis blancocerosaurus crosbysaurus didanodon erliansaurus galtonia kentrosaurus melanorosaurus nemegtia tetragonosaurus. Abrictosaurus achillobator adeopapposaurus albalophosaurus amazonsaurus banji brachylophosaurus capitalsaurus draconyx epicampodon gigantosaurus glishades hanssuesia huaxiasaurus ischyrosaurus libycosaurus limnornis losillasaurus micropachycephalosaurus proiguanodon rapator raptorex rhabdodon riojasuchus streptospondylus szechuanosaurus tatankacephalus. Abdallahsaurus astrophocaudia cetiosaurus dinheirosaurus einiosaurus glishades gryposaurus hypsibema kosmoceratops kulceratops loncosaurus prenoceratops proiguanodon siamotyrannus streptospondylus xuanhuasaurus."

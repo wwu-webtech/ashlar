@@ -1,5 +1,5 @@
 title_attributes:
   Attribute():
     class:
-    - page-title uppercase
+    - page-title
 title: Page Title
