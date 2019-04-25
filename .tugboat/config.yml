@@ -21,8 +21,3 @@ services:
             - php pattern-lab/core/console -c --set twigAutoescape=0
             - php pattern-lab/core/console --generate
             - ln -snf "${TUGBOAT_ROOT}/pattern-lab/public" "${DOCROOT}"
-          update:
-            - gulp patternlab
-          build:
-            - gulp patternlab
-            - php pattern-lab/core/console --generate
