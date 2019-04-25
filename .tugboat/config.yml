@@ -8,10 +8,17 @@ services:
             - apt-get install -y nodejs
             - apt-get install -y npm
             - apt-get install -y gcc g++ make
+            - apt-get install -y curl php-cli php-mbstring git unzip
+            - curl -sS https://getcomposer.org/installer -o composer-setup.php
+            - php composer-setup.php --install-dir=/usr/local/bin --filename=composer
             - npm install gulp
-            - ./patternlab-install.sh
-            - ./patternlab-provision.sh
+            - composer create-project -n pattern-lab/edition-twig-standard pattern-lab
+            - cd pattern-lab
+            - composer require aleksip/plugin-data-transform
+            - cd ../
             - apt-get install php
+            - php pattern-lab/core/console -c --set sourceDir=../source
+            - php pattern-lab/core/console -c --set twigAutoescape=0
             - php pattern-lab/core/console --generate
             - ln -snf "${TUGBOAT_ROOT}/pattern-lab/public" "${DOCROOT}"
           update:
