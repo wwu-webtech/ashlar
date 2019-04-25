@@ -12,10 +12,10 @@ commands:
         - npm install gulp
         - ./patternlab-install.sh
         - ./patternlab-provision.sh
-        - ln -snf "${TUGBOAT_ROOT}" "${DOCROOT}"
+        - php pattern-lab/core/console --generate
+        - ln -snf "${TUGBOAT_ROOT}/ashlar/pattern-lab/public" "${DOCROOT}"
       update:
         - gulp patternlab
       build:
         - gulp patternlab
         - php pattern-lab/core/console --generate
-        - php pattern-lab/core/console --server --port 80
