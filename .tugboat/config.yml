@@ -2,20 +2,21 @@ services:
   apache:
     image: tugboatqa/httpd:2.4
     default: true
+    commands:
+          init:
+            - curl -sL https://deb.nodesource.com/setup_8.x
+            - apt-get install -y nodejsapt-get install nodejs npm
+            - npm install gulp
+            - ./patternlab-install.sh
+            - ./patternlab-provision.sh
+            - php pattern-lab/core/console --generate
+            - ln -snf "${TUGBOAT_ROOT}/pattern-lab/public" "${DOCROOT}"
+          update:
+            - gulp patternlab
+          build:
+            - gulp patternlab
+            - php pattern-lab/core/console --generate
   node:
     image: tugboatqa/node:latest
   php:
     image: tugboatqa/php:7.3-apache
-
-commands:
-      init:
-        - npm install gulp
-        - ./patternlab-install.sh
-        - ./patternlab-provision.sh
-        - php pattern-lab/core/console --generate
-        - ln -snf "${TUGBOAT_ROOT}/pattern-lab/public" "${DOCROOT}"
-      update:
-        - gulp patternlab
-      build:
-        - gulp patternlab
-        - php pattern-lab/core/console --generate
