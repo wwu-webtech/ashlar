@@ -19,6 +19,6 @@ services:
             - php pattern-lab/core/console -c --set sourceDir=../source
             - php pattern-lab/core/console -c --set twigAutoescape=0
             - php pattern-lab/core/console --generate
-            - npm -g install gulp
+            - npm --prefix /var/lib/tugboat gulp install
             - gulp
             - ln -snf "${TUGBOAT_ROOT}/pattern-lab/public" "${DOCROOT}"
