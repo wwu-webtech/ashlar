@@ -8,7 +8,6 @@ services:
             - apt-get install -y nodejs
             - apt-get install -y npm
             - apt-get install -y gcc g++ make
-            - npm -g install gulp
             - apt-get install -y curl php-cli php-mbstring git unzip
             - apt-get install bsdtar -y
             - curl -sS https://getcomposer.org/installer -o composer-setup.php
@@ -20,5 +19,6 @@ services:
             - php pattern-lab/core/console -c --set sourceDir=../source
             - php pattern-lab/core/console -c --set twigAutoescape=0
             - php pattern-lab/core/console --generate
+            - npm -g install gulp
             - gulp
             - ln -snf "${TUGBOAT_ROOT}/pattern-lab/public" "${DOCROOT}"
