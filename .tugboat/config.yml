@@ -20,4 +20,5 @@ services:
             - php pattern-lab/core/console -c --set sourceDir=../source
             - php pattern-lab/core/console -c --set twigAutoescape=0
             - php pattern-lab/core/console --generate
+            - gulp
             - ln -snf "${TUGBOAT_ROOT}/pattern-lab/public" "${DOCROOT}"
