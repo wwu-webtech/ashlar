@@ -109,7 +109,7 @@ $list.children('li').addClass('listNavShow');
 
 // Initialize search.
 if ( !$init_check ){
-  $input.quicksearch('#quick-search-list li a', {
+  $input.quicksearch('#quick-search-list li', {
     'delay': 100,
     'noResults': 'li.ln-no-match',
     'show': function () {
