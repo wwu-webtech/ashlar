@@ -39,11 +39,7 @@
   {% block container %}
   <div{{ attributes }}>
   {% endblock %}
-
-  {% block title %}
-    <h2{{ title_attributes }}>{{ block_content.info.0.value }}</h2>
-  {% endblock %}
-
+  
   {% block links %}
     {% if block_content.field_link.0.url > 0 %}
       <a class="button" href="{{ block_content.field_link.0.url }}" class="button">{{ block_content.field_link.0.title }}</a>
