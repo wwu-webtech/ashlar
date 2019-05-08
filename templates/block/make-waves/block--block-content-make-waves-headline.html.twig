@@ -41,12 +41,6 @@
 
 {% embed "@molecules/headline/headline.html.twig" %}
   {% block container %}
-  <div{{ attributes }}>
-  {% endblock %}
-
-  {% block title %}
-    {{ title_prefix }}
-    <h2{{ title_attributes }}>{{ block_content.info.0.value }}</h2>
-    {{ title_suffix }}
+    <div{{ attributes }}>
   {% endblock %}
 {% endembed %}
