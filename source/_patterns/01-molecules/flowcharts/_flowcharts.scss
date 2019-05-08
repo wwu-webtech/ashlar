@@ -1,0 +1,23 @@
+/**
+* @file
+* 01-molecules/org-charts/_flowcharts.scss
+*/
+
+.flowchart {
+  .level-a {
+    li {
+
+    }
+  }
+  .level-b {
+    li {
+        list-style-type: lower-latin;
+      }
+    }
+
+  .level-c {
+    li {
+      list-style-type: decimal;
+    }
+  }
+}
