@@ -43,11 +43,11 @@ set classes = [
   <div class="container {{ block_content.field_spread_orientation.0.value }}">
 
     <div class="image">
-      {% if block_content.field_video_selection.0.value != NULL %}
-        {% if block_content.field_video_selection.0.value == "YouTube" %}
+      {% if block_content.field_video_source.0.value != NULL %}
+        {% if block_content.field_video_source.0.value == "YouTube" %}
         <a class="play-link" data-featherlight="iframe" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-style="display:block;border:none;height:80vh;width:80vw;" href="https://www.youtube.com/embed/{{ block_content.field_video_embed.0.value }}?rel=0&amp;autoplay=1">
 
-        {% elseif block_content.field_video_selection.0.value == "Vimeo" %}
+        {% elseif block_content.field_video_source.0.value == "Vimeo" %}
         <a class="play-link" data-featherlight="iframe" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-style="display:block;border:none;height:80vh;width:80vw;" href="https://player.vimeo.com/video/{{ block_content.field_video_embed.0.value }}?rel=0&amp;autoplay=1">
 
         {% endif %}
