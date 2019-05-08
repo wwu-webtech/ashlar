@@ -38,9 +38,9 @@
 {% set link_attributes = create_attribute() %}
 {% set link_attributes = link_attributes.addClass(link_classes) %}
 {% if block_content.field_tracking_event_category is not empty %}
-  {{ attach_library('ashlar/event-tracking') }}
   {% set link_attributes = link_attributes.setAttribute('data-event-tracking-category', block_content.field_tracking_event_category.0.value) %}
 {% endif %}
+
 {% block template %}
   {% embed "@molecules/buttons/image-buttons/image-button.html.twig" %}
     {% block content %}
