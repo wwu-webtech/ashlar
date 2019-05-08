@@ -50,7 +50,7 @@
         {% endif %}
         {{ title_suffix }}
 
-        {{ block_content.field_text.0.value }}
+        {{ content.body.0['#text']|raw }}
       </div>
     {% endblock %}
   {% endembed %}
