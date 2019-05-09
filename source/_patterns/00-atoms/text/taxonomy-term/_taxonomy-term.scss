@@ -6,12 +6,12 @@
 .taxonomy-term {
   display: inline-block;
   float: left;
-  margin: 0 $half-spacing $half-spacing 0;
-  padding: $half-spacing $standard-spacing;
+  margin: 0 $standard-spacing $standard-spacing 0;
+  padding: $standard-spacing;
   color: $dark-blue;
   border: none;
   background-color: $light-green;
-  font-size: $font-size--smaller;
+  font-size: $p-font-size--smaller;
 }
 
 a {
@@ -19,7 +19,8 @@ a {
     color: $dark-blue;
   }
   &.taxonomy-term:hover,
-  &.taxonomy-term:focus {
+  &.taxonomy-term:focus,
+  &.taxonomy-term:active {
     color: $light-green;
     background-color: $dark-blue;
   }

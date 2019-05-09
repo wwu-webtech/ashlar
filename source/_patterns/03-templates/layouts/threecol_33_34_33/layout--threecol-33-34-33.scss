@@ -12,7 +12,13 @@
   flex: 0 1 100%;
 }
 
+.layout--threecol-33-34-33 > .layout__region--top,
+.layout--threecol-33-34-33 > .layout__region--bottom {
+  @extend %font-size--larger;
+}
+
 .layout--threecol-33-34-33 > .layout__region--first{
+  @extend %font-size--smaller;
   @include breakpoint($medium) {
     flex: 0 1 33%;
     max-width: 33%;
@@ -21,6 +27,7 @@
 }
 
 .layout--threecol-33-34-33 > .layout__region--second {
+  @extend %font-size--smaller;
   @include breakpoint($medium) {
     flex: 0 1 34%;
     max-width: 34%;
@@ -29,6 +36,7 @@
 }
 
 .layout--threecol-33-34-33 > .layout__region--third {
+  @extend %font-size--smaller;
   @include breakpoint($medium) {
     flex: 0 1 33%;
     max-width: 33%;

@@ -1,16 +1,18 @@
 <div{{ attributes }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
-
   {% block content %}
     <div class="image">
-      {{ image }}
+      {% if image %}
+        {{ image }}
+      {% endif %}
     </div>
     <span class="material-icons">{{ icon }}</span>
     <div class="body">
+      {{ title_prefix }}
+      {% if label %}
+        <h2{{ title_attributes }}>{{ label }}</h2>
+      {% endif %}
+      {{ title_suffix }}
+      
       {{ body }}
     </div>
   {% endblock %}

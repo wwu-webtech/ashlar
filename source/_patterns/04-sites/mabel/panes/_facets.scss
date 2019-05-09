@@ -2,11 +2,57 @@
 * @file
 * sites/mabel/panes/_facets.scss
 */
+$plus-minus-size: 30px;
 
 .pane-islandora-solr-basic-facets {
   /* Date range slider */
   .islandora-solr-range-slider {
     text-align: right;
+
+    .ui-slider-range {
+      background: $darkest-blue;
+    }
+
+    .ui-slider-handle.ui-state-default {
+      display: block;
+      width: 0;
+      height: 0;
+      margin-right: 0;
+      padding: 0;
+      border-top: transparent solid 0;
+      border-right: transparent solid $standard-spacing;
+      border-bottom: $darkest-blue solid $double-spacing;
+      border-left: transparent solid $standard-spacing;
+      border-radius: 0;
+      background: none;
+    }
+
+    .ui-slider-horizontal {
+      max-height: $border-width;
+      margin-bottom: $double-spacing;
+      border: none;
+    }
+
+    .slider-popup-from-wrapper,
+    .slider-popup-to-wrapper {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      width: 120px;
+      margin-left: -60px;
+      text-align: center;
+
+      .slider-popup-from,
+      .slider-popup-to {
+        padding: 0 $standard-spacing $border-width $standard-spacing;
+        color: $black;
+        color: $white;
+        border: none;
+        border-radius: 10px;
+        background-color: $gray;
+        font-size: 12px;
+      }
+    }
   }
 
   #edit-range-slider-submit {
@@ -27,17 +73,15 @@
       display: grid;
       align-items: center;
 
-      grid-template-areas:
-      "plusminus link"
+      grid-template-areas: "plusminus link"
       "count    count";
-      grid-template-columns: 70px auto;
+      grid-template-columns: ($plus-minus-size*2 + $standard-spacing) auto;
       grid-template-rows: auto auto;
       justify-items: start;
 
       > a {
         margin: 0;
         padding: $half-spacing 0 $half-spacing $standard-spacing;
-        border-bottom: none;
 
         grid-area: link;
       }
@@ -55,15 +99,16 @@
         display: inline-grid;
         justify-content: center;
         align-content: center;
-        width: 30px;
-        height: 30px;
-        margin-right: $half-spacing / 2;
+        width: $plus-minus-size;
+        height: $plus-minus-size;
+        margin-right: $quarter-spacing;
+        text-decoration: none;
         color: $white;
-        border: none;
         background: $blue;
 
         &:hover,
-        &:focus {
+        &:focus,
+        &:active {
           color: $white;
           background-color: $dark-blue;
         }

@@ -34,13 +34,13 @@ $max-button-width: 250px;
           max-width: $max-button-width;
           padding: 0 ($standard-spacing * 1.5);
           text-align: center;
-          border-bottom: none;
         }
         @include breakpoint($large) {
           height: $toggle-size--larger;
         }
         position: relative;
-        display: block;
+        display: grid;
+        align-items: center;
         box-sizing: border-box;
         width: 100%;
         height: $toggle-size;
@@ -48,13 +48,16 @@ $max-button-width: 250px;
         padding: $standard-spacing;
         text-align: left;
         white-space: normal;
+        text-decoration: none;
         color: $white;
         border: none;
         background-color: $dark-blue;
-        line-height: 1.4em;
+        font-family: $condensed;
+        line-height: 1em;
 
         &:hover,
-        &:focus {
+        &:focus,
+        &:active {
           color: $black;
           outline: none;
           background-color: $light-green;

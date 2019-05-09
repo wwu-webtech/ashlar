@@ -4,7 +4,25 @@
 */
 
 #islandora-bookmark {
+  margin-bottom: $half-spacing;
+  font-size: $p-font-size--smaller;
   h3 {
     display: none;
+  }
+  select {
+    margin: 0;
+  }
+  input {
+    margin: 0;
+    padding: $standard-spacing;
+    border-radius: 0;
+  }
+}
+
+body.page-islandora-object {
+  .layout__region--first {
+    .pane-islandora-bookmark-islandora-bookmark {
+      margin-bottom: 0;
+    }
   }
 }

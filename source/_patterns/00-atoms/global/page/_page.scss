@@ -4,21 +4,9 @@
  */
 
 html {
-  color: $text-color;
-  font-family: $sans-serif;
-  font-size: $p-font-size;
-
   * {
     box-sizing: border-box;
   }
-}
-
-.page {
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  width: 100vw;
 }
 
 .visually-hidden {

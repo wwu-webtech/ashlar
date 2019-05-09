@@ -1,0 +1,43 @@
+/**
+* @file
+* organisms/blocks/_blocks--make-waves.scss
+*/
+.block--mave-waves {
+  font-family: $copy-font--make-waves;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: none;
+    font-family: $heading-font--make-waves;
+    line-height: 0.8em;
+  }
+
+  h3, h4, h5, h6 {
+    font-family: $heading-font--make-waves;
+    text-transform: uppercase;
+  }
+
+  a {
+    font-family: $url-font--make-waves;
+  }
+
+  &.white-bg {
+    h2, h3, h4, h5, h6 {
+      color: $blue;
+    }
+  }
+}
+
+.block--make-waves-basic-block {
+  @include breakpoint($medium) {
+    padding: $double-spacing;
+  }
+  @include breakpoint($large) {
+    padding: $triple-spacing;
+  }
+  padding: $standard-spacing;
+}

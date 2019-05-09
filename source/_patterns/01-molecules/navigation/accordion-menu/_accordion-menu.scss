@@ -28,7 +28,6 @@ $expand-toggle-size: 40px;
     border-radius: 0;
     background-image: none;
     font-family: $sans-serif;
-    font-size: $font-size--smaller;
 
     a {
       display: -ms-grid;
@@ -36,26 +35,29 @@ $expand-toggle-size: 40px;
       align-content: center;
       min-height: 40px;
       margin: inherit;
-      padding: $half-spacing ($standard-spacing + $expand-toggle-size) $half-spacing $standard-spacing;      
+      padding: $half-spacing ($standard-spacing + $expand-toggle-size) $half-spacing $standard-spacing;
       color: $black;
       border: none;
       background-color: $light-gray;
+      font-size: $p-font-size--smaller;
 
       &:hover,
-      &:focus {
+      &:focus,
+      &:active {
         color: $white;
         background-color: $gray;
       }
     }
 
     .ui-accordion-header-icon {
-      top: $half-spacing;
+      top: $half-spacing + $border-width;
       right: 0;
       left: inherit;
       width: inherit;
       height: 100%;
       text-indent: 0;
       background-image: none;
+      font-size: $p-font-size--smaller;
 
       &:after {
         display: block;

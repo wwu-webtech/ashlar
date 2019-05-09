@@ -2,6 +2,48 @@
 * @file
 * sites/mabel/panes/_result-limit.scss
 */
+.pane-islandora-solr-result-limit {
+  @include breakpoint ($medium) {
+    width: 180px;
+  }
+  @include breakpoint ($large) {
+    width: 200px;
+  }
+  position: relative;
+  top: -$half-spacing;
+  display: inline-block;
+  width: calc(50% - #{$standard-spacing});
+  margin-right: $standard-spacing;
+  margin-bottom: $standard-spacing;
+
+  .item-list {
+    position: absolute;
+    z-index: 1;
+    display: none;
+    width: 100%;
+    padding: 0;
+    background: $lightest-gray;
+    font-size: $p-font-size--smaller;
+
+
+    ul {
+      margin-bottom: 0;
+    }
+
+    li {
+      margin: 0;
+      padding: $half-spacing $standard-spacing;
+      list-style: none;
+
+      a {
+        display: block;
+        margin: (-$half-spacing) (-$standard-spacing);
+        padding: $half-spacing $standard-spacing;
+        text-decoration: none;
+      }
+    }
+  }
+}
 
 #islandora_solr_results_limit {
   display: flex;

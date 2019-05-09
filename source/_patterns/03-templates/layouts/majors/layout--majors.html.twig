@@ -19,11 +19,11 @@ set classes = [
   </h1>
 
   <div class="majors-menu">
-    <ul class="content-switcher">
-      <li><button disabled="disabled" class="active switch-introduction">Introduction</button></li>
-      <li><button class="switch-beyond">Beyond the Classroom</button></li>
-      <li><button class="switch-careers">Careers and Graduate Studies</button></li>
-    </ul>
+    <div class="content-switcher" role="tablist" aria-label="Major Information">
+      <button role="tab" id="button-intro" aria-controls="panel-intro" class="active switch-introduction">Introduction</button>
+      <button role="tab" aria-controls="panel-beyond" id="button-beyond" class="switch-beyond">Beyond the Classroom</button>
+      <button role="tab" aria-controls="panel-careers-grad" id="button-careers-grad" class="switch-careers">Careers and Graduate Studies</button>
+    </div>
   </div>
 </div>
 {% endif %}
@@ -31,19 +31,19 @@ set classes = [
 <div class="right-side-container">
   <div class="content-switcher-container">
     {% if content.introduction %}
-    <div {{ region_attributes.introduction.addClass('layout__region', 'layout__region--introduction', 'content', 'switch-introduction', 'active') }}>
+    <div role="tabpanel" tabindex="0" {{ region_attributes.introduction.addClass('layout__region', 'layout__region--introduction', 'content', 'switch-introduction', 'active') }} id="panel-intro" aria-labelledby="button-intro">
       {{ content.introduction }}
     </div>
     {% endif %}
 
     {% if content.beyond %}
-    <div {{ region_attributes.beyond.addClass('layout__region', 'layout__region--beyond', 'content', 'switch-beyond') }}>
+    <div role="tabpanel" tabindex="0" {{ region_attributes.beyond.addClass('layout__region', 'layout__region--beyond', 'content', 'switch-beyond') }} id="panel-beyond" aria-labelledby="button-beyond">
       {{ content.beyond }}
     </div>
     {% endif %}
 
       {% if content.careers %}
-      <div {{ region_attributes.careers.addClass('layout__region', 'layout__region--careers', 'content', 'switch-careers') }}>
+      <div role="tabpanel" tabindex="0" {{ region_attributes.careers.addClass('layout__region', 'layout__region--careers', 'content', 'switch-careers') }} id="panel-careers-grad" aria-labelledby="button-careers-grad">
         {{ content.careers }}
       </div>
       {% endif %}
@@ -51,7 +51,7 @@ set classes = [
 </div>
 
 {% if content.sample_jobs %}
-<div {{ region_attributes.sample_jobs.addClass('layout__region', 'layout__region--sample-jobs blue-bg') }}>
+<div {{ region_attributes.sample_jobs.addClass('layout__region', 'layout__region--sample-jobs blue-bg font-size--smaller') }}>
   {{ content.sample_jobs }}
 </div>
 {% endif %}

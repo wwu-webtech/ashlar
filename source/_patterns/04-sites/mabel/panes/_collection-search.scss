@@ -15,7 +15,8 @@
     width: 100%;
 
     grid-column-gap: $half-spacing;
-    grid-template-areas: "menu menu"
+    grid-template-areas:
+    "menu menu"
     "text   go";
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto auto;
@@ -41,7 +42,9 @@
   }
 
   .form-submit {
+    height: 100%;
     margin: 0;
+    border-radius: 0;
 
     grid-area: go;
   }

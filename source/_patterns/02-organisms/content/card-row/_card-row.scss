@@ -2,7 +2,8 @@
 * @file
 * organisms/sections/card-list/_card-row.scss
 */
-$card-height: 300px;
+$card-height--medium: 200px;
+$card-height--large: 300px;
 
 .card-row,
 .card-row .view-content {
@@ -11,19 +12,22 @@ $card-height: 300px;
   }
   display: flex;
   flex-direction: column;
-  grid-column-gap: $standard-spacing;
 
   .card {
     @include breakpoint($small) {
       flex: 0 1 33.333%;
       max-width: 33.333%;
     }
+    margin: $half-spacing;
     padding: 0;
     padding-bottom: $standard-spacing;
 
     .image {
+      @include breakpoint($large) {
+        height: $card-height--large;
+      }
       width: 100%;
-      height: $card-height;
+      height: $card-height--medium;
 
       img {
         width: 100%;
@@ -42,7 +46,8 @@ $card-height: 300px;
       padding: 0 $half-spacing;
 
       a:hover,
-      a:focus {
+      a:focus,
+      &:active {
         color: $dark-blue;
         outline: none;
         background: none;

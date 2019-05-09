@@ -1,6 +1,6 @@
 /**
 * @file
-* 00-atoms/buttons/_buttons.scss
+* 00-atoms/buttons/_buttons--base.scss
 */
 $button-border-radius: 100px;
 $button-border-radius-alt: 50%;
@@ -34,10 +34,11 @@ $button-colors: (
   vertical-align: middle;
   text-decoration: none;
   border-width: $border-width;
-  border-color: transparent;
   border-style: solid;
+  border-color: transparent;
   border-radius: $button-border-radius;
   font-family: $body-font-family;
+  font-size: $p-font-size--smaller;
   font-weight: $font-weight--regular;
   line-height: 1;
 
@@ -64,7 +65,8 @@ $button-colors: (
   background-color: $blue;
 
   &:focus,
-  &:hover {
+  &:hover,
+  &:active {
     text-decoration: none;
     color: $white;
     background-color: $dark-blue;
@@ -75,7 +77,8 @@ $button-colors: (
     color: $light-gray;
     background-color: $gray;
 
-    &:hover {
+    &:hover,
+    &:active {
       background-color: darken($gray, 10%);
     }
   }
@@ -85,11 +88,12 @@ $button-colors: (
   @each $color, $background, $text, $hover-color, $hover-text, $alt-hover-text in $button-colors {
     &.#{$color} {
       color: $text;
-      background-color: $background;
       border-color: transparent;
+      background-color: $background;
 
       &:focus,
-      &:hover {
+      &:hover,
+      &:active {
         color: $hover-text;
         background-color: $hover-color;
       }
@@ -108,7 +112,8 @@ $button-colors: (
     background-color: transparent;
 
     &:focus,
-    &:hover {
+    &:hover,
+    &:active {
       color: $dark-blue;
       border-color: $dark-blue;
       background-color: $white;
@@ -125,7 +130,8 @@ $button-colors: (
         background-color: transparent;
 
         &:focus,
-        &:hover {
+        &:hover,
+        &:active {
           color: $alt-hover-text;
           border-color: $background;
           background-color: $white;

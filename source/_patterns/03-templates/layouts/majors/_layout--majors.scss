@@ -13,6 +13,7 @@
   }
 
   > .layout__region--sample-jobs {
+    @extend %font-size--smaller;
     @include breakpoint($medium) {
       flex: 0 1 25%;
       max-width: 25%;
@@ -21,7 +22,6 @@
     margin-top: $double-spacing;
     padding: $standard-spacing $half-spacing;
     background-color: $blue;
-    font-size: $font-size--smaller;
 
     h2 {
       border-bottom-color: $lightest-green;
@@ -39,6 +39,10 @@
       max-width: 75%;
       padding-right: $double-spacing;
     }
+  }
+
+  > .layout__region--catalog {
+    @extend %font-size--larger;
   }
 
   > .layout__region--related-majors {

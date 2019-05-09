@@ -9,34 +9,21 @@
   margin: 0;
   padding: 0;
 
-  li {
-    display: inline-block;
-    flex: 1;
-    margin: 0;
-    list-style: none;
-    text-align: center;
-    border-left: solid $white $border-width--thicker;
-
-    &:first-of-type {
-      border-left: none;
-    }
-  }
-
   button {
     @include breakpoint($medium) {
       padding: $standard-spacing $double-spacing;
     }
     width: 100%;
     max-width: none;
-    height: 100%;
-    margin-bottom: 0;
+    margin-right: $standard-spacing / 3;
     padding: $half-spacing;
     color: $white;
     border-radius: 0;
     background-color: $blue;
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
       color: $dark-blue;
       background-color: $light-green;
       box-shadow: none;
@@ -48,6 +35,10 @@
       opacity: 1;
       color: $black;
       background-color: $light-green;
+    }
+
+    &:first-child {
+      margin-left: $standard-spacing / 3;
     }
   }
 }

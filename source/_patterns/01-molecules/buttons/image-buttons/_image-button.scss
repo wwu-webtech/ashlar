@@ -3,7 +3,8 @@
 * 01-molecules/buttons/image-buttons/_image-buttons.scss
 */
 $button-size: 130px;
-$button-size--larger: 240px;
+$button-size--medium: 180px;
+$button-size--large: 240px;
 
 .block--image-button {
   @include breakpoint($medium) {
@@ -32,16 +33,22 @@ $button-size--larger: 240px;
         grid-template-rows: $button-size $double-spacing auto;
       }
       @include breakpoint($medium) {
-        -ms-grid-columns: $button-size--larger;
-        -ms-grid-rows: $button-size--larger $double-spacing auto;
-        grid-template-columns: $button-size--larger;
-        grid-template-rows: $button-size--larger $double-spacing auto;
+        -ms-grid-columns: $button-size--medium;
+        -ms-grid-rows: $button-size--medium $double-spacing auto;
+        grid-template-columns: $button-size--medium;
+        grid-template-rows: $button-size--medium $double-spacing auto;
+      }
+      @include breakpoint($large) {
+        -ms-grid-columns: $button-size--large;
+        -ms-grid-rows: $button-size--large $double-spacing auto;
+        grid-template-columns: $button-size--large;
+        grid-template-rows: $button-size--large $double-spacing auto;
       }
 
-      -ms-grid-columns: $button-size--larger;
-      -ms-grid-rows: $button-size--larger $double-spacing auto;
-      grid-template-columns: $button-size--larger;
-      grid-template-rows: $button-size--larger $double-spacing auto;
+      -ms-grid-columns: $button-size--large;
+      -ms-grid-rows: $button-size--large $double-spacing auto;
+      grid-template-columns: $button-size--large;
+      grid-template-rows: $button-size--large $double-spacing auto;
 
       .text {
         -ms-grid-row: 3;
@@ -57,19 +64,24 @@ $button-size--larger: 240px;
         height: $button-size;
       }
       @include breakpoint($medium) {
-        width: $button-size--larger;
-        height: $button-size--larger;
+        width: $button-size--medium;
+        height: $button-size--medium;
       }
-      width: $button-size--larger;
-      height: $button-size--larger;
+      @include breakpoint($large) {
+        width: $button-size--large;
+        height: $button-size--large;
+      }
+      width: $button-size--large;
+      height: $button-size--large;
     }
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
       &:after {
         border-color: $blue;
       }
-      
+
       img {
         transform: translate(0, 0);
       }

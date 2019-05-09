@@ -1,7 +1,7 @@
 bodyClass: "path-frontpage"
 page:
   include():
-    pattern: organisms-page-html
+    pattern: organisms-page-template-html
     with:
       page:
         header:
@@ -81,7 +81,7 @@ page:
                                                 attributes:
                                                   Attribute():
                                                     class:
-                                                    - block--block-contentimagefield-image
+                                                    - block--image
                                                 label: ""
                                                 content:
                                                   include():
@@ -127,7 +127,7 @@ page:
                                                 attributes:
                                                   Attribute():
                                                     class:
-                                                    - block--block-contentimagefield-image
+                                                    - block--image
                                                 label: ""
                                                 content:
                                                   include():

@@ -1,6 +1,6 @@
 page:
   include():
-    pattern: organisms-page-html
+    pattern: organisms-page-template-html
     with:
       page:        
         content:
@@ -14,7 +14,7 @@ page:
                     with:
                       content:
                         include():
-                          pattern: molecules-page-title-html
+                          pattern: molecules-page-title-template-html
                           with:
                             title: Multi-column card list page
                 - include():

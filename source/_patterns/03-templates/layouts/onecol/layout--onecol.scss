@@ -3,5 +3,6 @@
  * templates/layouts/onecol/_layout--onecol.scss
  */
 .layout--onecol .layout__region {
+  @extend %font-size--larger;
   width: 100%;
 }

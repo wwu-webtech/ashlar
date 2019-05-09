@@ -2,8 +2,8 @@
  * @file
  * 00-atoms/logo/_logo.scss
  */
-$logo-width: 282px;
-$logo-height: 144px;
+$logo-width: 266px;
+$logo-height: 136px;
 $logo-width--larger: 306px;
 $logo-height--larger: 154px;
 $logo-width--horizontal: 400px;
@@ -27,5 +27,23 @@ $logo-height--horiztonal: 100px;
   svg {
     width: 100%;
     height: 100%;
+  }
+
+  &.full-color,
+  &.grayscale {
+    background-color: $white;
+  }
+
+  &.reversed {
+    background-color: $black;
+  }
+
+  &.make-waves {
+    @include breakpoint($large) {
+      width: $logo-width--larger;
+      height: $logo-width--larger;
+    }
+    width: $logo-width;
+    height: $logo-width;
   }
 }

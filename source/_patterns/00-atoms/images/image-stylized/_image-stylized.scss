@@ -64,7 +64,8 @@ $image-size: 300px;
     }
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
       color: $link-color--hover;
       background: none;
       box-shadow: none;

@@ -12,6 +12,12 @@
   flex: 0 1 100%;
 }
 
+.layout--twocol-bricks > .layout__region--top,
+.layout--twocol-bricks > .layout__region--middle,
+.layout--twocol-bricks > .layout__region--bottom {
+  @extend %font-size--larger;
+}
+
 .layout--twocol-bricks > .layout__region--first-above,
 .layout--twocol-bricks > .layout__region--second-above,
 .layout--twocol-bricks > .layout__region--first-below,

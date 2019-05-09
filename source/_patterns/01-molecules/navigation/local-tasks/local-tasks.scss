@@ -4,7 +4,7 @@
  */
 .block--local-tasks-block {
   margin-bottom: $standard-spacing;
-  font-size: $font-size--smaller;
+  font-size: $p-font-size--smaller;
 
   ul:not(.contextual-links) {
     display: flex;
@@ -18,17 +18,21 @@
       border-bottom-color: $light-gray;
     }
 
+    li {
+      margin-bottom: 0;
+    }
+
     a {
       display: block;
-      margin: inherit;
       padding: $half-spacing $standard-spacing;
+      text-decoration: none;
       color: black;
       border-right: solid $border-width--thicker $white;
-      border-bottom: none;
       background-color: $light-gray;
 
       &:hover,
       &:focus,
+      &:active,
       &.is-active {
         color: $white;
         background-color: $gray;
@@ -44,7 +48,7 @@
   padding-left: 0;
   list-style: none;
   border-bottom: solid $border-width--thicker $gray;
-  font-size: $font-size--smaller;
+  font-size: $p-font-size--smaller;
 
   &:nth-of-type(2) {
     margin-top: $half-spacing;
@@ -58,11 +62,12 @@
     padding: $half-spacing $standard-spacing;
     color: black;
     border-right: solid $border-width--thicker $white;
-    border-bottom: none;
+    text-decoration: none;
     background-color: $light-gray;
 
     &:hover,
     &:focus,
+    &:active,
     &.is-active {
       color: $white;
       background-color: $gray;

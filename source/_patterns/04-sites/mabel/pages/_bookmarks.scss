@@ -1,0 +1,6 @@
+/* Hot fix for making the checkboxes show up on the bookmark lists page */
+.page-islandora-bookmark input[type="checkbox"] {
+  opacity: 1;
+  position: relative;
+  left: 50%;
+}

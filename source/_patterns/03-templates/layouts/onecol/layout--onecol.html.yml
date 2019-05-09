@@ -11,10 +11,11 @@ content:
         with:
           content:
             include():
-              pattern: molecules-page-title-html
+              pattern: molecules-page-title-template-html
               with:
                 title: One Column Layout
     - include():
         pattern: organisms-block-template-html-main
         with:
-          content: "<p>Say that again. About how far ahead are you going? Now which one was it, Greg or Craig? Our first television set, Dad just picked it up today. Do you have a television? Yeah, I'll keep that in mind.</p><p>Alright, McFly, you're asking for it, and now you're gonna get it. Huh? I'm writing this down, this is good stuff. Yeah, but I never picked a fight in my entire life. </p><p>Hey. Watch this. Not me, the car, the car. Watch this, watch this. Ha, what did I tell you, eighty-eight miles per hour. The temporal displacement occurred at exactly 1:20 a.m. and zero seconds. Yeah, alright, bye-bye. What? I'd like you to meet my good friend George McFly. this has gotta be a dream.</p>"
+          content: "<div class='layout__region'>
+          <p>Say that again. About how far ahead are you going? Now which one was it, Greg or Craig? Our first television set, Dad just picked it up today. Do you have a television? Yeah, I'll keep that in mind.</p><p>Alright, McFly, you're asking for it, and now you're gonna get it. Huh? I'm writing this down, this is good stuff. Yeah, but I never picked a fight in my entire life. </p><p>Hey. Watch this. Not me, the car, the car. Watch this, watch this. Ha, what did I tell you, eighty-eight miles per hour. The temporal displacement occurred at exactly 1:20 a.m. and zero seconds. Yeah, alright, bye-bye. What? I'd like you to meet my good friend George McFly. this has gotta be a dream.</p></div>"

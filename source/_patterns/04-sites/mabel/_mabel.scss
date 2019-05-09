@@ -2,6 +2,7 @@
 * @file
 * sites/mabel/_mabel.scss
 */
+$mabel-site-name-height: 44px;
 
 /* General MABEL styles */
 .page-islandora {
@@ -46,13 +47,15 @@
       margin-bottom: $standard-spacing;
       padding: $standard-spacing;
       background: $lightest-gray;
-      font-size: $font-size--smaller;
+      font-size: $p-font-size--smaller;
     }
 
     a {
       border-bottom-color: transparent;
 
-      &:hover {
+      &:hover,
+      &:focus,
+      &:active {
         color: $dark-green;
         border-bottom-color: $dark-green;
       }
@@ -60,6 +63,8 @@
 
     h2 {
       margin-top: 0;
+      padding-bottom: $standard-spacing;
+      border-bottom-width: $border-width--thicker;
       font-family: $sans-serif;
       font-size: $p-font-size;
     }
@@ -67,10 +72,11 @@
     h3 {
       color: $dark-green;
       font-family: $sans-serif;
-      font-size: $p-font-size;
+      font-size: $p-font-size--smaller;
     }
 
-    input {
+    input,
+    select {
       border-width: $border-width;
     }
 
@@ -87,7 +93,6 @@
   .ui-datepicker {
     a {
       margin: initial;
-      border-bottom: none;
     }
     select {
       display: inline;
@@ -97,29 +102,22 @@
     }
   }
 
-  /* MABEL Splash */
-  .splash {
-    > div:nth-of-type(2) {
-      min-height: 240px;
-      z-index: 1;
-    }
-  }
-
   &.not-front {
     .splash {
       @include breakpoint($medium) {
         grid-template-columns: ($standard-spacing + $logo-width + $standard-spacing) 1fr $standard-spacing;
-        grid-template-rows: ($toggle-size + $standard-spacing) 180px ($standard-spacing + ($toggle-size / 2));
+        grid-template-rows: ($toggle-size + $standard-spacing) 1fr ($standard-spacing + ($toggle-size / 2));
       }
       @include breakpoint($large) {
-        grid-template-areas: ". . ....... ."
+        grid-template-areas:
+        ". . ....... ."
         ". . content ."
         ". . ....... .";
-        grid-template-columns: 1fr ($logo-width--larger + $standard-spacing) ($max-content-width - $logo-width--larger - $standard-spacing) 1fr;
-        grid-template-rows: ($toggle-size--larger + $standard-spacing) 180px ($standard-spacing + ($toggle-size--larger / 2));
+        grid-template-columns: 1fr ($logo-width--larger + $double-spacing) ($max-content-width - $logo-width--larger - $standard-spacing) 1fr;
+        grid-template-rows: ($toggle-size--larger + $standard-spacing) 1fr ($standard-spacing + ($toggle-size--larger / 2));
       }
       @include breakpoint(min-width 2420px) {
-        grid-template-rows: ($toggle-size--larger + $standard-spacing) 220px ($standard-spacing + ($toggle-size--larger / 2));
+        grid-template-rows: ($toggle-size--larger + $double-spacing) 1fr ($standard-spacing + ($toggle-size--larger / 2));
       }
     }
   }
@@ -127,11 +125,44 @@
   &.islandora-front-page {
     .splash {
       @include breakpoint($medium) {
-        grid-template-rows: ($logo-height + $standard-spacing + 40px) 160px (($toggle-size / 2) + $standard-spacing);
+        grid-template-rows: ($logo-height + $standard-spacing + $mabel-site-name-height) 1fr (($toggle-size--larger / 2) + $standard-spacing);
       }
       @include breakpoint($large) {
-        grid-template-rows: ($logo-height--larger + $standard-spacing +44px) 180px (($toggle-size--larger / 2) + $standard-spacing);
+        grid-template-rows: ($logo-height--larger + $standard-spacing + $mabel-site-name-height) 1fr (($toggle-size--larger / 2) + $standard-spacing);
       }
+    }
+  }
+
+  .site-footer {
+    #block-user-login {
+      text-align: right;
+
+      .form-submit {
+        background: $dark-blue;
+        font-size: 1em;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background: $darkest-blue;
+        }
+      }
+
+      .item-list {
+        display: none;
+      }
+
+      h2 {
+        font-size: $h4-font-size;
+      }
+    }
+
+    #edit-cas-login-redirection-message {
+      margin: 0;
+    }
+
+    #edit-actions {
+      margin-bottom: 0;
     }
   }
 }

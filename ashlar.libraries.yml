@@ -40,6 +40,16 @@ event-tracking:
     build/js/event-tracking.js: {}
   dependencies:
     - core/jquery
+make-waves-fonts:
+  css:
+    theme:
+      https://cloud.typography.com/6968476/7999012/css/fonts.css: {}
+menu-extras:
+  version: 1.x
+  js:
+    build/js/menu-extras.js: {}
+  dependencies:
+    - core/jquery
 quicksearch:
   version: 1.x
   js:
@@ -47,12 +57,6 @@ quicksearch:
     node_modules/jquery-listnav/jquery-listnav.js: {}
     node_modules/jquery.quicksearch/src/jquery.quicksearch.js: {}
     build/js/quicksearch.js: {}
-  dependencies:
-    - core/jquery
-menu-extras:
-  version: 1.x
-  js:
-    build/js/menu-extras.js: {}
   dependencies:
     - core/jquery
 search:
@@ -79,6 +83,10 @@ user-login:
     build/js/user-login.js: {}
   dependencies:
     - core/jquery
+vimeo-tracking:
+  version: 309.54.810
+  js:
+    //extend.vimeocdn.com/ga/30954810.js: { type: external, attributes: { defer: true }}
 wwu-header:
   version: 1.x
   js:
@@ -89,6 +97,6 @@ featherlight:
   version: 1.7.13
   css:
     theme:
-      node_modules/featherlight/src/featherlight.css: {}
+      dist/js/featherlight/featherlight.css: {}
   js:
-    node_modules/featherlight/src/featherlight.js: {}
+    dist/js/featherlight/featherlight.js: {}

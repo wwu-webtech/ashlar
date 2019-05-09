@@ -7,6 +7,7 @@
   .pane-page-title {
     h1 {
       display: inline-block;
+      margin-top: 0;
       margin-right: $standard-spacing;
     }
   }
@@ -26,7 +27,6 @@
     a {
       margin: initial;
       padding: 0;
-      border-bottom: none;
     }
 
     dl.solr-fields {
@@ -63,7 +63,7 @@
       margin: 0;
       padding: 0;
       border: none;
-      font-size: $font-size--smaller;
+      font-size: $p-font-size--smaller;
     }
   }
 
@@ -74,51 +74,6 @@
 }
 
 /* The following are for the resul limit/sort/display options, which also affect object 'result' pages, ie 'browse the collection' */
-.page-islandora {
-  .search-options-container {
-    @include breakpoint($small) {
-      position: absolute;
-      top: 0;
-      flex-flow: row nowrap;
-      margin-top: 0;
-    }
-    position: relative;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
-    align-items: start;
-    width: 100%;
-    margin-top: -$double-spacing;
-
-    > div {
-      @include breakpoint($small) {
-        flex: 0 1 33%;
-        margin-bottom: none;
-      }
-      display: inline-block;
-      width: 100%;
-      margin-bottom: $half-spacing;
-      vertical-align: top;
-      background: $lightest-gray;
-
-      .pane-title {
-        display: block;
-        padding: $half-spacing $standard-spacing;
-        background: $light-gray;
-      }
-
-      .item-list {
-        @include breakpoint($medium) {
-          border-width: $border-width--thicker;
-        }
-        display: none;
-        padding: $half-spacing;
-        border: solid $border-width $light-gray;
-      }
-    }
-  }
-}
-
 .expand-solr-panel {
   position: relative;
   width: 100%;
@@ -127,26 +82,45 @@
   text-align: left;
   color: $black;
   border-radius: 0;
-  background: $light-gray;
-
-  &:hover,
-  &:focus {
-    color: $white;
-    background: $gray;
-  }
+  background-color: $light-gray;
 
   .material-icons {
     position: absolute;
-    top: $half-spacing / 2;
+    top: $quarter-spacing;
     top: 50%;
     right: 0;
     transform: translate(-4px, -50%);
     font-size: 18px;
   }
 }
+
+.date-filter-toggle-text {
+  display: none;
+}
+
+.date-range-filter-wrapper {
+  display: block !important;
+}
+
 #islandora-solr-result-count {
   display: inline-block;
+  margin-right: $double-spacing;
 }
+
 #secondary-display-profiles {
   display: none;
+}
+
+#edit-range-slider-submit {
+  border-radius: 0;
+}
+
+#edit-date-filter-date-filter-submit {
+  margin-left: 100%;
+  transform: translatex(-100%);
+  border-radius: 0;
+}
+#edit-date-filter-date-filter-from,
+#edit-date-filter-date-filter-to {
+  padding: $half-spacing;
 }

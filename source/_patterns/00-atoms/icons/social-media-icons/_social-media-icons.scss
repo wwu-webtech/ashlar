@@ -9,8 +9,8 @@
   height: $toggle-size;
   transition: $standard-ease $button-transition-speed;
   background-color: $blue;
-  border-bottom: none;
-  
+  color: $white;
+
   svg {
     width: 100%;
     margin-top: (($toggle-size - $icon-size) / 2) - 1;
@@ -21,12 +21,17 @@
   }
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
+    color: $dark-blue;
     background-color: $light-green;
   }
 }
 
 .social-media-links {
+  @include breakpoint($medium) {
+    max-width: none;
+  }
   display: flex;
   flex-flow: row wrap;
   max-width: 400px;

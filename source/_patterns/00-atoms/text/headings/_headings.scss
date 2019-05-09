@@ -1,58 +1,177 @@
 /**
- * @file
- * 00-atoms/01-text/_headings.scss
- */
+* @file
+* 00-atoms/01-text/_headings.scss
+*/
 
 $heading-line-height: 1.2em;
-$heading-margin-top: $standard-spacing * 1.5;
+$heading-margin-top: $triple-spacing;
 $heading-margin-bottom: $standard-spacing;
 
-/* Default heading styles, serif with blues/darker greens */
+/* Default heading styles, serif with blues */
 h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   margin: $heading-margin-top 0 $heading-margin-bottom;
+  color: $dark-blue;
   font-family: $heading-font-family;
+  font-weight: $font-weight--bold;
   line-height: $heading-line-height;
-  font-weight: $font-weight--regular;
 }
 h1 {
-  color: $dark-blue;
+  @include breakpoint($large) {
+    font-size: $h1-font-size--max;
+  }
+  color: $darkest-blue;
   font-size: $h1-font-size;
   font-weight: $font-weight--bold;
 }
 h2 {
-  @include breakpoint($medium) {
-    border-width: $border-width--thicker;
+  @include breakpoint($large) {
+    font-size: $h2-font-size--max;
   }
-  padding-bottom: $half-spacing;
-  color: $dark-blue;
-  border-bottom: $border-width solid $dark-green;
+  color: $darkest-blue;
   font-size: $h2-font-size;
 }
 h3 {
-  color: $green;
+  @include breakpoint($large) {
+    font-size: $h3-font-size--max;
+  }
   font-size: $h3-font-size;
 }
 h4 {
-  text-transform: uppercase;
-  color: $dark-green;
+  @include breakpoint($large) {
+    font-size: $h4-font-size--max;
+  }
   font-size: $h4-font-size;
 }
 h5 {
-  text-transform: uppercase;
+  @include breakpoint($large) {
+    font-size: $h5-font-size--max;
+  }
   font-size: $h5-font-size;
 }
+h6 {
+  @include breakpoint($large) {
+    font-size: $h6-font-size--max;
+  }
+  font-size: $h6-font-size;
+}
 
-/* .sans-serif-headings heading styles, same as default but with Noto Sans */
+h2 + h3,
+h3 + h4,
+h4 + h5,
+h5 + h6 {
+  margin-top: 0;
+}
+
+main {
+  h2 {
+    padding-bottom: ($standard-spacing * 1.5);
+    border-bottom: $border-width--thickest solid $dark-blue;
+  }
+}
+
+/* .sans-serif-headings heading styles, same as default but without serifs */
 .sans-serif-headings {
   h1,
   h2,
   h3,
   h4,
+  h5,
+  h6 {
+    font-family: $sans-serif;
+  }
+}
+
+/* Helper to resize headings. Only applies at medium breakpoints. */
+%font-size--smaller {
+  h1 {
+    @include breakpoint($large) {
+      font-size: $h1-font-size--max--smaller;
+    }
+    font-size: $h1-font-size--smaller;
+  }
+
+  h2 {
+    @include breakpoint($large) {
+      font-size: $h2-font-size--max--smaller;
+    }
+    border-bottom-width: $border-width--thicker;
+    font-size: $h2-font-size--smaller;
+  }
+
+  h3 {
+    @include breakpoint($large) {
+      font-size: $h3-font-size--max--smaller;
+    }
+    font-size: $h1-font-size--smaller;
+  }
+
+  h4 {
+    @include breakpoint($large) {
+      font-size: $h4-font-size--max--smaller;
+    }
+    font-size: $h1-font-size--smaller;
+  }
+
   h5 {
-    font-family: 'Noto Sans', sans-serif;
+    @include breakpoint($large) {
+      font-size: $h5-font-size--max--smaller;
+    }
+    font-size: $h1-font-size--smaller;
+  }
+
+  h6 {
+    @include breakpoint($large) {
+      font-size: $h6-font-size--max--smaller;
+    }
+    font-size: $h6-font-size--smaller;
+  }
+}
+
+%font-size--larger {
+  h1 {
+    @include breakpoint($large) {
+      font-size: $h1-font-size--max--larger;
+    }
+    font-size: $h1-font-size--larger;
+  }
+
+  h2 {
+    @include breakpoint($large) {
+      font-size: $h2-font-size--max--larger;
+    }
+    font-size: $h2-font-size--larger;
+  }
+
+  h3 {
+    @include breakpoint($large) {
+      font-size: $h3-font-size--max--larger;
+    }
+    font-size: $h1-font-size--larger;
+  }
+
+  h4 {
+    @include breakpoint($large) {
+      font-size: $h4-font-size--max--larger;
+    }
+    font-size: $h1-font-size--larger;
+  }
+
+  h5 {
+    @include breakpoint($large) {
+      font-size: $h5-font-size--max--larger;
+    }
+    font-size: $h1-font-size--larger;
+  }
+
+  h6 {
+    @include breakpoint($large) {
+      font-size: $h6-font-size--max--larger;
+    }
+    font-size: $h6-font-size--larger;
   }
 }

@@ -8,7 +8,7 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: end;
-  font-size: $font-size--smallest;
+  font-size: $p-font-size--smaller;
 }
 
 #islandora-compound-sequence-position {
@@ -26,7 +26,8 @@
   line-height: inherit;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     color: $white;
     background: $gray;
   }

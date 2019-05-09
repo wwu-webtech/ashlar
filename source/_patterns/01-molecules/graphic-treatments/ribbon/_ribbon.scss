@@ -10,10 +10,11 @@ $ribbon-tail-height: 50px;
   position: relative;
   display: block;
   width: $ribbon-width;
-  padding: $double-spacing;
+  margin-bottom: $ribbon-tail-height;
+  padding: $triple-spacing;
   text-align: center;
+  text-decoration: none;
   letter-spacing: ($half-spacing) / 2;
-  border: none;
   background: mix($white, $light-gray, 50%);
 
 
@@ -41,15 +42,18 @@ $ribbon-tail-height: 50px;
   }
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     text-decoration: none;
     background-color: $light-gray;
   }
 
   &:hover:after,
   &:focus:after,
+  &:active:after,
   &:hover:before,
-  &:focus:before {
+  &:focus:before,
+  &:active:before {
     border-top-color: $light-gray;
   }
 
