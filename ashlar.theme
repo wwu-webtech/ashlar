@@ -61,6 +61,64 @@ function ashlar_preprocess_field(&$variables) {
   $element = $variables['element'];
   $object = $element['#object'];
   $bundle = $element['#bundle'];
+
+  if ($field_type === 'link') {
+    if ($object->hasField('field_tracking_event_category') || $object->hasField('field_tracking_event_enable')) {
+      $variables['element']['#attached']['library'][] = 'ashlar/event-tracking';
+      _ashlar_set_tracking_event_enable($variables['items'], $object);
+      _ashlar_set_tracking_event_category($variables['items'], $object);
+      _ahslar_set_tracking_event_label($variables['items'], $object);
+    }
+
+    if ($object->hasField('field_button_style')) {
+      _ashlar_set_button_style($variables['items'], $object);
+    }
+  }
+}
+
+/**
+ * Helper function to add tracking event attribute to field.
+ */
+function _ashlar_set_tracking_event_enable(&$items, $object) {
+  if (!$object->field_tracking_event_enable->isEmpty() || !$object->field_tracking_event_category->isEmtpy()) {
+    foreach ($items as &$item) {
+      $item['content']['#options']['attributes']['data-tracking-event-enable'] = '';
+    }
+  }
+}
+
+/**
+ * Helper function to add tracking event category attribute to field.
+ */
+function _ashlar_set_tracking_event_category(&$items, $object) {
+  if (!$object->field_tracking_event_category->isEmpty()) {
+    foreach ($items as &$item) {
+      $item['content']['#options']['attributes']['data-tracking-event-category'] = $object->field_tracking_event_category->value;
+    }
+  }
+}
+
+/**
+ * Helper function to add tracking event label attribute to field.
+ */
+function _ahslar_set_tracking_event_label(&$items, $object) {
+  if (!$object->field_tacking_event_label->isEmpty()) {
+    foreach ($items as &$item) {
+      $item['content']['#options']['attributes']['data-tracking-event-label'] = $object->field_tracking_event_label->value;
+    }
+  }
+}
+
+/**
+ * Helper function to add button style classes to field.
+ */
+function _ashlar_set_button_style(&$items, $object) {
+  if (!$object->field_button_style->isEmpty()) {
+    foreach ($items as &$item) {
+      $item['content']['#options']['attributes']['class'][] = 'button';
+      $item['content']['#options']['attributes']['class'][] = $object->field_button_style->value;
+    }
+  }
 }
 
 /**
