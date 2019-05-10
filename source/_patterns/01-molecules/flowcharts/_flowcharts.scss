@@ -3,21 +3,99 @@
 * 01-molecules/org-charts/_flowcharts.scss
 */
 
+$chart-background-color: $white;
+$line-color: mix($light-gray, $gray, 50%);
+$max-box-size: 300px;
+
 .flowchart {
-  .level-a {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  max-width: $max-content-width;
+  background: $chart-background-color;
+  font-size: $p-font-size--smaller;
+
+  figcaption {
+    text-align: center;
+  }
+  
+  ol {
+    position: relative;
+    display: flex;
+    list-style-type: none;
+    // margin-bottom: 0;
+    // margin-left: $standard-spacing;
+    // padding: 0;
     li {
+      @include breakpoint($medium) {
+        margin-right: $double-spacing;
+      }
+      position: relative;
+      margin-top: $double-spacing;
+
+      span,
+      a {
+        @include breakpoint($medium) {
+          max-width: none;
+          padding: $standard-spacing;
+        }
+        position: relative;
+        display: block;
+        max-width: $max-box-size;
+        margin: 0;
+        margin-top: $standard-spacing;
+        margin-left: $standard-spacing;
+        padding: $half-spacing;
+        text-align: center;
+        text-decoration: none;
+        background: $light-gray;
+      }
+
+      a {
+        color: white;
+        background: $blue;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: $dark-blue;
+          background-color: $light-green;
+        }
+      }
 
     }
-  }
-  .level-b {
-    li {
-        list-style-type: lower-latin;
+    &.level-a {
+      @include breakpoint($medium) {
+        // flex-flow: row nowrap;
+        display: grid;
+        grid-template-columns: repeat(10, auto);
+      }
+      flex-flow: column;
+
+      li {
       }
     }
 
-  .level-c {
-    li {
-      list-style-type: decimal;
+    &.level-b {
+      @include breakpoint($medium) {
+        display: grid;
+        grid-template-columns: repeat(10, auto);
+      }
+      margin-left: -($double-spacing + ($standard-spacing + 4px));
+      li {
+        flex-flow: row wrap;
+        width: 100%;
+      }
+    }
+
+    &.level-c {
+      @include breakpoint($medium) {
+        display: grid;
+      }
+      margin-left: -($triple-spacing + ($standard-spacing / 3));
+      li {
+
+      }
     }
   }
 }
