@@ -30,6 +30,12 @@
     -ms-grid-column-span: 1;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
+
+    div {
+      width: 100%;
+      height: 100%;
+    }
+
     img {
       display: block;
       width: 100%;
@@ -54,7 +60,7 @@
   }
 
   .body {
-    padding: $half-spacing;
+    padding: $standard-spacing;
 
     grid-area: text;
     -ms-grid-column: 1;
