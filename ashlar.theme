@@ -63,15 +63,18 @@ function ashlar_preprocess_field(&$variables) {
   $bundle = $element['#bundle'];
 
   if ($field_type === 'link') {
+    if ($object->hasField('field_tracking_event_enable')) {
+      $variables['#attached']['library'][] = 'ashlar/event-tracking';
+      _ashlar_set_tracking_event_enable($variables['items'], $object);
+    }
+
     if ($object->hasField('field_tracking_event_category')) {
-      $variables['element']['#attached']['library'][] = 'ashlar/event-tracking';
+      $variables['#attached']['library'][] = 'ashlar/event-tracking';
       _ashlar_set_tracking_event_category($variables['items'], $object);
     }
 
-    if ($object->hasField('field_tracking_event_enable')) {
-      $variables['element']['#attached']['library'][] = 'ashlar/event-tracking';
-      _ashlar_set_tracking_event_enable($variables['items'], $object);
-      _ahslar_set_tracking_event_label($variables['items'], $object);
+    if ($object->hasField('field_tracking_event_label')) {
+      _ashlar_set_tracking_event_label($variables['items'], $object);
     }
 
     if ($object->hasField('field_button_style')) {
@@ -109,8 +112,8 @@ function _ashlar_set_tracking_event_category(&$items, $object) {
 /**
  * Helper function to add tracking event label attribute to field.
  */
-function _ahslar_set_tracking_event_label(&$items, $object) {
-  if (!$object->field_tacking_event_label->isEmpty()) {
+function _ashlar_set_tracking_event_label(&$items, $object) {
+  if (!$object->field_tracking_event_label->isEmpty()) {
     foreach ($items as &$item) {
       $item['content']['#options']['attributes']['data-tracking-event-label'] = $object->field_tracking_event_label->value;
     }
