@@ -63,15 +63,23 @@ function ashlar_preprocess_field(&$variables) {
   $bundle = $element['#bundle'];
 
   if ($field_type === 'link') {
-    if ($object->hasField('field_tracking_event_category') || $object->hasField('field_tracking_event_enable')) {
+    if ($object->hasField('field_tracking_event_category')) {
+      $variables['element']['#attached']['library'][] = 'ashlar/event-tracking';
+      _ashlar_set_tracking_event_category($variables['items'], $object);
+    }
+
+    if ($object->hasField('field_tracking_event_enable')) {
       $variables['element']['#attached']['library'][] = 'ashlar/event-tracking';
       _ashlar_set_tracking_event_enable($variables['items'], $object);
-      _ashlar_set_tracking_event_category($variables['items'], $object);
       _ahslar_set_tracking_event_label($variables['items'], $object);
     }
 
     if ($object->hasField('field_button_style')) {
       _ashlar_set_button_style($variables['items'], $object);
+    }
+
+    if ($object->hasField('field_icon')) {
+      _ashlar_set_icon($variables['items'], $object);
     }
   }
 }
@@ -80,7 +88,7 @@ function ashlar_preprocess_field(&$variables) {
  * Helper function to add tracking event attribute to field.
  */
 function _ashlar_set_tracking_event_enable(&$items, $object) {
-  if (!$object->field_tracking_event_enable->isEmpty() || !$object->field_tracking_event_category->isEmtpy()) {
+  if (!$object->field_tracking_event_enable->isEmpty()) {
     foreach ($items as &$item) {
       $item['content']['#options']['attributes']['data-tracking-event-enable'] = '';
     }
@@ -117,6 +125,17 @@ function _ashlar_set_button_style(&$items, $object) {
     foreach ($items as &$item) {
       $item['content']['#options']['attributes']['class'][] = 'button';
       $item['content']['#options']['attributes']['class'][] = $object->field_button_style->value;
+    }
+  }
+}
+
+/**
+ * Helper function to add icons to link markup
+ */
+function _ashlar_set_icon(&$items, $object) {
+  if (!$object->field_icon->isEmpty()) {
+    foreach ($items as &$item) {
+      $item['content']['#title'] = array('#markup' =>  $item['content']['#title'] . ' <span class="material-icons">' . $object->field_icon->value . '</span>');
     }
   }
 }
