@@ -39,18 +39,5 @@
 {% set title_attributes = title_attributes.addClass('block__title') %}
 
 {% block template %}
-  {% embed "@molecules/search/quicksearch-form/quicksearch-form.html.twig" %}
-    {% block content %}
-      <div class="body">
-        {{ content.body.0['#text']|raw }}
-      </div>
-    {% endblock %}
-
-    {% block form %}
-      <form autocomplete="off" id="quick-search-form">
-        <label for="quick-search-input">{{ content.field_search_label }}</label>
-        <input id="quick-search-input" type="search" />
-      </form>
-    {% endblock %}
-  {% endembed %}
+  {% include "@molecules/search/quicksearch-form/quicksearch-form.html.twig" %}
 {% endblock %}

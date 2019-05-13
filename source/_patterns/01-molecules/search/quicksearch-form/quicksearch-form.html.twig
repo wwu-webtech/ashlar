@@ -3,13 +3,13 @@
 
   {% block content %}
   <div class="body">
-    {{ content }}
+    {{ content.body }}
   </div>
   {% endblock %}
 
   {% block form %}
     <form autocomplete="off" id="quick-search-form">
-      <label for="quick-search-input">{{ field_input_text }}</label>
+      <label for="quick-search-input">{{ content.field_search_label }}</label>
       <input id="quick-search-input" type="search" />
     </form>
   {% endblock %}
