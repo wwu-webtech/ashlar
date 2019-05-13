@@ -29,34 +29,16 @@
   set classes = [
     'block',
     'block--make-waves',
-    'block--button--make-waves',
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
   ]
 %}
 {% set attributes = attributes.addClass(classes) %}
 {% set title_attributes = title_attributes.addClass('block__title') %}
-{% set link_classes = ['button', 'button--make-waves', block_content.field_button_size.0.value] %}
-{% set link_attributes = create_attribute() %}
-{% set link_attributes = link_attributes.addClass(link_classes) %}
-{% if block_content.field_tracking_event_category is not empty %}
-  {% set link_attributes = link_attributes.setAttribute('data-event-tracking-category', block_content.field_tracking_event_category.0.value) %}
-{% endif %}
 
 {{ attach_library('ashlar/make-waves-fonts') }}
 
 {% block template %}
   <div{{ attributes }}>
-    {{ title_prefix }}
-    {% if label %}
-      <h2{{ title_attributes }}>{{ label }}</h2>
-    {% endif %}
-    {{ title_suffix }}
-
-    {% block content %}
-      <a href="{{ block_content.field_link.0.url }}" {{ link_attributes }}>
-        {{ block_content.field_link.0.title }}
-        <span aria-hidden="true" class="material-icons">{{ block_content.field_icon.0.value }}</span>
-      </a>
-    {% endblock %}
+    {% include "@organisms/blocks/block-template/block-template.html.twig" %}
   </div>
 {% endblock %}

@@ -81,6 +81,10 @@ function ashlar_preprocess_field(&$variables) {
       _ashlar_set_button_style($variables['items'], $object);
     }
 
+    if ($object->hasField('field_button_size')) {
+      _ashlar_set_button_size($variables['items'], $object);
+    }
+
     if ($object->hasField('field_icon')) {
       _ashlar_set_icon($variables['items'], $object);
     }
@@ -116,6 +120,18 @@ function _ashlar_set_tracking_event_label(&$items, $object) {
   if (!$object->field_tracking_event_label->isEmpty()) {
     foreach ($items as &$item) {
       $item['content']['#options']['attributes']['data-tracking-event-label'] = $object->field_tracking_event_label->value;
+    }
+  }
+}
+
+/**
+ * Helper function to add button size classes to field.
+ */
+function _ashlar_set_button_size(&$items, $object) {
+  if (!$object->field_button_size->isEmpty()) {
+    foreach ($items as &$item) {
+      $item['content']['#options']['attributes']['class'][] = 'button';
+      $item['content']['#options']['attributes']['class'][] = $object->field_button_size->value;
     }
   }
 }
