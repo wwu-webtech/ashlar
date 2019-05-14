@@ -18,20 +18,19 @@ $max-box-size: 300px;
   figcaption {
     text-align: center;
   }
-  
+
   ol {
     position: relative;
     display: flex;
     list-style-type: none;
-    // margin-bottom: 0;
-    // margin-left: $standard-spacing;
-    // padding: 0;
+
     li {
       @include breakpoint($medium) {
         margin-right: $double-spacing;
+        max-width: $max-box-size;
       }
       position: relative;
-      margin-top: $double-spacing;
+      margin-top: $standard-spacing;
 
       span,
       a {
@@ -64,38 +63,86 @@ $max-box-size: 300px;
       }
 
     }
-    &.level-a {
-      @include breakpoint($medium) {
-        // flex-flow: row nowrap;
-        display: grid;
-        grid-template-columns: repeat(10, auto);
-      }
-      flex-flow: column;
 
-      li {
-      }
+    &.level-a {
+      flex-flow: column;
     }
 
     &.level-b {
-      @include breakpoint($medium) {
-        display: grid;
-        grid-template-columns: repeat(10, auto);
-      }
       margin-left: -($double-spacing + ($standard-spacing + 4px));
-      li {
-        flex-flow: row wrap;
-        width: 100%;
-      }
+      flex-flow: row nowrap;
     }
 
     &.level-c {
       @include breakpoint($medium) {
         display: grid;
       }
+      flex-flow: column wrap;
       margin-left: -($triple-spacing + ($standard-spacing / 3));
-      li {
+    }
+  }
 
+&.simple {
+  .level-a {
+    @include breakpoint($medium) {
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+  }
+
+    li {
+      @include breakpoint($medium) {
+      /* horizontal bar for nested items */
+      > span:before,
+      > a:before {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          display: block;
+          width: $standard-spacing + $border-width;
+          height: 50%;
+          content: "";
+          transform: translate(-180%);
+          border-top: solid $line-color $border-width;
+          background: transparent;
+        }
+
+      &:first-of-type > span:before,
+      &:first-of-type > a:before,
+      &:first-child > .level-c:before {
+        display: none;
+        }
       }
     }
   }
+}
+
+&.multi-step {
+
+  .level-a {
+    @include breakpoint($medium) {
+      display: grid;
+      grid-template-rows: repeat(10, auto);
+    }
+  }
+
+  .level-b {
+    @include breakpoint($medium) {
+      display: grid;
+      grid-template-columns: repeat(10, auto);
+      justify-content: center;
+
+      li {
+        width: $max-box-size / 2;
+      }
+    }
+  }
+
+  // .level-c {
+  //   @include breakpoint($medium) {
+  //     display: grid;
+  //     grid-template-rows: repeat(10, auto);
+  //     justify-items: stretch;
+  //   }
+  // }
+}
 }
