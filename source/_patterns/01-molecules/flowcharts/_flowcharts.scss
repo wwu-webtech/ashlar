@@ -70,7 +70,7 @@ $max-box-size: 300px;
 
     &.level-b {
       margin-left: -($double-spacing + ($standard-spacing + 4px));
-      flex-flow: row nowrap;
+      flex-flow: column nowrap;
     }
 
     &.level-c {
@@ -130,19 +130,15 @@ $max-box-size: 300px;
       display: grid;
       grid-template-columns: repeat(10, auto);
       justify-content: center;
+    }
 
-      li {
-        width: $max-box-size / 2;
+    li {
+      @include breakpoint($medium) {
+        margin-left: 0 !important; //large screen overrides, resets left margin from mobile
       }
+      width: $max-box-size / 2;
+      margin-left: $double-spacing;
     }
   }
-
-  // .level-c {
-  //   @include breakpoint($medium) {
-  //     display: grid;
-  //     grid-template-rows: repeat(10, auto);
-  //     justify-items: stretch;
-  //   }
-  // }
 }
 }
