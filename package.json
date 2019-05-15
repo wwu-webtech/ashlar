@@ -4,6 +4,7 @@
   "description": "Ashlar theme for Drupal 8",
   "devDependencies": {
     "browserify": "^16.2.3",
+    "d3": "^5.0.0",
     "del": "^3.0.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
