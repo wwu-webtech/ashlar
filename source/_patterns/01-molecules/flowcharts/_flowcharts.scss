@@ -94,27 +94,24 @@ $max-box-size: 300px;
   }
 
     li {
-      @include breakpoint($medium) {
-      /* horizontal bar for nested items */
+      /*vertical bars for level-a items on mobile*/
       > span:before,
       > a:before {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          display: block;
-          width: $standard-spacing + $border-width;
-          height: 50%;
-          content: "";
-          transform: translate(-180%);
-          border-top: solid $line-color $border-width;
-          background: transparent;
-        }
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        display: block;
+        width: $border-width;
+        height: $standard-spacing;
+        content: "";
+        transform: translate(-50%, ($standard-spacing + 6px));
+        background: $line-color;
+      }
 
-      &:first-of-type > span:before,
-      &:first-of-type > a:before,
-      &:first-child > .level-c:before {
+      &:last-of-type > span:before,
+      &:last-of-type > a:before,
+      &:last-child > .level-c:before {
         display: none;
-        }
       }
     }
   }
@@ -136,12 +133,11 @@ $max-box-size: 300px;
       justify-content: center;
     }
 
-    li:not(.level-d > li) {
+    li {
       @include breakpoint($medium) {
         margin-left: 0 !important; //large screen overrides, resets left margin from mobile
         width: $max-box-size - ($double-spacing);
       }
-      width: $max-box-size / 1.5;
       margin-left: $double-spacing;
     }
 
@@ -150,15 +146,53 @@ $max-box-size: 300px;
         display: grid;
         grid-template-columns: repeat(10, auto);
         justify-content: space-evenly;
+        max-width: ($max-box-size - 50px);
       }
-      max-width: ($max-box-size - 50px);
-      margin-left: -($double-spacing);
 
       li {
-        width: $max-box-size / 2;
-        margin-right: $standard-spacing;
+        @include breakpoint($medium) {
+          max-width: $max-box-size / 2;
+        }
+        margin-right: 2%;
       }
     }
   }
 }
+}
+
+@include breakpoint($medium) {
+.flowchart {
+  &.simple {
+  .level-a {
+    li {
+      /* horizontal bar for level-a items on desktop */
+      > span:before,
+      > a:before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: $standard-spacing + $border-width;
+        height: 50%;
+        content: "";
+        transform: translate(-180%);
+        border-top: solid $line-color $border-width;
+        background: transparent;
+      }
+
+      &:first-of-type > span:before,
+      &:first-of-type > a:before,
+      &:first-child > .level-c:before {
+        display: none;
+        }
+
+      &:last-of-type > span:before,
+      &:last-of-type > a:before,
+      &:last-child > .level-c:before {
+        display: block;
+        }
+      }
+    }
+    }
+  }
 }
