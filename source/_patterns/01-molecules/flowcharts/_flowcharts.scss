@@ -91,6 +91,7 @@ $max-box-size: 300px;
     @include breakpoint($medium) {
     display: grid;
     grid-template-columns: repeat(10, auto);
+    align-items: center;
   }
 
     li {
