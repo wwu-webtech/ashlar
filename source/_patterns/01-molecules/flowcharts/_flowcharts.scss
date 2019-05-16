@@ -132,12 +132,28 @@ $max-box-size: 300px;
       justify-content: center;
     }
 
-    li {
+    li:not(.level-d > li) {
       @include breakpoint($medium) {
         margin-left: 0 !important; //large screen overrides, resets left margin from mobile
+        width: $max-box-size - ($double-spacing);
       }
-      width: $max-box-size / 2;
+      width: $max-box-size / 1.5;
       margin-left: $double-spacing;
+    }
+
+    .level-d {
+      @include breakpoint ($medium) {
+        display: grid;
+        grid-template-columns: repeat(10, auto);
+        justify-content: space-evenly;
+      }
+      max-width: ($max-box-size - 50px);
+      margin-left: -($double-spacing);
+
+      li {
+        width: $max-box-size / 2;
+        margin-right: $standard-spacing;
+      }
     }
   }
 }
