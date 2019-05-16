@@ -80,6 +80,10 @@ $max-box-size: 300px;
       flex-flow: column wrap;
       margin-left: -($triple-spacing + ($standard-spacing / 3));
     }
+
+    &.level-d {
+      flex-flow: column wrap;
+    }
   }
 
 &.simple {
