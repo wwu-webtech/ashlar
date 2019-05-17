@@ -92,28 +92,6 @@ $max-box-size: 300px;
     display: grid;
     grid-template-columns: repeat(10, auto);
     align-items: center;
-  }
-
-    li {
-      /*vertical bars for level-a items on mobile*/
-      > span:before,
-      > a:before {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        display: block;
-        width: $border-width;
-        height: $standard-spacing;
-        content: "";
-        transform: translate(-50%, ($standard-spacing + 6px));
-        background: $line-color;
-      }
-
-      &:last-of-type > span:before,
-      &:last-of-type > a:before,
-      &:last-child > .level-c:before {
-        display: none;
-      }
     }
   }
 }
@@ -159,6 +137,32 @@ $max-box-size: 300px;
     }
   }
 }
+
+  &.simple, &.multi-step {
+    .level-a {
+      li {
+      /*vertical bars for level-a items on mobile*/
+        > span:before,
+        > a:before {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          display: block;
+          width: $border-width;
+          height: $standard-spacing;
+          content: "";
+          transform: translate(-50%, ($standard-spacing + 6px));
+          background: $line-color;
+        }
+
+        &:last-of-type > span:before,
+        &:last-of-type > a:before,
+        &:last-child > .level-c:before {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 @include breakpoint($medium) {
@@ -194,6 +198,6 @@ $max-box-size: 300px;
         }
       }
     }
-    }
   }
+}
 }
