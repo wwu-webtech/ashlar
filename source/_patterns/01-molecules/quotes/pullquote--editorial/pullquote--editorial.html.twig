@@ -1,0 +1,13 @@
+<blockquote{{ attributes }}>
+  {% include "@atoms/global/label/label.twig" %}
+
+  {% block content %}
+    <div class="body">
+      {{ body }}
+    </div>
+    <div class="credit">
+      <span class="name"> {{ name }}</span>
+      <span class="description">{{ description }}</span>
+    </div>
+  {% endblock %}
+</blockquote>

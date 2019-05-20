@@ -1,0 +1,51 @@
+/**
+* @file
+* 01-molecules/testimonials/testimonial--quote-only/_testimonial--quote-only.scss
+*/
+$quote-icon-size: 30px;
+$quote-icon-font-size: 48px;
+
+.pullquote--editorial {
+  position: relative;
+  max-width: $max-content-width / 3;
+  margin-top: $quote-icon-size;
+  padding-top: $quote-icon-size + $standard-spacing;
+  border-top: $blue $border-width solid;
+  border-bottom: $blue $border-width solid;
+  background: initial;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: block;
+    display: grid;
+    width: $quote-icon-size;
+    height: $quote-icon-size;
+    padding: $standard-spacing;
+    content: "“";
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: $blue;
+    border: solid $blue $border-width;
+    border-radius: 50%;
+    background: $white;
+    font-family: pt serif;
+    font-size: $quote-icon-font-size;
+  }
+
+  .body {
+    margin-bottom: $double-spacing;
+    color: $dark-blue;
+    font-style: italic;
+  }
+
+  .credit {
+    text-align: center;
+  }
+
+  .name {
+    display: block;
+    font-weight: $font-weight--bold;
+  }
+}
