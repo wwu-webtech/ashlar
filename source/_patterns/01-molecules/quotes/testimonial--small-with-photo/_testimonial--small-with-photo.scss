@@ -21,6 +21,7 @@ $image-size--large: 300px;
   }
   margin: $double-spacing 0;
   text-align: center;
+  background: initial;
 
   .image,
   .field__item:nth-of-type(1) {
@@ -36,6 +37,8 @@ $image-size--large: 300px;
       grid-template-columns: $image-size--large;
       grid-template-rows: $image-size--large;
     }
+
+    grid-area: image;
     -ms-grid-columns: $image-size;
     -ms-grid-rows: $image-size;
     grid-template-columns: $image-size;
@@ -66,8 +69,6 @@ $image-size--large: 300px;
       width: $image-size;
       height: $image-size;
     }
-
-    grid-area: image;
   }
 
   .body,
@@ -92,12 +93,14 @@ $image-size--large: 300px;
   }
 
   .field__item:nth-of-type(3) {
-    grid-area: credit;
     font-weight: bold;
+
+    grid-area: credit;
   }
   .field__item:nth-of-type(4) {
-    grid-area: credit;
     transform: translatey(1.5em);
     font-style: italic;
+
+    grid-area: credit;
   }
 }
