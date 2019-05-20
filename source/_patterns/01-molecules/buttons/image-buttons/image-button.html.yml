@@ -8,5 +8,5 @@ title_attributes:
     class:
     - block__title
 content:
-  field_link: <a href="#">Link text</a>
+  field_link: <a href="#">Prospective Students</a>
   field_image: <div class="field__item"><img src="../../images/pattern-lab/placeholder.png" alt="gray placeholder"></div>

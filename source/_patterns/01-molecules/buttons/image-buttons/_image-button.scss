@@ -2,9 +2,93 @@
 * @file
 * 01-molecules/buttons/image-buttons/_image-buttons.scss
 */
-$button-size: 130px;
-$button-size--medium: 180px;
-$button-size--large: 240px;
+$image-button-size: 200px;
+$image-button-size--medium: 250px;
+$image-button-size--large: 300px;
 
 .block--image-button {
+  @include breakpoint($medium) {
+    width: $image-button-size--medium;
+    height: $image-button-size--medium;
+    margin: $image-button-size--medium / 4;
+  }
+  @include breakpoint($large) {
+    width: $image-button-size--large;
+    height: $image-button-size--large;
+    margin: $image-button-size--large / 4;
+  }
+  position: relative;
+  width: $image-button-size;
+  height: $image-button-size;
+  margin: $image-button-size / 4;
+  transition: 0.5s ease all;
+  border-radius: 50%;
+
+
+  &:before,
+  &:after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    display: block;
+    content: "";
+    transition: 0.5s ease all;
+    border-radius: 50%;
+  }
+
+  &:before {
+    width: 70%;
+    height: 70%;
+    transform: translate(-20%, -20%);
+    background: transparentize($blue, 0.8);
+  }
+
+  &:after {
+    width: 105%;
+    height: 105%;
+    transform: translate(15%, 10%);
+    background: transparentize($blue, 0.9);
+  }
+
+  &:hover:before {
+    transform: translate(60%, 45%) rotatey(180deg);
+  }
+
+  &:hover:after {
+    transform: translate(-20%, -20%) rotatex(180deg);
+  }
+
+  a {
+    @include breakpoint($medium) {
+      font-size: $image-button-size--medium / 6.25;
+    }
+    @include breakpoint($large) {
+      font-size: $image-button-size--large / 6.25;
+    }
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 50%;
+    background: transparentize($dark-blue, 0.5);
+    font-size: $image-button-size / 6.25;
+    font-weight: bold;
+
+    &:active,
+    &:focus,
+    &:hover {
+      outline: none;
+      background: transparentize($dark-blue, 0.1);
+    }
+  }
 }

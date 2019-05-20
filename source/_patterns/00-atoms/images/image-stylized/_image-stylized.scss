@@ -2,12 +2,11 @@
 * @file
 * 00-atoms/images/image-stylized/_image-stylized.scss
 */
-$image-size: 300px;
 
 .image--stylized {
   position: relative;
-  width: $image-size;
-  height: $image-size;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
 
   * {
