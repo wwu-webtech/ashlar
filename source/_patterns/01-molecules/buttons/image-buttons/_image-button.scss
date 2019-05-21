@@ -10,7 +10,7 @@ $image-button-size--large: 300px;
   @include breakpoint($medium) {
     width: $image-button-size--medium;
     height: $image-button-size--medium;
-    margin: $image-button-size--medium / 4;
+    margin: $image-button-size--medium / 5;
   }
   @include breakpoint($large) {
     width: $image-button-size--large;
@@ -21,7 +21,7 @@ $image-button-size--large: 300px;
   position: relative;
   width: $image-button-size;
   height: $image-button-size;
-  margin: $image-button-size / 4;
+  margin: $image-button-size / 5;
   transition: 0.5s ease all;
   border-radius: 50%;
 
@@ -96,7 +96,7 @@ $image-button-size--large: 300px;
   }
 
   /* Multiple image buttons in a single container */
-  &:nth-of-type(2) {
+  &:nth-of-type(3) {
     &:before {
       width: 110%;
       height: 110%;
@@ -120,7 +120,7 @@ $image-button-size--large: 300px;
   }
 
 
-  &:nth-of-type(3) {
+  &:nth-of-type(2) {
     &:before {
       width: 100%;
       height: 100%;
