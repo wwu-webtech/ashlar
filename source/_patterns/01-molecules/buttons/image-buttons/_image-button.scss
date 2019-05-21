@@ -15,7 +15,8 @@ $image-button-size--large: 300px;
   @include breakpoint($large) {
     width: $image-button-size--large;
     height: $image-button-size--large;
-    margin: $image-button-size--large / 4;
+    margin-left: 0;
+    margin-right: 0;
   }
   position: relative;
   width: $image-button-size;
@@ -40,7 +41,7 @@ $image-button-size--large: 300px;
   &:before {
     width: 70%;
     height: 70%;
-    transform: translate(-20%, -20%);
+    transform: translate(-20%, -10%);
     background: transparentize($blue, 0.8);
   }
 
@@ -51,12 +52,14 @@ $image-button-size--large: 300px;
     background: transparentize($blue, 0.9);
   }
 
-  &:hover:before {
+
+  &:hover:before,
+  &:focus-within:before {
     transform: translate(60%, 45%) rotatey(180deg);
   }
-
-  &:hover:after {
-    transform: translate(-20%, -20%) rotatex(180deg);
+  &:hover:after,
+  &:focus-within:after {
+    transform: translate(-20%, -10%) rotatex(180deg);
   }
 
   a {
@@ -89,6 +92,58 @@ $image-button-size--large: 300px;
     &:hover {
       outline: none;
       background: transparentize($dark-blue, 0.1);
+    }
+  }
+
+  /* Multiple image buttons in a single container */
+  &:nth-of-type(2) {
+    &:before {
+      width: 110%;
+      height: 110%;
+      transform: translate(12%, -9%);
+    }
+    &:after {
+      width: 80%;
+      height: 80%;
+      transform: translate(-12%, 30%);
+    }
+
+    &:hover:before,
+    &:focus-within:before {
+      transform: translate(-12%, -20%) rotatey(180deg);
+    }
+
+    &:hover:after,
+    &:focus-within:after {
+      transform: translate(50%, 14%) rotatey(180deg);
+    }
+  }
+
+
+  &:nth-of-type(3) {
+    &:before {
+      width: 100%;
+      height: 100%;
+      transform: translate(-10%, 20%);
+    }
+    &:after {
+      width: 80%;
+      height: 80%;
+      transform: translate(20%, -13%);
+    }
+
+    &:hover:before,
+    &:focus-within:before {
+      width: 100%;
+      height: 100%;
+      transform: translate(10%, -18%) rotatex(180deg);
+    }
+
+    &:hover:after,
+    &:focus-within:after {
+      width: 80%;
+      height: 80%;
+      transform: translate(0%, 40%) rotatex(180deg);
     }
   }
 }
