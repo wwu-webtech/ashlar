@@ -1,11 +1,10 @@
-{% include "@atoms/global/label/label.twig" %}
-
 <blockquote{{ attributes }}>
   {% block content %}
     <div class="image image--stylized">
       {{ content.field_image }}
     </div>
     <div class="body">
+      {% include "@atoms/global/label/label.twig" %}
       {{ content.body }}
     </div>
     <div class="credit">

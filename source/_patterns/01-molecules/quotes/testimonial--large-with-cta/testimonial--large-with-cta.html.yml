@@ -7,11 +7,11 @@ title_attributes:
   Attribute():
     class:
     - block__title
+label: "At Western, we keep it real nerdy."
 content:
   field_image: atoms-landscape-3x2
-  body: "Not if I weaken first. I'd like to think that I haven't changed those things, sir. You enjoyed that. I am your worst nightmare!"
-  field_name: "William Riker"
-  field_description: "First Officer: USS Enterprise-D"
-  field_title: "At Western, we keep it real nerdy."
-  field_cta_body: "I can't. As much as I care about you, my first duty is to the ship. But the probability of making a six is no greater than that of rolling a seven. Yesterday I did not know how to eat gagh. Smooth as an android's bottom, eh, Data? I've had twelve years to think about it. And if I had it to do over again, I would have grabbed the phaser and pointed it at you instead of them. Wouldn't that bring about chaos?"
+  body: "I am so thankful for the time I spent at WWU and feel that the training I received truly prepared me for my current profession as a first grade teacher. There have been many times where my training has kicked in to help me in difficult situations."
+  field_name: "Karen M."
+  field_description: "Teacher Education Outreach Program, Bremerton"
+  field_cta_body: "And if I had it to do over again, I would have grabbed the phaser and pointed it at you instead of them. Wouldn't that bring about chaos?"
   field_cta_link: "<a href='#' class='button square'>Learn about Star Trek</a>"
