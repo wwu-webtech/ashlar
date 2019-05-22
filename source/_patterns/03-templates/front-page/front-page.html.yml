@@ -51,10 +51,16 @@ page:
                                   join():
                                   - include():
                                       pattern: molecules-image-button-html
+                                      with:
+                                        content:
+                                          field_link: <a href="#">Apply</a>
                                   - include():
                                       pattern: molecules-image-button-html
                                   - include():
                                       pattern: molecules-image-button-html
+                                      with:
+                                        content:
+                                          field_link: <a href="#">Current Students</a>
                         - include():
                             pattern: templates-layout--twocol-bricks-html
                             with:

@@ -76,20 +76,6 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
 
     -ms-grid-row-align: end;
 
-    &:before {
-      @include breakpoint($medium) {
-        border-width: $border-width--thicker;
-      }
-      position: absolute;
-      right: $half-spacing;
-      bottom: $half-spacing;
-      display: block;
-      width: 100%;
-      height: 100%;
-      content: "";
-      border: solid $border-width $dark-blue;
-    }
-
     h2 {
       @include breakpoint($medium) {
         grid-column: initial;
