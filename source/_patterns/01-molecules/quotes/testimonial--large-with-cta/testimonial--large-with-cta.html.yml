@@ -1,8 +1,8 @@
 attributes:
   Attribute():
     class:
-    - 
-    -
+    - block
+    - block--testimonial-with-cta
 title_attributes:
   Attribute():
     class:
