@@ -17,12 +17,12 @@ input[type="submit"] {
   color: $white;
   border: $border-width solid $dark-blue;
   @include button-box-shadow($blue);
-  background: linear-gradient(to bottom right, $dark-blue 50%, $darkest-blue 100%);
-  transition: background $button-transition-speed, transform $fast-transition-speed, box-shadow $fast-transition-speed;
+  background: $darkest-blue;
+  transition: background $button-transition-speed, color $button-transition-speed, transform $fast-transition-speed, box-shadow $fast-transition-speed;
 
   &:hover,
   &:focus {
-    background: linear-gradient(to bottom right, $blue 50%, #{mix($blue, $dark-blue, 50%)} 100%);
+    background: $blue;
   }
 
   &:active {
@@ -30,15 +30,19 @@ input[type="submit"] {
     box-shadow: none;
   }
 
+  &:focus {
+    outline: none;
+  }
+
 
   &.alt {
     color: $dark-blue;
-    background: linear-gradient(to bottom right, $lightest-gray 50%, $light-gray 100%);
+    background: $lightest-gray;
 
     &:hover,
     &:focus {
       color: $white;
-      background: linear-gradient(to bottom right, $blue 50%, #{mix($blue, $dark-blue, 50%)} 100%);
+      background: $blue;
     }
   }
 
@@ -50,15 +54,15 @@ input[type="submit"] {
 
     &:hover,
     &:focus {
-      background: #{mix($yellow, $red, 80%)}
+      background: $light-gray; 
     }
   }
 
   &:disabled {
     border-color: mix($gray, $light-gray, 50%);
     @include button-box-shadow($light-gray);
-    color: $gray;
-    background: linear-gradient(to bottom right, #{mix($gray, $light-gray, 50%)} 50%, $gray 100%);
+    color: mix($gray, $light-gray, 50%);
+    background: $light-gray;
 
     &:active {
       transform: none;
@@ -74,7 +78,7 @@ input[type="submit"] {
   margin-bottom: $standard-spacing;
   padding: $standard-spacing $double-spacing;
   user-select: none;
-  transition: background-color $button-transition-speed, border-color $button-transition-speed, transform $fast-transition-speed, box-shadow $fast-transition-speed;
+  transition: background-color $button-transition-speed, color $button-transition-speed, border-color $button-transition-speed, transform $fast-transition-speed, box-shadow $fast-transition-speed;
   text-align: center;
   vertical-align: middle;
   text-decoration: none;
@@ -90,6 +94,10 @@ input[type="submit"] {
   &:active {
     transform: translate(2px, 2px);
     box-shadow: none !important;
+  }
+
+  &:focus {
+    outline: none;
   }
 
   &:hover,
