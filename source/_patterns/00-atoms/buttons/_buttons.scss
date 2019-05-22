@@ -54,7 +54,7 @@ input[type="submit"] {
 
     &:hover,
     &:focus {
-      background: $light-gray; 
+      background: $light-gray;
     }
   }
 
@@ -160,6 +160,20 @@ input[type="submit"] {
     }
   }
 
+  &.white {
+    @include button-box-shadow($dark-blue);
+    background: $white;
+    color: $blue;
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: $white;
+      border-color: transparent;
+      background: $blue;
+    }
+  }
+
   &.outline {
     @include button-box-shadow($blue);
     color: $blue;
@@ -213,6 +227,21 @@ input[type="submit"] {
         color: $white;
         border-color: transparent;
         background: $green;
+      }
+    }
+
+    &.white {
+      @include button-box-shadow($white);
+      color: $white;
+      border-color: $white;
+      background: transparent;
+
+      &:active,
+      &:hover,
+      &:focus {
+        color: $dark-blue;
+        border-color: transparent;
+        background: $light-gray;
       }
     }
   }
