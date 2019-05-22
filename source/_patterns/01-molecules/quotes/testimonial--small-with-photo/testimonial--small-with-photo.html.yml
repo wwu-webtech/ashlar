@@ -8,7 +8,7 @@ title_attributes:
     class:
     - block__title
 content:
-  field_image: atoms-image-stylized
+  field_image: atoms-landscape-3x2
   body: "Not if I weaken first. I'd like to think that I haven't changed those things, sir. You enjoyed that. I am your worst nightmare!"
   field_name: "William Riker"
   field_description: "First Officer: USS Enterprise-D"

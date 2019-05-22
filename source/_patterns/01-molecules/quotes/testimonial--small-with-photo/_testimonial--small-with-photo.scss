@@ -2,72 +2,67 @@
 * @file
 * 01-molecules/testimonials/testimonial--small-with-photo/_testimonial--small-with-photo.scss
 */
-$image-size: 180px;
-$image-size--medium: 220px;
-$image-size--large: 300px;
+$testimonial-photo-size: 300px;
 
 .block--testimonial,
 .paragraph--type--majors-profile {
   @include breakpoint ($small) {
-    display: grid;
     text-align: left;
 
-    grid-column-gap: $triple-spacing;
-    grid-template-areas:
-    "image body"
+    grid-column-gap: $double-spacing;
+    grid-row-gap: 0;
+    grid-template-areas: "image body"
     "image credit";
     grid-template-columns: auto 1fr;
     grid-template-rows: auto;
   }
-  margin: $double-spacing 0;
+  display: grid;
+  margin-top: $triple-spacing;
+  margin-right: $standard-spacing;
+  margin-bottom: $standard-spacing * 6;
+  margin-left: $standard-spacing;
+  padding: 0;
   text-align: center;
   background: initial;
 
+  grid-row-gap: $double-spacing;
+  grid-template-areas: "image"
+  "body"
+  "credit";
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+
   .image,
   .field__item:nth-of-type(1) {
-    @include breakpoint($medium) {
-      -ms-grid-columns: $image-size--medium;
-      -ms-grid-rows: $image-size--medium;
-      grid-template-columns: $image-size--medium;
-      grid-template-rows: $image-size--medium;
-    }
-    @include breakpoint($large) {
-      -ms-grid-columns: $image-size--large;
-      -ms-grid-rows: $image-size--large;
-      grid-template-columns: $image-size--large;
-      grid-template-rows: $image-size--large;
-    }
+    align-self: center;
+    width: $testimonial-photo-size;
+    max-width: calc(100vw - #{$double-spacing});
+    height: $testimonial-photo-size;
 
     grid-area: image;
-    -ms-grid-columns: $image-size;
-    -ms-grid-rows: $image-size;
-    grid-template-columns: $image-size;
-    grid-template-rows: $image-size;
-
-    &:after {
-      @include breakpoint($medium) {
-        width: $image-size--medium;
-        height: $image-size--medium;
-      }
-      @include breakpoint($large) {
-        width: $image-size--large;
-        height: $image-size--large;
-      }
-      width: $image-size;
-      height: $image-size;
-    }
+    justify-self: center;
 
     img {
-      @include breakpoint($medium) {
-        width: $image-size--medium;
-        height: $image-size--medium;
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+
+    &:after {
+      @include breakpoint($small) {
+        position: absolute;
+        z-index: -1;
+        top: -12%;
+        left: 30%;
+        display: block;
+        width: 140%;
+        height: 140%;
+        content: "";
+        border-radius: 50%;
+        background: transparentize($blue, 0.95);
       }
-      @include breakpoint($large) {
-        width: $image-size--large;
-        height: $image-size--large;
-      }
-      width: $image-size;
-      height: $image-size;
     }
   }
 
