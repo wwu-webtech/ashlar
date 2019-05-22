@@ -104,7 +104,7 @@ page:
                                         content: "<a class='button alt'>More News</a>"
                                 middle:
                                   include():
-                                    pattern: molecules-testimonial--small-with-photo-html
+                                    pattern: molecules-testimonial-html
                                 first_below:
                                   join():
                                   - include():

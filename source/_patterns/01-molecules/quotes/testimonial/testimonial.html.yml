@@ -3,6 +3,7 @@ attributes:
     class:
     - block
     - block--testimonial
+    - testimonial-default
 title_attributes:
   Attribute():
     class:

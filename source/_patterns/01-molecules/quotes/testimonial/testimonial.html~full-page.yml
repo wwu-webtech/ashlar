@@ -1,0 +1,16 @@
+attributes:
+  Attribute():
+    class:
+    - block
+    - block--testimonial
+    - testimonial-full-page
+title_attributes:
+  Attribute():
+    class:
+    - block__title
+label: This person, for one, loved it
+content:
+  field_image: atoms-landscape-3x2
+  body: "“Not if I weaken first. I'd like to think that I haven't changed those things, sir. You enjoyed that. I am your worst nightmare!”"
+  field_name: "William Riker"
+  field_description: "First Officer: USS Enterprise-D"
