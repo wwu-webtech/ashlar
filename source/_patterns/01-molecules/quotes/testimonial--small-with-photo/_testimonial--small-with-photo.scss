@@ -4,8 +4,7 @@
 */
 $testimonial-photo-size: 300px;
 
-.block--testimonial,
-.paragraph--type--majors-profile {
+.block--testimonial {
   @include breakpoint ($small) {
     text-align: left;
 
@@ -32,8 +31,7 @@ $testimonial-photo-size: 300px;
   grid-template-columns: auto;
   grid-template-rows: auto;
 
-  .image,
-  .field__item:nth-of-type(1) {
+  .image {
     align-self: center;
     width: $testimonial-photo-size;
     max-width: calc(100vw - #{$double-spacing});
@@ -66,8 +64,7 @@ $testimonial-photo-size: 300px;
     }
   }
 
-  .body,
-  .field__item:nth-of-type(2) {
+  .body {
     align-self: center;
     margin: $standard-spacing 0;
 
@@ -85,17 +82,5 @@ $testimonial-photo-size: 300px;
     .description {
       font-style: italic;
     }
-  }
-
-  .field__item:nth-of-type(3) {
-    font-weight: bold;
-
-    grid-area: credit;
-  }
-  .field__item:nth-of-type(4) {
-    transform: translatey(1.5em);
-    font-style: italic;
-
-    grid-area: credit;
   }
 }
