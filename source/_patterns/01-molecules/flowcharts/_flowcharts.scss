@@ -65,7 +65,7 @@ $max-box-size: 300px;
     }
 
     &.level-a {
-      flex-flow: column;
+      flex-direction: column;
     }
 
     &.level-b {
@@ -144,8 +144,8 @@ $max-box-size: 300px;
     .level-a {
       li {
       /*vertical bars for level-a items on mobile*/
-        > span:before,
-        > a:before {
+        > span:after,
+        > a:after {
           position: absolute;
           bottom: 0;
           left: 50%;
@@ -156,10 +156,16 @@ $max-box-size: 300px;
           transform: translate(-50%, ($standard-spacing + 6px));
           background: $line-color;
         }
+      }
+    }
+  }
 
-        &:last-of-type > span:before,
-        &:last-of-type > a:before,
-        &:last-child > .level-c:before {
+  &.simple {
+    .level-a {
+      li {
+        &:last-of-type > span:after,
+        &:last-of-type > a:after,
+        &:last-child > .level-c:after {
           display: none;
         }
       }
@@ -167,64 +173,80 @@ $max-box-size: 300px;
   }
 
   &.multi-step {
+    .level-b, .level-c, .level-d, .level-e, .level-f {
     .has-ol {
-      &:before {
-        > span:before,
-        > a:before {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          display: block;
-          width: $standard-spacing + $border-width;
-          height: 50%;
-          content: "";
-          transform: translate(-100%);
-          border-top: solid $line-color $border-width;
-          background: transparent;
+      @include breakpoint($medium) {
+        border-left: 0;
+      }
+      border-left: solid $border-width $line-color;
+      // &:before {
+        // > span:after,
+        // > a:after {
+        //   position: absolute;
+        //   bottom: 0;
+        //   left: 0;
+        //   display: block;
+        //   width: $standard-spacing + $border-width;
+        //   height: 50%;
+        //   content: "";
+        //   transform: translate(-100%);
+        //   border-top: solid $line-color $border-width;
+        //   background: transparent;
+        // }
+
+        .level-c {
+          li {
+            &:last-of-type {
+              span:after, a:after {
+                display: none;
+              }
+            }
+          }
         }
+
       }
     }
-  }
-  
-  .level-b, .level-c, .level-d,
-  .level-e, .level-f {
-    // &:before {
-    // /* vertical bar for nested items */
-    // position: absolute;
-    // bottom: 0;
-    // left: 0;
-    // display: block;
-    // width: $standard-spacing + $border-width;
-    // height: 50%;
-    // content: "";
-    // transform: translate(0);
-    // border-left: solid $border-width $line-color;
-    // background: transparent;
-    // }
-
-    /* horizontal bar for nested items */
-    > span:before,
-    > a:before {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      display: block;
-      width: $standard-spacing + $border-width;
-      height: 50%;
-      content: "";
-      transform: translate(-100%);
-      border-top: solid $line-color $border-width;
-      background: transparent;
     }
 
-    /* mask vertical bar for end items */
-    &:last-of-type {
+    .level-b, .level-c, .level-d,
+    .level-e, .level-f {
+      // &:before {
+      // /* vertical bar for nested items */
+      // position: absolute;
+      // bottom: 0;
+      // left: 0;
+      // display: block;
+      // width: $standard-spacing + $border-width;
+      // height: 50%;
+      // content: "";
+      // transform: translate(0);
+      // border-left: solid $border-width $line-color;
+      // background: transparent;
+      // }
+
+      /* horizontal bar for nested items */
       > span:before,
       > a:before {
-        background: $chart-background-color;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: $standard-spacing + $border-width;
+        height: 50%;
+        content: "";
+        transform: translate(-100%);
+        border-top: solid $line-color $border-width;
+        background: transparent;
+      }
+
+      /* mask vertical bar for end items */
+      &:last-of-type {
+        > span:before,
+        > a:before {
+          background: $chart-background-color;
+          }
         }
       }
-    }
   }
 
 @include breakpoint($medium) {
@@ -233,8 +255,8 @@ $max-box-size: 300px;
   .level-a {
     li {
       /* horizontal bar for level-a items on desktop */
-      > span:before,
-      > a:before {
+      > span:after,
+      > a:after {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -247,17 +269,24 @@ $max-box-size: 300px;
         background: transparent;
       }
 
-      &:first-of-type > span:before,
-      &:first-of-type > a:before,
-      &:first-child > .level-c:before {
+      &:first-of-type > span:after,
+      &:first-of-type > a:after,
+      &:first-child > .level-c:after {
         display: none;
         }
 
-      &:last-of-type > span:before,
-      &:last-of-type > a:before,
-      &:last-child > .level-c:before {
+      &:last-of-type > span:after,
+      &:last-of-type > a:after,
+      &:last-child > .level-c:after {
         display: block;
         }
+      }
+    }
+  }
+  &.multi-step {
+    .level-a {
+      li {
+
       }
     }
   }
