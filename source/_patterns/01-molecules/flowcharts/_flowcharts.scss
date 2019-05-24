@@ -110,6 +110,7 @@ $max-box-size: 300px;
       display: grid;
       grid-template-columns: repeat(10, auto);
       justify-content: center;
+      margin-top: 4vh;
     }
 
     li {
@@ -195,13 +196,25 @@ $max-box-size: 300px;
         // }
 
         .level-c {
-          li {
+          li:not(.has-ol){
             &:last-of-type {
               span:after, a:after {
                 display: none;
               }
             }
           }
+
+          li.has-ol {
+              > .level-d {
+                li {
+                  &:first-child {
+                    span:after, a:after {
+                      display: none;
+                    }
+                  }
+                }
+              }
+            }
         }
 
       }
