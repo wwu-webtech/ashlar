@@ -5,7 +5,7 @@ page:
     <span class="above">Thing <span class="bold">Above</span></span>
     <span class="below">Things <span class="italic serif">appearing</span> below</span>
   </a>
-  <p><a href="#" class="button">Button Default</a></p><p><a href="#" class="button alt white">White Button Alt</a></p>
+  <p><a href="#" class="button">Button Default</a></p><p><a href="#" class="button outline white">White Button Outline</a></p>
   </div>'
   footer_center: '<div class="region region--footer_center"><ul class="menu blue"> <li><a href="#">one</a></li> <li><a href="#">two</a></li> <li><a href="#">three</a></li></ul></div>'
   footer_right: '<div class="region region--footer_right">Content for the right footer.<a href="#">Link in right footer region</a></div>'

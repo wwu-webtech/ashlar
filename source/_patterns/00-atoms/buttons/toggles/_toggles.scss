@@ -15,6 +15,16 @@
   height: $toggle-size--larger;
   padding: 0;
   border-radius: 0;
+  border: 0;
+  box-shadow: none;
+  background: $blue;
+
+  &:active,
+  &:hover,
+  &:focus {
+    transform: none;
+    background: $dark-blue;
+  }
 
   .material-icons {
     top: inherit;
