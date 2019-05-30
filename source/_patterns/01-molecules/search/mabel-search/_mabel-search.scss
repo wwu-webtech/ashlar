@@ -56,6 +56,15 @@ $mabel-label-font-size: calc(#{$mabel-label-min-font-size} + #{strip-unit($mabel
       margin: 0;
       padding: $standard-spacing;
       border-radius: 0;
+      background: $blue;
+      border: none;
+
+      &:active,
+      &:hover,
+      &:focus {
+        background: $dark-blue;
+        transform: none;
+      }
     }
 
     .form-text {
@@ -74,6 +83,13 @@ input[title="Remove field"] {
   height: $toggle-size;
   padding: 0;
   border-radius: 0;
+  background: $blue;
+  border: none;
+  box-shadow: none;
+
+  &:active {
+    transform: none;
+  }
 }
 
 .islandora-solr-advanced-controls {
