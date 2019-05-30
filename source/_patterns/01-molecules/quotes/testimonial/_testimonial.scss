@@ -3,7 +3,11 @@
 * 01-molecules/testimonials/testimonial--default-style/_testimonial--default-style.scss
 */
 $testimonial-photo-size: 300px;
-
+$testimonial--full-page-photo-size: 40vw;
+$testimonial--full-page-photo-size-min: 400px;
+$testimonial--full-page-photo-size-max: 600px;
+$testimonial--credit-circle-size: 200px;
+$testimonial--credit-circle-size--larger: 300px;
 .block--testimonial {
   @include breakpoint ($small) {
     text-align: left;
@@ -91,6 +95,112 @@ $testimonial-photo-size: 300px;
 
     .description {
       font-style: italic;
+    }
+  }
+
+  &.testimonial-full-page {
+    @include breakpoint($medium) {
+      margin: $standard-spacing;
+      margin-top: calc(#{$testimonial--full-page-photo-size} * 0.12);
+
+      grid-column-gap: $double-spacing;
+      grid-template-columns: 1fr 1fr;
+    }
+    margin: $standard-spacing;
+    margin-left: -20%;
+
+    grid-column-gap: $standard-spacing;
+    grid-template-areas: "image body"
+    "image body"
+    "..... body";
+    grid-template-columns: 60% 40%;
+
+
+    .image {
+      @include breakpoint($medium) {
+        width: $testimonial--full-page-photo-size;
+        max-width: $testimonial--full-page-photo-size-max;
+        height: $testimonial--full-page-photo-size;
+        max-height: $testimonial--full-page-photo-size-max;
+      }
+      width: $testimonial--full-page-photo-size-min;
+      max-width: none;
+      height: $testimonial--full-page-photo-size-min;
+
+      justify-self: end;
+
+
+      &:after {
+        @include breakpoint($medium) {
+          top: -12%;
+          left: 60%;
+          width: 130%;
+          height: 130%;
+        }
+        position: absolute;
+        z-index: -1;
+        top: 6%;
+        left: 50%;
+        display: block;
+        width: 120%;
+        height: 120%;
+        content: "";
+        border-radius: 50%;
+        background: transparentize($blue, 0.95);
+      }
+    }
+
+    .body {
+      @include breakpoint($medium) {
+        max-width: $testimonial--full-page-photo-size-max;
+        margin-top: -4 * $standard-spacing;
+      }
+      align-self: center;
+      max-width: 50vw;
+      padding-right: $standard-spacing;
+    }
+
+    .credit {
+      @include breakpoint($medium) {
+        width: $testimonial--credit-circle-size--larger;
+        height: $testimonial--credit-circle-size--larger;
+        font-size: $p-font-size;
+      }
+      position: relative;
+      z-index: 1;
+      display: grid;
+      align-self: end;
+      justify-content: center;
+      align-content: center;
+      width: $testimonial--credit-circle-size;
+      height: $testimonial--credit-circle-size;
+      padding: $double-spacing;
+      text-align: center;
+      color: $dark-blue;
+      border-radius: 50%;
+      background: white;
+      font-size: $p-font-size--smaller;
+
+      grid-column: 1 / span 1;
+
+      grid-row: 2 / span 2;
+      justify-self: end;
+
+      &:after {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        content: "“";
+        text-align: center;
+        opacity: 0.2;
+        color: $blue;
+        font-family: $serif;
+        font-size: $testimonial--credit-circle-size;
+      }
     }
   }
 }
