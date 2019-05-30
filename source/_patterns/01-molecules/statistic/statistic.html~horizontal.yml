@@ -1,0 +1,15 @@
+attributes:
+  Attribute():
+    class:
+      - block
+      - block--statistic
+      - statistic--horizontal
+      - dark-blue-bg
+title_attributes:
+  Attribute():
+    class:
+    - block__title
+    - text
+label: academic programs, from the classics to those you get to design yourself
+content:
+  field_statistic_number: "160+"
