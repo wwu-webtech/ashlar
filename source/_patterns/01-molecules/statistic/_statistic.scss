@@ -5,12 +5,15 @@
 $vertical-statistic-width: 180px;
 
 .block--statistic {
+  margin: $half-spacing 0;
+
   .number {
     font-weight: $font-weight--bold;
   }
 
   &.statistic--vertical {
     width: $vertical-statistic-width;
+    margin: 0 $half-spacing;
     padding: $standard-spacing;
     text-align: center;
     border-radius: $button-border-radius--round-square;
