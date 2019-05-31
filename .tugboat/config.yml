@@ -14,7 +14,7 @@ services:
             - php composer-setup.php --install-dir=/usr/local/bin --filename=composer
             - composer create-project -n pattern-lab/edition-twig-standard pattern-lab
             - cd pattern-lab
-            - composer require aleksip/plugin-data-transform
+            - composer require aleksip/plugin-data-transform "^1.3"
             - cd ../
             - php pattern-lab/core/console -c --set sourceDir=../source
             - php pattern-lab/core/console -c --set twigAutoescape=0
