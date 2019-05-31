@@ -30,7 +30,6 @@
     'headline--make-waves',
     'block',
     'block--make-waves',
-    'block--headline--make-waves',
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
   ]
 %}
@@ -39,14 +38,4 @@
 
 {{ attach_library('ashlar/make-waves-fonts') }}
 
-{% embed "@molecules/headline/headline.html.twig" %}
-  {% block container %}
-  <div{{ attributes }}>
-  {% endblock %}
-
-  {% block title %}
-    {{ title_prefix }}
-    <h2{{ title_attributes }}>{{ block_content.info.0.value }}</h2>
-    {{ title_suffix }}
-  {% endblock %}
-{% endembed %}
+{% include "@molecules/headline/headline.html.twig" %}

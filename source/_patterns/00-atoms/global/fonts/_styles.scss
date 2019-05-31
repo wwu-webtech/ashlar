@@ -41,6 +41,16 @@
   @extend %font-size--smaller;
 }
 
+%font-size--regular {
+    @include breakpoint($large) {
+      font-size: $p-font-size--max;
+    }
+    font-size: $p-font-size;
+}
+.font-size--regular {
+  @extend %font-size--regular;
+}
+
 %font-size--larger {
   @include breakpoint($large) {
     font-size: $p-font-size--max--larger;

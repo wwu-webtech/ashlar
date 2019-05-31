@@ -8,8 +8,6 @@ libraries:
   - ashlar/accessible-mega-menu
   - ashlar/accordion
   - ashlar/alerts
-  - ashlar/bright-edge
-  - ashlar/event-tracking
   - ashlar/featherlight
   - ashlar/menu-extras
   - ashlar/quicksearch

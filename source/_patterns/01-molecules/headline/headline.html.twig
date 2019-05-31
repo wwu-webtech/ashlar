@@ -30,13 +30,7 @@
   <div{{ attributes }}>
   {% endblock %}
 
-    {% block title %}
-      {{ title_prefix }}
-      {% if label %}
-        <h2{{ title_attributes }}>{{ label }}</h2>
-      {% endif %}
-      {{ title_suffix }}
-    {% endblock %}
+    {% include "@atoms/global/label/label.twig" %}
 
     {% block content %}
       <div class="body">

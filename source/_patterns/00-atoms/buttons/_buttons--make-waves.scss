@@ -13,27 +13,29 @@ $button-font-size--make-waves: calc(#{$min-button-font-size--make-waves} + #{str
 $button-font-size--make-waves--larger: calc((#{$min-button-font-size--make-waves} + #{strip-unit($max-button-font-size--make-waves - $min-button-font-size--make-waves)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}))*1.5);
 
 
-.button--make-waves {
-  padding: $standard-spacing * 1.5;
-  text-transform: uppercase;
-  border-radius: $border-radius--make-waves;
-  font-family: $heading-font--make-waves;
-  font-size: $button-font-size--make-waves--smaller;
-  box-shadow: $box-shadow--make-waves;
+.block--make-waves-button {
+  .button {
+    padding: $standard-spacing * 1.5;
+    text-transform: uppercase;
+    border-radius: $border-radius--make-waves;
+    font-family: $heading-font--make-waves;
+    font-size: $button-font-size--make-waves--smaller;
+    box-shadow: $box-shadow--make-waves;
 
-  &:hover,
-  &:focus,
-  &:active {
-    box-shadow: $box-shadow-reversed--make-waves;
-  }
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: $box-shadow-reversed--make-waves;
+    }
 
-  &.medium {
-    padding: $double-spacing;
-    font-size: $button-font-size--make-waves;
-  }
+    &.medium {
+      padding: $double-spacing;
+      font-size: $button-font-size--make-waves;
+    }
 
-  &.large {
-    padding: $triple-spacing;
-    font-size: $button-font-size--make-waves--larger;
+    &.large {
+      padding: $triple-spacing;
+      font-size: $button-font-size--make-waves--larger;
+    }
   }
 }

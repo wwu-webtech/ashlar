@@ -63,24 +63,75 @@ function ashlar_preprocess_field(&$variables) {
   $bundle = $element['#bundle'];
 
   if ($field_type === 'link') {
+    if ($object->hasField('field_tracking_event_enable')) {
+      $variables['#attached']['library'][] = 'ashlar/event-tracking';
+      _ashlar_set_tracking_event_enable($variables['items'], $object);
+    }
+
     if ($object->hasField('field_tracking_event_category')) {
-      $variables['element']['#attached']['library'][] = 'ashlar/event-tracking';
+      $variables['#attached']['library'][] = 'ashlar/event-tracking';
       _ashlar_set_tracking_event_category($variables['items'], $object);
+    }
+
+    if ($object->hasField('field_tracking_event_label')) {
+      _ashlar_set_tracking_event_label($variables['items'], $object);
     }
 
     if ($object->hasField('field_button_style')) {
       _ashlar_set_button_style($variables['items'], $object);
     }
+
+    if ($object->hasField('field_button_size')) {
+      _ashlar_set_button_size($variables['items'], $object);
+    }
+
+    if ($object->hasField('field_icon')) {
+      _ashlar_set_icon($variables['items'], $object);
+    }
   }
 }
 
 /**
- * Helper function to add tracking event class attribute to field.
+ * Helper function to add tracking event attribute to field.
+ */
+function _ashlar_set_tracking_event_enable(&$items, $object) {
+  if (!$object->field_tracking_event_enable->isEmpty()) {
+    foreach ($items as &$item) {
+      $item['content']['#options']['attributes']['data-tracking-event-enable'] = '';
+    }
+  }
+}
+
+/**
+ * Helper function to add tracking event category attribute to field.
  */
 function _ashlar_set_tracking_event_category(&$items, $object) {
   if (!$object->field_tracking_event_category->isEmpty()) {
     foreach ($items as &$item) {
       $item['content']['#options']['attributes']['data-tracking-event-category'] = $object->field_tracking_event_category->value;
+    }
+  }
+}
+
+/**
+ * Helper function to add tracking event label attribute to field.
+ */
+function _ashlar_set_tracking_event_label(&$items, $object) {
+  if (!$object->field_tracking_event_label->isEmpty()) {
+    foreach ($items as &$item) {
+      $item['content']['#options']['attributes']['data-tracking-event-label'] = $object->field_tracking_event_label->value;
+    }
+  }
+}
+
+/**
+ * Helper function to add button size classes to field.
+ */
+function _ashlar_set_button_size(&$items, $object) {
+  if (!$object->field_button_size->isEmpty()) {
+    foreach ($items as &$item) {
+      $item['content']['#options']['attributes']['class'][] = 'button';
+      $item['content']['#options']['attributes']['class'][] = $object->field_button_size->value;
     }
   }
 }
@@ -93,6 +144,17 @@ function _ashlar_set_button_style(&$items, $object) {
     foreach ($items as &$item) {
       $item['content']['#options']['attributes']['class'][] = 'button';
       $item['content']['#options']['attributes']['class'][] = $object->field_button_style->value;
+    }
+  }
+}
+
+/**
+ * Helper function to add icons to link markup
+ */
+function _ashlar_set_icon(&$items, $object) {
+  if (!$object->field_icon->isEmpty()) {
+    foreach ($items as &$item) {
+      $item['content']['#title'] = array('#markup' =>  $item['content']['#title'] . ' <span class="material-icons">' . $object->field_icon->value . '</span>');
     }
   }
 }
