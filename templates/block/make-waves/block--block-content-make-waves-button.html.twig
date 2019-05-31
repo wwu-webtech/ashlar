@@ -29,7 +29,6 @@
   set classes = [
     'block',
     'block--make-waves',
-    'block--button--make-waves',
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
   ]
 %}
@@ -40,17 +39,6 @@
 
 {% block template %}
   <div{{ attributes }}>
-    {{ title_prefix }}
-    {% if label %}
-      <h2{{ title_attributes }}>{{ label }}</h2>
-    {% endif %}
-    {{ title_suffix }}
-
-    {% block content %}
-      <a href="{{ block_content.field_link.0.url }}" class="button button--make-waves {{ block_content.field_button_size.0.value|clean_class }}" data-tracking-event-category="{{ block_content.field_tracking_event_category.0.value }}">
-        {{ block_content.field_link.0.title }}
-        <span aria-hidden="true" class="material-icons">{{ block_content.field_material_icon.0.value }}</span>
-      </a>
-    {% endblock %}
+    {% include "@organisms/blocks/block-template/block-template.html.twig" %}
   </div>
 {% endblock %}

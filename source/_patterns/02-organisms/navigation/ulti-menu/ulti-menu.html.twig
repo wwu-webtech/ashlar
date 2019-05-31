@@ -5,11 +5,7 @@
 #}
 {% if items -%}
 <nav class="nav--main" aria-label="Main">
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
+  {% include "@atoms/global/label/label.twig" %}
 
   {# On small screens, Western menu shows here. Otherwise it is hidden and appears earlier in DOM #}
   {% include "@molecules/navigation/wwu-mobile-menu/wwu-mobile-menu.html.twig" %}
