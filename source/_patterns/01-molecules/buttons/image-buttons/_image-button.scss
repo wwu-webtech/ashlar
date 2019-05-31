@@ -16,15 +16,16 @@ $image-button-size--large: 300px;
   @include breakpoint($large) {
     width: $image-button-size--large;
     height: $image-button-size--large;
-    margin-left: 0;
     margin-right: 0;
+    margin-left: 0;
   }
   position: relative;
   width: $image-button-size;
   height: $image-button-size;
-  margin: $image-button-size / 5;
-  transition: 0.5s ease all;
+  margin: $image-button-size / 4.5;
+  transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1);
   border-radius: 50%;
+  box-shadow: 0 1px 3px tranparentize($black, 0.88), 0 1px 2px transparentize($black, 0.86);
 
 
   &:before,
@@ -51,6 +52,11 @@ $image-button-size--large: 300px;
     height: 105%;
     transform: translate(15%, 10%);
     background: transparentize($blue, 0.9);
+  }
+
+  &:hover,
+  &:focus-within {
+    box-shadow: 0 5px 10px transparentize($black, 0.84), 0 3px 6px transparentize($black, 0.77);
   }
 
 
