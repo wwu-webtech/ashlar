@@ -8,7 +8,7 @@ services:
             - apt-get install -y nodejs
             - apt-get install -y npm
             - apt-get install -y gcc g++ make
-            - apt-get install -y curl php-cli php-mbstring git unzip
+            - apt-get install -y curl git unzip
             - apt-get install bsdtar -y
             - curl -sS https://getcomposer.org/installer -o composer-setup.php
             - php composer-setup.php --install-dir=/usr/local/bin --filename=composer
