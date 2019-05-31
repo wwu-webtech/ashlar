@@ -35,3 +35,11 @@ $large-screen-columns: 1fr $max-content-width 1fr;
 /* Toggle/Menu Button Sizes */
 $toggle-size: 58px;
 $toggle-size--larger: 68px;
+
+/* Class to break blocks out of the max content area and take up full view width */
+.full-vw {
+  margin-left:   calc(50% - 50vw);
+  margin-right:  calc(50% - 50vw);
+  padding-left:  calc(50vw - 50%);
+  padding-right: calc(50vw - 50%);
+}
