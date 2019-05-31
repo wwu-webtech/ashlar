@@ -23,3 +23,5 @@ services:
             - gulp patternlab
             - php pattern-lab/core/console --generate
             - ln -snf "${TUGBOAT_ROOT}/pattern-lab/public" "${DOCROOT}"
+            - gulp patternlab
+            - php pattern-lab/core/console --generate
