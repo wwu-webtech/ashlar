@@ -23,5 +23,8 @@ services:
             - gulp patternlab
             - php pattern-lab/core/console --generate
             - ln -snf "${TUGBOAT_ROOT}/pattern-lab/public" "${DOCROOT}"
+            - cd pattern-lab
+            - composer require aleksip/plugin-data-transform "^1.3"
+            - cd ../
             - gulp patternlab
             - php pattern-lab/core/console --generate
