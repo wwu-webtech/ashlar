@@ -2,7 +2,8 @@ attributes:
   Attribute():
     class:
     - block
-    - block--full-page
+    - full-page
+    - dark-blue-bg
 title_attributes:
   Attribute():
     class:
