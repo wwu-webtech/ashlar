@@ -97,7 +97,7 @@ $max-box-size: 300px;
 }
 
 /*LINES*/
-  &.simple, &.multi-step {
+  &.simple {
 
     .level-a {
       li {
@@ -114,13 +114,7 @@ $max-box-size: 300px;
           transform: translate(-50%, ($standard-spacing + 6px));
           background: $line-color;
         }
-      }
-    }
-  }
 
-  &.simple {
-    .level-a {
-      li {
         &:last-of-type > span:after,
         &:last-of-type > a:after,
         &:last-child > .level-c:after {
@@ -129,47 +123,7 @@ $max-box-size: 300px;
       }
     }
   }
-
-    .level-b, .level-c, .level-d,
-    .level-e, .level-f {
-      // &:before {
-      // /* vertical bar for nested items */
-      // position: absolute;
-      // bottom: 0;
-      // left: 0;
-      // display: block;
-      // width: $standard-spacing + $border-width;
-      // height: 50%;
-      // content: "";
-      // transform: translate(0);
-      // border-left: solid $border-width $line-color;
-      // background: transparent;
-      // }
-
-      /* horizontal bar for nested items */
-      > span:before,
-      > a:before {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        display: block;
-        width: $standard-spacing + $border-width;
-        height: 50%;
-        content: "";
-        transform: translate(-100%);
-        border-top: solid $line-color $border-width;
-        background: transparent;
-      }
-
-      /* mask vertical bar for end items */
-      &:last-of-type {
-        > span:before,
-        > a:before {
-          background: $chart-background-color;
-          }
-        }
-      }
-  }
+}
 
 @include breakpoint($medium) {
 .flowchart {
@@ -195,7 +149,7 @@ $max-box-size: 300px;
       &:first-of-type > a:after,
       &:first-child > .level-c:after {
         display: none;
-        }
+      }
 
       &:last-of-type > span:after,
       &:last-of-type > a:after,
