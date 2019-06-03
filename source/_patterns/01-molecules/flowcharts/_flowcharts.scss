@@ -96,49 +96,6 @@ $max-box-size: 300px;
   }
 }
 
-&.multi-step {
-
-  .level-a {
-    @include breakpoint($medium) {
-      display: grid;
-      grid-template-rows: repeat(10, auto);
-    }
-  }
-
-  .level-b {
-    @include breakpoint($medium) {
-      display: grid;
-      grid-template-columns: repeat(10, auto);
-      justify-content: center;
-      margin-top: 4vh;
-    }
-
-    li {
-      @include breakpoint($medium) {
-        margin-left: 0 !important; //large screen overrides, resets left margin from mobile
-        width: $max-box-size - ($double-spacing);
-      }
-      margin-left: $double-spacing;
-    }
-
-    .level-d {
-      @include breakpoint ($medium) {
-        display: grid;
-        grid-template-columns: repeat(10, auto);
-        justify-content: space-evenly;
-        max-width: ($max-box-size - 50px);
-      }
-
-      li {
-        @include breakpoint($medium) {
-          max-width: $max-box-size / 2;
-        }
-        margin-right: 2%;
-      }
-    }
-  }
-}
-
 /*LINES*/
   &.simple, &.multi-step {
 
@@ -172,54 +129,6 @@ $max-box-size: 300px;
       }
     }
   }
-
-  &.multi-step {
-    .level-b, .level-c, .level-d, .level-e, .level-f {
-    .has-ol {
-      @include breakpoint($medium) {
-        border-left: 0;
-      }
-      border-left: solid $border-width $line-color;
-      // &:before {
-        // > span:after,
-        // > a:after {
-        //   position: absolute;
-        //   bottom: 0;
-        //   left: 0;
-        //   display: block;
-        //   width: $standard-spacing + $border-width;
-        //   height: 50%;
-        //   content: "";
-        //   transform: translate(-100%);
-        //   border-top: solid $line-color $border-width;
-        //   background: transparent;
-        // }
-
-        .level-c {
-          li:not(.has-ol){
-            &:last-of-type {
-              span:after, a:after {
-                display: none;
-              }
-            }
-          }
-
-          li.has-ol {
-              > .level-d {
-                li {
-                  &:first-child {
-                    span:after, a:after {
-                      display: none;
-                    }
-                  }
-                }
-              }
-            }
-        }
-
-      }
-    }
-    }
 
     .level-b, .level-c, .level-d,
     .level-e, .level-f {
@@ -293,13 +202,6 @@ $max-box-size: 300px;
       &:last-child > .level-c:after {
         display: block;
         }
-      }
-    }
-  }
-  &.multi-step {
-    .level-a {
-      li {
-
       }
     }
   }
