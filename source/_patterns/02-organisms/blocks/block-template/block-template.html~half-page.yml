@@ -1,0 +1,11 @@
+attributes:
+  Attribute():
+    class:
+    - block
+    - block--half-page
+title_attributes:
+  Attribute():
+    class:
+    - block__title
+label: Half Page Block
+content: "<p>This is a standard block with the class 'block--half-page' added to it.</p>"
