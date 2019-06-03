@@ -4,7 +4,9 @@
  */
 #}
 <div{{ attributes }}>
+  {% block title %}
   {% include "@atoms/global/label/label.twig" %}
+  {% endblock %}
 
   {% block content %}
     {{ content }}
