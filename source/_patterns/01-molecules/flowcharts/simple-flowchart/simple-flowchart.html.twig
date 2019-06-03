@@ -1,0 +1,12 @@
+<figure{{ attributes.addClass(classes) }}>
+<figcaption>Simple Flowchart Caption</figcaption>
+<ol{{ list_attributes.addClass(list_class) }}>
+{% for item in items %}
+  {% if item.url == true %}
+  <li><a href="{{ item.url }}">{{ item.content }}</a></li>
+  {% else %}
+  <li><span>{{ item.content }}</span></li>
+  {% endif %}
+{% endfor %}
+</ol>
+</figure>
