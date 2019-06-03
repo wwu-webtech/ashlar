@@ -40,23 +40,7 @@
   {% embed "@organisms/blocks/block-template/block-template.html.twig" %}
 
   {% block title %}
-  {{ title_prefix }}
-    {% if label %}
-
-      {% if block_content.field_heading_level.0.value == 'h2' %}
-        <h2{{ title_attributes }}>{{ label }}</h2>
-      {% elseif block_content.field_heading_level.0.value == 'h3' %}
-        <h3{{ title_attributes }}>{{ label }}</h3>
-      {% elseif block_content.field_heading_level.0.value == 'h4' %}
-        <h4{{ title_attributes }}>{{ label }}</h4>
-      {% elseif block_content.field_heading_level.0.value == 'h5' %}
-        <h5{{ title_attributes }}>{{ label }}</h5>
-      {% elseif block_content.field_heading_level.0.value == 'h6' %}
-        <h6{{ title_attributes }}>{{ label }}</h6>
-      {% endif %}
-
-    {% endif %}
-  {{ title_suffix }}
+    {% include "@atoms/global/label/label-customized.twig" %}
   {% endblock %}
 
   {% endembed %}
