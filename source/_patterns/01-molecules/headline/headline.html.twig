@@ -1,55 +1,27 @@
-{#
-/**
-* @file
-* Theme override to display a headline custom block type
-*
-* Available variables:
-* - plugin_id: The ID of the block implementation.
-* - label: The configured label of the block if visible.
-* - configuration: A list of the block's configuration values.
-*   - label: The configured label for the block.
-*   - label_display: The display settings for the label.
-*   - provider: The module or other provider that provided this block plugin.
-*   - Block plugin specific settings will also be stored here.
-* - content: The content of this block.
-* - attributes: array of HTML attributes populated by modules, intended to
-*   be added to the main container tag of this template.
-*   - id: A valid HTML ID and guaranteed unique.
-* - title_attributes: Same as attributes, except applied to the main title
-*   tag that appears in the template.
-* - title_prefix: Additional output populated by modules, intended to be
-*   displayed in front of the main title tag that appears in the template.
-* - title_suffix: Additional output populated by modules, intended to be
-*   displayed after the main title tag that appears in the template.
-*
-* @see template_preprocess_block()
-*/
-#}
-{% block template %}
-  {% block container %}
-  <div{{ attributes }}>
+{% block container %}
+<div{{ attributes }}>
+{% endblock %}
+
+  {% block title %}
+    {% include "@atoms/global/label/label.twig" %}
   {% endblock %}
 
-    {% include "@atoms/global/label/label.twig" %}
+  {% block content %}
+    <div class="body">
+    {{ content.body }}
+    </div>
+  {% endblock %}
 
-    {% block content %}
-      <div class="body">
-      {{ content.body }}
-      </div>
-    {% endblock %}
+  {% block links %}
+    {% if content.link %}
+      <a class="button" href="{{ content.link.url }}" class="button">{{ content.link.text }}</a>
+    {% endif %}
 
-    {% block links %}
-      {% if content.link %}
-        <a class="button" href="{{ content.link.url }}" class="button">{{ content.link.text }}</a>
-      {% endif %}
+    {% if content.video.type == "YouTube" %}
+      <a class="button" data-featherlight="iframe" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-style="display:block;border:none;height:50vh;width:50vw;" href="https://www.youtube.com/embed/{{ content.video.id }}?rel=0&amp;autoplay=1">Watch Video <i aria-hidden="true" class="material-icons" style="font-size: 18px">play_arrow</i></a>
 
-      {% if content.video.type == "YouTube" %}
-        <a class="button" data-featherlight="iframe" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-style="display:block;border:none;height:50vh;width:50vw;" href="https://www.youtube.com/embed/{{ content.video.id }}?rel=0&amp;autoplay=1">Watch Video <i aria-hidden="true" class="material-icons" style="font-size: 18px">play_arrow</i></a>
-
-      {% elseif content.video.type == "Vimeo" %}
-        <a class="button" data-featherlight="iframe" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-style="display:block;border:none;height:50vh;width:50vw;" href="https://player.vimeo.com/video/{{ content.video.id }}?rel=0&amp;autoplay=1">Watch Video <i aria-hidden="true" class="material-icons" style="font-size: 18px">play_arrow</i></a>
-      {% endif %}
-
-    {% endblock %}
-  </div>
-{% endblock %}
+    {% elseif content.video.type == "Vimeo" %}
+      <a class="button" data-featherlight="iframe" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-style="display:block;border:none;height:50vh;width:50vw;" href="https://player.vimeo.com/video/{{ content.video.id }}?rel=0&amp;autoplay=1">Watch Video <i aria-hidden="true" class="material-icons" style="font-size: 18px">play_arrow</i></a>
+    {% endif %}
+  {% endblock %}
+</div>
