@@ -9,4 +9,4 @@ title_attributes:
     class:
     - block__title
 label: Full Page Block
-content: "<p>This is a standard block with the custom class 'full-page' added to it.</p>"
+content: "<p>This is a standard block with the custom class 'block--full-page' added to it.</p>"

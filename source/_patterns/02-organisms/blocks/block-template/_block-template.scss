@@ -3,7 +3,7 @@
 * organisms/blocks/block/_block-template.scss
 */
 
-.full-page {
+.block--full-page {
   @include breakpoint($large) {
     padding-left: $double-spacing * 4;
     padding-right: $double-spacing * 4;
@@ -19,7 +19,7 @@
   margin-right:  calc(50% - 50vw);
 }
 
-.half-page {
+.block--half-page {
   @include breakpoint($large) {
     padding-left: $double-spacing * 4;
     padding-right: $double-spacing * 4;

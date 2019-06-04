@@ -99,7 +99,7 @@ $testimonial--credit-circle-size--larger: 300px;
     }
   }
 
-  &.testimonial-full-page {
+  &.testimonial--full-page {
     @include breakpoint($medium) {
       margin: $standard-spacing;
       margin-top: calc(#{$testimonial--full-page-photo-size} * 0.12);

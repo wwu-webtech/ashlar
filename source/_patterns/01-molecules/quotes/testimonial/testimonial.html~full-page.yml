@@ -3,7 +3,7 @@ attributes:
     class:
     - block
     - block--testimonial
-    - testimonial-full-page
+    - testimonial--full-page
 title_attributes:
   Attribute():
     class:
