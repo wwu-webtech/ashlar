@@ -29,6 +29,7 @@
   set classes = [
     'block',
     'block--testimonial',
+    block_content.field_custom_classes.0.value,
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
   ]
 %}

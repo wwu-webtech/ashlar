@@ -9,7 +9,7 @@
     padding-right: $double-spacing * 4;
   }
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 
   display: grid;
   align-content: center;
@@ -25,7 +25,7 @@
     padding-right: $double-spacing * 4;
   }
   width: 100vw;
-  height: 50vh;
+  min-height: 45vh;
 
   display: grid;
   align-content: center;

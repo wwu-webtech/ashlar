@@ -9,4 +9,4 @@ title_attributes:
     class:
     - block__title
 label: Half Page Block
-content: "<p>This is a standard block with the class 'block--half-page' added to it.</p>"
+content: "<p>This is a standard block with the class 'half-page' added to it.</p>"
