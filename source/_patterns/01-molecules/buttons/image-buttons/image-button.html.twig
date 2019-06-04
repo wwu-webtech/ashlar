@@ -1,9 +1,11 @@
-{% include "@atoms/global/label/label.twig" %}
-
 <div{{ attributes }}>
-  {{ content.field_link }}
+  {% include "@atoms/global/label/label.twig" %}
 
-  <div class="image image--stylized">
-    {{ content.field_image }}
+  <div class="image-button">
+    {{ content.field_link }}
+
+    <div class="image image--stylized">
+      {{ content.field_image }}
+    </div>
   </div>
 </div>
