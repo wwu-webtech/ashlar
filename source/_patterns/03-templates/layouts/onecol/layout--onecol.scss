@@ -2,9 +2,6 @@
  * @file
  * templates/layouts/onecol/_layout--onecol.scss
  */
-.layout--onecol {
-  @extend %font-size--larger;
-}
 
 .layout--onecol .layout__region {
   width: 100%;
