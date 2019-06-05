@@ -35,11 +35,12 @@
     grid-column: 1/ span all !important;
     grid-row: 1 / span all !important;
 
-    h1 {
+    .page-title {
       @include breakpoint($large) {
         font-size: $h1-font-size--max;
       }
       margin: 0;
+      text-align: left;
       text-transform: none;
       color: $white;
       font-family: $sans-serif;
