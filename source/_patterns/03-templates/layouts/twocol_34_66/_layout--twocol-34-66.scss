@@ -12,11 +12,6 @@
   flex: 0 1 100%;
 }
 
-.layout--twocol-34-66 > .layout__region--top,
-.layout--twocol-34-66 > .layout__region--bottom {
-  @extend %font-size--larger;
-}
-
 .layout--twocol-34-66 > .layout__region--first {
   @extend %font-size--smaller;
   @include breakpoint($medium) {
