@@ -2,7 +2,12 @@
  * @file
  * templates/layouts/onecol/_layout--onecol.scss
  */
-.layout--onecol .layout__region {
+.layout--onecol {
   @extend %font-size--larger;
+}
+
+.layout--onecol .layout__region {
   width: 100%;
+  max-width: $max-one-col-width;
+  margin: auto;
 }
