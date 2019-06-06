@@ -42,3 +42,34 @@
   margin-right: -$standard-spacing;
   margin-left: -$standard-spacing;
 }
+
+.layout--twocol-section--50-50 {
+  .block--half-page {
+    @include breakpoint($small) {
+      width: 50vw;
+    }
+    margin: 0 -$standard-spacing;
+  }
+
+  .layout__region--first {
+    .block--half-page {
+      @include breakpoint($medium) {
+        margin-left: -$standard-spacing;
+      }
+      @include breakpoint($large) {
+        margin-left: calc((100vw - #{$max-content-width}) / -2);
+      }
+    }
+  }
+
+  .layout__region--second {
+    .block--half-page {
+      @include breakpoint($medium) {
+        margin-right: -$standard-spacing;
+      }
+      @include breakpoint($large) {
+        margin-right: calc((100vw - #{$max-content-width}) / -2);
+      }
+    }
+  }
+}
