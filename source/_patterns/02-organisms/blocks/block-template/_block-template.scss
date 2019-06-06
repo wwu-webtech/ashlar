@@ -4,6 +4,10 @@
 */
 
 .block--full-page {
+  @include breakpoint($small) {
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+  }
   @include breakpoint($large) {
     padding-right: $double-spacing * 4;
     padding-left: $double-spacing * 4;
@@ -13,11 +17,15 @@
   align-content: center;
   width: 100vw;
   min-height: 100vh;
-  margin-right: calc(50% - 50vw);
-  margin-left: calc(50% - 50vw);
+  margin-right: -$standard-spacing;
+  margin-left: -$standard-spacing;
 }
 
 .block--half-page {
+  @include breakpoint($small) {
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+  }
   @include breakpoint($large) {
     padding-right: $double-spacing * 4;
     padding-left: $double-spacing * 4;
@@ -27,6 +35,6 @@
   align-content: center;
   width: 100vw;
   min-height: 45vh;
-  margin-right: calc(50% - 50vw);
-  margin-left: calc(50% - 50vw);
+  margin-right: -$standard-spacing;
+  margin-left: -$standard-spacing;
 }

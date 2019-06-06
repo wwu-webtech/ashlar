@@ -120,7 +120,7 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
     @include breakpoint($large) {
       margin-right: calc(((100vw - #{$max-content-width}) / -2) - #{$half-spacing} - #{$border-width--thicker});
     }
-    margin-right: -$standard-spacing - $half-spacing - $border-width--thicker;
+    margin-right: -$standard-spacing;
     margin-left: initial;
 
     -ms-grid-column-align: end;

@@ -111,10 +111,12 @@ main {
     h4,
     h5,
     h6 {
+      @include breakpoint($medium) {
+        font-size: $title-font-size--larger;
+      }
       @include breakpoint($large) {
         font-size: $title-font-size--max--larger;
       }
-      font-size: $title-font-size--larger;
     }
   }
 
