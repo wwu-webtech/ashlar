@@ -3,8 +3,6 @@
 * 00-atoms/buttons/make-waves-buttons/_buttons--make-waves.scss
 */
 $border-radius--make-waves: 20px;
-$box-shadow--make-waves: 6px 6px 0px $dark-blue;
-$box-shadow-reversed--make-waves: 6px 6px 0px $blue;
 $min-button-font-size--make-waves: 28px;
 $max-button-font-size--make-waves: 42px;
 
@@ -13,28 +11,16 @@ $button-font-size--make-waves: calc(#{$min-button-font-size--make-waves} + #{str
 $button-font-size--make-waves--larger: calc((#{$min-button-font-size--make-waves} + #{strip-unit($max-button-font-size--make-waves - $min-button-font-size--make-waves)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}))*1.5);
 
 
-.block--make-waves-button {
+.block--make-waves {
   .button {
-    padding: $standard-spacing * 1.5;
-    text-transform: uppercase;
-    border-radius: $border-radius--make-waves;
     font-family: $heading-font--make-waves;
-    font-size: $button-font-size--make-waves--smaller;
-    box-shadow: $box-shadow--make-waves;
+    font-size: $button-font-size--make-waves;
 
-    &:hover,
-    &:focus,
-    &:active {
-      box-shadow: $box-shadow-reversed--make-waves;
-    }
-
-    &.medium {
-      padding: $double-spacing;
-      font-size: $button-font-size--make-waves;
+    &.small {
+      font-size: $button-font-size--make-waves--smaller;
     }
 
     &.large {
-      padding: $triple-spacing;
       font-size: $button-font-size--make-waves--larger;
     }
   }
