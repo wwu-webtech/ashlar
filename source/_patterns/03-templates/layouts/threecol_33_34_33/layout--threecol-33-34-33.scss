@@ -12,11 +12,6 @@
   flex: 0 1 100%;
 }
 
-.layout--threecol-33-34-33 > .layout__region--top,
-.layout--threecol-33-34-33 > .layout__region--bottom {
-  @extend %font-size--larger;
-}
-
 .layout--threecol-33-34-33 > .layout__region--first{
   @extend %font-size--smaller;
   @include breakpoint($medium) {
