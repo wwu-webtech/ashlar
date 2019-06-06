@@ -5,32 +5,28 @@
 
 .block--full-page {
   @include breakpoint($large) {
-    padding-left: $double-spacing * 4;
     padding-right: $double-spacing * 4;
+    padding-left: $double-spacing * 4;
   }
+  display: grid;
+  justify-content: center;
+  align-content: center;
   width: 100vw;
   min-height: 100vh;
-
-  display: grid;
-  align-content: center;
-  justify-content: center;
-
-  margin-left:   calc(50% - 50vw);
-  margin-right:  calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
 }
 
 .block--half-page {
   @include breakpoint($large) {
-    padding-left: $double-spacing * 4;
     padding-right: $double-spacing * 4;
+    padding-left: $double-spacing * 4;
   }
+  display: grid;
+  justify-content: center;
+  align-content: center;
   width: 100vw;
   min-height: 45vh;
-
-  display: grid;
-  align-content: center;
-  justify-content: center;
-
-  margin-left:   calc(50% - 50vw);
-  margin-right:  calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
 }
