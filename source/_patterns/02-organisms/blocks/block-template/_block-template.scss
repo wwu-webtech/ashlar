@@ -2,6 +2,10 @@
 * @file
 * organisms/blocks/block/_block-template.scss
 */
+.block--beyond-basics-block {
+  position: relative;
+  z-index: 0;
+}
 
 .block--full-page {
   @include breakpoint($small) {
