@@ -1,0 +1,41 @@
+/**
+* @file
+* 00-atoms/text/tagline/_tagline.scss
+*/
+
+.tagline {
+  display: block;
+  margin-left: 12px;
+  color: $dark-blue;
+  font-style: italic;
+}
+
+h1 {
+  + .tagline {
+    font-size: $h2-font-size--smaller;
+  }
+}
+
+h2 {
+  + .tagline {
+    font-size: $h3-font-size--smaller;
+  }
+}
+
+h3 {
+  + .tagline {
+    font-size: $h4-font-size--smaller;
+  }
+}
+
+h4 {
+  + .tagline {
+    font-size: $h5-font-size--smaller;
+  }
+}
+
+h5 {
+  + .tagline {
+    font-size: $h6-font-size--smaller;
+  }
+}

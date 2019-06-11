@@ -1,4 +1,4 @@
-/**
+  /**
  * @file
  * utilities/structure.scss
  */
@@ -22,6 +22,7 @@ $focus-outline--thicker: $border-width--thicker dotted;
 
 /* Content Area */
 $max-content-width: 1300px;
+$max-one-col-width: 1000px;
 
 /* Breakpoints */
 $small: 581px;
