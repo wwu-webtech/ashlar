@@ -3,4 +3,4 @@ services:
     image: tugboatqa/php:7.1-apache
     default: true
     commands:
-          init: .tugboat/init.sh
+          init: sh .tugboat/init.sh
