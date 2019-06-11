@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e19aa99abd9005c919d13c5a3fa52cb8",
+    "content-hash": "8056fb40ad7b348cef3080559c220e8c",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -70,7 +70,7 @@
         },
         {
             "name": "aleksip/plugin-data-transform",
-            "version": "dev-master",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aleksip/plugin-data-transform.git",
@@ -903,9 +903,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "aleksip/plugin-data-transform": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
