@@ -6,6 +6,7 @@
   @include breakpoint($medium) {
     padding-left: $double-spacing + $logo-width;
     text-align: left;
+    font-size: $h4-font-size;
 
     grid-row: 2 / span 1;
   }
@@ -18,7 +19,7 @@
   text-align: center;
   color: $white;
   background: transparentize($blue, 0.2);
-  font-size: $h4-font-size;
+  font-size: $p-font-size;
 
   grid-column: 1 / span all;
   grid-row: 1;
