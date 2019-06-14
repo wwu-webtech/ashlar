@@ -3,7 +3,9 @@
  * 00-atoms/01-text/_taxonomy-term.scss
  */
 
-.taxonomy-term {
+.taxonomy-term,
+.academic-title,
+.pronouns {
   display: inline-block;
   float: left;
   margin: 0 $standard-spacing $standard-spacing 0;
