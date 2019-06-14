@@ -18,7 +18,7 @@ input[type="submit"] {
   border: solid $border-width transparent;
   @include button-box-shadow($gray);
   background: $light-gray;
-  transition: background $button-transition-speed, color $button-transition-speed, transform $fast-transition-speed, box-shadow $fast-transition-speed;
+  transition: background $button-transition-speed, color $button-transition-speed, box-shadow $fast-transition-speed;
 
   &:hover,
   &:focus {
@@ -28,7 +28,6 @@ input[type="submit"] {
   }
 
   &:active {
-    transform: translate(2px, 2px);
     box-shadow: none;
   }
 
@@ -79,10 +78,6 @@ input[type="submit"] {
     box-shadow: none;
     color: mix($gray, $light-gray, 50%);
     background: $light-gray;
-
-    &:active {
-      transform: none;
-    }
   }
 }
 
@@ -94,7 +89,7 @@ input[type="submit"] {
   margin-bottom: $standard-spacing;
   padding: $standard-spacing $double-spacing;
   user-select: none;
-  transition: background-color $button-transition-speed, color $button-transition-speed, border-color $button-transition-speed, transform $fast-transition-speed, box-shadow $fast-transition-speed;
+  transition: background-color $button-transition-speed, color $button-transition-speed, border-color $button-transition-speed, box-shadow $fast-transition-speed;
   text-align: center;
   vertical-align: middle;
   text-decoration: none;
@@ -108,7 +103,6 @@ input[type="submit"] {
 
 
   &:active {
-    transform: translate(2px, 2px);
     box-shadow: none !important;
   }
 
