@@ -14,15 +14,17 @@ button,
 input[type="submit"] {
   padding: ($standard-spacing * 0.75) $standard-spacing;
   border-radius: $button-border-radius--round-square;
-  color: $white;
-  border: $border-width solid $dark-blue;
-  @include button-box-shadow($blue);
-  background: $darkest-blue;
+  color: $black;
+  border: solid $border-width transparent;
+  @include button-box-shadow($gray);
+  background: $light-gray;
   transition: background $button-transition-speed, color $button-transition-speed, transform $fast-transition-speed, box-shadow $fast-transition-speed;
 
   &:hover,
   &:focus {
-    background: $blue;
+    background: $gray;
+    color: $white;
+    @include button-box-shadow($black);
   }
 
   &:active {
@@ -32,35 +34,49 @@ input[type="submit"] {
 
   &:focus {
     outline: none;
+    border: dotted $border-width $white;
   }
 
 
   &.alt {
-    color: $dark-blue;
+    color: $black;
     background: $lightest-gray;
+    border: solid $border-width $gray;
 
     &:hover,
     &:focus {
       color: $white;
       background: $blue;
     }
+
+    &:focus {
+      border: dotted $border-width $white;
+    }
   }
 
   &.warning {
     color: $black;
-    border-color: $yellow;
+    border-color: transparent;
     @include button-box-shadow($dark-blue);
     background: $yellow;
 
     &:hover,
     &:focus {
-      background: $light-gray;
+      background: mix($yellow, $white, 50%);
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+
+    &:focus {
+      border: dotted $border-width $red;
     }
   }
 
   &:disabled {
     border-color: mix($gray, $light-gray, 50%);
-    @include button-box-shadow($light-gray);
+    box-shadow: none;
     color: mix($gray, $light-gray, 50%);
     background: $light-gray;
 
@@ -98,6 +114,7 @@ input[type="submit"] {
 
   &:focus {
     outline: none;
+    border-style: dotted;
   }
 
   &:hover,
@@ -186,6 +203,10 @@ input[type="submit"] {
       color: $white;
       border-color: transparent;
       background: $dark-blue;
+    }
+
+    &:focus {
+      border: dotted $border-width $white !important;
     }
 
     &.dark-blue {
