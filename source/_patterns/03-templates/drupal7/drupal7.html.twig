@@ -5,11 +5,11 @@
       {% block site_name %}
         <?php
           if (drupal_is_front_page()) {
-            ?><h1 class="site-name">
+            ?><span class="site-name">
               <?php if ($site_name): ?>
                 <?php print $site_name; ?>
               <?php endif; ?>
-            </h1><?php
+            </span><?php
           } else {
             ?><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="site-name">
               <?php if ($site_name): ?>

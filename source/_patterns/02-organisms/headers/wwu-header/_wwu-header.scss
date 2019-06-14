@@ -28,7 +28,7 @@ $site-name-gradient-end: transparentize($dark-blue, 0.2);
     grid-template-columns: $large-screen-columns;
   }
   position: relative;
-  z-index: 1;
+  z-index: 2;
   background: linear-gradient(to left, $header-gradient-start 50%, $header-gradient-end 100%);
 
   .wrap {
