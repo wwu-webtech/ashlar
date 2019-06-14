@@ -76,7 +76,7 @@ input[type="submit"] {
   &:disabled {
     border-color: mix($gray, $light-gray, 50%);
     box-shadow: none;
-    color: mix($gray, $light-gray, 50%);
+    color: scale-color($gray, $lightness: -15%);
     background: $light-gray;
   }
 }
