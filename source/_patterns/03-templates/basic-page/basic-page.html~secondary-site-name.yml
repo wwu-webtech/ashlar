@@ -1,0 +1,23 @@
+page:
+  include():
+    pattern: organisms-page-template-html
+    with:
+      page:
+        header:
+          join():
+          - include():
+              pattern: molecules-secondary-site-name-html
+          - include():
+              pattern: molecules-splash-image-html
+          - include():
+              pattern: molecules-headline-html
+        content:
+          include():
+            pattern: organisms-content-region-html
+            with:
+              content:
+                join():
+                - include():
+                    pattern: organisms-block-template-html-main
+                    with:
+                      content: organisms-node-html-page
