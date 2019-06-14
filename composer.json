@@ -33,7 +33,7 @@
     }
   },
   "require": {
-    "aleksip/plugin-data-transform": "dev-master",
+    "aleksip/plugin-data-transform": "^1",
     "composer/installers": "^1.2"
   }
 }
