@@ -2,8 +2,15 @@
 * @file
 * organisms/cards/_cards.scss
 */
-$card-height--medium: 200px;
-$card-height--large: 300px;
+$spotlight-height--medium: 200px;
+$spotlight-height--large: 300px;
+
+.spotlight {
+  @include breakpoint($large) {
+    height: $spotlight-height--large;
+  }
+  height: $spotlight-height--medium;
+}
 
 .card-2col,
 .card-2col--view .view-content {
@@ -44,11 +51,7 @@ $card-height--large: 300px;
     padding-bottom: $standard-spacing;
 
     .image {
-      @include breakpoint($large) {
-        height: $card-height--large;
-      }
       width: 100%;
-      height: $card-height--medium;
 
       img {
         width: 100%;
