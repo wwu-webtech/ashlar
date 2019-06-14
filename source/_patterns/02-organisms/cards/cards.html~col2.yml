@@ -1,6 +1,7 @@
 attributes:
   Attribute():
-    class:    
+    class:
+      - card-2col
 label:
 cards:
 - molecules-card-html

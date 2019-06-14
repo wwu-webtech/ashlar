@@ -20,5 +20,5 @@ page:
                 - include():
                     pattern: organisms-block-template-html-main
                     with:
-                      content: organisms-card-list-html
+                      content: organisms-cards-html-list
         site_footer: organisms-site-footer-html

@@ -5,9 +5,11 @@
     <div class="title"><a href="{{ link_url }}">{{ title }}</a></div>
   {% endif %}
 
-  <div class="image">
-    {{ image }}
-  </div>
+  {% if image %}
+    <div class="image">
+      {{ image }}
+    </div>
+  {% endif %}
 
   {% if taxonomy_terms %}
     <div class="taxonomy-terms">
