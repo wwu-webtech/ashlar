@@ -32,7 +32,7 @@ $spotlight-height--large: 300px;
 }
 
 .card-3col,
-.card-3col--view .viewcontent,
+.card-3col--view .view-content,
 .card-row,
 .card-row .view-content {
   @include breakpoint($small) {
