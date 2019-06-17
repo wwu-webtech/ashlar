@@ -7,6 +7,6 @@ title_attributes:
   Attribute():
     class:
     - block__title
-url: "#"
-image: atoms-landscape-3x2
-link_text: "Image Button: Multiple lines of Text"
+content:
+  field_link: <a href="#">Prospective Students</a>
+  field_image: <div class="field__item"><img src="../../images/pattern-lab/placeholder.png" alt="gray placeholder"></div>

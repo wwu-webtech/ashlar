@@ -52,17 +52,17 @@
 %font-size--smaller {
   .page-title {
     @include breakpoint($large) {
-      font-size: $title-font-size--max--smaller;
+      font-size: $h1-font-size--max--smaller;
     }
-    font-size: $title-font-size--smaller;
+    font-size: $h1-font-size--smaller;
   }
 }
 
 %font-size--larger {
   .page-title {
     @include breakpoint($large) {
-      font-size: $title-font-size--max--larger;
+      font-size: $h1-font-size--max--larger;
     }
-    font-size: $title-font-size--larger;
+    font-size: $h1-font-size--larger;
   }
 }

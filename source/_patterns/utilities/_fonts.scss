@@ -28,7 +28,6 @@ $body-font-weight: $font-weight--regular;
 $button-font-weight: $font-weight--bold;
 
 // Fluid Typography: Major Second scale for headings/paragraphs
-$title-scale: 2.281;
 $h1-scale: 2.027;
 $h2-scale: 1.802;
 $h3-scale: 1.602;
@@ -36,6 +35,9 @@ $h4-scale: 1.424;
 $h5-scale: 1.266;
 $h6-scale: 1.125;
 $p-scale: 1;
+
+// Large title font size for special use
+$title-scale: 4.5;
 
 $min-base-font-size: 16px;
 $max-base-font-size: 22px;

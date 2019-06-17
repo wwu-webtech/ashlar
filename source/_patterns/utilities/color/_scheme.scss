@@ -51,7 +51,7 @@ $lightest-bg-blue: mix($white, $blue, 90%);
     color: $white;
   }
 
-  a {
+  a:not(.button) {
     color: $light-blue;
 
     &:hover,
@@ -59,16 +59,6 @@ $lightest-bg-blue: mix($white, $blue, 90%);
     &:active {
       color: $lightest-green;
       background-color: $darkest-blue;
-    }
-
-    &.button:not(.alt) {
-      color: $white;
-
-      &:hover,
-      &:focus,
-      &:active {
-        background-color: $darkest-blue;
-      }
     }
   }
 
@@ -111,7 +101,7 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   color: $white;
   background: $gray;
 
-  a {
+  a:not(.button) {
     color: $white;
 
     &:hover,
@@ -119,10 +109,6 @@ $lightest-bg-blue: mix($white, $blue, 90%);
     &:active {
       color: $light-green;
       background: $black;
-    }
-
-    &.button:not(.alt) {
-      color: $white;
     }
   }
 
@@ -170,7 +156,7 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   color: $black;
   background: $light-gray;
 
-  a {
+  a:not(.button) {
     color: mix($dark-blue, $link-blue, 50%);
 
     &:hover,
@@ -178,16 +164,6 @@ $lightest-bg-blue: mix($white, $blue, 90%);
     &:active {
       color: $black;
       background-color: mix(black, $light-gray, 20%);
-    }
-
-    &.button:not(.alt) {
-      color: $white;
-
-      &:hover,
-      &:focus,
-      &:active {
-        background-color: $dark-blue;
-      }
     }
   }
 
@@ -215,7 +191,7 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   @extend %light-gray-bg;
   background: $lightest-gray;
 
-  a {
+  a:not(.button) {
     color: $link-blue;
   }
 }
@@ -253,20 +229,11 @@ $lightest-bg-blue: mix($white, $blue, 90%);
     border-bottom-color: $light-green;
   }
 
-  a {
+  a:not(.button) {
     &:hover,
     &:focus,
     &:active {
       background: $dark-blue;
-    }
-
-    &.dark-blue.button {
-      &:hover,
-      &:focus,
-      &:active {
-        color: $dark-blue;
-        background-color: $light-blue;
-      }
     }
   }
 
@@ -291,7 +258,7 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   @extend %light-gray-bg;
   background: $light-bg-blue;
 
-  a {
+  a:not(.button) {
     &:hover,
     &:focus,
     &:active {
@@ -322,7 +289,7 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   @extend %lightest-gray-bg;
   background: $lightest-bg-blue;
 
-  a {
+  a:not(.button) {
     &:hover,
     &:focus,
     &:active {

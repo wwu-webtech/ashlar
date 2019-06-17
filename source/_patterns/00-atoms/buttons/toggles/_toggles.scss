@@ -14,7 +14,19 @@
   width: $toggle-size--larger;
   height: $toggle-size--larger;
   padding: 0;
+  color: $white;
+  border: 0;
   border-radius: 0;
+  background: $blue;
+  box-shadow: none;
+
+  &:active,
+  &:hover,
+  &:focus {
+    transform: none;
+    background: $dark-blue;
+    box-shadow: none;
+  }
 
   .material-icons {
     top: inherit;

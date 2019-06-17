@@ -2,29 +2,3 @@
 * @file
 * 00-atoms/images/image-featured/_image-featured.scss
 */
-$border-offset: 12px;
-
-.featured {
-  &.image {
-    position: relative;
-    margin-top: $border-offset;
-
-    img {
-      width: calc(100% - #{$border-offset});
-      margin-left: $border-offset;
-    }
-
-    &:after {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      box-sizing: border-box;
-      width: calc(100% - #{$border-offset});
-      height: 100%;
-      content: "";
-      transform: translate(0, -$border-offset);
-      border: solid $border-width--thicker $dark-blue;
-    }
-  }
-}
