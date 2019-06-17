@@ -38,6 +38,7 @@
       border-bottom: none;
       font-family: $title-font;
       font-weight: $font-weight--regular;
+      font-size: $title-font-size--smaller;
       line-height: 0.9em;
     }
   }
@@ -131,7 +132,6 @@
       h2 {
         text-align: left;
         color: $dark-blue;
-        font-size: $h2-font-size;
         font-weight: $font-weight--bold;
       }
 
