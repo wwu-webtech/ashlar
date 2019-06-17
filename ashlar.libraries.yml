@@ -40,6 +40,12 @@ event-tracking:
     build/js/event-tracking.js: {}
   dependencies:
     - core/jquery
+erm-menu:
+  version: 1.x
+  js:
+    build/js/erm-menu.js: {}
+  dependencies:
+    - core/jquery
 make-waves-fonts:
   css:
     theme:
