@@ -7,7 +7,8 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
 
 .headline {
   /* Style Option 1: Darkest Blue overlay */
-  &.black-overlay {
+  &.black-overlay,
+  &.box-headline {
     @include breakpoint($medium) {
       margin-top: 0;
       background: linear-gradient(to right, $headline-gradient-start 0%, $headline-gradient-end 100%);
