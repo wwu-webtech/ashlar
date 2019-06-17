@@ -1,0 +1,10 @@
+{{ title_prefix }}
+{{ title_suffix }}
+<div{{ attributes }}>
+  <span class="number">{{ content.field_statistic_number }}</span>
+  <span{{ title_attributes }}>
+    {% if label %}
+      {{ label }}
+    {% endif %}
+  </span>
+</div>

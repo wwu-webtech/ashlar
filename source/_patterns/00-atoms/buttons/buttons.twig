@@ -1,49 +1,76 @@
-<div style="padding:20px;">
-<p><button>Default Button</button></p>
-<p><button disabled>Disabled</button></p>
-</div>
+<h4>True buttons</h4>
+<p>True buttons use either the &lt;button&gt; or &lt;input type="submit"&gt; HTML tags. They are typically used for things like form submissions, or to trigger some kind of action on a page. For consistent user experience, the styles that can be applied to real buttons are limited.</p>
 
-<div style="padding:20px;">
-<p>Adding a color name as a class can change the color of the button</p>
-<p><button class="dark-blue">Dark Blue</button></p>
-<p><button class="dark-green">Dark Green</button></p>
-<p><button class="green">Green</button></p>
-</div>
+<button>Button</button>
+<button class="alt">With .alt class</button>
+<button class="warning">With .warning class</button>
+<button disabled>Disabled Button</button>
 
-<div class="light-gray-bg" style="padding:20px;">
-  <p>Adding an "alt" class produces outline buttons</p>
-  <p><button class="dark-blue alt">Dark Blue Alt</button></p>
-  <p><button class="dark-green alt">Dark Green Alt</button></p>
-</div>
 
-<div class="dark-blue-bg" style="padding:20px;">
-  <p style="color:#ffffff;">Here are alt button styles for a dark background</p>
-  <p><button class="light-blue alt">Light Blue Alt</button></p>
-  <p><button class="light-green alt">Light Green Alt</button></p>
-  <p><button class="white alt">White Alt</button></p>
-</div>
+<h4>Links styled as buttons</h4>
+<p>To style a link as a button, add the .button class</p>
+<a href="#" class="button">I'm a link!</a>
 
-<div style="padding:20px;">
-<p>Links can also be styled as buttons, with the same color and alt options</p>
-<p><a href="#" class="button">Link Button</a></p>
-<p><a href="#" class="dark-blue button">Blue Link Button</a></p>
-<p><a href="#" class="alt button">Alt Link Button</a></p>
-</div>
+<h5>Style Options</h5>
+<p>Links styled as buttons have a number of classes that can be used to alter the style, shape, color, and size of the button. Default buttons are filled, round, blue, and small. There are no classes for these defaults. Add any of the following classes to the &lt;a&gt; tag to customize your button links. You can use any combination of these custom classes to produce a large number of possible button styles.</p>
 
-<div style="padding:20px;">
-<p>Links styled as buttons will auto size for longer text, but have a minimum width of 300px at larger screen widths</p>
-<p><a href="#" class="button">Explore our 160+ Majors</a></p>
-</div>
-
-<h2>Buttons with icons</h2>
-<div style="padding: 20px">
-  <a href="#" class="button"><span class="material-icons" aria-hidden="true">arrow_upward</span> Back to Top</a>
-</div>
-
-<div class="light-gray-bg" style="padding: 20px;">
-  <a href="#" class="button alt">Watch the video <span class="material-icons" aria-hidden="true">play_arrow</span></a>
-</div>
-
-<div class="dark-blue-bg" style="padding: 20px;">
-  <a href="#" class="button white alt">Read the story <span class="material-icons" aria-hidden="true">arrow_forward</span></a>
-</div>
+<table>
+	<thead>
+		<tr>
+			<th scope="row">class(es) used</th>
+      <th scope="col">(default)</th>
+			<th scope="col">.outline</th>
+			<th scope="col">.square</th>
+			<th scope="col">.medium</th>
+			<th scope="col">.large</th>
+			<th scope="col">.outline + .square + .medium</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="row">(default)</th>
+      <td><a href="#" class="button ">Sample</a></td>
+			<td><a href="#" class="button outline">Sample</a></td>
+			<td><a href="#" class="button square">Sample</a></td>
+			<td><a href="#" class="button medium">Sample</a></td>
+			<td><a href="#" class="button large">Sample</a></td>
+			<td><a href="#" class="button outline square medium">Sample</a></td>
+		</tr>
+		<tr>
+			<th scope="row">.dark-blue</th>
+      <td><a href="#" class="button dark-blue">Sample</a></td>
+			<td><a href="#" class="button dark-blue outline">Sample</a></td>
+			<td><a href="#" class="button dark-blue square">Sample</a></td>
+			<td><a href="#" class="button dark-blue medium">Sample</a></td>
+			<td><a href="#" class="button dark-blue large">Sample</a></td>
+			<td><a href="#" class="button dark-blue outline square medium">Sample</a></td>
+		</tr>
+		<tr>
+			<th scope="row">.green</th>
+      <td><a href="#" class="button green">Sample</a></td>
+			<td><a href="#" class="button green outline">Sample</a></td>
+			<td><a href="#" class="button green square">Sample</a></td>
+			<td><a href="#" class="button green medium">Sample</a></td>
+			<td><a href="#" class="button green large">Sample</a></td>
+			<td><a href="#" class="button green outline square medium">Sample</a></td>
+		</tr>
+		<tr>
+			<th scope="row">.dark-green</th>
+      <td><a href="#" class="button dark-green">Sample</a></td>
+			<td><a href="#" class="button dark-green outline">Sample</a></td>
+			<td><a href="#" class="button dark-green square">Sample</a></td>
+			<td><a href="#" class="button dark-green medium">Sample</a></td>
+			<td><a href="#" class="button dark-green large">Sample</a></td>
+			<td><a href="#" class="button dark-green outline square medium">Sample</a></td>
+		</tr>
+		<tr>
+			<th scope="row">.white</th>
+      <td style="background-color: #667986"><a href="#" class="button white">Sample</a></td>
+			<td style="background-color: #667986"><a href="#" class="button white outline">Sample</a></td>
+			<td style="background-color: #667986"><a href="#" class="button white square">Sample</a></td>
+			<td style="background-color: #667986"><a href="#" class="button white medium">Sample</a></td>
+			<td style="background-color: #667986"><a href="#" class="button white large">Sample</a></td>
+			<td style="background-color: #667986"><a href="#" class="button white outline square medium">Sample</a></td>
+		</tr>
+	</tbody>
+</table>

@@ -34,9 +34,6 @@
     -ms-grid-column-span: 1;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
-
-    @extend %button-structure;
-    @extend %button-color;
   }
   .cancel-cas {
     grid-area: cancel;

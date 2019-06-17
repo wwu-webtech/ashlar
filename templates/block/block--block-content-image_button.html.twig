@@ -42,12 +42,5 @@
 {% endif %}
 
 {% block template %}
-  {% embed "@molecules/buttons/image-buttons/image-button.html.twig" %}
-    {% block content %}
-      <a href="{{ block_content.field_link.0.uri }}" {{ link_attributes }}>
-        <img src="{{ file_url(block_content.field_image.entity.fileuri) }}" alt="{{ block_content.field_image.0.alt }}">
-        <div class="text">{{ block_content.field_link.0.title }}</div>
-      </a>
-    {% endblock %}
-  {% endembed %}
+  {% include "@molecules/buttons/image-buttons/image-button.html.twig" %}
 {% endblock %}

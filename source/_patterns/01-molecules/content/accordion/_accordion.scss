@@ -33,6 +33,11 @@ $accordion-border: $dark-blue solid $border-width--thicker;
         font-size: $p-font-size;
         font-weight: $font-weight--semibold;
         line-height: 1.2em;
+        box-shadow: none;
+
+        &:active {
+          transform: none;
+        }
 
         &:focus {
           border: $border-width dotted $dark-blue;
@@ -82,12 +87,12 @@ $accordion-border: $dark-blue solid $border-width--thicker;
     }
   }
 
-  // Affects RSS feed 
+  // Affects RSS feed
   ul {
     p {
       font-size: $p-font-size
     }
-  
+
     a {
       font-size: $p-font-size
     }
