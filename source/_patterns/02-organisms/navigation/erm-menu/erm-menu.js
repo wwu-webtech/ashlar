@@ -1,11 +1,11 @@
-/* If the menu block is present */
-// Remove the nav .quick-links
-// Remove the .search
-// Remove the main navigation
-// Remove the splash region (first conten block gets moved into splash)
+$('.quick-links').remove();;
+$('.search').remove();
+$('.region--main_navigation').remove();
+$('.toggle-menu').remove();
+$('.splash').remove();
 
-// Show the open menu toggle on desktop
-// Change the menu toggle behavior (perhaps change the classes?) so that it hides/shows the #block-errmmenu instead
+if(!$('.toggle-erm-menu').length) {
+  var $new_toggle = $('<button class="toggle toggle-erm-menu toggle-open-menu" aria-label="Open the menu"><span class="material-icons">menu</span></button>');
 
-
-// #block-ermmenu is styled to be a full page menu with water background
+  $('.wrap').append($new_toggle);
+}

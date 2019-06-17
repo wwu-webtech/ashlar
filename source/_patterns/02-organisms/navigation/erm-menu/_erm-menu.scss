@@ -3,3 +3,13 @@
 * 02-organisms/navigation/erm-menu/_erm-menu.scss
 * Specialized menu for external relations and marketing pages
 */
+
+.toggle-erm-menu {
+  @include breakpoint($medium) {
+    position: relative;
+    grid-area: search;
+  }
+  position: absolute;
+  top: 0;
+  right: 0;  
+}
