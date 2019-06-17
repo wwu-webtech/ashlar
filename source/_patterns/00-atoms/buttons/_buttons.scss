@@ -6,25 +6,25 @@ $button-border-radius--round: 100px;
 $button-border-radius--round-square: 10px;
 $button-border-radius--square: 5px;
 @mixin button-box-shadow($color) {
-  box-shadow: 2px 2px 0px $color;
+  box-shadow: 2px 2px 0 $color;
 }
 
 /* Real buttons - few options */
 button,
 input[type="submit"] {
+  @include button-box-shadow($gray);
   padding: ($standard-spacing * 0.75) $standard-spacing;
-  border-radius: $button-border-radius--round-square;
+  transition: background $button-transition-speed, color $button-transition-speed, box-shadow $fast-transition-speed;
   color: $black;
   border: solid $border-width transparent;
-  @include button-box-shadow($gray);
+  border-radius: $button-border-radius--round-square;
   background: $light-gray;
-  transition: background $button-transition-speed, color $button-transition-speed, box-shadow $fast-transition-speed;
 
   &:hover,
   &:focus {
-    background: $gray;
-    color: $white;
     @include button-box-shadow($black);
+    color: $white;
+    background: $gray;
   }
 
   &:active {
@@ -32,15 +32,15 @@ input[type="submit"] {
   }
 
   &:focus {
-    outline: none;
     border: dotted $border-width $white;
+    outline: none;
   }
 
 
   &.alt {
     color: $black;
-    background: $lightest-gray;
     border: solid $border-width $gray;
+    background: $lightest-gray;
 
     &:hover,
     &:focus {
@@ -54,9 +54,9 @@ input[type="submit"] {
   }
 
   &.warning {
+    @include button-box-shadow($dark-blue);
     color: $black;
     border-color: transparent;
-    @include button-box-shadow($dark-blue);
     background: $yellow;
 
     &:hover,
@@ -74,10 +74,10 @@ input[type="submit"] {
   }
 
   &:disabled {
-    border-color: mix($gray, $light-gray, 50%);
-    box-shadow: none;
     color: scale-color($gray, $lightness: -15%);
+    border-color: mix($gray, $light-gray, 50%);
     background: $light-gray;
+    box-shadow: none;
   }
 }
 
@@ -107,8 +107,8 @@ input[type="submit"] {
   }
 
   &:focus {
-    outline: none;
     border-style: dotted;
+    outline: none;
   }
 
   &:hover,
@@ -148,6 +148,7 @@ input[type="submit"] {
   &.green {
     @include button-box-shadow($dark-green);
     background: $green;
+    font-size: 18px; /* min needed for contrast */
 
     &:active,
     &:hover,
@@ -155,6 +156,14 @@ input[type="submit"] {
       color: $dark-green;
       border-color: $dark-green;
       background: $light-gray;
+    }
+
+    &.medium {
+      font-size: $h5-font-size;
+    }
+
+    &.large {
+      font-size: $h3-font-size;
     }
   }
 
@@ -173,8 +182,8 @@ input[type="submit"] {
 
   &.white {
     @include button-box-shadow($dark-blue);
-    background: $white;
     color: $blue;
+    background: $white;
 
     &:active,
     &:hover,
