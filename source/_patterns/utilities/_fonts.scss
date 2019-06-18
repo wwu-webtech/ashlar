@@ -14,9 +14,9 @@ $heading-font-family: $serif;
 $body-font-family: $sans-serif;
 
 // Font styles for Make Waves campaign
-$heading-font--make-waves: "Knockout 94 A", "Knockout 94 B";
-$copy-font--make-waves: "Knockout 30 A", "Knockout 30 B";
-$url-font--make-waves: "Knockout 31 A", "Knockout 31 B";
+$heading-font--make-waves: "Knockout 94 A", "Knockout 94 B", $title-font;
+$copy-font--make-waves: "Knockout 30 A", "Knockout 30 B", $sans-serif;
+$url-font--make-waves: "Knockout 31 A", "Knockout 31 B", $sans-serif;
 
 // Font Weight Variables
 $font-weight--light: 300;
