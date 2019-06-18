@@ -7,5 +7,5 @@ $('.splash').remove();
 if(!$('.toggle-erm-menu').length) {
   var $new_toggle = $('<button class="toggle toggle-erm-menu toggle-open-menu" aria-label="Open the menu"><span class="material-icons">menu</span></button>');
 
-  $('.wrap').append($new_toggle);
+  $('.western-header').insertAfter($new_toggle);
 }
