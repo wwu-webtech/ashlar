@@ -1,8 +1,7 @@
 attributes:
   Attribute():
     class:
-    - block
-    - half-page
+    - block--half-page
     - blue-bg
 title_attributes:
   Attribute():
