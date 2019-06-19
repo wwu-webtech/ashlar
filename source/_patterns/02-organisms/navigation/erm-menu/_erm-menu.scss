@@ -3,48 +3,60 @@
 * 02-organisms/navigation/erm-menu/_erm-menu.scss
 * Specialized menu for external relations and marketing pages
 */
+$hover-opacity: 0.85;
 
 .toggle-erm-menu {
   @include breakpoint($medium) {
-    position: relative;
-    grid-area: search;
+    right: $standard-spacing;
+  }
+  @include breakpoint($large) {
+    right: calc((100vw - #{$max-content-width})/2);
   }
   position: absolute;
+  z-index: 5;
   top: 0;
   right: 0;
+  background: transparent;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: $hover-opacity;
+    background: transparent;
+  }
 }
 
 #block-ermmenu {
-  z-index: 4;
-  background-color: $blue;
-  background-image: url('https://www.wwu.edu/sites/wwwprod8x210.wwu.edu/files/inline-images/water-bg.jpg');
-  width: 100vw;
-  height: 100vh;
   position: absolute;
+  z-index: 4;
   top: 0;
   left: 0;
   display: grid;
   justify-content: center;
   align-content: center;
+  width: 100vw;
+  height: 100vh;
   text-align: center;
-  display: none;
-}
+  background-color: $blue;
+  background-image: url("https://www.wwu.edu/sites/wwwprod8x210.wwu.edu/files/inline-images/water-bg.jpg");
 
-#block-ermmenu a {
-  @include breakpoint($medium) {
-    font-size: $title-font-size--larger;
+
+  a {
+    @include breakpoint($medium) {
+      font-size: $title-font-size--larger;
+    }
+    transition: $standard-ease $fast-transition-speed opacity;
+    text-transform: uppercase;
+    color: white;
+    font-family: Montserrat;
+    font-size: $title-font-size--smaller;
+    line-height: 1em;
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: $hover-opacity;
+      background: none;
+    }
   }
-  color: white;
-  font-family: Montserrat;
-  text-transform: uppercase;
-  font-size: $title-font-size--smaller;
-  line-height: 1em;
-  transition: $standard-ease $fast-transition-speed opacity;
-}
-
-#block-ermmenu a:hover,
-#block-ermmenu a:focus,
-#block-ermmenu a:active {
-  background: none;
-  opacity: 0.85;
 }

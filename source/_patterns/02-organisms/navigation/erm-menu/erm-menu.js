@@ -1,3 +1,6 @@
+var $erm_menu = $('#block-ermmenu');
+
+$erm_menu.hide();
 $('.quick-links').remove();;
 $('.search').remove();
 $('.region--main_navigation').remove();
@@ -5,7 +8,39 @@ $('.toggle-menu').remove();
 $('.splash').remove();
 
 if(!$('.toggle-erm-menu').length) {
-  var $new_toggle = $('<button class="toggle toggle-erm-menu toggle-open-menu" aria-label="Open the menu"><span class="material-icons">menu</span></button>');
+  var $erm_toggle = $('<button class="toggle toggle-erm-menu toggle-open-menu" aria-label="Open the menu"><span class="material-icons">menu</span></button>');
 
-  $('.western-header').insertAfter($new_toggle);
+  $('.western-header').after($erm_toggle);
 }
+
+function toggle_erm_menu(event) {
+  $erm_toggle.off('click', toggle_erm_menu);
+
+  $erm_menu.animate(
+    {
+      opacity: 'toggle'
+    },
+    {
+      duration: 'normal',
+      easing: 'swing',
+      complete: function () {
+        $erm_toggle.toggleClass('is-expanded');
+
+        if ($erm_toggle.hasClass('is-expanded')) {
+          $('.toggle-erm-menu .material-icons').text('close');
+          $erm_toggle.attr('aria-label', 'Close the menu');
+        }
+        else {
+          $('.toggle-erm-menu .material-icons').text('menu');
+          $erm_toggle.attr('aria-label', 'Open the menu');
+        }
+
+        $erm_toggle.on('click', toggle_erm_menu);
+      }
+    }
+  );
+
+  event.stopPropagation();
+}
+
+$erm_toggle.on('click', toggle_erm_menu);
