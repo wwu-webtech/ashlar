@@ -1,0 +1,14 @@
+attributes:
+  Attribute():
+    class:
+    - block
+    - block--pullquote
+    - pullquote--editorial
+title_attributes:
+  Attribute():
+    class:
+    - block__title
+content:
+  body: "Not if I weaken first. I'd like to think that I haven't changed those things, sir. You   enjoyed that. I am your worst nightmare!"
+  field_name: "William Riker"
+  field_description: "First Officer: USS Enterprise-D"

@@ -1,10 +1,11 @@
 <div{{ attributes }}>
   {% include "@atoms/global/label/label.twig" %}
 
-  {% block content %}
-    <a href="{{ url }}" class="image button stylized">
-      {{ image }}
-      <div class="text">{{ link_text }}</div>
-    </a>
-  {% endblock %}
+  <div class="image-button">
+    {{ content.field_link }}
+
+    <div class="image image--stylized">
+      {{ content.field_image }}
+    </div>
+  </div>
 </div>

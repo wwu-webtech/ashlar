@@ -8,7 +8,6 @@
 
 .serif {
   font-family: $serif;
-  font-size: 1.2em;
 }
 
 .title-font {
@@ -29,6 +28,18 @@
 
 .lowercase {
   text-transform: lowercase;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
 }
 
 %font-size--smaller {

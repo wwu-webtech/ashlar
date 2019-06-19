@@ -7,7 +7,8 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
 
 .headline {
   /* Style Option 1: Darkest Blue overlay */
-  &.black-overlay {
+  &.black-overlay,
+  &.box-headline {
     @include breakpoint($medium) {
       margin-top: 0;
       background: linear-gradient(to right, $headline-gradient-start 0%, $headline-gradient-end 100%);
@@ -76,20 +77,6 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
 
     -ms-grid-row-align: end;
 
-    &:before {
-      @include breakpoint($medium) {
-        border-width: $border-width--thicker;
-      }
-      position: absolute;
-      right: $half-spacing;
-      bottom: $half-spacing;
-      display: block;
-      width: 100%;
-      height: 100%;
-      content: "";
-      border: solid $border-width $dark-blue;
-    }
-
     h2 {
       @include breakpoint($medium) {
         grid-column: initial;
@@ -134,7 +121,7 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
     @include breakpoint($large) {
       margin-right: calc(((100vw - #{$max-content-width}) / -2) - #{$half-spacing} - #{$border-width--thicker});
     }
-    margin-right: -$standard-spacing - $half-spacing - $border-width--thicker;
+    margin-right: -$standard-spacing;
     margin-left: initial;
 
     -ms-grid-column-align: end;

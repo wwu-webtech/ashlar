@@ -67,6 +67,10 @@ function ashlar_preprocess_field(&$variables) {
   $object = $element['#object'];
   $bundle = $element['#bundle'];
 
+  if ($object->hasField('field_custom_classes')) {
+    _ashlar_set_custom_classes($variables['items'], $object);
+  }
+
   if ($field_type === 'link') {
     if ($object->hasField('field_tracking_event_enable')) {
       $variables['#attached']['library'][] = 'ashlar/event-tracking';
@@ -82,17 +86,33 @@ function ashlar_preprocess_field(&$variables) {
       _ashlar_set_tracking_event_label($variables['items'], $object);
     }
 
-    if ($object->hasField('field_button_style')) {
-      _ashlar_set_button_style($variables['items'], $object);
-    }
-
-    if ($object->hasField('field_button_size')) {
-      _ashlar_set_button_size($variables['items'], $object);
-    }
-
     if ($object->hasField('field_icon')) {
       _ashlar_set_icon($variables['items'], $object);
     }
+
+    if ($bundle === 'button' | $bundle === 'make_waves_button') {
+      _ashlar_set_button_class($variables['items'], $object);
+    }
+  }
+}
+
+/**
+ * Helper function to add custom classes to a block
+ */
+function _ashlar_set_custom_classes(&$items, $object) {
+  if (!$object->field_custom_classes->isEmpty()) {
+    foreach ($items as &$item) {
+      $item['content']['#options']['attributes']['class'][] = $object->field_custom_classes->value;
+    }
+  }
+}
+
+/**
+ * Helper function to add button class to links
+ */
+function _ashlar_set_button_class(&$items, $object) {
+  foreach ($items as &$item) {
+    $item['content']['#options']['attributes']['class'][] = 'button';
   }
 }
 
@@ -125,30 +145,6 @@ function _ashlar_set_tracking_event_label(&$items, $object) {
   if (!$object->field_tracking_event_label->isEmpty()) {
     foreach ($items as &$item) {
       $item['content']['#options']['attributes']['data-tracking-event-label'] = $object->field_tracking_event_label->value;
-    }
-  }
-}
-
-/**
- * Helper function to add button size classes to field.
- */
-function _ashlar_set_button_size(&$items, $object) {
-  if (!$object->field_button_size->isEmpty()) {
-    foreach ($items as &$item) {
-      $item['content']['#options']['attributes']['class'][] = 'button';
-      $item['content']['#options']['attributes']['class'][] = $object->field_button_size->value;
-    }
-  }
-}
-
-/**
- * Helper function to add button style classes to field.
- */
-function _ashlar_set_button_style(&$items, $object) {
-  if (!$object->field_button_style->isEmpty()) {
-    foreach ($items as &$item) {
-      $item['content']['#options']['attributes']['class'][] = 'button';
-      $item['content']['#options']['attributes']['class'][] = $object->field_button_style->value;
     }
   }
 }
