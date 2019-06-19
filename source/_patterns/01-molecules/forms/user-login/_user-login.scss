@@ -20,12 +20,17 @@
 
   .manual-login {
     background-color: $dark-blue;
+    color: $white;
     grid-area: manual;
 
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
+
+    &:focus, &:hover, &:active {
+      background-color: $blue;
+    }
   }
   .cas-login-link {
     grid-area: login;
