@@ -15,6 +15,7 @@ $link-color-light--hover: $light-green;
 
 // State Colors
 $focus-shadow: 2px 2px 4px 2px transparentize($dark-blue, 0.5);
+$hover-opacity: 0.85;
 
 // Accent Colors
 $warning-color: $yellow;
@@ -23,6 +24,7 @@ $alert-color: $red;
 // Additional shades of blue use as backgrounds only
 $light-bg-blue: mix($white, $blue, 80%);
 $lightest-bg-blue: mix($white, $blue, 90%);
+
 
 // Base styles for different color backgrounds. Use @extend to utilize these styles inside of other components.
 // Note the cascade here, as the blue styles inherit from the gray styles of same shades (EG Dark blue inherits from black, blue inherits from gray, etc.)

@@ -3,7 +3,6 @@
 * 02-organisms/navigation/erm-menu/_erm-menu.scss
 * Specialized menu for external relations and marketing pages
 */
-$hover-opacity: 0.85;
 
 .toggle-erm-menu {
   @include breakpoint($medium) {
@@ -38,7 +37,6 @@ $hover-opacity: 0.85;
   background-color: $blue;
   background-image: url("https://www.wwu.edu/sites/wwwprod8x210.wwu.edu/files/inline-images/water-bg_0.jpg");
 
-
   a {
     @include breakpoint($small) {
       font-size: $title-font-size;
@@ -52,7 +50,7 @@ $hover-opacity: 0.85;
     transition: $standard-ease $fast-transition-speed opacity;
     text-transform: uppercase;
     color: white;
-    font-family: Montserrat;
+    font-family: $title-font;
     font-size: $title-font-size--smaller;
     line-height: 1em;
 
