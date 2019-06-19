@@ -7,28 +7,25 @@ $hover-opacity: 0.85;
 
 .toggle-erm-menu {
   @include breakpoint($medium) {
-    right: $standard-spacing;
-  }
-  @include breakpoint($large) {
-    right: calc((100vw - #{$max-content-width})/2);
+    position: relative;
+
+    grid-area: search;
   }
   position: absolute;
-  z-index: 5;
   top: 0;
   right: 0;
-  background: transparent;
+  background-color: transparent;
 
   &:hover,
   &:focus,
   &:active {
     opacity: $hover-opacity;
-    background: transparent;
   }
 }
 
 #block-ermmenu {
   position: absolute;
-  z-index: 4;
+  z-index: 3;
   top: 0;
   left: 0;
   display: grid;
@@ -38,7 +35,7 @@ $hover-opacity: 0.85;
   height: 100vh;
   text-align: center;
   background-color: $blue;
-  background-image: url("https://www.wwu.edu/sites/wwwprod8x210.wwu.edu/files/inline-images/water-bg.jpg");
+  background-image: url("https://www.wwu.edu/sites/wwwprod8x210.wwu.edu/files/inline-images/water-bg_0.jpg");
 
 
   a {

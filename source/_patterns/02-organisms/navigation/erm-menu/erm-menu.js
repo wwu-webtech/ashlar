@@ -1,16 +1,24 @@
 var $erm_menu = $('#block-ermmenu');
-
 $erm_menu.hide();
+
+/* Remove unneeded header elements*/
 $('.quick-links').remove();;
 $('.search').remove();
 $('.region--main_navigation').remove();
 $('.toggle-menu').remove();
 $('.splash').remove();
 
+/* Move the page content to the top, make top bar transparent */
+$('.page-content').css('margin-top', '-84px');
+$('.western-header').css('z-index', '4');
+$('.western-header').css('background', 'transparent');
+
+
+/* ERM Menu toggle controls */
 if(!$('.toggle-erm-menu').length) {
   var $erm_toggle = $('<button class="toggle toggle-erm-menu toggle-open-menu" aria-label="Open the menu"><span class="material-icons">menu</span></button>');
 
-  $('.western-header').after($erm_toggle);
+  $('.western-header .wrap').append($erm_toggle);
 }
 
 function toggle_erm_menu(event) {
