@@ -29,10 +29,17 @@
     -ms-grid-row-span: 1;
 
     &:focus, &:hover, &:active {
-      background-color: $blue;
+      @include button-box-shadow($blue);
+      background-color: $white;
+      color: $blue;
+      border-color: $blue;
     }
   }
   .cas-login-link {
+    @extend
+      .button,
+      .dark-blue,
+      .square;
     grid-area: login;
 
     -ms-grid-column: 1;
