@@ -74,7 +74,6 @@ main {
   }
 }
 
-/* .sans-serif-headings heading styles, same as default but without serifs */
 .sans-serif-headings {
   h1,
   h2,
@@ -83,6 +82,56 @@ main {
   h5,
   h6 {
     font-family: $sans-serif;
+  }
+}
+
+.title-font-headings {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include breakpoint($large) {
+      font-size: $title-font-size--max;
+    }
+    text-transform: uppercase;
+    font-family: $title-font;
+    font-size: $title-font-size;
+  }
+
+  h2 {
+    border-bottom: none;
+  }
+
+  &.font-size--larger {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @include breakpoint($medium) {
+        font-size: $title-font-size--larger;
+      }
+      @include breakpoint($large) {
+        font-size: $title-font-size--max--larger;
+      }
+    }
+  }
+
+  &.font-size--smaller {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @include breakpoint($large) {
+        font-size: $title-font-size--max--smaller;
+      }
+      font-size: $title-font-size--smaller;
+    }
   }
 }
 

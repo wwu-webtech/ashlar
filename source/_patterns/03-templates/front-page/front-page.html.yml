@@ -51,10 +51,16 @@ page:
                                   join():
                                   - include():
                                       pattern: molecules-image-button-html
+                                      with:
+                                        content:
+                                          field_link: <a href="#">Apply</a>
                                   - include():
                                       pattern: molecules-image-button-html
                                   - include():
                                       pattern: molecules-image-button-html
+                                      with:
+                                        content:
+                                          field_link: <a href="#">Current Students</a>
                         - include():
                             pattern: templates-layout--twocol-bricks-html
                             with:
@@ -91,7 +97,7 @@ page:
                                       pattern: organisms-block-template-html
                                       with:
                                         label: ""
-                                        content: "<a class='button alt'>More Stories</a>"
+                                        content: "<a class='button outline'>More Stories</a>"
                                 second_above:
                                   join():
                                   - include():
@@ -102,10 +108,10 @@ page:
                                       pattern: organisms-block-template-html
                                       with:
                                         label: ""
-                                        content: "<a class='button alt'>More News</a>"
+                                        content: "<a class='button outline'>More News</a>"
                                 middle:
                                   include():
-                                    pattern: molecules-testimonial-style-a-html
+                                    pattern: molecules-testimonial-html
                                 first_below:
                                   join():
                                   - include():
@@ -137,7 +143,7 @@ page:
                                       pattern: organisms-block-template-html
                                       with:
                                         label: ""
-                                        content: "<a class='button alt'>Learn More</a>"
+                                        content: "<a class='button outline'>Learn More</a>"
                                 second_below:
                                   join():
                                   - include():
@@ -152,7 +158,7 @@ page:
                                       pattern: organisms-block-template-html
                                       with:
                                         label: ""
-                                        content: "<a class='button alt'>More News</a>"
+                                        content: "<a class='button outline'>More News</a>"
                                 bottom: ""
 
         site_footer: organisms-site-footer-html

@@ -18,12 +18,15 @@
     margin-right: $standard-spacing / 3;
     padding: $half-spacing;
     color: $white;
+    border: none;
     border-radius: 0;
     background-color: $blue;
+    box-shadow: none;
 
     &:hover,
     &:focus,
     &:active {
+      transform: none;
       color: $dark-blue;
       background-color: $light-green;
       box-shadow: none;

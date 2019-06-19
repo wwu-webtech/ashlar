@@ -14,13 +14,9 @@
 
   &:hover,
   &:focus-within {
-    @include breakpoint($medium) {
-      transform: translate(-$border-width--thicker, -$border-width--thicker);
-      box-shadow: 0 0 0 $border-width--thicker $dark-blue;
-    }
     z-index: 1;
     transform: translate(-$border-width, -$border-width);
-    box-shadow: 0 0 0 $border-width $dark-blue;
+    box-shadow: $focus-shadow;
   }
 
   .image {

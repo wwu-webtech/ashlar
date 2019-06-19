@@ -1,0 +1,11 @@
+attributes:
+  Attribute():
+    class:
+    - block--full-page
+    - dark-blue-bg
+title_attributes:
+  Attribute():
+    class:
+    - block__title
+label: Full Page Block
+content: "<p>This is a standard block with the custom class 'block--full-page' added to it.</p>"

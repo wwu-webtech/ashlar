@@ -78,17 +78,6 @@ $spotlight-height--large: 300px;
       }
     }
 
-    &:nth-last-child(odd) {
-      @extend %lightest-gray-bg;
-      @include breakpoint($small) {
-        background-color: $white;
-      }
-    }
-
-    &:nth-last-child(even) {
-      @extend %light-gray-bg;
-    }
-
     .taxonomy-term {
       @extend .taxonomy-term;
     }
