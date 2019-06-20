@@ -7,7 +7,8 @@ title_attributes:
   Attribute():
     class:
     - block__title
+label: Block title
 content:
-  body: "<strong>Register:</strong> Fall Advising and Orientation <br> Register today for a good spot"
+  body: "<p><strong>Register:</strong> Fall Advising and Orientation <br> Register today for a good spot</p>"
   field_icon: check
   field_image: atoms-landscape-3x2
