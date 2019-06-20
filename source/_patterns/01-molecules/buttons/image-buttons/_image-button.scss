@@ -69,12 +69,16 @@ $image-button-size--large: 300px;
     transform: translate(-20%, -10%) rotatex(180deg);
   }
 
+  .image {
+    background-color: $blue;
+  }
+
   a {
     @include breakpoint($medium) {
-      font-size: $image-button-size--medium / 6.25;
+      font-size: $image-button-size--medium / 8;
     }
     @include breakpoint($large) {
-      font-size: $image-button-size--large / 6.25;
+      font-size: $image-button-size--large / 8;
     }
     position: absolute;
     z-index: 1;
@@ -91,7 +95,7 @@ $image-button-size--large: 300px;
     color: white;
     border-radius: 50%;
     background: transparentize($dark-blue, 0.5);
-    font-size: $image-button-size / 6.25;
+    font-size: $image-button-size / 8;
     font-weight: bold;
 
     &:active,
@@ -155,6 +159,16 @@ $image-button-size--large: 300px;
       &:focus-within:after {
         transform: translate(50%, 14%) rotatey(180deg);
       }
+    }
+  }
+}
+
+/* Simplified image button, no fancy overlaps */
+.image-button--simple {
+  .image-button {
+    &:before,
+    &:after {
+      display: none;
     }
   }
 }
