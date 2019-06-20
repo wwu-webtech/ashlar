@@ -270,3 +270,9 @@ input[type="submit"] {
     }
   }
 }
+
+/* Admin toolbar button overrides */
+.toolbar-bar button,
+.si-button {
+  box-shadow: none;
+}
