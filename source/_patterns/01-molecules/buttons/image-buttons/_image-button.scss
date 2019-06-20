@@ -69,6 +69,10 @@ $image-button-size--large: 300px;
     transform: translate(-20%, -10%) rotatex(180deg);
   }
 
+  .image {
+    background-color: $blue;
+  }
+
   a {
     @include breakpoint($medium) {
       font-size: $image-button-size--medium / 8;
