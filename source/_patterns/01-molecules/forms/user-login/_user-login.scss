@@ -3,23 +3,27 @@
 * molecules/forms/user-login/_user-login.scss
 * Additional styles for the user login form
 */
+
+$max-box-width: 100px;
+
 .user-login-form {
   display: grid;
-  grid-template-rows: auto auto auto auto;
-  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: repeat(4, auto);
+  grid-template-columns: repeat(auto-fit, minmax($max-box-width, 1fr));
   grid-template-areas:
-  "login manual ."
-  "username  username ."
-  "password  password ."
-  "submit  submit .";
+    "login manual . ."
+    "username username . ."
+    "password password  . ."
+    "submit submit  . .";
 
   grid-column-gap: $double-spacing;
+  grid-row-gap: $double-spacing;
+  justify-content: center;
 
   -ms-grid-rows: auto auto auto auto;
   -ms-grid-columns: 2fr $double-spacing 1fr $double-spacing 2fr;
 
   .manual-login {
-    background-color: $dark-blue;
     grid-area: manual;
 
     -ms-grid-column: 2;
@@ -27,7 +31,13 @@
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
   }
+
   .cas-login-link {
+    margin: 0;
+    @extend
+      .button,
+      .dark-blue,
+      .square;
     grid-area: login;
 
     -ms-grid-column: 1;
@@ -62,7 +72,7 @@
   }
   .form-actions {
     grid-area: submit;
-    justify-self: end;
+    justify-self: start;
 
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
