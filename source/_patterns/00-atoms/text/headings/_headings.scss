@@ -85,6 +85,66 @@ main {
   }
 }
 
+.erm-headings {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $blue;
+    font-family: $sans-serif;
+  }
+
+  h1,
+  h2 {
+    @include breakpoint($small) {
+      font-size: $title-font-size;
+    }
+    @include breakpoint($medium) {
+      font-size: $title-font-size--larger;
+    }
+    @include breakpoint($large) {
+      font-size: $title-font-size--max--larger;
+    }
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: none;
+    font-family: $title-font;
+    font-size: $title-font-size;
+  }
+
+  .blue-overlay,
+  .blue-bg,
+  .dark-blue-bg,
+  .black-bg {
+    h1,
+    h2,
+    h3 {
+      color: $white;
+    }
+  }
+
+  h3 {
+    display: inline-block;
+
+    &:after {
+      z-index: -1;
+      display: block;
+      width: 110%;
+      height: 30px;
+      margin-left: 50%;
+      content: "";
+      transform: translate(-50%, -18px);
+      background-color: transparentize($blue, 0.9);
+    }
+  }
+
+  .blue-bg h3:after {
+    background: mix($blue, $light-blue, 50%);
+  }
+}
+
 .title-font-headings {
   h1,
   h2,

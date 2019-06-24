@@ -104,7 +104,7 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
       margin-right: $standard-spacing;
       margin-left: $standard-spacing;
       border-color: $white;
-      background-color: transparent;
+      background-color: $blue;
 
       &:hover,
       &:focus,
