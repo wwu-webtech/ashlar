@@ -20,8 +20,8 @@ $links.once('tracking-event').on('click', function (event) {
   event.preventDefault();
   setTimeout(setLocation, 2000);
 
-  if (params.has('UTM')) {
-    category = params.get('UTM');
+  if (params.has('utm_campaign')) {
+    category = params.get('utm_campaign');
   }
   else {
     category = $target.data('tracking-event-category');
