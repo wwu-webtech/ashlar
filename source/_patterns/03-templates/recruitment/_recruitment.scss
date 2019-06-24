@@ -1,0 +1,123 @@
+/*
+* @file
+* templates/recruitment/_recruitment.scss
+*/
+
+.erm-page {
+  h3 {
+    justify-self: center;
+    text-align: center;
+  }
+
+  p {
+    max-width: $max-one-col-width;
+  }
+
+  .anchor-link {
+    position: absolute;
+    top: 0;
+    height: 0;
+  }
+
+  .erm-button {
+    @include breakpoint($small) {
+      width: 30%;
+    }
+    @include breakpoint($medium) {
+      padding: $double-spacing * 2;
+    }
+    display: inline-block;
+    width: 80%;
+    margin: auto;
+    margin-bottom: $standard-spacing;
+    padding: $triple-spacing;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: transparentize($blue, 0.9);
+    font-size: $h5-font-size;
+    font-weight: $font-weight--bold;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      background: $blue;
+    }
+
+    &:after {
+      display: block;
+      width: $standard-spacing * 4;
+      height: $half-spacing;
+      margin-left: 50%;
+      content: "";
+      transition: all $standard-ease $fast-transition-speed;
+      transform: translate(-50%, $standard-spacing);
+      border-radius: $button-border-radius--round-square;
+      background: $link-blue;
+    }
+
+    &:hover:after,
+    &:focus:after,
+    &:active:after {
+      background: $white;
+    }
+  }
+
+  .flex-container {
+    @include breakpoint($small) {
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+    }
+    display: flex;
+    flex-flow: column;
+    width: 100vw;
+    max-width: $max-content-width;
+  }
+
+  .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 180px;
+    transition: 0.5 ease opacity;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  .play-link {
+    position: relative;
+    display: block;
+    height: 180px;
+    margin-bottom: $double-spacing * 2;
+    padding: 0;
+    color: $white;
+    background: none;
+    box-shadow: none;
+    border: none;
+
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: none !important;
+
+      .play-icon {
+        opacity: $hover-opacity;
+      }
+    }
+  }
+
+  .page-content {
+    @include breakpoint($large) {
+      margin-top: -$standard-spacing - $toggle-size--larger;
+    }
+    margin-top: -$standard-spacing - $toggle-size;
+    margin-bottom: 0;
+  }
+
+  .western-header {
+    z-index: 4;
+    background: transparent;
+  }
+}
