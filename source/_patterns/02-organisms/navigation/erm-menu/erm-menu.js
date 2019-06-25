@@ -2,7 +2,7 @@ var $erm_menu = $('#block-ermmenu');
 $erm_menu.hide();
 
 /* ERM Menu toggle controls */
-if(!$('.toggle-erm-menu').length && $('#block-ermmenu').length) {
+if(!$('.toggle-erm-menu').length && $('#block-ermmenu').length && !$('.sg-main').length) {
   $('.quick-links').remove();
   $('.search').remove();
   $('.nav--main').remove();
