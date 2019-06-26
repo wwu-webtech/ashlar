@@ -1,8 +1,8 @@
 field:
-  name: William Riker
-  pronouns: He/him/his
-  job_title: Number One
-  department: USS Enterprise-D
-  email: william.riker@wwu.edu
+  name: Full Name
+  pronouns: they/them/theirs
+  job_title: Job Title
+  department: Department
+  email: first.last@wwu.edu
   office_phone: 360-650-xxxx
   cell_phone: 360-650-xxxx
