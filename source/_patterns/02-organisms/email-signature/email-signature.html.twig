@@ -1,0 +1,16 @@
+<div id="email-signature" style="font-size: 14px; display: flex; align-items: end;">
+  <img src="https://designsystem.wwu.edu/sites/designsystem.wwu.edu/files/western-logo-email.png" style="width: 184px; height: 94px; margin-right: 24px;">
+
+  <div class="info">
+    <p style="margin-bottom: -3px; font-family: 'Segoe UI Web (West European)',Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;">
+      <span style="font-weight: 700;">{{ field.name }}</span> | <span style="font-style: italic;">{{ field.pronouns }}</span>
+      <br />{{ field.job_title }} | {{ field.department }}
+      <br />Western Washington University
+      <br />516 High Street, Bellingham WA 98225
+      <br />{{ field.email }} | {{ field.office_phone }} | {{ field.cell_phone }}
+    </p>
+  </div>
+</div>
+
+
+<button id="copy-button">Copy to Clipboard</button>
