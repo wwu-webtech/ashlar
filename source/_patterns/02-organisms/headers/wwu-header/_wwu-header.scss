@@ -155,4 +155,18 @@ $site-name-gradient-end: transparentize($dark-blue, 0.2);
       justify-self: end;
     }
   }
+
+  .language-selector {
+    position: absolute;
+    top:10px;
+    right:25px;
+  }
+
+  .language-selector-label {
+    display:block;
+    float:left;
+    padding-top: 6px;
+    padding-right: 8px;
+  }
+
 }
