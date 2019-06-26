@@ -4,5 +4,5 @@ field:
   job_title: Job Title
   department: Department
   email: first.last@wwu.edu
-  office_phone: 360-650-xxxx
-  cell_phone: 360-650-xxxx
+  phone_one: 360-650-xxxx
+  phone_two: 360-650-xxxx

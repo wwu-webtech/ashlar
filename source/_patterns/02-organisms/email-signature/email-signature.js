@@ -7,35 +7,24 @@ generateButton.onclick = function() {
   var job_title =  document.getElementById('job_title');
   var department =  document.getElementById('department');
   var email =  document.getElementById('email');
-  var office_phone =  document.getElementById('phone_one');
-  var cell_phone =  document.getElementById('phone_two');
-
-  console.log(name);
+  var phone_one =  document.getElementById('phone_one');
+  var phone_two =  document.getElementById('phone_two');
 
   name = (name.value) ? name.value : "";
-  pronouns = (pronouns.value) ? pronouns.value : "";
+  pronouns = (pronouns.value) ? " | " + pronouns.value : "";
   job_title = (job_title.value) ? job_title.value : "";
-  department = (department.value) ? department.value : "";
+  department = (department.value) ? " | " + department.value : "";
   email = (email.value) ? email.value : "";
-  office_phone = (office_phone.value) ? office_phone.value : "";
-  cell_phone = (cell_phone.value) ? cell_phone.value : "";
-
-  console.log(name);
-
+  phone_one = (phone_one.value) ? phone_one.value : "";
+  phone_two = (phone_two.value) ? phone_two.value : "";
+  
   document.getElementById('field_name').innerText = name;
-  document.getElementById('field_pronouns').innerText = pronouns;  
-
+  document.getElementById('field_pronouns').innerText = pronouns;
   document.getElementById('field_job_title').innerText = job_title;
   document.getElementById('field_department').innerText = department;
-
-  document.getElementById('field_email').innerText = email;
-  document.getElementById('field_email').setAttribute("href", "mailto:" + email);
-
-  document.getElementById('field_phone_one').innerText = office_phone;
-  document.getElementById('field_phone_one').setAttribute("href", "tel:" + office_phone);
-
-  document.getElementById('field_phone_two').innerText = cell_phone;
-  document.getElementById('field_phone_two').setAttribute("href", "tel:" + cell_phone);
+  document.getElementById('field_email').innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
+  if(phone_one) { document.getElementById('field_phone_one').innerHTML = ' | <a href="tel:' + phone_one + '">' + phone_one + '</a>' } else { document.getElementById('field_phone_one').innerHTML= '' };
+  if(phone_two) { document.getElementById('field_phone_two').innerHTML = ' | <a href="tel:' + phone_two + '">' + phone_two + '</a>' } else { document.getElementById('field_phone_two').innerHTML= '' };
 
   copyButton.focus();
 }

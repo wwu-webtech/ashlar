@@ -29,11 +29,11 @@
 
   <div class="info">
     <p style="margin-bottom: -3px; font-family: 'Segoe UI Web (West European)',Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;">
-      <span id="field_name" style="font-weight: 700;">{{ field.name }}</span> | <span id="field_pronouns" style="font-style: italic;"> | {{ field.pronouns }}</span><br />
-      <span id="field_job_title">{{ field.job_title }}</span> | <span id="field_department">{{ field.department }}</span><br />
+      <span id="field_name" style="font-weight: 700;">{{ field.name }}</span><span id="field_pronouns"> | <span style="font-style: italic;">{{ field.pronouns }}</span></span><br />
+      <span id="field_job_title">{{ field.job_title }}</span><span id="field_department"> | {{ field.department }}</span><br />
       Western Washington University<br />
       516 High Street, Bellingham WA 98225<br />
-      <a id="field_email" href="mailto:{{ field.email }}">{{ field.email }}</a> | <a id="field_phone_one" href="tel:{{ field.office_phone }}">{{ field.office_phone }}</a> | <a id="field_phone_two" href="tel:{{ field.cell_phone }}">{{ field.cell_phone }}</a>
+      <span id="field_email"><a href="mailto:{{ field.email }}">{{ field.email }}</a></span><span id="field_phone_one"> | <a href="tel:{{ field.phone_one }}">{{ field.phone_one }}</a></span><span id="field_phone_two"> | <a href="tel:{{ field.phone_two }}">{{ field.phone_two }}</a></span>
     </p>
   </div>
 </div>
