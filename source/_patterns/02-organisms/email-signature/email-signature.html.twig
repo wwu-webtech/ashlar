@@ -1,41 +1,61 @@
 <form id="signature-form">
-  <label for="full_name">Full Name</label>
-  <input type="text" id="full_name" name="full_name"></input>
+  <div class="form-line">
+    <div class="form-item">
+      <label for="full_name">Full Name</label>
+      <input type="text" id="full_name" name="full_name"></input>
+    </div>
 
-  <label for="pronouns">Pronouns</label>
-  <input type="text" id="pronouns" name="pronouns"></input>
+    <div class="form-item">
+      <label for="pronouns">Pronouns</label>
+      <input type="text" id="pronouns" name="pronouns"></input>
+    </div>
+  </div>
 
-  <label for="job_title">Job title</label>
-  <input type="text" id="job_title" name="job_title"></input>
+  <div class="form-line">
+    <div class="form-item">
+      <label for="job_title">Job title</label>
+      <input type="text" id="job_title" name="job_title"></input>
+    </div>
 
-  <label for="department">Department</label>
-  <input type="text" id="department" name="department"></input>
+    <div class="form-item">
+      <label for="department">Department</label>
+      <input type="text" id="department" name="department"></input>
+    </div>
+  </div>
 
-  <label for="email">Email</label>
-  <input type="text" id="email" name="email"></input>
+  <div class="form-line">
+    <div class="form-item">
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email"></input>
+    </div>
 
-  <label for="phone_one">Office Phone Number</label>
-  <input type="text" id="phone_one" name="phone_one"></input>
+    <div class="form-item">
+      <label for="phone_one">Office Phone Number</label>
+      <input type="text" id="phone_one" name="phone_one"></input>
+    </div>
 
-  <label for="phone_two">Additional Phone Number</label>
-  <input type="text" id="phone_two" name="phone_two"></input>
+    <div class="form-item">
+      <label for="phone_two">Additional Phone Number</label>
+      <input type="text" id="phone_two" name="phone_two"></input>
+    </div>
+  </div>
 </form>
 
-<button id="generate_signature">Generate Signature</button>
+  <button id="generate_signature">Generate Signature</button>
 
 
-<div id="email_signature" style="font-size: 14px; display: flex; align-items: end;">
-  <img src="https://designsystem.wwu.edu/sites/designsystem.wwu.edu/files/western-logo-email.png" style="width: 184px; height: 94px; margin-right: 24px;">
+  <div id="email_signature" style="font-size: 14px; display: flex; align-items: end;">
+    <img src="https://designsystem.wwu.edu/sites/designsystem.wwu.edu/files/western-logo-email.png" style="width: 184px; height: 94px; margin-right: 24px;">
 
-  <div class="info">
-    <p style="margin-bottom: -3px; font-family: 'Segoe UI Web (West European)',Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;">
-      <span id="field_name" style="font-weight: 700;">{{ field.name }}</span><span id="field_pronouns"> | <span style="font-style: italic;">{{ field.pronouns }}</span></span><br />
-      <span id="field_job_title">{{ field.job_title }}</span><span id="field_department"> | {{ field.department }}</span><br />
-      Western Washington University<br />
-      516 High Street, Bellingham WA 98225<br />
-      <span id="field_email"><a href="mailto:{{ field.email }}">{{ field.email }}</a></span><span id="field_phone_one"> | <a href="tel:{{ field.phone_one }}">{{ field.phone_one }}</a></span><span id="field_phone_two"> | <a href="tel:{{ field.phone_two }}">{{ field.phone_two }}</a></span>
-    </p>
+    <div class="info">
+      <p style="margin-bottom: -3px; font-family: 'Segoe UI Web (West European)',Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;">
+        <span id="field_name" style="font-weight: 700;">{{ field.name }}</span><span id="field_pronouns"> | <span style="font-style: italic;">{{ field.pronouns }}</span></span><br />
+        <span id="field_job_title">{{ field.job_title }}</span><span id="field_department"> | {{ field.department }}</span><br />
+        Western Washington University<br />
+        516 High Street, Bellingham WA 98225<br />
+        <span id="field_email"><a href="mailto:{{ field.email }}">{{ field.email }}</a></span><span id="field_phone_one"> | <a href="tel:{{ field.phone_one }}">{{ field.phone_one }}</a></span><span id="field_phone_two"> | <a href="tel:{{ field.phone_two }}">{{ field.phone_two }}</a></span>
+      </p>
+    </div>
   </div>
-</div>
 
-<button id="copy_button">Copy to Clipboard</button>
+  <button id="copy_button">Copy to Clipboard</button>
