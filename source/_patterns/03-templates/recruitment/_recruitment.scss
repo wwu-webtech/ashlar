@@ -5,8 +5,9 @@
 
 .erm-page {
   h3 {
-    justify-self: center;
     text-align: center;
+
+    justify-self: center;
   }
 
   p {
@@ -79,7 +80,9 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 180px;
+    width: calc(30px + 10vw);
+    min-width: 80px;
+    max-width: 170px;
     transition: 0.5 ease opacity;
     transform: translate(-50%, -50%);
     opacity: 1;
@@ -92,9 +95,9 @@
     margin-bottom: $double-spacing * 2;
     padding: 0;
     color: $white;
+    border: none;
     background: none;
     box-shadow: none;
-    border: none;
 
 
     &:hover,
@@ -119,5 +122,64 @@
   .western-header {
     z-index: 4;
     background: transparent;
+  }
+
+  .block--video-container {
+    justify-content: stretch;
+    align-content: stretch;
+    padding: 0;
+  }
+
+  .video-container {
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
+
+    .video {
+      position: relative;
+      display: grid;
+      flex: 1 1 300px;
+      padding: $double-spacing;
+      transition: all $standard-ease $fast-transition-speed;
+
+      grid-template-areas:
+      "...."
+      "text"
+      "....";
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 2fr;
+
+      &:hover,
+      &:focus-within {
+        background-color: transparentize($blue, 0.2);
+
+        .video-title,
+        .play-icon {
+          opacity: 1;
+        }
+      }
+
+      .video-title {
+        text-align: center;
+        text-transform: uppercase;
+        opacity: 0;
+        font-family: $title-font;
+
+        grid-area: text;
+      }
+
+      .play-link {
+        height: 100%;
+
+        grid-column: 1 / span all;
+        grid-row: 1 / span all;
+      }
+
+      .play-icon {
+        top: inherit;
+        bottom: 0;
+        opacity: 0.5;
+      }
+    }
   }
 }
