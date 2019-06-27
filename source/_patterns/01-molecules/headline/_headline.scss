@@ -119,7 +119,7 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
   &.right-aligned-bar {
     @extend .left-aligned-bar;
     @include breakpoint($large) {
-      margin-right: calc(((100vw - #{$max-content-width}) / -2) - #{$half-spacing} - #{$border-width--thicker});
+      margin-right: calc(((100vw - #{$max-content-width}) / -2));
     }
     margin-right: -$standard-spacing;
     margin-left: initial;
