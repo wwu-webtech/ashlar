@@ -83,6 +83,12 @@ timeline-block:
     build/js/timeline-block.js: {}
   dependencies:
     - core/jquery
+page-title:
+  version: 1.x
+  js:
+    build/js/page-title.js: {}
+  dependencies:
+    - core/jquery
 user-login:
   version: 1.x
   js:
