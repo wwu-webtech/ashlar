@@ -1,4 +1,4 @@
 ---
-title: Two Column
+title: Two Column - 50/50
 ---
-Two column layouts
+Two column 50/50 layout

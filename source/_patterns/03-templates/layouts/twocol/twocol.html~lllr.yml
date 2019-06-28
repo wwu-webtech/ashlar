@@ -3,7 +3,7 @@ attributes:
     class:
     - layout
     - layout--twocol-section
-    - layout--twocol-section--50-50
+    - layout--twocol-section--75-25
 region_attributes:
   first:
     Attribute():
