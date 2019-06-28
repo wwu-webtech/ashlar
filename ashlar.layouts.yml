@@ -1,6 +1,6 @@
 layout_flex:
   label: 'Flex Container'
-  path: templates/layout/flex
+  path: templates/layouts/flex
   template: layout--flex
   category: 'Columns: 1'
   default_region: flex
@@ -10,8 +10,8 @@ layout_flex:
     flex:
       label: Flex
 layout_twocol_75_25:
-  label: 'Two column 75/25'
-  path: templates/layout/twocol_75_25
+  label: 'Deprecated - Use layouts above'
+  path: templates/retired-layouts/twocol_75_25
   template: layout--twocol-75-25
   category: 'Columns: 2'
   default_region: first
@@ -29,8 +29,8 @@ layout_twocol_75_25:
     bottom:
       label: Bottom
 layout_twocol_34_66:
-  label: 'Two column 34/66'
-  path: templates/layout/twocol_34_66
+  label: 'Deprecated - Use layouts above'
+  path: templates/retired-layouts/twocol_34_66
   template: layout--twocol-34-66
   category: 'Columns: 2'
   default_region: first
@@ -48,8 +48,8 @@ layout_twocol_34_66:
     bottom:
       label: Bottom
 layout_twocol_66_34:
-  label: 'Two column 66/34'
-  path: templates/layout/twocol_66_34
+  label: 'Deprecated - Use layouts above'
+  path: templates/retired-layouts/twocol_66_34
   template: layout--twocol-66-34
   category: 'Columns: 2'
   default_region: first
@@ -68,7 +68,7 @@ layout_twocol_66_34:
       label: Bottom
 layout_majors:
   label: 'Majors'
-  path: templates/layout/majors
+  path: templates/layouts/majors
   template: layout--majors
   category: 'Columns: 2'
   default_region: top
