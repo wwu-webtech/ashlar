@@ -5,16 +5,16 @@
 
 .layout--threecol-section {
   @include breakpoint($small) {
-    .layout__region--first {
+    > .layout__region--first {
       padding-right: $half-spacing;
     }
 
-    .layout__region--second {
+    > .layout__region--second {
       padding-left: $half-spacing;
       padding-right: $half-spacing;
     }
 
-    .layout__region--third {
+    > .layout__region--third {
       padding-left: $half-spacing;
     }
 
@@ -40,16 +40,16 @@
     }
   }
   @include breakpoint($medium) {
-    .layout__region--first {
+    > .layout__region--first {
       padding-right: $standard-spacing;
     }
 
-    .layout__region--second {
+    > .layout__region--second {
       padding-left: $standard-spacing;
       padding-right: $standard-spacing;
     }
 
-    .layout__region--third {
+    > .layout__region--third {
       padding-left: $standard-spacing;
     }
   }

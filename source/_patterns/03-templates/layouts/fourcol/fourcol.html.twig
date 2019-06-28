@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Three column layout. This layout does not get used by Drupal, but imitates the layout for pattern lab.
+ * Four column layout. This layout does not get used by Drupal, but imitates the layout for pattern lab.
  */
  #}
 
@@ -22,6 +22,12 @@
     {% if content.third %}
       <div {{ region_attributes.third }}>
         {{ content.third }}
+      </div>
+    {% endif %}
+
+    {% if content.fourth %}
+      <div {{ region_attributes.fourth }}>
+        {{ content.fourth }}
       </div>
     {% endif %}
   </div>
