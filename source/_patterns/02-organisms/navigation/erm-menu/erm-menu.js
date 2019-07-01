@@ -1,5 +1,6 @@
 var $erm_menu = $('#block-ermmenu');
 $erm_menu.hide();
+var $erm_toggle = $('<button class="toggle toggle-erm-menu toggle-open-menu" aria-label="Open the menu"><span class="material-icons">menu</span></button>');
 
 /* ERM Menu toggle controls */
 if(!$('.toggle-erm-menu').length && $('#block-ermmenu').length && !$('.sg-main').length) {
@@ -10,8 +11,6 @@ if(!$('.toggle-erm-menu').length && $('#block-ermmenu').length && !$('.sg-main')
   $('.splash').remove();
 
   $('body').addClass('erm-page erm-headings');
-
-  var $erm_toggle = $('<button class="toggle toggle-erm-menu toggle-open-menu" aria-label="Open the menu"><span class="material-icons">menu</span></button>');
 
   $('.western-header .wrap').append($erm_toggle);
 }
