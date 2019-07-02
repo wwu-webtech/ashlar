@@ -9,9 +9,6 @@ $play-icon-size: 200px;
   @include breakpoint($max-one-col-width) {
     transform: translatex(calc((100vw - #{$max-one-col-width}) / -2));
   }
-  @include breakpoint($large) {
-    transform: translatex(calc((100vw - #{$max-content-width}) / -2));
-  }
   width: 100vw;
   transform: translatex(-$standard-spacing);
 
