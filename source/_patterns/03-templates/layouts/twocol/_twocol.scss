@@ -4,39 +4,6 @@
 */
 
 .layout--twocol-section {
-  @include breakpoint($small) {
-    > .layout__region--first {
-      padding-right: $half-spacing;
-    }
-    > .layout__region--second {
-      padding-left: $half-spacing;
-    }
-
-    &.layout--twocol-section--50-50 > .layout__region--first,
-    &.layout--twocol-section--50-50 > .layout__region--second {
-      flex: 0 1 50%;
-    }
-
-    &.layout--twocol-section--33-67 > .layout__region--first,
-    &.layout--twocol-section--67-33 > .layout__region--second {
-      flex: 0 1 33%;
-    }
-
-    &.layout--twocol-section--33-67 > .layout__region--second,
-    &.layout--twocol-section--67-33 > .layout__region--first {
-      flex: 0 1 67%;
-    }
-
-    &.layout--twocol-section--25-75 > .layout__region--first,
-    &.layout--twocol-section--75-25 > .layout__region--second {
-      flex: 0 1 25%;
-    }
-
-    &.layout--twocol-section--25-75 > .layout__region--second,
-    &.layout--twocol-section--75-25 > .layout__region--first {
-      flex: 0 1 75%;
-    }
-  }
   @include breakpoint($medium) {
     > .layout__region--first {
       padding-right: $standard-spacing;
@@ -50,5 +17,53 @@
 
   > .layout__region {
     flex: 0 1 100%;
+  }
+
+  > .layout__region--first {
+    @include breakpoint($small) {
+      padding-right: $half-spacing;
+    }
+  }
+  > .layout__region--second {
+    @include breakpoint($small) {
+      padding-left: $half-spacing;
+    }
+  }
+
+  &.layout--twocol-section--50-50 > .layout__region--first,
+  &.layout--twocol-section--50-50 > .layout__region--second {
+    @include breakpoint($small) {
+      flex: 0 1 50%;
+    }
+  }
+
+  &.layout--twocol-section--33-67 > .layout__region--first,
+  &.layout--twocol-section--67-33 > .layout__region--second {
+    @extend %font-size--smaller;
+    @include breakpoint($small) {
+      flex: 0 1 33%;
+    }
+  }
+
+  &.layout--twocol-section--33-67 > .layout__region--second,
+  &.layout--twocol-section--67-33 > .layout__region--first {
+    @include breakpoint($small) {
+      flex: 0 1 67%;
+    }
+  }
+
+  &.layout--twocol-section--25-75 > .layout__region--first,
+  &.layout--twocol-section--75-25 > .layout__region--second {
+    @extend %font-size--smaller;
+    @include breakpoint($small) {
+      flex: 0 1 25%;
+    }
+  }
+
+  &.layout--twocol-section--25-75 > .layout__region--second,
+  &.layout--twocol-section--75-25 > .layout__region--first {
+    @include breakpoint($small) {
+      flex: 0 1 75%;
+    }
   }
 }

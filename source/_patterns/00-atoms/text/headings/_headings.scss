@@ -208,7 +208,8 @@ main {
     @include breakpoint($large) {
       font-size: $h2-font-size--max--smaller;
     }
-    border-bottom-width: $border-width--thicker;
+    padding-bottom: none;
+    border-bottom: none;
     font-size: $h2-font-size--smaller;
   }
 
