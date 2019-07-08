@@ -10,6 +10,7 @@ libraries:
   - ashlar/alerts
   - ashlar/featherlight
   - ashlar/menu-extras
+  - ashlar/page-title
   - ashlar/quicksearch
   - ashlar/search
   - ashlar/switcher

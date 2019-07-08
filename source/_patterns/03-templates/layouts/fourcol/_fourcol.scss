@@ -1,0 +1,58 @@
+/*
+* @file
+* templates/layouts/fourcol/_fourcol.scss
+*/
+
+.layout--fourcol-section {
+  display: flex;
+  flex-wrap: wrap;
+
+  > .layout__region {
+    @extend %font-size--smaller;
+    @include breakpoint($small) {
+      flex: 0 1 25%;
+    }
+    flex: 0 1 100%;
+  }
+
+  > .layout__region--first {
+    @include breakpoint($small) {
+      padding-right: $half-spacing;
+    }
+  }
+
+  > .layout__region--second,
+  > .layout__region--third {
+    @include breakpoint($small) {
+      padding-right: $half-spacing;
+      padding-left: $half-spacing;
+    }
+  }
+
+  > .layout__region--fourth {
+    @include breakpoint($small) {
+      padding-left: $half-spacing;
+    }
+  }
+
+
+  > .layout__region--first {
+    @include breakpoint($medium) {
+      padding-right: $standard-spacing;
+    }
+  }
+
+  > .layout__region--second,
+  > .layout__region--third {
+    @include breakpoint($medium) {
+      padding-right: $standard-spacing;
+      padding-left: $standard-spacing;
+    }
+  }
+
+  > .layout__region--fourth {
+    @include breakpoint($medium) {
+      padding-left: $standard-spacing;
+    }
+  }
+}
