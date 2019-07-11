@@ -86,23 +86,24 @@ $close-toggle-size: 64px;
               }
             }
           }
+        }
 
-          &.calendar {
-            grid-area: calendar;
-          }
+        &.calendar {
+          grid-area: calendar;
+        }
 
-          &.directory {
-            grid-area: directory;
-          }
+        &.directory {
+          grid-area: directory;
+        }
 
-          &.map {
-            grid-area: map;
-          }
+        &.map {
+          grid-area: map;
+        }
 
-          &.mywestern {
-            grid-area: mywestern;
-          }
+        &.mywestern {
+          grid-area: mywestern;
         }
       }
     }
   }
+}
