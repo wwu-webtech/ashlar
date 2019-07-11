@@ -9,6 +9,7 @@ $close-toggle-size: 64px;
     @include breakpoint($medium) {
       display: none;
     }
+
     background-color: $dark-blue;
 
     .toggle-close-menu {
@@ -25,8 +26,8 @@ $close-toggle-size: 64px;
       border-bottom: solid $border-width--thinner $white;
 
       grid-template-areas:
-      "apply . . ."
-      "calendar directory map mywestern";
+        "apply gift . ."
+        "calendar directory map mywestern";
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-rows: $close-toggle-size auto;
       justify-items: center;
@@ -66,24 +67,42 @@ $close-toggle-size: 64px;
               border-color: transparent;
             }
           }
-        }
 
-        &.calendar {
-          grid-area: calendar;
-        }
+          &.gift {
+            align-self: center;
+            margin-left: $standard-spacing;
+            border-top: none;
 
-        &.directory {
-          grid-area: directory;
-        }
+            grid-area: gift;
 
-        &.map {
-          grid-area: map;
-        }
+            .button {
+              padding: ($standard-spacing * 0.75);
+              border: solid $border-width $white;
 
-        &.mywestern {
-          grid-area: mywestern;
+              &:hover,
+              &:focus,
+              &:active {
+                border-color: transparent;
+              }
+            }
+          }
+
+          &.calendar {
+            grid-area: calendar;
+          }
+
+          &.directory {
+            grid-area: directory;
+          }
+
+          &.map {
+            grid-area: map;
+          }
+
+          &.mywestern {
+            grid-area: mywestern;
+          }
         }
       }
     }
   }
-}
