@@ -19,13 +19,14 @@ $close-toggle-size: 64px;
     }
 
     .menu {
+      
       display: grid;
       align-items: end;
       margin: 0;
       border-bottom: solid $border-width--thinner $white;
 
       grid-template-areas:
-      "apply . . ."
+      "apply language language ."
       "calendar directory map mywestern";
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-rows: $close-toggle-size auto;
@@ -68,6 +69,29 @@ $close-toggle-size: 64px;
           }
         }
 
+        &.language {
+          grid-area: language;
+          align-self: center;
+          padding-left: $triple-spacing;
+          border: none;
+        
+          button {
+            z-index: inherit;
+            border-radius: $triple-spacing;
+            box-shadow: $border-width $border-width white;
+            border: $border-width solid white;
+            padding: $half-spacing $standard-spacing;
+            color:white;
+            background-color: $dark-blue;
+
+            &:hover {
+              background-color:$light-green;
+              color:$black;
+              border-color: transparent;
+            }
+          }
+        }
+
         &.calendar {
           grid-area: calendar;
         }
@@ -83,6 +107,33 @@ $close-toggle-size: 64px;
         &.mywestern {
           grid-area: mywestern;
         }
+      }
+    }
+  }
+  .options {
+    background-color:$dark-blue;
+    z-index: 10;
+    position: absolute;
+    width:100%;
+    height:fit-content;
+    padding: $triple-spacing;
+
+    .selectLanguage {
+      align-self: center;
+    }
+
+    ul {
+      display: flex;
+      list-style-type: none;
+      margin: $double-spacing;
+      flex-direction: column;
+      align-items: center;
+      padding: $standard-spacing;
+      border: none;
+
+      li {
+        margin-bottom: 12px;
+        border: none;
       }
     }
   }
