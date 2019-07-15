@@ -1,0 +1,48 @@
+.langSelect {
+     @include breakpoint($medium) {
+      display: flex;
+    }
+    position: absolute;
+    z-index: 0;
+    right: 15px;
+    display: none;
+    justify-content: end;
+}
+
+.langButtonContainer {
+  position: relative;
+  display: inline-block;
+  p {
+    font-size:small;
+    font-family: $condensed;
+    width: fit-content;
+    margin: 0 auto;
+    //padding-top:$half-spacing;
+    line-height: 0;
+  }
+  //width: $toggle-size--larger;
+}
+
+.select-language {
+
+  @include breakpoint($large) {
+    top: $toggle-size--larger;  
+  }
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  top: $toggle-size;
+  flex-direction: column;
+  width: 100px;
+
+  .languageOption {
+    background-color:$dark-blue;
+    color:white;
+    border-radius: 0% !important;
+    width: 100% !important;
+    &:hover{
+      background-color: $light-green;
+      color:$black;
+    }
+  }
+}
