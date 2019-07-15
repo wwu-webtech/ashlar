@@ -38,21 +38,21 @@ $site-name-gradient-end: transparentize($dark-blue, 0.2);
       display: grid;
 
       -ms-grid-column: 2;
-      grid-column: 2 / span 1;
+      grid-column: 2 / span 2;
       -ms-grid-column-span: 1;
       -ms-grid-columns: $logo-width $standard-spacing 1fr $toggle-size;
       -ms-grid-row: 1;
       grid-row: 1 / span 1;
       -ms-grid-row-span: 1;
       -ms-grid-rows: $header-rows;
-      grid-template-areas: "logo quick-links search";
-      grid-template-columns: $header-columns;
+      grid-template-areas: "logo quick-links search lang_select";
+      grid-template-columns: $header-columns .25fr;
       grid-template-rows: $header-rows;
     }
     @include breakpoint($large) {
       -ms-grid-columns: $logo-width--larger $standard-spacing 1fr $toggle-size--larger;
       -ms-grid-rows: $header-rows--larger;
-      grid-template-columns: $header-columns--larger;
+      grid-template-columns: $header-columns--larger .25fr;
       grid-template-rows: $header-rows--larger;
     }
 
@@ -154,19 +154,15 @@ $site-name-gradient-end: transparentize($dark-blue, 0.2);
       grid-area: search;
       justify-self: end;
     }
-  }
 
-  .language-selector {
-    position: absolute;
-    top:10px;
-    right:25px;
+    .lang_select {
+      @include breakpoint($medium) {
+        top:0;
+        right: 0;
+      }
+      align-self: center;
+      grid-area: lang_select;
+      justify-self: end;
+    }
   }
-
-  .language-selector-label {
-    display:block;
-    float:left;
-    padding-top: 6px;
-    padding-right: 8px;
-  }
-
 }
