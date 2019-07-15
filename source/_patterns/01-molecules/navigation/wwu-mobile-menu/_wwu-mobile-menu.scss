@@ -67,25 +67,27 @@ $close-toggle-size: 64px;
               border-color: transparent;
             }
           }
+        }
 
-          &.gift {
-            align-self: center;
-            margin-left: $standard-spacing;
-            border-top: none;
+        &.gift {
+          align-self: center;
+          margin-left: $standard-spacing;
+          border-top: none;
 
-            grid-area: gift;
+          grid-area: gift;
 
-            .button {
-              padding: ($standard-spacing * 0.75);
-              border: solid $border-width $white;
+          .button {
+            padding: ($standard-spacing * 0.75);
+            border: solid $border-width $white;
 
-              &:hover,
-              &:focus,
-              &:active {
-                border-color: transparent;
-              }
+            &:hover,
+            &:focus,
+            &:active {
+              border-color: transparent;
             }
           }
+
+
         }
 
         &.calendar {
