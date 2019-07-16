@@ -9,6 +9,7 @@ libraries:
   - ashlar/accordion
   - ashlar/alerts
   - ashlar/featherlight
+  - ashlar/language-select
   - ashlar/menu-extras
   - ashlar/quicksearch
   - ashlar/search
@@ -16,6 +17,7 @@ libraries:
   - ashlar/user-login
   - ashlar/vimeo-tracking
   - ashlar/wwu-header
+  - ashlar/wwu-mobile-menu
 regions:
   header: Header
   quick_links: Quick Links
