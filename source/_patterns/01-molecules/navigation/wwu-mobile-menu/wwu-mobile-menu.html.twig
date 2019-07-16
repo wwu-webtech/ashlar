@@ -34,9 +34,9 @@
     </li>
   </ul>
 
-  <div class="options" id="dropLangMenu" style="display:none;">
+  <div class="languaeg-options" id="dropLangMenu" style="display:none;">
     <div>
-      <span class="selectLanguage">
+      <span class="select-language">
         <ul>
           <li>
             <a class="button outline square dark-blue large" href='#'>English</a> 
@@ -54,27 +54,22 @@
   For some reason wwu-mobile-language.js is not being detected as within the same directory
 -->
 
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+{# <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <script>
-  
-  var $mobileLangMenu = $('#dropLangMenu');
+  var $mobile_language_button = $('langOptionButton');
+  var $mobile_language_menu = $('#dropLangMenu');
 
-  $('#langOptionButton').click(function(event){
-    console.log("my life is a lie");
-    
-    if($mobileLangMenu.css('display') === 'none'){
+  $mobile_language_button.click(function (event) {
 
-      console.log("in conditional in html");
-      
-      $mobileLangMenu.show("linear");
-    }
-    else{
-      $mobileLangMenu.hide("linear");
-    }
-    event.stopPropagation();
+      if ($mobile_language_menu.css('display') === 'none') {
+          $mobile_language_menu.show("linear");
+      }
+      else {
+          $mobile_language_menu.hide("linear");
+      }
+      event.stopPropagation();
   });
-
-</script>
+</script> #}
 
 
 

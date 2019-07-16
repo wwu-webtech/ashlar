@@ -110,7 +110,7 @@ $close-toggle-size: 64px;
       }
     }
   }
-  .options {
+  .language-options {
     background-color:$dark-blue;
     z-index: 10;
     position: absolute;
@@ -118,7 +118,7 @@ $close-toggle-size: 64px;
     height:fit-content;
     padding: $triple-spacing;
 
-    .selectLanguage {
+    .select-language {
       align-self: center;
     }
 
