@@ -1,4 +1,4 @@
-.langSelect {
+.select-language {
      @include breakpoint($medium) {
       display: flex;
     }
@@ -9,7 +9,7 @@
     justify-content: end;
 }
 
-.langButtonContainer {
+.language-Button-Container {
   position: relative;
   display: inline-block;
   p {
@@ -23,7 +23,7 @@
   //width: $toggle-size--larger;
 }
 
-.select-language {
+.select-Language {
 
   @include breakpoint($large) {
     top: $toggle-size--larger;  
@@ -35,7 +35,7 @@
   flex-direction: column;
   width: 100px;
 
-  .languageOption {
+  .language-Option {
     background-color:$dark-blue;
     color:white;
     border-radius: 0% !important;
