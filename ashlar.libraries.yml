@@ -40,6 +40,7 @@ event-tracking:
     build/js/event-tracking.js: {}
   dependencies:
     - core/jquery
+    - core/jquery.once
 erm-menu:
   version: 1.x
   js:
@@ -81,6 +82,12 @@ timeline-block:
   version: 1.x
   js:
     build/js/timeline-block.js: {}
+  dependencies:
+    - core/jquery
+page-title:
+  version: 1.x
+  js:
+    build/js/page-title.js: {}
   dependencies:
     - core/jquery
 user-login:

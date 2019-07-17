@@ -24,7 +24,7 @@ page:
                         - include():
                             pattern: molecules-mabel-search-html
                         - include():
-                            pattern: templates-layout--onecol-html
+                            pattern: templates-onecol-html
                             with:
                               content:
                                 content:

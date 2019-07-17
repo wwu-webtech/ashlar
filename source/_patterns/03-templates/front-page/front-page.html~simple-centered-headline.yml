@@ -33,7 +33,7 @@ page:
                       content:
                         join():
                         - include():
-                            pattern: templates-layout--onecol-html
+                            pattern: templates-onecol-html
                             with:
                               content:
                                 content:

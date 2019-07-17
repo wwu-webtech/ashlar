@@ -1,0 +1,84 @@
+/*
+* @file
+* templates/layouts/threecol/_threecol.scss
+*/
+
+.layout--threecol-section {
+  display: flex;
+  flex-wrap: wrap;
+
+  > .layout__region {
+    flex: 0 1 100%;
+  }
+
+  > .layout__region--first {
+    @include breakpoint($small) {
+      padding-right: $half-spacing;
+    }
+  }
+
+  > .layout__region--second {
+    @include breakpoint($small) {
+      padding-left: $half-spacing;
+      padding-right: $half-spacing;
+    }
+  }
+
+  > .layout__region--third {
+    @include breakpoint($small) {
+      padding-left: $half-spacing;
+    }
+  }
+
+  &.layout--threecol-section--25-50-25 > .layout__region--first,
+  &.layout--threecol-section--25-50-25 > .layout__region--third,
+  &.layout--threecol-section--25-25-50 > .layout__region--first,
+  &.layout--threecol-section--25-25-50 > .layout__region--second,
+  &.layout--threecol-section--50-25-25 > .layout__region--second,
+  &.layout--threecol-section--50-25-25 > .layout__region--third {
+    @extend %font-size--smaller;
+    @include breakpoint($small) {
+      flex: 0 1 25%;
+    }
+  }
+  &.layout--threecol-section--25-50-25 > .layout__region--second,
+  &.layout--threecol-section--25-25-50 > .layout__region--third,
+  &.layout--threecol-section--50-25-25 > .layout__region--first {
+    @include breakpoint($small) {
+      flex: 0 1 50%;
+    }
+  }
+  &.layout--threecol-section--33-34-33 > .layout__region--first,
+  &.layout--threecol-section--33-34-33 > .layout__region--third {
+    @extend %font-size--smaller;
+    @include breakpoint($small) {
+      flex: 0 1 33%;
+    }
+  }
+  &.layout--threecol-section--33-34-33 > .layout__region--second {
+    @extend %font-size--smaller;
+    @include breakpoint($small) {
+      flex: 0 1 34%;
+    }
+  }
+
+
+  > .layout__region--first {
+    @include breakpoint($medium) {
+      padding-right: $standard-spacing;
+    }
+  }
+
+  > .layout__region--second {
+    @include breakpoint($medium) {
+      padding-left: $standard-spacing;
+      padding-right: $standard-spacing;
+    }
+  }
+
+  > .layout__region--third {
+    @include breakpoint($medium) {
+      padding-left: $standard-spacing;
+    }
+  }
+}
