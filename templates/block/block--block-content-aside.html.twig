@@ -35,7 +35,7 @@
 %}
 {% set attributes = attributes.addClass(classes, block_content.field_background_color.0.value) %}
 {% set title_attributes = title_attributes.addClass('block__title') %}
-{% set title_id = title_attributes.setAttribute('id', getUniqueID()) %}
+{% set title_id = title_attributes.setAttribute('id', getUniqueId()) %}
 
 {% block template %}
   {% if block_content.field_semantic_markup.0.value == 'div' %}
