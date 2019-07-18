@@ -1,26 +1,40 @@
 /**
- * @file
- * organisms/profile_profile.scss
- */
+* @file
+* organisms/profile_profile.scss
+*/
 
 .user-profile {
   display: flex;
   flex-flow: row wrap;
 
-  .profile-photo {
+  .profile-left {
     flex: 1 1 33%;
-
-    .container {
-      margin: auto;
-    }
   }
 
-  .profile-fields {
+  .profile-right {
     @include breakpoint($medium) {
-      text-align: left;
       padding-left: $double-spacing;
+      text-align: left;
     }
     flex: 1 1 66%;
     text-align: center;
+  }
+
+  .profile-photo {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    margin-top: $triple-spacing;
+  }
+  .social-links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: $double-spacing;
+  }
+
+  .social-icon {
+    margin-right: $standard-spacing;
+    margin-bottom: $standard-spacing;
   }
 }
