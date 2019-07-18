@@ -90,6 +90,12 @@ page-title:
     build/js/page-title.js: {}
   dependencies:
     - core/jquery
+profile:
+  version: 1.x
+  js:
+    build/js/profile.js: {}
+  dependencies:
+    - core/jquery
 user-login:
   version: 1.x
   js:

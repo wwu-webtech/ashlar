@@ -1,6 +1,6 @@
 /* Change social media links to icons */
 
-$social_links = $('.social-links a');
+var $social_links = $('.social-links a');
 
 $($social_links).each(function(){
   switch(this.text) {
