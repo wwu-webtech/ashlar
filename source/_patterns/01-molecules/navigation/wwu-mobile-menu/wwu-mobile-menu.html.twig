@@ -5,6 +5,9 @@
     <li class="apply" >
       <a class="button white outline" href="https://admissions.wwu.edu/">Apply</a>
     </li>
+    <li class = "language">
+      <button id="langOptionButton" > Language </button>
+    </li>
     <li class="calendar">
       <a class="icon-with-text" href="https://calendar.wwu.edu/">
         <span class="material-icons" aria-hidden="true">today</span>
@@ -30,4 +33,45 @@
       </a>
     </li>
   </ul>
-</div>
+
+  <div class="languaeg-options" id="dropLangMenu" style="display:none;">
+    <div>
+      <span class="select-language">
+        <ul>
+          <li>
+            <a class="button outline square dark-blue large" href='#'>English</a> 
+          </li>
+          <li>
+            <a class="button outline square dark-blue large" href="#">Español</a>
+          </li>
+        </ul>
+        </span>
+    </div>  
+  </div>
+
+<!--
+  Find a way to make this external so as to not load jquery everytime page is accessed.
+  For some reason wwu-mobile-language.js is not being detected as within the same directory
+-->
+
+{# <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+  var $mobile_language_button = $('langOptionButton');
+  var $mobile_language_menu = $('#dropLangMenu');
+
+  $mobile_language_button.click(function (event) {
+
+      if ($mobile_language_menu.css('display') === 'none') {
+          $mobile_language_menu.show("linear");
+      }
+      else {
+          $mobile_language_menu.hide("linear");
+      }
+      event.stopPropagation();
+  });
+</script> #}
+
+
+
+
+

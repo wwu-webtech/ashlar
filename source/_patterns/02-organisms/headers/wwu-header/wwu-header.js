@@ -41,6 +41,7 @@ function toggle_close_menu(event) {
       easing: 'swing',
       complete: function () {
         $('.nav--main').hide();
+        $('#dropLangMenu').hide();
         $toggle_close_menu.removeClass('is-expanded');
         $page.not('.nav--main').removeAttr('aria-hidden');
         $inputs.not('.nav--main a, .nav--main button').removeAttr('tabindex');
@@ -53,3 +54,4 @@ function toggle_close_menu(event) {
 
 $toggle_open_menu.on('click', toggle_open_menu);
 $toggle_close_menu.on('click', toggle_close_menu);
+
