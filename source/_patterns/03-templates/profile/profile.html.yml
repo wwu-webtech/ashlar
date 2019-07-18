@@ -1,24 +1,22 @@
-page:
-  include():
-    pattern: organisms-page-template-html
-    with:
-      page:
-        content:
-          include():
-            pattern: organisms-content-region-html
-            with:
-              content:
-                join():
-                - include():
-                    pattern: organisms-block-template-html-page-title
-                    with:
-                      content:
-                        include():
-                          pattern: molecules-page-title-template-html
-                          with:
-                            title: Kathleen J. Callahan
-                - include():
-                    pattern: templates-layout--onecol-html
-                    with:
-                      content: "Dobedo"
-        site_footer: organisms-site-footer-html
+field_preferred_name: Geordi
+field_last_name: La Forge
+field_degree: PhD
+field_pronouns: He/him/his
+field_job_title: Chief Engineer
+field_office_location: USS Enterprise-D
+field_office_hours:
+  - Mondays, 2pm-3pm
+  - Fridays, 1pm-3pm
+field_email: geordi.laforge@wwu.edu
+field_phone_number: 360-650-5555
+field_website_url: https://wwu.edu/geordilaforge
+field_website_title: VISOR
+field_about: "Lieutenant Commander Geordi La Forge[a] /ˈdʒɔːrdi ləˈfɔːrdʒ/ is a fictional character who appeared in all seven seasons of the American science fiction television series Star Trek: The Next Generation and its four feature films. Portrayed by LeVar Burton, he served as helmsman of the USS Enterprise-D in the first season, then occupied the role of the chief engineer for the rest of the series and in the films. La Forge has been blind since birth and uses technological devices that allow him to see – a VISOR in the series and the first film, replaced by ocular prosthetic implants in the last three films.
+Contents"
+field_social_media:
+  - url: https://twitter.com/GeordiLa4rge
+    name: twitter
+  - url: https://www.instagram.com/geordithecat/
+    name: instagram
+  - url: https://www.facebook.com/pages/Geordi-La-Forge/109436212415967
+    name: facebook

@@ -2,3 +2,25 @@
  * @file
  * organisms/profile_profile.scss
  */
+
+.user-profile {
+  display: flex;
+  flex-flow: row wrap;
+
+  .profile-photo {
+    flex: 1 1 33%;
+
+    .container {
+      margin: auto;
+    }
+  }
+
+  .profile-fields {
+    @include breakpoint($medium) {
+      text-align: left;
+      padding-left: $double-spacing;
+    }
+    flex: 1 1 66%;
+    text-align: center;
+  }
+}
