@@ -9,6 +9,11 @@
       <a href="{{ social.url }}">{{ social.name }}</a>
       {% endfor %}
     </div>
+
+    <div class="website">
+      <h3>Website</h3>
+      <p><a href="{{ field_website_url }}">{{ field_website_title }}</a></p>
+    </div>
   </div>
 
   <div class="profile-right">
@@ -22,21 +27,32 @@
 
     <div class="office">
       <h2>Office</h2>
-      <p>{{ field_office_location }}</p>
 
-      {% for hours in field_office_hours %}
-      <p>{{ hours }}</p>
-      {% endfor %}
+      <div>
+        <h3>Office</h3>
+        <p>{{ field_office_location }}</p>
+      </div>
+
+      <div>
+        <h3>Office Hours></h3>
+        {% for hours in field_office_hours %}
+        <p>{{ hours }}</p>
+        {% endfor %}
+      </div>
     </div>
 
     <div class="contact">
-      <h2>Contact Info</h2>
-      <p>
-        <span><a href="mailto:{{ field_email }}">{{ field_email }}</a></span> |
-        <span><a href="tel:{{ field_phone_number }}">{{ field_phone_number }}</a></span>
-      </p>
-      <p>Website: <a href="{{ field_website_url }}">{{ field_website_title }}</a></p>
+      <h2>Contact</h2>
 
+      <div>
+        <h3>Email</h3>
+        <p><a href="mailto:{{ field_email }}">{{ field_email }}</a></span></p>
+      </div>
+
+      <div>
+        <h3>Phone</h3>
+        <p><a href="tel:{{ field_phone_number }}">{{ field_phone_number }}</a></p>
+      </div>
     </div>
   </div>
 </div>

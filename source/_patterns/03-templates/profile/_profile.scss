@@ -2,6 +2,8 @@
 * @file
 * organisms/profile_profile.scss
 */
+$profile-photo-size--smaller: 300px;
+$profile-photo-size: 400px;
 
 .user-profile {
   display: flex;
@@ -21,11 +23,27 @@
   }
 
   .profile-photo {
-    width: 300px;
-    height: 300px;
+    @include breakpoint($small) {
+      width: $profile-photo-size;
+      height: $profile-photo-size;
+    }
+    @include breakpoint($medium) {
+      width: $profile-photo-size--smaller;
+      height: $profile-photo-size--smaller;
+    }
+    @include breakpoint($large) {
+      width: $profile-photo-size;
+      height: $profile-photo-size;
+    }
+    width: $profile-photo-size--smaller;
+    height: $profile-photo-size--smaller;
     margin: auto;
     margin-top: $triple-spacing;
   }
+  .website {
+    text-align: center;
+  }
+
   .social-links {
     display: flex;
     flex-flow: row wrap;
@@ -36,5 +54,24 @@
   .social-icon {
     margin-right: $standard-spacing;
     margin-bottom: $standard-spacing;
+  }
+
+  .office,
+  .contact {
+    display: flex;
+    flex-flow: row wrap;
+
+    h2 {
+      flex: 0 0 100%;
+      margin-bottom: 0;
+    }
+
+    h3 {
+      margin-top: $standard-spacing;
+    }
+
+    div {
+      flex: 0 1 50%;
+    }
   }
 }
