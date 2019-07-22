@@ -9,6 +9,7 @@ $close-toggle-size: 64px;
     @include breakpoint($medium) {
       display: none;
     }
+
     background-color: $dark-blue;
 
     .toggle-close-menu {
@@ -25,8 +26,8 @@ $close-toggle-size: 64px;
       border-bottom: solid $border-width--thinner $white;
 
       grid-template-areas:
-      "apply . . ."
-      "calendar directory map mywestern";
+        "apply gift . ."
+        "calendar directory map mywestern";
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-rows: $close-toggle-size auto;
       justify-items: center;
@@ -66,6 +67,27 @@ $close-toggle-size: 64px;
               border-color: transparent;
             }
           }
+        }
+
+        &.gift {
+          align-self: center;
+          margin-left: $standard-spacing;
+          border-top: none;
+
+          grid-area: gift;
+
+          .button {
+            padding: ($standard-spacing * 0.75);
+            border: solid $border-width $white;
+
+            &:hover,
+            &:focus,
+            &:active {
+              border-color: transparent;
+            }
+          }
+
+
         }
 
         &.calendar {
