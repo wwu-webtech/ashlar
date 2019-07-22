@@ -7,7 +7,6 @@ var $links = $('a[data-tracking-event-category], a[data-tracking-event-enable]',
 $links.once('tracking-event').on('click', function (event) {
   var category, label;
   var $target = $(event.target).closest('a');
-  var params = new URLSearchParams(window.location.search);
   var locationSet = false;
 
   function setLocation() {
@@ -20,12 +19,7 @@ $links.once('tracking-event').on('click', function (event) {
   event.preventDefault();
   setTimeout(setLocation, 2000);
 
-  if (params.has('utm_campaign')) {
-    category = params.get('utm_campaign');
-  }
-  else {
-    category = $target.data('tracking-event-category');
-  }
+  category = $target.data('tracking-event-category');
 
   if ($target.data('tracking-event-label')) {
     label = $target.data('tracking-event-label');
