@@ -30,11 +30,6 @@ var $results_text = $wrapper.find('#quick-search-results-text');
 var $letterMenu = $("#quick-search-list-nav");
 
 // ===Functions and attributes to enhance UX of filter===
-// Insert aria attr's to make div accessible:
-// $results_text.attr('aria-live', 'polite');
-// $results_text.attr('aria-atomic', 'true');
-// $wrapper.attr('role', 'status');
-// $results_text.attr('aria-labelledby', 'quick-search-input');
 
 /* Prevent a disabled letter from being selected through tab-navigation or
  * scrolling to top of page on click.
