@@ -20,4 +20,12 @@
 .listNavShow.ln-no-match {
   display: none !important;
 }
+
+.results-text-container {
+  margin-left: $double-spacing;
+  
+  p {
+    display: block !important;
+  }
+}
 /* END listnav.js styles */

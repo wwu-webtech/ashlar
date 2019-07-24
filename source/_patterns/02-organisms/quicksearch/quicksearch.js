@@ -143,12 +143,12 @@ function noResultsCheck() {
   $listItemNoMatch.removeClass('listNavShow');
 
   if (results === 0) {
-    // $listItemNoMatch.addClass('listNavHide');
-    // $listItemNoMatch.removeClass('listNavShow');
+    $results_text.html('No matching results.');
+  }
+  else if (results === 1) {
+    $results_text.html(results + ' result.')
   }
   else {
-    $results_text.css('display', 'block');
-    // $listItemNoMatch.addClass('listNavHide');
-    // $listItemNoMatch.removeClass('listNavShow');
+    $results_text.html(results + ' results.');
   }
 }
