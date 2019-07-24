@@ -113,7 +113,7 @@ $list.children('li').addClass('listNavShow');
 if ( !$init_check ){
   $input.quicksearch('#quick-search-list li', {
     'delay': 100,
-    'noResults': '#quick-search-results-text',
+    'noResults': $results_text,
     'show': function () {
       var $item = $(this).closest('li');
 
@@ -140,7 +140,7 @@ $form.submit(function (event) {
 
 // Check that the no results message is displayed correctly.
 function noResultsCheck() {
-  // No match message.
+  // No match message in list
   var $listItemNoMatch = $('li.ln-no-match');
   // Number of results shown by both filters.
   var results = $list.children('.listNavShow.quickSearchShow').length;
@@ -154,6 +154,7 @@ function noResultsCheck() {
   }
   else {
     $listItemNoMatch.css('display', 'none');
+    $results_text.css('display', 'block');
     // $listItemNoMatch.addClass('listNavHide');
     // $listItemNoMatch.removeClass('listNavShow');
   }
