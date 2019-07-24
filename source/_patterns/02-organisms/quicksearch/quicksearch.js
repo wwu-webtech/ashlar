@@ -110,7 +110,7 @@ if ( !$init_check ){
     'delay': 100,
     'noResults': $results_text,
     'show': function () {
-      var $item = $(this).closest('li');
+      var $item = $(this).closest('li').not('.ln-no-match.listNavHide');
 
       // Provide a custom class for quicksearch matches.
       $item.addClass('quickSearchShow');
@@ -140,7 +140,6 @@ function noResultsCheck() {
   // Number of results shown by both filters.
   var results = $list.children('.listNavShow.quickSearchShow').length;
 
-  $listItemNoMatch.addClass('listNavHide');
   $listItemNoMatch.removeClass('listNavShow');
 
   if (results === 0) {
@@ -148,7 +147,6 @@ function noResultsCheck() {
     // $listItemNoMatch.removeClass('listNavShow');
   }
   else {
-    $listItemNoMatch.css('display', 'none');
     $results_text.css('display', 'block');
     // $listItemNoMatch.addClass('listNavHide');
     // $listItemNoMatch.removeClass('listNavShow');
