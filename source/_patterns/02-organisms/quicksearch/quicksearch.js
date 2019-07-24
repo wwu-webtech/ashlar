@@ -22,8 +22,10 @@ var $list = $('#quick-search-list', context);
 var $form = $('#quick-search-form', context);
 // Search box (input).
 var $input = $('#quick-search-input', context);
-// Container to use as role="status" to announce live changes.
+// Container.
 var $wrapper = $(".quick-search-container");
+// Text that announces how many results are shown
+var $results_text = $wrapper.find('#quick-search-results-text');
 // Letter selection menu.
 var $letterMenu = $("#quick-search-list-nav");
 
@@ -111,7 +113,7 @@ $list.children('li').addClass('listNavShow');
 if ( !$init_check ){
   $input.quicksearch('#quick-search-list li', {
     'delay': 100,
-    'noResults': 'li.ln-no-match',
+    'noResults': '#quick-search-results-text',
     'show': function () {
       var $item = $(this).closest('li');
 
@@ -139,18 +141,20 @@ $form.submit(function (event) {
 // Check that the no results message is displayed correctly.
 function noResultsCheck() {
   // No match message.
-  var $noMatch = $('li.ln-no-match');
+  var $listItemNoMatch = $('li.ln-no-match');
   // Number of results shown by both filters.
   var results = $list.children('.listNavShow.quickSearchShow').length;
 
+  $listItemNoMatch.addClass('listNavHide');
+  $listItemNoMatch.removeClass('listNavShow');
+
   if (results === 0) {
-    $noMatch.css('display', 'list-item');
-    $noMatch.removeClass('listNavHide');
-    $noMatch.addClass('listNavShow');
+    // $listItemNoMatch.addClass('listNavHide');
+    // $listItemNoMatch.removeClass('listNavShow');
   }
   else {
-    $noMatch.css('display', 'none');
-    $noMatch.addClass('listNavHide');
-    $noMatch.removeClass('listNavShow');
+    $listItemNoMatch.css('display', 'none');
+    // $listItemNoMatch.addClass('listNavHide');
+    // $listItemNoMatch.removeClass('listNavShow');
   }
 }
