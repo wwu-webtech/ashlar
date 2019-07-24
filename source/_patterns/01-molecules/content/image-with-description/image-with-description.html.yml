@@ -2,7 +2,7 @@ attributes:
   Attribute():
     class:
     - block
-    - block--pullquote
+    - block--image-with-description
 title_attributes:
   Attribute():
     class:
