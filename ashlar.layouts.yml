@@ -1,3 +1,14 @@
+layout_onecol_full:
+  label: 'One column - full width'
+  path: templates/layouts/onecol
+  template: onecol--full
+  category: 'Columns: 1'
+  default_region: first
+  icon_map:
+    - [first]
+  regions:
+    first:
+      label: First
 layout_flex:
   label: 'Flex Container'
   path: templates/layouts/flex
