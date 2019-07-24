@@ -141,7 +141,12 @@ $max-box-size: 300px;
   .item-level-c,
   .item-level-d,
   .item-level-e,
-  .item-level-f {
+  .item-level-f,
+  .item-level-g,
+  .item-level-h,
+  .item-level-i,
+  .item-level-j,
+  .item-level-k {
     /* vertical bar for nested items */
     border-left: solid $border-width $line-color;
 
@@ -173,7 +178,12 @@ $max-box-size: 300px;
   .item-level-b:last-child > .level-c:before,
   .item-level-c:last-child > .level-d:before,
   .item-level-d:last-child > .level-e:before,
-  .item-level-e:last-child > .level-f:before {
+  .item-level-e:last-child > .level-f:before,
+  .item-level-f:last-child > .level-g:before,
+  .item-level-g:last-child > .level-h:before,
+  .item-level-h:last-child > .level-i:before,
+  .item-level-i:last-child > .level-j:before,
+  .item-level-j:last-child > .level-k:before {
     position: absolute;
     bottom: 0;
     left: 0;
