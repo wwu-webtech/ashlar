@@ -141,14 +141,15 @@ function noResultsCheck() {
   var results = $list.children('.listNavShow.quickSearchShow').length;
 
   $listItemNoMatch.removeClass('listNavShow');
+  $results_text.css('display', 'block');
 
   if (results === 0) {
-    $results_text.html('No matching results.');
+    $results_text.html('No matching results');
   }
   else if (results === 1) {
-    $results_text.html(results + ' result.')
+    $results_text.html(results + ' result')
   }
   else {
-    $results_text.html(results + ' results.');
+    $results_text.html(results + ' results');
   }
 }

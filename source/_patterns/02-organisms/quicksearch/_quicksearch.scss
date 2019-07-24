@@ -22,10 +22,10 @@
 }
 
 .results-text-container {
-  margin: $half-spacing 0 0 $double-spacing;
+  margin: -($double-spacing) 0 0 $double-spacing;
 
-  p {
-    display: block !important;
+  h3 {
+    // display: block !important;
   }
 }
 /* END listnav.js styles */
