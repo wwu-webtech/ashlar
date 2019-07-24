@@ -235,7 +235,8 @@ $lightest-bg-blue: mix($white, $blue, 90%);
     &:hover,
     &:focus,
     &:active {
-      background: $dark-blue;
+      color: $lightest-green;
+      background: mix(black, $blue, 20%);
     }
   }
 
@@ -248,6 +249,7 @@ $lightest-bg-blue: mix($white, $blue, 90%);
           &:hover,
           &:focus,
           &:active {
+            color: $lightest-green;
             background: mix(black, $blue, 20%);
           }
         }
