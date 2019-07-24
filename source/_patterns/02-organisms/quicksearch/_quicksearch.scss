@@ -22,8 +22,8 @@
 }
 
 .results-text-container {
-  margin-left: $double-spacing;
-  
+  margin: $half-spacing 0 0 $double-spacing;
+
   p {
     display: block !important;
   }
