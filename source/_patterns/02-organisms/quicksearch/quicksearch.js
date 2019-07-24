@@ -135,7 +135,7 @@ $form.submit(function (event) {
 
 // Check that the no results message is displayed correctly.
 function noResultsCheck() {
-  // No match message in list
+  // No match message in list--shouldn't be used
   var $listItemNoMatch = $('li.ln-no-match');
   // Number of results shown by both filters.
   var results = $list.children('.listNavShow.quickSearchShow').length;
