@@ -1,11 +1,11 @@
 <div{{ attributes }}>
-  {% include "@atoms/global/label/label.twig" %}
-
   {% block content %}
   <div class="image">
     {{ content.field_image }}
   </div>
   <div class="body">
+    {% include "@atoms/global/label/label.twig" %}
+    
     {{ content.body }}
   </div>
   {% endblock %}
