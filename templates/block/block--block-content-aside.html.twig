@@ -43,11 +43,7 @@
       <aside {{ attributes }} aria-label="{{ block_content.info.0.value }}">
   {% endif %}
 
-    {{ title_prefix }}
-    {% if label %}
-      <h2{{ title_attributes }} id="lala">{{ label }}</h2>
-    {% endif %}
-    {{ title_suffix }}
+  {% include "@atoms/global/label/label.twig" %}
 
     {{ content.body.0['#text']|raw }}
 

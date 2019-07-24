@@ -58,6 +58,12 @@ erm-menu:
     build/js/erm-menu.js: {}
   dependencies:
     - core/jquery
+language-select:
+  version: 1.x
+  js:
+    language-select.js: {}
+  dependencies:
+    - core/jquery
 make-waves-fonts:
   css:
     theme:
@@ -115,6 +121,12 @@ wwu-header:
   version: 1.x
   js:
     build/js/wwu-header.js: {}
+  dependencies:
+    - core/jquery
+wwu-mobile-menu:
+  version: 1.x
+  js:
+    build/js/wwu-mobile-menu.js: {}
   dependencies:
     - core/jquery
 featherlight:
