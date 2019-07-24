@@ -20,8 +20,8 @@
     @include breakpoint($medium) {
       z-index: 1;
 
-      grid-column: 1 / span 2 !important;
-      grid-row: 2 / span 1 !important;
+      grid-column: 1 / span 2;
+      grid-row: 2 / span 1;
     }
 
     grid-area: image;
@@ -39,11 +39,31 @@
     @include breakpoint($medium) {
       padding: $triple-spacing;
       padding-left: ($standard-spacing * 6);
-      border: solid $border-width $blue;
 
       grid-column: 2 / span 3;
       grid-row: 1 / span all;
+
+      &:not(.dark-blue-bg):not(.blue-bg):not(.light-blue-bg):not(.lightest-blue-bg):not(.light-gray-bg):not(.lightest-gray-b) {
+        border: solid $border-width $blue;
+        background: $white;
+      }
     }
-    background: $white;
+  }
+
+  &.mirror {
+    @include breakpoint($medium) {
+      grid-template-columns: 4fr $double-spacing ($standard-spacing * 4) 3fr;
+    }
+
+    .image {
+      grid-column: 3 / span 2;
+    }
+
+    .body {
+      padding-right: ($standard-spacing * 6);
+      padding-left: $triple-spacing;
+
+      grid-column: 1 / span 3;
+    }
   }
 }
