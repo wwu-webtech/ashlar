@@ -66,7 +66,6 @@ function ashlar_preprocess_field(&$variables) {
   $element = $variables['element'];
   $object = $element['#object'];
   $bundle = $element['#bundle'];
-  $text = $variables['items']['0']['content']['#text'];
 
   if ($object->hasField('field_custom_classes')) {
     _ashlar_set_custom_classes($variables['items'], $object);
@@ -96,9 +95,12 @@ function ashlar_preprocess_field(&$variables) {
     }
   }
 
-  if($variables['element']['#field_name'] === 'body') {
-    if(strpos($text, 'acalog') !== false) {
-      $variables['#attached']['library'][] = 'ashlar/acalog';
+  //Invoke acalog code when the when body is present and matches 'acalog'
+  if(!empty($variables['items']['0']['content']['#text'])){
+    if($variables['element']['#field_name'] === 'body') {
+      if(strpos($variables['items']['0']['content']['#text'], 'acalog') !== false) {
+        $variables['#attached']['library'][] = 'ashlar/acalog';
+      }
     }
   }
 }
