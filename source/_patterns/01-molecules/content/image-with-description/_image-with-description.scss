@@ -9,6 +9,7 @@
     grid-template-rows: ($standard-spacing * 4) 1fr $triple-spacing;
   }
   display: grid;
+  margin-bottom: $double-spacing;
 
   grid-area: body;
   grid-template-areas: "image"

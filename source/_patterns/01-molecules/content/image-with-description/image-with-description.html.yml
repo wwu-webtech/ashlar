@@ -7,6 +7,10 @@ title_attributes:
   Attribute():
     class:
     - block__title
+body_attributes:
+  Attribute():
+    class:
+    - body
 label: This is a thing
 content:
   field_image: atoms-landscape-3x2
