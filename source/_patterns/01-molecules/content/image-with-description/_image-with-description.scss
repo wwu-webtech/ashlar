@@ -17,6 +17,10 @@
   grid-template-columns: auto;
   grid-template-rows: auto auto auto;
 
+  .block__title {
+    margin-top: $standard-spacing;
+  }
+
   .image {
     @include breakpoint($medium) {
       z-index: 1;
@@ -28,6 +32,7 @@
     grid-area: image;
 
     img {
+      display: block;
       width: 100%;
       height: 100%;
 
@@ -43,28 +48,32 @@
 
       grid-column: 2 / span 3;
       grid-row: 1 / span all;
+    }
+    padding: $standard-spacing;
 
-      &:not(.dark-blue-bg):not(.blue-bg):not(.light-blue-bg):not(.lightest-blue-bg):not(.light-gray-bg):not(.lightest-gray-b) {
-        border: solid $border-width $blue;
-        background: $white;
+    &:not(.dark-blue-bg):not(.blue-bg):not(.light-blue-bg):not(.lightest-blue-bg):not(.light-gray-bg):not(.lightest-gray-b) {
+      @include breakpoint(max-width $medium) {
+        border-top: none;
       }
+      border: solid $border-width $blue;
+      background: $white;
     }
   }
 
   &.mirror {
     @include breakpoint($medium) {
       grid-template-columns: 4fr $double-spacing ($standard-spacing * 4) 3fr;
-    }
 
-    .image {
-      grid-column: 3 / span 2;
-    }
+      .image {
+        grid-column: 3 / span 2;
+      }
 
-    .body {
-      padding-right: ($standard-spacing * 6);
-      padding-left: $triple-spacing;
+      .body {
+        padding-right: ($standard-spacing * 6);
+        padding-left: $triple-spacing;
 
-      grid-column: 1 / span 3;
+        grid-column: 1 / span 3;
+      }
     }
   }
 }
