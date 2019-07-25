@@ -7,16 +7,14 @@
       </div>
     {% endblock %}
 
-    {% block body %}
     <div {{ body_attributes }}>
       {% block title %}
-        {% include "@atoms/global/label/label-customized.twig" %}
+        {% include "@atoms/global/label/label.twig" %}
       {% endblock %}
 
       {{ content.body }}
 
     </div>
-    {% endblock %}
 
   {% endblock %}
 </div>
