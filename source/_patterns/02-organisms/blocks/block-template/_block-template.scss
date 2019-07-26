@@ -6,6 +6,11 @@
 .block--half-page {
   position: relative;
   z-index: 0;
+
+  .block__title {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .block--full-page {

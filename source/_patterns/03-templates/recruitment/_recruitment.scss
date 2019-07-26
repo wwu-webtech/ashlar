@@ -4,6 +4,14 @@
 */
 
 .erm-page {
+  h1 {
+    @include breakpoint($small) {
+      max-width: 650px;
+    }
+    @include breakpoint($medium) {
+      max-width: 980px;
+    }
+  }
   h3 {
     text-align: center;
 
