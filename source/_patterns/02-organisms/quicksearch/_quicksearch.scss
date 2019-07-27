@@ -21,11 +21,12 @@
   display: none !important;
 }
 
-.results-text-container {
-  margin: -($double-spacing) 0 0 $double-spacing;
+.results-text-heading {
+  margin: $standard-spacing 0 0 $double-spacing;
 
-  h3 {
-    // display: block !important;
+  & + .results-text {
+    margin: $half-spacing 0 0 $double-spacing;
+    font-weight: bold;
   }
 }
 /* END listnav.js styles */

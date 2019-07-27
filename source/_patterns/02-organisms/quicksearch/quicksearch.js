@@ -26,6 +26,8 @@ var $input = $('#quick-search-input', context);
 var $wrapper = $(".quick-search-container");
 // Text that announces how many results are shown
 var $results_text = $wrapper.find('#quick-search-results-text');
+// Helper text for assistive tech usage
+var $helper_text = '<p class="helper-text visually-hidden">Press Tab to go to search results.</p>';
 // Letter selection menu.
 var $letterMenu = $("#quick-search-list-nav");
 
@@ -125,6 +127,17 @@ if ( !$init_check ){
     },
     'onAfter': noResultsCheck
   });
+
+  $input.focusin(function() {
+    $results_text.after($helper_text);
+    $results_text.removeAttr('aria-hidden');
+  });
+
+  $input.focusout(function () {
+    var $helper_text = $('.helper-text');
+    $helper_text.remove();
+    $results_text.attr('aria-hidden', 'true');
+  });
 }
 
 // Handle form submission behavior.
@@ -140,7 +153,7 @@ function noResultsCheck() {
   // Number of results shown by both filters.
   var results = $list.children('.listNavShow.quickSearchShow').length;
 
-  $listItemNoMatch.removeClass('listNavShow');
+  $listItemNoMatch.removeClass('listNavShow').css('display', 'none');
   $results_text.css('display', 'block');
 
   if (results === 0) {
