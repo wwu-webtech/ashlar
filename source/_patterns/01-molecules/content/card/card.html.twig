@@ -1,9 +1,15 @@
 <div class="card">
-  <div class="title"><a href="{{ link_url }}">{{ title }}</a></div>
+  {% if profile_fields %}
+    <p class="title"><a href="{{ link_url }}">{{ profile_fields.professional_title }} {{ profile_fields.preferred_name }} {{ profile_fields.last_name }}</a></p>
+  {% else %}
+    <div class="title"><a href="{{ link_url }}">{{ title }}</a></div>
+  {% endif %}
 
-  <div class="image">
-    {{ image }}
-  </div>
+  {% if image %}
+    <div class="image">
+      {{ image }}
+    </div>
+  {% endif %}
 
   {% if taxonomy_terms %}
     <div class="taxonomy-terms">
@@ -15,11 +21,26 @@
     </div>
   {% endif %}
 
-  {% if content %}
-    <div class="body">
+  {% if profile_fields %}
+    <div class="taxonomy-terms">
+      <span class="job-title">{{ profile_fields.job_title }}</span>
+      <span class="pronouns">{{ profile_fields.pronouns }}</span>
+    </div>
+  {% endif %}
+
+  <div class="body">
+    {% if profile_fields %}
+    <div class="contact-fields font-size--smaller">
+      <p><a href="mailto:{{ profile_fields.email }}">{{ profile_fields.email }}</a></p>
+      <p><a href="tel:{{ profile_fields.phone }}">{{ profile_fields.phone }}</a> | {{ profile_fields.office_location }}</p>
+    </div>
+
+    {% endif %}
+
+    {% if content %}
       {% block content %}
         {{ content }}
       {% endblock %}
-    </div>
-  {% endif %}
+    {% endif %}
+  </div>
 </div>

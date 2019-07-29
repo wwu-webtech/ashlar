@@ -9,7 +9,6 @@ $close-toggle-size: 64px;
     @include breakpoint($medium) {
       display: none;
     }
-
     background-color: $dark-blue;
 
     .toggle-close-menu {
@@ -25,9 +24,8 @@ $close-toggle-size: 64px;
       margin: 0;
       border-bottom: solid $border-width--thinner $white;
 
-      grid-template-areas:
-        "apply gift . ."
-        "calendar directory map mywestern";
+      grid-template-areas: "apply gift language ."
+      "calendar directory map mywestern";
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-rows: $close-toggle-size auto;
       justify-items: center;
@@ -86,8 +84,30 @@ $close-toggle-size: 64px;
               border-color: transparent;
             }
           }
+        }
 
+        &.language {
+          align-self: center;
+          padding-left: $triple-spacing;
+          border: none;
 
+          grid-area: language;
+
+          button {
+            z-index: inherit;
+            padding: $half-spacing $standard-spacing;
+            color: white;
+            border: $border-width solid white;
+            border-radius: $triple-spacing;
+            background-color: $dark-blue;
+            box-shadow: $border-width $border-width white;
+
+            &:hover {
+              color: $black;
+              border-color: transparent;
+              background-color: $light-green;
+            }
+          }
         }
 
         &.calendar {
@@ -105,6 +125,33 @@ $close-toggle-size: 64px;
         &.mywestern {
           grid-area: mywestern;
         }
+      }
+    }
+  }
+  .language-options {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: fit-content;
+    padding: $triple-spacing;
+    background-color: $dark-blue;
+
+    .select-language {
+      align-self: center;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: $double-spacing;
+      padding: $standard-spacing;
+      list-style-type: none;
+      border: none;
+
+      li {
+        margin-bottom: 12px;
+        border: none;
       }
     }
   }

@@ -8,3 +8,9 @@
   max-width: $max-one-col-width;
   margin: auto;
 }
+
+.layout--onecol--full .layout__region {
+  width: 100%;
+  max-width: $max-content-width;
+  margin: auto;
+}

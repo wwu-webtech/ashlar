@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Theme override to display an aside custom block type
+ * Theme override to display a block.
  *
  * Available variables:
  * - plugin_id: The ID of the block implementation.
@@ -27,29 +27,30 @@
 #}
 {%
   set classes = [
-    'aside',
     'block',
-    'block--aside',
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
+    block_content.field_font_size.0.value,
+    block_content.field_custom_classes.0.value
   ]
 %}
-{% set attributes = attributes.addClass(classes, block_content.field_background_color.0.value) %}
-{% set title_attributes = title_attributes.addClass('block__title') %}
+{% set body_attributes = create_attribute() %}
+
+{% if block_content.field_mirror_content.0.value == 1 %}
+  {% set attributes = attributes.addClass(classes, 'mirror') %}
+{% else %}
+  {% set attributes = attributes.addClass(classes) %}
+{% endif %}
+{% set title_attributes = title_attributes.addClass('block__title', block_content.field_heading_font.0.value) %}
+{% set body_attributes = body_attributes.addClass('body', block_content.field_background_color.0.value) %}
+
+
 
 {% block template %}
-  {% if block_content.field_semantic_markup.0.value == 'div' %}
-    <div {{ attributes }}>
-  {% else %}
-      <aside {{ attributes }} aria-label="{{ block_content.info.0.value }}">
-  {% endif %}
+  {% embed "@molecules/content/image-with-description/image-with-description.html.twig" %}
 
-  {% include "@atoms/global/label/label.twig" %}
+    {% block title %}
+      {% include "@atoms/global/label/label-customized.twig" %}
+    {% endblock %}
 
-    {{ content.body.0['#text']|raw }}
-
-  {% if block_content.field_semantic_markup.0.value == 'div' %}
-    </div>
-  {% else %}
-    </aside>
-  {% endif %}
+  {% endembed %}
 {% endblock %}

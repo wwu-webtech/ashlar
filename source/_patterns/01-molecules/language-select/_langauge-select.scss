@@ -1,0 +1,49 @@
+/**
+* @file
+* molecules/language-select/_language-select.scss
+*/
+.select-language {
+  @include breakpoint($medium) {
+    display: flex;
+  }
+  position: absolute;
+  z-index: 0;
+  right: $standard-spacing;
+  display: none;
+  justify-content: end;
+}
+
+.language-Button-Container {
+  position: relative;
+  display: inline-block;
+  p {
+    width: fit-content;
+    margin: 0 auto;
+    font-family: $condensed;
+    font-size: small;
+    line-height: 0;
+  }
+}
+
+.select-Language {
+  @include breakpoint($large) {
+    top: $toggle-size--larger;
+  }
+  position: absolute;
+  z-index: 1;
+  top: $toggle-size;
+  right: 0;
+  flex-direction: column;
+  width: 100px;
+
+  .language-Option {
+    width: 100% !important;
+    color: white;
+    border-radius: 0 !important;
+    background-color: $dark-blue;
+    &:hover {
+      color: $black;
+      background-color: $light-green;
+    }
+  }
+}

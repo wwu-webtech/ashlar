@@ -31,7 +31,7 @@ page:
                                 content:
                                   join():
                                   - include():
-                                      pattern: organisms-card-row-html
+                                      pattern: organisms-cards-html-col3
                                       with:
                                         label: "Spotlight"
                                         cards:
@@ -101,7 +101,7 @@ page:
                                 second_above:
                                   join():
                                   - include():
-                                      pattern: organisms-card-list-html
+                                      pattern: organisms-cards-html-list
                                       with:
                                         label: "In the News"
                                   - include():
@@ -147,7 +147,7 @@ page:
                                 second_below:
                                   join():
                                   - include():
-                                      pattern: organisms-card-list-html
+                                      pattern: organisms-cards-html-list
                                       with:
                                         label: "Upcoming Events"
                                         cards:

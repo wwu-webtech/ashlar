@@ -267,3 +267,13 @@ function ashlar_preprocess_ds_entity_view(&$variables) {
 function ashlar_form_user_login_form_alter(&$form, &$form_state, $form_id) {
   $form['cas_login_link']['#title'] = 'Universal Login';
 }
+
+/**
+* Implements hook_views_pre_render().
+*/
+function ashlar_preprocess_views_view(&$vars) {
+  $vars['#cache']['contexts'][] = 'route';
+  if ($vars['view_array']['#name'] == 'profile_page') {
+    $vars['#attached']['library'][] = 'ashlar/profile';
+  }
+}
