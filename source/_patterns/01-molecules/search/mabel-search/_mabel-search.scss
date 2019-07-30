@@ -57,6 +57,8 @@ $mabel-label-font-size: calc(#{$mabel-label-min-font-size} + #{strip-unit($mabel
       padding: $standard-spacing;
       border-radius: 0;
       background: $blue;
+      color: $white;
+      box-shadow: none;
       border: none;
 
       &:active,
