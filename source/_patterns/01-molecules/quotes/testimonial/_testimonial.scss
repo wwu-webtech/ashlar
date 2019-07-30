@@ -188,7 +188,7 @@ $testimonial--credit-circle-size--larger: 300px;
       grid-row: 2 / span 2;
       justify-self: end;
 
-      &:after {
+      &:after:not(.no-quote) {
         position: absolute;
         z-index: -1;
         top: 0;
