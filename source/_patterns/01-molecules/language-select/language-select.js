@@ -1,4 +1,3 @@
-
 var $language_Select_Button = $('#dropMenu');
 var $language_Menu = $('#langMenu');
 
@@ -11,4 +10,3 @@ $language_Select_Button.click(function(event){
   }
   event.stopPropagation();
 });
-   

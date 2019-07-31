@@ -9,7 +9,6 @@ libraries:
   - ashlar/accordion
   - ashlar/alerts
   - ashlar/featherlight
-  - ashlar/language-select
   - ashlar/menu-extras
   - ashlar/page-title
   - ashlar/quicksearch
