@@ -21,11 +21,12 @@
   display: none !important;
 }
 
-.results-text-heading {
+.results-text {
   margin: $standard-spacing 0 0 $double-spacing;
+  font-weight: bold;
 
-  & + .results-text {
-    margin: $half-spacing 0 0 $double-spacing;
+  & + .results-text-heading {
+    margin: $half-spacing 0 $standard-spacing $double-spacing;
     font-weight: bold;
   }
 }
