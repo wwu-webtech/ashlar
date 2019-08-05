@@ -2,3 +2,18 @@
 * @file
 * organisms/email-signature/email-signature.scss
 */
+#email_signature {
+  width: initial;
+  
+  tr {
+    background: transparent;
+  }
+
+  td {
+    border: none;
+  }
+
+  p {
+    font-size: inherit;
+  }
+}
