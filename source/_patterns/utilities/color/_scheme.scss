@@ -97,6 +97,29 @@ $lightest-bg-blue: mix($white, $blue, 90%);
       }
     }
   }
+
+  .social-media-links {
+    .social-icon {
+      color: $black;
+      outline: none;
+      background-color: $white;
+
+      svg {
+        fill: $black;
+      }
+
+      &:hover, &:focus, &:active {
+        svg {
+          fill: $dark-blue;
+        }
+        background-color: $light-green;
+      }
+
+      &:focus {
+        outline: dotted $light-green;
+      }
+    }
+  }
 }
 
 %gray-bg {
@@ -152,6 +175,29 @@ $lightest-bg-blue: mix($white, $blue, 90%);
       }
     }
   }
+
+  .social-media-links {
+    .social-icon {
+      color: $dark-blue;
+      outline: none;
+      background-color: $white;
+
+      svg {
+        fill: $dark-blue;
+      }
+
+      &:hover, &:focus, &:active {
+        svg {
+          fill: $light-green;
+        }
+        background-color: $black;
+      }
+
+      &:focus {
+        outline: dotted $black;
+      }
+    }
+  }
 }
 
 %light-gray-bg {
@@ -187,6 +233,29 @@ $lightest-bg-blue: mix($white, $blue, 90%);
       }
     }
   }
+
+  .social-media-links {
+    .social-icon {
+      color: $white;
+      outline: none;
+      background-color: $blue;
+
+      svg {
+        fill: $white;
+      }
+
+      &:hover, &:focus, &:active {
+        svg {
+          fill: $black;
+        }
+        background-color: mix(black, $light-gray, 20%);
+      }
+
+      &:focus {
+        outline: dotted $black;
+      }
+    }
+  }
 }
 
 %lightest-gray-bg {
@@ -214,6 +283,29 @@ $lightest-bg-blue: mix($white, $blue, 90%);
             background-color: $darkest-blue;
           }
         }
+      }
+    }
+  }
+
+  .social-media-links {
+    .social-icon {
+      color: $dark-blue;
+      outline: none;
+      background-color: $white;
+
+      svg {
+        fill: $dark-blue;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $dark-blue;
+        background-color: $light-green;
+      }
+
+      &:focus {
+        outline: dotted $light-blue;
       }
     }
   }
@@ -253,6 +345,29 @@ $lightest-bg-blue: mix($white, $blue, 90%);
             background: mix(black, $blue, 20%);
           }
         }
+      }
+    }
+  }
+
+  .social-media-links {
+    .social-icon {
+      color: $blue;
+      outline: none;
+      background-color: $white;
+
+      svg {
+        fill: $blue;
+      }
+
+      &:hover, &:focus, &:active {
+        svg {
+          fill: $white;
+        }
+        background-color: $dark-blue;
+      }
+
+      &:focus {
+        outline: dotted $light-green;
       }
     }
   }
