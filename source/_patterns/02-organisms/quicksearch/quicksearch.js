@@ -137,16 +137,20 @@ $form.submit(function (event) {
 function noResultsCheck() {
   // Number of results shown by both filters.
   var results = $list.children('.listNavShow.quickSearchShow').length;
+  var heading = $wrapper.find('.results-text-heading');
 
   $results_text.css('display', 'block');
 
   if (results === 0) {
     $results_text.html('No matching results');
+    heading.hide();
   }
   else if (results === 1) {
     $results_text.html(results + ' result');
+    heading.show();
   }
   else {
     $results_text.html(results + ' results');
+    heading.show();
   }
 }
