@@ -142,3 +142,10 @@ featherlight:
       dist/js/featherlight/featherlight.css: {}
   js:
     dist/js/featherlight/featherlight.js: {}
+fullpage:
+  version: 3.0.7
+  css:
+    theme:
+      dist/js/fullpage/fullpage.css: {}
+  js:
+    dist/js/fullpage/fullpage.js: {}
