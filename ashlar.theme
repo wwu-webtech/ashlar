@@ -53,6 +53,7 @@ function ashlar_preprocess_block(&$variables) {
   //Invoke erm menu code when the erm menu is present
   if (isset($variables['elements']['#id']) && $variables['elements']['#id'] === 'ermmenu') {
     $variables['#attached']['library'][] = 'ashlar/erm-menu';
+    $variables['#attached']['library'][] = 'ashlar/fullpage';
   }
 }
 
