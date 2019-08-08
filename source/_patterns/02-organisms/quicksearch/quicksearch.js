@@ -25,7 +25,7 @@ var $input = $('#quick-search-input', context);
 // Container.
 var $wrapper = $(".quick-search-container");
 // Text that announces how many results are shown
-var $results_text = $wrapper.find('#quick-search-results-text');
+var $results_text = $('#quick-search-results-text');
 // Letter selection menu.
 var $letterMenu = $("#quick-search-list-nav");
 
