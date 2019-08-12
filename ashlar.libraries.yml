@@ -146,6 +146,6 @@ fullpage:
   version: 3.0.7
   css:
     theme:
-      dist/js/fullpage/fullpage.css: {}
+      dist/js/fullPage/fullpage.css: {}
   js:
-    dist/js/fullpage/fullpage.js: {}
+    dist/js/fullPage/fullpage.js: {}
