@@ -34,7 +34,7 @@ $vertical-statistic-width: 180px;
     display: grid;
     justify-content: left;
     align-items: center;
-    padding: $standard-spacing;
+    padding: $standard-spacing $double-spacing;
     border-radius: $button-border-radius--round-square;
 
     grid-column-gap: $double-spacing;

@@ -3,6 +3,8 @@
  * 01-molecules/navigation/local-tasks/_local-tasks.scss
  */
 .block--local-tasks-block {
+  overflow: scroll;
+  max-width: calc(100vw - #{$double-spacing});
   margin-bottom: $standard-spacing;
   font-size: $p-font-size--smaller;
 
@@ -60,9 +62,9 @@
     display: block;
     margin: 0;
     padding: $half-spacing $standard-spacing;
+    text-decoration: none;
     color: black;
     border-right: solid $border-width--thicker $white;
-    text-decoration: none;
     background-color: $light-gray;
 
     &:hover,
