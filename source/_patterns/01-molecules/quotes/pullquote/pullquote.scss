@@ -28,7 +28,7 @@ $quote-icon-font-size: 48px;
     blockquote {
       position: relative;
       max-width: $max-content-width / 3;
-      margin-top: $quote-icon-size;
+      margin: $quote-icon-size auto 0;
       padding-top: $quote-icon-size + $standard-spacing;
       border-top: $blue $border-width solid;
       border-bottom: $blue $border-width solid;
