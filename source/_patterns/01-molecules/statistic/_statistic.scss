@@ -1,0 +1,47 @@
+/**
+* @file
+* molecules/statistic/statistic.scss
+*/
+$vertical-statistic-width: 180px;
+
+.block--statistic {
+  margin: $half-spacing 0;
+
+  .number {
+    font-weight: $font-weight--bold;
+  }
+
+  &.statistic--vertical {
+    width: $vertical-statistic-width;
+    margin: 0 $half-spacing $standard-spacing;
+    padding: $standard-spacing;
+    text-align: center;
+    border-radius: $button-border-radius--round-square;
+
+    .number {
+      display: block;
+      margin-bottom: $standard-spacing;
+      font-size: $p-font-size--larger;
+    }
+
+    .text {
+      margin-bottom: $standard-spacing;
+      font-size: $p-font-size--smaller;
+    }
+  }
+
+  &.statistic--horizontal {
+    display: grid;
+    justify-content: left;
+    align-items: center;
+    padding: $standard-spacing;
+    border-radius: $button-border-radius--round-square;
+
+    grid-column-gap: $double-spacing;
+    grid-template-areas: "number text";
+
+    .number {
+      font-size: $title-font-size;
+    }
+  }
+}

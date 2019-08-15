@@ -8,3 +8,23 @@ blockquote {
   margin: $standard-spacing 0;
   padding: $double-spacing;
 }
+
+.pullquote,
+.paragraph--type--majors-pull-quote {
+  margin: 0 $standard-spacing;
+  padding: $standard-spacing;
+  font-style: italic;
+  border-left: solid 3px $green;
+
+  &.style-thin-border {
+    border: 0;
+
+    &:before {
+      border-top: solid 3px $blue;
+    }
+
+    &:after {
+      border-top: solid 3px $blue;
+    }
+  }
+}

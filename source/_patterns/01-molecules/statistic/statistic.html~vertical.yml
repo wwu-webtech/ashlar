@@ -1,0 +1,15 @@
+attributes:
+  Attribute():
+    class:
+      - block
+      - block--statistic
+      - statistic--vertical
+      - blue-bg
+title_attributes:
+  Attribute():
+    class:
+    - block__title
+    - text
+label: Person city with a thriving arts & music scene
+content:
+  field_statistic_number: "88,500"

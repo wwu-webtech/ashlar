@@ -1,0 +1,30 @@
+/**
+ * @file
+ * templates/layouts/twocol_75_25/_layout--twocol075-25.scss
+ */
+
+.layout--twocol-75-25 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.layout--twocol-75-25 > .layout__region {
+  flex: 0 1 100%;
+}
+
+.layout--twocol-75-25 > .layout__region--first {
+  @include breakpoint($medium) {
+    flex: 0 1 75%;
+    max-width: 75%;
+    padding-right: $standard-spacing;
+  }
+}
+
+.layout--twocol-75-25 > .layout__region--second {
+  @extend %font-size--smaller;
+  @include breakpoint($medium) {
+    flex: 0 1 25%;
+    max-width: 25%;
+    padding-left: $standard-spacing;
+  }
+}

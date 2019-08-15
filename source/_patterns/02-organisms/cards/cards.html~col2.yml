@@ -1,0 +1,10 @@
+attributes:
+  Attribute():
+    class:
+      - card-2col
+label:
+cards:
+- molecules-card-html
+- molecules-card-html
+- molecules-card-html
+- molecules-card-html

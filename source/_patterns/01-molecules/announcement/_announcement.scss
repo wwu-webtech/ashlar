@@ -1,0 +1,92 @@
+/**
+* @file
+* molecules/messaging/announcement/_announcement.scss
+*/
+
+.block--announcement {
+  @include breakpoint($medium) {
+    max-width: 50%;
+  }
+  display: -ms-grid;
+  display: grid;
+  align-items: center;
+  margin: auto;
+  background-color: $dark-blue;
+
+  -ms-grid-columns: 1fr 3fr;
+  -ms-grid-rows: auto;
+  grid-template-areas: "image text";
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto;
+  justify-items: center;
+
+  .block__title {
+    margin-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+    border-bottom: none;
+    font-family: $sans-serif;
+  }
+
+  a {
+    color: $dark-blue;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    background-color: $dark-blue;
+
+    grid-area: image;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+
+    div {
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      opacity: 0.3;
+
+      object-fit: cover;
+    }
+  }
+
+  .material-icons {
+    @include breakpoint($medium) {
+      font-size: 48px;
+    }
+    color: $light-green;
+
+    grid-area: image;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+  }
+
+  .body {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    padding: $standard-spacing;
+    background: $light-green;
+
+    grid-area: text;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    justify-items: center;
+  }
+
+  &.layout-builder-block {
+    padding: 0;
+  }
+}

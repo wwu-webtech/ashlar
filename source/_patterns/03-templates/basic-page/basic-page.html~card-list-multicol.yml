@@ -22,7 +22,7 @@ page:
                     with:
                       content:
                         include():
-                          pattern: organisms-card-list-html
+                          pattern: organisms-cards-html-list
                           with:
                             attributes:
                               Attribute():

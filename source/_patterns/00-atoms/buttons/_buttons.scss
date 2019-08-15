@@ -1,0 +1,278 @@
+/**
+* @file
+* 00-atoms/buttons/_buttons--base.scss
+*/
+$button-border-radius--round: 100px;
+$button-border-radius--round-square: 10px;
+$button-border-radius--square: 5px;
+@mixin button-box-shadow($color) {
+  box-shadow: 2px 2px 0 $color;
+}
+
+/* Real buttons - few options */
+button,
+input[type="submit"] {
+  @include button-box-shadow($gray);
+  padding: ($standard-spacing * 0.75) $standard-spacing;
+  transition: background $button-transition-speed, color $button-transition-speed, box-shadow $fast-transition-speed;
+  color: $black;
+  border: solid $border-width transparent;
+  border-radius: $button-border-radius--round-square;
+  background: $light-gray;
+
+  &:hover,
+  &:focus {
+    @include button-box-shadow($black);
+    color: $white;
+    background: $gray;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+
+  &:focus {
+    border: dotted $border-width $white;
+    outline: none;
+  }
+
+
+  &.alt {
+    color: $black;
+    border: solid $border-width $gray;
+    background: $lightest-gray;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background: $blue;
+    }
+
+    &:focus {
+      border: dotted $border-width $white;
+    }
+  }
+
+  &.warning {
+    @include button-box-shadow($dark-blue);
+    color: $black;
+    border-color: transparent;
+    background: $yellow;
+
+    &:hover,
+    &:focus {
+      background: mix($yellow, $white, 50%);
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+
+    &:focus {
+      border: dotted $border-width $red;
+    }
+  }
+
+  &:disabled {
+    color: scale-color($gray, $lightness: -15%);
+    border-color: mix($gray, $light-gray, 50%);
+    background: $light-gray;
+    box-shadow: none;
+  }
+}
+
+/* Links styled as buttons - many options */
+.button {
+  @include button-box-shadow($dark-blue);
+  display: inline-block;
+  box-sizing: border-box;
+  margin-bottom: $standard-spacing;
+  padding: $standard-spacing $double-spacing;
+  user-select: none;
+  transition: background-color $button-transition-speed, color $button-transition-speed, border-color $button-transition-speed, box-shadow $fast-transition-speed;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  color: $white;
+  border-width: $border-width;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: $button-border-radius--round;
+  background: $blue;
+  line-height: 1;
+
+
+  &:active {
+    box-shadow: none !important;
+  }
+
+  &:focus {
+    border-style: dotted;
+    outline: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: $dark-blue;
+    border-color: $dark-blue;
+    background: $light-gray;
+  }
+
+  &.square {
+    border-radius: $button-border-radius--square;
+  }
+
+  &.medium {
+    padding: ($standard-spacing * 1.5) ($triple-spacing);
+    font-size: $h5-font-size;
+  }
+
+  &.large {
+    padding: $double-spacing ($double-spacing * 2);
+    font-size: $h3-font-size;
+  }
+
+  &.dark-blue {
+    @include button-box-shadow($blue);
+    background: $dark-blue;
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: $blue;
+      border-color: $blue;
+      background: $white;
+    }
+  }
+
+  &.green {
+    @include button-box-shadow($dark-green);
+    background: $green;
+    font-size: 18px; /* min needed for contrast */
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: $dark-green;
+      border-color: $dark-green;
+      background: $light-gray;
+    }
+
+    &.medium {
+      font-size: $h5-font-size;
+    }
+
+    &.large {
+      font-size: $h3-font-size;
+    }
+  }
+
+  &.dark-green {
+    @include button-box-shadow($light-green);
+    background: $dark-green;
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: $green;
+      border-color: $light-green;
+      background: $white;
+    }
+  }
+
+  &.white {
+    @include button-box-shadow($dark-blue);
+    color: $blue;
+    background: $white;
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: $white;
+      border-color: transparent;
+      background: $blue;
+    }
+  }
+
+  &.outline {
+    @include button-box-shadow($blue);
+    color: $blue;
+    border-color: $blue;
+    background: $white;
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: $white;
+      border-color: transparent;
+      background: $dark-blue;
+    }
+
+    &:focus {
+      border: dotted $border-width $white !important;
+    }
+
+    &.dark-blue {
+      @include button-box-shadow($dark-blue);
+      color: $dark-blue;
+      border-color: $dark-blue;
+
+      &:active,
+      &:hover,
+      &:focus {
+        color: $white;
+        border-color: transparent;
+        background: $blue;
+      }
+    }
+
+    &.green {
+      @include button-box-shadow($green);
+      color: $green;
+      border-color: $green;
+
+      &:active,
+      &:hover,
+      &:focus {
+        color: $white;
+        border-color: transparent;
+        background: $dark-green;
+      }
+    }
+
+    &.dark-green {
+      @include button-box-shadow($dark-green);
+      color: $dark-green;
+      border-color: $dark-green;
+
+      &:active,
+      &:hover,
+      &:focus {
+        color: $white;
+        border-color: transparent;
+        background: $green;
+      }
+    }
+
+    &.white {
+      @include button-box-shadow($white);
+      color: $white;
+      border-color: $white;
+      background: transparent;
+
+      &:active,
+      &:hover,
+      &:focus {
+        color: $dark-blue;
+        border-color: transparent;
+        background: $light-gray;
+      }
+    }
+  }
+}
+
+/* Admin toolbar button overrides */
+.toolbar-bar button,
+.si-button {
+  box-shadow: none;
+}

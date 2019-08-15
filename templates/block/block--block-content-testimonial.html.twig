@@ -29,24 +29,12 @@
   set classes = [
     'block',
     'block--testimonial',
+    block_content.field_custom_classes.0.value,
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
   ]
 %}
 {% set attributes = attributes.addClass(classes) %}
 {% set title_attributes = title_attributes.addClass('block__title') %}
 {% block template %}
-  {% embed "@molecules/buttons/image-buttons/image-button.html.twig" %}
-    {% block content %}
-      <div class="image stylized">
-        <img src="{{ file_url(block_content.field_image.entity.fileuri) }}" alt="{{ block_content.field_image.0.alt }}">
-      </div>
-      <div class="body">
-        <p>{{ block_content.field_quote.0.value }}</p>
-      </div>
-      <div class="credit">
-        <span class="name">{{ block_content.field_name.0.value }}</span>
-        <span class="description">{{ block_content.field_description.0.value }}</span>
-      </div>
-    {% endblock %}
-  {% endembed %}
+  {% include "@molecules/quotes/testimonial/testimonial.html.twig" %}
 {% endblock %}

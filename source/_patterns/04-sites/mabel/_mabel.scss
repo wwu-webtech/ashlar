@@ -122,23 +122,12 @@ $mabel-site-name-height: 44px;
     }
   }
 
-  &.islandora-front-page {
-    .splash {
-      @include breakpoint($medium) {
-        grid-template-rows: ($logo-height + $standard-spacing + $mabel-site-name-height) 1fr (($toggle-size--larger / 2) + $standard-spacing);
-      }
-      @include breakpoint($large) {
-        grid-template-rows: ($logo-height--larger + $standard-spacing + $mabel-site-name-height) 1fr (($toggle-size--larger / 2) + $standard-spacing);
-      }
-    }
-  }
-
   .site-footer {
     #block-user-login {
       text-align: right;
 
       .form-submit {
-        background: $dark-blue;
+        width: 100%;
         font-size: 1em;
 
         &:hover,

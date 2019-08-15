@@ -8,7 +8,6 @@
 
 .serif {
   font-family: $serif;
-  font-size: 1.2em;
 }
 
 .title-font {
@@ -31,6 +30,18 @@
   text-transform: lowercase;
 }
 
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
 %font-size--smaller {
   @include breakpoint($large) {
     font-size: $p-font-size--max--smaller;
@@ -39,6 +50,16 @@
 }
 .font-size--smaller {
   @extend %font-size--smaller;
+}
+
+%font-size--regular {
+    @include breakpoint($large) {
+      font-size: $p-font-size--max;
+    }
+    font-size: $p-font-size;
+}
+.font-size--regular {
+  @extend %font-size--regular;
 }
 
 %font-size--larger {

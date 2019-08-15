@@ -1,19 +1,15 @@
 <div{{ attributes }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
+  {% include "@atoms/global/label/label.twig" %}
 
   {% block content %}
   <div class="body">
-    {{ content }}
+    {{ content.body }}
   </div>
   {% endblock %}
 
   {% block form %}
     <form autocomplete="off" id="quick-search-form">
-      <label for="quick-search-input">{{ field_input_text }}</label>
+      <label for="quick-search-input">{{ content.field_search_label }}</label>
       <input id="quick-search-input" type="search" />
     </form>
   {% endblock %}

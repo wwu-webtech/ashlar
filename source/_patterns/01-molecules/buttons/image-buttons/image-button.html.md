@@ -1,4 +1,4 @@
 ---
 title: Image Buttons
 ---
-Links that contain images with a graphic treatment
+A call to action style button with an image and special styling.

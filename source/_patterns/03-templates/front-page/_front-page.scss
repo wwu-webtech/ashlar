@@ -7,7 +7,7 @@
 .front {
   .splash {
     img {
-      object-position: 100%;
+      object-position: 50%;
     }
 
     .right-aligned-bar {
@@ -37,8 +37,8 @@
       color: $blue;
       border-bottom: none;
       font-family: $title-font;
-      font-size: $title-font-size !important;
       font-weight: $font-weight--regular;
+      font-size: $title-font-size--smaller;
       line-height: 0.9em;
     }
   }
@@ -132,7 +132,6 @@
       h2 {
         text-align: left;
         color: $dark-blue;
-        font-size: $h2-font-size;
         font-weight: $font-weight--bold;
       }
 

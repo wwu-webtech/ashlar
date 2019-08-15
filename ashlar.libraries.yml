@@ -1,3 +1,14 @@
+acalog:
+  version: 1.x
+  css:
+    theme:
+      http://catalog.wwu.edu/widget-api/widget-api.min.css: {}
+  js:
+    http://catalog.wwu.edu/widget-api/widget-api.min.js: {}
+    dist/js/acalog.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
 global-styling:
   version: 1.x
   css:
@@ -40,6 +51,19 @@ event-tracking:
     build/js/event-tracking.js: {}
   dependencies:
     - core/jquery
+    - core/jquery.once
+erm-menu:
+  version: 1.x
+  js:
+    build/js/erm-menu.js: {}
+  dependencies:
+    - core/jquery
+language-select:
+  version: 1.x
+  js:
+    language-select.js: {}
+  dependencies:
+    - core/jquery
 make-waves-fonts:
   css:
     theme:
@@ -77,6 +101,18 @@ timeline-block:
     build/js/timeline-block.js: {}
   dependencies:
     - core/jquery
+page-title:
+  version: 1.x
+  js:
+    build/js/page-title.js: {}
+  dependencies:
+    - core/jquery
+profile:
+  version: 1.x
+  js:
+    build/js/profile.js: {}
+  dependencies:
+    - core/jquery
 user-login:
   version: 1.x
   js:
@@ -93,6 +129,12 @@ wwu-header:
     build/js/wwu-header.js: {}
   dependencies:
     - core/jquery
+wwu-mobile-menu:
+  version: 1.x
+  js:
+    build/js/wwu-mobile-menu.js: {}
+  dependencies:
+    - core/jquery
 featherlight:
   version: 1.7.13
   css:
@@ -100,3 +142,10 @@ featherlight:
       dist/js/featherlight/featherlight.css: {}
   js:
     dist/js/featherlight/featherlight.js: {}
+fullpage:
+  version: 3.0.7
+  css:
+    theme:
+      dist/js/fullpage/fullpage.css: {}
+  js:
+    dist/js/fullpage/fullpage.js: {}

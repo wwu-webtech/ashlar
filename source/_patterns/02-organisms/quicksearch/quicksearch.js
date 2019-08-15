@@ -22,17 +22,14 @@ var $list = $('#quick-search-list', context);
 var $form = $('#quick-search-form', context);
 // Search box (input).
 var $input = $('#quick-search-input', context);
-// Container to use as role="status" to announce live changes.
+// Container.
 var $wrapper = $(".quick-search-container");
+// Text that announces how many results are shown
+var $results_text = $('#quick-search-results-text');
 // Letter selection menu.
 var $letterMenu = $("#quick-search-list-nav");
 
 // ===Functions and attributes to enhance UX of filter===
-// Insert aria attr's to make div accessible:
-$list.attr('aria-live', 'assertive');
-$list.attr('aria-atomic', 'true');
-$wrapper.attr('role', 'status');
-$list.attr('aria-labelledby', 'quick-search-input');
 
 /* Prevent a disabled letter from being selected through tab-navigation or
  * scrolling to top of page on click.
@@ -111,9 +108,9 @@ $list.children('li').addClass('listNavShow');
 if ( !$init_check ){
   $input.quicksearch('#quick-search-list li', {
     'delay': 100,
-    'noResults': 'li.ln-no-match',
+    'noResults': $results_text,
     'show': function () {
-      var $item = $(this).closest('li');
+      var $item = $(this).closest('li').not('.ln-no-match.listNavHide');
 
       // Provide a custom class for quicksearch matches.
       $item.addClass('quickSearchShow');
@@ -138,19 +135,22 @@ $form.submit(function (event) {
 
 // Check that the no results message is displayed correctly.
 function noResultsCheck() {
-  // No match message.
-  var $noMatch = $('li.ln-no-match');
   // Number of results shown by both filters.
   var results = $list.children('.listNavShow.quickSearchShow').length;
+  var heading = $wrapper.find('.results-text-heading');
+
+  $results_text.css('display', 'block');
 
   if (results === 0) {
-    $noMatch.css('display', 'list-item');
-    $noMatch.removeClass('listNavHide');
-    $noMatch.addClass('listNavShow');
+    $results_text.html('No matching results');
+    heading.hide();
+  }
+  else if (results === 1) {
+    $results_text.html(results + ' result');
+    heading.show();
   }
   else {
-    $noMatch.css('display', 'none');
-    $noMatch.addClass('listNavHide');
-    $noMatch.removeClass('listNavShow');
+    $results_text.html(results + ' results');
+    heading.show();
   }
 }

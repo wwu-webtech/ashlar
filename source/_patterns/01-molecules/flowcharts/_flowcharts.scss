@@ -1,0 +1,163 @@
+/**
+* @file
+* 01-molecules/org-charts/_flowcharts.scss
+*/
+
+$chart-background-color: $white;
+$line-color: mix($light-gray, $gray, 50%);
+$max-box-size: 300px;
+
+.flowchart {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  max-width: $max-content-width;
+  background: $chart-background-color;
+  font-size: $p-font-size--smaller;
+
+  figcaption {
+    text-align: center;
+  }
+
+  ol {
+    position: relative;
+    display: flex;
+    list-style-type: none;
+
+    li {
+      @include breakpoint($medium) {
+        margin-right: $double-spacing;
+        max-width: $max-box-size;
+      }
+      position: relative;
+      margin-top: $standard-spacing;
+
+      span,
+      a {
+        @include breakpoint($medium) {
+          max-width: none;
+          padding: $standard-spacing;
+        }
+        position: relative;
+        display: block;
+        max-width: $max-box-size;
+        margin: 0;
+        margin-top: $standard-spacing;
+        margin-left: $standard-spacing;
+        padding: $half-spacing;
+        text-align: center;
+        text-decoration: none;
+        background: $light-gray;
+      }
+
+      a {
+        color: white;
+        background: $blue;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: $dark-blue;
+          background-color: $light-green;
+        }
+      }
+
+    }
+
+    &.level-a {
+      flex-direction: column;
+    }
+
+    &.level-b {
+      margin-left: -($double-spacing + ($standard-spacing + 4px));
+      flex-flow: column nowrap;
+    }
+
+    &.level-c {
+      @include breakpoint($medium) {
+        display: grid;
+      }
+      flex-flow: column wrap;
+      margin-left: -($triple-spacing + ($standard-spacing / 3));
+    }
+
+    &.level-d {
+      flex-flow: column wrap;
+    }
+  }
+
+&.simple {
+  .level-a {
+    @include breakpoint($medium) {
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    align-items: center;
+    }
+  }
+}
+
+/*LINES*/
+  &.simple {
+
+    .level-a {
+      li {
+      /*vertical bars for level-a items on mobile*/
+        > span:after,
+        > a:after {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          display: block;
+          width: $border-width;
+          height: $standard-spacing;
+          content: "";
+          transform: translate(-50%, ($standard-spacing + 6px));
+          background: $line-color;
+        }
+
+        &:last-of-type > span:after,
+        &:last-of-type > a:after,
+        &:last-child > .level-c:after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint($medium) {
+.flowchart {
+  &.simple {
+  .level-a {
+    li {
+      /* horizontal bar for level-a items on desktop */
+      > span:after,
+      > a:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: $standard-spacing + $border-width;
+        height: 50%;
+        content: "";
+        transform: translate(-180%);
+        border-top: solid $line-color $border-width;
+        background: transparent;
+      }
+
+      &:first-of-type > span:after,
+      &:first-of-type > a:after,
+      &:first-child > .level-c:after {
+        display: none;
+      }
+
+      &:last-of-type > span:after,
+      &:last-of-type > a:after,
+      &:last-child > .level-c:after {
+        display: block;
+        }
+      }
+    }
+  }
+}
+}

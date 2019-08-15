@@ -74,7 +74,6 @@ main {
   }
 }
 
-/* .sans-serif-headings heading styles, same as default but without serifs */
 .sans-serif-headings {
   h1,
   h2,
@@ -83,6 +82,116 @@ main {
   h5,
   h6 {
     font-family: $sans-serif;
+  }
+}
+
+.erm-headings {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $blue;
+    font-family: $sans-serif;
+  }
+
+  h1,
+  h2 {
+    @include breakpoint($small) {
+      font-size: $title-font-size;
+    }
+    @include breakpoint($medium) {
+      font-size: $title-font-size--larger;
+    }
+    @include breakpoint($large) {
+      font-size: $title-font-size--max--larger;
+    }
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: none;
+    font-family: $title-font;
+    font-size: $title-font-size;
+  }
+
+  .blue-overlay,
+  .blue-bg,
+  .dark-blue-bg,
+  .black-bg {
+    h1,
+    h2,
+    h3 {
+      color: $white;
+    }
+  }
+
+  h3 {
+    display: inline-block;
+
+    &:after {
+      z-index: -1;
+      display: block;
+      width: 110%;
+      height: 30px;
+      margin-left: 50%;
+      content: "";
+      transform: translate(-50%, -18px);
+      background-color: transparentize($blue, 0.9);
+    }
+  }
+
+  .blue-bg h3:after {
+    background: mix($blue, $light-blue, 50%);
+  }
+}
+
+.title-font-headings {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include breakpoint($large) {
+      font-size: $title-font-size--max;
+    }
+    text-transform: uppercase;
+    font-family: $title-font;
+    font-size: $title-font-size;
+  }
+
+  h2 {
+    border-bottom: none;
+  }
+
+  &.font-size--larger {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @include breakpoint($medium) {
+        font-size: $title-font-size--larger;
+      }
+      @include breakpoint($large) {
+        font-size: $title-font-size--max--larger;
+      }
+    }
+  }
+
+  &.font-size--smaller {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @include breakpoint($large) {
+        font-size: $title-font-size--max--smaller;
+      }
+      font-size: $title-font-size--smaller;
+    }
   }
 }
 
@@ -99,7 +208,8 @@ main {
     @include breakpoint($large) {
       font-size: $h2-font-size--max--smaller;
     }
-    border-bottom-width: $border-width--thicker;
+    padding-bottom: none;
+    border-bottom: none;
     font-size: $h2-font-size--smaller;
   }
 
@@ -129,49 +239,5 @@ main {
       font-size: $h6-font-size--max--smaller;
     }
     font-size: $h6-font-size--smaller;
-  }
-}
-
-%font-size--larger {
-  h1 {
-    @include breakpoint($large) {
-      font-size: $h1-font-size--max--larger;
-    }
-    font-size: $h1-font-size--larger;
-  }
-
-  h2 {
-    @include breakpoint($large) {
-      font-size: $h2-font-size--max--larger;
-    }
-    font-size: $h2-font-size--larger;
-  }
-
-  h3 {
-    @include breakpoint($large) {
-      font-size: $h3-font-size--max--larger;
-    }
-    font-size: $h1-font-size--larger;
-  }
-
-  h4 {
-    @include breakpoint($large) {
-      font-size: $h4-font-size--max--larger;
-    }
-    font-size: $h1-font-size--larger;
-  }
-
-  h5 {
-    @include breakpoint($large) {
-      font-size: $h5-font-size--max--larger;
-    }
-    font-size: $h1-font-size--larger;
-  }
-
-  h6 {
-    @include breakpoint($large) {
-      font-size: $h6-font-size--max--larger;
-    }
-    font-size: $h6-font-size--larger;
   }
 }

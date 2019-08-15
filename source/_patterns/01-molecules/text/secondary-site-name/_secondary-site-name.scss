@@ -1,0 +1,28 @@
+/**
+* @file
+* molecules/text/secondary-site-name/_secondary-site-name.scss
+*/
+.splash {
+  div.block--secondary-site-name {
+    @include breakpoint($medium) {
+      padding-left: $double-spacing + $logo-width;
+      text-align: left;
+      font-size: $h4-font-size;
+
+      grid-row: 2 / span 1;
+    }
+    @include breakpoint($large) {
+      padding-left: calc(((100vw - #{$max-content-width}) / 2) + #{$logo-width--larger} + #{$standard-spacing});
+      font-size: $h4-font-size--max;
+    }
+    z-index: 1;
+    padding: $half-spacing;
+    text-align: center;
+    color: $white;
+    background: transparentize($blue, 0.2);
+    font-size: $p-font-size;
+
+    grid-column: 1 / span all;
+    grid-row: 1;
+  }
+}

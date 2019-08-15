@@ -18,15 +18,22 @@
     margin-right: $standard-spacing / 3;
     padding: $half-spacing;
     color: $white;
+    border: $border-width--thicker solid transparent;
     border-radius: 0;
     background-color: $blue;
+    box-shadow: none;
 
     &:hover,
     &:focus,
     &:active {
+      transform: none;
       color: $dark-blue;
       background-color: $light-green;
       box-shadow: none;
+    }
+
+    &:focus {
+      border: $border-width--thicker dotted $black;
     }
 
     &.active,

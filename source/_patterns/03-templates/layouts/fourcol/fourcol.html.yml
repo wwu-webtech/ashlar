@@ -1,0 +1,31 @@
+attributes:
+  Attribute():
+    class:
+    - layout
+    - layout--fourcol-section    
+region_attributes:
+  first:
+    Attribute():
+      class:
+        - layout__region
+        - layout__region--first
+  second:
+    Attribute():
+      class:
+        - layout__region
+        - layout__region--second
+  third:
+    Attribute():
+      class:
+        - layout__region
+        - layout__region--third
+  fourth:
+    Attribute():
+      class:
+        - layout__region
+        - layout__region--fourth
+content:
+  first: "<h2>First</h2> Afield aghast booby coverlet dolven ell flagon garth gibbet hew lay lob mischance pate portend quaff rede rick spinney squib toss-pot unsated wax. Beset boon burnished esquire fender fillet forespeak hallow heed lissom lob longfather redound shale sortie tracery wheedle whet wile wold. "
+  second: "<h2>Second</h2> Aumbry champ fawn gainsay ghyll grandsire hoar hock nethermost oast profound stricken thunder-clap unsated."
+  third: "<h2>Third</h2> Aghast besought bower churl covert culvert dastard draught forespeak foreswear forsake fraught gangrel harbour hobble hythe liege lob malefactor reft rick sable squib strand umbel wrack wroth zenith."
+  fourth: "<h2>Fourth</h2> Aghast besought bower churl covert culvert dastard draught forespeak foreswear forsake fraught gangrel harbour hobble hythe liege lob malefactor reft rick sable squib strand umbel wrack wroth zenith."
