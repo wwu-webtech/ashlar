@@ -1,0 +1,80 @@
+/**
+* @file
+* 01-molecules/charts/donut-chart/_donut-chart.scss
+*/
+
+$chart-size: 300px;
+$chart-blues: (#003f87, #0059a4, #0074c1, #2c90d0, #61abdb, #93c5e4, #c4ddee, #f5f6f7);
+$chart-greens: (#006b3f, #268134, #4b972a, #6eac20, #92c016, #b5d50b, #d8e781, #f5f6f7);
+
+.donut-chart {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  svg {
+    width: $chart-size;
+    height: $chart-size;
+    transform: rotate(-90deg);
+    background: transparent;
+    border-radius: 50%;
+    margin: $double-spacing;
+  }
+
+  circle {
+    fill: transparent;
+    stroke-width: 16;
+
+    @for $i from 1 through length($chart-blues) {
+      &:nth-of-type(#{$i}) {
+        stroke: nth($chart-blues, $i);
+      }
+    }
+  }
+
+  .data {
+    li {
+      list-style: none;
+
+      &:before {
+        position: relative;
+        top: 3px;
+        display: inline-block;
+        width: $double-spacing;
+        height: $double-spacing;
+        margin-right: $half-spacing;
+        content: "";
+      }
+
+      @for $i from 1 through length($chart-blues) {
+        &:nth-of-type(#{$i}) {
+          &:before {
+            background: nth($chart-blues, $i);
+          }
+        }
+      }
+    }
+  }
+
+  &.green{
+    circle {
+      @for $i from 1 through length($chart-greens) {
+        &:nth-of-type(#{$i}) {
+          stroke: nth($chart-greens, $i);
+        }
+      }
+    }
+
+    .data {
+      li {
+        @for $i from 1 through length($chart-greens) {
+          &:nth-of-type(#{$i}) {
+            &:before {
+              background: nth($chart-greens, $i);
+            }
+          }
+        }
+      }
+    }
+  }
+}
