@@ -10,7 +10,9 @@
 }
 
 .layout--onecol--full .layout__region {
+  @include breakpoint($large) {
+    max-width: $max-content-width;
+    margin: auto;
+  }
   width: 100%;
-  max-width: $max-content-width;
-  margin: auto;
 }
