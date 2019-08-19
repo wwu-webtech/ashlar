@@ -100,7 +100,7 @@ input[type="submit"] {
   border-radius: $button-border-radius--round;
   background: $blue;
   line-height: 1;
-
+  font-size: $h6-font-size--max; /* 24px needed to meet large text contrast ratio */
 
   &:active {
     box-shadow: none !important;
@@ -148,7 +148,6 @@ input[type="submit"] {
   &.green {
     @include button-box-shadow($dark-green);
     background: $green;
-    font-size: 18px; /* min needed for contrast */
 
     &:active,
     &:hover,
