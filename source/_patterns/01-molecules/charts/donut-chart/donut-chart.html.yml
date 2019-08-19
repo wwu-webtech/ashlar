@@ -1,0 +1,27 @@
+attributes:
+  Attribute():
+    class:
+    - block
+    - block--donut-chart
+    - donut-chart
+title_attributes:
+  Attribute:
+    class:
+    - block__title
+content:
+  field_chart_number:
+    - 10
+    - 14
+    - 22
+    - 35
+    - 7
+    - 2
+    - 10
+  field_chart_label:
+   - Freshman
+   - Sophomore
+   - Junior
+   - Senior
+   - Post
+   - Grad
+   - Alumni
