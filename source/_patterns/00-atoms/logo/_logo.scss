@@ -1,11 +1,13 @@
 /**
- * @file
- * 00-atoms/logo/_logo.scss
- */
+* @file
+* 00-atoms/logo/_logo.scss
+*/
 $logo-width: 266px;
 $logo-height: 136px;
+$logo-height--stacked: 170px;
 $logo-width--larger: 306px;
 $logo-height--larger: 154px;
+$logo-height--stacked--larger: 196px;
 $logo-width--horizontal: 400px;
 $logo-height--horiztonal: 100px;
 
@@ -18,6 +20,13 @@ $logo-height--horiztonal: 100px;
   height: $logo-height;
   padding: $standard-spacing;
   background-color: $dark-blue;
+
+  &.stacked {
+    @include breakpoint($large) {
+      height: $logo-height--stacked--larger;
+    }
+    height: $logo-height--stacked;
+  }
 
   &.horizontal {
     width: $logo-width--horizontal;
@@ -45,5 +54,13 @@ $logo-height--horiztonal: 100px;
     }
     width: $logo-width;
     height: $logo-width;
+  }
+
+  .cls-1 {
+    fill: $dark-blue;
+  }
+
+  .cls-2 {
+    fill: $blue;
   }
 }
