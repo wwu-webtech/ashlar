@@ -3,17 +3,16 @@
   {% include "@atoms/global/label/label.twig" %}
 
   {% set numThings = content.field_chart_number['#items']|length - 1 %}
+  {% set dashoffset = 0 %}
 
-  <svg viewBox="0 0 32 32">
-    <circle r="16" cx="16" cy="16" style="stroke-dashoffset: 0; stroke-dasharray: 10;"/>
-    <circle r="16" cx="16" cy="16" style="stroke-dashoffset: -10; stroke-dasharray: 14 100;"/>
-    <circle r="16" cx="16" cy="16" style="stroke-dashoffset: -24; stroke-dasharray: 22 100;"/>
-    <circle r="16" cx="16" cy="16" style="stroke-dashoffset: -46; stroke-dasharray: 35 100;"/>
-    <circle r="16" cx="16" cy="16" style="stroke-dashoffset: -81; stroke-dasharray: 7 100;"/>
-    <circle r="16" cx="16" cy="16" style="stroke-dashoffset: -88; stroke-dasharray: 2 100;"/>
-    <circle r="16" cx="16" cy="16" style="stroke-dashoffset: -90; stroke-dasharray: 10 100;"/>
-    <circle r="16" cx="16" cy="16" style="stroke-dashoffset: -90; stroke-dasharray: 10 100;"/>
+  <svg viewBox="0 0 31.83 31.83">
+      {% for i in 0..numThings %}
+        <circle r="15.915" cx="15.915" cy="15.915" style="stroke-dashoffset: {{ dashoffset }}; stroke-dasharray: {{ content.field_chart_number[i] }} 100;"/>
+
+        {% set dashoffset = dashoffset - content.field_chart_number[i]['#markup'] %}
+      {% endfor %}
   </svg>
+
   <ul class="data">
     {% for i in 0..numThings %}
       <li>{{ content.field_chart_number[i] }}% {{ content.field_chart_label[i] }}</li>

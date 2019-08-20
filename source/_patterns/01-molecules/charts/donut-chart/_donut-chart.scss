@@ -12,6 +12,10 @@ $chart-greens: (#006b3f,#358a30,#6aa921,#9fc812,#c2dc2c,#d3e570,#e4edb3,#f5f6f7)
   flex-flow: row wrap;
   align-items: center;
 
+  .block__title {
+    flex: 0 0 100%;
+  }
+
   svg {
     width: $chart-size;
     height: $chart-size;
@@ -23,7 +27,7 @@ $chart-greens: (#006b3f,#358a30,#6aa921,#9fc812,#c2dc2c,#d3e570,#e4edb3,#f5f6f7)
 
   circle {
     fill: transparent;
-    stroke-width: 16;
+    stroke-width: 15.915;
 
     @for $i from 1 through length($chart-blues) {
       &:nth-of-type(#{$i}) {
@@ -75,6 +79,13 @@ $chart-greens: (#006b3f,#358a30,#6aa921,#9fc812,#c2dc2c,#d3e570,#e4edb3,#f5f6f7)
           }
         }
       }
+    }
+  }
+
+  &.pie {
+    circle {
+      fill: transparent;
+      stroke-width: 31.83;
     }
   }
 }
