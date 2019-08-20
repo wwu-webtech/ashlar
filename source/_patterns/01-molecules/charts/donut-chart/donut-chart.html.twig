@@ -5,12 +5,13 @@
   {% set numThings = content.field_chart_number['#items']|length - 1 %}
   {% set dashoffset = 0 %}
 
-  <svg viewBox="0 0 31.83 31.83">
-      {% for i in 0..numThings %}
-        <circle r="15.915" cx="15.915" cy="15.915" style="stroke-dashoffset: {{ dashoffset }}; stroke-dasharray: {{ content.field_chart_number[i] }} 100;"/>
+  <svg viewBox="0 0 31.83 31.83" role="img" aria-labelledby="{{ label|clean_class }}">
+    <title id="{{ label|clean_class }}">Pie chart of {{ label }}</title>
+    {% for i in 0..numThings %}
+      <circle r="15.915" cx="15.915" cy="15.915" style="stroke-dashoffset: {{ dashoffset }}; stroke-dasharray: {{ content.field_chart_number[i] }} 100;"/>
 
-        {% set dashoffset = dashoffset - content.field_chart_number[i]['#markup'] %}
-      {% endfor %}
+      {% set dashoffset = dashoffset - content.field_chart_number[i]['#markup'] %}
+    {% endfor %}
   </svg>
 
   <ul class="data">

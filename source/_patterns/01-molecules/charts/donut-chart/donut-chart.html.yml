@@ -8,6 +8,8 @@ title_attributes:
   Attribute:
     class:
     - block__title
+label:
+  A chart
 content:
   field_chart_number:
     - 10
