@@ -39,7 +39,8 @@ $logo-height--horiztonal: 100px;
   }
 
   &.full-color,
-  &.grayscale {
+  &.grayscale,
+  &.black {
     background-color: $white;
   }
 
@@ -69,6 +70,10 @@ $logo-height--horiztonal: 100px;
   }
 
   .cls-4 {
-    fill: $gray;
+    fill: #808285;
+  }
+
+  .cls-5 {
+    fill: $white;
   }
 }
