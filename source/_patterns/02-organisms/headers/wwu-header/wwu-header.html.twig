@@ -6,17 +6,26 @@
 <div class="western-header">
   <div class="wrap">
     <div class="western-logo">
-      <a class="western-home-link" href="https://wwu.edu">
-        <span class="university-name">Western Washington University</span>
-        {% include "@atoms/logo/logo.twig" %}
-      </a>
-      {% block site_name %}
-        {% if site_name != "Western Washington University" %}
+
+      {% if site_name != "Western Washington University" %}
+        <a class="western-home-link" href="https://wwu.edu">
+          <span class="university-name">Western Washington University</span>
+          {% include "@atoms/logo/logo--sub-branded.twig" %}
+        </a>
+
+        {% block site_name %}
           <a href="/" class="site-name">
               {{ site_name }}
           </a>
-        {% endif %}
-      {% endblock %}
+        {% endblock %}
+
+      {% else %}
+        <a class="western-home-link" href="https://wwu.edu">
+          <span class="university-name">Western Washington University</span>
+          {% include "@atoms/logo/logo.twig" %}
+        </a>
+      {% endif %}
+
     </div>
 
     {% block quick_links %}
