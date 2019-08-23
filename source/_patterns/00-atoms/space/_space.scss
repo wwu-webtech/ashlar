@@ -2,6 +2,65 @@
  * @file
  * 00-atoms/space/_space.scss
  */
+
+/* Helper classes to adjust spacing */
+.no-margin {
+  margin: 0;
+}
+
+.no-margin--top {
+  margin-top: 0;
+}
+
+.no-margin--right {
+  margin-right: 0;
+}
+
+.no-margin--bottom {
+  margin-bottom: 0;
+}
+
+.no-margin--left {
+  margin-left: 0;
+}
+
+.standard-margin {
+  margin: $standard-spacing;
+}
+
+.double-margin {
+  margin: $double-spacing;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-padding--top {
+  padding-top: 0;
+}
+
+.no-padding--right {
+  padding-right: 0;
+}
+
+.no-padding--bottom {
+  padding-bottom: 0;
+}
+
+.no-padding--left {
+  padding-left: 0;
+}
+
+.standard-padding {
+  padding: $standard-spacing;
+}
+
+.double-padding {
+  padding: $double-spacing;
+}
+
+/* space creating blocks */
 .vertical-space--1x {
   @include breakpoint($medium) {
     height: $standard-spacing;
