@@ -4,7 +4,7 @@
  */
 .block--local-tasks-block {
   overflow: scroll;
-  max-width: calc(100vw - $double-spacing);
+  max-width: calc(100vw - #{$double-spacing});
   margin-bottom: $standard-spacing;
   font-size: $p-font-size--smaller;
 
