@@ -104,21 +104,6 @@
 
   .social-media-links {
     justify-content: flex-start;
-
-    .social-icon {
-      background-color: $white;
-      color: $dark-blue;
-
-      svg {
-        fill: $blue;
-      }
-
-      &:hover,
-      &:focus,
-      &:active {
-        background-color: $light-green;
-      }
-    }
   }
 
   .ribbon {
