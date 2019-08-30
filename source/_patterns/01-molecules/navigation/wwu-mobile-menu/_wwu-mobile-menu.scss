@@ -51,19 +51,19 @@ $close-toggle-size: 64px;
         &.apply, &.gift {
           align-self: center;
           border-top: none;
-          
+
           .button {
             padding: ($standard-spacing * 0.75);
             border: solid $border-width $white;
             font-size: $p-font-size;
 
-              &:hover,
-              &:focus,
-              &:active {
-                border-color: transparent;
-              }
+            &:hover,
+            &:focus,
+            &:active {
+              border-color: transparent;
             }
           }
+        }
 
         &.apply {
           margin: 0 $half-spacing;
