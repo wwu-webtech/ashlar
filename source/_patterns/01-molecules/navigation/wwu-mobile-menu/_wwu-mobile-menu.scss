@@ -48,44 +48,31 @@ $close-toggle-size: 64px;
           }
         }
 
-        &.apply {
+        &.apply, &.gift {
           align-self: center;
-          margin: 0 $half-spacing;
           border-top: none;
-
-          grid-area: apply;
-
+          
           .button {
             padding: ($standard-spacing * 0.75);
             border: solid $border-width $white;
             font-size: $p-font-size;
 
-            &:hover,
-            &:focus,
-            &:active {
-              border-color: transparent;
+              &:hover,
+              &:focus,
+              &:active {
+                border-color: transparent;
+              }
             }
           }
+
+        &.apply {
+          margin: 0 $half-spacing;
+          grid-area: apply;
         }
 
         &.gift {
-          align-self: center;
           margin-left: $standard-spacing;
-          border-top: none;
-
           grid-area: gift;
-
-          .button {
-            padding: ($standard-spacing * 0.75);
-            border: solid $border-width $white;
-            font-size: $p-font-size;
-
-            &:hover,
-            &:focus,
-            &:active {
-              border-color: transparent;
-            }
-          }
         }
 
         &.language {
