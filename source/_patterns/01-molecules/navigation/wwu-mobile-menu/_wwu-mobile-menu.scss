@@ -50,7 +50,7 @@ $close-toggle-size: 64px;
 
         &.apply {
           align-self: center;
-          margin-left: $standard-spacing;
+          margin: 0 $half-spacing;
           border-top: none;
 
           grid-area: apply;
@@ -58,6 +58,7 @@ $close-toggle-size: 64px;
           .button {
             padding: ($standard-spacing * 0.75);
             border: solid $border-width $white;
+            font-size: $p-font-size;
 
             &:hover,
             &:focus,
@@ -77,6 +78,7 @@ $close-toggle-size: 64px;
           .button {
             padding: ($standard-spacing * 0.75);
             border: solid $border-width $white;
+            font-size: $p-font-size;
 
             &:hover,
             &:focus,
