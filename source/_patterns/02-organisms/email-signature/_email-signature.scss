@@ -4,7 +4,7 @@
 */
 #email_signature {
   width: initial;
-  
+
   tr {
     background: transparent;
   }
@@ -15,5 +15,13 @@
 
   p {
     font-size: inherit;
+  }
+}
+
+#copy_button {
+  &:focus {
+    background-color: $lightest-gray;
+    color: $black;
+    border-color: $black;
   }
 }
