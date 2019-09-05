@@ -87,7 +87,7 @@ $locations-font-size: 18px;
     display: inline-block;
     text-align: center;
     text-decoration: none;
-    color: $blue;
+    color: $link-blue;
     outline: 0;
     background-color: transparent;
     font-size: $locations-font-size;
@@ -101,7 +101,7 @@ $locations-font-size: 18px;
       height: 3px !important;
       content: "";
       transition: 0.3s ease all 0.1s;
-      background-color: $blue;
+      background-color: $link-blue;
     }
   }
 
@@ -124,7 +124,7 @@ $locations-font-size: 18px;
   .st3,
   .st4 {
     fill: none;
-    stroke: $blue;
+    stroke: $link-blue;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: $stroke-width--heavy;
@@ -138,7 +138,7 @@ $locations-font-size: 18px;
 
   .cls-3 {
     fill: none;
-    stroke: $blue;
+    stroke: $link-blue;
     stroke-linejoin: round;
     stroke-miterlimit: 10;
     stroke-width: $stroke-width--medium;
