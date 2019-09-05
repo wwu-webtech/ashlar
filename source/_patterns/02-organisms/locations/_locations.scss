@@ -7,6 +7,8 @@ $location-button-size: 160px;
 $location-icon-height: 90px;
 $stroke-width--heavy: 12px;
 $stroke-width--medium: 8px;
+$locations-icon-spacing: 30px;
+$locations-font-size: 18px;
 
 // Containers and Buttons
 .wwu-locations {
@@ -23,7 +25,7 @@ $stroke-width--medium: 8px;
     display: block;
     flex: 0 1 33%;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: $locations-icon-spacing 0;
   }
 
   .svg-container {
@@ -49,6 +51,10 @@ $stroke-width--medium: 8px;
       -webkit-animation-name: pulse;
       animation-name: pulse;
       border-radius: 500px;
+
+      &:active {
+        border: 2px solid #75cfff;
+      }
     }
 
     &:hover,
@@ -64,14 +70,15 @@ $stroke-width--medium: 8px;
 
   // Underline animation
   .link-text {
-    position: relative;
+    position: absolute;
+    bottom: $double-spacing;
     display: block;
     width: 100%;
-    height: 30px;
+    height: $locations-icon-spacing;
     text-align: center;
 
     span {
-      line-height: 30px;
+      line-height: $locations-icon-spacing;
     }
   }
 
@@ -79,38 +86,28 @@ $stroke-width--medium: 8px;
     position: relative;
     display: inline-block;
     text-align: center;
-    font-size: 18px;
-    font-weight: 600;
-  }
-
-  .custom-underline,
-  .custom-underline:hover,
-  .custom-underline:focus,
-  .custom-underline:active {
     text-decoration: none;
     color: $blue;
     outline: 0;
     background-color: transparent;
-  }
+    font-size: $locations-font-size;
+    font-weight: 600;
 
-  .custom-underline::after {
-    position: absolute;
-    content: "";
-  }
-
-  .link-text .custom-underline::after {
-    top: 95%;
-    left: 30%;
-    width: 30%;
-    height: 3px !important;
-    transition: 0.3s ease all 0.1s;
-    background-color: $blue;
+    &:after {
+      position: absolute;
+      top: 95%;
+      left: 30%;
+      width: 30%;
+      height: 3px !important;
+      content: "";
+      transition: 0.3s ease all 0.1s;
+      background-color: $blue;
+    }
   }
 
   .svg-container:hover .custom-underline::after {
     left: 0;
     width: 100%;
-    transition: 0.5s ease all;
   }
 
   // SVGS
@@ -123,7 +120,9 @@ $stroke-width--medium: 8px;
   .cls-1,
   .cls-2,
   .st1,
-  .st2 {
+  .st2,
+  .st3,
+  .st4 {
     fill: none;
     stroke: $blue;
     stroke-linecap: round;
@@ -132,6 +131,7 @@ $stroke-width--medium: 8px;
   }
 
   .cls-2,
+  .st0,
   .st1 {
     fill: $white;
   }
