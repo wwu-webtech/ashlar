@@ -1,4 +1,6 @@
 image: atoms-landscape-3x2
 title: Event Title
-content: "<div class='date'>June 1, 2018</div><div class='location'>Location Name</div><div class='time'>5:30 - 6:00pm</div>"
+content: "<p>A description of the event</p><div class='date'>June 1, 2018</div><div class='location'>Location Name</div><div class='time'>5:30 - 6:00pm</div>"
 link_url: "#"
+taxonomy_terms:
+  - Category
