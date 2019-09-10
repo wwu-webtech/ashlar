@@ -4,7 +4,7 @@ attributes:
     - headline
     - block
     - block--headline
-    - black-overlay
+    - box-headline
 title_attributes:
   Attribute():
     class:

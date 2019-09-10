@@ -34,19 +34,18 @@ if (generateButton) {
 
 if (copyButton) {
   copyButton.onclick = function(){
-    if (document.selection) {
-      var range = document.body.createTextRange();
-      range.moveToElementText(document.getElementById('email_signature'));
-      range.select().createTextRange();
-      document.execCommand('copy');
-
-    } else if (window.getSelection) {
-      var range = document.createRange();
-      range.selectNode(document.getElementById('email_signature'));
-      window.getSelection().addRange(range);
-      document.execCommand('copy');
-    }
-
+    copyToClip(document.getElementById('email_signature').innerHTML);
     copyButton.innerText ='Signature copied!';
   };
 }
+
+function copyToClip(str) {
+  function listener(e) {
+    e.clipboardData.setData("text/html", str);
+    e.clipboardData.setData("text/plain", str);
+    e.preventDefault();
+  }
+  document.addEventListener("copy", listener);
+  document.execCommand("copy");
+  document.removeEventListener("copy", listener);
+};

@@ -6,8 +6,7 @@ $headline-gradient-start: transparentize($darkest-blue, 0.2);
 $headline-gradient-end: transparentize($darkest-blue, 0.5);
 
 .headline {
-  /* Style Option 1: Darkest Blue overlay */
-  &.black-overlay,
+  /* Style Option 1: Box with semi-transparent overlay */
   &.box-headline {
     @include breakpoint($medium) {
       margin-top: 0;
@@ -22,6 +21,7 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
 
     -ms-grid-row-align: start;
 
+    h1,
     h2 {
       margin-top: $standard-spacing;
       color: $text-color-light;
@@ -77,6 +77,7 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
 
     -ms-grid-row-align: end;
 
+    h1,
     h2 {
       @include breakpoint($medium) {
         grid-column: initial;
@@ -145,6 +146,7 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
       display: none;
     }
 
+    h1,
     h2 {
       @include breakpoint($medium) {
         font-size: 4.5em;
@@ -156,6 +158,12 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
       font-family: $sans-serif;
       font-size: 3.5em;
       font-weight: bold;
+    }
+
+    .tagline {
+      color: $white;
+      text-shadow: 1px 1px 4px transparentize($darkest-blue, 0.1);
+      font-size: 2em;
     }
 
     .button {
