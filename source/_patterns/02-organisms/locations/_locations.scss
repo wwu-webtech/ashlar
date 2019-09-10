@@ -35,15 +35,6 @@ $locations-font-size: 18px;
     height: $location-button-size;
   }
 
-  .link--location-circle {
-    &:hover,
-    &:focus,
-    &:active {
-      outline: 0;
-      background: transparent;
-    }
-  }
-
   // Growing circle interaction
   .grow {
     .svg-container {
@@ -69,16 +60,23 @@ $locations-font-size: 18px;
   }
 
   // Underline animation
-  .link-text {
-    position: absolute;
-    bottom: $double-spacing;
+  .link {
     display: block;
     width: 100%;
     height: $locations-icon-spacing;
+    margin-top: -$half-spacing;
     text-align: center;
+    outline: 0;
+    background: transparent;
 
-    span {
-      line-height: $locations-icon-spacing;
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      content: "";
     }
   }
 
@@ -92,6 +90,7 @@ $locations-font-size: 18px;
     background-color: transparent;
     font-size: $locations-font-size;
     font-weight: 600;
+    line-height: $locations-icon-spacing;
 
     &:after {
       position: absolute;
