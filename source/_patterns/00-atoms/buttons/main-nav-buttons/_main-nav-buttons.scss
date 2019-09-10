@@ -64,7 +64,7 @@ $max-button-width: 250px;
         }
 
         &:focus {
-          border: ($half-spacing / 2) dotted;
+          border: ($half-spacing / 2) dotted $black;
         }
 
         &:after {
