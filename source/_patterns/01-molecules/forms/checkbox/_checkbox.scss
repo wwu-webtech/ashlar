@@ -2,6 +2,9 @@
 * @file
 * molecules/forms/checkbox/_checkbox.scss
 */
+$checkbox-size: 24px;
+$checkbox-size--smaller: 20px;
+
 .checkbox,
 .radio {
   position: relative;
@@ -13,8 +16,8 @@ input[type="radio"] {
   position: absolute;
   top: 0;
   left: 0;
-  width: $select-input-size;
-  height: $select-input-size;
+  width: $checkbox-size;
+  height: $checkbox-size;
   margin: 0;
   padding: 0;
   opacity: 0;
@@ -22,46 +25,37 @@ input[type="radio"] {
   outline: 0;
 
   + label {
-    @include breakpoint($small) {
-      margin-left: $select-input-size--smaller;
-      line-height: $select-input-size--smaller;
-    }
     @include breakpoint($medium) {
-      margin-left: $select-input-size;
-      line-height: $select-input-size;
+      margin-left: $checkbox-size;
+      line-height: $checkbox-size;
     }
+    position: relative;
     display: inline-block;
     align-self: center;
     margin: 0;
-    margin-left: $select-input-size;
+    margin-left: $checkbox-size--smaller;
     padding-left: $half-spacing;
     font-weight: $font-weight--regular;
-    line-height: $select-input-size;
-    position: relative;
+    line-height: $checkbox-size--smaller;
 
     &:before {
-      @include breakpoint($small) {
-        width: $select-input-size--smaller;
-        height: $select-input-size--smaller;
-      }
       @include breakpoint($medium) {
-        width: $select-input-size;
-        height: $select-input-size;
-        border-width: $border-width--thicker;
+        width: $checkbox-size;
+        height: $checkbox-size;
       }
       position: absolute;
       left: 0;
-      transform: translatex(-100%);
       display: grid;
       align-items: center;
       box-sizing: border-box;
-      width: $select-input-size;
-      height: $select-input-size;
+      width: $checkbox-size--smaller;
+      height: $checkbox-size--smaller;
       content: "";
+      transform: translatex(-100%);
       border-width: $border-width;
       border-style: solid;
-      border-color: $dark-blue;
-      background-color: $white;
+      border-color: $light-gray;
+      background-color: $lightest-gray;
       background-repeat: no-repeat;
       background-position: 50%;
 
