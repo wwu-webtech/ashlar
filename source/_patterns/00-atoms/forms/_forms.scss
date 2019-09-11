@@ -46,7 +46,7 @@ select {
 
   &:focus {
     outline: none;
-    box-shadow: $focus-shadow;
+    border-color: $light-blue;
   }
   &:disabled {
     cursor: not-allowed;
