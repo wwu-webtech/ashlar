@@ -1,0 +1,145 @@
+/**
+* @file
+* organisms/locations/_locations.scss
+*/
+$locations-block-width: 600px;
+$location-button-size: 160px;
+$location-icon-height: 90px;
+$stroke-width--heavy: 12px;
+$stroke-width--medium: 8px;
+$locations-icon-spacing: 30px;
+$locations-font-size: 18px;
+
+// Containers and Buttons
+.wwu-locations {
+  max-width: $locations-block-width;
+  margin: 0 auto;
+
+  .button-cluster {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .button-animated {
+    display: block;
+    flex: 0 1 33%;
+    margin: 0 auto;
+    padding: $locations-icon-spacing 0;
+  }
+
+  .svg-container {
+    position: relative;
+    display: block;
+    width: $location-button-size;
+    height: $location-button-size;
+  }
+
+  // Growing circle interaction
+  .grow {
+    .svg-container {
+      transition: 500ms;
+      -webkit-animation-name: pulse;
+      animation-name: pulse;
+      border-radius: 500px;
+
+      &:active {
+        border: 2px solid #75cfff;
+      }
+    }
+
+    &:hover,
+    &:focus-within {
+      .svg-container {
+        transition: 500ms;
+        -webkit-transform: scale(1.03, 1.03);
+        transform: scale(1.03, 1.03);
+        background-color: #d8f1ff;
+      }
+    }
+  }
+
+  // Underline animation
+  .link {
+    display: block;
+    width: 100%;
+    height: $locations-icon-spacing;
+    margin-top: -$half-spacing;
+    text-align: center;
+    outline: 0;
+    background: transparent;
+
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      content: "";
+    }
+  }
+
+  .custom-underline {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: $link-blue;
+    outline: 0;
+    background-color: transparent;
+    font-size: $locations-font-size;
+    font-weight: 600;
+    line-height: $locations-icon-spacing;
+
+    &:after {
+      position: absolute;
+      top: 95%;
+      left: 30%;
+      width: 30%;
+      height: 3px !important;
+      content: "";
+      transition: 0.3s ease all 0.1s;
+      background-color: $link-blue;
+    }
+  }
+
+  .svg-container:hover .custom-underline::after {
+    left: 0;
+    width: 100%;
+  }
+
+  // SVGS
+  svg {
+    width: 100%;
+    height: $location-icon-height;
+    margin-top: $standard-spacing;
+  }
+
+  .cls-1,
+  .cls-2,
+  .st1,
+  .st2,
+  .st3,
+  .st4 {
+    fill: none;
+    stroke: $link-blue;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: $stroke-width--heavy;
+  }
+
+  .cls-2,
+  .st0,
+  .st1 {
+    fill: $white;
+  }
+
+  .cls-3 {
+    fill: none;
+    stroke: $link-blue;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    stroke-width: $stroke-width--medium;
+  }
+}
