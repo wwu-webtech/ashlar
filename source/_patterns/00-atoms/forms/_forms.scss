@@ -2,6 +2,8 @@
  * @file
  * 00-atoms/forms/_forms.scss
  */
+$select-input-size: 28px;
+$select-input-size--smaller: 24px;
 
 fieldset {
   margin: 0;
@@ -9,29 +11,37 @@ fieldset {
   border: 0;
   background-color: transparent;
 }
-legend {
+
+legend,
+label {
+  display: block;
   margin-bottom: $standard-spacing;
   padding: 0;
-  font-weight: 600;
+  font-weight: $font-weight--semibold;
+
+  &.required:after,
+  &.form-required:after {
+    content: " *";
+    color: $blue;
+    font-weight: $font-weight--regular;
+  }
 }
+
 input,
-label,
+textarea,
 select {
-  display: block;
-}
-input {
   @include breakpoint($medium) {
     border-width: $border-width--thicker;
   }
+  display: block;
   box-sizing: border-box;
   max-width: 100%;
   margin-bottom: $standard-spacing;
-  padding: $standard-spacing;
-  transition: border-color $medium-transition-speed $standard-ease;
+  padding: $standard-spacing * 0.75;
   color: $black;
-  border: solid $border-width $dark-blue;
-  border-radius: 0;
-  background-color: $white;
+  border: solid $border-width $light-gray;
+  border-radius: $border-radius--square;
+  background-color: $lightest-gray;
   box-shadow: none;
 
   &:focus {
@@ -40,29 +50,22 @@ input {
   }
   &:disabled {
     cursor: not-allowed;
-    background-color: $white;
-    &:hover {
-      border: $gray;
-      border-width: 1px;
-    }
+    color: $gray;
+    border-color: $gray;
+    background-color: $light-gray;
   }
 }
 
-input[type="submit"] {
-  width: inherit;
-
-  &:focus {
-    box-shadow: none;
-  }
-}
-
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: transparentize($black, 0.1);
+::placeholder {
   opacity: 1; /* Firefox */
-}
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: transparentize($black, 0.1);
 }
-::-ms-input-placeholder { /* Microsoft Edge */
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: transparentize($black, 0.1);
+}
+::-ms-input-placeholder {
+  /* Microsoft Edge */
   color: transparentize($black, 0.1);
 }

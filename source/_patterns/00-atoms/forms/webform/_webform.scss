@@ -39,3 +39,15 @@
     }
   }
 }
+
+form {
+  .description {
+    margin-top: -$half-spacing;
+    margin-bottom: $standard-spacing;
+    font-size: $p-font-size--smaller;
+  }
+
+  .form-item {
+    margin-bottom: $standard-spacing;
+  }
+}
