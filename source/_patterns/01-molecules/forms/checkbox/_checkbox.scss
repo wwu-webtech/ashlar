@@ -42,6 +42,7 @@ input[type="radio"] {
       @include breakpoint($medium) {
         width: $checkbox-size;
         height: $checkbox-size;
+        background-size: $checkbox-size / 2;
       }
       position: absolute;
       left: 0;
@@ -58,6 +59,7 @@ input[type="radio"] {
       background-color: $lightest-gray;
       background-repeat: no-repeat;
       background-position: 50%;
+      background-size: $checkbox-size--smaller / 2;
 
       justify-items: center;
     }
@@ -76,12 +78,6 @@ input[type="checkbox"] {
   &:checked {
     + label {
       &:before {
-        @include breakpoint($small) {
-          background-image: url("../images/forms/check--smaller.png");
-        }
-        @include breakpoint($medium) {
-          background-image: url("../images/forms/check.png");
-        }
         background-image: url("../images/forms/check.png");
       }
     }
