@@ -85,7 +85,7 @@ $close-toggle-size: 64px;
           button {
             z-index: inherit;
             padding: $half-spacing $standard-spacing;
-            color: white;
+            color: $white;
             border: $border-width solid white;
             border-radius: $triple-spacing;
             background-color: $dark-blue;
@@ -102,7 +102,7 @@ $close-toggle-size: 64px;
         &.icon-with-text {
           width: inherit;
           height: inherit;
-          
+
           .icon-text {
             margin-top: 0;
           }
