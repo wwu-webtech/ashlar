@@ -1,5 +1,5 @@
 /* Add aria labels to all buttons */
-var $accordionButton = $('.accordion-set .field__title .expand', context);
+var $accordionButton = $('.accordion-set .expand', context);
 $accordionButton.filter('.is-expanded').attr('aria-expanded', 'true');
 $accordionButton.not('.is-expanded').attr('aria-expanded', 'false');
 
