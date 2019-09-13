@@ -15,14 +15,12 @@
   align-content: center;
   padding: $double-spacing;
   text-align: center;
-  color: white;
-  font-family: $copy-font--make-waves;
+  color: $white;
 
   h2 {
     margin: 0;
     text-transform: uppercase;
-    color: white;
-    font-family: $heading-font--make-waves;
+    color: $white;
     font-size: $title-font-size--larger;
   }
 }

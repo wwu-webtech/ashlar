@@ -13,7 +13,6 @@ $button-font-size--make-waves--larger: calc((#{$min-button-font-size--make-waves
 
 .block--make-waves {
   .button {
-    font-family: $heading-font--make-waves;
     font-size: $button-font-size--make-waves;
 
     &.small {
