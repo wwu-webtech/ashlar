@@ -1,6 +1,6 @@
 /**
 * @file
-* 00-molecules/navigation/wwu-menu/_wwu-menu.scss
+* 00-molecules/navigation/wwu-mobile-menu/_wwu-mobile-menu.scss
 */
 $close-toggle-size: 64px;
 
@@ -96,6 +96,15 @@ $close-toggle-size: 64px;
               border-color: transparent;
               background-color: $light-green;
             }
+          }
+        }
+
+        &.icon-with-text {
+          width: inherit;
+          height: inherit;
+          
+          .icon-text {
+            margin-top: 0;
           }
         }
 
