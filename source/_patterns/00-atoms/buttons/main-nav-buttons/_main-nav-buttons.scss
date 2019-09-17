@@ -23,7 +23,7 @@ $max-button-width: 250px;
       /* Keep borders even */
       &:first-of-type {
         a {
-          border-left-width: $half-spacing;
+          border-left-width: ($half-spacing / 2);
         }
       }
 
@@ -50,7 +50,7 @@ $max-button-width: 250px;
         white-space: normal;
         text-decoration: none;
         color: $white;
-        border: none;
+        border: ($half-spacing / 2) solid transparent;
         background-color: $dark-blue;
         font-family: $condensed;
         line-height: 1em;
@@ -61,6 +61,10 @@ $max-button-width: 250px;
           color: $black;
           outline: none;
           background-color: $light-green;
+        }
+
+        &:focus {
+          border: ($half-spacing / 2) dotted $black;
         }
 
         &:after {

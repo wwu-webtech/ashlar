@@ -19,8 +19,10 @@
   .browse-by-icons {
     @include breakpoint($medium) {
       max-width: 80%;
+      justify-content: space-evenly;
     }
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-around;
     margin: $double-spacing auto;
 
