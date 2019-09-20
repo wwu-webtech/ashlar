@@ -11,6 +11,9 @@
     @include breakpoint($medium) {
       max-width: 980px;
     }
+    &:after {
+      display: none;
+    }
   }
   h3 {
     text-align: center;
