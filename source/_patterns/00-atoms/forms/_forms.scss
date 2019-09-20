@@ -47,6 +47,10 @@ select {
   &:focus {
     outline: none;
     border-color: $light-blue;
+
+    @media (-ms-high-contrast: active) {
+      border-style: dotted;
+    }
   }
   &:disabled {
     cursor: not-allowed;
