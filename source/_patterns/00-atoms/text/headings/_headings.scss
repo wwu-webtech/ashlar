@@ -23,10 +23,6 @@ h6 {
 h1 {
   @include breakpoint($large) {
     font-size: $h1-font-size--max;
-    &:after {
-      border: 8px solid $darkest-blue;
-      width: 130px;
-    }
   }
   color: $darkest-blue;
   display: inline-block;
@@ -37,11 +33,14 @@ h1 {
   position: relative;
     &:after {
     content: "";
-    border: 4px solid $darkest-blue;
+    background-color: $darkest-blue;
+    border-color: $darkest-blue;
+    border-style:solid;
+    border-width: calc(4px + (4 - 1) * ((100vw - 300px) / (1200 - 300)));
     bottom: 0;
     left:0;
     position: absolute;
-    width:72px;
+    width:calc(70px + (150 - 70) * ((100vw - 300px) / (1200 - 300)));
     }
 }
 h2 {
