@@ -23,10 +23,26 @@ h6 {
 h1 {
   @include breakpoint($large) {
     font-size: $h1-font-size--max;
+    &:after {
+      border: 8px solid $darkest-blue;
+      width: 130px;
+    }
   }
   color: $darkest-blue;
+  display: inline-block;
+  font-family: $title-font;
   font-size: $h1-font-size;
   font-weight: $font-weight--bold;
+  padding-bottom: $double-spacing;
+  position: relative;
+    &:after {
+    content: "";
+    border: 4px solid $darkest-blue;
+    bottom: 0;
+    left:0;
+    position: absolute;
+    width:72px;
+    }
 }
 h2 {
   @include breakpoint($large) {
