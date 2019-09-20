@@ -70,12 +70,10 @@ h5 + h6 {
 main {
   h2 {
     padding-bottom: ($standard-spacing * 1.5);
-    border-bottom: $border-width--thickest solid $dark-blue;
   }
 }
 
 .sans-serif-headings {
-  h1,
   h2,
   h3,
   h4,
