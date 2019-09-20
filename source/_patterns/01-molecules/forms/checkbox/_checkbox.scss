@@ -69,6 +69,11 @@ input[type="radio"] {
     + label {
       &:before {
         border-color: $light-blue;
+        box-shadow: $focus-shadow;
+        
+        @media (-ms-high-contrast: active) {
+          border-style: dotted;
+        }
       }
     }
   }
