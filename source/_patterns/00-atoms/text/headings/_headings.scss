@@ -36,7 +36,7 @@ h1 {
     background-color: $darkest-blue;
     border-color: $darkest-blue;
     border-style:solid;
-    border-width: calc(4px + (4 - 1) * ((100vw - 300px) / (1200 - 300)));
+    border-width: calc(4px + (5 - 4) * ((100vw - 300px) / (1200 - 300)));
     bottom: 0;
     left:0;
     position: absolute;
