@@ -19,6 +19,9 @@ $max-border-width--thickest: 10px;
 $border-width--thickest: calc(#{$min-border-width--thickest} + #{strip-unit($max-border-width--thickest - $min-border-width--thickest)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 $focus-outline: $border-width dotted;
 $focus-outline--thicker: $border-width--thicker dotted;
+$border-radius--round: 100px;
+$border-radius--round-square: 10px;
+$border-radius--square: 5px;
 
 /* Content Area */
 $max-content-width: 1300px;

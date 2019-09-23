@@ -62,7 +62,7 @@
       content: "";
       transition: all $standard-ease $fast-transition-speed;
       transform: translate(-50%, $standard-spacing);
-      border-radius: $button-border-radius--round-square;
+      border-radius: $border-radius--round-square;
       background: $link-blue;
     }
 

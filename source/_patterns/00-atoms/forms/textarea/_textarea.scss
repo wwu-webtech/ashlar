@@ -2,35 +2,3 @@
  * @file
  * atoms/forms/textarea/_textarea.scss
  */
-textarea {
-  @include breakpoint($medium) {
-    border-width: $border-width--thicker;
-  }
-  max-width: 100%;
-  margin-bottom: $standard-spacing;
-  padding: $standard-spacing;
-  resize: vertical;
-  border: solid $dark-blue $border-width;
-
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-appearnce: none;
-
-  &:disabled {
-    color: $gray;
-    border-color: $gray;
-    background-color: $light-gray;
-  }
-  &:focus {
-    outline: none;
-    box-shadow: $focus-shadow;
-  }
-  &:disabled {
-    cursor: not-allowed;
-    background-color: $white;
-    &:hover {
-      border: $gray;
-      border-width: 1px;
-    }
-  }
-}
