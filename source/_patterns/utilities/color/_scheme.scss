@@ -14,7 +14,7 @@ $link-color-light: $light-blue;
 $link-color-light--hover: $light-green;
 
 // State Colors
-$focus-shadow: 2px 2px 4px 2px transparentize($dark-blue, 0.5);
+$focus-shadow: 0 5px 10px transparentize($blue, 0.84), 0 3px 6px transparentize($black, 0.77);
 $hover-opacity: 0.85;
 
 // Accent Colors

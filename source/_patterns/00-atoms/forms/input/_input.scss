@@ -2,14 +2,3 @@
  * @file
  * atoms/forms/input/_input.scss
  */
-$select-input-size: 28px;
-$select-input-size--smaller: 24px;
-
-
-input[type="search"] {
-  appearance: none;
-}
-
-input[type="file"] {
-  margin-bottom: $half-spacing;
-}

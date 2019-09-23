@@ -2,24 +2,3 @@
  * @file
  * atoms/forms/select/_select.scss
  */
-
-select {
-  @include breakpoint($medium) {
-    border-width: $border-width--thicker;
-  }
-  max-width: 100%;
-  margin-bottom: $standard-spacing;
-  padding: $half-spacing;
-  color: $black;
-  border: solid $dark-blue $border-width;
-  background-repeat: no-repeat;
-  background-position: calc(100% - 18px);
-
-  appearance: none;
-
-  &:disabled {
-    color: $gray;
-    border-color: $gray;
-    background-color: $light-gray;
-  }
-}

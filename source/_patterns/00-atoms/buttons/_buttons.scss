@@ -2,9 +2,7 @@
 * @file
 * 00-atoms/buttons/_buttons--base.scss
 */
-$button-border-radius--round: 100px;
-$button-border-radius--round-square: 10px;
-$button-border-radius--square: 5px;
+
 @mixin button-box-shadow($color) {
   box-shadow: 2px 2px 0 $color;
 }
@@ -17,7 +15,7 @@ input[type="submit"] {
   transition: background $button-transition-speed, color $button-transition-speed, box-shadow $fast-transition-speed;
   color: $black;
   border: solid $border-width transparent;
-  border-radius: $button-border-radius--round-square;
+  border-radius: $border-radius--round-square;
   background: $light-gray;
 
   &:hover,
@@ -97,7 +95,7 @@ input[type="submit"] {
   border-width: $border-width;
   border-style: solid;
   border-color: transparent;
-  border-radius: $button-border-radius--round;
+  border-radius: $border-radius--round;
   background: $blue;
   line-height: 1;
   font-size: $h6-font-size--max; /* 24px needed to meet large text contrast ratio */
@@ -119,7 +117,7 @@ input[type="submit"] {
   }
 
   &.square {
-    border-radius: $button-border-radius--square;
+    border-radius: $border-radius--square;
   }
 
   &.medium {
