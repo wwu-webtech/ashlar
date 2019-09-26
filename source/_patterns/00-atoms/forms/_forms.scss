@@ -20,7 +20,8 @@ label {
   font-weight: $font-weight--semibold;
 
   &.required:after,
-  &.form-required:after {
+  &.form-required:after,
+  .form-required:after {
     content: " *";
     color: $blue;
     font-weight: $font-weight--regular;
