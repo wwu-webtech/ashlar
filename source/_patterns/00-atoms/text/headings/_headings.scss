@@ -35,11 +35,11 @@ h1 {
     background-color: $darkest-blue;
     border-color: $darkest-blue;
     border-style:solid;
-    border-width: calc(4px + 1 * ((100vw - 300px) / (1200 - 300)));
+    border-width: calc(4px + 1 * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
     bottom: 0;
     left:0;
     position: absolute;
-    width:calc(70px + 80 * ((100vw - 300px) / (1200 - 300)));
+    width:calc(70px + 80 * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
     }
 }
 h2 {
