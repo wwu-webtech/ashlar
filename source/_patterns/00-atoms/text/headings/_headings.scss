@@ -17,7 +17,6 @@ h6 {
   margin: $heading-margin-top 0 $heading-margin-bottom;
   color: $dark-blue;
   font-family: $heading-font-family;
-  font-weight: $font-weight--bold;
   line-height: $heading-line-height;
 }
 h1 {
@@ -25,33 +24,51 @@ h1 {
     font-size: $h1-font-size--max;
   }
   color: $darkest-blue;
+  display: inline-block;
+  font-family: $title-font;
   font-size: $h1-font-size;
   font-weight: $font-weight--bold;
+  padding-bottom: $double-spacing;
+  position: relative;
+    &:after {
+    content: "";
+    background-color: $darkest-blue;
+    border-color: $darkest-blue;
+    border-style:solid;
+    border-width: calc(4px + 1 * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+    bottom: 0;
+    left:0;
+    position: absolute;
+    width:calc(70px + 80 * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+    }
 }
 h2 {
   @include breakpoint($large) {
     font-size: $h2-font-size--max;
   }
-  color: $darkest-blue;
   font-size: $h2-font-size;
+  font-weight: $font-weight--bold;
 }
 h3 {
   @include breakpoint($large) {
     font-size: $h3-font-size--max;
   }
   font-size: $h3-font-size;
+  font-weight: $font-weight--semibold;
 }
 h4 {
   @include breakpoint($large) {
     font-size: $h4-font-size--max;
   }
   font-size: $h4-font-size;
+  font-weight:$font-weight--regular;
 }
 h5 {
   @include breakpoint($large) {
     font-size: $h5-font-size--max;
   }
   font-size: $h5-font-size;
+  font-weight:$font-weight--regular;
 }
 h6 {
   @include breakpoint($large) {
@@ -70,12 +87,10 @@ h5 + h6 {
 main {
   h2 {
     padding-bottom: ($standard-spacing * 1.5);
-    border-bottom: $border-width--thickest solid $dark-blue;
   }
 }
 
 .sans-serif-headings {
-  h1,
   h2,
   h3,
   h4,
