@@ -3,6 +3,20 @@ var $accordionButton = $('.accordion-set .expand', context);
 $accordionButton.filter('.is-expanded').attr('aria-expanded', 'true');
 $accordionButton.not('.is-expanded').attr('aria-expanded', 'false');
 
+/* Set unique ids and aria-controls */
+var $accordionButton = $(".accordion-set .expand");
+var $accordionContent = $(".accordion-set .content");
+
+for (var i = 0; i < $accordionContent.length; i++) {
+  $accordionContent[i].setAttribute('id', 'accordion-content-' + i);
+}
+
+$accordionButton.each(function() {
+  var $contentID = $(this).parent().siblings($accordionContent).attr('id');
+  $(this).attr('aria-controls', $contentID);
+});
+
+
 
 /* Toggle expansion */
 $accordionButton.click(function () {
