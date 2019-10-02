@@ -1,15 +1,14 @@
 /**
- * @file
- * organisms/global/site-footer/_site-footer.scss
- */
+* @file
+* organisms/global/site-footer/_site-footer.scss
+*/
 
 .site-footer {
   @extend %blue-bg;
   @include breakpoint($medium) {
     -ms-grid-columns: $standard-spacing 1fr $standard-spacing 1fr $standard-spacing 1fr $standard-spacing;
     -ms-grid-rows: auto auto;
-    grid-template-areas:
-    ". footer_left . footer_center . footer_right ."
+    grid-template-areas: ". footer_left . footer_center . footer_right ."
     ". footer_bottom footer_bottom footer_bottom footer_bottom footer_bottom .";
     grid-template-columns: $standard-spacing 1fr $standard-spacing 1fr $standard-spacing 1fr $standard-spacing;
     grid-template-rows: auto auto;
@@ -24,8 +23,7 @@
 
   -ms-grid-columns: $small-screen-columns;
   -ms-grid-rows: auto $standard-spacing auto $standard-spacing auto;
-  grid-template-areas:
-  ". footer_left   ."
+  grid-template-areas: ". footer_left   ."
   ". ............. ."
   ". footer_center ."
   ". ............. ."
@@ -34,9 +32,13 @@
   grid-template-columns: $small-screen-columns;
   grid-template-rows: auto $standard-spacing auto $standard-spacing auto;
 
-  h1, h2, h3, h4, h5 {
-    font-family: $sans-serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
     margin-top: 0;
+    font-family: $sans-serif;
   }
 
   .block-title {
@@ -95,6 +97,7 @@
       -ms-grid-row: 2;
       -ms-grid-row-span: 1;
     }
+
     grid-area: footer_bottom;
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
@@ -104,6 +107,29 @@
 
   .social-media-links {
     justify-content: flex-start;
+
+    .social-icon {
+      color: $blue;
+      background-color: $white;
+
+      svg {
+        fill: $blue;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $lightest-green;
+
+        svg {
+          fill: $dark-blue;
+        }
+      }
+
+      &:focus {
+        outline-color: $lightest-green;
+      }
+    }
   }
 
   .ribbon {

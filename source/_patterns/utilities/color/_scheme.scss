@@ -53,7 +53,7 @@ $lightest-bg-blue: mix($white, $blue, 90%);
     color: $white;
   }
 
-  a:not(.button) {
+  a:not(.button):not(.social-icon) {
     color: $light-blue;
 
     &:hover,
@@ -103,7 +103,7 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   color: $white;
   background: $gray;
 
-  a:not(.button) {
+  a:not(.button):not(.social-icon) {
     color: $white;
 
     &:hover,
@@ -158,7 +158,7 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   color: $black;
   background: $light-gray;
 
-  a:not(.button) {
+  a:not(.button):not(.social-icon) {
     color: mix($dark-blue, $link-blue, 50%);
 
     &:hover,
@@ -193,7 +193,7 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   @extend %light-gray-bg;
   background: $lightest-gray;
 
-  a:not(.button) {
+  a:not(.button):not(.social-icon) {
     color: $link-blue;
   }
 }
@@ -231,7 +231,7 @@ $lightest-bg-blue: mix($white, $blue, 90%);
     border-bottom-color: $light-green;
   }
 
-  a:not(.button) {
+  a:not(.button):not(.social-icon) {
     &:hover,
     &:focus,
     &:active {
@@ -262,7 +262,7 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   @extend %light-gray-bg;
   background: $light-bg-blue;
 
-  a:not(.button) {
+  a:not(.button):not(.social-icon) {
     &:hover,
     &:focus,
     &:active {
@@ -293,7 +293,7 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   @extend %lightest-gray-bg;
   background: $lightest-bg-blue;
 
-  a:not(.button) {
+  a:not(.button):not(.social-icon) {
     &:hover,
     &:focus,
     &:active {
@@ -319,12 +319,21 @@ $lightest-bg-blue: mix($white, $blue, 90%);
 }
 
 
-.black-bg { @extend %black-bg; }
-.gray-bg { @extend %gray-bg; }
-.light-gray-bg { @extend %light-gray-bg; }
-.lightest-gray-bg { @extend %lightest-gray-bg; }
-.dark-blue-bg { @extend %dark-blue-bg; }
-
+.black-bg {
+  @extend %black-bg;
+}
+.gray-bg {
+  @extend %gray-bg;
+}
+.light-gray-bg {
+  @extend %light-gray-bg;
+}
+.lightest-gray-bg {
+  @extend %lightest-gray-bg;
+}
+.dark-blue-bg {
+  @extend %dark-blue-bg;
+}
 .blue-bg {
   @extend %blue-bg;
 
@@ -334,6 +343,73 @@ $lightest-bg-blue: mix($white, $blue, 90%);
     }
   }
 }
+.light-blue-bg {
+  @extend %light-blue-bg;
+}
+.lightest-blue-bg {
+  @extend %lightest-blue-bg;
+}
 
-.light-blue-bg { @extend %light-blue-bg; }
-.lightest-blue-bg { @extend %lightest-blue-bg; }
+.black-bg,
+.dark-blue-bg {
+  .social-icon {
+    color: $dark-blue;
+    background-color: $white;
+
+    svg {
+      fill: $dark-blue;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $light-green;
+    }
+
+    &:focus {
+      outline-color: $white;
+    }
+  }
+}
+
+.black-bg {
+  .social-icon {
+    svg {
+      fill: $black;
+    }
+  }
+}
+
+.blue-bg,
+.gray-bg {
+  .social-icon {
+    color: $dark-blue;
+    background-color: $white;
+
+    svg {
+      fill: $blue;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $lightest-green;
+
+      svg {
+        fill: $dark-blue;
+      }
+    }
+
+    &:focus {
+      outline-color: $lightest-green;
+    }
+  }
+}
+
+.gray-bg {
+  .social-icon {
+    svg {
+      fill: $gray;
+    }
+  }
+}
