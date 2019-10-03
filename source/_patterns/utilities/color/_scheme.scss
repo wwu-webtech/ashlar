@@ -449,6 +449,75 @@ $lightest-bg-blue: mix($white, $blue, 90%);
     }
   }
 }
+.light-blue-bg {
+  @extend %light-blue-bg;
+}
+.lightest-blue-bg {
+  @extend %lightest-blue-bg;
+}
 
-.light-blue-bg { @extend %light-blue-bg; }
-.lightest-blue-bg { @extend %lightest-blue-bg; }
+.black-bg,
+.dark-blue-bg,
+.wwu-footer {
+  .social-icon {
+    color: $dark-blue;
+    background-color: $white;
+
+    svg {
+      fill: $dark-blue;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $light-green;
+    }
+
+    &:focus {
+      outline-color: $white;
+    }
+  }
+}
+
+.black-bg {
+  .social-icon {
+    svg {
+      fill: $black;
+    }
+  }
+}
+
+.blue-bg,
+.gray-bg,
+.site-footer {
+  .social-icon {
+    color: $dark-blue;
+    background-color: $white;
+
+    svg {
+      fill: $blue;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $lightest-green;
+
+      svg {
+        fill: $dark-blue;
+      }
+    }
+
+    &:focus {
+      outline-color: $lightest-green;
+    }
+  }
+}
+
+.gray-bg {
+  .social-icon {
+    svg {
+      fill: $gray;
+    }
+  }
+}
