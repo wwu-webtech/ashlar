@@ -4,6 +4,6 @@ attributes:
     - card-list
 label:
 cards:
-- molecules-card-html
-- molecules-card-html
-- molecules-card-html
+- molecules-card-html-event
+- molecules-card-html-event
+- molecules-card-html-event
