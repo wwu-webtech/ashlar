@@ -41,6 +41,10 @@
       font-weight: $font-weight--regular;
       line-height: 0.9em;
     }
+
+    .blue-bg h2 {
+      color: $white;
+    }
   }
 
   .layout__region--top,

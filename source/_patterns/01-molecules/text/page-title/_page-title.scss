@@ -7,7 +7,7 @@
   @include breakpoint($large) {
     font-size: $h1-font-size--max--larger;
   }
-  text-align: center;
+  text-align: left;
   font-size: $h1-font-size--larger;
 }
 
@@ -44,7 +44,11 @@
       text-transform: none;
       color: $white;
       font-family: $sans-serif;
-      font-size: $h1-font-size;
+      font-size: $h1-font-size--larger;
+
+      &:after {
+        border: none;
+      }
     }
   }
 }
