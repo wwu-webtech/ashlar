@@ -35,8 +35,6 @@
 {% set attributes = attributes.addClass(classes) %}
 {% set title_attributes = title_attributes.addClass('block__title') %}
 
-{{ attach_library('ashlar/make-waves-fonts') }}
-
 {% block template %}
   <div{{ attributes }}>
     {% include "@organisms/blocks/block-template/block-template.html.twig" %}

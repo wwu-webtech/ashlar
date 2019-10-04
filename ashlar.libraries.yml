@@ -64,10 +64,6 @@ language-select:
     language-select.js: {}
   dependencies:
     - core/jquery
-make-waves-fonts:
-  css:
-    theme:
-      https://cloud.typography.com/6968476/7999012/css/fonts.css: {}
 menu-extras:
   version: 1.x
   js:
