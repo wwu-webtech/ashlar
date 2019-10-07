@@ -2,19 +2,19 @@
  * @file
  * 00-atoms/icons/social-media-icons/_social-media-icons.scss
  */
+$icon-space: (($toggle-size - $icon-size) / 2) - 1;
 
 .social-icon {
   display: block;
   width: $toggle-size;
   height: $toggle-size;
-  transition: $standard-ease $button-transition-speed;
-  background-color: $blue;
+  transition: $standard-ease $button-transition-speed background-color;
   color: $white;
+  background-color: $blue;
 
   svg {
     width: 100%;
-    margin-top: (($toggle-size - $icon-size) / 2) - 1;
-    margin-left: (($toggle-size - $icon-size) / 2) - 1;
+    padding: (($toggle-size - $icon-size) / 2) - 1;
     transition: fill $standard-ease $button-transition-speed;
 
     fill: $white;
@@ -25,6 +25,16 @@
   &:active {
     color: $white;
     background-color: $dark-blue;
+  }
+
+  &:focus {
+    @include breakpoint($medium) {
+      outline-width: $border-width--thicker;
+      outline-offset: $border-width--thicker;
+    }
+    outline: $focus-outline;
+    outline-color: $dark-blue;
+    outline-offset: $border-width;
   }
 }
 

@@ -1,23 +1,18 @@
 multiple: false
 attributes:
-  Attribute(): {}
-classes:
-- field
-- content-switcher
-title_attributes:
-  Attribute(): {}
-title_classes:
-- field__title
+  Attribute():
+    class:
+    - content-switcher
 items:
 - title: Content 1
   content: We have an infinite amount to learn both from nature and from each other.
     Science has not yet mastered prophecy. We predict too much for the next year and
     yet far too little for the next 10.
   attributes:
-    Attribute(): {}
-  classes:
-  - switch-01
-  - active
+    Attribute():
+      class:
+      - switch-01
+      - active
   button_id: switch-button-1
   content_id: switch-content-1
 - title: Content 2
@@ -26,17 +21,17 @@ items:
     more time congratulating people who have succeeded than encouraging people who
     have not.
   attributes:
-    Attribute(): {}
-  classes:
-  - switch-02
+    Attribute():
+      class:
+      - switch-02
   button_id: switch-button-2
   content_id: switch-content-2
 - title: Content 3
   content: Astronomy compels the soul to look upward, and leads us from this world
     to another.
   attributes:
-    Attribute(): {}
-  classes:
-  - switch-03
+    Attribute():
+      class:
+      - switch-03
   button_id: switch-button-3
   content_id: switch-content-3
