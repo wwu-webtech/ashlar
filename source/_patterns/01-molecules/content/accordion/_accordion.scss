@@ -16,7 +16,8 @@ $accordion-border: $dark-blue solid $border-width--thicker;
       border-bottom: $accordion-border;
     }
 
-    .field__title {
+    .field__title,
+    .title {
       margin: 0;
 
       .expand {

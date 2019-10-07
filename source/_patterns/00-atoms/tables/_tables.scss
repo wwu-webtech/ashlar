@@ -1,7 +1,7 @@
 /**
- * @file
- * 00-atoms/tables/_tables.scss
- */
+* @file
+* 00-atoms/tables/_tables.scss
+*/
 
 table {
   width: 100%;
@@ -39,7 +39,49 @@ th {
   border-left: none;
   background-color: mix(black, $light-gray, 20%);
   font-size: $p-font-size--smaller;
+
+  &[colspan],
+  &[rowspan] {
+    position: relative;
+    color: $white;
+    background-color: mix(black, $light-gray, 50%);
+
+    &:after {
+      position: absolute;
+      z-index: 1;
+      height: 100%;
+      content: "";
+      background: $white;
+    }
+  }
+
+  &[colspan] {
+    text-align: center;
+    &:after {
+      @include breakpoint($medium) {
+        right: -$border-width--thicker - 1px;
+        width: $border-width--thicker;
+      }
+      top: 0;
+      right: -$border-width - 1px;
+      width: $border-width;
+    }
+  }
+
+  &[rowspan] {
+    &:after {
+      @include breakpoint($medium) {
+        bottom: -$border-width--thicker - 1px;
+        height: $border-width--thicker;
+      }
+      bottom: -$border-width - 1px;
+      left: 0;
+      width: 100%;
+      height: $border-width;
+    }
+  }
 }
+
 td {
   @include breakpoint($medium) {
     border-width: $border-width--thicker;
@@ -58,11 +100,13 @@ td {
     border-right: $border-width solid $lightest-gray;
   }
 }
+
 tr,
 td,
 th {
   vertical-align: middle;
 }
+
 caption {
   padding-bottom: $standard-spacing;
   font-size: $p-font-size--smaller;
