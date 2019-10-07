@@ -37,8 +37,8 @@
       color: $blue;
       border-bottom: none;
       font-family: $title-font;
-      font-weight: $font-weight--regular;
       font-size: $title-font-size--smaller;
+      font-weight: $font-weight--regular;
       line-height: 0.9em;
     }
 
@@ -214,6 +214,26 @@
         }
         right: 0;
         transform: translatex(calc(100% - 3px));
+      }
+    }
+  }
+
+  .card-list {
+    .card {
+      > div {
+        padding: 0;
+      }
+
+      .image {
+        > div {
+          height: inherit;
+        }
+
+        img {
+          height: inherit;
+
+          object-fit: none;
+        }
       }
     }
   }
