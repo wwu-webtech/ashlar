@@ -351,7 +351,8 @@ $lightest-bg-blue: mix($white, $blue, 90%);
 }
 
 .black-bg,
-.dark-blue-bg {
+.dark-blue-bg,
+.wwu-footer {
   .social-icon {
     color: $dark-blue;
     background-color: $white;
@@ -381,7 +382,8 @@ $lightest-bg-blue: mix($white, $blue, 90%);
 }
 
 .blue-bg,
-.gray-bg {
+.gray-bg,
+.site-footer {
   .social-icon {
     color: $dark-blue;
     background-color: $white;
