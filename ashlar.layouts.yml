@@ -33,6 +33,21 @@ layout_twocol_page_width:
       label: First
     second:
       label: Second
+layout_threecol_page_width:
+  label: 'Three column - full page width'
+  path: templates/layouts/threecol
+  template: threecol--page-width
+  category: 'Columns: 3'
+  default_region: first
+  icon_map:
+    - [first, second, third]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
 layout_flex:
   label: 'Flex Container'
   path: templates/layouts/flex

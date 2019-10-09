@@ -82,3 +82,31 @@
     }
   }
 }
+
+.layout--threecol--page-width {
+  @include breakpoint($large) {
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+  }
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$standard-spacing;
+
+  > .layout__region {
+    flex: 0 1 100%;
+    max-width: none;
+  }
+
+  > .layout__region--first,
+  > .layout__region--third {
+    @include breakpoint($small) {
+      flex: 0 1 33%;
+    }
+  }
+
+  > .layout__region--second {
+    @include breakpoint($small) {
+      flex: 0 1 34%;
+    }
+  }
+}
