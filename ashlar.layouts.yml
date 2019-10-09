@@ -20,6 +20,19 @@ layout_onecol_page_width:
   regions:
     first:
       label: First
+layout_twocol_page_width:
+  label: 'Two column - full page width'
+  path: templates/layouts/twocol
+  template: twocol--page-width
+  category: 'Columns: 2'
+  default_region: first
+  icon_map:
+    - [first, second]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
 layout_flex:
   label: 'Flex Container'
   path: templates/layouts/flex
