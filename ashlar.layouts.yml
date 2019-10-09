@@ -1,7 +1,18 @@
 layout_onecol_full:
-  label: 'One column - full width'
+  label: 'One column - full content width'
   path: templates/layouts/onecol
   template: onecol--full
+  category: 'Columns: 1'
+  default_region: first
+  icon_map:
+    - [first]
+  regions:
+    first:
+      label: First
+layout_onecol_page_width:
+  label: 'One column - full page width'
+  path: templates/layouts/onecol
+  template: onecol--page-width
   category: 'Columns: 1'
   default_region: first
   icon_map:
