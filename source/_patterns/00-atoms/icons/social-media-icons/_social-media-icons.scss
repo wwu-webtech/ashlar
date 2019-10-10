@@ -56,7 +56,7 @@ $icon-space: (($toggle-size - $icon-size) / 2) - 1;
 .my-western-links {
   .social-media-links {
     @include breakpoint($medium) {
-      max-width: 530px;
+      max-width: 600px;
       margin-top: -$triple-spacing;
       margin-left: 50%;
       transform: translatex(-50%);
