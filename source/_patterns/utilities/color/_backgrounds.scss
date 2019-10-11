@@ -25,7 +25,7 @@
     color: $white;
   }
 
-  a:not(.button) {
+  a:not([class]) {
     color: $light-blue;
 
     &:hover,
@@ -75,7 +75,7 @@
   color: $white;
   background: $gray;
 
-  a:not(.button) {
+  a:not([class]) {
     color: $white;
 
     &:hover,
@@ -130,7 +130,7 @@
   color: $black;
   background: $light-gray;
 
-  a:not(.button) {
+  a:not([class]) {
     color: mix($dark-blue, $link-blue, 50%);
 
     &:hover,
@@ -165,7 +165,7 @@
   @include light-gray-bg;
   background: $lightest-gray;
 
-  a:not(.button) {
+  a:not([class]) {
     color: $link-blue;
   }
 }
@@ -203,7 +203,7 @@
     border-bottom-color: $light-green;
   }
 
-  a:not(.button) {
+  a:not([class]) {
     &:hover,
     &:focus,
     &:active {
@@ -234,7 +234,7 @@
   @include light-gray-bg;
   background: $light-bg-blue;
 
-  a:not(.button) {
+  a:not([class]) {
     &:hover,
     &:focus,
     &:active {
@@ -265,7 +265,7 @@
   @include lightest-gray-bg;
   background: $lightest-bg-blue;
 
-  a:not(.button) {
+  a:not([class]) {
     &:hover,
     &:focus,
     &:active {
