@@ -14,5 +14,4 @@ content_attributes:
     - comment__content
 content:
   join():
-  - molecules-field-html-comment-body
   - molecules-links-html
