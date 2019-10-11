@@ -3,7 +3,8 @@
 * 00-atoms/images/image-background/_image-background.scss
 */
 
-.background-image {
+.background-image,
+.background-image > div {
   position: absolute;
   z-index: -1;
   top: 0;
