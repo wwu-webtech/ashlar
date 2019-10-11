@@ -1,34 +1,6 @@
-/**
-* @file
-* utilities/color/_scheme.scss
-*/
-
-// Text Colors
-$text-color: $black;
-$text-color-light: $white;
-
-// Link Colors
-$link-color: $link-blue;
-$link-color--hover: $dark-blue;
-$link-color-light: $light-blue;
-$link-color-light--hover: $light-green;
-
-// State Colors
-$focus-shadow: 0 5px 10px transparentize($blue, 0.84), 0 3px 6px transparentize($black, 0.77);
-$hover-opacity: 0.85;
-
-// Accent Colors
-$warning-color: $yellow;
-$alert-color: $red;
-
-// Additional shades of blue use as backgrounds only
-$light-bg-blue: mix($white, $blue, 80%);
-$lightest-bg-blue: mix($white, $blue, 90%);
-
-
-// Base styles for different color backgrounds. Use @extend to utilize these styles inside of other components.
+// Base styles for different color backgrounds. Use @include o utilize these styles inside of other components.
 // Note the cascade here, as the blue styles inherit from the gray styles of same shades (EG Dark blue inherits from black, blue inherits from gray, etc.)
-%black-bg {
+@mixin black-bg {
   color: $white;
   background: $black;
 
@@ -53,7 +25,7 @@ $lightest-bg-blue: mix($white, $blue, 90%);
     color: $white;
   }
 
-  a:not(.button):not(.social-icon) {
+  a:not(.button) {
     color: $light-blue;
 
     &:hover,
@@ -99,11 +71,11 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   }
 }
 
-%gray-bg {
+@mixin gray-bg {
   color: $white;
   background: $gray;
 
-  a:not(.button):not(.social-icon) {
+  a:not(.button) {
     color: $white;
 
     &:hover,
@@ -154,11 +126,11 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   }
 }
 
-%light-gray-bg {
+@mixin light-gray-bg {
   color: $black;
   background: $light-gray;
 
-  a:not(.button):not(.social-icon) {
+  a:not(.button) {
     color: mix($dark-blue, $link-blue, 50%);
 
     &:hover,
@@ -189,17 +161,17 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   }
 }
 
-%lightest-gray-bg {
-  @extend %light-gray-bg;
+@mixin lightest-gray-bg {
+  @include light-gray-bg;
   background: $lightest-gray;
 
-  a:not(.button):not(.social-icon) {
+  a:not(.button) {
     color: $link-blue;
   }
 }
 
-%dark-blue-bg {
-  @extend %black-bg;
+@mixin dark-blue-bg {
+  @include black-bg;
   background: $dark-blue;
 
   ul {
@@ -219,8 +191,8 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   }
 }
 
-%blue-bg {
-  @extend %gray-bg;
+@mixin blue-bg {
+  @include gray-bg;
   background: $blue;
 
   h2 {
@@ -231,7 +203,7 @@ $lightest-bg-blue: mix($white, $blue, 90%);
     border-bottom-color: $light-green;
   }
 
-  a:not(.button):not(.social-icon) {
+  a:not(.button) {
     &:hover,
     &:focus,
     &:active {
@@ -258,11 +230,11 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   }
 }
 
-%light-blue-bg {
-  @extend %light-gray-bg;
+@mixin light-blue-bg {
+  @include light-gray-bg;
   background: $light-bg-blue;
 
-  a:not(.button):not(.social-icon) {
+  a:not(.button) {
     &:hover,
     &:focus,
     &:active {
@@ -289,11 +261,11 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   }
 }
 
-%lightest-blue-bg {
-  @extend %lightest-gray-bg;
+@mixin lightest-blue-bg {
+  @include lightest-gray-bg;
   background: $lightest-bg-blue;
 
-  a:not(.button):not(.social-icon) {
+  a:not(.button) {
     &:hover,
     &:focus,
     &:active {
@@ -320,22 +292,22 @@ $lightest-bg-blue: mix($white, $blue, 90%);
 
 
 .black-bg {
-  @extend %black-bg;
+  @include black-bg;
 }
 .gray-bg {
-  @extend %gray-bg;
+  @include gray-bg;
 }
 .light-gray-bg {
-  @extend %light-gray-bg;
+  @include light-gray-bg;
 }
 .lightest-gray-bg {
-  @extend %lightest-gray-bg;
+  @include lightest-gray-bg;
 }
 .dark-blue-bg {
-  @extend %dark-blue-bg;
+  @include dark-blue-bg;
 }
 .blue-bg {
-  @extend %blue-bg;
+  @include blue-bg;
 
   &.erm-headings {
     h2 {
@@ -344,10 +316,10 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   }
 }
 .light-blue-bg {
-  @extend %light-blue-bg;
+  @include light-blue-bg;
 }
 .lightest-blue-bg {
-  @extend %lightest-blue-bg;
+  @include lightest-blue-bg;
 }
 
 .black-bg,

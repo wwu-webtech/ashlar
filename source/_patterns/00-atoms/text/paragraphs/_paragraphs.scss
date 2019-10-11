@@ -11,6 +11,6 @@ p {
 }
 
 .intro {
-  @extend %font-size--larger;
+  @include font-size--larger;
   color: $dark-blue;
 }
