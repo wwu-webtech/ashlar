@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ * Four column layout that extends across the full page width.
+ */
+ #}
+  {%
+   set classes = [
+     'layout',
+     'layout--fourcol--page-width'
+   ]
+  %}
+
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    {% if content.first %}
+      <div {{ region_attributes.first.addClass('layout__region', 'layout__region--first') }}>
+        {{ content.first }}
+      </div>
+    {% endif %}
+
+    {% if content.second %}
+      <div {{ region_attributes.second.addClass('layout__region', 'layout__region--second') }}>
+        {{ content.second }}
+      </div>
+    {% endif %}
+
+    {% if content.third %}
+      <div {{ region_attributes.third.addClass('layout__region', 'layout__region--third') }}>
+        {{ content.third }}
+      </div>
+    {% endif %}
+
+    {% if content.fourth %}
+      <div {{ region_attributes.fourth.addClass('layout__region', 'layout__region--fourth') }}>
+        {{ content.fourth }}
+      </div>
+    {% endif %}
+
+  </div>
+{% endif %}

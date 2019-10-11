@@ -97,8 +97,8 @@ input[type="submit"] {
   border-color: transparent;
   border-radius: $border-radius--round;
   background: $blue;
+  font-size: $p-font-size;
   line-height: 1;
-  font-size: $h6-font-size--max; /* 24px needed to meet large text contrast ratio */
 
   &:active {
     box-shadow: none !important;
@@ -118,6 +118,11 @@ input[type="submit"] {
 
   &.square {
     border-radius: $border-radius--square;
+  }
+
+  &.small {
+    padding: $half-spacing $standard-spacing;
+    font-size: $p-font-size--smaller;
   }
 
   &.medium {

@@ -9,7 +9,6 @@
   flex-flow: row wrap;
   align-content: start;
   margin-bottom: $standard-spacing;
-  padding: $half-spacing;
   transition: $fast-transition-speed $standard-ease;
 
   &:hover,
@@ -58,7 +57,6 @@
       &:hover,
       &:focus,
       &:active {
-        color: $link-blue;
         outline: none;
         background: none;
       }
