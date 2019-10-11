@@ -1,12 +1,10 @@
 /* Add aria labels to all buttons */
 var $accordionButton = $('.accordion-set .expand', context);
+var $accordionContent = $(".accordion-set .content");
 $accordionButton.filter('.is-expanded').attr('aria-expanded', 'true');
 $accordionButton.not('.is-expanded').attr('aria-expanded', 'false');
 
 /* Set unique ids and aria-controls */
-var $accordionButton = $(".accordion-set .expand");
-var $accordionContent = $(".accordion-set .content");
-
 for (var i = 0; i < $accordionContent.length; i++) {
   $accordionContent[i].setAttribute('id', 'accordion-content-' + i);
 }

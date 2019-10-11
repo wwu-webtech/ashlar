@@ -1,5 +1,5 @@
 layout_onecol_full:
-  label: 'One column - full width'
+  label: 'One column - full content width'
   path: templates/layouts/onecol
   template: onecol--full
   category: 'Columns: 1'
@@ -9,6 +9,62 @@ layout_onecol_full:
   regions:
     first:
       label: First
+layout_onecol_page_width:
+  label: 'One column - full page width'
+  path: templates/layouts/onecol
+  template: onecol--page-width
+  category: 'Columns: 1'
+  default_region: first
+  icon_map:
+    - [first]
+  regions:
+    first:
+      label: First
+layout_twocol_page_width:
+  label: 'Two column - full page width'
+  path: templates/layouts/twocol
+  template: twocol--page-width
+  category: 'Columns: 2'
+  default_region: first
+  icon_map:
+    - [first, second]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+layout_threecol_page_width:
+  label: 'Three column - full page width'
+  path: templates/layouts/threecol
+  template: threecol--page-width
+  category: 'Columns: 3'
+  default_region: first
+  icon_map:
+    - [first, second, third]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+layout_fourcol_page_width:
+  label: 'Four column - full page width'
+  path: templates/layouts/fourcol
+  template: fourcol--page-width
+  category: 'Columns: 4'
+  default_region: first
+  icon_map:
+    - [first, second, third, fourth]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
+    fourth:
+      label: Fourth
 layout_flex:
   label: 'Flex Container'
   path: templates/layouts/flex
@@ -20,63 +76,6 @@ layout_flex:
   regions:
     flex:
       label: Flex
-layout_twocol_75_25:
-  label: 'Deprecated - Use layouts above'
-  path: templates/retired-layouts/twocol_75_25
-  template: layout--twocol-75-25
-  category: 'Columns: 2'
-  default_region: first
-  icon_map:
-    - [top]
-    - [first, first, first, second]
-    - [bottom]
-  regions:
-    top:
-      label: Top
-    first:
-      label: First
-    second:
-      label: Second
-    bottom:
-      label: Bottom
-layout_twocol_34_66:
-  label: 'Deprecated - Use layouts above'
-  path: templates/retired-layouts/twocol_34_66
-  template: layout--twocol-34-66
-  category: 'Columns: 2'
-  default_region: first
-  icon_map:
-    - [top]
-    - [first, second, second]
-    - [bottom]
-  regions:
-    top:
-      label: Top
-    first:
-      label: First
-    second:
-      label: Second
-    bottom:
-      label: Bottom
-layout_twocol_66_34:
-  label: 'Deprecated - Use layouts above'
-  path: templates/retired-layouts/twocol_66_34
-  template: layout--twocol-66-34
-  category: 'Columns: 2'
-  default_region: first
-  icon_map:
-    - [top]
-    - [second, second, first]
-    - [bottom]
-  regions:
-    top:
-      label: Top
-    first:
-      label: First
-    second:
-      label: Second
-    bottom:
-      label: Bottom
 layout_majors:
   label: 'Majors'
   path: templates/layouts/majors

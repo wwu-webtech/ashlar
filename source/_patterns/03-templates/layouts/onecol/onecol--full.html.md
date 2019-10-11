@@ -1,4 +1,4 @@
 ---
-title: One Column - Full page
+title: One Column - Full content
 ---
 Single column layout.
