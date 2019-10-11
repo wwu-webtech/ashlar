@@ -52,3 +52,58 @@ $icon-space: (($toggle-size - $icon-size) / 2) - 1;
     margin: $standard-spacing $standard-spacing 0 0;
   }
 }
+
+.my-western-links {
+  .social-media-links {
+    @include breakpoint($medium) {
+      max-width: 600px;
+      margin-top: -$triple-spacing;
+      margin-left: 50%;
+      transform: translatex(-50%);
+    }
+    @include breakpoint(1080px) {
+      margin-top: -$triple-spacing * 3;
+    }
+    justify-content: center;
+    width: 100%;
+    max-width: none;
+  }
+
+  .social-icon {
+    @include breakpoint($medium) {
+      font-size: 16px;
+    }
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: initial;
+    height: initial;
+    padding: $standard-spacing;
+    text-align: center;
+    text-decoration: none;
+    background: transparent;
+    font-size: 14px;
+    line-height: 1em;
+
+    &:hover,
+    &:active,
+    &:focus {
+      outline-color: $white;
+      background: $blue;
+    }
+
+    svg {
+      @include breakpoint($medium) {
+        width: $toggle-size--larger;
+        height: $toggle-size--larger;
+      }
+      width: $toggle-size;
+      height: $toggle-size;
+      margin-bottom: $half-spacing;
+    }
+
+    .icon-text {
+      margin-bottom: $standard-spacing;
+    }
+  }
+}
