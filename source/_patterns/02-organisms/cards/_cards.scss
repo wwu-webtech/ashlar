@@ -16,8 +16,8 @@ $spotlight-height--large: 300px;
 .card-2col--view .view-content {
   display: -ms-grid;
   display: grid;
-  grid-column-gap: $standard-spacing;
 
+  grid-column-gap: $standard-spacing;
   -ms-grid-columns: 1fr 1fr;
   -ms-grid-rows: auto;
   grid-template-columns: 1fr 1fr;
@@ -52,6 +52,7 @@ $spotlight-height--large: 300px;
     padding-bottom: $standard-spacing;
 
     .image {
+      overflow: hidden;
       width: 100%;
 
       img {
@@ -95,8 +96,8 @@ $spotlight-height--large: 300px;
   }
   display: -ms-grid;
   display: grid;
-  grid-column-gap: $standard-spacing;
 
+  grid-column-gap: $standard-spacing;
   -ms-grid-columns: 1fr 1fr;
   -ms-grid-rows: auto;
   grid-template-columns: 1fr 1fr;
@@ -117,10 +118,10 @@ $spotlight-height--large: 300px;
     display: -ms-grid;
     display: grid;
 
+    grid-column-gap: $standard-spacing;
     -ms-grid-columns: 1fr 1fr;
     -ms-grid-rows: auto 1fr;
-    grid-template-areas:
-    "image taxonomy"
+    grid-template-areas: "image taxonomy"
     "image title"
     "image body";
     grid-template-columns: 1fr 1fr;

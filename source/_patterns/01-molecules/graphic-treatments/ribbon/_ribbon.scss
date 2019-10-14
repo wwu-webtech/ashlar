@@ -6,7 +6,7 @@ $ribbon-width: 300px;
 $ribbon-tail-height: 50px;
 
 .ribbon {
-  @include transition($medium-transition-speed, $standard-ease);
+  transition: $medium-transition-speed $standard-ease;
   position: relative;
   display: block;
   width: $ribbon-width;
@@ -20,7 +20,7 @@ $ribbon-tail-height: 50px;
 
   &:before,
   &:after {
-    @include transition($medium-transition-speed, $standard-ease);
+    transition: $medium-transition-speed $standard-ease;
     position: absolute;
     bottom: -$ribbon-tail-height;
     display: block;

@@ -14,8 +14,3 @@ $link-transition-speed: $fast-transition-speed;
 $link-transition-ease: $standard-ease;
 $button-transition-speed: $medium-transition-speed;
 $button-transition-ease: $standard-ease;
-
-// Mixins
-@mixin transition($timing, $ease) {
-  transition: $timing $ease;
-}
