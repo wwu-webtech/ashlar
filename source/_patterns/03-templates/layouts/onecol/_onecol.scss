@@ -1,11 +1,13 @@
 /*
- * @file
- * templates/layouts/onecol/_onecol.scss
- */
+* @file
+* templates/layouts/onecol/_onecol.scss
+*/
 
 .layout--onecol .layout__region {
+  @include breakpoint($max-one-col-width) {
+    max-width: $max-one-col-width;
+  }
   width: 100%;
-  max-width: $max-one-col-width;
   margin: auto;
 }
 
@@ -15,4 +17,17 @@
     margin: auto;
   }
   width: 100%;
+}
+
+.layout--onecol--page-width {
+  @include breakpoint($large) {
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+  }
+  margin-left: -$standard-spacing;
+  
+  .layout__region {
+    max-width: none;
+    margin: 0;
+  }
 }

@@ -1,0 +1,27 @@
+.sans-serif {
+  font-family: $sans-serif;
+}
+
+.serif {
+  font-family: $serif;
+}
+
+.title-font {
+  font-family: $title-font;
+}
+
+.bold {
+  font-weight: $font-weight--bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}

@@ -92,7 +92,7 @@ $image-button-size--large: 300px;
     align-items: center;
     text-align: center;
     text-decoration: none;
-    color: white;
+    color: $white;
     border-radius: 50%;
     background: transparentize($dark-blue, 0.5);
     font-size: $image-button-size / 8;

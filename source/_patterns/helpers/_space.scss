@@ -1,9 +1,10 @@
 /**
  * @file
- * 00-atoms/space/_space.scss
+ * helpers/_space.scss
+ * Helper classes to adjust spacing
  */
 
-/* Helper classes to adjust spacing */
+
 .no-margin {
   margin: 0;
 }
@@ -58,15 +59,6 @@
 
 .double-padding {
   padding: $double-spacing;
-}
-
-/* For align classes, added by drupal to float block elements, add spacing from text */
-.align-right {
-  margin-left: $standard-spacing;
-}
-
-.align-left {
-  margin-right: $standard-spacing;
 }
 
 /* space creating blocks */

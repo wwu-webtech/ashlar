@@ -9,7 +9,7 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
   h1:after {
     border: none;
   }
-  
+
   /* Style Option 1: Box with semi-transparent overlay */
   &.box-headline {
     @include breakpoint($medium) {
@@ -74,6 +74,7 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
     align-self: end;
     width: 90vw;
     margin-top: 25vh;
+    margin-bottom: $standard-spacing;
     margin-left: -$standard-spacing;
     padding: $double-spacing;
     color: $white;
@@ -172,7 +173,7 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
 
     .button {
       margin: $half-spacing;
-      border-color: white;
+      border-color: $white;
       background: transparentize($darkest-blue, 0.3);
 
       &:hover,
