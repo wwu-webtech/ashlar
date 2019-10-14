@@ -1,0 +1,16 @@
+/**
+* @file
+* 01-molecules/banner/_banner.scss
+*/
+.block--banner {
+  position: relative;
+  padding: $triple-spacing;
+  text-align: center;
+
+
+}
+
+.block--banner .body {
+  max-width: $max-content-width;
+  margin: auto;
+}
