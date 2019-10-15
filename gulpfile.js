@@ -134,8 +134,8 @@
     iife: {
       useStrict: true,
       trimCode: true,
-      params: ['$', 'Drupal', 'window', 'document', 'undefined'],
-      args: ['jQuery', 'Drupal', 'this', 'this.document']
+      params: ['$', 'window', 'document', 'undefined'],
+      args: ['jQuery', 'this', 'this.document']
     },
     uglify: {
       compress: false,
