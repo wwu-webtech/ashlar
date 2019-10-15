@@ -334,12 +334,6 @@ $lightest-bg-blue: mix($white, $blue, 90%);
 }
 .blue-bg {
   @extend %blue-bg;
-
-  &.erm-headings {
-    h2 {
-      color: $white;
-    }
-  }
 }
 .light-blue-bg {
   @extend %light-blue-bg;
