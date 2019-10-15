@@ -1,4 +1,4 @@
-// Base styles for different color backgrounds. Use @include o utilize these styles inside of other components.
+// Base styles for different color backgrounds. Use @include to utilize these styles inside of other components.
 // Note the cascade here, as the blue styles inherit from the gray styles of same shades (EG Dark blue inherits from black, blue inherits from gray, etc.)
 @mixin black-bg {
   color: $white;

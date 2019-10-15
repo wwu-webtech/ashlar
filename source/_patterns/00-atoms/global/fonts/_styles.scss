@@ -2,46 +2,6 @@
  * @file
  * 00-atoms/global/fonts/_styles.scss
  */
-.sans-serif {
-  font-family: $sans-serif;
-}
-
-.serif {
-  font-family: $serif;
-}
-
-.title-font {
-  font-family: $title-font;
-}
-
-.bold {
-  font-weight: $font-weight--bold;
-}
-
-.italic {
-  font-style: italic;
-}
-
-.uppercase {
-  text-transform: uppercase;
-}
-
-.lowercase {
-  text-transform: lowercase;
-}
-
-.text-align-left {
-  text-align: left;
-}
-
-.text-align-center {
-  text-align: center;
-}
-
-.text-align-right {
-  text-align: right;
-}
-
 @mixin font-size--smaller {
   @include breakpoint($large) {
     font-size: $p-font-size--max--smaller;
