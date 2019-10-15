@@ -28,7 +28,7 @@
       display: block;
       padding: $half-spacing $standard-spacing;
       text-decoration: none;
-      color: black;
+      color: $black;
       border-right: solid $border-width--thicker $white;
       background-color: $light-gray;
 
@@ -63,7 +63,7 @@
     margin: 0;
     padding: $half-spacing $standard-spacing;
     text-decoration: none;
-    color: black;
+    color: $black;
     border-right: solid $border-width--thicker $white;
     background-color: $light-gray;
 

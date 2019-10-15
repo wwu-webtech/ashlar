@@ -49,7 +49,7 @@
     }
     transition: $standard-ease $fast-transition-speed opacity;
     text-transform: uppercase;
-    color: white;
+    color: $white;
     font-family: $title-font;
     font-size: $title-font-size--smaller;
     line-height: 1em;

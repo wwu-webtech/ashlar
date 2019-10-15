@@ -173,7 +173,7 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
 
     .button {
       margin: $half-spacing;
-      border-color: white;
+      border-color: $white;
       background: transparentize($darkest-blue, 0.3);
 
       &:hover,
