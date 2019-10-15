@@ -141,13 +141,3 @@ $h4-font-size--max--largest:    $max-base-font-size--largest * $h4-scale;
 $h5-font-size--max--largest:    $max-base-font-size--largest * $h5-scale;
 $h6-font-size--max--largest:    $max-base-font-size--largest * $h6-scale;
 $p-font-size--max--largest:     $max-base-font-size--largest * $p-scale;
-
-
-// Titles - use different scales for --smaller and --larger to allow for a wider range of variation
-$title-font-size: responsive-font-size(3.5);
-$title-font-size--smaller: responsive-font-size--smaller(2.5);
-$title-font-size--larger: responsive-font-size--larger(4.5);
-
-$title-font-size--max: $max-base-font-size * 3.5;
-$title-font-size--max--smaller: $max-base-font-size--smaller * 2.5;
-$title-font-size--max--larger: $max-base-font-size--larger * 4.5;
