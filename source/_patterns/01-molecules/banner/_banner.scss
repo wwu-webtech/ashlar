@@ -7,10 +7,19 @@
   padding: $triple-spacing;
   text-align: center;
 
-
+  .body {
+    z-index: 1;
+    max-width: $max-content-width;
+    margin: auto;
+    position: relative;
+  }
 }
 
-.block--banner .body {
-  max-width: $max-content-width;
-  margin: auto;
+/* Retrofit for existing pages with beyond basic block banners */
+.block--half-page,
+.block--full-page {
+  h1,
+  h2 {
+    z-index: 1;
+  }
 }
