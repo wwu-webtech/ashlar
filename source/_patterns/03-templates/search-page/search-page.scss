@@ -64,7 +64,7 @@
   }
 
   .search-results-summary {
-    @extend %light-gray-bg;
+    @include light-gray-bg;
     margin-top: $double-spacing;
     padding: $standard-spacing;
   }

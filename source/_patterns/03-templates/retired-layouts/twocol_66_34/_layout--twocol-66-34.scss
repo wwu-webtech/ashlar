@@ -21,7 +21,7 @@
 }
 
 .layout--twocol-66-34 > .layout__region--second {
-  @extend %font-size--smaller;
+  @include font-size--smaller;
   @include breakpoint($medium) {
     flex: 0 1 34%;
     max-width: 34%;

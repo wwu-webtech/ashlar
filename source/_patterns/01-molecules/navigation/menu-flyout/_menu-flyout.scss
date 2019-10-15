@@ -3,7 +3,7 @@
 * 01-molecules/navigation/menu-flyout/_menu-flyout.scss
 */
 .ultimenu__region {
-  @extend %blue-bg;
+  @include blue-bg;
   @include breakpoint($medium) {
     flex-flow: row nowrap;
     justify-content: space-around;

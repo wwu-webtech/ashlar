@@ -13,7 +13,7 @@
 }
 
 .layout--twocol-25-75 > .layout__region--first {
-  @extend %font-size--smaller;
+  @include font-size--smaller;
   @include breakpoint($medium) {
     flex: 0 1 25%;
     max-width: 25%;

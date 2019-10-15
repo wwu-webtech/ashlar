@@ -4,7 +4,7 @@
 */
 
 .wwu-footer {
-  @extend %dark-blue-bg;
+  @include dark-blue-bg;
   @include breakpoint($small) {
     -ms-grid-columns: $standard-spacing 1fr 2fr $standard-spacing;
     -ms-grid-rows: $triple-spacing auto auto $triple-spacing;

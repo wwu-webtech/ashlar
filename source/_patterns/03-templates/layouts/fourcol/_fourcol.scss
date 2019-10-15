@@ -8,7 +8,7 @@
   flex-wrap: wrap;
 
   > .layout__region {
-    @extend %font-size--smaller;
+    @include font-size--smaller;
     @include breakpoint($small) {
       flex: 0 1 25%;
     }
