@@ -10,8 +10,6 @@ $text-color-light: $white;
 // Link Colors
 $link-color: $link-blue;
 $link-color--hover: $dark-blue;
-$link-color-light: $light-blue;
-$link-color-light--hover: $light-green;
 
 // State Colors
 $focus-shadow: 0 5px 10px transparentize($blue, 0.84), 0 3px 6px transparentize($black, 0.77);
@@ -53,7 +51,7 @@ $lightest-bg-blue: mix($white, $blue, 90%);
     color: $white;
   }
 
-  a:not(.button) {
+  a:not(.button):not(.social-icon) {
     color: $light-blue;
 
     &:hover,
@@ -97,36 +95,13 @@ $lightest-bg-blue: mix($white, $blue, 90%);
       }
     }
   }
-
-  .social-media-links {
-    .social-icon {
-      color: $black;
-      outline: none;
-      background-color: $white;
-
-      svg {
-        fill: $black;
-      }
-
-      &:hover, &:focus, &:active {
-        svg {
-          fill: $dark-blue;
-        }
-        background-color: $light-green;
-      }
-
-      &:focus {
-        outline: dotted $light-green;
-      }
-    }
-  }
 }
 
 %gray-bg {
   color: $white;
   background: $gray;
 
-  a:not(.button) {
+  a:not(.button):not(.social-icon) {
     color: $white;
 
     &:hover,
@@ -175,36 +150,13 @@ $lightest-bg-blue: mix($white, $blue, 90%);
       }
     }
   }
-
-  .social-media-links {
-    .social-icon {
-      color: $dark-blue;
-      outline: none;
-      background-color: $white;
-
-      svg {
-        fill: $dark-blue;
-      }
-
-      &:hover, &:focus, &:active {
-        svg {
-          fill: $light-green;
-        }
-        background-color: $black;
-      }
-
-      &:focus {
-        outline: dotted $black;
-      }
-    }
-  }
 }
 
 %light-gray-bg {
   color: $black;
   background: $light-gray;
 
-  a:not(.button) {
+  a:not(.button):not(.social-icon) {
     color: mix($dark-blue, $link-blue, 50%);
 
     &:hover,
@@ -233,36 +185,13 @@ $lightest-bg-blue: mix($white, $blue, 90%);
       }
     }
   }
-
-  .social-media-links {
-    .social-icon {
-      color: $white;
-      outline: none;
-      background-color: $blue;
-
-      svg {
-        fill: $white;
-      }
-
-      &:hover, &:focus, &:active {
-        svg {
-          fill: $black;
-        }
-        background-color: mix(black, $light-gray, 20%);
-      }
-
-      &:focus {
-        outline: dotted $black;
-      }
-    }
-  }
 }
 
 %lightest-gray-bg {
   @extend %light-gray-bg;
   background: $lightest-gray;
 
-  a:not(.button) {
+  a:not(.button):not(.social-icon) {
     color: $link-blue;
   }
 }
@@ -286,29 +215,6 @@ $lightest-bg-blue: mix($white, $blue, 90%);
       }
     }
   }
-
-  .social-media-links {
-    .social-icon {
-      color: $dark-blue;
-      outline: none;
-      background-color: $white;
-
-      svg {
-        fill: $dark-blue;
-      }
-
-      &:hover,
-      &:focus,
-      &:active {
-        color: $dark-blue;
-        background-color: $light-green;
-      }
-
-      &:focus {
-        outline: dotted $light-blue;
-      }
-    }
-  }
 }
 
 %blue-bg {
@@ -323,7 +229,7 @@ $lightest-bg-blue: mix($white, $blue, 90%);
     border-bottom-color: $light-green;
   }
 
-  a:not(.button) {
+  a:not(.button):not(.social-icon) {
     &:hover,
     &:focus,
     &:active {
@@ -348,36 +254,13 @@ $lightest-bg-blue: mix($white, $blue, 90%);
       }
     }
   }
-
-  .social-media-links {
-    .social-icon {
-      color: $blue;
-      outline: none;
-      background-color: $white;
-
-      svg {
-        fill: $blue;
-      }
-
-      &:hover, &:focus, &:active {
-        svg {
-          fill: $white;
-        }
-        background-color: $dark-blue;
-      }
-
-      &:focus {
-        outline: dotted $light-green;
-      }
-    }
-  }
 }
 
 %light-blue-bg {
   @extend %light-gray-bg;
   background: $light-bg-blue;
 
-  a:not(.button) {
+  a:not(.button):not(.social-icon) {
     &:hover,
     &:focus,
     &:active {
@@ -408,7 +291,7 @@ $lightest-bg-blue: mix($white, $blue, 90%);
   @extend %lightest-gray-bg;
   background: $lightest-bg-blue;
 
-  a:not(.button) {
+  a:not(.button):not(.social-icon) {
     &:hover,
     &:focus,
     &:active {
@@ -434,12 +317,21 @@ $lightest-bg-blue: mix($white, $blue, 90%);
 }
 
 
-.black-bg { @extend %black-bg; }
-.gray-bg { @extend %gray-bg; }
-.light-gray-bg { @extend %light-gray-bg; }
-.lightest-gray-bg { @extend %lightest-gray-bg; }
-.dark-blue-bg { @extend %dark-blue-bg; }
-
+.black-bg {
+  @extend %black-bg;
+}
+.gray-bg {
+  @extend %gray-bg;
+}
+.light-gray-bg {
+  @extend %light-gray-bg;
+}
+.lightest-gray-bg {
+  @extend %lightest-gray-bg;
+}
+.dark-blue-bg {
+  @extend %dark-blue-bg;
+}
 .blue-bg {
   @extend %blue-bg;
 
@@ -449,6 +341,75 @@ $lightest-bg-blue: mix($white, $blue, 90%);
     }
   }
 }
+.light-blue-bg {
+  @extend %light-blue-bg;
+}
+.lightest-blue-bg {
+  @extend %lightest-blue-bg;
+}
 
-.light-blue-bg { @extend %light-blue-bg; }
-.lightest-blue-bg { @extend %lightest-blue-bg; }
+.black-bg,
+.dark-blue-bg,
+.wwu-footer {
+  .social-icon {
+    color: $dark-blue;
+    background-color: $white;
+
+    svg {
+      fill: $dark-blue;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $light-green;
+    }
+
+    &:focus {
+      outline-color: $white;
+    }
+  }
+}
+
+.black-bg {
+  .social-icon {
+    svg {
+      fill: $black;
+    }
+  }
+}
+
+.blue-bg,
+.gray-bg,
+.site-footer {
+  .social-icon {
+    color: $dark-blue;
+    background-color: $white;
+
+    svg {
+      fill: $blue;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $lightest-green;
+
+      svg {
+        fill: $dark-blue;
+      }
+    }
+
+    &:focus {
+      outline-color: $lightest-green;
+    }
+  }
+}
+
+.gray-bg {
+  .social-icon {
+    svg {
+      fill: $gray;
+    }
+  }
+}

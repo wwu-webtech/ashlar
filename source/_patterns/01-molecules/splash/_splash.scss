@@ -40,7 +40,7 @@ $secondary-site-name-spacer: 52px;
   ". content ."
   ". ....... .";
   grid-template-columns: $small-screen-columns;
-  grid-template-rows: auto 1fr $standard-spacing;
+  grid-template-rows: auto 1fr auto;
 
   > div {
     &:nth-of-type(1) {

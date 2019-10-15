@@ -9,12 +9,6 @@ acalog:
   dependencies:
     - core/jquery
     - core/jquery.once
-global-styling:
-  version: 1.x
-  css:
-    theme:
-      build/css/components.css: {}
-      https://fonts.googleapis.com/icon?family=Material+Icons: {}
 accessible-mega-menu:
   version: 1.x
   js:
@@ -45,6 +39,17 @@ bright-edge:
   dependencies:
     - core/drupal
     - core/jquery
+components:
+  version: 1.x
+  css:
+    theme:
+      build/css/components.css: {}
+erm-menu:
+  version: 1.x
+  js:
+    build/js/erm-menu.js: {}
+  dependencies:
+    - core/jquery
 event-tracking:
   version: 1.x
   js:
@@ -52,12 +57,20 @@ event-tracking:
   dependencies:
     - core/jquery
     - core/jquery.once
-erm-menu:
-  version: 1.x
+featherlight:
+  version: 1.7.13
+  css:
+    theme:
+      dist/js/featherlight/featherlight.css: {}
   js:
-    build/js/erm-menu.js: {}
-  dependencies:
-    - core/jquery
+    dist/js/featherlight/featherlight.js: {}
+fullpage:
+  version: 3.0.7
+  css:
+    theme:
+      dist/js/fullPage/fullpage.css: {}
+  js:
+    dist/js/fullPage/fullpage.js: {}
 language-select:
   version: 1.x
   js:
@@ -68,6 +81,18 @@ menu-extras:
   version: 1.x
   js:
     build/js/menu-extras.js: {}
+  dependencies:
+    - core/jquery
+page-title:
+  version: 1.x
+  js:
+    build/js/page-title.js: {}
+  dependencies:
+    - core/jquery
+profile:
+  version: 1.x
+  js:
+    build/js/profile.js: {}
   dependencies:
     - core/jquery
 quicksearch:
@@ -97,18 +122,6 @@ timeline-block:
     build/js/timeline-block.js: {}
   dependencies:
     - core/jquery
-page-title:
-  version: 1.x
-  js:
-    build/js/page-title.js: {}
-  dependencies:
-    - core/jquery
-profile:
-  version: 1.x
-  js:
-    build/js/profile.js: {}
-  dependencies:
-    - core/jquery
 user-login:
   version: 1.x
   js:
@@ -131,17 +144,3 @@ wwu-mobile-menu:
     build/js/wwu-mobile-menu.js: {}
   dependencies:
     - core/jquery
-featherlight:
-  version: 1.7.13
-  css:
-    theme:
-      dist/js/featherlight/featherlight.css: {}
-  js:
-    dist/js/featherlight/featherlight.js: {}
-fullpage:
-  version: 3.0.7
-  css:
-    theme:
-      dist/js/fullPage/fullpage.css: {}
-  js:
-    dist/js/fullPage/fullpage.js: {}
