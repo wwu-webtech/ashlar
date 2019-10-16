@@ -4,14 +4,16 @@
 */
 .block--banner {
   position: relative;
+  display: grid;
+  align-content: center;
   padding: $triple-spacing;
   text-align: center;
 
   .body {
+    position: relative;
     z-index: 1;
     max-width: $max-content-width;
     margin: auto;
-    position: relative;
   }
 }
 
