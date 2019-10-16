@@ -1,0 +1,351 @@
+// Base styles for different color backgrounds. Use @include to utilize these styles inside of other components.
+// Note the cascade here, as the blue styles inherit from the gray styles of same shades (EG Dark blue inherits from black, blue inherits from gray, etc.)
+@mixin black-bg {
+  color: $white;
+  background: $black;
+
+  h1 {
+    color: $white;
+  }
+
+  h2 {
+    color: $white;
+    border-bottom-color: $lightest-green;
+  }
+
+  h3 {
+    color: $lightest-green;
+  }
+
+  h4 {
+    color: $light-green;
+  }
+
+  h5 {
+    color: $white;
+  }
+
+  a:not([class]) {
+    color: $light-blue;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $lightest-green;
+      background-color: $darkest-blue;
+    }
+  }
+
+  .menu {
+    li {
+      @include breakpoint($medium) {
+        border-left-width: $border-width--thicker;
+      }
+      border-left: solid $border-width $dark-blue;
+
+      a {
+        color: $white;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: $lightest-green;
+          background-color: $dark-blue;
+        }
+      }
+    }
+  }
+
+  .social-icon {
+    color: $dark-blue;
+    background-color: $white;
+
+    svg {
+      fill: $black;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $light-green;
+    }
+
+    &:focus {
+      outline-color: $white;
+    }
+  }
+}
+
+@mixin gray-bg {
+  color: $white;
+  background: $gray;
+
+  a:not([class]) {
+    color: $white;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $light-green;
+      background: $black;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: $white;
+  }
+
+  h4 {
+    @include breakpoint($medium) {
+      border-bottom-width: $border-width--thicker;
+    }
+    padding-bottom: $half-spacing;
+    border-bottom: $border-width solid $light-gray;
+  }
+
+  .menu {
+    li {
+      @include breakpoint($medium) {
+        border-left-width: $border-width--thicker;
+      }
+      border-left: solid $border-width $black;
+
+      a {
+        color: $white;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background: $black;
+        }
+      }
+    }
+  }
+
+  .social-icon {
+    color: $dark-blue;
+    background-color: $white;
+
+    svg {
+      fill: $gray;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $lightest-green;
+    }
+
+    &:focus {
+      outline-color: $lightest-green;
+    }
+  }
+}
+
+@mixin light-gray-bg {
+  color: $black;
+  background: $light-gray;
+
+  a:not([class]) {
+    color: mix($dark-blue, $link-blue, 50%);
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $black;
+      background-color: mix(black, $light-gray, 20%);
+    }
+  }
+
+  .menu {
+    li {
+      @include breakpoint($medium) {
+        border-left-width: $border-width--thicker;
+      }
+      border-left: solid $border-width mix(black, $light-gray, 20%);
+
+      a {
+        color: $black;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background: mix(black, $light-gray, 20%);
+        }
+      }
+    }
+  }
+}
+
+@mixin lightest-gray-bg {
+  @include light-gray-bg;
+  background: $lightest-gray;
+
+  a:not([class]) {
+    color: $link-blue;
+  }
+}
+
+@mixin dark-blue-bg {
+  @include black-bg;
+  background: $dark-blue;
+
+  .menu {
+    li {
+      border-left-color: $darkest-blue;
+
+      a {
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: $darkest-blue;
+        }
+      }
+    }
+  }
+
+
+  .social-icon {
+    svg {
+      fill: $dark-blue;
+    }
+  }
+}
+
+@mixin blue-bg {
+  @include gray-bg;
+  background: $blue;
+
+  h2 {
+    border-bottom-color: $lightest-green;
+  }
+
+  h4 {
+    border-bottom-color: $light-green;
+  }
+
+  a:not([class]) {
+    &:hover,
+    &:focus,
+    &:active {
+      color: $lightest-green;
+      background: mix(black, $blue, 20%);
+    }
+  }
+
+  .menu {
+    li {
+      border-left-color: mix(black, $blue, 20%);
+
+      a {
+        &:hover,
+        &:focus,
+        &:active {
+          color: $lightest-green;
+          background: mix(black, $blue, 20%);
+        }
+      }
+    }
+  }
+
+  .social-icon {
+    svg {
+      fill: $blue;
+    }
+  }
+}
+
+@mixin light-blue-bg {
+  @include light-gray-bg;
+  background: $light-bg-blue;
+
+  a:not([class]) {
+    &:hover,
+    &:focus,
+    &:active {
+      color: $dark-blue;
+      border-bottom-color: transparent;
+      background-color: mix(white, $dark-blue, 60%);
+    }
+  }
+
+  .menu {
+    li {
+      border-left-color: mix(white, $dark-blue, 60%);
+
+      a {
+        color: $black;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background: mix(white, $dark-blue, 60%);
+        }
+      }
+    }
+  }
+}
+
+@mixin lightest-blue-bg {
+  @include lightest-gray-bg;
+  background: $lightest-bg-blue;
+
+  a:not([class]) {
+    &:hover,
+    &:focus,
+    &:active {
+      background: mix(white, $dark-blue, 70%);
+    }
+  }
+
+  .menu {
+    li {
+      border-left-color: mix(white, $dark-blue, 70%);
+
+      a {
+        color: $black;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background: mix(white, $dark-blue, 70%);
+        }
+      }
+    }
+  }
+}
+
+.black-bg {
+  @include black-bg;
+}
+.gray-bg {
+  @include gray-bg;
+}
+.light-gray-bg {
+  @include light-gray-bg;
+}
+.lightest-gray-bg {
+  @include lightest-gray-bg;
+}
+.dark-blue-bg {
+  @include dark-blue-bg;
+}
+.blue-bg {
+  @include blue-bg;
+
+  &.erm-headings {
+    h2 {
+      color: $white;
+    }
+  }
+}
+.light-blue-bg {
+  @include light-blue-bg;
+}
+.lightest-blue-bg {
+  @include lightest-blue-bg;
+}

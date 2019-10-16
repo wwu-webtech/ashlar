@@ -36,7 +36,7 @@
   &.layout--threecol-section--25-25-50 > .layout__region--second,
   &.layout--threecol-section--50-25-25 > .layout__region--second,
   &.layout--threecol-section--50-25-25 > .layout__region--third {
-    @extend %font-size--smaller;
+    @include font-size--smaller;
     @include breakpoint($small) {
       flex: 0 1 25%;
     }
@@ -50,13 +50,13 @@
   }
   &.layout--threecol-section--33-34-33 > .layout__region--first,
   &.layout--threecol-section--33-34-33 > .layout__region--third {
-    @extend %font-size--smaller;
+    @include font-size--smaller;
     @include breakpoint($small) {
       flex: 0 1 33%;
     }
   }
   &.layout--threecol-section--33-34-33 > .layout__region--second {
-    @extend %font-size--smaller;
+    @include font-size--smaller;
     @include breakpoint($small) {
       flex: 0 1 34%;
     }
