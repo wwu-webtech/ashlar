@@ -4,6 +4,23 @@ var emergency = $.getJSON('https://emergency.wwu.edu/api/alert/3');
 // Channel 4: Weather
 var weather = $.getJSON('https://emergency.wwu.edu/api/alert/4');
 
+var handler = {
+
+  has: function (obj, key) {
+    var skey = String(key);
+
+    return skey in obj || skey.toLowerCase() in obj
+  },
+
+  get: function (obj, key) {
+    var skey = String(key);
+    var lskey = skey.toLowerCase();
+
+    return obj[skey] || obj.getItem(skey) || obj[lskey] || obj.getItem(lskey) || undefined;
+  }
+
+};
+
 function is_all_clear(title) {
   return title.trim().toUpperCase() === 'WWU RSS ALL CLEAR';
 }
@@ -44,14 +61,24 @@ function display_alert($alert, data) {
 }
 
 emergency.done(function (data) {
-  if (is_valid_response(data)) {
-    display_alert($('#alert-emergency', context), data);
+  var proxy = Proxy(data, handler);
+
+  if (is_valid_response(proxy)) {
+    display_alert($('#alert-emergency', context), proxy);
+  }
+  else {
+    console.log("Alert JSON was not in a valid format.");
   }
 });
 
 weather.done(function (data) {
-  if (is_valid_response(data)) {
-    display_alert($('#alert-weather', context), data);
+  var proxy = Proxy(data, handler);
+
+  if (is_valid_response(proxy)) {
+    display_alert($('#alert-weather', context), proxy);
+  }
+  else {
+    console.log("Alert JSON was not in a valid format.");
   }
 });
 
