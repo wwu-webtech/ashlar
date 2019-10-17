@@ -61,7 +61,7 @@ function display_alert($alert, data) {
 }
 
 emergency.done(function (data) {
-  var proxy = Proxy(data, handler);
+  var proxy = new Proxy(data, handler);
 
   if (is_valid_response(proxy)) {
     display_alert($('#alert-emergency', context), proxy);
@@ -72,7 +72,7 @@ emergency.done(function (data) {
 });
 
 weather.done(function (data) {
-  var proxy = Proxy(data, handler);
+  var proxy = new Proxy(data, handler);
 
   if (is_valid_response(proxy)) {
     display_alert($('#alert-weather', context), proxy);
