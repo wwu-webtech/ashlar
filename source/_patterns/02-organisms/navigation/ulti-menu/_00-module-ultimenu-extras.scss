@@ -1,0 +1,181 @@
+/**
+* @file
+* 02-organisms/navigation/ulti-menu/_00-ultimenu-module.scss
+* This file does not affeact anything in Drupal, it is only for Pattern Lab.
+* This is a copy of ultimenu.extras.css from the module
+ * You can disable this file inclusion via UI: /admin/structure/ultimenu,
+ *
+ * Tips:
+ * If flyout was covered by another content, add higher z-index layering to its
+ * parent block, e.g.: .block-ultimenu {position: relative; z-index: 9999;}
+ */
+
+/* Remove this box-sizing if your theme is already using one globally */
+.ultimenu *,
+.ultimenu *::before,
+.ultimenu *::after {
+  box-sizing: border-box;
+}
+
+/** Prevents flyout from being covered by other contents, adjust it.
+Adjust it to the relevant block class, e.g.: .block--ultimenu, etc. */
+.block-ultimenu {
+  position: relative;
+  z-index: 98;
+}
+
+/** Adjust it to the relevant sidebar class, e.g.: .l-sidebar, etc. */
+.sidebar .block-ultimenu {
+  z-index: 96;
+}
+
+.block .ultimenu {
+  padding: 0;
+}
+
+/** Prevents overflowing block contents. */
+.ultimenu__flyout .block {
+  max-width: 100%;
+  padding: 1em 0;
+}
+
+/** Generally Ultimenu mobile menu items have background color. */
+.is-ultimenu-canvas--active .ultimenu--horizontal .is-active-trail > a {
+  color: #fff;
+}
+
+/**
+ * Link.
+ */
+.ultimenu--horizontal .ultimenu__link,
+.ultimenu .ultimenu__ajax {
+  padding: 1em 1.75em;
+  min-height: 42px;
+}
+
+.ultimenu .ultimenu__ajax {
+  display: block;
+}
+
+/**
+ * Menu description.
+ */
+.ultimenu__link small {
+  display: block;
+  line-height: 1;
+}
+
+/**
+ * Default icon styling.
+ */
+.ultimenu__icon,
+.ultimenu__title,
+.ultimenu__icon::before {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.ultimenu__icon {
+  font-size: 28px;
+  text-align: center;
+  width: 42px;
+}
+
+/* Mobile needs a handler for click event. */
+.has-ultimenu .caret {
+  background-color: rgba(0, 0, 0, .2);
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  min-height: 34px;
+  position: absolute;
+  right: 0; /* LTR */
+  top: 0;
+  width: 48px;
+}
+
+[dir="rtl"] .has-ultimenu .caret {
+  left: 0;
+  right: auto;
+}
+
+.has-ultimenu .caret::before {
+  border: 8px solid transparent;
+  border-top: 12px solid #fff;
+  content: '';
+  display: block;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  z-index: 2;
+  transition: all .2s;
+  transform: translate(-50%, -50%);
+}
+
+.has-ultimenu .is-ultimenu-active .caret::before {
+  border-bottom: 12px solid #fff;
+  border-top: 0;
+}
+
+/**
+ * Core Bartik do not have clearfix for region, add support for floating blocks
+ * with micro clearfix.
+ */
+.ultimenu__flyout::after,
+.ultimenu__region::after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+
+/** Overrides Bartik footer region. */
+.block .ultimenu__flyout .ultimenu__region {
+  margin: 0;
+}
+
+/**
+ * Overrides Bartik to avoid confusion with disappearing Ultimenu menu items.
+ * One prime sample why Ultimenu refuses to deal with theme compatibility.
+ */
+body:not(:target) .ultimenu .ultimenu__region .menu-item {
+  height: auto;
+}
+
+/**
+ * 944px+ with 16px base font.
+ */
+@media all and (min-width: 59em) {
+  .ultimenu .ultimenu__link {
+    line-height: 1.4;
+  }
+
+  .ultimenu--htb .ultimenu__region {
+    box-shadow: 0 2px 2px rgba(0 ,0, 0, .2);
+  }
+
+  .ultimenu--htb .ultimenu__flyout,
+  .ultimenu--htb .ultimenu__region {
+    border-radius: 0 0 9px 0;
+  }
+
+  .ultimenu--htt .ultimenu__flyout,
+  .ultimenu--htt .ultimenu__region {
+    border-radius: 0 9px 0 0;
+  }
+
+  /** The AJAX fallback link. Do not display block so to have correct throbber. */
+  .ultimenu .ultimenu__ajax {
+    display: inline-block;
+    padding: 0 1.25em;
+    vertical-align: middle;
+  }
+
+  /** Different themes different markups, and CSS rules, this is just an idea. */
+  #header .ultimenu--hover .ultimenu__flyout,
+  #footer .ultimenu--hover .ultimenu__flyout,
+  .sidebar .ultimenu__flyout {
+    min-width: 600px;
+  }
+}
