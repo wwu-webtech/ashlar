@@ -30,21 +30,6 @@
       height: 1px;
       word-wrap: normal;
     }
-
-    h2 {
-      text-align: center;
-      text-transform: uppercase;
-      color: $blue;
-      border-bottom: none;
-      font-family: $title-font;
-      font-size: $title-font-size--smaller;
-      font-weight: $font-weight--regular;
-      line-height: 0.9em;
-    }
-
-    .blue-bg h2 {
-      color: $white;
-    }
   }
 
   .layout__region--top,

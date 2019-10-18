@@ -39,7 +39,7 @@
 
   &.layout--twocol-section--33-67 > .layout__region--first,
   &.layout--twocol-section--67-33 > .layout__region--second {
-    @extend %font-size--smaller;
+    @include font-size--smaller;
     @include breakpoint($small) {
       flex: 0 1 33%;
     }
@@ -54,7 +54,7 @@
 
   &.layout--twocol-section--25-75 > .layout__region--first,
   &.layout--twocol-section--75-25 > .layout__region--second {
-    @extend %font-size--smaller;
+    @include font-size--smaller;
     @include breakpoint($small) {
       flex: 0 1 25%;
     }
@@ -75,6 +75,7 @@
   }
   display: flex;
   flex-wrap: wrap;
+  max-width: 100vw;
   margin-left: -$standard-spacing;
 
   > .layout__region {

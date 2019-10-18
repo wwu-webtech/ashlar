@@ -13,7 +13,7 @@
   }
 
   > .layout__region--sample-jobs {
-    @extend %font-size--smaller;
+    @include font-size--smaller;
     @include breakpoint($medium) {
       flex: 0 1 25%;
       max-width: 25%;
@@ -42,7 +42,7 @@
   }
 
   > .layout__region--catalog {
-    @extend %font-size--larger;
+    @include font-size--larger;
   }
 
   > .layout__region--related-majors {

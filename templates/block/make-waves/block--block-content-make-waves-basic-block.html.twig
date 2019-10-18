@@ -35,8 +35,6 @@
 {% set attributes = attributes.addClass(classes, block_content.field_mw_block_color.0.value) %}
 {% set title_attributes = title_attributes.addClass('block__title') %}
 
-{{ attach_library('ashlar/make-waves-fonts') }}
-
 {% block template %}
   {% include "@organisms/blocks/block-template/block-template.html.twig" %}
 {% endblock %}
