@@ -41,7 +41,10 @@ $vertical-statistic-width: 180px;
     grid-template-areas: "number text";
 
     .number {
-      font-size: $title-font-size;
+      @include breakpoint($large) {
+        font-size: $h3-font-size--max--largest;
+      }
+      font-size: $h3-font-size--largest;
     }
   }
 }

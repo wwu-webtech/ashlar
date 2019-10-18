@@ -38,20 +38,14 @@
   background-image: url("/files/inline-images/water-bg_1.jpg");
 
   a {
-    @include breakpoint($small) {
-      font-size: $title-font-size;
-    }
-    @include breakpoint($medium) {
-      font-size: $title-font-size--larger;
-    }
     @include breakpoint($large) {
-      font-size: $title-font-size--max--larger;
+      font-size: $h1-font-size--max--largest;
     }
     transition: $standard-ease $fast-transition-speed opacity;
     text-transform: uppercase;
     color: $white;
     font-family: $title-font;
-    font-size: $title-font-size--smaller;
+    font-size: $h1-font-size--largest;
     line-height: 1em;
 
     &:hover,

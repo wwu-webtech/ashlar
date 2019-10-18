@@ -1,3 +1,9 @@
+/**
+* @file
+* molecules/background-colors/_background-colors.scss
+*/
+
+
 // Base styles for different color backgrounds. Use @include to utilize these styles inside of other components.
 // Note the cascade here, as the blue styles inherit from the gray styles of same shades (EG Dark blue inherits from black, blue inherits from gray, etc.)
 @mixin black-bg {
@@ -6,6 +12,9 @@
 
   h1 {
     color: $white;
+    &:after {
+      border-color: $lightest-green;
+    }
   }
 
   h2 {
@@ -99,12 +108,10 @@
     color: $white;
   }
 
-  h4 {
-    @include breakpoint($medium) {
-      border-bottom-width: $border-width--thicker;
+  h1 {
+    &:after {
+      border-color: $light-blue;
     }
-    padding-bottom: $half-spacing;
-    border-bottom: $border-width solid $light-gray;
   }
 
   .menu {
@@ -149,6 +156,16 @@
 @mixin light-gray-bg {
   color: $black;
   background: $light-gray;
+
+  h2 {
+    color: $darkest-blue;
+  }
+
+  h3,
+  h4,
+  h5 {
+    color: $dark-blue;
+  }
 
   a:not([class]) {
     color: mix($dark-blue, $link-blue, 50%);
@@ -336,12 +353,6 @@
 }
 .blue-bg {
   @include blue-bg;
-
-  &.erm-headings {
-    h2 {
-      color: $white;
-    }
-  }
 }
 .light-blue-bg {
   @include light-blue-bg;
