@@ -1,86 +1,95 @@
-// Channel 3: Western Alert
 var emergency = $.getJSON('https://emergency.wwu.edu/api/alert/3');
-
-// Channel 4: Weather
 var weather = $.getJSON('https://emergency.wwu.edu/api/alert/4');
 
 var handler = {
 
   has: function (obj, key) {
     var skey = String(key);
+    var lskey = skey.toLowerCase();
+    var uskey = lskey.charAt(0).toUpperCase() + skey.substr(1); // In case of camel case, using original string.
 
-    return skey in obj || skey.toLowerCase() in obj
+    return skey in obj || lskey in obj || uskey in obj;
   },
 
   get: function (obj, key) {
     var skey = String(key);
     var lskey = skey.toLowerCase();
+    var uskey = lskey.charAt(0).toUpperCase() + skey.substr(1); // In case of camel case, using original string.
 
-    return obj[skey] || obj.getItem(skey) || obj[lskey] || obj.getItem(lskey) || undefined;
+    return obj[skey] || obj[lskey] || obj[uskey] || undefined;
   }
 
 };
 
-function is_all_clear(title) {
-  return title.trim().toUpperCase() === 'WWU RSS ALL CLEAR';
+function log_error(jqXHR, textStatus, errorThrown) {
+  console.log(errorThrown);
 }
 
-function is_valid_response(data) {
-  if (!('Title' in data)) {
+function valid_response(data) {
+  if (!('title' in data)) {
     return false;
   }
 
-  if (!('Content' in data)) {
+  if (!('content' in data)) {
     return false;
   }
 
-  if (!data.Title) {
+  if (!data.title) {
     return false;
   }
 
-  if (!data.Content) {
+  if (!data.content) {
     return false;
   }
 
   return true;
 }
 
-function log_error(jqXHR, textStatus, errorThrown) {
-  console.log(errorThrown);
+function all_clear(data) {
+  return data.title.trim().toUpperCase().includes('ALL CLEAR');
 }
 
 function display_alert($alert, data) {
   var $title = $alert.children('.alert-header');
   var $content = $alert.children('.alert-body');
 
-  if (!is_all_clear(data.Title)) {
-    $title.text(data.Title);
-    $content.text(data.Content);
-    $alert.show();
-  }
+  $title.text(data.title);
+  $content.text(data.content);
+  $alert.show();
 }
 
 emergency.done(function (data) {
   var proxy = new Proxy(data, handler);
 
-  if (is_valid_response(proxy)) {
-    display_alert($('#alert-emergency', context), proxy);
+  if (valid_response(proxy)) {
+    if (all_clear(proxy)) {
+      console.log("Emergency alert JSON returned ALL CLEAR.");
+    }
+    else {
+      display_alert($('#alert-emergency', context), proxy);
+    }
   }
   else {
-    console.log("Alert JSON was not in a valid format.");
-  }
-});
-
-weather.done(function (data) {
-  var proxy = new Proxy(data, handler);
-
-  if (is_valid_response(proxy)) {
-    display_alert($('#alert-weather', context), proxy);
-  }
-  else {
-    console.log("Alert JSON was not in a valid format.");
+    console.log("Emergency alert JSON was not in a valid format.");
   }
 });
 
 emergency.fail(log_error);
+
+weather.done(function (data) {
+  var proxy = new Proxy(data, handler);
+
+  if (valid_response(proxy)) {
+    if (all_clear(proxy)) {
+      console.log("Weather alert JSON returned ALL CLEAR.");
+    }
+    else {
+      display_alert($('#alert-weather', context), proxy);
+    }
+  }
+  else {
+    console.log("Weather alert JSON was not in a valid format.");
+  }
+});
+
 weather.fail(log_error);
