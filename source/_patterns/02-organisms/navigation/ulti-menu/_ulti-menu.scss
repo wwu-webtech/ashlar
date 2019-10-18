@@ -145,6 +145,13 @@
   }
 }
 
+.ultimenu--hover li:hover > .ultimenu__flyout,
+.ultimenu--hover li a:active + .ultimenu__flyout,
+.ultimenu--hover li a:focus + .ultimenu__flyout,
+.ultimenu--hover li .ultimenu__flyout:focus-within {
+  padding: 0;
+}
+
 .open {
   visibility: visible;
   opacity: 1;
