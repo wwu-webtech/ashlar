@@ -18,7 +18,7 @@
   background: $dark-blue;
 
   & > .menu,
-  .ultimenu--main,
+  .ultimenu--horizontal,
   .ultimenu-main-menu {
     @include breakpoint($medium) {
       flex-flow: row nowrap;
