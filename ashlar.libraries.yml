@@ -82,7 +82,6 @@ material-icons:
   version: 1.x
   css:
     theme:
-      build/css/components.css: {}
       https://fonts.googleapis.com/icon?family=Material+Icons: {}
 menu-extras:
   version: 1.x
