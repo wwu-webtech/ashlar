@@ -13,11 +13,6 @@ $condensed: "Fira Sans Extra Condensed", sans-serif;
 $heading-font-family: $serif;
 $body-font-family: $sans-serif;
 
-// Font styles for Make Waves campaign
-$heading-font--make-waves: "Knockout 94 A", "Knockout 94 B", $title-font;
-$copy-font--make-waves: "Knockout 30 A", "Knockout 30 B", $sans-serif;
-$url-font--make-waves: "Knockout 31 A", "Knockout 31 B", $sans-serif;
-
 // Font Weight Variables
 $font-weight--light: 300;
 $font-weight--regular: 400;
@@ -40,6 +35,7 @@ $min-base-font-size: 16px;
 $max-base-font-size: 22px;
 $max-base-font-size--smaller: 18px;
 $max-base-font-size--larger: 26px;
+$max-base-font-size--largest: 54px;
 
 // View width for fluid typography
 $min-vw: 300px;
@@ -61,6 +57,12 @@ $max-vw: 1300px;
 @function responsive-font-size--larger($scale) {
   $min: $min-base-font-size * $scale;
   $max: $max-base-font-size--larger * $scale;
+  @return calc(#{$min} + #{strip-unit($max - $min)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+}
+
+@function responsive-font-size--largest($scale) {
+  $min: $min-base-font-size * $scale;
+  $max: $max-base-font-size--largest * $scale;
   @return calc(#{$min} + #{strip-unit($max - $min)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 }
 
@@ -91,6 +93,16 @@ $h5-font-size--larger: responsive-font-size--larger($h5-scale);
 $h6-font-size--larger: responsive-font-size--larger($h6-scale);
 $p-font-size--larger:  responsive-font-size--larger($p-scale);
 
+// Responsive Font Sizes --largest
+$h1-font-size--largest: responsive-font-size--largest($h1-scale);
+$h2-font-size--largest: responsive-font-size--largest($h2-scale);
+$h3-font-size--largest: responsive-font-size--largest($h3-scale);
+$h4-font-size--largest: responsive-font-size--largest($h4-scale);
+$h5-font-size--largest: responsive-font-size--largest($h5-scale);
+$h6-font-size--largest: responsive-font-size--largest($h6-scale);
+$p-font-size--largest:  responsive-font-size--largest($p-scale);
+
+
 // After the viewport reaches the $max-content-width, the fonts shouldn't scale
 // These are the variables for use after the $large breakpoint
 $h1-font-size--max:    $max-base-font-size * $h1-scale;
@@ -117,11 +129,10 @@ $h5-font-size--max--larger:    $max-base-font-size--larger * $h5-scale;
 $h6-font-size--max--larger:    $max-base-font-size--larger * $h6-scale;
 $p-font-size--max--larger:     $max-base-font-size--larger * $p-scale;
 
-// Titles - use different scales for --smaller and --larger to allow for a wider range of variation
-$title-font-size: responsive-font-size(3.5);
-$title-font-size--smaller: responsive-font-size--smaller(2.5);
-$title-font-size--larger: responsive-font-size--larger(4.5);
-
-$title-font-size--max: $max-base-font-size * 3.5;
-$title-font-size--max--smaller: $max-base-font-size--smaller * 2.5;
-$title-font-size--max--larger: $max-base-font-size--larger * 4.5;
+$h1-font-size--max--largest:    $max-base-font-size--largest * $h1-scale;
+$h2-font-size--max--largest:    $max-base-font-size--largest * $h2-scale;
+$h3-font-size--max--largest:    $max-base-font-size--largest * $h3-scale;
+$h4-font-size--max--largest:    $max-base-font-size--largest * $h4-scale;
+$h5-font-size--max--largest:    $max-base-font-size--largest * $h5-scale;
+$h6-font-size--max--largest:    $max-base-font-size--largest * $h6-scale;
+$p-font-size--max--largest:     $max-base-font-size--largest * $p-scale;

@@ -15,7 +15,7 @@ h4,
 h5,
 h6 {
   margin: $heading-margin-top 0 $heading-margin-bottom;
-  color: $dark-blue;
+  color: $blue;
   font-family: $heading-font-family;
   line-height: $heading-line-height;
 }
@@ -30,7 +30,7 @@ h1 {
   font-weight: $font-weight--bold;
   padding-bottom: $double-spacing;
   position: relative;
-    &:after {
+  &:after {
     content: "";
     background-color: $darkest-blue;
     border-color: $darkest-blue;
@@ -40,7 +40,7 @@ h1 {
     left:0;
     position: absolute;
     width:calc(70px + 80 * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-    }
+  }
 }
 h2 {
   @include breakpoint($large) {
@@ -48,6 +48,7 @@ h2 {
   }
   font-size: $h2-font-size;
   font-weight: $font-weight--bold;
+  color: $dark-blue;
 }
 h3 {
   @include breakpoint($large) {
@@ -55,6 +56,7 @@ h3 {
   }
   font-size: $h3-font-size;
   font-weight: $font-weight--semibold;
+  color: mix($blue, $dark-blue, 50%);
 }
 h4 {
   @include breakpoint($large) {
@@ -100,47 +102,47 @@ main {
   }
 }
 
-.erm-headings {
+.big-bold-headings {
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    color: $blue;
     font-family: $sans-serif;
   }
 
-  h1,
-  h2 {
-    @include breakpoint($small) {
-      font-size: $title-font-size;
-    }
-    @include breakpoint($medium) {
-      font-size: $title-font-size--larger;
-    }
+  h1 {
     @include breakpoint($large) {
-      font-size: $title-font-size--max--larger;
+      font-size: $h1-font-size--max--largest;
     }
-    text-align: center;
     text-transform: uppercase;
     border-bottom: none;
     font-family: $title-font;
-    font-size: $title-font-size;
-  }
+    font-size: $h1-font-size--largest;
+    font-weight: $font-weight--black;
 
-  .blue-overlay,
-  .blue-bg,
-  .dark-blue-bg,
-  .black-bg {
-    h1,
-    h2,
-    h3 {
-      color: $white;
+    &:after {
+      display: none;
     }
   }
 
+  h2 {
+    @include breakpoint($large) {
+      font-size: $h2-font-size--max--largest;
+    }
+    font-size: $h2-font-size--largest;
+    text-transform: uppercase;
+    border-bottom: none;
+    font-family: $title-font;
+    font-weight: $font-weight--black;
+  }
+
   h3 {
+    @include breakpoint($large) {
+      font-size: $h3-font-size--max--larger;
+    }
+    font-size: $h3-font-size--larger;
     display: inline-block;
 
     &:after {
@@ -155,58 +157,19 @@ main {
     }
   }
 
-  .blue-bg h3:after {
-    background: mix($blue, $light-blue, 50%);
-  }
-}
-
-.title-font-headings {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h4 {
     @include breakpoint($large) {
-      font-size: $title-font-size--max;
+      font-size: $h4-font-size--max--larger;
     }
+    font-size: $h4-font-size--larger;
     text-transform: uppercase;
-    font-family: $title-font;
-    font-size: $title-font-size;
   }
 
-  h2 {
-    border-bottom: none;
-  }
-
-  &.font-size--larger {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      @include breakpoint($medium) {
-        font-size: $title-font-size--larger;
-      }
-      @include breakpoint($large) {
-        font-size: $title-font-size--max--larger;
-      }
+  h5 {
+    @include breakpoint($large) {
+      font-size: $h5-font-size--max--larger;
     }
-  }
-
-  &.font-size--smaller {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      @include breakpoint($large) {
-        font-size: $title-font-size--max--smaller;
-      }
-      font-size: $title-font-size--smaller;
-    }
+    font-size: $h5-font-size--larger;
   }
 }
 

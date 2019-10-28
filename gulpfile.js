@@ -52,6 +52,8 @@
     sassSrc: [
       'source/sass/styleguide/normalize.scss',
       'source/sass/styleguide/pattern-scaffolding.scss',
+      'source/sass/styleguide/ultimenu-extras.scss',
+      'source/sass/styleguide/ultimenu.scss',
       'source/sass/**/*.scss'
     ],
     sassDest: 'source/pattern-lab/css',

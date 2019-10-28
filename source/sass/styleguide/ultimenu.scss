@@ -1,0 +1,168 @@
+/**
+* @file
+* This is a copy of ultimenu.css from the module
+*
+* Classes:
+* .ultimenu: the menu UL tag.
+* .ultimenu > li: the menu LI tag.
+* .ultimenu__flyout: the ultimenu region container aka flyout.
+* .ultimenu__link: the menu-link A tag.
+* @see about RTL
+*  - https://drupal.org/node/2032405
+*/
+
+/**
+* Menu list style.
+*/
+.ultimenu {
+  position: relative; /* Make flyout relative to UL for wide flyout */
+  z-index: 97;
+  min-height: 42px;
+  margin: 0;
+  list-style: none;
+}
+
+/* Add "position: relative;" to make flyout relative to LI for smaller flyout */
+.ultimenu > li {
+  display: block;
+  margin: 0;
+}
+
+/**
+* Ugly arrows to support special_menu_items module that stripped out A classes.
+* If you don't have special_menu_items, reference it by .ultimenu__link.
+*/
+.ultimenu .ultimenu__link {
+  position: relative; /* To hold arrows for small device */
+  display: block;
+  transition: background-color 0.5s, color 0.5s;
+  text-decoration: none;
+  line-height: 1.6;
+}
+
+/**
+* Ultimenu flyout.
+*/
+.ultimenu__flyout {
+  z-index: 102;
+  left: 0;
+  /** Mobile has no :hover, safe to display: none, relies on click events. */
+  display: none;
+  width: 100%;
+  line-height: 1.4;
+}
+
+/** This region is palced within .ultimenu__flyout. */
+.ultimenu__region {
+  padding: 20px;
+  background-color: #fff;
+}
+
+/**
+* 944px below with 16px base font.
+*/
+@media all and (max-width: 58.999em) {
+  .ultimenu > li,
+  .ultimenu .ultimenu__link {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  /** Reset all Ultimeu flyout positioning for off-canvas, in case defined. */
+  .ultimenu__flyout,
+  .ultimenu--vertical .ultimenu__flyout,
+  .ultimenu--htt .ultimenu__flyout {
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+}
+
+/**
+* 944px+ with 16px base font.
+*
+* .ultimenu--hover is for when off-canvas is disabled for desktop.
+*/
+@media all and (min-width: 59em) {
+  .ultimenu--hover > li {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+
+  /** We still have .caret to toggle flyout here. */
+  .ultimenu--hover .ultimenu__flyout {
+    position: absolute;
+  }
+
+  /** To hold caret, tablet up. */
+  .ultimenu.ultimenu--hover .ultimenu__link {
+    padding-right: 64px;
+  }
+
+  .ultimenu--hover .ultimenu__link .caret {
+    background-color: transparent;
+  }
+
+  .ultimenu--hover li .is-ultimenu-active + .ultimenu__flyout {
+    padding: 20px 0;
+  }
+}
+
+/**
+* 1025px with 16px base font, assumes no-touch devices.
+* Use Modernizr.js to have correct touch detection.
+*/
+@media only screen and (min-width: 64.063em) {
+  /* Ultimenu flyout: Never display: none, bad for animation. */
+  .ultimenu--hover .ultimenu__flyout {
+    top: 100%;
+    display: block !important; /* Intentional !important to avoid overrides */
+    visibility: hidden;
+    overflow: hidden;
+    /** Fixed for unwanted hover. Or target .ultimenu selector. */
+    max-height: 0;
+    transition: all 0.2s;
+    opacity: 0;
+  }
+
+  /** Generic rules for all Ultimenu flyout being hovered. */
+  .ultimenu--hover li:hover > .ultimenu__flyout,
+  .ultimenu--hover li a:active + .ultimenu__flyout,
+  .ultimenu--hover li a:focus + .ultimenu__flyout,
+  .ultimenu--hover li .ultimenu__flyout:focus-within {
+    visibility: visible;
+    overflow: visible;
+    min-height: 64px;
+    max-height: none;
+    padding: 20px 0;
+    transition-delay: 0.1s;
+    opacity: 1;
+  }
+
+  /** Ultimenu placed in the footer, htt: horizontal to top. */
+  .ultimenu--htt li:hover > .ultimenu__flyout,
+  .ultimenu--htt li a:active + .ultimenu__flyout,
+  .ultimenu--htt li a:focus + .ultimenu__flyout,
+  .ultimenu--htt li .ultimenu__flyout:focus-within {
+    top: auto;
+    bottom: 100%;
+    max-height: none;
+  }
+
+  /* Unless you want to show caret for laptop up, hide the caret.
+  Remove this if you want to have clickable Ultimenu for all devices.
+  Be sure to remove the hover rules above. */
+  .ultimenu--htt .caret,
+  .ultimenu--vertical .caret,
+  .is-ultimenu-canvas--hover .ultimenu__link .caret {
+    display: none;
+  }
+
+  .ultimenu.ultimenu--hover .ultimenu__link {
+    padding-right: 1.5em;
+  }
+}

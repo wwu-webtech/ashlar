@@ -41,7 +41,7 @@
   }
 
   .body {
-    @extend %font-size--smaller;
+    @include font-size--smaller;
     @include breakpoint($medium) {
       padding: $triple-spacing;
       padding-left: ($standard-spacing * 6);
