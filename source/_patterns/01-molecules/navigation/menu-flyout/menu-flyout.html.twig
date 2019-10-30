@@ -1,8 +1,3 @@
-{#
-/**
- * @see templates/navigation/menu-flyout.html.twig
- */
-#}
 {% import _self as menus %}
 
 {#
@@ -18,19 +13,17 @@
 {% macro menu_links(items, attributes, classes, menu_level) %}
   {% import _self as menus %}
   {% if items %}
-    {% if menu_level == 0 %}
-      <ul{{ attributes.addClass(classes) }}>
-    {% else %}
-      <ul class="menu">
-    {% endif %}
+    <ul{{ attributes }}>
+
     {% for item in items %}
-      <li{{ item.attributes.addClass(class) }}>
+      <li{{ item.attributes.addClass('menu-item') }}>
         <a href="{{ item.url }}">{{ item.title }}</a>
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}
       </li>
     {% endfor %}
+
     </ul>
   {% endif %}
 {% endmacro %}
