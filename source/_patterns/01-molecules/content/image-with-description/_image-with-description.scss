@@ -51,7 +51,7 @@
     }
     padding: $standard-spacing;
 
-    &:not(.dark-blue-bg):not(.blue-bg):not(.light-blue-bg):not(.lightest-blue-bg):not(.light-gray-bg):not(.lightest-gray-b) {
+    &:not(.dark-blue-bg):not(.blue-bg):not(.light-blue-bg):not(.lightest-blue-bg):not(.light-gray-bg):not(.lightest-gray-bg) {
       @include breakpoint(max-width $medium) {
         border-top: none;
       }
