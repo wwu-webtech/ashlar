@@ -86,10 +86,10 @@ $close-toggle-size: 64px;
             z-index: inherit;
             padding: $half-spacing $standard-spacing;
             color: $white;
-            border: $border-width solid white;
+            border: $border-width solid $white;
             border-radius: $triple-spacing;
             background-color: $dark-blue;
-            box-shadow: $border-width $border-width white;
+            box-shadow: $border-width $border-width $white;
 
             &:hover {
               color: $black;
@@ -148,7 +148,7 @@ $close-toggle-size: 64px;
       border: none;
 
       li {
-        margin-bottom: 12px;
+        margin-bottom: $standard-spacing;
         border: none;
       }
     }
