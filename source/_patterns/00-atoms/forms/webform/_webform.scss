@@ -44,7 +44,7 @@ form {
   .description {
     margin-bottom: $standard-spacing;
     color: $gray;
-    font-size: 0.7em;
+    font-size: $p-font-size--smaller;
   }
 
   .form-item {
