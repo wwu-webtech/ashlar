@@ -66,7 +66,7 @@ $accordion-border: $dark-blue solid $border-width--thicker;
 // VU Accordion Styles
 .quick-accordion {
   .ui-accordion-content {
-    height: auto !important;
+    height: auto;
 
     // Affects VU generated content
     .view {

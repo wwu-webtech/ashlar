@@ -181,7 +181,7 @@ $testimonial--credit-circle-size--larger: 300px;
       color: $dark-blue;
       border-radius: 50%;
       background: $white;
-      box-shadow: 0 5px 10px transparentize($black, 0.84), 0 3px 6px transparentize($black, 0.77);
+      box-shadow: $focus-shadow;
       font-size: $p-font-size--smaller;
 
       grid-column: 1 / span 1;

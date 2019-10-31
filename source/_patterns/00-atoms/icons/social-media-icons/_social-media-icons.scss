@@ -71,7 +71,7 @@ $icon-space: (($toggle-size - $icon-size) / 2) - 1;
 
   .social-icon {
     @include breakpoint($medium) {
-      font-size: 16px;
+      font-size: $min-base-font-size;
     }
     display: flex;
     flex-flow: column;
