@@ -36,21 +36,20 @@ page:
                             pattern: templates-onecol-html
                             with:
                               content:
-                                content:
-                                  join():
-                                  - include():
-                                      pattern: organisms-cards-html-col3
-                                      with:
-                                        label: "Spotlight"
-                                        cards:
-                                        - molecules-card-html-tag
-                                        - molecules-card-html-tag
-                                        - molecules-card-html-tag
-                                  - include():
-                                      pattern: organisms-block-template-html
-                                      with:
-                                        label: ""
-                                        content: "<h2>Our Difference</h2><p>Sure. You'd be surprised how far a hug goes with Geordi, or Worf. How long can two people talk about nothing? I'd like to think that I haven't changed those things, sir. Mr. Worf, you do remember how to fire phasers? For an android with no feelings, he sure managed to evoke them in others. What's a knock-out like you doing in a computer-generated gin joint like this? Mr. Crusher, ready a collision course with the Borg ship.</p>"
+                                join():
+                                - include():
+                                    pattern: organisms-cards-html-col3
+                                    with:
+                                      label: "Spotlight"
+                                      cards:
+                                      - molecules-card-html-tag
+                                      - molecules-card-html-tag
+                                      - molecules-card-html-tag
+                                - include():
+                                    pattern: organisms-block-template-html
+                                    with:
+                                      label: ""
+                                      content: "<h2>Our Difference</h2><p>Sure. You'd be surprised how far a hug goes with Geordi, or Worf. How long can two people talk about nothing? I'd like to think that I haven't changed those things, sir. Mr. Worf, you do remember how to fire phasers? For an android with no feelings, he sure managed to evoke them in others. What's a knock-out like you doing in a computer-generated gin joint like this? Mr. Crusher, ready a collision course with the Borg ship.</p>"
                         - include():
                             pattern: templates-layout--flex-html
                             with:
