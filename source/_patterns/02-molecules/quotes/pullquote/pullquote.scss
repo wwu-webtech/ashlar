@@ -1,0 +1,75 @@
+/**
+* @file
+* 02-molecules/testimonials/testimonial--quote-only/_testimonial--quote-only.scss
+*/
+$quote-icon-size: 30px;
+$quote-icon-font-size: 48px;
+
+.block--pullquote {
+  blockquote {
+    @include breakpoint($medium) {
+      border-left: solid $border-width--thicker $green;
+    }
+    background: initial;
+    border-left: solid $border-width $green;
+    margin: 0 $double-spacing;
+
+    .body {
+      margin-bottom: $double-spacing;
+      font-style: italic;
+    }
+
+    .name {
+      font-weight: $font-weight--bold;
+    }
+  }
+
+  &.pullquote--editorial {
+    blockquote {
+      position: relative;
+      max-width: $max-content-width / 3;
+      margin: $quote-icon-size auto 0;
+      padding-top: $quote-icon-size + $standard-spacing;
+      border-top: $blue $border-width solid;
+      border-bottom: $blue $border-width solid;
+      border-left: none;
+      background: initial;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        display: block;
+        display: grid;
+        width: $quote-icon-size;
+        height: $quote-icon-size;
+        padding: $standard-spacing;
+        content: "“";
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: $blue;
+        border: solid $blue $border-width;
+        border-radius: 50%;
+        background: $white;
+        font-family: pt serif;
+        font-size: $quote-icon-font-size;
+      }
+
+      .block__title {
+        border-bottom: none;
+      }
+
+      .body {
+        color: $dark-blue;
+      }
+
+      .credit {
+        text-align: center;
+      }
+
+      .name {
+        display: block;
+      }
+    }
+  }
+}
