@@ -20,6 +20,13 @@
       margin-right: $standard-spacing;
       margin-bottom: $half-spacing;
 
+      &:hover,
+      &:focus,
+      &:active {
+        color: $lightest-green;
+        background: mix(black, $blue, 20%);
+      }
+
       &.ln-disabled {
         color: mix(black, $blue, 30%);
         border-bottom-color: transparent;
