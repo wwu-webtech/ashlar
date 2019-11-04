@@ -1,11 +1,12 @@
 attributes:
-  Attribute(): {}
-classes:
-- flowchart
-- simple
+  Attribute():
+    class:
+    - flowchart
+    - simple
 list_attributes:
-  Attribute(): {}
-list_class: level-a
+  Attribute():
+    class:
+    - level-a
 items:
   - content: Step 1
   - content: Step 2
