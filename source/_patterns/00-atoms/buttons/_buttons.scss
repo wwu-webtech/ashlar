@@ -100,6 +100,12 @@ input[type="submit"] {
   font-size: $p-font-size;
   line-height: 1;
 
+  .material-icons {
+    position: relative;
+    top: $half-spacing / 2;
+    font-size: $p-font-size;
+  }
+
   &:active {
     box-shadow: none;
   }
@@ -128,11 +134,19 @@ input[type="submit"] {
   &.medium {
     padding: ($standard-spacing * 1.5) ($triple-spacing);
     font-size: $h5-font-size;
+
+    .material-icons {
+      font-size: $h5-font-size;;
+    }
   }
 
   &.large {
     padding: $double-spacing ($double-spacing * 2);
     font-size: $h3-font-size;
+
+    .material-icons {
+      font-size: $h3-font-size;;
+    }
   }
 
   &.dark-blue {
