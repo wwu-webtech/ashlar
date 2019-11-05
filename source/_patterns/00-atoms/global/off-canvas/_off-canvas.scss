@@ -1,7 +1,11 @@
 /**
- * @file
- * 00-atoms/global/_off-canvas.scss
- */
+* @file
+* 00-atoms/global/_off-canvas.scss
+*/
+#drupal-off-canvas {
+  font-size: 0.5em;
+}
+
 #drupal-off-canvas ul {
   padding: $half-spacing 0;
 }
