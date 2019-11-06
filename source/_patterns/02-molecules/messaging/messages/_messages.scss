@@ -1,7 +1,7 @@
 /**
- * @file
- * molecules/messaging/messages/_messages.scss
- */
+* @file
+* molecules/messaging/messages/_messages.scss
+*/
 
 $status-color: #e5edf8;
 $warning-color: #fff6bf;
@@ -40,4 +40,15 @@ $success-color: #e6efc2;
 }
 .messages--error {
   @include message($error-color);
+}
+
+.node--unpublished {
+  border-top: solid $border-width $warning-color;
+
+  &:before {
+    @include message($warning-color);
+    position: absolute;
+    right: 0;
+    content: "Unpublished";
+  }
 }
