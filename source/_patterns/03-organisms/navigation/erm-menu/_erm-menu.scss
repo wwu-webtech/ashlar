@@ -1,0 +1,58 @@
+/**
+* @file
+* 03-organisms/navigation/erm-menu/_erm-menu.scss
+* Specialized menu for external relations and marketing pages
+*/
+
+.toggle-erm-menu {
+  @include breakpoint($medium) {
+    position: relative;
+
+    grid-area: search;
+  }
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: transparent;
+    opacity: $hover-opacity;
+  }
+}
+
+#block-ermmenu {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background-color: $blue;
+  background-image: url("/files/inline-images/water-bg_1.jpg");
+
+  a {
+    @include breakpoint($large) {
+      font-size: $h1-font-size--max--largest;
+    }
+    transition: $standard-ease $fast-transition-speed opacity;
+    text-transform: uppercase;
+    color: $white;
+    font-family: $title-font;
+    font-size: $h1-font-size--largest;
+    line-height: 1em;
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: $hover-opacity;
+      background: none;
+    }
+  }
+}

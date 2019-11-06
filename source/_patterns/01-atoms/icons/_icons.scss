@@ -1,0 +1,13 @@
+/**
+ * @file
+ * 01-atoms/icons/_icons.scss
+ */
+
+$icon-size: 36px;
+$icon-size--small: 18px;
+$icon-size--medium: 24px;
+$icon-size--large: 48px;
+
+html .material-icons {
+  font-size: $icon-size;
+}

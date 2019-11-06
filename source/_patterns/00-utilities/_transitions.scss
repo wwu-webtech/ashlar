@@ -1,0 +1,16 @@
+/**
+ * @file
+ * 00-utilities/_transitions.scss
+ */
+
+// Global variables
+$slow-transition-speed: 800ms;
+$medium-transition-speed: 400ms;
+$fast-transition-speed: 200ms;
+$standard-ease: ease; //could be ease-in-out etc
+
+// Used variables
+$link-transition-speed: $fast-transition-speed;
+$link-transition-ease: $standard-ease;
+$button-transition-speed: $medium-transition-speed;
+$button-transition-ease: $standard-ease;

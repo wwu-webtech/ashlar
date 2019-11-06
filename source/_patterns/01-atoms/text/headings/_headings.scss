@@ -1,0 +1,221 @@
+/**
+* @file
+* 01-atoms/01-text/_headings.scss
+*/
+
+$heading-line-height: 1.2em;
+$heading-margin-top: $triple-spacing;
+$heading-margin-bottom: $standard-spacing;
+
+/* Default heading styles, serif with blues */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: $heading-margin-top 0 $heading-margin-bottom;
+  color: $blue;
+  font-family: $heading-font-family;
+  line-height: $heading-line-height;
+}
+h1 {
+  @include breakpoint($large) {
+    font-size: $h1-font-size--max;
+  }
+  color: $darkest-blue;
+  display: inline-block;
+  font-family: $title-font;
+  font-size: $h1-font-size;
+  font-weight: $font-weight--bold;
+  padding-bottom: $double-spacing;
+  position: relative;
+  &:after {
+    content: "";
+    background-color: $darkest-blue;
+    border-color: $darkest-blue;
+    border-style:solid;
+    border-width: calc(4px + 1 * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+    bottom: 0;
+    left:0;
+    position: absolute;
+    width:calc(70px + 80 * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+  }
+}
+h2 {
+  @include breakpoint($large) {
+    font-size: $h2-font-size--max;
+  }
+  font-size: $h2-font-size;
+  font-weight: $font-weight--bold;
+  color: $dark-blue;
+}
+h3 {
+  @include breakpoint($large) {
+    font-size: $h3-font-size--max;
+  }
+  font-size: $h3-font-size;
+  font-weight: $font-weight--semibold;
+  color: mix($blue, $dark-blue, 50%);
+}
+h4 {
+  @include breakpoint($large) {
+    font-size: $h4-font-size--max;
+  }
+  font-size: $h4-font-size;
+  font-weight:$font-weight--regular;
+}
+h5 {
+  @include breakpoint($large) {
+    font-size: $h5-font-size--max;
+  }
+  font-size: $h5-font-size;
+  font-weight:$font-weight--regular;
+}
+h6 {
+  @include breakpoint($large) {
+    font-size: $h6-font-size--max;
+  }
+  font-size: $h6-font-size;
+}
+
+h2 + h3,
+h3 + h4,
+h4 + h5,
+h5 + h6 {
+  margin-top: 0;
+}
+
+main {
+  h2 {
+    padding-bottom: ($standard-spacing * 1.5);
+  }
+}
+
+.sans-serif-headings {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $sans-serif;
+  }
+}
+
+.big-bold-headings {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $sans-serif;
+  }
+
+  h1 {
+    @include breakpoint($large) {
+      font-size: $h1-font-size--max--largest;
+    }
+    text-transform: uppercase;
+    border-bottom: none;
+    font-family: $title-font;
+    font-size: $h1-font-size--largest;
+    font-weight: $font-weight--black;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  h2 {
+    @include breakpoint($large) {
+      font-size: $h2-font-size--max--largest;
+    }
+    font-size: $h2-font-size--largest;
+    text-transform: uppercase;
+    border-bottom: none;
+    font-family: $title-font;
+    font-weight: $font-weight--black;
+  }
+
+  h3 {
+    @include breakpoint($large) {
+      font-size: $h3-font-size--max--larger;
+    }
+    font-size: $h3-font-size--larger;
+    display: inline-block;
+
+    &:after {
+      z-index: -1;
+      display: block;
+      width: 110%;
+      height: 30px;
+      margin-left: 50%;
+      content: "";
+      transform: translate(-50%, -18px);
+      background-color: transparentize($blue, 0.9);
+    }
+  }
+
+  h4 {
+    @include breakpoint($large) {
+      font-size: $h4-font-size--max--larger;
+    }
+    font-size: $h4-font-size--larger;
+    text-transform: uppercase;
+  }
+
+  h5 {
+    @include breakpoint($large) {
+      font-size: $h5-font-size--max--larger;
+    }
+    font-size: $h5-font-size--larger;
+  }
+}
+
+/* Helper to resize headings. Only applies at medium breakpoints. */
+%font-size--smaller {
+  h1 {
+    @include breakpoint($large) {
+      font-size: $h1-font-size--max--smaller;
+    }
+    font-size: $h1-font-size--smaller;
+  }
+
+  h2 {
+    @include breakpoint($large) {
+      font-size: $h2-font-size--max--smaller;
+    }
+    padding-bottom: none;
+    border-bottom: none;
+    font-size: $h2-font-size--smaller;
+  }
+
+  h3 {
+    @include breakpoint($large) {
+      font-size: $h3-font-size--max--smaller;
+    }
+    font-size: $h1-font-size--smaller;
+  }
+
+  h4 {
+    @include breakpoint($large) {
+      font-size: $h4-font-size--max--smaller;
+    }
+    font-size: $h1-font-size--smaller;
+  }
+
+  h5 {
+    @include breakpoint($large) {
+      font-size: $h5-font-size--max--smaller;
+    }
+    font-size: $h1-font-size--smaller;
+  }
+
+  h6 {
+    @include breakpoint($large) {
+      font-size: $h6-font-size--max--smaller;
+    }
+    font-size: $h6-font-size--smaller;
+  }
+}

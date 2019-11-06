@@ -1,0 +1,28 @@
+/**
+* @file
+* 01-atoms/01-text/links/_links.scss
+*/
+a {
+  transition: $link-transition-speed $link-transition-ease;
+  transition-property: background, color, border;
+  text-decoration: underline;
+  color: $link-color;
+
+  &:active,
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: $link-color--hover;
+    border-bottom-color: transparent;
+    background-color: $light-gray;
+  }
+
+  &:focus {
+    @include breakpoint($medium) {
+      outline: $focus-outline--thicker;
+      outline-offset: $border-width--thicker;
+    }
+    outline: $focus-outline;
+    outline-offset: $border-width;
+  }
+}
