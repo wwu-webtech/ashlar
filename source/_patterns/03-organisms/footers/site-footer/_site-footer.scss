@@ -1,0 +1,121 @@
+/**
+* @file
+* organisms/site-footer/_site-footer.scss
+*/
+
+.site-footer {
+  @include blue-bg;
+  @include breakpoint($medium) {
+    -ms-grid-columns: $standard-spacing 1fr $standard-spacing 1fr $standard-spacing 1fr $standard-spacing;
+    -ms-grid-rows: auto auto;
+    grid-template-areas: ". footer_left . footer_center . footer_right ."
+    ". footer_bottom footer_bottom footer_bottom footer_bottom footer_bottom .";
+    grid-template-columns: $standard-spacing 1fr $standard-spacing 1fr $standard-spacing 1fr $standard-spacing;
+    grid-template-rows: auto auto;
+  }
+  @include breakpoint($large) {
+    -ms-grid-columns: 1fr ($max-content-width / 3) $standard-spacing ($max-content-width / 3) $standard-spacing ($max-content-width / 3) 1fr;
+    grid-template-columns: 1fr ($max-content-width / 3) $standard-spacing ($max-content-width / 3) $standard-spacing ($max-content-width / 3) 1fr;
+  }
+  display: -ms-grid;
+  display: grid;
+  padding: $triple-spacing 0;
+
+  -ms-grid-columns: $small-screen-columns;
+  -ms-grid-rows: auto $standard-spacing auto $standard-spacing auto;
+  grid-template-areas: ". footer_left   ."
+  ". ............. ."
+  ". footer_center ."
+  ". ............. ."
+  ". footer_right  ."
+  ". footer_bottom .";
+  grid-template-columns: $small-screen-columns;
+  grid-template-rows: auto $standard-spacing auto $standard-spacing auto;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin-top: 0;
+    font-family: $sans-serif;
+  }
+
+  .block-title {
+    border-bottom: none;
+  }
+
+  .region--footer_left {
+    @include breakpoint($small) {
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 1;
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+    }
+
+    grid-area: footer_left;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+  }
+
+  .region--footer_center {
+    @include breakpoint($small) {
+      -ms-grid-column: 4;
+      -ms-grid-column-span: 1;
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+    }
+
+    grid-area: footer_center;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+  }
+
+  .region--footer_right {
+    @include breakpoint($small) {
+      -ms-grid-column: 6;
+      -ms-grid-column-span: 1;
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 1;
+    }
+
+    grid-area: footer_right;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+  }
+
+  .region--footer_bottom {
+    @include breakpoint($small) {
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 5;
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 1;
+    }
+
+    grid-area: footer_bottom;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 1;
+  }
+
+  .social-media-links {
+    justify-content: flex-start;
+  }
+
+  .ribbon {
+    transform: translatey(-($triple-spacing));
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $light-gray !important;
+    }
+  }
+}

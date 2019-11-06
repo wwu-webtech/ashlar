@@ -1,0 +1,12 @@
+/**
+ * @file
+ * 00-utilities/_layout-builder.scss
+ * Styles that affect the content editor expereince in layout builder should
+ * reside here.
+ */
+
+/* Resets for styles when layout builder preview is turned off */
+.layout-builder--content-preview-disabled * {
+    width: initial;
+    min-height: initial;
+}

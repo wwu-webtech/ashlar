@@ -1,0 +1,79 @@
+/**
+* @file
+* 02-molecules/content/image-with-description/_image-with-description.scss
+*/
+.block--image-with-description {
+  @include breakpoint($medium) {
+    grid-template-areas: none;
+    grid-template-columns: 3fr ($standard-spacing * 4) $double-spacing 4fr;
+    grid-template-rows: ($standard-spacing * 4) 1fr $triple-spacing;
+  }
+  display: grid;
+  margin-bottom: $double-spacing;
+
+  grid-area: body;
+  grid-template-areas: "image"
+  "body";
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+
+  .block__title {
+    margin-top: $standard-spacing;
+  }
+
+  .image {
+    @include breakpoint($medium) {
+      z-index: 1;
+
+      grid-column: 1 / span 2;
+      grid-row: 2 / span 1;
+    }
+
+    grid-area: image;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  .body {
+    @include font-size--smaller;
+    @include breakpoint($medium) {
+      padding: $triple-spacing;
+      padding-left: ($standard-spacing * 6);
+
+      grid-column: 2 / span 3;
+      grid-row: 1 / span all;
+    }
+    padding: $standard-spacing;
+
+    &:not(.dark-blue-bg):not(.blue-bg):not(.light-blue-bg):not(.lightest-blue-bg):not(.light-gray-bg):not(.lightest-gray-bg) {
+      @include breakpoint(max-width $medium) {
+        border-top: none;
+      }
+      border: solid $border-width $blue;
+      background: $white;
+    }
+  }
+
+  &.mirror {
+    @include breakpoint($medium) {
+      grid-template-columns: 4fr $double-spacing ($standard-spacing * 4) 3fr;
+
+      .image {
+        grid-column: 3 / span 2;
+      }
+
+      .body {
+        padding-right: ($standard-spacing * 6);
+        padding-left: $triple-spacing;
+
+        grid-column: 1 / span 3;
+      }
+    }
+  }
+}

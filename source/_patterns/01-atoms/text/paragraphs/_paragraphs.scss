@@ -1,0 +1,16 @@
+/**
+ * @file
+ * 01-atoms/01-text/_paragraphs.scss
+ */
+
+$paragraph-margin-bottom: $standard-spacing;
+
+p {
+  line-height: 1.5em;
+  margin: 0 0 $paragraph-margin-bottom;
+}
+
+.intro {
+  @include font-size--larger;
+  color: $dark-blue;
+}

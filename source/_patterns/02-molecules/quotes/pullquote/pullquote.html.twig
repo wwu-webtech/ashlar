@@ -1,0 +1,15 @@
+<div{{ attributes }}>
+  {% include "@atoms/text/label/label.twig" %}
+
+  <blockquote> 
+    {% block content %}
+      <div class="body">
+        {{ content.body }}
+      </div>
+      <div class="credit">
+        <span class="name"> {{ content.field_name }}</span>
+        <span class="description">{{ content.field_description }}</span>
+      </div>
+    {% endblock %}
+  </blockquote>
+</div>
