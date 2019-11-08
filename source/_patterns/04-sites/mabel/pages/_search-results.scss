@@ -102,6 +102,11 @@
   display: block !important;
 }
 
+#skip-to-search-results:focus {
+  position: relative !important;
+  margin-right: $double-spacing;
+}
+
 #islandora-solr-result-count {
   display: inline-block;
   margin-right: $double-spacing;

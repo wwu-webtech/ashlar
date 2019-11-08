@@ -1,6 +1,9 @@
 /* Scripts for search result pages (and collection pages) */
+/* Move skip link to just after page title */
+var $skip_link = $('#skip-to-search-results');
+$('.pane-page-title').append($skip_link);
 
-/* Move search results count to after page title */
+/* Move search results count to after skip link */
 var $search_count = $('#islandora-solr-result-count');
 $('.pane-page-title').append($search_count);
 
