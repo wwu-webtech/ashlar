@@ -195,6 +195,25 @@ function ashlar_theme_suggestions_form_alter(array &$suggestions, array $variabl
 }
 
 /**
+ * Implements hook_theme_suggestions_page_alter().
+ *
+ * Suggest template for error pages
+ */
+function ashlar_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  // Get Request Object.
+  $request = \Drupal::request();
+
+  // If there is HTTP Exception..
+  if ($exception = $request->attributes->get('exception')) {
+    // Get the status code.
+    $status_code = $exception->getStatusCode();
+    if (in_array($status_code, array(401, 403, 404))) {
+      $suggestions[] = 'page__' . $status_code;
+    }
+  }
+}
+
+/**
  * Implements hook_preprocess_HOOK() for menu.html.twig.
  *
  * Adds classes to menu links. This cannot be done in Twig templates without
