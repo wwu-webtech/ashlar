@@ -60,7 +60,7 @@
     jsFile: 'wwu-styleguide.js',
     jsSrc: [
       'source/_patterns/**/*.js',
-      '!source/_patterns/02-molecules/d7-accordion-alert/d7-accordion-alert.js',
+      '!source/_patterns/01-molecules/d7-accordion-alert/d7-accordion-alert.js',
       'dist/js/*.js',
       '!dist/js/acalog.js',
       'source/js/menu-extras.js'

@@ -1,0 +1,26 @@
+<div{{ attributes }}>
+  {% include "@atoms/global/label/label.twig" %}
+
+  {% block content %}
+  <div class="body">
+    {{ content.body }}
+  </div>
+  {% endblock %}
+
+  {% block form %}
+    <form autocomplete="off" id="quick-search-form">
+      <label for="quick-search-input">{{ content.field_search_label }}</label>
+      <input id="quick-search-input" type="search" />
+    </form>
+  {% endblock %}
+
+  {% block list_nav %}
+    <div id="quick-search-list-nav"></div>
+  {% endblock %}
+</div>
+
+{% block results %}
+  <div class="results-text" role="status">
+  <p id="quick-search-results-text"></p>
+  </div>
+{% endblock %}

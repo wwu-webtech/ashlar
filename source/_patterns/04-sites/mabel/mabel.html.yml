@@ -1,0 +1,157 @@
+bodyClass: "page-islandora"
+page:
+  include():
+    pattern: organisms-page-template-html
+    with:
+      page:
+        header:
+          include():
+            pattern: organisms-block-template-html
+            with:
+              label: ""
+              content: molecules-splash-image-html
+        content:
+          include():
+            pattern: organisms-content-region-html
+            with:
+              content:
+                join():
+                - include():
+                    pattern: organisms-block-template-html-main
+                    with:
+                      content:
+                        join():
+                        - include():
+                            pattern: molecules-mabel-search-html
+                        - include():
+                            pattern: templates-onecol-html
+                            with:
+                              content:
+                                content:
+                                  join():
+                                  - include():
+                                      pattern: organisms-cards-html-col3
+                                      with:
+                                        label: "Spotlight"
+                                        cards:
+                                        - molecules-card-html-tag
+                                        - molecules-card-html-tag
+                                        - molecules-card-html-tag
+                                  - include():
+                                      pattern: organisms-block-template-html
+                                      with:
+                                        label: ""
+                                        content: "<h2>Our Difference</h2><p>Sure. You'd be surprised how far a hug goes with Geordi, or Worf. How long can two people talk about nothing? I'd like to think that I haven't changed those things, sir. Mr. Worf, you do remember how to fire phasers? For an android with no feelings, he sure managed to evoke them in others. What's a knock-out like you doing in a computer-generated gin joint like this? Mr. Crusher, ready a collision course with the Borg ship.</p>"
+                        - include():
+                            pattern: templates-layout--flex-html
+                            with:
+                              content:
+                                flex:
+                                  join():
+                                  - include():
+                                      pattern: molecules-image-button-html
+                                  - include():
+                                      pattern: molecules-image-button-html
+                                  - include():
+                                      pattern: molecules-image-button-html
+                        - include():
+                            pattern: templates-layout--twocol-bricks-html
+                            with:
+                              content:
+                                top: ""
+                                first_above:
+                                  join():
+                                  - include():
+                                      pattern: organisms-block-template-html
+                                      with:
+                                        label: ""
+                                        content:
+                                          include():
+                                              pattern: organisms-block-template-html
+                                              with:
+                                                attributes:
+                                                  Attribute():
+                                                    class:
+                                                    - block--image
+                                                label: ""
+                                                content:
+                                                  include():
+                                                    pattern: atoms-landscape-3x2
+                                  - include():
+                                      pattern: organisms-block-template-html
+                                      with:
+                                        label: "Featured"
+                                        content:
+                                          include():
+                                            pattern: molecules-card-html
+                                            with:
+                                              image: atoms-image-featured
+                                  - include():
+                                      pattern: organisms-block-template-html
+                                      with:
+                                        label: ""
+                                        content: "<a class='button outline'>More Stories</a>"
+                                second_above:
+                                  join():
+                                  - include():
+                                      pattern: organisms-cards-html-list
+                                      with:
+                                        label: "In the News"
+                                  - include():
+                                      pattern: organisms-block-template-html
+                                      with:
+                                        label: ""
+                                        content: "<a class='button outline'>More News</a>"
+                                middle:
+                                  include():
+                                    pattern: molecules-testimonial-html
+                                first_below:
+                                  join():
+                                  - include():
+                                      pattern: organisms-block-template-html
+                                      with:
+                                        label: ""
+                                        content:
+                                          include():
+                                              pattern: organisms-block-template-html
+                                              with:
+                                                attributes:
+                                                  Attribute():
+                                                    class:
+                                                    - block--image
+                                                label: ""
+                                                content:
+                                                  include():
+                                                    pattern: atoms-landscape-3x2
+                                  - include():
+                                      pattern: organisms-block-template-html
+                                      with:
+                                        label: "Up Next"
+                                        content:
+                                          include():
+                                            pattern: molecules-card-html-event
+                                            with:
+                                              image: atoms-image-featured
+                                  - include():
+                                      pattern: organisms-block-template-html
+                                      with:
+                                        label: ""
+                                        content: "<a class='button outline'>Learn More</a>"
+                                second_below:
+                                  join():
+                                  - include():
+                                      pattern: organisms-cards-html-list
+                                      with:
+                                        label: "Upcoming Events"
+                                        cards:
+                                          - molecules-card-html-event
+                                          - molecules-card-html-event
+                                          - molecules-card-html-event
+                                  - include():
+                                      pattern: organisms-block-template-html
+                                      with:
+                                        label: ""
+                                        content: "<a class='button outline'>More News</a>"
+                                bottom: ""
+
+        site_footer: organisms-site-footer-html

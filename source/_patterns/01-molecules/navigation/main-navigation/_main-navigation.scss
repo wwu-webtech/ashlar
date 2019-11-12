@@ -1,0 +1,60 @@
+/**
+ * @file
+ * 01-molecules/navigation/main-navigation/_main-navigation.scss
+ */
+.nav--main {
+  @include breakpoint($medium) {
+    display: block !important;
+  }
+}
+.nav--main,
+#block-system-main-menu {
+  @include breakpoint($medium) {
+    height: inherit;
+    min-height: 0;
+    background: transparent;
+  }
+  height: 100vh;
+  background: $dark-blue;
+
+  & > .menu,
+  .ultimenu--horizontal,
+  .ultimenu-main-menu {
+    @include breakpoint($medium) {
+      flex-flow: row nowrap;
+    }
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+}
+/* Reposition nav in context of the site header */
+.site-header {
+  .nav--main {
+    @include breakpoint($medium) {
+      position: inherit;
+      left: 0 !important;
+      overflow-x: visible;
+      overflow-y: visible;
+      margin-top: -($toggle-size / 2);
+      margin-bottom: ($toggle-size / 2);
+      opacity: 1 !important;
+    }
+    @include breakpoint($large) {
+      margin-top: -($toggle-size--larger / 2);
+      margin-bottom: ($toggle-size--larger / 2);
+    }
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    right: -100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 100%;
+    opacity: 0;
+  }
+}
+
+#block-system-main-menu ul ul {
+  display: none; // hide nested menus on non ultimenu main nav blocks
+}

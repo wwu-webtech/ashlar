@@ -1,0 +1,77 @@
+/**
+ * @file
+ * 01-molecules/content/switcher.scss
+ */
+
+.content-switcher {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  button {
+    @include breakpoint($medium) {
+      padding: $standard-spacing $double-spacing;
+    }
+    width: 100%;
+    max-width: none;
+    margin-right: $standard-spacing / 3;
+    padding: $half-spacing;
+    color: $white;
+    border: $border-width--thicker solid transparent;
+    border-radius: 0;
+    background-color: $blue;
+    box-shadow: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      transform: none;
+      color: $dark-blue;
+      background-color: $light-green;
+      box-shadow: none;
+    }
+
+    &:focus {
+      border: $border-width--thicker dotted $black;
+    }
+
+    &.active,
+    &:disabled {
+      cursor: pointer;
+      opacity: 1;
+      color: $black;
+      background-color: $light-green;
+    }
+
+    &:first-child {
+      margin-left: $standard-spacing / 3;
+    }
+  }
+}
+
+.content-switcher-container {
+  display: grid;
+  display: -ms-grid;
+
+  .content {
+    display: none;
+
+    -ms-grid-column: 1;
+    grid-column-start: 1;
+    -ms-grid-row: 1;
+    grid-row-start: 1;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.layout-builder--layout {
+  .content-switcher-container {
+    .content {
+      display: block;
+    }
+  }
+}

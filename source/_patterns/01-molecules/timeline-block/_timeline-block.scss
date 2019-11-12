@@ -1,0 +1,155 @@
+/**
+* @file
+* 01-molecules/timeline-block/_timeline-block.scss
+*/
+$min-timeline-font-size: 20px;
+$max-timeline-font-size: 28px;
+$timeline-font-size: calc(#{$min-timeline-font-size} + #{strip-unit($max-timeline-font-size - $min-timeline-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+$timeline-border-width: calc(#{$min-timeline-font-size} + #{strip-unit($max-timeline-font-size - $min-timeline-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}) + #{$double-spacing});
+$timeline-margin: calc(50% - (#{$min-timeline-font-size} + #{strip-unit($max-timeline-font-size - $min-timeline-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}) + #{$double-spacing}));
+$timeline-translate-pos: calc(100% + (#{$min-timeline-font-size} + #{strip-unit($max-timeline-font-size - $min-timeline-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}) + #{$double-spacing}));
+$timeline-translate-neg: calc(-100% - (#{$min-timeline-font-size} + #{strip-unit($max-timeline-font-size - $min-timeline-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}) + #{$double-spacing}));
+
+.timeline {
+  .legend {
+    @include breakpoint($small) {
+      float: left;
+    }
+    position: relative;
+    background: transparent;
+  }
+}
+
+.timeline-block {
+  position: relative;
+
+  ul {
+    margin-left: $double-spacing;
+    margin-bottom: 0;
+  }
+
+  .timeline-heading {
+    display: inline-block;
+    margin: 0;
+    padding: $standard-spacing $double-spacing;
+    white-space: nowrap;
+    color: $white;
+    font-family: $sans-serif;
+    font-size: $timeline-font-size;
+    line-height: 1em;
+    border: none;
+    font-weight: $font-weight--regular;
+  }
+
+  .timeline-item {
+    margin: 0;
+    padding: $standard-spacing;
+    position: relative;
+
+    .material-icons {
+      position: absolute;
+      top: 50%;
+      transform: translatey(-50%);
+    }
+
+    &:first-of-type {
+      padding-top: $double-spacing;
+    }
+
+    &:last-of-type {
+      padding-bottom: $double-spacing;
+    }
+  }
+
+  .timeline-item--highlighted {
+    @include breakpoint($small) {
+      max-width: calc(50vw - #{$timeline-border-width} - #{$standard-spacing});
+    }
+    margin: 0;
+    padding: $standard-spacing;
+
+    ul {
+      margin-left: 0;
+    }
+  }
+
+  &:nth-of-type(odd) {
+    @include breakpoint($small) {
+      margin-left: $timeline-margin;
+    }
+    border-left: $blue solid;
+    border-left-width: $timeline-border-width;
+
+    .timeline-heading {
+      position: absolute;
+      left: 0;
+      transform: translate(-100%, -100%) rotate(-90deg);
+      transform-origin: bottom right;
+    }
+
+    .timeline-item {
+      padding-left: calc(#{$icon-size} + #{$double-spacing});
+
+      .material-icons {
+        left: $standard-spacing;
+      }
+    }
+
+    .timeline-item--highlighted {
+      @include breakpoint($small) {
+        position: absolute;
+        left: 0;
+        float: left;
+        transform: translatex($timeline-translate-neg);
+        padding-right: $standard-spacing;
+      }
+      @include breakpoint($medium) {
+        padding-right: $double-spacing;
+      }
+      @include breakpoint($large) {
+        padding-right: $triple-spacing;
+      }
+    }
+  }
+
+  &:nth-of-type(even) {
+    @include breakpoint($small) {
+      margin-right: $timeline-margin;
+    }
+    border-right: $blue solid;
+    border-right-width: $timeline-border-width;
+    text-align: right;
+
+    .timeline-heading {
+      position: absolute;
+      right: 0;
+      transform: translate(100%, -100%) rotate(90deg);
+      transform-origin: bottom left;
+    }
+
+    .timeline-item {
+      padding-right: calc(#{$icon-size} + #{$double-spacing});
+
+      .material-icons {
+        right: $standard-spacing;
+      }
+    }
+
+    .timeline-item--highlighted {
+      @include breakpoint($small) {
+        position: absolute;
+        right: 0;
+        float: right;
+        text-align: left;
+        transform: translatex($timeline-translate-pos);
+        padding-left: $standard-spacing;
+      }
+      @include breakpoint($medium) {
+        padding-left: $double-spacing;
+      }
+      @include breakpoint($large) {
+        padding-left: $triple-spacing;
+      }
+    }
+  }
+}

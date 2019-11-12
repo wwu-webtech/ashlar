@@ -1,0 +1,42 @@
+/**
+ * @file
+ * organisms/global/content-region/_content-region.scss
+ */
+
+.page-content {
+  @include breakpoint($large) {
+    -ms-grid-columns: $large-screen-columns;
+    grid-template-columns: $large-screen-columns;
+  }
+  display: -ms-grid;
+  display: grid;
+  margin: $standard-spacing 0 $double-spacing 0;
+
+  -ms-grid-columns: $small-screen-columns;
+  -ms-grid-rows: auto;
+  grid-template-areas: " . skip_to_content . "
+  " . content         . ";
+  grid-template-columns: $small-screen-columns;
+  grid-template-rows: auto;
+
+
+  #main-content {
+    margin: 0;
+    padding: 0;
+    border: none;
+
+    grid-area: skip_to_content;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+  }
+
+  .region-wrapper {
+    grid-area: content;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+  }
+}

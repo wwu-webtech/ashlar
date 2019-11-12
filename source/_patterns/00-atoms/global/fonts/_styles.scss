@@ -1,0 +1,33 @@
+/**
+ * @file
+ * 00-atoms/global/fonts/_styles.scss
+ */
+@mixin font-size--smaller {
+  @include breakpoint($large) {
+    font-size: $p-font-size--max--smaller;
+  }
+  font-size: $p-font-size--smaller;
+}
+.font-size--smaller {
+  @include font-size--smaller;
+}
+
+@mixin font-size--regular {
+    @include breakpoint($large) {
+      font-size: $p-font-size--max;
+    }
+    font-size: $p-font-size;
+}
+.font-size--regular {
+  @include font-size--regular;
+}
+
+@mixin font-size--larger {
+  @include breakpoint($large) {
+    font-size: $p-font-size--max--larger;
+  }
+  font-size: $p-font-size--larger;
+}
+.font-size--larger {
+  @include font-size--larger;
+}

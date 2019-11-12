@@ -1,0 +1,53 @@
+/**
+ * @file
+ * 00-atoms/forms/webform/_webform.scss
+ * Styles specifically for the Drupal Webform module
+ */
+
+/* File Input */
+.form-managed-file {
+  .form-file {
+    display: inline-block;
+    margin-right: $standard-spacing;
+    margin-bottom: $standard-spacing;
+  }
+}
+
+/* Grids */
+// Overwrite our radio button styles for default radio buttons
+.webform-grid {
+  input[type="radio"] {
+    position: relative;
+    width: inherit;
+    height: inherit;
+    margin: auto;
+    opacity: 1;
+  }
+}
+
+// Make the whole table cell clickable
+.webform-grid {
+  .checkbox {
+    label {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      clip: inherit;
+      height: 100%;
+      opacity: 0;
+    }
+  }
+}
+
+form {
+  .description {
+    margin-bottom: $standard-spacing;
+    color: $gray;
+    font-size: $p-font-size--smaller;
+  }
+
+  .form-item {
+    margin-bottom: $standard-spacing;
+  }
+}

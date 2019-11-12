@@ -1,0 +1,106 @@
+/**
+ * @file
+ * 01-molecules/navigation/accordion-menu/_accordion-menu.scss
+ * While we are phasing out this UI pattern in Drupal 8, these styles are in
+ * place to support the Drupal 7 sites using the ashlar_d7 theme.
+ */
+$expand-toggle-size: 40px;
+
+.block-accordion-menu {
+  margin-bottom: $standard-spacing;
+
+  .block-title {
+    display: none;
+  }
+
+  h3 {
+    text-transform: none;
+  }
+}
+
+.ui-accordion {
+  .ui-accordion-header {
+    box-sizing: border-box;
+    margin-top: $border-width--thicker;
+    padding: 0;
+    border: none;
+    border-right: $expand-toggle-size;
+    border-radius: 0;
+    background-image: none;
+    font-family: $sans-serif;
+
+    a {
+      display: -ms-grid;
+      display: grid;
+      align-content: center;
+      min-height: 40px;
+      margin: inherit;
+      padding: $half-spacing ($standard-spacing + $expand-toggle-size) $half-spacing $standard-spacing;
+      color: $black;
+      border: none;
+      background-color: $light-gray;
+      font-size: $p-font-size--smaller;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $white;
+        background-color: $gray;
+      }
+    }
+
+    .ui-accordion-header-icon {
+      top: $half-spacing + $border-width;
+      right: 0;
+      left: inherit;
+      width: inherit;
+      height: 100%;
+      text-indent: 0;
+      background-image: none;
+      font-size: $p-font-size--smaller;
+
+      &:after {
+        display: block;
+        box-sizing: border-box;
+        width: $expand-toggle-size;
+        height: 100%;
+        content: "+";
+        text-align: center;
+        color: $black;
+        color: $white;
+        background-color: $gray;
+        line-height: $expand-toggle-size;
+      }
+
+      &.ui-icon-triangle-1-s:after {
+        content: "-";
+      }
+    }
+  }
+
+  .ui-accordion-content {
+    padding: $half-spacing 0 $half-spacing $standard-spacing;
+    border: 0;
+    border-radius: 0;
+    background-color: $light-gray;
+    background-image: none;
+
+    .ui-accordion-header {
+      margin: 0;
+    }
+
+    a {
+      border-left: solid $border-width--thicker $gray;
+    }
+  }
+
+  .no-children {
+    .ui-icon {
+      display: none;
+    }
+
+    & + .ui-accordion-content {
+      padding: 0;
+    }
+  }
+}

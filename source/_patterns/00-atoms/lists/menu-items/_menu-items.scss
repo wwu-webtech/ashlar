@@ -1,0 +1,21 @@
+/**
+* @file
+* 00-atoms/lists/_menu-items.scss
+*/
+
+.menu {
+  li {
+    margin-bottom: 0;
+
+    a {
+      display: inline-block;
+      width: 100%;
+      margin: inherit;
+      margin-bottom: 0;
+      padding: $half-spacing ($half-spacing * 4) $half-spacing ($half-spacing * 2);
+      transition: $medium-transition-speed $standard-ease background-color;
+      color: $black;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{#
+/**
+ * @see templates/navigation/ultimenu.html.twig
+ */
+#}
+{% if items -%}
+<nav class="nav--main" aria-label="Main">
+  {% include "@atoms/global/label/label.twig" %}
+
+  {# On small screens, Western menu shows here. Otherwise it is hidden and appears earlier in DOM #}
+  {% include "@molecules/navigation/wwu-mobile-menu/wwu-mobile-menu.html.twig" %}
+
+  <ul{{ attributes.addClass(classes) }}>
+    {%- for item in items -%}
+      <li{{ item.attributes.addClass(item_classes, item.flyout ? 'has-ultimenu') }}>
+        {%- if item.link -%}
+          {% if item.title == 'home-icon' %}
+            {% block home %}
+              <a class="ultimenu__link" href="/"><span class="material-icons">home</span></a>
+            {% endblock %}
+          {% else %}
+            {{ item.link }}
+            {% if item.flyout %}
+              <span class="material-icons expand-icon" aria-hidden="true">keyboard_arrow_right</span>
+            {% endif %}
+          {% endif %}
+          {% if item.below %}
+            {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+          {% endif %}
+        {%- endif -%}
+        {%- if item.flyout -%}
+          <section{{ item.flyout_attributes.addClass('ultimenu__flyout') }}>
+            {{ item.flyout }}
+          </section>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+</nav>
+{%- endif %}

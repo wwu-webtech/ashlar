@@ -1,0 +1,29 @@
+/**
+ * @file
+ * 00-atoms/01-text/_taxonomy-term.scss
+ */
+
+.taxonomy-term,
+.job-title,
+.pronouns {
+  display: inline-block;
+  float: left;
+  margin: 0 $standard-spacing $standard-spacing 0;
+  padding: $standard-spacing;
+  color: $dark-blue;
+  border: none;
+  background-color: $light-green;
+  font-size: $p-font-size--smaller;
+}
+
+a {
+  &.taxonomy-term {
+    color: $dark-blue;
+  }
+  &.taxonomy-term:hover,
+  &.taxonomy-term:focus,
+  &.taxonomy-term:active {
+    color: $light-green;
+    background-color: $dark-blue;
+  }
+}
