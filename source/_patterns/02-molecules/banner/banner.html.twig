@@ -1,0 +1,20 @@
+<div{{ attributes }}>
+  {% block content %}
+
+    {% block image %}
+      <div class="background-image">
+        {{ content.field_image }}
+      </div>
+    {% endblock %}
+
+    <div {{ body_attributes }}>
+      {% block title %}
+        {% include "@atoms/text/label/label.twig" %}
+      {% endblock %}
+
+      {{ content.body }}
+
+    </div>
+
+  {% endblock %}
+</div>

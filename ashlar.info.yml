@@ -31,13 +31,13 @@ regions:
 component-libraries:
   atoms:
     paths:
-      - source/_patterns/00-atoms
+      - source/_patterns/01-atoms
   molecules:
     paths:
-      - source/_patterns/01-molecules
+      - source/_patterns/02-molecules
   organisms:
     paths:
-      - source/_patterns/02-organisms
+      - source/_patterns/03-organisms
   templates:
     paths:
-      - source/_patterns/03-templates
+      - source/_patterns/04-templates
