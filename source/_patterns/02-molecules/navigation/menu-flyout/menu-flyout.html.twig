@@ -13,7 +13,7 @@
 {% macro menu_links(items, attributes, classes, menu_level) %}
   {% import _self as menus %}
   {% if items %}
-    <ul{{ attributes }}>
+    <ul{{ attributes.addClass('menu') }}>
 
     {% for item in items %}
       <li{{ item.attributes.addClass('menu-item') }}>
