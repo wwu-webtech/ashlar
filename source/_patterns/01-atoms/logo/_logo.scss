@@ -1,0 +1,79 @@
+/**
+* @file
+* 01-atoms/logo/_logo.scss
+*/
+$logo-width: 266px;
+$logo-height: 136px;
+$logo-height--stacked: 170px;
+$logo-width--larger: 306px;
+$logo-height--larger: 154px;
+$logo-height--stacked--larger: 196px;
+$logo-width--horizontal: 400px;
+$logo-height--horiztonal: 100px;
+
+.logo {
+  @include breakpoint($large) {
+    width: $logo-width--larger;
+    height: $logo-height--larger;
+  }
+  width: $logo-width;
+  height: $logo-height;
+  padding: $standard-spacing;
+  background-color: $dark-blue;
+
+  &.stacked {
+    @include breakpoint($large) {
+      height: $logo-height--stacked--larger;
+    }
+    height: $logo-height--stacked;
+  }
+
+  &.horizontal {
+    width: $logo-width--horizontal;
+    height: $logo-height--horiztonal;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &.full-color,
+  &.grayscale,
+  &.black {
+    background-color: $white;
+  }
+
+  &.reversed {
+    background-color: $black;
+  }
+
+  &.make-waves {
+    @include breakpoint($large) {
+      width: $logo-width--larger;
+      height: $logo-width--larger;
+    }
+    width: $logo-width;
+    height: $logo-width;
+  }
+
+  .cls-1 {
+    fill: $dark-blue;
+  }
+
+  .cls-2 {
+    fill: $blue;
+  }
+
+  .cls-3 {
+    fill: $black;
+  }
+
+  .cls-4 {
+    fill: #808285;
+  }
+
+  .cls-5 {
+    fill: $white;
+  }
+}
