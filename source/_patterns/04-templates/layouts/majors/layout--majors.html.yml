@@ -3,6 +3,7 @@ attributes:
     class:
     - layout
     - layout--majors
+    id: some-major
 region_attributes:
   title:
     Attribute():
