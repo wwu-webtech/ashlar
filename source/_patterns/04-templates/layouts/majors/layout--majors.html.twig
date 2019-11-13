@@ -14,12 +14,12 @@ set classes = [
 
 {% if content.title %}
 <div {{ region_attributes.title.addClass('layout__region', 'layout__region--title') }}>
-  <h1>
+  <h1 {{ attributes.setAttribute('id', 'major-title') }}>
     {{ content.title }}
   </h1>
 
   <div class="majors-menu">
-    <div class="content-switcher" role="tablist" aria-label="Major Information">
+    <div class="content-switcher" role="tablist" aria-labelledby="major-title">
       <button role="tab" id="button-intro" aria-controls="panel-intro" class="active switch-introduction">Introduction</button>
       <button role="tab" aria-controls="panel-beyond" id="button-beyond" class="switch-beyond">Beyond the Classroom</button>
       <button role="tab" aria-controls="panel-careers-grad" id="button-careers-grad" class="switch-careers">Careers and Graduate Studies</button>
