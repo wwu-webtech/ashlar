@@ -3,6 +3,7 @@ attributes:
   Attribute():
     class:
     - content-switcher
+    id: example
 page:
   title: Title of Page Content
 items:

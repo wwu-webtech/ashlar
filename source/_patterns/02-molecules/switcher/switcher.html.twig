@@ -1,5 +1,7 @@
-<h1 id="page-title">{{ page.title }}</h1>
-<div{{ attributes }} role="tablist" {% if page.title %} aria-labelledby="page-title" {% else %} aria-label="Content Switcher" {% endif %}>
+{% set heading_id = attributes.id ~ '-switcher' %}
+
+<h1 id="{{ heading_id }}">{{ page.title }}</h1>
+<div{{ attributes }} role="tablist" {% if page.title %} aria-labelledby="{{ heading_id }}" {% else %} aria-label="Content Switcher" {% endif %}>
   {% for item in items %}
     <button {{ item.attributes }} id="{{ item.button_id }}" role="tab" aria-controls="{{ item.content_id }}">
       {{ item.title }}
