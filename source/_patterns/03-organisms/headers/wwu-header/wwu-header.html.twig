@@ -29,7 +29,7 @@
     </div>
 
     {% block quick_links %}
-      <button class="toggle toggle-menu toggle-open-menu"><span class="material-icons">menu</span><span class="button-text visually-hidden">Open the menu</span></button>
+      <button class="toggle toggle-menu toggle-open-menu"><span class="material-icons" aria-hidden="true">menu</span><span class="button-text visually-hidden">Open the menu</span></button>
       {% include "@molecules/navigation/wwu-menu/wwu-menu.html.twig" %}
       {{ page.quick_links }}
     {% endblock %}
