@@ -3,6 +3,9 @@ attributes:
   Attribute():
     class:
     - content-switcher
+    id: example
+page:
+  title: Title of Page Content
 items:
 - title: Content 1
   content: We have an infinite amount to learn both from nature and from each other.
