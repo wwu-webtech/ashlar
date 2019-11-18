@@ -76,3 +76,10 @@
     }
   }
 }
+
+/* Hide linked title for embedded blocks */
+.node--view-mode-block {
+  & > h2 {
+    display: none;
+  }
+}
