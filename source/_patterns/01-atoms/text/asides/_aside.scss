@@ -4,10 +4,18 @@
 */
 
 aside,
-.aside,
+.block--beyond-basics-block,
 .paragraph--type--majors-aside {
-  margin: $standard-spacing 0;
-  padding: $double-spacing;
+
+  &.dark-blue-bg,
+  &.blue-bg,
+  &.light-gray-bg,
+  &.lightest-gray-bg,
+  &.light-blue-bg,
+  &.lightest-blue-bg {
+    margin: $standard-spacing 0;
+    padding: $double-spacing;
+  }
 
   h2 {
     margin-bottom: $double-spacing;
@@ -22,5 +30,5 @@ aside,
     &:first-child {
       margin-top: 0;
     }
-  }  
+  }
 }
