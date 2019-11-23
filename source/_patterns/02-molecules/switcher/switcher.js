@@ -5,13 +5,13 @@ var $selectedPanel = $('.content-switcher-container .content.active', context);
 
 
 $('.content-switcher button.active').attr('aria-selected', 'true');
-$('.content-switcher button:not(.active)').attr('aria-selected', 'false');
+$('.content-switcher button:not(.active)').attr({'aria-selected': 'false', 'tabindex': '-1'});
 
 $tabButton.click(function () {
   var $otherButtons = $('.content-switcher button');
   $otherButtons.removeClass('active');
   $otherButtons.attr('aria-selected', 'false');
-  // $otherButtons.attr('tabindex', '-1');
+  $otherButtons.attr('tabindex', '-1');
   var $thisSwitch = $(this).attr('class');
   $(this).addClass('active');
   $(this).attr('aria-selected', 'true');
