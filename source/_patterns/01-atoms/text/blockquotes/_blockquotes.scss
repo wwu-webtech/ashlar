@@ -15,6 +15,7 @@ blockquote {
   padding: $standard-spacing;
   font-style: italic;
   border-left: solid 3px $green;
+  font-display: fallback;
 
   &.style-thin-border {
     border: 0;

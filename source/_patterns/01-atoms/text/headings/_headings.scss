@@ -18,6 +18,7 @@ h6 {
   color: $blue;
   font-family: $heading-font-family;
   line-height: $heading-line-height;
+  font-display: swap;
 }
 h1 {
   @include breakpoint($large) {
