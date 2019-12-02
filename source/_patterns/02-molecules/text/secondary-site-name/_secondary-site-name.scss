@@ -21,6 +21,7 @@
     color: $white;
     background: transparentize($blue, 0.2);
     font-size: $p-font-size;
+    font-display: swap;
 
     grid-column: 1 / span all;
     grid-row: 1;
