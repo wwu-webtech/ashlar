@@ -3,7 +3,6 @@
 * 01-atoms/overlays/_overlays.scss
 */
 $overlay-transparency: 0.4;
-
 .blue-overlay,
 .dark-blue-overlay,
 .black-overlay,
@@ -30,18 +29,34 @@ $overlay-transparency: 0.4;
   }
 }
 
-.blue-overlay:after {
-  background: transparentize($blue, $overlay-transparency);
+.blue-overlay {
+  background: $blue;
+
+  &:after {
+    background: transparentize($blue, $overlay-transparency);
+  }
 }
 
-.dark-blue-overlay:after {
-  background: transparentize($dark-blue, $overlay-transparency);
+.dark-blue-overlay {
+  background: $dark-blue;
+
+  &:after {
+    background: transparentize($dark-blue, $overlay-transparency);
+  }
 }
 
-.black-overlay:after {
-  background: transparentize($black, $overlay-transparency);
+.black-overlay {
+  background: $black;
+
+  &:after {
+    background: transparentize($black, $overlay-transparency);
+  }
 }
 
-.gray-overlay:after {
-  background: transparentize($gray, $overlay-transparency);
+.gray-overlay {
+  background: $gray;
+
+  &:after {
+    background: transparentize($gray, $overlay-transparency);
+  }
 }
