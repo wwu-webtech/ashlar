@@ -190,3 +190,41 @@ $spotlight-height--large: 300px;
     }
   }
 }
+
+.card-2col--flex {
+  display: flex;
+  flex-flow: row wrap;
+
+  .card {
+    flex: 0 0 calc(50% - $half-spacing);
+    margin-right: $half-spacing;
+  }
+}
+
+.card-3col--flex {
+  display: flex;
+  flex-flow: row wrap;
+
+  .card-section {
+    flex: 0 0 100%;
+  }
+
+  .card {
+    flex: 0 0 calc(33.33% - $half-spacing);
+    margin-right: $half-spacing;
+  }
+}
+
+.card-4col--flex {
+  display: flex;
+  flex-flow: row wrap;
+
+  .card {
+    flex: 0 0 calc(25% - $half-spacing);
+    margin-right: $half-spacing;
+  }
+}
+
+.card--flex--section-divider {
+  flex: 0 0 100%;
+}
