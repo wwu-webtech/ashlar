@@ -6,6 +6,7 @@
 aside,
 .block--beyond-basics-block,
 .paragraph--type--majors-aside {
+  margin: $standard-spacing 0;
 
   &.dark-blue-bg,
   &.blue-bg,
@@ -13,7 +14,6 @@ aside,
   &.lightest-gray-bg,
   &.light-blue-bg,
   &.lightest-blue-bg {
-    margin: $standard-spacing 0;
     padding: $double-spacing;
 
     .block__title {
