@@ -46,7 +46,7 @@ $status-icon-size: 72px;
   padding: $standard-spacing;
 
   &.status-alert--minor {
-    @include message($green);
+    @include message($blue);
   }
 
   &.status-alert--major {
@@ -58,6 +58,6 @@ $status-icon-size: 72px;
   }
 
   &.status-alert--resolved {
-    @include message($blue);
+    @include message($green);
   }
 }
