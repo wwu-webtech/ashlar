@@ -13,8 +13,8 @@ $status-icon-size: 72px;
   h4,
   h5,
   h6 {
-    font-family: $sans-serif;
     text-align: center;
+    font-family: $sans-serif;
   }
 
   .material-icons {
@@ -29,6 +29,7 @@ $status-icon-size: 72px;
     }
     text-align: center;
     font-size: $h3-font-size;
+    font-weight: $font-weight--bold;
   }
 
   .severity {
@@ -41,9 +42,8 @@ $status-icon-size: 72px;
 }
 
 .status-alert--message {
-  padding: $standard-spacing;
-
   @include message($blue);
+  padding: $standard-spacing;
 
   &.status-alert--minor {
     @include message($green);
