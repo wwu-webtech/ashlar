@@ -8,9 +8,9 @@
     margin-bottom: 0;
   }
 }
-.message--status,
-.message--warning,
-.message--error {
+.messages--status,
+.messages--warning,
+.messages--error {
   display: block;
   margin-bottom: $half-spacing;
   padding: $half-spacing;
@@ -18,13 +18,13 @@
 }
 
 .messages--status {
-  @include message($status-color);
+  @include message($blue);
 }
 .messages--warning {
-  @include message($warning-color);
+  @include message($yellow);
 }
 .messages--error {
-  @include message($error-color);
+  @include message($red);
 }
 
 .node--unpublished {

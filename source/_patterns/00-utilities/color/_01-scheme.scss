@@ -23,15 +23,11 @@ $light-bg-blue: mix($white, $blue, 80%);
 $lightest-bg-blue: mix($white, $blue, 90%);
 
 // Status colors
-$status-color: $blue;
-$success-color: $green;
 $warning-color: $yellow;
 $alert-color: $red;
-$error-color: $red;
 
 // Status Message Shading
-@mixin message($color) {
-  color: mix($black, $color, 65%);
+@mixin message($color) {  
   background-color: transparentize($color, 0.75);
   a {
     text-decoration: underline;

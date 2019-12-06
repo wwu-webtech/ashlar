@@ -2,14 +2,8 @@ attributes:
   Attribute():
     class:
     - status-alert
-label: A Resolved Alert
+label: No alerts at this time!
 content:
-  label: Watch out for Pet Sitting Job Scams!
-  body: "<p><strong>10/15/19: </strong>Fake job scams have been making the rounds this Fall. Learn how to protect yourself from the latest scams, including the emails looking for pet sitters that have been so common in recent weeks.</p>
-
-      <ul>
-        <li><a href='http://finaid.wwu.edu/studentjobs/students/scams.php'>Online Job Scam Warning Signs</a></li>
-        <li><a href='https://atus.wwu.edu/kb/phishing-how-protect-yourself-fraudulent-emails'>How to Protect Yourself from Fraudulent Emails</a></li>
-      </ul>"
-  status: Resolved
-  severity: Minor
+  body:
+  status: none
+  severity: none

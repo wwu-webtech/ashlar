@@ -2,3 +2,34 @@
 * @file
 * molecules/messaging/status-alert/_status-alert.scss
 */
+.status-alert {
+  @include font-size--smaller;
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $sans-serif;
+  }
+}
+
+.status-alert--mesage {
+  @include message($blue);
+
+  &.status-alert--minor {
+    @include message($light-green);
+  }
+
+  &.status-alert--major {
+    @include message($yellow);
+  }
+
+  &.status-alert--critical {
+    @include message($red);
+  }
+
+  &.status-alert--resolved {
+    @include message($blue);
+  }
+}
