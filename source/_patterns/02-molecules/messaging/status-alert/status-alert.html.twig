@@ -1,18 +1,18 @@
 <div{{ attributes }}>
   <div class="status-alert--message status-alert--{{ content.status }} status-alert--{{ content.severity }}">
   {% block content %}
-    <span class="material-icons" aria-hidden="true">
+    <p class="material-icons status-color" aria-hidden="true">
     {% if content.status == "active" %}
       error_outline
-    </span>
-    <p>Status: {{ content.status }}</p>
+    </p>
+    <p class="status status-color">Status: {{ content.status }}</p>
     {% elseif content.status == "resolved" %}
       check_circle_outline
-    </span>
-    <p>Status: {{ content.status }}</p>
+    </p>
+    <p class="status status-color">Status: {{ content.status }}</p>
     {% else %}
       tag_faces
-    </span>
+    </p>
     {% endif %}
 
     <div class="body">
@@ -21,7 +21,7 @@
       {{ content.body }}
 
       {% if content.status == "active" or content.status =="resolved" %}
-      <p>Severity: {{ content.severity }}</p>
+      <p class="severity status-color">Severity: {{ content.severity }}</p>
       {% endif %}
     </div>
   {% endblock %}

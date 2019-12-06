@@ -2,8 +2,11 @@
 * @file
 * molecules/messaging/status-alert/_status-alert.scss
 */
+$status-icon-size: 72px;
+
 .status-alert {
   @include font-size--smaller;
+  border-width: $border-width--thicker;
 
   h2,
   h3,
@@ -11,14 +14,39 @@
   h5,
   h6 {
     font-family: $sans-serif;
+    text-align: center;
+  }
+
+  .material-icons {
+    display: block;
+    text-align: center;
+    font-size: $status-icon-size;
+  }
+
+  .status {
+    @include breakpoint($large) {
+      font-size: $h3-font-size--max;
+    }
+    text-align: center;
+    font-size: $h3-font-size;
+  }
+
+  .severity {
+    @include breakpoint($large) {
+      font-size: $h4-font-size--max;
+    }
+    text-align: center;
+    font-size: $h4-font-size;
   }
 }
 
-.status-alert--mesage {
+.status-alert--message {
+  padding: $standard-spacing;
+
   @include message($blue);
 
   &.status-alert--minor {
-    @include message($light-green);
+    @include message($green);
   }
 
   &.status-alert--major {
