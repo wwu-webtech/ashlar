@@ -1,0 +1,9 @@
+attributes:
+  Attribute():
+    class:
+    - status-alert
+label: No alerts at this time!
+content:
+  body:
+  status: none
+  severity: none
