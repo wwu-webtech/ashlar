@@ -1,0 +1,63 @@
+/**
+* @file
+* molecules/messaging/status-alert/_status-alert.scss
+*/
+$status-icon-size: 72px;
+
+.status-alert {
+  @include font-size--smaller;
+  border-width: $border-width--thicker;
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-align: center;
+    font-family: $sans-serif;
+  }
+
+  .material-icons {
+    display: block;
+    text-align: center;
+    font-size: $status-icon-size;
+  }
+
+  .status {
+    @include breakpoint($large) {
+      font-size: $h3-font-size--max;
+    }
+    text-align: center;
+    font-size: $h3-font-size;
+    font-weight: $font-weight--bold;
+  }
+
+  .severity {
+    @include breakpoint($large) {
+      font-size: $h4-font-size--max;
+    }
+    text-align: center;
+    font-size: $h4-font-size;
+  }
+}
+
+.status-alert--message {
+  @include message($blue);
+  padding: $standard-spacing;
+
+  &.status-alert--minor {
+    @include message($blue);
+  }
+
+  &.status-alert--major {
+    @include message($yellow);
+  }
+
+  &.status-alert--critical {
+    @include message($red);
+  }
+
+  &.status-alert--resolved {
+    @include message($green);
+  }
+}

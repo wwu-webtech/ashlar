@@ -4,9 +4,9 @@
 */
 
 $chart-size: 300px;
-$chart-blues: (#002f5e,#003f87,#0060ab,#007ac8,#429ad2,#7ab4da,#afcee1,#e3e7e9);
-$chart-light-blues: (#006ebb,#1681ca,#2c93d9,#42a6e8,#57b8f7,#7ecafa,#b3d9f1,#e3e7e9);
-$chart-greens: (#006b3f,#358a30,#6aa921,#9fc812,#c2dc2c,#d3e570,#e4edb3,#f5f6f7);
+$chart-blues: (#429ad2,#003f87,#7ab4da,#0060ab,#afcee1,#007ac8,#e3e7e9,#002f5e);
+$chart-light-blues: (#006ebb,#57b8f7,#1681ca,#7ecafa,#2c93d9,#b3d9f1,#42a6e8,#e3e7e9);
+$chart-greens: (#006b3f,#c2dc2c,#358a30,#d3e570,#6aa921,#e4edb3,#9fc812,#f5f6f7);
 
 .donut-chart {
   display: flex;

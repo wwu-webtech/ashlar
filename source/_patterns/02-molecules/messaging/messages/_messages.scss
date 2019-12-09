@@ -3,43 +3,28 @@
 * molecules/messaging/messages/_messages.scss
 */
 
-$status-color: #e5edf8;
-$warning-color: #fff6bf;
-$error-color: #fbe3e4;
-$success-color: #e6efc2;
-
-@mixin message($color) {
-  display: block;
-  margin-bottom: $half-spacing;
-  padding: $half-spacing;
-  text-align: center;
-  color: darken($color, 65%);
-  background-color: $color;
-  a {
-    text-decoration: underline;
-    color: darken($color, 70%);
-
-    &:focus,
-    &:hover,
-    &:active {
-      color: darken($color, 90%);
-    }
-  }
-}
-
 .messages {
   ul {
     margin-bottom: 0;
   }
 }
+.messages--status,
+.messages--warning,
+.messages--error {
+  display: block;
+  margin-bottom: $half-spacing;
+  padding: $half-spacing;
+  text-align: center;
+}
+
 .messages--status {
-  @include message($status-color);
+  @include message($blue);
 }
 .messages--warning {
-  @include message($warning-color);
+  @include message($yellow);
 }
 .messages--error {
-  @include message($error-color);
+  @include message($red);
 }
 
 .node--unpublished {

@@ -18,10 +18,36 @@ $unfocus-shadow: 0 1px 3px transparentize($black, 0.88), 0 1px 2px transparentiz
 $focus-shadow: 0 5px 10px transparentize($blue, 0.84), 0 3px 6px transparentize($black, 0.77);
 $hover-opacity: 0.85;
 
-// Accent Colors
-$warning-color: $yellow;
-$alert-color: $red;
-
 // Additional shades of blue use as backgrounds only
 $light-bg-blue: mix($white, $blue, 80%);
 $lightest-bg-blue: mix($white, $blue, 90%);
+
+// Status colors
+$warning-color: $yellow;
+$alert-color: $red;
+
+// Status Message Shading
+@mixin message($color) {
+  background-color: transparentize($color, 0.75);
+  border: solid $border-width transparentize($color, 0.25);
+
+  a {
+    text-decoration: underline;
+    color: mix($black, $color, 75%);
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: mix($black, $color, 90%);
+    }
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .status-color {
+    color: mix($black, $color, 65%);
+  }
+}
