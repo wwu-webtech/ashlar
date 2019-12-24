@@ -220,18 +220,6 @@
       > div {
         padding: 0;
       }
-
-      .image {
-        > div {
-          height: inherit;
-        }
-
-        img {
-          height: inherit;
-
-          object-fit: none;
-        }
-      }
     }
   }
 }
