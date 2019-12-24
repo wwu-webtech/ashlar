@@ -4,14 +4,6 @@
 */
 
 .layout--twocol-section {
-  @include breakpoint($medium) {
-    > .layout__region--first {
-      padding-right: $standard-spacing;
-    }
-    > .layout__region--second {
-      padding-left: $standard-spacing;
-    }
-  }
   display: flex;
   flex-wrap: wrap;
 
