@@ -11,6 +11,7 @@
   align-content: start;
   margin-bottom: $standard-spacing;
   transition: $fast-transition-speed $standard-ease;
+  padding-bottom: $standard-spacing;
 
   &:hover,
   &:focus-within {
@@ -20,11 +21,11 @@
   }
 
   .image {
+    overflow: hidden;
     flex: 0 1 100%;
     order: 1;
-    margin-bottom: $half-spacing;
-    overflow: hidden;
     width: 100%;
+    margin-bottom: $half-spacing;
 
     img {
       display: block;
@@ -38,11 +39,13 @@
   .taxonomy-terms {
     flex: 0 1 100%;
     order: 2;
+    padding: 0 $half-spacing;
   }
 
   .title {
     flex: 0 1 100%;
     order: 3;
+    padding: 0 $half-spacing;
 
     .block__title {
       margin-top: 0;
@@ -77,6 +80,7 @@
   .body {
     flex: 0 1 100%;
     order: 4;
+    padding: 0 $half-spacing;
 
     .date {
       font-weight: $font-weight--semibold;

@@ -27,7 +27,8 @@ $spotlight-height--large: 300px;
 .card-3col,
 .card-3col--view .view-content,
 .card-row,
-.card-row .view-content {
+.card-row .view-content,
+.layout--flex .layout__region {
   @include breakpoint($small) {
     flex-direction: row;
   }
@@ -41,17 +42,10 @@ $spotlight-height--large: 300px;
       max-width: 33.333%;
     }
     margin: $half-spacing;
-    padding: 0;
-    padding-bottom: $standard-spacing;
 
-    .taxonomy-terms {
-      padding: 0 $half-spacing;
-    }
 
     .title,
     .body {
-      padding: 0 $half-spacing;
-
       a:hover,
       a:focus,
       &:active {
