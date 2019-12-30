@@ -46,7 +46,7 @@
   <div class="messages--error">Label must not be hidden on accordions</p>
 {% else %}
   <div{{ attributes.addClass('item') }}>
-    <h3{{ title_attributes.addClass(title_classes) }}>
+    <h3{{ title_attributes.addClass(title_classes, 'title') }}>
       <button class="expand">
         <span class="material-icons" aria-hidden="true">add</span>
           {{ label }}
