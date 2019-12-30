@@ -43,18 +43,22 @@
 %}
 
 {% if label_hidden %}
-  <div class="messages--error">Label must not be hidden on accordions</p>
-{% else %}
-  <div{{ attributes.addClass('item') }}>
-    <h3{{ title_attributes.addClass(title_classes, 'title') }}>
-      <button class="expand">
-        <span class="material-icons" aria-hidden="true">add</span>
-          {{ label }}
-        </span>
-      </button>
-    </h3>
+  {% if multiple %}
+    <div{{ attributes.addClass('accordion-set') }}>
+      {% for item in items %}
+        <div{{ item.attributes.addClass('item') }}>{{ item.content }}</div>
+      {% endfor %}
+    </div>
+  {% else %}
     {% for item in items %}
-      <div{{ item.attributes.addClass('content') }}>{{ item.content }}</div>
+      <div{{ attributes.addClass('accordion-set') }}>{{ item.content }}</div>
+    {% endfor %}
+  {% endif %}
+{% else %}
+  <div{{ attributes.addClass('accordion-set') }}>
+    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+    {% for item in items %}
+      <div{{ item.attributes.addClass('item') }}>{{ item.content }}</div>
     {% endfor %}
   </div>
 {% endif %}
