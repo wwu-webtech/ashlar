@@ -5,7 +5,8 @@
 
 .tagline {
   display: block;
-  margin-left: 12px;
+  margin-left: $standard-spacing;
+  margin-bottom: $standard-spacing;
   color: $dark-blue;
   font-style: italic;
 }
@@ -37,5 +38,35 @@ h4 {
 h5 {
   + .tagline {
     font-size: $h6-font-size--smaller;
+  }
+}
+
+.black-bg {
+  h1, h2, h3,
+  h4, h5, h6 {
+
+    + .tagline {
+      color: $lightest-green;
+    }
+  }
+}
+
+.dark-blue-bg {
+  h1, h2, h3,
+  h4, h5, h6 {
+
+    + .tagline {
+      color: $light-green;
+    }
+  }
+}
+
+.blue-bg, .gray-bg {
+  h1, h2, h3,
+  h4, h5, h6 {
+
+    + .tagline {
+      color: $white;
+    }
   }
 }
