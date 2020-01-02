@@ -172,3 +172,10 @@ $image-button-size--large: 300px;
     }
   }
 }
+
+/* Internet Explorer Fix */
+@media screen and (min-width:0\0) {
+  .layout--flex .layout__region .block--image-button {
+    margin: 0 ($double-spacing * 2);
+  }
+}
