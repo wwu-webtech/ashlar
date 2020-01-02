@@ -1,10 +1,17 @@
 /*
- * @file
- * templates/layouts/onecol/_layout--flex.scss
- */
+* @file
+* templates/layouts/onecol/_layout--flex.scss
+*/
 .layout--flex .layout__region {
   width: 100%;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
+}
+
+/* Internet Explorer Fix */
+@media screen and (min-width:0\0) {
+  .layout--flex .layout__region {
+    justify-content: center;
+  }
 }
