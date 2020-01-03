@@ -47,14 +47,14 @@
   ]
 %}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
+  <div{{ attributes.addClass(classes) }}>  
     {% block content %}
-      <h3 class="title">
+      <{{ content['field_item_heading_level'][0]['#markup'] }} class="title">
         <button class="expand">
           <span class="material-icons" aria-hidden="true">add</span>
           {{ content['field_heading'][0]['#context']['value'] }}
         </button>
-      </h3>
+      </{{ content['field_item_heading_level'][0]['#markup'] }}>
 
       <div class="content">
         {{ content['field_content'][0]['#text'] | raw }}
