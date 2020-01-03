@@ -194,7 +194,17 @@ $spotlight-height--large: 300px;
 .card-2col--flex,
 .card-3col--flex,
 .card-4col--flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  
   .card {
+    @include breakpoint($small) {
+      margin-right: $half-spacing;
+    }
+    @include breakpoint($medium) {
+      margin-right: $standard-spacing;
+    }
     flex: 0 1 100%;
   }
 
@@ -205,41 +215,29 @@ $spotlight-height--large: 300px;
 }
 
 .card-2col--flex {
-  display: flex;
-  flex-flow: row wrap;
-
   .card {
-    @include breakpoint($medium) {
+    @include breakpoint($small) {
       flex: 0 0 calc(50% - #{$standard-spacing});
-      margin-right: $standard-spacing;
     }
   }
 }
 
 .card-3col--flex {
-  display: flex;
-  flex-flow: row wrap;
-
   .card-section {
     flex: 0 0 100%;
   }
 
   .card {
-    @include breakpoint($medium) {
+    @include breakpoint($small) {
       flex: 0 0 calc(33.33% - #{$standard-spacing});
-      margin-right: $standard-spacing;
     }
   }
 }
 
 .card-4col--flex {
-  display: flex;
-  flex-flow: row wrap;
-
   .card {
-    @include breakpoint($medium) {
+    @include breakpoint($small) {
       flex: 0 0 calc(25% - #{$standard-spacing});
-      margin-right: $standard-spacing;
     }
   }
 }
