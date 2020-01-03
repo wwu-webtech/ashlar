@@ -55,7 +55,7 @@
   }
 }
 
-%font-size--smaller {
+.font-size--smaller {
   .page-title {
     @include breakpoint($large) {
       font-size: $h1-font-size--max--smaller;
@@ -64,7 +64,7 @@
   }
 }
 
-%font-size--larger {
+.font-size--larger {
   .page-title {
     @include breakpoint($large) {
       font-size: $h1-font-size--max--larger;
