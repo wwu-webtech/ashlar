@@ -5,6 +5,10 @@
 
 .menu {
   li {
+    @include breakpoint($medium) {
+      border-left-width: $border-width--thicker;
+    }
+    border-left: solid $border-width $light-gray;
     margin-bottom: 0;
 
     a {
