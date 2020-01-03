@@ -191,6 +191,14 @@ $spotlight-height--large: 300px;
   }
 }
 
+.card-2col--flex,
+.card-3col--flex,
+.card-4col--flex {
+  .pager {
+    flex: 0 0 100%;
+  }
+}
+
 .card-2col--flex {
   display: flex;
   flex-flow: row wrap;
