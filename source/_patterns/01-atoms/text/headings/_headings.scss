@@ -174,7 +174,7 @@ main {
 }
 
 /* Helper to resize headings. Only applies at medium breakpoints. */
-%font-size--smaller {
+.font-size--smaller {
   h1 {
     @include breakpoint($large) {
       font-size: $h1-font-size--max--smaller;
@@ -195,21 +195,21 @@ main {
     @include breakpoint($large) {
       font-size: $h3-font-size--max--smaller;
     }
-    font-size: $h1-font-size--smaller;
+    font-size: $h3-font-size--smaller;
   }
 
   h4 {
     @include breakpoint($large) {
       font-size: $h4-font-size--max--smaller;
     }
-    font-size: $h1-font-size--smaller;
+    font-size: $h4-font-size--smaller;
   }
 
   h5 {
     @include breakpoint($large) {
       font-size: $h5-font-size--max--smaller;
     }
-    font-size: $h1-font-size--smaller;
+    font-size: $h5-font-size--smaller;
   }
 
   h6 {
