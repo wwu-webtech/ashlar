@@ -25,40 +25,21 @@ $spotlight-height--large: 300px;
 }
 
 .card-3col,
-.card-3col--view .view-content,
-.card-row,
-.card-row .view-content,
-.layout--flex .layout__region {
+.card-3col--view .view-content {
   @include breakpoint($small) {
-    flex-direction: row;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
   }
-  display: flex;
-  flex-direction: column;
+  display: -ms-grid;
+  display: grid;
 
-  .card,
-  .block--card {
-    @include breakpoint($small) {
-      flex: 0 1 33.333%;
-      max-width: 33.333%;
-    }
-    margin: $half-spacing;
-
-
-    .title,
-    .body {
-      a:hover,
-      a:focus,
-      &:active {
-        color: $dark-blue;
-        outline: none;
-        background: none;
-      }
-    }
-
-    .taxonomy-term {
-      @extend .taxonomy-term;
-    }
-  }
+  grid-column-gap: $standard-spacing;
+  -ms-grid-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
 }
 
 .card-4col,
@@ -210,6 +191,41 @@ $spotlight-height--large: 300px;
       &:last-of-type {
         margin-right: 0;
       }
+    }
+  }
+}
+
+/* Deprecating: .card-row */
+.card-row,
+.card-row .view-content {
+  @include breakpoint($small) {
+    flex-direction: row;
+  }
+  display: flex;
+  flex-direction: column;
+
+  .card,
+  .block--card {
+    @include breakpoint($small) {
+      flex: 0 1 33.333%;
+      max-width: 33.333%;
+    }
+    margin: $half-spacing;
+
+
+    .title,
+    .body {
+      a:hover,
+      a:focus,
+      &:active {
+        color: $dark-blue;
+        outline: none;
+        background: none;
+      }
+    }
+
+    .taxonomy-term {
+      @extend .taxonomy-term;
     }
   }
 }
