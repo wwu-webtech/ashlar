@@ -188,3 +188,13 @@ $spotlight-height--large: 300px;
     }
   }
 }
+
+/* Additional styles for card blocks used in "flex layout" sections*/
+.layout--flex {
+  .layout__region {
+    .block--card {
+      flex: 1;
+      margin: 0 $half-spacing;
+    }
+  }
+}
