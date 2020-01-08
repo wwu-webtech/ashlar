@@ -7,6 +7,7 @@ if (generateButton) {
     var pronouns =  document.getElementById('pronouns');
     var job_title =  document.getElementById('job_title');
     var department =  document.getElementById('department');
+    var department_website =  document.getElementById('department_website');
     var street_address =  document.getElementById('street_address');
     var city =  document.getElementById('city');
     var zip_code =  document.getElementById('zip_code');
@@ -17,6 +18,7 @@ if (generateButton) {
     name = (name.value) ? name.value : '';
     job_title = (job_title.value) ? job_title.value : '';
     department = (department.value) ? department.value : '';
+    department_website = (department_website.value) ? department_website.value : '';
     street_address = (street_address.value) ? street_address.value : '';
     city = (city.value) ? city.value : '';
     zip_code = (zip_code.value) ? zip_code.value : '';
@@ -40,9 +42,11 @@ if (generateButton) {
     document.getElementById('field_email').innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
 
     if(phone_one) { document.getElementById('field_phone_one').innerHTML = ' | <a href="tel:' + phone_one + '">' + phone_one + '</a>' }
-    else { document.getElementById('field_phone_one').innerHTML= '' };
+    else { document.getElementById('field_phone_one').innerHTML= '' }
     if(phone_two) { document.getElementById('field_phone_two').innerHTML = ' | <a href="tel:' + phone_two + '">' + phone_two + '</a>' }
-    else { document.getElementById('field_phone_two').innerHTML= '' };
+    else { document.getElementById('field_phone_two').innerHTML= '' }
+
+    if(department_website) { document.getElementById('field_department').innerHTML = '<a href="' + department_website + '">' + department + '</a>'; }
 
     copyButton.innerText ='Copy to Clipboard';
     copyButton.focus();
