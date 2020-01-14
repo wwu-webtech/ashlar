@@ -63,7 +63,12 @@ $accordion-border: $dark-blue solid $border-width--thicker;
   }
 }
 
-// VU Accordion Styles
+/* Make block editor widget a little more tolerable for accordion blocks */
+#drupal-off-canvas .field--name-field-accordion-item tr.draggable {
+  display: flex;
+}
+
+/* VU Accordion Styles */
 .quick-accordion {
   .ui-accordion-content {
     height: auto;
