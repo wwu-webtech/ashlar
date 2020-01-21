@@ -15,6 +15,9 @@
     @include breakpoint($small) {
       padding-right: $half-spacing;
     }
+    @include breakpoint($medium) {
+      padding-right: $standard-spacing;
+    }
   }
 
   > .layout__region--second {
@@ -22,11 +25,18 @@
       padding-right: $half-spacing;
       padding-left: $half-spacing;
     }
+    @include breakpoint($medium) {
+      padding-right: $standard-spacing;
+      padding-left: $standard-spacing;
+    }
   }
 
   > .layout__region--third {
     @include breakpoint($small) {
       padding-left: $half-spacing;
+    }
+    @include breakpoint($medium) {
+      padding-left: $standard-spacing;
     }
   }
 
@@ -59,26 +69,6 @@
     @include font-size--smaller;
     @include breakpoint($small) {
       flex: 0 1 34%;
-    }
-  }
-
-
-  > .layout__region--first {
-    @include breakpoint($medium) {
-      padding-right: $standard-spacing;
-    }
-  }
-
-  > .layout__region--second {
-    @include breakpoint($medium) {
-      padding-right: $standard-spacing;
-      padding-left: $standard-spacing;
-    }
-  }
-
-  > .layout__region--third {
-    @include breakpoint($medium) {
-      padding-left: $standard-spacing;
     }
   }
 }

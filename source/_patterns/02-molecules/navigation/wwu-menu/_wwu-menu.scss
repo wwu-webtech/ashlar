@@ -19,6 +19,7 @@
       li {
         flex: 1;
         margin: 0;
+        border: none;
 
         a {
           @include breakpoint($large) {

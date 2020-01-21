@@ -4,6 +4,13 @@
  * Helper classes to adjust spacing
  */
 
+.standard-margin {
+  margin: $standard-spacing;
+}
+
+.double-margin {
+  margin: $double-spacing;
+}
 
 .no-margin {
   margin: 0;
@@ -25,12 +32,12 @@
   margin-left: 0;
 }
 
-.standard-margin {
-  margin: $standard-spacing;
+.standard-padding {
+  padding: $standard-spacing;
 }
 
-.double-margin {
-  margin: $double-spacing;
+.double-padding {
+  padding: $double-spacing;
 }
 
 .no-padding {
@@ -51,14 +58,6 @@
 
 .no-padding--left {
   padding-left: 0;
-}
-
-.standard-padding {
-  padding: $standard-spacing;
-}
-
-.double-padding {
-  padding: $double-spacing;
 }
 
 /* space creating blocks */
