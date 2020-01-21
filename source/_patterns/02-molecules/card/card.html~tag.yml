@@ -1,6 +1,14 @@
-image: atoms-landscape-3x2
-title: Card Title
-taxonomy_terms:
-  - Excellence
-  - Student Success
-link_url: "#"
+attributes:
+  Attribute():
+    class:
+    - block
+    - block--card
+label: Card Title
+block_content:
+  field_link:
+    0:
+      url: "#"
+content:
+  body:
+  field_image: atoms-landscape-3x2
+  field_highlighted_terms: "<div class='taxonomy-terms'><span class='taxonomy-term'>Excellence</span> <span class='taxonomy-term'>Student Success</span></div>"

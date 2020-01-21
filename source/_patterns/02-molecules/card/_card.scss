@@ -3,13 +3,15 @@
 * molecules/components/card/_card.scss
 */
 
-.card {
+.card,
+.block--card {
   position: relative;
   display: flex;
   flex-flow: row wrap;
   align-content: start;
   margin-bottom: $standard-spacing;
   transition: $fast-transition-speed $standard-ease;
+  padding-bottom: $standard-spacing;
 
   &:hover,
   &:focus-within {
@@ -19,23 +21,35 @@
   }
 
   .image {
+    overflow: hidden;
     flex: 0 1 100%;
     order: 1;
+    width: 100%;
     margin-bottom: $half-spacing;
 
     img {
       display: block;
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
     }
   }
 
   .taxonomy-terms {
     flex: 0 1 100%;
     order: 2;
+    padding: 0 $half-spacing;
   }
 
   .title {
     flex: 0 1 100%;
     order: 3;
+    padding: 0 $half-spacing;
+
+    .block__title {
+      margin-top: 0;
+    }
 
     a {
       display: inline-block;
@@ -66,9 +80,16 @@
   .body {
     flex: 0 1 100%;
     order: 4;
+    padding: 0 $half-spacing;
 
     .date {
       font-weight: $font-weight--semibold;
     }
   }
+}
+
+/* Make sure configure button works in layout builder */
+.layout-builder-block.card .title a::after,
+.layout-builder-block.block--card .title a::after {
+  position: initial;
 }
