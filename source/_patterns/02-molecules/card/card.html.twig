@@ -1,45 +1,35 @@
-<div class="card">
-  {% if profile_fields %}
-    <p class="title"><a href="{{ link_url }}">{{ profile_fields.professional_title }} {{ profile_fields.preferred_name }} {{ profile_fields.last_name }}</a></p>
+<div {{ attributes }}>
+  {% if block_content.field_link.0.url is not empty %}
+  <div class="title">
+    <a href="{{ block_content.field_link.0.url }}">
+      {{ title_prefix }}
+        {% if label %}
+          <{{ block_content.field_heading_level.0.value }} {{ title_attributes }}>{{ label }}</{{ block_content.field_heading_level.0.value }}>
+        {% endif %}
+    </a>
+
+    {{ title_suffix }}
+  </div>
   {% else %}
-    <div class="title"><a href="{{ link_url }}">{{ title }}</a></div>
+  <div class="title">
+    {% include "@atoms/text/label/label-customized.twig" %}
+  </div>
   {% endif %}
 
-  {% if image %}
-    <div class="image">
-      {{ image }}
-    </div>
+  {% if content.field_image %}
+  <div class="image">
+    {{ content.field_image }}
+  </div>
   {% endif %}
 
-  {% if taxonomy_terms %}
-    <div class="taxonomy-terms">
-      {% for term in taxonomy_terms %}
-        <a href="#" class="taxonomy-term">
-          {{ term }}
-        </a>
-      {% endfor %}
-    </div>
-  {% endif %}
-
-  {% if profile_fields %}
-    <div class="taxonomy-terms">
-      <span class="job-title">{{ profile_fields.job_title }}</span>
-      <span class="pronouns">{{ profile_fields.pronouns }}</span>
-    </div>
+  {% if content.field_highlighted_terms %}
+    {{ content.field_highlighted_terms }}
   {% endif %}
 
   <div class="body">
-    {% if profile_fields %}
-    <div class="contact-fields font-size--smaller">
-      <p><a href="mailto:{{ profile_fields.email }}">{{ profile_fields.email }}</a></p>
-      <p><a href="tel:{{ profile_fields.phone }}">{{ profile_fields.phone }}</a> | {{ profile_fields.office_location }}</p>
-    </div>
-
-    {% endif %}
-
     {% if content %}
       {% block content %}
-        {{ content }}
+        {{ content.body }}
       {% endblock %}
     {% endif %}
   </div>
