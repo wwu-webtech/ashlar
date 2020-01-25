@@ -29,6 +29,15 @@ tr {
     border-bottom: none;
   }
 }
+
+/* Responsive table query */
+th, td {
+  @include breakpoint($medium) {
+    display: revert;
+  }
+  display: block;
+}
+
 th {
   @include light-gray-bg;
   padding: $half-spacing;
@@ -39,6 +48,20 @@ th {
   border-left: none;
   background-color: mix(black, $light-gray, 13%);
   font-size: $p-font-size--smaller;
+
+  &[scope="col"] {
+    @include breakpoint($medium) {
+      display: revert;
+    }
+    display: none;
+  }
+
+  &[scope="row"] {
+    @include breakpoint($medium) {
+      text-align: left;
+    }
+    text-align: center;
+  }
 
   &[colspan],
   &[rowspan] {
@@ -92,6 +115,12 @@ td {
   border-left: $border-width solid $lightest-gray;
   font-size: $p-font-size--smaller;
 
+  &:before {
+    @include breakpoint($medium) {
+      content: '';
+    }
+    content: attr(data-header);
+  }
   &:first-of-type {
     border-left: none;
   }
