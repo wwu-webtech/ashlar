@@ -50,7 +50,7 @@ $max-button-width: 250px;
         white-space: normal;
         text-decoration: none;
         color: $white;
-        border: ($half-spacing / 2) solid transparent;
+        outline: ($half-spacing / 2) solid transparent;
         background-color: $dark-blue;
         font-family: $condensed;
         line-height: 1em;
@@ -64,7 +64,8 @@ $max-button-width: 250px;
         }
 
         &:focus {
-          border: ($half-spacing / 2) dotted $black;
+          outline: ($half-spacing / 2) dotted $black;
+          outline-offset: -($half-spacing / 2);
         }
 
         &:after {
