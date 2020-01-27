@@ -19,8 +19,7 @@ $spotlight-height--large: 300px;
 .card-4col,
 .card-2col--view .view-content,
 .card-3col--view .view-content,
-.card-4col--view .view-content,
-.card-4col--view .view-heaader {
+.card-4col--view .view-content {
   display: -ms-grid;
   display: grid;
 
@@ -52,8 +51,7 @@ $spotlight-height--large: 300px;
 }
 
 .card-4col,
-.card-4col--view .view-content,
-.card-4col--view .view-header {
+.card-4col--view .view-content {
   @include breakpoint($small) {
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
     -ms-grid-rows: auto;
