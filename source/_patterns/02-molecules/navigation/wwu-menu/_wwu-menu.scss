@@ -31,6 +31,7 @@
           padding: 0 ($standard-spacing * 1.5);
           text-align: center;
           line-height: $toggle-size;
+          outline: ($half-spacing / 2) solid transparent;
 
           &:hover,
           &:focus,
@@ -38,6 +39,11 @@
             color: $black;
             outline: none;
             background-color: $light-green;
+          }
+
+          &:focus {
+            outline: ($half-spacing / 2) dotted $black;
+            outline-offset: 0;
           }
         }
 
