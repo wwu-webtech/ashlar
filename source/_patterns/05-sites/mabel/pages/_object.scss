@@ -90,3 +90,36 @@ body.page-islandora-object {
     margin-top: -$double-spacing;
   }
 }
+
+/* Details tab */
+.islandora-metadata {
+  .fieldset-title {
+    font-family: $serif;
+    font-size: $h2-font-size;
+    text-decoration: none;
+    color: $dark-blue;
+
+    &:after {
+      content: ' -';
+    }
+  }
+
+  &.collapsed {
+    .fieldset-title {
+      &:after {
+        content: ' +';
+      }
+    }
+  }
+}
+
+html.js .islandora-metadata,
+html.js .islandora-metadata.collapsed {
+  border: solid $dark-blue $border-width;
+  padding: $standard-spacing;
+  margin-bottom: $standard-spacing;
+}
+
+html.js .islandora-metadata.collapsible .fieldset-legend {
+  background-image: none;
+}
