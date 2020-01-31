@@ -36,6 +36,24 @@ $icon-space: (($toggle-size - $icon-size) / 2) - 1;
     outline-color: $dark-blue;
     outline-offset: $border-width;
   }
+
+  &.medium {
+    width: $icon-with-text-size--medium;
+    height: $icon-with-text-size--medium;
+
+    span {
+      font-size: $p-font-size;
+    }
+  }
+
+  &.large {
+    width: $icon-with-text-size--large;
+    height: $icon-with-text-size--large;
+
+    span {
+      font-size: $h4-font-size;
+    }
+  }
 }
 
 .social-media-links {
