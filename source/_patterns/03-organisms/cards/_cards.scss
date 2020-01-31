@@ -24,8 +24,6 @@ $spotlight-height--large: 300px;
   display: grid;
 
   grid-column-gap: $standard-spacing;
-  -ms-grid-columns: 1fr;
-  -ms-grid-rows: auto;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
 }
@@ -33,8 +31,6 @@ $spotlight-height--large: 300px;
 .card-2col,
 .card-2col--view .view-content {
   @include breakpoint($small) {
-    -ms-grid-columns: 1fr 1fr;
-    -ms-grid-rows: auto;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
   }
@@ -43,8 +39,6 @@ $spotlight-height--large: 300px;
 .card-3col,
 .card-3col--view .view-content {
   @include breakpoint($small) {
-    -ms-grid-columns: 1fr 1fr 1fr;
-    -ms-grid-rows: auto;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
   }
@@ -53,8 +47,6 @@ $spotlight-height--large: 300px;
 .card-4col,
 .card-4col--view .view-content {
   @include breakpoint($small) {
-    -ms-grid-columns: 1fr 1fr 1fr 1fr;
-    -ms-grid-rows: auto;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
   }
@@ -117,8 +109,6 @@ $spotlight-height--large: 300px;
     display: grid;
 
     grid-column-gap: $standard-spacing;
-    -ms-grid-columns: 1fr 1fr;
-    -ms-grid-rows: auto 1fr;
     grid-template-areas: "image taxonomy"
     "image title"
     "image body";
@@ -139,10 +129,6 @@ $spotlight-height--large: 300px;
       padding: 0;
 
       grid-area: image;
-      -ms-grid-column: 1;
-      -ms-grid-column-span: 1;
-      -ms-grid-row: 1;
-      -ms-grid-row-span: 2;
 
       > div {
         width: 100%;
@@ -162,10 +148,6 @@ $spotlight-height--large: 300px;
       padding-bottom: 0;
 
       grid-area: taxonomy;
-      -ms-grid-column: 2;
-      -ms-grid-column-span: 1;
-      -ms-grid-row: 1;
-      -ms-grid-row-span: 1;
     }
 
     .title {
@@ -173,18 +155,10 @@ $spotlight-height--large: 300px;
       padding-bottom: 0;
 
       grid-area: title;
-      -ms-grid-column: 2;
-      -ms-grid-column-span: 1;
-      -ms-grid-row: 2;
-      -ms-grid-row-span: 1;
     }
 
     .body {
       grid-area: body;
-      -ms-grid-column: 2;
-      -ms-grid-column-span: 1;
-      -ms-grid-row: 3;
-      -ms-grid-row-span: 1;
     }
   }
 }
@@ -195,6 +169,37 @@ $spotlight-height--large: 300px;
     .block--card {
       flex: 1;
       margin: 0 $half-spacing;
+    }
+  }
+}
+
+/* Internet exploreer */
+@media screen and (min-width:0\0) {
+  .card-2col,
+  .card-2col--view,
+  .card-2col--flex {
+    .card,
+    .block--card {
+      float: left;
+      width: 50%;
+    }
+  }
+  .card-3col,
+  .card-3col--view,
+  .card-3col--flex {
+    .card,
+    .block--card {
+      float: left;
+      width: 33%;
+    }
+  }
+  .card-4col,
+  .card-4col--view,
+  .card-4col--flex {
+    .card,
+    .block--card {
+      float: left;
+      width: 25%;
     }
   }
 }
