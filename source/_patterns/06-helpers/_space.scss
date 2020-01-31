@@ -108,3 +108,14 @@
     height: $standard-spacing * 8;
   }
 }
+
+.close-menu-gap {
+  margin-top: -$standard-spacing;
+
+  @include breakpoint($medium) {
+    margin-top: -$toggle-size;
+  }
+  @include breakpoint($large) {
+    margin-top: -$toggle-size--larger;
+  }
+}
