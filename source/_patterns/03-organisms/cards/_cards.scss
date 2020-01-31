@@ -178,6 +178,8 @@ $spotlight-height--large: 300px;
   .card-2col,
   .card-2col--view,
   .card-2col--flex {
+    display: initial;
+
     .card,
     .block--card {
       float: left;
@@ -187,6 +189,8 @@ $spotlight-height--large: 300px;
   .card-3col,
   .card-3col--view,
   .card-3col--flex {
+    display: initial;
+
     .card,
     .block--card {
       float: left;
@@ -196,10 +200,17 @@ $spotlight-height--large: 300px;
   .card-4col,
   .card-4col--view,
   .card-4col--flex {
+    display: initial;
+
     .card,
     .block--card {
       float: left;
       width: 25%;
     }
+  }
+
+  .card--flex--section-divider {
+    float: left;
+    width: 100%;
   }
 }
