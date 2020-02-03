@@ -79,6 +79,12 @@ input[type="submit"] {
   }
 }
 
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: default;
+}
 /* Links styled as buttons - many options */
 .button {
   @include button-box-shadow($dark-blue);
