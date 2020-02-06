@@ -6,7 +6,7 @@ $overlay-transparency: 0.4;
 .blue-overlay,
 .dark-blue-overlay,
 .black-overlay,
-.light-gray-overlay {
+.gray-overlay {
   &:after {
     position: absolute;
     z-index: 0;
@@ -58,11 +58,11 @@ $overlay-transparency: 0.4;
   }
 }
 
-.light-gray-overlay {
-  background: $light-gray;
+.gray-overlay {
+  background: $gray;
 
   &:after {
-    background: transparentize($light-gray, $overlay-transparency);
+    background: transparentize($gray, $overlay-transparency);
   }
 
   h1,

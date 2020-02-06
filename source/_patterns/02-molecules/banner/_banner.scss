@@ -36,13 +36,13 @@
       }
 
       &:focus {
-        outline-color: $light-gray;
+        outline-color: $gray;
       }
     }
   }
 
 
-  &.light-gray-overlay {
+  &.gray-overlay {
     a {
       color: $dark-blue;
 
