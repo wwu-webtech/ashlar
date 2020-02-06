@@ -59,10 +59,10 @@ $overlay-transparency: 0.4;
 }
 
 .gray-overlay {
-  background: $gray;
+  background: $light-gray;
 
   &:after {
-    background: transparentize($gray, $overlay-transparency);
+    background: transparentize($light-gray, $overlay-transparency);
   }
 
   h1,
