@@ -6,7 +6,7 @@ $overlay-transparency: 0.4;
 .blue-overlay,
 .dark-blue-overlay,
 .black-overlay,
-.gray-overlay {
+.light-gray-overlay {
   &:after {
     position: absolute;
     z-index: 0;
@@ -17,6 +17,11 @@ $overlay-transparency: 0.4;
     height: 100%;
     content: "";
   }
+}
+
+.blue-overlay,
+.dark-blue-overlay,
+.black-overlay, {
 
   h1,
   h2,
@@ -53,10 +58,23 @@ $overlay-transparency: 0.4;
   }
 }
 
-.gray-overlay {
-  background: $gray;
+.light-gray-overlay {
+  background: $light-gray;
 
   &:after {
-    background: transparentize($gray, $overlay-transparency);
+    background: transparentize($light-gray, $overlay-transparency);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $dark-blue;
+  }
+
+  p {
+    color: $black;
   }
 }
