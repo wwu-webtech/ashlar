@@ -17,20 +17,20 @@
   }
 
   &.blue-overlay {
-    a {
+    a:not(.button) {
       color: $white;
     }
   }
 
   &.dark-blue-overlay, &.black-overlay {
-    a {
+    a:not(.button) {
       color: scale-color($light-blue, $lightness: 48%);
     }
   }
 
   &.blue-overlay, &.dark-blue-overlay,
   &.black-overlay {
-    a {
+    a:not(.button) {
       &:hover, &:focus, &:active {
         color: $dark-blue;
       }
@@ -43,7 +43,7 @@
 
 
   &.gray-overlay {
-    a {
+    a:not(.button) {
       color: $dark-blue;
 
       &:focus {
