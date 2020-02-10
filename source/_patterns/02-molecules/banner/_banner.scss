@@ -15,6 +15,42 @@
     max-width: $max-content-width;
     margin: auto;
   }
+
+  &.blue-overlay {
+    a {
+      color: $white;
+    }
+  }
+
+  &.dark-blue-overlay, &.black-overlay {
+    a {
+      color: scale-color($light-blue, $lightness: 48%);
+    }
+  }
+
+  &.blue-overlay, &.dark-blue-overlay,
+  &.black-overlay {
+    a {
+      &:hover, &:focus, &:active {
+        color: $dark-blue;
+      }
+
+      &:focus {
+        outline-color: $gray;
+      }
+    }
+  }
+
+
+  &.gray-overlay {
+    a {
+      color: $dark-blue;
+
+      &:focus {
+        outline-color: inherit;
+      }
+    }
+  }
 }
 
 /* Retrofit for existing pages with beyond basic block banners */
