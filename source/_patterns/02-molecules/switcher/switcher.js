@@ -5,15 +5,18 @@ var $selectedPanel = $('.content-switcher-container .content.active', context);
 
 
 $('.content-switcher button.active').attr('aria-selected', 'true');
+$('.content-switcher button.active').children('span').removeClass('hidden').addClass('show');
 $('.content-switcher button:not(.active)').attr({'aria-selected': 'false', 'tabindex': '-1'});
 
 $tabButton.click(function () {
   var $otherButtons = $('.content-switcher button');
   $otherButtons.removeClass('active');
   $otherButtons.attr('aria-selected', 'false');
+  $otherButtons.children('span').removeClass('show').addClass('hide');
   $otherButtons.attr('tabindex', '-1');
   var $thisSwitch = $(this).attr('class');
   $(this).addClass('active');
+  $(this).children('span').removeClass('hide').addClass('show');
   $(this).attr('aria-selected', 'true');
   $(this).removeAttr('tabindex');
 

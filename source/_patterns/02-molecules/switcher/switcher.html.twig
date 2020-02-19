@@ -4,7 +4,9 @@
 <div{{ attributes }} role="tablist" {% if page.title %} aria-labelledby="{{ heading_id }}" {% else %} aria-label="Content Switcher" {% endif %}>
   {% for item in items %}
     <button {{ item.attributes }} id="{{ item.button_id }}" role="tab" aria-controls="{{ item.content_id }}">
+      <span class="material-icons hide" aria-hidden="true">chevron_left</span>
       {{ item.title }}
+      <span class="material-icons hide" aria-hidden="true">chevron_right</span>
     </button>
   {% endfor %}
 </div>
