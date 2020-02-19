@@ -50,10 +50,6 @@
     }
 
     .material-icons {
-      &.hide {
-        display: none;
-      }
-
       &.show {
         @include breakpoint($large) {
           font-size: $icon-size--small + 2px;
