@@ -12,7 +12,6 @@ $('.content-switcher button:not(.active)').attr({'aria-selected': 'false', 'tabi
 
 $tabButton.click(function () {
   var $otherButtons = $('.content-switcher button');
-
   $otherButtons.removeClass('active');
   $otherButtons.attr('aria-selected', 'false');
   $otherButtons.attr('tabindex', '-1');
