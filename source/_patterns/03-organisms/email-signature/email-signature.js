@@ -11,6 +11,7 @@ if (generateButton) {
     var street_address =  document.getElementById('street_address');
     var city =  document.getElementById('city');
     var zip_code =  document.getElementById('zip_code');
+    var mail_stop =  document.getElementById('mail_stop');
     var email =  document.getElementById('email');
     var phone_one =  document.getElementById('phone_one');
     var phone_two =  document.getElementById('phone_two');
@@ -22,6 +23,7 @@ if (generateButton) {
     street_address = (street_address.value) ? street_address.value : '';
     city = (city.value) ? city.value : '';
     zip_code = (zip_code.value) ? zip_code.value : '';
+    mail_stop = (mail_stop.value) ? mail_stop.value : '';
     email = (email.value) ? email.value : '';
     phone_one = (phone_one.value) ? phone_one.value : '';
     phone_two = (phone_two.value) ? phone_two.value : '';
@@ -45,6 +47,9 @@ if (generateButton) {
     else { document.getElementById('field_phone_one').innerHTML= '' }
     if(phone_two) { document.getElementById('field_phone_two').innerHTML = ' | <a href="tel:' + phone_two + '">' + phone_two + '</a>' }
     else { document.getElementById('field_phone_two').innerHTML= '' }
+
+    if(mail_stop) { document.getElementById('field_mail_stop').innerText = ' | ' + mail_stop }
+    else { document.getElementById('field_mail_stop').innerText= '' }
 
     if(department_website) { document.getElementById('field_department').innerHTML = '<a href="' + department_website + '">' + department + '</a>'; }
 
