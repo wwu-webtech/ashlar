@@ -2,9 +2,12 @@ var $tablist = $('.content-switcher', context);
 var $tabButton = $('.content-switcher button', context);
 var $panels = $('.content-switcher-container .content', context);
 var $selectedPanel = $('.content-switcher-container .content.active', context);
+var $leftArrow = '<span class="material-icons show" aria-hidden="true">chevron_left</span>';
+var $rightArrow = '<span class="material-icons show" aria-hidden="true">chevron_right</span>';
 
 
 $('.content-switcher button.active').attr('aria-selected', 'true');
+$('.content-switcher button.active').prepend($leftArrow).append($rightArrow);
 $('.content-switcher button:not(.active)').attr({'aria-selected': 'false', 'tabindex': '-1'});
 
 $tabButton.click(function () {
@@ -12,8 +15,11 @@ $tabButton.click(function () {
   $otherButtons.removeClass('active');
   $otherButtons.attr('aria-selected', 'false');
   $otherButtons.attr('tabindex', '-1');
+  $otherButtons.children('span').remove();
   var $thisSwitch = $(this).attr('class');
   $(this).addClass('active');
+  $(this).prepend($leftArrow);
+  $(this).append($rightArrow);
   $(this).attr('aria-selected', 'true');
   $(this).removeAttr('tabindex');
 
