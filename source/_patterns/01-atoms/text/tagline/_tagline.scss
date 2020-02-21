@@ -12,36 +12,31 @@
 }
 
 h1 {
-  + .tagline,
-  + div .tagline {
+  + .tagline {
     font-size: $h2-font-size--smaller;
   }
 }
 
 h2 {
-  + .tagline,
-  + div .tagline {
+  + .tagline {
     font-size: $h3-font-size--smaller;
   }
 }
 
 h3 {
-  + .tagline,
-  + div .tagline {
+  + .tagline {
     font-size: $h4-font-size--smaller;
   }
 }
 
 h4 {
-  + .tagline,
-  + div .tagline {
+  + .tagline {
     font-size: $h5-font-size--smaller;
   }
 }
 
 h5 {
-  + .tagline,
-  + div .tagline {
+  + .tagline {
     font-size: $h6-font-size--smaller;
   }
 }
@@ -50,8 +45,7 @@ h5 {
   h1, h2, h3,
   h4, h5, h6 {
 
-    + .tagline,
-    + div .tagline {
+    + .tagline {
       color: $lightest-green;
     }
   }
@@ -61,8 +55,7 @@ h5 {
   h1, h2, h3,
   h4, h5, h6 {
 
-    + .tagline,
-    + div .tagline {
+    + .tagline {
       color: $light-green;
     }
   }
@@ -72,8 +65,7 @@ h5 {
   h1, h2, h3,
   h4, h5, h6 {
 
-    + .tagline,
-    + div .tagline {
+    + .tagline {
       color: $white;
     }
   }
