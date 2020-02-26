@@ -18,7 +18,8 @@
     margin-right: $standard-spacing / 3;
     padding: $half-spacing;
     color: $white;
-    border: $border-width--thicker solid transparent;
+    border: none;
+    outline: $border-width--thicker solid transparent;
     border-radius: 0;
     background-color: $blue;
     box-shadow: none;
@@ -33,12 +34,12 @@
     }
 
     &:focus {
-      border: $border-width--thicker dotted $black;
+      border: none;
+      outline: $border-width--thicker dotted $black;
     }
 
     &.active,
     &:disabled {
-      cursor: pointer;
       opacity: 1;
       color: $black;
       background-color: $light-green;
@@ -46,6 +47,21 @@
 
     &:first-child {
       margin-left: $standard-spacing / 3;
+    }
+
+    .material-icons {
+      &.show {
+        @include breakpoint($large) {
+          font-size: $icon-size--small + 2px;
+        }
+        @include breakpoint($small) {
+          display: inline-block;
+          position: relative;
+          top: 3px;
+        }
+        display: block;
+        font-size: $icon-size--small;
+      }
     }
   }
 }
