@@ -5,16 +5,7 @@
  */
 #}
 {% extends '@organisms/page-template/page-template.html.twig' %}
-
 {% block top %}
   {{ attach_library('ashlar/alerts') }}
-
-  {% set site_url = url("<current>") %}
-
-  {% if 'https://www.wwu.edu/' in site_url|render|render %}
-    {% include '@molecules/messaging/alerts/alert.html.twig' %}
-  {% else %}
-    {{ parent() }}
-  {% endif %}
-
+  {% include '@molecules/messaging/alerts/alert.html.twig' %}
 {% endblock %}
