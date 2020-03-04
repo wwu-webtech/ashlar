@@ -6,6 +6,8 @@
 #}
 {% extends '@organisms/page-template/page-template.html.twig' %}
 {% block top %}
+{% if alert_display %}
   {{ attach_library('ashlar/alerts') }}
   {% include '@molecules/messaging/alerts/alert.html.twig' %}
+{% endif %}
 {% endblock %}
