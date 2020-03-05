@@ -1,0 +1,18 @@
+/**
+* @file
+* sites/mabel/pages/_virtual-collection.scss
+*/
+
+.virtual-collection-grid {
+  .grid {
+    display: flex;
+  }
+  .grid-cell {
+    flex: 1;
+    padding: $half-spacing;
+  }
+  .grid-cell2 {
+    flex: 2;
+    padding: $half-spacing;
+  }
+}

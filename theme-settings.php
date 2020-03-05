@@ -18,6 +18,12 @@ function ashlar_form_system_theme_settings_alter(&$form, FormStateInterface &$fo
     '#default_value' => theme_get_setting('siteimprove_tracking'),
   );
 
+  $form['tracking']['vimeo_tracking'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Enable Vimeo tracking'),
+    '#default_value' => theme_get_setting('vimeo_tracking'),
+  );
+
   $form['theme_settings']['alert_display'] = array(
     '#type' => 'checkbox',
     '#title' => t('Dispaly Western Alerts'),
