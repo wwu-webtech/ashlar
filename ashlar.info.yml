@@ -6,17 +6,10 @@ libraries:
   - core/normalize
   - ashlar/components
   - ashlar/material-icons
-  - ashlar/accessible-mega-menu
-  - ashlar/accordion
-  - ashlar/alerts
   - ashlar/featherlight
   - ashlar/menu-extras
-  - ashlar/page-title
-  - ashlar/quicksearch
   - ashlar/search
   - ashlar/switcher
-  - ashlar/user-login
-  - ashlar/vimeo-tracking
   - ashlar/wwu-header
   - ashlar/wwu-mobile-menu
 regions:
