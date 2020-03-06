@@ -5,7 +5,6 @@ core: 8.x
 libraries:
   - core/normalize
   - ashlar/components
-  - ashlar/material-icons
   - ashlar/featherlight
   - ashlar/menu-extras
   - ashlar/search
