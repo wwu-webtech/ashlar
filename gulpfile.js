@@ -21,6 +21,7 @@
   const sass = require('gulp-sass');
   const sassGlob = require('gulp-sass-glob');
   const imagemin = require('gulp-imagemin');
+  const group = require('gulp-group-css-media-queries');
 
   /**
    * Process the name of the input JS file to be used as the object key for a
@@ -176,6 +177,8 @@
       sourcemaps.init(),
       // Compile Sass.
       sass(config.sass.options),
+      // Group media queries.
+      group(),
       // Output source maps.
       sourcemaps.write(),
       // Flatten filepath globs.
