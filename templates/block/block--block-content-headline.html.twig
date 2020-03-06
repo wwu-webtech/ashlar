@@ -35,6 +35,7 @@
 %}
 {% set attributes = attributes.addClass(classes, block_content.field_headline_style.0.value) %}
 {% set title_attributes = title_attributes.addClass('block__title') %}
+{{ attach_library('ashlar/featherlight') }}
 {% embed "@molecules/headline/headline.html.twig" %}
   {% block container %}
   <div{{ attributes }}>
