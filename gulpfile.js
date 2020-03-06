@@ -22,6 +22,7 @@
   const sassGlob = require('gulp-sass-glob');
   const imagemin = require('gulp-imagemin');
   const group = require('gulp-group-css-media-queries');
+  const cleancss = require('gulp-clean-css');
 
   /**
    * Process the name of the input JS file to be used as the object key for a
@@ -101,6 +102,15 @@
         'node_modules/singularitygs/stylesheets'
       ],
       outputStyle: 'expanded'
+    },
+    cleancss: {
+      format: 'beautify',
+      inline: ['all'],
+      level: {
+        1: { all: true },
+        2: { all: true }
+      },
+      sourceMap: true
     }
   };
 
@@ -179,9 +189,27 @@
       sass(config.sass.options),
       // Group media queries.
       group(),
+      // Optimize css.
+      cleancss(config.sass.cleancss),
       // Output source maps.
       sourcemaps.write(),
       // Flatten filepath globs.
+      flatten(),
+      gulp.dest(config.sass.dest),
+      callback
+    );
+  });
+
+  /**
+   * Generate unoptimized CSS.
+   */
+  gulp.task('sass:dev', function (callback) {
+    pump(
+      gulp.src(config.sass.src),
+      sassGlob(),
+      sourcemaps.init(),
+      sass(config.sass.options),
+      sourcemaps.write(),
       flatten(),
       gulp.dest(config.sass.dest),
       callback
@@ -295,7 +323,7 @@
    * Set watch tasks.
    */
   gulp.task('watch', function () {
-    gulp.watch(config.sass.watch, gulp.series(['sass', 'patternlab:sass']));
+    gulp.watch(config.sass.watch, gulp.series(['sass:dev', 'patternlab:sass']));
     gulp.watch(config.js.watch, gulp.series(['js', 'patternlab:js']));
   });
 
