@@ -6,7 +6,7 @@
  */
 
 /**
- * Implements hook_page_attachments().
+ * Implements hook_page_attachments_alter().
  */
 function ashlar_page_attachments_alter(array &$attachments) {
   $facebook = <<<'FACEBOOK'
@@ -41,6 +41,10 @@ SITEIMPROVE;
       ),
       'siteimprove',
     );
+  }
+
+  if (theme_get_setting('vimeo_tracking')) {
+    $attachments['#attached']['library'][] = 'ashlar/vimeo-tracking';
   }
 }
 

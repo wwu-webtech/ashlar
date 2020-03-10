@@ -78,11 +78,6 @@ language-select:
     language-select.js: {}
   dependencies:
     - core/jquery
-material-icons:
-  version: 1.x
-  css:
-    theme:
-      https://fonts.googleapis.com/icon?family=Material+Icons: {}
 menu-extras:
   version: 1.x
   js:
