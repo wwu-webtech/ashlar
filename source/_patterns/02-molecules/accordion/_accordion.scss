@@ -41,9 +41,14 @@ $accordion-border: $dark-blue solid $border-width--thicker;
         }
 
         &:focus {
-          border: $border-width dotted $dark-blue;
-          background-color: transparentize($dark-blue, 0.9);
+          border: $border-width dotted $white;
+          background-color: $blue;
           box-shadow: none;
+          color: $white;
+
+          .material-icons {
+            color: inherit;
+          }
         }
 
         .material-icons {
