@@ -104,6 +104,11 @@ $image-button-size--large: 300px;
       outline: none;
       background: transparentize($dark-blue, 0.1);
     }
+
+    //overrides file extension style in link atom css
+    &:after {
+      content: "";
+    }
   }
 }
 
