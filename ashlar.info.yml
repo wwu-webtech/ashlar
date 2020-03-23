@@ -6,6 +6,7 @@ libraries:
   - core/normalize
   - ashlar/accordion
   - ashlar/components
+  - ashlar/external-links-a11y
   - ashlar/featherlight
   - ashlar/menu-extras
   - ashlar/search
