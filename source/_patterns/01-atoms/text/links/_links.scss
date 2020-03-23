@@ -41,7 +41,7 @@ a {
 
 // video
   &[href$='.mp4'], &[href$='.mov'], &[href$='.flv'],
-  &[href$='.mpg'], &[href$='.mpeg']{
+  &[href$='.mpg'], &[href$='.mpeg'] {
     &:after {
       content: ' (video)';
     }
@@ -55,56 +55,56 @@ a {
   }
 
   // Illustrator
-  &[href$='.ai']{
+  &[href$='.ai'] {
     &:after {
       content: ' (Illustrator)';
     }
   }
 
   // web
-  &[href$='.dwt'], &[href$='.css'],   &[href$='.xml']  {
+  &[href$='.dwt'], &[href$='.css'],   &[href$='.xml'] {
     &:after {
       content: ' (web file)';
     }
   }
 
   // Photoshop
-  &[href$='.psd']{
+  &[href$='.psd'] {
     &:after {
       content: ' (Photoshop)';
     }
   }
 
   // PostScript
-  &[href$='.eps']{
+  &[href$='.eps'] {
     &:after {
       content: ' (PostScript)';
     }
   }
 
   // InDesign
-  &[href$='.id']{
+  &[href$='.id'] {
     &:after {
       content: ' (InDesign)';
     }
   }
 
   // WMV
-  &[href$='.wmv']{
+  &[href$='.wmv'] {
     &:after {
       content: ' (WMV)';
     }
   }
 
   // Flash
-  &[href$='.swf']{
+  &[href$='.swf'] {
     &:after {
       content: ' (Flash)';
     }
   }
 
   // Word
-  &[href$='.doc'], &[href$='.docx'],  &[href$='.dot'], &[href$='.docm'],  &[href$='.dotx'],  &[href$='.dotm'], &[href$='.odt']{
+  &[href$='.doc'], &[href$='.docx'],  &[href$='.dot'], &[href$='.docm'],  &[href$='.dotx'],  &[href$='.dotm'], &[href$='.odt'] {
     &:after {
       content: ' (Word)';
     }
@@ -118,14 +118,14 @@ a {
   }
 
   // Excel
-  &[href$='.xls'], &[href$='.xlsx'],  &[href$='.xlsb'], &[href$='.xltm'],   &[href$='.xlam'], &[href$='.xltx'], &[href$='.ods']{
+  &[href$='.xls'], &[href$='.xlsx'],  &[href$='.xlsb'], &[href$='.xltm'],   &[href$='.xlam'], &[href$='.xltx'], &[href$='.ods'] {
     &:after {
       content: ' (Excel)';
     }
   }
 
   // PDF
-  &[href$='.pdf']{
+  &[href$='.pdf'] {
     &:after {
       content: ' (PDF)';
     }
