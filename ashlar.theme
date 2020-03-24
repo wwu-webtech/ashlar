@@ -60,8 +60,6 @@ function ashlar_preprocess_page(&$variables) {
  * Implements hook_preprocess_block().
  */
 function ashlar_preprocess_block(&$variables) {
-  kint($variables);
-
   if (isset($variables['elements']['content']['#block_content'])) {
     $variables['block_content'] = $variables['elements']['content']['#block_content'];
   }
