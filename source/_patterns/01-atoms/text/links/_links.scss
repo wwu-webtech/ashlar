@@ -104,21 +104,25 @@ a {
   }
 
   // Word
-  &[href$='.doc'], &[href$='.docx'],  &[href$='.dot'], &[href$='.docm'],  &[href$='.dotx'],  &[href$='.dotm'], &[href$='.odt'] {
+  &[href$='.doc'], &[href$='.docx'],  &[href$='.dot'], &[href$='.docm'],
+  &[href$='.dotx'],  &[href$='.dotm'], &[href$='.odt'] {
     &:after {
       content: ' (Word)';
     }
   }
 
   // PowerPoint
-  &[href$='.ppt'], &[href$='.pptx'],  &[href$='.pptm'], &[href$='.potx'],   &[href$='.potm'], &[href$='.ppam'],   &[href$='.ppsx'], &[href$='.sldx'],   &[href$='.sldm'], &[href$='.odp'] {
+  &[href$='.ppt'], &[href$='.pptx'],  &[href$='.pptm'], &[href$='.potx'],
+  &[href$='.potm'], &[href$='.ppam'],   &[href$='.ppsx'], &[href$='.sldx'],
+  &[href$='.sldm'], &[href$='.odp'] {
     &:after {
       content: ' (PowerPoint)';
     }
   }
 
   // Excel
-  &[href$='.xls'], &[href$='.xlsx'],  &[href$='.xlsb'], &[href$='.xltm'],   &[href$='.xlam'], &[href$='.xltx'], &[href$='.ods'] {
+  &[href$='.xls'], &[href$='.xlsx'],  &[href$='.xlsb'], &[href$='.xltm'],
+  &[href$='.xlam'], &[href$='.xltx'], &[href$='.ods'] {
     &:after {
       content: ' (Excel)';
     }
