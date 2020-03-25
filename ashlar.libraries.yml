@@ -47,7 +47,6 @@ components:
       build/css/components.css: {}
   dependencies:
     - core/normalize
-    - ashlar/material-icons
 erm-menu:
   version: 1.x
   js:
