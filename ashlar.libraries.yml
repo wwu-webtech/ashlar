@@ -35,7 +35,7 @@ bright-edge:
   version: 1.x
   header: true
   js:
-    //cdn.bc0a.com/be_ixf_js_sdk.js: {type: external, minified: true }
+    //cdn.bc0a.com/be_ixf_js_sdk.js: { type: external, minified: true }
     build/js/bright-edge.js: {}
   dependencies:
     - core/drupal
@@ -45,6 +45,8 @@ components:
   css:
     theme:
       build/css/components.css: {}
+  dependencies:
+    - core/normalize
 erm-menu:
   version: 1.x
   js:
@@ -58,6 +60,12 @@ event-tracking:
   dependencies:
     - core/jquery
     - core/jquery.once
+external-links-a11y:
+  version: 1.x
+  js:
+    build/js/external-links-a11y.js: {}
+  dependencies:
+    - core/jquery
 featherlight:
   version: 1.7.13
   css:
