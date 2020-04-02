@@ -4,7 +4,7 @@ attributes:
     - headline
     - block
     - block--headline
-    - box-headline
+    - left-aligned-bar
 title_attributes:
   Attribute():
     class:

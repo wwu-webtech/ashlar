@@ -5,6 +5,10 @@
 $headline-gradient-start: transparentize($darkest-blue, 0.2);
 $headline-gradient-end: transparentize($darkest-blue, 0.5);
 
+.block--headline {
+  z-index: 1;
+}
+
 .headline {
   h1:after {
     border: none;
@@ -31,6 +35,16 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
       color: $text-color-light;
       border-bottom: none;
       font-family: $sans-serif;
+    }
+
+    a {
+      color: $white;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $dark-blue
+      }
     }
 
     .button {
@@ -83,6 +97,16 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
       font-family: $sans-serif;
       font-size: $h5-font-size;
       font-weight: $font-weight--regular;
+    }
+
+    a {
+      color: $white;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $dark-blue;
+      }
     }
 
     .button {
@@ -138,6 +162,20 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
       font-family: $sans-serif;
       font-size: $h2-font-size--largest;
       font-weight: bold;
+    }
+
+    a,
+    p {
+      color: $white;
+      text-shadow: 1px 1px 2px transparentize($darkest-blue, 0.1);
+    }
+
+    a {
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $dark-blue;
+      }
     }
 
     .tagline {
