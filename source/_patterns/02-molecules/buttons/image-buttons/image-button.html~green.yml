@@ -3,7 +3,7 @@ attributes:
     class:
     - block
     - block--image-button
-    - simple
+    - green
 title_attributes:
   Attribute():
     class:
