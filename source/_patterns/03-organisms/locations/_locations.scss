@@ -3,6 +3,7 @@
 * organisms/locations/_locations.scss
 */
 $locations-block-width: 600px;
+$locations-block-width--bigger: 900px;
 $location-button-size: 160px;
 $location-icon-height: 90px;
 $stroke-width--heavy: 12px;
@@ -141,5 +142,22 @@ $locations-font-size: 18px;
     stroke-linejoin: round;
     stroke-miterlimit: 10;
     stroke-width: $stroke-width--medium;
+  }
+
+  &.single-row {
+    @include breakpoint($medium) {
+      max-width: $locations-block-width--bigger;
+    }
+
+    .button-cluster {
+      @include breakpoint($medium) {
+        flex-wrap: nowrap;
+        justify-content: center;
+      }
+
+      .button-animated {
+        padding: $half-spacing;
+      }
+    }
   }
 }
