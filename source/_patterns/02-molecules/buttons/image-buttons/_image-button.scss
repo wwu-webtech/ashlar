@@ -198,7 +198,7 @@ $image-button--smaller-size--medium: 180px;
 
     a {
       @include breakpoint($medium) {
-        font-size: $image-button--smaller-size / 8;
+        font-size: $image-button--smaller-size / 3.5;
       }
       font-size: $min-base-font-size;
     }
