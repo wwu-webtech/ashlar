@@ -9,6 +9,15 @@ table {
   table-layout: fixed;
   word-wrap: break-word;
   border-collapse: collapse;
+
+  &.auto-layout {
+    table-layout: auto;
+  }
+}
+.auto-layout {
+  table {
+    table-layout: auto;
+  }
 }
 tbody {
   border: none;
