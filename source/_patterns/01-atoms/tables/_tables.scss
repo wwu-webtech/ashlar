@@ -112,3 +112,18 @@ caption {
   font-size: $p-font-size--smaller;
   font-weight: $font-weight--bold;
 }
+
+/* Responsive table on small devices */
+@media (max-width: $small) {
+  .responsive-table {
+    overflow-x: scroll;
+
+    table {
+      width: auto;
+    }
+
+    caption {
+      text-align: left;
+    }
+  }
+}
