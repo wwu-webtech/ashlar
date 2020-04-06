@@ -4,7 +4,10 @@
 */
 
 table {
-  width: 100%;
+  @include breakpoint($medium) {
+    width: 100%;
+  }
+  width: auto;
   margin: $standard-spacing 0;
   table-layout: fixed;
   word-wrap: break-word;
@@ -114,16 +117,16 @@ caption {
 }
 
 /* Responsive table on small devices */
-@media (max-width: $small) {
-  .responsive-table {
-    overflow-x: scroll;
+.responsive-table {
+  @include breakpoint($medium) {
+    overflow-x: revert;
+  }
+  overflow-x: scroll;
 
-    table {
-      width: auto;
+  caption {
+    @include breakpoint($medium) {
+      text-align: center;
     }
-
-    caption {
-      text-align: left;
-    }
+    text-align: left;
   }
 }
