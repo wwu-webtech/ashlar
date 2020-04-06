@@ -13,8 +13,18 @@
   margin-right: $standard-spacing;
 }
 .align-center {
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
+
+  &.button {
+    margin-left: 50%;
+    transform: translatex(-50%);
+  }
+
+  .image-button {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 /* Adjust text-align properties */
