@@ -4,10 +4,7 @@
 */
 
 table {
-  @include breakpoint($medium) {
-    width: 100%;
-  }
-  width: auto;
+  width: 100%;
   margin: $standard-spacing 0;
   table-layout: fixed;
   word-wrap: break-word;
@@ -122,6 +119,13 @@ caption {
     overflow-x: revert;
   }
   overflow-x: scroll;
+
+  table {
+    @include breakpoint($medium) {
+      width: 100%;
+    }
+    width: auto;
+  }
 
   caption {
     @include breakpoint($medium) {
