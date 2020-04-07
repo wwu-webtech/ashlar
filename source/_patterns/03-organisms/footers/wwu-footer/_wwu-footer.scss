@@ -83,6 +83,7 @@
   .social-media-links {
     @include breakpoint($small) {
       justify-content: flex-end;
+      align-content: end;
 
       -ms-grid-column: 3;
       -ms-grid-column-span: 1;

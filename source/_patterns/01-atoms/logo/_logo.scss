@@ -5,9 +5,13 @@
 $logo-width: 266px;
 $logo-height: 136px;
 $logo-height--stacked: 170px;
+
+$logo-width--smaller: 178px;
+
 $logo-width--larger: 306px;
 $logo-height--larger: 154px;
 $logo-height--stacked--larger: 196px;
+
 $logo-width--horizontal: 400px;
 $logo-height--horiztonal: 100px;
 
@@ -49,12 +53,16 @@ $logo-height--horiztonal: 100px;
   }
 
   &.make-waves {
+    @include breakpoint($medium) {
+      width: $logo-width;
+      height: $logo-width;
+    }
     @include breakpoint($large) {
       width: $logo-width--larger;
       height: $logo-width--larger;
     }
-    width: $logo-width;
-    height: $logo-width;
+    width: $logo-width--smaller;
+    height: $logo-width--smaller;
   }
 
   .cls-1 {
