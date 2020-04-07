@@ -6,6 +6,7 @@
 aside,
 .block--beyond-basics-block,
 .paragraph--type--majors-aside {
+  margin: $standard-spacing 0;
 
   &.dark-blue-bg,
   &.blue-bg,
@@ -13,23 +14,11 @@ aside,
   &.lightest-gray-bg,
   &.light-blue-bg,
   &.lightest-blue-bg {
-    margin: $standard-spacing 0;
     padding: $double-spacing;
-  }
 
-  h2 {
-    margin-bottom: $double-spacing;
-    font-size: $h3-font-size;
-    font-display: fallback;
-  }
-
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    &:first-child {
+    .block__title {
       margin-top: 0;
+      padding-bottom: 0;
     }
   }
 }
