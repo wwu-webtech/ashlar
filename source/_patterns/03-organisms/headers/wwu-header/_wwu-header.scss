@@ -3,7 +3,7 @@
  * organisms/site-header/_site-header.scss
  */
 $header-columns: $logo-width 1fr $toggle-size;
-$header-columns--larger: $logo-width--larger 1fr $toggle-size--larger;
+$header-columns--larger: $logo-width 1fr $toggle-size--larger;
 $header-rows: $toggle-size;
 $header-rows--larger: $toggle-size--larger;
 
@@ -50,7 +50,7 @@ $site-name-gradient-end: transparentize($dark-blue, 0.2);
       grid-template-rows: $header-rows;
     }
     @include breakpoint($large) {
-      -ms-grid-columns: $logo-width--larger $standard-spacing 1fr $toggle-size--larger;
+      -ms-grid-columns: $logo-width $standard-spacing 1fr $toggle-size--larger;
       -ms-grid-rows: $header-rows--larger;
       grid-template-columns: $header-columns--larger .25fr;
       grid-template-rows: $header-rows--larger;
@@ -87,6 +87,9 @@ $site-name-gradient-end: transparentize($dark-blue, 0.2);
     }
 
     .site-name {
+      @include breakpoint($large) {
+        font-size: $p-font-size--max--smaller;
+      }
       @include breakpoint($medium) {
         display: block !important;
         border-top: $border-width--thinner solid $blue;

@@ -2,7 +2,6 @@
 * @file
 * molecules/media/splash/_splash.scss
 */
-$site-name-spacer: 72px;
 $secondary-site-name-spacer: 52px;
 
 .splash,
@@ -17,17 +16,17 @@ $secondary-site-name-spacer: 52px;
     ". content ."
     ". ....... .";
 
-    -ms-grid-rows: $toggle-size $secondary-site-name-spacer ($logo-height - $toggle-size - $secondary-site-name-spacer + $site-name-spacer + $standard-spacing) 1fr (($toggle-size) / 2 + $double-spacing);
-    grid-template-rows: $toggle-size $secondary-site-name-spacer ($logo-height - $toggle-size - $secondary-site-name-spacer + $site-name-spacer + $standard-spacing) 1fr (($toggle-size) / 2 + $double-spacing);
+    -ms-grid-rows: $toggle-size $secondary-site-name-spacer ($logo-width - $toggle-size - $secondary-site-name-spacer + $standard-spacing) 1fr (($toggle-size) / 2 + $double-spacing);
+    grid-template-rows: $toggle-size $secondary-site-name-spacer ($logo-width - $toggle-size - $secondary-site-name-spacer + $standard-spacing) 1fr (($toggle-size) / 2 + $double-spacing);
   }
   @include breakpoint($large) {
     margin-top: -$toggle-size--larger;
 
     -ms-grid-columns: $large-screen-columns;
-    -ms-grid-rows: ($logo-height--larger + $site-name-spacer) 1fr $toggle-size;
+    -ms-grid-rows: $logo-width 1fr $toggle-size;
     grid-template-columns: $large-screen-columns;
 
-    grid-template-rows: $toggle-size--larger $secondary-site-name-spacer ($logo-height--larger - $toggle-size--larger - $secondary-site-name-spacer + $site-name-spacer + $standard-spacing) 1fr (($toggle-size--larger) / 2 + $double-spacing);
+    grid-template-rows: $toggle-size--larger $secondary-site-name-spacer ($logo-width - $toggle-size--larger - $secondary-site-name-spacer + $standard-spacing) 1fr (($toggle-size--larger) / 2 + $double-spacing);
   }
   display: -ms-grid;
   display: grid;

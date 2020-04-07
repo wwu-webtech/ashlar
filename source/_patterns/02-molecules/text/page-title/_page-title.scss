@@ -25,7 +25,7 @@
       padding-top: calc(#{$toggle-size--larger} + #{$standard-spacing});
       padding-right: calc((100vw - #{$max-content-width}) / 2 + #{$double-spacing});
       padding-bottom: calc((#{$toggle-size--larger} / 2) + #{$standard-spacing});
-      padding-left: calc((100vw - #{$max-content-width}) / 2 + #{$logo-width--larger} + #{$double-spacing});
+      padding-left: calc((100vw - #{$max-content-width}) / 2 + #{$logo-width} + #{$double-spacing});
     }
     display: grid;
     justify-content: center;
