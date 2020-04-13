@@ -112,3 +112,25 @@ caption {
   font-size: $p-font-size--smaller;
   font-weight: $font-weight--bold;
 }
+
+/* Responsive table on small devices */
+.responsive-table {
+  @include breakpoint($medium) {
+    overflow-x: revert;
+  }
+  overflow-x: scroll;
+
+  table {
+    @include breakpoint($medium) {
+      width: 100%;
+    }
+    width: auto;
+  }
+
+  caption {
+    @include breakpoint($medium) {
+      text-align: center;
+    }
+    text-align: left;
+  }
+}
