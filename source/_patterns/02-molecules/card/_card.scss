@@ -54,7 +54,6 @@
     a {
       display: inline-block;
       text-decoration: none;
-      font-family: $sans-serif;
       font-size: $p-font-size;
       font-weight: $font-weight--bold;
       line-height: initial;
@@ -172,6 +171,63 @@
     .body {
       padding-right: $double-spacing;
       padding-left: $double-spacing;
+    }
+  }
+
+  /* Cards with .simple class */
+  &.simple {
+    text-align: center;
+    box-shadow: $unfocus-shadow;
+    font-size: $p-font-size--larger;
+
+    &:hover,
+    &:focus-within {
+      box-shadow: $focus-shadow;
+    }
+
+    &:focus-within {
+      .taxonomy-term {
+        border: $focus-outline--thicker;
+      }
+    }
+
+    .title {
+      order: 1;
+      padding: $triple-spacing;
+      background-color: $blue;
+
+      a {
+        &:hover,
+        &:focus,
+        &:active {
+          color: $white;
+          background: transparent;
+        }
+      }
+
+      h2 {
+        color: $white;
+      }
+    }
+
+    .body {
+      padding: $triple-spacing;
+      padding-bottom: $double-spacing;
+    }
+
+    .taxonomy-terms {
+      order: 6;
+      padding-bottom: $triple-spacing;
+    }
+
+    .taxonomy-term {
+      @include button-box-shadow($dark-blue);
+      float: none;
+      padding: $standard-spacing $double-spacing;
+      color: $white;
+      border-radius: $border-radius--round;
+      background-color: $blue;
+      font-size: $h3-font-size;
     }
   }
 }
