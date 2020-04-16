@@ -10,8 +10,8 @@
   flex-flow: row wrap;
   align-content: start;
   margin-bottom: $standard-spacing;
-  transition: $fast-transition-speed $standard-ease;
   padding-bottom: $standard-spacing;
+  transition: $fast-transition-speed $standard-ease;
 
   &:hover,
   &:focus-within {
@@ -77,9 +77,24 @@
     }
   }
 
-  .body {
+  .date {
     flex: 0 1 100%;
     order: 4;
+    padding: 0 $half-spacing;
+    font-weight: bold;
+  }
+
+  .location {
+    flex: 0 1 100%;
+    order: 4;
+    margin-bottom: $standard-spacing;
+    padding: 0 $half-spacing;
+    font-style: italic;
+  }
+
+  .body {
+    flex: 0 1 100%;
+    order: 5;
     padding: 0 $half-spacing;
 
     .date {
