@@ -101,6 +101,79 @@
       font-weight: $font-weight--semibold;
     }
   }
+
+  /* Cards with .event class */
+  &.event {
+    .image {
+      margin-bottom: -$double-spacing;
+    }
+
+    .date {
+      flex: 0 1 40%;
+      order: 2;
+      margin-right: -$standard-spacing;
+      padding-left: $double-spacing;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 1.5em;
+
+      .month {
+        display: block;
+        padding: $one-point-five-spacing $double-spacing 0 $double-spacing;
+        color: $white;
+        background-color: $blue;
+        font-size: $h3-font-size;
+        font-weight: $font-weight--regular;
+
+        @media (min-width: $large) {
+          font-size: $h3-font-size--max;
+        }
+      }
+
+      .day {
+        display: block;
+        padding: $half-spacing $double-spacing $one-point-five-spacing $double-spacing;
+        white-space: nowrap;
+        word-spacing: -0.2em;
+        color: $white;
+        background-color: $blue;
+        font-size: $h1-font-size;
+        font-weight: $font-weight--semibold;
+
+        @media (min-width: $large) {
+          font-size: $h1-font-size--max;
+        }
+      }
+    }
+
+    .location {
+      flex: 1 1 60%;
+      order: 2;
+      align-self: end;
+      margin-bottom: 0;
+      padding: $standard-spacing $standard-spacing $standard-spacing $double-spacing;
+      text-transform: uppercase;
+      color: $blue;
+      font-style: normal;
+    }
+
+    .title {
+      margin-top: $standard-spacing;
+      padding-right: $double-spacing;
+      padding-left: $double-spacing;
+
+      h2,
+      h3,
+      h4 {
+        font-family: $sans-serif;
+      }
+    }
+
+    .body {
+      padding-right: $double-spacing;
+      padding-left: $double-spacing;
+    }
+  }
 }
 
 /* Make sure configure button works in layout builder */

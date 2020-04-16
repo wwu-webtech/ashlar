@@ -13,6 +13,6 @@ content:
   body: "<p>Card body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
   field_image: atoms-landscape-3x2
-  field_highlighted_terms: "<div class='taxonomy-terms'><a href='#' class='taxonomy-term'>Category</a></div>"
-  field_date: "April 4, 2020"
-  field_location: "Old Main Theater"
+  field_highlighted_terms:
+  field_date: "<span class='month'>Apr</span> <span class='day'>04 - 07</span'>"
+  field_location: "Old Main Theater but Make The Location Longer"
