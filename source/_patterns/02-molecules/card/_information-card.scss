@@ -16,7 +16,6 @@
   .sorting-term {
     order: 0;
     min-width: 30%;
-    margin-bottom: $standard-spacing;
     margin-left: $double-spacing;
     padding: $half-spacing;
     color: $white;
@@ -24,7 +23,8 @@
     background-color: $blue;
   }
 
-  .title {
+  .title {    
+    margin-top: $standard-spacing;
     margin-right: $double-spacing;
     margin-left: $double-spacing;
     padding: 0;
