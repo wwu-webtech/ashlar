@@ -16,6 +16,12 @@
   </div>
   {% endif %}
 
+  {% if content.field_sorting_term %}
+    <div class="sorting-term">
+      {{ content.field_sorting_term }}
+    </div>
+  {% endif %}
+
   {% if content.field_image %}
   <div class="image">
     {{ content.field_image }}
