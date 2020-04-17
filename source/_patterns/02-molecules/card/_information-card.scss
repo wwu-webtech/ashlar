@@ -1,0 +1,61 @@
+/**
+* @file
+* molecules/components/card/_information-card.scss
+*/
+
+.information.block--card {
+  @include button-box-shadow($blue);
+  padding: 0;
+  border: solid $border-width--thicker $blue;
+  border-radius: $border-radius--square;
+
+  .sorting-term {
+    order: 0;
+    min-width: 30%;
+    margin-bottom: $standard-spacing;
+    margin-left: $double-spacing;
+    padding: $half-spacing;
+    color: $white;
+    border-radius: 0 0 $border-radius--square $border-radius--square;
+    background-color: $blue;
+  }
+
+  .title {
+    margin-right: $double-spacing;
+    margin-left: $double-spacing;
+    padding: 0;
+    border-bottom: solid 1px $blue;
+  }
+
+  .title h2 {
+    color: $blue;
+    font-family: $sans-serif;
+    font-weight: $font-weight--regular;
+  }
+
+  .body {
+    padding: $double-spacing !important;
+  }
+
+  .taxonomy-terms {
+    order: 6;
+    padding: 0;
+    background-color: $blue;
+  }
+
+  .taxonomy-term {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    color: $white;
+    background-color: transparent;
+  }
+
+  .taxonomy-term .material-icons {
+    margin-right: $half-spacing;
+    font-size: $double-spacing;
+  }
+
+  &.split-style {
+  }
+}
