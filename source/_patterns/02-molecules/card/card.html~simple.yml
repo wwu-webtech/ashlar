@@ -3,9 +3,9 @@ attributes:
     class:
     - block
     - block--card
-    - event
+    - simple
     - sans-serif-headings
-label: Event Title
+label: March 8
 block_content:
   field_link:
     0:
@@ -13,7 +13,5 @@ block_content:
 content:
   body: "<p>Card body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
-  field_image: atoms-landscape-3x2
-  field_highlighted_terms:
-  field_date: "<span class='month'>Apr</span> <span class='day'>04 - 07</span'>"
-  field_location: "Old Main Theater but Make The Location Longer"
+  field_image:
+  field_highlighted_terms: "<div class='taxonomy-terms'><span class='taxonomy-term'>Apply Now</span></div>"
