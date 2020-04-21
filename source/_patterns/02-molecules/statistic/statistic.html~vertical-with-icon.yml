@@ -6,7 +6,7 @@ attributes:
       - statistic--vertical
       - underlined-headings
       - text-align-center
-      - blue-text
+      - white-bg
 title_attributes:
   Attribute():
     class:

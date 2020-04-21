@@ -11,7 +11,8 @@ $vertical-statistic-width: 180px;
     font-weight: $font-weight--bold;
   }
 
-  &.blue-text {
+  &.white-bg {
+    background-color: $white;
     color: $blue;
 
     .block__title {
@@ -20,6 +21,17 @@ $vertical-statistic-width: 180px;
 
       &:after {
         border-width: $border-width;
+      }
+    }
+
+    a {
+      color: $blue;
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: $link-color--hover;
+        background-color: $light-gray;
       }
     }
   }
