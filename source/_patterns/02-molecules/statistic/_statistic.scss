@@ -16,6 +16,11 @@ $vertical-statistic-width: 180px;
 
     .block__title {
       color: $blue;
+      padding-bottom: $standard-spacing;
+
+      &:after {
+        border-width: $border-width;
+      }
     }
   }
 

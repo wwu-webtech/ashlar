@@ -4,6 +4,8 @@ attributes:
       - block
       - block--statistic
       - statistic--vertical
+      - underlined-headings
+      - text-align-center
       - blue-text
 title_attributes:
   Attribute():
