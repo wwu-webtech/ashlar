@@ -6,7 +6,8 @@ $overlay-transparency: 0.4;
 .blue-overlay,
 .dark-blue-overlay,
 .black-overlay,
-.gray-overlay {
+.gray-overlay,
+.white-gradient-overlay {
   &:after {
     position: absolute;
     z-index: 0;
@@ -76,5 +77,13 @@ $overlay-transparency: 0.4;
 
   p {
     color: $black;
+  }
+}
+
+.white-gradient-overlay {
+  background: $white;
+
+  &:after {
+    background: linear-gradient(to right, $white, transparentize($white, 0.2));
   }
 }
