@@ -11,12 +11,25 @@ $vertical-statistic-width: 180px;
     font-weight: $font-weight--bold;
   }
 
+  &.blue-text {
+    color: $blue;
+
+    .block__title {
+      color: $blue;
+    }
+  }
+
   &.statistic--vertical {
     width: $vertical-statistic-width;
     margin: 0 $half-spacing $standard-spacing;
     padding: $standard-spacing;
     text-align: center;
     border-radius: $border-radius--round-square;
+
+    .block__title {
+      margin-top: 0;
+      font-family: $sans-serif;
+    }
 
     .number {
       display: block;

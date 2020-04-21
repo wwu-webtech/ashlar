@@ -4,6 +4,7 @@ attributes:
       - block
       - block--statistic
       - statistic--vertical
+      - blue-text
 title_attributes:
   Attribute():
     class:
@@ -16,4 +17,4 @@ block_content:
       value: "h3"
 content:
   field_icon: "monetization_on"
-  body: "$11,950"
+  body: "<p><strong>$11,950</strong></p> <p>Discounts and scholarships available</p>"

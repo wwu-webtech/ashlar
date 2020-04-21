@@ -1,7 +1,11 @@
 <div{{ attributes }}>
-  <span class="material-icons" aria-hidden="true">{{ content.field_icon }}</span>
+  {% if content.field_icon %}
+    <span class="material-icons" aria-hidden="true">{{ content.field_icon }}</span>
+  {% endif %}
 
-  {% include "@atoms/text/label/label-customized.twig" %} 
+  {% include "@atoms/text/label/label-customized.twig" %}
 
-  <span class="text">{{ content.body }}</span>
+  {% if content.body %}
+    <span class="text">{{ content.body }}</span>
+  {% endif %}
 </div>
