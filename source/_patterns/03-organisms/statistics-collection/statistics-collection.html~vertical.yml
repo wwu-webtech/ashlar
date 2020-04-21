@@ -9,18 +9,18 @@ statistics:
   - include():
       pattern: molecules-statistic-html-vertical
       with:
-        label: "Miles of trails adjacent to campus"
+        label: "6"
         content:
-          field_statistic_number: "6"
+          body: "Miles of trails adjacent to campus"
   - include():
       pattern: molecules-statistic-html-vertical
       with:
-        label: "Miles to Vancouver, BC"
+        label: "55"
         content:
-          field_statistic_number: "55"
+          body: "Miles to Vancouver, BC"
   - include():
       pattern: molecules-statistic-html-vertical
       with:
-        label: "Miles to Seattle, WA"
+        label: "90"
         content:
-          field_statistic_number: "90"
+          body: "Miles to Seattle, WA"

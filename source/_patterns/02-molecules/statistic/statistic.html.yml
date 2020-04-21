@@ -8,6 +8,10 @@ title_attributes:
     class:
     - block__title
     - text
-label: Person city with a thriving arts & music scene
+label: "88,500"
+block_content:
+  field_heading_level:
+    0:
+      value: "span"
 content:
-  field_statistic_number: "88,500"
+  body: "Person city with a thriving arts & music scene"

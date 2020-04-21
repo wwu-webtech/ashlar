@@ -4,16 +4,16 @@ attributes:
       - block
       - block--statistic
       - statistic--vertical
-      - blue-bg
 title_attributes:
   Attribute():
     class:
     - block__title
     - number
-label: "88,500"
+label: Cost
 block_content:
   field_heading_level:
     0:
-      value: "span"
+      value: "h3"
 content:
-  body: "Person city with a thriving arts & music scene"
+  field_icon: "monetization_on"
+  body: "$11,950"
