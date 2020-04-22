@@ -1,10 +1,13 @@
-{{ title_prefix }}
-{{ title_suffix }}
 <div{{ attributes }}>
-  <span class="number">{{ content.field_statistic_number }}</span>
-  <span{{ title_attributes }}>
-    {% if label %}
-      {{ label }}
-    {% endif %}
-  </span>
+  {% if content.field_icon %}
+    <span class="material-icons" aria-hidden="true">{{ content.field_icon }}</span>
+  {% endif %}
+
+  {% include "@atoms/text/label/label-customized.twig" %}
+
+  {% if content.body %}
+    <div class="text">
+      {{ content.body }}
+    </div>
+  {% endif %}
 </div>
