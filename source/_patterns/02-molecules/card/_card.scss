@@ -2,6 +2,82 @@
 * @file
 * molecules/components/card/_card.scss
 */
+@mixin horizontal-card {
+  display: -ms-grid;
+  display: grid;
+  padding-bottom: 0;
+
+  grid-column-gap: $standard-spacing;
+  -ms-grid-columns: 1fr 1fr;
+  -ms-grid-rows: auto 1fr;
+  grid-template-areas: "image taxonomy"
+  "image title"
+  "image body";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto 1fr;
+
+  > div {
+    @include breakpoint ($medium) {
+      padding: $triple-spacing;
+      padding-left: $double-spacing;
+    }
+    padding: $standard-spacing;
+    padding-left: $half-spacing;
+  }
+
+  .image {
+    margin-bottom: 0;
+    padding: 0;
+
+    grid-area: image;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+
+    > div {
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  .taxonomy-terms {
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    grid-area: taxonomy;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+  }
+
+  .title {
+    margin-top: 0;
+    padding-bottom: 0;
+
+    grid-area: title;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+  }
+
+  .body {
+    grid-area: body;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+  }
+}
 
 .card,
 .block--card {
@@ -229,6 +305,10 @@
       background-color: $blue;
       font-size: $h3-font-size;
     }
+  }
+
+  &.horizontal {
+    @include horizontal-card;
   }
 }
 
