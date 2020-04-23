@@ -111,36 +111,36 @@
       flex: 0 1 40%;
       order: 2;
       margin-right: -$standard-spacing;
-      padding-left: $double-spacing;
+      padding-left: $standard-spacing;
       text-align: center;
       text-transform: uppercase;
       line-height: 1.5em;
 
       .month {
         display: block;
-        padding: $one-point-five-spacing $double-spacing 0 $double-spacing;
+        padding: $standard-spacing $one-point-five-spacing 0 $one-point-five-spacing;
         color: $white;
         background-color: $blue;
-        font-size: $h3-font-size;
+        font-size: $h4-font-size;
         font-weight: $font-weight--regular;
 
         @media (min-width: $large) {
-          font-size: $h3-font-size--max;
+          font-size: $h4-font-size--max;
         }
       }
 
       .day {
         display: block;
-        padding: $half-spacing $double-spacing $one-point-five-spacing $double-spacing;
+        padding: $half-spacing $one-point-five-spacing $standard-spacing $one-point-five-spacing;
         white-space: nowrap;
         word-spacing: -0.2em;
         color: $white;
         background-color: $blue;
-        font-size: $h1-font-size;
+        font-size: $h2-font-size;
         font-weight: $font-weight--semibold;
 
         @media (min-width: $large) {
-          font-size: $h1-font-size--max;
+          font-size: $h2-font-size--max;
         }
       }
     }
