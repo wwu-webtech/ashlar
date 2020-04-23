@@ -64,8 +64,11 @@ $max-button-width: 250px;
         }
 
         &:focus {
-          outline: ($half-spacing / 2) dotted $black;
-          outline-offset: -($half-spacing / 2);
+          outline: $border-width dotted $black;
+
+          @include breakpoint ($small) {
+            outline: $border-width--thicker dotted $black;
+          }
         }
 
         &:after {
