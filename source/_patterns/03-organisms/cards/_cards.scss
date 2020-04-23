@@ -106,6 +106,7 @@ $spotlight-height--large: 300px;
   .block--card {
     display: -ms-grid;
     display: grid;
+    padding-bottom: 0;
 
     grid-column-gap: $standard-spacing;
     -ms-grid-columns: 1fr 1fr;
