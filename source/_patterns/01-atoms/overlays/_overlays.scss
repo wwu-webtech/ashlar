@@ -84,6 +84,17 @@ $overlay-transparency: 0.4;
 .white-gradient-overlay {
   background: $white;
 
+  a:not([class]) {
+    color: mix($dark-blue, $link-blue, 50%);
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $black;
+      background-color: mix(black, $light-gray, 20%);
+    }
+  }
+
   &:after {
     background: linear-gradient(to right, $white, transparentize($white, 0.2));
   }
@@ -91,6 +102,10 @@ $overlay-transparency: 0.4;
 
 .black-gradient-overlay {
   @include black-bg;
+
+  a:not([class]) {
+    color: scale-color($light-blue, $lightness: 50%);
+  }
 
   &:after {
     background: linear-gradient(to left, $black, transparentize($black, 0.5));
