@@ -1,0 +1,123 @@
+/**
+* @file
+* molecules/event-list/_event-list.scss
+*/
+$event-icon-height: 60px;
+
+.event-list {
+  .event {
+    position: relative;
+    display: grid;
+    margin-bottom: $half-spacing;
+
+    grid-template-areas: "date title"
+    "date body"
+    "icon body";
+    grid-template-columns: $icon-with-text-size--small auto;
+
+    hover,
+    focus-within {
+      z-index: 1;
+      transform: translate(-$border-width,-$border-width);
+      box-shadow: $focus-shadow;
+    }
+
+    .title {
+      flex: 1 0 70%;
+      order: 3;
+      margin-left: $half-spacing;
+
+      grid-area: title;
+
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        line-height: 0.75em;
+      }
+
+      a {
+        @include breakpoint($large) {
+          font-size: $p-font-size--max--larger;
+        }
+        text-decoration: none;
+        font-family: $sans-serif;
+        font-size: $p-font-size--larger;
+
+        &:hover {
+          background-color: transparent;
+        }
+
+        &:after {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          content: "";
+        }
+      }
+    }
+
+    .body {
+      order: 4;
+      margin-left: $half-spacing;
+
+      grid-area: body;
+    }
+
+    .icon {
+      order: 1;
+
+      grid-area: icon;
+
+      .icon-with-text {
+        height: $event-icon-height;
+        color: $darkest-blue;
+        background-color: $light-green;
+      }
+      .icon-with-text .material-icons {
+        font-size: $double-spacing;
+      }
+      .icon-with-text .icon-text {
+        margin-top: 0;
+      }
+    }
+
+    .date {
+      order: 2;
+      width: $icon-with-text-size--small;
+      max-height: $icon-with-text-size--small;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 1.5em;
+
+      grid-area: date;
+
+      .day,
+      .month {
+        display: flex;
+        justify-content: center;
+        height: 50%;
+        padding: 0 $standard-spacing;
+        color: $white;
+        background-color: $blue;
+      }
+
+      .month {
+        align-items: end;
+        font-size: $h5-font-size;
+        font-weight: $font-weight--regular;
+      }
+
+      .day {
+        align-items: start;
+        white-space: nowrap;
+        word-spacing: -0.2em;        
+        font-size: $h3-font-size;
+        font-weight: $font-weight--semibold;
+      }
+    }
+  }
+}
