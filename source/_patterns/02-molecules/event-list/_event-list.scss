@@ -8,23 +8,28 @@ $event-icon-height: 60px;
   .event {
     position: relative;
     display: grid;
-    margin-bottom: $half-spacing;
+    margin-bottom: $standard-spacing;
 
     grid-template-areas: "date title"
     "date body"
     "icon body";
     grid-template-columns: $icon-with-text-size--small auto;
 
-    hover,
-    focus-within {
+    &:hover,
+    &:focus-within {
       z-index: 1;
       transform: translate(-$border-width,-$border-width);
       box-shadow: $focus-shadow;
     }
 
+    p {
+      margin: 0;
+    }
+
     .title {
       flex: 1 0 70%;
       order: 3;
+      margin-bottom: $standard-spacing;
       margin-left: $half-spacing;
 
       grid-area: title;
@@ -88,9 +93,9 @@ $event-icon-height: 60px;
     .date {
       order: 2;
       width: $icon-with-text-size--small;
-      max-height: $icon-with-text-size--small;
       text-align: center;
       text-transform: uppercase;
+      background-color: $blue;
       line-height: 1.5em;
 
       grid-area: date;
@@ -106,16 +111,22 @@ $event-icon-height: 60px;
       }
 
       .month {
+        @include breakpoint($large) {
+          font-size: $h5-font-size--max;
+        }
         align-items: end;
         font-size: $h5-font-size;
         font-weight: $font-weight--regular;
       }
 
       .day {
+        @include breakpoint($large) {
+          font-size: $h4-font-size--max;
+        }
         align-items: start;
         white-space: nowrap;
-        word-spacing: -0.2em;        
-        font-size: $h3-font-size;
+        word-spacing: -0.2em;
+        font-size: $h4-font-size;
         font-weight: $font-weight--semibold;
       }
     }
