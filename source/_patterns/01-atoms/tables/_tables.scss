@@ -228,3 +228,37 @@ td {
     text-align: left;
   }
 }
+
+/* Fix link colors in table headers */
+tr,
+.light-blue tr {
+  &:nth-of-type(odd),
+  &:nth-of-type(even) {
+    th {
+      a:not([class]) {
+        color: $dark-blue;
+      }
+
+      &[colspan],
+      &[rowspan] {
+        a:not([class]) {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.lightest-gray tr {
+  &:nth-of-type(odd),
+  &:nth-of-type(even) {
+    th {
+      &[colspan],
+      &[rowspan] {
+        a:not([class]) {
+          color: $dark-blue;
+        }
+      }
+    }
+  }
+}

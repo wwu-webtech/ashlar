@@ -178,7 +178,7 @@
   }
 
   a:not([class]) {
-    color: mix($dark-blue, $link-blue, 50%);
+    color: $link-blue--darker;
 
     &:hover,
     &:focus,
