@@ -2,6 +2,82 @@
 * @file
 * molecules/components/card/_card.scss
 */
+@mixin horizontal-card {
+  display: -ms-grid;
+  display: grid;
+  padding-bottom: 0;
+
+  grid-column-gap: $standard-spacing;
+  -ms-grid-columns: 1fr 1fr;
+  -ms-grid-rows: auto 1fr;
+  grid-template-areas: "image taxonomy"
+  "image title"
+  "image body";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto 1fr;
+
+  > div {
+    @include breakpoint ($medium) {
+      padding: $triple-spacing;
+      padding-left: $double-spacing;
+    }
+    padding: $standard-spacing;
+    padding-left: $half-spacing;
+  }
+
+  .image {
+    margin-bottom: 0;
+    padding: 0;
+
+    grid-area: image;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+
+    > div {
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  .taxonomy-terms {
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    grid-area: taxonomy;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+  }
+
+  .title {
+    margin-top: 0;
+    padding-bottom: 0;
+
+    grid-area: title;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+  }
+
+  .body {
+    grid-area: body;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+  }
+}
 
 .card,
 .block--card {
@@ -10,8 +86,8 @@
   flex-flow: row wrap;
   align-content: start;
   margin-bottom: $standard-spacing;
-  transition: $fast-transition-speed $standard-ease;
   padding-bottom: $standard-spacing;
+  transition: $fast-transition-speed $standard-ease;
 
   &:hover,
   &:focus-within {
@@ -54,7 +130,6 @@
     a {
       display: inline-block;
       text-decoration: none;
-      font-family: $sans-serif;
       font-size: $p-font-size;
       font-weight: $font-weight--bold;
       line-height: initial;
@@ -77,14 +152,163 @@
     }
   }
 
-  .body {
+  .date {
     flex: 0 1 100%;
     order: 4;
+    padding: 0 $half-spacing;
+    font-weight: bold;
+  }
+
+  .location {
+    flex: 0 1 100%;
+    order: 4;
+    margin-bottom: $standard-spacing;
+    padding: 0 $half-spacing;
+    font-style: italic;
+  }
+
+  .body {
+    flex: 0 1 100%;
+    order: 5;
     padding: 0 $half-spacing;
 
     .date {
       font-weight: $font-weight--semibold;
     }
+  }
+
+  /* Cards with .event class */
+  &.event {
+    .image {
+      margin-bottom: -$double-spacing;
+    }
+
+    .date {
+      flex: 0 1 40%;
+      order: 2;
+      margin-right: -$standard-spacing;
+      padding-left: $standard-spacing;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 1.5em;
+
+      .month {
+        display: block;
+        padding: $standard-spacing $one-point-five-spacing 0 $one-point-five-spacing;
+        color: $white;
+        background-color: $blue;
+        font-size: $h4-font-size;
+        font-weight: $font-weight--regular;
+
+        @media (min-width: $large) {
+          font-size: $h4-font-size--max;
+        }
+      }
+
+      .day {
+        display: block;
+        padding: $half-spacing $one-point-five-spacing $standard-spacing $one-point-five-spacing;
+        white-space: nowrap;
+        word-spacing: -0.2em;
+        color: $white;
+        background-color: $blue;
+        font-size: $h2-font-size;
+        font-weight: $font-weight--semibold;
+
+        @media (min-width: $large) {
+          font-size: $h2-font-size--max;
+        }
+      }
+    }
+
+    .location {
+      flex: 1 1 60%;
+      order: 2;
+      align-self: end;
+      margin-bottom: 0;
+      padding: $standard-spacing $standard-spacing $standard-spacing $double-spacing;
+      text-transform: uppercase;
+      color: $blue;
+      font-style: normal;
+    }
+
+    .title {
+      margin-top: $standard-spacing;
+      padding-right: $double-spacing;
+      padding-left: $double-spacing;
+
+      h2,
+      h3,
+      h4 {
+        font-family: $sans-serif;
+      }
+    }
+
+    .body {
+      padding-right: $double-spacing;
+      padding-left: $double-spacing;
+    }
+  }
+
+  /* Cards with .simple class */
+  &.simple {
+    text-align: center;
+    box-shadow: $unfocus-shadow;
+    font-size: $p-font-size--larger;
+
+    &:hover,
+    &:focus-within {
+      box-shadow: $focus-shadow;
+    }
+
+    &:focus-within {
+      .taxonomy-term {
+        border: $focus-outline--thicker;
+      }
+    }
+
+    .title {
+      order: 1;
+      padding: $triple-spacing;
+      background-color: $blue;
+
+      a {
+        &:hover,
+        &:focus,
+        &:active {
+          color: $white;
+          background: transparent;
+        }
+      }
+
+      h2 {
+        color: $white;
+      }
+    }
+
+    .body {
+      padding: $triple-spacing;
+      padding-bottom: $double-spacing;
+    }
+
+    .taxonomy-terms {
+      order: 6;
+      padding-bottom: $triple-spacing;
+    }
+
+    .taxonomy-term {
+      @include button-box-shadow($dark-blue);
+      float: none;
+      padding: $standard-spacing $double-spacing;
+      color: $white;
+      border-radius: $border-radius--round-square;
+      background-color: $blue;
+      font-size: $h3-font-size;
+    }
+  }
+
+  &.horizontal {
+    @include horizontal-card;
   }
 }
 

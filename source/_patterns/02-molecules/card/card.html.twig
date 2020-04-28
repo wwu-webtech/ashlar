@@ -16,6 +16,12 @@
   </div>
   {% endif %}
 
+  {% if content.field_sorting_term %}
+    <div class="sorting-term">
+      {{ content.field_sorting_term }}
+    </div>
+  {% endif %}
+
   {% if content.field_image %}
   <div class="image">
     {{ content.field_image }}
@@ -24,6 +30,18 @@
 
   {% if content.field_highlighted_terms %}
     {{ content.field_highlighted_terms }}
+  {% endif %}
+
+  {% if content.field_date %}
+    <div class="date">
+      {{ content.field_date }}
+    </div>
+  {% endif %}
+
+  {% if content.field_location %}
+    <div class="location">
+      {{ content.field_location }}
+    </div>
   {% endif %}
 
   <div class="body">

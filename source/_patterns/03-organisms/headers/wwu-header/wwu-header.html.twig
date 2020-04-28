@@ -8,7 +8,7 @@
     <div class="western-logo">
       {% if site_name != "Western Washington University" %}
         <a class="western-home-link" href="https://wwu.edu">
-          {% include "@atoms/logo/logo--sub-branded.twig" %}
+          {% include "@atoms/logo/logo.twig" %}
         </a>
 
         {% block site_name %}
@@ -19,7 +19,7 @@
 
       {% else %}
         <a class="western-home-link" href="https://wwu.edu">
-          {% include "@atoms/logo/logo.twig" %}
+          {% include "@atoms/logo/logo--make-waves.twig" %}
         </a>
       {% endif %}
 
