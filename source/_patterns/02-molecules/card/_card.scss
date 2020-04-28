@@ -196,17 +196,20 @@
       padding: $triple-spacing;
       background-color: $blue;
 
-      a {
-        &:hover,
-        &:focus,
-        &:active {
-          color: $white;
-          background: transparent;
-        }
-      }
-
-      h2 {
+      .block__title {
         color: $white;
+
+        a {
+          color: $white;
+          font-size: $h2-font-size;
+
+          &:hover,
+          &:focus,
+          &:active {
+            color: $white;
+            background: transparent;
+          }
+        }
       }
     }
 
