@@ -51,6 +51,16 @@ th {
   }
 }
 
+.font-size--smaller {
+  td {
+    font-size: $min-base-font-size;
+  }
+
+  th {
+    font-size: $max-base-font-size--smaller;
+  }
+}
+
 tr {
   border-top: none;
   border-right: none;
