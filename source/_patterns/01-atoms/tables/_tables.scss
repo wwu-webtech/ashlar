@@ -170,6 +170,32 @@ td {
   }
 }
 
+.lightest-gray {
+  tr {
+    &:nth-of-type(odd) {
+      background-color: $white;
+    }
+  }
+
+  th {
+    @include lightest-gray-bg;
+    background-color: mix($black, $lightest-gray, 13%);
+
+    &[colspan],
+    &[rowspan] {
+      background-color: mix($black, $lightest-gray, 25%);
+    }
+  }
+
+  td {
+    border-left-color: $white;
+
+    &:last-of-type {
+      border-right-color: $white;
+    }
+  }
+}
+
 
 /* Responsive table on small devices */
 .responsive-table {
