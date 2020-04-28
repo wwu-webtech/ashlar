@@ -14,14 +14,43 @@ table {
     table-layout: auto;
   }
 }
+
 .auto-layout {
   table {
     table-layout: auto;
   }
 }
+
+caption {
+  padding-bottom: $standard-spacing;
+  font-size: $p-font-size--smaller;
+  font-weight: $font-weight--bold;
+}
+
 tbody {
   border: none;
 }
+
+tr,
+td,
+th {
+  vertical-align: middle;
+}
+
+.align-top {
+  td,
+  th {
+    vertical-align: top;
+  }
+}
+
+.align-bottom {
+  td,
+  th {
+    vertical-align: bottom;
+  }
+}
+
 tr {
   border-top: none;
   border-right: none;
@@ -38,6 +67,7 @@ tr {
     border-bottom: none;
   }
 }
+
 th {
   @include light-gray-bg;
   padding: $half-spacing;
@@ -110,17 +140,36 @@ td {
   }
 }
 
-tr,
-td,
-th {
-  vertical-align: middle;
+.light-blue {
+  tr {
+    &:nth-of-type(odd) {
+      @include light-blue-bg;
+    }
+    &:nth-of-type(even) {
+      @include lightest-blue-bg;
+    }
+  }
+
+  th {
+    @include light-blue-bg;
+    background-color: mix($dark-blue, $light-bg-blue, 13%);
+
+    &[colspan],
+    &[rowspan] {
+      color: $white;
+      background-color: mix($dark-blue, $light-bg-blue, 80%);
+    }
+  }
+
+  td {
+    border-left-color: $lightest-bg-blue;
+
+    &:last-of-type {
+      border-right-color: $lightest-bg-blue;
+    }
+  }
 }
 
-caption {
-  padding-bottom: $standard-spacing;
-  font-size: $p-font-size--smaller;
-  font-weight: $font-weight--bold;
-}
 
 /* Responsive table on small devices */
 .responsive-table {
