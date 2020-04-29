@@ -5,6 +5,7 @@
 
 .views-exposed-form {
   display: flex;
+  flex: 0 1 100%;
   flex-flow: row wrap;
   align-items: flex-end;
   margin-bottom: $standard-spacing;

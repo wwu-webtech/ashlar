@@ -21,6 +21,7 @@
     color: $white;
     border-radius: 0 0 $border-radius--round-square $border-radius--round-square;
     background-color: $blue;
+    font-size: $min-base-font-size;
   }
 
   .title {
@@ -48,11 +49,16 @@
   }
 
   .body {
+    @include breakpoint($large) {
+      font-size: $p-font-size--max--smaller;
+    }
     padding: $double-spacing !important;
+    font-size: $p-font-size--smaller;
   }
 
   .taxonomy-terms {
     order: 6;
+    align-self: end;
     padding: 0;
     background-color: $blue;
   }
@@ -63,6 +69,7 @@
     margin: 0;
     color: $white;
     background-color: transparent;
+    font-size: $min-base-font-size;
   }
 
   .material-icons {
@@ -72,6 +79,8 @@
 
   &.split-style {
     display: grid;
+    align-items: initial;
+    align-content: start;
     border: none;
 
     grid-template-areas: "title body"
