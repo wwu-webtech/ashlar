@@ -60,7 +60,8 @@ $spotlight-height--large: 300px;
   flex-flow: row wrap;
 
   .card,
-  .block--card {
+  .block--card,
+  .pager {
     flex: 0 0 100%;
   }
 }
