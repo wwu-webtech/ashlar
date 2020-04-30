@@ -1,0 +1,11 @@
+/**
+ * @file
+ * helpers/_blazy.scss
+ * CSS fixes for some blazy issues
+ */
+
+.background-image .blazy,
+.background-image .media {
+  width: 100%;
+  height: 100%;
+}
