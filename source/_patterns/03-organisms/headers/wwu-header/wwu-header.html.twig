@@ -6,24 +6,18 @@
 <div class="western-header">
   <div class="wrap">
     <div class="western-logo">
-      {% if site_name != "Western Washington University" %}
-        <a class="western-home-link" href="https://wwu.edu">
-          {% include "@atoms/logo/logo.twig" %}
-        </a>
-
-        {% block site_name %}
-          <a href="/" class="site-name">
-              {{ site_name }}
-          </a>
-        {% endblock %}
-
-      {% else %}
-        <a class="western-home-link" href="https://wwu.edu">
-          {% include "@atoms/logo/logo--make-waves.twig" %}
-        </a>
-      {% endif %}
-
+      <a class="western-home-link" href="https://wwu.edu">
+        {% include "@atoms/logo/logo--make-waves.twig" %}
+      </a>
     </div>
+
+    {% block site_name %}
+      <div class="site-name">
+        <a href="/">
+            {{ site_name }}
+        </a>
+      </div>
+    {% endblock %}
 
     {% block quick_links %}
       <button class="toggle toggle-menu toggle-open-menu"><span class="material-icons" aria-hidden="true">menu</span><span class="button-text visually-hidden">Open the menu</span></button>
@@ -34,6 +28,5 @@
     {% block search %}
       {% include "@molecules/search/search.html.twig" %}
     {% endblock %}
-
   </div>
 </div>

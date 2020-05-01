@@ -7,8 +7,6 @@ $secondary-site-name-spacer: 52px;
 .splash,
 .featured-major-splash-area {
   @include breakpoint($medium) {
-    margin-top: -$toggle-size;
-
     grid-template-areas:
     ". ....... ."
     ". ....... ."
@@ -20,8 +18,6 @@ $secondary-site-name-spacer: 52px;
     grid-template-rows: $toggle-size $secondary-site-name-spacer ($logo-width - $toggle-size - $secondary-site-name-spacer + $standard-spacing) 1fr (($toggle-size) / 2 + $double-spacing);
   }
   @include breakpoint($large) {
-    margin-top: -$toggle-size--larger;
-
     -ms-grid-columns: $large-screen-columns;
     -ms-grid-rows: $logo-width 1fr $toggle-size;
     grid-template-columns: $large-screen-columns;
