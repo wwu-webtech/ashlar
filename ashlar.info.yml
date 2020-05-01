@@ -9,7 +9,6 @@ libraries:
   - ashlar/wwu-mobile-menu
 regions:
   header: Header
-  quick_links: Quick Links
   main_navigation: Main Navigation
   content: Content
   footer_left: Left Footer
