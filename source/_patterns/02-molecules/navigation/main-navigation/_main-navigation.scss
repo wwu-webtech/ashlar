@@ -2,12 +2,12 @@
  * @file
  * 02-molecules/navigation/main-navigation/_main-navigation.scss
  */
-.nav--main {
+.main-navigation {
   @include breakpoint($medium) {
     display: block !important;
   }
 }
-.nav--main,
+.main-navigation,
 #block-system-main-menu {
   @include breakpoint($medium) {
     height: inherit;

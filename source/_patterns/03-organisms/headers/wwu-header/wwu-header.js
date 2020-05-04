@@ -8,8 +8,8 @@ var $page = $('.skip-link, .western-header, .splash, .toggle-open-menu, .search,
 function toggle_open_menu(event) {
   $last_focused = document.activeElement;
   $toggle_open_menu.off('click', toggle_open_menu);
-  $('.nav--main').show();
-  $('.nav--main').animate(
+  $('.main-navigation').show();
+  $('.main-navigation').animate(
     {
       right: '0',
       opacity: '1'
@@ -21,8 +21,8 @@ function toggle_open_menu(event) {
         $toggle_open_menu.addClass('is-expanded');
         $toggle_open_menu.on('click', toggle_open_menu);
         $toggle_close_menu.focus();
-        $inputs.not('.nav--main a, .nav--main button, .ultimenu__flyout a').attr('tabindex', '-1');
-        $page.not('.nav--main').attr('aria-hidden', 'true');
+        $inputs.not('.main-navigation a, .main-navigation button, .ultimenu__flyout a').attr('tabindex', '-1');
+        $page.not('.main-navigation').attr('aria-hidden', 'true');
       }
     }
   );
@@ -31,7 +31,7 @@ function toggle_open_menu(event) {
 function toggle_close_menu(event) {
   $toggle_close_menu.off('click', toggle_close_menu);
 
-  $('.nav--main').animate(
+  $('.main-navigation').animate(
     {
       right: '-100%',
       opacity: '0'
@@ -40,11 +40,11 @@ function toggle_close_menu(event) {
       duration: 'normal',
       easing: 'swing',
       complete: function () {
-        $('.nav--main').hide();
+        $('.main-navigation').hide();
         $('#dropLangMenu').hide();
         $toggle_close_menu.removeClass('is-expanded');
-        $page.not('.nav--main').removeAttr('aria-hidden');
-        $inputs.not('.nav--main a, .nav--main button').removeAttr('tabindex');
+        $page.not('.main-navigation').removeAttr('aria-hidden');
+        $inputs.not('.main-navigation a, .main-navigation button').removeAttr('tabindex');
         $toggle_close_menu.on('click', toggle_close_menu);
         $last_focused.focus();
       }
