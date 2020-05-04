@@ -30,8 +30,11 @@
           height: $toggle-size;
           padding: 0 ($standard-spacing * 1.5);
           text-align: center;
-          line-height: $toggle-size;
+          color: white;
           outline: ($half-spacing / 2) solid transparent;
+          font-size: $p-font-size--smaller;
+          font-weight: $font-weight--light;
+          line-height: $toggle-size;
 
           &:hover,
           &:focus,
