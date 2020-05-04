@@ -53,7 +53,7 @@
       font-size: $p-font-size--max--larger;
     }
     align-self: center;
-    padding-right: calc($logo-width + $double-spacing);
+    padding-right: calc(#{$logo-width} + #{$double-spacing});
     font-family: $serif;
     font-size: $p-font-size--larger;
 

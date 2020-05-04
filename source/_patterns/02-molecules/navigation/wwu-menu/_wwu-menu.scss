@@ -20,34 +20,38 @@
         flex: 1;
         margin: 0;
         border: none;
+      }
 
-        a {
-          @include breakpoint($large) {
-            height: $toggle-size--larger;
-            line-height: $toggle-size--larger;
-          }
-          width: 100%;
-          height: $toggle-size;
-          padding: 0 ($standard-spacing * 1.5);
-          text-align: center;
-          color: white;
-          outline: ($half-spacing / 2) solid transparent;
-          font-size: $p-font-size--smaller;
-          font-weight: $font-weight--light;
-          line-height: $toggle-size;
+      a {
+        @include breakpoint($small) {
+          font-size: $p-font-size--max--smaller;
+        }
+        width: 100%;
+        text-align: center;
+        color: white;
+        outline: ($half-spacing / 2) solid transparent;
+        font-size: $p-font-size--smaller;
+        font-weight: $font-weight--light;
 
-          &:hover,
-          &:focus,
-          &:active {
-            color: $black;
-            outline: none;
-            background-color: $light-green;
-          }
+        &:after {
+          display: block;
+          content: "";
+          border-bottom: solid $border-width--thicker transparent;
+        }
 
-          &:focus {
-            outline: ($half-spacing / 2) dotted $black;
-            outline-offset: 0;
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: transparent;
+
+          &:after {
+            border-bottom-color: $lightest-green;
           }
+        }
+
+        &:focus {
+          outline: ($half-spacing / 2) dotted $lightest-green;
+          outline-offset: 0;
         }
       }
     }
