@@ -6,11 +6,11 @@ page:
         header:
           join():
           - include():
+              pattern: molecules-secondary-site-name-html
+          - include():
               pattern: molecules-splash-image-html
           - include():
               pattern: molecules-headline-html
-          - include():
-              pattern: molecules-secondary-site-name-html
         content:
           include():
             pattern: organisms-content-region-html

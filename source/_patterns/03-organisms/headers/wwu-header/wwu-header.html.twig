@@ -4,28 +4,30 @@
  */
 #}
 <div class="western-header">
-  <div class="wrap">
-    <div class="western-logo">
-      <a class="western-home-link" href="https://wwu.edu">
-        {% include "@atoms/logo/logo--make-waves.twig" %}
+  <div class="western-logo">
+    <a class="western-home-link" href="https://wwu.edu">
+      {% include "@atoms/logo/logo--make-waves.twig" %}
+    </a>
+  </div>
+
+  {% block quick_links %}
+    <button class="toggle toggle-menu toggle-open-menu"><span class="material-icons" aria-hidden="true">menu</span><span class="button-text visually-hidden">Open the menu</span></button>
+    {% include "@molecules/navigation/wwu-menu/wwu-menu.html.twig" %}
+  {% endblock %}
+
+  {% block search %}
+    {% include "@molecules/search/search.html.twig" %}
+  {% endblock %}
+
+  {% block site_name %}
+    <div class="site-name">
+      <a href="/">
+          {{ site_name }}
       </a>
     </div>
+  {% endblock %}
 
-    {% block site_name %}
-      <div class="site-name">
-        <a href="/">
-            {{ site_name }}
-        </a>
-      </div>
-    {% endblock %}
-
-    {% block quick_links %}
-      <button class="toggle toggle-menu toggle-open-menu"><span class="material-icons" aria-hidden="true">menu</span><span class="button-text visually-hidden">Open the menu</span></button>
-      {% include "@molecules/navigation/wwu-menu/wwu-menu.html.twig" %}
-    {% endblock %}
-
-    {% block search %}
-      {% include "@molecules/search/search.html.twig" %}
-    {% endblock %}
-  </div>
+  {% block main_navigation %}
+    {{ page.main_navigation }}
+  {% endblock %}
 </div>

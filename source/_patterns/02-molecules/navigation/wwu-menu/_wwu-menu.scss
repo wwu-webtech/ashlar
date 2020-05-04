@@ -46,22 +46,6 @@
             outline-offset: 0;
           }
         }
-
-        &:nth-of-type(1) {
-          a {
-            @include breakpoint($medium) {
-              color: $white;
-              background-color: $dark-blue;
-            }
-
-            &:hover,
-            &:focus,
-            &:active {
-              color: $black;
-              background-color: $light-green;
-            }
-          }
-        }
       }
     }
   }

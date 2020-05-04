@@ -11,17 +11,13 @@
   <header class="site-header">
     {% block wwu_header %}
       {% include "@organisms/headers/wwu-header/wwu-header.html.twig" %}
-    {% endblock %}
-
-    {% block main_navigation %}
-      {{ page.main_navigation }}
-    {% endblock %}
+    {% endblock %}    
 
     {% block splash %}
       <div class="splash">
         {{ page.header }}
       </div>
-    {% endblock %}    
+    {% endblock %}
   </header>
 
   {% block content %}
