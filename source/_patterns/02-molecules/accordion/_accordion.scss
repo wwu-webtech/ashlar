@@ -65,6 +65,10 @@ $accordion-border: $dark-blue solid $border-width--thicker;
         word-wrap: break-word;
       }
     }
+
+    h2.title {
+      padding-bottom: 0;
+    }
   }
 }
 
