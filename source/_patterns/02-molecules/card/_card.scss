@@ -224,7 +224,7 @@
     .location {
       flex: 1 1 60%;
       order: 2;
-      align-self: end;
+      align-self: flex-end;
       margin-bottom: 0;
       padding: $standard-spacing $standard-spacing $standard-spacing $double-spacing;
       text-transform: uppercase;
