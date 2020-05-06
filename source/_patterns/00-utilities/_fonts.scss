@@ -30,6 +30,7 @@ $h4-scale: 1.424;
 $h5-scale: 1.266;
 $h6-scale: 1.125;
 $p-scale: 1;
+$menu-scale: 0.8;
 
 $min-base-font-size: 16px;
 $max-base-font-size: 22px;
@@ -74,6 +75,7 @@ $h4-font-size: responsive-font-size($h4-scale);
 $h5-font-size: responsive-font-size($h5-scale);
 $h6-font-size: responsive-font-size($h6-scale);
 $p-font-size:  responsive-font-size($p-scale);
+$menu-font-size:  responsive-font-size($menu-scale);
 
 // Responisve Font Sizes --smaller
 $h1-font-size--smaller: responsive-font-size--smaller($h1-scale);
@@ -112,6 +114,7 @@ $h4-font-size--max:    $max-base-font-size * $h4-scale;
 $h5-font-size--max:    $max-base-font-size * $h5-scale;
 $h6-font-size--max:    $max-base-font-size * $h6-scale;
 $p-font-size--max:     $max-base-font-size * $p-scale;
+$menu-font-size--max: $max-base-font-size * $menu-scale;
 
 $h1-font-size--max--smaller:    $max-base-font-size--smaller * $h1-scale;
 $h2-font-size--max--smaller:    $max-base-font-size--smaller * $h2-scale;

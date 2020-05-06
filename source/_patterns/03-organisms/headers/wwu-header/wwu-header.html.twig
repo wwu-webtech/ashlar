@@ -11,12 +11,12 @@
   </div>
 
   {% block quick_links %}
-    <button class="toggle toggle-menu toggle-open-menu"><span class="material-icons" aria-hidden="true">menu</span><span class="button-text visually-hidden">Open the menu</span></button>
+    <button class="toggle toggle-menu toggle-open-menu">
+      <span class="material-icons" aria-hidden="true">menu</span>
+      <span class="toggle-prefix visually-hidden">Open the </span>
+      <span class="toggle-text">Menu</span>
+    </button>
     {% include "@molecules/navigation/wwu-menu/wwu-menu.html.twig" %}
-  {% endblock %}
-
-  {% block search %}
-    {% include "@molecules/search/search.html.twig" %}
   {% endblock %}
 
   {% block site_name %}

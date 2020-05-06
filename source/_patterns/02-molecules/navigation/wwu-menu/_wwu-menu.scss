@@ -4,14 +4,13 @@
 */
 
 .quick-links {
-  @include breakpoint($medium) {
-    font-family: $condensed;
-  }
+  font-family: $condensed;
 
   &.desktop {
     .menu {
       display: flex;
       flex-flow: row nowrap;
+      align-items: center;
       margin: 0;
       border: none;
       background-color: transparent;
@@ -27,6 +26,7 @@
           font-size: $p-font-size--max--smaller;
         }
         width: 100%;
+        padding: $half-spacing $standard-spacing;
         text-align: center;
         color: white;
         outline: ($half-spacing / 2) solid transparent;
@@ -50,7 +50,7 @@
         }
 
         &:focus {
-          outline: ($half-spacing / 2) dotted $lightest-green;
+          outline: $border-width dotted $lightest-green;
           outline-offset: 0;
         }
       }

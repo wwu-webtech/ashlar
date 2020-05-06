@@ -3,28 +3,32 @@
   * 01-atoms/buttons/toggles/_toggles.scss
   */
 .toggle {
-  @include breakpoint($medium) {
-    width: $toggle-size;
-    height: $toggle-size;
-  }
-  @include breakpoint($large) {
-    width: $toggle-size--larger;
-    height: $toggle-size--larger;
-  }
-  width: $toggle-size--larger;
-  height: $toggle-size--larger;
+  width: $toggle-size;
+  height: $toggle-size;
   padding: 0;
   color: $white;
   border: 0;
   border-radius: 0;
-  background: $blue;
+  background-color: $dark-blue;
   box-shadow: none;
+  font-family: $condensed;
+  font-weight: $font-weight--light;
+
+  .toggle-text {
+    @include breakpoint($large) {
+      font-size: $menu-font-size--max;
+    }
+    position: relative;
+    top: -$half-spacing;
+    display: block;
+    font-size: $menu-font-size;
+  }
 
   &:active,
   &:hover,
   &:focus {
     transform: none;
-    background: $dark-blue;
+    background-color: $blue;
     box-shadow: none;
   }
 

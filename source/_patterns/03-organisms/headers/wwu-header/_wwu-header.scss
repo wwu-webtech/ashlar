@@ -4,56 +4,63 @@
 */
 
 .western-header {
-  @include breakpoint($small) {
-    display: grid;
+  @include breakpoint($medium) {
     min-height: $logo-width;
     background-image: linear-gradient(to right, $dark-blue $logo-width, $darkest-blue);
 
-    grid-template-areas: "logo quick-links search"
-    "logo site-name site-name"
-    "logo main-nav main-nav";
-    grid-template-columns: $logo-width auto $toggle-size;
-    grid-template-rows: $toggle-size 1fr $toggle-size $toggle-size;
+    grid-row-gap: 0;
+    grid-template-areas:
+    "logo quick-links"
+    "logo site-name"
+    "logo main-nav";
+    grid-template-columns: $logo-width auto;
+    grid-template-rows: $toggle-size auto auto;
   }
+  display: grid;
+  background-color: $dark-blue;
+
+  grid-row-gap: $standard-spacing;
+  grid-template-areas:
+  "logo menu"
+  "site-name site-name";
+  grid-template-columns: 1fr $toggle-size;
+  grid-template-rows: $logo-width auto;
 
   .logo {
-    @include breakpoint($small) {
+    @include breakpoint($medium) {
       margin-left: $double-spacing;
-
-      grid-area: logo;
     }
+    margin: auto;
+
+    grid-area: logo;
   }
 
   .toggle-menu {
-    @include breakpoint($small) {
+    @include breakpoint($medium) {
       display: none;
     }
+
+    grid-area: menu;
   }
 
   .quick-links.desktop {
-    @include breakpoint($small) {
+    @include breakpoint($medium) {
       display: flex;
 
       grid-area: quick-links;
       justify-self: end;
     }
-  }
-
-  .search {
-    @include breakpoint($small) {
-      top: 0;
-      right: 0;
-
-      grid-area: search;
-    }
+    display: none;
   }
 
   .site-name {
     @include breakpoint($large) {
+      padding-right: calc(#{$logo-width} + #{$double-spacing});
       font-size: $p-font-size--max--larger;
     }
     align-self: center;
-    padding-right: calc(#{$logo-width} + #{$double-spacing});
+    margin: $standard-spacing;
+    text-align: center;
     font-family: $serif;
     font-size: $p-font-size--larger;
 
@@ -75,7 +82,7 @@
   }
 
   .main-navigation {
-    @include breakpoint($small) {
+    @include breakpoint($medium) {
       padding-right: calc(#{$logo-width} + #{$double-spacing});
 
       grid-area: main-nav;

@@ -10,10 +10,14 @@
 .main-navigation,
 #block-system-main-menu {
   @include breakpoint($medium) {
+    position: initial;
+    z-index: initial;
     height: inherit;
     min-height: 0;
     background: transparent;
   }
+  position: absolute;
+  z-index: 2;
   height: 100vh;
   background: $dark-blue;
 
