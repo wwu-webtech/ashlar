@@ -1,15 +1,32 @@
 /**
- * @file
- * 01-atoms/forms/_forms.scss
- */
+* @file
+* 01-atoms/forms/_forms.scss
+*/
 $select-input-size: 28px;
 $select-input-size--smaller: 24px;
 
-fieldset {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background-color: transparent;
+form {
+  fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+  }
+
+  > fieldset > legend {
+    @include breakpoint($large) {
+      font-size: $h4-font-size--max;
+    }
+    padding: 0 $double-spacing;
+    color: $dark-blue;
+    font-size: $h4-font-size;
+  }
+
+  > fieldset {
+    margin-top: $double-spacing;
+    padding: $double-spacing;
+    border: solid $border-width--thicker $lightest-gray;
+  }
 }
 
 legend,
@@ -46,8 +63,8 @@ select {
   box-shadow: none;
 
   &:focus {
-    outline: none;
     border-color: $light-blue;
+    outline: none;
     box-shadow: $focus-shadow;
 
     @media (-ms-high-contrast: active) {
