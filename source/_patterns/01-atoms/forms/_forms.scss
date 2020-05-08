@@ -6,14 +6,14 @@ $select-input-size: 28px;
 $select-input-size--smaller: 24px;
 
 form {
-  fieldset {
+  fieldset, .webform-section {
     margin: 0;
     padding: 0;
     border: 0;
     background-color: transparent;
   }
 
-  > fieldset > legend {
+  > fieldset > legend, .webform-section h2 {
     @include breakpoint($large) {
       font-size: $h4-font-size--max;
     }
@@ -22,10 +22,16 @@ form {
     font-size: $h4-font-size;
   }
 
-  > fieldset {
+  > fieldset, .webform-section {
     margin-top: $double-spacing;
     padding: $double-spacing;
     border: solid $border-width--thicker $lightest-gray;
+  }
+
+  .webform-section {
+    h2 {
+      margin: 0 0 $double-spacing -($double-spacing);
+    }
   }
 }
 
