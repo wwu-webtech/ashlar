@@ -6,7 +6,8 @@ $select-input-size: 28px;
 $select-input-size--smaller: 24px;
 
 form {
-  fieldset {
+  fieldset,
+  .webform-section {
     margin: 0;
     padding: 0;
     border: 0;
@@ -22,7 +23,20 @@ form {
     font-size: $h4-font-size;
   }
 
-  > fieldset {
+  .webform-section-title {
+    display: inline-block;
+    margin: 0;
+    padding: 0 $double-spacing;
+    transform: translatey(-1.2em);
+    background-color: $white;
+
+    + .webform-section-wrapper {
+      margin-top: -1.2em;
+    }
+  }
+
+  > fieldset,
+  .webform-section {
     margin-top: $double-spacing;
     padding: $double-spacing;
     border: solid $border-width--thicker $lightest-gray;
