@@ -1,5 +1,3 @@
-
-//For some reason, this file is not being found or used 
 var $mobile_language_button = $('langOptionButton');
 var $mobile_language_menu = $('#dropLangMenu');
 
@@ -13,4 +11,3 @@ $mobile_language_button.click(function (event) {
     }
     event.stopPropagation();
 });
-

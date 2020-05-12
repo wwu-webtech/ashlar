@@ -1,18 +1,15 @@
 <div class="select-language-container">
-  <div class="language-button-container">
-    <button class="toggle" id="dropMenu">
-      <span class="material-icons" alt="languages">language</span>
-      <p>Language</p>
-    </button>
-  </div>
-  <div class="select-language dark-blue-bg">
-    <ul id="langMenu" class = "menu" style="display:none;">
-      <li>
-        <a class = "language-option" href="#">English</a>
-      </li>
-      <li>
-        <a class="language-option" href="#">Español</a>
-      </li>
-    </ul>
-  </div>
+  <button class="icon-with-text select-language" id="dropMenu">
+    <span class="material-icons" aria-hidden="true">language</span>
+    <span class="toggle-text">Language</span>
+  </button>
+
+  <ul id="langMenu" class="menu language-menu">
+    <li>
+      <a class = "language-option" href="#">English</a>
+    </li>
+    <li>
+      <a class="language-option" href="#">Español</a>
+    </li>
+  </ul>
 </div>

@@ -5,26 +5,15 @@
 
 .western-header {
   @include breakpoint($medium) {
-    min-height: $logo-width;
-    background-image: linear-gradient(to right, $dark-blue $logo-width, $darkest-blue);
-
-    grid-row-gap: 0;
-    grid-template-areas:
-    "logo quick-links"
-    "logo site-name"
-    "logo main-nav";
-    grid-template-columns: $logo-width auto;
-    grid-template-rows: $toggle-size auto auto;
   }
-  display: grid;
   background-color: $dark-blue;
 
-  grid-row-gap: $standard-spacing;
-  grid-template-areas:
-  "logo menu"
-  "site-name site-name";
-  grid-template-columns: 1fr $toggle-size;
-  grid-template-rows: $logo-width auto;
+  .header-navigation {
+    @include breakpoint($medium) {
+      display: grid !important;
+    }
+    display: none;
+  }
 
   .logo {
     @include breakpoint($medium) {
@@ -43,16 +32,6 @@
     grid-area: menu;
   }
 
-  .quick-links.desktop {
-    @include breakpoint($medium) {
-      display: flex;
-
-      grid-area: quick-links;
-      justify-self: end;
-    }
-    display: none;
-  }
-
   .site-name {
     @include breakpoint($large) {
       padding-right: calc(#{$logo-width} + #{$double-spacing});
@@ -61,11 +40,9 @@
     align-self: center;
     margin: $standard-spacing;
     text-align: center;
+    color: $white;
     font-family: $serif;
     font-size: $p-font-size--larger;
-
-    grid-area: site-name;
-    justify-self: center;
 
     &:after {
       display: block;
@@ -75,17 +52,10 @@
       border-bottom: solid $light-blue $border-width--thicker;
     }
 
-    a {
-      text-decoration: none;
-      color: white;
-    }
-  }
-
-  .main-navigation {
-    @include breakpoint($medium) {
-      padding-right: calc(#{$logo-width} + #{$double-spacing});
-
-      grid-area: main-nav;
+    &.mobile {
+      @include breakpoint($medium) {
+        display: none;
+      }
     }
   }
 }

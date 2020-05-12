@@ -6,53 +6,47 @@
 .quick-links {
   font-family: $condensed;
 
-  &.desktop {
-    .menu {
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
+  .menu {
+    margin: 0;
+    border: none;
+    background-color: transparent;
+
+    li {
       margin: 0;
       border: none;
-      background-color: transparent;
+    }
 
-      li {
-        flex: 1;
-        margin: 0;
-        border: none;
+    a {
+      @include breakpoint($small) {
+        font-size: $p-font-size--max--smaller;
+      }
+      width: 100%;
+      padding: $half-spacing $standard-spacing;
+      text-align: center;
+      color: white;
+      outline: ($half-spacing / 2) solid transparent;
+      font-size: $p-font-size--smaller;
+      font-weight: $font-weight--light;
+
+      &:after {
+        display: block;
+        content: "";
+        border-bottom: solid $border-width--thicker transparent;
       }
 
-      a {
-        @include breakpoint($small) {
-          font-size: $p-font-size--max--smaller;
-        }
-        width: 100%;
-        padding: $half-spacing $standard-spacing;
-        text-align: center;
-        color: white;
-        outline: ($half-spacing / 2) solid transparent;
-        font-size: $p-font-size--smaller;
-        font-weight: $font-weight--light;
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: transparent;
 
         &:after {
-          display: block;
-          content: "";
-          border-bottom: solid $border-width--thicker transparent;
+          border-bottom-color: $lightest-green;
         }
+      }
 
-        &:hover,
-        &:focus,
-        &:active {
-          background-color: transparent;
-
-          &:after {
-            border-bottom-color: $lightest-green;
-          }
-        }
-
-        &:focus {
-          outline: $border-width dotted $lightest-green;
-          outline-offset: 0;
-        }
+      &:focus {
+        outline: $border-width dotted $lightest-green;
+        outline-offset: 0;
       }
     }
   }

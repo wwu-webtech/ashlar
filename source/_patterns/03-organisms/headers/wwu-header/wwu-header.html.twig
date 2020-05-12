@@ -10,24 +10,30 @@
     </a>
   </div>
 
-  {% block quick_links %}
-    <button class="toggle toggle-menu toggle-open-menu">
-      <span class="material-icons" aria-hidden="true">menu</span>
-      <span class="toggle-prefix visually-hidden">Open the </span>
-      <span class="toggle-text">Menu</span>
-    </button>
-    {% include "@molecules/navigation/wwu-menu/wwu-menu.html.twig" %}
-  {% endblock %}
+  <button class="icon-with-text toggle-menu">
+    <span class="material-icons" aria-hidden="true">menu</span>
+    <span class="toggle-prefix visually-hidden">Open the </span>
+    <span class="toggle-text">Menu</span>
+    <span class="toggle-suffix visually-hidden"></span>
+  </button>
 
-  {% block site_name %}
-    <div class="site-name">
-      <a href="/">
-          {{ site_name }}
-      </a>
-    </div>
-  {% endblock %}
+  <div class="site-name mobile">
+    {{ site_name }}
+  </div>
 
-  {% block main_navigation %}
-    {{ page.main_navigation }}
-  {% endblock %}
+  <div class="header-navigation">
+    {% block quick_links %}
+      {% include "@molecules/navigation/wwu-menu/wwu-menu.html.twig" %}
+    {% endblock %}
+
+    {% block site_name %}
+      <div class="site-name">
+        {{ site_name }}
+      </div>
+    {% endblock %}
+
+    {% block main_navigation %}
+      {{ page.main_navigation }}
+    {% endblock %}
+  </div>
 </div>

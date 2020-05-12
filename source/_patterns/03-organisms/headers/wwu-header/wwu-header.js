@@ -1,15 +1,33 @@
-var $toggle_open_menu = $('.toggle-open-menu', context);
-var $toggle_close_menu = $('.toggle-close-menu', context);
+var $menu_toggle = $('.toggle-menu', context);
+var $menu_icon = $menu_toggle.children('.material-icons');
+var $toggle_prefix = $menu_toggle.children('.toggle-prefix');
+var $toggle_text = $menu_toggle.children('.toggle-text');
+var $toggle_suffix = $menu_toggle.children('.toggle-suffix');
 var $last_focused;
-var $mobile_nav = $('.quick-links .mobile', context);
 var $inputs = $(document).find('select, button, a, input, textarea', context)
 var $page = $('.skip-link, .western-header, .splash, .toggle-open-menu, .search, .page-content, .region--footer', context);
 
+function toggle_menu(event) {
+  $menu_toggle.off('click', toggle_menu);
+
+  if ($menu_toggle.hasClass('is-expanded')) {
+    toggle_close_menu(event);
+  }
+  else {
+    toggle_open_menu(event);
+  }
+}
+
 function toggle_open_menu(event) {
   $last_focused = document.activeElement;
-  $toggle_open_menu.off('click', toggle_open_menu);
-  $('.main-navigation').show();
-  $('.main-navigation').animate(
+
+  $('.header-navigation').show();
+  $menu_icon.text('close');
+  $toggle_prefix.html('');
+  $toggle_text.html('Close');
+  $toggle_suffix.html(' the Menu');
+
+  $('.header-navigation').animate(
     {
       right: '0',
       opacity: '1'
@@ -18,20 +36,23 @@ function toggle_open_menu(event) {
       duration: 'normal',
       easing: 'swing',
       complete: function () {
-        $toggle_open_menu.addClass('is-expanded');
-        $toggle_open_menu.on('click', toggle_open_menu);
-        $toggle_close_menu.focus();
-        $inputs.not('.main-navigation a, .main-navigation button, .ultimenu__flyout a').attr('tabindex', '-1');
-        $page.not('.main-navigation').attr('aria-hidden', 'true');
+        $menu_toggle.addClass('is-expanded');
+        $menu_toggle.on('click', toggle_menu);
+        $menu_toggle.focus();
+        $inputs.not('.header-navigation a, .header-navigation button, .ultimenu__flyout a').attr('tabindex', '-1');
+        $page.not('.header-navigation').attr('aria-hidden', 'true');
       }
     }
   );
 }
 
 function toggle_close_menu(event) {
-  $toggle_close_menu.off('click', toggle_close_menu);
-
-  $('.main-navigation').animate(
+  $menu_icon.text('menu');
+  $toggle_prefix.html('Open the ');
+  $toggle_text.html('Menu');
+  $toggle_suffix.html('');
+  
+  $('.header-navigation').animate(
     {
       right: '-100%',
       opacity: '0'
@@ -40,18 +61,16 @@ function toggle_close_menu(event) {
       duration: 'normal',
       easing: 'swing',
       complete: function () {
-        $('.main-navigation').hide();
+        $('.header-navigation').hide();
         $('#dropLangMenu').hide();
-        $toggle_close_menu.removeClass('is-expanded');
-        $page.not('.main-navigation').removeAttr('aria-hidden');
-        $inputs.not('.main-navigation a, .main-navigation button').removeAttr('tabindex');
-        $toggle_close_menu.on('click', toggle_close_menu);
+        $menu_toggle.removeClass('is-expanded');
+        $page.not('.header-navigation').removeAttr('aria-hidden');
+        $inputs.not('.header-navigation a, .header-navigation button').removeAttr('tabindex');
+        $menu_toggle.on('click', toggle_menu);
         $last_focused.focus();
       }
     }
   );
 }
 
-$toggle_open_menu.on('click', toggle_open_menu);
-$toggle_close_menu.on('click', toggle_close_menu);
-
+$menu_toggle.on('click', toggle_menu);

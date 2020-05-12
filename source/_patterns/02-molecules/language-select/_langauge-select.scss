@@ -2,32 +2,7 @@
 * @file
 * molecules/language-select/_language-select.scss
 */
-.select-language-container {
-  @include breakpoint($medium) {
-    display: flex;
-  }
-  position: absolute;
-  z-index: 0;
-  right: $standard-spacing;
+
+.language-menu {
   display: none;
-  justify-content: end;
-
-  .language-button-container {
-    position: relative;
-    display: inline-block;
-
-    p {
-      margin: 0 auto;
-      font-family: $condensed;
-      font-size: $min-base-font-size;
-      line-height: 1em;
-    }
-  }
-
-  .select-language {
-    @include breakpoint($large) {
-      top: $toggle-size--larger;
-    }
-    position: absolute;
-  }
 }

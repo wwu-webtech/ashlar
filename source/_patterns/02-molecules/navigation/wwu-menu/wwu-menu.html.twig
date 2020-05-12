@@ -1,24 +1,22 @@
-<nav class="quick-links desktop" aria-label="Western Quick Links">
-  <ul class="menu">
-    <li>
-      <a class="apply-quick-link" href="https://admissions.wwu.edu/apply">Apply</a>
-    </li>
-    <li>
-      <a class="give-quick-link" href="https://securelb.imodules.com/s/1710/17give/giving.aspx?sid=1710&gid=2&pgid=1816&cid=3291&paymenttype=perpetual">Give</a>
-    </li>
-    <li>
-      <a href="https://calendar.wwu.edu/">Calendar</a>
-    </li>
-    <li>
-      <a href="https://www.wwu.edu/directory">Directory</a>
-    </li>
-    <li>
-      <a href="https://www.wwu.edu/campus-maps">Map</a>
-    </li>
-    <li>
-      <a href="https://mywestern.wwu.edu">myWestern</a>
-    </li>
-  </ul>
+<div class="western-menu">
+  <nav class="quick-links" aria-label="Western Quick Links">
+    <a class="icon-with-text apply-quick-link" href="https://admissions.wwu.edu/apply">
+      <span class="material-icons" aria-hidden="true">how_to_reg</span>
+      <span class="icon-text">Apply</span>
+    </a>
 
-  {% include "@molecules/search/search.html.twig" %} 
-</nav>
+    <a class="icon-with-text give-quick-link" href="https://securelb.imodules.com/s/1710/17give/giving.aspx?sid=1710&gid=2&pgid=1816&cid=3291&paymenttype=perpetual">
+      <span class="material-icons" aria-hidden="true">favorite_border</span>
+      <span class="icon-text">Give</span>
+    </a>
+
+    <a class="icon-with-text" href="https://mywestern.wwu.edu">
+      <span class="material-icons" aria-hidden="true">account_circle</span>
+      <span class="icon-text">myWestern</span>
+    </a>
+
+    {% include "@molecules/search/search.html.twig" %}
+
+    {% include "@molecules/language-select/language-select.html.twig" %}
+  </nav>
+</div>
