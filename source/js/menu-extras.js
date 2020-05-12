@@ -25,4 +25,3 @@ $('.main-navigation').accessibleMegaMenu({
     /* css class for the open state */
     openClass: "open"
 });
-$('.main-navigation').hide();

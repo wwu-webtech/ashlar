@@ -1,8 +1,4 @@
 .search2 {
-  .western-header .wrap .site-name {
-    display: none !important;
-  }
-
   .splash {
     @include breakpoint($medium) {
       grid-template-rows: 170px;

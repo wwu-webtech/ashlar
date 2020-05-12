@@ -104,6 +104,15 @@ $h5-font-size--largest: responsive-font-size--largest($h5-scale);
 $h6-font-size--largest: responsive-font-size--largest($h6-scale);
 $p-font-size--largest:  responsive-font-size--largest($p-scale);
 
+// Minimum size, for use when font-scaling doesn't necessarily make sense
+$h1-font-size--min:    $min-base-font-size * $h1-scale;
+$h2-font-size--min:    $min-base-font-size * $h2-scale;
+$h3-font-size--min:    $min-base-font-size * $h3-scale;
+$h4-font-size--min:    $min-base-font-size * $h4-scale;
+$h5-font-size--min:    $min-base-font-size * $h5-scale;
+$h6-font-size--min:    $min-base-font-size * $h6-scale;
+$p-font-size--min:     $min-base-font-size * $p-scale;
+$menu-font-size--min:     $min-base-font-size * $menu-scale;
 
 // After the viewport reaches the $max-content-width, the fonts shouldn't scale
 // These are the variables for use after the $large breakpoint
@@ -114,7 +123,7 @@ $h4-font-size--max:    $max-base-font-size * $h4-scale;
 $h5-font-size--max:    $max-base-font-size * $h5-scale;
 $h6-font-size--max:    $max-base-font-size * $h6-scale;
 $p-font-size--max:     $max-base-font-size * $p-scale;
-$menu-font-size--max: $max-base-font-size * $menu-scale;
+$menu-font-size--max:     $max-base-font-size * $menu-scale;
 
 $h1-font-size--max--smaller:    $max-base-font-size--smaller * $h1-scale;
 $h2-font-size--max--smaller:    $max-base-font-size--smaller * $h2-scale;

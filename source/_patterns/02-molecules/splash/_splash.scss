@@ -22,7 +22,7 @@ $secondary-site-name-spacer: 52px;
     -ms-grid-rows: $logo-width 1fr $toggle-size;
     grid-template-columns: $large-screen-columns;
 
-    grid-template-rows: $toggle-size--larger $secondary-site-name-spacer ($logo-width - $toggle-size--larger - $secondary-site-name-spacer + $standard-spacing) 1fr (($toggle-size--larger) / 2 + $double-spacing);
+    grid-template-rows: $toggle-size $secondary-site-name-spacer ($logo-width - $toggle-size - $secondary-site-name-spacer + $standard-spacing) 1fr (($toggle-size) / 2 + $double-spacing);
   }
   display: -ms-grid;
   display: grid;

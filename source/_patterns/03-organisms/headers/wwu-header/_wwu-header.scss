@@ -12,7 +12,15 @@
     @include breakpoint($medium) {
       display: grid !important;
     }
+    position: fixed;
+    z-index: 4;
+    top: 0;
     display: none;
+    width: 100vw;
+    min-height: 100vh;
+    padding-top: $toggle-size;
+    background-color: $dark-blue;
+    background-image: linear-gradient(to bottom, $darkest-blue, $dark-blue);
   }
 
   .logo {
@@ -22,14 +30,47 @@
     margin: auto;
 
     grid-area: logo;
+
+    &.horizontal {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100vw - #{$toggle-size});
+      height: $toggle-size;
+      background: transparent;
+    }
   }
 
   .toggle-menu {
     @include breakpoint($medium) {
       display: none;
     }
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    color: $white;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
 
     grid-area: menu;
+
+    &.is-expanded {
+      position: fixed;
+      top: 0;
+      right: 0;
+    }
+
+    &:hover {
+      color: $darkest-blue;
+      background: $lightest-green;
+      box-shadow: none;
+    }
+
+    &:focus {
+      background: transparent;
+    }
   }
 
   .site-name {
@@ -39,17 +80,23 @@
     }
     align-self: center;
     margin: $standard-spacing;
+    margin: 0 !important;
+    padding: $standard-spacing;
     text-align: center;
     color: $white;
+    border-top: solid $border-width--thinner $blue;
+    border-bottom: solid $border-width--thinner $blue;
     font-family: $serif;
     font-size: $p-font-size--larger;
 
     &:after {
-      display: block;
-      width: 30%;
-      margin: $standard-spacing auto 0;
-      content: "";
-      border-bottom: solid $light-blue $border-width--thicker;
+      @include breakpoint($medium) {
+        display: block;
+        width: 30%;
+        margin: $standard-spacing auto 0;
+        content: "";
+        border-bottom: solid $light-blue $border-width--thicker;
+      }
     }
 
     &.mobile {

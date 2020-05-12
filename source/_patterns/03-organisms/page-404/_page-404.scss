@@ -8,7 +8,7 @@
     margin-top: -$toggle-size * 2;
   }
   @include breakpoint($large) {
-    margin-top: -$toggle-size--larger * 2;
+    margin-top: -$toggle-size * 2;
   }
   background: $dark-blue;
 

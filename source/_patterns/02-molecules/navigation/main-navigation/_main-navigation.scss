@@ -2,11 +2,6 @@
  * @file
  * 02-molecules/navigation/main-navigation/_main-navigation.scss
  */
-.main-navigation {
-  @include breakpoint($medium) {
-    display: block !important;
-  }
-}
 .main-navigation,
 #block-system-main-menu {
   @include breakpoint($medium) {
@@ -19,7 +14,6 @@
   position: absolute;
   z-index: 2;
   height: 100vh;
-  background: $dark-blue;
 
   & > .menu,
   .ultimenu--horizontal,
@@ -30,6 +24,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    padding-left: 0;
   }
 }
 

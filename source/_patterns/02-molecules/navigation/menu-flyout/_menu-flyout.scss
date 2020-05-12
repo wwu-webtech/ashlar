@@ -9,7 +9,7 @@
     justify-content: space-around;
     width: 100%;
     height: inherit;
-    padding-top: (($toggle-size--larger / 2) + $standard-spacing);
+    padding-top: (($toggle-size / 2) + $standard-spacing);
     padding-bottom: $double-spacing;
   }
   @include breakpoint($large) {

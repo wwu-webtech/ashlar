@@ -36,7 +36,7 @@ $max-button-width: 250px;
           text-align: center;
         }
         @include breakpoint($large) {
-          height: $toggle-size--larger;
+          height: $toggle-size;
         }
         position: relative;
         display: grid;

@@ -124,7 +124,7 @@
 
   .page-content {
     @include breakpoint($large) {
-      margin-top: -$standard-spacing - $toggle-size--larger;
+      margin-top: -$standard-spacing - $toggle-size;
     }
     margin-top: -$standard-spacing - $toggle-size;
     margin-bottom: 0;

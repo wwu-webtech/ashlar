@@ -16,7 +16,7 @@
       transform: translatey(-($toggle-size/2));
     }
     @include breakpoint($large) {
-      transform: translatey(-($toggle-size--larger/2));
+      transform: translatey(-($toggle-size/2));
     }
     display: block;
     visibility: hidden;

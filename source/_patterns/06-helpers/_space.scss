@@ -116,6 +116,6 @@
     margin-top: -$toggle-size;
   }
   @include breakpoint($large) {
-    margin-top: -$toggle-size--larger;
+    margin-top: -$toggle-size;
   }
 }
