@@ -7,7 +7,6 @@
   @include breakpoint($medium) {
     position: initial;
     z-index: initial;
-    width: 100vw;
     height: inherit;
     min-height: 0;
   }
@@ -19,7 +18,7 @@
   .ultimenu--horizontal,
   .ultimenu-main-menu {
     @include breakpoint($medium) {
-      background-color: transparentize($darkest-blue, 0.2);
+      background-color: transparentize($darkest-blue, 0.1);
     }
     display: flex;
     flex-flow: row wrap;
@@ -90,7 +89,6 @@
       &:hover,
       &:focus-within {
         @include breakpoint($medium) {
-          outline-color: $white;
           background-color: transparent;
         }
         background-color: $light-green;
@@ -117,6 +115,9 @@
       }
 
       &:focus-within {
+        @include breakpoint($medium) {
+          outline-color: $white;
+        }
         outline: dotted $black $border-width;
         outline-offset: -$border-width;
       }

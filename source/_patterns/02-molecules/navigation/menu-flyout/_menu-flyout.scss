@@ -4,32 +4,54 @@
 */
 .ultimenu__region {
   @include blue-bg;
+  @include breakpoint($large) {
+    font-size: $menu-font-size--max;
+  }
   @include breakpoint($medium) {
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-around;
     width: 100%;
+    max-width: 100vw;
     height: inherit;
-    padding-top: (($toggle-size / 2) + $standard-spacing);
-    padding-bottom: $double-spacing;
-  }
-  @include breakpoint($large) {
-    padding: $triple-spacing * 2;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, transparentize($darkest-blue, 0.1), $blue);
+    font-size: $menu-font-size;
   }
   display: flex;
   flex-flow: column;
   padding: $standard-spacing;
+  font-family: $condensed;
 
-  .menu .menu li {
-    border-left: none;
+  .menu {
+    li {
+      border-left-color: $lightest-green;
+
+      a {
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: $light-blue;
+          outline-offset: -$border-width;
+          color: $black;
+        }
+      }
+    }
+
+    .menu {
+      li {
+        border-left: none;
+      }
+    }
   }
 
-  h2, h3 {
+  h2,
+  h3 {
     margin-top: 0;
     color: $lightest-green;
+    text-shadow: 1px 1px 1px transparentize($dark-blue, 0.1);
     font-family: $sans-serif;
     font-size: $h5-font-size;
     font-weight: $font-weight--semibold;
-    text-shadow: 1px 1px 1px transparentize($dark-blue, 0.1);
 
     a:not(.button) {
       color: $lightest-green;
@@ -43,7 +65,7 @@
 
   > div {
     @include breakpoint($medium) {
-      flex: 0 1 40%;
+      flex: 0 1 auto;
     }
     flex: 0 1 100%;
     margin: 0 $standard-spacing;

@@ -67,6 +67,13 @@
   }
 }
 
+.ultimenu__region,
+.ultimenu--htb .ultimenu__flyout,
+.ultimenu--htb .ultimenu__region {
+  border-radius: 0;
+  box-shadow: none;
+}
+
 .ultimenu--hover li:hover > .ultimenu__flyout,
 .ultimenu--hover li a:active + .ultimenu__flyout,
 .ultimenu--hover li a:focus + .ultimenu__flyout,

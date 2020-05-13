@@ -4,28 +4,31 @@
 */
 .quick-links {
   @include breakpoint($medium) {
-    margin: 0;
     justify-content: end;
+    margin: 0;
   }
-  font-family: $condensed;
   position: relative;
   display: flex;
   justify-content: end;
   margin-top: $half-spacing;
   margin-bottom: $standard-spacing;
+  font-family: $condensed;
 
   .icon-with-text {
-    background: transparent;
-    color: $white;
-    box-shadow: none;
     padding: 0;
+    color: $white;
     border-radius: 0;
+    background: transparent;
+    box-shadow: none;
 
     &:hover,
     &:active,
     &:focus {
-      background-color: $lightest-green;
       color: $darkest-blue;
+      border-color: $darkest-blue;
+      outline-color: $darkest-blue;
+      outline-offset: -$border-width;
+      background-color: $lightest-green;
     }
   }
 }
