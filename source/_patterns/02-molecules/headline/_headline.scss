@@ -5,10 +5,6 @@
 $headline-gradient-start: transparentize($darkest-blue, 0.2);
 $headline-gradient-end: transparentize($darkest-blue, 0.5);
 
-.block--headline {
-  z-index: 1;
-}
-
 .headline {
   h1:after {
     border: none;
