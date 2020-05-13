@@ -69,7 +69,7 @@ items:
     Attribute():
       class:
         - ultimenu__item
-- link: '<a href=#" class="ultimenu__link">Menu Item Nine</a>'
+- link: '<a href=#" class="ultimenu__link">Menu Item Nine Is Extra Long</a>'
   attributes:
     Attribute():
       class:

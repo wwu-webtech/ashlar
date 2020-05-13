@@ -1,16 +1,15 @@
 /**
- * @file
- * 02-molecules/navigation/main-navigation/_main-navigation.scss
- */
+* @file
+* 02-molecules/navigation/main-navigation/_main-navigation.scss
+*/
 .main-navigation,
 #block-system-main-menu {
   @include breakpoint($medium) {
     position: initial;
     z-index: initial;
+    width: 100vw;
     height: inherit;
     min-height: 0;
-    background: transparent;
-    width: 100vw;
   }
   position: absolute;
   z-index: 2;
@@ -20,11 +19,125 @@
   .ultimenu--horizontal,
   .ultimenu-main-menu {
     @include breakpoint($medium) {
+      background-color: transparentize($darkest-blue, 0.2);
     }
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     padding-left: 0;
+    background-color: initial;
+
+    & > li {
+      @include breakpoint($medium) {
+        width: inherit;
+        padding: $half-spacing;
+        border-bottom: none;
+
+        grid-template-columns: 1fr;
+      }
+      display: grid;
+      width: 100%;
+      transition: $button-transition-speed background-color $standard-ease;
+      border-bottom: $border-width--thinner solid $darkest-blue;
+
+      grid-template-areas: "link icon"
+      "flyout flyout";
+      grid-template-columns: 1fr $toggle-size;
+      grid-template-rows: auto auto;
+
+      & > a {
+        @include breakpoint($large) {
+          font-size: $menu-font-size--max;
+        }
+        @include breakpoint($medium) {
+          display: flex;
+          align-items: center;
+          padding: $standard-spacing;
+          text-align: center;
+          font-size: $menu-font-size;
+        }
+        position: relative;
+        display: grid;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: $one-point-five-spacing;
+        text-align: left;
+        white-space: normal;
+        text-decoration: none;
+        color: $white;
+        font-family: $condensed;
+        font-size: $p-font-size;
+        line-height: 1em;
+
+        grid-area: link;
+
+        &:hover,
+        &:focus,
+        &:active {
+          text-decoration: none;
+          outline: none;
+          background-color: transparent;
+        }
+
+        &:after {
+          @include breakpoint($medium) {
+            border-bottom: solid $border-width transparent;
+          }
+        }
+      }
+
+      &:hover,
+      &:focus-within {
+        @include breakpoint($medium) {
+          outline-color: $white;
+          background-color: transparent;
+        }
+        background-color: $light-green;
+
+        > a {
+          @include breakpoint($medium) {
+            color: $white;
+          }
+          color: $black;
+
+          &:after {
+            @include breakpoint($medium) {
+              position: absolute;
+              bottom: $half-spacing;
+              left: 50%;
+              display: block;
+              width: 50%;
+              content: "";
+              transform: translatex(-50%);
+              border-color: $lightest-green;
+            }
+          }
+        }
+      }
+
+      &:focus-within {
+        outline: dotted $black $border-width;
+        outline-offset: -$border-width;
+      }
+
+      .expand-icon {
+        @include breakpoint($medium) {
+          display: none;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        color: $white;
+        border: none;
+
+        grid-area: icon;
+        -ms-grid-column: 2;
+        -ms-grid-column-span: 1;
+      }
+    }
   }
 }
 

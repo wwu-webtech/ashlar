@@ -4,7 +4,11 @@
 */
 
 .block--secondary-site-name {
+  @include breakpoint($medium) {
+    border-bottom: none;
+  }
   padding: $standard-spacing;
   text-align: center;
   color: $white;
+  border-bottom: solid $border-width--thinner $blue;
 }

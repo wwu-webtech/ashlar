@@ -26,13 +26,19 @@
       background-image: linear-gradient(to left, $darkest-blue, $dark-blue);
 
       grid-area: header;
-      grid-template-areas:
-      "logo ... wwu-menu"
+      grid-template-areas: "logo wwu-menu"
+      "logo site-name"
+      "logo secondary-site-name"
+      "menu menu";
+      grid-template-columns: ($logo-size + $double-spacing) 1fr;
+      grid-template-rows: ($logo-size / 3) ($logo-size / 3) ($logo-size / 3) auto;
+    }
+    @include breakpoint($large) {
+      grid-template-areas: "logo ... wwu-menu"
       "logo site-name ..."
       "logo secondary-site-name ..."
       "menu menu menu";
-      grid-template-columns: ($logo-size + $double-spacing) 1fr;
-      grid-template-rows: ($logo-size / 3) ($logo-size / 3) ($logo-size / 3) auto;
+      grid-template-columns: ($logo-size + $double-spacing) 1fr auto;
     }
     position: fixed;
     z-index: 4;
@@ -52,6 +58,7 @@
   .western-logo {
     position: relative;
     z-index: 2;
+    width: $logo-size + $double-spacing;
 
     grid-area: header;
   }
