@@ -5,12 +5,34 @@
 
 .western-header {
   @include breakpoint($medium) {
+    display: grid;
+
+    grid-template-areas: "header";
+    grid-template-columns: 1fr;
+    grid-template-rows: $logo-size;
   }
   background-color: $dark-blue;
 
   .header-navigation {
     @include breakpoint($medium) {
+      position: relative;
+      z-index: 1;
+      right: initial !important;
       display: grid !important;
+      width: 100%;
+      min-height: initial;
+      padding-top: 0;
+      opacity: 1 !important;
+      background-image: linear-gradient(to left, $darkest-blue, $dark-blue);
+
+      grid-area: header;
+      grid-template-areas:
+      "logo ... wwu-menu"
+      "logo site-name ..."
+      "logo secondary-site-name ..."
+      "menu menu menu";
+      grid-template-columns: ($logo-size + $double-spacing) 1fr;
+      grid-template-rows: ($logo-size / 3) ($logo-size / 3) ($logo-size / 3) auto;
     }
     position: fixed;
     z-index: 4;
@@ -23,15 +45,30 @@
     background-image: linear-gradient(to bottom, $darkest-blue, $dark-blue);
   }
 
+  .western-menu {
+    grid-area: wwu-menu;
+  }
+
+  .western-logo {
+    position: relative;
+    z-index: 2;
+
+    grid-area: header;
+  }
+
   .logo {
     @include breakpoint($medium) {
-      margin-left: $double-spacing;
+      margin-left: $standard-spacing;
+      background: transparent;
     }
     margin: auto;
 
     grid-area: logo;
 
     &.horizontal {
+      @include breakpoint($medium) {
+        display: none;
+      }
       position: absolute;
       top: 0;
       left: 0;
@@ -62,20 +99,25 @@
       right: 0;
     }
 
+    &:focus {
+      background: transparent;
+    }
+
     &:hover {
       color: $darkest-blue;
       background: $lightest-green;
       box-shadow: none;
     }
-
-    &:focus {
-      background: transparent;
-    }
   }
 
   .site-name {
+    @include breakpoint($medium) {
+      border-top: none;
+      border-bottom: none;
+
+      grid-area: site-name;
+    }
     @include breakpoint($large) {
-      padding-right: calc(#{$logo-width} + #{$double-spacing});
       font-size: $p-font-size--max--larger;
     }
     align-self: center;
@@ -104,5 +146,13 @@
         display: none;
       }
     }
+  }
+
+  .block--secondary-site-name {
+    grid-area: secondary-site-name;
+  }
+
+  .main-navigation {
+    grid-area: menu;
   }
 }

@@ -14,15 +14,15 @@ $secondary-site-name-spacer: 52px;
     ". content ."
     ". ....... .";
 
-    -ms-grid-rows: $toggle-size $secondary-site-name-spacer ($logo-width - $toggle-size - $secondary-site-name-spacer + $standard-spacing) 1fr (($toggle-size) / 2 + $double-spacing);
-    grid-template-rows: $toggle-size $secondary-site-name-spacer ($logo-width - $toggle-size - $secondary-site-name-spacer + $standard-spacing) 1fr (($toggle-size) / 2 + $double-spacing);
+    -ms-grid-rows: $toggle-size $secondary-site-name-spacer ($logo-size - $toggle-size - $secondary-site-name-spacer + $standard-spacing) 1fr (($toggle-size) / 2 + $double-spacing);
+    grid-template-rows: $toggle-size $secondary-site-name-spacer ($logo-size - $toggle-size - $secondary-site-name-spacer + $standard-spacing) 1fr (($toggle-size) / 2 + $double-spacing);
   }
   @include breakpoint($large) {
     -ms-grid-columns: $large-screen-columns;
-    -ms-grid-rows: $logo-width 1fr $toggle-size;
+    -ms-grid-rows: $logo-size 1fr $toggle-size;
     grid-template-columns: $large-screen-columns;
 
-    grid-template-rows: $toggle-size $secondary-site-name-spacer ($logo-width - $toggle-size - $secondary-site-name-spacer + $standard-spacing) 1fr (($toggle-size) / 2 + $double-spacing);
+    grid-template-rows: $toggle-size $secondary-site-name-spacer ($logo-size - $toggle-size - $secondary-site-name-spacer + $standard-spacing) 1fr (($toggle-size) / 2 + $double-spacing);
   }
   display: -ms-grid;
   display: grid;

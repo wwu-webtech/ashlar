@@ -10,6 +10,7 @@
     height: inherit;
     min-height: 0;
     background: transparent;
+    width: 100vw;
   }
   position: absolute;
   z-index: 2;
@@ -19,7 +20,6 @@
   .ultimenu--horizontal,
   .ultimenu-main-menu {
     @include breakpoint($medium) {
-      flex-flow: row nowrap;
     }
     display: flex;
     flex-flow: row wrap;

@@ -1,4 +1,4 @@
-page:
+page:  
   header: organisms-header-region-html
   main_navigation: organisms-ulti-menu-html
   content: organisms-content-region-html

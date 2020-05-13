@@ -2,7 +2,7 @@
  * @file
  * organisms/page/_alerts.scss
  */
-$logo-size: 100px;
+$alert-logo-size: 100px;
 
 .alert {
   width: 100%;
@@ -19,13 +19,13 @@ $logo-size: 100px;
   }
 
   .alert-icon {
-    width: $logo-size;
+    width: $alert-logo-size;
     float: left;
     margin-right: $double-spacing;
 
     svg {
       position: relative;
-      width: $logo-size;
+      width: $alert-logo-size;
       height: auto;
     }
   }

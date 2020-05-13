@@ -2,8 +2,11 @@
 * @file
 * 00-molecules/navigation/wwu-menu/_wwu-menu.scss
 */
-
 .quick-links {
+  @include breakpoint($medium) {
+    margin: 0;
+    justify-content: end;
+  }
   font-family: $condensed;
   position: relative;
   display: flex;
@@ -13,7 +16,7 @@
 
   .icon-with-text {
     background: transparent;
-    color: white;
+    color: $white;
     box-shadow: none;
     padding: 0;
     border-radius: 0;

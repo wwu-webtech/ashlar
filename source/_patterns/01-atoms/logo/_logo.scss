@@ -2,28 +2,24 @@
 * @file
 * 01-atoms/logo/_logo.scss
 */
-$logo-width--smaller: 212px;
-$logo-height--smaller: 136px;
-
-$logo-width: 266px;
-$logo-height: 170px;
+$logo-size: 196px;
 
 $logo-width--horizontal: 400px;
-$logo-height--horiztonal: 100px;
+$logo-height--horizontal: 100px;
 
 .logo {
   @include breakpoint($medium) {
-    width: $logo-width;
-    height: $logo-height;
+    width: $logo-size;
+    height: $logo-size;
   }
-  width: $logo-width--smaller;
-  height: $logo-height--smaller;
+  width: $logo-size;
+  height: $logo-size;
   padding: $standard-spacing;
   background-color: $dark-blue;
 
   &.horizontal {
     width: $logo-width--horizontal;
-    height: $logo-height--horiztonal;
+    height: $logo-height--horizontal;
   }
 
   svg {
@@ -43,11 +39,11 @@ $logo-height--horiztonal: 100px;
 
   &.make-waves {
     @include breakpoint($medium) {
-      width: $logo-width;
-      height: $logo-width;
+      width: $logo-size;
+      height: $logo-size;
     }
-    width: $logo-width--smaller;
-    height: $logo-width--smaller;
+    width: $logo-size;
+    height: $logo-size;
   }
 
   .cls-1 {

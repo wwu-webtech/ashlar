@@ -19,13 +19,13 @@
       padding-top: calc(#{$toggle-size} + #{$standard-spacing});
       padding-right: $standard-spacing;
       padding-bottom: calc((#{$toggle-size} / 2) + #{$standard-spacing});
-      padding-left: $standard-spacing + $logo-width + $standard-spacing;
+      padding-left: $standard-spacing + $logo-size + $standard-spacing;
     }
     @include breakpoint($large) {
       padding-top: calc(#{$toggle-size} + #{$standard-spacing});
       padding-right: calc((100vw - #{$max-content-width}) / 2 + #{$double-spacing});
       padding-bottom: calc((#{$toggle-size} / 2) + #{$standard-spacing});
-      padding-left: calc((100vw - #{$max-content-width}) / 2 + #{$logo-width} + #{$double-spacing});
+      padding-left: calc((100vw - #{$max-content-width}) / 2 + #{$logo-size} + #{$double-spacing});
     }
     display: grid;
     justify-content: center;

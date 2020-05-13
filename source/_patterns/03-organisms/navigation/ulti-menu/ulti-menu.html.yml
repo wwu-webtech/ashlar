@@ -44,3 +44,33 @@ items:
     Attribute():
       class:
         - ultimenu__item
+- link: '<a href=#" class="ultimenu__link">Menu Item Four</a>'
+  attributes:
+    Attribute():
+      class:
+        - ultimenu__item
+- link: '<a href=#" class="ultimenu__link">Menu Item Five</a>'
+  attributes:
+    Attribute():
+      class:
+        - ultimenu__item
+- link: '<a href=#" class="ultimenu__link">Menu Item Six</a>'
+  attributes:
+    Attribute():
+      class:
+        - ultimenu__item
+- link: '<a href=#" class="ultimenu__link">Menu Item Seven</a>'
+  attributes:
+    Attribute():
+      class:
+        - ultimenu__item
+- link: '<a href=#" class="ultimenu__link">Menu Item Eight</a>'
+  attributes:
+    Attribute():
+      class:
+        - ultimenu__item
+- link: '<a href=#" class="ultimenu__link">Menu Item Nine</a>'
+  attributes:
+    Attribute():
+      class:
+        - ultimenu__item
