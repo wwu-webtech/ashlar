@@ -19,6 +19,10 @@
 
   <div class="site-name mobile">
     {{ site_name }}
+    
+    {% block mobile_banner_region %}
+        {{ page.banner }}
+    {% endblock %}
   </div>
 
   <div class="header-navigation">

@@ -18,7 +18,7 @@
   .ultimenu--horizontal,
   .ultimenu-main-menu {
     @include breakpoint($medium) {
-      background-color: transparentize($darkest-blue, 0.1);
+      background-color: $blue
     }
     display: flex;
     flex-flow: row wrap;

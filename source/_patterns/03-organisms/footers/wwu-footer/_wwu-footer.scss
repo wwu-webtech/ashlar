@@ -54,6 +54,8 @@
       -ms-grid-row: 2;
       -ms-grid-row-span: 2;
     }
+    width: $logo-size--larger;
+    height: $logo-size--larger;
 
     grid-area: logo;
     -ms-grid-column: 2;

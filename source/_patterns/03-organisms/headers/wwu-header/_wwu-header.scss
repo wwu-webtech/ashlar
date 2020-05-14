@@ -23,22 +23,21 @@
       min-height: initial;
       padding-top: 0;
       opacity: 1 !important;
-      background-image: linear-gradient(to left, $darkest-blue, $dark-blue);
 
       grid-area: header;
       grid-template-areas: "logo wwu-menu"
       "logo site-name"
       "logo secondary-site-name"
       "menu menu";
-      grid-template-columns: ($logo-size + $double-spacing) 1fr;
-      grid-template-rows: ($logo-size / 3) ($logo-size / 3) ($logo-size / 3) auto;
+      grid-template-columns: ($logo-size + ($triple-spacing * 2)) 1fr;
+      grid-template-rows: $toggle-size $toggle-size ($logo-size - $toggle-size * 2) auto;
     }
     @include breakpoint($large) {
       grid-template-areas: "logo ... wwu-menu"
       "logo site-name ..."
       "logo secondary-site-name ..."
       "menu menu menu";
-      grid-template-columns: ($logo-size + $double-spacing) 1fr auto;
+      grid-template-columns: ($logo-size + ($triple-spacing * 2)) 1fr auto;
     }
     position: fixed;
     z-index: 4;
@@ -56,16 +55,21 @@
   }
 
   .western-logo {
+    @include breakpoint($medium) {
+      margin: initial;
+    }
     position: relative;
     z-index: 2;
     width: $logo-size + $double-spacing;
+    margin: auto;
+    padding-right: $toggle-size;
 
     grid-area: header;
   }
 
   .logo {
     @include breakpoint($medium) {
-      margin-left: $standard-spacing;
+      margin-left: $triple-spacing;
       background: transparent;
     }
     margin: auto;
@@ -119,6 +123,8 @@
 
   .site-name {
     @include breakpoint($medium) {
+      padding: 0;
+      text-align: left;
       border-top: none;
       border-bottom: none;
 
@@ -135,16 +141,15 @@
     color: $white;
     border-top: solid $border-width--thinner $blue;
     border-bottom: solid $border-width--thinner $blue;
-    font-family: $serif;
     font-size: $p-font-size--larger;
 
     &:after {
       @include breakpoint($medium) {
         display: block;
         width: 30%;
-        margin: $standard-spacing auto 0;
+        margin-top: $standard-spacing - 2;
         content: "";
-        border-bottom: solid $light-blue $border-width--thicker;
+        border-bottom: solid $light-blue $border-width--thinner;
       }
     }
 
