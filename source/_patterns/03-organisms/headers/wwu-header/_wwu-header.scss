@@ -30,7 +30,7 @@
       "logo secondary-site-name"
       "menu menu";
       grid-template-columns: ($logo-size + ($triple-spacing * 2)) 1fr;
-      grid-template-rows: $toggle-size $toggle-size ($logo-size - $toggle-size * 2) auto;
+      grid-template-rows: ($logo-size / 3) ($logo-size / 3) ($logo-size / 3) auto;
     }
     @include breakpoint($large) {
       grid-template-areas: "logo ... wwu-menu"
