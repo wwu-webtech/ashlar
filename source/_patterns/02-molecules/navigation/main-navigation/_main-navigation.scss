@@ -18,7 +18,7 @@
   .ultimenu--horizontal,
   .ultimenu-main-menu {
     @include breakpoint($medium) {
-      background-color: $blue
+      background-color: $blue;
     }
     display: flex;
     flex-flow: row wrap;
@@ -78,18 +78,13 @@
           outline: none;
           background-color: transparent;
         }
-
-        &:after {
-          @include breakpoint($medium) {
-            border-bottom: solid $border-width transparent;
-          }
-        }
       }
+
 
       &:hover,
       &:focus-within {
         @include breakpoint($medium) {
-          background-color: transparent;
+          background-color: $dark-blue;
         }
         background-color: $light-green;
 
@@ -98,19 +93,10 @@
             color: $white;
           }
           color: $black;
+        }
 
-          &:after {
-            @include breakpoint($medium) {
-              position: absolute;
-              bottom: $half-spacing;
-              left: 50%;
-              display: block;
-              width: 50%;
-              content: "";
-              transform: translatex(-50%);
-              border-color: $lightest-green;
-            }
-          }
+        .expand-icon.mobile {
+          color: $black;
         }
       }
 
@@ -133,10 +119,26 @@
         height: 100%;
         color: $white;
         border: none;
+        font-size: $icon-size--small;
 
         grid-area: icon;
         -ms-grid-column: 2;
         -ms-grid-column-span: 1;
+
+        &.desktop {
+          @include breakpoint($medium) {
+            display: flex;
+            position: relative;
+            right: $half-spacing;
+          }
+          display: none;
+        }
+
+        &.mobile {
+          @include breakpoint($medium) {
+            display: none;
+          }
+        }
       }
     }
   }

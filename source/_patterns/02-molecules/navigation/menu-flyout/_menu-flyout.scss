@@ -50,7 +50,7 @@
     color: $lightest-green;
     text-shadow: 1px 1px 1px transparentize($dark-blue, 0.1);
     font-family: $sans-serif;
-    font-size: $h5-font-size;
+    font-size: $p-font-size;
     font-weight: $font-weight--semibold;
 
     a:not(.button) {
@@ -59,7 +59,7 @@
   }
 
   h3 {
-    font-size: $h5-font-size--smaller;
+    font-size: $p-font-size--smaller;
   }
 
 

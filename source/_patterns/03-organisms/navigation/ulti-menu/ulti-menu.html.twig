@@ -18,7 +18,8 @@
           {% else %}
             {{ item.link }}
             {% if item.flyout %}
-              <span class="material-icons expand-icon" aria-hidden="true">keyboard_arrow_right</span>
+              <span class="material-icons expand-icon mobile" aria-hidden="true">keyboard_arrow_right</span>
+              <span class="material-icons expand-icon desktop" aria-hidden="true">keyboard_arrow_down</span>
             {% endif %}
           {% endif %}
           {% if item.below %}

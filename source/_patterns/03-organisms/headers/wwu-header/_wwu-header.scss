@@ -46,7 +46,7 @@
     width: 100vw;
     min-height: 100vh;
     padding-top: $toggle-size;
-    background-color: $dark-blue;    
+    background-color: $dark-blue;
   }
 
   .western-menu {
@@ -145,6 +145,12 @@
     &.mobile {
       @include breakpoint($medium) {
         display: none;
+      }
+
+      .block--secondary-site-name {
+        margin: -$standard-spacing;
+        margin-top: $standard-spacing;
+        border-top: $border-width--thinner $blue solid;
       }
     }
   }
