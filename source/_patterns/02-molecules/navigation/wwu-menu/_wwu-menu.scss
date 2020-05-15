@@ -2,16 +2,20 @@
 * @file
 * 00-molecules/navigation/wwu-menu/_wwu-menu.scss
 */
-.quick-links {
+.western-menu {
   @include breakpoint($medium) {
     margin: 0;
   }
-  position: relative;
   display: flex;
+  align-self: start;
   justify-content: flex-end;
   margin-top: $half-spacing;
   margin-bottom: $standard-spacing;
   font-family: $condensed;
+
+  .quick-links {
+    display: flex;
+  }
 
   .icon-with-text {
     @include breakpoint($medium) {
