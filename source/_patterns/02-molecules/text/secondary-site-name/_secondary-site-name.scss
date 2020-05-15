@@ -5,12 +5,20 @@
 
 .block--secondary-site-name {
   @include breakpoint($medium) {
+    margin: initial;
     padding: 0;
     text-align: left;
-    border-bottom: none;
+    border: none;
   }
+  @include breakpoint($large) {
+    font-size: $p-font-size--max--smaller;
+  }
+  margin: -$standard-spacing;
+  margin-top: $standard-spacing;
   padding: $standard-spacing;
   text-align: center;
   color: $white;
+  border-top: $border-width--thinner $blue solid ;
   border-bottom: solid $border-width--thinner $blue;
+  font-size: $p-font-size--smaller;
 }

@@ -4,7 +4,6 @@
 */
 .quick-links {
   @include breakpoint($medium) {
-    justify-content: end;
     margin: 0;
   }
   position: relative;
@@ -15,6 +14,20 @@
   font-family: $condensed;
 
   .icon-with-text {
+    @include breakpoint($medium) {
+      display: flex;
+      align-items: center;
+      width: initial;
+      height: initial;
+      padding: $half-spacing $standard-spacing $half-spacing $half-spacing;
+
+      .material-icons {
+        position: relative;
+        top: 2px;
+        margin-right: 1px;
+        font-size: $icon-size--medium;
+      }
+    }
     padding: 0;
     color: $white;
     border-radius: 0;

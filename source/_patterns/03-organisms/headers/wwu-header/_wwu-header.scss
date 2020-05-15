@@ -143,28 +143,18 @@
     border-bottom: solid $border-width--thinner $blue;
     font-size: $p-font-size--larger;
 
-    &:after {
-      @include breakpoint($medium) {
-        display: block;
-        width: 30%;
-        margin-top: $standard-spacing - 2;
-        content: "";
-        border-bottom: solid $light-blue $border-width--thinner;
-      }
-    }
-
     &.mobile {
       @include breakpoint($medium) {
         display: none;
       }
     }
   }
+}
 
-  .block--secondary-site-name {
-    grid-area: secondary-site-name;
-  }
+.block--secondary-site-name {
+  grid-area: secondary-site-name;
+}
 
-  .main-navigation {
-    grid-area: menu;
-  }
+.main-navigation {
+  grid-area: menu;
 }
