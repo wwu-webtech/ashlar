@@ -64,10 +64,11 @@ textarea,
 select {
   @include breakpoint($medium) {
     border-width: $border-width--thicker;
+    width: auto;
   }
   display: block;
   box-sizing: border-box;
-  max-width: 100%;
+  width: 100%;
   margin-bottom: $standard-spacing;
   padding: $standard-spacing * 0.75;
   color: $black;
@@ -91,6 +92,10 @@ select {
     border-color: $gray;
     background-color: $light-gray;
   }
+}
+
+input[type="submit"] {
+  width: auto;
 }
 
 ::placeholder {
