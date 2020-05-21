@@ -13,13 +13,8 @@ function ashlar_page_attachments_alter(array &$attachments) {
 !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window,document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '1839973826107796'); fbq('track', 'PageView');
 FACEBOOK;
 
-  $googleOptimize = <<<'GOOGLEOPTIMIZE'
-  <script src="https://www.googleoptimize.com/optimize.js?id=GTM-5QM62SQ"></script>
-GOOGLEOPTIMIZE;
-  
   $host = \Drupal::request()->getHost();
-  $homepage = \Drupal::service('path.matcher')->isFrontPage();
-  
+
   switch ($host) {
     case 'www.wwu.edu' || 'wwwdev.wwu.edu':
       $attachments['#attached']['html_head'][] = array(
@@ -30,16 +25,6 @@ GOOGLEOPTIMIZE;
         ),
         'facebook',
       );
-      if ($homepage) {
-        $attachments['#attached']['html_head'][] = array(
-          array(
-            '#type' => 'html_tag',
-            '#tag' => 'script',
-            '#value' => $googleOptimize,
-          ),
-          'googleOptimize',
-        );
-      }
       break;
   }
 
@@ -69,6 +54,15 @@ SITEIMPROVE;
 function ashlar_preprocess_page(&$variables) {
   $variables['site_name'] = \Drupal::config('system.site')->get('name');
   $variables['alert_display'] = (bool) theme_get_setting('alert_display');
+
+  $host = \Drupal::request()->getHost();
+  $homepage = \Drupal::service('path.matcher')->isFrontPage();
+    switch ($host) {
+      case 'www.wwu.edu' || 'wwwdev.wwu.edu':
+      if ($homepage) {
+        $variables['#attached']['library'][] = 'ashlar/google-optimize';
+      }
+    }
 }
 
 /**
@@ -326,7 +320,7 @@ function ashlar_form_user_login_form_alter(&$form, &$form_state, $form_id) {
 * Implements hook_views_pre_render().
 * Note:  If your site would like to use pattern lab scalable social icons then
 *  you can create a view with a machine name that resolves to one of the names
-*  below.  You'll also have to create the content type that includes a "Link" 
+*  below.  You'll also have to create the content type that includes a "Link"
 *  field to encapsulate the social media url and link text.  The code below attaches
 *  the profile.js script to your view which will replace the link text with a very
 *  nice social icon svg.  See profile.js if confused.
