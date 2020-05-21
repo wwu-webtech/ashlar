@@ -15,7 +15,7 @@ FACEBOOK;
 
   $googleOptimize = <<<'GOOGLEOPTIMIZE'
   <script src="https://www.googleoptimize.com/optimize.js?id=GTM-5QM62SQ"></script>
-  GOOGLEOPTIMIZE;
+GOOGLEOPTIMIZE;
   
   $host = \Drupal::request()->getHost();
   $homepage = \Drupal::service('path.matcher')->isFrontPage();
