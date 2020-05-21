@@ -21,7 +21,7 @@ GOOGLEOPTIMIZE;
   $homepage = \Drupal::service('path.matcher')->isFrontPage();
   
   switch ($host) {
-    case 'www.wwu.edu':
+    case 'www.wwu.edu' || 'wwwdev.wwu.edu':
       $attachments['#attached']['html_head'][] = array(
         array(
           '#type' => 'html_tag',
