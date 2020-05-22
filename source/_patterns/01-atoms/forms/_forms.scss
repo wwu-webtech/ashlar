@@ -5,6 +5,11 @@
 $select-input-size: 28px;
 $select-input-size--smaller: 24px;
 
+@mixin current-progress-hover {
+  color: $lightest-green;
+  background: mix(black, $blue, 20%);
+}
+
 form {
   fieldset,
   .webform-section {
@@ -150,8 +155,7 @@ input[type="submit"] {
     &.is-active {
 
       &:hover .progress-marker {
-        color: $lightest-green;
-        background: mix(black, $blue, 20%);
+        @include current-progress-hover();
       }
 
       .progress-marker {
@@ -160,8 +164,7 @@ input[type="submit"] {
         &:hover,
         &:focus,
         &:active {
-          color: $lightest-green;
-          background: mix(black, $blue, 20%);
+          @include current-progress-hover();
         }
       }
     }
