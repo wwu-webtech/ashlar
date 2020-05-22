@@ -141,12 +141,7 @@ input[type="submit"] {
           }
 
           &:focus {
-            @include breakpoint($medium) {
-              outline: $focus-outline--thicker;
-              outline-offset: $border-width--thicker;
-            }
-            outline: $focus-outline;
-            outline-offset: $border-width;
+            @include default-link-focus-border();
           }
         }
       }
@@ -162,7 +157,6 @@ input[type="submit"] {
         background-color: $blue;
 
         &:hover,
-        &:focus,
         &:active {
           @include current-progress-hover();
         }
@@ -172,6 +166,9 @@ input[type="submit"] {
     .progress-marker {
       &:hover, &:focus {
         background-color: $link-color;
+      }
+      &:focus {
+        @include default-link-focus-border();
       }
     }
   }
