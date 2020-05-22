@@ -120,10 +120,7 @@ input[type="submit"] {
     &.is-complete {
       &:hover, &:focus {
         .progress-marker {
-          text-decoration: none;
-          color: $link-color--hover;
-          border-bottom-color: transparent;
-          background-color: $light-gray;
+          @include default-link-hover-focus();
         }
       }
 
@@ -135,10 +132,7 @@ input[type="submit"] {
           &:active,
           &:focus,
           &:hover {
-            text-decoration: none;
-            color: $link-color--hover;
-            border-bottom-color: transparent;
-            background-color: $light-gray;
+            @include default-link-hover-focus();
           }
 
           &:focus {

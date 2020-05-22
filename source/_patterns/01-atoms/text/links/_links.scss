@@ -11,10 +11,7 @@ a {
   &:active,
   &:focus,
   &:hover {
-    text-decoration: none;
-    color: $link-color--hover;
-    border-bottom-color: transparent;
-    background-color: $light-gray;
+    @include default-link-hover-focus();
   }
 
   &:focus {
