@@ -111,3 +111,74 @@ input[type="submit"] {
   /* Microsoft Edge */
   color: transparentize($black, 0.1);
 }
+
+/* Wizard page styles */
+.webform-progress-tracker {
+
+  .progress-step {
+
+    &.is-complete {
+      &:hover, &:focus {
+        .progress-marker {
+          text-decoration: none;
+          color: $link-color--hover;
+          border-bottom-color: transparent;
+          background-color: $light-gray;
+        }
+      }
+
+      .progress-title {
+        text-decoration: underline;
+      }
+
+      .progress-title {
+        &[role="link"] {
+          color: $link-color;
+
+          &:active,
+          &:focus,
+          &:hover {
+            text-decoration: none;
+            color: $link-color--hover;
+            border-bottom-color: transparent;
+            background-color: $light-gray;
+          }
+
+          &:focus {
+            @include breakpoint($medium) {
+              outline: $focus-outline--thicker;
+              outline-offset: $border-width--thicker;
+            }
+            outline: $focus-outline;
+            outline-offset: $border-width;
+          }
+        }
+      }
+    }
+
+    &.is-active {
+
+      &:hover .progress-marker {
+        color: $lightest-green;
+        background: mix(black, $blue, 20%);
+      }
+
+      .progress-marker {
+        background-color: $blue;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: $lightest-green;
+          background: mix(black, $blue, 20%);
+        }
+      }
+    }
+
+    .progress-marker {
+      &:hover, &:focus {
+        background-color: $link-color;
+      }
+    }
+  }
+}
