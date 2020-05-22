@@ -128,12 +128,9 @@ input[type="submit"] {
       }
 
       .progress-title {
-        text-decoration: underline;
-      }
-
-      .progress-title {
         &[role="link"] {
           color: $link-color;
+          text-decoration: underline;
 
           &:active,
           &:focus,
