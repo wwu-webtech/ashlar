@@ -19,7 +19,7 @@ $focus-shadow: 0 5px 10px transparentize($blue, 0.84), 0 3px 6px transparentize(
 $hover-opacity: 0.85;
 
 // Hover/focus mixins
-@mixin default-link-hover-focus() {
+@mixin default-link-hover-focus {
   text-decoration: none;
   color: $link-color--hover;
   border-bottom-color: transparent;
