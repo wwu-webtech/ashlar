@@ -109,16 +109,16 @@ $mabel-site-name-height: 44px;
         grid-template-rows: ($toggle-size + $standard-spacing) 1fr ($standard-spacing + ($toggle-size / 2));
       }
       @include breakpoint($large) {
-        grid-template-areas:
-        ". . ....... ."
+        grid-template-areas: ". . ....... ."
         ". . content ."
         ". . ....... .";
-        grid-template-columns: 1fr ($logo-width--larger + $double-spacing) ($max-content-width - $logo-width--larger - $standard-spacing) 1fr;
+        grid-template-columns: 1fr ($logo-width + $double-spacing) ($max-content-width - $logo-width - $standard-spacing) 1fr;
         grid-template-rows: ($toggle-size--larger + $standard-spacing) 1fr ($standard-spacing + ($toggle-size--larger / 2));
       }
       @include breakpoint(min-width 2420px) {
         grid-template-rows: ($toggle-size--larger + $double-spacing) 1fr ($standard-spacing + ($toggle-size--larger / 2));
       }
+      max-height: 350px;
     }
   }
 

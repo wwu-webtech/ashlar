@@ -1,0 +1,9 @@
+.after-unset:after {
+  content: '';
+  display: none;
+}
+
+.before-unset:before {
+  content: '';
+  display: none;
+}

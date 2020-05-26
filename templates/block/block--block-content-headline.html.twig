@@ -46,10 +46,12 @@
     {% endif %}
 
     {% if block_content.field_video_source.0.value == "YouTube" %}
-      <a class="button" data-featherlight="iframe" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-style="display:block;border:none;height:50vh;width:50vw;" href="https://www.youtube.com/embed/{{ block_content.field_video_embed.0.value }}?rel=0&amp;autoplay=1">Watch Video <i aria-hidden="true" class="material-icons" style="font-size: 18px">play_arrow</i></a>
+      {{ attach_library('ashlar/featherlight') }}
+      <a class="button" data-featherlight="iframe" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-style="display:block;border:none;height:50vh;width:50vw;" href="https://www.youtube.com/embed/{{ block_content.field_video_embed.0.value }}?rel=0&amp;autoplay=1">Watch Video <span aria-hidden="true" class="material-icons" style="font-size: 18px">play_arrow</span></a>
 
     {% elseif block_content.field_video_source.0.value == "Vimeo" %}
-      <a class="button" data-featherlight="iframe" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-style="display:block;border:none;height:50vh;width:50vw;" href="https://player.vimeo.com/video/{{ block_content.field_video_embed.0.value }}?rel=0&amp;autoplay=1">Watch Video <i aria-hidden="true" class="material-icons" style="font-size: 18px">play_arrow</i></a>
+      {{ attach_library('ashlar/featherlight') }}
+      <a class="button" data-featherlight="iframe" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-style="display:block;border:none;height:50vh;width:50vw;" href="https://player.vimeo.com/video/{{ block_content.field_video_embed.0.value }}?rel=0&amp;autoplay=1">Watch Video <span aria-hidden="true" class="material-icons" style="font-size: 18px">play_arrow</span></a>
 
     {% endif %}
   {% endblock %}

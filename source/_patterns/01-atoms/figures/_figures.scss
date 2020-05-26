@@ -1,0 +1,12 @@
+/**
+ * @file
+ * 01-atoms/figures/_figures.scss
+ */
+
+figcaption {
+  @include light-gray-bg
+  padding: $standard-spacing;
+}
+figure {
+  margin: 0px;
+}

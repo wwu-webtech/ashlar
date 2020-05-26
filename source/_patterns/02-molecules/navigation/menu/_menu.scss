@@ -18,6 +18,10 @@
     a {
       padding-left: $double-spacing;
       font-size: $p-font-size--smaller;
+
+      @include breakpoint ($large) {
+        font-size: $p-font-size--max--smaller;
+      }
     }
   }
 }

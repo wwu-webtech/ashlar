@@ -30,7 +30,8 @@ input[type="submit"] {
   }
 
   &:focus {
-    border: dotted $border-width $white;
+    border-style: dotted;
+    border-color: $white;
     outline: none;
   }
 
@@ -47,7 +48,7 @@ input[type="submit"] {
     }
 
     &:focus {
-      border: dotted $border-width $white;
+      outline: none;
     }
   }
 
@@ -67,7 +68,7 @@ input[type="submit"] {
     }
 
     &:focus {
-      border: dotted $border-width $red;
+      border-color: $red;
     }
   }
 
@@ -168,6 +169,24 @@ input[type="submit"] {
     }
   }
 
+  &.light-green {
+    @include button-box-shadow($dark-blue);
+    color: $dark-blue;
+    background: $light-green;
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: $lightest-green;
+      border-color: $darkest-blue;
+      background: $darkest-blue;
+    }
+
+    &:focus {
+      border-color: $lightest-green;
+    }
+  }
+
   &.green {
     @include button-box-shadow($dark-green);
     background: $green;
@@ -231,7 +250,7 @@ input[type="submit"] {
     }
 
     &:focus {
-      border: dotted $border-width $white;
+      border-color: $white;
     }
 
     &.dark-blue {
@@ -245,6 +264,24 @@ input[type="submit"] {
         color: $white;
         border-color: transparent;
         background: $blue;
+      }
+    }
+
+    &.light-green {
+      @include button-box-shadow($light-green);
+      color: $green;
+      border-color: $light-green;
+
+      &:active,
+      &:hover,
+      &:focus {
+        color: $dark-blue;
+        border-color: transparent;
+        background: $lightest-green;
+      }
+
+      &:focus {
+        border-color: $green;
       }
     }
 

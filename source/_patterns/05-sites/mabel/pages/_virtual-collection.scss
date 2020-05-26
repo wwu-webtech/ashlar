@@ -3,16 +3,43 @@
 * sites/mabel/pages/_virtual-collection.scss
 */
 
-.virtual-collection-grid {
-  .grid {
-    display: flex;
+.view-virtual-collection-grid {
+  .card {
+    display: block;
+    float: left;
+    margin: $double-spacing;
+    padding: $standard-spacing;
+    text-align: left;
+    border-radius: $border-radius--round-square;
+    background: radial-gradient( ellipse at top left, rgba(255, 255, 255, 1) 65%, rgba(229, 229, 229, 0.9) 100% );
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
-  .grid-cell {
-    flex: 1;
-    padding: $half-spacing;
+  .card .small {
+    font-size: $p-font-size--smaller;
   }
-  .grid-cell2 {
-    flex: 2;
-    padding: $half-spacing;
+
+  ul.db-row {
+    list-style-type: none;
+  }
+
+  ul.db-row li {
+    display: inline-block;
+    overflow: hidden;
+    max-height: 300px;
+    margin: $half-spacing;
+    padding: $standard-spacing;
+    text-align: left;
+    border-radius: $border-radius--round-square;
+    background: radial-gradient(ellipse at top left, white 65%, rgba(229, 229, 229, 0.9) 100%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  ul.db-row li img {
+    overflow: hidden;
+    max-height: 200px;
+  }
+
+  .item-list {
+    display: inline-table;
   }
 }

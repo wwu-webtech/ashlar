@@ -1,0 +1,20 @@
+attributes:
+  Attribute():
+    class:
+    - headline
+    - block
+    - block--headline
+    - left-aligned-bar
+title_attributes:
+  Attribute():
+    class:
+    - block__title
+label: Headline block
+content:
+  body: <p>Headline material can go here. Try using different classes to style this headline in different ways. Headlines might have <a href="#">links</a>.</p>
+  link:
+    url: '#'
+    text: 'Basic link'
+  video:
+    type: 'Vimeo'
+    id: '317603873'

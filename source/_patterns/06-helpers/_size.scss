@@ -1,8 +1,12 @@
 /**
- * @file
- * helpers/_size.scss
- * Helper classes to adjust spacing
- */
+* @file
+* helpers/_size.scss
+* Helper classes to adjust spacing
+*/
+
+.full-height {
+  height: 100%;
+}
 
 .min-height--25vh {
   min-height: 25vh;

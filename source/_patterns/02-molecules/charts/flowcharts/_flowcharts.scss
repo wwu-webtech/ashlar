@@ -2,8 +2,6 @@
 * @file
 * 02-molecules/org-charts/_flowcharts.scss
 */
-
-$chart-background-color: $white;
 $line-color: mix($light-gray, $gray, 50%);
 $max-box-size: 300px;
 
@@ -12,7 +10,6 @@ $max-box-size: 300px;
   display: grid;
   justify-content: center;
   max-width: $max-content-width;
-  background: $chart-background-color;
   font-size: $p-font-size--smaller;
 
   figcaption {

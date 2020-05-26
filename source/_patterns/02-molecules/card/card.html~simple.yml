@@ -1,0 +1,17 @@
+attributes:
+  Attribute():
+    class:
+    - block
+    - block--card
+    - simple
+    - sans-serif-headings
+label: March 8
+block_content:
+  field_link:
+    0:
+      url: "#"
+content:
+  body: "<p>Card body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+  field_image:
+  field_highlighted_terms: "<div class='taxonomy-terms'><span class='taxonomy-term'>Apply Now</span></div>"

@@ -3,13 +3,17 @@ attributes:
     class:
     - block
     - block--card
+    - event
+    - sans-serif-headings
 label: Event Title
 block_content:
   field_link:
     0:
       url: "#"
 content:
-  content:
-    body: "<p>A description of the event</p><div class='date'>June 1, 2018</div><div class='location'>Location Name</div><div class='time'>5:30 - 6:00pm</div>"
-    field_image: atoms-landscape-3x2
-    field_highlighted_terms: "<div class='taxonomy-terms'><a href='#' class='taxonomy-term'>Category</a></div>"
+  body: "<p>Card body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+  field_image: atoms-landscape-3x2
+  field_highlighted_terms:
+  field_date: "<span class='month'>Apr</span> <span class='day'>04 - 07</span'>"
+  field_location: "Old Main Theater but Make The Location Longer"

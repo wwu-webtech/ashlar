@@ -6,6 +6,7 @@
 .section-title {
   font-size: $h4-font-size;
   font-weight: $font-weight--black;
+  font-display: swap;
   &:after {
     display: none;
   }

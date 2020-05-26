@@ -6,7 +6,7 @@
  */
 
 /**
- * Implements hook_page_attachments().
+ * Implements hook_page_attachments_alter().
  */
 function ashlar_page_attachments_alter(array &$attachments) {
   $facebook = <<<'FACEBOOK'
@@ -16,7 +16,7 @@ FACEBOOK;
   $host = \Drupal::request()->getHost();
 
   switch ($host) {
-    case 'www.wwu.edu':
+    case 'www.wwu.edu' || 'wwwdev.wwu.edu':
       $attachments['#attached']['html_head'][] = array(
         array(
           '#type' => 'html_tag',
@@ -42,6 +42,10 @@ SITEIMPROVE;
       'siteimprove',
     );
   }
+
+  if (theme_get_setting('vimeo_tracking')) {
+    $attachments['#attached']['library'][] = 'ashlar/vimeo-tracking';
+  }
 }
 
 /**
@@ -50,6 +54,15 @@ SITEIMPROVE;
 function ashlar_preprocess_page(&$variables) {
   $variables['site_name'] = \Drupal::config('system.site')->get('name');
   $variables['alert_display'] = (bool) theme_get_setting('alert_display');
+
+  $host = \Drupal::request()->getHost();
+  $homepage = \Drupal::service('path.matcher')->isFrontPage();
+    switch ($host) {
+      case 'www.wwu.edu' || 'wwwdev.wwu.edu':
+      if ($homepage) {
+        $variables['#attached']['library'][] = 'ashlar/google-optimize';
+      }
+    }
 }
 
 /**
@@ -58,11 +71,6 @@ function ashlar_preprocess_page(&$variables) {
 function ashlar_preprocess_block(&$variables) {
   if (isset($variables['elements']['content']['#block_content'])) {
     $variables['block_content'] = $variables['elements']['content']['#block_content'];
-  }
-
-  //Invoke BrightEdge code only where block is present
-  if (isset($variables['elements']['#id']) && $variables['elements']['#id'] === 'brightedgelinkequitymangerlemhtml') {
-    $variables['#attached']['library'][] = 'ashlar/bright-edge';
   }
 
   //Invoke erm menu code when the erm menu is present
@@ -307,7 +315,7 @@ function ashlar_form_user_login_form_alter(&$form, &$form_state, $form_id) {
 * Implements hook_views_pre_render().
 * Note:  If your site would like to use pattern lab scalable social icons then
 *  you can create a view with a machine name that resolves to one of the names
-*  below.  You'll also have to create the content type that includes a "Link" 
+*  below.  You'll also have to create the content type that includes a "Link"
 *  field to encapsulate the social media url and link text.  The code below attaches
 *  the profile.js script to your view which will replace the link text with a very
 *  nice social icon svg.  See profile.js if confused.

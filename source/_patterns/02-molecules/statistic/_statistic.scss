@@ -2,7 +2,8 @@
 * @file
 * molecules/statistic/statistic.scss
 */
-$vertical-statistic-width: 180px;
+$vertical-statistic-width--min: 180px;
+$vertical-statistic-width--max: 240px;
 
 .block--statistic {
   margin: $half-spacing 0;
@@ -11,12 +12,43 @@ $vertical-statistic-width: 180px;
     font-weight: $font-weight--bold;
   }
 
+  &.white-bg {
+    color: $blue;
+    background-color: $white;
+
+    .block__title {
+      padding-bottom: $standard-spacing;
+      color: $blue;
+
+      &:after {
+        border-width: $border-width;
+      }
+    }
+
+    a {
+      color: $blue;
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: $link-color--hover;
+        background-color: $light-gray;
+      }
+    }
+  }
+
   &.statistic--vertical {
-    width: $vertical-statistic-width;
+    min-width: $vertical-statistic-width--min;
+    max-width: $vertical-statistic-width--max;
     margin: 0 $half-spacing $standard-spacing;
     padding: $standard-spacing;
     text-align: center;
     border-radius: $border-radius--round-square;
+
+    .block__title {
+      margin-top: 0;
+      font-family: $sans-serif;
+    }
 
     .number {
       display: block;
