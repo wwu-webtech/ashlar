@@ -31,15 +31,6 @@ alerts:
     build/js/alerts.js: {}
   dependencies:
     - core/jquery
-bright-edge:
-  version: 1.x
-  header: true
-  js:
-    //cdn.bc0a.com/be_ixf_js_sdk.js: { type: external, minified: true }
-    build/js/bright-edge.js: {}
-  dependencies:
-    - core/drupal
-    - core/jquery
 components:
   version: 1.x
   css:
@@ -80,6 +71,10 @@ fullpage:
       dist/js/fullPage/fullpage.css: {}
   js:
     dist/js/fullPage/fullpage.js: {}
+google-optimize:
+    version: 1.x
+    js:
+      https://www.googleoptimize.com/optimize.js?id=GTM-5QM62SQ: { type: external, attributes: { async: true }}
 language-select:
   version: 1.x
   js:
