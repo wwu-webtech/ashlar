@@ -21,7 +21,7 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.1",
     "gulp-wrap": "^0.15.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.1",
     "jquery-listnav": "^2.4.10",
     "jquery-once": "^2.2.1",
     "jquery.quicksearch": "^2.0.5",
@@ -40,7 +40,7 @@
     "test-pa11y": "./node_modules/.bin/pa11y-ci"
   },
   "dependencies": {
-    "acorn": "^6.0.4",
+    "acorn": "^6.4.1",
     "breakpoint-sass": "^2.7.1"
   }
 }

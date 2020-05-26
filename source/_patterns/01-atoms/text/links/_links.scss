@@ -11,19 +11,11 @@ a {
   &:active,
   &:focus,
   &:hover {
-    text-decoration: none;
-    color: $link-color--hover;
-    border-bottom-color: transparent;
-    background-color: $light-gray;
+    @include default-link-hover-focus();
   }
 
   &:focus {
-    @include breakpoint($medium) {
-      outline: $focus-outline--thicker;
-      outline-offset: $border-width--thicker;
-    }
-    outline: $focus-outline;
-    outline-offset: $border-width;
+    @include default-link-focus-border();
   }
 
 // additional styles for [target="blank"] material icons
