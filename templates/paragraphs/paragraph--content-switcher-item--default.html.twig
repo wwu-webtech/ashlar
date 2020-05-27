@@ -47,29 +47,5 @@
   ]
 %}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
-    {% block content %}
-      <{{ content['field_item_heading_level'][0]['#markup'] }} class="title">
-        <button class="expand">
-          <span class="material-icons" aria-hidden="true">add</span>
-          {{ content['field_heading'][0]['#context']['value'] }}
-        </button>
-      </{{ content['field_item_heading_level'][0]['#markup'] }}>
-
-      <div class="content">
-        {{ content['field_content'][0]['#text'] | raw }}
-      </div>
-    {% endblock %}
-
-
-    {% block content %}
-      <div{{ attributes }} role="tablist" {% if page.title %} aria-labelledby="{{ heading_id }}" {% else %} aria-label="Content Switcher" {% endif %}>
-        {% for item in items %}
-          <button {{ item.attributes }} id="{{ item.button_id }}" role="tab" aria-controls="{{ item.content_id }}">
-            {{ item.title }}
-          </button>
-        {% endfor %}
-      </div>
-    {% endblock %}
-  </div>
+  {% include "@molecules/switcher/switcher-items.html.twig" %}
 {% endblock paragraph %}

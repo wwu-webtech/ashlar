@@ -1,0 +1,7 @@
+<button {{ content.attributes }} id="{{ content.button_id }}" role="tab" aria-controls="{{ content.content_id }}">
+  {{ content.field_heading }}
+</button>
+
+<div{{ content.attributes.addClass("content") }} id="{{  content.content_id }}" role="tabpanel" aria-labelledby="{{ content.button_id }}" tabindex="0">
+  {{ content.field_content }}
+</div>

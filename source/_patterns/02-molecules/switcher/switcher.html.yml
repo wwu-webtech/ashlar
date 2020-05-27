@@ -2,13 +2,12 @@ multiple: false
 attributes:
   Attribute():
     class:
-    - content-switcher
+    - block--content-switcher
     id: example
-page:
-  title: Title of Page Content
+label: Title of Content Switcher
 items:
-- title: Content 1
-  content: We have an infinite amount to learn both from nature and from each other.
+- field_heading: Content 1
+  field_content: We have an infinite amount to learn both from nature and from each other.
     Science has not yet mastered prophecy. We predict too much for the next year and
     yet far too little for the next 10.
   attributes:
@@ -18,8 +17,8 @@ items:
       - active
   button_id: switch-button-1
   content_id: switch-content-1
-- title: Content 2
-  content: If you could see the earth illuminated when you were in a place as dark
+- field_heading: Content 2
+  field_content: If you could see the earth illuminated when you were in a place as dark
     as night, it would look to you more splendid than the moon. Curious that we spend
     more time congratulating people who have succeeded than encouraging people who
     have not.
@@ -29,8 +28,8 @@ items:
       - switch-02
   button_id: switch-button-2
   content_id: switch-content-2
-- title: Content 3
-  content: Astronomy compels the soul to look upward, and leads us from this world
+- field_heading: Content 3
+  field_content: Astronomy compels the soul to look upward, and leads us from this world
     to another.
   attributes:
     Attribute():
