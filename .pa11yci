@@ -2,7 +2,7 @@
   "urls": [
     {
       "url": "http://localhost:8000/patterns/01-atoms-background-color/index.html",
-      "hideElements": "head"
+      "rootElement": ".sg-pattern-example"
     }
   ]
 }
