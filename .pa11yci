@@ -1,8 +1,8 @@
 {
-  "defaults": {
-    "timeout": 5000
-  },
   "urls": [
-    "localhost:8000"
+    {
+      "url": "http://localhost:8000/patterns/01-atoms-background-color/index.html",
+      "hideElements": "head"
+    }
   ]
 }
