@@ -18,7 +18,7 @@ $tabButton.click(function () {
   $otherButtons.removeClass('active');
   $otherButtons.attr('aria-selected', 'false');
   $otherButtons.attr('tabindex', '-1');
-  $otherButtons.children('span').remove();
+  $otherButtons.children('.material-icons').remove();
   var $thisSwitch = $(this).attr('class');
   $(this).addClass('active');
   $(this).prepend($leftArrow);
