@@ -1,7 +1,11 @@
-<button {{ content.attributes }} id="{{ content.button_id }}" role="tab" aria-controls="{{ content.content_id }}">
+{% if loop.index %}
+  {% set switch_number = loop.index %}
+{% endif %}
+
+<button class="switch-{{ switch_number }} {% if switch_number == 1 %} active {% endif %}" role="tab" id="switch-button-{{ switch_number }}" aria-controls="switch-content-{{ switch_number }}">
   {{ content.field_heading }}
 </button>
 
-<div{{ content.attributes.addClass("content") }} id="{{  content.content_id }}" role="tabpanel" aria-labelledby="{{ content.button_id }}" tabindex="0">
+<div class="switch-{{ switch_number }} {% if switch_number == 1 %} active {% endif %} content" role="tabpanel" id="switch-content-{{  switch_number }}" aria-labelledby="switch-button-{{ switch_number }}" tabindex="0">
   {{ content.field_content }}
 </div>

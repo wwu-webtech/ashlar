@@ -26,8 +26,8 @@ $tabButton.click(function () {
   $(this).attr('aria-selected', 'true');
   $(this).removeAttr('tabindex');
 
-  $('.content-switcher-container .content:not(.' + $thisSwitch + ')').fadeOut();
-  $('.content-switcher-container .content.' + $thisSwitch).fadeIn();
+  $('.content-switcher-container .content:not(.' + $thisSwitch + ')').fadeOut(200);
+  $('.content-switcher-container .content.' + $thisSwitch).fadeIn(200);
 });
 
 $tabButton.keydown(function (event) {
