@@ -146,8 +146,7 @@ input[type="submit"] {
         }
 
         &:after {
-          font-family: 'Material Icons';
-          content: 'done';
+          content: ' \2714'; /* checkmark */
           color: $green;
           display: inline-block;
           position: relative;
