@@ -81,10 +81,15 @@ form {
         }
 
         &:after {
+          content: '';
           background-image: url("../images/forms/green-check.png");
-          display: inline-block;
-          position: relative;
-          right: 0;
+          background-repeat: no-repeat;
+          transform: scale(0.5);
+          height: 60px;
+          width: 80px;
+          position: absolute;
+          right: -30px;
+          top: 45px;
         }
       }
     }
