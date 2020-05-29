@@ -144,6 +144,15 @@ input[type="submit"] {
             @include default-link-focus-border();
           }
         }
+
+        &:after {
+          font-family: 'Material Icons';
+          content: 'done';
+          color: $green;
+          display: inline-block;
+          position: relative;
+          right: 0;
+        }
       }
     }
 
