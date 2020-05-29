@@ -4,6 +4,8 @@
  * Styles specifically for the Drupal Webform module
  */
 
+$checkmark-size: 60px;
+
 /* File Input */
 .form-managed-file {
   .form-file {
@@ -85,11 +87,12 @@ form {
           background-image: url("../images/forms/green-check.png");
           background-repeat: no-repeat;
           transform: scale(0.5);
-          height: 60px;
-          width: 80px;
-          position: absolute;
-          right: -30px;
-          top: 45px;
+          display: block;
+          height: $checkmark-size;
+          width: $checkmark-size + 10px;
+          position: relative;
+          left: $checkmark-size;
+          top: -($standard-spacing);
         }
       }
     }
