@@ -51,3 +51,67 @@ form {
     margin-bottom: $standard-spacing;
   }
 }
+
+/* Wizard page styles */
+.webform-progress-tracker {
+
+  .progress-step {
+
+    &.is-complete {
+      &:hover, &:focus {
+        .progress-marker {
+          @include default-link-hover-focus();
+        }
+      }
+
+      .progress-title {
+        &[role="link"] {
+          color: $link-color;
+          text-decoration: underline;
+
+          &:active,
+          &:focus,
+          &:hover {
+            @include default-link-hover-focus();
+          }
+
+          &:focus {
+            @include default-link-focus-border();
+          }
+        }
+
+        &:after {
+          background-image: url("../images/forms/green-check.png");
+          display: inline-block;
+          position: relative;
+          right: 0;
+        }
+      }
+    }
+
+    &.is-active {
+
+      &:hover .progress-marker {
+        @include current-progress-hover();
+      }
+
+      .progress-marker {
+        background-color: $blue;
+
+        &:hover,
+        &:active {
+          @include current-progress-hover();
+        }
+      }
+    }
+
+    .progress-marker {
+      &:hover, &:focus {
+        background-color: $link-color;
+      }
+      &:focus {
+        @include default-link-focus-border();
+      }
+    }
+  }
+}
