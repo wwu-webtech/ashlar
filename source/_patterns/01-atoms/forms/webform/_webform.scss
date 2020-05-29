@@ -83,6 +83,12 @@ form {
         }
 
         &:after {
+          @include breakpoint($large) {
+            left: $checkmark-size;
+          }
+          @include breakpoint($medium) {
+            left: $standard-spacing * 3;
+          }
           content: '';
           background-image: url("../images/forms/green-check.png");
           background-repeat: no-repeat;
@@ -91,8 +97,8 @@ form {
           height: $checkmark-size;
           width: $checkmark-size + 10px;
           position: relative;
-          left: $checkmark-size;
           top: -($standard-spacing);
+          left: ($standard-spacing / 3);
         }
       }
     }
