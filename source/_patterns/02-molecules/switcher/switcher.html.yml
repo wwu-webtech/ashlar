@@ -4,7 +4,8 @@ attributes:
     class:
     - block--content-switcher
     id: example
-label: Title of Content Switcher
+configuration:
+  label: Title of Content Switcher
 items:
 - field_heading: Content 1
   field_content: We have an infinite amount to learn both from nature and from each other.
