@@ -10,3 +10,9 @@
     width: initial;
     min-height: initial;
 }
+
+/* Make block editor widget a little more tolerable for accordion and switcher blocks */
+#drupal-off-canvas .field--name-field-accordion-item tr.draggable,
+#drupal-off-canvas .field--name-field-content-switcher-item tr.draggable {
+  display: flex;
+}
