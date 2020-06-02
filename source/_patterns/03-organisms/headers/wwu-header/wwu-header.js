@@ -39,7 +39,7 @@ function toggle_open_menu(event) {
         $menu_toggle.addClass('is-expanded');
         $menu_toggle.on('click', toggle_menu);
         $menu_toggle.focus();
-        $inputs.not('.header-navigation a, .header-navigation button, .ultimenu__flyout a').attr('tabindex', '-1');
+        $inputs.not('.toggle-menu, .header-navigation a, .header-navigation button, .ultimenu__flyout a').attr('tabindex', '-1');
         $page.not('.header-navigation').attr('aria-hidden', 'true');
       }
     }
@@ -51,7 +51,7 @@ function toggle_close_menu(event) {
   $toggle_prefix.html('Open the ');
   $toggle_text.html('Menu');
   $toggle_suffix.html('');
-  
+
   $('.header-navigation').animate(
     {
       right: '-100%',

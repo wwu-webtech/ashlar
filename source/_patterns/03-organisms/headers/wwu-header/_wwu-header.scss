@@ -115,11 +115,8 @@
       right: 0;
     }
 
+    &:hover,
     &:focus {
-      background: transparent;
-    }
-
-    &:hover {
       color: $darkest-blue;
       background: $lightest-green;
       box-shadow: none;
