@@ -3,6 +3,7 @@ type: theme
 description: An atomic design Drupal theme for Western Washington University
 core: 8.x
 libraries:
+  - ashlar/bg-video
   - ashlar/components
   - ashlar/search
   - ashlar/wwu-header
