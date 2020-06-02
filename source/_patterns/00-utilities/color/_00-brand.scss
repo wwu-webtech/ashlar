@@ -26,3 +26,4 @@ $lightest-green: #d6e86c;
 $red: #cc2d30;
 $yellow: #ffc61e;
 $link-blue: #006ebb;
+$link-blue--darker: mix($dark-blue, $link-blue, 50%);

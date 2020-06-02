@@ -84,7 +84,7 @@
   position: relative;
   display: flex;
   flex-flow: row wrap;
-  align-content: start;
+  align-items: start;
   margin-bottom: $standard-spacing;
   padding-bottom: $standard-spacing;
   transition: $fast-transition-speed $standard-ease;
@@ -224,7 +224,7 @@
     .location {
       flex: 1 1 60%;
       order: 2;
-      align-self: end;
+      align-self: flex-end;
       margin-bottom: 0;
       padding: $standard-spacing $standard-spacing $standard-spacing $double-spacing;
       text-transform: uppercase;
@@ -272,17 +272,20 @@
       padding: $triple-spacing;
       background-color: $blue;
 
-      a {
-        &:hover,
-        &:focus,
-        &:active {
-          color: $white;
-          background: transparent;
-        }
-      }
-
-      h2 {
+      .block__title {
         color: $white;
+
+        a {
+          color: $white;
+          font-size: $h2-font-size;
+
+          &:hover,
+          &:focus,
+          &:active {
+            color: $white;
+            background: transparent;
+          }
+        }
       }
     }
 
