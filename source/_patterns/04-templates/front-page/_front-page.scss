@@ -5,19 +5,6 @@
 
 .path-frontpage,
 .front {
-  .splash {
-    img {
-      object-position: 50%;
-    }
-
-    .right-aligned-bar {
-      @include breakpoint($medium) {
-        margin-top: inherit;
-      }
-      margin-top: 40vh;
-    }
-  }
-
   main {
     overflow-x: hidden;
     margin-bottom: 0;
@@ -221,17 +208,5 @@
         padding: 0;
       }
     }
-  }
-}
-
-/* Bright Edge styles */
-.be-ix-link-block {
-  a {
-    margin: 0;
-    border-bottom: none;
-  }
-
-  h4 {
-    border-bottom: none;
   }
 }

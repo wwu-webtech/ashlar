@@ -7,8 +7,7 @@
   @include breakpoint($medium) {
     position: initial;
     z-index: initial;
-    height: inherit;
-    min-height: 0;
+    height: inherit;    
   }
   position: absolute;
   z-index: 2;

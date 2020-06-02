@@ -1,11 +1,4 @@
 .search2 {
-  .splash {
-    @include breakpoint($medium) {
-      grid-template-rows: 170px;
-    }
-
-    grid-template-rows: 100px;
-  }
 }
 
 .western-home-link {

@@ -102,26 +102,6 @@ $mabel-site-name-height: 44px;
     }
   }
 
-  &.not-front {
-    .splash {
-      @include breakpoint($medium) {
-        grid-template-columns: ($standard-spacing + $logo-size + $standard-spacing) 1fr $standard-spacing;
-        grid-template-rows: ($toggle-size + $standard-spacing) 1fr ($standard-spacing + ($toggle-size / 2));
-      }
-      @include breakpoint($large) {
-        grid-template-areas: ". . ....... ."
-        ". . content ."
-        ". . ....... .";
-        grid-template-columns: 1fr ($logo-size + $double-spacing) ($max-content-width - $logo-size - $standard-spacing) 1fr;
-        grid-template-rows: ($toggle-size + $standard-spacing) 1fr ($standard-spacing + ($toggle-size / 2));
-      }
-      @include breakpoint(min-width 2420px) {
-        grid-template-rows: ($toggle-size + $double-spacing) 1fr ($standard-spacing + ($toggle-size / 2));
-      }
-      max-height: 350px;
-    }
-  }
-
   .site-footer {
     #block-user-login {
       text-align: right;

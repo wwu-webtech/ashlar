@@ -8,8 +8,7 @@
     display: grid;
 
     grid-template-areas: "header";
-    grid-template-columns: 1fr;
-    grid-template-rows: $logo-size;
+    grid-template-columns: 1fr;    
   }
   background-color: $dark-blue;
 
