@@ -3,4 +3,4 @@ page:
     pattern: organisms-page-template-html
     with:
       page:
-        header: "Header"
+        header:

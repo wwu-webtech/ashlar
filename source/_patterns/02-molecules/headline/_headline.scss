@@ -13,7 +13,8 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
   /* Style Option 1: Box with semi-transparent overlay */
   &.box-headline {
     @include breakpoint($medium) {
-      margin-top: 0;
+      margin-top: 5%;
+      margin-left: 5%;
       background: linear-gradient(to right, $headline-gradient-start 0%, $headline-gradient-end 100%);
     }
     align-self: start;
