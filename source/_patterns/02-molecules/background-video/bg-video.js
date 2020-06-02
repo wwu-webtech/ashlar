@@ -11,18 +11,19 @@ function vidList() {
 )};
 
 playPause.on('click', function() {
-  var vid = $(this).siblings('video');
+  var button = $(this);
+  var vid = button.siblings('video');
 
-  $(this).toggleClass('bg-video--play bg-video--pause');
+  button.toggleClass('bg-video--play bg-video--pause');
   vid.toggleClass('paused playing');
   vidList();
 
   if (vid.hasClass('paused')) {
     vid.get(0).pause();
-    $(this).html('Resume animation');
+    button.html('Resume animation');
   }
   else {
     vid.get(0).play();
-    $(this).html('Pause animation');
+    button.html('Pause animation');
   }
 });
