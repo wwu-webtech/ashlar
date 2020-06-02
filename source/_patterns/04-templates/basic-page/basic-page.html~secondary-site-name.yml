@@ -3,7 +3,7 @@ page:
     pattern: organisms-page-template-html
     with:
       page:
-        banner: molecules-secondary-site-name-html
+        wwu_header: molecules-secondary-site-name-html
         header:
           join():
           - include():

@@ -8,7 +8,7 @@
     display: grid;
 
     grid-template-areas: "header";
-    grid-template-columns: 1fr;    
+    grid-template-columns: 1fr;
   }
   background-color: $dark-blue;
 
@@ -155,7 +155,7 @@
   }
 }
 
-.block--secondary-site-name {
+.region--wwu_header {
   grid-area: secondary-site-name;
 }
 
