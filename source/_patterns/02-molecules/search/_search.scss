@@ -31,6 +31,9 @@
   }
 
   .toggle-search {
+    @include breakpoint($medium) {
+      width: 5.45em;
+    }
     order: 2;
   }
 
@@ -40,15 +43,13 @@
 
     .search-box {
       input {
-        @include breakpoint($large) {
-          padding: $standard-spacing;
-        }
         max-width: calc(100vw - (#{$toggle-size} * 2));
-        height: $toggle-size;
+        height: 100%;
         margin: 0;
         padding: $half-spacing;
         border-color: $blue;
         border-radius: 0;
+        font-size: $p-font-size--min;
       }
     }
 

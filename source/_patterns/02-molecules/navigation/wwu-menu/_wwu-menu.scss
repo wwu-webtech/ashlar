@@ -42,10 +42,19 @@
     &:active,
     &:focus {
       color: $darkest-blue;
-      border-color: $darkest-blue;
+      background-color: $lightest-green;
+    }
+
+    &:focus {
       outline-color: $darkest-blue;
       outline-offset: -$border-width;
-      background-color: $lightest-green;
+    }
+
+    &.my-western-link {
+      @include breakpoint($medium) {
+        width: initial;
+      }
+      width: $toggle-size + $standard-spacing;
     }
   }
 }
