@@ -8,7 +8,7 @@ libraries:
   - ashlar/wwu-header
   - ashlar/wwu-mobile-menu
 regions:
-  banner: Top Banner
+  site_name: Site Name
   header: Splash Area
   main_navigation: Main Navigation
   content: Content

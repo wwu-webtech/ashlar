@@ -54,11 +54,11 @@
 .ultimenu--horizontal {
   .ultimenu__link {
     &.is-active {
-      background: $dark-blue;
+      background: transparent;
 
       &.open {
-        color: $dark-blue;
-        background: $light-green;
+        color: $white;
+        background: transparent;
       }
     }
     .caret {

@@ -160,6 +160,7 @@
   grid-area: secondary-site-name;
 }
 
-.main-navigation {
+.main-navigation,
+.region--main_navigation {
   grid-area: menu;
 }
