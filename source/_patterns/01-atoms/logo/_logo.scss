@@ -38,15 +38,6 @@ $logo-height--horizontal: 100px;
     background-color: $black;
   }
 
-  &.make-waves {
-    @include breakpoint($medium) {
-      width: $logo-size;
-      height: $logo-size;
-    }
-    width: $logo-size;
-    height: $logo-size;
-  }
-
   .cls-1 {
     fill: $dark-blue;
   }

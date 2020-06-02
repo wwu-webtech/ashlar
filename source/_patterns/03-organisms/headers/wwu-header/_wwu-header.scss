@@ -63,6 +63,13 @@
     padding-right: $toggle-size;
 
     grid-area: header;
+
+    .western-home-link {
+      &:focus {
+        outline-color: $white;
+        outline-offset: -$border-width;
+      }
+    }
   }
 
   .logo {
