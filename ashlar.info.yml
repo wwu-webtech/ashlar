@@ -8,7 +8,7 @@ libraries:
   - ashlar/wwu-header
   - ashlar/wwu-mobile-menu
 regions:
-  site_name: Site Name
+  wwu_header: Western Header
   header: Splash Area
   main_navigation: Main Navigation
   content: Content
