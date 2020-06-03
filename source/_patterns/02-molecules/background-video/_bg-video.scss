@@ -7,7 +7,7 @@
     z-index: 1;
   }
 
-  button {
+  + button {
     @include breakpoint($medium) {
       visibility: visible;
     }
