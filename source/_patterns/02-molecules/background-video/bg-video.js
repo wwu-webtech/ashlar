@@ -1,7 +1,6 @@
 var bgVideo = $('.bg-video-container', context);
-var playPause = bgVideo.children('button');
-var vid = playPause.siblings('video');
-playPause.addClass('bg-video--pause')
+var playPause = bgVideo.siblings('.bg-video--pause');
+var vid = playPause.siblings('.bg-video-container').children('video');
 vid.addClass('playing');
 
 function vidList() {
@@ -12,7 +11,7 @@ function vidList() {
 
 playPause.on('click', function() {
   var button = $(this);
-  var vid = button.siblings('video');
+  var vid = button.prev('.bg-video-container').children('video');
 
   button.toggleClass('bg-video--play bg-video--pause');
   vid.toggleClass('paused playing');
