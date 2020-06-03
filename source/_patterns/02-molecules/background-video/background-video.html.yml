@@ -1,0 +1,15 @@
+attributes:
+  Attribute():
+    class:
+    - bg-video-container
+items:
+  - attributes:
+      Attribute(): {}
+    alt: Drone footage of north campus
+    id: video-elem-1
+    source: https://admissions.wwu.edu/files/2020-04/Loop.mp4
+  - attributes:
+      Attribute(): {}
+    alt: Curiosity Mars Rover crawls along rocky landscape
+    id: video-elem-2
+    source: https://www.wwu.edu/files/2020-04/Viking%20on%20Mars.mp4
