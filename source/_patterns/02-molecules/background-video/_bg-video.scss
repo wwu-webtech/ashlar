@@ -6,4 +6,11 @@
     position: inherit;
     z-index: 1;
   }
+
+  button {
+    @include breakpoint($medium) {
+      visibility: visible;
+    }
+    visibility: hidden;
+  }
 }
