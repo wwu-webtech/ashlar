@@ -1,8 +1,13 @@
+{% set classes = ['bg-video', 'background-image'] %}
+
 {% for item in items %}
 
 <div{{ attributes }}>
-  <video{{ item.attributes.addClass('bg-video') }} alt="{{ item.alt }}" autoplay=""  id="{{ item.id }}" loop="" muted="" preload="auto" style="width:100%; z-index:-1;"><source src="{{ item.source }}" /></video>
+  {% if item.heading_title %}
+    <h2 class="block__title serif" style="z-index: 1;">{{ item.heading_title }}</h2>
+  {% endif %}
+  <video{{ item.attributes.addClass(classes) }} alt="{{ item.alt }}" autoplay=""  id="{{ item.id }}" loop="" muted="" preload="auto"><source src="{{ item.source }}" /></video>
   <button>Pause animation</button>
-  </div>
+</div>
 
 {% endfor %}
