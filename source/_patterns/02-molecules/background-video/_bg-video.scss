@@ -1,0 +1,9 @@
+.bg-video-container {
+  position: relative;
+  min-height: 50vh;
+
+  h1, h2, button {
+    position: inherit;
+    z-index: 1;
+  }
+}
