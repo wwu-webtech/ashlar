@@ -3,6 +3,12 @@ attributes:
     class:
     - bg-video-container
     - big-bold-headings
+title_attributes:
+  Attribute():
+    class:
+    - title
+    - serif
+label: Find Space on Mars
 items:
   - attributes:
       Attribute(): {}
@@ -11,7 +17,6 @@ items:
     source: https://admissions.wwu.edu/files/2020-04/Loop.mp4
   - attributes:
       Attribute(): {}
-    heading_title: Find Space on Mars
     alt: Curiosity Mars Rover crawls along rocky landscape
     id: video-elem-2
     source: https://www.wwu.edu/files/2020-04/Viking%20on%20Mars.mp4
