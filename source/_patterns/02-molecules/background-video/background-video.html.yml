@@ -3,7 +3,6 @@ attributes:
     class:
     - bg-video-container
     - big-bold-headings
-    - dark-blue-bg
 title_attributes:
   Attribute():
     class:
@@ -13,14 +12,13 @@ label: Here's the callout label
 items:
   - attributes:
       Attribute(): {}
-    alt: Drone footage of north campus
-    id: video-elem-1
-    source: https://admissions.wwu.edu/files/2020-04/Loop.mp4
-    style: 'color: white;'
-  - attributes:
-      Attribute(): {}
-    alt: Curiosity Mars Rover crawls along rocky landscape
+    title: Curiosity Mars Rover crawls along rocky landscape
     id: video-elem-2
     source: https://www.wwu.edu/files/2020-04/Viking%20on%20Mars.mp4
+  - attributes:
+      Attribute(): {}
+    title: Drone footage of north campus
+    id: video-elem-1
+    source: https://admissions.wwu.edu/files/2020-04/Loop.mp4
 button:
   content: '<button class="bg-video--pause alt">Pause animation</button>'
