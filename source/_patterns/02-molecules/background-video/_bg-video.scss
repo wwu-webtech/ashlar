@@ -2,14 +2,17 @@
   position: relative;
   min-height: 50vh;
 
-  h1, h2, button {
+  h1, h2 {
     position: inherit;
     z-index: 1;
   }
 
   + button {
-    @include breakpoint($medium) {
+    @include breakpoint($small) {
       visibility: visible;
+      position: relative;
+      top: -($double-spacing * 2.5);
+      left: $half-spacing;
     }
     visibility: hidden;
   }
