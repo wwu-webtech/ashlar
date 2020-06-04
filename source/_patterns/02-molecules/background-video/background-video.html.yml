@@ -3,12 +3,13 @@ attributes:
     class:
     - bg-video-container
     - big-bold-headings
+    - dark-blue-bg
 title_attributes:
   Attribute():
     class:
     - title
     - serif
-label: Find Space on Mars
+label: Here's the callout label
 items:
   - attributes:
       Attribute(): {}
@@ -22,4 +23,4 @@ items:
     id: video-elem-2
     source: https://www.wwu.edu/files/2020-04/Viking%20on%20Mars.mp4
 button:
-  content: '<button class="bg-video--pause">Pause animation</button>'
+  content: '<button class="bg-video--pause alt">Pause animation</button>'
