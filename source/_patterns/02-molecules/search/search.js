@@ -16,9 +16,9 @@ function toggle_search(event) {
       duration: 'normal',
       easing: 'swing',
       complete: function () {
-        $toggle_search.toggleClass('.is-expanded');
+        $toggle_search.toggleClass('is-expanded');
 
-        if ($toggle_search.hasClass('.is-expanded')) {
+        if ($toggle_search.hasClass('is-expanded')) {
           $search_icon.text('close');
           $search_toggle_prefix.html('');
           $search_toggle_text.html('Close');

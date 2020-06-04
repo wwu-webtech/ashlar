@@ -2,6 +2,7 @@
 * @file
 * 02-molecules/content/search/_search.scss
 */
+$search-input-size: 200px;
 
 .search {
   @include breakpoint($medium) {
@@ -43,7 +44,7 @@
 
     .search-box {
       input {
-        max-width: calc(100vw - (#{$toggle-size} * 2));
+        width: $search-input-size;
         height: 100%;
         margin: 0;
         padding: $half-spacing;
