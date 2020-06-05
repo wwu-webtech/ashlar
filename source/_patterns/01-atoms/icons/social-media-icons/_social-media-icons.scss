@@ -18,6 +18,10 @@ $icon-space: (($toggle-size - $icon-size) / 2) - 1;
     transition: fill $standard-ease $button-transition-speed;
 
     fill: $white;
+
+    @media print {
+      fill: $black;
+    }
   }
 
   &:hover,
