@@ -5,6 +5,6 @@
   <video{{ item.attributes.addClass(item_classes) }} title="{{ item.title }}" autoplay=""  id="{{ item.id }}" loop="" muted="" preload="auto"><source src="{{ item.source }}" /></video>
 </div>
 
-{{ button.content }}
+<button{{ button.attributes.addClass(button_classes) }}>Pause animation</button>
 
 {% endfor %}
