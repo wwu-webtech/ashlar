@@ -1,8 +1,8 @@
 var bgVideo = $('.bg-video-container', context);
 var playPause = bgVideo.siblings('.bg-video--pause');
+var vid = playPause.siblings('.bg-video-container').children('video');
 var materialPlay = '<span class="material-icons" aria-hidden="true">play_arrow</span>';
 var materialPause = '<span class="material-icons" aria-hidden="true">pause</span>'
-var vid = playPause.siblings('.bg-video-container').children('video');
 
 vid.addClass('playing');
 playPause.prepend(materialPause);
