@@ -13,12 +13,12 @@ items:
   - attributes:
       Attribute(): {}
     title: Curiosity Mars Rover crawls along rocky landscape
-    id: video-elem-2
+    id: video-elem-1
     source: https://www.wwu.edu/files/2020-04/Viking%20on%20Mars.mp4
   - attributes:
       Attribute(): {}
     title: Drone footage of north campus
-    id: video-elem-1
+    id: video-elem-2
     source: https://admissions.wwu.edu/files/2020-04/Loop.mp4
 button:
   content: '<button class="bg-video--pause alt">Pause animation</button>'
