@@ -1,13 +1,13 @@
 attributes:
   Attribute():
     class:
-    - bg-video-container
-    - big-bold-headings
+      - bg-video-container
+      - big-bold-headings
 title_attributes:
   Attribute():
     class:
-    - title
-    - serif
+      - title
+      - serif
 label: Here's the callout label
 items:
   - attributes:
