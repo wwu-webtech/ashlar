@@ -1,7 +1,11 @@
 var bgVideo = $('.bg-video-container', context);
 var playPause = bgVideo.siblings('.bg-video--pause');
+var materialPlay = '<span class="material-icons" aria-hidden="true">play_arrow</span>';
+var materialPause = '<span class="material-icons" aria-hidden="true">pause</span>'
 var vid = playPause.siblings('.bg-video-container').children('video');
+
 vid.addClass('playing');
+playPause.prepend(materialPause);
 
 function vidList() {
   playPause.each(function(){
@@ -20,9 +24,11 @@ playPause.on('click', function() {
   if (vid.hasClass('paused')) {
     vid.get(0).pause();
     button.html('Resume animation');
+    button.prepend(materialPlay);
   }
   else {
     vid.get(0).play();
     button.html('Pause animation');
+    button.prepend(materialPause);
   }
 });

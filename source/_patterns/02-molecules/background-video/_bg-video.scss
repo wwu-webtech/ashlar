@@ -15,5 +15,12 @@
       left: $half-spacing;
     }
     visibility: hidden;
+
+    .material-icons {
+      font-size: inherit;
+      position: relative;
+      top: $quarter-spacing;
+      right: $quarter-spacing;
+    }
   }
 }
