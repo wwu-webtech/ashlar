@@ -19,7 +19,7 @@ $window.on('resize', function() {
     vid.addClass('playing');
     vid.removeClass('paused');
     vid.each(function(){
-      $(this).get(0).pause();
+      $(this).get(0).play();
     });
   }
 });
