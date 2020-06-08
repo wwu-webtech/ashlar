@@ -1,18 +1,16 @@
-{% set heading_id = attributes.id ~ '-switcher' %}
+<div{{ attributes }}>
+  {% block title %}
+    {% include "@atoms/text/label/label.twig" %}
+  {% endblock %}
 
-<h1 id="{{ heading_id }}">{{ page.title }}</h1>
-<div{{ attributes }} role="tablist" {% if page.title %} aria-labelledby="{{ heading_id }}" {% else %} aria-label="Content Switcher" {% endif %}>
-  {% for item in items %}
-    <button {{ item.attributes }} id="{{ item.button_id }}" role="tab" aria-controls="{{ item.content_id }}">
-      {{ item.title }}
-    </button>
-  {% endfor %}
-</div>
+  <div class="content-switcher" role="tablist" aria-label="{{ configuration.label }}">
+  </div>
 
-<div class="content-switcher-container">
-  {% for item in items %}
-    <div{{ item.attributes.addClass("content") }} id="{{  item.content_id }}" role="tabpanel" aria-labelledby="{{ item.button_id }}" tabindex="0">
-      <p>{{ item.content }}</p>
-    </div>
-{% endfor %}
+  <div class="content-switcher-container">
+    {% block content %}
+      {% for item in items %}
+        {% include "@molecules/switcher/switcher-items.html.twig" with {content: item} %}
+      {% endfor %}
+    {% endblock %}
+  </div>
 </div>

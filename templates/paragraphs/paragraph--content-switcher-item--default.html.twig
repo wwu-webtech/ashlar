@@ -46,19 +46,9 @@
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
-{% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
-    {% block content %}
-      <{{ content['field_item_heading_level'][0]['#markup'] }} class="title">
-        <button class="expand">
-          <span class="material-icons" aria-hidden="true">add</span>
-          {{ content['field_heading'][0]['#context']['value'] }}
-        </button>
-      </{{ content['field_item_heading_level'][0]['#markup'] }}>
 
-      <div class="content">
-        {{ content['field_content'][0]['#text'] | raw }}
-      </div>
-    {% endblock %}
-  </div>
+{% block paragraph %}
+  {% set switch_number = paragraph.id() %}
+
+  {% include "@molecules/switcher/switcher-items.html.twig" %}
 {% endblock paragraph %}
