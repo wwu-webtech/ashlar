@@ -9,15 +9,13 @@ var materialPause = '<span class="material-icons" aria-hidden="true">pause</span
 var $window = $(window, context);
 $window.on('resize', function() {
   if ($window.width() <= 1075) {
-    vid.addClass('paused');
-    vid.removeClass('playing');
+    vid.addClass('paused').removeClass('playing');
     vid.each(function(){
       $(this).get(0).pause();
     });
   }
   else {
-    vid.addClass('playing');
-    vid.removeClass('paused');
+    vid.addClass('playing').removeClass('paused');
     vid.each(function(){
       $(this).get(0).play();
     });
@@ -29,6 +27,7 @@ $(document).ready(function(){
 })
 
 // play/pause functionality
+
 playPause.prepend(materialPause);
 
 function vidList() {
