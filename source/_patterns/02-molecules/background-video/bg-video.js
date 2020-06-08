@@ -11,14 +11,16 @@ $window.on('resize', function() {
   if ($window.width() <= 1075) {
     vid.addClass('paused');
     vid.removeClass('playing');
-    vidList();
-    vid.get(0).pause();
+    vid.each(function(){
+      $(this).get(0).pause();
+    });
   }
   else {
     vid.addClass('playing');
     vid.removeClass('paused');
-    vidList();
-    vid.get(0).play();
+    vid.each(function(){
+      $(this).get(0).pause();
+    });
   }
 });
 
