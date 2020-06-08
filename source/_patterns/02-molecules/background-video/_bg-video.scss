@@ -13,7 +13,7 @@
   }
 
   + button {
-    @include breakpoint($small) {
+    @include breakpoint($large) {
       visibility: visible;
       position: relative;
       top: -($double-spacing * 2.5);
