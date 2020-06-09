@@ -8,7 +8,7 @@ title_attributes:
     class:
       - title
       - serif
-label: Here's the callout label
+label: Here's the call-out label
 items:
   - attributes:
       Attribute():
