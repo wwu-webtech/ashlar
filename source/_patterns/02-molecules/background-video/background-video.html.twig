@@ -2,7 +2,7 @@
 
 <div{{ attributes }} {% if loop.first %} {{ attributes.addClass('dark-blue-bg') }} {% endif %}>
   {% include "@atoms/text/label/label.twig" %}
-  <video{{ item.attributes.addClass(item_classes) }} title="{{ item.title }}" autoplay=""  id="{{ item.id }}" loop="" muted="" preload="auto"><source src="{{ item.source }}" /></video>
+  <video{{ item.attributes.addClass(item_classes) }} aria-label="{{ item.title }}" autoplay=""  id="{{ item.id }}" loop="" muted="" preload="auto"><source src="{{ item.source }}" /></video>
 </div>
 
 <button{{ button.attributes.addClass(button_classes) }}>Pause animation</button>
