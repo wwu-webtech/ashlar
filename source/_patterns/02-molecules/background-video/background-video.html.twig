@@ -1,6 +1,6 @@
 {% for item in items %}
 
-<div{{ attributes }} {% if loop.first %} {{ attributes.addClass('dark-blue-bg') }} {% endif %}>
+<div{{ attributes }} {% if loop.first %} {{ attributes.removeClass('black-overlay').addClass('dark-blue-overlay') }} {% endif %}>
   {% include "@atoms/text/label/label.twig" %}
   <video{{ item.attributes.addClass(item_classes) }} aria-label="{{ item.title }}" autoplay=""  id="{{ item.id }}" loop="" muted="" preload="auto"><source src="{{ item.source }}" /></video>
 </div>

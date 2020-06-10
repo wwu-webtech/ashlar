@@ -3,6 +3,7 @@ attributes:
     class:
       - bg-video-container
       - big-bold-headings
+      - black-overlay
 title_attributes:
   Attribute():
     class:
