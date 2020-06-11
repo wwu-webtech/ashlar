@@ -2,22 +2,16 @@
   {% block wwu_header %}
     {% embed "@organisms/headers/wwu-header/wwu-header.html.twig" %}
 
+      {% block mobile_site_name %}
+        <?php if ($site_name): ?>
+          <?php print $site_name; ?>
+        <?php endif; ?>
+      {% endblock %}
+      
       {% block site_name %}
-        <?php
-          if (drupal_is_front_page()) {
-            ?><span class="site-name">
-              <?php if ($site_name): ?>
-                <?php print $site_name; ?>
-              <?php endif; ?>
-            </span><?php
-          } else {
-            ?><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="site-name">
-              <?php if ($site_name): ?>
-                <?php print $site_name; ?>
-              <?php endif; ?>
-            </a><?php
-          }
-        ?>
+        <?php if ($site_name): ?>
+          <?php print $site_name; ?>
+        <?php endif; ?>
       {% endblock %}
 
     {% endembed %}

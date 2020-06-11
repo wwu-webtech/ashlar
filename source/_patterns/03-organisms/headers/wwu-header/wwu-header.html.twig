@@ -18,7 +18,9 @@
   </button>
 
   <div class="site-name mobile">
-    {{ site_name }}
+    {% block mobile_site_name %}
+      {{ site_name }}
+    {% endblock %}
 
     {% block mobile_western_header %}
         {{ page.wwu_header }}
@@ -32,11 +34,11 @@
       {% include "@molecules/navigation/wwu-menu/wwu-menu.html.twig" %}
     {% endblock %}
 
-    {% block site_name %}
-      <div class="site-name">
+    <div class="site-name">
+      {% block site_name %}
         {{ site_name }}
-      </div>
-    {% endblock %}
+      {% endblock %}
+    </div>
 
     {% block western_header %}
         {{ page.wwu_header }}
