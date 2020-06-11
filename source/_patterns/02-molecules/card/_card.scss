@@ -179,6 +179,8 @@
 
   /* Cards with .event class */
   &.event {
+    align-content: start;
+    
     .image {
       margin-bottom: -$double-spacing;
     }
