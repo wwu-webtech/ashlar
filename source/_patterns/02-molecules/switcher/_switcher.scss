@@ -1,7 +1,7 @@
 /**
- * @file
- * 02-molecules/content/switcher.scss
- */
+* @file
+* 02-molecules/content/switcher.scss
+*/
 
 .content-switcher {
   display: flex;
@@ -72,6 +72,7 @@
 
   .content {
     display: none;
+    margin-top: $standard-spacing;
 
     -ms-grid-column: 1;
     grid-column-start: 1;
