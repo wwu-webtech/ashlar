@@ -31,6 +31,12 @@ alerts:
     build/js/alerts.js: {}
   dependencies:
     - core/jquery
+bg-video:
+  version: 1.x
+  js:
+    build/js/bg-video.js: {}
+  dependencies:
+    - core/jquery
 components:
   version: 1.x
   css:

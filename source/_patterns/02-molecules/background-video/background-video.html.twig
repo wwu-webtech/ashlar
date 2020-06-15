@@ -1,0 +1,30 @@
+<div class="block block--announcement" style="margin-bottom: 24px;">
+
+    <span class="material-icons" aria-hidden="true">warning</span>
+
+    <div class="body">
+
+        <h2 class="block__title">Advisory Notice about Background Video</h2>
+
+      <p>This component is a work in progress, but is not yet WCAG 2.1 compliant and should be used carefully. If another pattern such as banners or inline video can highlight the content just as well, those patterns are preferred over this component.</p><p>We recommend the following if you plan on using background video:</p>
+      <ul>
+      <li>An overlay class on the wrapping &lt;div&gt; needs to be added to ensure color contrast is maintained. See "Show Pattern Info" for examples.</li>
+      <li>The pause animation button is required</li>
+      <li>A short description of the video must be provided. See "Show pattern info" for examples</li>
+      </ul>
+    </div>
+  </div>
+
+
+
+{% for item in items %}
+
+<div{{ attributes }} {% if loop.first %} {{ attributes.removeClass('black-overlay').addClass('dark-blue-overlay') }} {% endif %}>
+  {% include "@atoms/text/label/label.twig" %}
+  <video{{ item.attributes.addClass(item_classes) }} autoplay=""  id="{{ item.id }}" loop="" muted="" preload="auto"><source src="{{ item.source }}" /></video>
+  <p class="visually-hidden">{{ item.description }}</p>
+</div>
+
+<button{{ button.attributes.addClass(button_classes) }}>Pause animation</button>
+
+{% endfor %}
