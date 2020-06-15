@@ -4,28 +4,6 @@ var vid = playPause.siblings('.bg-video-container').children('video');
 var materialPlay = '<span class="material-icons" aria-hidden="true">play_arrow</span>';
 var materialPause = '<span class="material-icons" aria-hidden="true">pause</span>'
 
-// stop video on tablet size or smaller devices
-
-var $window = $(window, context);
-$window.on('resize', function() {
-  if ($window.width() <= 1075) {
-    vid.addClass('paused').removeClass('playing');
-    vid.each(function(){
-      $(this).get(0).pause();
-    });
-  }
-  else {
-    vid.addClass('playing').removeClass('paused');
-    vid.each(function(){
-      $(this).get(0).play();
-    });
-  }
-});
-
-$(document).ready(function(){
-  $window.trigger('resize');
-})
-
 // play/pause functionality
 
 playPause.prepend(materialPause);

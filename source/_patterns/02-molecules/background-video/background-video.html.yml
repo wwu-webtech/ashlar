@@ -16,7 +16,7 @@ items:
         class:
           - bg-video
           - background-image
-    title: Curiosity Mars Rover crawls along rocky landscape
+    description: Curiosity Mars Rover crawls along rocky landscape, video
     id: video-elem-1
     source: https://www.wwu.edu/files/2020-04/Viking%20on%20Mars.mp4
   - attributes:
@@ -24,7 +24,7 @@ items:
         class:
           - bg-video
           - background-image
-    title: Drone footage of north campus
+    description: Drone footage of north campus, video
     id: video-elem-2
     source: https://admissions.wwu.edu/files/2020-04/Loop.mp4
 button:
