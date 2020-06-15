@@ -44,12 +44,6 @@ components:
       build/css/components.css: {}
   dependencies:
     - core/normalize
-erm-menu:
-  version: 1.x
-  js:
-    build/js/erm-menu.js: {}
-  dependencies:
-    - core/jquery
 event-tracking:
   version: 1.x
   js:
