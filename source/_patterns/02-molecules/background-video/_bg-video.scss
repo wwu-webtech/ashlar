@@ -1,0 +1,31 @@
+/**
+* @file
+* 02-molecules/background-video/_bg-video.scss
+*/
+.bg-video-container {
+  position: relative;
+  min-height: 50vh;
+
+  h1, h2 {
+    position: absolute;
+    margin-top: 5%;
+    z-index: 1;
+  }
+
+  + button {
+    @include breakpoint($small) {
+      visibility: visible;
+      position: relative;
+      top: -($double-spacing * 2.5);
+      left: $half-spacing;
+    }
+    visibility: hidden;
+
+    .material-icons {
+      font-size: inherit;
+      position: relative;
+      top: $quarter-spacing;
+      right: $quarter-spacing;
+    }
+  }
+}

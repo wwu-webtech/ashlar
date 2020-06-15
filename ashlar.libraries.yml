@@ -31,6 +31,12 @@ alerts:
     build/js/alerts.js: {}
   dependencies:
     - core/jquery
+bg-video:
+  version: 1.x
+  js:
+    build/js/bg-video.js: {}
+  dependencies:
+    - core/jquery
 components:
   version: 1.x
   css:
@@ -38,12 +44,6 @@ components:
       build/css/components.css: {}
   dependencies:
     - core/normalize
-erm-menu:
-  version: 1.x
-  js:
-    build/js/erm-menu.js: {}
-  dependencies:
-    - core/jquery
 event-tracking:
   version: 1.x
   js:
