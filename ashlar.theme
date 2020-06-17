@@ -72,12 +72,6 @@ function ashlar_preprocess_block(&$variables) {
   if (isset($variables['elements']['content']['#block_content'])) {
     $variables['block_content'] = $variables['elements']['content']['#block_content'];
   }
-
-  //Invoke erm menu code when the erm menu is present
-  if (isset($variables['elements']['#id']) && $variables['elements']['#id'] === 'ermmenu') {
-    $variables['#attached']['library'][] = 'ashlar/erm-menu';
-    $variables['#attached']['library'][] = 'ashlar/fullpage';
-  }
 }
 
 /**
