@@ -202,17 +202,6 @@ main {
     }
     display: inline-block;
     font-size: $h3-font-size--larger;
-
-    &:after {
-      z-index: -1;
-      display: block;
-      width: 110%;
-      height: 30px;
-      margin-left: 50%;
-      content: "";
-      transform: translate(-50%, -18px);
-      background-color: transparentize($blue, 0.9);
-    }
   }
 
   h4 {
