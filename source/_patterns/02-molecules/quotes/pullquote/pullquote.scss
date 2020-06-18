@@ -2,17 +2,18 @@
 * @file
 * 02-molecules/testimonials/testimonial--quote-only/_testimonial--quote-only.scss
 */
-$quote-icon-size: 30px;
-$quote-icon-font-size: 48px;
+$quote-icon-size: 50px;
 
 .block--pullquote {
+  position: relative;
+  
   blockquote {
     @include breakpoint($medium) {
       border-left: solid $border-width--thicker $green;
     }
-    background: initial;
-    border-left: solid $border-width $green;
     margin: 0 $double-spacing;
+    border-left: solid $border-width $green;
+    background: initial;
 
     .body {
       margin-bottom: $double-spacing;
@@ -22,6 +23,10 @@ $quote-icon-font-size: 48px;
     .name {
       font-weight: $font-weight--bold;
     }
+  }
+
+  .decoration {
+    display: none;
   }
 
   &.pullquote--editorial {
@@ -34,26 +39,6 @@ $quote-icon-font-size: 48px;
       border-bottom: $blue $border-width solid;
       border-left: none;
       background: initial;
-
-      &:before {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        display: block;
-        display: grid;
-        width: $quote-icon-size;
-        height: $quote-icon-size;
-        padding: $standard-spacing;
-        content: "“";
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: $blue;
-        border: solid $blue $border-width;
-        border-radius: 50%;
-        background: $white;
-        font-family: pt serif;
-        font-size: $quote-icon-font-size;
-      }
 
       .block__title {
         border-bottom: none;
@@ -70,6 +55,26 @@ $quote-icon-font-size: 48px;
       .name {
         display: block;
       }
+    }
+
+    .decoration {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 50%;
+      display: block;
+      display: grid;
+      width: $quote-icon-size;
+      height: $quote-icon-size;
+      padding: $half-spacing;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: $blue;
+      border: solid $blue $border-width;
+      border-radius: 50%;
+      background: $white;
+      font-family: pt serif;
+      font-size: $quote-icon-size;
     }
   }
 }
