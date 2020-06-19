@@ -15,6 +15,7 @@ if (generateButton) {
     var email =  document.getElementById('email');
     var phone_one =  document.getElementById('phone_one');
     var phone_two =  document.getElementById('phone_two');
+    var teams_id =  document.getElementById('teams_id');
 
     name = (name.value) ? name.value : '';
     job_title = (job_title.value) ? job_title.value : '';
@@ -27,6 +28,7 @@ if (generateButton) {
     email = (email.value) ? email.value : '';
     phone_one = (phone_one.value) ? phone_one.value : '';
     phone_two = (phone_two.value) ? phone_two.value : '';
+    teams_id = (teams_id.value) ? teams_id.value : '';
 
     if (document.getElementById('include_pronoun_link').checked) {
       pronouns = (pronouns.value) ? ' | <a href="https://www.mypronouns.org/about">' + pronouns.value + '</a>' : '';
@@ -47,6 +49,9 @@ if (generateButton) {
     else { document.getElementById('field_phone_one').innerHTML= '' }
     if(phone_two) { document.getElementById('field_phone_two').innerHTML = ' | <a href="tel:' + phone_two + '">' + phone_two + '</a>' }
     else { document.getElementById('field_phone_two').innerHTML= '' }
+
+    if(teams_id) { document.getElementById('field_teams_id').innerHTML = ' | <a href="https://teams.microsoft.com/l/chat/0/0?users=' + teams_id + '@wwu.edu" target="_blank">Message me on Teams</a>' }
+    else { document.getElementById('field_teams_id').innerHTML= '' }
 
     if(mail_stop) { document.getElementById('field_mail_stop').innerText = ' | ' + mail_stop }
     else { document.getElementById('field_mail_stop').innerText= '' }
