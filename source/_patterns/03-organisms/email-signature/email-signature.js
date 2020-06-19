@@ -50,7 +50,7 @@ if (generateButton) {
     if(phone_two) { document.getElementById('field_phone_two').innerHTML = ' | <a href="tel:' + phone_two + '">' + phone_two + '</a>' }
     else { document.getElementById('field_phone_two').innerHTML= '' }
 
-    if(teams_id) { document.getElementById('field_teams_id').innerHTML = ' | <a href="https://teams.microsoft.com/l/chat/0/0?users=' + teams_id + '@wwu.edu" target="_blank">Message me on Teams</a>' }
+    if(teams_id) { document.getElementById('field_teams_id').innerHTML = ' | <a href="https://teams.microsoft.com/l/chat/0/0?users=' + teams_id + '@wwu.edu">Message me on Teams</a>' }
     else { document.getElementById('field_teams_id').innerHTML= '' }
 
     if(mail_stop) { document.getElementById('field_mail_stop').innerText = ' | ' + mail_stop }
