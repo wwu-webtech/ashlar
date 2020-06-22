@@ -86,7 +86,7 @@
   {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
 {% endset %}
 
-<div{{ attributes.removeAttribute('role') }}>
+<article{{ attributes.removeAttribute('role') }}>
 
   {{ title_prefix }}
   {% if not page %}
@@ -110,4 +110,4 @@
     {{ content }}
   </div>
 
-</div>
+</article>
