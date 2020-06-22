@@ -8,8 +8,8 @@ libraries:
   - ashlar/wwu-header
   - ashlar/wwu-mobile-menu
 regions:
-  header: Header
-  quick_links: Quick Links
+  wwu_header: Western Header
+  header: Splash Area
   main_navigation: Main Navigation
   content: Content
   footer_left: Left Footer

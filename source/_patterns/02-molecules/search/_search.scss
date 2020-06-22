@@ -2,16 +2,15 @@
 * @file
 * 02-molecules/content/search/_search.scss
 */
+$search-input-size: 200px;
 
 .search {
   @include breakpoint($medium) {
     right: inherit;
     left: inherit;
   }
-  position: absolute;
   z-index: 0;
-  top: $toggle-size--larger;
-  right: 0;
+  top: $toggle-size;
   display: flex;
   justify-content: end;
 
@@ -23,10 +22,8 @@
         background-color: $dark-blue;
       }
     }
-    @include breakpoint($large) {
-      min-width: $toggle-size--larger;
-    }
     min-width: $toggle-size;
+
     &:hover,
     &:focus,
     &:active {
@@ -35,6 +32,9 @@
   }
 
   .toggle-search {
+    @include breakpoint($medium) {
+      width: 5.45em;
+    }
     order: 2;
   }
 
@@ -44,18 +44,13 @@
 
     .search-box {
       input {
-        @include breakpoint($medium) {
-          height: $toggle-size;
-        }
-        @include breakpoint($large) {
-          height: $toggle-size--larger;
-          padding: $standard-spacing;
-        }
-        max-width: calc(100vw - (#{$toggle-size--larger} * 2));
-        height: $toggle-size--larger;
+        width: $search-input-size;
+        height: 100%;
         margin: 0;
         padding: $half-spacing;
         border-color: $blue;
+        border-radius: 0;
+        font-size: $p-font-size--min;
       }
     }
 

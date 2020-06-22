@@ -8,6 +8,23 @@
   <div class="ultimenusub">
     {{ menus.menu_links(items, attributes, classes, 0) }}
   </div>
+
+  {% if extra_menus %}
+    {% for menu in extra_menus %}
+    <div class="block--menu">
+      <h2>{{ menu.title }}</h2>
+      <ul class="menu">
+        {% for item in menu.items %}
+        <li class="menu-item">
+          <a href="{{ item.url }}">
+            {{ item.title }}
+          </a>
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  {% endif %}
 </div>
 
 {% macro menu_links(items, attributes, classes, menu_level) %}

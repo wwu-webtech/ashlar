@@ -8,7 +8,7 @@
     margin-top: -$toggle-size * 2;
   }
   @include breakpoint($large) {
-    margin-top: -$toggle-size--larger * 2;
+    margin-top: -$toggle-size * 2;
   }
   background: $dark-blue;
 
@@ -34,7 +34,7 @@
 
 .site-header {
   .nav--404 {
-    .nav--main {
+    .main-navigation {
       @include breakpoint($medium) {
         margin: 0;
         transform: translatey(32vw);

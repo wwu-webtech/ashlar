@@ -2,82 +2,13 @@
 * @file
 * molecules/media/splash/_splash.scss
 */
-$secondary-site-name-spacer: 52px;
-
-.splash,
-.featured-major-splash-area {
-  @include breakpoint($medium) {
-    margin-top: -$toggle-size;
-
-    grid-template-areas:
-    ". ....... ."
-    ". ....... ."
-    ". ....... ."
-    ". content ."
-    ". ....... .";
-
-    -ms-grid-rows: $toggle-size $secondary-site-name-spacer ($logo-width - $toggle-size - $secondary-site-name-spacer + $standard-spacing) 1fr (($toggle-size) / 2 + $double-spacing);
-    grid-template-rows: $toggle-size $secondary-site-name-spacer ($logo-width - $toggle-size - $secondary-site-name-spacer + $standard-spacing) 1fr (($toggle-size) / 2 + $double-spacing);
-  }
-  @include breakpoint($large) {
-    margin-top: -$toggle-size--larger;
-
-    -ms-grid-columns: $large-screen-columns;
-    -ms-grid-rows: $logo-width 1fr $toggle-size;
-    grid-template-columns: $large-screen-columns;
-
-    grid-template-rows: $toggle-size--larger $secondary-site-name-spacer ($logo-width - $toggle-size--larger - $secondary-site-name-spacer + $standard-spacing) 1fr (($toggle-size--larger) / 2 + $double-spacing);
-  }
-  display: -ms-grid;
+.splash {
+  position: relative;
+  z-index: 0;
   display: grid;
-  background-image: linear-gradient($dark-blue, $blue);
-
-  -ms-grid-columns: $small-screen-columns;
-  -ms-grid-rows: 25vh 1fr $double-spacing;
-  grid-template-areas:
-  ". ....... ."
-  ". content ."
-  ". ....... .";
-  grid-template-columns: $small-screen-columns;
-  grid-template-rows: auto 1fr auto;
-
-  > div {
-    &:nth-of-type(1) {
-      -ms-grid-column: 1;
-      grid-column: 1 / span all;
-      -ms-grid-column-span: 3;
-      -ms-grid-row: 1;
-      grid-row: 1 / span all;
-      -ms-grid-row-span: 3;
-
-      div {
-        height: 100%;
-      }
-    }
-
-    &:nth-of-type(2) {
-      grid-area: content;
-      -ms-grid-column: 2;
-      -ms-grid-column-span: 1;
-      -ms-grid-row: 2;
-      -ms-grid-row-span: 1;
-    }
-  }
 }
 
-/* Featured major pages have some overwrites */
-.featured-major-splash-area {
-  margin-top: 0;
-
-  .featured-major-info {
-    .headline {
-      height: initial;
-    }
-  }
-}
-
-.page-node-type-article {
-  .splash {
-    grid-template-rows: 1fr;
-  }
+.splash > div {
+  grid-column: 1;
+  grid-row: 1;
 }

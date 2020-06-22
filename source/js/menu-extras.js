@@ -1,5 +1,5 @@
 /* Accessibile mega menu variable declarations */
-$('.nav--main').accessibleMegaMenu({
+$('.main-navigation').accessibleMegaMenu({
     /* prefix for generated unique id attributes, which are required
        to indicate aria-owns, aria-controls and aria-labelledby */
     uuidPrefix: "accessible-megamenu",
@@ -25,4 +25,3 @@ $('.nav--main').accessibleMegaMenu({
     /* css class for the open state */
     openClass: "open"
 });
-$('.nav--main').hide();

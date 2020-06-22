@@ -116,8 +116,8 @@ $icon-space: (($toggle-size - $icon-size) / 2) - 1;
 
     svg {
       @include breakpoint($medium) {
-        width: $toggle-size--larger;
-        height: $toggle-size--larger;
+        width: $toggle-size;
+        height: $toggle-size;
       }
       width: $toggle-size;
       height: $toggle-size;

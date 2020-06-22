@@ -7,16 +7,15 @@
 .ultimenu {
   overflow: visible;
 
+  > li {
+    min-width: initial;
+  }
+
   section.ultimenu__flyout {
     @include breakpoint($medium) {
-      z-index: 0;
       top: 100%;
       right: 0 !important;
       display: none !important;
-      transform: translatey(-($toggle-size/2));
-    }
-    @include breakpoint($large) {
-      transform: translatey(-($toggle-size--larger/2));
     }
     display: block;
     visibility: hidden;
@@ -44,83 +43,6 @@
       opacity: 1;
     }
   }
-
-  .ultimenu__item {
-    @include breakpoint($medium) {
-      position: static;
-      display: block;
-      min-width: initial;
-
-      &:hover {
-        & > .ultimenu__flyout {
-          display: none;
-          visibility: hidden;
-          opacity: 0;
-        }
-
-        & > .ultimenu__flyout.open {
-          display: block;
-          visibility: visible;
-          opacity: 1;
-        }
-      }
-    }
-    position: relative;
-    display: grid;
-    margin: 0;
-
-    -ms-grid-columns: 1fr $toggle-size;
-    -ms-grid-rows: auto auto;
-    grid-template-areas: "link     icon"
-    "flyout flyout";
-    grid-template-columns: 1fr $toggle-size;
-    grid-template-rows: auto auto;
-
-
-    .ultimenu__link {
-      z-index: 1;
-      transition: $medium-transition-speed $standard-ease;
-
-      -ms-grid-column: 1;
-      grid-column: 1 / span 2;
-      -ms-grid-column-span: 2;
-
-      &:hover,
-      &:focus,
-      &:active {
-        text-decoration: none;
-
-        + .expand-icon {
-          color: $black;
-          background-color: $light-green;
-        }
-      }
-    }
-
-    &.has-ultimenu {
-      .ultimenu__link {
-        grid-area: link;
-      }
-    }
-
-    .expand-icon {
-      @include breakpoint($medium) {
-        display: none;
-      }
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-      transition: $medium-transition-speed $standard-ease;
-      color: $white;
-      border: none;
-
-      grid-area: icon;
-      -ms-grid-column: 2;
-      -ms-grid-column-span: 1;
-    }
-  }
 }
 
 .ultimenu--basic {
@@ -132,17 +54,24 @@
 .ultimenu--horizontal {
   .ultimenu__link {
     &.is-active {
-      background: $dark-blue;
+      background: transparent;
 
       &.open {
-        color: $dark-blue;
-        background: $light-green;
+        color: $white;
+        background: transparent;
       }
     }
     .caret {
       display: none;
     }
   }
+}
+
+.ultimenu__region,
+.ultimenu--htb .ultimenu__flyout,
+.ultimenu--htb .ultimenu__region {
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .ultimenu--hover li:hover > .ultimenu__flyout,

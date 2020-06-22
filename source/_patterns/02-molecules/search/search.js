@@ -1,7 +1,9 @@
 var $toggle_search = $('.toggle-search', context);
 var $search_icon = $toggle_search.children('.material-icons');
 var $search_box = $('#search-box');
-var $button_text = $toggle_search.children('.button-text');
+var $search_toggle_prefix = $toggle_search.children('.toggle-prefix');
+var $search_toggle_text = $toggle_search.children('.toggle-text');
+var $search_toggle_suffix = $toggle_search.children('.toggle-suffix');
 
 function toggle_search(event) {
   $toggle_search.off('click', toggle_search);
@@ -14,16 +16,20 @@ function toggle_search(event) {
       duration: 'normal',
       easing: 'swing',
       complete: function () {
-        $toggle_search.toggleClass('.is-expanded');
+        $toggle_search.toggleClass('is-expanded');
 
-        if ($toggle_search.hasClass('.is-expanded')) {
+        if ($toggle_search.hasClass('is-expanded')) {
           $search_icon.text('close');
-          $button_text.html('Close the search box');
+          $search_toggle_prefix.html('');
+          $search_toggle_text.html('Close');
+          $search_toggle_suffix.html(' Search');
           $search_box.focus()
         }
         else {
           $search_icon.text('search');
-          $button_text.html('Open the search box');
+          $search_toggle_prefix.html('Open ');
+          $search_toggle_text.html('Search');
+          $search_toggle_suffix.html('');
         }
 
         $toggle_search.on('click', toggle_search);

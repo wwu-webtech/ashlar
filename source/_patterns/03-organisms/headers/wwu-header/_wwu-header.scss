@@ -1,165 +1,169 @@
 /**
- * @file
- * organisms/site-header/_site-header.scss
- */
-$header-columns: $logo-width 1fr $toggle-size;
-$header-columns--larger: $logo-width 1fr $toggle-size--larger;
-$header-rows: $toggle-size;
-$header-rows--larger: $toggle-size--larger;
-
-// gradients
-$header-gradient-start: transparentize($white, 0.3);
-$header-gradient-end: transparentize($white, 0.8);
-$site-name-gradient-start: $dark-blue;
-$site-name-gradient-end: transparentize($dark-blue, 0.2);
+* @file
+* organisms/site-header/_site-header.scss
+*/
 
 .western-header {
   @include breakpoint($medium) {
-    display: -ms-grid;
     display: grid;
 
-    -ms-grid-columns: $small-screen-columns;
-    -ms-grid-rows: auto;
-    grid-template-columns: $small-screen-columns;
-    grid-template-rows: auto;
+    grid-template-areas: "header";
+    grid-template-columns: 1fr;
   }
-  @include breakpoint ($large) {
-    -ms-grid-columns: $large-screen-columns;
-    grid-template-columns: $large-screen-columns;
-  }
-  position: relative;
-  z-index: 2;
-  background: linear-gradient(to left, $header-gradient-start 50%, $header-gradient-end 100%);
+  background-color: $dark-blue;
 
-  .wrap {
+  .header-navigation {
     @include breakpoint($medium) {
       position: relative;
-      display: -ms-grid;
-      display: grid;
+      z-index: 1;
+      right: initial !important;
+      display: grid !important;
+      width: 100%;
+      min-height: initial;
+      padding-top: 0;
+      opacity: 1 !important;
 
-      -ms-grid-column: 2;
-      grid-column: 2 / span 2;
-      -ms-grid-column-span: 1;
-      -ms-grid-columns: $logo-width $standard-spacing 1fr $toggle-size;
-      -ms-grid-row: 1;
-      grid-row: 1 / span 1;
-      -ms-grid-row-span: 1;
-      -ms-grid-rows: $header-rows;
-      grid-template-areas: "logo quick-links search lang_select";
-      grid-template-columns: $header-columns .25fr;
-      grid-template-rows: $header-rows;
+      grid-area: header;
+      grid-template-areas: "logo wwu-menu"
+      "logo site-name"
+      "logo secondary-site-name"
+      "menu menu";
+      grid-template-columns: ($logo-size + ($triple-spacing * 2)) 1fr;
+      grid-template-rows: ($logo-size / 3) ($logo-size / 3) ($logo-size / 3) auto;
     }
     @include breakpoint($large) {
-      -ms-grid-columns: $logo-width $standard-spacing 1fr $toggle-size--larger;
-      -ms-grid-rows: $header-rows--larger;
-      grid-template-columns: $header-columns--larger .25fr;
-      grid-template-rows: $header-rows--larger;
+      grid-template-areas: "logo ... wwu-menu"
+      "logo site-name ..."
+      "logo secondary-site-name ..."
+      "menu menu menu";
+      grid-template-columns: ($logo-size + ($triple-spacing * 2)) 1fr auto;
     }
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    display: none;
+    width: 100vw;
+    min-height: 100vh;
+    padding-top: $toggle-size;
+    background-color: $dark-blue;
+  }
 
-    .western-logo {
-      color: $white;
-      background-color: $dark-blue;
+  .western-menu {
+    grid-area: wwu-menu;
+  }
 
-      grid-area: logo;
-      -ms-grid-column: 1;
-      -ms-grid-column-span: 1;
-      -ms-grid-row: 1;
-      -ms-grid-row-span: 1;
+  .western-logo {
+    @include breakpoint($medium) {
+      margin: initial;
+    }
+    position: relative;
+    z-index: 2;
+    width: $logo-size + $double-spacing;
+    margin: auto;
+    padding-right: $toggle-size;
 
-      .western-home-link {
-        @include breakpoint($medium) {
-          padding-right: 0;
-        }
-        display: flex;
-        justify-content: center;
-        margin: inherit;
-        padding: 0;
-        padding-right: $toggle-size--larger;
-        color: $white;
-        border: none;
+    grid-area: header;
 
-        &:hover,
-        &:focus,
-        &:active {
-          background: transparent;
-        }
+    .western-home-link {
+      &:focus {
+        outline-color: $white;
+        outline-offset: -$border-width;
       }
     }
+  }
 
-    .site-name {
-      @include breakpoint($large) {
-        font-size: $p-font-size--max--smaller;
-      }
-      @include breakpoint($medium) {
-        display: block !important;
-        border-top: $border-width--thinner solid $blue;
-        border-bottom: none;
-      }
-      display: block;
-      margin: 0;
-      padding: $half-spacing $standard-spacing;
-      text-align: center;
-      text-decoration: none;
-      text-transform: none;
-      color: $white;
-      border-top: $border-width--thinner solid $blue;
-      border-bottom: $border-width--thinner solid $blue;
-      background: linear-gradient(to right, $site-name-gradient-start 0%, $site-name-gradient-end 100%);
-      font-family: $serif;
-      font-size: $p-font-size--smaller;
-      font-weight: $font-weight--regular;
-      line-height: 1.5em;
+  .logo {
+    @include breakpoint($medium) {
+      margin-left: $triple-spacing;
+      background: transparent;
     }
+    margin: auto;
 
-    .quick-links {
-      @include breakpoint($medium) {
-        display: block !important;
-      }
-      display: none;
-      align-self: center;
+    grid-area: logo;
 
-      grid-area: quick-links;
-      -ms-grid-column: 3;
-      -ms-grid-column-span: 1;
-      -ms-grid-row: 1;
-      -ms-grid-row-span: 1;
-      justify-self: end;
-    }
-
-    .toggle-menu {
+    &.horizontal {
       @include breakpoint($medium) {
         display: none;
       }
       position: absolute;
       top: 0;
-      right: 0;
-
-      &:hover,
-      &:focus,
-      &:active {
-        background-color: $darkest-blue;
-      }
-    }
-
-    .search {
-      @include breakpoint($medium) {
-        top: 0;
-        right: 0;
-      }
-      align-self: center;
-
-      grid-area: search;
-      justify-self: end;
-    }
-
-    .lang_select {
-      @include breakpoint($medium) {
-        top:0;
-        right: 0;
-      }
-      align-self: center;
-      grid-area: lang_select;
-      justify-self: end;
+      left: 0;
+      width: calc(100vw - #{$toggle-size});
+      height: $toggle-size;
+      background: transparent;
     }
   }
+
+  .toggle-menu {
+    @include breakpoint($medium) {
+      display: none;
+    }
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    color: $white;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+
+    grid-area: menu;
+
+    &.is-expanded {
+      position: fixed;
+      top: 0;
+      right: 0;
+    }
+
+    &:hover,
+    &:focus {
+      color: $darkest-blue;
+      background: $lightest-green;
+      box-shadow: none;
+    }
+  }
+
+  .site-name {
+    @include breakpoint($medium) {
+      padding: 0;
+      text-align: left;
+      border-top: none;
+      border-bottom: none;
+
+      grid-area: site-name;
+    }
+    @include breakpoint($large) {
+      font-size: $p-font-size--max--larger;
+    }
+    align-self: center;
+    margin: $standard-spacing;
+    margin: 0 !important;
+    padding: $standard-spacing;
+    text-align: center;
+    color: $white;
+    border-top: solid $border-width--thinner $blue;
+    border-bottom: solid $border-width--thinner $blue;
+    font-size: $p-font-size--larger;
+
+    &.mobile {
+      @include breakpoint($medium) {
+        display: none;
+      }
+
+      .block--secondary-site-name {
+        margin: -$standard-spacing;
+        margin-top: $standard-spacing;
+        border-top: $border-width--thinner $blue solid;
+      }
+    }
+  }
+}
+
+.region--wwu_header {
+  grid-area: secondary-site-name;
+}
+
+.main-navigation,
+.region--main_navigation {
+  grid-area: menu;
 }
