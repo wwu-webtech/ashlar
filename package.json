@@ -6,7 +6,6 @@
     "browserify": "^16.2.3",
     "del": "^3.0.0",
     "gulp": "^4.0.2",
-    "gulp-axe-webdriver": "^3.1.0",
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-flatmap": "^1.0.2",
@@ -26,6 +25,7 @@
     "jquery-listnav": "^2.4.10",
     "jquery-once": "^2.2.1",
     "jquery.quicksearch": "^2.0.5",
+    "pa11y": "^5.3.0",
     "pump": "^3.0.0",
     "run-sequence": "^2.2.1",
     "vinyl-source-stream": "^2.0.0"
@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "acorn": "^6.4.1",
-    "breakpoint-sass": "^2.7.1"
+    "breakpoint-sass": "^2.7.1",
+    "puppeteer": "^4.0.0"
   }
 }
