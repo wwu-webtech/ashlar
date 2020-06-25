@@ -23,6 +23,7 @@
   const imagemin = require('gulp-imagemin');
   const group = require('gulp-group-css-media-queries');
   const cleancss = require('gulp-clean-css');
+  const axe = require('gulp-axe-webdriver');
 
   /**
    * Process the name of the input JS file to be used as the object key for a
@@ -360,9 +361,20 @@
    */
   gulp.task('clean', gulp.parallel(['clean:css', 'clean:js', 'clean:images', 'clean:patternlab']));
 
+   //
+   // Runs accessibility checks using axe-core
+   //
+  gulp.task('axe', function() {
+   var options = {
+     saveOutputIn: 'axeTest-1.json',
+     urls: ['source/_patterns/*/*.twig'],
+     headless: true
+   };
+   return axe(options);
+  });
+
   /**
    * Gulp default task.
    */
-  gulp.task('default', gulp.parallel(['sass', 'js', 'images']));
-
+  gulp.task('default', gulp.parallel(['sass', 'js', 'images', 'axe']));
 })();
