@@ -25,7 +25,7 @@ The general idea is that you have Pattern Lab installed *inside* of the Ashlar T
 
 This means adding accessibility checks to changes in the theme before those changes get submitted to the repository. These checks allow developers to address common issues before they are introduced into the live code, and prevents barriers that come from those issues.
 
-See
+See section IV. Pattern Lab: Accessibility for additional instructions on how to ensure accessibility checks are set up properly.
 
 ## Getting Started
 Download and install the latest **stable** [version of Lando](https://github.com/lando/lando/releases). The latest version to be tested with these instructions is [v3.0.0-rc.14](https://github.com/lando/lando/releases/tag/v3.0.0-rc.14)
@@ -102,9 +102,9 @@ Running "lando npm install" in Pattern Lab will download Pa11y CI, an automated 
 
 This command will run if you are contributing to Ashlar development, when pushing changes to this repository. If all checks pass, the changes will finally get push into a new branch or existing branch.
 
-#### Accessibility Testing "Chromium isn’t installed" Error
+#### Accessibility Testing Note: "Chromium isn’t installed" Error
 
-If you get an error that says “Chromium isn’t installed,” it’s probably because lando npm install installs Chromium for the lando container which is linux. We haven’t found a way for Lando to talk to Chromium yet, so the patch for this error is to go into /ashlar/node_modules/puppeteer and run npm install. It should then install chromium for your OS and run pa11y-ci.
+If you get a Pa11y error when pushing changes that says “Chromium isn’t installed,” it’s probably because lando npm install installs Chromium for the lando container which is linux. We haven’t found a way for Lando to talk to Chromium yet, so the patch for this error is to go into /ashlar/node_modules/puppeteer and run npm install. It should then install chromium for your OS and run pa11y-ci.
 
 If pa11y-ci is working, it will run through the commands listed in the husky pre-push hook.
 
