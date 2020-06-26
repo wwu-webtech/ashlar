@@ -45,7 +45,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lando gulp patternlab && php pattern-lab/core/console --generate && pa11y-ci"
+      "pre-push": "lando gulp patternlab && php pattern-lab/core/console --generate && pa11y-ci"
     }
   }
 }
