@@ -25,7 +25,7 @@ The general idea is that you have Pattern Lab installed *inside* of the Ashlar T
 
 This means adding accessibility checks to changes in the theme before those changes get submitted to the repository. These checks allow developers to address common issues before they are introduced into the live code, and prevents barriers that come from those issues.
 
-See section IV. Pattern Lab: Accessibility for additional instructions on how to ensure accessibility checks are set up properly.
+For additional instructions on setting up accessibility checks in Pattern Lab, see "Accessibility Testing in Ashlar" under the Pattern Lab section.
 
 ## Getting Started
 Download and install the latest **stable** [version of Lando](https://github.com/lando/lando/releases). The latest version to be tested with these instructions is [v3.0.0-rc.14](https://github.com/lando/lando/releases/tag/v3.0.0-rc.14)
