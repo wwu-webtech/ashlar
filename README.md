@@ -94,6 +94,8 @@ It can be helpful to put these commands in a bash script (or two, with the serve
 
 Note: you can change the `--port 8000` to a different number if needed. Pattern Lab defaults to port 8080, but this often conflicts with other local server instances.
 
+Changing the port does mean that Pa11y accessibility checks in Ashlar will not work by default, since it refers to localhost:8000. If you do need to change the port, You can change the URLs in the .pa11yci to your chosen port so Pa11y can find the right URL.
+
 #### Accessibility Testing in Ashlar
 
 Running "lando npm install" in Pattern Lab will download Pa11y CI, an automated accessibiltiy engine that can check for code issues in the Pattern Lab components, typically at the following URL pattern:
@@ -102,7 +104,13 @@ Running "lando npm install" in Pattern Lab will download Pa11y CI, an automated 
 
 This command will run if you are contributing to Ashlar development, when pushing changes to this repository. If all checks pass, the changes will finally get push into a new branch or existing branch.
 
-#### Accessibility Testing Note: "Chromium isn’t installed" Error
+#### Possible Accessibility Testing Errors
+
+"Failed to run"/"ERR_CONNECTION_REFUSED"
+
+This error usually means the Pattern Lab server shut off, and the crawler can't access the localhost URLs. Double check that the Pattern Lab server is by running `php pattern-lab/core/console --server --port 8000`.  
+
+"Chromium isn’t installed" Error
 
 If you get a Pa11y error when pushing changes that says “Chromium isn’t installed,” it’s probably because lando npm install installs Chromium for the lando container which is linux. We haven’t found a way for Lando to talk to Chromium yet, so the patch for this error is to go into /ashlar/node_modules/puppeteer and run npm install. It should then install chromium for your OS and run pa11y-ci.
 
