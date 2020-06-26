@@ -94,7 +94,11 @@ It can be helpful to put these commands in a bash script (or two, with the serve
 
 Note: you can change the `--port 8000` to a different number if needed. Pattern Lab defaults to port 8080, but this often conflicts with other local server instances.
 
+<<<<<<< Updated upstream
 Changing the port does mean that Pa11y accessibility checks in Ashlar will not work by default, since it refers to localhost:8000. If you do need to change the port, You can change the URLs in the .pa11yci to your chosen port so Pa11y can find the right URL.
+=======
+Changing the port does mean that Pa11y accessibility checks in Ashlar will not work by default, since it refers to localhost:8000. If you do need to change the port, you can change the URLs in the .pa11yci to your chosen port so Pa11y can find the right URL.
+>>>>>>> Stashed changes
 
 #### Accessibility Testing in Ashlar
 
