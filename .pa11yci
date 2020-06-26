@@ -3,6 +3,50 @@
     {
       "url": "http://localhost:8000/patterns/01-atoms-background-color/index.html",
       "rootElement": ".sg-pattern-example"
+    },
+    {
+      "url": "http://localhost:8000/patterns/01-atoms-buttons/index.html",
+      "rootElement": ".sg-pattern-example"
+    },
+    {
+      "url": "http://localhost:8000/patterns/01-atoms-color/index.html",
+      "rootElement": ".sg-pattern-example"
+    },
+    {
+      "url": "http://localhost:8000/patterns/01-atoms-forms/index.html",
+      "rootElement": ".sg-pattern-example"
+    },
+    {
+      "url": "http://localhost:8000/patterns/01-atoms-icons/index.html",
+      "rootElement": ".sg-pattern-example"
+    },
+    {
+      "url": "http://localhost:8000/patterns/01-atoms-images/index.html",
+      "rootElement": ".sg-pattern-example"
+    },
+    {
+      "url": "http://localhost:8000/patterns/01-atoms-lists/index.html",
+      "rootElement": ".sg-pattern-example"
+    },
+    {
+      "url": "http://localhost:8000/patterns/01-atoms-logo/index.html",
+      "rootElement": ".sg-pattern-example"
+    },
+    {
+      "url": "http://localhost:8000/patterns/01-atoms-overlays/index.html",
+      "rootElement": ".sg-pattern-example"
+    },
+    {
+      "url": "http://localhost:8000/patterns/01-atoms-tables/index.html",
+      "rootElement": ".sg-pattern-example"
+    },
+    {
+      "url": "http://localhost:8000/patterns/01-atoms-text/index.html",
+      "rootElement": ".sg-pattern-example"
+    },
+    {
+      "url": "http://localhost:8000/patterns/01-atoms-transitions/index.html",
+      "rootElement": ".sg-pattern-example"
     }
   ]
 }
