@@ -106,11 +106,11 @@ This command will run if you are contributing to Ashlar development, when pushin
 
 #### Possible Accessibility Testing Errors
 
-"Failed to run"/"ERR_CONNECTION_REFUSED"
+**"Failed to run"/"ERR_CONNECTION_REFUSED"**
 
 This error usually means the Pattern Lab server shut off, and the crawler can't access the localhost URLs. Double check that the Pattern Lab server is by running `php pattern-lab/core/console --server --port 8000`.  
 
-"Chromium isn’t installed" Error
+**"Chromium isn’t installed" Error**
 
 If you get a Pa11y error when pushing changes that says “Chromium isn’t installed,” it’s probably because lando npm install installs Chromium for the lando container which is linux. We haven’t found a way for Lando to talk to Chromium yet, so the patch for this error is to go into /ashlar/node_modules/puppeteer and run npm install. It should then install chromium for your OS and run pa11y-ci.
 
