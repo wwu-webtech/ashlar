@@ -79,12 +79,12 @@ $icon-space: (($toggle-size - $icon-size) / 2) - 1;
   .social-media-links {
     @include breakpoint($medium) {
       max-width: 600px;
-      margin-top: -$triple-spacing;
+      margin-top: -$triple-spacing * 1.5;
       margin-left: 50%;
       transform: translatex(-50%);
     }
     @include breakpoint(1080px) {
-      margin-top: -$triple-spacing * 3;
+      margin-top: -$triple-spacing * 2;
     }
     justify-content: center;
     width: 100%;
