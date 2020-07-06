@@ -181,10 +181,6 @@
     "rootElement": ".sg-pattern-example"
   },
   {
-    "url": "http://localhost:8000/patterns/03-organisms-sections/index.html",
-    "rootElement": ".sg-pattern-example"
-  },
-  {
     "url": "http://localhost:8000/patterns/03-organisms-statistics-collection/index.html",
     "rootElement": ".sg-pattern-example"
   },
