@@ -7,10 +7,12 @@
   @include breakpoint($medium) {
     position: initial;
     z-index: initial;
-    height: inherit;    
+    width: initial;
+    height: inherit;
   }
   position: absolute;
   z-index: 2;
+  width: 100%;
   height: 100vh;
 
   & > .menu,
@@ -22,6 +24,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    margin: 0;
     padding-left: 0;
     background-color: initial;
 
@@ -37,6 +40,7 @@
       width: 100%;
       transition: $button-transition-speed background-color $standard-ease;
       border-bottom: $border-width--thinner solid $darkest-blue;
+      border-left: none;
 
       grid-template-areas: "link icon"
       "flyout flyout";
@@ -126,9 +130,9 @@
 
         &.desktop {
           @include breakpoint($medium) {
-            display: flex;
             position: relative;
             right: $half-spacing;
+            display: flex;
           }
           display: none;
         }
