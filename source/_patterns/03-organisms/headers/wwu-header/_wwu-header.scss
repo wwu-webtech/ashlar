@@ -34,7 +34,7 @@
     @include breakpoint($large) {
       grid-template-areas: "logo ... wwu-menu"
       "logo site-name ..."
-      "logo secondary-site-name ..."
+      "logo secondary-site-name secondary-site-name"
       "menu menu menu";
       grid-template-columns: ($logo-size + ($triple-spacing * 2)) 1fr auto;
     }
