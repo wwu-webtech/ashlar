@@ -9,10 +9,16 @@ $mabel-label-max-font-size: 25px;
 $mabel-label-font-size: calc(#{$mabel-label-min-font-size} + #{strip-unit($mabel-label-max-font-size - $mabel-label-min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 
 #islandora-search-container {
+  @include breakpoint($medium) {
+    width: 50%;
+  }
   background: linear-gradient(to right, transparentize($darkest-blue, 0.1) 0%, transparentize($darkest-blue, 0.2) 100%);
   padding: $double-spacing;
   display: flex;
   flex-flow: column;
+  margin-left: 50%;
+  transform: translatex(-50%);
+  margin-top: $double-spacing;
 
   .block-title {
     display: block;
@@ -102,12 +108,5 @@ input[title="Remove field"] {
   .form-submit {
     display: inline-block;
     margin-right: $standard-spacing;
-  }
-}
-
-/* Search box is positioned more prominently on front page */
-.islandora-front-page {
-  #islandora-search-container {
-    width: 100%;
   }
 }
