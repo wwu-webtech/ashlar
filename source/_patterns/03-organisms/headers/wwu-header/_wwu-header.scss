@@ -156,6 +156,17 @@
         border-top: $border-width--thinner $blue solid;
       }
     }
+
+    .home-link {
+      text-decoration: none;
+      color: $white;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $dark-blue;
+      }
+    }
   }
 }
 

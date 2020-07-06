@@ -4,13 +4,13 @@
 
       {% block mobile_site_name %}
         <?php if ($site_name): ?>
-          <?php print $site_name; ?>
+          <a href="/" class="home-link"><?php print $site_name; ?></a>
         <?php endif; ?>
       {% endblock %}
-      
+
       {% block site_name %}
         <?php if ($site_name): ?>
-          <?php print $site_name; ?>
+          <a href="/" class="home-link"><?php print $site_name; ?></a>
         <?php endif; ?>
       {% endblock %}
 
