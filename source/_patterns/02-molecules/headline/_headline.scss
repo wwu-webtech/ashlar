@@ -19,7 +19,7 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
     }
     align-self: start;
     max-width: $max-content-width * (2/3);
-    margin-top: 25vh;
+    margin: $standard-spacing;
     padding: $double-spacing;
     color: $text-color-light;
     background-color: transparentize($darkest-blue, 0.3);
