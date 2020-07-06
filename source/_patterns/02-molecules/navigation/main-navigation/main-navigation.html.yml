@@ -1,7 +1,7 @@
 attributes:
   Attribute():
     class:
-    - nav--main
+    - main-navigation
 configuration:
   label_display: false
   label: Main navigation

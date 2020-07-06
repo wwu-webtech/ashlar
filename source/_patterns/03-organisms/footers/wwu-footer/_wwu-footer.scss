@@ -64,6 +64,8 @@
     @include breakpoint($medium) {
       justify-self: start;
     }
+    width: $logo-size--larger;
+    height: $logo-size--larger;
 
     grid-area: logo;
     -ms-grid-column: 2;

@@ -20,6 +20,13 @@ The static site that Pattern Lab generates isn't meant to be public facing, but 
 ### Developing with Pattern Lab and Ashlar
 The general idea is that you have Pattern Lab installed *inside* of the Ashlar Theme. This Pattern Lab installation doesn't have any template files of it's own. Instead it goes down one folder and grabs all of its templates and styles from the theme to generate patterns. This theme has been developed for Drupal 8, so many of the twig templates use the structure of a Drupal 8 site. However, the stylesheets and templates that are output by pattern lab are also useful for building static sites with these components.
 
+### Ashlar Accessibility
+[Western is committed to creating an inclusive web](https://www.wwu.edu/commitment-accessibility) for its community members, including students, staff, faculty, and guests. Because Ashlar reflects the current standards for branding and web development, we take extra care in making sure the end result is accessible.
+
+This means adding accessibility checks to changes in the theme before those changes get submitted to the repository. These checks allow developers to address common issues before they are introduced into the live code, and prevents barriers that come from those issues.
+
+For additional instructions on setting up accessibility checks in Pattern Lab, see "Accessibility Testing in Ashlar" under the Pattern Lab section.
+
 ## Getting Started
 Download and install the latest **stable** [version of Lando](https://github.com/lando/lando/releases). The latest version to be tested with these instructions is [v3.0.0-rc.14](https://github.com/lando/lando/releases/tag/v3.0.0-rc.14)
 
@@ -86,6 +93,28 @@ Run these commands each time you make changes, and navigate to http://localhost:
 It can be helpful to put these commands in a bash script (or two, with the server running constantly in a separate terminal window) to speed up workflow.
 
 Note: you can change the `--port 8000` to a different number if needed. Pattern Lab defaults to port 8080, but this often conflicts with other local server instances.
+
+Changing the port does mean that Pa11y accessibility checks in Ashlar will not work by default, since it refers to localhost:8000. If you do need to change the port, you can change the URLs in the .pa11yci to your chosen port so Pa11y can find the right URL.
+
+#### Accessibility Testing in Ashlar
+
+Running "lando npm install" in Pattern Lab will download Pa11y CI, an automated accessibiltiy engine that can check for code issues in the Pattern Lab components, typically at the following URL pattern:
+
+    http://localhost:8000/patterns/pattern-name/index.html
+
+This command will run if you are contributing to Ashlar development, when pushing changes to this repository. If all checks pass, the changes will finally get push into a new branch or existing branch.
+
+#### Possible Accessibility Testing Errors
+
+**"Failed to run"/"ERR_CONNECTION_REFUSED"**
+
+This error usually means the Pattern Lab server shut off, and the crawler can't access the localhost URLs. Double check that the Pattern Lab server is by running `php pattern-lab/core/console --server --port 8000`.  
+
+**"Chromium isn’t installed" Error**
+
+If you get a Pa11y error when pushing changes that says “Chromium isn’t installed,” it’s probably because lando npm install installs Chromium for the lando container which is linux. We haven’t found a way for Lando to talk to Chromium yet, so the patch for this error is to go into /ashlar/node_modules/puppeteer and run npm install. It should then install chromium for your OS and run pa11y-ci.
+
+If pa11y-ci is working, it will run through the commands listed in the husky pre-push hook.
 
 ### V. Working with Patterns
 

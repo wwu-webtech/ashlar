@@ -4,36 +4,48 @@
  */
 #}
 <div class="western-header">
-  <div class="wrap">
-    <div class="western-logo">
-      {% if site_name != "Western Washington University" %}
-        <a class="western-home-link" href="https://wwu.edu">
-          {% include "@atoms/logo/logo.twig" %}
-        </a>
+  <div class="western-logo">
+    <a class="western-home-link" href="https://wwu.edu">
+      {% include "@atoms/logo/logo--make-waves.twig" %}
+    </a>
+  </div>
 
-        {% block site_name %}
-          <a href="/" class="site-name">
-              {{ site_name }}
-          </a>
-        {% endblock %}
+  <button class="small icon-with-text toggle-menu">
+    <span class="material-icons" aria-hidden="true">menu</span>
+    <span class="toggle-prefix visually-hidden">Open the </span>
+    <span class="toggle-text">Menu</span>
+    <span class="toggle-suffix visually-hidden"></span>
+  </button>
 
-      {% else %}
-        <a class="western-home-link" href="https://wwu.edu">
-          {% include "@atoms/logo/logo--make-waves.twig" %}
-        </a>
-      {% endif %}
+  <div class="site-name mobile">
+    {% block mobile_site_name %}
+      {{ site_name }}
+    {% endblock %}
 
-    </div>
+    {% block mobile_western_header %}
+        {{ page.wwu_header }}
+    {% endblock %}
+  </div>
+
+  <div class="header-navigation">
+    {% include "@atoms/logo/logo--horizontal.twig" %}
 
     {% block quick_links %}
-      <button class="toggle toggle-menu toggle-open-menu"><span class="material-icons" aria-hidden="true">menu</span><span class="button-text visually-hidden">Open the menu</span></button>
       {% include "@molecules/navigation/wwu-menu/wwu-menu.html.twig" %}
-      {{ page.quick_links }}
     {% endblock %}
 
-    {% block search %}
-      {% include "@molecules/search/search.html.twig" %}
+    <div class="site-name">
+      {% block site_name %}
+        {{ site_name }}
+      {% endblock %}
+    </div>
+
+    {% block western_header %}
+        {{ page.wwu_header }}
     {% endblock %}
 
+    {% block main_navigation %}
+      {{ page.main_navigation }}
+    {% endblock %}
   </div>
 </div>

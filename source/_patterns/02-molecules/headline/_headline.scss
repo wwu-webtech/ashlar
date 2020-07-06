@@ -5,10 +5,6 @@
 $headline-gradient-start: transparentize($darkest-blue, 0.2);
 $headline-gradient-end: transparentize($darkest-blue, 0.5);
 
-.block--headline {
-  z-index: 1;
-}
-
 .headline {
   h1:after {
     border: none;
@@ -17,7 +13,8 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
   /* Style Option 1: Box with semi-transparent overlay */
   &.box-headline {
     @include breakpoint($medium) {
-      margin-top: 0;
+      margin-top: 5%;
+      margin-left: 5%;
       background: linear-gradient(to right, $headline-gradient-start 0%, $headline-gradient-end 100%);
     }
     align-self: start;
@@ -71,14 +68,12 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
     }
     @include breakpoint($large) {
       max-width: 70vw;
-      margin-left: calc(((100vw - #{$max-content-width}) / -2));
     }
     position: relative;
     align-self: end;
     width: 90vw;
     margin-top: 25vh;
-    margin-bottom: $standard-spacing;
-    margin-left: -$standard-spacing;
+    margin-bottom: $triple-spacing;
     padding: $double-spacing;
     color: $white;
     background: transparentize($blue, 0.1);
@@ -129,21 +124,11 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
   /* Style Option 3: Right aligned bottom bar */
   &.right-aligned-bar {
     @extend .left-aligned-bar;
-    @include breakpoint($large) {
-      margin-right: calc(((100vw - #{$max-content-width}) / -2));
-    }
-    margin-right: -$standard-spacing;
-    margin-left: initial;
-
     justify-self: end;
   }
 
   /* Style Option 4: Simple centered */
   &.simple-centered {
-    @include breakpoint($medium) {
-      align-self: start;
-      margin: 0;
-    }
     align-self: center;
     margin: 10vh 0;
     text-align: center;
@@ -185,19 +170,6 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
       color: $white;
       text-shadow: 1px 1px 4px transparentize($darkest-blue, 0.1);
       font-size: $h6-font-size--largest;
-    }
-
-    .button {
-      margin: $half-spacing;
-      border-color: $white;
-      background: transparentize($darkest-blue, 0.3);
-
-      &:hover,
-      &:focus,
-      &:active {
-        color: $blue;
-        background: $white;
-      }
     }
   }
 }
