@@ -14,20 +14,19 @@
         <?php endif; ?>
       {% endblock %}
 
+      {% block main_navigation %}
+        <nav class="main-navigation" aria-label="Main">
+          {% include "@molecules/navigation/wwu-mobile-menu/wwu-mobile-menu.html.twig" %}
+
+          <div id="main-menu"><?php print render($page['navigation']); ?></div>
+        </nav>
+      {% endblock %}
+      
     {% endembed %}
   {% endblock %}
 
-
   {% block splash %}
     <?php print render($page['header']); ?>
-  {% endblock %}
-
-  {% block main_navigation %}
-    <nav class="main-navigation" aria-label="Main">
-      {% include "@molecules/navigation/wwu-mobile-menu/wwu-mobile-menu.html.twig" %}
-
-      <div id="main-menu"><?php print render($page['navigation']); ?></div>
-    </nav>
   {% endblock %}
 
   {% block content %}
