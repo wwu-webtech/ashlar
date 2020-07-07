@@ -42,6 +42,7 @@
     z-index: 4;
     top: 0;
     display: none;
+    overflow-y: scroll;
     width: 100vw;
     min-height: 100vh;
     padding-top: $toggle-size;
