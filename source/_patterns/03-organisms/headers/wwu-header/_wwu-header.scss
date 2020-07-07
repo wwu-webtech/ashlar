@@ -18,6 +18,7 @@
       z-index: 1;
       right: initial !important;
       display: grid !important;
+      overflow-y: initial;
       width: 100%;
       min-height: initial;
       padding-top: 0;
@@ -34,7 +35,7 @@
     @include breakpoint($large) {
       grid-template-areas: "logo ... wwu-menu"
       "logo site-name ..."
-      "logo secondary-site-name ..."
+      "logo secondary-site-name secondary-site-name"
       "menu menu menu";
       grid-template-columns: ($logo-size + ($triple-spacing * 2)) 1fr auto;
     }
@@ -42,6 +43,7 @@
     z-index: 4;
     top: 0;
     display: none;
+    overflow-y: scroll;
     width: 100vw;
     min-height: 100vh;
     padding-top: $toggle-size;
@@ -59,6 +61,7 @@
     position: relative;
     z-index: 2;
     width: $logo-size + $double-spacing;
+    height: $logo-size;
     margin: auto;
     padding-right: $toggle-size;
 
