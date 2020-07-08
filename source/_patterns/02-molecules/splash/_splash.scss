@@ -2,13 +2,15 @@
 * @file
 * molecules/media/splash/_splash.scss
 */
-.splash {
+.splash,
+.featured-major-splash-area {
   position: relative;
   z-index: 0;
   display: grid;
 }
 
-.splash > div {
+.splash > div,
+.featured-major-splash-area > div {
   grid-column: 1;
   grid-row: 1;
   z-index: 0;
@@ -19,4 +21,8 @@
       height: 100%;
     }
   }
+}
+
+.featured-major-splash-area .headline.box-headline {
+  height: initial;
 }
