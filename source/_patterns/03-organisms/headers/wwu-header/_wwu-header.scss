@@ -2,6 +2,10 @@
 * @file
 * organisms/site-header/_site-header.scss
 */
+.site-header {
+  position: relative;
+  z-index: 2;
+}
 
 .western-header {
   @include breakpoint($medium) {
