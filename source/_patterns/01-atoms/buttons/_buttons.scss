@@ -2,6 +2,7 @@
 * @file
 * 01-atoms/buttons/_buttons.scss
 */
+$soft-button-shadow: 0 3px 6px transparentize(black, 0.84), 0 3px 6px transparentize(black, 0.77);
 
 @mixin button-box-shadow($color) {
   box-shadow: 2px 2px 0 $color;
@@ -48,8 +49,8 @@ input[type="submit"] {
     }
 
     &:focus {
-      outline: none;
       border: $border-width dotted;
+      outline: none;
     }
   }
 
@@ -120,14 +121,14 @@ input[type="submit"] {
 
   &:focus {
     border-style: dotted;
+    border-color: $white;
     outline: none;
   }
 
   &:hover,
   &:focus {
-    color: $dark-blue;
-    border-color: $dark-blue;
-    background: $light-gray;
+    color: $white;
+    background: $darkest-blue;
   }
 
   &.square {
@@ -157,6 +158,19 @@ input[type="submit"] {
     }
   }
 
+  &.light-blue {
+    @include button-box-shadow($blue);
+    color: $black;
+    background: $light-blue;
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: $white;
+      background: $blue;
+    }
+  }
+
   &.dark-blue {
     @include button-box-shadow($blue);
     background: $dark-blue;
@@ -164,9 +178,7 @@ input[type="submit"] {
     &:active,
     &:hover,
     &:focus {
-      color: $blue;
-      border-color: $blue;
-      background: $white;
+      background: $blue;
     }
   }
 
@@ -178,13 +190,12 @@ input[type="submit"] {
     &:active,
     &:hover,
     &:focus {
-      color: $lightest-green;
-      border-color: $darkest-blue;
+      color: $lightest-green;      
       background: $darkest-blue;
     }
 
-    &:focus {
-      border-color: $lightest-green;
+    &:active {
+      box-shadow: none;
     }
   }
 
@@ -195,17 +206,12 @@ input[type="submit"] {
     &:active,
     &:hover,
     &:focus {
-      color: $dark-green;
+      color: $black;
+      background: $light-green;
+    }
+
+    &:focus {
       border-color: $dark-green;
-      background: $light-gray;
-    }
-
-    &.medium {
-      font-size: $h5-font-size;
-    }
-
-    &.large {
-      font-size: $h3-font-size;
     }
   }
 
@@ -216,9 +222,12 @@ input[type="submit"] {
     &:active,
     &:hover,
     &:focus {
-      color: $green;
-      border-color: $light-green;
-      background: $white;
+      color: $black;
+      background: $light-green;
+    }
+
+    &:focus {
+      border-color: $dark-green;
     }
   }
 
@@ -231,7 +240,6 @@ input[type="submit"] {
     &:hover,
     &:focus {
       color: $white;
-      border-color: transparent;
       background: $blue;
     }
   }
@@ -252,6 +260,21 @@ input[type="submit"] {
 
     &:focus {
       border-color: $white;
+    }
+
+    &.light-blue {
+      @include button-box-shadow($light-blue);
+      color: $light-blue;
+      border-color: $light-blue;
+      background-color: transparent;
+
+      &:active,
+      &:hover,
+      &:focus {
+        color: $dark-blue;
+        border-color: $light-gray;
+        background: $light-gray;
+      }
     }
 
     &.dark-blue {
@@ -344,6 +367,14 @@ input[type="submit"] {
       &:focus {
         border: dotted $border-width $white;
       }
+    }
+  }
+
+  &.soft-shadow {
+    box-shadow: $soft-button-shadow;
+
+    &:active {
+      box-shadow: none;
     }
   }
 }
