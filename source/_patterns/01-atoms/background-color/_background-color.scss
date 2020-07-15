@@ -289,6 +289,14 @@
   @include black-bg;
   background: $darkest-blue;
 
+  a:not([class]) {
+    &:hover,
+    &:active,
+    &:focus {
+      background: $dark-blue;
+    }
+  }
+
   .menu {
     li {
       border-left-color: $dark-blue;
@@ -413,6 +421,91 @@
   }
 }
 
+@mixin dark-green-bg {
+  @include black-bg;
+  background: $dark-green;
+
+  a:not([class]) {
+    color: $lightest-green;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      background-color: $black;
+    }
+  }
+
+  .menu {
+    li {
+      border-left-color: $light-green;
+
+      a {
+        color: $white;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: $white;
+          background-color: $black;
+        }
+      }
+    }
+  }
+
+  .social-icon {
+    svg {
+      fill: $dark-green;
+    }
+  }
+}
+
+@mixin green-bg {
+  @include gray-bg;
+  background: $green;
+
+  h1 {
+    &:after {
+      border-color: $light-green;
+    }
+  }
+
+  .social-icon {
+    svg {
+      fill: $green;
+    }
+  }
+}
+
+@mixin light-green-bg {
+  @include light-gray-bg;
+  background: $light-green;
+
+  a:not([class]) {
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      background-color: $blue;
+    }
+  }
+
+  .menu {
+    li {
+      border-left-color: $lightest-green;
+
+      a {
+        &:hover,
+        &:focus,
+        &:active {
+          color: $black;
+          background-color: $lightest-green;
+        }
+      }
+    }
+  }
+}
+
 .black-bg {
   @include black-bg;
 }
@@ -440,14 +533,23 @@
 .lightest-blue-bg {
   @include lightest-blue-bg;
 }
+.dark-green-bg {
+  @include dark-green-bg;
+}
+.green-bg {
+  @include green-bg;
+}
+.light-green-bg {
+  @include light-green-bg;
+}
 
 /* Gradient Backgrounds */
 .dark-blue-gradient-bg {
   @include blue-bg;
-   background-image: linear-gradient(to left bottom, #1c2023, #18242d, #122738, #0a2a44, #022d4f, #00335c, #013a69, #044077, #074e8b, #085c9f, #066bb3, #007ac8);
+  background-image: linear-gradient(to left bottom, #1c2023, #18242d, #122738, #0a2a44, #022d4f, #00335c, #013a69, #044077, #074e8b, #085c9f, #066bb3, #007ac8);
 }
 
 .blue-gradient-bg {
   @include blue-bg;
-   background-image: linear-gradient(to right bottom, #002f5e, #003266, #00356d, #003875, #003b7d, #004186, #01478e, #004d97, #0058a3, #0063b0, #006ebc, #007ac8);
+  background-image: linear-gradient(to right bottom, #002f5e, #003266, #00356d, #003875, #003b7d, #004186, #01478e, #004d97, #0058a3, #0063b0, #006ebc, #007ac8);
 }
