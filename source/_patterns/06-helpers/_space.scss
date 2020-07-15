@@ -8,8 +8,40 @@
   margin: $standard-spacing;
 }
 
+.standard-margin--top {
+  margin-top: $standard-spacing;
+}
+
+.standard-margin--right {
+  margin-right: $standard-spacing;
+}
+
+.standard-margin--bottom {
+  margin-bottom: $standard-spacing;
+}
+
+.standard-margin--left {
+  margin-left: $standard-spacing;
+}
+
 .double-margin {
   margin: $double-spacing;
+}
+
+.double-margin--top {
+  margin-top: $double-spacing;
+}
+
+.double-margin--right {
+  margin-right: $double-spacing;
+}
+
+.double-margin--bottom {
+  margin-bottom: $double-spacing;
+}
+
+.double-margin--left {
+  margin-left: $double-spacing;
 }
 
 .no-margin {
@@ -36,8 +68,40 @@
   padding: $standard-spacing;
 }
 
+.standard-padding--top {
+  padding-top: $standard-spacing;
+}
+
+.standard-padding--right {
+  padding-right: $standard-spacing;
+}
+
+.standard-padding--bottom {
+  padding-bottom: $standard-spacing;
+}
+
+.standard-padding--left {
+  padding-left: $standard-spacing;
+}
+
 .double-padding {
   padding: $double-spacing;
+}
+
+.double-padding--top {
+  padding-top: $double-spacing;
+}
+
+.double-padding--right {
+  padding-right: $double-spacing;
+}
+
+.double-padding--bottom {
+  padding-bottom: $double-spacing;
+}
+
+.double-padding--left {
+  padding-left: $double-spacing;
 }
 
 .no-padding {
