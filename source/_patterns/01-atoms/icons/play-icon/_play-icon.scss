@@ -1,0 +1,24 @@
+/**
+ * @file
+ * 01-atoms/icons/play-icon/_play-icon.scss
+ */
+$play-icon-size: 72px;
+
+.play-link {
+  display: block;
+
+  svg {
+    width: $play-icon-size;
+    fill: $dark-blue;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: transparent;
+
+    svg path {
+      fill: $blue;
+    }
+  }
+}

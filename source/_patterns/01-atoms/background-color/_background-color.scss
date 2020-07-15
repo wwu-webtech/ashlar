@@ -88,6 +88,20 @@
       outline-color: $white;
     }
   }
+
+  .play-link {
+    svg path {
+      fill: $white;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      svg path {
+        fill: $light-blue;
+      }
+    }
+  }
 }
 
 @mixin gray-bg {
@@ -160,6 +174,20 @@
       outline-color: $lightest-green;
     }
   }
+
+  .play-link {
+    svg path {
+      fill: $white;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      svg path {
+        fill: $lightest-green;
+      }
+    }
+  }
 }
 
 @mixin light-gray-bg {
@@ -203,6 +231,20 @@
         &:active {
           background: mix(black, $light-gray, 20%);
         }
+      }
+    }
+  }
+
+  .play-link {
+    svg path {
+      fill: $blue;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      svg path {
+        fill: $dark-blue;
       }
     }
   }
