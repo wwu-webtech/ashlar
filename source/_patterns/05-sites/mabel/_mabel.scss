@@ -19,6 +19,12 @@ $mabel-site-name-height: 44px;
     }
   }
 
+  /* Fix contextual links in splash with no header image */
+  .splash > div:nth-of-type(1) div {
+    width: initial;
+    height: initial;
+  }
+
   /* Reorder so left sidebar goes below main content area on 25/75 layouts */
   .layout--twocol-25-75 {
     .layout__region--top {
