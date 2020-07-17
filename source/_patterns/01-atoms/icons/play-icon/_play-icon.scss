@@ -5,7 +5,7 @@
 $play-icon-size: 72px;
 
 .play-link {
-  display: block;
+  display: inline-block;
 
   svg {
     width: $play-icon-size;
@@ -20,5 +20,16 @@ $play-icon-size: 72px;
     svg path {
       fill: $blue;
     }
+  }
+}
+
+button.play-link {
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0;
+
+  &:focus {
+    border: $focus-outline;
+    border-color: $dark-blue;
   }
 }

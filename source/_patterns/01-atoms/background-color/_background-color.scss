@@ -334,8 +334,9 @@
     &:hover,
     &:focus,
     &:active {
-      color: $lightest-green;
-      background: mix(black, $blue, 20%);
+      color: $darkest-blue;
+      outline-color: $white;
+      background: $light-blue;
     }
   }
 
@@ -421,6 +422,24 @@
   }
 }
 
+@mixin gradient-blue-bg {
+  @include blue-bg;
+  .menu {
+    li {
+      border-left-color: $light-blue;
+
+      a {
+        &:hover,
+        &:focus,
+        &:active {
+          color: $darkest-blue;
+          background-color: $light-blue;
+        }
+      }
+    }
+  }
+}
+
 @mixin dark-green-bg {
   @include black-bg;
   background: $dark-green;
@@ -486,6 +505,7 @@
     &:focus,
     &:active {
       color: $white;
+      outline-color: $blue;
       background-color: $blue;
     }
   }
@@ -545,11 +565,11 @@
 
 /* Gradient Backgrounds */
 .dark-blue-gradient-bg {
-  @include blue-bg;
+  @include gradient-blue-bg;
   background-image: linear-gradient(to left bottom, #1c2023, #18242d, #122738, #0a2a44, #022d4f, #00335c, #013a69, #044077, #074e8b, #085c9f, #066bb3, #007ac8);
 }
 
 .blue-gradient-bg {
-  @include blue-bg;
+  @include gradient-blue-bg;
   background-image: linear-gradient(to right bottom, #002f5e, #003266, #00356d, #003875, #003b7d, #004186, #01478e, #004d97, #0058a3, #0063b0, #006ebc, #007ac8);
 }
