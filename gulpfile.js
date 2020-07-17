@@ -56,7 +56,9 @@
       'source/sass/styleguide/pattern-scaffolding.scss',
       'source/sass/styleguide/ultimenu-extras.scss',
       'source/sass/styleguide/ultimenu.scss',
-      'source/sass/**/*.scss'
+      'source/sass/lib/font-families.scss',
+      'source/sass/**/*.scss',
+      '!source/_patterns/01-atoms/text/fonts/_families.scss'
     ],
     sassDest: 'source/pattern-lab/css',
     jsFile: 'wwu-styleguide.js',
