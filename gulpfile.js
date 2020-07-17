@@ -176,6 +176,20 @@
   };
 
   /**
+   * Fonts configuration.
+   *
+   * src: Source pattern for font files.
+   * dest: Output pattern for font files.
+   */
+  config.fonts = {
+    src: [
+      'source/fonts/*.{woff2}'
+    ],
+    dest: 'build/fonts/*.{woff2}'
+  };
+
+
+  /**
    * Generate CSS.
    */
   gulp.task('sass', function (callback) {
@@ -249,6 +263,17 @@
       gulp.src(config.images.src),
       imagemin(),
       gulp.dest(config.images.dest),
+      callback
+    );
+  });
+
+  /**
+   * Put fonts in the right spot.
+   */
+  gulp.task('fonts', function (callback) {
+    pump(
+      gulp.src(config.fonts.src),
+      gulp.dest(config.fonts.dest),
       callback
     );
   });
@@ -363,6 +388,6 @@
   /**
    * Gulp default task.
    */
-  gulp.task('default', gulp.parallel(['sass', 'js', 'images']));
+  gulp.task('default', gulp.parallel(['sass', 'js', 'images', 'fonts']));
 
 })();
