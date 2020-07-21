@@ -644,10 +644,10 @@
 	var $page = $('.page, .skip-link, .page-content');
 
 	$playLink.featherlight({
-	  beforeOpen: function(){
+	  beforeOpen: function() {
 		$page.attr('aria-hidden', 'true');
 	  },
-	  afterClose: function(){
+	  afterClose: function() {
 		$page.removeAttr('aria-hidden');
 		$playLink.focus();
 	  }
