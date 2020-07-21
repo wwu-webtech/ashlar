@@ -638,4 +638,18 @@
 
 	/* bind featherlight on ready if config autoBind is set */
 	$(document).ready(function(){ Featherlight._onReady(); });
+
+	// patch featherlight, semantically hide main page content while iframe modal is open
+	var $playLink = $('a[data-featherlight="iframe"]');
+	var $page = $('.page, .skip-link, .page-content');
+
+	$playLink.featherlight({
+		beforeOpen: function(){
+			$page.attr('aria-hidden', 'true');
+		},
+		afterClose: function(){
+			$page.removeAttr('aria-hidden');
+			$playLink.focus();
+		}
+	});
 }(jQuery));
