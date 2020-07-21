@@ -644,12 +644,12 @@
 	var $page = $('.page, .skip-link, .page-content');
 
 	$playLink.featherlight({
-		beforeOpen: function(){
-			$page.attr('aria-hidden', 'true');
-		},
-		afterClose: function(){
-			$page.removeAttr('aria-hidden');
-			$playLink.focus();
-		}
+	  beforeOpen: function(){
+		$page.attr('aria-hidden', 'true');
+	  },
+	  afterClose: function(){
+		$page.removeAttr('aria-hidden');
+		$playLink.focus();
+	  }
 	});
 }(jQuery));
