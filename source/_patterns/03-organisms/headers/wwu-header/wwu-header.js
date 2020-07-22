@@ -4,8 +4,9 @@ var $toggle_prefix = $menu_toggle.children('.toggle-prefix');
 var $toggle_text = $menu_toggle.children('.toggle-text');
 var $toggle_suffix = $menu_toggle.children('.toggle-suffix');
 var $last_focused;
-var $inputs = $(document).find('select, button, a, input, textarea', context)
-var $page = $('.skip-link, .western-header, .splash, .toggle-open-menu, .search, .page-content, .region--footer', context);
+var $menu_link = $('.main-navigation .ultimenu .ultimenu__item .ultimenu__link');
+var $inputs = $(document).find('select, button, a, input, textarea', context);
+var $page = $('.skip-link, .splash, .make-waves, .header-navigation .site-name, .toggle-open-menu, .page-content, .region--footer', context);
 
 function toggle_menu(event) {
   $menu_toggle.off('click', toggle_menu);
@@ -40,6 +41,7 @@ function toggle_open_menu(event) {
         $menu_toggle.on('click', toggle_menu);
         $menu_toggle.focus();
         $inputs.not('.toggle-menu, .header-navigation a, .header-navigation button, .ultimenu__flyout a').attr('tabindex', '-1');
+        $menu_link.removeAttr('aria-hidden');
         $page.not('.header-navigation').attr('aria-hidden', 'true');
       }
     }
@@ -66,6 +68,7 @@ function toggle_close_menu(event) {
         $menu_toggle.removeClass('is-expanded');
         $page.not('.header-navigation').removeAttr('aria-hidden');
         $inputs.not('.header-navigation a, .header-navigation button').removeAttr('tabindex');
+        $menu_link.attr('aria-hidden', 'true');
         $menu_toggle.on('click', toggle_menu);
         $last_focused.focus();
       }
