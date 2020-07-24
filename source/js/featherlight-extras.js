@@ -1,5 +1,5 @@
 
-// patch featherlight, semantically hide main page content while iframemodal is open
+// patch featherlight, semantically hide main page content while iframe modal is open
 var $playLink = $('a[data-featherlight="iframe"]');
 var $behindFeatherlight = $('.page, .skip-link, .page-content');
 $playLink.featherlight({
