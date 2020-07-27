@@ -69,7 +69,7 @@ featherlight-extras:
   js:
     build/js/featherlight-extras.js: {}
   dependencies:
-    - featherlight
+    - ashlar/featherlight
 fullpage:
   version: 3.0.7
   css:
