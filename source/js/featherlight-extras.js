@@ -11,6 +11,5 @@ $playLink.featherlight({
   },
   afterClose: function() {
 	$behindFeatherlight.removeAttr('aria-hidden');
-	$playLink.focus();
   }
 });
