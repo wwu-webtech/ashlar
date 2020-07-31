@@ -109,7 +109,7 @@ main {
 .sans-serif-alternate-headings {
   h1 {
     text-transform: uppercase;
-    
+
     &:after {
       display: none;
     }
@@ -131,6 +131,7 @@ main {
   h6 {
     position: relative;
     padding-bottom: $one-point-five-spacing;
+    font-family: $title-font;
 
     &:after {
       position: absolute;
