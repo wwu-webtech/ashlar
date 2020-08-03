@@ -74,8 +74,7 @@ function toggle_close_menu(event) {
         $menu_toggle.removeClass('is-expanded');
         $page.not('.header-navigation').removeAttr('aria-hidden');
         $inputs.not('.header-navigation a, .header-navigation button').removeAttr('tabindex');
-        $menu_link.attr('aria-hidden', 'true');
-        $menu_link.attr('tabindex', '-1');
+        $menu_link.attr({'aria-hidden': 'true', 'tabindex': '-1'});
         $menu_toggle.on('click', toggle_menu);
         $last_focused.focus();
       }
