@@ -32,15 +32,6 @@ function toggle_menu(event) {
       'role': 'button',
       'aria-expanded': false
     });
-  
-    $menu_link.click(function(){
-      if ($(this).parent().hasClass('has-ultimenu')) {
-        $(this).attr('aria-expanded', 'true');
-      }
-      else {
-        $(this).attr('aria-expanded', 'true');
-      }  
-    });
   }
 // end aria-expanded fix
 }
