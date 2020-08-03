@@ -16,24 +16,10 @@ function toggle_menu(event) {
 
   if ($menu_toggle.hasClass('is-expanded')) {
     toggle_close_menu(event);
-    $menu_link.attr('aria-hidden', 'true');
-    $menu_link.attr('tabindex', '-1');
   }
   else {
     toggle_open_menu(event);
-    $menu_link.removeAttr('aria-hidden tabindex');
-    ariaFix();
   }
-
-  // aria-expanded fix
-  function ariaFix() {
-    $menu_link.removeAttr('aria-hidden aria-expanded');
-    $('.has-ultimenu').find($menu_link).attr({
-      'role': 'button',
-      'aria-expanded': false
-    });
-  }
-// end aria-expanded fix
 }
 
 function toggle_open_menu(event) {
@@ -58,6 +44,11 @@ function toggle_open_menu(event) {
         $menu_toggle.focus();
         $inputs.not('.toggle-menu, .header-navigation a, .header-navigation button, .ultimenu__flyout a').attr('tabindex', '-1');
         $page.not('.header-navigation').attr('aria-hidden', 'true');
+        $menu_link.removeAttr('aria-hidden aria-expanded');
+        $('.has-ultimenu').find($menu_link).attr({
+          'role': 'button',
+          'aria-expanded': false
+        });
       }
     }
   );
@@ -84,6 +75,7 @@ function toggle_close_menu(event) {
         $page.not('.header-navigation').removeAttr('aria-hidden');
         $inputs.not('.header-navigation a, .header-navigation button').removeAttr('tabindex');
         $menu_link.attr('aria-hidden', 'true');
+        $menu_link.attr('tabindex', '-1');
         $menu_toggle.on('click', toggle_menu);
         $last_focused.focus();
       }
