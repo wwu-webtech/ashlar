@@ -8,7 +8,7 @@ var $inputs = $(document).find('select, button, a, input, textarea', context);
 var $page = $('.skip-link, .splash, .make-waves, .header-navigation .site-name, .toggle-open-menu, .page-content, .region--footer', context);
 
 // aria-expanded vars
-var $menu_item = $('.ultimenu__item');
+var $menu_item = $('.ultimenu__item', context);
 var $menu_link = $menu_item.children('.ultimenu__link');
 
 function toggle_menu(event) {
@@ -44,7 +44,7 @@ function toggle_open_menu(event) {
         $menu_toggle.focus();
         $inputs.not('.toggle-menu, .header-navigation a, .header-navigation button, .ultimenu__flyout a').attr('tabindex', '-1');
         $page.not('.header-navigation').attr('aria-hidden', 'true');
-        $menu_link.removeAttr('aria-hidden aria-expanded');
+        $menu_link.removeAttr('aria-hidden aria-expanded tabindex');
         $('.has-ultimenu').find($menu_link).attr({
           'role': 'button',
           'aria-expanded': false
@@ -82,4 +82,26 @@ function toggle_close_menu(event) {
   );
 }
 
-$menu_toggle.on('click', toggle_menu);
+function ariaMobile() {
+    var $tablet_breakpoint = 840;
+
+    if ($window.width() <= $tablet_breakpoint) {
+      $menu_link.attr({'aria-hidden': 'true', 'tabindex': '-1'});
+    }
+    else {
+      $menu_link.removeAttr('tabindex aria-hidden');
+    }
+  }
+
+  function bindHandlers() {
+    $window.unbind('resize', ariaMobile);
+
+    if ($window.width() <= 841) {
+      $window.resize(ariaMobile);
+    }
+  }
+  var $window = $(window, context);
+  $window.resize(bindHandlers);
+  bindHandlers();
+
+  $menu_toggle.on('click', toggle_menu);
