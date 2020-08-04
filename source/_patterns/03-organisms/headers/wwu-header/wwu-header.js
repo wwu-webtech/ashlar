@@ -82,6 +82,9 @@ function toggle_close_menu(event) {
   );
 }
 
+// START desktop/mobile resize toggle
+var $window = $(window, context);
+
 function ariaMobile() {
     var $tablet_breakpoint = 840;
 
@@ -100,8 +103,9 @@ function ariaMobile() {
       $window.resize(ariaMobile);
     }
   }
-  var $window = $(window, context);
+
   $window.resize(bindHandlers);
   bindHandlers();
+// END desktop/mobile resize toggle
 
   $menu_toggle.on('click', toggle_menu);
