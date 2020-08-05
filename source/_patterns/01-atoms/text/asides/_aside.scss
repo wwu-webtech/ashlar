@@ -16,6 +16,12 @@ aside,
   &.lightest-blue-bg {
     padding: $double-spacing;
 
+    &.underlined-headings {
+      .block__title {
+        padding-bottom: $standard-spacing * 1.5;
+      }
+    }
+
     .block__title {
       margin-top: 0;
       padding-bottom: 0;
