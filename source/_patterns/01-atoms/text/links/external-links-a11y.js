@@ -2,10 +2,10 @@
 
 
 var newTab = document.querySelectorAll('a[target="_blank"], a[target="blank"]', context);
-var page = document.querySelector('body');
+var $signedIn = document.querySelector('body').classList.contains('adminimal-admin-toolbar');
 
 // only run if on a live page
-if (!page.classList.contains('adminimal-admin-toolbar')) {
+if (!$signedIn) {
   var newTabArr = Array.from(newTab);
 
   newTabArr.forEach(function(link) {
