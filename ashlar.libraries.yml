@@ -55,8 +55,6 @@ external-links-a11y:
   version: 1.x
   js:
     build/js/external-links-a11y.js: {}
-  dependencies:
-    - core/jquery
 featherlight:
   version: 1.7.13
   css:

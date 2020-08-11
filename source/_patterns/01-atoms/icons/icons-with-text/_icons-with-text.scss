@@ -38,6 +38,10 @@ $icon-with-text-size--large: 180px;
 
     .material-icons {
       font-size: $icon-size * 2;
+
+      &:last-of-type {
+        font-size: $h6-font-size--min;
+      }
     }
   }
 
@@ -48,6 +52,10 @@ $icon-with-text-size--large: 180px;
 
     .material-icons {
       font-size: $icon-size--large * 2;
+
+      &:last-of-type {
+        font-size: $h4-font-size--min;
+      }
     }
   }
 }
