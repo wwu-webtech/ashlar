@@ -1,0 +1,19 @@
+/* Darken bg image to improve contrast as needed, mainly for image buttons and banner images with overlays on top */
+
+.image-dark {
+    .image, .background-image {
+      filter: brightness(75%);
+    }
+}
+
+.image-darker {
+    .image, .background-image {
+      filter: brightness(50%);
+    }
+}
+
+.image-darkest {
+    .image, .background-image {
+      filter: brightness(25%);
+    }
+}
