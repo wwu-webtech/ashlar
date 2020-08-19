@@ -22,6 +22,12 @@
     }
   }
 
+  &.blue-overlay, &.dark-blue-overlay {
+    .background-image {
+      filter: brightness(50%);
+    }
+  }
+
   &.dark-blue-overlay, &.black-overlay {
     a:not(.button) {
       color: scale-color($light-blue, $lightness: 48%);
