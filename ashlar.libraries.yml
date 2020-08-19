@@ -72,6 +72,10 @@ language-select:
     language-select.js: {}
   dependencies:
     - core/jquery
+lightbox:
+  version: 1.x
+  js:
+    build/js/lightbox.js: {}
 menu-extras:
   version: 1.x
   js:
