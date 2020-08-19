@@ -116,6 +116,12 @@ $image-button--smaller-size--medium: 180px;
       content: "";
     }
   }
+
+  &:not(.green) {
+    .image {
+      filter: brightness(75%);
+    }
+  }
 }
 
 /* Multiple image buttons in a single container */
