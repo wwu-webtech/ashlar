@@ -18,6 +18,8 @@
 
 var lbPlayButton = document.querySelectorAll('.play-link');
 var playButtonArr = Array.from(lbPlayButton);
+var bgFocusable = document.querySelectorAll('a, button:not(.close-dialog), textarea, select, input');
+var playButtonFocused;
 
 // // create lightbox container // //
 var lbContainer = document.createElement('div');
@@ -48,16 +50,25 @@ lbContainer.appendChild(video);
 // // end lightbox creation // //
 
 // on button click, open modal
+
 playButtonArr.forEach(function(button){
     var lbVideo = button.dataset.url;
-    button.addEventListener('click', showModal);
+    button.addEventListener('click', lightboxModal);
 
-    function showModal() {
+    function lightboxModal() {
+        playButtonFocused = document.activeElement;
         lbContainer.classList.remove('hidden');
-        
+        for (var i = 0; i < bgFocusable.length; i++) {
+          bgFocusable[i].setAttribute('tabindex', '-1');
+        }
+
         var closeDialog = lbContainer.querySelector('.close-dialog');
         closeDialog.addEventListener('click', function(){
           lbContainer.classList.add('hidden');
+          for (var i = 0; i < bgFocusable.length; i++) {
+            bgFocusable[i].removeAttribute('tabindex');
+          }  
+          playButtonFocused.focus();
     })
   };
 });
