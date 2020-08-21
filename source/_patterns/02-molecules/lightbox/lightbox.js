@@ -14,24 +14,54 @@
 // add click event
 // this button is event target
 // var lightbox is next dialog sibling
-// 
-// 
-//
 
-var lightboxContainer = document.querySelectorAll('.lightbox-video-container');
+
 var lbPlayButton = document.querySelectorAll('.play-link');
-var closeButton = document.querySelectorAll('.lightbox-close-button');
+var playButtonArr = Array.from(lbPlayButton);
 
-for (i = 0; i < lbPlayButton.length; i++) {
-    lbPlayButton[i].addEventListener('click', showModal, false);
-}
+// // create lightbox container // //
+var lbContainer = document.createElement('div');
+lbContainer.classList.add('lightbox-dialog', 'hidden');
+lbContainer.setAttribute('role', 'dialog');
+lbContainer.setAttribute('id', 'dialog-1');
+lbContainer.setAttribute('aria-labelledby', 'dialog-heading');
+document.querySelector('body').appendChild(lbContainer);
 
-function showModal() {
-    var button = this;
-    var lightbox = button.nextElementSibling;
-    console.log('I was clicked');
-    console.log(this.nextElementSibling);
-}
+// add child elements of container
+
+  // close button
+var closeButton = document.createElement('button');
+closeButton.classList.add('close-dialog')
+closeButton.innerHTML = '<span class="material-icons" aria-hidden="true">clear</span> <span class="visually-hidden">Close dialog</span>'
+lbContainer.appendChild(closeButton);
+
+  // video iframe
+var video = document.createElement('div');
+video.classList.add('embed-container');
+
+var iframe = document.createElement('iframe');
+iframe.setAttribute('title', '');
+iframe.setAttribute('src', '');
+video.appendChild(iframe);
+lbContainer.appendChild(video);
+
+// // end lightbox creation // //
+
+// on button click, open modal
+playButtonArr.forEach(function(button){
+    var lbVideo = button.dataset.url;
+    button.addEventListener('click', showModal);
+
+    function showModal() {
+        lbContainer.classList.remove('hidden');
+        
+        var closeDialog = lbContainer.querySelector('.close-dialog');
+        closeDialog.addEventListener('click', function(){
+          lbContainer.classList.add('hidden');
+    })
+  };
+});
+
 // var nonDialogContent = document.getElementsByTagName('div');
 // var bgFocusable = document.querySelectorAll('a, button:not(.lightbox-close-dialog), textarea, select, input');
 
