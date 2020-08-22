@@ -5,11 +5,26 @@
 
  .lightbox {
    &-dialog {
+    @include breakpoint($large) {
+      transform: translate(5%, 5%);
+    }
+    @include breakpoint($medium) {
+      -ms-grid-template-columns: 1fr 8%;
+      -ms-grid-template-rows: 20% auto;
+      grid-template-columns: 1fr 8%;
+      grid-template-rows: 20% auto;
+      width: 90%;
+      top: 0;
+      left: 0;
+      transform: translate(5%, 25%);
+    }
     display: -ms-grid;
-    -ms-grid-columns: 80% 20%;
+    -ms-grid-columns: 1fr 15%;
+    -ms-grid-template-rows: 20% 1fr;
     display: grid;
-    grid-template-columns: 80% 20%;
-    grid-template-areas: "content button";
+    grid-template-columns: 1fr 15%;
+    grid-template-rows: 20% 1fr;
+    grid-template-areas: "... button" "content content";
     position: fixed;
     top: 25%;
     padding: $standard-spacing;
@@ -25,14 +40,15 @@
  }
 
   &-content {
-    grid-area: 'content';
+    grid-area: content;
     align-self: end;
   }
 
   &-close-dialog {
-    grid-area: 'button';
+    grid-area: button;
     transform: scale(.7);
     align-self: start;
+    justify-self: end;
   }
 
   &-overlay {
