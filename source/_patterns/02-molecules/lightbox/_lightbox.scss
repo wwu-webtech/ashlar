@@ -30,11 +30,7 @@
     width: 100%;
     z-index: 6;
     transform: translateY(16rem);
-
-    &.hidden {
-      display: none;
-    }
- }
+  }
 
   &-content {
     grid-area: content;
@@ -56,9 +52,11 @@
      height: 100%;
      background-color: transparentize($black, .3);
      z-index: 5;
-
-     &.hidden {
-       display: none;
-     }
    }
+
+  &-dialog, &-overlay {
+    &.hidden {
+      display: none;
+    }
+  }
 }
