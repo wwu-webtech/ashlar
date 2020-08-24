@@ -6,33 +6,30 @@
  .lightbox {
    &-dialog {
     @include breakpoint($large) {
-      transform: translate(5%, 5%);
+      max-width: $max-content-width;
+      transform: translate(8rem, 3rem);
     }
     @include breakpoint($medium) {
       -ms-grid-template-columns: 1fr 8%;
-      -ms-grid-template-rows: 20% auto;
       grid-template-columns: 1fr 8%;
-      grid-template-rows: 20% auto;
       width: 90%;
-      top: 0;
-      left: 0;
-      transform: translate(5%, 25%);
+      transform: translate(2.5rem, 10rem);
     }
     display: -ms-grid;
     -ms-grid-columns: 1fr 15%;
-    -ms-grid-template-rows: 20% 1fr;
     display: grid;
     grid-template-columns: 1fr 15%;
-    grid-template-rows: 20% 1fr;
     grid-template-areas: "... button" "content content";
     position: fixed;
-    top: 25%;
+    top: 0;
+    left: 0;
     padding: $standard-spacing;
     border-radius: $border-radius--round-square;
     background-color: $white;
     height: auto;
     width: 100%;
     z-index: 6;
+    transform: translateY(16rem);
 
     &.hidden {
       display: none;
