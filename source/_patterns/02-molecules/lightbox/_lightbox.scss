@@ -56,5 +56,9 @@
      height: 100%;
      background-color: transparentize($black, .3);
      z-index: 5;
+
+     &.hidden {
+       display: none;
+     }
    }
 }
