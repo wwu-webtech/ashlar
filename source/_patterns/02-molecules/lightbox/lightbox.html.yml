@@ -2,8 +2,9 @@ attributes:
   Attribute():
     class:
       - play-link
-data:
-  url: https://player.vimeo.com/video/368377261
-  title: Vimeo, find what floats your goat
-button:
-  name: 'Play Video: Find what floats your goat'
+items:
+  - data:
+      url: https://player.vimeo.com/video/368377261
+      title: Vimeo, find what floats your goat
+    button:
+      name: 'Play Video: Find what floats your goat'
