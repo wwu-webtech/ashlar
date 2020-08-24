@@ -63,12 +63,7 @@ playButtonArr.forEach(function(button){
         bgFocusable[i].setAttribute('tabindex', '-1');
       }
       // add iframe src and titles
-      if (this.dataset.url === '') {
-        iframe.setAttribute('title', 'Video');
-      }
-      else {
-        iframe.setAttribute('title', this.dataset.title);
-      }
+      iframe.setAttribute('title', this.dataset.title);
       iframe.setAttribute('src', this.dataset.url);
 
        // reveal modal
@@ -78,12 +73,10 @@ playButtonArr.forEach(function(button){
       var closeDialog = lbContainer.querySelector('.lightbox-close-dialog');
       closeDialog.focus();
       
-      // on close, return focus to button pressed
-      // clear out sources to avoid conflict
       closeDialog.addEventListener('click', function(){
         closeModal();
       });
-  });
+   });
 });
 
 document.addEventListener('keydown', function(e) {
@@ -92,13 +85,15 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
-overlay.addEventListener('click', function( e ) {
+overlay.addEventListener('click', function(e) {
   if (e.target == this) {
     closeModal(e);
   }
  }, false);
 
 function closeModal() {
+  // on close, return focus to button pressed
+  // clear out sources to avoid conflict
   lbContainer.classList.replace('shown', 'hidden');
   overlay.classList.add('hidden');
   iframe.setAttribute('title', '');
