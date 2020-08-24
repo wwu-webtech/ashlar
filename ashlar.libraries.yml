@@ -55,6 +55,19 @@ external-links-a11y:
   version: 1.x
   js:
     build/js/external-links-a11y.js: {}
+featherlight:
+  version: 1.7.13
+  css:
+    theme:
+      dist/js/featherlight/featherlight.css: {}
+  js:
+    dist/js/featherlight/featherlight.js: {}
+  dependencies:
+    - ashlar/featherlight-extras
+featherlight-extras:
+  version: 1.0.0
+  js:
+    build/js/featherlight-extras.js: {}
 fullpage:
   version: 3.0.7
   css:
