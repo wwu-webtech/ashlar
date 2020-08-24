@@ -8,3 +8,8 @@ items:
       title: Vimeo, find what floats your goat
     button:
       name: 'Play Video: Find what floats your goat'
+  - data:
+      url: https://player.vimeo.com/video/393784067
+      title: Vimeo, find space
+    button:
+      name: 'Play Video: find space'
