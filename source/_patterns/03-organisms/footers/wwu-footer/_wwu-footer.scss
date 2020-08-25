@@ -11,7 +11,7 @@
     grid-template-areas: ". ... ... ."
     ". logo info  ."
     ". statement icons ."
-    ". ... ... .";
+    ". copyright copyright .";
     grid-template-columns: $standard-spacing 1fr 1fr $standard-spacing;
     grid-template-rows: $triple-spacing auto auto $triple-spacing;
     justify-items: end;
@@ -21,7 +21,7 @@
     grid-template-areas: ". ... ... ... ."
     ". logo statement info  ."
     ". logo statement icons ."
-    ". ... ... ... .";
+    ". copyright copyright copyright .";
     grid-template-columns: calc((100vw - #{$max-content-width})/2) auto auto auto calc((100vw - #{$max-content-width})/2);
   }
   display: -ms-grid;
@@ -36,7 +36,9 @@
   ". ....  ."
   ". info  ."
   ". ..... ."
-  ". icons .";
+  ". icons ."
+  ". ..... ."
+  ". copyright .";
   grid-template-columns: $small-screen-columns;
   grid-template-rows: repeat(4, $standard-spacing auto);
   justify-items: center;
@@ -81,7 +83,7 @@
       -ms-grid-row: 2;
       -ms-grid-row-span: 2;
     }
-    align-self: end;
+    align-self: start;
     padding: 0 $double-spacing;
 
     grid-area: statement;
@@ -136,5 +138,13 @@
     .social-icon {
       margin: $standard-spacing 0 0 $standard-spacing;
     }
+  }
+
+  .copyright {
+    margin: auto;
+    font-size: $p-font-size--smaller;
+    font-weight: $font-weight--light;
+
+    grid-area: copyright;
   }
 }
