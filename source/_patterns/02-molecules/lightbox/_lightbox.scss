@@ -50,11 +50,9 @@
       align-self: end;
       grid-area: content;
     }
+  }
 
-    &-overlay {
-      &.hidden {
-        display: none;
-      }
-    }
+  &.hidden {
+    display: none;
   }
 }
