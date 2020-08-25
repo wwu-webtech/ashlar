@@ -13,6 +13,7 @@ lbContainer.classList.add('lightbox-dialog', 'hidden');
 lbContainer.setAttribute('role', 'dialog');
 lbContainer.setAttribute('id', 'dialog-1');
 lbContainer.setAttribute('aria-labelledby', 'dialog-heading');
+lbContainer.setAttribute('aria-modal', 'true');
 
 var overlay = document.createElement('div');
 overlay.classList.add('lightbox-overlay', 'hidden');
