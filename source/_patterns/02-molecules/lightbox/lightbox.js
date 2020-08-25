@@ -63,7 +63,12 @@ playButtonArr.forEach(function(button){
         bgFocusable[i].setAttribute('tabindex', '-1');
       }
       // add iframe src and titles
-      iframe.setAttribute('title', this.dataset.title);
+      if (this.dataset.title === '') {
+        iframe.setAttribute('title', 'Video');
+      }
+      else {
+        iframe.setAttribute('title', this.dataset.title);
+      }
       iframe.setAttribute('src', this.dataset.url);
 
        // reveal modal
