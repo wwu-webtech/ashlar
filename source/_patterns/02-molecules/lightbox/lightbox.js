@@ -9,7 +9,7 @@ var pageBackground = document.querySelectorAll('div:not(.lightbox-dialog):not(.l
 
 // // create lightbox container // //
 var lbContainer = document.createElement('div');
-lbContainer.classList.add('lightbox-dialog', 'hidden');
+lbContainer.classList.add('lightbox-dialog');
 lbContainer.setAttribute('role', 'dialog');
 lbContainer.setAttribute('id', 'dialog-1');
 lbContainer.setAttribute('aria-labelledby', 'dialog-heading');
@@ -18,7 +18,8 @@ lbContainer.setAttribute('aria-modal', 'true');
 var overlay = document.createElement('div');
 overlay.classList.add('lightbox-overlay', 'hidden');
 
-body.append(lbContainer, overlay);
+overlay.appendChild(lbContainer);
+body.appendChild(overlay);
 
 // add child elements of container
 
@@ -73,8 +74,8 @@ playButtonArr.forEach(function(button){
       iframe.setAttribute('src', this.dataset.url);
 
        // reveal modal
-      lbContainer.classList.replace('hidden', 'shown');
-      overlay.classList.remove('hidden');
+      // lbContainer.classList.replace('hidden', 'shown');
+      overlay.classList.replace('hidden', 'shown');
 
       var closeDialog = lbContainer.querySelector('.lightbox-close-dialog');
       closeDialog.focus();
@@ -100,8 +101,8 @@ overlay.addEventListener('click', function(e) {
 function closeModal() {
   // on close, return focus to button pressed
   // clear out sources to avoid conflict
-  lbContainer.classList.replace('shown', 'hidden');
-  overlay.classList.add('hidden');
+  // lbContainer.classList.replace('shown', 'hidden');
+  overlay.classList.replace('shown', 'hidden');
   iframe.setAttribute('title', '');
   iframe.setAttribute('src', '');
   for (var i = 0; i < pageBackground.length; i++) {
