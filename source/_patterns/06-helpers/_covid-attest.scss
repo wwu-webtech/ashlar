@@ -1,9 +1,16 @@
 .covid-attestation {
-  padding: 6px;
   text-align: center;
   background-color: $yellow;
 
+  h2 {
+    margin: 0;
+    font-weight: $font-weight--regular;
+    line-height: 1em;
+  }
+
   a {
     color: $dark-blue;
+    font-size: $p-font-size;
+    font-family: $sans-serif
   }
 }
