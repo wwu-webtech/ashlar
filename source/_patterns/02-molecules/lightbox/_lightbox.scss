@@ -15,10 +15,13 @@
   .lightbox {
     &-dialog {
       @include breakpoint($large) {
-        width: 85%;
+        width: 70%;
       }
       @include breakpoint($medium) {
-        width: 95%;
+        width: 80%;
+      }
+      @include breakpoint($small) {
+        width: 60%;
       }
       display: -ms-grid;
       -ms-grid-columns: 1fr 15%;
@@ -27,7 +30,7 @@
       grid-template-areas: "... button" "content content";
       width: 100%;
       background-color: $white;
-      padding: $double-spacing;
+      padding: $half-spacing $double-spacing $double-spacing;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -47,12 +50,16 @@
     }
 
     &-content {
-      align-self: end;
       grid-area: content;
+      align-self: end;
     }
   }
 
   &.hidden {
-    display: none;
+    visibility: hidden;
+  }
+
+  &.shown {
+    visibility: visible;
   }
 }
