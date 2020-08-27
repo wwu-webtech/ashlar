@@ -13,7 +13,6 @@ lbContainer.classList.add('lightbox-dialog');
 lbContainer.setAttribute('role', 'dialog');
 lbContainer.setAttribute('id', 'dialog-1');
 lbContainer.setAttribute('aria-labelledby', 'dialog-heading');
-lbContainer.setAttribute('tabindex', '-1');
 
 var overlay = document.createElement('div');
 overlay.classList.add('lightbox-overlay', 'hidden');
@@ -44,7 +43,7 @@ lbContainer.appendChild(content);
 
   // visually-hidden heading, needed to name dialog
 var lbHeading = document.createElement('h2');
-lbHeading.innerHTML = 'Lightbox';
+lbHeading.innerHTML = '';
 lbHeading.setAttribute('id', 'dialog-heading');
 lbHeading.classList.add('visually-hidden');
 
@@ -58,18 +57,20 @@ playButtonArr.forEach(function(button){
     button.addEventListener('click', function(){
       playButtonFocused = document.activeElement;
 
-      // add iframe src and titles
+      // add iframe src and titles, heading title
       if (this.dataset.title === '') {
         iframe.setAttribute('title', 'Video');
+        lbHeading.innerHTML = 'Lightbox';
       }
       else {
         iframe.setAttribute('title', this.dataset.title);
+        lbHeading.innerHTML = this.dataset.title;
       }
       iframe.setAttribute('src', this.dataset.url);
 
       // reveal modal
       overlay.classList.replace('hidden', 'shown');
-      lbContainer.focus();
+      closeButton.focus();
       
       // set aria and tabindex attrs
       for (var i = 0; i < pageBackground.length; i++) {
@@ -113,5 +114,6 @@ function closeModal() {
   }
   iframe.setAttribute('title', '');
   iframe.setAttribute('src', '');
+  lbHeading.innerHTML = '';
   playButtonFocused.focus();
 }
