@@ -102,9 +102,9 @@ overlay.addEventListener('click', function(e) {
   }
  }, false);
 
+// on close, return focus to button pressed
+// clear out sources to avoid conflict
 function closeModal() {
-  // on close, return focus to button pressed
-  // clear out sources to avoid conflict
   overlay.classList.replace('shown', 'hidden');
   for (var i = 0; i < pageBackground.length; i++) {
     pageBackground[i].removeAttribute('aria-hidden');
