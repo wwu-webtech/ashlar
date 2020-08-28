@@ -2,6 +2,15 @@
 var body = document.querySelector('body');
 var main = body.querySelector('main');
 
+// if other async scripts are on page and load focusable items, hold off on lightbox loading so we can hide those tabindex items when the modal is open. 
+// Last resort since we can't access iframe objects to control tab focus 
+if (main.getElementsByTagName('script')) {
+  window.setTimeout(function(){
+    lightbox();
+  }, 3000);
+}
+
+function lightbox() {
 var lbPlayButton = document.querySelectorAll('.play-link');
 var playButtonArr = Array.from(lbPlayButton);
 var bgFocusable = document.querySelectorAll('a, button:not(.lightbox-close-dialog), textarea, select, input');
@@ -51,16 +60,7 @@ var pageBackground = document.querySelectorAll('div:not(.lightbox-dialog):not(.l
   iframe.parentNode.insertBefore(lbHeading, iframe);
   
   // // end lightbox creation // //
-
-// if other async scripts are on page and load focusable items, hold off on lightbox loading so we can hide those tabindex items when the modal is open. 
-// Last resort since we can't access iframe objects to control tab focus 
-if (main.getElementsByTagName('script')) {
-  window.setTimeout(function(){
-    lightbox();
-  }, 4000);
-}
-
-function lightbox() {  
+  
   // on button click, open modal
 
   playButtonArr.forEach(function(button){
