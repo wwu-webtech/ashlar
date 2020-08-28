@@ -1,6 +1,6 @@
 // Lightbox modal component, replaces featherlight video functionality
 var body = document.querySelector('body');
-var main = body.querySelector('main');
+var main = body.querySelector('.page-content');
 
 // if other async scripts are on page and load focusable items, hold off on lightbox loading so we can hide those tabindex items when the modal is open. 
 // Last resort since we can't access iframe objects to control tab focus 
@@ -11,11 +11,11 @@ if (main.getElementsByTagName('script')) {
 }
 
 function lightbox() {
-var lbPlayButton = document.querySelectorAll('.play-link');
-var playButtonArr = Array.from(lbPlayButton);
-var bgFocusable = document.querySelectorAll('a, button:not(.lightbox-close-dialog), textarea, select, input');
-var playButtonFocused;
-var pageBackground = document.querySelectorAll('div:not(.lightbox-dialog):not(.lightbox-content), .skip-link');
+  var lbPlayButton = document.querySelectorAll('.play-link');
+  var playButtonArr = Array.from(lbPlayButton);
+  var bgFocusable = document.querySelectorAll('a, button:not(.lightbox-close-dialog), textarea, select, input');
+  var playButtonFocused;
+  var pageBackground = document.querySelectorAll('div:not(.lightbox-dialog):not(.lightbox-content), .skip-link');
 
   // // create lightbox container // //
   var lbContainer = document.createElement('div');
@@ -35,67 +35,65 @@ var pageBackground = document.querySelectorAll('div:not(.lightbox-dialog):not(.l
     // close button
   var closeButton = document.createElement('button');
   closeButton.classList.add('lightbox-close-dialog', 'alt');
-  closeButton.innerHTML = '<span class="material-icons" aria-hidden="true">clear</span> <span class="visually-hidden">Close dialog</span>'
+  closeButton.innerHTML = '<span class="material-icons" aria-hidden="true">clear</span> <span  class="visually-hidden">Close dialog</span>'
   lbContainer.appendChild(closeButton);
-  
+
     // video iframe
   var content = document.createElement('div');
   content.classList.add('embed-container', 'lightbox-content');
   content.setAttribute('id', 'lightbox-content');
-  
+
   var iframe = document.createElement('iframe');
   iframe.setAttribute('title', '');
   iframe.setAttribute('src', '');
   iframe.setAttribute('allowfullscreen', '');
-  
+
   content.appendChild(iframe);
   lbContainer.appendChild(content);
   
-    // visually-hidden heading, needed to name dialog
+  // visually-hidden heading, needed to name dialog
   var lbHeading = document.createElement('h2');
   lbHeading.innerHTML = '';
   lbHeading.setAttribute('id', 'dialog-heading');
   lbHeading.classList.add('visually-hidden');
-  
+
   iframe.parentNode.insertBefore(lbHeading, iframe);
-  
   // // end lightbox creation // //
   
   // on button click, open modal
-
   playButtonArr.forEach(function(button){
-      button.addEventListener('click', function(){
-        playButtonFocused = document.activeElement;
-  
-        // add iframe src and titles, heading title
-        if (this.dataset.title === '') {
-          iframe.setAttribute('title', 'Video');
-          lbHeading.innerHTML = 'Lightbox';
+    button.addEventListener('click', function(){
+      playButtonFocused = document.activeElement;
+    
+      // add iframe src and titles, heading title
+      if (this.dataset.title === '') {
+        iframe.setAttribute('title', 'Video');
+        lbHeading.innerHTML = 'Lightbox';
+      }
+      else {
+        iframe.setAttribute('title', this.dataset.title);
+        lbHeading.innerHTML = this.dataset.title;
+      }
+      iframe.setAttribute('src', this.dataset.url);
+
+      // reveal modal
+      overlay.classList.replace('invisible', 'shown');
+      closeButton.focus();
+      
+      // set aria and tabindex attrs
+      for (var i = 0; i < pageBackground.length; i++) {
+          pageBackground[i].setAttribute('aria-hidden', 'true');
         }
-        else {
-          iframe.setAttribute('title', this.dataset.title);
-          lbHeading.innerHTML = this.dataset.title;
-        }
-        iframe.setAttribute('src', this.dataset.url);
+      for (var i = 0; i < bgFocusable.length; i++) {
+        bgFocusable[i].setAttribute('tabindex', '-1');
+      }
   
-        // reveal modal
-        overlay.classList.replace('invisible', 'shown');
-        closeButton.focus();
-        
-        // set aria and tabindex attrs
-        for (var i = 0; i < pageBackground.length; i++) {
-            pageBackground[i].setAttribute('aria-hidden', 'true');
-          }
-        for (var i = 0; i < bgFocusable.length; i++) {
-          bgFocusable[i].setAttribute('tabindex', '-1');
-        }
-  
-        // Press close button, close modal
-        var closeDialog = lbContainer.querySelector('.lightbox-close-dialog');
-        closeDialog.addEventListener('click', function(){
-          closeModal();
-        });
-     });
+      // Press close button, close modal
+      var closeDialog = lbContainer.querySelector('.lightbox-close-dialog');
+      closeDialog.addEventListener('click', function(){
+        closeModal();
+      });
+    });
   });
   
   // Press Esc, close modal
