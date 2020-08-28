@@ -126,3 +126,5 @@ function lightbox() {
     playButtonFocused.focus();
   }
 }
+
+// end lightbox 
