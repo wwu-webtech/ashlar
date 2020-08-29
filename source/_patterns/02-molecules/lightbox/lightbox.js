@@ -2,12 +2,19 @@
 var body = document.querySelector('body');
 var main = body.querySelector('.page-content');
 
-// if other async scripts are on page and load focusable items, hold off on lightbox loading so we can hide those tabindex items when the modal is open. 
+// Make this work in Pattern Lab
+if (main == null) {
+  lightbox();
+}
+else if (main.getElementsByTagName('script')) {
+  // if other async scripts are on page and load focusable items, hold off on lightbox loading so we can hide those tabindex items when the modal is open. 
 // Last resort since we can't access iframe objects to control tab focus 
-if (main.getElementsByTagName('script')) {
   window.setTimeout(function(){
     lightbox();
   }, 3000);
+}
+else {
+  return false;
 }
 
 function lightbox() {
