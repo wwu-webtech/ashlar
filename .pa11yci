@@ -93,6 +93,10 @@
     "rootElement": ".sg-pattern-example"
   },
   {
+    "url": "http://localhost:8000/patterns/02-molecules-lightbox/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
     "url": "http://localhost:8000/patterns/02-molecules-messaging/index.html",
     "rootElement": ".sg-pattern-example"
   },
