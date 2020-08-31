@@ -1,20 +1,20 @@
-// Lightbox modal component, replaces featherlight video functionality
+// Lightbox dialog component, replaces featherlight video functionality
 var body = document.querySelector('body');
 var main = body.querySelector('.page-content');
 
-// Make this work in Pattern Lab
+// 'if': Make this work in Pattern Lab
+// 'else if': other async scripts are on page, delay lightbox loading in case scripts load focusable items, so this one can set tabindex="-1" as needed. 
+// Last resort since we can't access iframe objects for traditional modal focus traps.
 if (main == null) {
   lightbox();
 }
 else if (main.getElementsByTagName('script')) {
-  // if other async scripts are on page and load focusable items, hold off on lightbox loading so we can hide those tabindex items when the modal is open. 
-// Last resort since we can't access iframe objects to control tab focus 
   window.setTimeout(function(){
     lightbox();
   }, 3000);
 }
 else {
-  return false;
+  lightbox();
 }
 
 function lightbox() {
@@ -25,6 +25,7 @@ function lightbox() {
   var pageBackground = document.querySelectorAll('div:not(.lightbox-dialog):not(.lightbox-content), .skip-link');
 
   // // create lightbox container // //
+
   var lbContainer = document.createElement('div');
   lbContainer.classList.add('lightbox-dialog');
   lbContainer.setAttribute('role', 'dialog');
@@ -65,9 +66,11 @@ function lightbox() {
   lbHeading.classList.add('visually-hidden');
 
   iframe.parentNode.insertBefore(lbHeading, iframe);
+
   // // end lightbox creation // //
   
-  // on button click, open modal
+  // on button click, open dialog
+
   playButtonArr.forEach(function(button){
     button.addEventListener('click', function(){
       playButtonFocused = document.activeElement;
@@ -83,7 +86,7 @@ function lightbox() {
       }
       iframe.setAttribute('src', this.dataset.url);
 
-      // reveal modal
+      // reveal dialog
       overlay.classList.replace('invisible', 'shown');
       closeButton.focus();
       
@@ -95,31 +98,31 @@ function lightbox() {
         bgFocusable[i].setAttribute('tabindex', '-1');
       }
   
-      // Press close button, close modal
-      var closeDialog = lbContainer.querySelector('.lightbox-close-dialog');
-      closeDialog.addEventListener('click', function(){
-        closeModal();
+      // Press close button, close dialog
+      closeButton.addEventListener('click', function(){
+        closeDialog();
       });
     });
   });
   
-  // Press Esc, close modal
+  // Press Esc, close dialog
   document.addEventListener('keydown', function(e) {
     if (!e.keyCode || e.keyCode == 27) {
-      closeModal();
+      closeDialog();
     }
   });
   
-  // Click outside of modal, close modal
+  // Click outside of dialog, close dialog
   overlay.addEventListener('click', function(e) {
     if (e.target == this) {
-      closeModal(e);
+      closeDialog(e);
     }
    }, false);
   
   // on close, return focus to button pressed
   // clear out sources to avoid conflict
-  function closeModal() {
+  
+  function closeDialog() {
     overlay.classList.replace('shown', 'invisible');
     for (var i = 0; i < pageBackground.length; i++) {
       pageBackground[i].removeAttribute('aria-hidden');
