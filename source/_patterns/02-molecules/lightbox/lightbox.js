@@ -43,7 +43,7 @@ function lightbox() {
     // close button
   var closeButton = document.createElement('button');
   closeButton.classList.add('lightbox-close-dialog', 'alt');
-  closeButton.innerHTML = '<span class="material-icons" aria-hidden="true">clear</span> <span  class="visually-hidden">Close dialog</span>'
+  closeButton.innerHTML = ' <span class="material-icons" aria-hidden="true">clear</span> Close <span class="visually-hidden">dialog</span>'
   lbContainer.appendChild(closeButton);
 
     // video iframe
