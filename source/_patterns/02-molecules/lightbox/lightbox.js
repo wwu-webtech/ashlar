@@ -99,9 +99,7 @@ function lightbox() {
       }
   
       // Press close button, close dialog
-      closeButton.addEventListener('click', function(){
-        closeDialog();
-      });
+      closeButton.addEventListener('click', closeDialog);
     });
   });
   
