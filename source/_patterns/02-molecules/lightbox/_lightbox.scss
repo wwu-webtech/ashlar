@@ -11,7 +11,7 @@
   left: 0;
   background: transparentize($black, .1);
   z-index: 5;
-  transition: opacity $medium-transition-speed ease-in-out;
+  transition: opacity $fast-transition-speed ease-out;
 
   .lightbox {
     &-dialog {
@@ -27,7 +27,7 @@
       display: -ms-grid;
       -ms-grid-columns: 1fr 15%;
       display: grid;
-      grid-template-columns: 1fr 15%;
+      grid-template-columns: 1fr 33%;
       grid-template-areas: "... button" "content content";
       width: 100%;
       background-color: $white;
@@ -39,14 +39,21 @@
     }
 
     &-close-dialog {
+      @include breakpoint($medium) {
+        margin: 5% 0;
+        font-size: $p-font-size;
+      }
       grid-area: button;
-      transform: scale(.7);
       align-self: start;
       justify-self: end;
+      margin: 12% 0 5%;
+      font-size: $p-font-size--smaller;
 
       .material-icons {
         position: relative;
-        top: 2px;
+        top: $half-spacing / 1.5;
+        left: $quarter-spacing;
+        font-size: inherit;
       }
     }
 
@@ -58,9 +65,11 @@
 
   &.invisible {
     visibility: hidden;
+    opacity: 0;
   }
 
   &.shown {
     visibility: visible;
+    opacity: 1;
   }
 }
