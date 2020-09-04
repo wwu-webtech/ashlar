@@ -93,10 +93,15 @@ function lightbox() {
       }
       iframe.setAttribute('src', this.dataset.url);
 
-      // add cta link text and href
-      ctaLink.setAttribute('href', this.dataset.ctaUrl);
-      ctaLink.innerHTML = this.dataset.ctaText;
-
+      // add cta link text and href if attrs exist and are defined
+      // else, hide the link
+      if (button.dataset.ctaText !== undefined || button.dataset.ctaLink !== undefined) {
+        ctaLink.setAttribute('href', this.dataset.ctaUrl);
+        ctaLink.innerHTML = this.dataset.ctaText;  
+      }
+      else {
+        ctaLink.style.display = 'none';
+      }
       // reveal dialog
       overlay.classList.replace('invisible', 'shown');
       closeButton.focus();
@@ -164,6 +169,9 @@ function lightbox() {
     for (var i = 0; i < bgFocusable.length; i++) {
       bgFocusable[i].removeAttribute('tabindex');
     }
+    ctaLink.setAttribute('href', '');
+    ctaLink.innerHTML = '';  
+    ctaLink.style.display = '';
     iframe.setAttribute('title', '');
     iframe.setAttribute('src', '');
     lbHeading.innerHTML = '';
