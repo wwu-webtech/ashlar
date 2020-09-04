@@ -67,6 +67,13 @@ function lightbox() {
 
   iframe.parentNode.insertBefore(lbHeading, iframe);
 
+  // CTA button
+  var ctaLink = document.createElement('a');
+  ctaLink.setAttribute('href', '');
+  ctaLink.classList.add('button', 'lightbox-cta-link');
+  ctaLink.innerHTML = '';
+  lbContainer.appendChild(ctaLink);
+
   // // end lightbox creation // //
   
   // on button click, open dialog
@@ -86,6 +93,10 @@ function lightbox() {
       }
       iframe.setAttribute('src', this.dataset.url);
 
+      // add cta link text and href
+      ctaLink.setAttribute('href', this.dataset.ctaUrl);
+      ctaLink.innerHTML = this.dataset.ctaText;
+
       // reveal dialog
       overlay.classList.replace('invisible', 'shown');
       closeButton.focus();
@@ -100,6 +111,31 @@ function lightbox() {
   
       // Press close button, close dialog
       closeButton.addEventListener('click', closeDialog);
+
+      // if shift + tab pressed on close button, send focus to cta link
+      closeButton.addEventListener('keydown', function(e){
+        if (document.activeElement == this) {
+          if ((e.key === 'Tab' || e.keyCode === 9) && e.shiftKey) {
+            ctaLink.focus();
+            e.preventDefault();
+          }
+        }      
+      });
+      
+      // if tab pressed on cta link, send focus to close button
+      ctaLink.addEventListener('keydown', function(e){
+        if (document.activeElement == this) {
+          if (e.key === 'Tab' || e.keyCode === 9) {
+            if (e.shiftKey) {
+              return;
+            }
+            else {
+              closeButton.focus();
+              e.preventDefault();
+            }
+          }
+        }
+      })
     });
   });
   

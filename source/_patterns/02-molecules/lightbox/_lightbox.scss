@@ -19,16 +19,23 @@
         width: 70%;
       }
       @include breakpoint($medium) {
+        grid-template-areas: 
+        "... ... button" 
+        "content content content" 
+        "... cta ...";
         width: 80%;
       }
       @include breakpoint($small) {
         width: 60%;
       }
       display: -ms-grid;
-      -ms-grid-columns: 1fr 15%;
+      -ms-grid-columns: 33% 34% 33%;
       display: grid;
-      grid-template-columns: 1fr 33%;
-      grid-template-areas: "... button" "content content";
+      grid-template-columns: 33% 34% 33%;
+      grid-template-areas: 
+        "... ... button" 
+        "content content content" 
+        "cta cta cta";
       width: 100%;
       background-color: $white;
       padding: $half-spacing $double-spacing $double-spacing;
@@ -60,6 +67,13 @@
     &-content {
       grid-area: content;
       align-self: end;
+    }
+
+    &-cta-link {
+      grid-area: cta;
+      max-width: 100%;
+      margin: 0 auto;
+      margin-top: $double-spacing;
     }
   }
 
