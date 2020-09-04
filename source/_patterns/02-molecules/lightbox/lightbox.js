@@ -11,7 +11,7 @@ if (main == null) {
 else if (main.getElementsByTagName('script')) {
   window.setTimeout(function(){
     lightbox();
-  }, 3000);
+  }, 1000);
 }
 else {
   lightbox();
