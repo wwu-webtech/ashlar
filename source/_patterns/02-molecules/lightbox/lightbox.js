@@ -67,12 +67,12 @@ function lightbox() {
 
   iframe.parentNode.insertBefore(lbHeading, iframe);
 
-  // CTA button
-  var ctaLink = document.createElement('a');
-  ctaLink.setAttribute('href', '');
-  ctaLink.classList.add('button', 'lightbox-cta-link');
-  ctaLink.innerHTML = '';
-  lbContainer.appendChild(ctaLink);
+  // if cta data attrs exist, create CTA button
+      var ctaLink = document.createElement('a');
+      ctaLink.setAttribute('href', '');
+      ctaLink.classList.add('button', 'lightbox-cta-link');
+      ctaLink.innerHTML = '';
+      lbContainer.appendChild(ctaLink);
 
   // // end lightbox creation // //
   
