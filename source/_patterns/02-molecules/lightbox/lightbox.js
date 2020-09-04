@@ -117,7 +117,7 @@ function lightbox() {
       // Press close button, close dialog
       closeButton.addEventListener('click', closeDialog);
 
-      // if shift + tab pressed on close button, send focus to cta link
+      // if CTA exists and shift + tab pressed on close button, send focus to cta link
       closeButton.addEventListener('keydown', function(e){
         if (document.activeElement == this) {
           if ((e.key === 'Tab' || e.keyCode === 9) && e.shiftKey) {
@@ -127,7 +127,7 @@ function lightbox() {
         }      
       });
       
-      // if tab pressed on cta link, send focus to close button
+      // if CTA exists and tab pressed on cta link, send focus to close button
       ctaLink.addEventListener('keydown', function(e){
         if (document.activeElement == this) {
           if (e.key === 'Tab' || e.keyCode === 9) {
