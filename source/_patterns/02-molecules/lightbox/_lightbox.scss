@@ -16,7 +16,7 @@
   .lightbox {
     &-dialog {
       @include breakpoint($large) {
-        width: 70%;
+        width: 65%;
       }
       @include breakpoint($medium) {
         grid-template-areas: 
@@ -26,7 +26,7 @@
         width: 80%;
       }
       @include breakpoint($small) {
-        width: 60%;
+        width: 75%;
       }
       display: -ms-grid;
       -ms-grid-columns: 33% 34% 33%;
