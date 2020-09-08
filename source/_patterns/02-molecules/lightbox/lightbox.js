@@ -85,15 +85,15 @@ function lightbox() {
       playButtonFocused = document.activeElement;
     
       // add iframe src and titles, heading title
-      if (this.dataset.title === '') {
+      if (this.dataset.lightboxTitle === '') {
         iframe.setAttribute('title', 'Video');
         lbHeading.innerHTML = 'Lightbox';
       }
       else {
-        iframe.setAttribute('title', this.dataset.title);
-        lbHeading.innerHTML = this.dataset.title;
+        iframe.setAttribute('title', this.dataset.lightboxTitle);
+        lbHeading.innerHTML = this.dataset.lightboxTitle;
       }
-      iframe.setAttribute('src', this.dataset.url);
+      iframe.setAttribute('src', this.dataset.lightboxUrl);
 
       // add cta link text and href if attrs exist and are defined
       // else, hide the link
