@@ -99,7 +99,32 @@ function lightbox() {
       // else, hide the link
       if (button.dataset.ctaText !== undefined || button.dataset.ctaLink !== undefined) {
         ctaLink.setAttribute('href', this.dataset.ctaUrl);
-        ctaLink.innerHTML = this.dataset.ctaText;  
+        ctaLink.innerHTML = this.dataset.ctaText;
+
+        // if CTA exists and shift + tab pressed on close button, send focus to cta link
+        closeButton.addEventListener('keydown', function(e){
+          if (document.activeElement == this) {
+            if ((e.key === 'Tab' || e.keyCode === 9) && e.shiftKey) {
+              ctaLink.focus();
+              e.preventDefault();
+            }
+          }      
+        });
+        
+        // if CTA exists and tab pressed on cta link, send focus to close button
+        ctaLink.addEventListener('keydown', function(e){
+          if (document.activeElement == this) {
+            if (e.key === 'Tab' || e.keyCode === 9) {
+              if (e.shiftKey) {
+                return;
+              }
+              else {
+                closeButton.focus();
+                e.preventDefault();
+              }
+            }
+          }
+        });
       }
       else {
         ctaLink.style.display = 'none';
@@ -118,31 +143,6 @@ function lightbox() {
   
       // Press close button, close dialog
       closeButton.addEventListener('click', closeDialog);
-
-      // if CTA exists and shift + tab pressed on close button, send focus to cta link
-      closeButton.addEventListener('keydown', function(e){
-        if (document.activeElement == this) {
-          if ((e.key === 'Tab' || e.keyCode === 9) && e.shiftKey) {
-            ctaLink.focus();
-            e.preventDefault();
-          }
-        }      
-      });
-      
-      // if CTA exists and tab pressed on cta link, send focus to close button
-      ctaLink.addEventListener('keydown', function(e){
-        if (document.activeElement == this) {
-          if (e.key === 'Tab' || e.keyCode === 9) {
-            if (e.shiftKey) {
-              return;
-            }
-            else {
-              closeButton.focus();
-              e.preventDefault();
-            }
-          }
-        }
-      })
     });
   });
   
