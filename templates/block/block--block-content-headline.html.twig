@@ -47,7 +47,7 @@
 
     {% if block_content.field_video_source.0.value == "YouTube" %}
       {{ attach_library('ashlar/lightbox') }}
-      <a class="button play-link" href="#" data-title="{{ block_content.field_video_title.0.value }}" data-url="https://www.youtube.com/embed/{{ block_content.field_video_embed.0.value }}?rel=0&amp;autoplay=1">Watch Video 
+      <a class="button play-link" href="#" data-lightbox-title="{{ block_content.field_video_title.0.value }}" data-lightbox-url="https://www.youtube.com/embed/{{ block_content.field_video_embed.0.value }}?rel=0&amp;autoplay=1">Watch Video 
         {% if block_content.field_video_title.0.value is not empty %}
           <span class="visually-hidden">: {{ block_content.field_video_title.0.value }}</span>
         {% endif %}
