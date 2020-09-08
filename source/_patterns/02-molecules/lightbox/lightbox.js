@@ -173,7 +173,7 @@ function lightbox() {
     }
     ctaLink.setAttribute('href', '');
     ctaLink.innerHTML = '';  
-    ctaLink.style.display = '';
+    ctaLink.removeAttribute('style');
     iframe.setAttribute('title', '');
     iframe.setAttribute('src', '');
     lbHeading.innerHTML = '';
