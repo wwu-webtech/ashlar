@@ -102,14 +102,7 @@ function lightbox() {
         ctaLink.innerHTML = this.dataset.ctaText;
 
         // if CTA exists and shift + tab pressed on close button, send focus to cta link
-        closeButton.addEventListener('keydown', function(e){
-          if (document.activeElement == this) {
-            if ((e.key === 'Tab' || e.keyCode === 9) && e.shiftKey) {
-              ctaLink.focus();
-              e.preventDefault();
-            }
-          }      
-        });
+        closeButton.addEventListener('keydown', closeShiftTabFocus);
         
         // if CTA exists and tab pressed on cta link, send focus to close button
         ctaLink.addEventListener('keydown', function(e){
@@ -159,6 +152,15 @@ function lightbox() {
       closeDialog(e);
     }
    }, false);
+
+   function closeShiftTabFocus(e) {
+    if (document.activeElement == this) {
+      if ((e.key === 'Tab' || e.keyCode === 9) && e.shiftKey) {
+        ctaLink.focus();
+        e.preventDefault();
+      }
+    }      
+  }
   
   // on close, return focus to button pressed
   // clear out sources to avoid conflict
@@ -174,6 +176,7 @@ function lightbox() {
     ctaLink.setAttribute('href', '');
     ctaLink.innerHTML = '';  
     ctaLink.removeAttribute('style');
+    closeButton.removeEventListener('keydown', closeShiftTabFocus);
     iframe.setAttribute('title', '');
     iframe.setAttribute('src', '');
     lbHeading.innerHTML = '';
