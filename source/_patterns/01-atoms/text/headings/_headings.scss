@@ -39,9 +39,9 @@ h1 {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: calc(70px + 80 * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+    width: 50%;
     content: "";
-    border-width: calc(4px + 1 * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+    border-width: 0.12em;
     border-style: solid;
   }
 }
