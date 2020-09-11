@@ -4,7 +4,7 @@
  */
 
 /* Spacing */
-$standard-spacing: 12px;
+$standard-spacing: 1.3333rem;
 $quarter-spacing: $standard-spacing / 4;
 $half-spacing: $standard-spacing / 2;
 $one-point-five-spacing: $standard-spacing * 1.5;
@@ -12,9 +12,9 @@ $double-spacing: $standard-spacing * 2;
 $triple-spacing: $standard-spacing * 3;
 
 /* Borders and Lines */
-$border-width--thinner: 1px;
-$border-width: 2px;
-$border-width--thicker: 3px;
+$border-width--thinner: 0.0625rem;
+$border-width: 0.125rem;
+$border-width--thicker: 0.1875rem;
 $focus-outline: $border-width dotted;
 $focus-outline--thicker: $border-width--thicker dotted;
 $border-radius--round: 100px;
@@ -35,7 +35,7 @@ $small-screen-columns: $standard-spacing 1fr $standard-spacing;
 $large-screen-columns: 1fr $max-content-width 1fr;
 
 /* Toggle/Menu Button Sizes */
-$toggle-size: 64px;
+$toggle-size: 4rem;
 
 /* Class to break blocks out of the max content area and take up full view width */
 .full-vw {

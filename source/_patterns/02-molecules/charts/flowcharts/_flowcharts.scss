@@ -3,7 +3,7 @@
 * 02-molecules/org-charts/_flowcharts.scss
 */
 $line-color: mix($light-gray, $gray, 50%);
-$max-box-size: 300px;
+$max-box-size: 18.75rem;
 
 .flowchart {
   position: relative;
@@ -66,7 +66,7 @@ $max-box-size: 300px;
     }
 
     &.level-b {
-      margin-left: -($double-spacing + ($standard-spacing + 4px));
+      margin-left: -($double-spacing + ($standard-spacing + 0.25rem));
       flex-flow: column nowrap;
     }
 
@@ -108,7 +108,7 @@ $max-box-size: 300px;
           width: $border-width;
           height: $standard-spacing;
           content: "";
-          transform: translate(-50%, ($standard-spacing + 6px));
+          transform: translate(-50%, ($standard-spacing + 0.375rem));
           background: $line-color;
         }
 

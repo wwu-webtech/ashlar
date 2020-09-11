@@ -2,11 +2,11 @@
 * @file
 * 01-atoms/logo/_logo.scss
 */
-$logo-size: 164px;
-$logo-size--larger: 246px;
+$logo-size: 10.25rem;
+$logo-size--larger: 15.375rem;
 
-$logo-width--horizontal: 400px;
-$logo-height--horizontal: 100px;
+$logo-width--horizontal: 25rem;
+$logo-height--horizontal: 6.25rem;
 
 .logo {
   @include breakpoint($medium) {
