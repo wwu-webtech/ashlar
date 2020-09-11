@@ -11,8 +11,6 @@
 */
 
 /* Material Icons */
-
-/* fallback */
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -20,27 +18,7 @@
   src: url(/themes/contrib/ashlar/dist/fonts/material-icons.woff2) format('woff2');
 }
 
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -moz-font-feature-settings: 'liga';
-  -moz-osx-font-smoothing: grayscale;
-}
-
-
-
 /* Style them up */
-
-/* latin */
 @font-face {
   font-family: 'Fira Sans';
   font-style: italic;
@@ -57,7 +35,7 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-/* latin */
+
 @font-face {
   font-family: 'Fira Sans';
   font-style: normal;
@@ -66,7 +44,7 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-/* latin */
+
 @font-face {
   font-family: 'Fira Sans';
   font-style: normal;
@@ -74,7 +52,7 @@
   src: local('Fira Sans Regular'), local('FiraSans-Regular'), url(/themes/contrib/ashlar/dist/fonts/fira-sans-normal-400.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-/* latin */
+
 @font-face {
   font-family: 'Fira Sans';
   font-style: normal;
@@ -83,7 +61,7 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-/* latin */
+
 @font-face {
   font-family: 'Fira Sans';
   font-style: normal;
@@ -91,7 +69,7 @@
   src: local('Fira Sans Bold'), local('FiraSans-Bold'), url(/themes/contrib/ashlar/dist/fonts/fira-sans-normal-700.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-/* latin */
+
 @font-face {
   font-family: 'Fira Sans';
   font-style: normal;
@@ -99,7 +77,7 @@
   src: local('Fira Sans Black'), local('FiraSans-Black'), url(/themes/contrib/ashlar/dist/fonts/fira-sans-normal-900.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-/* latin */
+
 @font-face {
   font-family: 'Fira Sans Extra Condensed';
   font-style: normal;
@@ -107,7 +85,7 @@
   src: local('Fira Sans Extra Condensed Light'), local('FiraSansExtraCondensed-Light'), url(/themes/contrib/ashlar/dist/fonts/fira-sans-extra-condensed-300.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-/* latin */
+
 @font-face {
   font-family: 'Fira Sans Extra Condensed';
   font-style: normal;
@@ -122,7 +100,7 @@
   src: local('Montserrat Bold'), local('Montserrat-Bold'), url(/themes/contrib/ashlar/dist/fonts/montserrat-700.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-/* latin */
+
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
@@ -130,7 +108,7 @@
   src: local('Montserrat Black'), local('Montserrat-Black'), url(/themes/contrib/ashlar/dist/fonts/montserrat-900.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-/* latin */
+
 @font-face {
   font-family: 'PT Serif';
   font-style: normal;
@@ -139,7 +117,7 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-/* latin */
+
 @font-face {
   font-family: 'PT Serif';
   font-style: normal;
