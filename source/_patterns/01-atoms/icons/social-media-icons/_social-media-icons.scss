@@ -14,7 +14,7 @@ $icon-space: (($toggle-size - $icon-size) / 2) - 1;
 
   svg {
     width: 100%;
-    padding: (($toggle-size - $icon-size) / 2) - 1;
+    padding: (($toggle-size - $icon-size) / 2);
     transition: fill $standard-ease $button-transition-speed;
 
     fill: $white;
