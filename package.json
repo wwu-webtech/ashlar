@@ -41,8 +41,7 @@
   },
   "dependencies": {
     "acorn": "^6.4.1",
-    "breakpoint-sass": "^2.7.1",
-    "material-design-icons": "^3.0.1"
+    "breakpoint-sass": "^2.7.1"
   },
   "husky": {
     "hooks": {
