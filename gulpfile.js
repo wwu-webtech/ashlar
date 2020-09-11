@@ -56,9 +56,7 @@
       'source/sass/styleguide/pattern-scaffolding.scss',
       'source/sass/styleguide/ultimenu-extras.scss',
       'source/sass/styleguide/ultimenu.scss',
-      'source/sass/lib/font-families.scss',
-      'source/sass/**/*.scss',
-      '!source/_patterns/01-atoms/text/fonts/_families.scss'
+      'source/sass/**/*.scss'
     ],
     sassDest: 'source/pattern-lab/css',
     jsFile: 'wwu-styleguide.js',
@@ -76,7 +74,11 @@
     imagesSrc: [
       'source/images/**/*.{jpg,jpeg,gif,png,svg}'
     ],
-    imagesDest: 'source/pattern-lab/images'
+    imagesDest: 'source/pattern-lab/images',
+    fontSrc: [
+      'source/fonts/*.woff2'
+    ],
+    fontDest: 'source/pattern-lab/fonts'
   };
 
   /**
@@ -185,9 +187,9 @@
    */
   config.fonts = {
     src: [
-      'source/fonts/*.{woff2}'
+      'source/fonts/*.woff2'
     ],
-    dest: 'build/fonts/*.{woff2}'
+    dest: 'build/fonts'
   };
 
 
@@ -342,9 +344,20 @@
   });
 
   /**
+   * Generate Pattern Lab Fonts.
+   */
+  gulp.task('patternlab:fonts', function (callback) {
+    pump(
+      gulp.src(config.patternLab.fontSrc),
+      gulp.dest(config.patternLab.fontDest),
+      callback
+    );
+  });
+
+  /**
    * Run Pattern Lab tasks.
    */
-  gulp.task('patternlab', gulp.parallel(['patternlab:sass', 'patternlab:js', 'patternlab:images']));
+  gulp.task('patternlab', gulp.parallel(['patternlab:sass', 'patternlab:js', 'patternlab:images', 'patternlab:fonts']));
 
   /**
    * Set watch tasks.
