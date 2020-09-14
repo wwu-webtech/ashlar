@@ -4,7 +4,7 @@
  * Styles specifically for the Drupal Webform module
  */
 
-$checkmark-size: 60px;
+$checkmark-size: 3.75rem;
 
 /* File Input */
 .form-managed-file {
@@ -95,7 +95,7 @@ form {
           transform: scale(0.5);
           display: block;
           height: $checkmark-size;
-          width: $checkmark-size + 10px;
+          width: $checkmark-size + 3.75rem;
           position: relative;
           top: -($standard-spacing);
           left: ($standard-spacing / 3);

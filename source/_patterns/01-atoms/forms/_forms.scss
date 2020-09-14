@@ -2,8 +2,8 @@
 * @file
 * 01-atoms/forms/_forms.scss
 */
-$select-input-size: 28px;
-$select-input-size--smaller: 24px;
+$select-input-size: 1.75rem;
+$select-input-size--smaller: 1.5rem;
 
 @mixin current-progress-hover {
   color: $lightest-green;

@@ -143,7 +143,7 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
       margin-top: 0;
       color: $white;
       border: none;
-      text-shadow: 1px 1px 4px transparentize($darkest-blue, 0.1);
+      text-shadow: 0.0625rem 0.0625rem 0.25rem transparentize($darkest-blue, 0.1);
       font-family: $sans-serif;
       font-size: $h2-font-size--largest;
       font-weight: bold;
@@ -152,7 +152,7 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
     a,
     p {
       color: $white;
-      text-shadow: 1px 1px 2px transparentize($darkest-blue, 0.1);
+      text-shadow: 0.0625rem 0.0625rem 0.125rem transparentize($darkest-blue, 0.1);
     }
 
     a {
@@ -168,7 +168,7 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
         font-size: $h6-font-size--max--largest;
       }
       color: $white;
-      text-shadow: 1px 1px 4px transparentize($darkest-blue, 0.1);
+      text-shadow: 0.0625rem 0.0625rem 0.25rem transparentize($darkest-blue, 0.1);
       font-size: $h6-font-size--largest;
     }
   }
