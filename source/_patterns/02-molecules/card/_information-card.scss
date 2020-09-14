@@ -29,7 +29,7 @@
     margin-right: $double-spacing;
     margin-left: $double-spacing;
     padding: 0;
-    border-bottom: solid 1px $blue;
+    border-bottom: solid $border-width $blue;
 
     a {
       font-weight: $font-weight--regular;
@@ -155,7 +155,7 @@
     }
 
     .body {
-      border: solid 3px $dark-blue;
+      border: solid $border-width--thicker $dark-blue;
       border-left: none;
       border-radius: 0 $border-radius--round-square $border-radius--round-square 0;
 

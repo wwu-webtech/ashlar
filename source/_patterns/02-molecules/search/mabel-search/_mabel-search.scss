@@ -2,9 +2,9 @@
 * @file
 * 02-molecules/content/search/mabel-search/_mabel-search.scss
 */
-$simple-search-button--width: 120px;
-$mabel-label-min-font-size: 17px;
-$mabel-label-max-font-size: 25px;
+$simple-search-button--width: 7.5rem;
+$mabel-label-min-font-size: 1.0625rem;
+$mabel-label-max-font-size: 1.5625rem;
 $mabel-label-font-size: calc(#{$mabel-label-min-font-size} + #{strip-unit($mabel-label-max-font-size - $mabel-label-min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 
 #islandora-search-container {

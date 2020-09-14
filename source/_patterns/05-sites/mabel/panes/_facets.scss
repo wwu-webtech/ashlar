@@ -36,10 +36,10 @@ $plus-minus-size: 0.533rem;
     .slider-popup-from-wrapper,
     .slider-popup-to-wrapper {
       position: absolute;
-      top: -30px;
+      top: -1.875rem;
       left: 50%;
-      width: 120px;
-      margin-left: -60px;
+      width: 7.5rem;
+      margin-left: -3.75rem;
       text-align: center;
 
       .slider-popup-from,
@@ -48,9 +48,9 @@ $plus-minus-size: 0.533rem;
         color: $black;
         color: $white;
         border: none;
-        border-radius: 10px;
+        border-radius: 0.625rem;
         background-color: $gray;
-        font-size: 12px;
+        font-size: 0.75rem;
       }
     }
   }

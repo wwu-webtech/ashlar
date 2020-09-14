@@ -57,7 +57,7 @@
         @include breakpoint($small) {
           display: inline-block;
           position: relative;
-          top: 3px;
+          top: $border-width--thicker;
         }
         display: block;
         font-size: $icon-size--small;

@@ -60,7 +60,7 @@
 
   .material-icons {
     @include breakpoint($medium) {
-      font-size: 48px;
+      font-size: $icon-size--large;
     }
     color: $light-green;
 
