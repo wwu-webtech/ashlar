@@ -1,13 +1,13 @@
 /* Darken bg image to improve contrast as needed, 
 mainly for image buttons and banner images with overlays on top */
 
-.image-darker {
+.image-darker:not(.green) {
   .image, .background-image {
       filter: brightness(35%);
     }
 }
 
-.image-darkest {
+.image-darkest:not(.green) {
   .image, .background-image {
       filter: brightness(25%);
     }
