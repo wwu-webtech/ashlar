@@ -28,7 +28,7 @@
 .grid-column-count--3,
 .grid-column-count--4 {
   display: grid;
-  grid-column-gap: $double-spacing;
+  grid-column-gap: $standard-spacing;
   align-items: stretch;
 }
 
