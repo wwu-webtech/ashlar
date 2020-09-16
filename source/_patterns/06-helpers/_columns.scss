@@ -24,9 +24,19 @@
   column-count: 4;
 }
 
+.column-count--5 {
+  column-count: 5;
+}
+
+.column-count--6 {
+  column-count: 6;
+}
+
 .grid-column-count--2,
 .grid-column-count--3,
-.grid-column-count--4 {
+.grid-column-count--4,
+.grid-column-count--5,
+.grid-column-count--6 {
   display: grid;
   grid-column-gap: $standard-spacing;
   align-items: stretch;
@@ -40,4 +50,10 @@
 }
 .grid-column-count--4 {
   grid-template-columns: auto auto auto auto;
+}
+.grid-column-count--5 {
+  grid-template-columns: auto auto auto auto auto;
+}
+.grid-column-count--6 {
+  grid-template-columns: auto auto auto auto auto auto;
 }
