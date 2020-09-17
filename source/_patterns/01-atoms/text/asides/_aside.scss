@@ -8,12 +8,18 @@ aside,
 .paragraph--type--majors-aside {
   margin: $standard-spacing 0;
 
+  &.darkest-blue-bg,
   &.dark-blue-bg,
   &.blue-bg,
   &.light-gray-bg,
   &.lightest-gray-bg,
   &.light-blue-bg,
-  &.lightest-blue-bg {
+  &.lightest-blue-bg,
+  &.black-bg,
+  &.gray-bg,
+  &.dark-green-bg,
+  &.green-bg,
+  &.light-green-bg {
     padding: $double-spacing;
 
     &.underlined-headings {
