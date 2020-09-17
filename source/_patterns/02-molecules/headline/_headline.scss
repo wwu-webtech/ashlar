@@ -10,6 +10,21 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
     border: none;
   }
 
+  .play-link {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    border-radius: $border-radius--round;
+    border: $border-width solid $white;
+    font-size: $p-font-size;
+
+    .material-icons {
+      font-size: inherit;
+      position: relative;
+      top: $half-spacing / 1.5;
+    }
+  }
+
   /* Style Option 1: Box with semi-transparent overlay */
   &.box-headline {
     @include breakpoint($medium) {
@@ -40,7 +55,7 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
       &:hover,
       &:focus,
       &:active {
-        background-color: $dark-blue
+        background-color: $dark-blue;
       }
     }
 
@@ -55,6 +70,20 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
       &:active {
         color: $blue;
         background-color: $white;
+      }
+    }
+
+    .play-link {
+      @include button-box-shadow($dark-blue);
+      color: $white;
+      padding: ($standard-spacing / 1.2) $double-spacing;
+      top: .3rem;
+
+      &:hover, 
+      &:focus, 
+      &:active {
+        background-color: $white;
+        color: $blue;
       }
     }
   }
@@ -109,6 +138,7 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
       align-self: end;
       margin-right: $standard-spacing;
       margin-left: $standard-spacing;
+      margin-bottom: 0;
       border-color: $white;
       background-color: $blue;
 
@@ -117,6 +147,25 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
       &:active {
         color: $blue;
         background: $white;
+      }
+    }
+
+    .play-link {
+      @include breakpoint($small) {
+        padding: ($standard-spacing / 1.2) ($standard-spacing * 1.333);
+        top: 0;
+      }
+      @include button-box-shadow($dark-blue);
+      padding: ($standard-spacing / 1.2) $double-spacing;
+      background-color: $blue;
+      color: $white;
+      top: .4rem;
+
+      &:hover, 
+      &:focus, 
+      &:active {
+        background-color: $white;
+        color: $blue;
       }
     }
   }
@@ -150,7 +199,8 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
     }
 
     a,
-    p {
+    p,
+    .play-link {
       color: $white;
       text-shadow: 1px 1px 2px transparentize($darkest-blue, 0.1);
     }
@@ -160,6 +210,21 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
       &:focus,
       &:active {
         background-color: $dark-blue;
+      }
+    }
+
+    .play-link {
+      @include button-box-shadow($dark-blue);
+      background-color: $blue;
+      padding: $standard-spacing $double-spacing;
+      border: transparent;
+      top: -$quarter-spacing;
+
+      &:hover, 
+      &:focus, 
+      &:active {
+        background-color: $dark-blue;
+        color: $white;
       }
     }
 
