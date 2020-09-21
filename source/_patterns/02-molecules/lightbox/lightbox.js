@@ -1,24 +1,26 @@
 // Lightbox dialog component, replaces featherlight video functionality
 var body = document.querySelector('body');
 var main = body.querySelector('.page-content');
+var lbPlayButton = document.querySelectorAll('.play-link');
 
 // 'if': Make this work in Pattern Lab
 // 'else if': other async scripts are on page, delay lightbox loading in case scripts load focusable items, so this one can set tabindex="-1" as needed. 
 // Last resort since we can't access iframe objects for traditional modal focus traps.
-if (main == null) {
-  lightbox();
-}
-else if (main.getElementsByTagName('script')) {
-  window.setTimeout(function(){
+if (lbPlayButton.length) {
+  if (main == null) {
     lightbox();
-  }, 3000);
-}
-else {
-  lightbox();
+  }
+  else if (main.getElementsByTagName('script')) {
+    window.setTimeout(function(){
+      lightbox();
+    }, 1000);
+  }
+  else {
+    lightbox();
+  }
 }
 
 function lightbox() {
-  var lbPlayButton = document.querySelectorAll('.play-link');
   var playButtonArr = Array.from(lbPlayButton);
   var bgFocusable = document.querySelectorAll('a, button:not(.lightbox-close-dialog), textarea, select, input');
   var playButtonFocused;
@@ -54,7 +56,7 @@ function lightbox() {
   var iframe = document.createElement('iframe');
   iframe.setAttribute('title', '');
   iframe.setAttribute('src', '');
-  iframe.setAttribute('allowfullscreen', '');
+  iframe.setAttribute('allow', 'fullscreen autoplay');
 
   content.appendChild(iframe);
   lbContainer.appendChild(content);
@@ -67,6 +69,13 @@ function lightbox() {
 
   iframe.parentNode.insertBefore(lbHeading, iframe);
 
+  // create CTA link element
+  var ctaLink = document.createElement('a');
+  ctaLink.setAttribute('href', '');
+  ctaLink.classList.add('button', 'lightbox-cta-link');
+  ctaLink.innerHTML = '';
+  lbContainer.appendChild(ctaLink);
+
   // // end lightbox creation // //
   
   // on button click, open dialog
@@ -76,16 +85,43 @@ function lightbox() {
       playButtonFocused = document.activeElement;
     
       // add iframe src and titles, heading title
-      if (this.dataset.title === '') {
+      if (this.dataset.lightboxTitle === '') {
         iframe.setAttribute('title', 'Video');
         lbHeading.innerHTML = 'Lightbox';
       }
       else {
-        iframe.setAttribute('title', this.dataset.title);
-        lbHeading.innerHTML = this.dataset.title;
+        iframe.setAttribute('title', this.dataset.lightboxTitle);
+        lbHeading.innerHTML = this.dataset.lightboxTitle;
       }
-      iframe.setAttribute('src', this.dataset.url);
+      iframe.setAttribute('src', this.dataset.lightboxUrl);
 
+      // add cta link text and href if attrs exist and are defined
+      // else, hide the link
+      if (button.dataset.ctaText !== undefined || button.dataset.ctaLink !== undefined) {
+        ctaLink.setAttribute('href', this.dataset.ctaUrl);
+        ctaLink.innerHTML = this.dataset.ctaText;
+
+        // if CTA exists and shift + tab pressed on close button, send focus to cta link
+        closeButton.addEventListener('keydown', closeShiftTabFocus);
+        
+        // if CTA exists and tab pressed on cta link, send focus to close button
+        ctaLink.addEventListener('keydown', function(e){
+          if (document.activeElement == this) {
+            if (e.key === 'Tab' || e.keyCode === 9) {
+              if (e.shiftKey) {
+                return;
+              }
+              else {
+                closeButton.focus();
+                e.preventDefault();
+              }
+            }
+          }
+        });
+      }
+      else {
+        ctaLink.style.display = 'none';
+      }
       // reveal dialog
       overlay.classList.replace('invisible', 'shown');
       closeButton.focus();
@@ -116,6 +152,15 @@ function lightbox() {
       closeDialog(e);
     }
    }, false);
+
+   function closeShiftTabFocus(e) {
+    if (document.activeElement == this) {
+      if ((e.key === 'Tab' || e.keyCode === 9) && e.shiftKey) {
+        ctaLink.focus();
+        e.preventDefault();
+      }
+    }      
+  }
   
   // on close, return focus to button pressed
   // clear out sources to avoid conflict
@@ -128,6 +173,10 @@ function lightbox() {
     for (var i = 0; i < bgFocusable.length; i++) {
       bgFocusable[i].removeAttribute('tabindex');
     }
+    ctaLink.setAttribute('href', '');
+    ctaLink.innerHTML = '';  
+    ctaLink.removeAttribute('style');
+    closeButton.removeEventListener('keydown', closeShiftTabFocus);
     iframe.setAttribute('title', '');
     iframe.setAttribute('src', '');
     lbHeading.innerHTML = '';

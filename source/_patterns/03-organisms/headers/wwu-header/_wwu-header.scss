@@ -72,6 +72,8 @@
     grid-area: header;
 
     .western-home-link {
+      color: $white;
+      
       &:focus {
         outline-color: $white;
         outline-offset: -$border-width;

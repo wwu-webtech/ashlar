@@ -47,21 +47,21 @@
 
     {% if block_content.field_video_source.0.value == "YouTube" %}
       {{ attach_library('ashlar/lightbox') }}
-      <a class="button play-link" href="#" data-title="{{ block_content.field_video_title.0.value }}" data-url="https://www.youtube.com/embed/{{ block_content.field_video_embed.0.value }}?rel=0&amp;autoplay=1">Watch Video
+      <button class="play-link" data-lightbox-title="{{ block_content.field_video_title.0.value }}" data-lightbox-url="https://www.youtube.com/embed/{{ block_content.field_video_embed.0.value }}?rel=0&amp;autoplay=1"><span>Watch Video</span>
         {% if block_content.field_video_title.0.value is not empty %}
           <span class="visually-hidden">: {{ block_content.field_video_title.0.value }}</span>
         {% endif %}
-        <span aria-hidden="true" class="material-icons" style="font-size: 1.125rem">play_arrow</span>
-      </a>
+        <span aria-hidden="true" class="material-icons">play_arrow</span>
+      </button>
 
     {% elseif block_content.field_video_source.0.value == "Vimeo" %}
       {{ attach_library('ashlar/lightbox') }}
-      <a class="button play-link" href="#" data-title="{{ block_content.field_video_title.0.value }}" data-url="https://player.vimeo.com/video/{{ block_content.field_video_embed.0.value }}?rel=0&amp;autoplay=1">Watch Video
+      <button class="play-link" data-lightbox-title="{{ block_content.field_video_title.0.value }}" data-lightbox-url="https://player.vimeo.com/video/{{ block_content.field_video_embed.0.value }}?rel=0&amp;autoplay=1"><span>Watch Video</span>
         {% if block_content.field_video_title.0.value is not empty %}
           <span class="visually-hidden">: {{ block_content.field_video_title.0.value }}</span>
         {% endif %}
-        <span aria-hidden="true" class="material-icons" style="font-size: 1.125rem">play_arrow</span>
-      </a>
+        <span aria-hidden="true" class="material-icons">play_arrow</span>
+      </button>
 
     {% endif %}
   {% endblock %}
