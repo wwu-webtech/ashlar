@@ -4,10 +4,10 @@
 */
 .pane-islandora-solr-result-limit {
   @include breakpoint ($medium) {
-    width: 180px;
+    width: 11.25rem;
   }
   @include breakpoint ($large) {
-    width: 200px;
+    width: 12.5rem;
   }
   position: relative;
   top: -$half-spacing;

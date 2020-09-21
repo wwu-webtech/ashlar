@@ -18,7 +18,7 @@
 
   .islandora-solr-search-result {
     padding: 0 $standard-spacing $double-spacing;
-    border-bottom: solid 1px $gray;
+    border-bottom: solid $border-width--thinner $gray;
 
     &:last-of-type {
       border-bottom: none;
@@ -89,8 +89,8 @@
     top: $quarter-spacing;
     top: 50%;
     right: 0;
-    transform: translate(-4px, -50%);
-    font-size: 18px;
+    transform: translate(-0.25rem, -50%);
+    font-size: 1.125rem;
   }
 }
 

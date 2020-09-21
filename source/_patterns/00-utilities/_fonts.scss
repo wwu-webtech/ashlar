@@ -32,15 +32,15 @@ $h6-scale: 1.125;
 $p-scale: 1;
 $menu-scale: 0.8;
 
-$min-base-font-size: 16px;
-$max-base-font-size: 22px;
-$max-base-font-size--smaller: 18px;
-$max-base-font-size--larger: 26px;
-$max-base-font-size--largest: 54px;
+$min-base-font-size: 1rem;
+$max-base-font-size: 1.375rem;
+$max-base-font-size--smaller: 1.125rem;
+$max-base-font-size--larger: 1.625rem;
+$max-base-font-size--largest: 3.375rem;
 
 // View width for fluid typography
-$min-vw: 300px;
-$max-vw: 1300px;
+$min-vw: 18.75rem;
+$max-vw: 81.25rem;
 
 // Functions to calculate responsive font sizes
 @function responsive-font-size($scale) {

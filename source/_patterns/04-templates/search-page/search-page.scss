@@ -24,7 +24,7 @@
         max-width: none;
       }
       flex: 1;
-      max-width: calc(100vw - #{$double-spacing} - 120px);
+      max-width: calc(100vw - #{$double-spacing} - 7.5rem);
     }
 
     .search-submit {

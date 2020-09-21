@@ -2,11 +2,11 @@
 * @file
 * 02-molecules/testimonials/testimonial--default-style/_testimonial--default-style.scss
 */
-$testimonial-photo-size: 300px;
+$testimonial-photo-size: 18.75rem;
 $testimonial--full-page-photo-size: 40vw;
-$testimonial--full-page-photo-size-min: 320px;
-$testimonial--full-page-photo-size-max: 600px;
-$testimonial--credit-circle-size: 300px;
+$testimonial--full-page-photo-size-min: 20rem;
+$testimonial--full-page-photo-size-max: 37.5rem;
+$testimonial--credit-circle-size: 18.75rem;
 .block--testimonial {
   @include breakpoint ($small) {
     text-align: left;

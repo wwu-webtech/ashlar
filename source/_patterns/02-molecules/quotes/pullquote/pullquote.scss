@@ -2,11 +2,11 @@
 * @file
 * 02-molecules/testimonials/testimonial--quote-only/_testimonial--quote-only.scss
 */
-$quote-icon-size: 50px;
+$quote-icon-size: 3.125rem;
 
 .block--pullquote {
   position: relative;
-  
+
   blockquote {
     @include breakpoint($medium) {
       border-left: solid $border-width--thicker $green;

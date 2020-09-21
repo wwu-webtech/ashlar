@@ -2,8 +2,8 @@
 * @file
 * molecules/forms/checkbox/_checkbox.scss
 */
-$checkbox-size: 24px;
-$checkbox-size--smaller: 20px;
+$checkbox-size: 1.5rem;
+$checkbox-size--smaller: 1.25rem;
 
 .checkbox,
 .radio {
@@ -70,7 +70,7 @@ input[type="radio"] {
       &:before {
         border-color: $light-blue;
         box-shadow: $focus-shadow;
-        
+
         @media (-ms-high-contrast: active) {
           border-style: dotted;
         }

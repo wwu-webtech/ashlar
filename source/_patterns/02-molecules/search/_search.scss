@@ -2,7 +2,7 @@
 * @file
 * 02-molecules/content/search/_search.scss
 */
-$search-input-size: 200px;
+$search-input-size: 12.5rem;
 
 .search {
   @include breakpoint($medium) {

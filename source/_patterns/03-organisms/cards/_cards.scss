@@ -2,8 +2,8 @@
 * @file
 * organisms/cards/_cards.scss
 */
-$spotlight-height--medium: 200px;
-$spotlight-height--large: 300px;
+$spotlight-height--medium: 12.5rem;
+$spotlight-height--large: 18.75rem;
 
 .spotlight {
   @include breakpoint($large) {
