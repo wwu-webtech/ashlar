@@ -52,12 +52,12 @@
     .material-icons {
       &.show {
         @include breakpoint($large) {
-          font-size: $icon-size--small + 2px;
+          font-size: $icon-size--small + 0.125rem;
         }
         @include breakpoint($small) {
           display: inline-block;
           position: relative;
-          top: 3px;
+          top: $border-width--thicker;
         }
         display: block;
         font-size: $icon-size--small;

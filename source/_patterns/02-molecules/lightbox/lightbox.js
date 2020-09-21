@@ -56,7 +56,7 @@ function lightbox() {
   var iframe = document.createElement('iframe');
   iframe.setAttribute('title', '');
   iframe.setAttribute('src', '');
-  iframe.setAttribute('allowfullscreen', '');
+  iframe.setAttribute('allow', 'fullscreen autoplay');
 
   content.appendChild(iframe);
   lbContainer.appendChild(content);

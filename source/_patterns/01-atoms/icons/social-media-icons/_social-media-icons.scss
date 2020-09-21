@@ -14,7 +14,7 @@ $icon-space: (($toggle-size - $icon-size) / 2) - 1;
 
   svg {
     width: 100%;
-    padding: (($toggle-size - $icon-size) / 2) - 1;
+    padding: (($toggle-size - $icon-size) / 2);
     transition: fill $standard-ease $button-transition-speed;
 
     fill: $white;
@@ -66,7 +66,7 @@ $icon-space: (($toggle-size - $icon-size) / 2) - 1;
   }
   display: flex;
   flex-flow: row wrap;
-  max-width: 400px;
+  max-width: 25rem;
   padding: 0;
   list-style: none;
 
@@ -78,12 +78,12 @@ $icon-space: (($toggle-size - $icon-size) / 2) - 1;
 .my-western-links {
   .social-media-links {
     @include breakpoint($medium) {
-      max-width: 600px;
+      max-width: 37.5rem;
       margin-top: -$triple-spacing * 1.5;
       margin-left: 50%;
       transform: translatex(-50%);
     }
-    @include breakpoint(1080px) {
+    @include breakpoint(67.5rem) {
       margin-top: -$triple-spacing * 2;
     }
     justify-content: center;
@@ -104,7 +104,7 @@ $icon-space: (($toggle-size - $icon-size) / 2) - 1;
     text-align: center;
     text-decoration: none;
     background: transparent;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 1em;
 
     &:hover,

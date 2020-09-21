@@ -108,11 +108,11 @@ th {
     text-align: center;
     &:after {
       @include breakpoint($medium) {
-        right: -$border-width--thicker - 1px;
+        right: -$border-width--thicker - 0.0625rem;
         width: $border-width--thicker;
       }
       top: 0;
-      right: -$border-width - 1px;
+      right: -$border-width - 0.0625rem;
       width: $border-width;
     }
   }
@@ -120,10 +120,10 @@ th {
   &[rowspan] {
     &:after {
       @include breakpoint($medium) {
-        bottom: -$border-width--thicker - 1px;
+        bottom: -$border-width--thicker - 0.0625rem;
         height: $border-width--thicker;
       }
-      bottom: -$border-width - 1px;
+      bottom: -$border-width - 0.0625rem;
       left: 0;
       width: 100%;
       height: $border-width;

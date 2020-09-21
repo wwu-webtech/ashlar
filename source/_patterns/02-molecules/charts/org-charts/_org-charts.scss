@@ -4,7 +4,7 @@
 */
 $chart-background-color: $white;
 $line-color: mix($light-gray, $gray, 50%);
-$max-box-size: 300px;
+$max-box-size: 18.75rem;
 
 .org-chart {
   @include breakpoint($medium) {

@@ -14,17 +14,17 @@ blockquote {
   margin: 0 $standard-spacing;
   padding: $standard-spacing;
   font-style: italic;
-  border-left: solid 3px $green;
+  border-left: solid $border-width--thicker $green;
 
   &.style-thin-border {
     border: 0;
 
     &:before {
-      border-top: solid 3px $blue;
+      border-top: solid $border-width--thicker $blue;
     }
 
     &:after {
-      border-top: solid 3px $blue;
+      border-top: solid $border-width--thicker $blue;
     }
   }
 }

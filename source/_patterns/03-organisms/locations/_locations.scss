@@ -2,14 +2,14 @@
 * @file
 * organisms/locations/_locations.scss
 */
-$locations-block-width: 600px;
-$locations-block-width--bigger: 900px;
-$location-button-size: 160px;
-$location-icon-height: 90px;
-$stroke-width--heavy: 12px;
-$stroke-width--medium: 8px;
-$locations-icon-spacing: 30px;
-$locations-font-size: 18px;
+$locations-block-width: 37.5rem;
+$locations-block-width--bigger: 56.25rem;
+$location-button-size: 10rem;
+$location-icon-height: 5.625rem;
+$stroke-width--heavy: 0.75rem;
+$stroke-width--medium: 0.5rem;
+$locations-icon-spacing: 1.875rem;
+$locations-font-size: 1.125rem;
 
 // Containers and Buttons
 .wwu-locations {
@@ -42,10 +42,10 @@ $locations-font-size: 18px;
       transition: 500ms;
       -webkit-animation-name: pulse;
       animation-name: pulse;
-      border-radius: 500px;
+      border-radius: 31.25rem;
 
       &:active {
-        border: 2px solid #75cfff;
+        border: 0.125rem solid #75cfff;
       }
     }
 
@@ -98,7 +98,7 @@ $locations-font-size: 18px;
       top: 95%;
       left: 30%;
       width: 30%;
-      height: 3px;
+      height: 0.1875rem;
       content: "";
       transition: 0.3s ease all 0.1s;
       background-color: $link-blue;

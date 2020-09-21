@@ -2,8 +2,8 @@
  * @file
  * molecules/ribbon/_ribbon.scss
  */
-$ribbon-width: 300px;
-$ribbon-tail-height: 50px;
+$ribbon-width: 18.75rem;
+$ribbon-tail-height: 3.125rem;
 
 .ribbon {
   transition: $medium-transition-speed $standard-ease;
@@ -61,11 +61,11 @@ $ribbon-tail-height: 50px;
     display: block;
     color: $link-blue;
     border-bottom: $dark-blue $border-width solid;
-    font-size: 32px;
+    font-size: 2rem;
   }
 
   .below {
     color: $dark-blue;
-    font-size: 22px;
+    font-size: 1.375rem;
   }
 }

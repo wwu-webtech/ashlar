@@ -2,7 +2,7 @@
 * @file
 * 02-molecules/content/accordion.scss
 */
-$left-col-width: 84px;
+$left-col-width: 5.25rem;
 $accordion-border: $dark-blue solid $border-width--thicker;
 
 .accordion-set {
@@ -68,43 +68,6 @@ $accordion-border: $dark-blue solid $border-width--thicker;
 
     h2.title {
       padding-bottom: 0;
-    }
-  }
-}
-
-/* VU Accordion Styles */
-.quick-accordion {
-  .ui-accordion-content {
-    height: auto;
-
-    // Affects VU generated content
-    .view {
-      .view-content {
-        .views-row {
-          article {
-            header {
-              h2 {
-                font-size: 25px;
-              }
-
-              p {
-                font-size: $p-font-size;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  // Affects RSS feed
-  ul {
-    p {
-      font-size: $p-font-size
-    }
-
-    a {
-      font-size: $p-font-size
     }
   }
 }

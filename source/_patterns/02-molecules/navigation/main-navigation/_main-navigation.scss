@@ -57,6 +57,8 @@
           padding: $standard-spacing;
           text-align: center;
           font-size: $menu-font-size;
+          grid-column: initial;
+          grid-row: initial;
         }
         position: relative;
         display: grid;

@@ -74,7 +74,11 @@
     imagesSrc: [
       'source/images/**/*.{jpg,jpeg,gif,png,svg}'
     ],
-    imagesDest: 'source/pattern-lab/images'
+    imagesDest: 'source/pattern-lab/images',
+    fontSrc: [
+      'source/fonts/*.woff2'
+    ],
+    fontDest: 'source/pattern-lab/fonts'
   };
 
   /**
@@ -176,6 +180,20 @@
   };
 
   /**
+   * Fonts configuration.
+   *
+   * src: Source pattern for font files.
+   * dest: Output pattern for font files.
+   */
+  config.fonts = {
+    src: [
+      'source/fonts/*.woff2'
+    ],
+    dest: 'build/fonts'
+  };
+
+
+  /**
    * Generate CSS.
    */
   gulp.task('sass', function (callback) {
@@ -254,6 +272,17 @@
   });
 
   /**
+   * Put fonts in the right spot.
+   */
+  gulp.task('fonts', function (callback) {
+    pump(
+      gulp.src(config.fonts.src),
+      gulp.dest(config.fonts.dest),
+      callback
+    );
+  });
+
+  /**
    * Generate Pattern Lab CSS.
    */
   gulp.task('patternlab:sass', function (callback) {
@@ -315,9 +344,20 @@
   });
 
   /**
+   * Generate Pattern Lab Fonts.
+   */
+  gulp.task('patternlab:fonts', function (callback) {
+    pump(
+      gulp.src(config.patternLab.fontSrc),
+      gulp.dest(config.patternLab.fontDest),
+      callback
+    );
+  });
+
+  /**
    * Run Pattern Lab tasks.
    */
-  gulp.task('patternlab', gulp.parallel(['patternlab:sass', 'patternlab:js', 'patternlab:images']));
+  gulp.task('patternlab', gulp.parallel(['patternlab:sass', 'patternlab:js', 'patternlab:images', 'patternlab:fonts']));
 
   /**
    * Set watch tasks.
@@ -363,6 +403,6 @@
   /**
    * Gulp default task.
    */
-  gulp.task('default', gulp.parallel(['sass', 'js', 'images']));
+  gulp.task('default', gulp.parallel(['sass', 'js', 'images', 'fonts']));
 
 })();

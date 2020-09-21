@@ -48,7 +48,7 @@
   h3 {
     margin-top: 0;
     color: $lightest-green;
-    text-shadow: 1px 1px 1px transparentize($dark-blue, 0.1);
+    text-shadow: 0.0625rem 0.0625rem 0.0625rem transparentize($dark-blue, 0.1);
     font-family: $sans-serif;
     font-size: $p-font-size;
     font-weight: $font-weight--semibold;
