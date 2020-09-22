@@ -17,12 +17,14 @@
     <span class="toggle-suffix visually-hidden"></span>
   </button>
 
-  <div class="site-name mobile">
-    {% block mobile_site_name %}
+  <div class="site-name">
+    {% block site_name %}
       <a href="/" class="home-link">{{ site_name }}</a>
     {% endblock %}
+  </div>
 
-    {% block mobile_western_header %}
+  <div class="western-header-region">
+    {% block western_header %}
         {{ page.wwu_header }}
     {% endblock %}
   </div>
@@ -32,16 +34,6 @@
 
     {% block quick_links %}
       {% include "@molecules/navigation/wwu-menu/wwu-menu.html.twig" %}
-    {% endblock %}
-
-    <div class="site-name">
-      {% block site_name %}
-        <a href="/" class="home-link">{{ site_name }}</a>
-      {% endblock %}
-    </div>
-
-    {% block western_header %}
-        {{ page.wwu_header }}
     {% endblock %}
 
     {% block main_navigation %}

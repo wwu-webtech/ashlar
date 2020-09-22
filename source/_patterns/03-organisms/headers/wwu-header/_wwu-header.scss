@@ -29,19 +29,6 @@
       opacity: 1 !important;
 
       grid-area: header;
-      grid-template-areas: "logo wwu-menu"
-      "logo site-name"
-      "logo secondary-site-name"
-      "menu menu";
-      grid-template-columns: ($logo-size + ($triple-spacing * 2)) 1fr;
-      grid-template-rows: ($logo-size / 3) ($logo-size / 3) ($logo-size / 3) auto;
-    }
-    @include breakpoint($large) {
-      grid-template-areas: "logo ... wwu-menu"
-      "logo site-name ..."
-      "logo secondary-site-name secondary-site-name"
-      "menu menu menu";
-      grid-template-columns: ($logo-size + ($triple-spacing * 2)) 1fr auto;
     }
     position: fixed;
     z-index: 4;
@@ -73,7 +60,7 @@
 
     .western-home-link {
       color: $white;
-      
+
       &:focus {
         outline-color: $white;
         outline-offset: -$border-width;

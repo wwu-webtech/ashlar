@@ -29,6 +29,7 @@
   set classes = [
     'block',
     'block--secondary-site-name',
+    'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
   ]
 %}
 {% set attributes = attributes.addClass(classes) %}
