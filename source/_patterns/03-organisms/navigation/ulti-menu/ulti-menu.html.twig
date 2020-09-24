@@ -16,11 +16,11 @@
               <a class="ultimenu__link" href="/"><span class="material-icons">home</span></a>
             {% endblock %}
           {% else %}
-            {{ item.link }}
             {% if item.flyout %}
               <span class="material-icons expand-icon mobile" aria-hidden="true">keyboard_arrow_right</span>
               <span class="material-icons expand-icon desktop" aria-hidden="true">keyboard_arrow_down</span>
             {% endif %}
+            {{ item.link }}
           {% endif %}
           {% if item.below %}
             {{ menus.menu_links(item.below, attributes, menu_level + 1) }}

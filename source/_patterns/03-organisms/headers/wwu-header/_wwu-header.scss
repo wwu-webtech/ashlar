@@ -11,8 +11,12 @@
   @include breakpoint($medium) {
     display: grid;
 
-    grid-template-areas: "header";
-    grid-template-columns: 1fr;
+    grid-template-areas: "logo quick-links"
+    "logo site-name"
+    "logo western-header-region"
+    "main-nav main-nav";
+    grid-template-columns: ($logo-size + ($triple-spacing * 2)) 1fr;
+    grid-template-rows: ($logo-size / 3) ($logo-size / 3) auto auto;
   }
   background-color: $dark-blue;
 
@@ -27,21 +31,6 @@
       min-height: initial;
       padding-top: 0;
       opacity: 1 !important;
-
-      grid-area: header;
-      grid-template-areas: "logo wwu-menu"
-      "logo site-name"
-      "logo secondary-site-name"
-      "menu menu";
-      grid-template-columns: ($logo-size + ($triple-spacing * 2)) 1fr;
-      grid-template-rows: ($logo-size / 3) ($logo-size / 3) ($logo-size / 3) auto;
-    }
-    @include breakpoint($large) {
-      grid-template-areas: "logo ... wwu-menu"
-      "logo site-name ..."
-      "logo secondary-site-name secondary-site-name"
-      "menu menu menu";
-      grid-template-columns: ($logo-size + ($triple-spacing * 2)) 1fr auto;
     }
     position: fixed;
     z-index: 4;
@@ -50,17 +39,32 @@
     overflow-y: scroll;
     width: 100vw;
     min-height: 100vh;
-    padding-top: $toggle-size;
     background-color: $dark-blue;
-  }
 
-  .western-menu {
-    grid-area: wwu-menu;
+    &.western-header-navigation {
+      @include breakpoint($medium) {
+        padding-top: 0;
+
+        grid-area: quick-links;
+      }
+      padding-top: $toggle-size;
+    }
+
+    &.main-header-navigation {
+      @include breakpoint($medium) {
+        top: initial;
+
+        grid-area: main-nav;
+      }
+      top: ($toggle-size * 2) + $double-spacing;
+    }
   }
 
   .western-logo {
     @include breakpoint($medium) {
       margin: initial;
+
+      grid-area: logo;
     }
     position: relative;
     z-index: 3;
@@ -69,11 +73,9 @@
     margin: auto;
     padding-right: $toggle-size;
 
-    grid-area: header;
-
     .western-home-link {
       color: $white;
-      
+
       &:focus {
         outline-color: $white;
         outline-offset: -$border-width;
@@ -87,8 +89,6 @@
       background: transparent;
     }
     margin: auto;
-
-    grid-area: logo;
 
     &.horizontal {
       @include breakpoint($medium) {
@@ -115,8 +115,6 @@
     border-radius: 0;
     background: transparent;
     box-shadow: none;
-
-    grid-area: menu;
 
     &.is-expanded {
       position: fixed;
@@ -177,14 +175,8 @@
       }
     }
   }
-}
 
-.region--wwu_header,
-.block--secondary-site-name {
-  grid-area: secondary-site-name;
-}
-
-.main-navigation,
-.region--main_navigation {
-  grid-area: menu;
+  .western-header-region {
+    grid-area: western-header-region;
+  }
 }
