@@ -16,7 +16,7 @@
     "logo western-header-region"
     "main-nav main-nav";
     grid-template-columns: ($logo-size + ($triple-spacing * 2)) 1fr;
-    grid-template-rows: ($logo-size / 3) ($logo-size / 3) ($logo-size / 3) auto;
+    grid-template-rows: ($logo-size / 3) ($logo-size / 3) auto auto;
   }
   background-color: $dark-blue;
 
