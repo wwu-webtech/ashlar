@@ -44,7 +44,8 @@
 }
 
 /* Drupal 7 Version */
-.tabs-primary {
+.tabs-primary,
+.transcript-link {
   display: flex;
   margin-bottom: $standard-spacing;
   padding-left: 0;
