@@ -18,6 +18,34 @@ a#clip {
   }
 }
 
+.islandora-objects-display-switch {
+  float: none;
+
+  ul {
+    display: flex;
+    margin: $half-spacing 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    margin-right: $standard-spacing;
+    padding: $half-spacing $standard-spacing;
+    text-decoration: none;
+    color: $black;
+    background-color: $light-gray;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      background-color: $gray;
+    }
+  }
+}
+
+
+
 /* Gray box around objects */
 .islandora-audio-content,
 .islandora-basic-image-content,
@@ -90,20 +118,20 @@ body.page-islandora-object {
 /* Details tab */
 .islandora-metadata {
   .fieldset-title {
-    font-family: $serif;
-    font-size: $h2-font-size;
     text-decoration: none;
     color: $dark-blue;
+    font-family: $serif;
+    font-size: $h2-font-size;
 
     &:after {
-      content: ' -';
+      content: " -";
     }
   }
 
   &.collapsed {
     .fieldset-title {
       &:after {
-        content: ' +';
+        content: " +";
       }
     }
   }
@@ -111,9 +139,9 @@ body.page-islandora-object {
 
 html.js .islandora-metadata,
 html.js .islandora-metadata.collapsed {
-  border: solid $dark-blue $border-width;
-  padding: $standard-spacing;
   margin-bottom: $standard-spacing;
+  padding: $standard-spacing;
+  border: solid $dark-blue $border-width;
 }
 
 html.js .islandora-metadata.collapsible .fieldset-legend {
