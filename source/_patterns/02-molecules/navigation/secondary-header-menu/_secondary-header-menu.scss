@@ -1,0 +1,41 @@
+/**
+ * @file
+ * molecules/links/skip-content/_secondary-header-menu.scss
+ */
+
+.western-header-region {
+  .menu {
+    @include breakpoint ($small) {
+      justify-content: end;
+    }
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 0;
+    padding: $standard-spacing 0;
+
+    li {
+      margin-right: $standard-spacing;
+      margin-bottom: $half-spacing;
+      border: none;
+
+      a {
+        @include button-box-shadow($white);
+        padding: $half-spacing;
+        text-align: center;
+        color: white;
+        border: solid $border-width--thinner $white;
+        border-radius: $border-radius--round;
+        font-size: 1rem;
+        line-height: 1em;
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: $dark-blue;
+          outline-color: $white;
+        }
+      }
+    }
+  }
+}

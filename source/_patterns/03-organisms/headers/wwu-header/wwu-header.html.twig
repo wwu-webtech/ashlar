@@ -1,7 +1,7 @@
 {#
 /**
- * Western header - includes logo, campus links, search, and site name
- */
+* Western header - includes logo, campus links, search, and site name
+*/
 #}
 <div class="western-header">
   <div class="western-logo">
@@ -17,33 +17,27 @@
     <span class="toggle-suffix visually-hidden"></span>
   </button>
 
-  <div class="site-name mobile">
-    {% block mobile_site_name %}
+  <div class="site-name">
+    {% block site_name %}
       <a href="/" class="home-link">{{ site_name }}</a>
-    {% endblock %}
-
-    {% block mobile_western_header %}
-        {{ page.wwu_header }}
     {% endblock %}
   </div>
 
-  <div class="header-navigation">
+  <div class="western-header-region">
+    {% block western_header %}
+      {{ page.wwu_header }}
+    {% endblock %}
+  </div>
+
+  <div class="header-navigation western-header-navigation">
     {% include "@atoms/logo/logo--horizontal.twig" %}
 
     {% block quick_links %}
       {% include "@molecules/navigation/wwu-menu/wwu-menu.html.twig" %}
     {% endblock %}
+  </div>
 
-    <div class="site-name">
-      {% block site_name %}
-        <a href="/" class="home-link">{{ site_name }}</a>
-      {% endblock %}
-    </div>
-
-    {% block western_header %}
-        {{ page.wwu_header }}
-    {% endblock %}
-
+  <div class="header-navigation main-header-navigation">
     {% block main_navigation %}
       {{ page.main_navigation }}
     {% endblock %}
