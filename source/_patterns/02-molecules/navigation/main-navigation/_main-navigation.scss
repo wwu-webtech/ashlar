@@ -49,6 +49,13 @@
       grid-template-columns: 1fr $toggle-size;
       grid-template-rows: auto auto;
 
+      &:last-of-type {
+        @include breakpoint($small) {
+          margin-bottom: 0;
+        }
+        margin-bottom: 50vh;
+      }
+
       & > a {
         @include breakpoint($large) {
           font-size: $menu-font-size--max;
@@ -84,10 +91,6 @@
           text-decoration: none;
           outline: none;
           background-color: transparent;
-        }
-
-        &:last-of-type {
-          margin-bottom: 50vh;
         }
       }
 
