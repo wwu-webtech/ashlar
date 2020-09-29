@@ -37,6 +37,7 @@
         position: absolute;
         display: block !important;
       }
+      max-height: none;
       visibility: visible;
       opacity: 1;
     }
@@ -55,7 +56,6 @@
       background: transparent;
 
       &.open {
-        color: $white;
         background: transparent;
       }
     }
