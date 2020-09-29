@@ -85,6 +85,10 @@
           outline: none;
           background-color: transparent;
         }
+
+        &:last-of-type {
+          margin-bottom: 50vh;
+        }
       }
 
 
