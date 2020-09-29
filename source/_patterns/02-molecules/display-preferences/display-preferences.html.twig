@@ -1,15 +1,34 @@
 <div class="display-preferences">
-  <div class="color-mode">
-    <fieldset>
-      <legend>Color Mode:</legend>
-      <input id="default" type="checkbox" name="toppings" value="default">
-      <label for="default">Default</label><br>
-      <input id="Dark Mode" type="checkbox" name="toppings" value="Dark Mode">
-      <label for="Dark Mode">Dark Mode</label><br>
-      <input id="low-contrast-light" type="checkbox" name="toppings" value="low-contrast-light">
-      <label for="low-contrast-light">Low Contrast (light)</label><br>
-      <input id="low-contrast-dark" type="checkbox" name="toppings" value="low-contrast-dark">
-      <label for="low-contrast-dark">Low Contrast (dark)</label>
-    </fieldset>
-  </div>
+    <button class="small icon-with-text toggle-display-preferences">
+      <span class="material-icons" aria-hidden="true">settings</span>
+      <span class="toggle-prefix visually-hidden">Open the </span>
+      <span class="toggle-text icon-text">Display Preferences</span>
+      <span class="toggle-suffix visually-hidden"></span>
+    </button>
+
+    <div class="display-preferences-menu">
+      <div class="color-mode">
+        <fieldset>
+          <legend>Theme</legend>
+          <input id="default" type="radio" name="toppings" value="default" checked="checked">
+          <label for="default">Default</label><br>
+          <input id="dark-mode" type="radio" name="toppings" value="dark-mode">
+          <label for="dark-mode">Dark</label><br>
+        </fieldset>
+      </div>
+
+      <div class="font-selection">
+        <fieldset>
+          <legend>Font</legend>
+          <input id="default" type="radio" name="toppings" value="default" checked="checked">
+          <label for="default">Default</label><br>
+          <input id="serif" type="radio" name="toppings" value="serif">
+          <label for="serif">Serif</label><br>
+          <input id="opendyslexic" type="radio" name="toppings" value="opendyslexic">
+          <label for="opendyslexic">Open Dyslexic</label><br>
+          <input id="comic-sans" type="radio" name="toppings" value="comic-sans">
+          <label for="comic-sans">Comic Sans</label><br>
+        </fieldset>
+      </div>
+    </div>
 </div>

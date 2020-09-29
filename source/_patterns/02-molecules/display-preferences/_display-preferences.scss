@@ -2,3 +2,77 @@
 * @file
 * molecules/display-preferences/_display-preferences.scss
 */
+
+.display-preferences {
+  @include breakpoint($medium) {
+    margin: 0;
+  }
+  display: flex;
+  flex-flow: row wrap;
+  align-self: start;
+  justify-content: flex-start;
+  margin-top: $half-spacing;
+  margin-bottom: $standard-spacing;
+  font-family: $condensed;
+
+  .quick-links {
+    display: flex;
+  }
+
+  .icon-with-text {
+    @include breakpoint($medium) {
+      display: flex;
+      align-items: center;
+      width: initial;
+      height: initial;
+      padding: $half-spacing $standard-spacing $half-spacing $half-spacing;
+
+      .material-icons {
+        position: relative;
+        top: 0.125rem;
+        margin-right: $border-width;
+        font-size: $icon-size--medium;
+      }
+    }
+    padding: 0;
+    color: $white;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $darkest-blue;
+      background-color: $lightest-green;
+    }
+
+    &:focus {
+      outline-color: $darkest-blue;
+      outline-offset: -$border-width;
+    }
+
+    &.my-western-link {
+      @include breakpoint($medium) {
+        width: initial;
+      }
+      width: $toggle-size + $standard-spacing;
+    }
+  }
+
+  .toggle-display-preferences {
+    width: initial;
+  }
+
+  .display-preferences-menu {
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+    display: flex;
+    flex: 0 0 100%;
+    min-width: 50vw;
+    padding: $double-spacing;
+    color: $white;
+    background-image: linear-gradient(to bottom, $darkest-blue, transparentize($dark-blue, 0.1));
+  }
+}

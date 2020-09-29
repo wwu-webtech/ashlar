@@ -43,15 +43,19 @@
 
     &.western-header-navigation {
       @include breakpoint($medium) {
+        z-index: 3;
+        display: grid;
         padding-top: 0;
 
         grid-area: quick-links;
+        grid-template-columns: auto 1fr;
       }
       padding-top: $toggle-size;
     }
 
     &.main-header-navigation {
       @include breakpoint($medium) {
+        z-index: 2;
         top: initial;
 
         grid-area: main-nav;
