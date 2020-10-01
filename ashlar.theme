@@ -230,8 +230,8 @@ function ashlar_preprocess_ultimenu(&$variables) {
  */
 function _ultimenu_links(&$items) {
   foreach ($items as $item) {
-    if($item['attributes']['class'] == 'is-active-trail') {
-      $item['attributes']['class']->addClass('test-class');
+    if($item['link']['#options']['attributes']['class'] == 'is-active-trail') {
+      $item['link']['#options']['attributes']['class']->addClass('test-class');
     }
   }
 }
