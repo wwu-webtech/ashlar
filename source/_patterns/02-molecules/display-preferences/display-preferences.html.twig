@@ -1,34 +1,34 @@
 <div class="display-preferences">
-    <button class="small icon-with-text toggle-display-preferences" aria-expanded="false" aria-controls="display-preferences-menu" onclick="toggle_preferences()">
-      <span class="material-icons" aria-hidden="true">settings</span>
-      <span class="toggle-prefix visually-hidden">Open the </span>
-      <span class="toggle-text icon-text">Display Preferences</span>
-      <span class="toggle-suffix visually-hidden"></span>
-    </button>
+  <button class="small icon-with-text toggle-display-preferences" aria-expanded="false" aria-controls="display-preferences-menu" onclick="toggle_preferences()">
+    <span class="material-icons" aria-hidden="true">settings</span>
+    <span class="toggle-prefix visually-hidden">Open the </span>
+    <span class="toggle-text icon-text">Display Preferences</span>
+    <span class="toggle-suffix visually-hidden"></span>
+  </button>
 
-    <div id="display-preferences-menu" class="display-preferences-menu" hidden>
-      <div class="color-mode">
-        <fieldset>
-          <legend>Theme</legend>
-          <input id="default-theme" type="radio" name="default-theme" value="default" checked="checked">
-          <label for="default-theme">Default</label><br>
-          <input id="dark-mode" type="radio" name="dark-mode" value="dark-mode">
-          <label for="dark-mode">Dark</label><br>
-        </fieldset>
-      </div>
-
-      <div class="font-selection">
-        <fieldset>
-          <legend>Font</legend>
-          <input id="default-font" type="radio" name="default-font" value="default" checked="checked">
-          <label for="default-font">Default</label><br>
-          <input id="serif" type="radio" name="serif" value="serif">
-          <label for="serif">Serif</label><br>
-          <input id="opendyslexic" type="radio" name="open-dyslexic" value="opendyslexic">
-          <label for="opendyslexic">Open Dyslexic</label><br>
-          <input id="comic-sans" type="radio" name="comic-sans" value="comic-sans">
-          <label for="comic-sans">Comic Sans</label><br>
-        </fieldset>
-      </div>
+  <div id="display-preferences-menu" class="display-preferences-menu" hidden>
+    <div class="color-mode">
+      <fieldset>
+        <legend>Theme</legend>
+        <input id="default-theme" type="radio" name="theme-select" value="default" checked="checked">
+        <label for="default-theme">Default</label><br>
+        <input id="dark-mode" type="radio" name="theme-select" value="dark-mode">
+        <label for="dark-mode">Dark</label><br>
+      </fieldset>
     </div>
+
+    <div class="font-selection">
+      <fieldset>
+        <legend>Font</legend>
+        <input id="default-font" type="radio" name="font-select" value="default" checked="checked">
+        <label for="default-font">Default</label><br>
+        <input id="serif" type="radio" name="font-select" value="serif">
+        <label for="serif">Serif</label><br>
+        <input id="opendyslexic" type="radio" name="font-select" value="opendyslexic">
+        <label for="opendyslexic">Open Dyslexic</label><br>
+        <input id="comic-sans" type="radio" name="font-select" value="comic-sans">
+        <label for="comic-sans">Comic Sans</label><br>
+      </fieldset>
+    </div>
+  </div>
 </div>
