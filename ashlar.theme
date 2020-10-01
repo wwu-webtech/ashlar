@@ -216,6 +216,27 @@ function ashlar_theme_suggestions_page_alter(array &$suggestions, array $variabl
 }
 
 /**
+ * Implements hook_preprocess_HOOK() for ultimenu.html.twig.
+ *
+ * Adds aria-current to ultimenu link representing current page. This cannot be done in Twig templates without
+ * using Drupal specific extensions.
+ */
+function ashlar_preprocess_ultimenu(&$variables) {
+  _ultimenu_links($variables['element']['#items'], 0);
+}
+
+/**
+ * Helper function for adding aria-current to ultimenu links.
+ */
+function _ultimenu_links(&$items) {
+  foreach ($items as $item) {
+    if($item['attributes']['class'] == 'is-active-trail') {
+      $item['attributes']['class']->addClass('test-class');
+    }
+  }
+}
+
+/**
  * Implements hook_preprocess_HOOK() for menu.html.twig.
  *
  * Adds classes to menu links. This cannot be done in Twig templates without
@@ -239,6 +260,7 @@ function _menu_links(&$items, $menu_level) {
     }
     if ($item['in_active_trail']) {
       $classes[] = 'menu-item--active-trail';
+      $item['attributes']->setAttribute('aria-current', 'page');
     }
     $item['attributes']->addClass($classes);
     if ($item['below']) {
