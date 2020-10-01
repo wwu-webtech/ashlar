@@ -9,7 +9,7 @@
 
   <ul{{ attributes.addClass(classes) }}>
     {%- for item in items -%}
-      <li{{ item.attributes.addClass(item_classes, item.flyout ? 'has-ultimenu') }}>
+      <li{{ item.attributes.addClass(item_classes, item.flyout ? 'has-ultimenu').setAttribute(item.config.is_active ? 'aria-current', 'page') }}>
         {%- if item.link -%}
           {% if item.title == 'home-icon' %}
             {% block home %}
