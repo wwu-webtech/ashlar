@@ -526,7 +526,8 @@
   }
 }
 
-.black-bg {
+.black-bg,
+.dark-mode {
   @include black-bg;
 }
 .gray-bg {

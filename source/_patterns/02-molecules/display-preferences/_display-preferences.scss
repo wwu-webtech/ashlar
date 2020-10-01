@@ -5,14 +5,14 @@
 
 .display-preferences {
   @include breakpoint($medium) {
+    min-height: initial;
     margin: 0;
   }
   display: flex;
   flex-flow: row wrap;
   align-self: start;
   justify-content: flex-start;
-  margin-top: $half-spacing;
-  margin-bottom: $standard-spacing;
+  min-height: $toggle-size;
   font-family: $condensed;
 
   .quick-links {
@@ -20,25 +20,22 @@
   }
 
   .icon-with-text {
-    @include breakpoint($medium) {
-      display: flex;
-      align-items: center;
-      width: initial;
-      height: initial;
-      padding: $half-spacing $standard-spacing $half-spacing $half-spacing;
-
-      .material-icons {
-        position: relative;
-        top: 0.125rem;
-        margin-right: $border-width;
-        font-size: $icon-size--medium;
-      }
-    }
-    padding: 0;
+    display: flex;
+    align-items: center;
+    width: initial;
+    height: initial;
+    padding: $half-spacing $standard-spacing $half-spacing $half-spacing;
     color: $white;
     border-radius: 0;
     background: transparent;
     box-shadow: none;
+
+    .material-icons {
+      position: relative;
+      top: 0.125rem;
+      margin-right: $border-width;
+      font-size: $icon-size--medium;
+    }
 
     &:hover,
     &:active,
@@ -66,13 +63,24 @@
 
   .display-preferences-menu {
     position: absolute;
-    top: 2.6rem;
+    top: 2.7rem;
     left: 0;
-    display: none;
     flex: 0 0 100%;
     padding: $double-spacing;
     color: $white;
     background-image: linear-gradient(to bottom, $darkest-blue, transparentize($dark-blue, 0.1));
+    display: flex;
+    transition: $standard-ease $fast-transition-speed all;
+
+    &.closed {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &.open {
+      visibility: visible;
+      opacity: 1;
+    }
 
     legend {
       margin: 0;
