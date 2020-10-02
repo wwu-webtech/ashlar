@@ -61,6 +61,16 @@
         @include breakpoint($medium) {
           background-color: $lightest-green;
           border-left: 0;
+
+          .expand-icon.desktop {
+            color: $black;
+          }
+
+          &:hover, &:focus-within, &:active {
+            .expand-icon.desktop {
+              color: $white;
+            }
+          }
         }
         border-left: $border-width--thicker solid $lightest-green;
         

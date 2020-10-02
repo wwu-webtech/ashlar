@@ -13,6 +13,14 @@
 
     li {
       border-left: none;
+
+      &[aria-current="page"] {
+        background-color: $lightest-green;
+    
+        a {
+          color: $black;
+        }
+      }
     }
 
     a {
