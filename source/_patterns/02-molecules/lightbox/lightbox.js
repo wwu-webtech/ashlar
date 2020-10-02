@@ -30,12 +30,12 @@ function lightbox() {
 
   var lbContainer = document.createElement('div');
   lbContainer.classList.add('lightbox-dialog');
-  lbContainer.setAttribute('role', 'dialog');
-  lbContainer.setAttribute('id', 'dialog-1');
-  lbContainer.setAttribute('aria-labelledby', 'dialog-heading');
   
   var overlay = document.createElement('div');
   overlay.classList.add('lightbox-overlay', 'invisible');
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('id', 'dialog-1');
+  overlay.setAttribute('aria-labelledby', 'dialog-heading');
   
   overlay.appendChild(lbContainer);
   body.appendChild(overlay);
