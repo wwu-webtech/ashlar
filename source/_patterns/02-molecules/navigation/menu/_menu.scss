@@ -33,3 +33,16 @@
     }
   }
 }
+
+/* Block system menus */
+
+.block--menu {
+  .menu {
+    li {
+
+      &[aria-current="page"] {
+        background-color: $lightest-green;
+      }
+    }
+  }
+}
