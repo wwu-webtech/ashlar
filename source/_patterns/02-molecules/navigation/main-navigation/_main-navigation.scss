@@ -29,7 +29,7 @@
     margin: 0;
     padding-left: 0;
     background-color: initial;
-
+    
     & > li {
       @include breakpoint($medium) {
         width: inherit;
@@ -54,6 +54,33 @@
           margin-bottom: 0;
         }
         margin-bottom: 50vh;
+      }
+
+      /* active page styles */
+      &[aria-current="page"] {
+        @include breakpoint($medium) {
+          background-color: $lightest-green;
+          border-left: 0;
+
+          .expand-icon.desktop {
+            color: $black;
+          }
+
+          &:hover, &:focus-within, &:active {
+            .expand-icon.desktop {
+              color: $white;
+            }
+          }
+        }
+        border-left: $border-width--thicker solid $lightest-green;
+        
+        a {
+          @include breakpoint($medium) {
+            color: $black;
+            padding-left: $standard-spacing;
+          }
+          padding-left: $standard-spacing * 1.25;
+        }
       }
 
       & > a {
