@@ -29,7 +29,13 @@
   }
 
   .mobile-menu {
-    display: none;
+    &.open {
+      display: block;
+    }
+    
+    &.closed {
+      display: none;
+    }
   }
 
   .site-name {

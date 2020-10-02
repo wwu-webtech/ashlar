@@ -23,8 +23,19 @@ function position_elements() {
   }
 }
 
+function toggle_mobile_menu() {
+  if (mobile_menu_wrapper.classList.contains('closed')) {
+    mobile_menu_wrapper.classList.add('open');
+    mobile_menu_wrapper.classList.remove('closed');
+  } else {
+    mobile_menu_wrapper.classList.remove('open');
+    mobile_menu_wrapper.classList.add('closed');
+  }
+}
+
 position_elements();
-window.addEventListener("resize", position_elements);
+window.addEventListener('resize', position_elements);
+mobile_menu_toggle.addEventListener('click', toggle_mobile_menu);
 
 /*
 var $menu_toggle = $('.toggle-menu', context);
@@ -36,38 +47,82 @@ var $last_focused;
 var $inputs = $(document).find('select, button, a, input, textarea', context);
 var $page = $('.skip-link, .splash, .make-waves, .header-navigation .site-name, .toggle-open-menu, .page-content, .region--footer', context);
 
-*/
+// aria-expanded vars
+var $menu_item = $('.ultimenu__item', context);
+var $menu_link = $menu_item.children('.ultimenu__link');
 
+function toggle_menu(event) {
+$menu_toggle.off('click', toggle_menu);
 
+if ($menu_toggle.hasClass('is-expanded')) {
+toggle_close_menu(event);
+}
+else {
+toggle_open_menu(event);
+}
+}
 
-// Function to toggle menu open/closed
+function toggle_open_menu(event) {
+$last_focused = document.activeElement;
+$('.header-navigation').show();
+$menu_icon.text('close');
+$toggle_prefix.html('');
+$toggle_text.html('Close');
+$toggle_suffix.html(' the Menu');
 
-// Function to open menu
-// show the menu (add is-expanded), with slide in animation
-/* aria stuff
+$('.header-navigation').animate(
+{
+right: '0',
+opacity: '1'
+},
+{
+duration: 'normal',
+easing: 'swing',
+complete: function () {
+$menu_toggle.addClass('is-expanded');
+$menu_toggle.on('click', toggle_menu);
+$menu_toggle.focus();
 $inputs.not('.toggle-menu, .header-navigation a, .header-navigation button, .ultimenu__flyout a').attr('tabindex', '-1');
 $page.not('.header-navigation').attr('aria-hidden', 'true');
 $menu_link.removeAttr('aria-hidden aria-expanded tabindex');
 $('.has-ultimenu').find($menu_link).attr({
 'role': 'button',
 'aria-expanded': false
-*/
+});
+}
+}
+);
+}
 
-// Function to close the menu
-// slide out animation an hide things (remove .is-extended)
-/* aria stuff
+function toggle_close_menu(event) {
+$menu_icon.text('menu');
+$toggle_prefix.html('Open the ');
+$toggle_text.html('Menu');
+$toggle_suffix.html('');
+
+$('.header-navigation').animate(
+{
+right: '-100%',
+opacity: '0'
+},
+{
+duration: 'normal',
+easing: 'swing',
+complete: function () {
+$('.header-navigation').hide();
+$('#dropLangMenu').hide();
+$menu_toggle.removeClass('is-expanded');
 $page.not('.header-navigation').removeAttr('aria-hidden');
 $inputs.not('.header-navigation a, .header-navigation button').removeAttr('tabindex');
 $menu_link.attr({'aria-hidden': 'true', 'tabindex': '-1'});
 $menu_toggle.on('click', toggle_menu);
 $last_focused.focus();
-*/
+}
+}
+);
+}
 
 // START desktop/mobile resize toggle
-/* This whole thing basically just hides all the menu links if the menu is hidden on mobile??
-
-var $menu_item = $('.ultimenu__item', context);
-var $menu_link = $menu_item.children('.ultimenu__link');
 var $window = $(window, context);
 
 function ariaMobile() {
