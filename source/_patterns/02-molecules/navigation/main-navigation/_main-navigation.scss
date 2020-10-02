@@ -74,7 +74,7 @@
         }
         border-left: $border-width--thicker solid $lightest-green;
         
-        a {
+        & > a {
           @include breakpoint($medium) {
             color: $black;
             padding-left: $standard-spacing;
