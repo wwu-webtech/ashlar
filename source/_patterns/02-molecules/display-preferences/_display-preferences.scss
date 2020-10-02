@@ -6,13 +6,12 @@
 .display-preferences {
   @include breakpoint($medium) {
     min-height: initial;
-    margin: 0;
+    margin-bottom: 0;
   }
-  display: flex;
   flex-flow: row wrap;
   align-self: start;
   justify-content: flex-start;
-  min-height: $toggle-size;
+  margin-bottom: $triple-spacing;
   font-family: $condensed;
 
   .quick-links {
@@ -65,12 +64,12 @@
     position: absolute;
     top: 2.7rem;
     left: 0;
+    display: flex;
     flex: 0 0 100%;
     padding: $double-spacing;
+    transition: $standard-ease $fast-transition-speed all;
     color: $white;
     background-image: linear-gradient(to bottom, $darkest-blue, transparentize($dark-blue, 0.1));
-    display: flex;
-    transition: $standard-ease $fast-transition-speed all;
 
     &.closed {
       visibility: hidden;

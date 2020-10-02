@@ -13,10 +13,6 @@
   margin-bottom: $standard-spacing;
   font-family: $condensed;
 
-  .quick-links {
-    display: flex;
-  }
-
   .icon-with-text {
     @include breakpoint($medium) {
       display: flex;
@@ -56,5 +52,9 @@
       }
       width: $toggle-size + $standard-spacing;
     }
+  }
+
+  .quick-links {
+    display: flex;
   }
 }

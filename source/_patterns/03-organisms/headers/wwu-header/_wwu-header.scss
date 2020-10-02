@@ -4,133 +4,32 @@
 */
 .site-header {
   position: relative;
-  z-index: 2;
 }
 
 .western-header {
   @include breakpoint($medium) {
     display: grid;
 
-    grid-template-areas: "logo quick-links"
-    "logo site-name"
-    "logo western-header-region"
-    "main-nav main-nav";
-    grid-template-columns: ($logo-size + ($triple-spacing * 2)) 1fr;
+    grid-template-areas:
+    "logo display-preferences quick-links"
+    "logo site-name site-name"
+    "logo western-header-region western-header-region"
+    "main-nav main-nav main-nav";
+    grid-template-columns: ($logo-size + ($triple-spacing * 2)) auto 1fr;
     grid-template-rows: ($logo-size / 3) ($logo-size / 3) auto auto;
   }
   background-color: $dark-blue;
 
-  .header-navigation {
-    @include breakpoint($medium) {
-      position: relative;
-      z-index: 2;
-      right: initial !important;
-      display: grid !important;
-      overflow-y: initial;
-      width: 100%;
-      min-height: initial;
-      padding-top: 0;
-      opacity: 1 !important;
-    }
-    position: fixed;
-    z-index: 4;
-    top: 0;
+  .display-preferences {
+    grid-area: display-preferences;
+  }
+
+  .main-navigation {
+    grid-area: main-nav;
+  }
+
+  .mobile-menu {
     display: none;
-    overflow-y: scroll;
-    width: 100vw;
-    min-height: 100vh;
-    background-color: $dark-blue;
-
-    &.western-header-navigation {
-      @include breakpoint($medium) {
-        z-index: 3;
-        display: grid;
-        padding-top: 0;
-
-        grid-area: quick-links;
-        grid-template-columns: auto 1fr;
-      }
-    }
-
-    &.main-header-navigation {
-      @include breakpoint($medium) {
-        z-index: 2;
-        top: initial;
-
-        grid-area: main-nav;
-      }
-      top: ($toggle-size * 2) + $double-spacing;
-    }
-  }
-
-  .western-logo {
-    @include breakpoint($medium) {
-      margin: initial;
-
-      grid-area: logo;
-    }
-    position: relative;
-    z-index: 3;
-    width: $logo-size + $double-spacing;
-    height: $logo-size;
-    margin: auto;
-    padding-right: $toggle-size;
-
-    .western-home-link {
-      color: $white;
-
-      &:focus {
-        outline-color: $white;
-        outline-offset: -$border-width;
-      }
-    }
-  }
-
-  .logo {
-    @include breakpoint($medium) {
-      margin-left: $triple-spacing;
-      background: transparent;
-    }
-    margin: auto;
-
-    &.horizontal {
-      @include breakpoint($medium) {
-        display: none;
-      }
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: calc(100vw - #{$toggle-size});
-      height: $toggle-size;
-      background: transparent;
-    }
-  }
-
-  .toggle-menu {
-    @include breakpoint($medium) {
-      display: none;
-    }
-    position: absolute;
-    z-index: 5;
-    top: 0;
-    right: 0;
-    color: $white;
-    border-radius: 0;
-    background: transparent;
-    box-shadow: none;
-
-    &.is-expanded {
-      position: fixed;
-      top: 0;
-      right: 0;
-    }
-
-    &:hover,
-    &:focus {
-      color: $darkest-blue;
-      background: $lightest-green;
-      box-shadow: none;
-    }
   }
 
   .site-name {
@@ -156,10 +55,6 @@
     font-size: $p-font-size--larger;
 
     &.mobile {
-      @include breakpoint($medium) {
-        display: none;
-      }
-
       .block--secondary-site-name {
         margin: -$standard-spacing;
         margin-top: $standard-spacing;
@@ -179,7 +74,67 @@
     }
   }
 
+  .toggle-menu {
+    @include breakpoint($medium) {
+      display: none;
+    }
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: $white;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+
+    &.is-expanded {
+      position: fixed;
+      top: 0;
+      right: 0;
+    }
+
+    &:hover,
+    &:focus {
+      color: $darkest-blue;
+      background: $lightest-green;
+      box-shadow: none;
+    }
+  }
+
+  .western-logo {
+    @include breakpoint($medium) {
+      margin: initial;
+
+      grid-area: logo;
+    }
+    position: relative;
+    width: $logo-size + $double-spacing;
+    height: $logo-size;
+    margin: auto;
+    padding-right: $toggle-size;
+
+    .western-home-link {
+      color: $white;
+
+      &:focus {
+        outline-color: $white;
+        outline-offset: -$border-width;
+      }
+    }
+
+    .logo {
+      @include breakpoint($medium) {
+        margin-left: $triple-spacing;
+        background: transparent;
+      }
+      margin: auto;
+    }
+  }
+
   .western-header-region {
     grid-area: western-header-region;
+  }
+
+  .western-menu {
+    grid-area: quick-links;
   }
 }
