@@ -6,6 +6,7 @@
 /* Overrides for ultimenu styles & functionality */
 .ultimenu {
   overflow: visible;
+  z-index: initial;
 
   > li {
     min-width: initial;

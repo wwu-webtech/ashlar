@@ -135,10 +135,6 @@
   grid-template-columns: auto $toggle-size;
   grid-template-rows: $toggle-size auto auto;
 
-  .toggle-display-settings {
-    margin-left: 0;
-  }
-
   &.open {
     visibility: visible;
     overflow-y: hidden;

@@ -13,6 +13,7 @@
   justify-content: flex-start;
   margin-bottom: $triple-spacing;
   font-family: $condensed;
+
   grid-area: display-settings;
 
   .wwu-menu {
@@ -57,17 +58,24 @@
   }
 
   .toggle-display-settings {
-    margin-left: -0.575rem;
+    @include breakpoint($medium) {
+      margin-left: -0.575rem;
+    }
     width: initial;
   }
 
   .display-settings-menu {
+    @include breakpoint($medium) {
+      margin-left: -0.575rem;
+    }
+    position: relative;
+    z-index: 1;
     display: flex;
     flex: 0 0 100%;
     padding: $double-spacing;
     transition: $standard-ease $fast-transition-speed all;
     color: $white;
-    background-image: linear-gradient(to bottom, $darkest-blue, transparentize($dark-blue, 0.1));
+    background: $darkest-blue;
 
     &.closed {
       visibility: hidden;
