@@ -31,7 +31,6 @@
 
     .material-icons {
       position: relative;
-      top: 0.125rem;
       margin-right: $border-width;
       font-size: $icon-size--medium;
     }
@@ -61,9 +60,6 @@
   }
 
   .display-preferences-menu {
-    position: absolute;
-    top: 2.7rem;
-    left: 0;
     display: flex;
     flex: 0 0 100%;
     padding: $double-spacing;

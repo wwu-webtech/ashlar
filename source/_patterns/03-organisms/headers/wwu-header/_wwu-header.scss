@@ -10,8 +10,7 @@
   @include breakpoint($medium) {
     display: grid;
 
-    grid-template-areas:
-    "logo display-preferences quick-links"
+    grid-template-areas: "logo display-preferences quick-links"
     "logo site-name site-name"
     "logo western-header-region western-header-region"
     "main-nav main-nav main-nav";
@@ -32,7 +31,7 @@
     &.open {
       display: block;
     }
-    
+
     &.closed {
       display: none;
     }
@@ -44,8 +43,6 @@
       text-align: left;
       border-top: none;
       border-bottom: none;
-
-      grid-area: site-name;
     }
     @include breakpoint($large) {
       font-size: $p-font-size--max--larger;
@@ -59,6 +56,8 @@
     border-top: solid $border-width--thinner $blue;
     border-bottom: solid $border-width--thinner $blue;
     font-size: $p-font-size--larger;
+
+    grid-area: site-name;
 
     &.mobile {
       .block--secondary-site-name {
@@ -84,19 +83,10 @@
     @include breakpoint($medium) {
       display: none;
     }
-    position: absolute;
-    top: 0;
-    right: 0;
     color: $white;
     border-radius: 0;
     background: transparent;
     box-shadow: none;
-
-    &.is-expanded {
-      position: fixed;
-      top: 0;
-      right: 0;
-    }
 
     &:hover,
     &:focus {
