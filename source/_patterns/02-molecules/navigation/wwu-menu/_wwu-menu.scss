@@ -12,6 +12,7 @@
   margin-top: $half-spacing;
   margin-bottom: $standard-spacing;
   font-family: $condensed;
+  grid-area: wwu-menu;
 
   .icon-with-text {
     @include breakpoint($medium) {
@@ -54,7 +55,7 @@
     }
   }
 
-  .quick-links {
+  .wwu-menu {
     display: flex;
   }
 }

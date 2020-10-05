@@ -1,9 +1,9 @@
 /**
 * @file
-* molecules/display-preferences/_display-preferences.scss
+* molecules/display-settings/_display-settings.scss
 */
 
-.display-preferences {
+.display-settings {
   @include breakpoint($medium) {
     min-height: initial;
     margin-bottom: 0;
@@ -13,8 +13,9 @@
   justify-content: flex-start;
   margin-bottom: $triple-spacing;
   font-family: $condensed;
+  grid-area: display-settings;
 
-  .quick-links {
+  .wwu-menu {
     display: flex;
   }
 
@@ -55,11 +56,12 @@
     }
   }
 
-  .toggle-display-preferences {
+  .toggle-display-settings {
+    margin-left: -0.575rem;
     width: initial;
   }
 
-  .display-preferences-menu {
+  .display-settings-menu {
     display: flex;
     flex: 0 0 100%;
     padding: $double-spacing;

@@ -8,34 +8,21 @@
 
 .western-header {
   @include breakpoint($medium) {
-    display: grid;
-
-    grid-template-areas: "logo display-preferences quick-links"
+    grid-template-areas: "logo display-settings wwu-menu"
     "logo site-name site-name"
     "logo western-header-region western-header-region"
     "main-nav main-nav main-nav";
     grid-template-columns: ($logo-size + ($triple-spacing * 2)) auto 1fr;
     grid-template-rows: ($logo-size / 3) ($logo-size / 3) auto auto;
   }
+  display: grid;
   background-color: $dark-blue;
 
-  .display-preferences {
-    grid-area: display-preferences;
-  }
-
-  .main-navigation {
-    grid-area: main-nav;
-  }
-
-  .mobile-menu {
-    &.open {
-      display: block;
-    }
-
-    &.closed {
-      display: none;
-    }
-  }
+  grid-template-areas: ".... logo menu-toggle"
+  "site-name site-name site-name"
+  "western-header-region western-header-region western-header-region";
+  grid-template-columns: $toggle-size auto $toggle-size;
+  grid-template-rows: auto auto auto auto;
 
   .site-name {
     @include breakpoint($medium) {
@@ -79,34 +66,17 @@
     }
   }
 
-  .toggle-menu {
-    @include breakpoint($medium) {
-      display: none;
-    }
-    color: $white;
-    border-radius: 0;
-    background: transparent;
-    box-shadow: none;
-
-    &:hover,
-    &:focus {
-      color: $darkest-blue;
-      background: $lightest-green;
-      box-shadow: none;
-    }
-  }
-
   .western-logo {
     @include breakpoint($medium) {
       margin: initial;
-
-      grid-area: logo;
     }
     position: relative;
     width: $logo-size + $double-spacing;
     height: $logo-size;
     margin: auto;
     padding-right: $toggle-size;
+
+    grid-area: logo;
 
     .western-home-link {
       color: $white;
@@ -129,8 +99,55 @@
   .western-header-region {
     grid-area: western-header-region;
   }
+}
 
-  .western-menu {
-    grid-area: quick-links;
+/* Mobile Menu */
+.toggle-menu {
+  @include breakpoint($medium) {
+    display: none;
+  }
+  color: $white;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+
+  grid-area: menu-toggle;
+
+  &:hover,
+  &:focus {
+    color: $darkest-blue;
+    background: $lightest-green;
+    box-shadow: none;
+  }
+}
+
+.mobile-menu {
+  position: absolute;
+  display: grid;
+  top: 0;
+  transition: $fast-transition-speed $standard-ease all;
+  z-index: 1;
+  background-color: $dark-blue;
+
+  grid-template-areas: "display-settings menu-toggle"
+  "wwu-menu wwu-menu"
+  "main-nav main-nav";
+  grid-template-columns: auto $toggle-size;
+  grid-template-rows: $toggle-size auto auto;
+
+  .toggle-display-settings {
+    margin-left: 0;
+  }
+
+  &.open {
+    visibility: visible;
+    overflow-y: hidden;
+    transform: translatex(0);
+  }
+
+  &.closed {
+    visibility: hidden;
+    transform: translatex(100%);
+    opacity: 0;
   }
 }

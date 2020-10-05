@@ -1,5 +1,5 @@
-var display_pref_toggle = document.querySelector('.toggle-display-preferences');
-var display_preferences_menu = document.querySelector('.display-preferences-menu');
+var display_pref_toggle = document.querySelector('.toggle-display-settings');
+var display_preferences_menu = document.querySelector('.display-settings-menu');
 
 function toggle_preferences() {
   if (display_preferences_menu.classList.contains('open')) {

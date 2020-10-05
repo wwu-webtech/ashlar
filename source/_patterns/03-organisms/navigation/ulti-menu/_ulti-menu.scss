@@ -17,6 +17,7 @@
       right: 0 !important;
       display: none !important;
     }
+    z-index: initial;
     display: block;
     visibility: hidden;
     max-height: 0;
@@ -37,8 +38,8 @@
         position: absolute;
         display: block !important;
       }
-      max-height: none;
       visibility: visible;
+      max-height: none;
       opacity: 1;
     }
   }

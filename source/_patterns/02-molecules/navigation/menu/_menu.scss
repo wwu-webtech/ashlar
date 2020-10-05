@@ -13,6 +13,14 @@
 
     li {
       border-left: none;
+
+      &[aria-current="page"] {
+        background-color: $lightest-green;
+    
+        a {
+          color: $black;
+        }
+      }
     }
 
     a {
@@ -21,6 +29,19 @@
 
       @include breakpoint ($large) {
         font-size: $p-font-size--max--smaller;
+      }
+    }
+  }
+}
+
+/* Block system menus */
+
+.block--menu {
+  .menu {
+    li {
+
+      &[aria-current="page"] {
+        background-color: $lightest-green;
       }
     }
   }
