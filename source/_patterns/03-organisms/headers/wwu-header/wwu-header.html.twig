@@ -3,10 +3,10 @@
 * Western header - includes logo, campus links, search, and site name
 */
 #}
-<div class="mobile-menu closed">
+<div id="mobile-menu" class="mobile-menu closed">
 </div>
 
-<div class="western-header"> 
+<div class="western-header">
   <div class="western-logo">
     <a class="western-home-link" href="https://wwu.edu">
       {% include "@atoms/logo/logo--make-waves.twig" %}
@@ -15,7 +15,7 @@
 
   {% include "@molecules/display-settings/display-settings.html.twig" %}
 
-  <button class="small icon-with-text toggle-menu">
+  <button class="small icon-with-text toggle-menu" aria-expanded="false" aria-controls="mobile-menu">
     <span class="material-icons" aria-hidden="true">menu</span>
     <span class="toggle-prefix visually-hidden">Open the </span>
     <span class="toggle-text">Menu</span>

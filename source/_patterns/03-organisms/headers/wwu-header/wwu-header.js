@@ -37,6 +37,8 @@ function hide_page_elements() {
   splash.style.display = "none";
   content.style.display = "none";
   footer.style.display = "none";
+
+  mobile_menu_wrapper.removeEventListener("transitionend", hide_page_elements);
 }
 
 function show_page_elements() {
@@ -46,21 +48,28 @@ function show_page_elements() {
   footer.style.display = "block";
 }
 
+function set_focus() {
+  mobile_menu_toggle.focus();
+
+  mobile_menu_wrapper.removeEventListener("transitionend", set_focus);
+}
+
 function open_mobile_menu() {
   mobile_menu_wrapper.addEventListener("transitionend", hide_page_elements);
+  mobile_menu_wrapper.addEventListener("transitionend", set_focus);
   mobile_menu_wrapper.classList.add('open');
   mobile_menu_wrapper.classList.remove('closed');
-  mobile_menu_wrapper.insertBefore(mobile_menu_toggle, header_quick_links);
+  mobile_menu_wrapper.insertBefore(mobile_menu_toggle, header_display_settings);
 
   mobile_menu_toggle.querySelector('.material-icons').innerText = "close";
   mobile_menu_toggle.querySelector('.toggle-prefix').innerText = "";
   mobile_menu_toggle.querySelector('.toggle-text').innerText = "Close";
   mobile_menu_toggle.querySelector('.toggle-suffix').innerText = " the menu";
+  mobile_menu_toggle.setAttribute('aria-expanded', true);
 }
 
 function close_mobile_menu() {
   show_page_elements();
-  mobile_menu_wrapper.removeEventListener("transitionend", hide_page_elements);
   mobile_menu_wrapper.classList.remove('open');
   mobile_menu_wrapper.classList.add('closed');
   western_header.insertBefore(mobile_menu_toggle, header_site_name)
@@ -69,14 +78,18 @@ function close_mobile_menu() {
   mobile_menu_toggle.querySelector('.toggle-prefix').innerText = "Open the ";
   mobile_menu_toggle.querySelector('.toggle-text').innerText = "Menu";
   mobile_menu_toggle.querySelector('.toggle-suffix').innerText = "";
+  mobile_menu_toggle.setAttribute('aria-expanded', false);
+
+  set_focus()
 }
 
 function toggle_mobile_menu() {
   if (mobile_menu_wrapper.classList.contains('closed')) {
-    open_mobile_menu()
+    open_mobile_menu();
     return;
   } else {
-    close_mobile_menu()
+    close_mobile_menu();
+    return;
   }
 }
 
