@@ -229,6 +229,8 @@ function ashlar_preprocess_menu(&$variables) {
  * Helper function for adding classes to menu links.
  */
 function _menu_links(&$items, $menu_level) {
+  $current_path = \Drupal::request()->getRequestUri();
+
   foreach ($items as $item) {
     $classes = ['menu-item'];
     if ($item['is_expanded']) {
@@ -239,6 +241,9 @@ function _menu_links(&$items, $menu_level) {
     }
     if ($item['in_active_trail']) {
       $classes[] = 'menu-item--active-trail';
+    }
+    if ($item['url']->toString() == $current_path) {
+      $classes[] = 'menu-item--active-page';
       $item['attributes']->setAttribute('aria-current', 'page');
     }
     $item['attributes']->addClass($classes);
