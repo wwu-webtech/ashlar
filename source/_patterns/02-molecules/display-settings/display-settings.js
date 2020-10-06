@@ -1,8 +1,8 @@
 var display_toggle = document.querySelector('.toggle-display-settings');
 var display_menu = document.querySelector('.display-settings-menu');
 var body = document.querySelector('body');
-var selected_theme = document.querySelector('input[name="theme-select"]:checked').value;
 var theme_options = document.querySelector('.theme-selection');
+var selected_theme;
 
 function open_display_settings() {
   display_toggle.setAttribute('aria-expanded', true);
@@ -37,13 +37,24 @@ function toggle_settings() {
   }
 }
 
+function set_initial_theme() {
+  if (localStorage.getItem('preferred_theme')) {
+    selected_theme = localStorage.getItem('preferred_theme');
+    
+  }
+  body.classList.add(selected_theme);
+}
+
 function select_theme() {
   var previous_theme = selected_theme;
   selected_theme = document.querySelector('input[name="theme-select"]:checked').value;
 
   body.classList.remove(previous_theme);
   body.classList.add(selected_theme);
+
+  localStorage.setItem('preferred_theme', selected_theme)
 }
 
+set_initial_theme()
 display_toggle.addEventListener('click', toggle_settings);
 theme_options.addEventListener('click', select_theme);

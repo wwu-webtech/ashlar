@@ -6,11 +6,16 @@
 $paragraph-margin-bottom: $standard-spacing;
 
 p {
-  line-height: 1.5em;
   margin: 0 0 $paragraph-margin-bottom;
+  line-height: 1.5em;
 }
 
 .intro {
   @include font-size--larger;
   color: $dark-blue;
+}
+
+.dark-mode
+.intro {
+  color: $light-blue;
 }

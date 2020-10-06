@@ -44,6 +44,10 @@ components:
       build/css/components.css: {}
   dependencies:
     - core/normalize
+display-settings:
+  version: 1.x
+  js:
+    build/js/display-settings.js: {}
 event-tracking:
   version: 1.x
   js:
@@ -151,8 +155,6 @@ wwu-header:
   dependencies:
     - core/jquery
 wwu-mobile-menu:
-  version: 1.x
+  version: 2.x
   js:
     build/js/wwu-mobile-menu.js: {}
-  dependencies:
-    - core/jquery
