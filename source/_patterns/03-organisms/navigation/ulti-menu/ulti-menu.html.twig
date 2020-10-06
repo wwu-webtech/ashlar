@@ -9,7 +9,7 @@
 
   <ul{{ attributes.addClass(classes) }}>
     {%- for item in items -%}
-      {% if item.config.is_active == true %}
+      {% if item.config.is_active == true and item.config.has_submenu == false %}
        <li{{ item.attributes.addClass(item_classes, item.flyout ? 'has-ultimenu').setAttribute('aria-current', 'page') }}>
       {% else %}
         <li{{ item.attributes.addClass(item_classes, item.flyout ? 'has-ultimenu') }}>
