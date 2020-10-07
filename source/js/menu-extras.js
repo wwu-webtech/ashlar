@@ -25,3 +25,7 @@ $('.main-navigation').accessibleMegaMenu({
     /* css class for the open state */
     openClass: "open"
 });
+
+// add aria-current to ultimenu link representing active page
+var $active_item = $('.main-navigation ul .ultimenu__item--active-page:not(.has-ultimenu');
+$active_item.children('.ultimenu__link').attr('aria-current', 'page');

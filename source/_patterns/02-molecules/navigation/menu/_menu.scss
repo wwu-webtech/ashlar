@@ -14,8 +14,8 @@
     li {
       border-left: none;
 
-      &[aria-current="page"] {
-        > a {
+      li > a {
+        &[aria-current="page"] {
           background-color: $lightest-green;
           color: $black;
         }
@@ -37,10 +37,12 @@
 
 .block--menu {
   .menu {
-    li {
+    li > a {
       &[aria-current="page"] {
-        > a {
-          background-color: $lightest-green;
+        background-color: $lightest-green;
+
+        &:hover, &:focus, &:active {
+          background-color: $light-gray;
         }
       }
     }
