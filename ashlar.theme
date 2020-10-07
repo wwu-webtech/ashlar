@@ -244,7 +244,6 @@ function _menu_links(&$items, $menu_level) {
     }
     if ($item['url']->toString() == $current_path) {
       $classes[] = 'menu-item--active-page';
-      $item['attributes']->setAttribute('aria-current', 'page');
     }
     $item['attributes']->addClass($classes);
     if ($item['below']) {
