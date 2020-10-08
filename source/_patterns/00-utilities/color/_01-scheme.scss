@@ -35,6 +35,20 @@ $hover-opacity: 0.85;
   outline-offset: $border-width;
 }
 
+// Default links for Dark Mode
+@mixin dark-mode-links {
+  a:not([class]),
+  a.patternLink {
+    color: $link-color-light;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $link-color--hover;
+    }
+  }
+}
+
 // Additional shades of blue use as backgrounds only
 $light-bg-blue: mix($white, $blue, 80%);
 $lightest-bg-blue: mix($white, $blue, 90%);
@@ -45,8 +59,8 @@ $alert-color: $red;
 
 // Status Message Shading
 @mixin message($color) {
-  background-color: transparentize($color, 0.75);
   border: solid $border-width transparentize($color, 0.25);
+  background-color: transparentize($color, 0.75);
 
   a {
     text-decoration: underline;

@@ -135,14 +135,5 @@ a {
 }
 
 .dark-mode {
-  a:not([class]),
-  a.patternLink {
-    color: $link-color-light;
-
-    &:active,
-    &:focus,
-    &:hover {
-      color: $link-color--hover;
-    }
-  }
+  @include dark-mode-links;
 }

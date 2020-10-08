@@ -40,7 +40,12 @@ function toggle_settings() {
 function set_initial_theme() {
   if (localStorage.getItem('wwu_preferred_theme')) {
     selected_theme = localStorage.getItem('wwu_preferred_theme');
-    document.querySelector('input[value="' + String(selected_theme) + '"]').checked = true;
+    var selected_theme_input = document.querySelector('input[value="' + String(selected_theme) + '"]')
+
+    if (selected_theme_input) {
+      selected_theme_input.checked = true;
+    }
+
     body.classList.add(selected_theme);
     return;
   } else {
@@ -59,6 +64,10 @@ function select_theme() {
   localStorage.setItem('wwu_preferred_theme', selected_theme);
 }
 
-display_toggle.addEventListener('click', toggle_settings);
-theme_options.addEventListener('click', select_theme);
+if (display_toggle) {
+  display_toggle.addEventListener('click', toggle_settings);
+}
+if (theme_options) {
+  theme_options.addEventListener('click', select_theme);
+}
 set_initial_theme();
