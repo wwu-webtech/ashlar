@@ -3,7 +3,7 @@
 * 01-atoms/tables/_tables.scss
 */
 
-@mixin color-table($light-headers, $dark-headers, $light-rows, $dark-rows) {
+@mixin color-table($light-rows, $dark-rows, $light-headers, $dark-headers) {
   tr {
     &:nth-of-type(odd) {
       background-color: $light-rows;
@@ -32,7 +32,7 @@
 }
 
 table {
-  @include color-table(mix(black, $light-gray, 13%), mix(black, $light-gray, 25%), $light-gray, $lightest-gray);
+  @include color-table($light-gray, $lightest-gray, mix(black, $light-gray, 13%), mix(black, $light-gray, 25%));
   width: 100%;
   margin: $standard-spacing 0;
   table-layout: fixed;
@@ -155,6 +155,60 @@ td {
   }
 }
 
+/* Color Alternates */
+
+.light-blue {
+  @include color-table($light-bg-blue, $lightest-bg-blue, mix($dark-blue, $light-bg-blue, 13%), mix($dark-blue, $light-bg-blue, 25%));
+}
+
+.lightest-gray {
+  @include color-table($white, $lightest-gray, mix($black, $lightest-gray, 10%), mix($black, $lightest-gray, 15%));
+}
+
+.dark-mode {
+  @include color-table(mix(black, $light-gray, 60%), mix(black, $light-gray, 65%), mix(black, $light-gray, 70%), mix(black, $light-gray, 75%));
+
+  table {
+    a:not([class]) {
+      &:hover,
+      &:active,
+      &:focus {
+        color: $white;
+      }
+    }
+  }
+
+  .lightest-gray {
+    @include color-table(mix(black, $light-gray, 50%), mix(black, $light-gray, 55%), mix(black, $light-gray, 60%), mix(black, $light-gray, 65%));
+  }
+
+  .light-blue {
+    @include color-table(mix($blue, $dark-blue, 50%), mix($blue, $dark-blue, 75%), $dark-blue, $darkest-blue);
+  }
+}
+
+/* Style Alternates */
+.responsive-table {
+  @include breakpoint($medium) {
+    overflow-x: revert;
+  }
+  overflow-x: scroll;
+
+  table {
+    @include breakpoint($medium) {
+      width: 100%;
+    }
+    width: auto;
+  }
+
+  caption {
+    @include breakpoint($medium) {
+      text-align: center;
+    }
+    text-align: left;
+  }
+}
+
 .align-top {
   td,
   th {
@@ -176,36 +230,5 @@ td {
 
   th {
     font-size: $max-base-font-size--smaller;
-  }
-}
-
-.light-blue {
-  @include color-table(mix($dark-blue, $light-bg-blue, 13%), mix($dark-blue, $light-bg-blue, 25%), $light-bg-blue, $lightest-bg-blue);
-}
-
-.lightest-gray {
-  @include color-table(mix($black, $lightest-gray, 10%), mix($black, $lightest-gray, 15%), $white, $lightest-gray);
-}
-
-
-/* Responsive table on small devices */
-.responsive-table {
-  @include breakpoint($medium) {
-    overflow-x: revert;
-  }
-  overflow-x: scroll;
-
-  table {
-    @include breakpoint($medium) {
-      width: 100%;
-    }
-    width: auto;
-  }
-
-  caption {
-    @include breakpoint($medium) {
-      text-align: center;
-    }
-    text-align: left;
   }
 }
