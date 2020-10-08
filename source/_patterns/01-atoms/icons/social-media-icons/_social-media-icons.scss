@@ -1,7 +1,7 @@
 /**
- * @file
- * 01-atoms/icons/social-media-icons/_social-media-icons.scss
- */
+* @file
+* 01-atoms/icons/social-media-icons/_social-media-icons.scss
+*/
 $icon-space: (($toggle-size - $icon-size) / 2) - 1;
 
 .social-icon {
@@ -126,6 +126,14 @@ $icon-space: (($toggle-size - $icon-size) / 2) - 1;
 
     .icon-text {
       margin-bottom: $standard-spacing;
+    }
+  }
+}
+
+.dark-mode {
+  .social-icon {
+    .icon-text {
+      color: $white;
     }
   }
 }
