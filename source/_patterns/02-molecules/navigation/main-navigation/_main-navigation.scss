@@ -54,33 +54,16 @@
         margin-bottom: 50vh;
       }
 
-      /* active page styles */
-      &[aria-current="page"] {
+      /* active page styles for non-dropdown items */
+      &.ultimenu__item--active-page:not(.has-ultimenu) {
         @include breakpoint($medium) {
           border-left: 0;
           background-color: $lightest-green;
-
-          .expand-icon.desktop {
+          a {
             color: $black;
-          }
-
-          &:hover,
-          &:focus-within,
-          &:active {
-            .expand-icon.desktop {
-              color: $white;
-            }
           }
         }
         border-left: $border-width--thicker solid $lightest-green;
-
-        & > a {
-          @include breakpoint($medium) {
-            padding-left: $standard-spacing;
-            color: $black;
-          }
-          padding-left: $standard-spacing * 1.25;
-        }
       }
 
       & > a {
