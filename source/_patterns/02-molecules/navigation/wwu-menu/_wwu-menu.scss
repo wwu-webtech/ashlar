@@ -9,9 +9,11 @@
   display: flex;
   align-self: start;
   justify-content: flex-end;
+  max-width: 100vw;
   margin-top: $half-spacing;
   margin-bottom: $standard-spacing;
   font-family: $condensed;
+
   grid-area: wwu-menu;
 
   .icon-with-text {

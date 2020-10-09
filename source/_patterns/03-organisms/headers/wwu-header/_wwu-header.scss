@@ -123,10 +123,15 @@
 
 .mobile-menu {
   position: absolute;
-  display: grid;
-  top: 0;
-  transition: $fast-transition-speed $standard-ease all;
   z-index: 1;
+  top: 0;
+  display: grid;
+  align-content: start;
+  min-height: 100vh;
+  transition: $fast-transition-speed $standard-ease;
+  transition-property: opacity, transform;
+  transform: translatex(0);
+  opacity: 1;
   background-color: $dark-blue;
 
   grid-template-areas: "display-settings menu-toggle"
@@ -138,11 +143,12 @@
   &.open {
     visibility: visible;
     overflow-y: hidden;
-    transform: translatex(0);
+    width: 100%;
   }
 
   &.closed {
     visibility: hidden;
+    width: 0;
     transform: translatex(100%);
     opacity: 0;
   }
