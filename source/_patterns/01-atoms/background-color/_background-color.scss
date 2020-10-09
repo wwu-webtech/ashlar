@@ -38,6 +38,9 @@
     color: $white;
   }
 
+  .tagline {
+    color: $lightest-green;
+  }
 
   a:not([class]) {
     color: $light-blue;
@@ -135,6 +138,10 @@
     &:after {
       border-color: $light-blue;
     }
+  }
+
+  .tagline {
+    color: $white;
   }
 
   .menu {
