@@ -211,3 +211,20 @@ $testimonial--credit-circle-size: 18.75rem;
     }
   }
 }
+
+.dark-mode {
+  .block--testimonial {
+    color: $white;
+    
+    .block__title {
+      color: $light-blue;
+    }
+
+    &.testimonial--full-page {
+      .credit {
+        color: $white;
+        background-color: $gray;
+      }
+    }
+  }
+}

@@ -42,22 +42,45 @@ $status-icon-size: 4.5rem;
 }
 
 .status-alert--message {
-  @include message($blue);
+  @include message($blue, $black);
   padding: $standard-spacing;
 
   &.status-alert--minor {
-    @include message($blue);
+    @include message($blue, $black);
   }
 
   &.status-alert--major {
-    @include message($yellow);
+    @include message($yellow, $black);
   }
 
   &.status-alert--critical {
-    @include message($red);
+    @include message($red, $black);
   }
 
   &.status-alert--resolved {
-    @include message($green);
+    @include message($green, $black);
+  }
+}
+
+.dark-mode {
+  .status-alert--message {
+    @include message($blue, $white);
+    padding: $standard-spacing;
+
+    &.status-alert--minor {
+      @include message($blue, $white);
+    }
+
+    &.status-alert--major {
+      @include message($yellow, $white);
+    }
+
+    &.status-alert--critical {
+      @include message($red, $white);
+    }
+
+    &.status-alert--resolved {
+      @include message($green, $white);
+    }
   }
 }

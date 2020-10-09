@@ -58,18 +58,18 @@ $warning-color: $yellow;
 $alert-color: $red;
 
 // Status Message Shading
-@mixin message($color) {
+@mixin message($color, $blend) {
   border: solid $border-width transparentize($color, 0.25);
   background-color: transparentize($color, 0.75);
 
   a {
     text-decoration: underline;
-    color: mix($black, $color, 75%);
+    color: mix($blend, $color, 75%);
 
     &:focus,
     &:hover,
     &:active {
-      color: mix($black, $color, 90%);
+      color: mix($blend, $color, 90%);
     }
   }
 
@@ -79,6 +79,6 @@ $alert-color: $red;
   h5,
   h6,
   .status-color {
-    color: mix($black, $color, 65%);
+    color: mix($blend, $color, 65%);
   }
 }

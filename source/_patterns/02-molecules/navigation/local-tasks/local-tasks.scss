@@ -77,3 +77,13 @@
     }
   }
 }
+
+.dark-mode {
+  .block--local-tasks-block {
+    ul:not(.contextual-links) {
+      a {
+        border-color: $black;
+      }
+    }
+  }
+}

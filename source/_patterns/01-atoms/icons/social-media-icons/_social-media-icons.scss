@@ -136,4 +136,10 @@ $icon-space: (($toggle-size - $icon-size) / 2) - 1;
       color: $white;
     }
   }
+
+  .my-western-links {
+    .social-icon svg {
+      fill: $white;
+    }
+  }
 }
