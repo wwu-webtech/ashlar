@@ -90,3 +90,17 @@
     padding: 0;
   }
 }
+
+.dark-mode {
+  .block--announcement {
+    background: $dark-green;
+
+    .image {
+      background: $dark-green;
+    }
+
+    .body {
+      background: $green;
+    }
+  }
+}

@@ -213,7 +213,7 @@ $image-button--smaller-size--medium: 11.25rem;
 
 /* Color variations */
 .green {
-  .image-button {
+  .image-button:not(.green) {
     .image {
       background-color: $light-green;
     }
@@ -247,5 +247,19 @@ $image-button--smaller-size--medium: 11.25rem;
 @media screen and (min-width:0\0) {
   .layout--flex .layout__region .block--image-button {
     margin: 0 ($double-spacing * 2);
+  }
+}
+
+.dark-mode {
+  .image-button {
+    a {
+      color: $white;
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: $white;
+      }
+    }
   }
 }
