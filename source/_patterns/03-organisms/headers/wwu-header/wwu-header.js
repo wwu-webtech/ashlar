@@ -1,3 +1,8 @@
+/* Prevent multiple calls in Drupal */
+if (context !== document) {
+  return;
+}
+
 /* Header Things */
 var western_header = document.querySelector('.western-header');
 var mobile_menu_toggle = document.querySelector('.toggle-menu');
