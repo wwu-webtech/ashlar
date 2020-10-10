@@ -69,7 +69,7 @@
       margin-left: -0.575rem;
     }
     position: relative;
-    z-index: 1;
+    z-index: 3;
     display: flex;
     flex: 0 0 100%;
     padding: $double-spacing;
@@ -87,9 +87,26 @@
       opacity: 1;
     }
 
-    legend {
-      margin: 0;
-      padding: $half-spacing;
+    fieldset {
+      display: flex;
+      flex-flow: column wrap;
+      
+      legend {
+        margin: 0;
+        padding: $half-spacing;
+      }
+
+      input[type="radio"], input[type="radio"] + label {
+        &:not(:last-of-type) {
+          margin-bottom: $standard-spacing;
+        }
+      }
+
+      input[type="radio"] {
+        & + label {
+          align-self: flex-start;
+        }
+      }
     }
   }
 }
