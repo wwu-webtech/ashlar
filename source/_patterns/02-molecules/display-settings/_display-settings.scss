@@ -8,6 +8,7 @@
     min-height: initial;
     margin-bottom: 0;
   }
+  display: flex;
   flex-flow: row wrap;
   align-self: start;
   justify-content: flex-start;
@@ -87,6 +88,10 @@
       opacity: 1;
     }
 
+    .font-selection {
+      flex: 1;
+    }
+    
     fieldset {
       display: flex;
       flex-flow: column nowrap;
@@ -96,16 +101,15 @@
         padding: $half-spacing;
       }
 
-      input[type="radio"], input[type="radio"] + label {
+      input[type="radio"], 
+      input[type="radio"] + label {
         &:not(:last-of-type) {
           margin-bottom: $standard-spacing;
         }
       }
 
-      input[type="radio"] {
-        & + label {
+      input[type="radio"] + label {
           align-self: flex-start;
-        }
       }
     }
   }
