@@ -89,7 +89,7 @@
 
     fieldset {
       display: flex;
-      flex-flow: column wrap;
+      flex-flow: column nowrap;
       
       legend {
         margin: 0;
