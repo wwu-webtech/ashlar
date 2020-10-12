@@ -1,9 +1,16 @@
 var display_toggle = document.querySelector('.toggle-display-settings');
 var display_menu = document.querySelector('.display-settings-menu');
 var body = document.querySelector('body');
+
+// Theme variables
 var theme_options = document.querySelector('.theme-selection');
 var selected_theme;
 
+// Font variables
+var font_options = document.querySelector('.font-selection');
+var selected_font;
+
+// Open display menu
 function open_display_settings() {
   display_toggle.setAttribute('aria-expanded', true);
   display_toggle.querySelector('.material-icons').innerText = 'close';
@@ -16,6 +23,7 @@ function open_display_settings() {
   display_menu.classList.add('open');
 }
 
+// Close display menu
 function close_display_settings() {
   display_toggle.setAttribute('aria-expanded', false);
   display_toggle.querySelector('.material-icons').innerText = 'settings';
@@ -37,6 +45,7 @@ function toggle_settings() {
   }
 }
 
+// Set theme in local storage
 function set_initial_theme() {
   if (localStorage.getItem('wwu_preferred_theme')) {
     selected_theme = localStorage.getItem('wwu_preferred_theme');
@@ -54,6 +63,7 @@ function set_initial_theme() {
   }
 }
 
+// Choose theme from fieldset
 function select_theme() {
   var previous_theme = selected_theme;
   selected_theme = document.querySelector('input[name="theme-select"]:checked').value;
@@ -64,10 +74,45 @@ function select_theme() {
   localStorage.setItem('wwu_preferred_theme', selected_theme);
 }
 
+// Set font in local storage
+function set_font_preference() {
+  if (localStorage.getItem('wwu_preferred_font')) {
+    selected_font = localStorage.getItem('wwu_preferred_font');
+    var selected_font_input = document.querySelector('input[value="' + String(selected_font) + '"]')
+
+    if (selected_font_input) {
+      selected_font_input.checked = true;
+    }
+
+    body.classList.add(selected_font);
+    return;
+  } else {
+    localStorage.setItem('wwu_preferred_font', 'default');
+    return;
+  }
+}
+
+// Choose font from fieldset
+function select_font() {
+  var previous_font = selected_font;
+  selected_font = document.querySelector('input[name="font-select"]:checked').value;
+
+  body.classList.remove(previous_font);
+  body.classList.add(selected_font);
+
+  localStorage.setItem('wwu_preferred_font', selected_font);
+}
+
+// Click events for menu items
 if (display_toggle) {
   display_toggle.addEventListener('click', toggle_settings);
 }
 if (theme_options) {
   theme_options.addEventListener('click', select_theme);
 }
+if (font_options) {
+  font_options.addEventListener('click', select_font);
+}
+
 set_initial_theme();
+set_font_preference();
