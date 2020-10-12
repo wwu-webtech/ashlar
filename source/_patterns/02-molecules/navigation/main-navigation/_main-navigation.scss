@@ -61,8 +61,16 @@
         @include breakpoint($medium) {
           border-left: 0;
           background-color: $lightest-green;
+
+          &:hover, &:focus-within, &:active {
+            background-color: $dark-blue;
+          }
           a {
             color: $black;
+
+            &:hover, &:focus, &:active {
+              color: $white;
+            }
           }
         }
         border-left: $border-width--thicker solid $lightest-green;
