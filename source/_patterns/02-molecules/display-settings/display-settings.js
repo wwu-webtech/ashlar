@@ -9,8 +9,6 @@ var selected_font;
 
 var reset_preferences = document.getElementById('reset-display-preferences');
 
-var reset_preferences = document.querySelector('reset-display-preferences'); 
-
 // Open display menu
 function open_display_settings() {
   display_toggle.setAttribute('aria-expanded', true);
@@ -124,7 +122,6 @@ function global_reset(e) {
   };
 }
 
-// Click events for menu items
 if (display_toggle) {
   display_toggle.addEventListener('click', toggle_settings);
   };
@@ -134,9 +131,7 @@ if (theme_options) {
 if (font_options) {
   font_options.addEventListener('click', select_font);
 }
-if (reset_preferences) {
-  reset_preferences.addEventListener('click', global_reset);
-}
+reset_preferences.addEventListener('click', global_reset);
 
 set_initial_theme();
 set_font_preference();

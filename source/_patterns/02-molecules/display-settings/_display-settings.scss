@@ -120,8 +120,18 @@
     }
 
     .reset-button {
-      display: block;
       margin: $triple-spacing auto 0;
+      display: flex;
+      font-size: $p-font-size--smaller;
+
+      .material-icons {
+        display: flex;
+        align-self: center;
+        font-size: inherit;
+        position: relative;
+        margin-right: $half-spacing;
+
+      }
     }
   }
 }
