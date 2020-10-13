@@ -37,10 +37,10 @@ function close_display_settings() {
 
 function toggle_settings() {
   if (display_menu.classList.contains('closed')) {
-    open_display_settings()
+    open_display_settings();
     return;
   } else {
-    close_display_settings()
+    close_display_settings();
     return;
   }
 }
