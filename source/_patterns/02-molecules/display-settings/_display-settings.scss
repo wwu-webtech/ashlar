@@ -72,6 +72,7 @@
     position: relative;
     z-index: 3;
     display: flex;
+    flex-flow: row wrap;
     flex: 0 0 100%;
     padding: $double-spacing;
     transition: $standard-ease $fast-transition-speed all;
@@ -101,6 +102,12 @@
         padding: $half-spacing;
       }
 
+      input[type="radio"] {
+        &:focus {
+          border-color: $lightest-green;
+        }
+      }
+
       input[type="radio"], 
       input[type="radio"] + label {
         &:not(:last-of-type) {
@@ -110,6 +117,20 @@
 
       input[type="radio"] + label {
           align-self: flex-start;
+      }
+    }
+
+    &--reset-button {
+      display: inline-block;
+      margin: $triple-spacing auto 0;
+
+      &:hover, 
+      &:focus, 
+      &:active {
+        @include button-box-shadow($black);
+        color: $white;
+        background: $gray;
+        outline: $focus-outline $white;
       }
     }
   }

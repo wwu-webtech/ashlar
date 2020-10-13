@@ -7,6 +7,9 @@ var selected_theme;
 var font_options = document.querySelector('.font-selection');
 var selected_font;
 
+
+var reset_preferences = document.querySelector('input[name="reset"]'); 
+
 // Open display menu
 function open_display_settings() {
   display_toggle.setAttribute('aria-expanded', true);
@@ -111,5 +114,25 @@ if (font_options) {
   font_options.addEventListener('click', select_font);
 }
 
+function global_reset(e) {
+  if (e.target == reset_preferences) {
+    var theme_default = theme_options.querySelector('input[value="default-theme"]');
+    var font_default = font_options.querySelector('input[value="default-font"]');
+
+    localStorage.setItem('wwu_preferred_theme', 'default-theme');
+    localStorage.setItem('wwu_preferred_font', 'default-font');
+  
+    var default_theme_value = localStorage.getItem('wwu_preferred_theme');
+    var default_font_value = localStorage.getItem('wwu_preferred_font');
+    body.classList.add(default_font_value, default_theme_value);
+    body.classList.remove('dark-mode', 'opendyslexic', 'open-sans', 'serif');
+
+    theme_default.checked = true;
+    font_default.checked = true;
+    
+  };
+}
+
 set_initial_theme();
 set_font_preference();
+reset_preferences.addEventListener('click', global_reset);
