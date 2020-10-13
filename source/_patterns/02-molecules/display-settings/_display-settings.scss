@@ -106,12 +106,6 @@
           padding: $half-spacing;
         }
   
-        input[type="radio"] {
-          &:focus {
-            border-color: $lightest-green;
-          }
-        }
-  
         input[type="radio"], 
         input[type="radio"] + label {
           &:not(:last-of-type) {
