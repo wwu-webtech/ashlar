@@ -2,11 +2,8 @@ var display_toggle = document.querySelector('.toggle-display-settings');
 var display_menu = document.querySelector('.display-settings-menu');
 var body = document.querySelector('body');
 
-// Theme variables
 var theme_options = document.querySelector('.theme-selection');
 var selected_theme;
-
-// Font variables
 var font_options = document.querySelector('.font-selection');
 var selected_font;
 
