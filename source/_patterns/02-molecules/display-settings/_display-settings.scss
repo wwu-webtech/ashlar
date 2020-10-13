@@ -69,11 +69,9 @@
     @include breakpoint($medium) {
       margin-left: -0.575rem;
     }
+    flex: 0 0 100%;
     position: relative;
     z-index: 3;
-    display: flex;
-    flex-flow: row wrap;
-    flex: 0 0 100%;
     padding: $double-spacing;
     transition: $standard-ease $fast-transition-speed all;
     color: $white;
@@ -89,49 +87,47 @@
       opacity: 1;
     }
 
-    .font-selection {
-      flex: 1;
-    }
-    
-    fieldset {
+    .menu-container {
       display: flex;
-      flex-flow: column nowrap;
+      flex-flow: row wrap;
+      flex: 0 0 100%;
+
+      .font-selection, 
+      .theme-selection {
+        flex: 1;
+      }
       
-      legend {
-        margin: 0;
-        padding: $half-spacing;
-      }
-
-      input[type="radio"] {
-        &:focus {
-          border-color: $lightest-green;
+      fieldset {
+        display: flex;
+        flex-flow: column nowrap;
+        
+        legend {
+          margin: 0;
+          padding: $half-spacing;
         }
-      }
-
-      input[type="radio"], 
-      input[type="radio"] + label {
-        &:not(:last-of-type) {
-          margin-bottom: $standard-spacing;
+  
+        input[type="radio"] {
+          &:focus {
+            border-color: $lightest-green;
+          }
         }
-      }
-
-      input[type="radio"] + label {
-          align-self: flex-start;
+  
+        input[type="radio"], 
+        input[type="radio"] + label {
+          &:not(:last-of-type) {
+            margin-bottom: $standard-spacing;
+          }
+        }
+  
+        input[type="radio"] + label {
+            align-self: flex-start;
+        }
       }
     }
 
-    &--reset-button {
-      display: inline-block;
+    .reset-button {
+      display: block;
       margin: $triple-spacing auto 0;
-
-      &:hover, 
-      &:focus, 
-      &:active {
-        @include button-box-shadow($black);
-        color: $white;
-        background: $gray;
-        outline: $focus-outline $white;
-      }
     }
   }
 }

@@ -8,7 +8,7 @@ var font_options = document.querySelector('.font-selection');
 var selected_font;
 
 
-var reset_preferences = document.querySelector('input[name="reset"]'); 
+var reset_preferences = document.querySelector('reset-display-preferences'); 
 
 // Open display menu
 function open_display_settings() {

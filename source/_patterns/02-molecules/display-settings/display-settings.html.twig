@@ -7,29 +7,31 @@
   </button>
 
   <div id="display-settings-menu" class="display-settings-menu closed">
-    <div class="theme-selection">
-      <fieldset>
-        <legend>Theme</legend>
-        <input id="default-theme" type="radio" name="theme-select" value="default-theme" checked="checked">
-        <label for="default-theme">Default</label>
-        <input id="dark-mode" type="radio" name="theme-select" value="dark-mode">
-        <label for="dark-mode">Dark</label>
-      </fieldset>
+   <div class="menu-container">
+      <div class="theme-selection">
+        <fieldset>
+          <legend>Theme</legend>
+          <input id="default-theme" type="radio" name="theme-select" value="default-theme" checked="checked">
+          <label for="default-theme">Default</label>
+          <input id="dark-mode" type="radio" name="theme-select" value="dark-mode">
+          <label for="dark-mode">Dark</label>
+        </fieldset>
+      </div>
+  
+      <div class="font-selection">
+        <fieldset>
+          <legend>Font</legend>
+          <input id="default-font" type="radio" name="font-select" value="default-font" checked="checked">
+          <label for="default-font">Default</label>
+          <input id="serif" type="radio" name="font-select" value="serif">
+          <label for="serif">Serif</label>
+          <input id="opendyslexic" type="radio" name="font-select" value="opendyslexic">
+          <label for="opendyslexic">Open Dyslexic</label>
+          <input id="open-sans" type="radio" name="font-select" value="open-sans">
+          <label for="open-sans">Open Sans</label>
+        </fieldset>
+      </div>
     </div>
-
-    <div class="font-selection">
-      <fieldset>
-        <legend>Font</legend>
-        <input id="default-font" type="radio" name="font-select" value="default-font" checked="checked">
-        <label for="default-font">Default</label>
-        <input id="serif" type="radio" name="font-select" value="serif">
-        <label for="serif">Serif</label>
-        <input id="opendyslexic" type="radio" name="font-select" value="opendyslexic">
-        <label for="opendyslexic">Open Dyslexic</label>
-        <input id="open-sans" type="radio" name="font-select" value="open-sans">
-        <label for="open-sans">Open Sans</label>
-      </fieldset>
-    </div>
-    <input type="button" class="display-settings-menu--reset-button" name="reset" value="Reset preferences" />
+    <button id="reset-display-preferences" class="reset-button">Reset preferences</button>
   </div>
 </div>
