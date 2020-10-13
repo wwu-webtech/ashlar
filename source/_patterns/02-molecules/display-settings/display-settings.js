@@ -128,7 +128,6 @@ function global_reset(e) {
 if (display_toggle) {
   display_toggle.addEventListener('click', toggle_settings);
   };
-}
 if (theme_options) {
   theme_options.addEventListener('click', select_theme);
 }
@@ -141,4 +140,3 @@ if (reset_preferences) {
 
 set_initial_theme();
 set_font_preference();
-reset_preferences.addEventListener('click', global_reset);
