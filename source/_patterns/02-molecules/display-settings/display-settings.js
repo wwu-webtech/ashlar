@@ -122,9 +122,16 @@ function global_reset(e) {
   };
 }
 
+function keyboard_close(e) {
+  if (e.keyCode == 27 && display_menu.classList.contains('open')) {
+    close_display_settings();
+  }
+}
+
 if (display_toggle) {
   display_toggle.addEventListener('click', toggle_settings);
-  };
+  display_toggle.addEventListener('keydown', keyboard_close);
+};
 if (theme_options) {
   theme_options.addEventListener('click', select_theme);
 }
