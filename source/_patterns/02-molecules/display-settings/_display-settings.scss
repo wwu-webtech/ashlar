@@ -60,9 +60,10 @@
 
   .toggle-display-settings {
     @include breakpoint($medium) {
-      margin-left: -0.575rem;
+      margin-left: -.525rem;
     }
     width: initial;
+    padding: $standard-spacing $double-spacing;
   }
 
   .display-settings-menu {

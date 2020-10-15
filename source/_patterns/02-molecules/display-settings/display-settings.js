@@ -122,15 +122,28 @@ function global_reset(e) {
   };
 }
 
-function keyboard_close(e) {
-  if (e.keyCode == 27 && display_menu.classList.contains('open')) {
+function keyboard_close(event) {
+  if (event.keyCode == 27 && display_menu.classList.contains('open')) {
     close_display_settings();
+    display_toggle.focus();
+  }
+}
+
+function outside_settings_close(event) {
+  if (event.target !== display_toggle) {
+    if (display_menu.classList.contains('open')) {
+      close_display_settings();
+    }
+  }
+  else {
+    return;
   }
 }
 
 if (display_toggle) {
   display_toggle.addEventListener('click', toggle_settings);
   display_toggle.addEventListener('keydown', keyboard_close);
+  display_menu.addEventListener('keydown', keyboard_close);
 };
 if (theme_options) {
   theme_options.addEventListener('click', select_theme);
@@ -138,7 +151,14 @@ if (theme_options) {
 if (font_options) {
   font_options.addEventListener('click', select_font);
 }
+
 reset_preferences.addEventListener('click', global_reset);
+
+body.addEventListener('click', outside_settings_close);
+
+display_menu.addEventListener('click', function(event){
+  event.stopPropagation();
+});
 
 set_initial_theme();
 set_font_preference();
