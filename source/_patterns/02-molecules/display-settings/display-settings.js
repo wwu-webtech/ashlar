@@ -129,17 +129,6 @@ function keyboard_close(event) {
   }
 }
 
-function outside_settings_close(event) {
-  if (event.target !== display_toggle) {
-    if (display_menu.classList.contains('open')) {
-      close_display_settings();
-    }
-  }
-  else {
-    return;
-  }
-}
-
 if (display_toggle) {
   display_toggle.addEventListener('click', toggle_settings);
   display_toggle.addEventListener('keydown', keyboard_close);
@@ -153,12 +142,6 @@ if (font_options) {
 }
 
 reset_preferences.addEventListener('click', global_reset);
-
-body.addEventListener('click', outside_settings_close);
-
-display_menu.addEventListener('click', function(event){
-  event.stopPropagation();
-});
 
 set_initial_theme();
 set_font_preference();
