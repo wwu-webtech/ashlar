@@ -38,18 +38,6 @@
       font-size: $icon-size--medium;
     }
 
-    &:hover,
-    &:active,
-    &:focus {
-      color: $darkest-blue;
-      background-color: $lightest-green;
-    }
-
-    &:focus {
-      outline-color: $darkest-blue;
-      outline-offset: -$border-width;
-    }
-
     &.my-western-link {
       @include breakpoint($medium) {
         width: initial;
@@ -64,6 +52,17 @@
     }
     width: initial;
     padding: $standard-spacing $double-spacing;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $darkest-blue;
+      background-color: $lightest-green;
+    }
+
+    &:focus {
+      border-color: $darkest-blue;
+    }
   }
 
   .display-settings-menu {
