@@ -15,6 +15,11 @@ body {
   }
   font-size: $p-font-size;
 
+  &.opendyslexic {
+    font-family: $opendyslexic;
+    font-feature-settings: unset;
+  }
+  
   &.open-sans {
     font-family: $open-sans;
   }
