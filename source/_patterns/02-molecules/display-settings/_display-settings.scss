@@ -92,8 +92,11 @@
       flex-flow: row wrap;
       flex: 0 0 100%;
 
-      .font-selection, 
       .theme-selection {
+        flex: 0 0 40%;
+      } 
+      
+      .font-selection {
         flex: 1;
       }
       
