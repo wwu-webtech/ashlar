@@ -60,3 +60,19 @@ $alert-logo-size: 6.25rem;
     }
   }
 }
+
+.opendyslexic {
+  .alert {
+    .alert-header {
+      font-family: $opendyslexic;
+    }
+  }
+}
+
+.open-sans {
+  .alert {
+    .alert-header {
+      font-family: $open-sans;
+    }
+  }
+}

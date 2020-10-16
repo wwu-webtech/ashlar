@@ -163,3 +163,31 @@
     }
   }
 }
+
+.opendyslexic {
+  .information.block--card {
+    .title {
+  
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: $opendyslexic;
+      }
+    }
+  }
+}
+
+.open-sans {
+  .information.block--card {
+    .title {
+  
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: $open-sans;
+      }
+    }
+  }
+}
