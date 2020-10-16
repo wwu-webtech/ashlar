@@ -119,3 +119,29 @@
     }
   }
 }
+
+.opendyslexic {
+  .site-footer {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: $opendyslexic;
+    }
+  }
+}
+
+.open-sans {
+  .site-footer {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: $open-sans;
+    }
+  }
+}

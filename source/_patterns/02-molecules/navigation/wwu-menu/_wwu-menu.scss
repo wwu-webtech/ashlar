@@ -61,3 +61,15 @@
     display: flex;
   }
 }
+
+.opendyslexic {
+  .western-menu {
+    font-family: $opendyslexic;
+  }
+}
+
+.open-sans {
+  .western-menu {
+    font-family: $open-sans;
+  }
+}

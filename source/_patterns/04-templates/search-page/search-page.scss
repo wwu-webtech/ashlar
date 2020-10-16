@@ -73,3 +73,17 @@
     font-weight: $font-weight--bold;
   }
 }
+
+.opendyslexic {
+  .search-wrapper {
+    * {
+      font-family: $opendyslexic;
+    }
+}
+
+.open-sans {
+  .search-wrapper {
+    * {
+      font-family: $open-sans;
+    }
+}

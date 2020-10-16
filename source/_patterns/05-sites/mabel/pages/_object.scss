@@ -147,3 +147,41 @@ html.js .islandora-metadata.collapsed {
 html.js .islandora-metadata.collapsible .fieldset-legend {
   background-image: none;
 }
+
+.opendyslexic {
+  body.page-islandora-object {
+    .layout__region--first {
+      .panel-pane {
+        h2,
+        h3 {
+          font-family: $opendyslexic;
+        }
+      }
+    }
+  }
+
+  .islandora-metadata {
+    .fieldset-title {
+      font-family: $opendyslexic;
+    }
+  }
+}
+
+.open-sans {
+  body.page-islandora-object {
+    .layout__region--first {
+      .panel-pane {
+        h2,
+        h3 {
+          font-family: $open-sans;
+        }
+      }
+    }
+  }
+
+  .islandora-metadata {
+    .fieldset-title {
+      font-family: $open-sans;
+    }
+  }
+}

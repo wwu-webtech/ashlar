@@ -109,3 +109,19 @@ input[title="Remove field"] {
     margin-right: $standard-spacing;
   }
 }
+
+.opendyslexic {
+  #islandora-search-container {
+    .block-title {
+      font-family: $opendyslexic;
+    }
+  }
+}
+
+.open-sans {
+  #islandora-search-container {
+    .block-title {
+      font-family: $open-sans;
+    }
+  }
+}
