@@ -73,3 +73,10 @@
     font-family: $open-sans;
   }
 }
+
+.opendyslexic, .open-sans {
+  .wwu-menu {
+    justify-content: flex-start;
+    width: 80vw;
+  }
+}
