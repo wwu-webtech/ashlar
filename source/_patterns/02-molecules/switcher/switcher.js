@@ -4,11 +4,8 @@ var $tabButton = $('.content-switcher button', context);
 var $panels = $('.content-switcher-container .content', context);
 var $selectedPanel = $('.content-switcher-container .content.active', context);
 
-var $tabButtonFirst = $tabButton.first();
-$tabButtonFirst.addClass('active');
-
-var $panelFirst = $panels.first();
-$panelFirst.addClass('active');
+$tabButton.first().addClass('active');
+$panels.first().addClass('active');
 
 var $activeButton = $('.content-switcher button.active', context);
 var $leftArrow = '<span class="material-icons show" aria-hidden="true">chevron_left</span>';
