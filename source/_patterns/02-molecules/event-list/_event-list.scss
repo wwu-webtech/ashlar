@@ -132,3 +132,25 @@ $event-icon-height: 3.75rem;
     }
   }
 }
+
+.opendyslexic {
+  .event-list {
+    .title {
+      a {
+        font-family: $opendyslexic;
+      }
+    }
+  }
+
+}
+
+.open-sans {
+  .event-list {
+    .title {
+      a {
+        font-family: $open-sans;
+      }
+    }
+  }
+
+}

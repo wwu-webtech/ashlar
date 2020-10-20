@@ -170,3 +170,33 @@
 #block-system-main-menu ul ul {
   display: none; // hide nested menus on non ultimenu main nav blocks
 }
+
+.opendyslexic {
+  .main-navigation,
+  #block-system-main-menu {  
+    & > .menu,
+    .ultimenu--horizontal,
+    .ultimenu-main-menu {
+      & > li {
+        & > a {
+          font-family: $opendyslexic;
+        }
+      }
+    }
+  }  
+}
+
+.open-sans {
+  .main-navigation,
+  #block-system-main-menu {  
+    & > .menu,
+    .ultimenu--horizontal,
+    .ultimenu-main-menu {
+      & > li {
+        & > a {
+          font-family: $open-sans;
+        }
+      }
+    }
+  }  
+}

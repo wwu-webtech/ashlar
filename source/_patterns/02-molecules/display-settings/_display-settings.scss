@@ -8,6 +8,7 @@
     min-height: initial;
     margin-bottom: 0;
   }
+  display: flex;
   flex-flow: row wrap;
   align-self: start;
   justify-content: flex-start;
@@ -37,18 +38,6 @@
       font-size: $icon-size--medium;
     }
 
-    &:hover,
-    &:active,
-    &:focus {
-      color: $darkest-blue;
-      background-color: $lightest-green;
-    }
-
-    &:focus {
-      outline-color: $darkest-blue;
-      outline-offset: -$border-width;
-    }
-
     &.my-western-link {
       @include breakpoint($medium) {
         width: initial;
@@ -59,19 +48,30 @@
 
   .toggle-display-settings {
     @include breakpoint($medium) {
-      margin-left: -0.575rem;
+      margin-left: -.525rem;
     }
     width: initial;
+    padding-top: $standard-spacing;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $darkest-blue;
+      background-color: $lightest-green;
+    }
+
+    &:focus {
+      border-color: $darkest-blue;
+    }
   }
 
   .display-settings-menu {
     @include breakpoint($medium) {
       margin-left: -0.575rem;
     }
-    position: relative;
-    z-index: 1;
-    display: flex;
     flex: 0 0 100%;
+    position: relative;
+    z-index: 3;
     padding: $double-spacing;
     transition: $standard-ease $fast-transition-speed all;
     color: $white;
@@ -87,9 +87,64 @@
       opacity: 1;
     }
 
-    legend {
-      margin: 0;
-      padding: $half-spacing;
+    .menu-container {
+      display: flex;
+      flex-flow: row wrap;
+      flex: 0 0 100%;
+
+      .theme-selection {
+        flex: 0 0 40%;
+      } 
+      
+      .font-selection {
+        flex: 1;
+      }
+      
+      fieldset {
+        display: flex;
+        flex-flow: column nowrap;
+        
+        legend {
+          margin: 0;
+          padding: $half-spacing;
+        }
+  
+        input[type="radio"], 
+        input[type="radio"] + label {
+          &:not(:last-of-type) {
+            margin-bottom: $standard-spacing;
+          }
+        }
+  
+        input[type="radio"] + label {
+            align-self: flex-start;
+        }
+      }
     }
+
+    .reset-button {
+      margin: $double-spacing auto 0;
+      display: flex;
+      font-size: $p-font-size--smaller;
+
+      .material-icons {
+        align-self: center;
+        font-size: inherit;
+        position: relative;
+        margin-right: $half-spacing;
+      }
+    }
+  }
+}
+
+.opendyslexic {
+  .display-settings {
+    font-family: $opendyslexic;
+  }
+}
+
+.open-sans {
+  .display-settings {
+    font-family: $open-sans;
   }
 }
