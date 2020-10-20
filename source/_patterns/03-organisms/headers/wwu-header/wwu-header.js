@@ -72,7 +72,7 @@ function open_mobile_menu() {
   mobile_menu_toggle.querySelector('.toggle-prefix').innerText = "";
   mobile_menu_toggle.querySelector('.toggle-text').innerText = "Close";
   mobile_menu_toggle.querySelector('.toggle-suffix').innerText = " the menu";
-  mobile_menu_toggle.setAttribute('aria-expanded', true);
+  mobile_menu_toggle.setAttribute('aria-expanded', 'true');
 
   menu_links.forEach(function(link) {
     link.removeAttribute('aria-hidden');
@@ -98,7 +98,7 @@ function close_mobile_menu() {
   mobile_menu_toggle.querySelector('.toggle-prefix').innerText = "Open the ";
   mobile_menu_toggle.querySelector('.toggle-text').innerText = "Menu";
   mobile_menu_toggle.querySelector('.toggle-suffix').innerText = "";
-  mobile_menu_toggle.setAttribute('aria-expanded', false);
+  mobile_menu_toggle.setAttribute('aria-expanded', 'false');
 
   set_focus()
 }
