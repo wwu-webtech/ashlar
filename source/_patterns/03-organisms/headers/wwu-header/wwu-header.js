@@ -11,6 +11,8 @@ var header_site_name = document.querySelector('.site-name');
 var header_display_settings = document.querySelector('.display-settings');
 var header_quick_links = document.querySelector('.western-menu');
 var header_main_nav = document.querySelector('.main-navigation');
+var menu_links = Array.from(document.querySelectorAll('.main-navigation ul li:not(.has-ultimenu) a'));
+var has_submenu_links = Array.from(document.querySelectorAll('.main-navigation ul .has-ultimenu a'));
 
 /* Non-Menu Things */
 var header = document.querySelector('.western-header');
@@ -71,6 +73,19 @@ function open_mobile_menu() {
   mobile_menu_toggle.querySelector('.toggle-text').innerText = "Close";
   mobile_menu_toggle.querySelector('.toggle-suffix').innerText = " the menu";
   mobile_menu_toggle.setAttribute('aria-expanded', true);
+
+  menu_links.forEach(function(link) {
+    link.removeAttribute('aria-hidden');
+    link.removeAttribute('aria-expanded');
+  });
+
+  has_submenu_links.forEach(function(submenu_link) {
+    if (submenu_link.classList.contains('open')) {
+      submenu_link.setAttribute('aria-expanded', 'true');
+    } else {
+      submenu_link.setAttribute('aria-expanded', 'false');
+    }
+  });
 }
 
 function close_mobile_menu() {
