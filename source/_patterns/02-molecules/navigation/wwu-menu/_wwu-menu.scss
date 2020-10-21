@@ -76,6 +76,10 @@
 
 .opendyslexic, .open-sans {
   .wwu-menu {
+    @include breakpoint($medium) {
+      justify-content: flex-end;
+      width: initial;
+    }
     justify-content: flex-start;
     width: 80vw;
   }
