@@ -266,7 +266,7 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
 }
 
 .open-sans {
-  &.headline {
+  .headline {
     &.box-headline {
       h1, 
       h2 {
