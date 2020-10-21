@@ -308,3 +308,29 @@ main {
     font-family: $open-sans;
   }
 }
+
+.opendyslexic {
+  .big-bold-headings {    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: $opendyslexic;
+    }
+  }
+}
+
+.open-sans {
+  .big-bold-headings {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: $open-sans;
+    }
+  }
+}
