@@ -263,3 +263,14 @@ $image-button--smaller-size--medium: 11.25rem;
     }
   }
 }
+
+.opendyslexic, .open-sans {
+  .smaller {
+    .image-button, .image-button--simple {
+      @include breakpoint($medium) {
+        font-size: $image-button--smaller-size / 5;
+      }
+      font-size: .9rem;
+    }
+  }
+}
