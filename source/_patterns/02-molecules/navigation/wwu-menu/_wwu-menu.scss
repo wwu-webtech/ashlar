@@ -74,13 +74,18 @@
   }
 }
 
-.opendyslexic, .open-sans {
-  .wwu-menu {
+.opendyslexic, 
+.open-sans {
+
+  .western-menu {
     @include breakpoint($medium) {
-      justify-content: flex-end;
-      width: initial;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      .icon-with-text {
+        font-size: $sans-dyslexic-icon-smaller;
+      }
     }
-    justify-content: flex-start;
-    width: 80vw;
   }
 }

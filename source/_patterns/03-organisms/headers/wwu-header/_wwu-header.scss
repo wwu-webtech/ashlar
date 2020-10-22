@@ -163,8 +163,8 @@
     .icon-with-text {
       &.small {
         font-size: .8rem;
-        width: 5rem;
-        height: auto;
+        width: $icon-with-text-size + 1;
+        height: $icon-with-text-size + 1;
       }
 
     }

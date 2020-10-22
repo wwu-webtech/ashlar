@@ -60,3 +60,12 @@ $search-input-size: 12.5rem;
     }
   }
 }
+
+.opendyslexic,
+.open-sans {
+  .search .search-area .search-box {
+    input {
+      font-size: $sans-dyslexic-icon-smaller;
+    }
+  }
+}

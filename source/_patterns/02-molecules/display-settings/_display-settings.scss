@@ -3,6 +3,8 @@
 * molecules/display-settings/_display-settings.scss
 */
 
+$sans-dyslexic-icon-smaller: $p-font-size--min * .8;
+
 .display-settings {
   @include breakpoint($medium) {
     min-height: initial;
@@ -132,6 +134,20 @@
         font-size: inherit;
         position: relative;
         margin-right: $half-spacing;
+      }
+    }
+  }
+}
+
+.open-sans, 
+.opendyslexic {
+  
+  .display-settings {
+    .icon-with-text.small {
+      @include breakpoint($medium) {
+        font-size: $sans-dyslexic-icon-smaller;
+        width: initial;
+        height: initial;
       }
     }
   }
