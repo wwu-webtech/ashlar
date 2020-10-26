@@ -2,10 +2,10 @@
   {% set switch_number = loop.index %}
 {% endif %}
 
-<button class="switch-{{ switch_number }} {% if switch_number == 1 %} active {% endif %}" role="tab" id="switch-button-{{ switch_number }}" title="switch-button-{{ switch_number }}" aria-controls="switch-content-{{ switch_number }}">
+<button class="switch-{{ switch_number }}" role="tab" id="switch-button-{{ switch_number }}" title="switch-button-{{ switch_number }}" aria-controls="switch-content-{{ switch_number }}">
   {{ content.field_heading }}
 </button>
 
-<div class="switch-{{ switch_number }} {% if switch_number == 1 %} active {% endif %} content" role="tabpanel" id="switch-content-{{  switch_number }}" aria-labelledby="switch-button-{{ switch_number }}" tabindex="0">
+<div class="switch-{{ switch_number }} content" role="tabpanel" id="switch-content-{{  switch_number }}" aria-labelledby="switch-button-{{ switch_number }}" tabindex="0">
   {{ content.field_content }}
 </div>
