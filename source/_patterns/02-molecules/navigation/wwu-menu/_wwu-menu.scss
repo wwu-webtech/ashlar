@@ -61,3 +61,31 @@
     display: flex;
   }
 }
+
+.opendyslexic {
+  .western-menu {
+    font-family: $opendyslexic;
+  }
+}
+
+.open-sans {
+  .western-menu {
+    font-family: $open-sans;
+  }
+}
+
+.opendyslexic, 
+.open-sans {
+
+  .western-menu {
+    @include breakpoint($medium) {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      .icon-with-text {
+        font-size: $sans-dyslexic-icon-smaller;
+      }
+    }
+  }
+}

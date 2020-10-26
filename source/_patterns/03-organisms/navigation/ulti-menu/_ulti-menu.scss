@@ -38,6 +38,7 @@
       @include breakpoint($medium) {
         position: absolute;
         display: block !important;
+        z-index: 2;
       }
       visibility: visible;
       max-height: none;

@@ -386,3 +386,23 @@
 .vik-st25 {
   font-size: 3.06rem;
 }
+
+.opendyslexic {
+  .wrapper--404 {
+    .big-bold-headings {
+      h1 {
+        font-family: $opendyslexic;
+      }
+    }
+  }
+}
+
+.open-sans {
+  .wrapper--404 {
+    .big-bold-headings {
+      h1 {
+        font-family: $open-sans;
+      }
+    }
+  }
+}

@@ -238,3 +238,55 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
     }
   }
 }
+
+.opendyslexic {
+  .headline {
+    &.box-headline {
+      h1, 
+      h2 {
+        font-family: $opendyslexic;
+      }
+    }
+    
+    &.left-aligned-bar,
+    &.right-aligned-bar {
+      h1,
+      h2 {
+        font-family: $opendyslexic;
+      }
+    }
+  
+    &.simple-centered {
+      h1,
+      h2 {
+        font-family: $opendyslexic;
+      }
+    }
+  }
+}
+
+.open-sans {
+  .headline {
+    &.box-headline {
+      h1, 
+      h2 {
+        font-family: $open-sans;
+      }
+    }
+    
+    &.left-aligned-bar,
+    &.right-aligned-bar {
+      h1,
+      h2 {
+        font-family: $open-sans;
+      }
+    }
+  
+    &.simple-centered {
+      h1,
+      h2 {
+        font-family: $open-sans;
+      }
+    }
+  }
+}

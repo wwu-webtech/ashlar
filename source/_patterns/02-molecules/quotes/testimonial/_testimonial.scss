@@ -228,3 +228,19 @@ $testimonial--credit-circle-size: 18.75rem;
     }
   }
 }
+
+.opendyslexic {
+  .block--testimonial {
+    .block__title {
+      font-family: $opendyslexic;
+    }
+  }
+}
+
+.open-sans {
+  .block--testimonial {
+    .block__title {
+      font-family: $open-sans;
+    }
+  }
+}

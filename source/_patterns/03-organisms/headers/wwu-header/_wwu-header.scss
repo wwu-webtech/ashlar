@@ -153,3 +153,20 @@
     opacity: 0;
   }
 }
+
+.opendyslexic, 
+.open-sans { 
+
+  .mobile-menu {
+    
+    .toggle-menu,
+    .icon-with-text {
+      &.small {
+        font-size: .8rem;
+        width: $icon-with-text-size + 1;
+        height: $icon-with-text-size + 1;
+      }
+
+    }
+  }
+}
