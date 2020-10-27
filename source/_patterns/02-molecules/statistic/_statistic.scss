@@ -93,13 +93,13 @@ $vertical-statistic-width--max: 15rem;
   }
 }
 
-.open-sans {
+.atkinson {
   .block--statistic {
     &.white-bg, 
     &.statistic--vertical, 
     &.statistic--horizontal {
       .block__title {
-        font-family: $open-sans;
+        font-family: $atkinson;
       }
     }
   }

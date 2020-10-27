@@ -155,13 +155,16 @@
 }
 
 .opendyslexic, 
-.open-sans { 
+.atkinson { 
 
   .mobile-menu {
     
     .toggle-menu,
     .icon-with-text {
       &.small {
+        @include breakpoint($medium) {
+          font-size: 1rem;
+        }
         font-size: .8rem;
         width: $icon-with-text-size + 1;
         height: $icon-with-text-size + 1;
