@@ -265,12 +265,12 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
   }
 }
 
-.open-sans {
+.atkinson {
   .headline {
     &.box-headline {
       h1, 
       h2 {
-        font-family: $open-sans;
+        font-family: $atkinson;
       }
     }
     
@@ -278,14 +278,14 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
     &.right-aligned-bar {
       h1,
       h2 {
-        font-family: $open-sans;
+        font-family: $atkinson;
       }
     }
   
     &.simple-centered {
       h1,
       h2 {
-        font-family: $open-sans;
+        font-family: $atkinson;
       }
     }
   }

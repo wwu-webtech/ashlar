@@ -167,13 +167,13 @@ html.js .islandora-metadata.collapsible .fieldset-legend {
   }
 }
 
-.open-sans {
+.atkinson {
   body.page-islandora-object {
     .layout__region--first {
       .panel-pane {
         h2,
         h3 {
-          font-family: $open-sans;
+          font-family: $atkinson;
         }
       }
     }
@@ -181,7 +181,7 @@ html.js .islandora-metadata.collapsible .fieldset-legend {
 
   .islandora-metadata {
     .fieldset-title {
-      font-family: $open-sans;
+      font-family: $atkinson;
     }
   }
 }
