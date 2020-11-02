@@ -194,7 +194,7 @@
   }  
 }
 
-.open-sans {
+.atkinson {
   .main-navigation,
   #block-system-main-menu {  
     & > .menu,
@@ -202,7 +202,7 @@
     .ultimenu-main-menu {
       & > li {
         & > a {
-          font-family: $open-sans;
+          font-family: $atkinson;
         }
       }
     }

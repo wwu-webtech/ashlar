@@ -114,7 +114,7 @@ function global_reset(e) {
       localStorage.setItem('wwu_preferred_theme', 'default-theme');
       localStorage.setItem('wwu_preferred_font', 'default-font');
       body.classList.add(current_theme_value, current_font_value);
-      body.classList.remove('dark-mode', 'opendyslexic', 'open-sans', 'serif');
+      body.classList.remove('dark-mode', 'opendyslexic', 'atkinson', 'serif');
   
       theme_default.checked = true;
       font_default.checked = true;
