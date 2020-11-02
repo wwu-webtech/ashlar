@@ -14,16 +14,17 @@
   border: none;
   background-color: $light-green;
   font-size: $p-font-size--smaller;
+
   font-display: fallback;
 }
 
-a {
-  &.taxonomy-term {
-    color: $dark-blue;
-  }
-  &.taxonomy-term:hover,
-  &.taxonomy-term:focus,
-  &.taxonomy-term:active {
+a.taxonomy-term,
+.taxonomy-term a,
+.dark-mode .taxonomy-term a {
+  color: $dark-blue;
+  &:hover,
+  &:focus,
+  &:active {
     color: $light-green;
     background-color: $dark-blue;
   }
