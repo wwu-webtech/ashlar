@@ -537,6 +537,11 @@
 .dark-mode {
   @include black-bg;
 }
+
+.dark-mode {
+  background-color: $dark-mode-black;
+}
+
 .gray-bg {
   @include gray-bg;
 }
