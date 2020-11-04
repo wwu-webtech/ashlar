@@ -40,9 +40,6 @@ $profile-photo-size: 25rem;
     margin: auto;
     margin-top: $triple-spacing;
   }
-  .website {
-    text-align: center;
-  }
 
   .social-links {
     display: flex;
@@ -57,7 +54,8 @@ $profile-photo-size: 25rem;
   }
 
   .office,
-  .contact {
+  .contact,
+  .website {
     display: flex;
     flex-flow: row wrap;
 
@@ -67,7 +65,7 @@ $profile-photo-size: 25rem;
     }
 
     h3 {
-      margin-top: $standard-spacing;
+      margin-top: 0;
     }
 
     div {
