@@ -175,12 +175,16 @@
     .date {
       font-weight: $font-weight--semibold;
     }
+
+    a {
+      position: relative;
+    }
   }
 
   /* Cards with .event class */
   &.event {
     align-content: start;
-    
+
     .image {
       margin-bottom: -$double-spacing;
     }
