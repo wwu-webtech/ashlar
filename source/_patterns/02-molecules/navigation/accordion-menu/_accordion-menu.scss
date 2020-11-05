@@ -104,3 +104,19 @@ $expand-toggle-size: 0.4rem;
     }
   }
 }
+
+.atkinson {
+  .ui-accordion {
+    .ui-accordion-header {
+      font-family: $opendyslexic;
+    }
+  }
+}
+
+.atkinson {
+  .ui-accordion {
+    .ui-accordion-header {
+      font-family: $atkinson;
+    }
+  }
+}

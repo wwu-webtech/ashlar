@@ -77,3 +77,13 @@
     }
   }
 }
+
+.dark-mode {
+  .block--image-with-description {
+    .body {
+      &:not(.dark-blue-bg):not(.blue-bg):not(.light-blue-bg):not(.lightest-blue-bg):not(.light-gray-bg):not(.lightest-gray-bg) {
+        background: $black;
+      }
+    }
+  }
+}

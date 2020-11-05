@@ -38,6 +38,9 @@
     color: $white;
   }
 
+  .tagline {
+    color: $lightest-green;
+  }
 
   a:not([class]) {
     color: $light-blue;
@@ -135,6 +138,10 @@
     &:after {
       border-color: $light-blue;
     }
+  }
+
+  .tagline {
+    color: $white;
   }
 
   .menu {
@@ -526,9 +533,15 @@
   }
 }
 
-.black-bg {
+.black-bg,
+.dark-mode {
   @include black-bg;
 }
+
+.dark-mode {
+  background-color: $dark-mode-black;
+}
+
 .gray-bg {
   @include gray-bg;
 }
@@ -563,13 +576,24 @@
   @include light-green-bg;
 }
 
-/* Gradient Backgrounds */
 .dark-blue-gradient-bg {
   @include gradient-blue-bg;
   background-image: linear-gradient(to left bottom, #1c2023, #18242d, #122738, #0a2a44, #022d4f, #00335c, #013a69, #044077, #074e8b, #085c9f, #066bb3, #007ac8);
 }
-
 .blue-gradient-bg {
   @include gradient-blue-bg;
   background-image: linear-gradient(to right bottom, #002f5e, #003266, #00356d, #003875, #003b7d, #004186, #01478e, #004d97, #0058a3, #0063b0, #006ebc, #007ac8);
+}
+
+.dark-mode {
+  .light-blue-bg,
+  .lightest-blue-bg,
+  .light-gray-bg,
+  .lightest-gray-bg {
+    @include gray-bg;
+  }
+
+  .light-green-bg {
+    @include green-bg;
+  }
 }

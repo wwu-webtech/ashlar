@@ -4,131 +4,25 @@
 */
 .site-header {
   position: relative;
-  z-index: 2;
 }
 
 .western-header {
   @include breakpoint($medium) {
-    display: grid;
-
-    grid-template-areas: "logo quick-links"
-    "logo site-name"
-    "logo western-header-region"
-    "main-nav main-nav";
-    grid-template-columns: ($logo-size + ($triple-spacing * 2)) 1fr;
+    grid-template-areas: "logo display-settings wwu-menu"
+    "logo site-name site-name"
+    "logo western-header-region western-header-region"
+    "main-nav main-nav main-nav";
+    grid-template-columns: ($logo-size + ($triple-spacing * 2)) auto 1fr;
     grid-template-rows: ($logo-size / 3) ($logo-size / 3) auto auto;
   }
+  display: grid;
   background-color: $dark-blue;
 
-  .header-navigation {
-    @include breakpoint($medium) {
-      position: relative;
-      z-index: 2;
-      right: initial !important;
-      display: grid !important;
-      overflow-y: initial;
-      width: 100%;
-      min-height: initial;
-      padding-top: 0;
-      opacity: 1 !important;
-    }
-    position: fixed;
-    z-index: 4;
-    top: 0;
-    display: none;
-    overflow-y: scroll;
-    width: 100vw;
-    min-height: 100vh;
-    background-color: $dark-blue;
-
-    &.western-header-navigation {
-      @include breakpoint($medium) {
-        padding-top: 0;
-
-        grid-area: quick-links;
-      }
-      padding-top: $toggle-size;
-    }
-
-    &.main-header-navigation {
-      @include breakpoint($medium) {
-        top: initial;
-
-        grid-area: main-nav;
-      }
-      top: ($toggle-size * 2) + $double-spacing;
-    }
-  }
-
-  .western-logo {
-    @include breakpoint($medium) {
-      margin: initial;
-
-      grid-area: logo;
-    }
-    position: relative;
-    z-index: 3;
-    width: $logo-size + $double-spacing;
-    height: $logo-size;
-    margin: auto;
-    padding-right: $toggle-size;
-
-    .western-home-link {
-      color: $white;
-
-      &:focus {
-        outline-color: $white;
-        outline-offset: -$border-width;
-      }
-    }
-  }
-
-  .logo {
-    @include breakpoint($medium) {
-      margin-left: $triple-spacing;
-      background: transparent;
-    }
-    margin: auto;
-
-    &.horizontal {
-      @include breakpoint($medium) {
-        display: none;
-      }
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: calc(100vw - #{$toggle-size});
-      height: $toggle-size;
-      background: transparent;
-    }
-  }
-
-  .toggle-menu {
-    @include breakpoint($medium) {
-      display: none;
-    }
-    position: absolute;
-    z-index: 5;
-    top: 0;
-    right: 0;
-    color: $white;
-    border-radius: 0;
-    background: transparent;
-    box-shadow: none;
-
-    &.is-expanded {
-      position: fixed;
-      top: 0;
-      right: 0;
-    }
-
-    &:hover,
-    &:focus {
-      color: $darkest-blue;
-      background: $lightest-green;
-      box-shadow: none;
-    }
-  }
+  grid-template-areas: ".... logo menu-toggle"
+  "site-name site-name site-name"
+  "western-header-region western-header-region western-header-region";
+  grid-template-columns: $toggle-size auto $toggle-size;
+  grid-template-rows: auto auto auto auto;
 
   .site-name {
     @include breakpoint($medium) {
@@ -136,8 +30,6 @@
       text-align: left;
       border-top: none;
       border-bottom: none;
-
-      grid-area: site-name;
     }
     @include breakpoint($large) {
       font-size: $p-font-size--max--larger;
@@ -152,11 +44,9 @@
     border-bottom: solid $border-width--thinner $blue;
     font-size: $p-font-size--larger;
 
-    &.mobile {
-      @include breakpoint($medium) {
-        display: none;
-      }
+    grid-area: site-name;
 
+    &.mobile {
       .block--secondary-site-name {
         margin: -$standard-spacing;
         margin-top: $standard-spacing;
@@ -176,7 +66,110 @@
     }
   }
 
+  .western-logo {
+    @include breakpoint($medium) {
+      margin: initial;
+    }
+    position: relative;
+    width: $logo-size + $double-spacing;
+    height: $logo-size;
+    margin: auto;
+    padding-right: $toggle-size;
+
+    grid-area: logo;
+
+    .western-home-link {
+      color: $white;
+
+      &:focus {
+        outline-color: $white;
+        outline-offset: -$border-width;
+      }
+    }
+
+    .logo {
+      @include breakpoint($medium) {
+        margin-left: $triple-spacing;
+        background: transparent;
+      }
+      margin: auto;
+    }
+  }
+
   .western-header-region {
     grid-area: western-header-region;
+  }
+}
+
+/* Mobile Menu */
+.toggle-menu {
+  @include breakpoint($medium) {
+    display: none;
+  }
+  color: $white;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+
+  grid-area: menu-toggle;
+
+  &:hover,
+  &:focus {
+    color: $darkest-blue;
+    background: $lightest-green;
+    box-shadow: none;
+  }
+}
+
+.mobile-menu {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  display: grid;
+  align-content: start;
+  min-height: 100vh;
+  transition: $fast-transition-speed $standard-ease;
+  transition-property: opacity, transform;
+  transform: translatex(0);
+  opacity: 1;
+  background-color: $dark-blue;
+
+  grid-template-areas: "display-settings menu-toggle"
+  "wwu-menu wwu-menu"
+  "main-nav main-nav";
+  grid-template-columns: auto $toggle-size;
+  grid-template-rows: $toggle-size auto auto;
+
+  &.open {
+    visibility: visible;
+    overflow-y: hidden;
+    width: 100%;
+  }
+
+  &.closed {
+    visibility: hidden;
+    width: 0;
+    transform: translatex(100%);
+    opacity: 0;
+  }
+}
+
+.opendyslexic, 
+.atkinson { 
+
+  .mobile-menu {
+    
+    .toggle-menu,
+    .icon-with-text {
+      &.small {
+        @include breakpoint($medium) {
+          font-size: 1rem;
+        }
+        font-size: .8rem;
+        width: $icon-with-text-size + 1;
+        height: $icon-with-text-size + 1;
+      }
+
+    }
   }
 }

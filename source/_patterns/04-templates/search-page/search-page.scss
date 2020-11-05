@@ -73,3 +73,19 @@
     font-weight: $font-weight--bold;
   }
 }
+
+.opendyslexic {
+  .search-wrapper {
+    * {
+      font-family: $opendyslexic;
+    }
+  }
+}
+
+.atkinson {
+  .search-wrapper {
+    * {
+      font-family: $atkinson;
+    }
+  }
+}

@@ -180,7 +180,7 @@
   /* Cards with .event class */
   &.event {
     align-content: start;
-    
+
     .image {
       margin-bottom: -$double-spacing;
     }
@@ -321,4 +321,40 @@
 .layout-builder-block.card .title a::after,
 .layout-builder-block.block--card .title a::after {
   position: initial;
+}
+
+.dark-mode {
+  .block--card {
+    a {
+      &:hover,
+      &:active,
+      &:focus {
+        color: $white;
+      }
+    }
+  }
+}
+
+.opendyslexic {
+  .card, .block--card {
+    .title {
+      h2,
+      h3,
+      h4 {
+        font-family: $opendyslexic;
+      }
+    }
+  }
+}
+
+.atkinson {
+  .card, .block--card {
+    .title {
+      h2,
+      h3,
+      h4 {
+        font-family: $atkinson;
+      }
+    }
+  }
 }

@@ -28,3 +28,13 @@ blockquote {
     }
   }
 }
+
+.dark-mode {
+  blockquote:not([class]) {
+    @include gray-bg;
+  }
+
+  blockquote.pullquote {
+    @include black-bg;
+  }
+}

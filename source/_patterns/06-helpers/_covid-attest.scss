@@ -10,7 +10,21 @@
 
   a {
     color: $dark-blue;
+    font-family: $sans-serif;
     font-size: $p-font-size;
-    font-family: $sans-serif
+  }
+}
+
+.dark-mode {
+  .covid-attestation {
+    a {
+      color: $dark-blue;
+
+      &:active,
+      &:hover,
+      &:focus {
+        color: $white;
+      }
+    }
   }
 }

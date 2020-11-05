@@ -14,4 +14,13 @@ body {
     font-size: $p-font-size--max;
   }
   font-size: $p-font-size;
+
+  &.opendyslexic {
+    font-family: $opendyslexic;
+    font-feature-settings: unset;
+  }
+  
+  &.atkinson {
+    font-family: $atkinson;
+  }
 }

@@ -210,3 +210,29 @@
     }
   }
 }
+
+.opendyslexic {
+  .front, .path-frontpage {
+    .layout__region--first-above,
+    .layout__region--first-below,
+    .layout__region--second-above,
+    .layout__region--second-below {
+      h2 {
+        font-family: $opendyslexic;
+      }
+    }
+  }
+}
+
+.atkinson {
+  .front, .path-frontpage {
+    .layout__region--first-above,
+    .layout__region--first-below,
+    .layout__region--second-above,
+    .layout__region--second-below {
+      h2 {
+        font-family: $atkinson;
+      }
+    }
+  }
+}
