@@ -118,6 +118,19 @@
       background-color: $light-gray !important;
     }
   }
+
+  .block--menu .menu li {
+    & > a[aria-current="page"] {
+      color: $black;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $lightest-green;
+        background: mix(black, $blue, 20%);
+      }
+    }
+  }
 }
 
 .opendyslexic {
