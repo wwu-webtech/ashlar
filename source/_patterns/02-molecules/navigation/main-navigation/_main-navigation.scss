@@ -5,7 +5,7 @@
 .main-navigation,
 #block-system-main-menu {
   @include breakpoint($medium) {
-    width: initial;
+    width: 100vw;
     height: inherit;
     border-top: none;
   }
@@ -61,15 +61,15 @@
           background-color: $lightest-green;
           border-bottom: $border-width--thicker solid $dark-blue;
           padding-bottom: $half-spacing;
-          
+
           &:hover, &:focus-within, &:active {
             background-color: $dark-blue;
           }
           a {
             color: $black;
 
-            &:hover, 
-            &:focus, 
+            &:hover,
+            &:focus,
             &:active {
               color: $white;
             }
@@ -185,7 +185,7 @@
 
 .opendyslexic {
   .main-navigation,
-  #block-system-main-menu {  
+  #block-system-main-menu {
     & > .menu,
     .ultimenu--horizontal,
     .ultimenu-main-menu {
@@ -195,12 +195,12 @@
         }
       }
     }
-  }  
+  }
 }
 
 .atkinson {
   .main-navigation,
-  #block-system-main-menu {  
+  #block-system-main-menu {
     & > .menu,
     .ultimenu--horizontal,
     .ultimenu-main-menu {
@@ -210,5 +210,5 @@
         }
       }
     }
-  }  
+  }
 }
