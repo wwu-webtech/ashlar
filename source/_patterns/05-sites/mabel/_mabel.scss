@@ -145,3 +145,29 @@ $mabel-site-name-height: 2.75rem;
     max-width: 100%;
   }
 }
+
+.opendyslexic {
+  .page-islandora {
+    .layout__region--first {
+      .panel-pane {
+        h2,
+        h3 {
+          font-family: $opendyslexic;
+        }
+      }
+    }
+  }
+}
+
+.atkinson {
+  .page-islandora {
+    .layout__region--first {
+      .panel-pane {
+        h2,
+        h3 {
+          font-family: $atkinson;
+        }
+      }
+    }
+  }
+}

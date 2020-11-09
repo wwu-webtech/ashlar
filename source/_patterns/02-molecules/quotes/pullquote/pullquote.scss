@@ -78,3 +78,15 @@ $quote-icon-size: 3.125rem;
     }
   }
 }
+
+.dark-mode {
+  .block--pullquote {
+    &.pullquote--editorial {
+      blockquote {
+        .body {
+          color: $white;
+        }
+      }
+    }
+  }
+}

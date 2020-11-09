@@ -5,17 +5,15 @@
 .main-navigation,
 #block-system-main-menu {
   @include breakpoint($medium) {
-    position: initial;
-    z-index: initial;
     width: initial;
     height: inherit;
     border-top: none;
   }
-  position: absolute;
-  z-index: 2;
   width: 100%;
-  height: 100vh;
   border-top: solid $darkest-blue $border-width--thinner;
+  background-color: $dark-blue;
+
+  grid-area: main-nav;
 
   & > .menu,
   .ultimenu--horizontal,
@@ -29,7 +27,7 @@
     margin: 0;
     padding-left: 0;
     background-color: initial;
-    
+
     & > li {
       @include breakpoint($medium) {
         width: inherit;
@@ -165,7 +163,6 @@
 
         &.desktop {
           @include breakpoint($medium) {
-            position: relative;
             right: $half-spacing;
             display: flex;
           }
@@ -184,4 +181,34 @@
 
 #block-system-main-menu ul ul {
   display: none; // hide nested menus on non ultimenu main nav blocks
+}
+
+.opendyslexic {
+  .main-navigation,
+  #block-system-main-menu {  
+    & > .menu,
+    .ultimenu--horizontal,
+    .ultimenu-main-menu {
+      & > li {
+        & > a {
+          font-family: $opendyslexic;
+        }
+      }
+    }
+  }  
+}
+
+.atkinson {
+  .main-navigation,
+  #block-system-main-menu {  
+    & > .menu,
+    .ultimenu--horizontal,
+    .ultimenu-main-menu {
+      & > li {
+        & > a {
+          font-family: $atkinson;
+        }
+      }
+    }
+  }  
 }

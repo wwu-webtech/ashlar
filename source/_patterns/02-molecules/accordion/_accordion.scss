@@ -31,20 +31,20 @@ $accordion-border: $dark-blue solid $border-width--thicker;
         border: $border-width solid transparent;
         border-radius: 0;
         background: none;
+        box-shadow: none;
         font-size: $p-font-size;
         font-weight: $font-weight--semibold;
         line-height: 1.2em;
-        box-shadow: none;
 
         &:active {
           transform: none;
         }
 
         &:focus {
+          color: $white;
           border: $border-width dotted $white;
           background-color: $blue;
           box-shadow: none;
-          color: $white;
 
           .material-icons {
             color: inherit;
@@ -52,9 +52,9 @@ $accordion-border: $dark-blue solid $border-width--thicker;
         }
 
         .material-icons {
+          margin-right: $standard-spacing;
           color: $dark-blue;
           font-size: $icon-size--medium;
-          margin-right: $standard-spacing;
         }
       }
 
@@ -68,6 +68,25 @@ $accordion-border: $dark-blue solid $border-width--thicker;
 
     h2.title {
       padding-bottom: 0;
+    }
+  }
+}
+
+.dark-mode {
+  .accordion-set {
+    .item {
+      border-color: $light-blue;
+      
+      .title, 
+      .field__title {
+        .expand {
+          color: $light-blue;
+      
+        .material-icons {
+            color: $light-blue;
+          }
+        }
+      }
     }
   }
 }

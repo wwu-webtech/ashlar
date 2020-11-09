@@ -118,4 +118,43 @@
       background-color: $light-gray !important;
     }
   }
+
+  .block--menu .menu li {
+    & > a[aria-current="page"] {
+      color: $black;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $lightest-green;
+        background: mix(black, $blue, 20%);
+      }
+    }
+  }
+}
+
+.opendyslexic {
+  .site-footer {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: $opendyslexic;
+    }
+  }
+}
+
+.atkinson {
+  .site-footer {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: $atkinson;
+    }
+  }
 }

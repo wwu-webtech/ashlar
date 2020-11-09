@@ -6,6 +6,7 @@
 /* Overrides for ultimenu styles & functionality */
 .ultimenu {
   overflow: visible;
+  z-index: initial;
 
   > li {
     min-width: initial;
@@ -17,6 +18,7 @@
       right: 0 !important;
       display: none !important;
     }
+    z-index: initial;
     display: block;
     visibility: hidden;
     max-height: 0;
@@ -36,9 +38,10 @@
       @include breakpoint($medium) {
         position: absolute;
         display: block !important;
+        z-index: 2;
       }
-      max-height: none;
       visibility: visible;
+      max-height: none;
       opacity: 1;
     }
   }

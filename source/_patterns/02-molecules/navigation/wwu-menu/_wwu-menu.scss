@@ -2,6 +2,13 @@
 * @file
 * 00-molecules/navigation/wwu-menu/_wwu-menu.scss
 */
+
+@mixin position-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .western-menu {
   @include breakpoint($medium) {
     margin: 0;
@@ -9,13 +16,12 @@
   display: flex;
   align-self: start;
   justify-content: flex-end;
+  max-width: 100vw;
   margin-top: $half-spacing;
   margin-bottom: $standard-spacing;
   font-family: $condensed;
 
-  .quick-links {
-    display: flex;
-  }
+  grid-area: wwu-menu;
 
   .icon-with-text {
     @include breakpoint($medium) {
@@ -56,5 +62,34 @@
       }
       width: $toggle-size + $standard-spacing;
     }
+  }
+
+  .wwu-menu {
+    display: flex;
+  }
+}
+
+.opendyslexic {
+  .western-menu {
+    @include breakpoint($medium) {
+      @include position-right();
+
+      .icon-with-text {
+        font-size: $dyslexic-icon-smaller;
+      }
+    }
+    font-family: $opendyslexic;
+  }
+}
+
+.atkinson {
+  .western-menu {
+    @include breakpoint($medium) {
+      @include position-right();
+
+      font-size: 1rem;
+    }
+    font-size: $dyslexic-icon-smaller;
+    font-family: $atkinson;
   }
 }

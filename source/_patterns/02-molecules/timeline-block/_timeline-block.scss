@@ -153,3 +153,19 @@ $timeline-translate-neg: calc(-100% - (#{$min-timeline-font-size} + #{strip-unit
     }
   }
 }
+
+.opendyslexic {
+  .timeline-block {
+    .timeline-heading {
+      font-family: $opendyslexic;
+    }
+  }
+}
+
+.atkinson {
+  .timeline-block {
+    .timeline-heading {
+      font-family: $atkinson;
+    }
+  }
+}

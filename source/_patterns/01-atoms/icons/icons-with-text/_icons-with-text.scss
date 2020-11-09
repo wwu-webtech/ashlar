@@ -59,3 +59,50 @@ $icon-with-text-size--large: 7.5em;
     }
   }
 }
+
+.dark-mode {
+  .page-content  a {
+    &.icon-with-text {
+      color: $light-blue;
+
+      &:hover,
+      &:focus, 
+      &:active {
+        color: $dark-blue;
+      }
+  
+      &:focus {
+        outline-color: $white;
+      }
+
+      &.blue-bg,
+      &.dark-blue-bg {
+        color: $white;
+      }
+
+      &.white-bg {
+        background-color: $white;
+        color: $link-color;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: $link-color;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.opendyslexic {
+  .icon-with-text {
+    font-family: $opendyslexic;
+  }
+}
+
+.atkinson {
+  .icon-with-text {
+    font-family: $atkinson;
+  }
+}
