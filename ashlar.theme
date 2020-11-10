@@ -54,15 +54,6 @@ SITEIMPROVE;
 function ashlar_preprocess_page(&$variables) {
   $variables['site_name'] = \Drupal::config('system.site')->get('name');
   $variables['alert_display'] = (bool) theme_get_setting('alert_display');
-
-  $host = \Drupal::request()->getHost();
-  $homepage = \Drupal::service('path.matcher')->isFrontPage();
-    switch ($host) {
-      case 'www.wwu.edu' || 'wwwdev.wwu.edu':
-      if ($homepage) {
-        $variables['#attached']['library'][] = 'ashlar/google-optimize';
-      }
-    }
 }
 
 /**
