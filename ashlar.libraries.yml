@@ -66,10 +66,6 @@ fullpage:
       dist/js/fullPage/fullpage.css: {}
   js:
     dist/js/fullPage/fullpage.js: {}
-google-optimize:
-    version: 1.x
-    js:
-      https://www.googleoptimize.com/optimize.js?id=GTM-5QM62SQ: { type: external, attributes: { async: true }}
 language-select:
   version: 1.x
   js:
