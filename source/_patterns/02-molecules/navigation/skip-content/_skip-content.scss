@@ -10,8 +10,8 @@
       z-index: 3;
       top: 0;
       left: $standard-spacing;
-      clip-path: initial;
       clip: initial; // IE support
+      clip-path: initial;
       width: inherit;
       height: inherit;
       padding: $standard-spacing;
