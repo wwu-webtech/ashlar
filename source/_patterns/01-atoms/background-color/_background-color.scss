@@ -540,6 +540,7 @@
 
 .dark-mode {
   background-color: $dark-mode-black;
+  @include dark-mode-links;
 }
 
 .gray-bg {
@@ -586,6 +587,7 @@
 }
 
 .dark-mode {
+  .gray-bg,
   .light-blue-bg,
   .lightest-blue-bg,
   .light-gray-bg,
@@ -595,5 +597,9 @@
 
   .light-green-bg {
     @include green-bg;
+  }
+
+  .blue-bg {
+    @include dark-blue-bg;
   }
 }
