@@ -210,12 +210,27 @@ $testimonial--credit-circle-size: 18.75rem;
       }
     }
   }
+
+  &.mirror {
+    grid-template-areas: "body image" "credit image";
+
+    .body,
+    .credit {
+      text-align: right;
+    }
+
+    .image {
+      &:after {
+        left: -60%;
+      }
+    }
+  }
 }
 
 .dark-mode {
   .block--testimonial {
     color: $white;
-    
+
     .block__title {
       color: $light-blue;
     }
