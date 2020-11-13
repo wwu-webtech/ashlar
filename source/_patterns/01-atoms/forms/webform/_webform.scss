@@ -6,6 +6,11 @@
 
 $checkmark-size: 3.75rem;
 
+@mixin current-progress-hover {
+  color: $lightest-green;
+  background: mix(black, $blue, 20%);
+}
+
 /* File Input */
 .form-managed-file {
   .form-file {
