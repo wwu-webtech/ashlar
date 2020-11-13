@@ -19,24 +19,24 @@ form {
     background-color: transparent;
   }
 
-  > fieldset > legend {
-    @include breakpoint($large) {
-      font-size: $h4-font-size--max;
-    }
-    padding: 0 $double-spacing;
-    color: $dark-blue;
-    font-size: $h4-font-size;
-  }
-
   .webform-section-title {
+    @include breakpoint($large) {
+      font-size: $h2-font-size--max;
+    }
     display: inline-block;
     margin: 0;
     padding: 0 $double-spacing;
     transform: translatey(-1.2em);
     background-color: $white;
+    color: $dark-blue;
+    font-size: $h2-font-size;
 
     + .webform-section-wrapper {
       margin-top: -1.2em;
+      
+      fieldset {
+        margin-left: $double-spacing;  
+      }
     }
   }
 
