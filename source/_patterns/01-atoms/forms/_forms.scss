@@ -5,11 +5,6 @@
 $select-input-size: 1.75rem;
 $select-input-size--smaller: 1.5rem;
 
-@mixin current-progress-hover {
-  color: $lightest-green;
-  background: mix(black, $blue, 20%);
-}
-
 form {
   fieldset,
   .webform-section {
