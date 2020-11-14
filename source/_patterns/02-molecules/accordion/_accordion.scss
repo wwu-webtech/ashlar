@@ -76,6 +76,10 @@ $accordion-border: $dark-blue solid $border-width--thicker;
   .accordion-set {
     .item {
       border-color: $light-blue;
+
+      &:last-of-type {
+        border-bottom-color: $light-blue;
+      }
       
       .title, 
       .field__title {
