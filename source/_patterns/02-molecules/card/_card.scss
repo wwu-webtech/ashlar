@@ -320,6 +320,7 @@
   &.color-block-title {
     .title {
       order: 0;
+      padding: $standard-spacing;
       background-color: $blue;
 
       a {
