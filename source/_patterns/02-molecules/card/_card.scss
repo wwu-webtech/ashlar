@@ -316,6 +316,38 @@
     }
   }
 
+  /* Cards with .color-block-title class */
+  &.color-block-title {
+    .title {
+      order: 0;
+      background-color: $blue;
+
+      a {
+        color: $lightest-green;
+      }
+    }
+
+    &.dark-blue {
+      .title {
+        background-color: $dark-blue;
+
+        a {
+          color: $light-green;
+        }
+      }
+    }
+  }
+
+  &.light-green {
+    .title {
+      background-color: $light-green;
+
+      a {
+        color: $dark-blue;
+      }
+    }
+  }
+
   &.horizontal {
     @include horizontal-card;
   }
@@ -340,7 +372,8 @@
 }
 
 .opendyslexic {
-  .card, .block--card {
+  .card,
+  .block--card {
     .title {
       h2,
       h3,
@@ -352,7 +385,8 @@
 }
 
 .atkinson {
-  .card, .block--card {
+  .card,
+  .block--card {
     .title {
       h2,
       h3,
