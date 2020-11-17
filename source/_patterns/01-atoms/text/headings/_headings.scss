@@ -172,8 +172,8 @@ main {
   h5,
   h6 {
     &:after {
-      left: initial;
       right: 0;
+      left: initial;
     }
   }
 }
@@ -286,7 +286,6 @@ main {
 }
 
 .opendyslexic {
-  
   h1,
   h2,
   h3,
@@ -296,7 +295,9 @@ main {
     font-family: $opendyslexic;
   }
 
-  .big-bold-headings {    
+  .serif-headings,
+  .sans-serif-headings,
+  .big-bold-headings {
     h1,
     h2,
     h3,
@@ -309,7 +310,6 @@ main {
 }
 
 .atkinson {
-  
   h1,
   h2,
   h3,
@@ -319,6 +319,8 @@ main {
     font-family: $atkinson;
   }
 
+  .serif-headings,
+  .sans-serif-headings,
   .big-bold-headings {
     h1,
     h2,
