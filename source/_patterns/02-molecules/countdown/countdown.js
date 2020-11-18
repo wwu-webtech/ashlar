@@ -3,7 +3,7 @@ var second = 1000,
   hour = minute * 60,
   day = hour * 24;
 
-var countDown = new Date('Sep 22, 2020 15:30:00').getTime(),
+var countDown = new Date(document.getElementById('countdown_date').innerText).getTime(),
 x = setInterval(function() {
   var now = new Date().getTime(),
   distance = countDown - now;

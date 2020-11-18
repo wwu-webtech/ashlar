@@ -3,49 +3,46 @@
 * molecules/countdown/_countdown.scss
 */
 
-.countdown {
-  color: white;
-}
-
-.countdown h1 > span {
-  display: block;
-  font-size: 0.8em;
-  line-height: 0.8em;
-}
-
-.countdown ul {
-  display: flex;
-  justify-content: center;
-  margin-top: 24px;
-  list-style: none;
-}
-
-.countdown li {
-  padding: 36px 48px;
-  border-right: 2px solid white;
-  font-size: 1.5em;
-}
-
-.countdown li:last-of-type {
-  border: none;
-}
-
-.countdown li > span {
-  display: block;
-  margin-bottom: 12px;
-  font-size: 2.5em;
-}
-
-.countdown ul {
-  flex-flow: row wrap;
-}
-
-@media (max-width: 841px) {
-  .countdown ul {
+.block--countdown {
+  ul {
+    @include breakpoint($medium) {
+      flex-flow: row wrap;
+    }
+    display: flex;
     flex-flow: column;
-  }
+    justify-content: center;
+    margin-top: $double-spacing;
+    list-style: none;
 
-  .countdown li {
-    border-right: none;
+    li {
+      @include breakpoint($medium) {
+        border-right: $border-width solid;
+      }
+      padding: $triple-spacing ($double-spacing * 2);
+      font-size: 1.5em;
+
+      &:last-of-type {
+        border: none;
+      }
+
+      > span {
+        display: block;
+        margin-bottom: $standard-spacing;
+        font-size: 2.5em;
+      }
+    }
+  }
+}
+
+.black-bg,
+.gray-bg,
+.blue-bg,
+.dark-blue-bg,
+.green-bg,
+.dark-green-bg,
+.dark-blue-gradient-bg,
+.blue-gradient-bg {
+  .block--countdown {
+    color: $white;
   }
 }

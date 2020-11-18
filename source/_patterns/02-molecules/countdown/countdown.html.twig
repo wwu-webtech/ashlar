@@ -1,6 +1,10 @@
-<div class="countdown">
+<div {{ attributes }}>
+  <span id="countdown_date" style="display: none;">Sep 22, 2020 15:30:00</span>
   <div class="container">
-    <h1><span>Countdown to Student </span>Convocation</h1>
+    {% block title %}
+      {% include "@atoms/text/label/label.twig" %}
+    {% endblock %}
+
     <ul role="timer">
       <li><span id="days"></span>days</li>
       <li><span id="hours"></span>Hours</li>
