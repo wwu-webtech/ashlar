@@ -143,6 +143,10 @@ $dyslexic-icon-smaller: $p-font-size--min * .8;
 .opendyslexic {
   
   .display-settings {
+    &-menu {
+      flex: 0 0 75%;
+    }
+
     .icon-with-text.small {
       @include breakpoint($medium) {
         font-size: 1rem;
@@ -157,6 +161,15 @@ $dyslexic-icon-smaller: $p-font-size--min * .8;
 .opendyslexic {
   .display-settings {
     font-family: $opendyslexic;
+
+    .icon-with-text.small.toggle-display-settings {
+      @include breakpoint($medium) {
+        width: initial;
+        justify-content: initial;
+      }
+      width: $toggle-size * 3.5;
+      justify-content: flex-start;
+    }
   }
 }
 
