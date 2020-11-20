@@ -4,6 +4,8 @@
 */
 
 .block--countdown {
+  padding: $double-spacing;
+
   ul {
     @include breakpoint($medium) {
       flex-flow: row wrap;

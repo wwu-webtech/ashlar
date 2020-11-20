@@ -44,6 +44,10 @@ components:
       build/css/components.css: {}
   dependencies:
     - core/normalize
+countdown:
+  version: 1.x
+  js:
+    build/js/countdown.js: {}
 display-settings:
   version: 1.x
   js:

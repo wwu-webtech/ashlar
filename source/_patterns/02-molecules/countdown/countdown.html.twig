@@ -1,5 +1,5 @@
 <div {{ attributes }}>
-  <span id="countdown_date" style="display: none;">Sep 22, 2020 15:30:00</span>
+  <span id="countdown_date" style="display: none;">{{ content.field_date }}</span>
   <div class="container">
     {% block title %}
       {% include "@atoms/text/label/label.twig" %}
