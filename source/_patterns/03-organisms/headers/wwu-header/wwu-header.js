@@ -69,9 +69,7 @@ function open_mobile_menu() {
   mobile_menu_wrapper.insertBefore(mobile_menu_toggle, header_display_settings);
 
   mobile_menu_toggle.querySelector('.material-icons').innerText = "close";
-  mobile_menu_toggle.querySelector('.toggle-prefix').innerText = "";
-  mobile_menu_toggle.querySelector('.toggle-text').innerText = "Close";
-  mobile_menu_toggle.querySelector('.toggle-suffix').innerText = " the menu";
+  mobile_menu_toggle.querySelector('.toggle-text').innerText = "Close Menu";
   mobile_menu_toggle.setAttribute('aria-expanded', 'true');
 
   menu_links.forEach(function(link) {
@@ -95,9 +93,7 @@ function close_mobile_menu() {
   western_header.insertBefore(mobile_menu_toggle, header_site_name)
 
   mobile_menu_toggle.querySelector('.material-icons').innerText = "menu";
-  mobile_menu_toggle.querySelector('.toggle-prefix').innerText = "Open the ";
-  mobile_menu_toggle.querySelector('.toggle-text').innerText = "Menu";
-  mobile_menu_toggle.querySelector('.toggle-suffix').innerText = "";
+  mobile_menu_toggle.querySelector('.toggle-text').innerText = "Open Menu";
   mobile_menu_toggle.setAttribute('aria-expanded', 'false');
 
   set_focus()
