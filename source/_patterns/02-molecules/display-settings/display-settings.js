@@ -13,9 +13,7 @@ var reset_preferences = document.getElementById('reset-display-preferences');
 function open_display_settings() {
   display_toggle.setAttribute('aria-expanded', true);
   display_toggle.querySelector('.material-icons').innerText = 'close';
-  display_toggle.querySelector('.toggle-prefix').innerText = '';
-  display_toggle.querySelector('.toggle-text').innerText = 'Close';
-  display_toggle.querySelector('.toggle-suffix').innerText = ' Display Settings';
+  display_toggle.querySelector('.toggle-text').innerText = 'Close Display Settings';
 
   display_menu.removeAttribute('hidden');
   display_menu.classList.remove('closed');
@@ -26,9 +24,7 @@ function open_display_settings() {
 function close_display_settings() {
   display_toggle.setAttribute('aria-expanded', false);
   display_toggle.querySelector('.material-icons').innerText = 'settings';
-  display_toggle.querySelector('.toggle-prefix').innerText = 'Open ';
-  display_toggle.querySelector('.toggle-text').innerText = 'Display';
-  display_toggle.querySelector('.toggle-suffix').innerText = ' Settings';
+  display_toggle.querySelector('.toggle-text').innerText = 'Open Display Settings';
 
   display_menu.classList.remove('open');
   display_menu.classList.add('closed');
@@ -102,11 +98,11 @@ function select_font() {
   localStorage.setItem('wwu_preferred_font', selected_font);
 }
 
-function global_reset(e) {
+function global_reset(event) {
   var current_theme_value = localStorage.getItem('wwu_preferred_theme');
   var current_font_value = localStorage.getItem('wwu_preferred_font');
 
-  if (e.target == reset_preferences) {
+  if (event.target == reset_preferences) {
     if ((current_theme_value !== 'default-theme') || (current_font_value !== 'default-font')) {
       var theme_default = theme_options.querySelector('input[value="default-theme"]');
       var font_default = font_options.querySelector('input[value="default-font"]');

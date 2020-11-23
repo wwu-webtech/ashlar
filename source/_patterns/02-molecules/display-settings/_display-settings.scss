@@ -27,7 +27,6 @@ $dyslexic-icon-smaller: $p-font-size--min * .8;
     display: flex;
     align-items: center;
     width: initial;
-    height: initial;
     padding: $half-spacing $standard-spacing $half-spacing $half-spacing;
     color: $white;
     border-radius: 0;
@@ -70,8 +69,9 @@ $dyslexic-icon-smaller: $p-font-size--min * .8;
   .display-settings-menu {
     @include breakpoint($medium) {
       margin-left: -0.575rem;
+      flex: 0 0 100%;
     }
-    flex: 0 0 100%;
+    flex: 0 0 75%;
     position: relative;
     z-index: 3;
     padding: $double-spacing;
@@ -150,6 +150,15 @@ $dyslexic-icon-smaller: $p-font-size--min * .8;
       font-size: $dyslexic-icon-smaller;
       width: initial;
       height: initial;
+
+      &.toggle-display-settings {
+        @include breakpoint($medium) {
+          width: initial;
+          justify-content: initial;
+        }
+        width: $toggle-size * 3.5;
+        justify-content: flex-start;
+      }
     }
   }
 }
@@ -165,3 +174,4 @@ $dyslexic-icon-smaller: $p-font-size--min * .8;
     font-family: $atkinson;
   }
 }
+

@@ -108,8 +108,11 @@
   }
   color: $white;
   border-radius: 0;
+  line-height: 1.1;
   background: transparent;
   box-shadow: none;
+  position: relative;
+  right: .5rem;
 
   grid-area: menu-toggle;
 
