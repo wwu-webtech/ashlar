@@ -3,7 +3,7 @@
 * molecules/display-settings/_display-settings.scss
 */
 
-$dyslexic-icon-smaller: $p-font-size--min * .8;
+$dyslexic-icon-smaller: $p-font-size--min * 0.8;
 
 .display-settings {
   @include breakpoint($medium) {
@@ -27,7 +27,6 @@ $dyslexic-icon-smaller: $p-font-size--min * .8;
     display: flex;
     align-items: center;
     width: initial;
-    height: initial;
     padding: $half-spacing $standard-spacing $half-spacing $half-spacing;
     color: $white;
     border-radius: 0;
@@ -50,9 +49,10 @@ $dyslexic-icon-smaller: $p-font-size--min * .8;
 
   .toggle-display-settings {
     @include breakpoint($medium) {
-      margin-left: -.525rem;
+      margin-left: -0.525rem;
     }
     width: initial;
+    height: initial;
     padding-top: $standard-spacing;
 
     &:hover,
@@ -69,11 +69,12 @@ $dyslexic-icon-smaller: $p-font-size--min * .8;
 
   .display-settings-menu {
     @include breakpoint($medium) {
+      flex: 0 0 100%;
       margin-left: -0.575rem;
     }
-    flex: 0 0 100%;
     position: relative;
     z-index: 3;
+    flex: 0 0 75%;
     padding: $double-spacing;
     transition: $standard-ease $fast-transition-speed all;
     color: $white;
@@ -91,65 +92,73 @@ $dyslexic-icon-smaller: $p-font-size--min * .8;
 
     .menu-container {
       display: flex;
-      flex-flow: row wrap;
       flex: 0 0 100%;
+      flex-flow: row wrap;
 
       .theme-selection {
         flex: 0 0 40%;
-      } 
-      
+      }
+
       .font-selection {
         flex: 1;
       }
-      
+
       fieldset {
         display: flex;
         flex-flow: column nowrap;
-        
+
         legend {
           margin: 0;
           padding: $half-spacing;
         }
-  
-        input[type="radio"], 
+
+        input[type="radio"],
         input[type="radio"] + label {
           &:not(:last-of-type) {
             margin-bottom: $standard-spacing;
           }
         }
-  
+
         input[type="radio"] + label {
-            align-self: flex-start;
+          align-self: flex-start;
         }
       }
     }
 
     .reset-button {
-      margin: $double-spacing auto 0;
       display: flex;
+      margin: $double-spacing auto 0;
       font-size: $p-font-size--smaller;
 
       .material-icons {
-        align-self: center;
-        font-size: inherit;
         position: relative;
+        align-self: center;
         margin-right: $half-spacing;
+        font-size: inherit;
       }
     }
   }
 }
 
-.atkinson, 
+.atkinson,
 .opendyslexic {
-  
   .display-settings {
     .icon-with-text.small {
       @include breakpoint($medium) {
         font-size: 1rem;
       }
-      font-size: $dyslexic-icon-smaller;
       width: initial;
       height: initial;
+      font-size: $dyslexic-icon-smaller;
+
+      &.toggle-display-settings {
+        @include breakpoint($medium) {
+          justify-content: initial;
+          width: initial;
+        }
+        justify-content: flex-start;
+        width: $toggle-size * 3.5;
+      }
     }
   }
 }
