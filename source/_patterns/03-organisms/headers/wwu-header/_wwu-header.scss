@@ -12,7 +12,7 @@
     "logo site-name site-name"
     "logo western-header-region western-header-region"
     "main-nav main-nav main-nav";
-    grid-template-columns: ($logo-size + ($triple-spacing * 2)) auto 1fr;
+    grid-template-columns: ($logo-size + ($triple-spacing * 2)) 1fr 2fr;
     grid-template-rows: ($logo-size / 3) ($logo-size / 3) auto auto;
   }
   display: grid;
@@ -106,13 +106,13 @@
   @include breakpoint($medium) {
     display: none;
   }
+  position: relative;
+  right: 0.5rem;
   color: $white;
   border-radius: 0;
-  line-height: 1.1;
   background: transparent;
   box-shadow: none;
-  position: relative;
-  right: .5rem;
+  line-height: 1.1;
 
   grid-area: menu-toggle;
 
@@ -157,22 +157,19 @@
   }
 }
 
-.opendyslexic, 
-.atkinson { 
-
+.opendyslexic,
+.atkinson {
   .mobile-menu {
-    
     .toggle-menu,
     .icon-with-text {
       &.small {
         @include breakpoint($medium) {
           font-size: 1rem;
         }
-        font-size: .8rem;
         width: $icon-with-text-size + 1;
         height: $icon-with-text-size + 1;
+        font-size: 0.8rem;
       }
-
     }
   }
 }
