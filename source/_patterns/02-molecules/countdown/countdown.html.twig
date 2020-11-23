@@ -6,10 +6,10 @@
     {% endblock %}
 
     <ul role="timer">
-      <li><span id="days"></span>days</li>
-      <li><span id="hours"></span>Hours</li>
-      <li><span id="minutes"></span>Minutes</li>
-      <li><span id="seconds"></span>Seconds</li>
+      <li id="days-item"><span class="number" id="days"></span>days</li>
+      <li id="hours-item"><span class="number" id="hours"></span>Hours</li>
+      <li id="minutes-item"><span class="number" id="minutes"></span><span id="announced-minutes" aria-live="polite">Minutes</span></li>
+      <li id="seconds-item"><span class="number" id="seconds"></span><span id="announced-seconds" aria-live="polite">Seconds</span></li>
     </ul>
   </div>
 </div>

@@ -27,12 +27,16 @@
         border: none;
       }
 
-      > span {
+      .number {
         display: block;
         margin-bottom: $standard-spacing;
         font-size: 2.5em;
       }
     }
+  }
+
+  .hidden {
+    display: none;
   }
 }
 
