@@ -20,28 +20,19 @@ function findTimeLeft() {
   seconds_left = Math.floor((distance % (minute)) / second);
 }
 
-function setDays() {
-  document.getElementById('days').innerText = days_left;
-}
-function setHours() {
-  document.getElementById('hours').innerText = hours_left;
-}
-function setMinutes() {
-  document.getElementById('minutes').innerText = minutes_left;
-
-  /* Only announce last 10 minutes */
-  if (days_left <=0 && hours_left <=0 && minutes_left <= 10) {
-    document.getElementById('announced-minutes').innerHTML = "<span class='visually-hidden'>" + minutes_left + "</span> Minutes";
+function setDays() { document.getElementById('days').innerText = days_left; }
+function setHours() { document.getElementById('hours').innerText = hours_left; }
+function setMinutes() { document.getElementById('minutes').innerText = minutes_left; }
+function setSeconds() { document.getElementById('seconds').innerText = seconds_left; }
+function setMinuteAnnouncement() {
+  if (minutes_left == 1) {
+    document.getElementById('announced-time').innerText = String(minutes_left) + " minute left";
+  }
+  else {
+    document.getElementById('announced-time').innerText = String(minutes_left) + " minutes left";
   }
 }
-function setSeconds() {
-  document.getElementById('seconds').innerText = seconds_left;
-
-  /* Only announce last 10 seconds */
-  if (days_left <=0 && hours_left <=0 && minutes_left <= 0 && seconds_left <=10) {
-    document.getElementById('announced-seconds').innerHTML = "<span class='visually-hidden'>" + seconds_left + "</span> Seconds";
-  }
-}
+function setSecondAnnouncement() { document.getElementById('announced-time').innerText = String(seconds_left); }
 
 function initializeCountDown() {
   findTimeLeft();
@@ -69,7 +60,8 @@ function initializeCountDown() {
 
 var countDownSeconds = setInterval(function() {
   var prev_hours_left = hours_left,
-    prev_minutes_left = minutes_left;
+  prev_minutes_left = minutes_left;
+
   findTimeLeft();
 
   if (hours_left >= 0 && prev_hours_left != hours_left) {
@@ -81,7 +73,15 @@ var countDownSeconds = setInterval(function() {
   if (seconds_left >= 0) {
     setSeconds();
   }
-}, second);
 
+  /* Only announce last 10 minutes, and only when the minute is about to change */
+  if (days_left <=0 && hours_left <=0 && minutes_left <= 10 && minutes_left >=1 && seconds_left == 0) {
+    setMinuteAnnouncement();
+  }
+  /* Only announce last 10 seconds */
+  if (days_left <=0 && hours_left <=0 && minutes_left <= 0 && seconds_left <= 10 && seconds_left > 0) {
+    setSecondAnnouncement();
+  }
+}, second);
 
 initializeCountDown();
