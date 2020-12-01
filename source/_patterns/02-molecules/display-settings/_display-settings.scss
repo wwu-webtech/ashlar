@@ -84,6 +84,7 @@ $dyslexic-icon-smaller: $p-font-size--min * 0.8;
     &.closed {
       visibility: hidden;
       opacity: 0;
+      height: 0;
     }
 
     &.open {
