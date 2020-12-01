@@ -7,8 +7,7 @@ hours_left,
 minutes_left,
 seconds_left;
 
-//var countDown = new Date(document.getElementById('countdown_date').innerText).getTime();
-var countDown = new Date().getTime() + 135000; /*test countdown with 2:15 on timer */
+var countDown = new Date(document.getElementById('countdown_date').innerText).getTime();
 
 function findTimeLeft() {
   var now = new Date().getTime(),

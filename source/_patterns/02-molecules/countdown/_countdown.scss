@@ -21,6 +21,7 @@
         border-right: $border-width solid;
       }
       padding: $triple-spacing ($double-spacing * 2);
+      text-align: center;
       font-size: 1.5em;
 
       &:last-of-type {
