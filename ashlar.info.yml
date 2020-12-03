@@ -8,6 +8,14 @@ libraries:
   - ashlar/search
   - ashlar/wwu-header
   - ashlar/wwu-mobile-menu
+libraries-override:
+  core/drupal.dialog.off_canvas:
+    css:
+      base:
+        /core/themes/stable/css/core/dialog/off-canvas.reset.css: dist/css/off-canvas.reset.css
+        /core/themes/stable/css/core/dialog/off-canvas.base.css: /core/themes/stable/css/core/dialog/off-canvas.base.css
+        /core/themes/stable/css/core/dialog/off-canvas.css: /core/themes/stable/css/core/dialog/off-canvas.css
+        /core/themes/stable/css/core/dialog/off-canvas.theme.css: /core/themes/stable/css/core/dialog/off-canvas.theme.css
 regions:
   wwu_header: Western Header
   header: Splash Area
