@@ -7,9 +7,10 @@ $dyslexic-icon-smaller: $p-font-size--min * 0.8;
 
 .display-settings {
   @include breakpoint($medium) {
+    z-index: 1;
+    height: 100%;
     min-height: initial;
     margin-bottom: 0;
-    z-index: 1;
   }
   display: flex;
   flex-flow: row wrap;
