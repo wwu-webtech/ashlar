@@ -1,0 +1,59 @@
+/**
+* @file
+* molecules/countdown/_countdown.scss
+*/
+
+.block--countdown {
+  padding: $double-spacing;
+
+  ul {
+    @include breakpoint($medium) {
+      flex-flow: row wrap;
+    }
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin-top: $double-spacing;
+    list-style: none;
+
+    li {
+      @include breakpoint($medium) {
+        border-right: $border-width solid;
+      }
+      padding: $triple-spacing ($double-spacing * 2);
+      text-align: center;
+      font-size: 1.5em;
+
+      &:last-of-type {
+        border: none;
+      }
+
+      .number {
+        display: block;
+        margin-bottom: $standard-spacing;
+        font-size: 2.5em;
+      }
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .test {
+    color: red !important;
+  }
+}
+
+.black-bg,
+.gray-bg,
+.blue-bg,
+.dark-blue-bg,
+.green-bg,
+.dark-green-bg,
+.dark-blue-gradient-bg,
+.blue-gradient-bg {
+  .block--countdown {
+    color: $white;
+  }
+}

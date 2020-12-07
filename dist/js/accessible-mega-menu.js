@@ -589,7 +589,7 @@ limitations under the License.
                 break;
             case Keyboard.SPACE:
             case Keyboard.ENTER:
-                if (isTopNavItem) {
+                if (isTopNavItem && target.attr('role')) {
                     event.preventDefault();
                     _clickHandler.call(that, event);
                 } else {
