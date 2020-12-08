@@ -51,7 +51,7 @@
     }
     padding: $standard-spacing;
 
-    &:not(.dark-blue-bg):not(.blue-bg):not(.light-blue-bg):not(.lightest-blue-bg):not(.light-gray-bg):not(.lightest-gray-bg) {
+    &:not(.black-bg):not(.gray-bg):not(.light-gray-bg):not(.lightest-gray-bg):not(.dark-blue-bg):not(.darkest-blue-bg):not(.blue-bg):not(.light-blue-bg):not(.lightest-blue-bg):not(.dark-green-bg):not(.green-bg):not(.light-green-bg):not(.dark-blue-gradient-bg):not(.blue-gradient-bg) {
       @include breakpoint(max-width $medium) {
         border-top: none;
       }
@@ -81,7 +81,7 @@
 .dark-mode {
   .block--image-with-description {
     .body {
-      &:not(.dark-blue-bg):not(.blue-bg):not(.light-blue-bg):not(.lightest-blue-bg):not(.light-gray-bg):not(.lightest-gray-bg) {
+      &:not(.black-bg):not(.gray-bg):not(.light-gray-bg):not(.lightest-gray-bg):not(.dark-blue-bg):not(.darkest-blue-bg):not(.blue-bg):not(.light-blue-bg):not(.lightest-blue-bg):not(.dark-green-bg):not(.green-bg):not(.light-green-bg):not(.dark-blue-gradient-bg):not(.blue-gradient-bg) {
         background: $black;
       }
     }
