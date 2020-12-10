@@ -19,7 +19,9 @@ aside,
   &.gray-bg,
   &.dark-green-bg,
   &.green-bg,
-  &.light-green-bg {
+  &.light-green-bg,
+  &.dark-blue-gradient-bg,
+  &.blue-gradient-bg {
     padding: $double-spacing;
 
     &.underlined-headings {
