@@ -60,7 +60,6 @@
         @include breakpoint($medium) {
           border-left: 0;
           background-color: $lightest-green;
-          // padding-bottom: $half-spacing;
 
           &:hover,
           &:focus-within,
