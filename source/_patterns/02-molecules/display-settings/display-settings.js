@@ -53,7 +53,7 @@ function set_initial_theme() {
     body.classList.add(selected_theme);
     return;
   } else {
-    localStorage.setItem('wwu_preferred_theme', 'default');
+    localStorage.setItem("wwu_preferred_theme", "default-theme");
     return;
   }
 }
@@ -82,7 +82,7 @@ function set_font_preference() {
     body.classList.add(selected_font);
     return;
   } else {
-    localStorage.setItem('wwu_preferred_font', 'default');
+    localStorage.setItem("wwu_preferred_font", "default-font");
     return;
   }
 }
