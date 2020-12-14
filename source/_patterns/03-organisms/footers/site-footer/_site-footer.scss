@@ -6,16 +6,21 @@
 .site-footer {
   @include blue-bg;
   @include breakpoint($medium) {
-    -ms-grid-columns: $standard-spacing 1fr $standard-spacing 1fr $standard-spacing 1fr $standard-spacing;
+    -ms-grid-columns: $standard-spacing 1fr $standard-spacing 1fr
+      $standard-spacing 1fr $standard-spacing;
     -ms-grid-rows: auto auto;
-    grid-template-areas: ". footer_left . footer_center . footer_right ."
-    ". footer_bottom footer_bottom footer_bottom footer_bottom footer_bottom .";
+    grid-template-areas:
+      ". footer_left . footer_center . footer_right ."
+      ". footer_bottom footer_bottom footer_bottom footer_bottom footer_bottom .";
     grid-template-columns: $standard-spacing 1fr $standard-spacing 1fr $standard-spacing 1fr $standard-spacing;
     grid-template-rows: auto auto;
   }
   @include breakpoint($large) {
-    -ms-grid-columns: 1fr ($max-content-width / 3) $standard-spacing ($max-content-width / 3) $standard-spacing ($max-content-width / 3) 1fr;
-    grid-template-columns: 1fr ($max-content-width / 3) $standard-spacing ($max-content-width / 3) $standard-spacing ($max-content-width / 3) 1fr;
+    -ms-grid-columns: 1fr ($max-content-width / 3) $standard-spacing
+      ($max-content-width / 3) $standard-spacing ($max-content-width / 3) 1fr;
+    grid-template-columns: 1fr ($max-content-width / 3) $standard-spacing (
+        $max-content-width / 3
+      ) $standard-spacing ($max-content-width / 3) 1fr;
   }
   display: -ms-grid;
   display: grid;
@@ -23,12 +28,13 @@
 
   -ms-grid-columns: $small-screen-columns;
   -ms-grid-rows: auto $standard-spacing auto $standard-spacing auto;
-  grid-template-areas: ". footer_left   ."
-  ". ............. ."
-  ". footer_center ."
-  ". ............. ."
-  ". footer_right  ."
-  ". footer_bottom .";
+  grid-template-areas:
+    ". footer_left   ."
+    ". ............. ."
+    ". footer_center ."
+    ". ............. ."
+    ". footer_right  ."
+    ". footer_bottom .";
   grid-template-columns: $small-screen-columns;
   grid-template-rows: auto $standard-spacing auto $standard-spacing auto;
 
@@ -122,6 +128,7 @@
   .block--menu .menu li {
     & > a[aria-current="page"] {
       color: $black;
+      font-weight: $font-weight--bold;
 
       &:hover,
       &:focus,

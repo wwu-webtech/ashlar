@@ -26,7 +26,7 @@
       padding-left: $double-spacing;
       font-size: $p-font-size--smaller;
 
-      @include breakpoint ($large) {
+      @include breakpoint($large) {
         font-size: $p-font-size--max--smaller;
       }
     }
@@ -40,9 +40,10 @@
     li > a {
       &[aria-current="page"] {
         background-color: $lightest-green;
+        font-weight: $font-weight--bold;
 
-        &:hover, 
-        &:focus, 
+        &:hover,
+        &:focus,
         &:active {
           background-color: $light-gray;
         }
@@ -57,9 +58,9 @@
       li > a {
         &[aria-current="page"] {
           color: $black;
-  
-          &:hover, 
-          &:focus, 
+
+          &:hover,
+          &:focus,
           &:active {
             background-color: $dark-blue;
             color: $light-green;
