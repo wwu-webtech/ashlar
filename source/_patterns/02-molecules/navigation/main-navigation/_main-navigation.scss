@@ -42,8 +42,9 @@
       border-bottom: $border-width--thinner solid $darkest-blue;
       border-left: none;
 
-      grid-template-areas: "link icon"
-      "flyout flyout";
+      grid-template-areas:
+        "link icon"
+        "flyout flyout";
       grid-template-columns: 1fr $toggle-size;
       grid-template-rows: auto auto;
 
@@ -59,10 +60,10 @@
         @include breakpoint($medium) {
           border-left: 0;
           background-color: $lightest-green;
-          border-bottom: $border-width--thicker solid $dark-blue;
-          padding-bottom: $half-spacing;
 
-          &:hover, &:focus-within, &:active {
+          &:hover,
+          &:focus-within,
+          &:active {
             background-color: $dark-blue;
           }
           a {
@@ -75,6 +76,7 @@
             }
           }
         }
+        font-weight: $font-weight--bold;
         border-left: $border-width--thicker solid $lightest-green;
       }
 
@@ -115,7 +117,6 @@
           background-color: transparent;
         }
       }
-
 
       &:hover,
       &:focus-within {

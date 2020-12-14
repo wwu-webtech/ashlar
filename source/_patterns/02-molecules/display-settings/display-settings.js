@@ -53,7 +53,7 @@ function set_initial_theme() {
     body.classList.add(selected_theme);
     return;
   } else {
-    localStorage.setItem('wwu_preferred_theme', 'default');
+    localStorage.setItem("wwu_preferred_theme", "default-theme");
     return;
   }
 }
@@ -82,7 +82,7 @@ function set_font_preference() {
     body.classList.add(selected_font);
     return;
   } else {
-    localStorage.setItem('wwu_preferred_font', 'default');
+    localStorage.setItem("wwu_preferred_font", "default-font");
     return;
   }
 }
@@ -107,11 +107,10 @@ function global_reset(event) {
       var theme_default = theme_options.querySelector('input[value="default-theme"]');
       var font_default = font_options.querySelector('input[value="default-font"]');
   
-      localStorage.setItem('wwu_preferred_theme', 'default-theme');
-      localStorage.setItem('wwu_preferred_font', 'default-font');
-      body.classList.add(current_theme_value, current_font_value);
-      body.classList.remove('dark-mode', 'opendyslexic', 'atkinson', 'serif');
-  
+      localStorage.setItem("wwu_preferred_theme", "default-theme");
+      localStorage.setItem("wwu_preferred_font", "default-font");
+      body.classList.add("default-theme", "default-font");
+      body.classList.remove("dark-mode", "opendyslexic", "atkinson", "serif");
       theme_default.checked = true;
       font_default.checked = true;
     }  
