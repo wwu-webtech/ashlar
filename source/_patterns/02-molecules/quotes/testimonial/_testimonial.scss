@@ -212,11 +212,15 @@ $testimonial--credit-circle-size: 18.75rem;
   }
 
   &.mirror {
-    grid-template-areas: "body image" "credit image";
+    @include breakpoint($small) {
+      grid-template-areas: "body image" "credit image";
+    }
 
     .body,
     .credit {
-      text-align: right;
+      @include breakpoint($small) {
+        text-align: right;
+      }
     }
 
     .image {
