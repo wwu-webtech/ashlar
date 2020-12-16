@@ -5,7 +5,7 @@
 $image-button-size: 12.5rem;
 $image-button-size--medium: 15.625rem;
 $image-button-size--large: 18.75rem;
-$image-button--smaller-size: 6.25rem;
+$image-button--smaller-size: 8.25rem;
 $image-button--smaller-size--medium: 11.25rem;
 
 .image-button {
@@ -284,15 +284,36 @@ $image-button--smaller-size--medium: 11.25rem;
   }
 }
 
-.opendyslexic,
-.atkinson {
-  .smaller {
-    .image-button,
-    .image-button--simple {
-      @include breakpoint($medium) {
-        font-size: $image-button--smaller-size / 5;
+.atkinson,
+.opendyslexic {
+  .block--image-button {
+    &.smaller {
+      a {
+        @include breakpoint($medium) {
+          font-size: $image-button--smaller-size / 5;
+        }
+        font-size: 0.9rem;
       }
-      font-size: 0.9rem;
+    }
+  }
+}
+
+.opendyslexic {
+  .block--image-button {
+    word-spacing: -1em;
+    line-height: 2em;
+    a {
+      @include breakpoint($medium) {
+        font-size: $image-button-size--medium / 9;
+      }
+      @include breakpoint($large) {
+        font-size: $image-button-size--large / 9;
+      }
+      font-size: $image-button-size / 9;
+    }
+
+    &.smaller {
+      line-height: 1.2em;
     }
   }
 }
