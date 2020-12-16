@@ -3,7 +3,15 @@
   <div class="title">
     {{ title_prefix }}
       {% if label %}
-        <{{ block_content.field_heading_level.0.value }} {{ title_attributes }}><a href="{{ block_content.field_link.0.url }}">{{ label }}</a></{{ block_content.field_heading_level.0.value }}>
+        {% if block_content.field_heading_level.0.value is not empty %}
+          <{{ block_content.field_heading_level.0.value }} {{ title_attributes }}>
+            <a href="{{ block_content.field_link.0.url }}">{{ label }}</a>
+          </{{ block_content.field_heading_level.0.value }}>
+        {% else %}
+          <p {{ title_attributes }}>
+            <a href="{{ block_content.field_link.0.url }}">{{ label }}</a>
+          </p>
+        {% endif %}
       {% endif %}
     {{ title_suffix }}
   </div>
