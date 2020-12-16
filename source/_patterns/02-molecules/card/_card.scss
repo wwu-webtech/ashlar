@@ -87,13 +87,22 @@
   align-items: start;
   margin-bottom: $standard-spacing;
   padding-bottom: $standard-spacing;
-  transition: $fast-transition-speed $standard-ease;
+
+  a {
+    &:after {
+      transition: $medium-transition-speed $standard-ease;
+    }
+  }
 
   &:hover,
   &:focus-within {
     z-index: 1;
-    transform: translate(-$border-width, -$border-width);
-    box-shadow: $focus-shadow;
+
+    a {
+      &:after {
+        box-shadow: $focus-shadow;
+      }
+    }
   }
 
   .image {
@@ -264,7 +273,11 @@
 
     &:hover,
     &:focus-within {
-      box-shadow: $focus-shadow;
+      a {
+        &:after {
+          box-shadow: $focus-shadow;
+        }
+      }
     }
 
     &:focus-within {

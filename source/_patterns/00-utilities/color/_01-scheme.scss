@@ -15,7 +15,7 @@ $link-color-light--hover: $light-green;
 
 // State Colors
 $unfocus-shadow: 0 0.0625rem 0.1875rem transparentize($black, 0.88), 0 0.0625rem 0.125rem transparentize($black, 0.86);
-$focus-shadow: 0 0.3125rem 0.625rem transparentize($blue, 0.84), 0 0.1875rem 0.375rem transparentize($black, 0.77);
+$focus-shadow: 0 0.3125rem 0.625rem transparentize($blue, 0.64), 0 0.1875rem 0.375rem transparentize($black, 0.57);
 $hover-opacity: 0.85;
 
 // Hover/focus mixins
