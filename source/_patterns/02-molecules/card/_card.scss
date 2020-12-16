@@ -323,7 +323,13 @@
       padding: $standard-spacing;
       background-color: $blue;
 
-      a {
+      a,
+      p,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         color: $lightest-green;
       }
     }
@@ -332,7 +338,13 @@
       .title {
         background-color: $dark-blue;
 
-        a {
+        a,
+        p,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
           color: $light-green;
         }
       }
@@ -343,7 +355,13 @@
     .title {
       background-color: $light-green;
 
-      a {
+      a,
+      p,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         color: $dark-blue;
       }
     }
