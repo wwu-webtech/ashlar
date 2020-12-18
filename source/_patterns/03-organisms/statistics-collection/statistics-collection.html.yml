@@ -1,8 +1,8 @@
 attributes:
   Attribute():
     class:
-      - statistics-collection
-statistics:
+      - block--statistics-collection
+content:
   join():
   - include():
       pattern: molecules-statistic-html
