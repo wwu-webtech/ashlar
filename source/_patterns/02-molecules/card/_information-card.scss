@@ -7,7 +7,6 @@
   padding: 0;
   border: solid $border-width--thicker $blue;
   border-radius: $border-radius--round-square;
-  box-shadow: $border-width--thicker $border-width--thicker 0 $blue;
 
   &:focus-within {
     border-style: dotted;
@@ -33,6 +32,20 @@
 
     a {
       font-weight: $font-weight--regular;
+
+      &:after {
+        transition: $fast-transition-speed $standard-ease;
+        border-radius: $border-radius--round-square;
+        box-shadow: ($border-width--thicker * 2) ($border-width--thicker * 2) 0 $blue;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        &:after {
+          box-shadow: none;
+        }
+      }
     }
 
     h2,
@@ -127,6 +140,19 @@
       a {
         color: $white;
         font-size: $p-font-size;
+
+        &:after {
+          border-radius: $border-radius--round-square;
+          box-shadow: $border-width--thicker $border-width--thicker 0 $blue;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+          &:after {
+            box-shadow: none;
+          }
+        }
       }
     }
 
@@ -170,7 +196,6 @@
 .opendyslexic {
   .information.block--card {
     .title {
-  
       h2,
       h3,
       h4,
@@ -184,7 +209,6 @@
 .atkinson {
   .information.block--card {
     .title {
-  
       h2,
       h3,
       h4,
