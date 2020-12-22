@@ -1,5 +1,9 @@
 {{ title_prefix }}
   {% if label %}
-    <{{ block_content.field_heading_level.0.value }} {{ title_attributes }}>{{ label }}</{{ block_content.field_heading_level.0.value }}>
+    {% if block_content.field_heading_level.0.value is not empty %}
+      <{{ block_content.field_heading_level.0.value }} {{ title_attributes }}>{{ label }}</{{ block_content.field_heading_level.0.value }}>
+    {% else %}
+      <p {{ title_attributes }}>{{ label }}</p>
+    {% endif %}
   {% endif %}
 {{ title_suffix }}
