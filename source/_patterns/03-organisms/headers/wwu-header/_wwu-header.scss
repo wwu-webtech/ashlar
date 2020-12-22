@@ -22,7 +22,7 @@
   "site-name site-name site-name"
   "western-header-region western-header-region western-header-region";
   grid-template-columns: $toggle-size auto $toggle-size;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: $logo-size auto auto;
 
   .site-name {
     @include breakpoint($medium) {
