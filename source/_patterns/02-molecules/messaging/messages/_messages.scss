@@ -18,22 +18,40 @@
 }
 
 .messages--status {
-  @include message($blue);
+  @include message($blue, $black);
 }
 .messages--warning {
-  @include message($yellow);
+  @include message($yellow, $black);
 }
 .messages--error {
-  @include message($red);
+  @include message($red, $black);
 }
 
 .node--unpublished {
   border-top: solid $border-width $warning-color;
 
   &:before {
-    @include message($warning-color);
+    @include message($warning-color, $black);
     position: absolute;
     right: 0;
     content: "Unpublished";
+  }
+}
+
+.dark-mode {
+  .messages--status {
+    @include message($blue, $white);
+  }
+  .messages--warning {
+    @include message($yellow, $white);
+  }
+  .messages--error {
+    @include message($red, $white);
+  }
+
+  .node--unpublished {
+    &:before {
+      @include message($warning-color, $white);
+    }
   }
 }

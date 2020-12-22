@@ -2,67 +2,87 @@
 * @file
 * 00-molecules/navigation/wwu-menu/_wwu-menu.scss
 */
-
-.quick-links {
+.western-menu {
   @include breakpoint($medium) {
-    font-family: $condensed;
+    margin: 0;
+
+    grid-area: none;
+    grid-column: 2 / span all;
+    grid-row: 1 / span 1;
   }
+  display: flex;
+  align-self: start;
+  justify-content: flex-end;
+  max-width: 100vw;
+  margin-top: $double-spacing;
+  margin-bottom: $standard-spacing;
+  font-family: $condensed;
 
-  &.desktop {
-    .menu {
+  grid-area: wwu-menu;
+
+  .icon-with-text {
+    @include breakpoint($medium) {
       display: flex;
-      flex-flow: row nowrap;
-      margin: 0;
-      border: none;
-      background-color: transparent;
+      align-items: center;
+      width: initial;
+      height: initial;
+      padding: $half-spacing $standard-spacing $half-spacing $half-spacing;
 
-      li {
-        flex: 1;
-        margin: 0;
-        border: none;
-
-        a {
-          @include breakpoint($large) {
-            height: $toggle-size--larger;
-            line-height: $toggle-size--larger;
-          }
-          width: 100%;
-          height: $toggle-size;
-          padding: 0 ($standard-spacing * 1.5);
-          text-align: center;
-          line-height: $toggle-size;
-          outline: ($half-spacing / 2) solid transparent;
-
-          &:hover,
-          &:focus,
-          &:active {
-            color: $black;
-            outline: none;
-            background-color: $light-green;
-          }
-
-          &:focus {
-            outline: ($half-spacing / 2) dotted $black;
-            outline-offset: 0;
-          }
-        }
-
-        &:nth-of-type(1) {
-          a {
-            @include breakpoint($medium) {
-              color: $white;
-              background-color: $dark-blue;
-            }
-
-            &:hover,
-            &:focus,
-            &:active {
-              color: $black;
-              background-color: $light-green;
-            }
-          }
-        }
+      .material-icons {
+        position: relative;
+        top: 0.125rem;
+        margin-right: $border-width;
+        font-size: $icon-size--medium;
       }
     }
+    padding: 0;
+    color: $white;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $darkest-blue;
+      background-color: $lightest-green;
+    }
+
+    &:focus {
+      outline-color: $darkest-blue;
+      outline-offset: -$border-width;
+    }
+
+    &.my-western-link {
+      @include breakpoint($medium) {
+        width: initial;
+      }
+      width: $toggle-size + $standard-spacing;
+    }
+  }
+
+  .wwu-menu {
+    display: flex;
+  }
+}
+
+.opendyslexic {
+  .western-menu {
+    @include breakpoint($medium) {
+      .icon-with-text {
+        font-size: $dyslexic-icon-smaller;
+      }
+    }
+    font-family: $opendyslexic;
+  }
+}
+
+.atkinson {
+  .western-menu {
+    @include breakpoint($medium) {
+      font-size: 1rem;
+    }
+    font-family: $atkinson;
+    font-size: $dyslexic-icon-smaller;
   }
 }

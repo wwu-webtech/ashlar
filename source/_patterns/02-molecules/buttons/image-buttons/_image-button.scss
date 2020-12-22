@@ -2,11 +2,11 @@
 * @file
 * 02-molecules/buttons/image-buttons/_image-buttons.scss
 */
-$image-button-size: 200px;
-$image-button-size--medium: 250px;
-$image-button-size--large: 300px;
-$image-button--smaller-size: 100px;
-$image-button--smaller-size--medium: 180px;
+$image-button-size: 12.5rem;
+$image-button-size--medium: 15.625rem;
+$image-button-size--large: 18.75rem;
+$image-button--smaller-size: 8.25rem;
+$image-button--smaller-size--medium: 11.25rem;
 
 .image-button {
   @include breakpoint($medium) {
@@ -116,6 +116,12 @@ $image-button--smaller-size--medium: 180px;
       content: "";
     }
   }
+
+  &:not(.green) {
+    .image {
+      filter: brightness(75%);
+    }
+  }
 }
 
 /* Multiple image buttons in a single container */
@@ -207,7 +213,7 @@ $image-button--smaller-size--medium: 180px;
 
 /* Color variations */
 .green {
-  .image-button {
+  .image-button:not(.green) {
     .image {
       background-color: $light-green;
     }
@@ -241,5 +247,73 @@ $image-button--smaller-size--medium: 180px;
 @media screen and (min-width:0\0) {
   .layout--flex .layout__region .block--image-button {
     margin: 0 ($double-spacing * 2);
+  }
+}
+
+.dark-mode {
+  .image-button {
+    a {
+      color: $white;
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: $white;
+      }
+    }
+
+    &:before {
+      background: transparentize($blue, 0.5);
+    }
+
+    &:after {
+      background: transparentize($blue, 0.3);
+    }
+  }
+
+  .green {
+    .image-button {
+      a {
+        &:hover,
+        &:focus,
+        &:active {
+          color: $darkest-blue;
+        }
+      }
+    }
+  }
+}
+
+.atkinson,
+.opendyslexic {
+  .block--image-button {
+    &.smaller {
+      a {
+        @include breakpoint($medium) {
+          font-size: $image-button--smaller-size / 5;
+        }
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+.opendyslexic {
+  .block--image-button {
+    word-spacing: -1em;
+    line-height: 2em;
+    a {
+      @include breakpoint($medium) {
+        font-size: $image-button-size--medium / 9;
+      }
+      @include breakpoint($large) {
+        font-size: $image-button-size--large / 9;
+      }
+      font-size: $image-button-size / 9;
+    }
+
+    &.smaller {
+      line-height: 1.2em;
+    }
   }
 }

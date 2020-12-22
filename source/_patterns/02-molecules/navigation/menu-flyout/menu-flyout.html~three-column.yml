@@ -1,0 +1,54 @@
+attributes:
+  Attribute():
+    class:
+    - menu
+items:
+- title: Menu item 1
+  url: ''
+  attributes:
+    Attribute(): {}
+- title: Menu item 2
+  url: ''
+  attributes:
+    Attribute(): {}
+- title: Menu item three
+  url: ''
+  attributes:
+    Attribute(): {}
+- title: Menu item 4
+  url: ''
+  attributes:
+    Attribute(): {}
+- title: Menu item 5
+  url: ''
+  attributes:
+    Attribute(): {}
+- title: Menu item six
+  url: ''
+  attributes:
+    Attribute(): {}
+- title: Menu item 7
+  url: ''
+  attributes:
+    Attribute(): {}
+extra_menus:
+- title: Second Menu
+  items:
+  - title: Secondary Menu Item 1
+    url: ""
+  - title: Secondary Menu Item 2
+    url: ""
+  - title: Secondary Menu Item 3
+    url: ""
+  - title: Secondary Menu Item 4
+    url: ""
+- title: Third Menu
+  items:
+  - title: Tertiary Menu Item 1
+    url: ""
+  - title: Tertiary Menu Item 2
+    url: ""
+  - title: Tertiary Menu Item 3
+    url: ""
+  - title: Tertiary Menu Item 4
+    url: ""

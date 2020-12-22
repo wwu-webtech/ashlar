@@ -3,12 +3,51 @@
 * 01-atoms/tables/_tables.scss
 */
 
+@mixin color-table($light-rows, $dark-rows, $light-headers, $dark-headers) {
+  tr {
+    &:nth-of-type(odd) {
+      background-color: $light-rows;
+    }
+    &:nth-of-type(even) {
+      background-color: $dark-rows;
+    }
+  }
+
+  td {
+    border-left-color: $light-rows;
+  }
+
+  th {
+    background-color: $light-headers;
+
+    &[colspan],
+    &[rowspan] {
+      background-color: $dark-headers;
+    }
+
+    &:after {
+      background-color: $light-headers;
+    }
+  }
+}
+
 table {
+  @include color-table($light-gray, $lightest-gray, mix(black, $light-gray, 13%), mix(black, $light-gray, 25%));
   width: 100%;
   margin: $standard-spacing 0;
   table-layout: fixed;
   word-wrap: break-word;
   border-collapse: collapse;
+
+  a:not([class]) {
+    color: $darkest-blue;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $darkest-blue;
+    }
+  }
 
   &.auto-layout {
     table-layout: auto;
@@ -37,41 +76,11 @@ th {
   vertical-align: middle;
 }
 
-.align-top {
-  td,
-  th {
-    vertical-align: top;
-  }
-}
-
-.align-bottom {
-  td,
-  th {
-    vertical-align: bottom;
-  }
-}
-
-.font-size--smaller {
-  td {
-    font-size: $min-base-font-size;
-  }
-
-  th {
-    font-size: $max-base-font-size--smaller;
-  }
-}
-
 tr {
   border-top: none;
   border-right: none;
   border-bottom: none;
   border-left: none;
-  &:nth-of-type(odd) {
-    @include light-gray-bg;
-  }
-  &:nth-of-type(even) {
-    @include lightest-gray-bg;
-  }
   &.even,
   &.odd {
     border-bottom: none;
@@ -79,28 +88,23 @@ tr {
 }
 
 th {
-  @include light-gray-bg;
   padding: $half-spacing;
   text-align: left;
   border-top: none;
   border-right: none;
   border-bottom: none;
   border-left: none;
-  background-color: mix(black, $light-gray, 13%);
   font-size: $p-font-size--smaller;
 
   &[colspan],
   &[rowspan] {
     position: relative;
-    color: $white;
-    background-color: mix(black, $light-gray, 50%);
 
     &:after {
       position: absolute;
       z-index: 1;
       height: 100%;
       content: "";
-      background: $white;
     }
   }
 
@@ -108,11 +112,11 @@ th {
     text-align: center;
     &:after {
       @include breakpoint($medium) {
-        right: -$border-width--thicker - 1px;
+        right: -$border-width--thicker - 0.0625rem;
         width: $border-width--thicker;
       }
       top: 0;
-      right: -$border-width - 1px;
+      right: -$border-width - 0.0625rem;
       width: $border-width;
     }
   }
@@ -120,10 +124,10 @@ th {
   &[rowspan] {
     &:after {
       @include breakpoint($medium) {
-        bottom: -$border-width--thicker - 1px;
+        bottom: 0;
         height: $border-width--thicker;
       }
-      bottom: -$border-width - 1px;
+      bottom: 0;
       left: 0;
       width: 100%;
       height: $border-width;
@@ -136,9 +140,10 @@ td {
     border-width: $border-width--thicker;
   }
   padding: $half-spacing;
+  border-width: $border-width;
   border-top: none;
   border-bottom: none;
-  border-left: $border-width solid $lightest-gray;
+  border-left: solid;
   font-size: $p-font-size--smaller;
 
   &:first-of-type {
@@ -150,64 +155,39 @@ td {
   }
 }
 
+/* Color Alternates */
+
 .light-blue {
-  tr {
-    &:nth-of-type(odd) {
-      @include light-blue-bg;
-    }
-    &:nth-of-type(even) {
-      @include lightest-blue-bg;
-    }
-  }
-
-  th {
-    @include light-blue-bg;
-    background-color: mix($dark-blue, $light-bg-blue, 13%);
-
-    &[colspan],
-    &[rowspan] {
-      color: $white;
-      background-color: mix($dark-blue, $light-bg-blue, 80%);
-    }
-  }
-
-  td {
-    border-left-color: $lightest-bg-blue;
-
-    &:last-of-type {
-      border-right-color: $lightest-bg-blue;
-    }
-  }
+  @include color-table($light-bg-blue, $lightest-bg-blue, mix($dark-blue, $light-bg-blue, 13%), mix($dark-blue, $light-bg-blue, 25%));
 }
 
 .lightest-gray {
-  tr {
-    &:nth-of-type(odd) {
-      background-color: $white;
+  @include color-table($white, $lightest-gray, mix($black, $lightest-gray, 10%), mix($black, $lightest-gray, 15%));
+}
+
+.dark-mode {
+  @include color-table(mix(black, $light-gray, 60%), mix(black, $light-gray, 65%), mix(black, $light-gray, 70%), mix(black, $light-gray, 75%));
+
+  table {
+    a:not([class]) {
+      &:hover,
+      &:active,
+      &:focus {
+        color: $white;
+      }
     }
   }
 
-  th {
-    @include lightest-gray-bg;
-    background-color: mix($black, $lightest-gray, 13%);
-
-    &[colspan],
-    &[rowspan] {
-      background-color: mix($black, $lightest-gray, 25%);
-    }
+  .lightest-gray {
+    @include color-table(mix(black, $light-gray, 50%), mix(black, $light-gray, 55%), mix(black, $light-gray, 60%), mix(black, $light-gray, 65%));
   }
 
-  td {
-    border-left-color: $white;
-
-    &:last-of-type {
-      border-right-color: $white;
-    }
+  .light-blue {
+    @include color-table(mix($blue, $dark-blue, 50%), mix($blue, $dark-blue, 75%), $dark-blue, $darkest-blue);
   }
 }
 
-
-/* Responsive table on small devices */
+/* Style Alternates */
 .responsive-table {
   @include breakpoint($medium) {
     overflow-x: revert;
@@ -229,36 +209,26 @@ td {
   }
 }
 
-/* Fix link colors in table headers */
-tr,
-.light-blue tr {
-  &:nth-of-type(odd),
-  &:nth-of-type(even) {
-    th {
-      a:not([class]) {
-        color: $dark-blue;
-      }
-
-      &[colspan],
-      &[rowspan] {
-        a:not([class]) {
-          color: $white;
-        }
-      }
-    }
+.align-top {
+  td,
+  th {
+    vertical-align: top;
   }
 }
 
-.lightest-gray tr {
-  &:nth-of-type(odd),
-  &:nth-of-type(even) {
-    th {
-      &[colspan],
-      &[rowspan] {
-        a:not([class]) {
-          color: $dark-blue;
-        }
-      }
-    }
+.align-bottom {
+  td,
+  th {
+    vertical-align: bottom;
+  }
+}
+
+.font-size--smaller {
+  td {
+    font-size: $min-base-font-size;
+  }
+
+  th {
+    font-size: $max-base-font-size--smaller;
   }
 }

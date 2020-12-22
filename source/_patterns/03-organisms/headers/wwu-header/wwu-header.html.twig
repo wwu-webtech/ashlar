@@ -1,39 +1,40 @@
 {#
 /**
- * Western header - includes logo, campus links, search, and site name
- */
+* Western header - includes logo, campus links, search, and site name
+*/
 #}
+<div id="mobile-menu" class="mobile-menu closed">
+</div>
+
 <div class="western-header">
-  <div class="wrap">
-    <div class="western-logo">
-      {% if site_name != "Western Washington University" %}
-        <a class="western-home-link" href="https://wwu.edu">
-          {% include "@atoms/logo/logo.twig" %}
-        </a>
-
-        {% block site_name %}
-          <a href="/" class="site-name">
-              {{ site_name }}
-          </a>
-        {% endblock %}
-
-      {% else %}
-        <a class="western-home-link" href="https://wwu.edu">
-          {% include "@atoms/logo/logo--make-waves.twig" %}
-        </a>
-      {% endif %}
-
-    </div>
-
-    {% block quick_links %}
-      <button class="toggle toggle-menu toggle-open-menu"><span class="material-icons" aria-hidden="true">menu</span><span class="button-text visually-hidden">Open the menu</span></button>
-      {% include "@molecules/navigation/wwu-menu/wwu-menu.html.twig" %}
-      {{ page.quick_links }}
-    {% endblock %}
-
-    {% block search %}
-      {% include "@molecules/search/search.html.twig" %}
-    {% endblock %}
-
+  <div class="western-logo">
+    <a class="western-home-link" href="https://wwu.edu">
+      {% include "@atoms/logo/logo--make-waves.twig" %}
+    </a>
   </div>
+
+  {% include "@molecules/display-settings/display-settings.html.twig" %}
+
+  <button class="icon-with-text toggle-menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="material-icons" aria-hidden="true">menu</span>
+      <span class="toggle-text">Open Menu</span>
+  </button>
+
+  {% include "@molecules/navigation/wwu-menu/wwu-menu.html.twig" %}
+
+  <div class="site-name">
+    {% block site_name %}
+      <a href="/" class="home-link">{{ site_name }}</a>
+    {% endblock %}
+  </div>
+
+  <div class="western-header-region">
+    {% block western_header %}
+      {{ page.wwu_header }}
+    {% endblock %}
+  </div>
+
+  {% block main_navigation %}
+    {{ page.main_navigation }}
+  {% endblock %}
 </div>

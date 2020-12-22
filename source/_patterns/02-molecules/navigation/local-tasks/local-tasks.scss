@@ -44,7 +44,8 @@
 }
 
 /* Drupal 7 Version */
-.tabs-primary {
+.tabs-primary,
+.transcript-link {
   display: flex;
   margin-bottom: $standard-spacing;
   padding-left: 0;
@@ -73,6 +74,16 @@
     &.is-active {
       color: $white;
       background-color: $gray;
+    }
+  }
+}
+
+.dark-mode {
+  .block--local-tasks-block {
+    ul:not(.contextual-links) {
+      a {
+        border-color: $black;
+      }
     }
   }
 }

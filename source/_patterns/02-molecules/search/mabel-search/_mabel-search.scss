@@ -2,17 +2,20 @@
 * @file
 * 02-molecules/content/search/mabel-search/_mabel-search.scss
 */
-$simple-search-button--width: 120px;
-$simple-search-button--height: 64px;
-$mabel-label-min-font-size: 17px;
-$mabel-label-max-font-size: 25px;
+$simple-search-button--width: 7.5rem;
+$mabel-label-min-font-size: 1.0625rem;
+$mabel-label-max-font-size: 1.5625rem;
 $mabel-label-font-size: calc(#{$mabel-label-min-font-size} + #{strip-unit($mabel-label-max-font-size - $mabel-label-min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 
 #islandora-search-container {
-  background: linear-gradient(to right, transparentize($darkest-blue, 0.1) 0%, transparentize($darkest-blue, 0.2) 100%);
+  @include breakpoint($medium) {
+    padding: $double-spacing 25vw;
+  }
+  background: linear-gradient(to right bottom, #002f5e, #003266, #00356d, #003875, #003b7d, #004186, #01478e, #004d97, #0058a3, #0063b0, #006ebc, #007ac8);
   padding: $double-spacing;
   display: flex;
   flex-flow: column;
+  margin: auto;
 
   .block-title {
     display: block;
@@ -33,7 +36,8 @@ $mabel-label-font-size: calc(#{$mabel-label-min-font-size} + #{strip-unit($mabel
   .advanced-search-link {
     align-self: end;
     color: $white;
-    margin-top: $standard-spacing;
+    font-size: $p-font-size--smaller;
+    margin-top: $half-spacing;
 
     &:hover,
     &:focus,
@@ -52,7 +56,7 @@ $mabel-label-font-size: calc(#{$mabel-label-min-font-size} + #{strip-unit($mabel
       bottom: 0;
       display: inline-block;
       width: $simple-search-button--width;
-      height: $simple-search-button--height;
+      height: 100%;
       margin: 0;
       padding: $standard-spacing;
       border-radius: 0;
@@ -71,10 +75,10 @@ $mabel-label-font-size: calc(#{$mabel-label-min-font-size} + #{strip-unit($mabel
 
     .form-text {
       width: calc(100% - #{$simple-search-button--width});
-      height: $simple-search-button--height;
       margin: 0;
       border-color: $blue;
       font-size: $p-font-size;
+      border-radius: 0;
     }
   }
 }
@@ -88,6 +92,7 @@ input[title="Remove field"] {
   background: $blue;
   border: none;
   box-shadow: none;
+  color: $white;
 
   &:active {
     transform: none;
@@ -105,9 +110,18 @@ input[title="Remove field"] {
   }
 }
 
-/* Search box is positioned more prominently on front page */
-.islandora-front-page {
+.opendyslexic {
   #islandora-search-container {
-    width: 100%;
+    .block-title {
+      font-family: $opendyslexic;
+    }
+  }
+}
+
+.atkinson {
+  #islandora-search-container {
+    .block-title {
+      font-family: $atkinson;
+    }
   }
 }

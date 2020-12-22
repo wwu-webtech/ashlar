@@ -4,7 +4,7 @@
  * While we are phasing out this UI pattern in Drupal 8, these styles are in
  * place to support the Drupal 7 sites using the ashlar_d7 theme.
  */
-$expand-toggle-size: 40px;
+$expand-toggle-size: 0.4rem;
 
 .block-accordion-menu {
   margin-bottom: $standard-spacing;
@@ -33,7 +33,7 @@ $expand-toggle-size: 40px;
       display: -ms-grid;
       display: grid;
       align-content: center;
-      min-height: 40px;
+      min-height: $expand-toggle-size;
       margin: inherit;
       padding: $half-spacing ($standard-spacing + $expand-toggle-size) $half-spacing $standard-spacing;
       color: $black;
@@ -101,6 +101,22 @@ $expand-toggle-size: 40px;
 
     & + .ui-accordion-content {
       padding: 0;
+    }
+  }
+}
+
+.atkinson {
+  .ui-accordion {
+    .ui-accordion-header {
+      font-family: $opendyslexic;
+    }
+  }
+}
+
+.atkinson {
+  .ui-accordion {
+    .ui-accordion-header {
+      font-family: $atkinson;
     }
   }
 }

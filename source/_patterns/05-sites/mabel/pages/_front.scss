@@ -41,7 +41,7 @@
 
       &:hover,
       &:focus-within {
-        transform: translate(-2px, -2px);
+        transform: translate(-0.125rem, -0.125rem);
         border-color: $dark-blue;
         outline: none;
         background: transparent;
@@ -65,4 +65,8 @@
   -ms-grid-rows: auto;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
+}
+
+#block-masquerade-masquerade .description {
+  color: $white;
 }

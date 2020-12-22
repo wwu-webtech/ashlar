@@ -2,8 +2,8 @@
 * @file
 * 02-molecules/timeline-block/_timeline-block.scss
 */
-$min-timeline-font-size: 20px;
-$max-timeline-font-size: 28px;
+$min-timeline-font-size: 1.25rem;
+$max-timeline-font-size: 1.75rem;
 $timeline-font-size: calc(#{$min-timeline-font-size} + #{strip-unit($max-timeline-font-size - $min-timeline-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 $timeline-border-width: calc(#{$min-timeline-font-size} + #{strip-unit($max-timeline-font-size - $min-timeline-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}) + #{$double-spacing});
 $timeline-margin: calc(50% - (#{$min-timeline-font-size} + #{strip-unit($max-timeline-font-size - $min-timeline-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}) + #{$double-spacing}));
@@ -150,6 +150,22 @@ $timeline-translate-neg: calc(-100% - (#{$min-timeline-font-size} + #{strip-unit
       @include breakpoint($large) {
         padding-left: $triple-spacing;
       }
+    }
+  }
+}
+
+.opendyslexic {
+  .timeline-block {
+    .timeline-heading {
+      font-family: $opendyslexic;
+    }
+  }
+}
+
+.atkinson {
+  .timeline-block {
+    .timeline-heading {
+      font-family: $atkinson;
     }
   }
 }

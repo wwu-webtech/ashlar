@@ -5,19 +5,6 @@
 
 .path-frontpage,
 .front {
-  .splash {
-    img {
-      object-position: 50%;
-    }
-
-    .right-aligned-bar {
-      @include breakpoint($medium) {
-        margin-top: inherit;
-      }
-      margin-top: 40vh;
-    }
-  }
-
   main {
     overflow-x: hidden;
     margin-bottom: 0;
@@ -106,7 +93,7 @@
         z-index: -1;
         top: 0;
         display: block;
-        width: $standard-spacing + 3px;
+        width: $standard-spacing + 0.1875rem;
         height: 100%;
         content: "";
       }
@@ -152,14 +139,14 @@
       /* fake the full width background for color block bg sections */
       &:before {
         @include breakpoint($medium) {
-          width: $standard-spacing + 3px;
+          width: $standard-spacing + 0.1875rem;
         }
         @include breakpoint($large) {
-          width: calc(((100vw - #{$max-content-width})/2) + 3px);
-          transform: translatex(calc(-100% + 3px));
+          width: calc(((100vw - #{$max-content-width})/2) + 0.1875rem);
+          transform: translatex(calc(-100% + 0.1875rem));
         }
         left: 0;
-        transform: translatex(calc(-100% + 3px));
+        transform: translatex(calc(-100% + 0.1875rem));
       }
 
       &:after {
@@ -167,7 +154,7 @@
           width: 0;
         }
         right: 0;
-        transform: translatex(calc(100% - 3px));
+        transform: translatex(calc(100% - 0.1875rem));
       }
     }
 
@@ -199,18 +186,18 @@
           width: 0;
         }
         left: 0;
-        transform: translatex(calc(-100% + 3px));
+        transform: translatex(calc(-100% + 0.1875rem));
       }
       &:after {
         @include breakpoint($medium) {
-          width: $standard-spacing + 3px;
+          width: $standard-spacing + 0.1875rem;
         }
         @include breakpoint($large) {
-          width: calc(((100vw - #{$max-content-width})/2) + 3px);
-          transform: translatex(calc(100% - 3px));
+          width: calc(((100vw - #{$max-content-width})/2) + 0.1875rem);
+          transform: translatex(calc(100% - 0.1875rem));
         }
         right: 0;
-        transform: translatex(calc(100% - 3px));
+        transform: translatex(calc(100% - 0.1875rem));
       }
     }
   }
@@ -224,14 +211,28 @@
   }
 }
 
-/* Bright Edge styles */
-.be-ix-link-block {
-  a {
-    margin: 0;
-    border-bottom: none;
+.opendyslexic {
+  .front, .path-frontpage {
+    .layout__region--first-above,
+    .layout__region--first-below,
+    .layout__region--second-above,
+    .layout__region--second-below {
+      h2 {
+        font-family: $opendyslexic;
+      }
+    }
   }
+}
 
-  h4 {
-    border-bottom: none;
+.atkinson {
+  .front, .path-frontpage {
+    .layout__region--first-above,
+    .layout__region--first-below,
+    .layout__region--second-above,
+    .layout__region--second-below {
+      h2 {
+        font-family: $atkinson;
+      }
+    }
   }
 }

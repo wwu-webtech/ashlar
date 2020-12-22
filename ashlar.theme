@@ -16,7 +16,7 @@ FACEBOOK;
   $host = \Drupal::request()->getHost();
 
   switch ($host) {
-    case 'www.wwu.edu':
+    case 'www.wwu.edu' || 'wwwdev.wwu.edu':
       $attachments['#attached']['html_head'][] = array(
         array(
           '#type' => 'html_tag',
@@ -62,17 +62,6 @@ function ashlar_preprocess_page(&$variables) {
 function ashlar_preprocess_block(&$variables) {
   if (isset($variables['elements']['content']['#block_content'])) {
     $variables['block_content'] = $variables['elements']['content']['#block_content'];
-  }
-
-  //Invoke BrightEdge code only where block is present
-  if (isset($variables['elements']['#id']) && $variables['elements']['#id'] === 'brightedgelinkequitymangerlemhtml') {
-    $variables['#attached']['library'][] = 'ashlar/bright-edge';
-  }
-
-  //Invoke erm menu code when the erm menu is present
-  if (isset($variables['elements']['#id']) && $variables['elements']['#id'] === 'ermmenu') {
-    $variables['#attached']['library'][] = 'ashlar/erm-menu';
-    $variables['#attached']['library'][] = 'ashlar/fullpage';
   }
 }
 
@@ -231,6 +220,8 @@ function ashlar_preprocess_menu(&$variables) {
  * Helper function for adding classes to menu links.
  */
 function _menu_links(&$items, $menu_level) {
+  $current_path = \Drupal::request()->getRequestUri();
+
   foreach ($items as $item) {
     $classes = ['menu-item'];
     if ($item['is_expanded']) {
@@ -241,6 +232,9 @@ function _menu_links(&$items, $menu_level) {
     }
     if ($item['in_active_trail']) {
       $classes[] = 'menu-item--active-trail';
+    }
+    if ($item['url']->toString() == $current_path) {
+      $classes[] = 'menu-item--active-page';
     }
     $item['attributes']->addClass($classes);
     if ($item['below']) {
@@ -309,13 +303,12 @@ function ashlar_form_user_login_form_alter(&$form, &$form_state, $form_id) {
 
 /**
 * Implements hook_views_pre_render().
-*
-* Note: If your site would like to use pattern lab scalable social icons then
-* you can create a view with a machine name that resolves to one of the names
-* below.  You'll also have to create the content type that includes a "Link"
-* field to encapsulate the social media url and link text.  The code below
-* attaches the profile.js script to your view which will replace the link text
-* with a very nice social icon svg.  See profile.js if confused.
+* Note:  If your site would like to use pattern lab scalable social icons then
+*  you can create a view with a machine name that resolves to one of the names
+*  below.  You'll also have to create the content type that includes a "Link"
+*  field to encapsulate the social media url and link text.  The code below attaches
+*  the profile.js script to your view which will replace the link text with a very
+*  nice social icon svg.  See profile.js if confused.
 */
 function ashlar_preprocess_views_view(&$variables) {
   $view_array = $variables['view_array'];

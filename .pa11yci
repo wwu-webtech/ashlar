@@ -1,0 +1,220 @@
+{
+  "urls": [
+  {
+    "url": "http://localhost:8000/patterns/01-atoms-background-color/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/01-atoms-buttons/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/01-atoms-color/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/01-atoms-forms/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/01-atoms-icons/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/01-atoms-images/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/01-atoms-lists/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/01-atoms-logo/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/01-atoms-overlays/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/01-atoms-tables/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/01-atoms-text/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/01-atoms-transitions/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/02-molecules-accordion/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/02-molecules-announcement/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/02-molecules-background-video/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/02-molecules-banner/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/02-molecules-buttons/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/02-molecules-card/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/02-molecules-charts/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/02-molecules-forms/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/02-molecules-headline/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/02-molecules-image-with-description/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/02-molecules-language-select/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/02-molecules-lightbox/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/02-molecules-messaging/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/02-molecules-navigation/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/02-molecules-quotes/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/02-molecules-ribbon/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/02-molecules-search/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/02-molecules-social-media/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/02-molecules-splash/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/02-molecules-statistic/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/02-molecules-switcher/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/02-molecules-text/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/02-molecules-timeline-block/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/03-organisms-blocks/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/03-organisms-cards/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/03-organisms-content/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/03-organisms-email-signature/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/03-organisms-footers/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/03-organisms-headers/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/03-organisms-locations/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/03-organisms-navigation/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/03-organisms-page-404/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/03-organisms-page-template/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/03-organisms-quicksearch/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/03-organisms-statistics-collection/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/03-organisms-timeline/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/04-templates-basic-page/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/04-templates-front-page/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/04-templates-profile/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/04-templates-search-page/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/05-sites-homepage/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/05-sites-mabel/index.html",
+    "rootElement": ".sg-pattern-example"
+  }
+  ]
+}

@@ -38,6 +38,9 @@
     color: $white;
   }
 
+  .tagline {
+    color: $lightest-green;
+  }
 
   a:not([class]) {
     color: $light-blue;
@@ -88,6 +91,20 @@
       outline-color: $white;
     }
   }
+
+  .play-link {
+    svg path {
+      fill: $white;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      svg path {
+        fill: $light-blue;
+      }
+    }
+  }
 }
 
 @mixin gray-bg {
@@ -121,6 +138,10 @@
     &:after {
       border-color: $light-blue;
     }
+  }
+
+  .tagline {
+    color: $white;
   }
 
   .menu {
@@ -158,6 +179,20 @@
 
     &:focus {
       outline-color: $lightest-green;
+    }
+  }
+
+  .play-link {
+    svg path {
+      fill: $white;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      svg path {
+        fill: $lightest-green;
+      }
     }
   }
 }
@@ -206,6 +241,20 @@
       }
     }
   }
+
+  .play-link {
+    svg path {
+      fill: $blue;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      svg path {
+        fill: $dark-blue;
+      }
+    }
+  }
 }
 
 @mixin lightest-gray-bg {
@@ -243,6 +292,39 @@
   }
 }
 
+@mixin darkest-blue-bg {
+  @include black-bg;
+  background: $darkest-blue;
+
+  a:not([class]) {
+    &:hover,
+    &:active,
+    &:focus {
+      background: $dark-blue;
+    }
+  }
+
+  .menu {
+    li {
+      border-left-color: $dark-blue;
+
+      a {
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: $dark-blue;
+        }
+      }
+    }
+  }
+
+  .social-icon {
+    svg {
+      fill: $dark-blue;
+    }
+  }
+}
+
 @mixin blue-bg {
   @include gray-bg;
   background: $blue;
@@ -259,8 +341,9 @@
     &:hover,
     &:focus,
     &:active {
-      color: $lightest-green;
-      background: mix(black, $blue, 20%);
+      color: $darkest-blue;
+      outline-color: $white;
+      background: $light-blue;
     }
   }
 
@@ -346,9 +429,120 @@
   }
 }
 
-.black-bg {
+@mixin gradient-blue-bg {
+  @include blue-bg;
+  .menu {
+    li {
+      border-left-color: $light-blue;
+
+      a {
+        &:hover,
+        &:focus,
+        &:active {
+          color: $darkest-blue;
+          background-color: $light-blue;
+        }
+      }
+    }
+  }
+}
+
+@mixin dark-green-bg {
+  @include black-bg;
+  background: $dark-green;
+
+  a:not([class]) {
+    color: $lightest-green;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      background-color: $black;
+    }
+  }
+
+  .menu {
+    li {
+      border-left-color: $light-green;
+
+      a {
+        color: $white;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: $white;
+          background-color: $black;
+        }
+      }
+    }
+  }
+
+  .social-icon {
+    svg {
+      fill: $dark-green;
+    }
+  }
+}
+
+@mixin green-bg {
+  @include gray-bg;
+  background: $green;
+
+  h1 {
+    &:after {
+      border-color: $light-green;
+    }
+  }
+
+  .social-icon {
+    svg {
+      fill: $green;
+    }
+  }
+}
+
+@mixin light-green-bg {
+  @include light-gray-bg;
+  background: $light-green;
+
+  a:not([class]) {
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      outline-color: $blue;
+      background-color: $blue;
+    }
+  }
+
+  .menu {
+    li {
+      border-left-color: $lightest-green;
+
+      a {
+        &:hover,
+        &:focus,
+        &:active {
+          color: $black;
+          background-color: $lightest-green;
+        }
+      }
+    }
+  }
+}
+
+.black-bg,
+.dark-mode {
   @include black-bg;
 }
+
+.dark-mode {
+  background-color: $dark-mode-black;
+  @include dark-mode-links;
+}
+
 .gray-bg {
   @include gray-bg;
 }
@@ -361,6 +555,9 @@
 .dark-blue-bg {
   @include dark-blue-bg;
 }
+.darkest-blue-bg {
+  @include darkest-blue-bg;
+}
 .blue-bg {
   @include blue-bg;
 }
@@ -369,4 +566,40 @@
 }
 .lightest-blue-bg {
   @include lightest-blue-bg;
+}
+.dark-green-bg {
+  @include dark-green-bg;
+}
+.green-bg {
+  @include green-bg;
+}
+.light-green-bg {
+  @include light-green-bg;
+}
+
+.dark-blue-gradient-bg {
+  @include gradient-blue-bg;
+  background-image: linear-gradient(to left bottom, #1c2023, #18242d, #122738, #0a2a44, #022d4f, #00335c, #013a69, #044077, #074e8b, #085c9f, #066bb3, #007ac8);
+}
+.blue-gradient-bg {
+  @include gradient-blue-bg;
+  background-image: linear-gradient(to right bottom, #002f5e, #003266, #00356d, #003875, #003b7d, #004186, #01478e, #004d97, #0058a3, #0063b0, #006ebc, #007ac8);
+}
+
+.dark-mode {
+  .gray-bg,
+  .light-blue-bg,
+  .lightest-blue-bg,
+  .light-gray-bg,
+  .lightest-gray-bg {
+    @include gray-bg;
+  }
+
+  .light-green-bg {
+    @include green-bg;
+  }
+
+  .blue-bg {
+    @include dark-blue-bg;
+  }
 }

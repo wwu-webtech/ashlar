@@ -1,0 +1,84 @@
+attributes:
+  Attribute():
+    class:
+    - menu
+items:
+- title: Menu item 1
+  url: ''
+  attributes:
+    Attribute(): {}
+- title: Menu item 2
+  url: ''
+  attributes:
+    Attribute(): {}
+- title: Menu item three
+  url: ''
+  attributes:
+    Attribute(): {}
+- title: Menu item 4
+  url: ''
+  attributes:
+    Attribute(): {}
+- title: Menu item 5
+  url: ''
+  attributes:
+    Attribute(): {}
+- title: Menu item six
+  url: ''
+  attributes:
+    Attribute(): {}
+- title: Menu item 7
+  url: ''
+  attributes:
+    Attribute(): {}
+extra_menus:
+- title: Second Menu
+  items:
+  - title: Secondary Menu Item 1
+    url: ""
+  - title: Secondary Menu Item 2
+    url: ""
+  - title: Secondary Menu Item 3
+    url: ""
+  - title: Secondary Menu Item 4
+    url: ""
+- title: Third Menu
+  items:
+  - title: Tertiary Menu Item 1
+    url: ""
+  - title: Tertiary Menu Item 2
+    url: ""
+  - title: Tertiary Menu Item 3
+    url: ""
+  - title: Tertiary Menu Item 4
+    url: ""
+- title: Fourth Menu
+  items:
+  - title: Quaternary Menu Item 1
+    url: ""
+  - title: Quaternary Menu Item 2
+    url: ""
+  - title: Quaternary Menu Item 3
+    url: ""
+  - title: Quaternary Menu Item 4
+    url: ""
+- title: Fifth Menu
+  items:
+  - title: Quinary Menu Item 1
+    url: ""
+  - title: Quinary Menu Item 2
+    url: ""
+  - title: Quinary Menu Item 3
+    url: ""
+  - title: Quinary Menu Item 4
+    url: ""
+- title: Sixth Menu
+  items:
+  - title: Senary Menu Item 1
+    url: ""
+  - title: Senary Menu Item 2
+    url: ""
+  - title: Senary Menu Item 3
+    url: ""
+  - title: Senary Menu Item 4
+    url: ""

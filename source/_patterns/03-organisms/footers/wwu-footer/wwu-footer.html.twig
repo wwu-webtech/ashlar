@@ -1,18 +1,41 @@
 {#
 /**
- * @see templates/layout/region--footer.html.twig
- */
+* @see templates/layout/region--footer.html.twig
+*/
 #}
 <section aria-label="Western footer" class="wwu-footer">
   {% include "@atoms/logo/logo--make-waves.twig" %}
 
+  <div class="tribal-lands-statement">
+    <h2 class="visually-hidden">Tribal Lands Statement</h2>
+    <p>Western Washington University's main campus is situated on the ancestral homelands of the Coast Salish Peoples, who have lived in the Salish Sea basin, all throughout the San Juan Islands and the North Cascades watershed from time immemorial. We express our deepest respect and gratitude to our indigenous neighbors, for their enduring care and protection of our shared lands and waterways. <a href="https://www.wwu.edu/tribal-lands-statement">Access our inclusive Tribal Lands Statement.</a> </p>
+  </div>
+
   <div class="western-info">
     <h2 class="visually-hidden">Western Contact Info</h2>
     <p>516 High Street, Bellingham, WA 98225</p>
-    <p><a href="tel:3606503000">(360) 650-3000</a> <span aria-hidden="true">|</span> <a href="https://www.wwu.edu/wwucontact/">Contact Western</a></p>
+    <p>
+      <a href="tel:3606503000">(360) 650-3000</a>
+      <span aria-hidden="true"> | </span>
+      <a href="https://www.wwu.edu/wwucontact/">Contact Western</a>
+    </p>
+
+    <h2 class="visually-hidden">University Links</h2>
+    <p>
+      <a href="https://calendar.wwu.edu/">Calendar</a>
+      <span aria-hidden="true"> | </span>
+      <a href="https://www.wwu.edu/directory">University Directory</a>
+      <span aria-hidden="true"> | </span>
+      <a href="https://www.wwu.edu/campus-maps">Map</a>
+    </p>
+
     <h2 class="visually-hidden">Policy Links</h2>
     <p><a href="https://www.wwu.edu/privacy/">Privacy</a> <span aria-hidden="true">|</span> <a href="https://www.wwu.edu/commitment-accessibility">Accessibility Notice</a></p>
   </div>
 
   {% include "@molecules/social-media/social-media-icons-footer.html.twig" %}
+
+  <div class="copyright">
+    © {{ "now"|date("Y") }} Western Washington University
+  </div>
 </section>

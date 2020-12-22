@@ -31,14 +31,11 @@ alerts:
     build/js/alerts.js: {}
   dependencies:
     - core/jquery
-bright-edge:
+bg-video:
   version: 1.x
-  header: true
   js:
-    //cdn.bc0a.com/be_ixf_js_sdk.js: { type: external, minified: true }
-    build/js/bright-edge.js: {}
+    build/js/bg-video.js: {}
   dependencies:
-    - core/drupal
     - core/jquery
 components:
   version: 1.x
@@ -47,12 +44,14 @@ components:
       build/css/components.css: {}
   dependencies:
     - core/normalize
-erm-menu:
+countdown:
   version: 1.x
   js:
-    build/js/erm-menu.js: {}
-  dependencies:
-    - core/jquery
+    build/js/countdown.js: {}
+display-settings:
+  version: 1.x
+  js:
+    build/js/display-settings.js: {}
 event-tracking:
   version: 1.x
   js:
@@ -64,15 +63,6 @@ external-links-a11y:
   version: 1.x
   js:
     build/js/external-links-a11y.js: {}
-  dependencies:
-    - core/jquery
-featherlight:
-  version: 1.7.13
-  css:
-    theme:
-      dist/js/featherlight/featherlight.css: {}
-  js:
-    dist/js/featherlight/featherlight.js: {}
 fullpage:
   version: 3.0.7
   css:
@@ -86,6 +76,10 @@ language-select:
     language-select.js: {}
   dependencies:
     - core/jquery
+lightbox:
+  version: 1.x
+  js:
+    build/js/lightbox.js: {}
 menu-extras:
   version: 1.x
   js:
@@ -148,8 +142,6 @@ wwu-header:
   dependencies:
     - core/jquery
 wwu-mobile-menu:
-  version: 1.x
+  version: 2.x
   js:
     build/js/wwu-mobile-menu.js: {}
-  dependencies:
-    - core/jquery

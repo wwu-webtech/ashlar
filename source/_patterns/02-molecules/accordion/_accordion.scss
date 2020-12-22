@@ -2,7 +2,7 @@
 * @file
 * 02-molecules/content/accordion.scss
 */
-$left-col-width: 84px;
+$left-col-width: 5.25rem;
 $accordion-border: $dark-blue solid $border-width--thicker;
 
 .accordion-set {
@@ -31,20 +31,20 @@ $accordion-border: $dark-blue solid $border-width--thicker;
         border: $border-width solid transparent;
         border-radius: 0;
         background: none;
+        box-shadow: none;
         font-size: $p-font-size;
         font-weight: $font-weight--semibold;
         line-height: 1.2em;
-        box-shadow: none;
 
         &:active {
           transform: none;
         }
 
         &:focus {
+          color: $white;
           border: $border-width dotted $white;
           background-color: $blue;
           box-shadow: none;
-          color: $white;
 
           .material-icons {
             color: inherit;
@@ -52,9 +52,9 @@ $accordion-border: $dark-blue solid $border-width--thicker;
         }
 
         .material-icons {
+          margin-right: $standard-spacing;
           color: $dark-blue;
           font-size: $icon-size--medium;
-          margin-right: $standard-spacing;
         }
       }
 
@@ -72,44 +72,25 @@ $accordion-border: $dark-blue solid $border-width--thicker;
   }
 }
 
-/* Make block editor widget a little more tolerable for accordion blocks */
-#drupal-off-canvas .field--name-field-accordion-item tr.draggable {
-  display: flex;
-}
+.dark-mode {
+  .accordion-set {
+    .item {
+      border-color: $light-blue;
 
-/* VU Accordion Styles */
-.quick-accordion {
-  .ui-accordion-content {
-    height: auto;
-
-    // Affects VU generated content
-    .view {
-      .view-content {
-        .views-row {
-          article {
-            header {
-              h2 {
-                font-size: 25px;
-              }
-
-              p {
-                font-size: $p-font-size;
-              }
-            }
+      &:last-of-type {
+        border-bottom-color: $light-blue;
+      }
+      
+      .title, 
+      .field__title {
+        .expand {
+          color: $light-blue;
+      
+        .material-icons {
+            color: $light-blue;
           }
         }
       }
-    }
-  }
-
-  // Affects RSS feed
-  ul {
-    p {
-      font-size: $p-font-size
-    }
-
-    a {
-      font-size: $p-font-size
     }
   }
 }

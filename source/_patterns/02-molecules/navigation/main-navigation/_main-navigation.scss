@@ -1,60 +1,215 @@
 /**
- * @file
- * 02-molecules/navigation/main-navigation/_main-navigation.scss
- */
-.nav--main {
-  @include breakpoint($medium) {
-    display: block !important;
-  }
-}
-.nav--main,
+* @file
+* 02-molecules/navigation/main-navigation/_main-navigation.scss
+*/
+.main-navigation,
 #block-system-main-menu {
   @include breakpoint($medium) {
+    width: 100vw;
     height: inherit;
-    min-height: 0;
-    background: transparent;
+    border-top: none;
   }
-  height: 100vh;
-  background: $dark-blue;
+  width: 100%;
+  border-top: solid $darkest-blue $border-width--thinner;
+  background-color: $dark-blue;
+
+  grid-area: main-nav;
 
   & > .menu,
   .ultimenu--horizontal,
   .ultimenu-main-menu {
     @include breakpoint($medium) {
-      flex-flow: row nowrap;
+      background-color: $blue;
     }
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-  }
-}
-/* Reposition nav in context of the site header */
-.site-header {
-  .nav--main {
-    @include breakpoint($medium) {
-      position: inherit;
-      left: 0 !important;
-      overflow-x: visible;
-      overflow-y: visible;
-      margin-top: -($toggle-size / 2);
-      margin-bottom: ($toggle-size / 2);
-      opacity: 1 !important;
+    margin: 0;
+    padding-left: 0;
+    background-color: initial;
+
+    & > li {
+      @include breakpoint($medium) {
+        width: inherit;
+        padding: $half-spacing;
+        border-bottom: none;
+
+        grid-template-columns: 1fr $icon-size--small;
+      }
+      display: grid;
+      width: 100%;
+      transition: $button-transition-speed background-color $standard-ease;
+      border-bottom: $border-width--thinner solid $darkest-blue;
+      border-left: none;
+
+      grid-template-areas:
+        "link icon"
+        "flyout flyout";
+      grid-template-columns: 1fr $toggle-size;
+      grid-template-rows: auto auto;
+
+      &:last-of-type {
+        @include breakpoint($small) {
+          margin-bottom: 0;
+        }
+        margin-bottom: 50vh;
+      }
+
+      /* active page styles for non-dropdown items */
+      &.ultimenu__item--active-page:not(.has-ultimenu) {
+        @include breakpoint($medium) {
+          border-left: 0;
+          background-color: $lightest-green;
+
+          &:hover,
+          &:focus-within,
+          &:active {
+            background-color: $dark-blue;
+          }
+          a {
+            color: $black;
+
+            &:hover,
+            &:focus,
+            &:active {
+              color: $white;
+            }
+          }
+        }
+        font-weight: $font-weight--bold;
+        border-left: $border-width--thicker solid $lightest-green;
+      }
+
+      & > a {
+        @include breakpoint($large) {
+          font-size: $menu-font-size--max;
+        }
+        @include breakpoint($medium) {
+          display: flex;
+          align-items: center;
+          padding: $standard-spacing;
+          padding-right: $icon-size--small + $standard-spacing;
+          text-align: center;
+          font-size: $menu-font-size;
+        }
+        position: relative;
+        display: grid;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: $one-point-five-spacing;
+        text-align: left;
+        white-space: normal;
+        text-decoration: none;
+        color: $white;
+        font-family: $condensed;
+        font-size: $p-font-size;
+        line-height: 1em;
+
+        grid-column: 1 / span all;
+        grid-row: 1 / span 1;
+
+        &:hover,
+        &:focus,
+        &:active {
+          text-decoration: none;
+          outline: none;
+          background-color: transparent;
+        }
+      }
+
+      &:hover,
+      &:focus-within {
+        @include breakpoint($medium) {
+          background-color: $dark-blue;
+        }
+        background-color: $light-green;
+
+        > a {
+          @include breakpoint($medium) {
+            color: $white;
+          }
+          color: $black;
+        }
+
+        .expand-icon.mobile {
+          color: $black;
+        }
+      }
+
+      &:focus-within {
+        @include breakpoint($medium) {
+          outline-color: $white;
+        }
+        outline: dotted $black $border-width;
+        outline-offset: -$border-width;
+      }
+
+      .expand-icon {
+        @include breakpoint($medium) {
+          display: none;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        color: $white;
+        border: none;
+        font-size: $icon-size--small;
+
+        grid-area: icon;
+        -ms-grid-column: 2;
+        -ms-grid-column-span: 1;
+
+        &.desktop {
+          @include breakpoint($medium) {
+            right: $half-spacing;
+            display: flex;
+          }
+          display: none;
+        }
+
+        &.mobile {
+          @include breakpoint($medium) {
+            display: none;
+          }
+        }
+      }
     }
-    @include breakpoint($large) {
-      margin-top: -($toggle-size--larger / 2);
-      margin-bottom: ($toggle-size--larger / 2);
-    }
-    position: fixed;
-    z-index: 3;
-    top: 0;
-    right: -100%;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    width: 100%;
-    opacity: 0;
   }
 }
 
 #block-system-main-menu ul ul {
   display: none; // hide nested menus on non ultimenu main nav blocks
+}
+
+.opendyslexic {
+  .main-navigation,
+  #block-system-main-menu {
+    & > .menu,
+    .ultimenu--horizontal,
+    .ultimenu-main-menu {
+      & > li {
+        & > a {
+          font-family: $opendyslexic;
+        }
+      }
+    }
+  }
+}
+
+.atkinson {
+  .main-navigation,
+  #block-system-main-menu {
+    & > .menu,
+    .ultimenu--horizontal,
+    .ultimenu-main-menu {
+      & > li {
+        & > a {
+          font-family: $atkinson;
+        }
+      }
+    }
+  }
 }

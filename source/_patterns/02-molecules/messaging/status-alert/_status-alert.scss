@@ -2,7 +2,7 @@
 * @file
 * molecules/messaging/status-alert/_status-alert.scss
 */
-$status-icon-size: 72px;
+$status-icon-size: 4.5rem;
 
 .status-alert {
   @include font-size--smaller;
@@ -42,22 +42,69 @@ $status-icon-size: 72px;
 }
 
 .status-alert--message {
-  @include message($blue);
+  @include message($blue, $black);
   padding: $standard-spacing;
 
   &.status-alert--minor {
-    @include message($blue);
+    @include message($blue, $black);
   }
 
   &.status-alert--major {
-    @include message($yellow);
+    @include message($yellow, $black);
   }
 
   &.status-alert--critical {
-    @include message($red);
+    @include message($red, $black);
   }
 
   &.status-alert--resolved {
-    @include message($green);
+    @include message($green, $black);
+  }
+}
+
+.dark-mode {
+  .status-alert--message {
+    @include message($blue, $white);
+    padding: $standard-spacing;
+
+    &.status-alert--minor {
+      @include message($blue, $white);
+    }
+
+    &.status-alert--major {
+      @include message($yellow, $white);
+    }
+
+    &.status-alert--critical {
+      @include message($red, $white);
+    }
+
+    &.status-alert--resolved {
+      @include message($green, $white);
+    }
+  }
+}
+
+.opendyslexic {
+  .status-alert {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: $opendyslexic;
+    }
+  }
+}
+
+.atkinson {
+  .status-alert {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: $atkinson;
+    }
   }
 }

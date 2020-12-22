@@ -4,10 +4,10 @@
 */
 .pane-islandora-solr-display-switch {
   @include breakpoint ($medium) {
-    width: 180px;
+    width: 11.25rem;
   }
   @include breakpoint ($large) {
-    width: 200px;
+    width: 12.5rem;
   }
   position: relative;
   z-index: 1;
@@ -45,10 +45,4 @@
       }
     }
   }
-}
-
-
-/* This is not the display pane, but the grid/list switcher that appears automatically on objects */
-.islandora-objects-display-switch {
-  display: none;
 }

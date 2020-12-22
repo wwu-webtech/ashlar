@@ -2,50 +2,107 @@
 * @file
 * 01-atoms/icons/icons-with-text/_icons-with-text.scss
 */
-$icon-with-text-size--small: 80px;
-$icon-with-text-size--medium: 140px;
-$icon-with-text-size--large: 180px;
+$icon-with-text-size--small: $toggle-size;
+$icon-with-text-size: 5em;
+$icon-with-text-size--medium: 6.5em;
+$icon-with-text-size--large: 7.5em;
 
 .icon-with-text {
   display: inline-grid;
-  text-decoration: none;
-  width: $icon-with-text-size--small;
-  height: $icon-with-text-size--small;
   justify-content: center;
   align-content: center;
+  width: $icon-with-text-size;
+  height: $icon-with-text-size;
   text-align: center;
+  text-decoration: none;
+  font-family: $condensed;
+  font-size: $p-font-size--min;
+  font-weight: $font-weight--light;
+
   font-display: fallback;
 
   .icon-text {
     display: block;
-    font-size: $min-base-font-size;
     margin-top: $half-spacing;
+  }
+
+  &.small {
+    width: $icon-with-text-size--small;
+    height: $icon-with-text-size--small;
   }
 
   &.medium {
     width: $icon-with-text-size--medium;
     height: $icon-with-text-size--medium;
+    font-size: $h6-font-size--min;
 
     .material-icons {
       font-size: $icon-size * 2;
-    }
 
-    .icon-text {
-      font-size: $p-font-size;
+      &:last-of-type {
+        font-size: $h6-font-size--min;
+      }
     }
-
   }
 
   &.large {
     width: $icon-with-text-size--large;
     height: $icon-with-text-size--large;
+    font-size: $h4-font-size--min;
 
     .material-icons {
       font-size: $icon-size--large * 2;
-    }
 
-    .icon-text {
-      font-size: $h4-font-size;
+      &:last-of-type {
+        font-size: $h4-font-size--min;
+      }
     }
+  }
+}
+
+.dark-mode {
+  .page-content  a {
+    &.icon-with-text {
+      color: $light-blue;
+
+      &:hover,
+      &:focus, 
+      &:active {
+        color: $dark-blue;
+      }
+  
+      &:focus {
+        outline-color: $white;
+      }
+
+      &.blue-bg,
+      &.dark-blue-bg {
+        color: $white;
+      }
+
+      &.white-bg {
+        background-color: $white;
+        color: $link-color;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: $link-color;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.opendyslexic {
+  .icon-with-text {
+    font-family: $opendyslexic;
+  }
+}
+
+.atkinson {
+  .icon-with-text {
+    font-family: $atkinson;
   }
 }

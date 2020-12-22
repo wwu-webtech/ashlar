@@ -4,9 +4,9 @@ var $erm_toggle = $('<button class="toggle toggle-erm-menu toggle-open-menu" ari
 
 /* ERM Menu toggle controls */
 if(!$('.toggle-erm-menu').length && $('#block-ermmenu').length && !$('.sg-main').length) {
-  $('.quick-links').remove();
+  $('.wwu-menu').remove();
   $('.search').remove();
-  $('.nav--main').remove();
+  $('.main-navigation').remove();
   $('.toggle-menu').remove();
   $('.splash').remove();
 

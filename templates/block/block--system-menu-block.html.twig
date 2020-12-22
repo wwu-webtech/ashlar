@@ -31,7 +31,6 @@
  * http://www.w3.org/TR/WCAG-TECHS/H42.html for more information.
  */
 #}
-{% set heading_id = attributes.id ~ '-menu'|clean_id %}
 {% set attributes = attributes|without('role', 'aria-labelledby') %}
 {%
   set classes = [

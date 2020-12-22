@@ -5,24 +5,36 @@
 $headline-gradient-start: transparentize($darkest-blue, 0.2);
 $headline-gradient-end: transparentize($darkest-blue, 0.5);
 
-.block--headline {
-  z-index: 1;
-}
-
 .headline {
   h1:after {
     border: none;
   }
 
+  .play-link {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    border-radius: $border-radius--round;
+    border: $border-width solid $white;
+    font-size: $p-font-size;
+
+    .material-icons {
+      font-size: inherit;
+      position: relative;
+      top: $half-spacing / 1.5;
+    }
+  }
+
   /* Style Option 1: Box with semi-transparent overlay */
   &.box-headline {
     @include breakpoint($medium) {
-      margin-top: 0;
+      margin-top: 5%;
+      margin-left: 5%;
       background: linear-gradient(to right, $headline-gradient-start 0%, $headline-gradient-end 100%);
     }
     align-self: start;
     max-width: $max-content-width * (2/3);
-    margin-top: 25vh;
+    margin: $standard-spacing;
     padding: $double-spacing;
     color: $text-color-light;
     background-color: transparentize($darkest-blue, 0.3);
@@ -43,7 +55,7 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
       &:hover,
       &:focus,
       &:active {
-        background-color: $dark-blue
+        background-color: $dark-blue;
       }
     }
 
@@ -60,6 +72,20 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
         background-color: $white;
       }
     }
+
+    .play-link {
+      @include button-box-shadow($dark-blue);
+      color: $white;
+      padding: ($standard-spacing / 1.2) $double-spacing;
+      top: .3rem;
+
+      &:hover, 
+      &:focus, 
+      &:active {
+        background-color: $white;
+        color: $blue;
+      }
+    }
   }
 
   /* Style Option 2: Left aligned bottom bar */
@@ -71,14 +97,12 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
     }
     @include breakpoint($large) {
       max-width: 70vw;
-      margin-left: calc(((100vw - #{$max-content-width}) / -2));
     }
     position: relative;
     align-self: end;
     width: 90vw;
     margin-top: 25vh;
-    margin-bottom: $standard-spacing;
-    margin-left: -$standard-spacing;
+    margin-bottom: $triple-spacing;
     padding: $double-spacing;
     color: $white;
     background: transparentize($blue, 0.1);
@@ -114,6 +138,7 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
       align-self: end;
       margin-right: $standard-spacing;
       margin-left: $standard-spacing;
+      margin-bottom: 0;
       border-color: $white;
       background-color: $blue;
 
@@ -124,26 +149,35 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
         background: $white;
       }
     }
+
+    .play-link {
+      @include breakpoint($small) {
+        padding: ($standard-spacing / 1.2) ($standard-spacing * 1.333);
+        top: 0;
+      }
+      @include button-box-shadow($dark-blue);
+      padding: ($standard-spacing / 1.2) $double-spacing;
+      background-color: $blue;
+      color: $white;
+      top: .4rem;
+
+      &:hover, 
+      &:focus, 
+      &:active {
+        background-color: $white;
+        color: $blue;
+      }
+    }
   }
 
   /* Style Option 3: Right aligned bottom bar */
   &.right-aligned-bar {
     @extend .left-aligned-bar;
-    @include breakpoint($large) {
-      margin-right: calc(((100vw - #{$max-content-width}) / -2));
-    }
-    margin-right: -$standard-spacing;
-    margin-left: initial;
-
     justify-self: end;
   }
 
   /* Style Option 4: Simple centered */
   &.simple-centered {
-    @include breakpoint($medium) {
-      align-self: start;
-      margin: 0;
-    }
     align-self: center;
     margin: 10vh 0;
     text-align: center;
@@ -158,16 +192,17 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
       margin-top: 0;
       color: $white;
       border: none;
-      text-shadow: 1px 1px 4px transparentize($darkest-blue, 0.1);
+      text-shadow: 0.0625rem 0.0625rem 0.25rem transparentize($darkest-blue, 0.1);
       font-family: $sans-serif;
       font-size: $h2-font-size--largest;
       font-weight: bold;
     }
 
     a,
-    p {
+    p,
+    .play-link {
       color: $white;
-      text-shadow: 1px 1px 2px transparentize($darkest-blue, 0.1);
+      text-shadow: 0.0625rem 0.0625rem 0.125rem transparentize($darkest-blue, 0.1);
     }
 
     a {
@@ -178,25 +213,79 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
       }
     }
 
+    .play-link {
+      @include button-box-shadow($dark-blue);
+      background-color: $blue;
+      padding: $standard-spacing $double-spacing;
+      border: transparent;
+      top: -$quarter-spacing;
+
+      &:hover, 
+      &:focus, 
+      &:active {
+        background-color: $dark-blue;
+        color: $white;
+      }
+    }
+
     .tagline {
       @include breakpoint($large) {
         font-size: $h6-font-size--max--largest;
       }
       color: $white;
-      text-shadow: 1px 1px 4px transparentize($darkest-blue, 0.1);
+      text-shadow: 0.0625rem 0.0625rem 0.25rem transparentize($darkest-blue, 0.1);
       font-size: $h6-font-size--largest;
     }
+  }
+}
 
-    .button {
-      margin: $half-spacing;
-      border-color: $white;
-      background: transparentize($darkest-blue, 0.3);
+.opendyslexic {
+  .headline {
+    &.box-headline {
+      h1, 
+      h2 {
+        font-family: $opendyslexic;
+      }
+    }
+    
+    &.left-aligned-bar,
+    &.right-aligned-bar {
+      h1,
+      h2 {
+        font-family: $opendyslexic;
+      }
+    }
+  
+    &.simple-centered {
+      h1,
+      h2 {
+        font-family: $opendyslexic;
+      }
+    }
+  }
+}
 
-      &:hover,
-      &:focus,
-      &:active {
-        color: $blue;
-        background: $white;
+.atkinson {
+  .headline {
+    &.box-headline {
+      h1, 
+      h2 {
+        font-family: $atkinson;
+      }
+    }
+    
+    &.left-aligned-bar,
+    &.right-aligned-bar {
+      h1,
+      h2 {
+        font-family: $atkinson;
+      }
+    }
+  
+    &.simple-centered {
+      h1,
+      h2 {
+        font-family: $atkinson;
       }
     }
   }

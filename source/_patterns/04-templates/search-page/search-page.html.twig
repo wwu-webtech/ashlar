@@ -9,26 +9,18 @@
       {% block wwu_header %}
         {% embed "@organisms/headers/wwu-header/wwu-header.html.twig" %}
 
-          {% block quick_links %}
-            {% include "@molecules/navigation/wwu-menu/wwu-menu.html.twig" %}
-          {% endblock %}
-
-          {% block search %}
+          {% block site_name %}
+            <div class="site-name">
+              Search
+            </div>
           {% endblock %}
 
         {% endembed %}
       {% endblock %}
 
-      {% block splash %}
-        <div class="splash">
-          <div class="block block--page-title-block">
-            <h1 class="page-title">Search</h1>
-          </div>
-        </div>
-      {% endblock %}
-
       {% block content %}
       <main class="page-content">
+        <span id="main-content" tabindex="-1"></span>
         <div class="region-wrapper">
           <div class="region region--content">
             <section class="search-wrapper">

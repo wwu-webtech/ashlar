@@ -1,0 +1,14 @@
+attributes:
+  Attribute():
+    class:
+    - block
+    - block--countdown
+    - big-bold-headings
+title_attributes:
+  Attribute():
+    class:
+    - block__title
+    - text-align-center
+label: Countdown to Something Cool
+content:
+  field_date: 'Dec 25, 2020 00:00:00'

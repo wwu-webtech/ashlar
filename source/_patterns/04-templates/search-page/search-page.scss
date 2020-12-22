@@ -1,21 +1,3 @@
-.search2 {
-  .western-header .wrap .site-name {
-    display: none !important;
-  }
-
-  .splash {
-    @include breakpoint($medium) {
-      grid-template-rows: 170px;
-    }
-
-    grid-template-rows: 100px;
-  }
-}
-
-.western-home-link {
-  padding-right: 0;
-}
-
 .search-wrapper {
   max-width: calc(100vw - #{$double-spacing});
   margin-top: $double-spacing;
@@ -42,7 +24,7 @@
         max-width: none;
       }
       flex: 1;
-      max-width: calc(100vw - #{$double-spacing} - 120px);
+      max-width: calc(100vw - #{$double-spacing} - 7.5rem);
     }
 
     .search-submit {
@@ -89,5 +71,21 @@
 
   .query {
     font-weight: $font-weight--bold;
+  }
+}
+
+.opendyslexic {
+  .search-wrapper {
+    * {
+      font-family: $opendyslexic;
+    }
+  }
+}
+
+.atkinson {
+  .search-wrapper {
+    * {
+      font-family: $atkinson;
+    }
   }
 }

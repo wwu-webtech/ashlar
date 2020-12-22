@@ -1,165 +1,175 @@
 /**
- * @file
- * organisms/site-header/_site-header.scss
- */
-$header-columns: $logo-width 1fr $toggle-size;
-$header-columns--larger: $logo-width 1fr $toggle-size--larger;
-$header-rows: $toggle-size;
-$header-rows--larger: $toggle-size--larger;
-
-// gradients
-$header-gradient-start: transparentize($white, 0.3);
-$header-gradient-end: transparentize($white, 0.8);
-$site-name-gradient-start: $dark-blue;
-$site-name-gradient-end: transparentize($dark-blue, 0.2);
+* @file
+* organisms/site-header/_site-header.scss
+*/
+.site-header {
+  position: relative;
+}
 
 .western-header {
   @include breakpoint($medium) {
-    display: -ms-grid;
-    display: grid;
-
-    -ms-grid-columns: $small-screen-columns;
-    -ms-grid-rows: auto;
-    grid-template-columns: $small-screen-columns;
-    grid-template-rows: auto;
+    grid-template-areas: "logo display-settings wwu-menu"
+    "logo site-name site-name"
+    "logo western-header-region western-header-region"
+    "main-nav main-nav main-nav";
+    grid-template-columns: ($logo-size + ($triple-spacing * 2)) 1fr 2fr;
+    grid-template-rows: ($logo-size / 3) ($logo-size / 3) auto auto;
   }
-  @include breakpoint ($large) {
-    -ms-grid-columns: $large-screen-columns;
-    grid-template-columns: $large-screen-columns;
-  }
-  position: relative;
-  z-index: 2;
-  background: linear-gradient(to left, $header-gradient-start 50%, $header-gradient-end 100%);
+  display: grid;
+  background-color: $dark-blue;
 
-  .wrap {
+  grid-template-areas: ".... logo menu-toggle"
+  "site-name site-name site-name"
+  "western-header-region western-header-region western-header-region";
+  grid-template-columns: $toggle-size auto $toggle-size;
+  grid-template-rows: auto auto auto auto;
+
+  .site-name {
     @include breakpoint($medium) {
-      position: relative;
-      display: -ms-grid;
-      display: grid;
-
-      -ms-grid-column: 2;
-      grid-column: 2 / span 2;
-      -ms-grid-column-span: 1;
-      -ms-grid-columns: $logo-width $standard-spacing 1fr $toggle-size;
-      -ms-grid-row: 1;
-      grid-row: 1 / span 1;
-      -ms-grid-row-span: 1;
-      -ms-grid-rows: $header-rows;
-      grid-template-areas: "logo quick-links search lang_select";
-      grid-template-columns: $header-columns .25fr;
-      grid-template-rows: $header-rows;
+      padding: 0;
+      text-align: left;
+      border-top: none;
+      border-bottom: none;
     }
     @include breakpoint($large) {
-      -ms-grid-columns: $logo-width $standard-spacing 1fr $toggle-size--larger;
-      -ms-grid-rows: $header-rows--larger;
-      grid-template-columns: $header-columns--larger .25fr;
-      grid-template-rows: $header-rows--larger;
+      font-size: $p-font-size--max--larger;
     }
+    align-self: center;
+    margin: $standard-spacing;
+    margin: 0 !important;
+    padding: $standard-spacing;
+    text-align: center;
+    color: $white;
+    border-top: solid $border-width--thinner $blue;
+    border-bottom: solid $border-width--thinner $blue;
+    font-size: $p-font-size--larger;
 
-    .western-logo {
-      color: $white;
-      background-color: $dark-blue;
+    grid-area: site-name;
 
-      grid-area: logo;
-      -ms-grid-column: 1;
-      -ms-grid-column-span: 1;
-      -ms-grid-row: 1;
-      -ms-grid-row-span: 1;
-
-      .western-home-link {
-        @include breakpoint($medium) {
-          padding-right: 0;
-        }
-        display: flex;
-        justify-content: center;
-        margin: inherit;
-        padding: 0;
-        padding-right: $toggle-size--larger;
-        color: $white;
-        border: none;
-
-        &:hover,
-        &:focus,
-        &:active {
-          background: transparent;
-        }
+    &.mobile {
+      .block--secondary-site-name {
+        margin: -$standard-spacing;
+        margin-top: $standard-spacing;
+        border-top: $border-width--thinner $blue solid;
       }
     }
 
-    .site-name {
-      @include breakpoint($large) {
-        font-size: $p-font-size--max--smaller;
-      }
-      @include breakpoint($medium) {
-        display: block !important;
-        border-top: $border-width--thinner solid $blue;
-        border-bottom: none;
-      }
-      display: block;
-      margin: 0;
-      padding: $half-spacing $standard-spacing;
-      text-align: center;
+    .home-link {
       text-decoration: none;
-      text-transform: none;
       color: $white;
-      border-top: $border-width--thinner solid $blue;
-      border-bottom: $border-width--thinner solid $blue;
-      background: linear-gradient(to right, $site-name-gradient-start 0%, $site-name-gradient-end 100%);
-      font-family: $serif;
-      font-size: $p-font-size--smaller;
-      font-weight: $font-weight--regular;
-      line-height: 1.5em;
-    }
-
-    .quick-links {
-      @include breakpoint($medium) {
-        display: block !important;
-      }
-      display: none;
-      align-self: center;
-
-      grid-area: quick-links;
-      -ms-grid-column: 3;
-      -ms-grid-column-span: 1;
-      -ms-grid-row: 1;
-      -ms-grid-row-span: 1;
-      justify-self: end;
-    }
-
-    .toggle-menu {
-      @include breakpoint($medium) {
-        display: none;
-      }
-      position: absolute;
-      top: 0;
-      right: 0;
 
       &:hover,
-      &:focus,
-      &:active {
-        background-color: $darkest-blue;
+      &:active,
+      &:focus {
+        color: $dark-blue;
+      }
+    }
+  }
+
+  .western-logo {
+    @include breakpoint($medium) {
+      margin: initial;
+    }
+    position: relative;
+    width: $logo-size + $double-spacing;
+    height: $logo-size;
+    margin: auto;
+    padding-right: $toggle-size;
+
+    grid-area: logo;
+
+    .western-home-link {
+      color: $white;
+
+      &:focus {
+        outline-color: $white;
+        outline-offset: -$border-width;
       }
     }
 
-    .search {
+    .logo {
       @include breakpoint($medium) {
-        top: 0;
-        right: 0;
+        margin-left: $triple-spacing;
+        background: transparent;
       }
-      align-self: center;
-
-      grid-area: search;
-      justify-self: end;
+      margin: auto;
     }
+  }
 
-    .lang_select {
-      @include breakpoint($medium) {
-        top:0;
-        right: 0;
+  .western-header-region {
+    grid-area: western-header-region;
+  }
+}
+
+/* Mobile Menu */
+.toggle-menu {
+  @include breakpoint($medium) {
+    display: none;
+  }
+  position: relative;
+  right: 0.5rem;
+  color: $white;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  line-height: 1.1;
+
+  grid-area: menu-toggle;
+
+  &:hover,
+  &:focus {
+    color: $darkest-blue;
+    background: $lightest-green;
+    box-shadow: none;
+  }
+}
+
+.mobile-menu {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  display: grid;
+  align-content: start;
+  min-height: 100vh;
+  transition: $fast-transition-speed $standard-ease;
+  transition-property: opacity, transform;
+  transform: translatex(0);
+  opacity: 1;
+  background-color: $dark-blue;
+
+  grid-template-areas: "display-settings menu-toggle"
+  "wwu-menu wwu-menu"
+  "main-nav main-nav";
+  grid-template-columns: auto $toggle-size;
+  grid-template-rows: $toggle-size auto auto;
+
+  &.open {
+    visibility: visible;
+    overflow-y: hidden;
+    width: 100%;
+  }
+
+  &.closed {
+    visibility: hidden;
+    width: 0;
+    transform: translatex(100%);
+    opacity: 0;
+  }
+}
+
+.opendyslexic,
+.atkinson {
+  .mobile-menu {
+    .toggle-menu,
+    .icon-with-text {
+      &.small {
+        @include breakpoint($medium) {
+          font-size: 1rem;
+        }
+        width: $icon-with-text-size + 1;
+        height: $icon-with-text-size + 1;
+        font-size: 0.8rem;
       }
-      align-self: center;
-      grid-area: lang_select;
-      justify-self: end;
     }
   }
 }

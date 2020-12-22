@@ -2,8 +2,8 @@
 * @file
 * organisms/profile_profile.scss
 */
-$profile-photo-size--smaller: 300px;
-$profile-photo-size: 400px;
+$profile-photo-size--smaller: 18.75rem;
+$profile-photo-size: 25rem;
 
 .user-profile {
   display: flex;
@@ -40,9 +40,6 @@ $profile-photo-size: 400px;
     margin: auto;
     margin-top: $triple-spacing;
   }
-  .website {
-    text-align: center;
-  }
 
   .social-links {
     display: flex;
@@ -57,7 +54,8 @@ $profile-photo-size: 400px;
   }
 
   .office,
-  .contact {
+  .contact,
+  .website {
     display: flex;
     flex-flow: row wrap;
 
@@ -67,7 +65,7 @@ $profile-photo-size: 400px;
     }
 
     h3 {
-      margin-top: $standard-spacing;
+      margin-top: 0;
     }
 
     div {

@@ -2,7 +2,7 @@
 * @file
 * sites/mabel/_mabel.scss
 */
-$mabel-site-name-height: 44px;
+$mabel-site-name-height: 2.75rem;
 
 /* General MABEL styles */
 .page-islandora {
@@ -17,6 +17,12 @@ $mabel-site-name-height: 44px;
         text-transform: uppercase;
       }
     }
+  }
+
+  /* Fix contextual links in splash with no header image */
+  .splash > div:nth-of-type(1) div {
+    width: initial;
+    height: initial;
   }
 
   /* Reorder so left sidebar goes below main content area on 25/75 layouts */
@@ -102,26 +108,6 @@ $mabel-site-name-height: 44px;
     }
   }
 
-  &.not-front {
-    .splash {
-      @include breakpoint($medium) {
-        grid-template-columns: ($standard-spacing + $logo-width + $standard-spacing) 1fr $standard-spacing;
-        grid-template-rows: ($toggle-size + $standard-spacing) 1fr ($standard-spacing + ($toggle-size / 2));
-      }
-      @include breakpoint($large) {
-        grid-template-areas: ". . ....... ."
-        ". . content ."
-        ". . ....... .";
-        grid-template-columns: 1fr ($logo-width + $double-spacing) ($max-content-width - $logo-width - $standard-spacing) 1fr;
-        grid-template-rows: ($toggle-size--larger + $standard-spacing) 1fr ($standard-spacing + ($toggle-size--larger / 2));
-      }
-      @include breakpoint(min-width 2420px) {
-        grid-template-rows: ($toggle-size--larger + $double-spacing) 1fr ($standard-spacing + ($toggle-size--larger / 2));
-      }
-      max-height: 350px;
-    }
-  }
-
   .site-footer {
     #block-user-login {
       text-align: right;
@@ -152,6 +138,36 @@ $mabel-site-name-height: 44px;
 
     #edit-actions {
       margin-bottom: 0;
+    }
+  }
+
+  .form-select {
+    max-width: 100%;
+  }
+}
+
+.opendyslexic {
+  .page-islandora {
+    .layout__region--first {
+      .panel-pane {
+        h2,
+        h3 {
+          font-family: $opendyslexic;
+        }
+      }
+    }
+  }
+}
+
+.atkinson {
+  .page-islandora {
+    .layout__region--first {
+      .panel-pane {
+        h2,
+        h3 {
+          font-family: $atkinson;
+        }
+      }
     }
   }
 }

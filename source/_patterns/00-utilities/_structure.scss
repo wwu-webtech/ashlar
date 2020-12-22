@@ -4,7 +4,7 @@
  */
 
 /* Spacing */
-$standard-spacing: 12px;
+$standard-spacing: 0.75rem;
 $quarter-spacing: $standard-spacing / 4;
 $half-spacing: $standard-spacing / 2;
 $one-point-five-spacing: $standard-spacing * 1.5;
@@ -12,25 +12,22 @@ $double-spacing: $standard-spacing * 2;
 $triple-spacing: $standard-spacing * 3;
 
 /* Borders and Lines */
-$border-width--thinner: 1px;
-$border-width: 2px;
-$border-width--thicker: 3px;
-$min-border-width--thickest: 5px;
-$max-border-width--thickest: 10px;
-$border-width--thickest: calc(#{$min-border-width--thickest} + #{strip-unit($max-border-width--thickest - $min-border-width--thickest)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+$border-width--thinner: 0.0625rem;
+$border-width: 0.125rem;
+$border-width--thicker: 0.1875rem;
 $focus-outline: $border-width dotted;
 $focus-outline--thicker: $border-width--thicker dotted;
-$border-radius--round: 100px;
-$border-radius--round-square: 10px;
-$border-radius--square: 5px;
+$border-radius--round: 6.25rem;
+$border-radius--round-square: 0.625rem;
+$border-radius--square: 0.125rem;
 
 /* Content Area */
-$max-content-width: 1300px;
-$max-one-col-width: 1000px;
+$max-content-width: 81.25rem;
+$max-one-col-width: 62.5rem;
 
 /* Breakpoints */
-$small: 581px;
-$medium: 841px;
+$small: 36.3125rem;
+$medium: 52.5625rem;
 $large: $max-content-width;
 
 /* Grid */
@@ -38,8 +35,7 @@ $small-screen-columns: $standard-spacing 1fr $standard-spacing;
 $large-screen-columns: 1fr $max-content-width 1fr;
 
 /* Toggle/Menu Button Sizes */
-$toggle-size: 58px;
-$toggle-size--larger: 68px;
+$toggle-size: 4rem;
 
 /* Class to break blocks out of the max content area and take up full view width */
 .full-vw {

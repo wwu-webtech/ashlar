@@ -6,7 +6,7 @@
 $heading-line-height: 1.2em;
 $heading-margin-top: $triple-spacing;
 $heading-margin-bottom: $standard-spacing;
-$max-heading-underline-width: 200px;
+$max-heading-underline-width: 12.5rem;
 
 /* Default heading styles, serif with blues */
 h1,
@@ -39,9 +39,9 @@ h1 {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: calc(70px + 80 * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+    width: 50%;
     content: "";
-    border-width: calc(4px + 1 * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+    border-width: 0.12em;
     border-style: solid;
   }
 }
@@ -106,6 +106,23 @@ main {
   }
 }
 
+.sans-serif-alternate-headings {
+  h1 {
+    text-transform: uppercase;
+
+    &:after {
+      display: none;
+    }
+  }
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $title-font;
+  }
+}
+
 .underlined-headings {
   h2,
   h3,
@@ -114,6 +131,7 @@ main {
   h6 {
     position: relative;
     padding-bottom: $one-point-five-spacing;
+    font-family: $title-font;
 
     &:after {
       position: absolute;
@@ -154,8 +172,8 @@ main {
   h5,
   h6 {
     &:after {
-      left: initial;
       right: 0;
+      left: initial;
     }
   }
 }
@@ -202,17 +220,6 @@ main {
     }
     display: inline-block;
     font-size: $h3-font-size--larger;
-
-    &:after {
-      z-index: -1;
-      display: block;
-      width: 110%;
-      height: 30px;
-      margin-left: 50%;
-      content: "";
-      transform: translate(-50%, -18px);
-      background-color: transparentize($blue, 0.9);
-    }
   }
 
   h4 {
@@ -275,5 +282,53 @@ main {
       font-size: $h6-font-size--max--smaller;
     }
     font-size: $h6-font-size--smaller;
+  }
+}
+
+.opendyslexic {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $opendyslexic;
+  }
+
+  .serif-headings,
+  .sans-serif-headings,
+  .big-bold-headings {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: $opendyslexic;
+    }
+  }
+}
+
+.atkinson {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $atkinson;
+  }
+
+  .serif-headings,
+  .sans-serif-headings,
+  .big-bold-headings {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: $atkinson;
+    }
   }
 }

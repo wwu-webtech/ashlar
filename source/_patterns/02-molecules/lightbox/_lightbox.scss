@@ -1,0 +1,89 @@
+/**
+* @file
+* 02-molecules/content/lightbox/_lightbox.scss
+*/
+
+.lightbox-overlay {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: transparentize($black, .1);
+  z-index: 5;
+  transition: opacity $fast-transition-speed ease-out;
+
+  .lightbox {
+    &-dialog {
+      @include breakpoint($large) {
+        width: 65%;
+      }
+      @include breakpoint($medium) {
+        grid-template-areas: 
+        "... ... button" 
+        "content content content" 
+        "... cta ...";
+        width: 80%;
+      }
+      @include breakpoint($small) {
+        width: 75%;
+      }
+      display: -ms-grid;
+      -ms-grid-columns: 33% 34% 33%;
+      display: grid;
+      grid-template-columns: 33% 34% 33%;
+      grid-template-areas: 
+        "... ... button" 
+        "content content content" 
+        "cta cta cta";
+      width: 100%;
+      background-color: $white;
+      padding: $half-spacing $double-spacing $double-spacing;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &-close-dialog {
+      @include breakpoint($medium) {
+        margin: 5% 0;
+        font-size: $p-font-size;
+      }
+      grid-area: button;
+      align-self: start;
+      justify-self: end;
+      margin: 12% 0 5%;
+      font-size: $p-font-size--smaller;
+
+      .material-icons {
+        position: relative;
+        top: $half-spacing / 1.5;
+        left: $quarter-spacing;
+        font-size: inherit;
+      }
+    }
+
+    &-content {
+      grid-area: content;
+      align-self: end;
+    }
+
+    &-cta-link {
+      grid-area: cta;
+      max-width: 100%;
+      margin: 0 auto;
+      margin-top: $double-spacing;
+    }
+  }
+
+  &.invisible {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &.shown {
+    visibility: visible;
+    opacity: 1;
+  }
+}

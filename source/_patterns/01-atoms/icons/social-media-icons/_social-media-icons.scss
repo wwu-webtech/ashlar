@@ -1,7 +1,7 @@
 /**
- * @file
- * 01-atoms/icons/social-media-icons/_social-media-icons.scss
- */
+* @file
+* 01-atoms/icons/social-media-icons/_social-media-icons.scss
+*/
 $icon-space: (($toggle-size - $icon-size) / 2) - 1;
 
 .social-icon {
@@ -14,10 +14,14 @@ $icon-space: (($toggle-size - $icon-size) / 2) - 1;
 
   svg {
     width: 100%;
-    padding: (($toggle-size - $icon-size) / 2) - 1;
+    padding: (($toggle-size - $icon-size) / 2);
     transition: fill $standard-ease $button-transition-speed;
 
     fill: $white;
+
+    @media print {
+      fill: $black;
+    }
   }
 
   &:hover,
@@ -62,7 +66,7 @@ $icon-space: (($toggle-size - $icon-size) / 2) - 1;
   }
   display: flex;
   flex-flow: row wrap;
-  max-width: 400px;
+  max-width: 25rem;
   padding: 0;
   list-style: none;
 
@@ -74,13 +78,13 @@ $icon-space: (($toggle-size - $icon-size) / 2) - 1;
 .my-western-links {
   .social-media-links {
     @include breakpoint($medium) {
-      max-width: 600px;
-      margin-top: -$triple-spacing;
+      max-width: 37.5rem;
+      margin-top: -$triple-spacing * 1.5;
       margin-left: 50%;
       transform: translatex(-50%);
     }
-    @include breakpoint(1080px) {
-      margin-top: -$triple-spacing * 3;
+    @include breakpoint(67.5rem) {
+      margin-top: -$triple-spacing * 2;
     }
     justify-content: center;
     width: 100%;
@@ -100,7 +104,7 @@ $icon-space: (($toggle-size - $icon-size) / 2) - 1;
     text-align: center;
     text-decoration: none;
     background: transparent;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 1em;
 
     &:hover,
@@ -112,8 +116,8 @@ $icon-space: (($toggle-size - $icon-size) / 2) - 1;
 
     svg {
       @include breakpoint($medium) {
-        width: $toggle-size--larger;
-        height: $toggle-size--larger;
+        width: $toggle-size;
+        height: $toggle-size;
       }
       width: $toggle-size;
       height: $toggle-size;
@@ -122,6 +126,20 @@ $icon-space: (($toggle-size - $icon-size) / 2) - 1;
 
     .icon-text {
       margin-bottom: $standard-spacing;
+    }
+  }
+}
+
+.dark-mode {
+  .social-icon {
+    .icon-text {
+      color: $white;
+    }
+  }
+
+  .my-western-links {
+    .social-icon svg {
+      fill: $white;
     }
   }
 }

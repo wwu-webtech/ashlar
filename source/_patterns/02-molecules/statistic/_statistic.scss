@@ -2,7 +2,8 @@
 * @file
 * molecules/statistic/statistic.scss
 */
-$vertical-statistic-width: 180px;
+$vertical-statistic-width--min: 11.25rem;
+$vertical-statistic-width--max: 15rem;
 
 .block--statistic {
   margin: $half-spacing 0;
@@ -12,12 +13,12 @@ $vertical-statistic-width: 180px;
   }
 
   &.white-bg {
-    background-color: $white;
     color: $blue;
+    background-color: $white;
 
     .block__title {
-      color: $blue;
       padding-bottom: $standard-spacing;
+      color: $blue;
 
       &:after {
         border-width: $border-width;
@@ -37,7 +38,8 @@ $vertical-statistic-width: 180px;
   }
 
   &.statistic--vertical {
-    width: $vertical-statistic-width;
+    min-width: $vertical-statistic-width--min;
+    max-width: $vertical-statistic-width--max;
     margin: 0 $half-spacing $standard-spacing;
     padding: $standard-spacing;
     text-align: center;
@@ -75,6 +77,30 @@ $vertical-statistic-width: 180px;
         font-size: $h3-font-size--max--largest;
       }
       font-size: $h3-font-size--largest;
+    }
+  }
+}
+
+.opendyslexic {
+  .block--statistic {
+    &.white-bg, 
+    &.statistic--vertical, 
+    &.statistic--horizontal {
+      .block__title {
+        font-family: $opendyslexic;
+      }
+    }
+  }
+}
+
+.atkinson {
+  .block--statistic {
+    &.white-bg, 
+    &.statistic--vertical, 
+    &.statistic--horizontal {
+      .block__title {
+        font-family: $atkinson;
+      }
     }
   }
 }
