@@ -21,8 +21,8 @@
   grid-template-areas: ".... logo menu-toggle"
   "site-name site-name site-name"
   "western-header-region western-header-region western-header-region";
-  grid-template-columns: $toggle-size 2fr $toggle-size;
-  grid-template-rows: auto auto auto auto;
+  grid-template-columns: $toggle-size auto $toggle-size;
+  grid-template-rows: auto auto auto;
 
   .site-name {
     @include breakpoint($medium) {
