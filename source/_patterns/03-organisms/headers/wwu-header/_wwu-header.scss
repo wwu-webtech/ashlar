@@ -21,7 +21,7 @@
   grid-template-areas: ".... logo menu-toggle"
   "site-name site-name site-name"
   "western-header-region western-header-region western-header-region";
-  grid-template-columns: $toggle-size auto $toggle-size;
+  grid-template-columns: $toggle-size 2fr $toggle-size;
   grid-template-rows: auto auto auto auto;
 
   .site-name {
@@ -71,7 +71,8 @@
       margin: initial;
     }
     position: relative;
-    width: $logo-size + $double-spacing;    
+    width: $logo-size + $double-spacing;
+    height: $logo-size;
     margin: auto;
     padding-right: $toggle-size;
 
