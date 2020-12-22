@@ -269,7 +269,7 @@
   /* Cards with .simple class */
   &.simple {
     text-align: center;
-    background-color: $lightest-gray;
+    background-color: mix($lightest-gray, $white, 50%);
 
     &:hover,
     &:focus-within {
