@@ -36,26 +36,9 @@ $vertical-statistic-width--max: 15rem;
       }
     }
   }
-
-  &.statistic--horizontal {
-    display: grid;
-    justify-content: left;
-    align-items: center;
-    padding: $standard-spacing $double-spacing;
-    border-radius: $border-radius--round-square;
-
-    grid-column-gap: $double-spacing;
-    grid-template-areas: "number text";
-
-    .number {
-      @include breakpoint($large) {
-        font-size: $h3-font-size--max--largest;
-      }
-      font-size: $h3-font-size--largest;
-    }
-  }
 }
 
+/* Vertically styled blocks, which get laid out side-by-side in a collection */
 .block--statistic.statistic--vertical,
 .statistics-collection--side-by-side .block--statistic {
   min-width: $vertical-statistic-width--min;
@@ -79,6 +62,26 @@ $vertical-statistic-width--max: 15rem;
   .text {
     margin-bottom: $standard-spacing;
     font-size: $p-font-size--smaller;
+  }
+}
+
+/* Horizontally styled blocks, which get laid out stacked on top of one another in a collection */
+.block--statistic.statistic--horizontal,
+.statistics-collection--stacked .block--statistic {
+  display: grid;
+  justify-content: left;
+  align-items: center;
+  padding: $standard-spacing $double-spacing;
+  border-radius: $border-radius--round-square;
+
+  grid-column-gap: $double-spacing;
+  grid-template-areas: "number text";
+
+  .number {
+    @include breakpoint($large) {
+      font-size: $h3-font-size--max--largest;
+    }
+    font-size: $h3-font-size--largest;
   }
 }
 
