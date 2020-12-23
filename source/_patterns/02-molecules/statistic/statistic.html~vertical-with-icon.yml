@@ -19,4 +19,5 @@ block_content:
       value: "h3"
 content:
   field_icon: "monetization_on"
-  body: "<p><strong>$11,950</strong></p> <p>Discounts and scholarships available</p>"
+  field_number: "11,950"
+  field_text: "Discounts and scholarships available"

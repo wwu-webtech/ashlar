@@ -57,7 +57,7 @@ $vertical-statistic-width--max: 15rem;
 }
 
 .block--statistic.statistic--vertical,
-.statistics-collection--horizontal .block--statistic {
+.statistics-collection--side-by-side .block--statistic {
   min-width: $vertical-statistic-width--min;
   max-width: $vertical-statistic-width--max;
   margin: 0 $half-spacing $standard-spacing;
