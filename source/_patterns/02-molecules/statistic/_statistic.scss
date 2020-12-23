@@ -8,6 +8,30 @@ $vertical-statistic-width--max: 15rem;
 .block--statistic {
   margin: $half-spacing 0;
 
+  .material-icons {
+    font-size: $icon-size--large;
+  }
+
+  .statistic-heading {
+    position: relative;
+    margin: 0 0 $standard-spacing 0;
+    padding-bottom: $one-point-five-spacing;
+    font-family: $title-font;
+    font-size: $h5-font-size;
+
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 50%;
+      max-width: $max-heading-underline-width;
+      content: "";
+      transform: translatex(-50%);
+      border-width: $border-width--thicker;
+      border-style: solid;
+    }
+  }
+
   .number {
     font-weight: $font-weight--bold;
   }

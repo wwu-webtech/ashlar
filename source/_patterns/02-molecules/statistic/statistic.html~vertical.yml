@@ -10,10 +10,6 @@ title_attributes:
     class:
     - block__title
     - number
-block_content:
-  field_heading_level:
-    0:
-      value: "span"
 content:
   field_number: "88,500"
   field_text: "Person city with a thriving arts & music scene"
