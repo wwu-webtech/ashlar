@@ -1,4 +1,4 @@
 ---
-title: Statistics Collection - Vertical (a collection of vertically styled statistics)
+title: Statistics Collection - Side-by-side
 ---
-A grouping of statistics, styled with flexbox. This one contains vertical statistics.
+A grouping of statistics, styled with flexbox. This one contains vertically styled statistics laid out side-by-side.

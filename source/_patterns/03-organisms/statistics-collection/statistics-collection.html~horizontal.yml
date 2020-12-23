@@ -1,7 +1,7 @@
 attributes:
   Attribute():
     class:
-      - statistics-collection
+      - block--statistics-collection
 statistics:
   join():
   - include():

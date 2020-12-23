@@ -1,6 +1,7 @@
 attributes:
   Attribute():
     class:
+      - block--statistics-collection
       - statistics-collection--vertical
 statistics:
   join():

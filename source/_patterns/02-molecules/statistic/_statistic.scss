@@ -37,31 +37,6 @@ $vertical-statistic-width--max: 15rem;
     }
   }
 
-  &.statistic--vertical {
-    min-width: $vertical-statistic-width--min;
-    max-width: $vertical-statistic-width--max;
-    margin: 0 $half-spacing $standard-spacing;
-    padding: $standard-spacing;
-    text-align: center;
-    border-radius: $border-radius--round-square;
-
-    .block__title {
-      margin-top: 0;
-      font-family: $sans-serif;
-    }
-
-    .number {
-      display: block;
-      margin-bottom: $standard-spacing;
-      font-size: $p-font-size--larger;
-    }
-
-    .text {
-      margin-bottom: $standard-spacing;
-      font-size: $p-font-size--smaller;
-    }
-  }
-
   &.statistic--horizontal {
     display: grid;
     justify-content: left;
@@ -81,10 +56,36 @@ $vertical-statistic-width--max: 15rem;
   }
 }
 
+.block--statistic.statistic--vertical,
+.statistics-collection--horizontal .block--statistic {
+  min-width: $vertical-statistic-width--min;
+  max-width: $vertical-statistic-width--max;
+  margin: 0 $half-spacing $standard-spacing;
+  padding: $standard-spacing;
+  text-align: center;
+  border-radius: $border-radius--round-square;
+
+  .block__title {
+    margin-top: 0;
+    font-family: $sans-serif;
+  }
+
+  .number {
+    display: block;
+    margin-bottom: $standard-spacing;
+    font-size: $p-font-size--larger;
+  }
+
+  .text {
+    margin-bottom: $standard-spacing;
+    font-size: $p-font-size--smaller;
+  }
+}
+
 .opendyslexic {
   .block--statistic {
-    &.white-bg, 
-    &.statistic--vertical, 
+    &.white-bg,
+    &.statistic--vertical,
     &.statistic--horizontal {
       .block__title {
         font-family: $opendyslexic;
@@ -95,8 +96,8 @@ $vertical-statistic-width--max: 15rem;
 
 .atkinson {
   .block--statistic {
-    &.white-bg, 
-    &.statistic--vertical, 
+    &.white-bg,
+    &.statistic--vertical,
     &.statistic--horizontal {
       .block__title {
         font-family: $atkinson;

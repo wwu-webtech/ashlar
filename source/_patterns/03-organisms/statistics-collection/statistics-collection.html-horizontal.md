@@ -1,4 +1,4 @@
 ---
-title: Statistics Collection - Horizontal (a collection of horizontally styled statistics)
+title: Statistics Collection - Stacked
 ---
-A grouping of statistics, styled with flexbox. This one contains horizontal statistics.
+A grouping of statistics, styled with flexbox. This one contains horizontally styled statistics laid out stacked on top of each other.

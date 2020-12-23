@@ -1,4 +1,4 @@
 ---
-title: Statistic - Styled horizontally
+title: Statistic - Styled vertically
 ---
-Basic statistic styled vertically
+Basic statistic laid out vertically
