@@ -99,13 +99,31 @@ $vertical-statistic-width--max: 15rem;
   border-radius: $border-radius--round-square;
 
   grid-column-gap: $double-spacing;
-  grid-template-areas: "number text";
+  grid-template-areas: "heading heading heading" "icon number text";
+
+  .statistic-heading {
+    grid-area: heading;
+
+    &:after {
+      left: 0;
+      transform: none;
+    }
+  }
+
+  .material-icons {
+    grid-area: icon;
+  }
 
   .number {
     @include breakpoint($large) {
       font-size: $h3-font-size--max--largest;
     }
+    grid-area: number;
     font-size: $h3-font-size--largest;
+  }
+
+  .text {
+    grid-area: text;
   }
 }
 
