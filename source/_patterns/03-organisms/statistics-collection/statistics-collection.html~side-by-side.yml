@@ -1,26 +1,27 @@
 attributes:
   Attribute():
     class:
-      - statistics-collection--vertical
-statistics:
+      - block--statistics-collection
+      - statistics-collection--side-by-side
+content:
   join():
   - include():
       pattern: molecules-statistic-html-vertical
   - include():
       pattern: molecules-statistic-html-vertical
       with:
-        label: "6"
         content:
-          body: "Miles of trails adjacent to campus"
+          field_number: "6"
+          field_text: "Miles of trails adjacent to campus"
   - include():
       pattern: molecules-statistic-html-vertical
       with:
-        label: "55"
         content:
-          body: "Miles to Vancouver, BC"
+          field_number: "55"
+          field_text: "Miles to Vancouver, BC"
   - include():
       pattern: molecules-statistic-html-vertical
       with:
-        label: "90"
         content:
-          body: "Miles to Seattle, WA"
+          field_number: "90"
+          field_text: "Miles to Seattle, WA"

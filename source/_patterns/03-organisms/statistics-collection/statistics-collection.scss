@@ -3,8 +3,13 @@
 * organisms/statistics-collection/statistics-collection.scss
 */
 
-.statistics-collection--vertical {
+.statistics-collection--vertical,
+.statistics-collection--side-by-side {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+
+  .block__title {
+    flex: 0 0 100%;
+  }
 }
