@@ -4,7 +4,7 @@
  */
 #}
 {% if items %}
-  <nav class="pager" aria-label="{{ pagination_title }}">
+  <nav class="pager" aria-label="Pagination for {{ pager['#theme'].0|replace({'pager__': '','_': ' '}) }}">
     <ul class="pager__items js-pager__items">
       {# Print first item if we are not on the first page. #}
       {% if items.first %}
