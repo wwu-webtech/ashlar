@@ -8,6 +8,30 @@ $vertical-statistic-width--max: 15rem;
 .block--statistic {
   margin: $half-spacing 0;
 
+  .material-icons {
+    font-size: $icon-size--large;
+  }
+
+  .statistic-heading {
+    position: relative;
+    margin: 0 0 $standard-spacing 0;
+    padding-bottom: $one-point-five-spacing;
+    font-family: $title-font;
+    font-size: $h5-font-size;
+
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 50%;
+      max-width: $max-heading-underline-width;
+      content: "";
+      transform: translatex(-50%);
+      border-width: $border-width--thicker;
+      border-style: solid;
+    }
+  }
+
   .number {
     font-weight: $font-weight--bold;
   }
@@ -36,55 +60,77 @@ $vertical-statistic-width--max: 15rem;
       }
     }
   }
+}
 
-  &.statistic--vertical {
-    min-width: $vertical-statistic-width--min;
-    max-width: $vertical-statistic-width--max;
-    margin: 0 $half-spacing $standard-spacing;
-    padding: $standard-spacing;
-    text-align: center;
-    border-radius: $border-radius--round-square;
+/* Vertically styled blocks, which get laid out side-by-side in a collection */
+.block--statistic.statistic--vertical,
+.statistics-collection--side-by-side .block--statistic {
+  min-width: $vertical-statistic-width--min;
+  max-width: $vertical-statistic-width--max;
+  margin: 0 $half-spacing $standard-spacing;
+  padding: $standard-spacing;
+  text-align: center;
+  border-radius: $border-radius--round-square;
 
-    .block__title {
-      margin-top: 0;
-      font-family: $sans-serif;
-    }
+  .block__title {
+    margin-top: 0;
+    font-family: $sans-serif;
+  }
 
-    .number {
-      display: block;
-      margin-bottom: $standard-spacing;
-      font-size: $p-font-size--larger;
-    }
+  .number {
+    display: block;
+    margin-bottom: $standard-spacing;
+    font-size: $p-font-size--larger;
+  }
 
-    .text {
-      margin-bottom: $standard-spacing;
-      font-size: $p-font-size--smaller;
+  .text {
+    margin-bottom: $standard-spacing;
+    font-size: $p-font-size--smaller;
+  }
+}
+
+/* Horizontally styled blocks, which get laid out stacked on top of one another in a collection */
+.block--statistic.statistic--horizontal,
+.statistics-collection--stacked .block--statistic {
+  display: grid;
+  justify-content: left;
+  align-items: center;
+  padding: $standard-spacing $double-spacing;
+  border-radius: $border-radius--round-square;
+
+  grid-column-gap: $double-spacing;
+  grid-template-areas: "heading heading heading" "icon number text";
+
+  .statistic-heading {
+    grid-area: heading;
+
+    &:after {
+      left: 0;
+      transform: none;
     }
   }
 
-  &.statistic--horizontal {
-    display: grid;
-    justify-content: left;
-    align-items: center;
-    padding: $standard-spacing $double-spacing;
-    border-radius: $border-radius--round-square;
+  .material-icons {
+    grid-area: icon;
+  }
 
-    grid-column-gap: $double-spacing;
-    grid-template-areas: "number text";
-
-    .number {
-      @include breakpoint($large) {
-        font-size: $h3-font-size--max--largest;
-      }
-      font-size: $h3-font-size--largest;
+  .number {
+    @include breakpoint($large) {
+      font-size: $h3-font-size--max--largest;
     }
+    grid-area: number;
+    font-size: $h3-font-size--largest;
+  }
+
+  .text {
+    grid-area: text;
   }
 }
 
 .opendyslexic {
   .block--statistic {
-    &.white-bg, 
-    &.statistic--vertical, 
+    &.white-bg,
+    &.statistic--vertical,
     &.statistic--horizontal {
       .block__title {
         font-family: $opendyslexic;
@@ -95,8 +141,8 @@ $vertical-statistic-width--max: 15rem;
 
 .atkinson {
   .block--statistic {
-    &.white-bg, 
-    &.statistic--vertical, 
+    &.white-bg,
+    &.statistic--vertical,
     &.statistic--horizontal {
       .block__title {
         font-family: $atkinson;

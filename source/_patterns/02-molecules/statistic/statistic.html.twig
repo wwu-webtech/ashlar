@@ -1,13 +1,27 @@
-<div{{ attributes }}>
+<div{{ attributes.addClass(classes) }}>
   {% if content.field_icon %}
     <span class="material-icons" aria-hidden="true">{{ content.field_icon }}</span>
   {% endif %}
 
-  {% include "@atoms/text/label/label-customized.twig" %}
+  {% block label_markup %}
+    {% if content.field_heading %}
+      {% if content.field_heading_level %}
+        <{{ content.field_heading_level }} class="statistic-heading">{{ content.field_heading }}</{{ content.field_heading_level }}>
+      {% else %}
+        <div class="statistic-heading">{{ content.field_heading }}</div>
+      {% endif %}
+    {% endif %}
+  {% endblock %}
 
-  {% if content.body %}
+  {% if content.field_number %}
+    <div class="number">
+      {{ content.field_number }}
+    </div>
+  {% endif %}
+
+  {% if content.field_text %}
     <div class="text">
-      {{ content.body }}
+      {{ content.field_text }}
     </div>
   {% endif %}
 </div>

@@ -1,3 +1,9 @@
 <div{{ attributes }}>
-  {{ statistics }}
+  {% block title %}
+    {% include "@atoms/text/label/label-customized.twig" %}
+  {% endblock %}
+
+  {% block content %}
+    {{ content }}
+  {% endblock %}
 </div>
