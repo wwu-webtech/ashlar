@@ -4,8 +4,7 @@
  */
 #}
 {% if items %}
-  <nav class="pager" aria-labelledby="pagination-heading">
-    <h4 id="pagination-heading" class="visually-hidden">{{ pagination_title }}</h4>
+  <nav class="pager" aria-label="{{ pagination_title }}">
     <ul class="pager__items js-pager__items">
       {# Print first item if we are not on the first page. #}
       {% if items.first %}
