@@ -4,9 +4,11 @@
  */
 
 figcaption {
-  @include light-gray-bg
+  @include light-gray-bg;
   padding: $standard-spacing;
+  margin-bottom: $double-spacing;
 }
+
 figure {
   margin: 0;
 }
