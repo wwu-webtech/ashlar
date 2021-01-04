@@ -116,38 +116,19 @@ body.page-islandora-object {
 }
 
 /* Details tab */
-.islandora-metadata {
-  .fieldset-title {
-    text-decoration: none;
-    color: $dark-blue;
-    font-family: $serif;
-    font-size: $h2-font-size;
-
-    &:after {
-      content: " -";
-    }
-  }
-
-  &.collapsed {
-    .fieldset-title {
-      &:after {
-        content: " +";
-      }
-    }
-  }
-}
-
 html.js .islandora-metadata,
 html.js .islandora-metadata.collapsed {
   margin-bottom: $standard-spacing;
   padding: $standard-spacing;
-  border: solid $dark-blue $border-width;
+  border: none;
 }
 
 html.js .islandora-metadata.collapsible .fieldset-legend {
   background-image: none;
 }
 
+
+/* Display Preferences */
 .opendyslexic {
   body.page-islandora-object {
     .layout__region--first {
