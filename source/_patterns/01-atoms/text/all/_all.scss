@@ -19,8 +19,12 @@ body {
     font-family: $opendyslexic;
     font-feature-settings: unset;
   }
-  
+
   &.atkinson {
     font-family: $atkinson;
+  }
+
+  @media print {
+    font-size: 12pt;
   }
 }

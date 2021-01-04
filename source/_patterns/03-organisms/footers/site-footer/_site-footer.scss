@@ -2,6 +2,11 @@
 * @file
 * organisms/site-footer/_site-footer.scss
 */
+.page-footer {
+  @media print {
+    display: none;
+  }
+}
 
 .site-footer {
   @include blue-bg;

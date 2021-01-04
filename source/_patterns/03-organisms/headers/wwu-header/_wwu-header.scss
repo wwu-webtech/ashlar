@@ -4,6 +4,10 @@
 */
 .site-header {
   position: relative;
+
+  @media print {
+    display: none;
+  }
 }
 
 .western-header {

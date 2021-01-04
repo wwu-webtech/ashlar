@@ -1,0 +1,11 @@
+/**
+ * @file
+ * helpers/_print.scss
+ * CSS helper classes for print styles
+ */
+
+.no-printing {
+  @media print {
+    display: none;
+  }
+}
