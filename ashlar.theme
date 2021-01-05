@@ -310,12 +310,14 @@ function ashlar_form_user_login_form_alter(&$form, &$form_state, $form_id) {
 *  the profile.js script to your view which will replace the link text with a very
 *  nice social icon svg.  See profile.js if confused.
 */
-function ashlar_preprocess_views_view(&$vars) {
-  $vars['#cache']['contexts'][] = 'route';
-  if ($vars['view_array']['#name'] == 'profile_page') {
-    $vars['#attached']['library'][] = 'ashlar/profile';
-  }
-  if ($vars['view_array']['#name'] == 'social_media_directory') {
-    $vars['#attached']['library'][] = 'ashlar/profile';
+function ashlar_preprocess_views_view(&$variables) {
+  $view_array = $variables['view_array'];
+  $variables['#cache']['contexts'][] = 'route';
+  if (isset($view_array['#name'])) {
+    switch ($view_array['#name']) {
+      case 'profile_page':
+      case 'social_media_directory':
+        $variables['#attached']['library'][] = 'ashlar/profile';
+    }
   }
 }
