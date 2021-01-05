@@ -93,6 +93,13 @@
       transition: $medium-transition-speed $standard-ease;
       box-shadow: $unfocus-shadow;
     }
+
+    &:before {
+      @media print {
+        content: " [" attr(href) "] ";
+        font-size: 10pt;
+      }
+    }
   }
 
   &:hover,

@@ -40,6 +40,10 @@ $image-button--smaller-size--medium: 11.25rem;
     content: "";
     transition: 0.5s ease all;
     border-radius: 50%;
+
+    @media print {
+      display: none;
+    }
   }
 
   &:before {
@@ -73,6 +77,12 @@ $image-button--smaller-size--medium: 11.25rem;
 
   .image {
     background-color: $blue;
+
+    img {
+      @media print {
+        display: none;
+      }
+    }
   }
 
   a {
@@ -111,9 +121,21 @@ $image-button--smaller-size--medium: 11.25rem;
       outline: none;
     }
 
-    //overrides file extension style in link atom css
     &:after {
-      content: "";
+      content: ""; //overrides file extension style in link atom css
+
+      @media print {
+        position: absolute;
+        bottom: 10%;
+        display: block;
+        content: " [" attr(href) "] ";
+        font-size: 10pt;
+      }
+    }
+
+    @media print {
+      overflow: visible;
+      font-size: 12pt;
     }
   }
 
@@ -121,6 +143,13 @@ $image-button--smaller-size--medium: 11.25rem;
     .image {
       filter: brightness(75%);
     }
+  }
+
+  @media print {
+    display: inline-block;
+    margin: 0;
+    border: solid $border-width--thinner $black;
+    box-shadow: none;
   }
 }
 
