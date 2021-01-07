@@ -56,11 +56,13 @@ $dyslexic-icon-smaller: $p-font-size--min * 0.8;
     width: initial;
     height: initial;
     padding-top: $standard-spacing;
+    border: $focus-outline--thicker transparent;
 
     &:hover,
     &:active,
     &:focus {
       color: $darkest-blue;
+      border-color: inherit;
       background-color: $lightest-green;
     }
 
