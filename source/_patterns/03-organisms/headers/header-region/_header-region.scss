@@ -1,9 +1,39 @@
 /**
  * @file
- * molecules/links/skip-content/_secondary-header-menu.scss
+ * organisms/headers/header-region/header-region.scss
  */
 
 .western-header-region {
+  .block {
+    @include breakpoint($medium) {
+      margin: initial;
+      padding: 0;
+      text-align: left;
+      border: none;
+    }
+    @include breakpoint($large) {
+      font-size: $p-font-size--max--smaller;
+    }
+    @include dark-blue-bg;
+    padding: $standard-spacing;
+    text-align: center;
+    color: $white;
+    border-bottom: solid $border-width--thinner $blue;
+    font-size: $p-font-size--smaller;
+
+    .block__title {
+      margin: 0;
+      font-family: $sans-serif;
+      font-size: $p-font-size;
+      font-weight: $font-weight--regular;
+    }
+
+    a:not([class]) {
+      text-decoration: none;
+      color: $white;
+    }
+  }
+
   .menu {
     @include breakpoint ($small) {
       justify-content: end;
