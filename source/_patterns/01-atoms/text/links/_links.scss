@@ -133,3 +133,19 @@ a {
     }
   }
 }
+
+/* Print styles for general links */
+@media print {
+  p a,
+  ul a {
+    word-break: break-all;
+    color: #003f87 !important;
+
+    page-break-inside: avoid;
+  }
+  p a[href^=http]:after,
+  ul a[href^=http]:after {
+    content: " [" attr(href) "] ";
+    font-size: 10pt;
+  }
+}

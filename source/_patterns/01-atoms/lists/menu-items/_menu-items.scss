@@ -8,8 +8,8 @@
     @include breakpoint($medium) {
       border-left-width: $border-width--thicker;
     }
-    border-left: solid $border-width $light-gray;
     margin-bottom: 0;
+    border-left: solid $border-width $light-gray;
 
     a {
       display: inline-block;
@@ -18,8 +18,30 @@
       margin-bottom: 0;
       padding: $half-spacing ($half-spacing * 4) $half-spacing ($half-spacing * 2);
       transition: $medium-transition-speed $standard-ease background-color;
-      color: $black;
       text-decoration: none;
+      color: $black;
+    }
+  }
+}
+
+@media print {
+  .menu {
+    padding: 0 !important;
+
+    ul {
+      padding: 0;
+    }
+    li {
+      border-left: none !important;
+      a {
+        padding: 0;
+        font-size: 10pt;
+        line-height: 1em;
+
+        &:after {
+          content: " [" attr(href) "] ";
+        }
+      }
     }
   }
 }

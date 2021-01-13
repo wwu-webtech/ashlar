@@ -2,7 +2,7 @@
 * @file
 * organisms/site-header/_site-header.scss
 */
-.site-header {
+.western-header {
   position: relative;
 }
 
@@ -98,6 +98,10 @@
 
   .western-header-region {
     grid-area: western-header-region;
+  }
+
+  @media print {
+    display: none !important;
   }
 }
 
