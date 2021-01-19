@@ -7,8 +7,8 @@
 
 /* Resets for styles when layout builder preview is turned off */
 .layout-builder--content-preview-disabled * {
-    width: initial;
-    min-height: initial;
+  width: initial;
+  min-height: initial;
 }
 
 /* Make block editor widget a little more tolerable for accordion and switcher blocks */
@@ -16,4 +16,14 @@
 #drupal-off-canvas .field--name-field-content-switcher-item tr.draggable,
 #drupal-off-canvas .field--name-field-statistic tr.draggable {
   display: flex;
+}
+
+/* Fix some styles in the layout builder frame */
+#drupal-off-canvas .messages--error {
+  background-repeat: no-repeat;
+  background-position-x: 1%;
+  background-position-y: 50%;
+}
+#drupal-off-canvas .ui-autocomplete li a {
+  color: #63c2ff !important;
 }
