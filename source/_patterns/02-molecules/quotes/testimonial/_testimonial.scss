@@ -74,6 +74,10 @@ $testimonial--credit-circle-size: 18.75rem;
         content: "";
         border-radius: 50%;
         background: transparentize($blue, 0.95);
+
+        @media print {
+          display: none;
+        }
       }
     }
   }
@@ -155,6 +159,10 @@ $testimonial--credit-circle-size: 18.75rem;
         content: "";
         border-radius: 50%;
         background: transparentize($blue, 0.95);
+
+        @media print {
+          display: none;
+        }
       }
     }
 
