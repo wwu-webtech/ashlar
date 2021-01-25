@@ -6,7 +6,7 @@
 .block--countdown {
   padding: $double-spacing;
 
-  ul {
+  div[role="timer"] {
     @include breakpoint($medium) {
       flex-flow: row wrap;
     }
@@ -16,7 +16,7 @@
     margin-top: $double-spacing;
     list-style: none;
 
-    li {
+    p {
       @include breakpoint($medium) {
         border-right: $border-width solid;
       }
