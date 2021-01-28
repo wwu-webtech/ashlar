@@ -25,19 +25,26 @@ $status-icon-size: 4.5rem;
 
   .status {
     @include breakpoint($large) {
-      font-size: $h3-font-size--max;
+      font-size: $h5-font-size--max;
     }
     text-align: center;
-    font-size: $h3-font-size;
+    font-size: $h5-font-size;
     font-weight: $font-weight--bold;
   }
 
   .severity {
-    @include breakpoint($large) {
-      font-size: $h4-font-size--max;
-    }
     text-align: center;
-    font-size: $h4-font-size;
+  }
+
+  summary {
+    @include breakpoint($large) {
+      font-size: $h6-font-size--max;
+    }
+    margin-bottom: $standard-spacing;
+    padding: $half-spacing;
+    cursor: pointer;
+    text-align: center;
+    font-size: $h6-font-size;
   }
 }
 
