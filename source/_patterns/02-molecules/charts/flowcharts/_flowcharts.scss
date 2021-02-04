@@ -2,169 +2,67 @@
 * @file
 * 02-molecules/org-charts/_flowcharts.scss
 */
-$line-color: mix($light-gray, $gray, 50%);
-$max-box-size: 18.75rem;
+$flowchart-item-width: 22.5rem;
 
 .flowchart {
-  position: relative;
-  display: grid;
-  justify-content: center;
-  max-width: $max-content-width;
-  color: $black;
-  font-size: $p-font-size--smaller;
-
   figcaption {
     text-align: center;
   }
-
+  
   ol {
-    position: relative;
+    @include breakpoint($small) {
+      flex-flow: row wrap;
+      justify-content: center;
+    }
     display: flex;
+    flex-flow: column;
+    padding: 0;
     list-style-type: none;
-
-    li {
-      @include breakpoint($medium) {
-        max-width: $max-box-size;
-        margin-right: $double-spacing;
-      }
-      position: relative;
-      margin-top: $standard-spacing;
-
-      span,
-      a {
-        @include breakpoint($medium) {
-          max-width: none;
-          padding: $standard-spacing;
-        }
-        position: relative;
-        display: block;
-        max-width: $max-box-size;
-        margin: 0;
-        margin-top: $standard-spacing;
-        margin-left: $standard-spacing;
-        padding: $half-spacing;
-        text-align: center;
-        text-decoration: none;
-        background: $light-gray;
-      }
-
-      a {
-        color: $white;
-        background: $blue;
-
-        &:hover,
-        &:focus,
-        &:active {
-          color: $dark-blue;
-          background-color: $light-green;
-        }
-      }
-    }
-
-    &.level-a {
-      flex-direction: column;
-    }
-
-    &.level-b {
-      flex-flow: column nowrap;
-      margin-left: -($double-spacing + ($standard-spacing + 0.25rem));
-    }
-
-    &.level-c {
-      @include breakpoint($medium) {
-        display: grid;
-      }
-      flex-flow: column wrap;
-      margin-left: -($triple-spacing + ($standard-spacing / 3));
-    }
-
-    &.level-d {
-      flex-flow: column wrap;
-    }
   }
 
-  &.simple {
-    .level-a {
-      @include breakpoint($medium) {
-        display: grid;
-        align-items: center;
+  li {
+    @include breakpoint($small) {
+      flex-flow: row nowrap;
+      margin: $standard-spacing 0 0;
+    }
+    display: flex;
+    flex-flow: column;
+    max-width: $flowchart-item-width;
+    margin: auto;
 
-        grid-template-columns: repeat(10, auto);
+    &:last-of-type {
+      .flow-right,
+      .flow-left {
+        display: none;
       }
     }
   }
 
-  /*LINES*/
-  &.simple {
-    .level-a {
-      li {
-        /*vertical bars for level-a items on mobile*/
-        > span:after,
-        > a:after {
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          display: block;
-          width: $border-width;
-          height: $standard-spacing;
-          content: "";
-          transform: translate(-50%, ($standard-spacing + 0.375rem));
-          background: $line-color;
-        }
-
-        &:last-of-type > span:after,
-        &:last-of-type > a:after,
-        &:last-child > .level-c:after {
-          display: none;
-        }
-      }
-    }
+  .item {
+    display: flex;
+    align-items: center;
+    padding: $standard-spacing;
   }
-}
 
-@include breakpoint($medium) {
-  .flowchart {
-    &.simple {
-      a {
-        color: $white;
+  .material-icons {
+    display: block;
+  }
 
-        &:active,
-        &:hover,
-        &:focus {
-          color: $white;
-        }
-      }
-
-      .level-a {
-        li {
-          /* horizontal bar for level-a items on desktop */
-          > span:after,
-          > a:after {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            display: block;
-            width: $standard-spacing + $border-width;
-            height: 50%;
-            content: "";
-            transform: translate(-180%);
-            border-top: solid $line-color $border-width;
-            background: transparent;
-          }
-
-          &:first-of-type > span:after,
-          &:first-of-type > a:after,
-          &:first-child > .level-c:after {
-            display: none;
-          }
-
-          &:last-of-type > span:after,
-          &:last-of-type > a:after,
-          &:last-child > .level-c:after {
-            display: block;
-          }
-        }
-      }
+  .flow-down {
+    @include breakpoint($small) {
+      display: none;
     }
+    display: block;
+    margin: auto;
+    padding: $standard-spacing;
+  }
+
+  .flow-right {
+    @include breakpoint($small) {
+      display: block;
+    }
+    display: none;
+    align-self: center;
+    padding: $standard-spacing;
   }
 }
