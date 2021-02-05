@@ -111,7 +111,7 @@
     display: none;
   }
   position: relative;
-  right: 0.5rem;
+  width: initial;
   color: $white;
   border-radius: 0;
   background: transparent;
@@ -150,7 +150,6 @@
   &.open {
     visibility: visible;
     overflow-y: hidden;
-    width: 100%;
   }
 
   &.closed {
