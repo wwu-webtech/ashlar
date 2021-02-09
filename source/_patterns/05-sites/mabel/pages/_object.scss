@@ -115,20 +115,7 @@ body.page-islandora-object {
   }
 }
 
-/* Details tab */
-html.js .islandora-metadata,
-html.js .islandora-metadata.collapsed {
-  margin-bottom: $standard-spacing;
-  padding: $standard-spacing;
-  border: none;
-}
-
-html.js .islandora-metadata.collapsible .fieldset-legend {
-  background-image: none;
-}
-
-
-/* Display Preferences */
+/* Preferences */
 .opendyslexic {
   body.page-islandora-object {
     .layout__region--first {
