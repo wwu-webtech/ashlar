@@ -6,6 +6,7 @@ a#clip {
   @include breakpoint($medium) {
     font-size: $p-font-size--smaller;
   }
+  margin-top: $half-spacing;
   margin-bottom: $standard-spacing;
   margin-left: 0;
   font-size: $p-font-size--smaller;
@@ -44,7 +45,41 @@ a#clip {
   }
 }
 
+/* Detail Lists */
+.islandora-metadata .fieldset-legend {
+  padding: $standard-spacing;
+  color: $dark-blue;
+  font-size: $p-font-size--larger;
+}
 
+.islandora-metadata {
+  margin-bottom: $standard-spacing;
+  border-width: $border-width;
+  border-color: $light-gray;
+  font-size: $p-font-size--smaller;
+}
+
+.side-by-side {
+  dl.islandora-metadata-fields {
+    display: flex;
+    flex-flow: column;
+    margin-top: 0;
+  }
+
+  .islandora-metadata-fields dt {
+    width: 100%;
+    margin-bottom: $half-spacing;
+    text-align: left;
+    border-top: none;
+    border-bottom: solid $border-width--thinner $lightest-gray;
+  }
+
+  .islandora-metadata-fields dd {
+    width: 100%;
+    min-height: 2rem;
+    border: none;
+  }
+}
 
 /* Gray box around objects */
 .islandora-audio-content,
@@ -112,6 +147,12 @@ body.page-islandora-object {
   .layout__region--second {
     position: relative;
     padding-top: $double-spacing;
+  }
+
+  .block--content-switcher {
+    .layout__region--second {
+      padding-top: 0;
+    }
   }
 }
 

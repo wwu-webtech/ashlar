@@ -45,8 +45,8 @@
       background-color: $light-green;
     }
 
-    &:first-child {
-      margin-left: $standard-spacing / 3;
+    &:last-child {
+      margin-right: 0;
     }
 
     .material-icons {
