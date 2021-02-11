@@ -1,38 +1,68 @@
-/* For compound object pages */
+var $tablist = $('.mabel-content-switcher', context);
+var $tabButton = $('.mabel-content-switcher button', context);
+var $panels = $('.mabel-content-switcher-container .content', context);
+var $selectedPanel = $('.mabel-content-switcher-container .content.active', context);
 
-/* When the third tab is clicked, move things from the first two into it */
-var firstTab = document.getElementById('mabel-object-switch-button-1');
-var secondTab = document.getElementById('mabel-object-switch-button-2');
-var thirdTab = document.getElementById('mabel-object-switch-button-3');
+$tabButton.first().addClass('active');
+$panels.first().addClass('active');
 
-var firstContainer = document.getElementById('mabel-object-switch-content-1');
-var secondContainer = document.getElementById('mabel-object-switch-content-2');
-var thirdContainerLeft = document.getElementById('mabel-viewer-container');
-var thirdContainerRight = document.getElementById('mabel-metadata-container');
+var $activeButton = $('.mabel-content-switcher button.active', context);
+var $leftArrow = '<span class="material-icons show" aria-hidden="true">chevron_left</span>';
+var $rightArrow = '<span class="material-icons show" aria-hidden="true">chevron_right</span>';
 
-var imageViewer = document.getElementsByClassName('islandora-large-image-content-wrapper');
-var metadata = document.getElementsByClassName('islandora-metadata');
+$activeButton.attr('aria-selected', 'true');
+$activeButton.prepend($leftArrow);
+$activeButton.append($rightArrow);
+$('.mabel-content-switcher button:not(.active)').attr({
+  'aria-selected': 'false',
+  'tabindex': '-1'
+});
 
-function splitContent() {
-  for(var i = 0; i < imageViewer.length; i++) {
-    firstContainer.appendChild(imageViewer[i]);
+$tabButton.click(function () {
+  var $otherButtons = $('.mabel-content-switcher button');
+  $otherButtons.removeClass('active');
+  $otherButtons.attr('aria-selected', 'false');
+  $otherButtons.attr('tabindex', '-1');
+  $otherButtons.children('.material-icons').remove();
+  var $thisSwitch = $(this).attr('class');
+  $(this).addClass('active');
+  $(this).prepend($leftArrow);
+  $(this).append($rightArrow);
+  $(this).attr('aria-selected', 'true');
+  $(this).removeAttr('tabindex');
+
+  $('.mabel-content-switcher-container .content:not(.' + $thisSwitch + ')').fadeOut(200);
+  $('.mabel-content-switcher-container .content.' + $thisSwitch).fadeIn(200);
+});
+
+$tabButton.keydown(function (event) {
+  var $key = event.keyCode;
+  var $selected = $('.mabel-content-switcher button.active', context);
+  var $selectedPanel = $('#' + $selected.attr('aria-controls'), context);
+
+  if ($key === 37) {
+    // find previous tab, if we are on first => activate last
+    $selectedPanel.removeClass('active');
+    if ($selected.is('.mabel-content-switcher button:first-child')) {
+      $('.mabel-content-switcher button:last-child').click().focus();
+      $('.mabel-content-switcher-container:last-child').addClass('active');
+    }
+    else {
+      $selected.prev($tabButton).click().focus();
+    }
+    event.preventDefault();
   }
 
-  for(var i = 0; i < metadata.length; i++) {
-    secondContainer.appendChild(metadata[i]);
+  if ($key === 39) {
+  // find next tab, if we are on last => activate first
+    $selectedPanel.removeClass('active');
+    if ($selected.is('.mabel-content-switcher button:last-child')) {
+      $('.mabel-content-switcher button:first-child').click().focus();
+      $selectedPanel.addClass('active');
+    }
+    else {
+      $selected.next($tabButton).click().focus();
+    }
+    event.preventDefault();
   }
-}
-
-function mergeContent() {
-  for(var i = 0; i < imageViewer.length; i++) {
-    thirdContainerLeft.appendChild(imageViewer[i]);
-  }
-
-  for(var i = 0; i < metadata.length; i++) {
-    thirdContainerRight.appendChild(metadata[i]);
-  }
-}
-
-firstTab.addEventListener("click", splitContent);
-secondTab.addEventListener("click", splitContent);
-thirdTab.addEventListener("click", mergeContent);
+});
