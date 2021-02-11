@@ -104,6 +104,10 @@
         fill: $light-blue;
       }
     }
+
+    &:focus {
+      border-color: $light-blue;
+    }
   }
 }
 
@@ -365,6 +369,12 @@
   .social-icon {
     svg {
       fill: $blue;
+    }
+  }
+
+  .play-link {
+    &:focus {
+      border-color: $lightest-green;
     }
   }
 }
