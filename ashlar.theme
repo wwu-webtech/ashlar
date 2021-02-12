@@ -321,3 +321,13 @@ function ashlar_preprocess_views_view(&$variables) {
     }
   }
 }
+
+function ashlar_preprocess_breadcrumb(&$variables) {
+  $request = \Drupal::request();
+  $route_match = \Drupal::routeMatch();
+  $page_title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+
+  $variables['breadcrumb'][] = array(
+    'text' => $page_title
+  );
+}

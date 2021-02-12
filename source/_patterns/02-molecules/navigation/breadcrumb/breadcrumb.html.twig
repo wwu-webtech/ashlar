@@ -3,6 +3,10 @@
  * @see templates/navigation/breadcrumb.html.twig
  */
 #}
+
+{% set site_url = url("<current>") %}
+{% set title = 'Breadcrumb' %}
+
 <nav aria-labelledby="system-breadcrumb" class="breadcrumb">
   <h2 id="system-breadcrumb" class="visually-hidden">{{ title }}</h2>
   <ol>
@@ -10,6 +14,8 @@
     <li>
       {% if item.url %}
         <a href="{{ item.url }}">{{ item.text }}</a>
+      {% elseif loop.last %}
+        <a href="{{ site_url }}" class="bold" aria-current="page">{{ item.text }}</a>
       {% else %}
         {{ item.text }}
       {% endif %}
