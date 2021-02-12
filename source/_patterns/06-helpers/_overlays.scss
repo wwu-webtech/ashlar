@@ -1,63 +1,63 @@
 /* Darken bg image to improve contrast as needed, 
 mainly for image buttons and banner images with overlays on top */
 
-.darken-bg-image--10 {
+.image-darker--10 {
   .image,
   .background-image {
     filter: brightness(90%);
   }
 }
 
-.darken-bg-image--20 {
+.image-darker--20 {
   .image,
   .background-image {
     filter: brightness(80%);
   }
 }
 
-.darken-bg-image--30 {
+.image-darker--30 {
   .image,
   .background-image {
     filter: brightness(70%);
   }
 }
 
-.darken-bg-image--40 {
+.image-darker--40 {
   .image,
   .background-image {
     filter: brightness(60%);
   }
 }
 
-.darken-bg-image--50 {
+.image-darker--50 {
   .image,
   .background-image {
     filter: brightness(50%);
   }
 }
 
-.darken-bg-image--60 {
+.image-darker--60 {
   .image,
   .background-image {
     filter: brightness(40%);
   }
 }
 
-.darken-bg-image--70 {
+.image-darker--70 {
   .image,
   .background-image {
     filter: brightness(30%);
   }
 }
 
-.darken-bg-image--80 {
+.image-darker--80 {
   .image,
   .background-image {
     filter: brightness(20%);
   }
 }
 
-.darken-bg-image--90 {
+.image-darker--90 {
   .image,
   .background-image {
     filter: brightness(10%);
