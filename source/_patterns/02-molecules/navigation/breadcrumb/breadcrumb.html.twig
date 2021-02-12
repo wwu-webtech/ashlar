@@ -4,7 +4,6 @@
  */
 #}
 
-{% set site_url = url("<current>") %}
 {% set title = 'Breadcrumb' %}
 
 <nav aria-labelledby="system-breadcrumb" class="breadcrumb">
@@ -15,7 +14,7 @@
       {% if item.url %}
         <a href="{{ item.url }}">{{ item.text }}</a>
       {% elseif loop.last %}
-        <a href="{{ site_url }}" class="bold" aria-current="page">{{ item.text }}</a>
+        <a href="{{ path('<current>') }}" class="bold" aria-current="page">{{ item.text }}</a>
       {% else %}
         {{ item.text }}
       {% endif %}
