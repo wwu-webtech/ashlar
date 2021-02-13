@@ -34,10 +34,13 @@
 %}
 {% set attributes = attributes.addClass(classes) %}
 {% set title_attributes = title_attributes.addClass('system__breadcrumb') %}
+
 {% block template %}
-    {% embed '@molecules/navigation/breadcrumb/breadcrumb.html.twig' %}
+  {% embed '@molecules/navigation/breadcrumb/breadcrumb.html.twig' %}
+
       {% block current %}
-        <a href="{{ path('<current>') }}" class="bold" aria-current="page">{{ item.text }}</a>
+        <a href="{{ path('<current>') }}" class="bold" aria-current="page">{{ item.text }}</a>    
       {% endblock %}
-    {% endembed %}
+      
+  {% endembed %}
 {% endblock %}
