@@ -1,7 +1,13 @@
+attributes:
+  Attribute():
+    class:
+      - block
+      - block--breadcrumb
+      - block--system-breadcrumb-block
 title: Breadcrumb
 breadcrumb:
-- text: Home
-  url: "/"
-- text: Crumb 1
-  url: "/"
-- text: Crumb 2
+  - text: Home
+    url: "/"
+  - text: Crumb 1
+    url: "/"
+  - text: Crumb 2

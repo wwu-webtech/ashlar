@@ -3,25 +3,25 @@
  * @see templates/navigation/breadcrumb.html.twig
  */
 #}
-
 {% set title = 'Breadcrumb' %}
 
-
-<nav aria-labelledby="system-breadcrumb" class="breadcrumb">
-  <h2 id="system-breadcrumb" class="visually-hidden">{{ title }}</h2>
-  <ol>
-  {% for item in breadcrumb %}
-    <li>
-      {% if item.url %}
-        <a href="{{ item.url }}">{{ item.text }}</a>
-      {% elseif loop.last %}
-        {% block current %}
-        <a href="#" class="bold" aria-current="page">{{ item.text }}</a>
-        {% endblock %}
-      {% else %}
-        {{ item.text }}
-      {% endif %}
-    </li>
-  {% endfor %}
-  </ol>
-</nav>
+  <div{{attributes}}>
+  <nav aria-labelledby="system-breadcrumb" class="breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">{{ title }}</h2>
+    <ol>
+    {% for item in breadcrumb %}
+      <li>
+        {% if item.url %}
+          <a href="{{ item.url }}">{{ item.text }}</a>
+        {% elseif loop.last %}
+          {% block current %}
+          <a href="#" class="bold" aria-current="page">{{ item.text }}</a>
+          {% endblock %}
+        {% else %}
+          {{ item.text }}
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ol>
+  </nav>
+  </div>
