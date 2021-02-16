@@ -16,50 +16,10 @@
     margin: auto;
   }
 
-  &.blue-overlay {
-    a:not(.button) {
-      color: $white;
-    }
-  }
-
   &.blue-overlay,
   &.dark-blue-overlay {
     .background-image {
       filter: brightness(50%);
-    }
-  }
-
-  &.dark-blue-overlay,
-  &.black-overlay {
-    a:not(.button) {
-      color: scale-color($light-blue, $lightness: 48%);
-    }
-  }
-
-  &.blue-overlay,
-  &.dark-blue-overlay,
-  &.black-overlay {
-    a:not(.button) {
-      &:hover,
-      &:focus,
-      &:active {
-        color: $dark-blue;
-      }
-
-      &:focus {
-        outline-color: $gray;
-      }
-    }
-  }
-
-
-  &.gray-overlay {
-    a:not(.button) {
-      color: $dark-blue;
-
-      &:focus {
-        outline-color: inherit;
-      }
     }
   }
 }

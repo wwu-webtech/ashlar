@@ -16,7 +16,10 @@
     grid-template-rows: $triple-spacing auto auto $triple-spacing;
     justify-items: end;
   }
-  @include breakpoint($medium) {
+  @include breakpoint($large) {
+    display: -ms-grid;
+    display: grid;
+
     -ms-grid-columns: calc((100vw - #{$max-content-width})/2) auto auto auto calc((100vw - #{$max-content-width})/2);
     grid-template-areas: ". ... ... ... ."
     ". logo statement info  ."
@@ -24,24 +27,8 @@
     ". copyright copyright copyright .";
     grid-template-columns: calc((100vw - #{$max-content-width})/2) auto auto auto calc((100vw - #{$max-content-width})/2);
   }
-  display: -ms-grid;
-  display: grid;
-
-  -ms-grid-columns: $small-screen-columns;
-  -ms-grid-rows: $standard-spacing auto $standard-spacing auto $standard-spacing auto $standard-spacing auto;
-  grid-template-areas: ". ....  ."
-  ". logo  ."
-  ". ....  ."
-  ". statement ."
-  ". ....  ."
-  ". info  ."
-  ". ..... ."
-  ". icons ."
-  ". ..... ."
-  ". copyright .";
-  grid-template-columns: $small-screen-columns;
-  grid-template-rows: repeat(4, $standard-spacing auto);
-  justify-items: center;
+  display: flex;
+  flex-flow: column;
 
   a {
     color: $white;
@@ -57,6 +44,7 @@
 
   .logo {
     @include breakpoint($small) {
+      grid-area: logo;
       -ms-grid-column: 2;
       -ms-grid-column-span: 1;
       -ms-grid-row: 2;
@@ -68,16 +56,12 @@
     }
     width: $logo-size--larger;
     height: $logo-size--larger;
-
-    grid-area: logo;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
+    margin: 0 auto;
   }
 
   .tribal-lands-statement {
     @include breakpoint($small) {
+      grid-area: statement;
       -ms-grid-column: 3;
       -ms-grid-column-span: 1;
       -ms-grid-row: 2;
@@ -86,12 +70,6 @@
     align-self: start;
     padding: 0 $double-spacing;
 
-    grid-area: statement;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    -ms-grid-row: 4;
-    -ms-grid-row-span: 1;
-
     p {
       font-size: $p-font-size--smaller;
       font-weight: $font-weight--light;
@@ -99,22 +77,17 @@
   }
 
   .western-info {
-    @include breakpoint($small) {
+    @include breakpoint($large) {
       align-self: end;
       text-align: right;
 
+      grid-area: info;
       -ms-grid-column: 4;
       -ms-grid-column-span: 1;
       -ms-grid-row: 2;
       -ms-grid-row-span: 1;
     }
     text-align: center;
-
-    grid-area: info;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    -ms-grid-row: 6;
-    -ms-grid-row-span: 1;
   }
 
   .social-media-links {
@@ -122,18 +95,14 @@
       justify-content: end;
       align-content: start;
 
+      grid-area: icons;
       -ms-grid-column: 4;
       -ms-grid-column-span: 1;
       -ms-grid-row: 3;
       -ms-grid-row-span: 1;
     }
     justify-content: center;
-
-    grid-area: icons;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    -ms-grid-row: 8;
-    -ms-grid-row-span: 1;
+    margin: 0.75rem auto;
 
     .social-icon {
       margin: $standard-spacing 0 0 $standard-spacing;
@@ -141,10 +110,13 @@
   }
 
   .copyright {
-    margin: auto;
+    @include breakpoint($small) {
+      margin: auto;
+
+      grid-area: copyright;
+    }
+    text-align: center;
     font-size: $p-font-size--smaller;
     font-weight: $font-weight--light;
-
-    grid-area: copyright;
   }
 }

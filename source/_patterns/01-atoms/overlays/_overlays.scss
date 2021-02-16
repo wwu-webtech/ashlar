@@ -21,23 +21,8 @@ $overlay-transparency: 0.4;
   }
 }
 
-.blue-overlay,
-.dark-blue-overlay,
-.black-overlay {
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    color: $white;
-  }
-}
-
 .blue-overlay {
-  background: $blue;
+  @include blue-bg;
 
   &:after {
     background: transparentize($blue, $overlay-transparency);
@@ -45,7 +30,7 @@ $overlay-transparency: 0.4;
 }
 
 .dark-blue-overlay {
-  background: $dark-blue;
+  @include dark-blue-bg;
 
   &:after {
     background: transparentize($dark-blue, $overlay-transparency);
@@ -53,7 +38,7 @@ $overlay-transparency: 0.4;
 }
 
 .black-overlay {
-  background: $black;
+  @include black-bg;
 
   &:after {
     background: transparentize($black, $overlay-transparency);
@@ -62,6 +47,10 @@ $overlay-transparency: 0.4;
 
 .gray-overlay {
   background: $light-gray;
+
+  a:not([class]) {
+    color: scale-color($link-blue--darker, $lightness: -60%);
+  }
 
   &:after {
     background: transparentize($light-gray, $overlay-transparency);
@@ -109,5 +98,19 @@ $overlay-transparency: 0.4;
 
   &:after {
     background: linear-gradient(to left, $black, transparentize($black, 0.3));
+  }
+}
+
+.blue-overlay,
+.dark-blue-overlay,
+.black-overlay {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: $white;
   }
 }
