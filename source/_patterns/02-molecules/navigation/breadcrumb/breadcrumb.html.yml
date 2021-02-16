@@ -1,9 +1,3 @@
-attributes:
-  Attribute():
-    class:
-      - block
-      - block--breadcrumb
-      - block--system-breadcrumb-block
 breadcrumb:
   - text: Home
     url: "/"
