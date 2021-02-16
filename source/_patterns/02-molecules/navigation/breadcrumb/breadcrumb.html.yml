@@ -4,7 +4,6 @@ attributes:
       - block
       - block--breadcrumb
       - block--system-breadcrumb-block
-title: Breadcrumb
 breadcrumb:
   - text: Home
     url: "/"
