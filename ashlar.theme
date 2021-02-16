@@ -63,18 +63,6 @@ function ashlar_preprocess_block(&$variables) {
   if (isset($variables['elements']['content']['#block_content'])) {
     $variables['block_content'] = $variables['elements']['content']['#block_content'];
   }
-
-  if (isset($variables['title'])) {
-    if ($variables['title'] === 'Breadcrumb') {
-      $request = \Drupal::request();
-      $route_match = \Drupal::routeMatch();
-      $page_title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
-
-      $variables['elements']['content']['#links'][] = array(
-        'text' => $page_title
-      );
-    }
-  }
 }
 
 /**
