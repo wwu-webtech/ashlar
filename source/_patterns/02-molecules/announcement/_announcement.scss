@@ -89,6 +89,10 @@
   &.layout-builder-block {
     padding: 0;
   }
+
+  &.full-width {
+    max-width: none;
+  }
 }
 
 .dark-mode {
@@ -114,5 +118,5 @@
 .atkinson {
   .block__title {
     font-family: $atkinson;
-  }  
+  }
 }

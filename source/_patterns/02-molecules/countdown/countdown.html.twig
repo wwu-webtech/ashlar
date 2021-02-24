@@ -5,20 +5,12 @@
       {% include "@atoms/text/label/label.twig" %}
     {% endblock %}
 
-    <ul role="timer">
-      <li id="days-item">
-        <span class="number" id="days">0</span> Days
-      </li>
-      <li id="hours-item">
-        <span class="number" id="hours">0</span> Hours
-      </li>
-      <li id="minutes-item">
-        <span class="number" id="minutes">0</span> Minutes
-      </li>
-      <li id="seconds-item">
-        <span class="number" id="seconds">0</span> Seconds
-      </li>
-    </ul>
+    <div role="timer" aria-label="{{ block_content.field_accessible_label.0.value }}">
+      <p id="days-item"><span class="number" id="days">0</span> Days</p>
+      <p id="hours-item"><span class="number" id="hours">0</span> Hours</p>
+      <p id="minutes-item"><span class="number" id="minutes">0</span> Minutes</p>
+      <p id="seconds-item"><span class="number" id="seconds">0</span> Seconds</p>
+    </div>
 
     <div id="announced-time" aria-live="polite" aria-atomic="true" class="visually-hidden"></div>
   </div>

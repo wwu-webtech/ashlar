@@ -36,6 +36,11 @@ $search-input-size: 12.5rem;
       width: 5.45em;
     }
     order: 2;
+    border: $focus-outline--thicker transparent;
+
+    &:focus {
+      border-color: inherit;
+    }
   }
 
   .search-area {
@@ -61,7 +66,7 @@ $search-input-size: 12.5rem;
   }
 }
 
-.opendyslexic{
+.opendyslexic {
   .search .search-area .search-box {
     input {
       font-size: $dyslexic-icon-smaller;

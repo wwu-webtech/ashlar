@@ -104,6 +104,10 @@
         fill: $light-blue;
       }
     }
+
+    &:focus {
+      border-color: $light-blue;
+    }
   }
 }
 
@@ -367,6 +371,12 @@
       fill: $blue;
     }
   }
+
+  .play-link {
+    &:focus {
+      border-color: $lightest-green;
+    }
+  }
 }
 
 @mixin light-blue-bg {
@@ -539,8 +549,8 @@
 }
 
 .dark-mode {
-  background-color: $dark-mode-black;
   @include dark-mode-links;
+  background-color: $dark-mode-black;
 }
 
 .gray-bg {
@@ -601,5 +611,40 @@
 
   .blue-bg {
     @include dark-blue-bg;
+  }
+}
+
+/* Print styles */
+@media print {
+  .black-bg,
+  .gray-bg,
+  .light-gray-bg,
+  .lightest-gray-bg,
+  .dark-blue-bg,
+  .darkest-blue-bg,
+  .blue-bg,
+  .light-blue-bg,
+  .lightest-blue-bg,
+  .dark-green-bg,
+  .green-bg,
+  .light-green-bg,
+  .dark-blue-gradient-bg,
+  .blue-gradient-bg {
+    color: $black;
+    border: solid $border-width--thinner $black;
+    background-color: $white;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $dark-blue;
+    }
+
+    .block--beyond-basics-block {
+      padding: 0.8rem;
+    }
   }
 }

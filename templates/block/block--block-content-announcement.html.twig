@@ -30,6 +30,9 @@
     'block',
     'block--announcement',
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
+    block_content.field_font_size.0.value,
+    block_content.field_heading_style.0.value,
+    block_content.field_custom_classes.0.value
   ]
 %}
 {% set attributes = attributes.addClass(classes) %}

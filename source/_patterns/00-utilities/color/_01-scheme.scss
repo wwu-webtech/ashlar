@@ -73,11 +73,13 @@ $alert-color: $red;
     }
   }
 
+  p,
   h2,
   h3,
   h4,
   h5,
   h6,
+  details,
   .status-color {
     color: mix($blend, $color, 65%);
   }

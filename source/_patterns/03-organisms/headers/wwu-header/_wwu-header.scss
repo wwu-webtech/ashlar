@@ -2,25 +2,27 @@
 * @file
 * organisms/site-header/_site-header.scss
 */
-.site-header {
+.western-header {
   position: relative;
 }
 
 .western-header {
   @include breakpoint($medium) {
-    grid-template-areas: "logo display-settings wwu-menu"
-    "logo site-name site-name"
-    "logo western-header-region western-header-region"
-    "main-nav main-nav main-nav";
+    grid-template-areas:
+      "logo display-settings wwu-menu"
+      "logo site-name site-name"
+      "logo western-header-region western-header-region"
+      "main-nav main-nav main-nav";
     grid-template-columns: ($logo-size + ($triple-spacing * 2)) 1fr 2fr;
     grid-template-rows: ($logo-size / 3) ($logo-size / 3) auto auto;
   }
   display: grid;
   background-color: $dark-blue;
 
-  grid-template-areas: ".... logo menu-toggle"
-  "site-name site-name site-name"
-  "western-header-region western-header-region western-header-region";
+  grid-template-areas:
+    ".... logo menu-toggle"
+    "site-name site-name site-name"
+    "western-header-region western-header-region western-header-region";
   grid-template-columns: $toggle-size auto $toggle-size;
   grid-template-rows: $logo-size auto auto;
 
@@ -63,6 +65,10 @@
       &:focus {
         color: $dark-blue;
       }
+
+      &:focus {
+        outline-color: $light-gray;
+      }
     }
   }
 
@@ -99,6 +105,10 @@
   .western-header-region {
     grid-area: western-header-region;
   }
+
+  @media print {
+    display: none !important;
+  }
 }
 
 /* Mobile Menu */
@@ -107,7 +117,7 @@
     display: none;
   }
   position: relative;
-  right: 0.5rem;
+  width: initial;
   color: $white;
   border-radius: 0;
   background: transparent;
@@ -137,16 +147,16 @@
   opacity: 1;
   background-color: $dark-blue;
 
-  grid-template-areas: "display-settings menu-toggle"
-  "wwu-menu wwu-menu"
-  "main-nav main-nav";
+  grid-template-areas:
+    "display-settings menu-toggle"
+    "wwu-menu wwu-menu"
+    "main-nav main-nav";
   grid-template-columns: auto $toggle-size;
   grid-template-rows: $toggle-size auto auto;
 
   &.open {
     visibility: visible;
     overflow-y: hidden;
-    width: 100%;
   }
 
   &.closed {

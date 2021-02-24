@@ -21,6 +21,12 @@ h6 {
   line-height: $heading-line-height;
 
   font-display: fallback;
+
+  @media print {
+    margin-bottom: 0;
+
+    page-break-inside: avoid;
+  }
 }
 
 h1 {
@@ -44,6 +50,10 @@ h1 {
     border-width: 0.12em;
     border-style: solid;
   }
+
+  @media print {
+    font-size: 24pt;
+  }
 }
 
 h2 {
@@ -53,6 +63,10 @@ h2 {
   color: $dark-blue;
   font-size: $h2-font-size;
   font-weight: $font-weight--bold;
+
+  @media print {
+    font-size: 22pt;
+  }
 }
 h3 {
   @include breakpoint($large) {
@@ -61,6 +75,10 @@ h3 {
   color: mix($blue, $dark-blue, 50%);
   font-size: $h3-font-size;
   font-weight: $font-weight--semibold;
+
+  @media print {
+    font-size: 19pt;
+  }
 }
 h4 {
   @include breakpoint($large) {
@@ -68,6 +86,10 @@ h4 {
   }
   font-size: $h4-font-size;
   font-weight: $font-weight--regular;
+
+  @media print {
+    font-size: 17pt;
+  }
 }
 h5 {
   @include breakpoint($large) {
@@ -75,12 +97,20 @@ h5 {
   }
   font-size: $h5-font-size;
   font-weight: $font-weight--regular;
+
+  @media print {
+    font-size: 16pt;
+  }
 }
 h6 {
   @include breakpoint($large) {
     font-size: $h6-font-size--max;
   }
   font-size: $h6-font-size;
+
+  @media print {
+    font-size: 14pt;
+  }
 }
 
 h2 + h3,

@@ -53,7 +53,11 @@ function set_initial_theme() {
     body.classList.add(selected_theme);
     return;
   } else {
-    localStorage.setItem("wwu_preferred_theme", "default-theme");
+    try {
+      localStorage.setItem("wwu_preferred_theme", "default-theme");
+    } catch(e) {
+      return;
+    }
     return;
   }
 }
@@ -66,7 +70,12 @@ function select_theme() {
   body.classList.remove(previous_theme);
   body.classList.add(selected_theme);
 
-  localStorage.setItem('wwu_preferred_theme', selected_theme);
+  try {
+    localStorage.setItem('wwu_preferred_theme', selected_theme);
+  } catch(e) {
+    return;
+  }
+
 }
 
 // Set font in local storage
@@ -82,7 +91,11 @@ function set_font_preference() {
     body.classList.add(selected_font);
     return;
   } else {
-    localStorage.setItem("wwu_preferred_font", "default-font");
+    try {
+      localStorage.setItem("wwu_preferred_font", "default-font");
+    } catch(e) {
+      return;
+    }
     return;
   }
 }
@@ -95,7 +108,11 @@ function select_font() {
   body.classList.remove(previous_font);
   body.classList.add(selected_font);
 
-  localStorage.setItem('wwu_preferred_font', selected_font);
+  try {
+    localStorage.setItem('wwu_preferred_font', selected_font);
+  } catch(e) {
+    return;
+  }
 }
 
 function global_reset(event) {
@@ -106,14 +123,18 @@ function global_reset(event) {
     if ((current_theme_value !== 'default-theme') || (current_font_value !== 'default-font')) {
       var theme_default = theme_options.querySelector('input[value="default-theme"]');
       var font_default = font_options.querySelector('input[value="default-font"]');
-  
-      localStorage.setItem("wwu_preferred_theme", "default-theme");
-      localStorage.setItem("wwu_preferred_font", "default-font");
+
+      try {
+        localStorage.setItem("wwu_preferred_theme", "default-theme");
+        localStorage.setItem("wwu_preferred_font", "default-font");
+      } catch(e) {
+        return;
+      }
       body.classList.add("default-theme", "default-font");
       body.classList.remove("dark-mode", "opendyslexic", "atkinson", "serif");
       theme_default.checked = true;
       font_default.checked = true;
-    }  
+    }
   };
 }
 

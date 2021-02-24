@@ -380,6 +380,13 @@ input[type="submit"] {
       box-shadow: $soft-button-shadow--hover;
     }
   }
+
+  &:after {
+    @media print {
+      content: " [" attr(href) "] ";
+      font-size: 10pt;
+    }
+  }
 }
 
 /* Admin toolbar button overrides */
