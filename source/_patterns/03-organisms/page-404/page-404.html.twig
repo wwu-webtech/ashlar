@@ -1,19 +1,18 @@
 {% embed '@organisms/page-template/page-template.html.twig' %}
 
-  {% block splash %}
-  {% endblock %}
+{% block main_navigation %}
+<div class="nav--404">
+  {{ page.main_navigation }}
+</div>
+{% endblock %}
 
-  {% block main_navigation %}
-  <div class="nav--404">
-    {{ page.main_navigation }}
-  </div>
-  {% endblock %}
-
-  {% block content %}
+{% block content %}
+<main>
+  <span id="main-content" tabindex="-1"></span>
   <div class="wrapper--404">
     <div class="svg-box">
-      <svg role="img" aria-labelledby="404-graphic" class="vikingship" viewBox="0 0 2500 1050">
-      <title id="404-graphic">A small viking ship rocking on waves, nestled in a rocky cove. Rendered as a playful, flat illustration.</title>
+      <svg role="img" aria-labelledby="graphic-404" class="vikingship" viewBox="0 0 2500 1050">
+        <title id="graphic-404">A small viking ship rocking on waves, nestled in a rocky cove. Rendered as a playful, flat illustration.</title>
         <g id="Sky">
           <path id="Sky_1_" class="vik-st0" d="M0 0h2500v761.2H0z"></path>
         </g>
@@ -85,13 +84,12 @@
       </svg>
     </div>
 
-    <main>
-      <span id="main-content" tabindex="-1"></span>
-      <div class="text dark-blue-bg big-bold-headings">
-        <h1>404 not found</h1>
-        <p class="tagline">You are in uncharted waters</p>
-      </div>
-    </main>
-    {% endblock %}
+    <div class="text dark-blue-bg big-bold-headings">
+      <h1>404 not found</h1>
+      <p class="tagline">You are in uncharted waters</p>
+    </div>
+  </div>
+</main>
+{% endblock %}
 
-  {% endembed %}
+{% endembed %}

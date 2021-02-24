@@ -40,19 +40,19 @@ function position_elements() {
 }
 
 function hide_page_elements() {
-  header.style.display = "none";
-  splash.style.display = "none";
-  content.style.display = "none";
-  footer.style.display = "none";
+  if (header) { header.style.display = "none"; }
+  if (splash) { splash.style.display = "none"; }
+  if (content) { content.style.display = "none"; }
+  if (footer) { footer.style.display = "none"; }
 
   mobile_menu_wrapper.removeEventListener("transitionend", hide_page_elements);
 }
 
 function show_page_elements() {
-  header.style.display = "grid";
-  splash.style.display = "grid";
-  content.style.display = "grid";
-  footer.style.display = "block";
+  if (header) { header.style.display = "grid"; }
+  if (splash) { splash.style.display = "grid"; }
+  if (content) { content.style.display = "grid"; }
+  if (footer) { footer.style.display = "block"; }
 }
 
 function set_focus() {
