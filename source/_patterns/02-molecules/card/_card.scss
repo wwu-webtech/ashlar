@@ -10,14 +10,15 @@
   grid-column-gap: $standard-spacing;
   -ms-grid-columns: 1fr 1fr;
   -ms-grid-rows: auto 1fr;
-  grid-template-areas: "image taxonomy"
-  "image title"
-  "image body";
+  grid-template-areas:
+    "image taxonomy"
+    "image title"
+    "image body";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto 1fr;
 
   > div {
-    @include breakpoint ($medium) {
+    @include breakpoint($medium) {
       padding: $triple-spacing;
       padding-left: $double-spacing;
     }
@@ -110,6 +111,16 @@
       &:after {
         box-shadow: $focus-shadow;
       }
+    }
+  }
+
+  &:focus-within {
+    a:after {
+      @include breakpoint($medium) {
+        outline: $focus-outline--thicker $dark-blue;
+      }
+      outline: $focus-outline $dark-blue;
+      outline-offset: $border-width--thicker;
     }
   }
 

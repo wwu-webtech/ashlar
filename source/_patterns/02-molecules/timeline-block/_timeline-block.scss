@@ -34,6 +34,7 @@ $timeline-translate-neg: calc(-100% - (#{$min-timeline-font-size} + #{strip-unit
     padding: $standard-spacing $double-spacing;
     white-space: nowrap;
     color: $white;
+    background-color: $blue;
     font-family: $sans-serif;
     font-size: $timeline-font-size;
     line-height: 1em;
