@@ -132,6 +132,10 @@
     background: $lightest-green;
     box-shadow: none;
   }
+
+  &:focus {
+    outline-color: $darkest-blue;
+  }
 }
 
 .mobile-menu {
