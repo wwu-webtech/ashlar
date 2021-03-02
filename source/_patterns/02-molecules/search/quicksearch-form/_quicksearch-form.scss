@@ -28,28 +28,18 @@
         background-color: mix(white, $dark-blue, 60%);
       }
 
-      &.ln-disabled {
-        color: mix(black, $gray, 30%);
-        font-weight: $font-weight--regular;
-        text-decoration: none;
-        border-bottom-color: transparent;
-
-        &:hover,
-        &:focus,
-        &:active {
-          background: transparent;
-          outline: none;
-        }
+      @include breakpoint($medium) {
+        margin-right: 0;
+        margin-bottom: 0;
       }
-
-        @include breakpoint($medium) {
-          margin-right: 0;
-          margin-bottom: 0;
-        }
-      }
-
     }
   }
+
+  .ln-disabled {
+    color: mix(black, $gray, 30%);
+    font-weight: $font-weight--regular;
+  }
+}
 
 /* Form block styles */
 .quicksearch-form-container {
@@ -68,7 +58,8 @@
     width: calc(100% - #{$standard-spacing});
     border-color: scale-color($gray, $lightness: 50%);
 
-    &:focus, &:active {
+    &:focus,
+    &:active {
       border-color: $light-blue;
     }
   }
