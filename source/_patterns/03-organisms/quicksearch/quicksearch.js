@@ -36,13 +36,17 @@ var $letterMenu = $("#quick-search-list-nav");
  * The interval is used because the buttons are added dynamically, so
  * we must wait for them to be present.*/
 var checkForLetters = setInterval(function () {
-  var letterDisabled = $(".ln-disabled");
+  var $letters = $letterMenu.find("a");
+  $letters.each(function () {
+    var $letter = $(this);
 
-  if (letterDisabled.length) {
-    letterDisabled.removeAttr("href");
-    letterDisabled.attr("tabindex", "-1").attr("aria-disabled", "true");
-    clearTimeout(checkForLetters);
-  }
+    if ($letter.hasClass("ln-disabled")) {
+      $letter.replaceWith(
+        '<span class="ln-disabled">' + $letter.text() + "</span>"
+      );
+    }
+  });
+  clearTimeout(checkForLetters);
 }, 100);
 
 // Hide the letter-selection menu once the user has typed something in:
