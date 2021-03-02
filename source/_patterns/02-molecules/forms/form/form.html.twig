@@ -3,6 +3,21 @@
  * @see templates/form/form.html.twig
  */
 #}
+
+{% set text_attributes = create_attribute() %}
+
+{% set text_classes = [
+    'double-margin--bottom', 
+    'webform-required-text',
+    ] 
+%}
+
+{% block form_help %}
+<p{{ text_attributes.addClass(text_classes) }}>
+    <em>Required fields are marked with an asterisk (*).</em>
+</p>
+{% endblock %}
+
 <form{{ attributes }}>
   {{ children }}
 </form>
