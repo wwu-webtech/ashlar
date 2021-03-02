@@ -249,7 +249,6 @@ limitations under the License.
                         .attr('aria-expanded', 'false')
                         .removeClass(settings.openClass)
                         .filter('.' + settings.panelClass)
-                        // .attr('aria-hidden', 'true');
                     if ((event.type === 'keydown' && event.keyCode === Keyboard.ESCAPE) || event.type === 'DOMAttrModified') {
                         newfocus = topli.find(':tabbable:first');
                         setTimeout(function () {
@@ -263,7 +262,6 @@ limitations under the License.
                         .attr('aria-expanded', 'false')
                         .removeClass(settings.openClass)
                         .filter('.' + settings.panelClass)
-                        // .attr('aria-hidden', 'true');
                 }
             } else {
                 clearTimeout(that.focusTimeoutID);
@@ -272,12 +270,10 @@ limitations under the License.
                     .attr('aria-expanded', 'false')
                     .removeClass(settings.openClass)
                     .filter('.' + settings.panelClass)
-                    // .attr('aria-hidden', 'true');
                 topli.find('[aria-expanded]')
                     .attr('aria-expanded', 'true')
                     .addClass(settings.openClass)
                     .filter('.' + settings.panelClass)
-                    // .attr('aria-hidden', 'false');
 
                 var pageScrollPosition = $('html')[0].scrollTop;
                 var openPanelTopPosition = $('.' + settings.panelClass + '.' + settings.openClass).parent().offset().top;
@@ -508,7 +504,6 @@ limitations under the License.
                             .attr('aria-expanded', 'true')
                             .addClass(settings.openClass)
                             .filter('.' + settings.panelClass)
-                            // .attr('aria-hidden', 'false')
                             .find(':tabbable:last')
                             .focus() === 1);
                     }
@@ -565,7 +560,6 @@ limitations under the License.
                             .attr('aria-expanded', 'true')
                             .addClass(settings.openClass)
                             .filter('.' + settings.panelClass)
-                            // .attr('aria-hidden', 'false')
                             .find(':tabbable:last')
                             .focus();
                     }
@@ -835,7 +829,6 @@ limitations under the License.
 
                         topnavitempanel.attr({
                             "aria-expanded": false,
-                            // "aria-hidden": true
                         })                            
                             .not("[aria-labelledby]")
                             .attr("aria-labelledby", topnavitemlink.attr("id"));
