@@ -108,7 +108,7 @@ This command will run if you are contributing to Ashlar development, when pushin
 
 **"Failed to run"/"ERR_CONNECTION_REFUSED"**
 
-This error usually means the Pattern Lab server shut off, and the crawler can't access the localhost URLs. Double check that the Pattern Lab server is by running `php pattern-lab/core/console --server --port 8000`.  
+This error usually means the Pattern Lab server shut off, and the crawler can't access the localhost URLs. Check the Pattern Lab server is on by running `php pattern-lab/core/console --server --port 8000`.  
 
 **"Chromium isn’t installed" Error**
 
