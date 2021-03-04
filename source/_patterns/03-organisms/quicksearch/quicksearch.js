@@ -1,31 +1,31 @@
 /**
-* @file
-* Quick search and filter functions.
-*
-* Some logic to get listnav and quicksearch to play nice together. We want
-* them to share the same "no results" message, as well as properly function
-* as an intersection. That is, each search method should be able to filter
-* the results of the other.
-*
-* This is achieved by giving each filter it's own classes to "show" and
-* "hide" each result. A result is only shown if it has the ".listNavShow" and
-* ".quickSearchShow" classes. In addition, the "no results" message is only
-* shown if there are no results matching this selector.
-*
-* This code relies on the TODO: id attribute attached to the "majors_index" view in
-* the views_view_list preprocessor function.
-*/
+ * @file
+ * Quick search and filter functions.
+ *
+ * Some logic to get listnav and quicksearch to play nice together. We want
+ * them to share the same "no results" message, as well as properly function
+ * as an intersection. That is, each search method should be able to filter
+ * the results of the other.
+ *
+ * This is achieved by giving each filter it's own classes to "show" and
+ * "hide" each result. A result is only shown if it has the ".listNavShow" and
+ * ".quickSearchShow" classes. In addition, the "no results" message is only
+ * shown if there are no results matching this selector.
+ *
+ * This code relies on the id attribute attached to the "majors_index" view in
+ * the views_view_list preprocessor function.
+ */
 
 // The ul element to be filtered
-var $list = $('#quick-search-list', context);
+var $list = $("#quick-search-list", context);
 // Search form.
-var $form = $('#quick-search-form', context);
+var $form = $("#quick-search-form", context);
 // Search box (input).
-var $input = $('#quick-search-input', context);
+var $input = $("#quick-search-input", context);
 // Container.
 var $wrapper = $(".quick-search-container");
 // Text that announces how many results are shown
-var $results_text = $('#quick-search-results-text');
+var $results_text = $("#quick-search-results-text");
 // Letter selection menu.
 var $letterMenu = $("#quick-search-list-nav");
 
@@ -36,18 +36,26 @@ var $letterMenu = $("#quick-search-list-nav");
  * The interval is used because the buttons are added dynamically, so
  * we must wait for them to be present.*/
 var checkForLetters = setInterval(function () {
-  var letterDisabled = $(".ln-disabled");
+  var $letters = $letterMenu.find("a");
 
-  if (letterDisabled.length) {
-    letterDisabled.removeAttr("href");
-    letterDisabled.attr("tabindex", "-1").attr("aria-disabled", "true");
-    clearTimeout(checkForLetters);
-  }
+  $letters.each(function () {
+    var $letter = $(this);
+    var $spanWrapper =
+      "<span class='ln-disabled'>" + $letter.text() + "</span>";
+    var $inactiveText =
+      "<span class='visually-hidden' role='presentation'>, inactive</span>";
+
+    $letter.wrap("<p class='no-margin--bottom'></p>");
+
+    if ($letter.hasClass("ln-disabled")) {
+      $letter.replaceWith($spanWrapper + $inactiveText);
+    }
+  });
+  clearTimeout(checkForLetters);
 }, 100);
 
 // Hide the letter-selection menu once the user has typed something in:
 $input.on("keyup", function () {
-
   if (!$(".ln-selected").hasClass("all")) {
     /* Simulate a user clicking on the "all" label, and then refocusing
     on input box:*/
@@ -55,27 +63,24 @@ $input.on("keyup", function () {
     $($input).focus();
   }
 
-  if ($input.val() == "")
-  $letterMenu.fadeIn();
-  else
-  $letterMenu.fadeOut();
+  if ($input.val() == "") $letterMenu.fadeIn();
+  else $letterMenu.fadeOut();
 });
 
 // Setup variables for timer.
-var typingTimer;                // Timer identifier.
-var doneTypingInterval = 500;   // Time in ms.
+var typingTimer; // Timer identifier.
+var doneTypingInterval = 500; // Time in ms.
 
 // On keyup, start the countdown => this is used to detect when user is done typing (for the moment)
 $input.keyup(function () {
   clearTimeout(typingTimer);
-  if ($input.val())
-  typingTimer = setTimeout(showResults, doneTypingInterval);
+  if ($input.val()) typingTimer = setTimeout(showResults, doneTypingInterval);
 });
 
 /* This function will run once the user has stopped typing --
 this is implemented in order to avoid repeated flashing of results on the
 screen while the list is filtering.*/
-function showResults(){
+function showResults() {
   // Flash list so screen reader knows content was added.
   $list.fadeOut(10);
   setTimeout(function () {
@@ -84,16 +89,16 @@ function showResults(){
 }
 
 /* ====End of UX features===*/
-var $init_check = $('.ln-letters').length;
+var $init_check = $(".ln-letters").length;
 
 // Initialize index.
-if ( !$init_check ) {
-  $('#quick-search-list').listnav({
-    'includeAll': true,
-    'includeNums': false,
-    'noMatchText': 'No matching results.',
-    'showCounts': false,
-    'onClick': noResultsCheck
+if (!$init_check) {
+  $("#quick-search-list").listnav({
+    includeAll: true,
+    includeNums: false,
+    noMatchText: "No matching results.",
+    showCounts: false,
+    onClick: noResultsCheck,
   });
 }
 
@@ -102,28 +107,28 @@ $("#quick-search-list-nav .ln-letters > a").on("click touchstart", function () {
 });
 
 // Initialize index classes so that the no results check works correctly.
-$list.children('li').addClass('listNavShow');
+$list.children("li").addClass("listNavShow");
 
 // Initialize search.
-if ( !$init_check ){
-  $input.quicksearch('#quick-search-list li', {
-    'delay': 100,
-    'noResults': $results_text,
-    'show': function () {
-      var $item = $(this).closest('li').not('.ln-no-match.listNavHide');
+if (!$init_check) {
+  $input.quicksearch("#quick-search-list li", {
+    delay: 100,
+    noResults: $results_text,
+    show: function () {
+      var $item = $(this).closest("li").not(".ln-no-match.listNavHide");
 
       // Provide a custom class for quicksearch matches.
-      $item.addClass('quickSearchShow');
-      $item.removeClass('quickSearchHide');
+      $item.addClass("quickSearchShow");
+      $item.removeClass("quickSearchHide");
     },
-    'hide': function () {
-      var $item = $(this).closest('li');
+    hide: function () {
+      var $item = $(this).closest("li");
 
       // Provide a custom class for quicksearch non-matches.
-      $item.removeClass('quickSearchShow');
-      $item.addClass('quickSearchHide');
+      $item.removeClass("quickSearchShow");
+      $item.addClass("quickSearchHide");
     },
-    'onAfter': noResultsCheck
+    onAfter: noResultsCheck,
   });
 }
 
@@ -136,21 +141,19 @@ $form.submit(function (event) {
 // Check that the no results message is displayed correctly.
 function noResultsCheck() {
   // Number of results shown by both filters.
-  var results = $list.children('.listNavShow.quickSearchShow').length;
-  var heading = $wrapper.find('.results-text-heading');
+  var results = $list.children(".listNavShow.quickSearchShow").length;
+  var heading = $wrapper.find(".results-text-heading");
 
-  $results_text.css('display', 'block');
+  $results_text.css("display", "block");
 
   if (results === 0) {
-    $results_text.html('No matching results');
+    $results_text.html("No matching results");
     heading.hide();
-  }
-  else if (results === 1) {
-    $results_text.html(results + ' result');
+  } else if (results === 1) {
+    $results_text.html(results + " result");
     heading.show();
-  }
-  else {
-    $results_text.html(results + ' results');
+  } else {
+    $results_text.html(results + " results");
     heading.show();
   }
 }
