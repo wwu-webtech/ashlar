@@ -1,0 +1,37 @@
+<div{{ attributes }}>
+  <h2{{ title_attributes }}>
+    Schedule of Events
+  </h2>
+
+  {% for item in items %}
+  <div>
+    {% block paragraph %}
+      <div class="schedule-item">
+        {% block content %}
+          {% if item.field_link %}
+            <a href="{{ item.field_link }}">
+          {% endif %}
+            {% if item.field_item_heading_level %}
+              <{{ item.field_item_heading_level }} class="schedule-heading">
+                {{ item.field_time }}
+                {{ item.field_item_label }}
+              </{{ item.field_item_heading_level }}>
+            {% else %}
+              <div class="statistic-heading">
+                {{ item.field_time }}
+                {{ item.field_item_label }}
+              </div>
+            {% endif %}
+          {% if item.field_link %}
+            </a>
+          {% endif %}
+
+          <div class="content">
+            {{ item.field_content }}
+          </div>
+        {% endblock %}
+      </div>
+    {% endblock paragraph %}
+  </div>
+  {% endfor %}
+</div>

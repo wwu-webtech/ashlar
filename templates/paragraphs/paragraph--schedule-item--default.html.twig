@@ -42,6 +42,7 @@
   set classes = [
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
+    'schedule-item',
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
@@ -58,7 +59,7 @@
             {{ content.field_item_label }}
           </{{ content.field_item_heading_level.0['#markup'] }}>
         {% else %}
-          <div class="statistic-heading">
+          <div class="schedule-heading">
             {{ content.field_time }}
             {{ content.field_item_label }}
           </div>
