@@ -13,13 +13,13 @@
           {% endif %}
             {% if item.field_item_heading_level %}
               <{{ item.field_item_heading_level }} class="schedule-heading">
-                {{ item.field_time }}
-                {{ item.field_item_label }}
+                <span class="time">{{ item.field_time }}</span>
+                <span class="label">{{ item.field_item_label }}</span>
               </{{ item.field_item_heading_level }}>
             {% else %}
               <div class="statistic-heading">
-                {{ item.field_time }}
-                {{ item.field_item_label }}
+                <span class="time">{{ item.field_time }}</span>
+                <span class="label">{{ item.field_item_label }}</span>
               </div>
             {% endif %}
           {% if item.field_link %}

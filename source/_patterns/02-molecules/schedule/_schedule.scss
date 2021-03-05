@@ -1,0 +1,62 @@
+/**
+* @file
+* molecules/schedule/_schedule.scss
+*/
+
+.block--schedule {
+  .schedule-item {
+    position: relative;
+    margin-bottom: $one-point-five-spacing;
+    padding: $standard-spacing;
+    border-radius: $one-point-five-spacing;
+
+    a:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: -$one-point-five-spacing;
+      content: "";
+      transition: $standard-ease;
+    }
+
+    a:hover:after,
+    &:focus-within {
+      border-radius: $one-point-five-spacing;
+      box-shadow: $focus-shadow;
+    }
+
+    a:focus {
+      outline: none;
+    }
+
+    a:focus:after {
+      outline: $focus-outline;
+      outline-offset: $border-width--thicker;
+    }
+  }
+
+  .schedule-heading {
+    margin: 0;
+    line-height: 1em;
+  }
+
+  .time,
+  .label {
+    @include breakpoint($large) {
+      font-size: $h5-font-size--max--smaller;
+    }
+    display: block;
+    font-size: $h5-font-size--smaller;
+  }
+
+  div:nth-of-type(odd) .schedule-item {
+    border-left: solid $blue $one-point-five-spacing;
+    background-color: $lightest-bg-blue;
+  }
+
+  div:nth-of-type(even) .schedule-item {
+    border-left: solid $light-blue $one-point-five-spacing;
+    background-color: $lightest-bg-blue;
+  }
+}
