@@ -45,7 +45,7 @@ var checkForLetters = setInterval(function () {
     var $inactiveText =
       "<span class='visually-hidden' role='presentation'>, inactive</span>";
 
-    $letter.wrap("<p class='no-margin--bottom'></p>");
+    $letter.wrap("<p></p>");
 
     if ($letter.hasClass("ln-disabled")) {
       $letter.replaceWith($spanWrapper + $inactiveText);
