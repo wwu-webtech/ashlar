@@ -320,6 +320,8 @@ function ashlar_preprocess_views_view(&$variables) {
         $variables['#attached']['library'][] = 'ashlar/profile';
       case 'profile_page':
       case 'taxonomy_term':
+      case 'we_admit_community_college':
+      case 'we_admit_high_school':
         $variables['#attached']['library'][] = 'ashlar/breadcrumb-viewpage';
     }
   }
