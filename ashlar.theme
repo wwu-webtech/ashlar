@@ -318,6 +318,9 @@ function ashlar_preprocess_views_view(&$variables) {
       case 'profile_page':
       case 'social_media_directory':
         $variables['#attached']['library'][] = 'ashlar/profile';
+      case 'profile_page':
+      case 'taxonomy_term':
+        $variables['#attached']['library'][] = 'ashlar/breadcrumb-viewpage';
     }
   }
 }
