@@ -309,6 +309,8 @@ function ashlar_form_user_login_form_alter(&$form, &$form_state, $form_id) {
 *  field to encapsulate the social media url and link text.  The code below attaches
 *  the profile.js script to your view which will replace the link text with a very
 *  nice social icon svg.  See profile.js if confused.
+*
+* Also adds breadcrumb fix to page view displays.
 */
 function ashlar_preprocess_views_view(&$variables) {
   $view_array = $variables['view_array'];
