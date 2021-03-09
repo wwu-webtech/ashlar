@@ -1,3 +1,7 @@
+block_attributes:
+  Attribute():
+    class:
+      - block
 attributes:
   Attribute():
     class:
@@ -31,5 +35,4 @@ button:
   attributes:
     Attribute():
       class:
-        - bg-video--pause
         - alt

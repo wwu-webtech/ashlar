@@ -2,41 +2,46 @@ attributes:
   Attribute():
     id: comment-form
     class:
-    - comment-comment-form
-    - comment-form
+      - comment-comment-form
+      - comment-form
+text_attributes:
+  Attribute():
+    class:
+      - double-margin--bottom
+      - webform-required-text
 children:
   join():
-  - include():
-      pattern: molecules-form-element-html-textfield
-      with:
-        label:
-          include():
-            pattern: atoms-label-html
-            with:
-              title: Your name
-  - include():
-      pattern: molecules-form-element-html-textfield
-      with:
-        label:
-          include():
-            pattern: atoms-label-html
-            with:
-              title: Email
-  - include():
-      pattern: molecules-form-element-html-textfield
-      with:
-        label:
-          include():
-            pattern: atoms-label-html
-            with:
-              title: Homepage
-  - include():
-      pattern: molecules-form-element-html-textarea
-      with:
-        label:
-          include():
-            pattern: atoms-label-html
-            with:
-              title: Comment
-  - include():
-      pattern: atoms-input-html-submit
+    - include():
+        pattern: molecules-form-element-html-textfield
+        with:
+          label:
+            include():
+              pattern: atoms-label-html
+              with:
+                title: Your name
+    - include():
+        pattern: molecules-form-element-html-textfield
+        with:
+          label:
+            include():
+              pattern: atoms-label-html
+              with:
+                title: Email
+    - include():
+        pattern: molecules-form-element-html-textfield
+        with:
+          label:
+            include():
+              pattern: atoms-label-html
+              with:
+                title: Homepage
+    - include():
+        pattern: molecules-form-element-html-textarea
+        with:
+          label:
+            include():
+              pattern: atoms-label-html
+              with:
+                title: Comment
+    - include():
+        pattern: atoms-input-html-submit
