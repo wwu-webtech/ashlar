@@ -2,31 +2,36 @@ attributes:
   Attribute():
     id: search-block-form
     class:
-    - search-block-form
+      - search-block-form
+text_attributes:
+  Attribute():
+    class:
+      - double-margin--bottom
+      - webform-required-text
 children:
   join():
-  - include():
-      pattern: molecules-form-element-html-textfield
-      with:
-        label:
-          include():
-            pattern: atoms-label-html
-            with:
-              attributes:
-                Attribute():
-                  class: []
-              title_display: invisible
-              title: Search
-  - include():
-      pattern: atoms-input-html-submit
-      with:
-        attributes:
-          Attribute():
-            id:
-            - edit-submit
-            type:
-            - submit
-            value:
-            - Search
-            class:
-            - button
+    - include():
+        pattern: molecules-form-element-html-textfield
+        with:
+          label:
+            include():
+              pattern: atoms-label-html
+              with:
+                attributes:
+                  Attribute():
+                    class: []
+                title_display: invisible
+                title: Search
+    - include():
+        pattern: atoms-input-html-submit
+        with:
+          attributes:
+            Attribute():
+              id:
+                - edit-submit
+              type:
+                - submit
+              value:
+                - Search
+              class:
+                - button

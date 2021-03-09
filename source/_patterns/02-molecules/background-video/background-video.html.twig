@@ -15,16 +15,18 @@
     </div>
   </div>
 
-
-
 {% for item in items %}
+  <div{{ block_attributes }} {% if loop.first %} {{ block_attributes.addClass('paused')}} {% endif %}>
 
-<div{{ attributes }} {% if loop.first %} {{ attributes.removeClass('black-overlay').addClass('dark-blue-overlay') }} {% endif %}>
-  {% include "@atoms/text/label/label.twig" %}
-  <video{{ item.attributes.addClass(item_classes) }} autoplay=""  id="{{ item.id }}" loop="" muted="" preload="auto"><source src="{{ item.source }}" /></video>
-  <p class="visually-hidden">{{ item.description }}</p>
-</div>
+    <div{{ attributes }} {% if loop.first %} {{ attributes.removeClass('black-overlay').addClass('dark-blue-overlay') }} {% endif %}>
 
-<button{{ button.attributes.addClass(button_classes) }}>Pause animation</button>
+    {% include "@atoms/text/label/label.twig" %}
+      <video{{ item.attributes.addClass(item_classes) }} autoplay=""  id="{{ item.id }}" loop="" muted="" preload="auto"><source src="{{ item.source }}" /></video>
+      <p class="visually-hidden">{{ item.description }}</p>
 
+    </div>
+
+    <button{{ button.attributes.addClass(button_classes) }}>Pause animation</button>
+    
+  </div>
 {% endfor %}
