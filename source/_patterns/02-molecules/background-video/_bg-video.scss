@@ -5,12 +5,13 @@
 .bg-video-container {
   position: relative;
   min-height: 50vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
 
-  h1, h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  h1,
+  h2,
+  p {
     width: 100%;
     text-align: center;
     z-index: 1;
