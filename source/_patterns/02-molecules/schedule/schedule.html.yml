@@ -5,7 +5,7 @@ attributes:
 title_attributes:
   Attribute():
     class:
-    - schedule-heading
+    - block__title
 items:
   - field_item_label: Short name for the cool event thing happening
     field_time: 1:15-2pm

@@ -1,7 +1,9 @@
 <div{{ attributes }}>
-  <h2{{ title_attributes }}>
-    Schedule of Events
-  </h2>
+  {% block title %}
+    <h2{{ title_attributes }}>
+      Schedule of Events
+    </h2>
+  {% endblock %}
 
   {% for item in items %}
   <div>

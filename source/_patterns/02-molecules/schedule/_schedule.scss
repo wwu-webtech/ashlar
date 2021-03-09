@@ -8,21 +8,19 @@
     position: relative;
     margin-bottom: $one-point-five-spacing;
     padding: $standard-spacing;
-    border-radius: $one-point-five-spacing;
 
     a:after {
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
-      left: -$one-point-five-spacing;
+      left: -$border-radius--round-square;
       content: "";
       transition: $standard-ease;
     }
 
     a:hover:after,
     &:focus-within {
-      border-radius: $one-point-five-spacing;
       box-shadow: $focus-shadow;
     }
 
@@ -36,9 +34,19 @@
     }
   }
 
+  &.round-edges {
+    .schedule-item {
+      border-radius: $border-radius--round-square;
+
+      a:hover:after,
+      &:focus-within {
+        border-radius: $border-radius--round-square;
+      }
+    }
+  }
+
   .schedule-heading {
     margin: 0;
-    line-height: 1em;
   }
 
   .time,
@@ -48,15 +56,16 @@
     }
     display: block;
     font-size: $h5-font-size--smaller;
+    line-height: 1.2em;
   }
 
   div:nth-of-type(odd) .schedule-item {
-    border-left: solid $blue $one-point-five-spacing;
+    border-left: solid $blue $border-radius--round-square;
     background-color: $lightest-bg-blue;
   }
 
   div:nth-of-type(even) .schedule-item {
-    border-left: solid $light-blue $one-point-five-spacing;
+    border-left: solid $light-blue $border-radius--round-square;
     background-color: $lightest-bg-blue;
   }
 }
