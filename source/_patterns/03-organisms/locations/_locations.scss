@@ -10,6 +10,7 @@ $stroke-width--heavy: 0.75rem;
 $stroke-width--medium: 0.5rem;
 $locations-icon-spacing: 1.875rem;
 $locations-font-size: 1.125rem;
+$locations-transition-speed: 500ms;
 
 // Containers and Buttons
 .wwu-locations {
@@ -39,7 +40,7 @@ $locations-font-size: 1.125rem;
   // Growing circle interaction
   .grow {
     .svg-container {
-      transition: 500ms;
+      transition: background-color $locations-transition-speed;
       -webkit-animation-name: pulse;
       animation-name: pulse;
       border-radius: 31.25rem;
@@ -52,10 +53,16 @@ $locations-font-size: 1.125rem;
     &:hover,
     &:focus-within {
       .svg-container {
-        transition: 500ms;
+        transition: background-color $locations-transition-speed;
         -webkit-transform: scale(1.03, 1.03);
         transform: scale(1.03, 1.03);
         background-color: #d8f1ff;
+      }
+    }
+
+    &:focus-within {
+      .svg-container {
+        border: $focus-outline $dark-blue;
       }
     }
   }
@@ -105,9 +112,14 @@ $locations-font-size: 1.125rem;
     }
   }
 
-  .svg-container:hover .custom-underline::after {
-    left: 0;
-    width: 100%;
+  .svg-container {
+    &:hover,
+    &:focus-within {
+      .custom-underline::after {
+        left: 0;
+        width: 100%;
+      }
+    }
   }
 
   // SVGS
