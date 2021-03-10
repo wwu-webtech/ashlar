@@ -37,6 +37,10 @@ bg-video:
     build/js/bg-video.js: {}
   dependencies:
     - core/jquery
+breadcrumb-viewpage:
+  version: 1.x
+  js:
+    build/js/breadcrumb-viewpage.js: {}
 components:
   version: 1.x
   css:
@@ -134,7 +138,8 @@ user-login:
 vimeo-tracking:
   version: 309.54.810
   js:
-    //extend.vimeocdn.com/ga/30954810.js: { type: external, attributes: { defer: true }}
+    //extend.vimeocdn.com/ga/30954810.js:
+      { type: external, attributes: { defer: true } }
 wwu-header:
   version: 1.x
   js:
