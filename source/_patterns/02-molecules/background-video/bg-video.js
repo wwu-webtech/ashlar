@@ -1,35 +1,42 @@
-var bgVideo = $('.bg-video-container', context);
-var playPause = bgVideo.siblings('.bg-video--pause');
-var vid = playPause.siblings('.bg-video-container').children('video');
-var materialPlay = '<span class="material-icons" aria-hidden="true">play_arrow</span>';
-var materialPause = '<span class="material-icons" aria-hidden="true">pause</span>'
+/* Prevent multiple calls in Drupal */
+if (context !== document) {
+  return;
+}
 
-// play/pause functionality
+var play_pause_button = Array.from(
+  document.querySelectorAll(".bg-video-container + button")
+);
+var material_play =
+  '<span class="material-icons" aria-hidden="true">play_arrow</span>';
+var material_pause =
+  '<span class="material-icons" aria-hidden="true">pause</span>';
 
-playPause.prepend(materialPause);
+play_pause_button.forEach(function (button) {
+  var custom_classes = button.closest(".block");
+  var video = custom_classes.querySelector(".bg-video-container video");
 
-function vidList() {
-  playPause.each(function(){
-    vid.toArray();
+  if (custom_classes.classList.contains("paused")) {
+    video.pause();
+    button.classList.add("bg-video--pause");
+    button.innerHTML = material_play + "Resume animation";
+  } else {
+    button.innerHTML = material_pause + "Pause animation";
   }
-)};
 
-playPause.on('click', function() {
-  var button = $(this);
-  var vid = button.prev('.bg-video-container').children('video');
+  button.addEventListener("click", function () {
+    var video_elm = button
+      .closest(".block")
+      .querySelector(".bg-video-container video");
 
-  button.toggleClass('bg-video--play bg-video--pause');
-  vid.toggleClass('paused playing');
-  vidList();
+    video_elm.classList.toggle("paused");
+    button.classList.toggle("bg-video--pause");
 
-  if (vid.hasClass('paused')) {
-    vid.get(0).pause();
-    button.html('Resume animation');
-    button.prepend(materialPlay);
-  }
-  else {
-    vid.get(0).play();
-    button.html('Pause animation');
-    button.prepend(materialPause);
-  }
+    if (button.classList.contains("bg-video--pause")) {
+      video_elm.pause();
+      button.innerHTML = material_play + "Resume animation";
+    } else {
+      video_elm.play();
+      button.innerHTML = material_pause + "Pause animation";
+    }
+  });
 });

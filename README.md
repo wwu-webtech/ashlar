@@ -28,12 +28,14 @@ This means adding accessibility checks to changes in the theme before those chan
 For additional instructions on setting up accessibility checks in Pattern Lab, see "Accessibility Testing in Ashlar" under the Pattern Lab section.
 
 ## Getting Started
-Download and install the latest **stable** [version of Lando](https://github.com/lando/lando/releases). The latest version to be tested with these instructions is [v3.0.0-rc.14](https://github.com/lando/lando/releases/tag/v3.0.0-rc.14)
+Download and install the latest **stable** [version of Lando](https://github.com/lando/lando/releases). The latest version to be tested with these instructions is [v3.0.21](https://github.com/lando/lando/releases/tag/v3.0.21)
 
 You will also need to have [PHP 7](https://www.php.net/) installed on your machine in order to serve Pattern Lab, and be able to run [Git](https://git-scm.com/) from the Terminal or Command Line.
 
 ### IA. Lando container with working Drupal 8 site
 Follow the instructions on the [composer installation profile](https://bitbucket.org/wwuweb/wwu_drupal). Once you get to step **IV. Compile Ashlar** on that page, skip that step and return here and proceed with Step **II. Ashlar** below.
+
+> Don't forget: If using Drupal, you must remove Clean URLs after running `lando start` but before installing Drupal in the browser.
 
 
 ### IB. Lando container without a working Drupal 8 site
