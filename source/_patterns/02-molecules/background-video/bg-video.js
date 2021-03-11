@@ -12,8 +12,8 @@ var material_pause =
   '<span class="material-icons" aria-hidden="true">pause</span>';
 
 play_pause_button.forEach(function (button) {
-  var video = button.previousElementSibling.childNodes[3];
   var custom_classes = button.closest(".block");
+  var video = custom_classes.querySelector(".bg-video-container video");
 
   if (custom_classes.classList.contains("paused")) {
     video.pause();
