@@ -1,0 +1,128 @@
+/*------------------------------------------------------------------------------
+VARIABLES
+--------------------------------------------------------------------------------
+1. Color
+  a. Brand
+  b. Special use
+2. Typography
+  a. Font families
+  b. Font weights
+3. Page layout
+  a. Spacing
+  b. Content areas
+  c. Content area grids
+  d. Breakpoints
+4. Decoration
+  a. Borders and outlines
+  b. Shadows
+5. Animation
+------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------
+1. Color
+------------------------------------------------------------------------------*/
+/* a. Brand ------------------------------------------------------------------*/
+--black: #262b2f;
+--gray: #667986;
+--light-gray: #e3e7e9;
+--lightest-gray: #f5f6f7;
+--white: #fff;
+
+--darkest-blue: #002f5e;
+--dark-blue: #003f87;
+--blue: #007ac8;
+--light-blue: #63c2ff;
+--light-bg-blue: #cce4f4;
+--lightest-bg-blue: #e6f2fa;
+
+--dark-green: #006b3f;
+--green: #4A821E;
+--light-green: #bad80a;
+--lightest-green: #d6e86c;
+
+/* b. Special use ------------------------------------------------------------*/
+--dark-mode-black: #131e29;
+--red: #cc2d30;
+--yellow: #ffc61e;
+--link-blue: #006ebb;
+--link-blue--darker: #0056a0;
+
+/* c. Gradients --------------------------------------------------------------*/
+--gradient--diagonal--blue-to-dark-blue: linear-gradient(to right bottom,
+  #002f5e, #003266, #00356d, #003875, #003b7d, #004186,
+  #01478e, #004d97, #0058a3, #0063b0, #006ebc, #007ac8);
+--gradient--diagonal--dark-blue-to-black: linear-gradient(to left bottom,
+  #1c2023, #18242d, #122738, #0a2a44, #022d4f, #00335c,
+  #013a69, #044077, #074e8b, #085c9f, #066bb3, #007ac8);
+
+/*------------------------------------------------------------------------------
+2. Typography
+------------------------------------------------------------------------------*/
+/* a. Font families ----------------------------------------------------------*/
+--font--sans-serif: "Fira Sans", sans-serif;
+--font--serif: "PT Serif", serif;
+--font--hyperlegible: "Atkinson Hyperlegible", sans-serif;
+--font--dyslexia-friendly: "Open Dyslexic", sans-serif;
+--font--title: "Montserrat", sans-serif;
+--font--condensed: "Fira Sans Extra Condensed", sans-serif;
+
+/* b. Font weights -----------------------------------------------------------*/
+--font-weight--light: 300;
+--font-weight--regular: 400;
+--font-weight--semibold: 600;
+--font-weight--bold: 700;
+--font-weight--black: 900;
+
+/*------------------------------------------------------------------------------
+3. Page layout
+------------------------------------------------------------------------------*/
+/* a. Spacing ----------------------------------------------------------------*/
+--space--smallest: 0.25rem;
+--space--smaller: 0.5rem;
+--space--small: 0.75rem;
+--space--standard: 1rem;
+--space--large: 2rem;
+--space--larger: 3rem;
+--space--largest: 4rem;
+
+/* b. Content areas ----------------------------------------------------------*/
+--content-area-max-width: 81.25rem;
+--content-area-max-width--smaller: 62.5rem;
+
+/* c. Content area grids -----------------------------------------------------*/
+--grid-columns__small: var(--standard-spacing), 1fr, var(--standard-spacing);
+--grid-columns__large: 1fr, var(--content-area-max-width), 1fr;
+
+/* c. Breakpoints ------------------------------------------------------------*/
+--breakpoint--small: 36.3125rem;
+--breakpoint--medium: 52.5625rem;
+--breakpoint--large: var(--content-area-max-width);
+
+/*------------------------------------------------------------------------------
+4. Decoration
+------------------------------------------------------------------------------*/
+/* a. Borders and outlines----------------------------------------------------*/
+--border-width--small: 0.0625rem;
+--border-width: 0.125rem;
+--border-width--large: 0.1875rem;
+--border-radius--circular: 6.25rem;
+--border-radius--rounder: 0.625rem;
+--border-radius--round: 0.125rem;
+--outline: var(--border-width) dotted;
+--outline--thicker: var(--border-width--large) dotted;
+
+/* b. Shadows ----------------------------------------------------------------*/
+--shadow--button: 0.125rem 0.125rem 0 var(--light-gray);
+--shadow--button--hover:
+--shadow--button--soft: 0 0.1875rem 0.375rem rgba(0,0,0,0.84),
+  0 0.1875rem 0.375rem rgba(0,0,0,0.77);
+--shadow--button--soft--hover: 0 0.0625rem 0.1875rem rgba(0,0,0,0.12),
+  0 0.0625rem 0.125rem rgba(0,0,0,0.24);
+
+/*------------------------------------------------------------------------------
+5. Animation
+------------------------------------------------------------------------------*/
+--transition-speed--slow: 800ms;
+--transition-speed--medium: 400ms;
+--transition-speed--fast: 200ms;
+--ease--standard: ease;
