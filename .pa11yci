@@ -77,6 +77,14 @@
     "rootElement": ".sg-pattern-example"
   },
   {
+    "url": "http://localhost:8000/patterns/02-molecules-countdown/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/02-molecules-display-settings/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
     "url": "http://localhost:8000/patterns/02-molecules-forms/index.html",
     "rootElement": ".sg-pattern-example"
   },
@@ -110,6 +118,10 @@
   },
   {
     "url": "http://localhost:8000/patterns/02-molecules-ribbon/index.html",
+    "rootElement": ".sg-pattern-example"
+  },
+  {
+    "url": "http://localhost:8000/patterns/02-molecules-schedule/index.html",
     "rootElement": ".sg-pattern-example"
   },
   {
