@@ -8,6 +8,7 @@
     position: relative;
     margin-bottom: $one-point-five-spacing;
     padding: $standard-spacing;
+    background-color: $lightest-bg-blue;
 
     a:after {
       position: absolute;
@@ -30,7 +31,8 @@
 
     a:focus:after {
       outline: $focus-outline;
-      outline-offset: $border-width--thicker;
+      border: $focus-outline;
+      outline-offset: -$border-width--thicker;
     }
   }
 
@@ -61,11 +63,18 @@
 
   div:nth-of-type(odd) .schedule-item {
     border-left: solid $blue $border-radius--round-square;
-    background-color: $lightest-bg-blue;
   }
 
   div:nth-of-type(even) .schedule-item {
     border-left: solid $light-blue $border-radius--round-square;
-    background-color: $lightest-bg-blue;
+  }
+}
+
+
+.dark-mode {
+  .block--schedule {
+    .schedule-item {
+      background-color: $dark-blue;
+    }
   }
 }
