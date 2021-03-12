@@ -10,23 +10,31 @@
     {% block paragraph %}
       <div class="schedule-item">
         {% block content %}
-          {% if item.field_link %}
-            <a href="{{ item.field_link }}">
-          {% endif %}
-            {% if item.field_item_heading_level %}
-              <{{ item.field_item_heading_level }} class="schedule-heading">
+
+          {% if item.field_item_heading_level %}
+            <{{ item.field_item_heading_level }} class="schedule-heading">
+              {% if item.field_link %}
+                <a href="{{ item.field_link }}">
+              {% endif %}
                 <span class="time">{{ item.field_time }}</span>
                 <span class="label">{{ item.field_item_label }}</span>
-              </{{ item.field_item_heading_level }}>
+              {% if item.field_link %}
+                </a>
+              {% endif %}
+            </{{ item.field_item_heading_level }}>
+
             {% else %}
               <div class="statistic-heading">
-                <span class="time">{{ item.field_time }}</span>
-                <span class="label">{{ item.field_item_label }}</span>
+                {% if item.field_link %}
+                  <a href="{{ item.field_link }}">
+                {% endif %}
+                  <span class="time">{{ item.field_time }}</span>
+                  <span class="label">{{ item.field_item_label }}</span>
+                {% if item.field_link %}
+                  </a>
+                {% endif %}
               </div>
             {% endif %}
-          {% if item.field_link %}
-            </a>
-          {% endif %}
 
           <div class="content">
             {{ item.field_content }}

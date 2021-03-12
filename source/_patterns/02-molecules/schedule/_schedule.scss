@@ -16,7 +16,7 @@
       bottom: 0;
       left: -$border-radius--round-square;
       content: "";
-      transition: $standard-ease;
+      transition: $fast-transition-speed $standard-ease;
     }
 
     a:hover:after,
