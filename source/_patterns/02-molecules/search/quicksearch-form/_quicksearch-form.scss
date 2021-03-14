@@ -40,8 +40,12 @@
   }
 
   .ln-disabled {
+    @include breakpoint($medium) {
+      margin-right: 0;
+    }
     color: mix(black, $gray, 30%);
     font-weight: $font-weight--regular;
+    margin-right: $standard-spacing;
   }
 }
 
