@@ -6,7 +6,7 @@
     {% for item in breadcrumb %} 
       {% if loop.last %}
       <li>
-        <a href="{{ item.url }}" class="bold" aria-current="page">{{item.text}}</a>
+        <a href="{{ item.url }}" aria-current="page">{{item.text}}</a>
       </li>
       {% else %}
       <li>
