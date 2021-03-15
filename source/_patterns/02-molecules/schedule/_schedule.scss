@@ -1,0 +1,80 @@
+/**
+* @file
+* molecules/schedule/_schedule.scss
+*/
+
+.block--schedule {
+  .schedule-item {
+    position: relative;
+    margin-bottom: $one-point-five-spacing;
+    padding: $standard-spacing;
+    background-color: $lightest-bg-blue;
+
+    a:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: -$border-radius--round-square;
+      content: "";
+      transition: $fast-transition-speed $standard-ease;
+    }
+
+    a:hover:after,
+    &:focus-within {
+      box-shadow: $focus-shadow;
+    }
+
+    a:focus {
+      outline: none;
+    }
+
+    a:focus:after {
+      outline: $focus-outline;
+      border: $focus-outline;
+      outline-offset: -$border-width--thicker;
+    }
+  }
+
+  &.round-edges {
+    .schedule-item {
+      border-radius: $border-radius--round-square;
+
+      a:hover:after,
+      &:focus-within {
+        border-radius: $border-radius--round-square;
+      }
+    }
+  }
+
+  .schedule-heading {
+    margin: 0;
+  }
+
+  .time,
+  .label {
+    @include breakpoint($large) {
+      font-size: $h5-font-size--max--smaller;
+    }
+    display: block;
+    font-size: $h5-font-size--smaller;
+    line-height: 1.2em;
+  }
+
+  div:nth-of-type(odd) .schedule-item {
+    border-left: solid $blue $border-radius--round-square;
+  }
+
+  div:nth-of-type(even) .schedule-item {
+    border-left: solid $light-blue $border-radius--round-square;
+  }
+}
+
+
+.dark-mode {
+  .block--schedule {
+    .schedule-item {
+      background-color: $dark-blue;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+attributes:
+  Attribute():
+    class:
+      - block--schedule
+title_attributes:
+  Attribute():
+    class:
+    - block__title
+items:
+  - field_item_label: Short name for the cool event thing happening
+    field_time: 1:15-2pm
+    field_content: We have an infinite amount to learn both from nature and from each other.
+      Science has not yet mastered prophecy. We predict too much for the next year and
+      yet far too little for the next 10.
+    field_link: https://wwu.edu
+    field_item_heading_level: h3
+  - field_time: 12 pm to 1 pm
+    field_content: If you could see the earth illuminated when you were in a place as dark
+      as night, it would look to you more splendid than the moon. Curious that we spend
+      more time congratulating people who have succeeded than encouraging people who
+      have not.
+    field_item_heading_level: h3
+  - field_time: 1:15 - 2 pm
+    field_content: Astronomy compels the soul to look upward, and leads us from this world
+      to another.
+    field_item_heading_level: h3
