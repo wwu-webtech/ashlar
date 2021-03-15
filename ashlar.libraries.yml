@@ -35,6 +35,12 @@ bg-video:
   version: 1.x
   js:
     build/js/bg-video.js: {}
+  dependencies:
+    - core/jquery
+breadcrumb-viewpage:
+  version: 1.x
+  js:
+    build/js/breadcrumb-viewpage.js: {}
 components:
   version: 1.x
   css:
