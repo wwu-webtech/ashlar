@@ -2,7 +2,7 @@ var $tablist = $(".mabel-content-switcher", context);
 var $tabButton = $(".mabel-content-switcher button", context);
 var $panels = $(".mabel-content-switcher-container .content", context);
 var $selectedPanel = $(".mabel-content-switcher-container .content.active", context);
-var $imageViewer = $(".islandora-large-image-content-wrapper", context);
+var $imageViewer = $(".islandora-content-wrapper", context);
 var $metadata = $(".islandora-metadata", context);
 
 $tabButton.first().addClass("active");
