@@ -71,3 +71,4 @@ $tabButton.keydown(function(event) {
     }
     event.preventDefault();
   }
+});
