@@ -7,7 +7,7 @@ var $metadata = $(".islandora-metadata", context);
 
 $tabButton.first().addClass("active");
 $panels.first().addClass("active");
-$("#medatdata-container").append($metadata);
+$("#metadata-container").append($metadata);
 
 var $activeButton = $(".mabel-content-switcher button.active", context);
 var $leftArrow = '<span class="material-icons show" aria-hidden="true">chevron_left</span>';
