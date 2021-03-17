@@ -58,9 +58,9 @@ a#clip {
 .islandora-oralhistories-content,
 .islandora-pdf-content,
 .islandora-video-content {
+  padding: 0;
   border: none;
   border-radius: 0;
-  background: $light-gray;
 }
 
 body.page-islandora-object {
@@ -117,5 +117,39 @@ body.page-islandora-object {
   .layout__region--second {
     position: relative;
     padding-top: $double-spacing;
+  }
+}
+
+
+/* Details */
+.islandora-metadata-set {
+  legend {
+    margin: 0;
+    padding: 0 $standard-spacing;
+    color: $dark-blue;
+  }
+
+  fieldset {
+    margin-bottom: $half-spacing;
+  }
+}
+
+/* Side by side details */
+.layout--twocol-section {
+  dl.islandora-inline-metadata {
+    display: grid;
+    font-size: $p-font-size--smaller;
+
+    dt {
+      width: initial;
+      border: none;
+    }
+
+    dd {
+      width: initial;
+      margin: 0;
+      padding: $half-spacing 0 $half-spacing $one-point-five-spacing;
+      border: none;
+    }
   }
 }
