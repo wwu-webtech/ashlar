@@ -34,22 +34,26 @@ button.play-link {
   }
 }
 
-/* Dark mode overrides for play-icon in banner overlays */
-.dark-mode {
-  .gray-overlay {
-    .play-link {
-      svg path {
-        fill: $darkest-blue;
+/* Dark mode styles for play-icon on certain banner overlays */
 
+.dark-mode {
+  .block--banner {
+    &:not(.blue-overlay):not(.black-overlay):not(.dark-blue-overlay):not(.black-gradient-overlay) {
+      .play-link {
+        svg path {
+          fill: $dark-blue;
+        }
         &:hover,
         &:focus,
         &:active {
-          fill: $dark-blue;
+          svg path {
+            fill: $blue;
+          }
         }
-      }
 
-      &:focus {
-        border-color: $dark-blue;
+        &:focus {
+          border-color: $blue;
+        }
       }
     }
   }

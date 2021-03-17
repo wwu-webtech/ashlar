@@ -24,6 +24,37 @@
   }
 }
 
+.dark-mode {
+  .block--banner {
+    &:not([class*="-overlay"]) {
+      color: $black;
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: $dark-blue;
+      }
+
+      a:not([class]) {
+        color: $link-blue--darker;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: $lightest-green;
+        }
+
+        &:focus {
+          outline-color: $darkest-blue;
+        }
+      }
+    }
+  }
+}
+
 /* Retrofit for existing pages with beyond basic block banners */
 .block--half-page,
 .block--full-page {
