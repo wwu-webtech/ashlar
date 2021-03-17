@@ -38,8 +38,7 @@ button.play-link {
 
 .dark-mode {
   .block--banner {
-    &.white-gradient-overlay,
-    &.gray-overlay {
+    &:not(.blue-overlay):not(.black-overlay):not(.dark-blue-overlay):not(.black-gradient-overlay) {
       .play-link {
         svg path {
           fill: $dark-blue;
