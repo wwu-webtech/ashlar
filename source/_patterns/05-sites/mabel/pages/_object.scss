@@ -126,12 +126,13 @@ body.page-islandora-object {
   legend {
     margin: 0;
     padding: 0 $standard-spacing;
-    color: $dark-blue;
+    color: $darkest-blue;
   }
+}
 
-  fieldset {
-    margin-bottom: $half-spacing;
-  }
+.islandora-metadata-set fieldset,
+fieldset.islandora-metadata-set {
+  margin-bottom: $half-spacing;
 }
 
 /* Side by side details */
@@ -139,6 +140,7 @@ body.page-islandora-object {
   dl.islandora-inline-metadata {
     display: grid;
     font-size: $p-font-size--smaller;
+    margin-top: 0;
 
     dt {
       width: initial;
