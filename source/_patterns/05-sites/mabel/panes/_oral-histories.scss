@@ -1,0 +1,48 @@
+/**
+* @file
+* sites/mabel/panes/_oral-histories.scss
+*/
+.islandora-oralhistories-content {
+  padding: 0;
+
+  .transcript-container {
+    height: initial;
+  }
+
+  .ui-widget {
+    font-size: $p-font-size--smaller;
+  }
+
+  .ui-widget-header {
+    border: none;
+    border-bottom: solid $border-width--thicker $gray;
+    background: transparent;
+  }
+
+  .ui-tabs {
+    padding: $half-spacing 0 0 0;
+    border: none;
+  }
+
+  .ui-tabs .ui-tabs-nav {
+    margin-bottom: $half-spacing;
+  }
+
+  .ui-state-active,
+  .ui-widget-content .ui-state-active,
+  .ui-widget-header .ui-state-active {
+    border: none;
+    border-radius: 0;
+    background: $gray;
+  }
+
+  .ui-state-active a,
+  .ui-state-active a:link,
+  .ui-state-active a:visited {
+    color: $white;
+  }
+
+  .ui-tabs .ui-tabs-panel {
+    padding: 0;
+  }
+}

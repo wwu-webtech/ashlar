@@ -2,11 +2,15 @@
 * @file
 * sites/mabel/pages/_object.scss
 */
+
+.download-link {
+  margin-top: $standard-spacing;
+}
+
 a#clip {
   @include breakpoint($medium) {
     font-size: $p-font-size--smaller;
   }
-  margin-top: $half-spacing;
   margin-bottom: $standard-spacing;
   margin-left: 0;
   font-size: $p-font-size--smaller;
@@ -45,41 +49,7 @@ a#clip {
   }
 }
 
-/* Detail Lists */
-.islandora-metadata .fieldset-legend {
-  padding: $standard-spacing;
-  color: $dark-blue;
-  font-size: $p-font-size--larger;
-}
 
-.islandora-metadata {
-  margin-bottom: $standard-spacing;
-  border-width: $border-width;
-  border-color: $light-gray;
-  font-size: $p-font-size--smaller;
-}
-
-.side-by-side {
-  dl.islandora-metadata-fields {
-    display: flex;
-    flex-flow: column;
-    margin-top: 0;
-  }
-
-  .islandora-metadata-fields dt {
-    width: 100%;
-    margin-bottom: $half-spacing;
-    text-align: left;
-    border-top: none;
-    border-bottom: solid $border-width--thinner $light-gray;
-  }
-
-  .islandora-metadata-fields dd {
-    width: 100%;
-    min-height: 2rem;
-    border: none;
-  }
-}
 
 /* Gray box around objects */
 .islandora-audio-content,
@@ -148,15 +118,41 @@ body.page-islandora-object {
     position: relative;
     padding-top: $double-spacing;
   }
+}
 
-  .block--content-switcher {
-    .layout__region--second {
-      padding-top: 0;
+/* Details tab */
+.islandora-metadata {
+  .fieldset-title {
+    text-decoration: none;
+    color: $dark-blue;
+    font-family: $serif;
+    font-size: $h2-font-size;
+
+    &:after {
+      content: " -";
+    }
+  }
+
+  &.collapsed {
+    .fieldset-title {
+      &:after {
+        content: " +";
+      }
     }
   }
 }
 
-/* Preferences */
+html.js .islandora-metadata,
+html.js .islandora-metadata.collapsed {
+  margin-bottom: $standard-spacing;
+  padding: $standard-spacing;
+  border: solid $dark-blue $border-width;
+}
+
+html.js .islandora-metadata.collapsible .fieldset-legend {
+  background-image: none;
+}
+
 .opendyslexic {
   body.page-islandora-object {
     .layout__region--first {
@@ -166,6 +162,12 @@ body.page-islandora-object {
           font-family: $opendyslexic;
         }
       }
+    }
+  }
+
+  .islandora-metadata {
+    .fieldset-title {
+      font-family: $opendyslexic;
     }
   }
 }
@@ -179,6 +181,12 @@ body.page-islandora-object {
           font-family: $atkinson;
         }
       }
+    }
+  }
+
+  .islandora-metadata {
+    .fieldset-title {
+      font-family: $atkinson;
     }
   }
 }
