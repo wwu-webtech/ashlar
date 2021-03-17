@@ -33,3 +33,29 @@ button.play-link {
     border-color: $dark-blue;
   }
 }
+
+/* Dark mode styles for play-icon on certain banner overlays */
+
+.dark-mode {
+  .block--banner {
+    &.white-gradient-overlay,
+    &.gray-overlay {
+      .play-link {
+        svg path {
+          fill: $dark-blue;
+        }
+        &:hover,
+        &:focus,
+        &:active {
+          svg path {
+            fill: $blue;
+          }
+        }
+
+        &:focus {
+          border-color: $blue;
+        }
+      }
+    }
+  }
+}
