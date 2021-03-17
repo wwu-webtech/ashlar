@@ -3,7 +3,7 @@ var $tabButton = $(".mabel-content-switcher button", context);
 var $panels = $(".mabel-content-switcher-container .content", context);
 var $selectedPanel = $(".mabel-content-switcher-container .content.active", context);
 var $imageViewer = $(".islandora-content-wrapper", context);
-var $metadata = $(".islandora-metadata", context);
+var $metadata = $(".islandora-metadata-set", context);
 
 $tabButton.first().addClass("active");
 $panels.first().addClass("active");
@@ -45,7 +45,7 @@ $tabButton.click(function() {
   }
 });
 
-$tabButton.keydown(function(event) {
+$tabButton.keyup(function(event) {
   var $key = event.keyCode;
   var $selected = $(".mabel-content-switcher button.active", context);
   var $selectedPanel = $("#" + $selected.attr("aria-controls"), context);
