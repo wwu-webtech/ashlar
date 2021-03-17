@@ -114,3 +114,18 @@ $overlay-transparency: 0.4;
     color: $white;
   }
 }
+
+.dark-mode {
+  .white-gradient-overlay {
+    color: $black;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $dark-blue;
+    }
+  }
+}
