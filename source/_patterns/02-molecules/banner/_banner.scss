@@ -24,6 +24,31 @@
   }
 }
 
+.dark-mode {
+  .block--banner {
+    color: $black;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $dark-blue;
+    }
+
+    a:not([class]) {
+      color: $link-blue--darker;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $lightest-green;
+      }
+    }
+  }
+}
+
 /* Retrofit for existing pages with beyond basic block banners */
 .block--half-page,
 .block--full-page {
