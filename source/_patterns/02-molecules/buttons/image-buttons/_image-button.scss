@@ -141,7 +141,7 @@ $image-button--smaller-size--medium: 11.25rem;
 
   &:not(.green) {
     .image {
-      filter: brightness(75%);
+      filter: brightness(0.75);
     }
   }
 

@@ -19,7 +19,7 @@
   &.blue-overlay,
   &.dark-blue-overlay {
     .background-image {
-      filter: brightness(50%);
+      filter: brightness(0.5);
     }
   }
 }
@@ -27,8 +27,6 @@
 .dark-mode {
   .block--banner {
     &:not([class*="-overlay"]) {
-      color: $black;
-
       h1,
       h2,
       h3,
@@ -47,6 +45,14 @@
           color: $lightest-green;
         }
 
+        &:focus {
+          outline-color: $darkest-blue;
+        }
+      }
+    }
+
+    &.gray-overlay {
+      a:not([class]) {
         &:focus {
           outline-color: $darkest-blue;
         }
