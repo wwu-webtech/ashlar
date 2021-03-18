@@ -63,6 +63,13 @@ $search-input-size: 12.5rem;
       margin: 0;
       font-size: 0;
     }
+
+    .submit-search {
+      &:focus,
+      &:active {
+        border-color: inherit;
+      }
+    }
   }
 }
 

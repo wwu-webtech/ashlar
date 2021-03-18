@@ -19,7 +19,44 @@
   &.blue-overlay,
   &.dark-blue-overlay {
     .background-image {
-      filter: brightness(50%);
+      filter: brightness(0.5);
+    }
+  }
+}
+
+.dark-mode {
+  .block--banner {
+    &:not([class*="-overlay"]) {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: $dark-blue;
+      }
+
+      a:not([class]) {
+        color: $link-blue--darker;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: $lightest-green;
+        }
+
+        &:focus {
+          outline-color: $darkest-blue;
+        }
+      }
+    }
+
+    &.gray-overlay {
+      a:not([class]) {
+        &:focus {
+          outline-color: $darkest-blue;
+        }
+      }
     }
   }
 }
