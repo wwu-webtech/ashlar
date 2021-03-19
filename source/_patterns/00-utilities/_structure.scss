@@ -1,4 +1,4 @@
-  /**
+/**
  * @file
  * 00-utilities/structure.scss
  */
@@ -36,11 +36,3 @@ $large-screen-columns: 1fr $max-content-width 1fr;
 
 /* Toggle/Menu Button Sizes */
 $toggle-size: 4rem;
-
-/* Class to break blocks out of the max content area and take up full view width */
-.full-vw {
-  margin-left:   calc(50% - 50vw);
-  margin-right:  calc(50% - 50vw);
-  padding-left:  calc(50vw - 50%);
-  padding-right: calc(50vw - 50%);
-}

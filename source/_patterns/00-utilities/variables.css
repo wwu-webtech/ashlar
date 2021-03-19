@@ -73,6 +73,20 @@ VARIABLES
 --font-weight--bold: 700;
 --font-weight--black: 900;
 
+/* c. Font sizes (based on major second scale) -------------------------------*/
+--font-size-sm: 0.8em;
+--font-size-base: 1em;
+--font-size-lg: 1.125em;
+--font-size-xl: 1.266em;
+--font-size-2xl: 1.424em;
+--font-size-3xl: 1.602em;
+--font-size-4xl: 1.802em;
+--font-size-5xl: 2.027em;
+--font-size-6xl: 2.281em;
+--font-size-7xl: 2.566em;
+--font-size-8xl: 2.887em;
+--font-size-9xl: 3.247em;
+
 /*------------------------------------------------------------------------------
 3. Page layout
 ------------------------------------------------------------------------------*/

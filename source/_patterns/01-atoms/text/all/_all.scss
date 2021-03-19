@@ -4,19 +4,20 @@
 */
 
 html {
+  @include breakpoint($large) {
+    font-size: calc(1rem + #{$max-content-width});
+  }
   color: $text-color;
   font-family: $sans-serif;
+  font-size: calc(1rem + 1vw);
+
   font-display: auto;
 }
 
 body {
-  @include breakpoint($large) {
-    font-size: $p-font-size--max;
-  }
-  font-size: $p-font-size;
-
   &.opendyslexic {
     font-family: $opendyslexic;
+
     font-feature-settings: unset;
   }
 
