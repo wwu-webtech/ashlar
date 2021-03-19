@@ -1,35 +1,34 @@
 (function () {
+  "use strict";
 
-  'use strict';
-
-  const path = require('path');
-  const pump = require('pump');
-  const sequence = require('run-sequence');
-  const browserify = require('browserify');
-  const source = require('vinyl-source-stream');
-  const del = require('del');
-  const gulp = require('gulp');
-  const run = require('gulp-run');
-  const flatten = require('gulp-flatten');
-  const flatmap = require('gulp-flatmap');
-  const wrap = require('gulp-wrap');
-  const iife = require('gulp-iife');
-  const concat = require('gulp-concat');
-  const rename = require('gulp-rename');
-  const uglify = require('gulp-uglify');
-  const sourcemaps = require('gulp-sourcemaps');
-  const sass = require('gulp-sass');
-  const sassGlob = require('gulp-sass-glob');
-  const imagemin = require('gulp-imagemin');
-  const group = require('gulp-group-css-media-queries');
-  const cleancss = require('gulp-clean-css');
+  const path = require("path");
+  const pump = require("pump");
+  const sequence = require("run-sequence");
+  const browserify = require("browserify");
+  const source = require("vinyl-source-stream");
+  const del = require("del");
+  const gulp = require("gulp");
+  const run = require("gulp-run");
+  const flatten = require("gulp-flatten");
+  const flatmap = require("gulp-flatmap");
+  const wrap = require("gulp-wrap");
+  const iife = require("gulp-iife");
+  const concat = require("gulp-concat");
+  const rename = require("gulp-rename");
+  const uglify = require("gulp-uglify");
+  const sourcemaps = require("gulp-sourcemaps");
+  const sass = require("gulp-sass");
+  const sassGlob = require("gulp-sass-glob");
+  const imagemin = require("gulp-imagemin");
+  const group = require("gulp-group-css-media-queries");
+  const cleancss = require("gulp-clean-css");
 
   /**
    * Process the name of the input JS file to be used as the object key for a
    * Drupal JS Behavior.
    */
   function drupalBehaviorName(file) {
-    return path.basename(file.path, '.js').split('.').pop().replace(/-/g, '_');
+    return path.basename(file.path, ".js").split(".").pop().replace(/-/g, "_");
   }
 
   var config = {};
@@ -49,36 +48,32 @@
    * imagesDest: The destination directory for image files.
    */
   config.patternLab = {
-    patterns: 'source/_patterns',
-    sassFile: 'wwu-styleguide.css',
+    patterns: "source/_patterns",
+    sassFile: "wwu-styleguide.css",
     sassSrc: [
-      'source/sass/styleguide/normalize.scss',
-      'source/sass/styleguide/pattern-scaffolding.scss',
-      'source/sass/styleguide/ultimenu-extras.scss',
-      'source/sass/styleguide/ultimenu.scss',
-      'source/sass/**/*.scss'
+      "source/sass/styleguide/normalize.scss",
+      "source/sass/styleguide/pattern-scaffolding.scss",
+      "source/sass/styleguide/ultimenu-extras.scss",
+      "source/sass/styleguide/ultimenu.scss",
+      "source/sass/**/*.scss",
     ],
-    sassDest: 'source/pattern-lab/css',
-    jsFile: 'wwu-styleguide.js',
+    sassDest: "source/pattern-lab/css",
+    jsFile: "wwu-styleguide.js",
     jsSrc: [
-      'source/_patterns/**/*.js',
-      '!source/_patterns/02-molecules/d7-accordion-alert/d7-accordion-alert.js',
-      'dist/js/*.js',
-      '!dist/js/acalog.js',
-      'source/js/menu-extras.js'
+      "source/_patterns/**/*.js",
+      "!source/_patterns/02-molecules/d7-accordion-alert/d7-accordion-alert.js",
+      "dist/js/*.js",
+      "!dist/js/acalog.js",
+      "source/js/menu-extras.js",
     ],
-    jsDest: 'source/pattern-lab/js',
+    jsDest: "source/pattern-lab/js",
     jsTemplate: {
-      src: 'source/js/patternlab.lodash'
+      src: "source/js/patternlab.lodash",
     },
-    imagesSrc: [
-      'source/images/**/*.{jpg,jpeg,gif,png,svg}'
-    ],
-    imagesDest: 'source/pattern-lab/images',
-    fontSrc: [
-      'source/fonts/*.woff2'
-    ],
-    fontDest: 'source/pattern-lab/fonts'
+    imagesSrc: ["source/images/**/*.{jpg,jpeg,gif,png,svg}"],
+    imagesDest: "source/pattern-lab/images",
+    fontSrc: ["source/fonts/*.woff2"],
+    fontDest: "source/pattern-lab/fonts",
   };
 
   /**
@@ -90,32 +85,26 @@
    * options: Options map to pass to the Sass compiler.
    */
   config.sass = {
-    src: [
-      'source/sass/**/*.scss',
-      '!source/sass/styleguide/*'
-    ],
-    dest: 'build/css',
-    watch: [
-      'source/sass/**/*.scss',
-      config.patternLab.patterns + '/**/*.scss',
-    ],
+    src: ["source/sass/**/*.scss", "!source/sass/styleguide/*"],
+    dest: "build/css",
+    watch: ["source/sass/**/*.scss", config.patternLab.patterns + "/**/*.scss"],
     options: {
       includePaths: [
-        'node_modules/breakpoint-sass/stylesheets',
-        'node_modules/sass-toolkit/stylesheets',
-        'node_modules/singularitygs/stylesheets'
+        "node_modules/breakpoint-sass/stylesheets",
+        "node_modules/sass-toolkit/stylesheets",
+        "node_modules/singularitygs/stylesheets",
       ],
-      outputStyle: 'expanded'
+      outputStyle: "expanded",
     },
     cleancss: {
-      format: 'beautify',
-      inline: ['all'],
+      format: "beautify",
+      inline: ["all"],
       level: {
         1: { all: true },
-        2: { all: true }
+        2: { all: true },
       },
-      sourceMap: true
-    }
+      sourceMap: true,
+    },
   };
 
   /**
@@ -132,27 +121,21 @@
    * uglify: Options map to pass to the uglify plugin.
    */
   config.js = {
-    src: [
-      'source/js/**/*.js',
-      'source/_patterns/**/*.js'
-    ],
-    dest: 'build/js',
-    watch: [
-      'source/js/**/*.js',
-      'source/_patterns/**/*.js'
-    ],
+    src: ["source/js/**/*.js", "source/_patterns/**/*.js"],
+    dest: "build/js",
+    watch: ["source/js/**/*.js", "source/_patterns/**/*.js"],
     template: {
-      src: 'source/js/behavior.lodash'
+      src: "source/js/behavior.lodash",
     },
-    templateVariable: 'behavior',
+    templateVariable: "behavior",
     rename: {
-      suffix: '.min'
+      suffix: ".min",
     },
     iife: {
       useStrict: true,
       trimCode: true,
-      params: ['$', 'window', 'document', 'undefined'],
-      args: ['jQuery', 'this', 'this.document']
+      params: ["$", "window", "document", "undefined"],
+      args: ["jQuery", "this", "this.document"],
     },
     uglify: {
       compress: false,
@@ -161,9 +144,9 @@
         beautify: true,
         braces: true,
         comments: true,
-        indent_level: 2
-      }
-    }
+        indent_level: 2,
+      },
+    },
   };
 
   /**
@@ -173,10 +156,8 @@
    * dest: Output pattern for image files.
    */
   config.images = {
-    src: [
-      'source/images/**/*.{jpg,jpeg,gif,png,svg}'
-    ],
-    dest: 'build/images'
+    src: ["source/images/**/*.{jpg,jpeg,gif,png,svg}"],
+    dest: "build/images",
   };
 
   /**
@@ -186,17 +167,14 @@
    * dest: Output pattern for font files.
    */
   config.fonts = {
-    src: [
-      'source/fonts/*.woff2'
-    ],
-    dest: 'build/fonts'
+    src: ["source/fonts/*.woff2"],
+    dest: "build/fonts",
   };
-
 
   /**
    * Generate CSS.
    */
-  gulp.task('sass', function (callback) {
+  gulp.task("sass", function (callback) {
     pump(
       gulp.src(config.sass.src),
       // Parse globbing patterns in @include statements.
@@ -221,7 +199,7 @@
   /**
    * Generate unoptimized CSS.
    */
-  gulp.task('sass:dev', function (callback) {
+  gulp.task("sass:dev", function (callback) {
     pump(
       gulp.src(config.sass.src),
       sassGlob(),
@@ -237,7 +215,7 @@
   /**
    * Generate JS.
    */
-  gulp.task('js', function (callback) {
+  gulp.task("js", function (callback) {
     pump(
       gulp.src(config.js.src),
       // Process each file in the source stream.
@@ -245,7 +223,11 @@
         return pump(
           stream,
           // Wrap the JS in Drupal JS Behavior boilerplate.
-          wrap(config.js.template, { name: drupalBehaviorName(file) }, { variable: config.js.templateVariable }),
+          wrap(
+            config.js.template,
+            { name: drupalBehaviorName(file) },
+            { variable: config.js.templateVariable }
+          ),
           // Wrap the JS in an immediately-invoked function expression.
           iife(config.js.iife),
           // Format the source.
@@ -262,7 +244,7 @@
   /**
    * Minify images.
    */
-  gulp.task('images', function (callback) {
+  gulp.task("images", function (callback) {
     pump(
       gulp.src(config.images.src),
       imagemin(),
@@ -274,18 +256,14 @@
   /**
    * Put fonts in the right spot.
    */
-  gulp.task('fonts', function (callback) {
-    pump(
-      gulp.src(config.fonts.src),
-      gulp.dest(config.fonts.dest),
-      callback
-    );
+  gulp.task("fonts", function (callback) {
+    pump(gulp.src(config.fonts.src), gulp.dest(config.fonts.dest), callback);
   });
 
   /**
    * Generate Pattern Lab CSS.
    */
-  gulp.task('patternlab:sass', function (callback) {
+  gulp.task("patternlab:sass", function (callback) {
     pump(
       gulp.src(config.patternLab.sassSrc),
       sassGlob(),
@@ -301,7 +279,7 @@
   /**
    * Generate Pattern Lab JS pre.
    */
-  gulp.task('patternlab:js:pre', function (callback) {
+  gulp.task("patternlab:js:pre", function (callback) {
     pump(
       gulp.src(config.patternLab.jsSrc),
       sourcemaps.init(),
@@ -317,24 +295,29 @@
   /**
    * Generate Pattern Lab JS post.
    */
-  gulp.task('patternlab:js:post', gulp.series(['patternlab:js:pre'], function (callback) {
-    pump(
-      browserify(config.patternLab.jsDest + '/' + config.patternLab.jsFile, { debug: true }).bundle(),
-      source(config.patternLab.jsFile),
-      gulp.dest(config.patternLab.jsDest),
-      callback
-    );
-  }));
+  gulp.task(
+    "patternlab:js:post",
+    gulp.series(["patternlab:js:pre"], function (callback) {
+      pump(
+        browserify(config.patternLab.jsDest + "/" + config.patternLab.jsFile, {
+          debug: true,
+        }).bundle(),
+        source(config.patternLab.jsFile),
+        gulp.dest(config.patternLab.jsDest),
+        callback
+      );
+    })
+  );
 
   /**
    * Generate Pattern Lab JS.
    */
-  gulp.task('patternlab:js', gulp.series(['patternlab:js:post']));
+  gulp.task("patternlab:js", gulp.series(["patternlab:js:post"]));
 
   /**
    * Generate Pattern Lab images.
    */
-  gulp.task('patternlab:images', function (callback) {
+  gulp.task("patternlab:images", function (callback) {
     pump(
       gulp.src(config.patternLab.imagesSrc),
       imagemin(),
@@ -346,7 +329,7 @@
   /**
    * Generate Pattern Lab Fonts.
    */
-  gulp.task('patternlab:fonts', function (callback) {
+  gulp.task("patternlab:fonts", function (callback) {
     pump(
       gulp.src(config.patternLab.fontSrc),
       gulp.dest(config.patternLab.fontDest),
@@ -357,52 +340,66 @@
   /**
    * Run Pattern Lab tasks.
    */
-  gulp.task('patternlab', gulp.parallel(['patternlab:sass', 'patternlab:js', 'patternlab:images', 'patternlab:fonts']));
+  gulp.task(
+    "patternlab",
+    gulp.parallel([
+      "patternlab:sass",
+      "patternlab:js",
+      "patternlab:images",
+      "patternlab:fonts",
+    ])
+  );
 
   /**
    * Set watch tasks.
    */
-  gulp.task('watch', function () {
-    gulp.watch(config.sass.watch, gulp.series(['sass:dev', 'patternlab:sass']));
-    gulp.watch(config.js.watch, gulp.series(['js', 'patternlab:js']));
+  gulp.task("watch", function () {
+    gulp.watch(config.sass.watch, gulp.series(["sass:dev", "patternlab:sass"]));
+    gulp.watch(config.js.watch, gulp.series(["js", "patternlab:js"]));
   });
 
   /**
    * Clean generated CSS files.
    */
-  gulp.task('clean:css', function () {
+  gulp.task("clean:css", function () {
     return del([config.sass.dest]);
   });
 
   /**
    * Clean generated JS files.
    */
-  gulp.task('clean:js', function () {
+  gulp.task("clean:js", function () {
     return del([config.js.dest]);
   });
 
   /**
    * Clean generated image files.
    */
-  gulp.task('clean:images', function () {
+  gulp.task("clean:images", function () {
     return del([config.images.dest]);
   });
 
   /**
    * Clean generated Pattern Lab files.
    */
-  gulp.task('clean:patternlab', function () {
-    return del([config.patternLab.sassDest, config.patternLab.jsDest, config.patternLab.imagesDest]);
+  gulp.task("clean:patternlab", function () {
+    return del([
+      config.patternLab.sassDest,
+      config.patternLab.jsDest,
+      config.patternLab.imagesDest,
+    ]);
   });
 
   /**
    * Run clean tasks.
    */
-  gulp.task('clean', gulp.parallel(['clean:css', 'clean:js', 'clean:images', 'clean:patternlab']));
+  gulp.task(
+    "clean",
+    gulp.parallel(["clean:css", "clean:js", "clean:images", "clean:patternlab"])
+  );
 
   /**
    * Gulp default task.
    */
-  gulp.task('default', gulp.parallel(['sass', 'js', 'images', 'fonts']));
-
+  gulp.task("default", gulp.parallel(["sass", "js", "images", "fonts"]));
 })();

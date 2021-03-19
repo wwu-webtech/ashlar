@@ -17,7 +17,7 @@ VARIABLES
   b. Shadows
 5. Animation
 ------------------------------------------------------------------------------*/
-
+:root {
 /*------------------------------------------------------------------------------
 1. Color
 ------------------------------------------------------------------------------*/
@@ -91,13 +91,13 @@ VARIABLES
 3. Page layout
 ------------------------------------------------------------------------------*/
 /* a. Spacing ----------------------------------------------------------------*/
---space--smallest: 0.25rem;
---space--smaller: 0.5rem;
---space--small: 0.75rem;
---space--standard: 1rem;
---space--large: 2rem;
---space--larger: 3rem;
---space--largest: 4rem;
+--space--2xs: 0.25rem;
+--space--xs: 0.5rem;
+--space--sm: 0.75rem;
+--space--base: 1rem;
+--space--lg: 2rem;
+--space--xl: 3rem;
+--space--2xl: 4rem;
 
 /* b. Content areas ----------------------------------------------------------*/
 --content-area-max-width: 81.25rem;
@@ -140,3 +140,4 @@ VARIABLES
 --transition-speed--medium: 400ms;
 --transition-speed--fast: 200ms;
 --ease--standard: ease;
+}

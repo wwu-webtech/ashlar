@@ -13,10 +13,10 @@
 }
 
 @mixin font-size--regular {
-    @include breakpoint($large) {
-      font-size: $p-font-size--max;
-    }
-    font-size: $p-font-size;
+  @include breakpoint($large) {
+    font-size: $p-font-size--max;
+  }
+  font-size: $p-font-size;
 }
 .font-size--regular {
   @include font-size--regular;
@@ -30,4 +30,14 @@
 }
 .font-size--larger {
   @include font-size--larger;
+}
+
+.opendyslexic {
+  font-family: var(--font--dyslexia-friendly);
+
+  font-feature-settings: unset;
+}
+
+.atkinson {
+  font-family: var(--font--hyperlegible);
 }

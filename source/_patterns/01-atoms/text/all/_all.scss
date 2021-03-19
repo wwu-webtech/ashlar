@@ -5,27 +5,15 @@
 
 html {
   @include breakpoint($large) {
-    font-size: calc(1rem + #{$max-content-width});
+    font-size: calc(1rem + (#{$max-content-width} * 0.005));
   }
-  color: $text-color;
-  font-family: $sans-serif;
-  font-size: calc(1rem + 1vw);
+  color: var(--black);
+  font-family: var(--font--sans-serif);
+  font-size: calc(1rem + 0.5vw);
 
   font-display: auto;
-}
 
-body {
-  &.opendyslexic {
-    font-family: $opendyslexic;
-
-    font-feature-settings: unset;
-  }
-
-  &.atkinson {
-    font-family: $atkinson;
-  }
-
-  @media print {
+  @media (print) {
     font-size: 12pt;
   }
 }

@@ -3,22 +3,15 @@
 * 01-atoms/01-text/_headings.scss
 */
 
-$heading-line-height: 1.2em;
-$heading-margin-top: $triple-spacing;
-$heading-margin-bottom: $standard-spacing;
-$max-heading-underline-width: 12.5rem;
-
-/* Default heading styles, serif with blues */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin: $heading-margin-top 0 $heading-margin-bottom;
+  margin: var(--space--lg) 0 var(--space--base);
   color: $blue;
-  font-family: $heading-font-family;
-  line-height: $heading-line-height;
+  line-height: 1.2em;
 
   font-display: fallback;
 
@@ -30,16 +23,13 @@ h6 {
 }
 
 h1 {
-  @include breakpoint($large) {
-    font-size: $h1-font-size--max;
-  }
   position: relative;
   display: inline-block;
   padding-bottom: $double-spacing;
   color: $darkest-blue;
-  font-family: $title-font;
-  font-size: $h1-font-size;
-  font-weight: $font-weight--bold;
+  font-family: var(--font--title);
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight--bold);
 
   &:after {
     position: absolute;
@@ -50,67 +40,28 @@ h1 {
     border-width: 0.12em;
     border-style: solid;
   }
-
-  @media print {
-    font-size: 24pt;
-  }
 }
 
 h2 {
-  @include breakpoint($large) {
-    font-size: $h2-font-size--max;
-  }
   color: $dark-blue;
-  font-size: $h2-font-size;
+  font-size: var(--font-size-4xl);
   font-weight: $font-weight--bold;
-
-  @media print {
-    font-size: 22pt;
-  }
 }
 h3 {
-  @include breakpoint($large) {
-    font-size: $h3-font-size--max;
-  }
   color: mix($blue, $dark-blue, 50%);
-  font-size: $h3-font-size;
+  font-size: var(--font-size-3xl);
   font-weight: $font-weight--semibold;
-
-  @media print {
-    font-size: 19pt;
-  }
 }
 h4 {
-  @include breakpoint($large) {
-    font-size: $h4-font-size--max;
-  }
-  font-size: $h4-font-size;
+  font-size: var(--font-size-2xl);
   font-weight: $font-weight--regular;
-
-  @media print {
-    font-size: 17pt;
-  }
 }
 h5 {
-  @include breakpoint($large) {
-    font-size: $h5-font-size--max;
-  }
-  font-size: $h5-font-size;
+  font-size: var(--font-size-xl);
   font-weight: $font-weight--regular;
-
-  @media print {
-    font-size: 16pt;
-  }
 }
 h6 {
-  @include breakpoint($large) {
-    font-size: $h6-font-size--max;
-  }
-  font-size: $h6-font-size;
-
-  @media print {
-    font-size: 14pt;
-  }
+  font-size: var(--font-size-l);
 }
 
 h2 + h3,
@@ -118,12 +69,6 @@ h3 + h4,
 h4 + h5,
 h5 + h6 {
   margin-top: 0;
-}
-
-main {
-  h2 {
-    padding-bottom: $one-point-five-spacing;
-  }
 }
 
 .sans-serif-headings {
@@ -168,7 +113,7 @@ main {
       bottom: 0;
       left: 0;
       width: 50%;
-      max-width: $max-heading-underline-width;
+      max-width: 12.5rem;
       content: "";
       border-width: $border-width--thicker;
       border-style: solid;

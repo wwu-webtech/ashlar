@@ -5,11 +5,11 @@
  * CSS rules that style design components (and their associated states and themes.)
  */
 
-@import 'partials/imports';
-@import '../_patterns/00-utilities/**/*.scss';
-@import '../_patterns/01-atoms/**/*.scss';
-@import '../_patterns/02-molecules/**/*.scss';
-@import '../_patterns/03-organisms/**/*.scss';
-@import '../_patterns/04-templates/**/*.scss';
-@import '../_patterns/05-sites/**/*.scss';
-@import '../_patterns/06-helpers/**/*.scss';
+@import "partials/imports";
+@import "../_patterns/00-utilities/**/*.scss";
+@import "../_patterns/01-atoms/**/*.scss";
+@import "../_patterns/02-molecules/**/*.scss";
+@import "../_patterns/03-organisms/**/*.scss";
+@import "../_patterns/04-templates/**/*.scss";
+@import "../_patterns/05-sites/**/*.scss";
+@import "../_patterns/06-helpers/**/*.scss";

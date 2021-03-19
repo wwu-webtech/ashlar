@@ -3,25 +3,20 @@
  * 01-atoms/01-text/_paragraphs.scss
  */
 
-$paragraph-margin-bottom: $standard-spacing;
-
 p {
-  margin: 0 0 $paragraph-margin-bottom;
+  margin: 0 0 var(--space--standard);
   line-height: 1.5em;
 
   @media print {
-    font-size: 12pt;
-
     page-break-inside: avoid;
   }
 }
 
 .intro {
-  @include font-size--larger;
+  font-size: var(--font-size-lg);
   color: $dark-blue;
 }
 
-.dark-mode
-.intro {
+.dark-mode .intro {
   color: $light-blue;
 }
