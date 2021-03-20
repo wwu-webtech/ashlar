@@ -7,7 +7,7 @@ $paragraph-margin-bottom: $standard-spacing;
 
 p {
   margin: 0 0 $paragraph-margin-bottom;
-  line-height: 1.5em;
+  line-height: 1.5;
 
   @media print {
     font-size: 12pt;
