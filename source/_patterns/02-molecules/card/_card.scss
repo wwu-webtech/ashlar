@@ -401,6 +401,30 @@
         font-size: $min-base-font-size;
       }
     }
+    &.blue {
+      background-color:$light-blue;
+      .title {
+        color: $darkest-blue;
+      }
+      .body {
+        color: $dark-blue;
+        .button.white a{
+          color: $blue;
+        }
+      }
+    }
+    &.green {
+      background-color:$lightest-green;
+      .title {
+        color:$dark-green;
+      }
+      .body {
+        color: darken($dark-green, 30%);
+        .button.white a{
+          color: $dark-green;
+        }
+      }
+    }
   }
 
   /* Cards with .color-block-title class */
