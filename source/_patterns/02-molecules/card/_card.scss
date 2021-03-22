@@ -368,6 +368,27 @@
       }
     }
 
+    .image {
+     max-width: 50%;
+     max-height: 100%;
+     position: absolute;
+     border-radius: 0 $triple-spacing $triple-spacing 0;
+     right: 0;
+     bottom: 0;
+     margin: 0;
+     overflow: hidden;
+     flex: 0 1 100%;
+     order: 2;
+     img {
+       opacity:25%;
+       display: block;
+       width: 100%;
+       height: 100%;
+       object-fit: contain;
+       margin: 0 $triple-spacing 0;
+     }
+   }
+
     .body {
       max-width: 23rem;
       padding: $standard-spacing $double-spacing 0;
