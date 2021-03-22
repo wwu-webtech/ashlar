@@ -2,6 +2,11 @@
 * @file
 * sites/mabel/pages/_object.scss
 */
+
+.download-link {
+  margin-top: $standard-spacing;
+}
+
 a#clip {
   @include breakpoint($medium) {
     font-size: $p-font-size--smaller;
@@ -53,9 +58,9 @@ a#clip {
 .islandora-oralhistories-content,
 .islandora-pdf-content,
 .islandora-video-content {
+  padding: 0;
   border: none;
   border-radius: 0;
-  background: $light-gray;
 }
 
 body.page-islandora-object {
@@ -115,73 +120,38 @@ body.page-islandora-object {
   }
 }
 
-/* Details tab */
-.islandora-metadata {
-  .fieldset-title {
-    text-decoration: none;
-    color: $dark-blue;
-    font-family: $serif;
-    font-size: $h2-font-size;
 
-    &:after {
-      content: " -";
-    }
-  }
-
-  &.collapsed {
-    .fieldset-title {
-      &:after {
-        content: " +";
-      }
-    }
+/* Details */
+.islandora-metadata-set {
+  legend {
+    margin: 0;
+    padding: 0 $standard-spacing;
+    color: $darkest-blue;
   }
 }
 
-html.js .islandora-metadata,
-html.js .islandora-metadata.collapsed {
-  margin-bottom: $standard-spacing;
-  padding: $standard-spacing;
-  border: solid $dark-blue $border-width;
+.islandora-metadata-set fieldset,
+fieldset.islandora-metadata-set {
+  margin-bottom: $half-spacing;
 }
 
-html.js .islandora-metadata.collapsible .fieldset-legend {
-  background-image: none;
-}
+/* Side by side details */
+.layout--twocol-section {
+  dl.islandora-inline-metadata {
+    display: grid;
+    font-size: $p-font-size--smaller;
+    margin-top: 0;
 
-.opendyslexic {
-  body.page-islandora-object {
-    .layout__region--first {
-      .panel-pane {
-        h2,
-        h3 {
-          font-family: $opendyslexic;
-        }
-      }
+    dt {
+      width: initial;
+      border: none;
     }
-  }
 
-  .islandora-metadata {
-    .fieldset-title {
-      font-family: $opendyslexic;
-    }
-  }
-}
-
-.atkinson {
-  body.page-islandora-object {
-    .layout__region--first {
-      .panel-pane {
-        h2,
-        h3 {
-          font-family: $atkinson;
-        }
-      }
-    }
-  }
-
-  .islandora-metadata {
-    .fieldset-title {
-      font-family: $atkinson;
+    dd {
+      width: initial;
+      margin: 0;
+      padding: $half-spacing 0 $half-spacing $one-point-five-spacing;
+      border: none;
     }
   }
 }

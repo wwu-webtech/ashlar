@@ -3,7 +3,8 @@
 * 02-molecules/content/switcher.scss
 */
 
-.content-switcher {
+.content-switcher,
+.mabel-content-switcher {
   display: flex;
   width: 100%;
   margin: 0;
@@ -45,8 +46,8 @@
       background-color: $light-green;
     }
 
-    &:first-child {
-      margin-left: $standard-spacing / 3;
+    &:last-child {
+      margin-right: 0;
     }
 
     .material-icons {
@@ -66,7 +67,8 @@
   }
 }
 
-.content-switcher-container {
+.content-switcher-container,
+.mabel-content-switcher-container {
   display: grid;
   display: -ms-grid;
 

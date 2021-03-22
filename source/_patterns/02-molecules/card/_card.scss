@@ -224,11 +224,12 @@
       padding-left: $standard-spacing;
       text-align: center;
       text-transform: uppercase;
-      line-height: 1.5em;
+      line-height: 1.5;
 
       .month {
         display: block;
-        padding: $standard-spacing $one-point-five-spacing 0 $one-point-five-spacing;
+        padding: $standard-spacing $one-point-five-spacing 0
+          $one-point-five-spacing;
         color: $white;
         background-color: $blue;
         font-size: $h4-font-size;
@@ -241,7 +242,8 @@
 
       .day {
         display: block;
-        padding: $half-spacing $one-point-five-spacing $standard-spacing $one-point-five-spacing;
+        padding: $half-spacing $one-point-five-spacing $standard-spacing
+          $one-point-five-spacing;
         white-space: nowrap;
         word-spacing: -0.2em;
         color: $white;
@@ -260,7 +262,8 @@
       order: 2;
       align-self: flex-end;
       margin-bottom: 0;
-      padding: $standard-spacing $standard-spacing $standard-spacing $double-spacing;
+      padding: $standard-spacing $standard-spacing $standard-spacing
+        $double-spacing;
       text-transform: uppercase;
       color: $blue;
       font-style: normal;
@@ -413,6 +416,12 @@
       &:active,
       &:focus {
         color: $white;
+      }
+    }
+
+    &:focus-within {
+      a:after {
+        outline-color: $white;
       }
     }
   }
