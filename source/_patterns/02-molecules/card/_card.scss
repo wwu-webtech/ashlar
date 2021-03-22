@@ -344,6 +344,44 @@
     }
   }
 
+  /* Cards with .solid-round class */
+  &.solid-round {
+    border-radius: $triple-spacing;
+    box-shadow: none;
+
+    a {
+      &:after {
+        display:none;
+      }
+      &:before {
+        display:none;
+      }
+    }
+
+    .title {
+      padding:0;
+      .block__title {
+        font-family: $title-font;
+        font-size: $h3-font-size--larger;
+        font-weight:800;
+        padding: $double-spacing $double-spacing 0;
+      }
+    }
+
+    .body {
+      max-width: 23rem;
+      padding: $standard-spacing $double-spacing 0;
+      p {
+        font-size:$p-font-size--smaller;
+      }
+      .button.white {
+        box-shadow: none;
+        font-family: $title-font;
+        font-size: $min-base-font-size;
+      }
+    }
+  }
+
   /* Cards with .color-block-title class */
   &.color-block-title {
     .title {
