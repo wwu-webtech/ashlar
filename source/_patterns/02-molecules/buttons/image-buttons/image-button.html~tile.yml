@@ -1,0 +1,22 @@
+attributes:
+  Attribute():
+    class:
+    - block
+    - block--image-button
+    - tile
+title_attributes:
+  Attribute():
+    class:
+    - block__title
+label: Button Title
+block_content:
+  field_heading_level:
+    0:
+      value: "h3"
+  field_link:
+    0:
+      url: "#"
+content:
+  field_link: <a href="#">Marine Science</a>
+  field_image: <div class="field__item"><img src="../../images/pattern-lab/placeholder.png" alt="gray placeholder"></div>
+  field_highlighted_terms: "<div class='taxonomy-terms'><span class='taxonomy-term'>One-on-one chat</span></div>"
