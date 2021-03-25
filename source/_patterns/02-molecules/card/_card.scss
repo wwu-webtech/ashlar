@@ -347,6 +347,28 @@
     }
   }
 
+  /* Cards with .tile class */
+  &.tile {
+    background-color: $light-blue;
+    border-radius: $triple-spacing;
+    font-family: $title-font;
+    padding: $standard-spacing;
+
+    .title {
+      color: $darkest-blue;
+      font-family: $title-font;
+      padding:0 $standard-spacing $standard-spacing;
+      text-transform: uppercase;
+    }
+
+    .taxonomy-term {
+      background-color: transparent;
+      color: $darkest-blue;
+      font-size: $p-font-size;
+      padding:$standard-spacing $standard-spacing 0;
+    }
+  }
+
   /* Cards with .color-block-title class */
   &.color-block-title {
     .title {
