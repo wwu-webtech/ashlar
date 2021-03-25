@@ -1,0 +1,16 @@
+attributes:
+  Attribute():
+    class:
+    - block
+    - block--card
+    - sans-serif-headings
+    - tile
+label: Card Title
+block_content:
+  field_link:
+    0:
+      url: "#"
+content:
+  body:
+  field_image: atoms-landscape-3x2
+  field_highlighted_terms: "<div class='taxonomy-terms'><span class='taxonomy-term'>One-on-one chat</span></div>"
