@@ -354,18 +354,61 @@
     font-family: $title-font;
     padding: $standard-spacing;
 
-    .title {
-      color: $darkest-blue;
-      font-family: $title-font;
-      padding:0 $standard-spacing $standard-spacing;
-      text-transform: uppercase;
+    a {
+      &:after {
+        border-radius: $triple-spacing;
+      }
     }
 
-    .taxonomy-term {
-      background-color: transparent;
-      color: $darkest-blue;
-      font-size: $p-font-size;
-      padding:$standard-spacing $standard-spacing 0;
+    &:hover,
+    &:focus-within {
+      a {
+        &:after {
+          box-shadow: $focus-shadow;
+          border-radius: $triple-spacing;
+        }
+      }
+    }
+
+    .image {
+      border-radius: 0 $triple-spacing 0 0;
+      margin: 0 0 $standard-spacing;
+      order: 1;
+      display: flex;
+      justify-content: flex-end;
+      img {
+        opacity: 25%;
+        display: block;
+        width: auto;
+        max-height: 100px;
+        object-fit: scale-down;
+        margin: 0;
+      }
+    }
+
+    .taxonomy-terms{
+      padding:0 $half-spacing;
+      .taxonomy-term {
+        background-color: transparent;
+        color: $darkest-blue;
+        font-size: $menu-font-size;
+        margin:0;
+        padding: 0;
+      }
+    }
+
+    .title {
+      margin:0;
+      padding: 0 $half-spacing $half-spacing;
+      text-transform: uppercase;
+      .block__title {
+        margin:0;
+        a {
+        color: $darkest-blue;
+        font-family: $title-font;
+        font-size: $h4-font-size;
+        }
+      }
     }
   }
 
