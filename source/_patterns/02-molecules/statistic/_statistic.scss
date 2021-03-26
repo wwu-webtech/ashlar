@@ -120,10 +120,12 @@ $vertical-statistic-width--max: 15rem;
     }
     grid-area: number;
     font-size: $h3-font-size--largest;
+    margin: 0;
   }
 
   .text {
     grid-area: text;
+    margin: 0;
   }
 }
 
