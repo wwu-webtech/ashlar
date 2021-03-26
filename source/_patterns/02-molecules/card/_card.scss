@@ -10,10 +10,9 @@
   grid-column-gap: $standard-spacing;
   -ms-grid-columns: 1fr 1fr;
   -ms-grid-rows: auto 1fr;
-  grid-template-areas:
-    "image taxonomy"
-    "image title"
-    "image body";
+  grid-template-areas: "image taxonomy"
+  "image title"
+  "image body";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto 1fr;
 
@@ -90,6 +89,8 @@
   padding-bottom: $standard-spacing;
 
   a {
+    word-break: break-all;
+
     &:after {
       transition: $medium-transition-speed $standard-ease;
       box-shadow: $unfocus-shadow;
@@ -229,7 +230,7 @@
       .month {
         display: block;
         padding: $standard-spacing $one-point-five-spacing 0
-          $one-point-five-spacing;
+        $one-point-five-spacing;
         color: $white;
         background-color: $blue;
         font-size: $h4-font-size;
@@ -243,7 +244,7 @@
       .day {
         display: block;
         padding: $half-spacing $one-point-five-spacing $standard-spacing
-          $one-point-five-spacing;
+        $one-point-five-spacing;
         white-space: nowrap;
         word-spacing: -0.2em;
         color: $white;
@@ -263,7 +264,7 @@
       align-self: flex-end;
       margin-bottom: 0;
       padding: $standard-spacing $standard-spacing $standard-spacing
-        $double-spacing;
+      $double-spacing;
       text-transform: uppercase;
       color: $blue;
       font-style: normal;
