@@ -78,7 +78,6 @@ $vertical-statistic-width--max: 15rem;
   }
 
   .number {
-    display: block;
     margin-bottom: $standard-spacing;
     font-size: $p-font-size--larger;
   }
@@ -120,10 +119,12 @@ $vertical-statistic-width--max: 15rem;
     }
     grid-area: number;
     font-size: $h3-font-size--largest;
+    margin: 0;
   }
 
   .text {
     grid-area: text;
+    margin: 0;
   }
 }
 

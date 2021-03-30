@@ -274,6 +274,7 @@
       "-ms-word-wrap",
       "word-wrap",
       "word-break",
+      "page-break-inside",
       "-ms-word-break",
       "-moz-tab-size",
       "-o-tab-size",
@@ -410,6 +411,7 @@
       "font-emphasize-position",
       "font-emphasize-style",
       "font-smooth",
+      "font-display",
       "line-height",
 
       "$media",
