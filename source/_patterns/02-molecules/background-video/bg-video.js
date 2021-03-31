@@ -39,7 +39,7 @@ function prefersReducedMotion() {
   });
   play_pause_button.forEach(function (button) {
     if (motionQuery.matches) {
-      button.classList.remove("bg-video--pause");
+      button.classList.add("bg-video--pause");
       button.innerHTML = material_pause + "Pause animation";
     } else {
       button.classList.add("bg-video--play");
