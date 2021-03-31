@@ -89,8 +89,6 @@
   padding-bottom: $standard-spacing;
 
   a {
-    word-break: break-all;
-
     &:after {
       transition: $medium-transition-speed $standard-ease;
       box-shadow: $unfocus-shadow;
@@ -206,6 +204,7 @@
     }
 
     a {
+      word-break: break-all;
       position: relative;
     }
   }
