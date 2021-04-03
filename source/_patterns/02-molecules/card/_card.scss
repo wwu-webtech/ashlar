@@ -358,6 +358,11 @@
       }
     }
 
+    &:focus,
+    &:active {
+      outline: $focus-outline currentColor;
+    }
+
     .title {
       padding:0;
       .block__title {
@@ -394,6 +399,7 @@
       padding: $standard-spacing $double-spacing 0;
       p {
         font-size:$p-font-size--smaller;
+        margin: 0 0 $double-spacing;
       }
       .button.white {
         box-shadow: none;
@@ -401,27 +407,47 @@
         font-size: $min-base-font-size;
       }
     }
+
     &.blue {
       background-color:$light-blue;
       .title {
-        color: $darkest-blue;
-      }
+        .block__title {
+          a {
+              color: $dark-blue;
+            }
+          }
+        }
       .body {
-        color: $dark-blue;
-        .button.white a{
+        color: $darkest-blue;
+        a.button.white {
           color: $blue;
+          &:hover,
+          &:focus {
+            background-color: $blue;
+            color: $white;
+          }
         }
       }
     }
+
     &.green {
       background-color:$lightest-green;
       .title {
-        color:$dark-green;
+        .block__title {
+          a {
+              color: $dark-green;
+            }
+        }
       }
       .body {
-        color: darken($dark-green, 30%);
-        .button.white a{
-          color: $dark-green;
+        color: darken($dark-green,10%);
+        a.button.white {
+          color: $green;
+          &:hover,
+          &:focus {
+            background-color: $green;
+            color: $white;
+          }
         }
       }
     }
