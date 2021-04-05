@@ -1,0 +1,23 @@
+attributes:
+  Attribute():
+    class:
+    - block
+    - block--card
+    - solid-round
+    - blue
+title_attributes:
+  Attribute():
+    class:
+    - block__title
+label: Card Title
+block_content:
+  field_heading_level:
+    0:
+      value: "h3"
+  field_link:
+    0:
+      url: "#"
+content:
+  body: "<p>Card body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><div><a class='button round white' href='#'>Button Text</a></div>"
+  field_image: atoms-image-illustration
+  field_highlighted_terms:

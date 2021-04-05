@@ -348,6 +348,115 @@
     }
   }
 
+  /* Cards with .solid-round class */
+  &.solid-round {
+    border-radius: $triple-spacing;
+    box-shadow: none;
+
+    a {
+      &:after {
+        display:none;
+      }
+      &:before {
+        display:none;
+      }
+    }
+
+    &:focus,
+    &:active {
+      outline: $focus-outline currentColor;
+    }
+
+    .title {
+      padding:0;
+      .block__title {
+        font-family: $title-font;
+        font-size: $h3-font-size--larger;
+        font-weight:800;
+        padding: $double-spacing $double-spacing 0;
+      }
+    }
+
+    .image {
+     max-width: 50%;
+     max-height: 100%;
+     position: absolute;
+     border-radius: 0 $triple-spacing $triple-spacing 0;
+     right: 0;
+     bottom: 0;
+     margin: 0;
+     overflow: hidden;
+     flex: 0 1 100%;
+     order: 2;
+     img {
+       opacity:25%;
+       display: block;
+       width: 100%;
+       height: 100%;
+       object-fit: contain;
+       margin: 0 $triple-spacing 0;
+     }
+   }
+
+    .body {
+      max-width: 23rem;
+      padding: $standard-spacing $double-spacing 0;
+      p {
+        font-size:$p-font-size--smaller;
+        margin: 0 0 $double-spacing;
+      }
+      .button.white {
+        box-shadow: none;
+        font-family: $title-font;
+        font-size: $min-base-font-size;
+      }
+    }
+
+    &.blue {
+      background-color:$light-blue;
+      .title {
+        .block__title {
+          a {
+              color: $dark-blue;
+            }
+          }
+        }
+      .body {
+        color: $darkest-blue;
+        a.button.white {
+          color: $blue;
+          &:hover,
+          &:focus {
+            background-color: $blue;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    &.green {
+      background-color:$lightest-green;
+      .title {
+        .block__title {
+          a {
+              color: $dark-green;
+            }
+        }
+      }
+      .body {
+        color: darken($dark-green,10%);
+        a.button.white {
+          color: $green;
+          &:hover,
+          &:focus {
+            background-color: $green;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
   /* Cards with .color-block-title class */
   &.color-block-title {
     .title {
