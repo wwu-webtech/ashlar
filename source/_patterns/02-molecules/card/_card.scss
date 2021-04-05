@@ -204,8 +204,8 @@
     }
 
     a {
-      word-break: break-all;
       position: relative;
+      word-break: break-all;
     }
   }
 
@@ -284,6 +284,75 @@
     .body {
       padding-right: $double-spacing;
       padding-left: $double-spacing;
+    }
+
+    /* event cards with additional .alt class */
+    &.alt {
+      display: grid;
+
+      grid-template-areas: "image image"
+      "date title"
+      "date location"
+      "body body"
+      "terms terms";
+      grid-template-columns: 20% 80%;
+      grid-template-rows: auto;
+
+      .title {
+        @include blue-bg;
+        display: flex;
+        align-items: end;
+        height: 100%;
+        margin: 0;
+        padding-top: $standard-spacing;
+
+        grid-area: title;
+      }
+
+      .image {
+        margin-bottom: 0;
+
+        grid-area: image;
+      }
+
+      .date {
+        margin: 0;
+        padding: 0;
+
+        grid-area: date;
+
+        .month {
+          background-color: $dark-blue;
+        }
+
+        .day {
+          color: $dark-blue;
+          background-color: $light-green;
+        }
+      }
+
+      .location {
+        @include blue-bg;
+        display: flex;
+        align-items: start;
+        height: 100%;
+        padding-top: 0;
+
+        grid-area: location;
+      }
+
+      .body {
+        padding: $standard-spacing;
+        padding-bottom: 0;
+
+        grid-area: body;
+      }
+
+      .taxonomy-terms {
+        padding: $standard-spacing;
+
+        grid-area: terms;
+      }
     }
   }
 
