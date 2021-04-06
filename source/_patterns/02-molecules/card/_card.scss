@@ -224,7 +224,7 @@
       padding-left: $standard-spacing;
       text-align: center;
       text-transform: uppercase;
-      line-height: 1.5;
+      line-height: 1;
 
       .month {
         display: block;
@@ -242,7 +242,7 @@
 
       .day {
         display: block;
-        padding: $half-spacing $one-point-five-spacing $standard-spacing
+        padding: 0 $one-point-five-spacing $standard-spacing
         $one-point-five-spacing;
         white-space: nowrap;
         word-spacing: -0.2em;
@@ -316,6 +316,7 @@
       }
 
       .date {
+        width: 100%;
         margin: 0;
         padding: 0;
 
