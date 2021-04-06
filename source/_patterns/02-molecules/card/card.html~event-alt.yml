@@ -1,0 +1,20 @@
+attributes:
+  Attribute():
+    class:
+    - block
+    - block--card
+    - event
+    - alt
+    - sans-serif-headings
+label: Event Title
+block_content:
+  field_link:
+    0:
+      url: "#"
+content:
+  body: "<p>Card body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+  field_image: atoms-landscape-3x2
+  field_highlighted_terms: "<div class='taxonomy-terms'><span class='taxonomy-term'>Category One</span> <span class='taxonomy-term'>Category Two</span> <span class='taxonomy-term'>Category Three</span></div>"
+  field_date: "<span class='month'>Apr</span> <span class='day'>04 - 07</span'>"
+  field_location: "10:30 am | Viking Union"
