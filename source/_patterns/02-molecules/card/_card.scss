@@ -10,8 +10,7 @@
   grid-column-gap: $standard-spacing;
   -ms-grid-columns: 1fr 1fr;
   -ms-grid-rows: auto 1fr;
-  grid-template-areas:
-  "image taxonomy"
+  grid-template-areas: "image taxonomy"
   "image title"
   "image body";
   grid-template-columns: 1fr 1fr;
@@ -205,8 +204,8 @@
     }
 
     a {
-      word-break: break-all;
       position: relative;
+      word-break: break-all;
     }
   }
 
@@ -225,7 +224,7 @@
       padding-left: $standard-spacing;
       text-align: center;
       text-transform: uppercase;
-      line-height: 1.5;
+      line-height: 1;
 
       .month {
         display: block;
@@ -243,7 +242,7 @@
 
       .day {
         display: block;
-        padding: $half-spacing $one-point-five-spacing $standard-spacing
+        padding: 0 $one-point-five-spacing $standard-spacing
         $one-point-five-spacing;
         white-space: nowrap;
         word-spacing: -0.2em;
@@ -285,6 +284,76 @@
     .body {
       padding-right: $double-spacing;
       padding-left: $double-spacing;
+    }
+
+    /* event cards with additional .alt class */
+    &.alt {
+      display: grid;
+
+      grid-template-areas: "image image"
+      "date title"
+      "date location"
+      "body body"
+      "terms terms";
+      grid-template-columns: 20% 80%;
+      grid-template-rows: auto;
+
+      .title {
+        @include blue-bg;
+        display: flex;
+        align-items: end;
+        height: 100%;
+        margin: 0;
+        padding-top: $standard-spacing;
+
+        grid-area: title;
+      }
+
+      .image {
+        margin-bottom: 0;
+
+        grid-area: image;
+      }
+
+      .date {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        grid-area: date;
+
+        .month {
+          background-color: $dark-blue;
+        }
+
+        .day {
+          color: $dark-blue;
+          background-color: $light-green;
+        }
+      }
+
+      .location {
+        @include blue-bg;
+        display: flex;
+        align-items: start;
+        height: 100%;
+        padding-top: 0;
+
+        grid-area: location;
+      }
+
+      .body {
+        padding: $standard-spacing;
+        padding-bottom: 0;
+
+        grid-area: body;
+      }
+
+      .taxonomy-terms {
+        padding: $standard-spacing;
+
+        grid-area: terms;
+      }
     }
   }
 
@@ -350,10 +419,10 @@
 
   /* Cards with .tile class */
   &.tile {
-    background-color: $light-blue;
-    border-radius: $triple-spacing;
-    font-family: $title-font;
     padding: $standard-spacing;
+    border-radius: $triple-spacing;
+    background-color: $light-blue;
+    font-family: $title-font;
 
     a {
       &:after {
@@ -364,9 +433,9 @@
     &:hover {
       a {
         &:after {
-          box-shadow: $focus-shadow;
           border-radius: $triple-spacing;
           outline: transparent;
+          box-shadow: $focus-shadow;
         }
       }
     }
@@ -384,42 +453,153 @@
     }
 
     .image {
-      border-radius: 0 $triple-spacing 0 0;
-      margin: 0 0 $standard-spacing;
-      order: 1;
       display: flex;
+      order: 1;
       justify-content: flex-end;
+      margin: 0 0 $standard-spacing;
+      border-radius: 0 $triple-spacing 0 0;
       img {
-        opacity: 25%;
         display: block;
         width: auto;
         max-height: 6.25rem;
-        object-fit: scale-down;
         margin: 0;
+        opacity: 25%;
+
+        object-fit: scale-down;
       }
     }
 
     .taxonomy-terms {
-      padding:0 $half-spacing;
+      padding: 0 $half-spacing;
       .taxonomy-term {
-        background-color: transparent;
-        color: $darkest-blue;
-        font-size: $menu-font-size;
-        margin:0;
+        margin: 0;
         padding: 0;
+        color: $darkest-blue;
+        background-color: transparent;
+        font-size: $menu-font-size;
       }
     }
 
     .title {
-      margin:0;
+      margin: 0;
       padding: 0 $half-spacing $half-spacing;
       text-transform: uppercase;
       .block__title {
-        margin:0;
+        margin: 0;
         a {
-        color: $darkest-blue;
+          color: $darkest-blue;
+          font-family: $title-font;
+          font-size: $h4-font-size;
+        }
+      }
+    }
+  }
+
+  /* Cards with .solid-round class */
+  &.solid-round {
+    border-radius: $triple-spacing;
+    box-shadow: none;
+
+    a {
+      &:after {
+        display: none;
+      }
+      &:before {
+        display: none;
+      }
+    }
+
+    &:focus,
+    &:active {
+      outline: $focus-outline currentColor;
+    }
+
+    .title {
+      padding: 0;
+      .block__title {
+        padding: $double-spacing $double-spacing 0;
         font-family: $title-font;
-        font-size: $h4-font-size;
+        font-size: $h3-font-size--larger;
+        font-weight: 800;
+      }
+    }
+
+    .image {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      flex: 0 1 100%;
+      order: 2;
+      max-width: 50%;
+      max-height: 100%;
+      margin: 0;
+      border-radius: 0 $triple-spacing $triple-spacing 0;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: 0 $triple-spacing 0;
+        opacity: 25%;
+
+        object-fit: contain;
+      }
+    }
+
+    .body {
+      max-width: 23rem;
+      padding: $standard-spacing $double-spacing 0;
+      p {
+        margin: 0 0 $double-spacing;
+        font-size: $p-font-size--smaller;
+      }
+      .button.white {
+        box-shadow: none;
+        font-family: $title-font;
+        font-size: $min-base-font-size;
+      }
+    }
+
+    &.blue {
+      background-color: $light-blue;
+      .title {
+        .block__title {
+          a {
+            color: $dark-blue;
+          }
+        }
+      }
+      .body {
+        color: $darkest-blue;
+        a.button.white {
+          color: $blue;
+          &:hover,
+          &:focus {
+            color: $white;
+            background-color: $blue;
+          }
+        }
+      }
+    }
+
+    &.green {
+      background-color: $lightest-green;
+      .title {
+        .block__title {
+          a {
+            color: $dark-green;
+          }
+        }
+      }
+      .body {
+        color: darken($dark-green,10%);
+        a.button.white {
+          color: $green;
+          &:hover,
+          &:focus {
+            color: $white;
+            background-color: $green;
+          }
         }
       }
     }
