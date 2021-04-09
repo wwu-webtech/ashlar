@@ -22,7 +22,6 @@ if (breadcrumb_list) {
 
   current_link.setAttribute("href", window.location.pathname);
   current_link.setAttribute("aria-current", "page");
-  current_link.classList.add("bold");
 
   if (profile_page_title) current_link.innerText = profile_page_title.innerText;
   else current_link.innerText = page_title.innerText;

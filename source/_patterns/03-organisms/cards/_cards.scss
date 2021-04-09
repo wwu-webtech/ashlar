@@ -61,14 +61,16 @@ $spotlight-height--large: 18.75rem;
 
   .card,
   .block--card,
-  .pager {
+  .pager,
+  .event {
     flex: 0 0 100%;
   }
 }
 
 .card-2col--flex {
   .card,
-  .block--card {
+  .block--card,
+  .event {
     @include breakpoint($small) {
       flex: 0 0 calc(50% - #{$half-spacing});
       margin-right: $half-spacing;
@@ -78,7 +80,8 @@ $spotlight-height--large: 18.75rem;
 
 .card-3col--flex {
   .card,
-  .block--card {
+  .block--card,
+  .event {
     @include breakpoint($small) {
       flex: 0 0 calc(33.33% - #{$half-spacing});
       margin-right: $half-spacing;
@@ -88,7 +91,8 @@ $spotlight-height--large: 18.75rem;
 
 .card-4col--flex {
   .card,
-  .block--card {
+  .block--card,
+  .event {
     @include breakpoint($small) {
       flex: 0 0 calc(25% - #{$half-spacing});
       margin-right: $half-spacing;
@@ -104,7 +108,8 @@ $spotlight-height--large: 18.75rem;
 /* Vertical Card List */
 .card-list {
   .card,
-  .block--card {
+  .block--card,
+  .event {
     @include horizontal-card;
   }
 }
@@ -127,7 +132,8 @@ $spotlight-height--large: 18.75rem;
     display: initial;
 
     .card,
-    .block--card {
+    .block--card,
+    .event {
       float: left;
       width: 50%;
     }
@@ -139,7 +145,8 @@ $spotlight-height--large: 18.75rem;
     display: initial;
 
     .card,
-    .block--card {
+    .block--card,
+    .event {
       float: left;
       width: 33%;
     }
@@ -151,7 +158,8 @@ $spotlight-height--large: 18.75rem;
     display: initial;
 
     .card,
-    .block--card {
+    .block--card,
+    .event {
       float: left;
       width: 25%;
     }

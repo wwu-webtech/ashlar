@@ -10,10 +10,9 @@
   grid-column-gap: $standard-spacing;
   -ms-grid-columns: 1fr 1fr;
   -ms-grid-rows: auto 1fr;
-  grid-template-areas:
-    "image taxonomy"
-    "image title"
-    "image body";
+  grid-template-areas: "image taxonomy"
+  "image title"
+  "image body";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto 1fr;
 
@@ -206,6 +205,7 @@
 
     a {
       position: relative;
+      word-break: break-all;
     }
   }
 
@@ -224,11 +224,12 @@
       padding-left: $standard-spacing;
       text-align: center;
       text-transform: uppercase;
-      line-height: 1.5em;
+      line-height: 1;
 
       .month {
         display: block;
-        padding: $standard-spacing $one-point-five-spacing 0 $one-point-five-spacing;
+        padding: $standard-spacing $one-point-five-spacing 0
+        $one-point-five-spacing;
         color: $white;
         background-color: $blue;
         font-size: $h4-font-size;
@@ -241,7 +242,8 @@
 
       .day {
         display: block;
-        padding: $half-spacing $one-point-five-spacing $standard-spacing $one-point-five-spacing;
+        padding: 0 $one-point-five-spacing $standard-spacing
+        $one-point-five-spacing;
         white-space: nowrap;
         word-spacing: -0.2em;
         color: $white;
@@ -260,7 +262,8 @@
       order: 2;
       align-self: flex-end;
       margin-bottom: 0;
-      padding: $standard-spacing $standard-spacing $standard-spacing $double-spacing;
+      padding: $standard-spacing $standard-spacing $standard-spacing
+      $double-spacing;
       text-transform: uppercase;
       color: $blue;
       font-style: normal;
@@ -281,6 +284,76 @@
     .body {
       padding-right: $double-spacing;
       padding-left: $double-spacing;
+    }
+
+    /* event cards with additional .alt class */
+    &.alt {
+      display: grid;
+
+      grid-template-areas: "image image"
+      "date title"
+      "date location"
+      "body body"
+      "terms terms";
+      grid-template-columns: 20% 80%;
+      grid-template-rows: auto;
+
+      .title {
+        @include blue-bg;
+        display: flex;
+        align-items: end;
+        height: 100%;
+        margin: 0;
+        padding-top: $standard-spacing;
+
+        grid-area: title;
+      }
+
+      .image {
+        margin-bottom: 0;
+
+        grid-area: image;
+      }
+
+      .date {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        grid-area: date;
+
+        .month {
+          background-color: $dark-blue;
+        }
+
+        .day {
+          color: $dark-blue;
+          background-color: $light-green;
+        }
+      }
+
+      .location {
+        @include blue-bg;
+        display: flex;
+        align-items: start;
+        height: 100%;
+        padding-top: 0;
+
+        grid-area: location;
+      }
+
+      .body {
+        padding: $standard-spacing;
+        padding-bottom: 0;
+
+        grid-area: body;
+      }
+
+      .taxonomy-terms {
+        padding: $standard-spacing;
+
+        grid-area: terms;
+      }
     }
   }
 
@@ -341,6 +414,115 @@
       color: $white;
       border-radius: $border-radius--round-square;
       background-color: $blue;
+    }
+  }
+
+  /* Cards with .solid-round class */
+  &.solid-round {
+    border-radius: $triple-spacing;
+    box-shadow: none;
+
+    a {
+      &:after {
+        display:none;
+      }
+      &:before {
+        display:none;
+      }
+    }
+
+    &:focus,
+    &:active {
+      outline: $focus-outline currentColor;
+    }
+
+    .title {
+      padding:0;
+      .block__title {
+        font-family: $title-font;
+        font-size: $h3-font-size--larger;
+        font-weight:800;
+        padding: $double-spacing $double-spacing 0;
+      }
+    }
+
+    .image {
+     max-width: 50%;
+     max-height: 100%;
+     position: absolute;
+     border-radius: 0 $triple-spacing $triple-spacing 0;
+     right: 0;
+     bottom: 0;
+     margin: 0;
+     overflow: hidden;
+     flex: 0 1 100%;
+     order: 2;
+     img {
+       opacity:25%;
+       display: block;
+       width: 100%;
+       height: 100%;
+       object-fit: contain;
+       margin: 0 $triple-spacing 0;
+     }
+   }
+
+    .body {
+      max-width: 23rem;
+      padding: $standard-spacing $double-spacing 0;
+      p {
+        font-size:$p-font-size--smaller;
+        margin: 0 0 $double-spacing;
+      }
+      .button.white {
+        box-shadow: none;
+        font-family: $title-font;
+        font-size: $min-base-font-size;
+      }
+    }
+
+    &.blue {
+      background-color:$light-blue;
+      .title {
+        .block__title {
+          a {
+              color: $dark-blue;
+            }
+          }
+        }
+      .body {
+        color: $darkest-blue;
+        a.button.white {
+          color: $blue;
+          &:hover,
+          &:focus {
+            background-color: $blue;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    &.green {
+      background-color:$lightest-green;
+      .title {
+        .block__title {
+          a {
+              color: $dark-green;
+            }
+        }
+      }
+      .body {
+        color: darken($dark-green,10%);
+        a.button.white {
+          color: $green;
+          &:hover,
+          &:focus {
+            background-color: $green;
+            color: $white;
+          }
+        }
+      }
     }
   }
 
@@ -413,6 +595,12 @@
       &:active,
       &:focus {
         color: $white;
+      }
+    }
+
+    &:focus-within {
+      a:after {
+        outline-color: $white;
       }
     }
   }

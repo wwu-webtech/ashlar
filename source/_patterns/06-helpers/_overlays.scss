@@ -1,65 +1,80 @@
+/* Dark mode overlay helper--mutes images in dark mode */
+
+.dark-mode {
+  .block--banner,
+  .block--image-button,
+  .block--image {
+    .image,
+    .background-image {
+      img {
+        filter: brightness(0.8) contrast(1.2);
+      }
+    }
+  }
+}
+
 /* Darken bg image to improve contrast as needed, 
 mainly for image buttons and banner images with overlays on top */
 
 .image-darker--10 {
   .image,
   .background-image {
-    filter: brightness(90%);
+    filter: brightness(0.9);
   }
 }
 
 .image-darker--20 {
   .image,
   .background-image {
-    filter: brightness(80%);
+    filter: brightness(0.8);
   }
 }
 
 .image-darker--30 {
   .image,
   .background-image {
-    filter: brightness(70%);
+    filter: brightness(0.7);
   }
 }
 
 .image-darker--40 {
   .image,
   .background-image {
-    filter: brightness(60%);
+    filter: brightness(0.6);
   }
 }
 
 .image-darker--50 {
   .image,
   .background-image {
-    filter: brightness(50%);
+    filter: brightness(0.5);
   }
 }
 
 .image-darker--60 {
   .image,
   .background-image {
-    filter: brightness(40%);
+    filter: brightness(0.4);
   }
 }
 
 .image-darker--70 {
   .image,
   .background-image {
-    filter: brightness(30%);
+    filter: brightness(0.3);
   }
 }
 
 .image-darker--80 {
   .image,
   .background-image {
-    filter: brightness(20%);
+    filter: brightness(0.2);
   }
 }
 
 .image-darker--90 {
   .image,
   .background-image {
-    filter: brightness(10%);
+    filter: brightness(0.1);
   }
 }

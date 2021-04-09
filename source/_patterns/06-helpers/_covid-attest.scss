@@ -29,6 +29,10 @@
       &:focus {
         color: $white;
       }
+
+      &:focus {
+        outline-color: $darkest-blue;
+      }
     }
   }
 }

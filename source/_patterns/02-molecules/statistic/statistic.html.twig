@@ -13,15 +13,19 @@
     {% endif %}
   {% endblock %}
 
-  {% if content.field_number %}
-    <div class="number">
-      {{ content.field_number }}
-    </div>
-  {% endif %}
+  {% block field_number %}
+    {% if content.field_number %}
+      <p class="number">
+        {{ content.field_number }}
+      </p>
+    {% endif %}
+  {% endblock %}
 
-  {% if content.field_text %}
-    <div class="text">
-      {{ content.field_text }}
-    </div>
-  {% endif %}
+  {% block field_text %}
+    {% if content.field_text %}
+      <p class="text">
+        {{ content.field_text }}
+      </p>
+    {% endif %}
+  {% endblock %}
 </div>

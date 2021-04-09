@@ -15,12 +15,20 @@
       display: inline-block;
       margin-right: $half-spacing;
 
+      &:last-child {
+        font-weight: $font-weight--bold;
+
+        &::before {
+          font-weight: initial;
+        }
+      }
+
       &:before {
         margin-right: $half-spacing;
       }
     }
   }
   li + li::before {
-    content: '>';
+    content: ">";
   }
 }
