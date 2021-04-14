@@ -47,6 +47,9 @@ $max-box-size: 18.75rem;
         padding: ($chart-standard-spacing / 2);
         text-align: center;
         text-decoration: none;
+      }
+
+      & > span {
         background: $light-gray;
       }
 
