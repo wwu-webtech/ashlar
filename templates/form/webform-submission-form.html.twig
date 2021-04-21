@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a webform submission form.
+ *
+ * Available variables:
+ * - form: The webform submission form.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% set text_attributes = create_attribute() %}
+
+{% set text_classes = [
+    'double-margin--bottom', 
+    'webform-required-text',
+    ] 
+%}
+
+{% if form.preview %}
+  {{ form }}
+{% else %}
+  <p{{ text_attributes.addClass(text_classes) }}>
+      <em>Required fields are marked with an asterisk (*).</em>
+  </p>
+
+  {{ form }}
+{% endif %}
+

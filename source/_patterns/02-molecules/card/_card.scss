@@ -417,6 +417,84 @@
     }
   }
 
+  /* Cards with .tile class */
+  &.tile {
+    padding: $standard-spacing;
+    border-radius: $triple-spacing;
+    background-color: $light-blue;
+    font-family: $title-font;
+
+    a {
+      &:after {
+        border-radius: $triple-spacing;
+      }
+    }
+
+    &:hover {
+      a {
+        &:after {
+          border-radius: $triple-spacing;
+          outline: transparent;
+          box-shadow: $focus-shadow;
+        }
+      }
+    }
+
+    &:focus-within {
+      a {
+        &:after {
+          @include breakpoint($medium) {
+            border: $focus-outline--thicker;
+          }
+          border: $focus-outline $dark-blue;
+          outline: transparent;
+        }
+      }
+    }
+
+    .image {
+      display: flex;
+      order: 1;
+      justify-content: flex-end;
+      margin: 0 0 $standard-spacing;
+      border-radius: 0 $triple-spacing 0 0;
+      img {
+        display: block;
+        width: auto;
+        max-height: 6.25rem;
+        margin: 0;
+        opacity: 25%;
+
+        object-fit: scale-down;
+      }
+    }
+
+    .taxonomy-terms {
+      padding: 0 $half-spacing;
+      .taxonomy-term {
+        margin: 0;
+        padding: 0;
+        color: $darkest-blue;
+        background-color: transparent;
+        font-size: $menu-font-size;
+      }
+    }
+
+    .title {
+      margin: 0;
+      padding: 0 $half-spacing $half-spacing;
+      text-transform: uppercase;
+      .block__title {
+        margin: 0;
+        a {
+          color: $darkest-blue;
+          font-family: $title-font;
+          font-size: $h4-font-size;
+        }
+      }
+    }
+  }
+
   /* Cards with .solid-round class */
   &.solid-round {
     border-radius: $triple-spacing;
@@ -424,10 +502,10 @@
 
     a {
       &:after {
-        display:none;
+        display: none;
       }
       &:before {
-        display:none;
+        display: none;
       }
     }
 
@@ -437,42 +515,43 @@
     }
 
     .title {
-      padding:0;
+      padding: 0;
       .block__title {
+        padding: $double-spacing $double-spacing 0;
         font-family: $title-font;
         font-size: $h3-font-size--larger;
-        font-weight:800;
-        padding: $double-spacing $double-spacing 0;
+        font-weight: 800;
       }
     }
 
     .image {
-     max-width: 50%;
-     max-height: 100%;
-     position: absolute;
-     border-radius: 0 $triple-spacing $triple-spacing 0;
-     right: 0;
-     bottom: 0;
-     margin: 0;
-     overflow: hidden;
-     flex: 0 1 100%;
-     order: 2;
-     img {
-       opacity:25%;
-       display: block;
-       width: 100%;
-       height: 100%;
-       object-fit: contain;
-       margin: 0 $triple-spacing 0;
-     }
-   }
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      flex: 0 1 100%;
+      order: 2;
+      max-width: 50%;
+      max-height: 100%;
+      margin: 0;
+      border-radius: 0 $triple-spacing $triple-spacing 0;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: 0 $triple-spacing 0;
+        opacity: 25%;
+
+        object-fit: contain;
+      }
+    }
 
     .body {
       max-width: 23rem;
       padding: $standard-spacing $double-spacing 0;
       p {
-        font-size:$p-font-size--smaller;
         margin: 0 0 $double-spacing;
+        font-size: $p-font-size--smaller;
       }
       .button.white {
         box-shadow: none;
@@ -482,34 +561,34 @@
     }
 
     &.blue {
-      background-color:$light-blue;
+      background-color: $light-blue;
       .title {
         .block__title {
           a {
-              color: $dark-blue;
-            }
+            color: $dark-blue;
           }
         }
+      }
       .body {
         color: $darkest-blue;
         a.button.white {
           color: $blue;
           &:hover,
           &:focus {
-            background-color: $blue;
             color: $white;
+            background-color: $blue;
           }
         }
       }
     }
 
     &.green {
-      background-color:$lightest-green;
+      background-color: $lightest-green;
       .title {
         .block__title {
           a {
-              color: $dark-green;
-            }
+            color: $dark-green;
+          }
         }
       }
       .body {
@@ -518,8 +597,8 @@
           color: $green;
           &:hover,
           &:focus {
-            background-color: $green;
             color: $white;
+            background-color: $green;
           }
         }
       }

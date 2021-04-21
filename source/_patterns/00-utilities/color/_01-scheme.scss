@@ -62,7 +62,7 @@ $alert-color: $red;
   border: solid $border-width transparentize($color, 0.25);
   background-color: transparentize($color, 0.75);
 
-  a {
+  a:not([class]) {
     text-decoration: underline;
     color: mix($blend, $color, 75%);
 
@@ -70,6 +70,7 @@ $alert-color: $red;
     &:hover,
     &:active {
       color: mix($blend, $color, 90%);
+      text-decoration: none;
     }
   }
 

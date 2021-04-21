@@ -47,10 +47,13 @@ $max-box-size: 18.75rem;
         padding: ($chart-standard-spacing / 2);
         text-align: center;
         text-decoration: none;
+      }
+
+      & > span {
         background: $light-gray;
       }
 
-      a {
+      & > a {
         color: $white;
         background-color: $blue;
 
@@ -287,7 +290,9 @@ $max-box-size: 18.75rem;
         width: $chart-border-width;
         height: $chart-standard-spacing;
         content: "";
-        transform: translate(-(($chart-standard-spacing / 2) + ($chart-border-width / 2)));
+        transform: translate(
+          -(($chart-standard-spacing / 2) + ($chart-border-width / 2))
+        );
         border: none;
         background: $line-color;
       }
