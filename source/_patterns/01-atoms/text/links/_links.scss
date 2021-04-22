@@ -143,8 +143,8 @@ a {
 
     page-break-inside: avoid;
   }
-  p a[href^=http]:after,
-  ul a[href^=http]:after {
+  p a[href^="http"]:after,
+  ul a[href^="http"]:after {
     content: " [" attr(href) "] ";
     font-size: 10pt;
   }

@@ -29,10 +29,10 @@ VARIABLES
 --gray--darker-40: #3d4950;
 --gray--darker-20: #52616b;
 --gray: #667986;
---gray--lighter-20: #85949e; // replaces $lightest-gray
---gray--lighter-40: #a3afb6; // replaces $light-gray
---gray--lighter-60: #c2c9cf;
---gray--lighter-80: #e0e4e7;
+--gray--lighter-20: #85949e;
+--gray--lighter-40: #a3afb6;
+--gray--lighter-60: #c2c9cf; // replaces $light-gray
+--gray--lighter-80: #e0e4e7; // replaces $lightest-gray
 --white: #fff;
 
 --dark-blue--darker-80: #000d1b;
@@ -40,10 +40,10 @@ VARIABLES
 --dark-blue--darker-40: #002651;
 --dark-blue--darker-20: #00326c; // replaces $darkest-blue
 --dark-blue: #003f87;
---dark-blue--lighter-20: #33659f; // replaces $lightest-bg-blue
---dark-blue--lighter-40: #668cb7; // replaces $light-bg-blue
---dark-blue--lighter-60: #99b2cf;
---dark-blue--lighter-80: #ccd9e7;
+--dark-blue--lighter-20: #33659f;
+--dark-blue--lighter-40: #668cb7;
+--dark-blue--lighter-60: #99b2cf; // replaces $light-bg-blue
+--dark-blue--lighter-80: #ccd9e7; // replaces $lightest-bg-blue
 
 --blue--darker-80: #001828;
 --blue--darker-60: #003150;
@@ -157,26 +157,26 @@ VARIABLES
 --content-area-max-width--smaller: 62.5rem;
 
 /* c. Content area grids -----------------------------------------------------*/
---grid-columns__small: var(--standard-spacing), 1fr, var(--standard-spacing);
---grid-columns__large: 1fr, var(--content-area-max-width), 1fr;
+--grid-columns__sm: var(--standard-spacing), 1fr, var(--standard-spacing);
+--grid-columns__lg: 1fr, var(--content-area-max-width), 1fr;
 
 /* c. Breakpoints ------------------------------------------------------------*/
---breakpoint--small: 36.3125rem;
---breakpoint--medium: 52.5625rem;
---breakpoint--large: var(--content-area-max-width);
+--breakpoint--sm: 36.3125rem;
+--breakpoint--md: 52.5625rem;
+--breakpoint--lg: var(--content-area-max-width);
 
 /*------------------------------------------------------------------------------
 4. Decoration
 ------------------------------------------------------------------------------*/
 /* a. Borders and outlines----------------------------------------------------*/
---border-width--small: 0.0625rem;
---border-width: 0.125rem;
---border-width--large: 0.1875rem;
+--border-width--sm: 0.0625rem;
+--border-width--md: 0.125rem;
+--border-width--lg: 0.1875rem;
 --border-radius--circular: 6.25rem;
 --border-radius--rounder: 0.625rem;
 --border-radius--round: 0.125rem;
 --outline: var(--border-width) dotted;
---outline--thicker: var(--border-width--large) dotted;
+--outline--thicker: var(--border-width--lg) dotted;
 
 /* b. Shadows ----------------------------------------------------------------*/
 --shadow--button: 0.125rem 0.125rem 0 var(--light-gray);
@@ -190,7 +190,7 @@ VARIABLES
 5. Animation
 ------------------------------------------------------------------------------*/
 --transition-speed--slow: 800ms;
---transition-speed--medium: 400ms;
+--transition-speed--md: 400ms;
 --transition-speed--fast: 200ms;
 --ease--standard: ease;
 }
