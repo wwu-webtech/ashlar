@@ -4,6 +4,7 @@ VARIABLES
 1. Color
   a. Brand
   b. Special use
+  c. Gradients
 2. Typography
   a. Font families
   b. Font weights
@@ -23,29 +24,80 @@ VARIABLES
 ------------------------------------------------------------------------------*/
 /* a. Brand ------------------------------------------------------------------*/
 --black: #262b2f;
+--gray--darker-80: #14181b;
+--gray--darker-60: #293036;
+--gray--darker-40: #3d4950;
+--gray--darker-20: #52616b;
 --gray: #667986;
---light-gray: #e3e7e9;
---lightest-gray: #f5f6f7;
+--gray--lighter-20: #85949e; // replaces $lightest-gray
+--gray--lighter-40: #a3afb6; // replaces $light-gray
+--gray--lighter-60: #c2c9cf;
+--gray--lighter-80: #e0e4e7;
 --white: #fff;
 
---darkest-blue: #002f5e;
+--dark-blue--darker-80: #000d1b;
+--dark-blue--darker-60: #001936;
+--dark-blue--darker-40: #002651;
+--dark-blue--darker-20: #00326c; // replaces $darkest-blue
 --dark-blue: #003f87;
---blue: #007ac8;
---light-blue: #63c2ff;
---light-bg-blue: #cce4f4;
---lightest-bg-blue: #e6f2fa;
+--dark-blue--lighter-20: #33659f; // replaces $lightest-bg-blue
+--dark-blue--lighter-40: #668cb7; // replaces $light-bg-blue
+--dark-blue--lighter-60: #99b2cf;
+--dark-blue--lighter-80: #ccd9e7;
 
+--blue--darker-80: #001828;
+--blue--darker-60: #003150;
+--blue--darker-40: #004978; // replaces $link-blue--darker
+--blue--darker-20: #0062a0; // replaces $link-blue
+--blue: #007ac8;
+--blue--lighter-20: #3395d3;
+--blue--lighter-40: #66afde;
+--blue--lighter-60: #99cae9;
+--blue--lighter-80: #cce4f4;
+
+--light-blue--darker-80: #142733;
+--light-blue--darker-60: #284e66;
+--light-blue--darker-40: #3b7499;
+--light-blue--darker-20: #4f9bcc;
+--light-blue: #63c2ff;
+--light-blue--lighter-20: #82ceff;
+--light-blue--lighter-40: #a1daff;
+--light-blue--lighter-60: #c1e7ff;
+--light-blue--lighter-80: #e0f3ff;
+
+--dark-green--darker-80: #00150d;
+--dark-green--darker-60: #002b19;
+--dark-green--darker-40: #004026;
+--dark-green--darker-20: #005632;
 --dark-green: #006b3f;
+--dark-green--lighter-20: #338965;
+--dark-green--lighter-40: #66a68c;
+--dark-green--lighter-60: #99c4b2;
+--dark-green--lighter-80: #cce1d9;
+
+--green--darker-80: #0f1a06;
+--green--darker-60: #1e340c;
+--green--darker-40: #2c4e12;
+--green--darker-20: #3b6818;
 --green: #4A821E;
+--green--lighter-20: #6e9b4b;
+--green--lighter-40: #92b478; // possibly replaces $dark-green
+--green--lighter-60: #b7cda5;
+--green--lighter-80: #dbe6d2;
+
+--light-green--darker-80: #252b02;
+--light-green--darker-60: #4a5604;
+--light-green--darker-40: #708206;
+--light-green--darker-20: #95ad08;
 --light-green: #bad80a;
---lightest-green: #d6e86c;
+--light-green--lighter-20: #c8e03b;
+--light-green--lighter-40: #d6e86c; //replaces $lightest-green
+--light-green--lighter-60: #e3ef9d;
+--light-green--lighter-80: #f1f7ce;
 
 /* b. Special use ------------------------------------------------------------*/
---dark-mode-black: #131e29;
 --red: #cc2d30;
 --yellow: #ffc61e;
---link-blue: #006ebb;
---link-blue--darker: #0056a0;
 
 /* c. Gradients --------------------------------------------------------------*/
 --gradient--diagonal--blue-to-dark-blue: linear-gradient(to right bottom,
@@ -54,6 +106,7 @@ VARIABLES
 --gradient--diagonal--dark-blue-to-black: linear-gradient(to left bottom,
   #1c2023, #18242d, #122738, #0a2a44, #022d4f, #00335c,
   #013a69, #044077, #074e8b, #085c9f, #066bb3, #007ac8);
+
 
 /*------------------------------------------------------------------------------
 2. Typography
