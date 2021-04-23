@@ -16,6 +16,7 @@ VARIABLES
 4. Decoration
   a. Borders and outlines
   b. Shadows
+  c. Icons
 5. Animation
 ------------------------------------------------------------------------------*/
 :root {
@@ -79,7 +80,7 @@ VARIABLES
 --green--darker-60: #1e340c;
 --green--darker-40: #2c4e12;
 --green--darker-20: #3b6818;
---green: #4A821E;
+--green: #4a821e;
 --green--lighter-20: #6e9b4b;
 --green--lighter-40: #92b478; // possibly replaces $dark-green
 --green--lighter-60: #b7cda5;
@@ -100,13 +101,36 @@ VARIABLES
 --yellow: #ffc61e;
 
 /* c. Gradients --------------------------------------------------------------*/
---gradient--diagonal--blue-to-dark-blue: linear-gradient(to right bottom,
-  #002f5e, #003266, #00356d, #003875, #003b7d, #004186,
-  #01478e, #004d97, #0058a3, #0063b0, #006ebc, #007ac8);
---gradient--diagonal--dark-blue-to-black: linear-gradient(to left bottom,
-  #1c2023, #18242d, #122738, #0a2a44, #022d4f, #00335c,
-  #013a69, #044077, #074e8b, #085c9f, #066bb3, #007ac8);
-
+--gradient--diagonal--blue-to-dark-blue: linear-gradient(
+  to right bottom,
+  #002f5e,
+  #003266,
+  #00356d,
+  #003875,
+  #003b7d,
+  #004186,
+  #01478e,
+  #004d97,
+  #0058a3,
+  #0063b0,
+  #006ebc,
+  #007ac8
+);
+--gradient--diagonal--dark-blue-to-black: linear-gradient(
+  to left bottom,
+  #1c2023,
+  #18242d,
+  #122738,
+  #0a2a44,
+  #022d4f,
+  #00335c,
+  #013a69,
+  #044077,
+  #074e8b,
+  #085c9f,
+  #066bb3,
+  #007ac8
+);
 
 /*------------------------------------------------------------------------------
 2. Typography
@@ -147,20 +171,20 @@ VARIABLES
 --space--2xs: 0.25rem;
 --space--xs: 0.5rem;
 --space--sm: 0.75rem;
---space--base: 1rem;
+--space--md: 1rem; // replaces $standard-spacing
 --space--lg: 2rem;
 --space--xl: 3rem;
 --space--2xl: 4rem;
 
-/* b. Content areas ----------------------------------------------------------*/
+/* b. Content areas ---------------------------------------------------------*/
 --content-area-max-width: 81.25rem;
 --content-area-max-width--smaller: 62.5rem;
 
-/* c. Content area grids -----------------------------------------------------*/
+/* c. Content area grids ----------------------------------------------------*/
 --grid-columns__sm: var(--standard-spacing), 1fr, var(--standard-spacing);
 --grid-columns__lg: 1fr, var(--content-area-max-width), 1fr;
 
-/* c. Breakpoints ------------------------------------------------------------*/
+/* d. Breakpoints ------------------------------------------------------------*/
 --breakpoint--sm: 36.3125rem;
 --breakpoint--md: 52.5625rem;
 --breakpoint--lg: var(--content-area-max-width);
@@ -180,11 +204,23 @@ VARIABLES
 
 /* b. Shadows ----------------------------------------------------------------*/
 --shadow--button: 0.125rem 0.125rem 0 var(--light-gray);
---shadow--button--hover:
---shadow--button--soft: 0 0.1875rem 0.375rem rgba(0,0,0,0.84),
-  0 0.1875rem 0.375rem rgba(0,0,0,0.77);
---shadow--button--soft--hover: 0 0.0625rem 0.1875rem rgba(0,0,0,0.12),
-  0 0.0625rem 0.125rem rgba(0,0,0,0.24);
+--shadow--button--soft: 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.84),
+  0 0.1875rem 0.375rem rgba(0, 0, 0, 0.77);
+--shadow--button--soft--hover: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.12),
+  0 0.0625rem 0.125rem rgba(0, 0, 0, 0.24);
+
+/* c. Icons ------------------------------------------------------------------*/
+--icon-size--xs: 1.125rem;
+--icon-size--sm: 1.5rem;
+--icon-size--md: 2.25rem; // replaces $icon-size
+--icon-size--lg: 3rem;
+--icon-size--block--sm: 4rem;
+--icon-size--block--md: 5em;
+--icon-size--block--lg: 6.5em;
+--icon-size--block--xl: 7.5em;
+
+/* d. Toggles ----------------------------------------------------------------*/
+--toggle-size--md: 4rem; //replaces $toggle-size
 
 /*------------------------------------------------------------------------------
 5. Animation

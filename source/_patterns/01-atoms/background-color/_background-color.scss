@@ -3,7 +3,7 @@ Atom: Background Colors
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 .sg-pattern-example > div {
-  padding: var(--space--base);
+  padding: var(--space--md);
 }
 
 /*------------------------------------------------------------------------------
@@ -65,7 +65,6 @@ Atom: Background Colors
   }
 
   .social-icon {
-    color: var(--dark-blue);
     background-color: var(--white);
 
     svg {
@@ -75,11 +74,26 @@ Atom: Background Colors
     &:hover,
     &:focus,
     &:active {
+      color: var(--light-green);
       background-color: var(--light-green);
     }
+  }
 
+  .play-link {
+    color: var(--white);
+
+    svg {
+      fill: var(--white);
+    }
+
+    &:hover,
+    &:active,
     &:focus {
-      outline-color: var(--white);
+      color: var(--light-green);
+
+      svg {
+        fill: var(--light-green);
+      }
     }
   }
 }
