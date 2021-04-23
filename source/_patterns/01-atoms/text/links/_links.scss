@@ -11,11 +11,11 @@ a {
   &:active,
   &:focus,
   &:hover {
-    @include default-link-hover-focus();
+    @include default-link-hover();
   }
 
   &:focus {
-    @include default-link-focus-border();
+    @include default-link-focus();
   }
 
   &[target="_blank"],
@@ -139,9 +139,8 @@ a {
   p a,
   ul a {
     word-break: break-all;
-    color: #003f87 !important;
-
     page-break-inside: avoid;
+    color: #003f87 !important;
   }
   p a[href^="http"]:after,
   ul a[href^="http"]:after {

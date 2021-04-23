@@ -67,7 +67,7 @@ form {
     &.is-complete {
       &:hover, &:focus {
         .progress-marker {
-          @include default-link-hover-focus();
+          @include default-link-hover();
         }
       }
 
@@ -79,11 +79,11 @@ form {
           &:active,
           &:focus,
           &:hover {
-            @include default-link-hover-focus();
+            @include default-link-hover();
           }
 
           &:focus {
-            @include default-link-focus-border();
+            @include default-link-focus();
           }
         }
 
@@ -129,7 +129,7 @@ form {
         background-color: $link-color;
       }
       &:focus {
-        @include default-link-focus-border();
+        @include default-link-focus();
       }
     }
   }

@@ -1,0 +1,51 @@
+@mixin default-link-hover {
+  text-decoration: none;
+  color: var(--dark-blue);
+  background-color: var(--gray--lighter-60);
+}
+
+@mixin default-link-focus {
+  outline: dotted var(--border-width--md);
+  outline-offset: var(--border-width--md);
+}
+
+@mixin dark-mode-links {
+  a:not([class]),
+  a.patternLink {
+    color: $link-color-light;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $link-color-light--hover;
+    }
+  }
+}
+
+@mixin message($color, $blend) {
+  border: solid $border-width transparentize($color, 0.25);
+  background-color: transparentize($color, 0.75);
+
+  a:not([class]) {
+    text-decoration: underline;
+    color: mix($blend, $color, 75%);
+
+    &:focus,
+    &:hover,
+    &:active {
+      text-decoration: none;
+      color: mix($blend, $color, 90%);
+    }
+  }
+
+  p,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  details,
+  .status-color {
+    color: mix($blend, $color, 65%);
+  }
+}
