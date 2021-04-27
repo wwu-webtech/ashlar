@@ -42,7 +42,7 @@
   }
 
   > .layout__region--catalog {
-    @include font-size--larger;
+    font-size: var(--font-size--lg);
   }
 
   > .layout__region--related-majors {

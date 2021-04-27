@@ -382,7 +382,7 @@ Atom: Background Colors
 }
 .dark-mode {
   @include dark-mode-links;
-  background-color: var(--gray-darker-80);
+  background-color: var(--gray--darker-80);
 }
 
 .dark-blue-bg {

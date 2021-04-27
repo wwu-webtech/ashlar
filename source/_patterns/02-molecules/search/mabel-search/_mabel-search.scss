@@ -110,18 +110,18 @@ input[title="Remove field"] {
   }
 }
 
-.opendyslexic {
+.font--dyslexia-friendly {
   #islandora-search-container {
     .block-title {
-      font-family: $opendyslexic;
+      font-family: var(--font--dyslexia-friendly);
     }
   }
 }
 
-.atkinson {
+.font--hyperlegible {
   #islandora-search-container {
     .block-title {
-      font-family: $atkinson;
+      font-family: var(--font--hyperlegible);
     }
   }
 }

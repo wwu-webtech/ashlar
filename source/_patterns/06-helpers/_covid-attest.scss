@@ -37,18 +37,18 @@
   }
 }
 
-.opendyslexic {
+.font--dyslexia-friendly {
   .covid-attestation {
     a {
-      font-family: $opendyslexic;
+      font-family: var(--font--dyslexia-friendly);
     }
   }
 }
 
-.atkinson {
+.font--hyperlegible {
   .covid-attestation {
     a {
-      font-family: $atkinson;
+      font-family: var(--font--hyperlegible);
     }
   }
 }

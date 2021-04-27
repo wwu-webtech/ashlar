@@ -109,14 +109,14 @@
   }
 }
 
-.opendyslexic {
+.font--dyslexia-friendly {
   .block__title {
-    font-family: $opendyslexic;
+    font-family: var(--font--dyslexia-friendly);
   }
 }
 
-.atkinson {
+.font--hyperlegible {
   .block__title {
-    font-family: $atkinson;
+    font-family: var(--font--hyperlegible);
   }
 }

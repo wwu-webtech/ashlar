@@ -1,0 +1,19 @@
+/*------------------------------------------------------------------------------
+Atom: Text
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+
+html {
+  @include breakpoint(var(--breakpoint--lg)) {
+    font-size: calc(1rem + (var(--content-area-max-width) * 0.005));
+  }
+  color: var(--black);
+  font-family: var(--font--sans-serif);
+  font-size: calc(1rem + 0.5vw);
+
+  font-display: auto;
+
+  @media (print) {
+    font-size: 12pt;
+  }
+}

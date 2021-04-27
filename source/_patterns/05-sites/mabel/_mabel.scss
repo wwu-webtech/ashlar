@@ -146,26 +146,26 @@ $mabel-site-name-height: 2.75rem;
   }
 }
 
-.opendyslexic {
+.font--dyslexia-friendly {
   .page-islandora {
     .layout__region--first {
       .panel-pane {
         h2,
         h3 {
-          font-family: $opendyslexic;
+          font-family: var(--font--dyslexia-friendly);
         }
       }
     }
   }
 }
 
-.atkinson {
+.font--hyperlegible {
   .page-islandora {
     .layout__region--first {
       .panel-pane {
         h2,
         h3 {
-          font-family: $atkinson;
+          font-family: var(--font--hyperlegible);
         }
       }
     }

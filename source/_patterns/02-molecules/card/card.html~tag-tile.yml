@@ -3,7 +3,7 @@ attributes:
     class:
     - block
     - block--card
-    - sans-serif-headings
+    - headings--sans-serif
     - tile
 label: Card Title
 block_content:

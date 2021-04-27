@@ -74,18 +74,18 @@
   }
 }
 
-.opendyslexic {
+.font--dyslexia-friendly {
   .search-wrapper {
     * {
-      font-family: $opendyslexic;
+      font-family: var(--font--dyslexia-friendly);
     }
   }
 }
 
-.atkinson {
+.font--hyperlegible {
   .search-wrapper {
     * {
-      font-family: $atkinson;
+      font-family: var(--font--hyperlegible);
     }
   }
 }

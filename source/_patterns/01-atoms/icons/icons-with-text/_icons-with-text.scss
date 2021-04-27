@@ -95,14 +95,14 @@ $icon-with-text-size--large: 7.5em;
   }
 }
 
-.opendyslexic {
+.font--dyslexia-friendly {
   .icon-with-text {
-    font-family: $opendyslexic;
+    font-family: var(--font--dyslexia-friendly);
   }
 }
 
-.atkinson {
+.font--hyperlegible {
   .icon-with-text {
-    font-family: $atkinson;
+    font-family: var(--font--hyperlegible);
   }
 }

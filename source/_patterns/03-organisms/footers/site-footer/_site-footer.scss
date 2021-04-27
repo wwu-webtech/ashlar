@@ -145,7 +145,7 @@
   }
 }
 
-.opendyslexic {
+.font--dyslexia-friendly {
   .site-footer {
     h1,
     h2,
@@ -153,12 +153,12 @@
     h4,
     h5,
     h6 {
-      font-family: $opendyslexic;
+      font-family: var(--font--dyslexia-friendly);
     }
   }
 }
 
-.atkinson {
+.font--hyperlegible {
   .site-footer {
     h1,
     h2,
@@ -166,7 +166,7 @@
     h4,
     h5,
     h6 {
-      font-family: $atkinson;
+      font-family: var(--font--hyperlegible);
     }
   }
 }

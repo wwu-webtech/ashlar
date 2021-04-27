@@ -66,23 +66,23 @@
   }
 }
 
-.opendyslexic {
+.font--dyslexia-friendly {
   .western-menu {
     @include breakpoint($medium) {
       .icon-with-text {
         font-size: $dyslexic-icon-smaller;
       }
     }
-    font-family: $opendyslexic;
+    font-family: var(--font--dyslexia-friendly);
   }
 }
 
-.atkinson {
+.font--hyperlegible {
   .western-menu {
     @include breakpoint($medium) {
       font-size: 1rem;
     }
-    font-family: $atkinson;
+    font-family: var(--font--hyperlegible);
     font-size: $dyslexic-icon-smaller;
   }
 }

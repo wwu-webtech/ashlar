@@ -1,0 +1,25 @@
+/*------------------------------------------------------------------------------
+Atom: Text - Font Styles
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+.font-size--smaller {
+  font-size: var(--font-size--sm);
+}
+
+.font-size--regular {
+  font-size: var(--font-size--md);
+}
+
+.font-size--larger {
+  font-size: var(--font-size--lg);
+}
+
+.font--dyslexia-friendly {
+  font-family: var(--font--dyslexia-friendly);
+
+  font-feature-settings: unset;
+}
+
+.font--hyperlegible {
+  font-family: var(--font--hyperlegible);
+}

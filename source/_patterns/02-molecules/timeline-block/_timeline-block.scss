@@ -155,18 +155,18 @@ $timeline-translate-neg: calc(-100% - (#{$min-timeline-font-size} + #{strip-unit
   }
 }
 
-.opendyslexic {
+.font--dyslexia-friendly {
   .timeline-block {
     .timeline-heading {
-      font-family: $opendyslexic;
+      font-family: var(--font--dyslexia-friendly);
     }
   }
 }
 
-.atkinson {
+.font--hyperlegible {
   .timeline-block {
     .timeline-heading {
-      font-family: $atkinson;
+      font-family: var(--font--hyperlegible);
     }
   }
 }

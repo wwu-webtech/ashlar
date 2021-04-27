@@ -144,8 +144,8 @@ $dyslexic-icon-smaller: $p-font-size--min * 0.8;
   }
 }
 
-.atkinson,
-.opendyslexic {
+hyperlegible,
+.font--dyslexia-friendly {
   .display-settings {
     .icon-with-text.small {
       @include breakpoint($medium) {
@@ -167,14 +167,14 @@ $dyslexic-icon-smaller: $p-font-size--min * 0.8;
   }
 }
 
-.opendyslexic {
+.font--dyslexia-friendly {
   .display-settings {
-    font-family: $opendyslexic;
+    font-family: var(--font--dyslexia-friendly);
   }
 }
 
-.atkinson {
+.font--hyperlegible {
   .display-settings {
-    font-family: $atkinson;
+    font-family: var(--font--hyperlegible);
   }
 }

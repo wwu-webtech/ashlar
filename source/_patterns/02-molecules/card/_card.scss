@@ -685,27 +685,27 @@
   }
 }
 
-.opendyslexic {
+.font--dyslexia-friendly {
   .card,
   .block--card {
     .title {
       h2,
       h3,
       h4 {
-        font-family: $opendyslexic;
+        font-family: var(--font--dyslexia-friendly);
       }
     }
   }
 }
 
-.atkinson {
+.font--hyperlegible {
   .card,
   .block--card {
     .title {
       h2,
       h3,
       h4 {
-        font-family: $atkinson;
+        font-family: var(--font--hyperlegible);
       }
     }
   }

@@ -1,3 +1,7 @@
+@mixin font-size--smaller {
+  font-size: --font-size-sm;
+}
+
 @mixin default-link-hover {
   text-decoration: none;
   color: var(--dark-blue);

@@ -92,26 +92,26 @@ $status-icon-size: 4.5rem;
   }
 }
 
-.opendyslexic {
+.font--dyslexia-friendly {
   .status-alert {
     h2,
     h3,
     h4,
     h5,
     h6 {
-      font-family: $opendyslexic;
+      font-family: var(--font--dyslexia-friendly);
     }
   }
 }
 
-.atkinson {
+.font--hyperlegible {
   .status-alert {
     h2,
     h3,
     h4,
     h5,
     h6 {
-      font-family: $atkinson;
+      font-family: var(--font--hyperlegible);
     }
   }
 }

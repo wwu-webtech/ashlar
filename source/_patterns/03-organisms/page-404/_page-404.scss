@@ -387,21 +387,21 @@
   font-size: 3.06rem;
 }
 
-.opendyslexic {
+.font--dyslexia-friendly {
   .wrapper--404 {
-    .big-bold-headings {
+    .headings--big-bold {
       h1 {
-        font-family: $opendyslexic;
+        font-family: var(--font--dyslexia-friendly);
       }
     }
   }
 }
 
-.atkinson {
+.font--hyperlegible {
   .wrapper--404 {
-    .big-bold-headings {
+    .headings--big-bold {
       h1 {
-        font-family: $atkinson;
+        font-family: var(--font--hyperlegible);
       }
     }
   }

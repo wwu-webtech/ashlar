@@ -193,27 +193,27 @@
   }
 }
 
-.opendyslexic {
+.font--dyslexia-friendly {
   .information.block--card {
     .title {
       h2,
       h3,
       h4,
       h5 {
-        font-family: $opendyslexic;
+        font-family: var(--font--dyslexia-friendly);
       }
     }
   }
 }
 
-.atkinson {
+.font--hyperlegible {
   .information.block--card {
     .title {
       h2,
       h3,
       h4,
       h5 {
-        font-family: $atkinson;
+        font-family: var(--font--hyperlegible);
       }
     }
   }

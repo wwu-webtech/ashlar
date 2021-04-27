@@ -61,18 +61,18 @@ $alert-logo-size: 4.25rem;
   }
 }
 
-.opendyslexic {
+.font--dyslexia-friendly {
   .alert {
     .alert-header {
-      font-family: $opendyslexic;
+      font-family: var(--font--dyslexia-friendly);
     }
   }
 }
 
-.atkinson {
+.font--hyperlegible {
   .alert {
     .alert-header {
-      font-family: $atkinson;
+      font-family: var(--font--hyperlegible);
     }
   }
 }

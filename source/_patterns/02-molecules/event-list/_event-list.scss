@@ -133,22 +133,22 @@ $event-icon-height: 3.75rem;
   }
 }
 
-.opendyslexic {
+.font--dyslexia-friendly {
   .event-list {
     .title {
       a {
-        font-family: $opendyslexic;
+        font-family: var(--font--dyslexia-friendly);
       }
     }
   }
 
 }
 
-.atkinson {
+.font--hyperlegible {
   .event-list {
     .title {
       a {
-        font-family: $atkinson;
+        font-family: var(--font--hyperlegible);
       }
     }
   }

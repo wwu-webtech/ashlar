@@ -1,8 +1,7 @@
-/**
-* @file
-* 01-atoms/01-text/_headings.scss
-*/
-
+/*------------------------------------------------------------------------------
+Atom: Text - Headings
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 h1,
 h2,
 h3,
@@ -10,14 +9,11 @@ h4,
 h5,
 h6 {
   margin: var(--space--lg) 0 var(--space--md);
-  color: $blue;
-  line-height: 1.2em;
-
   font-display: fallback;
+  line-height: 1.2em;
 
   @media print {
     margin-bottom: 0;
-
     page-break-inside: avoid;
   }
 }
@@ -25,10 +21,10 @@ h6 {
 h1 {
   position: relative;
   display: inline-block;
-  padding-bottom: $double-spacing;
-  color: $darkest-blue;
+  padding-bottom: var(--space--lg);
+  color: var(--blue--darker-80);
   font-family: var(--font--title);
-  font-size: var(--font-size-5xl);
+  font-size: var(--font-size--5xl);
   font-weight: var(--font-weight--bold);
 
   &:after {
@@ -43,27 +39,31 @@ h1 {
 }
 
 h2 {
-  color: $dark-blue;
-  font-size: var(--font-size-4xl);
-  font-weight: $font-weight--bold;
+  color: var(--blue--darker-60);
+  font-size: var(--font-size--4xl);
+  font-weight: var(--font-weight--bold);
 }
 h3 {
-  color: mix($blue, $dark-blue, 50%);
-  font-size: var(--font-size-3xl);
-  font-weight: $font-weight--semibold;
+  color: var(--blue--darker-40);
+  font-size: var(--font-size--3xl);
+  font-weight: var(--font-weight--semibold);
 }
 h4 {
-  font-size: var(--font-size-2xl);
-  font-weight: $font-weight--regular;
+  color: var(--blue--darker-20);
+  font-size: var(--font-size--2xl);
+  font-weight: var(--font-weight--regular);
 }
 h5 {
-  font-size: var(--font-size-xl);
-  font-weight: $font-weight--regular;
+  color: var(--blue);
+  font-size: var(--font-size--xl);
+  font-weight: var(--font-weight--regular);
 }
 h6 {
-  font-size: var(--font-size-l);
+  color: var(--blue);
+  font-size: var(--font-size--lg);
 }
 
+h1 + h2,
 h2 + h3,
 h3 + h4,
 h4 + h5,
@@ -71,18 +71,19 @@ h5 + h6 {
   margin-top: 0;
 }
 
-.sans-serif-headings {
+.headings--sans-serif {
   h2,
   h3,
   h4,
   h5,
   h6 {
-    font-family: $sans-serif;
+    font-family: var(--font--sans-serif);
   }
 }
 
-.sans-serif-alternate-headings {
+.headings--sans-serif--alt {
   h1 {
+    padding-bottom: 0;
     text-transform: uppercase;
 
     &:after {
@@ -94,19 +95,19 @@ h5 + h6 {
   h4,
   h5,
   h6 {
-    font-family: $title-font;
+    font-family: var(--font--title);
   }
 }
 
-.underlined-headings {
+.headings--underlined {
   h2,
   h3,
   h4,
   h5,
   h6 {
     position: relative;
-    padding-bottom: $one-point-five-spacing;
-    font-family: $title-font;
+    padding-bottom: var(--space--lg);
+    font-family: var(--font--title);
 
     &:after {
       position: absolute;
@@ -115,15 +116,15 @@ h5 + h6 {
       width: 50%;
       max-width: 12.5rem;
       content: "";
-      border-width: $border-width--thicker;
+      border-width: var(--border-width--lg);
       border-style: solid;
     }
   }
 }
 
-.text-align-center .underlined-headings,
-.text-align-center.underlined-headings,
-.underlined-headings .text-align-center {
+.text-align-center .headings--underlined,
+.text-align-center.headings--underlined,
+.headings--underlined .text-align-center {
   h1,
   h2,
   h3,
@@ -137,9 +138,9 @@ h5 + h6 {
   }
 }
 
-.text-align-right .underlined-headings,
-.text-align-right.underlined-headings,
-.underlined-headings .text-align-right {
+.text-align-right .headings--underlined,
+.text-align-right.headings--underlined,
+.headings--underlined .text-align-right {
   h1,
   h2,
   h3,
@@ -153,25 +154,23 @@ h5 + h6 {
   }
 }
 
-.big-bold-headings {
+.headings--big-bold {
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    font-family: $sans-serif;
+    font-family: var(--font--sans-serif);
   }
 
   h1 {
-    @include breakpoint($large) {
-      font-size: $h1-font-size--max--largest;
-    }
+    padding-bottom: 0;
     text-transform: uppercase;
     border-bottom: none;
-    font-family: $title-font;
-    font-size: $h1-font-size--largest;
-    font-weight: $font-weight--black;
+    font-family: var(--font--title);
+    font-size: var(--font-size--9xl);
+    font-weight: var(--font-weight--black);
 
     &:after {
       display: none;
@@ -179,131 +178,101 @@ h5 + h6 {
   }
 
   h2 {
-    @include breakpoint($large) {
-      font-size: $h2-font-size--max--largest;
-    }
     text-transform: uppercase;
     border-bottom: none;
-    font-family: $title-font;
-    font-size: $h2-font-size--largest;
-    font-weight: $font-weight--black;
+    font-family: var(--font--title);
+    font-size: var(--font-size--8xl);
+    font-weight: var(--font-weight--black);
   }
 
   h3 {
-    @include breakpoint($large) {
-      font-size: $h3-font-size--max--larger;
-    }
     display: inline-block;
-    font-size: $h3-font-size--larger;
+    font-size: var(--font-size--7xl);
   }
 
   h4 {
-    @include breakpoint($large) {
-      font-size: $h4-font-size--max--larger;
-    }
     text-transform: uppercase;
-    font-size: $h4-font-size--larger;
+    font-size: var(--font-size--6xl);
   }
 
   h5 {
-    @include breakpoint($large) {
-      font-size: $h5-font-size--max--larger;
-    }
-    font-size: $h5-font-size--larger;
+    font-size: var(--font-size--5xl);
   }
 }
 
-/* Helper to resize headings. Only applies at medium breakpoints. */
+
 .font-size--smaller {
   h1 {
-    @include breakpoint($large) {
-      font-size: $h1-font-size--max--smaller;
-    }
-    font-size: $h1-font-size--smaller;
+    font-size: var(--font-size--3xl);
   }
 
   h2 {
-    @include breakpoint($large) {
-      font-size: $h2-font-size--max--smaller;
-    }
     padding-bottom: none;
     border-bottom: none;
-    font-size: $h2-font-size--smaller;
+    font-size: var(--font-size--2xl);
   }
 
   h3 {
-    @include breakpoint($large) {
-      font-size: $h3-font-size--max--smaller;
-    }
-    font-size: $h3-font-size--smaller;
+    font-size: var(--font-size--xl);
   }
 
   h4 {
-    @include breakpoint($large) {
-      font-size: $h4-font-size--max--smaller;
-    }
-    font-size: $h4-font-size--smaller;
+    font-size: var(--font-size--lg);
   }
 
   h5 {
-    @include breakpoint($large) {
-      font-size: $h5-font-size--max--smaller;
-    }
-    font-size: $h5-font-size--smaller;
+    font-size: var(--font-size--md);
   }
 
   h6 {
-    @include breakpoint($large) {
-      font-size: $h6-font-size--max--smaller;
-    }
-    font-size: $h6-font-size--smaller;
+    font-size: var(--font-size--sm);
   }
 }
 
-.opendyslexic {
+.font--dyslexia-friendly {
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    font-family: $opendyslexic;
+    font-family: var(--font--dyslexia-friendly);
   }
 
-  .serif-headings,
-  .sans-serif-headings,
-  .big-bold-headings {
+  .headings--serif,
+  .headings--sans-serif,
+  .headings--big-bold {
     h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
-      font-family: $opendyslexic;
+      font-family: var(--font--dyslexia-friendly);
     }
   }
 }
 
-.atkinson {
+.font--hyperlegible {
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    font-family: $atkinson;
+    font-family: var(--font--hyperlegible);
   }
 
-  .serif-headings,
-  .sans-serif-headings,
-  .big-bold-headings {
+  .headings--serif,
+  .headings--sans-serif,
+  .headings--big-bold {
     h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
-      font-family: $atkinson;
+      font-family: var(--font--hyperlegible);
     }
   }
 }

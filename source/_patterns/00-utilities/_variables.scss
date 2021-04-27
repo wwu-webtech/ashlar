@@ -150,19 +150,19 @@ VARIABLES
 --font-weight--bold: 700;
 --font-weight--black: 900;
 
-/* c. Font sizes (based on major second scale) -------------------------------*/
---font-size-sm: 0.8em;
---font-size-base: 1em;
---font-size-lg: 1.125em;
---font-size-xl: 1.266em;
---font-size-2xl: 1.424em;
---font-size-3xl: 1.602em;
---font-size-4xl: 1.802em;
---font-size-5xl: 2.027em;
---font-size-6xl: 2.281em;
---font-size-7xl: 2.566em;
---font-size-8xl: 2.887em;
---font-size-9xl: 3.247em;
+/* c. Font sizes (mostly based on major second scale) ------------------------*/
+--font-size--sm: 0.8em;
+--font-size--md: 1em;
+--font-size--lg: 1.125em;
+--font-size--xl: 1.266em;
+--font-size--2xl: 1.424em;
+--font-size--3xl: 1.602em;
+--font-size--4xl: 1.802em;
+--font-size--5xl: 2.027em;
+--font-size--6xl: 2.281em;
+--font-size--7xl: 2.566em;
+--font-size--8xl: 3.653em;
+--font-size--9xl: 4.11em;
 
 /*------------------------------------------------------------------------------
 3. Page layout
@@ -172,12 +172,13 @@ VARIABLES
 --space--xs: 0.5rem;
 --space--sm: 0.75rem;
 --space--md: 1rem; // replaces $standard-spacing
---space--lg: 2rem;
---space--xl: 3rem;
---space--2xl: 4rem;
+--space--lg: 1.5rem;
+--space--xl: 2rem; // replaces $double-spacing
+--space--2xl: 3rem;
+--space--3xl: 4rem;
 
 /* b. Content areas ---------------------------------------------------------*/
---content-area-max-width: 81.25rem;
+--content-area-max-width: 81.25rem; // replaces $max-content-width
 --content-area-max-width--smaller: 62.5rem;
 
 /* c. Content area grids ----------------------------------------------------*/
@@ -185,17 +186,17 @@ VARIABLES
 --grid-columns__lg: 1fr, var(--content-area-max-width), 1fr;
 
 /* d. Breakpoints ------------------------------------------------------------*/
---breakpoint--sm: 36.3125rem;
---breakpoint--md: 52.5625rem;
---breakpoint--lg: var(--content-area-max-width);
+--breakpoint--sm: 36.3125rem; // replaces $small
+--breakpoint--md: 52.5625rem; // replaces $medium
+--breakpoint--lg: var(--content-area-max-width); // replaces $large
 
 /*------------------------------------------------------------------------------
 4. Decoration
 ------------------------------------------------------------------------------*/
 /* a. Borders and outlines----------------------------------------------------*/
---border-width--sm: 0.0625rem;
---border-width--md: 0.125rem;
---border-width--lg: 0.1875rem;
+--border-width--sm: 0.0625rem; // replaces $border-width--thinner
+--border-width--md: 0.125rem; // replaces $border-width
+--border-width--lg: 0.1875rem; // replaces $border-width--thicker
 --border-radius--circular: 6.25rem;
 --border-radius--rounder: 0.625rem;
 --border-radius--round: 0.125rem;

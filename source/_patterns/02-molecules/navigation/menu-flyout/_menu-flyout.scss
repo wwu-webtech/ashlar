@@ -99,14 +99,14 @@
   }
 }
 
-.opendyslexic {
+.font--dyslexia-friendly {
   .ultimenu__region {
-    font-family: $opendyslexic;
+    font-family: var(--font--dyslexia-friendly);
   }
 }
 
-.atkinson {
+.font--hyperlegible {
   .ultimenu__region {
-    font-family: $atkinson;
+    font-family: var(--font--hyperlegible);
   }
 }

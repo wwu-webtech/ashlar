@@ -5,7 +5,7 @@ attributes:
     - block--card
     - event
     - alt
-    - sans-serif-headings
+    - headings--sans-serif
 label: Event Title
 block_content:
   field_link:

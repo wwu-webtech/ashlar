@@ -183,7 +183,7 @@
   display: none; // hide nested menus on non ultimenu main nav blocks
 }
 
-.opendyslexic {
+.font--dyslexia-friendly {
   .main-navigation,
   #block-system-main-menu {
     & > .menu,
@@ -191,14 +191,14 @@
     .ultimenu-main-menu {
       & > li {
         & > a {
-          font-family: $opendyslexic;
+          font-family: var(--font--dyslexia-friendly);
         }
       }
     }
   }
 }
 
-.atkinson {
+.font--hyperlegible {
   .main-navigation,
   #block-system-main-menu {
     & > .menu,
@@ -206,7 +206,7 @@
     .ultimenu-main-menu {
       & > li {
         & > a {
-          font-family: $atkinson;
+          font-family: var(--font--hyperlegible);
         }
       }
     }

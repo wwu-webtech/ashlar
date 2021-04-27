@@ -311,8 +311,8 @@ $image-button--smaller-size--medium: 11.25rem;
   }
 }
 
-.atkinson,
-.opendyslexic {
+hyperlegible,
+.font--dyslexia-friendly {
   .block--image-button {
     &.smaller {
       a {
@@ -325,7 +325,7 @@ $image-button--smaller-size--medium: 11.25rem;
   }
 }
 
-.opendyslexic {
+.font--dyslexia-friendly {
   .block--image-button {
     word-spacing: -1em;
     line-height: 2em;

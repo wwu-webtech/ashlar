@@ -4,7 +4,7 @@ attributes:
     - block
     - block--card
     - simple
-    - sans-serif-headings
+    - headings--sans-serif
 label: March 8
 block_content:
   field_link:

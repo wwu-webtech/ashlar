@@ -105,18 +105,18 @@ $expand-toggle-size: 0.4rem;
   }
 }
 
-.atkinson {
+.font--hyperlegible {
   .ui-accordion {
     .ui-accordion-header {
-      font-family: $opendyslexic;
+      font-family: var(--font--dyslexia-friendly);
     }
   }
 }
 
-.atkinson {
+.font--hyperlegible {
   .ui-accordion {
     .ui-accordion-header {
-      font-family: $atkinson;
+      font-family: var(--font--hyperlegible);
     }
   }
 }

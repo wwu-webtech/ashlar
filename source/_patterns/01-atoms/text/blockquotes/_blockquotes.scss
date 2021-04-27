@@ -1,30 +1,30 @@
-/**
- * @file
- * 01-atoms/01-text/_blockquotes.scss
- */
+/*------------------------------------------------------------------------------
+Atom: Text - Blockquotes
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 
 blockquote {
-  @include light-gray-bg;
-  margin: $standard-spacing 0;
-  padding: $double-spacing;
+  @include lightest-gray-bg;
+  margin: var(--space--md) 0;
+  padding: var(--space--xl);
 }
 
 .pullquote,
 .paragraph--type--majors-pull-quote {
-  margin: 0 $standard-spacing;
-  padding: $standard-spacing;
+  margin: 0 var(--space--md);
+  padding: var(--space--md);
   font-style: italic;
-  border-left: solid $border-width--thicker $green;
+  border-left: solid var(--border-width--lg) var(--green);
 
   &.style-thin-border {
     border: 0;
 
     &:before {
-      border-top: solid $border-width--thicker $blue;
+      border-top: solid var(--border-width--lg) var(--blue);
     }
 
     &:after {
-      border-top: solid $border-width--thicker $blue;
+      border-top: solid var(--border-width--lg) var(--blue);
     }
   }
 }
