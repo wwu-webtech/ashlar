@@ -54,7 +54,6 @@
       border: none;
 
       a {
-        @include button-box-shadow($white);
         padding: $half-spacing;
         text-align: center;
         color: white;

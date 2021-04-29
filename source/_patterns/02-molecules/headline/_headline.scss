@@ -74,13 +74,12 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
     }
 
     .play-link {
-      @include button-box-shadow($dark-blue);
       color: $white;
       padding: ($standard-spacing / 1.2) $double-spacing;
       top: .3rem;
 
-      &:hover, 
-      &:focus, 
+      &:hover,
+      &:focus,
       &:active {
         background-color: $white;
         color: $blue;
@@ -155,14 +154,13 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
         padding: ($standard-spacing / 1.2) ($standard-spacing * 1.333);
         top: 0;
       }
-      @include button-box-shadow($dark-blue);
       padding: ($standard-spacing / 1.2) $double-spacing;
       background-color: $blue;
       color: $white;
       top: .4rem;
 
-      &:hover, 
-      &:focus, 
+      &:hover,
+      &:focus,
       &:active {
         background-color: $white;
         color: $blue;
@@ -214,14 +212,13 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
     }
 
     .play-link {
-      @include button-box-shadow($dark-blue);
       background-color: $blue;
       padding: $standard-spacing $double-spacing;
       border: transparent;
       top: -$quarter-spacing;
 
-      &:hover, 
-      &:focus, 
+      &:hover,
+      &:focus,
       &:active {
         background-color: $dark-blue;
         color: $white;
@@ -242,12 +239,12 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
 .font--dyslexia-friendly {
   .headline {
     &.box-headline {
-      h1, 
+      h1,
       h2 {
         font-family: var(--font--dyslexia-friendly);
       }
     }
-    
+
     &.left-aligned-bar,
     &.right-aligned-bar {
       h1,
@@ -255,7 +252,7 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
         font-family: var(--font--dyslexia-friendly);
       }
     }
-  
+
     &.simple-centered {
       h1,
       h2 {
@@ -268,12 +265,12 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
 .font--hyperlegible {
   .headline {
     &.box-headline {
-      h1, 
+      h1,
       h2 {
         font-family: var(--font--hyperlegible);
       }
     }
-    
+
     &.left-aligned-bar,
     &.right-aligned-bar {
       h1,
@@ -281,7 +278,7 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
         font-family: var(--font--hyperlegible);
       }
     }
-  
+
     &.simple-centered {
       h1,
       h2 {

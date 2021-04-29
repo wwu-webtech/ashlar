@@ -2,6 +2,36 @@
   font-size: --font-size-sm;
 }
 
+@mixin link-styles--default {
+  transition: var(--transition-speed--fast) var(--ease--standard);
+  transition-property: background;
+  text-decoration: underline;
+  color: var(--blue--darker-20);
+
+  &:visited {
+    color: var(--green);
+
+    text-decoration-color: var(--green--lighter-80);
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: var(--dark-blue);
+    background-color: var(--gray--lighter-60);
+
+    &:visited {
+      color: var(--dark-blue);
+    }
+  }
+
+  &:focus {
+    outline: dotted var(--border-width--md);
+    outline-offset: var(--border-width--md);
+  }
+}
+
 @mixin default-link-hover {
   text-decoration: none;
   color: var(--dark-blue);

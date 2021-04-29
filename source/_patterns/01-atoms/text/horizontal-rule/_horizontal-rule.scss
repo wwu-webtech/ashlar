@@ -1,13 +1,12 @@
-/**
- * @file
- * 01-atoms/01-text/_horizontal-rule.scss
- */
-
+/*------------------------------------------------------------------------------
+Atom: Text - Horizontal Rule
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 hr {
-  @include breakpoint($medium) {
-    border-width: $border-width--thicker;
+  @include breakpoint(var(--breakpoint--md)) {
+    border-width: var(--border-width-lg);
   }
-  margin: $standard-spacing 0;
+  margin: var(--space--md) 0;
   border: 0;
-  border-bottom: $border-width solid $light-gray;
+  border-bottom: var(--border-width--md) solid var(--gray--lighter-80);
 }

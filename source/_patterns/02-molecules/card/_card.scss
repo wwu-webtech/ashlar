@@ -408,7 +408,6 @@
     }
 
     .taxonomy-term {
-      @include button-box-shadow($dark-blue);
       float: none;
       padding: $standard-spacing $double-spacing;
       color: $white;

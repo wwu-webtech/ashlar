@@ -1,28 +1,15 @@
-/**
-* @file
-* 01-atoms/01-text/links/_links.scss
-*/
+/*------------------------------------------------------------------------------
+Atom: Text - Links
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 a {
-  transition: $link-transition-speed $link-transition-ease;
-  transition-property: background, color, border;
-  text-decoration: underline;
-  color: $link-color;
-
-  &:active,
-  &:focus,
-  &:hover {
-    @include default-link-hover();
-  }
-
-  &:focus {
-    @include default-link-focus();
-  }
+  @include link-styles--default;
 
   &[target="_blank"],
   &[target="blank"] {
     .material-icons {
       position: relative;
-      top: $standard-spacing / 3;
+      top: var(--space--md) / 3;
       left: 0.125rem;
       font-size: inherit;
     }
@@ -140,7 +127,7 @@ a {
   ul a {
     word-break: break-all;
     page-break-inside: avoid;
-    color: #003f87 !important;
+    color: var(--dark-blue) !important;
   }
   p a[href^="http"]:after,
   ul a[href^="http"]:after {

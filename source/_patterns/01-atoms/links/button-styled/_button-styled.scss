@@ -1,0 +1,302 @@
+/*------------------------------------------------------------------------------
+Atom: Text - Links - Button Styled
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+.button {
+
+  display: inline-block;
+  box-sizing: border-box;
+  margin-bottom: $standard-spacing;
+  padding: $standard-spacing $double-spacing;
+  user-select: none;
+  transition: background-color $button-transition-speed, color $button-transition-speed, border-color $button-transition-speed, box-shadow $fast-transition-speed;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  color: $white;
+  border-width: $border-width;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: $border-radius--round;
+  background: $blue;
+  font-size: $p-font-size;
+  line-height: 1;
+
+  .material-icons {
+    position: relative;
+    top: $half-spacing / 2;
+    font-size: $p-font-size;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+
+  &:focus {
+    border-style: dotted;
+    border-color: $white;
+    outline: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background: $darkest-blue;
+  }
+
+  &.square {
+    border-radius: $border-radius--square;
+  }
+
+  &.small {
+    padding: $half-spacing $standard-spacing;
+    font-size: $p-font-size--smaller;
+  }
+
+  &.medium {
+    padding: ($standard-spacing * 1.5) ($triple-spacing);
+    font-size: $h5-font-size;
+
+    .material-icons {
+      font-size: $h5-font-size;;
+    }
+  }
+
+  &.large {
+    padding: $double-spacing ($double-spacing * 2);
+    font-size: $h3-font-size;
+
+    .material-icons {
+      font-size: $h3-font-size;;
+    }
+  }
+
+  &.light-blue {
+
+    color: $black;
+    background: $light-blue;
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: $white;
+      background: $blue;
+    }
+  }
+
+  &.dark-blue {
+
+    background: $dark-blue;
+
+    &:active,
+    &:hover,
+    &:focus {
+      background: $blue;
+    }
+  }
+
+  &.light-green {
+
+    color: $dark-blue;
+    background: $light-green;
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: $lightest-green;
+      background: $darkest-blue;
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+  }
+
+  &.green {
+
+    background: $green;
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: $black;
+      background: $light-green;
+    }
+
+    &:focus {
+      border-color: $dark-green;
+    }
+  }
+
+  &.dark-green {
+
+    background: $dark-green;
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: $black;
+      background: $light-green;
+    }
+
+    &:focus {
+      border-color: $dark-green;
+    }
+  }
+
+  &.white {
+
+    color: $blue;
+    background: $white;
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: $white;
+      background: $blue;
+    }
+  }
+
+  &.outline {
+
+    color: $blue;
+    border-color: $blue;
+    background: $white;
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: $white;
+      border-color: transparent;
+      background: $dark-blue;
+    }
+
+    &:focus {
+      border-color: $white;
+    }
+
+    &.light-blue {
+
+      color: $light-blue;
+      border-color: $light-blue;
+      background-color: transparent;
+
+      &:active,
+      &:hover,
+      &:focus {
+        color: $dark-blue;
+        border-color: $light-gray;
+        background: $light-gray;
+      }
+    }
+
+    &.dark-blue {
+
+      color: $dark-blue;
+      border-color: $dark-blue;
+
+      &:active,
+      &:hover,
+      &:focus {
+        color: $white;
+        border-color: transparent;
+        background: $blue;
+      }
+    }
+
+    &.light-green {
+
+      color: $green;
+      border-color: $light-green;
+
+      &:active,
+      &:hover,
+      &:focus {
+        color: $dark-blue;
+        border-color: transparent;
+        background: $lightest-green;
+      }
+
+      &:focus {
+        border-color: $green;
+      }
+    }
+
+    &.green {
+
+      color: $green;
+      border-color: $green;
+
+      &:active,
+      &:hover,
+      &:focus {
+        color: $white;
+        border-color: transparent;
+        background: $dark-green;
+      }
+    }
+
+    &.dark-green {
+
+      color: $dark-green;
+      border-color: $dark-green;
+
+      &:active,
+      &:hover,
+      &:focus {
+        color: $white;
+        border-color: transparent;
+        background: $green;
+      }
+    }
+
+    &.white {
+
+      color: $white;
+      border-color: $white;
+      background: transparent;
+
+      &:active,
+      &:hover,
+      &:focus {
+        color: $dark-blue;
+        border-color: transparent;
+        background: $light-gray;
+      }
+    }
+  }
+
+  &.dark-blue,
+  &.green,
+  &.dark-green,
+  &.white {
+    &:active {
+      box-shadow: none;
+    }
+    &.outline {
+      &:active {
+        box-shadow: none;
+      }
+      &:focus {
+        border: dotted $border-width $white;
+      }
+    }
+  }
+
+  &.soft-shadow {
+    box-shadow: var(--shadow--button--soft);
+
+    &:hover,
+    &:active,
+    &:focus {
+      box-shadow: var(--shadow--button--soft--hover);
+    }
+  }
+
+  &:after {
+    @media print {
+      content: " [" attr(href) "] ";
+      font-size: 10pt;
+    }
+  }
+}
