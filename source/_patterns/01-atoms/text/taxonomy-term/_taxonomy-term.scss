@@ -27,5 +27,6 @@ a.taxonomy-term,
   &:active {
     color: $light-green;
     background-color: $dark-blue;
+    outline-color: $dark-blue;
   }
 }
