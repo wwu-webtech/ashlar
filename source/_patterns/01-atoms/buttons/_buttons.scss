@@ -22,10 +22,14 @@ input[type="submit"] {
   &:focus {
     outline: dotted var(--border-width--md) var(--black);
     outline-offset: var(--border-width--md);
+
+    &:not(:focus-visible) {
+      outline: none;
+    }
   }
 
   &:active {
-    border-style: outset;
+    border-style: inset;
   }
 
   &.alt {
@@ -42,7 +46,7 @@ input[type="submit"] {
   &.warning {
     color: var(--black);
     background: var(--yellow);
-    border: var(--border-width--md) outset var(--yellow--lighter-40);
+    border-color: var(--yellow--lighter-40);
 
     &:hover,
     &:focus {
