@@ -17,7 +17,7 @@ if (lbPlayButton.length) {
   } else if (main.getElementsByTagName("script")) {
     window.setTimeout(function () {
       lightbox();
-    }, 1000);
+    }, 2000);
   } else {
     lightbox();
   }
@@ -26,7 +26,7 @@ if (lbPlayButton.length) {
 function lightbox() {
   var playButtonArr = Array.from(lbPlayButton);
   var bgFocusable = document.querySelectorAll(
-    "a, button:not(.lightbox-close-dialog), textarea, select, input"
+    "a, button:not(.lightbox-close-dialog), textarea, select, input, iframe, [tabindex='0']"
   );
   var playButtonFocused;
   var pageBackground = document.querySelectorAll(
