@@ -26,14 +26,13 @@
     margin: 0;
     padding-left: 0;
     background-color: initial;
+    min-height: $standard-spacing * 4.27;
 
     & > li {
       @include breakpoint($medium) {
         width: inherit;
-        padding: $half-spacing;
         border-bottom: none;
-
-        grid-template-columns: 1fr $icon-size--small;
+        grid-template-columns: 1fr $icon-size--small;      
       }
       display: grid;
       width: 100%;
@@ -86,7 +85,7 @@
         @include breakpoint($medium) {
           display: flex;
           align-items: center;
-          padding: $standard-spacing;
+          padding: ($standard-spacing * 1.6) $standard-spacing ($standard-spacing * 1.6) $one-point-five-spacing;
           padding-right: $icon-size--small + $standard-spacing;
           text-align: center;
           font-size: $menu-font-size;
@@ -103,7 +102,7 @@
         color: $white;
         font-family: $condensed;
         font-size: $p-font-size;
-        line-height: 1em;
+        line-height: 1;
 
         grid-column: 1 / span all;
         grid-row: 1 / span 1;
