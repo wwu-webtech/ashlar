@@ -85,7 +85,7 @@
         @include breakpoint($medium) {
           display: flex;
           align-items: center;
-          padding: $one-point-five-spacing $standard-spacing $one-point-five-spacing $one-point-five-spacing;
+          padding: $one-point-five-spacing;
           padding-right: $icon-size--small + $standard-spacing;
           text-align: center;
           font-size: $menu-font-size;
