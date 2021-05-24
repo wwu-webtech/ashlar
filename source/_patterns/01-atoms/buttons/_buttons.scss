@@ -9,9 +9,9 @@ input[type="submit"] {
   padding: var(--space--xs);
   transition: background var(--transition-speed--fast), color var(--transition-speed--fast), box-shadow var(--transition-speed--fast);
   color: var(--black);
+  border: var(--border-width--md) outset var(--gray--lighter-80);
   border-radius: var(--border-radius--round);
   background: var(--gray--lighter-80);
-  border: var(--border-width--md) outset var(--gray--lighter-80);
 
   &:hover,
   &:focus {
@@ -33,20 +33,20 @@ input[type="submit"] {
   }
 
   &.alt {
-    background: var(--dark-blue--lighter-80);
-    border-color: var(--dark-blue--lighter-60);
+    border-color: var(--blue--lighter-20);
+    background: var(--blue);
+    color: var(--white);
 
     &:hover,
     &:focus {
-      color: var(--white);
-      background: var(--blue);
+      background: var(--dark-blue);
     }
   }
 
   &.warning {
     color: var(--black);
-    background: var(--yellow);
     border-color: var(--yellow--lighter-40);
+    background: var(--yellow);
 
     &:hover,
     &:focus {
@@ -59,9 +59,10 @@ input[type="submit"] {
   }
 
   &:disabled {
-    color: scale-color($gray, $lightness: -15%);
-    border-color: mix($gray, $light-gray, 50%);
-    background: $light-gray;
+    color: var(--gray--darker-40);
+    border-style: solid;
+    border-color: var(--gray--lighter-60);
+    background: var(--gray--lighter-60);
     box-shadow: none;
   }
 }
