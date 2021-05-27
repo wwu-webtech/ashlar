@@ -3,7 +3,7 @@ Atom: Text - Horizontal Rule
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 hr {
-  @include breakpoint(var(--breakpoint--md)) {
+  @include breakpoint($medium) {
     border-width: var(--border-width-lg);
   }
   margin: var(--space--md) 0;

@@ -58,7 +58,7 @@ Atom: Background Colors
 
   .menu {
     li {
-      @include breakpoint(var(--breakpoint--md)) {
+      @include breakpoint($medium) {
         border-left-width: var(--border-width--lg);
       }
       border-left: solid var(--border-width--md) var(--blue--lighter-40);
@@ -201,7 +201,7 @@ Atom: Background Colors
 
   .menu {
     li {
-      @include breakpoint(var(--breakpoint--md)) {
+      @include breakpoint($medium) {
         border-left-width: var(--border-width--lg);
       }
       border-left: solid var(--border-width--md) var(--white);
@@ -330,7 +330,7 @@ Atom: Background Colors
 
   .menu {
     li {
-      @include breakpoint(var(--breakpoint--md)) {
+      @include breakpoint($medium) {
         border-left-width: var(--border-width--lg);
       }
       border-left: solid var(--border-width--md) var(--blue--darker-40);

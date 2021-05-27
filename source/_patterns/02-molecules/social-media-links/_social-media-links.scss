@@ -3,7 +3,7 @@ Molecules: Social Media Links
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 .social-media-links {
-  @include breakpoint(var(--breakpoint--md)) {
+  @include breakpoint($medium) {
     max-width: none;
   }
   display: flex;

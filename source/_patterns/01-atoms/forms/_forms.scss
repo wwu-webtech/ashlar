@@ -55,7 +55,7 @@ label {
 input,
 textarea,
 select {
-  @include breakpoint(var(--breakpoint--md)) {
+  @include breakpoint($medium) {
     width: auto;
     border-width: var(--border-width--lg);
   }
@@ -65,10 +65,11 @@ select {
   margin-bottom: var(--space--md);
   padding: var(--space--xs);
   color: var(--black);
-  border: solid var(--border-width--md) var(--gray--lighter-60);
+  border: solid var(--border-width--md) var(--gray--lighter-80);
   border-radius: var(--border-radius-round);
-  background-color: var(--gray--lighter-80);
+  background-color: var(--gray--lighter-90);
   box-shadow: none;
+  font-size: var(--font-size--md);
 
   &:focus {
     outline: none;
@@ -77,6 +78,7 @@ select {
       border-style: dotted;
     }
   }
+
   &:disabled {
     cursor: not-allowed;
     color: var(--gray);
@@ -84,6 +86,7 @@ select {
     background-color: var(--gray--lighter-60);
   }
 }
+
 
 input,
 textarea {

@@ -4,7 +4,7 @@ Atom: Text
 ------------------------------------------------------------------------------*/
 
 html {
-  @include breakpoint(var(--breakpoint--lg)) {
+  @include breakpoint($large) {
     font-size: calc(1rem + (var(--content-area-max-width) * 0.005));
   }
   color: var(--black);

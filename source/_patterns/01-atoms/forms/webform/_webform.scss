@@ -76,17 +76,17 @@ form {
         }
 
         &:after {
-          @include breakpoint(var(--breakpoint--lg)) {
+          @include breakpoint($large) {
             left: var(--checkmark-size);
           }
-          @include breakpoint(var(--breakpoint--md)) {
+          @include breakpoint($medium) {
             left: var(--space--2xl);
           }
           position: relative;
           top: calc(-1 * var(--space--md));
           left: var(--space--2xl);
           display: block;
-          width: var(--checkmark-size) * 2;
+          width: calc(var(--checkmark-size) * 2);
           height: var(--checkmark-size);
           content: "";
           transform: scale(0.5);
