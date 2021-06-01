@@ -164,6 +164,7 @@
           @include breakpoint($medium) {
             right: $half-spacing;
             display: flex;
+            position: relative;
           }
           display: none;
         }
