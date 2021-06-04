@@ -5,8 +5,8 @@ Atom: Icons - Social Media Icons
 
 .social-icon {
   display: block;
-  width: var(--icon-size--block--sm);
-  height: var(--icon-size--block--sm);
+  width: var(--toggle-size--sm);
+  height: var(--toggle-size--sm);
   transition: var(--ease-standard) var(--transition-speed--fast) background-color;
   color: var(--white);
   background-color: var(--blue);
@@ -34,12 +34,12 @@ Atom: Icons - Social Media Icons
   }
 
   &.medium {
-    width: var(--icon-size--block--md);
-    height: var(--icon-size--block--md);
+    width: var(--toggle-size--md);
+    height: var(--toggle-size--md);
   }
 
   &.large {
-    width: var(--icon-size--block--lg);
-    height: var(--icon-size--block--lg);
+    width: var(--toggle-size--lg);
+    height: var(--toggle-size--lg);
   }
 }

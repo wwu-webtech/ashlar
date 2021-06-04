@@ -33,7 +33,7 @@
         padding: $half-spacing;
         border-bottom: none;
 
-        grid-template-columns: 1fr $icon-size--small;
+        grid-template-columns: 1fr var(--icon-size--sm);
       }
       display: grid;
       width: 100%;
@@ -87,7 +87,7 @@
           display: flex;
           align-items: center;
           padding: $standard-spacing;
-          padding-right: $icon-size--small + $standard-spacing;
+          padding-right: calc(var(--icon-size--sm) + var(--space--md));
           text-align: center;
           font-size: $menu-font-size;
         }
@@ -155,7 +155,7 @@
         height: 100%;
         color: $white;
         border: none;
-        font-size: $icon-size--small;
+        font-size: var(--icon-size--sm);
 
         grid-area: icon;
         -ms-grid-column: 2;

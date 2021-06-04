@@ -53,7 +53,7 @@
     .material-icons {
       &.show {
         @include breakpoint($large) {
-          font-size: $icon-size--small + 0.125rem;
+          font-size: calc(var(--icon-size--sm) + 0.125rem);
         }
         @include breakpoint($small) {
           display: inline-block;
@@ -61,7 +61,7 @@
           top: $border-width--thicker;
         }
         display: block;
-        font-size: $icon-size--small;
+        font-size: var(--icon-size--sm);
       }
     }
   }

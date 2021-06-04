@@ -32,7 +32,7 @@
         position: relative;
         top: 0.125rem;
         margin-right: $border-width;
-        font-size: $icon-size--medium;
+        font-size: var(--icon-size--lg);
       }
     }
     padding: 0;

@@ -1,13 +1,17 @@
+/*------------------------------------------------------------------------------
+Atom: Icons - My Western Icons
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .my-western-links {
   .social-media-links {
     @include breakpoint($medium) {
       max-width: 37.5rem;
-      margin-top: -$triple-spacing * 1.5;
+      margin-top: -3.375rem;
       margin-left: 50%;
       transform: translatex(-50%);
     }
     @include breakpoint(67.5rem) {
-      margin-top: -$triple-spacing * 2;
+      margin-top: -4.5rem;
     }
     justify-content: center;
     width: 100%;
@@ -15,19 +19,16 @@
   }
 
   .social-icon {
-    @include breakpoint($medium) {
-      font-size: $min-base-font-size;
-    }
     display: flex;
     flex-flow: column;
     align-items: center;
     width: initial;
     height: initial;
-    padding: $standard-spacing;
+    padding: var(--space--md);
     text-align: center;
     text-decoration: none;
     background: transparent;
-    font-size: 0.875rem;
+    font-size: var(--font-size--xs);
     line-height: 1em;
 
     &:hover,
@@ -39,16 +40,16 @@
 
     svg {
       @include breakpoint($medium) {
-        width: var(--icon-size--block--sm);
-        height: var(--icon-size--block--sm);
+        width: var(--toggle-size--md);
+        height: var(--toggle-size--md);
       }
-      width: var(--icon-size--block--sm);
-      height: var(--icon-size--block--sm);
-      margin-bottom: $half-spacing;
+      width: var(--toggle-size--sm);
+      height: var(--toggle-size--sm);
+      margin-bottom: var(--space--xs);
     }
 
     .icon-text {
-      margin-bottom: $standard-spacing;
+      margin-bottom: var(--space--md);
     }
   }
 }

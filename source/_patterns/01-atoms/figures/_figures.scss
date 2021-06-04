@@ -1,11 +1,11 @@
-/**
- * @file
- * 01-atoms/figures/_figures.scss
- */
+/*------------------------------------------------------------------------------
+Atom: Figures
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 
 figcaption {
-  padding: $standard-spacing;
-  margin-bottom: $double-spacing;
+  padding: var(--space--md);
+  margin-bottom: var(--space--xl);
 }
 
 figure {

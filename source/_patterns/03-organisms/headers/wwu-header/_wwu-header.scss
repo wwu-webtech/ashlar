@@ -180,8 +180,8 @@
         @include breakpoint($medium) {
           font-size: 1rem;
         }
-        width: $icon-with-text-size + 1;
-        height: $icon-with-text-size + 1;
+        width: calc(var(--toggle-size--lg) + 1);
+        height: calc(var(--toggle-size--lg) + 1);
         font-size: 0.8rem;
       }
     }

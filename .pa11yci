@@ -13,10 +13,6 @@
     "rootElement": ".sg-pattern-example"
   },
   {
-    "url": "http://localhost:8000/patterns/01-atoms-forms/index.html",
-    "rootElement": ".sg-pattern-example"
-  },
-  {
     "url": "http://localhost:8000/patterns/01-atoms-icons/index.html",
     "rootElement": ".sg-pattern-example"
   },
@@ -129,7 +125,7 @@
     "rootElement": ".sg-pattern-example"
   },
   {
-    "url": "http://localhost:8000/patterns/02-molecules-social-media/index.html",
+    "url": "http://localhost:8000/patterns/02-molecules-social-media-links/index.html",
     "rootElement": ".sg-pattern-example"
   },
   {

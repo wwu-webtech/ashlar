@@ -9,7 +9,7 @@ $vertical-statistic-width--max: 15rem;
   margin: $half-spacing 0;
 
   .material-icons {
-    font-size: $icon-size--large;
+    font-size: var(--icon-size--lg);
   }
 
   .statistic-heading {

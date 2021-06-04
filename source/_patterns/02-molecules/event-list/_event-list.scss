@@ -13,7 +13,7 @@ $event-icon-height: 3.75rem;
     grid-template-areas: "date title"
     "date body"
     "icon body";
-    grid-template-columns: $icon-with-text-size--small auto;
+    grid-template-columns: var(--toggle-size--md) auto;
 
     &:hover,
     &:focus-within {
@@ -92,7 +92,7 @@ $event-icon-height: 3.75rem;
 
     .date {
       order: 2;
-      width: $icon-with-text-size--small;
+      width: var(--toggle-size--md);
       text-align: center;
       text-transform: uppercase;
       background-color: $blue;

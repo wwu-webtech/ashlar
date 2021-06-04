@@ -1,18 +1,12 @@
-/**
- * @file
- * 01-atoms/icons/_icons.scss
- */
-
-$icon-size: 2.25rem;
-$icon-size--small: 1.125rem;
-$icon-size--medium: 1.5rem;
-$icon-size--large: 3rem;
-
+/*------------------------------------------------------------------------------
+Atom: Icons
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
-  font-size: $icon-size;
+  font-size: var(--icon-size--md);
   line-height: 1;
   letter-spacing: normal;
   text-transform: none;

@@ -89,7 +89,7 @@ $timeline-translate-neg: calc(-100% - (#{$min-timeline-font-size} + #{strip-unit
     }
 
     .timeline-item {
-      padding-left: calc(#{$icon-size} + #{$double-spacing});
+      padding-left: calc(var(--icon-size--md) + var(--space--xl));
 
       .material-icons {
         left: $standard-spacing;
@@ -129,7 +129,7 @@ $timeline-translate-neg: calc(-100% - (#{$min-timeline-font-size} + #{strip-unit
     }
 
     .timeline-item {
-      padding-right: calc(#{$icon-size} + #{$double-spacing});
+      padding-right: calc(var(--icon-size--md) + var(--space--xl));
 
       .material-icons {
         right: $standard-spacing;

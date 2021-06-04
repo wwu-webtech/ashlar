@@ -143,6 +143,7 @@ VARIABLES
 --font-weight--black: 900;
 
 /* c. Font sizes (mostly based on major second scale) ------------------------*/
+--font-size--xs: 0.6em;
 --font-size--sm: 0.8em;
 --font-size--md: 1em;
 --font-size--lg: 1.125em;
@@ -207,13 +208,13 @@ VARIABLES
 --icon-size--sm: 1.5rem;
 --icon-size--md: 2.25rem; // replaces $icon-size
 --icon-size--lg: 3rem;
---icon-size--block--sm: 4rem;
---icon-size--block--md: 5em;
---icon-size--block--lg: 6.5em;
---icon-size--block--xl: 7.5em;
 
 /* d. Toggles ----------------------------------------------------------------*/
---toggle-size--md: 4rem; //replaces $toggle-size
+--toggle-size--sm: 3rem; //replaces $toggle-size
+--toggle-size--md: 3.5rem;
+--toggle-size--lg: 4.5rem;
+--toggle-size--xl: 5.5rem;
+--toggle-size--2xl: 6.5rem;
 
 /*------------------------------------------------------------------------------
 5. Animation

@@ -38,7 +38,7 @@ $dyslexic-icon-smaller: $p-font-size--min * 0.8;
     .material-icons {
       position: relative;
       margin-right: $border-width;
-      font-size: $icon-size--medium;
+      font-size: var(--icon-size--lg);
     }
 
     &.my-western-link {

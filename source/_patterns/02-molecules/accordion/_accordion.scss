@@ -54,7 +54,7 @@ $accordion-border: $dark-blue solid $border-width--thicker;
         .material-icons {
           margin-right: $standard-spacing;
           color: $dark-blue;
-          font-size: $icon-size--medium;
+          font-size: var(--icon-size--lg);
         }
       }
 
@@ -80,12 +80,12 @@ $accordion-border: $dark-blue solid $border-width--thicker;
       &:last-of-type {
         border-bottom-color: $light-blue;
       }
-      
-      .title, 
+
+      .title,
       .field__title {
         .expand {
           color: $light-blue;
-      
+
         .material-icons {
             color: $light-blue;
           }
