@@ -2,6 +2,7 @@
 * @file
 * 00-molecules/navigation/wwu-menu/_wwu-menu.scss
 */
+
 .western-menu {
   @include breakpoint($medium) {
     margin: 0;
@@ -26,7 +27,7 @@
       align-items: center;
       width: initial;
       height: initial;
-      padding: $half-spacing $standard-spacing $half-spacing $half-spacing;
+      padding: $min-target-spacing $standard-spacing $min-target-spacing $half-spacing;
 
       .material-icons {
         position: relative;
