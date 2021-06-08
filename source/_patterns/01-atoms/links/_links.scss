@@ -3,7 +3,40 @@ Atom: Text - Links
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 a {
-  @include link-styles--default;
+  padding: 3px 0;
+  transition: background-size var(--transition-speed--fast) cubic-bezier(0.33,0.66,0.66,1), text-decoration var(--transition-speed--fast) ease-out;
+  text-decoration: underline var(--border-width--md) var(--blue--lighter-60);
+  color: var(--blue--darker-20);
+  background: linear-gradient(to bottom,var(--blue--lighter-40) 0,var(--blue--lighter-60) 100%);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 0;
+  font-weight: var(--font-weight--semibold);
+
+  text-underline-offset: 7px;
+
+  &:visited {
+    color: var(--purple);
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    transition: 0.25s ease-out;
+    color: var(--dark-blue);
+    background-size: 100% 100%;
+
+    text-decoration-color: var(--blue--lighter-60);
+
+    &:visited {
+      color: var(--dark-blue);
+    }
+  }
+
+  &:focus {
+    outline: dotted var(--border-width--md);
+    outline-offset: var(--border-width--md);
+  }
 
   &[target="_blank"],
   &[target="blank"] {

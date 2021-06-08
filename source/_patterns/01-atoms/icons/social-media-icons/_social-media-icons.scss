@@ -9,7 +9,7 @@ Atom: Icons - Social Media Icons
   height: var(--toggle-size--sm);
   transition: var(--ease-standard) var(--transition-speed--fast) background-color;
   color: var(--white);
-  background-color: var(--blue);
+  background: var(--blue);  
 
   svg {
     width: 100%;
