@@ -11,6 +11,8 @@ $one-point-five-spacing: $standard-spacing * 1.5;
 $double-spacing: $standard-spacing * 2;
 $triple-spacing: $standard-spacing * 3;
 
+$min-target-spacing: $standard-spacing * .65; // above 44px
+
 /* Borders and Lines */
 $border-width--thinner: 0.0625rem;
 $border-width: 0.125rem;

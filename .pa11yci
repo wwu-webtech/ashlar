@@ -205,10 +205,6 @@
     "rootElement": ".sg-pattern-example"
   },
   {
-    "url": "http://localhost:8000/patterns/04-templates-front-page/index.html",
-    "rootElement": ".sg-pattern-example"
-  },
-  {
     "url": "http://localhost:8000/patterns/04-templates-profile/index.html",
     "rootElement": ".sg-pattern-example"
   },

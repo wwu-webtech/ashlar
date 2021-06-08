@@ -26,11 +26,11 @@
     margin: 0;
     padding-left: 0;
     background-color: initial;
+    min-height: $standard-spacing * 4.27;
 
     & > li {
       @include breakpoint($medium) {
         width: inherit;
-        padding: $half-spacing;
         border-bottom: none;
 
         grid-template-columns: 1fr var(--icon-size--sm);
@@ -103,7 +103,7 @@
         color: $white;
         font-family: $condensed;
         font-size: $p-font-size;
-        line-height: 1em;
+        line-height: 1;
 
         grid-column: 1 / span all;
         grid-row: 1 / span 1;
@@ -165,6 +165,7 @@
           @include breakpoint($medium) {
             right: $half-spacing;
             display: flex;
+            position: relative;
           }
           display: none;
         }
