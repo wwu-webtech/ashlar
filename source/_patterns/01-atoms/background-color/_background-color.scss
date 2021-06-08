@@ -597,30 +597,6 @@
   background-image: linear-gradient(to right bottom, #002f5e, #003266, #00356d, #003875, #003b7d, #004186, #01478e, #004d97, #0058a3, #0063b0, #006ebc, #007ac8);
 }
 
-div[class$='-bg'] {
-  table {
-    td, 
-    th {
-      color: initial;
-
-      a:not([class]) {
-        color: $dark-blue;
-
-        &:hover,
-        &:focus,
-        &:active {
-          color: $black;
-          background-color: mix(black, $light-gray, 20%);
-        }
-
-        &:focus {
-          outline-color: inherit;
-        }
-      }
-    }
-  }
-}
-
 .dark-mode {
   .gray-bg,
   .light-blue-bg,
