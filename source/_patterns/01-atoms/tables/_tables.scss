@@ -196,6 +196,8 @@ div[class$='-bg'] {
 
   table {
     a:not([class]) {
+      color: $white;
+
       &:hover,
       &:active,
       &:focus {
@@ -212,7 +214,7 @@ div[class$='-bg'] {
     @include color-table(mix($blue, $dark-blue, 50%), mix($blue, $dark-blue, 75%), $dark-blue, $darkest-blue);
   }
 
-  div[class$='-bg'] {
+  div[class*='-bg'] {
     table {
       td, 
       th {
@@ -236,17 +238,24 @@ div[class$='-bg'] {
     }
   }
 
-  /* Reset blue bg tables in dark mode to gray table so contrast works */
+  /* blue tables on blue backgrounds in dark mode has low contrast -- reset to gray in dark mode */
   .blue-bg, 
   .dark-blue-bg, 
   .darkest-blue-bg, 
   .dark-blue-gradient-bg, 
   .blue-gradient-bg { 
     .light-blue {
-      @include color-table($light-gray, $lightest-gray, mix(black, $light-gray, 13%), mix(black, $light-gray, 25%));
-      td, 
-      th {
-        color: $black;
+      @include color-table(mix(black, $light-gray, 52%), mix(black, $light-gray, 60%), mix(black, $light-gray, 65%), mix(black, $light-gray, 70%));
+      
+      a:not([class]) {
+        color: $white;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: $white;
+          background-color: $darkest-blue;
+        }
       }
     }
   }
