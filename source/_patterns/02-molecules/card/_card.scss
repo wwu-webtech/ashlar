@@ -203,7 +203,7 @@
       font-weight: $font-weight--semibold;
     }
 
-    a {
+    a[href^="mailto:"] {
       position: relative;
       word-break: break-all;
     }
