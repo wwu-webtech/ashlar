@@ -87,3 +87,22 @@
     grid-area: more;
   }
 }
+
+.dark-mode .degree-card {
+  .department-link {
+    color: $white;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $black;
+      color: $light-green;
+    }
+  }
+
+  .body {
+    h4 {
+      color: $lightest-green;
+    }
+  }
+}
