@@ -167,7 +167,7 @@ td {
 
 /* Tables on different bg colors, dark mode */
 
-div[class$='-bg'] {
+div[class*='-bg'] {
   table {
     td, 
     th {
