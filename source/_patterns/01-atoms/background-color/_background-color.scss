@@ -44,13 +44,18 @@ Atom: Background Colors
     color: var(--light-green--lighter-40);
   }
 
-  a:not([class]) {
+  a:not([class]),
+  a.patternLink {
     color: var(--blue--lighter-40);
+
+    &:visited {
+      color: var(--purple--lighter-80);
+    }
 
     &:hover,
     &:focus,
     &:active {
-      color: var(--dark-blue);
+      color: var(--black);
       outline-color: var(--blue--lighter-40);
     }
   }
@@ -126,11 +131,12 @@ Atom: Background Colors
 
   a:not([class]) {
     color: var(--green--lighter-80);
+    text-decoration-color: var(--light-green--lighter-20);
 
     &:hover,
     &:focus,
     &:active {
-      background-color: var(--light-green);
+      background-image: linear-gradient(to bottom,var(--light-green--lighter-20) 0,var(--light-green) 100%);
       outline-color: var(--light-green);
     }
   }
@@ -184,13 +190,18 @@ Atom: Background Colors
 
   a:not([class]) {
     color: var(--white);
+    background-image: linear-gradient(to bottom,var(--blue--lighter-40) 0,var(--blue--lighter-60) 100%);
+    text-decoration-color: var(--blue--lighter-60);
+
+    &:visited {
+      text-decoration-color: var(--purple--lighter-60);
+    }
 
     &:hover,
     &:focus,
     &:active {
-      color: var(--dark-blue);
-      background: var(--blue--lighter-40);
-      outline-color: var(--blue--lighter-40);
+      color: var(--black);
+      outline-color: var(--white);
     }
   }
 
@@ -267,10 +278,12 @@ Atom: Background Colors
   }
 
   a:not([class]) {
+    text-decoration-color: var(--light-green--lighter-20);
+
     &:hover,
     &:focus,
     &:active {
-      background-color: var(--light-green--lighter-20);
+      background-image: linear-gradient(to bottom,var(--light-green--lighter-20) 0,var(--light-green) 100%);
       outline-color: var(--light-green--lighter-20);
     }
   }
@@ -317,12 +330,17 @@ Atom: Background Colors
 
   a:not([class]) {
     color: var(--blue--darker-40);
+    text-decoration-color: var(--dark-blue);
+
+    &:visited {
+      color: var(--purple);
+    }
 
     &:hover,
     &:focus,
     &:active {
       color: var(--white);
-      background-color: var(--dark-blue);
+      background-image: linear-gradient(to bottom,var(--dark-blue--darker-40) 0,var(--dark-blue) 100%);
       outline-color: var(--dark-blue);
     }
   }
@@ -380,7 +398,6 @@ Atom: Background Colors
   @include black-bg;
 }
 .dark-mode {
-  @include dark-mode-links;
   background-color: var(--gray--darker-80);
 }
 

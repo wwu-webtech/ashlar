@@ -13,19 +13,6 @@
   outline-offset: var(--border-width--md);
 }
 
-@mixin dark-mode-links {
-  a:not([class]),
-  a.patternLink {
-    color: $link-color-light;
-
-    &:active,
-    &:focus,
-    &:hover {
-      color: $link-color-light--hover;
-    }
-  }
-}
-
 @mixin message($color, $blend) {
   border: solid $border-width transparentize($color, 0.25);
   background-color: transparentize($color, 0.75);
