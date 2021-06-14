@@ -1,0 +1,108 @@
+/**
+* @file
+* molecules/components/card/_degree-card.scss
+*/
+.degree-card {
+  display: grid;
+
+  grid-template-areas: "taxonomy"
+  "title"
+  "body"
+  "more";
+  grid-template-rows: auto auto 1fr auto;
+
+  .title {
+    padding: $double-spacing $double-spacing 0 $double-spacing;
+
+    grid-area: title;
+
+    h3 {
+      @include breakpoint($large) {
+        font-size: $h4-font-size--max--smaller
+      }
+      margin-top: 0;
+      font-size: $h4-font-size--smaller;
+    }
+  }
+
+  .taxonomy-terms {
+    padding: 0;
+
+    grid-area: taxonomy;
+  }
+
+  .taxonomy-term {
+    margin-right: $half-spacing;
+    padding: $half-spacing $standard-spacing;
+  }
+
+  .taxonomy-term .material-icons {
+    font-size: $icon-size--small;
+  }
+
+  .body {
+    padding: 0 $double-spacing $standard-spacing $double-spacing;
+
+    grid-area: body;
+
+    h4 {
+      @include breakpoint($large) {
+        font-size: $p-font-size--max--smaller
+      }
+      margin-bottom: 0;
+      text-transform: uppercase;
+      color: $black;
+      font-size: $p-font-size--smaller;
+      font-weight: bold;
+    }
+  }
+
+  .department-links > div {
+    margin: $double-spacing 0;
+  }
+
+  .department-link {
+    @include breakpoint($large) {
+      font-size: $p-font-size--max;
+    }
+    text-decoration: none;
+    font-size: $p-font-size;
+    font-weight: bold;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $black;
+      background-color: #b3c5db;
+    }
+
+    .material-icons {
+      font-size: $icon-size--small;
+    }
+  }
+
+  .more-link {
+    margin-left: $double-spacing;
+
+    grid-area: more;
+  }
+}
+
+.dark-mode .degree-card {
+  .department-link {
+    color: $white;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $black;
+      color: $light-green;
+    }
+  }
+
+  .body {
+    h4 {
+      color: $lightest-green;
+    }
+  }
+}
