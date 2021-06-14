@@ -32,7 +32,7 @@ form {
   .webform-section {
     margin-top: var(space--xl);
     padding: var(space--xl);
-    border: solid var(--border-width--lg) var(--gray--lighter-80);
+    border: solid var(--border-width--lg) var(--gray--lighter--80);
   }
 }
 
@@ -65,9 +65,9 @@ select {
   margin-bottom: var(--space--md);
   padding: var(--space--xs);
   color: var(--black);
-  border: solid var(--border-width--md) var(--gray--lighter-80);
+  border: solid var(--border-width--md) var(--gray--lighter--80);
   border-radius: var(--border-radius-round);
-  background-color: var(--gray--lighter-90);
+  background-color: var(--gray--lighter--90);
   box-shadow: none;
   font-size: var(--font-size--md);
 
@@ -83,7 +83,7 @@ select {
     cursor: not-allowed;
     color: var(--gray);
     border-color: var(--gray);
-    background-color: var(--gray--lighter-60);
+    background-color: var(--gray--lighter--60);
   }
 }
 
@@ -91,7 +91,7 @@ select {
 input,
 textarea {
   &:focus {
-    border-color: var(--dark-blue--lighter-60);
+    border-color: var(--dark-blue--lighter--60);
     box-shadow: var(--shadow--button--soft);
   }
 }

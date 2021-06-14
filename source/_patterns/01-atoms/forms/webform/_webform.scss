@@ -62,7 +62,7 @@ form {
       .progress-title {
         &[role="link"] {
           text-decoration: underline;
-          color: var(--darker-20);
+          color: var(--darker--20);
 
           &:active,
           &:focus,
@@ -100,8 +100,8 @@ form {
 
     &.is-active {
       &:hover .progress-marker {
-        color: var(--light-green--lighter-40);
-        background: var(--blue--darker-20);
+        color: var(--light-green--lighter--40);
+        background: var(--blue--darker--20);
       }
 
       .progress-marker {
@@ -109,8 +109,8 @@ form {
 
         &:hover,
         &:active {
-          color: var(--light-green--lighter-40);
-          background: var(--blue--darker-20);
+          color: var(--light-green--lighter--40);
+          background: var(--blue--darker--20);
         }
       }
     }
@@ -118,7 +118,7 @@ form {
     .progress-marker {
       &:hover,
       &:focus {
-        background-color: var(--blue--darker-20);
+        background-color: var(--blue--darker--20);
       }
       &:focus {
         @include default-link-focus();

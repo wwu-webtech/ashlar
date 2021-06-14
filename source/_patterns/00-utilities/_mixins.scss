@@ -5,7 +5,7 @@
 @mixin default-link-hover {
   text-decoration: none;
   color: var(--dark-blue);
-  background-color: var(--gray--lighter-60);
+  background-color: var(--gray--lighter--60);
 }
 
 @mixin default-link-focus {

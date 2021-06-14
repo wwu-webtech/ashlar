@@ -22,7 +22,7 @@ h1 {
   position: relative;
   display: inline-block;
   padding-bottom: var(--space--lg);
-  color: var(--blue--darker-80);
+  color: var(--blue--darker--80);
   font-family: var(--font--title);
   font-size: var(--font-size--5xl);
   font-weight: var(--font-weight--bold);
@@ -39,17 +39,17 @@ h1 {
 }
 
 h2 {
-  color: var(--blue--darker-60);
+  color: var(--blue--darker--60);
   font-size: var(--font-size--4xl);
   font-weight: var(--font-weight--bold);
 }
 h3 {
-  color: var(--blue--darker-40);
+  color: var(--blue--darker--40);
   font-size: var(--font-size--3xl);
   font-weight: var(--font-weight--semibold);
 }
 h4 {
-  color: var(--blue--darker-20);
+  color: var(--blue--darker--20);
   font-size: var(--font-size--2xl);
   font-weight: var(--font-weight--regular);
 }

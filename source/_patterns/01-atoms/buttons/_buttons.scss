@@ -9,9 +9,9 @@ input[type="submit"] {
   padding: var(--space--xs);
   transition: background var(--transition-speed--fast), color var(--transition-speed--fast), box-shadow var(--transition-speed--fast);
   color: var(--black);
-  border: var(--border-width--md) outset var(--gray--lighter-80);
+  border: var(--border-width--md) outset var(--gray--lighter--80);
   border-radius: var(--border-radius--round);
-  background: var(--gray--lighter-80);
+  background: var(--gray--lighter--80);
 
   &:hover,
   &:focus {
@@ -33,7 +33,7 @@ input[type="submit"] {
   }
 
   &.alt {
-    border-color: var(--blue--lighter-20);
+    border-color: var(--blue--lighter--20);
     background: var(--blue);
     color: var(--white);
 
@@ -45,12 +45,12 @@ input[type="submit"] {
 
   &.warning {
     color: var(--black);
-    border-color: var(--yellow--lighter-40);
+    border-color: var(--yellow--lighter--40);
     background: var(--yellow);
 
     &:hover,
     &:focus {
-      background: var(--yellow--lighter-40);
+      background: var(--yellow--lighter--40);
     }
 
     &:active {
@@ -59,10 +59,10 @@ input[type="submit"] {
   }
 
   &:disabled {
-    color: var(--gray--darker-40);
+    color: var(--gray--darker--40);
     border-style: solid;
-    border-color: var(--gray--lighter-60);
-    background: var(--gray--lighter-60);
+    border-color: var(--gray--lighter--60);
+    background: var(--gray--lighter--60);
     box-shadow: none;
   }
 }

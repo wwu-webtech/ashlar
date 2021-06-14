@@ -60,7 +60,7 @@ Atom: Icons - Icons with Text
   .sg-pattern-example a,
   .page-content a {
     &.icon-with-text {
-      color: var(--blue--lighter-40);
+      color: var(--blue--lighter--40);
 
       &:hover,
       &:focus,
@@ -85,12 +85,12 @@ Atom: Icons - Icons with Text
 
       &.white-bg {
         background-color: var(--white);
-        color: (var--blue--darker-20);
+        color: (var--blue--darker--20);
 
         &:hover,
         &:focus,
         &:active {
-          background-color: (var--blue--darker-20);
+          background-color: (var--blue--darker--20);
           color: var(--white);
         }
       }

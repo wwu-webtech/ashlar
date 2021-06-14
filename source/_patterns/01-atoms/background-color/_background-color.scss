@@ -21,19 +21,19 @@ Atom: Background Colors
   }
 
   h2 {
-    color: var(--light-green--lighter-20);
+    color: var(--light-green--lighter--20);
   }
 
   h3 {
-    color: var(--light-green--lighter-40);
+    color: var(--light-green--lighter--40);
   }
 
   h4 {
-    color: var(--light-green--lighter-60);
+    color: var(--light-green--lighter--60);
   }
 
   h5 {
-    color: var(--light-green--lighter-80);
+    color: var(--light-green--lighter--80);
   }
 
   h6 {
@@ -41,22 +41,22 @@ Atom: Background Colors
   }
 
   .tagline {
-    color: var(--light-green--lighter-40);
+    color: var(--light-green--lighter--40);
   }
 
   a:not([class]),
   a.patternLink {
-    color: var(--blue--lighter-40);
+    color: var(--blue--lighter--40);
 
     &:visited {
-      color: var(--purple--lighter-80);
+      color: var(--purple--lighter--80);
     }
 
     &:hover,
     &:focus,
     &:active {
       color: var(--black);
-      outline-color: var(--blue--lighter-40);
+      outline-color: var(--blue--lighter--40);
     }
   }
 
@@ -65,7 +65,7 @@ Atom: Background Colors
       @include breakpoint($medium) {
         border-left-width: var(--border-width--lg);
       }
-      border-left: solid var(--border-width--md) var(--blue--lighter-40);
+      border-left: solid var(--border-width--md) var(--blue--lighter--40);
     }
   }
 
@@ -105,11 +105,11 @@ Atom: Background Colors
 
 @mixin darkest-blue-bg {
   @include black-bg;
-  background: var(--dark-blue--darker-20);
+  background: var(--dark-blue--darker--20);
 
   .social-icon {
     svg {
-      fill: var(--dark-blue--darker-20);
+      fill: var(--dark-blue--darker--20);
     }
   }
 }
@@ -130,20 +130,20 @@ Atom: Background Colors
   background: var(--dark-green);
 
   a:not([class]) {
-    color: var(--green--lighter-80);
-    text-decoration-color: var(--light-green--lighter-20);
+    color: var(--green--lighter--80);
+    text-decoration-color: var(--light-green--lighter--20);
 
     &:hover,
     &:focus,
     &:active {
-      background-image: linear-gradient(to bottom,var(--light-green--lighter-20) 0,var(--light-green) 100%);
+      background-image: linear-gradient(to bottom,var(--light-green--lighter--20) 0,var(--light-green) 100%);
       outline-color: var(--light-green);
     }
   }
 
   .menu {
     li {
-      border-left-color: var(--green--lighter-80);
+      border-left-color: var(--green--lighter--80);
     }
   }
 
@@ -162,22 +162,22 @@ Atom: Background Colors
   background: var(--gray);
 
   h1 {
-    color: var(--light-green--lighter-20);
+    color: var(--light-green--lighter--20);
     &:after {
-      border-color: var(--blue--lighter-40);
+      border-color: var(--blue--lighter--40);
     }
   }
 
   h2 {
-    color: var(--light-green--lighter-40);
+    color: var(--light-green--lighter--40);
   }
 
   h3 {
-    color: var(--light-green--lighter-60);
+    color: var(--light-green--lighter--60);
   }
 
   h4 {
-    color: var(--light-green--lighter-80);
+    color: var(--light-green--lighter--80);
   }
 
   h5 {
@@ -190,11 +190,11 @@ Atom: Background Colors
 
   a:not([class]) {
     color: var(--white);
-    background-image: linear-gradient(to bottom,var(--blue--lighter-40) 0,var(--blue--lighter-60) 100%);
-    text-decoration-color: var(--blue--lighter-60);
+    background-image: linear-gradient(to bottom,var(--blue--lighter--40) 0,var(--blue--lighter--60) 100%);
+    text-decoration-color: var(--blue--lighter--60);
 
     &:visited {
-      text-decoration-color: var(--purple--lighter-60);
+      text-decoration-color: var(--purple--lighter--60);
     }
 
     &:hover,
@@ -206,7 +206,7 @@ Atom: Background Colors
   }
 
   .tagline {
-    color: var(--light-green--lighter-80);
+    color: var(--light-green--lighter--80);
   }
 
   .menu {
@@ -229,11 +229,11 @@ Atom: Background Colors
     &:hover,
     &:focus,
     &:active {
-      background-color: var(--light-green--lighter-60);
+      background-color: var(--light-green--lighter--60);
     }
 
     &:focus {
-      outline-color: var(--light-green--lighter-60);
+      outline-color: var(--light-green--lighter--60);
     }
   }
 
@@ -247,10 +247,10 @@ Atom: Background Colors
     &:hover,
     &:active,
     &:focus {
-      color: var(--light-green--lighter-60);
+      color: var(--light-green--lighter--60);
 
       svg {
-        fill: var(--light-green--lighter-60);
+        fill: var(--light-green--lighter--60);
       }
     }
   }
@@ -273,18 +273,18 @@ Atom: Background Colors
 
   h1 {
     &:after {
-      border-color: var(--light-green--lighter-80);
+      border-color: var(--light-green--lighter--80);
     }
   }
 
   a:not([class]) {
-    text-decoration-color: var(--light-green--lighter-20);
+    text-decoration-color: var(--light-green--lighter--20);
 
     &:hover,
     &:focus,
     &:active {
-      background-image: linear-gradient(to bottom,var(--light-green--lighter-20) 0,var(--light-green) 100%);
-      outline-color: var(--light-green--lighter-20);
+      background-image: linear-gradient(to bottom,var(--light-green--lighter--20) 0,var(--light-green) 100%);
+      outline-color: var(--light-green--lighter--20);
     }
   }
 
@@ -299,25 +299,25 @@ Atom: Background Colors
 / Light gray based backgrounds
 ------------------------------------------------------------------------------*/
 @mixin light-gray-bg {
-  background: var(--gray--lighter-60);
+  background: var(--gray--lighter--60);
 
   h1 {
-    color: var(--dark-blue--darker-80);
+    color: var(--dark-blue--darker--80);
     &:after {
-      border-color: var(--dark-blue--darker-80);
+      border-color: var(--dark-blue--darker--80);
     }
   }
 
   h2 {
-    color: var(--dark-blue--darker-60);
+    color: var(--dark-blue--darker--60);
   }
 
   h3 {
-    color: var(--dark-blue--darker-40);
+    color: var(--dark-blue--darker--40);
   }
 
   h4 {
-    color: var(--dark-blue--darker-20);
+    color: var(--dark-blue--darker--20);
   }
 
   h5 {
@@ -329,7 +329,7 @@ Atom: Background Colors
   }
 
   a:not([class]) {
-    color: var(--blue--darker-40);
+    color: var(--blue--darker--40);
     text-decoration-color: var(--dark-blue);
 
     &:visited {
@@ -340,7 +340,7 @@ Atom: Background Colors
     &:focus,
     &:active {
       color: var(--white);
-      background-image: linear-gradient(to bottom,var(--dark-blue--darker-40) 0,var(--dark-blue) 100%);
+      background-image: linear-gradient(to bottom,var(--dark-blue--darker--40) 0,var(--dark-blue) 100%);
       outline-color: var(--dark-blue);
     }
   }
@@ -350,7 +350,7 @@ Atom: Background Colors
       @include breakpoint($medium) {
         border-left-width: var(--border-width--lg);
       }
-      border-left: solid var(--border-width--md) var(--blue--darker-40);
+      border-left: solid var(--border-width--md) var(--blue--darker--40);
     }
   }
 
@@ -364,10 +364,10 @@ Atom: Background Colors
     &:hover,
     &:active,
     &:focus {
-      color: var(--dark-blue--darker-80);
+      color: var(--dark-blue--darker--80);
 
       svg {
-        fill: var(--dark-blue--darker-80);
+        fill: var(--dark-blue--darker--80);
       }
     }
   }
@@ -375,17 +375,17 @@ Atom: Background Colors
 
 @mixin lightest-gray-bg {
   @include light-gray-bg;
-  background: var(--gray--lighter-80);
+  background: var(--gray--lighter--80);
 }
 
 @mixin light-blue-bg {
   @include light-gray-bg;
-  background: var(--blue--lighter-60);
+  background: var(--blue--lighter--60);
 }
 
 @mixin lightest-blue-bg {
   @include lightest-gray-bg;
-  background: var(--blue--lighter-80);
+  background: var(--blue--lighter--80);
 }
 
 @mixin light-green-bg {
@@ -398,7 +398,7 @@ Atom: Background Colors
   @include black-bg;
 }
 .dark-mode {
-  background-color: var(--gray--darker-80);
+  background-color: var(--gray--darker--80);
 }
 
 .dark-blue-bg {

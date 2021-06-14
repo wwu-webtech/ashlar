@@ -3,45 +3,33 @@ Atom: Text - Links - Button Styled
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 .button {
-
   display: inline-block;
   box-sizing: border-box;
-  margin-bottom: $standard-spacing;
-  padding: $standard-spacing $double-spacing;
+  margin-bottom: var(--space--md);
+  padding: var(--space--sm) var(--space--md);
   user-select: none;
-  transition: background-color $button-transition-speed, color $button-transition-speed, border-color $button-transition-speed, box-shadow $fast-transition-speed;
+  transition: background-color var(--transition-speed--fast), color var(--transition-speed--fast), border-color var(--transition-speed--fast), box-shadow var(--transition-speed--fast);
   text-align: center;
-  vertical-align: middle;
   text-decoration: none;
-  color: $white;
-  border-width: $border-width;
-  border-style: solid;
-  border-color: transparent;
+  color: var(--white);
   border-radius: $border-radius--round;
-  background: $blue;
-  font-size: $p-font-size;
+  background: var(--blue);
+  box-shadow: var(--shadow--button--soft);
+  font-size: var(--font-size--md);
   line-height: 1;
 
   .material-icons {
     position: relative;
-    top: $half-spacing / 2;
-    font-size: $p-font-size;
-  }
-
-  &:active {
-    box-shadow: none;
-  }
-
-  &:focus {
-    border-style: dotted;
-    border-color: $white;
-    outline: none;
+    top: 2px;
+    font-size: var(--font-size--md);
   }
 
   &:hover,
-  &:focus {
-    color: $white;
-    background: $darkest-blue;
+  &:focus,
+  &:active {
+    color: var(--white);
+    background: var(--dark-blue--darker--40);
+    box-shadow: var(--shadow--button--soft--hover);
   }
 
   &.square {
@@ -49,54 +37,42 @@ Atom: Text - Links - Button Styled
   }
 
   &.small {
-    padding: $half-spacing $standard-spacing;
-    font-size: $p-font-size--smaller;
-  }
-
-  &.medium {
-    padding: ($standard-spacing * 1.5) ($triple-spacing);
-    font-size: $h5-font-size;
+    padding: var(--space--xs) var(--space--sm);
+    font-size: var(--font-size--sm);
 
     .material-icons {
-      font-size: $h5-font-size;;
+      font-size: var(--font-size--sm);
     }
   }
 
   &.large {
-    padding: $double-spacing ($double-spacing * 2);
-    font-size: $h3-font-size;
-
-    .material-icons {
-      font-size: $h3-font-size;;
-    }
+    padding: var(--space--md) var(--space--lg);
+    font-size: var(--font-size--2xl);
   }
 
   &.light-blue {
-
-    color: $black;
-    background: $light-blue;
+    color: var(--black);
+    background: var(--blue--lighter--40);
 
     &:active,
     &:hover,
     &:focus {
-      color: $white;
-      background: $blue;
+      color: var(--white);
+      background: var(--blue);
     }
   }
 
   &.dark-blue {
-
     background: $dark-blue;
 
     &:active,
     &:hover,
     &:focus {
-      background: $blue;
+      background: var(--blue);
     }
   }
 
   &.light-green {
-
     color: $dark-blue;
     background: $light-green;
 
@@ -113,13 +89,12 @@ Atom: Text - Links - Button Styled
   }
 
   &.green {
-
     background: $green;
 
     &:active,
     &:hover,
     &:focus {
-      color: $black;
+      color: var(--black);
       background: $light-green;
     }
 
@@ -129,13 +104,12 @@ Atom: Text - Links - Button Styled
   }
 
   &.dark-green {
-
     background: $dark-green;
 
     &:active,
     &:hover,
     &:focus {
-      color: $black;
+      color: var(--black);
       background: $light-green;
     }
 
@@ -145,38 +119,38 @@ Atom: Text - Links - Button Styled
   }
 
   &.white {
-
-    color: $blue;
-    background: $white;
+    color: var(--blue);
+    background: var(--white);
 
     &:active,
     &:hover,
     &:focus {
-      color: $white;
-      background: $blue;
+      color: var(--white);
+      background: var(--blue);
     }
   }
 
   &.outline {
+    color: var(--blue);
+    border-width: $border-width;
+    border-style: solid;
+    border-color: var(--blue);
+    background: var(--white);
 
-    color: $blue;
-    border-color: $blue;
-    background: $white;
 
     &:active,
     &:hover,
     &:focus {
-      color: $white;
+      color: var(--white);
       border-color: transparent;
       background: $dark-blue;
     }
 
     &:focus {
-      border-color: $white;
+      border-color: var(--white);
     }
 
     &.light-blue {
-
       color: $light-blue;
       border-color: $light-blue;
       background-color: transparent;
@@ -191,21 +165,19 @@ Atom: Text - Links - Button Styled
     }
 
     &.dark-blue {
-
       color: $dark-blue;
       border-color: $dark-blue;
 
       &:active,
       &:hover,
       &:focus {
-        color: $white;
+        color: var(--white);
         border-color: transparent;
-        background: $blue;
+        background: var(--blue);
       }
     }
 
     &.light-green {
-
       color: $green;
       border-color: $light-green;
 
@@ -223,37 +195,34 @@ Atom: Text - Links - Button Styled
     }
 
     &.green {
-
       color: $green;
       border-color: $green;
 
       &:active,
       &:hover,
       &:focus {
-        color: $white;
+        color: var(--white);
         border-color: transparent;
         background: $dark-green;
       }
     }
 
     &.dark-green {
-
       color: $dark-green;
       border-color: $dark-green;
 
       &:active,
       &:hover,
       &:focus {
-        color: $white;
+        color: var(--white);
         border-color: transparent;
         background: $green;
       }
     }
 
     &.white {
-
-      color: $white;
-      border-color: $white;
+      color: var(--white);
+      border-color: var(--white);
       background: transparent;
 
       &:active,
@@ -278,18 +247,8 @@ Atom: Text - Links - Button Styled
         box-shadow: none;
       }
       &:focus {
-        border: dotted $border-width $white;
+        border: dotted $border-width var(--white);
       }
-    }
-  }
-
-  &.soft-shadow {
-    box-shadow: var(--shadow--button--soft);
-
-    &:hover,
-    &:active,
-    &:focus {
-      box-shadow: var(--shadow--button--soft--hover);
     }
   }
 
