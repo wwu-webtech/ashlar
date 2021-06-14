@@ -9,6 +9,21 @@
     margin-bottom: $one-point-five-spacing;
     padding: $standard-spacing;
     background-color: $lightest-bg-blue;
+  }
+
+  &.round-edges {
+    .schedule-item {
+      border-radius: $border-radius--round-square;
+
+      a:hover:after,
+      &:focus-within {
+        border-radius: $border-radius--round-square;
+      }
+    }
+  }
+
+  .schedule-heading {
+    margin: 0;
 
     a:after {
       position: absolute;
@@ -34,21 +49,6 @@
       border: $focus-outline;
       outline-offset: -$border-width--thicker;
     }
-  }
-
-  &.round-edges {
-    .schedule-item {
-      border-radius: $border-radius--round-square;
-
-      a:hover:after,
-      &:focus-within {
-        border-radius: $border-radius--round-square;
-      }
-    }
-  }
-
-  .schedule-heading {
-    margin: 0;
   }
 
   .time,
