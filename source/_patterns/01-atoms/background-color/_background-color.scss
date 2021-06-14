@@ -379,6 +379,7 @@
   }
 }
 
+
 @mixin light-blue-bg {
   @include light-gray-bg;
   background: $light-bg-blue;
@@ -606,6 +607,10 @@
   }
 
   .light-green-bg {
+    @include green-bg;
+  }
+
+  .green-bg {
     @include green-bg;
   }
 
