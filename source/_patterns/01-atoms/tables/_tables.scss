@@ -165,11 +165,39 @@ td {
   @include color-table($white, $lightest-gray, mix($black, $lightest-gray, 10%), mix($black, $lightest-gray, 15%));
 }
 
+/* Tables on different bg colors, dark mode */
+
+div[class*='-bg'] {
+  table {
+    td, 
+    th {
+      color: initial;
+
+      a:not([class]) {
+        color: $dark-blue;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: $black;
+          background-color: mix(black, $light-gray, 20%);
+        }
+
+        &:focus {
+          outline-color: inherit;
+        }
+      }
+    }
+  }
+}
+
 .dark-mode {
   @include color-table(mix(black, $light-gray, 60%), mix(black, $light-gray, 65%), mix(black, $light-gray, 70%), mix(black, $light-gray, 75%));
 
   table {
     a:not([class]) {
+      color: $white;
+
       &:hover,
       &:active,
       &:focus {
@@ -184,6 +212,52 @@ td {
 
   .light-blue {
     @include color-table(mix($blue, $dark-blue, 50%), mix($blue, $dark-blue, 75%), $dark-blue, $darkest-blue);
+  }
+
+  div[class*='-bg'] {
+    table {
+      td, 
+      th {
+        color: $white;
+  
+        a:not([class]) {
+          color: unset;
+  
+          &:hover,
+          &:focus,
+          &:active {
+            color: $black;
+            background-color: mix(black, $light-gray, 20%);
+          }
+  
+          &:focus {
+            outline-color: inherit;
+          }
+        }
+      }
+    }
+  }
+
+  /* blue tables on blue backgrounds in dark mode has low contrast -- reset to gray in dark mode */
+  .blue-bg, 
+  .dark-blue-bg, 
+  .darkest-blue-bg, 
+  .dark-blue-gradient-bg, 
+  .blue-gradient-bg { 
+    .light-blue {
+      @include color-table(mix(black, $light-gray, 52%), mix(black, $light-gray, 60%), mix(black, $light-gray, 65%), mix(black, $light-gray, 70%));
+      
+      a:not([class]) {
+        color: $white;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: $white;
+          background-color: $darkest-blue;
+        }
+      }
+    }
   }
 }
 

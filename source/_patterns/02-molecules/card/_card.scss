@@ -79,6 +79,32 @@
   }
 }
 
+@mixin card-bg-link-text-colors($bg-color, $link-color, $text-color: false) {
+  &.card, 
+  &.block--card {
+    transition: $medium-transition-speed $standard-ease;
+
+    &:hover, 
+    &:focus-within {
+      background-color: $bg-color;
+      
+      .title {
+        a {
+          &:hover,
+          &:focus,
+          &:active {
+            color: $link-color;
+          }
+        }
+      }
+      
+      @if $text-color {
+        color: $text-color;
+      }
+    }
+  }
+}
+
 .card,
 .block--card {
   position: relative;
@@ -666,6 +692,41 @@
   position: initial;
 }
 
+/* Hover/focus styles for card with -bg classes */
+
+.blue-bg {
+  @include card-bg-link-text-colors($dark-blue, $light-green);
+}
+
+.blue-gradient-bg {
+  @include card-bg-link-text-colors($dark-blue, $light-green);
+}
+
+.dark-blue-gradient-bg {
+  @include card-bg-link-text-colors($dark-blue, $light-green);
+}
+
+.dark-blue-bg {
+  @include card-bg-link-text-colors($blue, $light-green);
+}
+
+.darkest-blue-bg {
+  @include card-bg-link-text-colors($dark-blue, $light-green);
+}
+
+.green-bg {
+  @include card-bg-link-text-colors($dark-green, $white);
+}
+
+.dark-green-bg {
+  @include card-bg-link-text-colors($green, $white);
+}
+
+.light-green-bg {
+  @include card-bg-link-text-colors($green, $white, $white);
+}
+
+/* Display preferences styles */
 .dark-mode {
   .block--card {
     a {
@@ -679,6 +740,28 @@
     &:focus-within {
       a:after {
         outline-color: $white;
+      }
+    }
+  }
+  
+  .dark-blue-bg, 
+  .darkest-blue-bg {
+    &.card, 
+    &.block--card {
+      &:hover, 
+      &:focus-within {
+        background-color: $dark-blue;
+        
+        .title {
+          a {
+            &:hover,
+            &:focus,
+            &:active {
+              color: $light-green;
+              background-color: $darkest-blue;
+            }
+          }
+        }
       }
     }
   }

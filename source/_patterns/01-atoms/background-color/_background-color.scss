@@ -485,6 +485,10 @@ Atom: Background Colors
     @include green-bg;
   }
 
+  .green-bg {
+    @include green-bg;
+  }
+
   .blue-bg {
     @include dark-blue-bg;
   }
