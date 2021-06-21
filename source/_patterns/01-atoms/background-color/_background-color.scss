@@ -131,13 +131,14 @@ Atom: Background Colors
 
   a:not([class]) {
     color: var(--green--lighter--80);
+
     text-decoration-color: var(--light-green--lighter--20);
 
     &:hover,
     &:focus,
     &:active {
-      background-image: linear-gradient(to bottom,var(--light-green--lighter--20) 0,var(--light-green) 100%);
       outline-color: var(--light-green);
+      background-image: linear-gradient(to bottom,var(--light-green--lighter--20) 0,var(--light-green) 100%);
     }
   }
 
@@ -190,7 +191,7 @@ Atom: Background Colors
 
   a:not([class]) {
     color: var(--white);
-    background-image: linear-gradient(to bottom,var(--blue--lighter--40) 0,var(--blue--lighter--60) 100%);
+
     text-decoration-color: var(--blue--lighter--60);
 
     &:visited {
@@ -202,6 +203,7 @@ Atom: Background Colors
     &:active {
       color: var(--black);
       outline-color: var(--white);
+      background-image: linear-gradient(to bottom,var(--blue--lighter--40) 0,var(--blue--lighter--60) 100%);
     }
   }
 
@@ -214,7 +216,7 @@ Atom: Background Colors
       @include breakpoint($medium) {
         border-left-width: var(--border-width--lg);
       }
-      border-left: solid var(--border-width--md) var(--white);
+      border-left: solid var(--border-width--md) var(--blue--lighter--60);
     }
   }
 
@@ -283,8 +285,8 @@ Atom: Background Colors
     &:hover,
     &:focus,
     &:active {
-      background-image: linear-gradient(to bottom,var(--light-green--lighter--20) 0,var(--light-green) 100%);
       outline-color: var(--light-green--lighter--20);
+      background-image: linear-gradient(to bottom,var(--light-green--lighter--20) 0,var(--light-green) 100%);
     }
   }
 
@@ -330,6 +332,7 @@ Atom: Background Colors
 
   a:not([class]) {
     color: var(--blue--darker--40);
+
     text-decoration-color: var(--dark-blue);
 
     &:visited {
@@ -340,8 +343,8 @@ Atom: Background Colors
     &:focus,
     &:active {
       color: var(--white);
-      background-image: linear-gradient(to bottom,var(--dark-blue--darker--40) 0,var(--dark-blue) 100%);
       outline-color: var(--dark-blue);
+      background-image: linear-gradient(to bottom,var(--dark-blue--darker--40) 0,var(--dark-blue) 100%);
     }
   }
 

@@ -1,11 +1,11 @@
-/**
- * @file
- * 01-atoms/lists/_lists.scss
- */
+/*------------------------------------------------------------------------------
+Atom: Text - Lists
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 
 ul,
 ol {
-  margin: 0 0 $standard-spacing;
+  margin: 0 0 var(--space--md);
 }
 
 li {
@@ -15,17 +15,17 @@ li {
 .spaced {
   li {
     @include breakpoint($medium) {
-      margin-bottom: $standard-spacing;
+      margin-bottom: var(--space--md);
     }
-    margin-bottom: $half-spacing;
+    margin-bottom: var(--space--xs);
   }
 }
 
 dl {
-  margin-bottom: $half-spacing;
+  margin-bottom: var(--space--xs);
   dt {
-    margin-top: $half-spacing;
-    font-weight: 600;
+    margin-top: var(--space--xs);
+    font-weight: var(--font-weight--semibold);
   }
   dd {
     margin: 0;
