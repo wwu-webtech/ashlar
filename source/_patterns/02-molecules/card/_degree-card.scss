@@ -37,7 +37,7 @@
   }
 
   .taxonomy-term .material-icons {
-    font-size: $icon-size--small;
+    font-size: var(--icon-size--sm);
   }
 
   .body {
@@ -77,7 +77,7 @@
     }
 
     .material-icons {
-      font-size: $icon-size--small;
+      font-size: var(--icon-size--sm);
     }
   }
 

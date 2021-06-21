@@ -1,8 +1,10 @@
 /*------------------------------------------------------------------------------
-Atom: Text - Links - Button Styled
+Atom: Text - Links - Call to Action
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-.button {
+a.button,
+a.call-to-action,
+a.cta {
   display: inline-block;
   box-sizing: border-box;
   margin-bottom: var(--space--md);
@@ -12,7 +14,8 @@ Atom: Text - Links - Button Styled
   text-align: center;
   text-decoration: none;
   color: var(--white);
-  border-radius: $border-radius--round;
+  border-radius: var(--border-radius--roundest);
+  outline-offset: calc(-1 * var(--border-width--lg));
   background: var(--blue);
   box-shadow: var(--shadow--button--soft);
   font-size: var(--font-size--md);
@@ -24,16 +27,16 @@ Atom: Text - Links - Button Styled
     font-size: var(--font-size--md);
   }
 
-  &:hover,
+  &:active,
   &:focus,
-  &:active {
+  &:hover {
     color: var(--white);
     background: var(--dark-blue--darker--40);
     box-shadow: var(--shadow--button--soft--hover);
   }
 
   &.square {
-    border-radius: $border-radius--square;
+    border-radius: var(--border-radius--round);
   }
 
   &.small {
@@ -55,168 +58,145 @@ Atom: Text - Links - Button Styled
     background: var(--blue--lighter--40);
 
     &:active,
-    &:hover,
-    &:focus {
-      color: var(--white);
-      background: var(--blue);
+    &:focus,
+    &:hover {
+      background: var(--blue--lighter--60);
+      box-shadow: var(--shadow--button--soft--hover);
     }
   }
 
   &.dark-blue {
-    background: $dark-blue;
+    background: var(--dark-blue);
 
     &:active,
-    &:hover,
-    &:focus {
-      background: var(--blue);
+    &:focus,
+    &:hover {
+      background: var(--dark-blue--darker--60);
+      box-shadow: var(--shadow--button--soft--hover);
     }
   }
 
   &.light-green {
-    color: $dark-blue;
-    background: $light-green;
+    color: var(--dark-blue);
+    background: var(--light-green);
 
     &:active,
-    &:hover,
-    &:focus {
-      color: $lightest-green;
-      background: $darkest-blue;
-    }
-
-    &:active {
-      box-shadow: none;
+    &:focus,
+    &:hover {
+      background: var(--light-green--lighter--60);
+      box-shadow: var(--shadow--button--soft--hover);
     }
   }
 
   &.green {
-    background: $green;
+    background: var(--green);
 
     &:active,
-    &:hover,
-    &:focus {
-      color: var(--black);
-      background: $light-green;
-    }
-
-    &:focus {
-      border-color: $dark-green;
+    &:focus,
+    &:hover {
+      color: var(--white);
+      background: var(--green--darker--40);
+      box-shadow: var(--shadow--button--soft--hover);
     }
   }
 
   &.dark-green {
-    background: $dark-green;
+    background: var(--dark-green);
 
     &:active,
-    &:hover,
-    &:focus {
-      color: var(--black);
-      background: $light-green;
-    }
-
-    &:focus {
-      border-color: $dark-green;
+    &:focus,
+    &:hover {
+      color: var(--white);
+      background: var(--dark-green--darker--60);
+      box-shadow: var(--shadow--button--soft--hover);
     }
   }
 
   &.white {
-    color: var(--blue);
+    color: var(--dark-blue);
     background: var(--white);
 
     &:active,
-    &:hover,
-    &:focus {
-      color: var(--white);
-      background: var(--blue);
+    &:focus,
+    &:hover {
+      background: var(--gray--lighter--60);
+      box-shadow: var(--shadow--button--soft--hover);
     }
   }
 
   &.outline {
     color: var(--blue);
-    border-width: $border-width;
+    border-width: var(--border-width--md);
     border-style: solid;
     border-color: var(--blue);
     background: var(--white);
 
-
     &:active,
-    &:hover,
-    &:focus {
+    &:focus,
+    &:hover {
       color: var(--white);
-      border-color: transparent;
-      background: $dark-blue;
-    }
-
-    &:focus {
-      border-color: var(--white);
+      background: var(--dark-blue--darker--40);
     }
 
     &.light-blue {
-      color: $light-blue;
-      border-color: $light-blue;
+      color: var(--blue--lighter--40);
+      border-color: var(--blue--lighter--40);
       background-color: transparent;
 
       &:active,
-      &:hover,
-      &:focus {
-        color: $dark-blue;
-        border-color: $light-gray;
-        background: $light-gray;
+      &:focus,
+      &:hover {
+        color: var(--black);
+        background: var(--blue--lighter--60);
       }
     }
 
     &.dark-blue {
-      color: $dark-blue;
-      border-color: $dark-blue;
+      color: var(--dark-blue);
+      border-color: var(--dark-blue);
 
       &:active,
-      &:hover,
-      &:focus {
+      &:focus,
+      &:hover {
         color: var(--white);
-        border-color: transparent;
-        background: var(--blue);
+        background: var(--dark-blue--darker--60);
       }
     }
 
     &.light-green {
-      color: $green;
-      border-color: $light-green;
+      color: var(--light-green);
+      border-color: var(--light-green);
+      background-color: transparent;
 
       &:active,
-      &:hover,
-      &:focus {
-        color: $dark-blue;
-        border-color: transparent;
-        background: $lightest-green;
-      }
-
-      &:focus {
-        border-color: $green;
+      &:focus,
+      &:hover {
+        color: var(--dark-blue);
+        background: var(--light-green--lighter--60);
       }
     }
 
     &.green {
-      color: $green;
-      border-color: $green;
+      color: var(--green);
+      border-color: var(--green);
 
       &:active,
-      &:hover,
-      &:focus {
+      &:focus,
+      &:hover {
         color: var(--white);
-        border-color: transparent;
-        background: $dark-green;
+        background: var(--green--darker--40);
       }
     }
 
     &.dark-green {
-      color: $dark-green;
-      border-color: $dark-green;
+      color: var(--dark-green);
+      border-color: var(--dark-green);
 
       &:active,
-      &:hover,
-      &:focus {
+      &:focus,
+      &:hover {
         color: var(--white);
-        border-color: transparent;
-        background: $green;
+        background: var(--dark-green--darker--60);
       }
     }
 
@@ -226,28 +206,11 @@ Atom: Text - Links - Button Styled
       background: transparent;
 
       &:active,
-      &:hover,
-      &:focus {
-        color: $dark-blue;
+      &:focus,
+      &:hover {
+        color: var(--dark-blue);
+        background: var(--gray--lighter--60);
         border-color: transparent;
-        background: $light-gray;
-      }
-    }
-  }
-
-  &.dark-blue,
-  &.green,
-  &.dark-green,
-  &.white {
-    &:active {
-      box-shadow: none;
-    }
-    &.outline {
-      &:active {
-        box-shadow: none;
-      }
-      &:focus {
-        border: dotted $border-width var(--white);
       }
     }
   }
