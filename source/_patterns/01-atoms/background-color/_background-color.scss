@@ -69,36 +69,23 @@ Atom: Background Colors
     }
   }
 
-  .social-icon {
-    background-color: var(--white);
+  .social-icon,
+  .play-button {
+    color: var(--dark-blue);
+    background: var(--white);
 
     svg {
-      fill: var(--black);
+      fill: var(--dark-blue);
     }
 
     &:hover,
     &:focus,
     &:active {
-      color: var(--light-green);
-      background-color: var(--light-green);
-    }
-  }
-
-  .play-link {
-    color: var(--white);
-
-    svg {
-      fill: var(--white);
+      background: var(--blue--lighter--60);
     }
 
-    &:hover,
-    &:active,
     &:focus {
-      color: var(--light-green);
-
-      svg {
-        fill: var(--light-green);
-      }
+      outline-color: var(--white);
     }
   }
 }
@@ -106,23 +93,11 @@ Atom: Background Colors
 @mixin darkest-blue-bg {
   @include black-bg;
   background: var(--dark-blue--darker--20);
-
-  .social-icon {
-    svg {
-      fill: var(--dark-blue--darker--20);
-    }
-  }
 }
 
 @mixin dark-blue-bg {
   @include black-bg;
   background: var(--dark-blue);
-
-  .social-icon {
-    svg {
-      fill: var(--dark-blue);
-    }
-  }
 }
 
 @mixin dark-green-bg {
@@ -145,12 +120,6 @@ Atom: Background Colors
   .menu {
     li {
       border-left-color: var(--green--lighter--80);
-    }
-  }
-
-  .social-icon {
-    svg {
-      fill: var(--dark-green);
     }
   }
 }
@@ -220,40 +189,23 @@ Atom: Background Colors
     }
   }
 
-  .social-icon {
+  .social-icon,
+  .play-button {
     color: var(--dark-blue);
-    background-color: var(--white);
+    background: var(--white);
 
     svg {
-      fill: var(--gray);
+      fill: var(--dark-blue);
     }
 
     &:hover,
     &:focus,
     &:active {
-      background-color: var(--light-green--lighter--60);
+      background: var(--blue--lighter--60);
     }
 
     &:focus {
-      outline-color: var(--light-green--lighter--60);
-    }
-  }
-
-  .play-link {
-    color: var(--white);
-
-    svg {
-      fill: var(--white);
-    }
-
-    &:hover,
-    &:active,
-    &:focus {
-      color: var(--light-green--lighter--60);
-
-      svg {
-        fill: var(--light-green--lighter--60);
-      }
+      outline-color: var(--white);
     }
   }
 }
@@ -261,12 +213,6 @@ Atom: Background Colors
 @mixin blue-bg {
   @include gray-bg;
   background: var(--blue);
-
-  .social-icon {
-    svg {
-      fill: var(--blue);
-    }
-  }
 }
 
 @mixin green-bg {
@@ -287,12 +233,6 @@ Atom: Background Colors
     &:active {
       outline-color: var(--light-green--lighter--20);
       background-image: linear-gradient(to bottom,var(--light-green--lighter--20) 0,var(--light-green) 100%);
-    }
-  }
-
-  .social-icon {
-    svg {
-      fill: var(--green);
     }
   }
 }
@@ -354,24 +294,6 @@ Atom: Background Colors
         border-left-width: var(--border-width--lg);
       }
       border-left: solid var(--border-width--md) var(--blue--darker--40);
-    }
-  }
-
-  .play-link {
-    color: var(--dark-blue);
-
-    svg {
-      fill: var(--dark-blue);
-    }
-
-    &:hover,
-    &:active,
-    &:focus {
-      color: var(--dark-blue--darker--80);
-
-      svg {
-        fill: var(--dark-blue--darker--80);
-      }
     }
   }
 }

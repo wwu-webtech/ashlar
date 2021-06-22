@@ -2,41 +2,28 @@
 Atom: Buttons - Play Button
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-
-.play-link {
-  display: inline-block;
-  padding: 0;
-  color: var(--blue);
-  border-color: transparent;
+.play-link,
+.play-button {
+  width: var(--toggle-size--sm);
+  height: var(--toggle-size--sm);
+  padding: var(--space--sm) var(--space--sm) var(--space--md) var(--space--md);
+  color: var(--white);
+  border-style: none;
   border-radius: 50%;
-  background-color: transparent;
-  box-shadow: none;
+  background-color: var(--blue);
 
   svg {
-    width: 4.5rem;
-
-    fill: var(--blue);
+    fill: var(--white);
   }
 
-  &:hover,
   &:active,
-  &:focus {
-    color: var(--dark-blue);
-    border-color: transparent;
-    background-color: transparent;
-    box-shadow: none;
-
-    svg {
-      fill: var(--dark-blue);
-    }
-  }
-
-  &:focus {
-    outline: dotted var(--border-width--md);
+  &:focus,
+  &:hover {
+    background-color: var(--dark-blue);
   }
 
   .play-icon {
-    display: block;
-    height: 4.5rem;
+    position: relative;
+    left: 0.14rem;
   }
 }
