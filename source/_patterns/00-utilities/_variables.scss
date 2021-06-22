@@ -17,6 +17,8 @@ VARIABLES
   a. Borders and outlines
   b. Shadows
   c. Icons
+  d. Toggles
+  e. Logo
 5. Animation
 ------------------------------------------------------------------------------*/
 :root {
@@ -220,6 +222,11 @@ VARIABLES
 --toggle-size--lg: 4.5rem;
 --toggle-size--xl: 5.5rem;
 --toggle-size--2xl: 6.5rem;
+
+/* e. Logo  ------------------------------------------------------------------*/
+--logo--size: 10.25rem;
+--logo--horizontal--width: 25rem;
+--logo--horizontal--height: 6.25rem;
 
 /*------------------------------------------------------------------------------
 5. Animation

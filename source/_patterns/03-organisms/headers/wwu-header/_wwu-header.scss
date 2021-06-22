@@ -13,8 +13,8 @@
       "logo site-name site-name"
       "logo western-header-region western-header-region"
       "main-nav main-nav main-nav";
-    grid-template-columns: ($logo-size + ($triple-spacing * 2)) 1fr 2fr;
-    grid-template-rows: ($logo-size / 3) ($logo-size / 3) auto auto;
+    grid-template-columns: (var(--logo-size) + ($triple-spacing * 2)) 1fr 2fr;
+    grid-template-rows: (var(--logo-size) / 3) (var(--logo-size) / 3) auto auto;
   }
   display: grid;
   background-color: $dark-blue;
@@ -24,7 +24,7 @@
     "site-name site-name site-name"
     "western-header-region western-header-region western-header-region";
   grid-template-columns: $toggle-size auto $toggle-size;
-  grid-template-rows: $logo-size auto auto;
+  grid-template-rows: var(--logo-size) auto auto;
 
   .site-name {
     @include breakpoint($medium) {
@@ -77,8 +77,8 @@
       margin: initial;
     }
     position: relative;
-    width: $logo-size + $double-spacing;
-    height: $logo-size;
+    width: var(--logo-size) + $double-spacing;
+    height: var(--logo-size);
     margin: auto;
     padding-right: $toggle-size;
 
