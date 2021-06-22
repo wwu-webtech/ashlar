@@ -11,9 +11,13 @@
 
   .body {
     position: relative;
-    z-index: 1;
     max-width: $max-content-width;
     margin: auto;
+  }
+
+  .body,
+  .block__title {
+    z-index: 1;
   }
 
   &.blue-overlay,
