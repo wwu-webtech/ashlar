@@ -1,6 +1,9 @@
 <div{{ attributes }}>
   {% block content %}
-
+    {% block title %}
+      {% include "@atoms/text/label/label.twig" %}
+    {% endblock %}
+    
     {% block image %}
       <div class="background-image">
         {{ content.field_image }}
@@ -8,13 +11,8 @@
     {% endblock %}
 
     <div {{ body_attributes }}>
-      {% block title %}
-        {% include "@atoms/text/label/label.twig" %}
-      {% endblock %}
-
       {{ content.body }}
-
     </div>
-
   {% endblock %}
+
 </div>
