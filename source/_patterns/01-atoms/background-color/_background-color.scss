@@ -1,13 +1,21 @@
 /*------------------------------------------------------------------------------
 Atom: Background Colors
 --------------------------------------------------------------------------------
+1. Black based backgrounds
+2. Gray based backgrounds
+3. Light gray based backgrounds
+4. Classes
+5. Dark mode
+6. Print styles
 ------------------------------------------------------------------------------*/
 .sg-pattern-example > div[class$="-bg"] {
   padding: var(--space--md);
 }
 
 /*------------------------------------------------------------------------------
-/ Black based backgrounds
+1. Black based backgrounds
+--------------------------------------------------------------------------------
+Black, darkest blue, dark blue, and dark green are black based.
 ------------------------------------------------------------------------------*/
 @mixin black-bg {
   color: var(--white);
@@ -133,7 +141,9 @@ Atom: Background Colors
 }
 
 /*------------------------------------------------------------------------------
-/ Gray based backgrounds
+2. Gray based backgrounds
+--------------------------------------------------------------------------------
+Gray, blue, and green backgrounds are gray based.
 ------------------------------------------------------------------------------*/
 @mixin gray-bg {
   color: var(--white);
@@ -257,7 +267,10 @@ Atom: Background Colors
 }
 
 /*------------------------------------------------------------------------------
-/ Light gray based backgrounds
+3. Light gray based backgrounds
+--------------------------------------------------------------------------------
+Light gray, lightest gray, light blue, lightest blue, and light green
+backgrounds are light gray based.
 ------------------------------------------------------------------------------*/
 @mixin light-gray-bg {
   background: var(--gray--lighter--60);
@@ -346,6 +359,9 @@ Atom: Background Colors
   background: var(--light-green);
 }
 
+/*------------------------------------------------------------------------------
+4. Classes
+------------------------------------------------------------------------------*/
 .black-bg,
 .dark-mode {
   @include black-bg;
@@ -387,7 +403,6 @@ Atom: Background Colors
 .light-green-bg {
   @include light-green-bg;
 }
-
 .dark-blue-gradient-bg {
   @include blue-bg;
 
@@ -427,6 +442,9 @@ Atom: Background Colors
   );
 }
 
+/*------------------------------------------------------------------------------
+5. Dark Mode
+------------------------------------------------------------------------------*/
 .dark-mode {
   .gray-bg,
   .light-blue-bg,
@@ -449,7 +467,9 @@ Atom: Background Colors
   }
 }
 
-/* Print styles */
+/*------------------------------------------------------------------------------
+6. Print Styles
+------------------------------------------------------------------------------*/
 @media print {
   .black-bg,
   .gray-bg,
