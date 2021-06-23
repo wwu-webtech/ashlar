@@ -10,7 +10,10 @@ a.cta {
   margin-bottom: var(--space--md);
   padding: var(--space--sm) var(--space--md);
   user-select: none;
-  transition: background-color var(--transition-speed--fast), color var(--transition-speed--fast), border-color var(--transition-speed--fast), box-shadow var(--transition-speed--fast);
+  transition: background-color var(--transition-speed--fast),
+    color var(--transition-speed--fast),
+    border-color var(--transition-speed--fast),
+    box-shadow var(--transition-speed--fast);
   text-align: center;
   text-decoration: none;
   color: var(--white);
@@ -209,8 +212,8 @@ a.cta {
       &:focus,
       &:hover {
         color: var(--dark-blue);
-        background: var(--gray--lighter--60);
         border-color: transparent;
+        background: var(--gray--lighter--60);
       }
     }
   }

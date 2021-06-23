@@ -13,6 +13,7 @@ Atom: Icons - My Western Icons
     @include breakpoint(67.5rem) {
       margin-top: -4.5rem;
     }
+
     justify-content: center;
     width: 100%;
     max-width: none;
@@ -43,6 +44,7 @@ Atom: Icons - My Western Icons
         width: var(--toggle-size--md);
         height: var(--toggle-size--md);
       }
+
       width: var(--toggle-size--sm);
       height: var(--toggle-size--sm);
       margin-bottom: var(--space--xs);
@@ -53,7 +55,6 @@ Atom: Icons - My Western Icons
     }
   }
 }
-
 
 .dark-mode {
   .social-icon {

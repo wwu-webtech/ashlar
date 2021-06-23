@@ -2,7 +2,6 @@
 Atom: Text - Lists
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-
 ul,
 ol {
   margin: 0 0 var(--space--md);
@@ -17,6 +16,7 @@ li {
     @include breakpoint($medium) {
       margin-bottom: var(--space--md);
     }
+
     margin-bottom: var(--space--xs);
   }
 }

@@ -7,7 +7,9 @@ see Atom - Links - Button Styled
 button,
 input[type="submit"] {
   padding: var(--space--xs);
-  transition: background var(--transition-speed--fast), color var(--transition-speed--fast), box-shadow var(--transition-speed--fast);
+  transition: background var(--transition-speed--fast),
+    color var(--transition-speed--fast),
+    box-shadow var(--transition-speed--fast);
   color: var(--black);
   border: var(--border-width--md) outset var(--gray--lighter--80);
   border-radius: var(--border-radius--round);
@@ -33,9 +35,9 @@ input[type="submit"] {
   }
 
   &.alt {
+    color: var(--white);
     border-color: var(--blue--lighter--20);
     background: var(--blue);
-    color: var(--white);
 
     &:hover,
     &:focus {

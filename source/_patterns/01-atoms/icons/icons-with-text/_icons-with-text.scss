@@ -2,7 +2,6 @@
 Atom: Icons - Icons with Text
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-
 .icon-with-text {
   display: inline-grid;
   justify-content: center;
@@ -14,7 +13,6 @@ Atom: Icons - Icons with Text
   font-family: var(--font--condensed);
   font-size: var(--font-size--sm);
   font-weight: var(--font-weight--light);
-
   font-display: fallback;
 
   .icon-text {
@@ -84,14 +82,14 @@ Atom: Icons - Icons with Text
       }
 
       &.white-bg {
-        background-color: var(--white);
         color: (var--blue--darker--20);
+        background-color: var(--white);
 
         &:hover,
         &:focus,
         &:active {
-          background-color: (var--blue--darker--20);
           color: var(--white);
+          background-color: (var--blue--darker--20);
         }
       }
     }

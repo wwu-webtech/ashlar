@@ -65,6 +65,7 @@ Atom: Background Colors
       @include breakpoint($medium) {
         border-left-width: var(--border-width--lg);
       }
+
       border-left: solid var(--border-width--md) var(--blue--lighter--40);
     }
   }
@@ -92,28 +93,35 @@ Atom: Background Colors
 
 @mixin darkest-blue-bg {
   @include black-bg;
+
   background: var(--dark-blue--darker--20);
 }
 
 @mixin dark-blue-bg {
   @include black-bg;
+
   background: var(--dark-blue);
 }
 
 @mixin dark-green-bg {
   @include black-bg;
+
   background: var(--dark-green);
 
   a:not([class]) {
-    color: var(--green--lighter--80);
-
     text-decoration-color: var(--light-green--lighter--20);
+
+    color: var(--green--lighter--80);
 
     &:hover,
     &:focus,
     &:active {
       outline-color: var(--light-green);
-      background-image: linear-gradient(to bottom,var(--light-green--lighter--20) 0,var(--light-green) 100%);
+      background-image: linear-gradient(
+        to bottom,
+        var(--light-green--lighter--20) 0,
+        var(--light-green) 100%
+      );
     }
   }
 
@@ -159,9 +167,9 @@ Atom: Background Colors
   }
 
   a:not([class]) {
-    color: var(--white);
-
     text-decoration-color: var(--blue--lighter--60);
+
+    color: var(--white);
 
     &:visited {
       text-decoration-color: var(--purple--lighter--60);
@@ -172,7 +180,11 @@ Atom: Background Colors
     &:active {
       color: var(--black);
       outline-color: var(--white);
-      background-image: linear-gradient(to bottom,var(--blue--lighter--40) 0,var(--blue--lighter--60) 100%);
+      background-image: linear-gradient(
+        to bottom,
+        var(--blue--lighter--40) 0,
+        var(--blue--lighter--60) 100%
+      );
     }
   }
 
@@ -185,6 +197,7 @@ Atom: Background Colors
       @include breakpoint($medium) {
         border-left-width: var(--border-width--lg);
       }
+
       border-left: solid var(--border-width--md) var(--blue--lighter--60);
     }
   }
@@ -212,11 +225,13 @@ Atom: Background Colors
 
 @mixin blue-bg {
   @include gray-bg;
+
   background: var(--blue);
 }
 
 @mixin green-bg {
   @include gray-bg;
+
   background: var(--green);
 
   h1 {
@@ -232,7 +247,11 @@ Atom: Background Colors
     &:focus,
     &:active {
       outline-color: var(--light-green--lighter--20);
-      background-image: linear-gradient(to bottom,var(--light-green--lighter--20) 0,var(--light-green) 100%);
+      background-image: linear-gradient(
+        to bottom,
+        var(--light-green--lighter--20) 0,
+        var(--light-green) 100%
+      );
     }
   }
 }
@@ -271,9 +290,9 @@ Atom: Background Colors
   }
 
   a:not([class]) {
-    color: var(--blue--darker--40);
-
     text-decoration-color: var(--dark-blue);
+
+    color: var(--blue--darker--40);
 
     &:visited {
       color: var(--purple);
@@ -284,7 +303,11 @@ Atom: Background Colors
     &:active {
       color: var(--white);
       outline-color: var(--dark-blue);
-      background-image: linear-gradient(to bottom,var(--dark-blue--darker--40) 0,var(--dark-blue) 100%);
+      background-image: linear-gradient(
+        to bottom,
+        var(--dark-blue--darker--40) 0,
+        var(--dark-blue) 100%
+      );
     }
   }
 
@@ -293,6 +316,7 @@ Atom: Background Colors
       @include breakpoint($medium) {
         border-left-width: var(--border-width--lg);
       }
+
       border-left: solid var(--border-width--md) var(--blue--darker--40);
     }
   }
@@ -300,21 +324,25 @@ Atom: Background Colors
 
 @mixin lightest-gray-bg {
   @include light-gray-bg;
+
   background: var(--gray--lighter--80);
 }
 
 @mixin light-blue-bg {
   @include light-gray-bg;
+
   background: var(--blue--lighter--60);
 }
 
 @mixin lightest-blue-bg {
   @include lightest-gray-bg;
+
   background: var(--blue--lighter--80);
 }
 
 @mixin light-green-bg {
   @include light-gray-bg;
+
   background: var(--light-green);
 }
 
@@ -362,38 +390,40 @@ Atom: Background Colors
 
 .dark-blue-gradient-bg {
   @include blue-bg;
+
   background-image: linear-gradient(
-  to left bottom,
-  #1c2023,
-  #18242d,
-  #122738,
-  #0a2a44,
-  #022d4f,
-  #00335c,
-  #013a69,
-  #044077,
-  #074e8b,
-  #085c9f,
-  #066bb3,
-  #007ac8
+    to left bottom,
+    #1c2023,
+    #18242d,
+    #122738,
+    #0a2a44,
+    #022d4f,
+    #00335c,
+    #013a69,
+    #044077,
+    #074e8b,
+    #085c9f,
+    #066bb3,
+    #007ac8
   );
 }
 .blue-gradient-bg {
   @include blue-bg;
+
   background-image: linear-gradient(
-  to right bottom,
-  #002f5e,
-  #003266,
-  #00356d,
-  #003875,
-  #003b7d,
-  #004186,
-  #01478e,
-  #004d97,
-  #0058a3,
-  #0063b0,
-  #006ebc,
-  #007ac8
+    to right bottom,
+    #002f5e,
+    #003266,
+    #00356d,
+    #003875,
+    #003b7d,
+    #004186,
+    #01478e,
+    #004d97,
+    #0058a3,
+    #0063b0,
+    #006ebc,
+    #007ac8
   );
 }
 

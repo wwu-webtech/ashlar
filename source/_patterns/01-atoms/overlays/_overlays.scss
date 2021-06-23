@@ -1,8 +1,7 @@
-/**
-* @file
-* 01-atoms/overlays/_overlays.scss
-*/
-$overlay-transparency: 0.4;
+/*------------------------------------------------------------------------------
+Atom: Overlays
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .blue-overlay,
 .dark-blue-overlay,
 .black-overlay,
@@ -18,6 +17,7 @@ $overlay-transparency: 0.4;
     width: 100%;
     height: 100%;
     content: "";
+    opacity: 0.6;
   }
 }
 
@@ -25,7 +25,7 @@ $overlay-transparency: 0.4;
   @include blue-bg;
 
   &:after {
-    background: transparentize($blue, $overlay-transparency);
+    background: var(--blue);
   }
 }
 
@@ -33,7 +33,7 @@ $overlay-transparency: 0.4;
   @include dark-blue-bg;
 
   &:after {
-    background: transparentize($dark-blue, $overlay-transparency);
+    background: var(--dark-blue);
   }
 }
 
@@ -41,92 +41,40 @@ $overlay-transparency: 0.4;
   @include black-bg;
 
   &:after {
-    background: transparentize($black, $overlay-transparency);
+    background: var(--black);
   }
 }
 
 .gray-overlay {
-  background: $light-gray;
+  @include light-gray-bg;
 
-  a:not([class]) {
-    color: scale-color($link-blue--darker, $lightness: -60%);
-  }
+  color: var(--black);
 
   &:after {
-    background: transparentize($light-gray, $overlay-transparency);
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: $dark-blue;
-  }
-
-  p {
-    color: $black;
+    background: var(--gray--lighter--60);
   }
 }
 
 .white-gradient-overlay {
-  background: $white;
+  @include light-gray-bg;
 
-  a:not([class]) {
-    color: $link-blue--darker;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: $black;
-      background-color: mix(black, $light-gray, 20%);
-    }
-  }
+  color: var(--black);
 
   &:after {
-    background: linear-gradient(to right, $white, transparentize($white, 0.2));
+    opacity: 1;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.2)
+    );
   }
 }
 
 .black-gradient-overlay {
   @include black-bg;
 
-  a:not([class]) {
-    color: scale-color($light-blue, $lightness: 50%);
-  }
-
   &:after {
-    background: linear-gradient(to left, $black, transparentize($black, 0.3));
-  }
-}
-
-.blue-overlay,
-.dark-blue-overlay,
-.black-overlay {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    color: $white;
-  }
-}
-
-/* Dark mode adjustments */
-.dark-mode {
-  .white-gradient-overlay {
-    color: $black;
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: $dark-blue;
-    }
+    opacity: 1;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3));
   }
 }

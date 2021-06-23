@@ -2,21 +2,21 @@
 Atom: Icons - Social Media Icons
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-
 .social-icon {
   display: block;
   width: var(--toggle-size--sm);
   height: var(--toggle-size--sm);
-  transition: var(--ease-standard) var(--transition-speed--fast) background-color;
+  transition: var(--ease-standard) var(--transition-speed--fast)
+    background-color;
   color: var(--white);
   background: var(--blue);
 
   svg {
+    fill: var(--white);
+
     width: 100%;
     padding: 0.5em;
     transition: var(--ease-standard) var(--transition-speed--fast) fill;
-
-    fill: var(--white);
 
     @media print {
       fill: var(--black);

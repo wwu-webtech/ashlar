@@ -1,7 +1,6 @@
 /*------------------------------------------------------------------------------
 Atom: Forms - Webforms
 ------------------------------------------------------------------------------*/
-
 /* File Input */
 .form-managed-file {
   .form-file {
@@ -76,12 +75,15 @@ form {
         }
 
         &:after {
+          --checkmark-size: 3.75rem;
+
           @include breakpoint($large) {
             left: var(--checkmark-size);
           }
           @include breakpoint($medium) {
             left: var(--space--2xl);
           }
+
           position: relative;
           top: calc(-1 * var(--space--md));
           left: var(--space--2xl);
@@ -92,8 +94,6 @@ form {
           transform: scale(0.5);
           background-image: url("../images/forms/green-check.png");
           background-repeat: no-repeat;
-
-          --checkmark-size: 3.75rem;
         }
       }
     }

@@ -3,7 +3,6 @@ Atom: Images - Stylized
 --------------------------------------------------------------------------------
 In the current version of the theme, stylized images are circles
 ------------------------------------------------------------------------------*/
-
 .image--stylized {
   position: relative;
   width: 100%;
@@ -17,10 +16,10 @@ In the current version of the theme, stylized images are circles
   }
 
   img {
+    object-fit: cover;
+
     display: block;
     width: 100%;
     height: 100%;
-
-    object-fit: cover;
   }
 }

@@ -2,12 +2,12 @@
 Atom: Text - Lists - Menu Items
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-
 .menu {
   li {
     @include breakpoint($medium) {
       border-left-width: var(--border-width--lg);
     }
+
     margin-bottom: 0;
     border-left: solid var(--border-width--md) var(--blue--lighter--60);
 
@@ -16,7 +16,8 @@ Atom: Text - Lists - Menu Items
       width: 100%;
       margin: inherit;
       margin-bottom: 0;
-      padding: var(--space--xs) var(--space--xl) var(--space--xs) var(--space--md);
+      padding: var(--space--xs) var(--space--xl) var(--space--xs)
+        var(--space--md);
       transition: var(--transition-speed--fast) var(--ease--standard) all;
       text-decoration: none;
       background-size: 100% 100%;

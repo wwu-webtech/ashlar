@@ -4,6 +4,8 @@ Atom: Images - Image Backgrounds
 ------------------------------------------------------------------------------*/
 .background-image,
 .background-image > div {
+  object-fit: cover;
+
   position: absolute;
   z-index: 0;
   top: 0;
@@ -13,13 +15,11 @@ Atom: Images - Image Backgrounds
   width: 100%;
   height: 100%;
 
-  object-fit: cover;
-
   img {
+    object-fit: cover;
+
     display: block;
     width: 100%;
     height: 100%;
-
-    object-fit: cover;
   }
 }

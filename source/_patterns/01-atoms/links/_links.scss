@@ -4,16 +4,17 @@ Atom: Text - Links
 ------------------------------------------------------------------------------*/
 a {
   padding: 0.1563rem 0;
-  transition: background-size var(--transition-speed--fast) cubic-bezier(0.33,0.66,0.66,1), text-decoration var(--transition-speed--fast) ease-out;
+  transition: background-size var(--transition-speed--fast)
+      cubic-bezier(0.33, 0.66, 0.66, 1),
+    text-decoration var(--transition-speed--fast) ease-out;
   text-decoration: underline var(--border-width--md) var(--blue--lighter--60);
+  text-underline-offset: 0.3125rem;
   color: var(--blue--darker--20);
   background-image: none;
   background-repeat: no-repeat;
   background-position: 0 100%;
   background-size: 100% 0;
   font-weight: var(--font-weight--semibold);
-
-  text-underline-offset: 0.3125rem;
 
   &:visited {
     color: var(--purple);
@@ -23,11 +24,14 @@ a {
   &:focus,
   &:hover {
     transition: 0.25s ease-out;
-    color: var(--dark-blue);
-    background-image: linear-gradient(to bottom,var(--blue--lighter--40) 0,var(--blue--lighter--60) 100%);
-    background-size: 100% 100%;
-
     text-decoration-color: var(--blue--lighter--60);
+    color: var(--dark-blue);
+    background-image: linear-gradient(
+      to bottom,
+      var(--blue--lighter--40) 0,
+      var(--blue--lighter--60) 100%
+    );
+    background-size: 100% 100%;
 
     &:visited {
       color: var(--dark-blue);
