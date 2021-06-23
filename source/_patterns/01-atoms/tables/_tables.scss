@@ -38,7 +38,7 @@ Atom: Tables
 
 table {
   --table-blue: #cce4f4;
-  --table-blue--darker--5: #cce4f4;
+  --table-blue--darker--5: #e6f2fa;
   --table-blue--darker--10: #b1cfe6;
   --table-blue--darker--15: #99bbd9;
   --table-gray: #f5f6f7;
@@ -84,7 +84,7 @@ table {
 caption {
   padding-bottom: var(--space--md);
   font-size: var(--font-size--sm);
-  font-weight: $font-weight--bold;
+  font-weight: var(--font-weight--bold);
 }
 
 tbody {
@@ -262,7 +262,7 @@ td {
   );
 
   table {
-    @include black-bg;
+    @include gray-bg;
 
     &.lightest-gray {
       @include gray-bg;

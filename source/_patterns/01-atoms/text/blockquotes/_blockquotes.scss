@@ -1,34 +1,26 @@
 /*------------------------------------------------------------------------------
 Atom: Text - Blockquotes
 --------------------------------------------------------------------------------
+1. Dark Mode
 ------------------------------------------------------------------------------*/
+blockquote:not([class*="-bg"]) {
+  @include lightest-gray-bg;
+}
 
 blockquote {
-  @include lightest-gray-bg;
   margin: var(--space--md) 0;
-  padding: var(--space--xl);
+  padding: var(--space--md);
 }
 
 .pullquote,
 .paragraph--type--majors-pull-quote {
-  margin: 0 var(--space--md);
   padding: var(--space--md);
-  font-style: italic;
-  border-left: solid var(--border-width--lg) var(--green);
-
-  &.style-thin-border {
-    border: 0;
-
-    &:before {
-      border-top: solid var(--border-width--lg) var(--blue);
-    }
-
-    &:after {
-      border-top: solid var(--border-width--lg) var(--blue);
-    }
-  }
+  border-left: solid var(--border-width--lg) var(--blue--lighter--40);
 }
 
+/*------------------------------------------------------------------------------
+1. Dark Mode
+------------------------------------------------------------------------------*/
 .dark-mode {
   blockquote:not([class]) {
     @include gray-bg;

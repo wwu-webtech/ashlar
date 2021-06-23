@@ -118,7 +118,6 @@ Black, darkest blue, dark blue, and dark green are black based.
 
   a:not([class]) {
     text-decoration-color: var(--light-green--lighter--20);
-
     color: var(--green--lighter--80);
 
     &:hover,
@@ -137,6 +136,10 @@ Black, darkest blue, dark blue, and dark green are black based.
     li {
       border-left-color: var(--green--lighter--80);
     }
+  }
+
+  &.pullquote {
+    border-left-color: var(--green--lighter--80);
   }
 }
 
@@ -178,7 +181,6 @@ Gray, blue, and green backgrounds are gray based.
 
   a:not([class]) {
     text-decoration-color: var(--blue--lighter--60);
-
     color: var(--white);
 
     &:visited {
@@ -264,6 +266,10 @@ Gray, blue, and green backgrounds are gray based.
       );
     }
   }
+
+  &.pullquote {
+    border-left-color: var(--light-green--lighter--40);
+  }
 }
 
 /*------------------------------------------------------------------------------
@@ -304,7 +310,6 @@ backgrounds are light gray based.
 
   a:not([class]) {
     text-decoration-color: var(--dark-blue);
-
     color: var(--blue--darker--40);
 
     &:visited {
@@ -332,6 +337,10 @@ backgrounds are light gray based.
 
       border-left: solid var(--border-width--md) var(--blue--darker--40);
     }
+  }
+
+  &.pullquote {
+    border-left-color: var(--dark-blue);
   }
 }
 

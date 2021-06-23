@@ -14,6 +14,14 @@ Atom: Text - Font Styles
   font-size: var(--font-size--lg);
 }
 
+.font--sans-serif {
+  font-family: var(--font--sans-serif);
+}
+
+.font--serif {
+  font-family: var(--font--serif);
+}
+
 .font--dyslexia-friendly {
   font-family: var(--font--dyslexia-friendly);
 
