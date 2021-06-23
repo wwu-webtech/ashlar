@@ -1,6 +1,12 @@
 /*------------------------------------------------------------------------------
 Atom: Tables
 --------------------------------------------------------------------------------
+1. Base Styles
+2. Alternates
+3. Dark Mode
+------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------
+1. Base Styles
 ------------------------------------------------------------------------------*/
 @mixin color-table($light-rows, $dark-rows, $light-headers, $dark-headers) {
   tr {
@@ -32,21 +38,28 @@ Atom: Tables
 
 table {
   --table-blue: #cce4f4;
-  --table-blue--darker--13: #b1cfe6;
-  --table-blue--darker--25: #99bbd9;
-  --table-blue--lighter: #e6f2fa;
-  --table-gray: #e3e7e9;
-  --table-gray--darker--10: #e0e2e3;
-  --table-gray--darker--13: #c5c9cb;
-  --table-gray--darker--15: #d6d8d9;
-  --table-gray--darker--25: #aaadaf;
-  --table-gray--lighter: #f5f6f7;
+  --table-blue--darker--5: #cce4f4;
+  --table-blue--darker--10: #b1cfe6;
+  --table-blue--darker--15: #99bbd9;
+  --table-gray: #f5f6f7;
+  --table-gray--darker--5: #e9e9ea;
+  --table-gray--darker--10: #dcddde;
+  --table-gray--darker--15: #d0d1d2;
+  --table-gray--darker--20: #c4c5c6;
+  --table-gray--darker--25: #b8b8b9;
+  --table-gray--darker--50: #7a7b7b;
+  --table-gray--darker--55: #6e6f6f;
+  --table-gray--darker--60: #626263;
+  --table-gray--darker--65: #565656;
+  --table-gray--darker--70: #49494a;
+  --table-gray--darker--75: #3d3e3e;
 
+  @include light-gray-bg;
   @include color-table(
     var(--table-gray),
-    var(--table-gray--lighter),
-    var(--table-gray--darker--13),
-    var(--table-gray--darker--25)
+    var(--table-gray--darker--5),
+    var(--table-gray--darker--10),
+    var(--table-gray--darker--15)
   );
 
   grid-template-columns: auto;
@@ -54,17 +67,8 @@ table {
   margin: var(--space--md) 0;
   table-layout: auto;
   word-wrap: break-word;
+  color: var(--black);
   border-collapse: collapse;
-
-  a:not([class]) {
-    color: $darkest-blue;
-
-    &:hover,
-    &:active,
-    &:focus {
-      color: $darkest-blue;
-    }
-  }
 
   &.fixed {
     table-layout: auto;
@@ -175,68 +179,27 @@ td {
   }
 }
 
+/*------------------------------------------------------------------------------
+1. Alternates
+------------------------------------------------------------------------------*/
 .light-blue {
   @include color-table(
     var(--table-blue),
-    var(--table-blue--lighter),
-    var(--table-blue--darker--13),
-    var(--table-blue--darker--25)
+    var(--table-blue--darker--5),
+    var(--table-blue--darker--10),
+    var(--table-blue--darker--15)
   );
 }
 
 .lightest-gray {
   @include color-table(
     var(--white),
-    var(--table-gray--lighter),
-    var(--table-gray--lighter--10),
-    var(--table-gray--lighter--15)
+    var(--table-gray),
+    var(--table-gray--darker--5),
+    var(--table-gray--darker--10)
   );
 }
 
-.dark-mode {
-  @include color-table(
-    mix(black, $light-gray, 60%),
-    mix(black, $light-gray, 65%),
-    mix(black, $light-gray, 70%),
-    mix(black, $light-gray, 75%)
-  );
-
-  table {
-    a:not([class]) {
-      color: $white;
-
-      &:hover,
-      &:active,
-      &:focus {
-        color: $white;
-      }
-    }
-  }
-
-  .lightest-gray {
-    @include color-table(
-      mix(black, $light-gray, 50%),
-      mix(black, $light-gray, 55%),
-      mix(black, $light-gray, 60%),
-      mix(black, $light-gray, 65%)
-    );
-  }
-
-  .light-blue {
-    @include color-table(
-      mix($blue, $dark-blue, 50%),
-      mix($blue, $dark-blue, 75%),
-      $dark-blue,
-      $darkest-blue
-    );
-  }
-
-  table {
-    border: solid var(--border-width--md) var(--blue--lighter--40);
-  }
-}
-
-/* Style Alternates */
 .responsive-table {
   @include breakpoint($medium) {
     overflow-x: revert;
@@ -284,5 +247,45 @@ td {
   th {
     padding: var(--space--2xs);
     font-size: var(--font-size--md);
+  }
+}
+
+/*------------------------------------------------------------------------------
+3. Dark Mode
+------------------------------------------------------------------------------*/
+.dark-mode {
+  @include color-table(
+    var(--table-gray--darker--60),
+    var(--table-gray--darker--65),
+    var(--table-gray--darker--70),
+    var(--table-gray--darker--75)
+  );
+
+  table {
+    @include black-bg;
+
+    &.lightest-gray {
+      @include gray-bg;
+      @include color-table(
+        var(--table-gray--darker--50),
+        var(--table-gray--darker--55),
+        var(--table-gray--darker--60),
+        var(--table-gray--darker--65)
+      );
+    }
+
+    &.light-blue {
+      @include blue-bg;
+      @include color-table(
+        var(--blue),
+        var(--blue--darker--20),
+        var(--blue--darker--40),
+        var(--blue--darker--60)
+      );
+
+      td:last-of-type {
+        border-right: none;
+      }
+    }
   }
 }
