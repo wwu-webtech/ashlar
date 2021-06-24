@@ -27,6 +27,10 @@ Atom: Overlays
   &:after {
     background: var(--blue);
   }
+
+  .background-image {
+    filter: brightness(0.5);
+  }
 }
 
 .dark-blue-overlay {
@@ -34,6 +38,10 @@ Atom: Overlays
 
   &:after {
     background: var(--dark-blue);
+  }
+
+  .background-image {
+    filter: brightness(0.5);
   }
 }
 
@@ -52,6 +60,10 @@ Atom: Overlays
 
   &:after {
     background: var(--gray--lighter--60);
+  }
+
+  .background-image {
+    filter: brightness(-0.5);
   }
 }
 
