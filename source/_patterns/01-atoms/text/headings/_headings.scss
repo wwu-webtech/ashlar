@@ -1,6 +1,12 @@
 /*------------------------------------------------------------------------------
 Atom: Text - Headings
 --------------------------------------------------------------------------------
+1. Default
+2. Alternate Styles
+3. Display Preferences
+------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------
+1. Default
 ------------------------------------------------------------------------------*/
 h1,
 h2,
@@ -20,7 +26,7 @@ h6 {
 
 h1 {
   position: relative;
-  display: inline-block;
+  display: block;
   padding-bottom: var(--space--lg);
   color: var(--blue--darker--80);
   font-family: var(--font--title);
@@ -32,6 +38,7 @@ h1 {
     bottom: 0;
     left: 0;
     width: 50%;
+    max-width: 6em;
     content: "";
     border-width: 0.12em;
     border-style: solid;
@@ -71,13 +78,17 @@ h5 + h6 {
   margin-top: 0;
 }
 
-.headings--sans-serif {
+/*------------------------------------------------------------------------------
+2. Alternate Styles
+------------------------------------------------------------------------------*/
+.headings--serif {
+  h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    font-family: var(--font--sans-serif);
+    font-family: var(--font--serif);
   }
 }
 
@@ -99,6 +110,17 @@ h5 + h6 {
   }
 }
 
+.headings--uppercase {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-transform: uppercase;
+  }
+}
+
 .headings--underlined {
   h2,
   h3,
@@ -106,6 +128,7 @@ h5 + h6 {
   h5,
   h6 {
     position: relative;
+    display: block;
     padding-bottom: var(--space--lg);
     font-family: var(--font--title);
 
@@ -114,14 +137,13 @@ h5 + h6 {
       bottom: 0;
       left: 0;
       width: 50%;
-      max-width: 12.5rem;
+      max-width: 6em;
       content: "";
-      border-width: var(--border-width--lg);
+      border-width: 0.12em;
       border-style: solid;
     }
   }
 }
-
 .text-align-center .headings--underlined,
 .text-align-center.headings--underlined,
 .headings--underlined .text-align-center {
@@ -137,7 +159,6 @@ h5 + h6 {
     }
   }
 }
-
 .text-align-right .headings--underlined,
 .text-align-right.headings--underlined,
 .headings--underlined .text-align-right {
@@ -161,14 +182,13 @@ h5 + h6 {
   h4,
   h5,
   h6 {
-    font-family: var(--font--sans-serif);
+    font-family: var(--font--title);
   }
 
   h1 {
     padding-bottom: 0;
     text-transform: uppercase;
     border-bottom: none;
-    font-family: var(--font--title);
     font-size: var(--font-size--9xl);
     font-weight: var(--font-weight--black);
 
@@ -180,7 +200,6 @@ h5 + h6 {
   h2 {
     text-transform: uppercase;
     border-bottom: none;
-    font-family: var(--font--title);
     font-size: var(--font-size--8xl);
     font-weight: var(--font-weight--black);
   }
@@ -191,7 +210,6 @@ h5 + h6 {
   }
 
   h4 {
-    text-transform: uppercase;
     font-size: var(--font-size--6xl);
   }
 
@@ -199,7 +217,6 @@ h5 + h6 {
     font-size: var(--font-size--5xl);
   }
 }
-
 
 .font-size--smaller {
   h1 {
@@ -229,6 +246,9 @@ h5 + h6 {
   }
 }
 
+/*------------------------------------------------------------------------------
+3. Display Preferences
+------------------------------------------------------------------------------*/
 .font--dyslexia-friendly {
   h1,
   h2,
@@ -239,9 +259,7 @@ h5 + h6 {
     font-family: var(--font--dyslexia-friendly);
   }
 
-  .headings--serif,
-  .headings--sans-serif,
-  .headings--big-bold {
+  [class^="headings--"] {
     h1,
     h2,
     h3,
@@ -263,9 +281,7 @@ h5 + h6 {
     font-family: var(--font--hyperlegible);
   }
 
-  .headings--serif,
-  .headings--sans-serif,
-  .headings--big-bold {
+  [class^="headings"] {
     h1,
     h2,
     h3,
