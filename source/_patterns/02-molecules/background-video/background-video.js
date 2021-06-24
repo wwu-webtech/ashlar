@@ -4,7 +4,7 @@ if (context !== document) {
 }
 
 var play_pause_button = Array.from(
-  document.querySelectorAll(".bg-video-container + button")
+  document.querySelectorAll(".bg-video-container > button")
 );
 var videos = Array.from(document.querySelectorAll(".bg-video-container video"));
 var material_play =
