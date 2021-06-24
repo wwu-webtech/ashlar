@@ -1,93 +1,115 @@
-/**
-* @file
-* 02-molecules/content/accordion.scss
-*/
-$left-col-width: 5.25rem;
-$accordion-border: $dark-blue solid $border-width--thicker;
-
-.accordion-set {
-  margin-bottom: $standard-spacing;
+/*------------------------------------------------------------------------------
+Molecule: Accordion
+--------------------------------------------------------------------------------
+1. No background colors
+2. General accordion styles
+3. Dark mode
+------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------
+1. No background colors
+--------------------------------------------------------------------------------
+Borders only added to accordions without custom background classes added
+------------------------------------------------------------------------------*/
+.accordion-set:not([class*="-bg"]) {
   .item {
-    border-top: $accordion-border;
-    border-right: $accordion-border;
-    border-left: $accordion-border;
+    border-top: var(--dark-blue--darker--20) solid var(--border-width--lg);
+    border-right: var(--dark-blue--darker--20) solid var(--border-width--lg);
+    border-left: var(--dark-blue--darker--20) solid var(--border-width--lg);
 
     &:last-of-type {
-      border-bottom: $accordion-border;
+      border-bottom: var(--dark-blue--darker--20) solid var(--border-width--lg);
     }
+  }
 
-    .field__title,
-    .title {
-      margin: 0;
+  .title {
+    .expand {
+      color: var(--dark-blue--darker--20);
 
-      .expand {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        margin-bottom: 0;
-        padding: $standard-spacing;
-        text-align: left;
-        color: $darkest-blue;
-        border: $border-width solid transparent;
-        border-radius: 0;
-        background: none;
-        box-shadow: none;
-        font-size: $p-font-size;
-        font-weight: $font-weight--semibold;
-        line-height: 1.2em;
-
-        &:active {
-          transform: none;
-        }
-
-        &:focus {
-          color: $white;
-          border: $border-width dotted $white;
-          background-color: $blue;
-          box-shadow: none;
-
-          .material-icons {
-            color: inherit;
-          }
-        }
-
-        .material-icons {
-          margin-right: $standard-spacing;
-          color: $dark-blue;
-          font-size: var(--icon-size--lg);
-        }
+      .material-icons {
+        color: var(--dark-blue);
       }
-
-      & + .content {
-        display: none;
-        padding: $standard-spacing;
-        padding-top: 0;
-        word-wrap: break-word;
-      }
-    }
-
-    h2.title {
-      padding-bottom: 0;
     }
   }
 }
 
-.dark-mode {
-  .accordion-set {
-    .item {
-      border-color: $light-blue;
+/*------------------------------------------------------------------------------
+2. General accordion styles
+------------------------------------------------------------------------------*/
+.accordion-set {
+  margin-bottom: var(--space--md);
 
-      &:last-of-type {
-        border-bottom-color: $light-blue;
+  .title {
+    margin: 0;
+    padding-bottom: 0;
+    font-size: var(--font-size--md);
+    font-weight: var(--font-weight--semibold);
+
+    .expand {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 0;
+      padding: var(--space--sm);
+      text-align: left;
+      color: inherit;
+      border: none;
+      border-radius: 0;
+      background: none;
+
+      &:active {
+        transform: none;
       }
 
-      .title,
-      .field__title {
-        .expand {
-          color: $light-blue;
+      &:focus {
+        color: var(--white);
+        outline-color: var(--white);
+        outline-offset: calc(-1 * var(--border-width--md));
+        background-color: var(--blue);
 
         .material-icons {
-            color: $light-blue;
+          color: inherit;
+        }
+      }
+
+      .material-icons {
+        margin-right: var(--space--sm);
+        font-size: var(--icon-size--sm);
+      }
+    }
+
+    & + .content {
+      display: none;
+      margin-top: var(--space--sm);
+      padding: 0 var(--space--md) var(--space--md) var(--space--md);
+      word-wrap: break-word;
+    }
+  }
+}
+
+/*------------------------------------------------------------------------------
+2. Dark Mode
+------------------------------------------------------------------------------*/
+.dark-mode {
+  .accordion-set:not([class*="-bg"]) {
+    .item {
+      border-color: var(--blue--lighter--40);
+
+      &:last-of-type {
+        border-bottom-color: var(--blue--lighter--40);
+      }
+
+      .title {
+        .expand {
+          color: var(--blue--lighter--40);
+
+          &:active,
+          &:focus,
+          &:hover {
+            color: var(--white);
+          }
+
+          .material-icons {
+            color: var(--blue--lighter--40);
           }
         }
       }
