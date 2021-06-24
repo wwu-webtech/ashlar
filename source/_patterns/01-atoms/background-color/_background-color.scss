@@ -48,6 +48,7 @@ Black, darkest blue, dark blue, and dark green are black based.
     color: var(--light-green);
   }
 
+  .intro,
   .tagline {
     color: var(--light-green--lighter--40);
   }
@@ -200,6 +201,7 @@ Gray, blue, and green backgrounds are gray based.
     }
   }
 
+  .intro,
   .tagline {
     color: var(--light-green--lighter--80);
   }

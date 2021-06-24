@@ -1,8 +1,9 @@
-/**
- * @file
- * 01-atoms/01-text/_paragraphs.scss
- */
-
+/*------------------------------------------------------------------------------
+Atom: Text - Paragraph
+--------------------------------------------------------------------------------
+1. Custom Styles
+2. Dark Mode
+------------------------------------------------------------------------------*/
 p {
   margin: 0 0 var(--space--md);
   line-height: 1.5em;
@@ -12,11 +13,55 @@ p {
   }
 }
 
+/*------------------------------------------------------------------------------
+1. Custom Styles
+------------------------------------------------------------------------------*/
 .intro {
+  color: var(--dark-blue);
   font-size: var(--font-size-lg);
-  color: $dark-blue;
 }
 
-.dark-mode .intro {
-  color: $light-blue;
+.tagline {
+  display: block;
+  margin-bottom: var(--space--md);
+  margin-left: var(--space--md);
+  color: var(--dark-blue);
+  font-style: italic;
+
+  font-display: swap;
+}
+
+h1 {
+  + .tagline,
+  ~ div .tagline {
+    font-size: var(--font-size--3xl);
+  }
+}
+
+h2 {
+  + .tagline,
+  ~ div .tagline {
+    font-size: var(--font-size--2xl);
+  }
+}
+
+h3 {
+  + .tagline,
+  ~ div .tagline {
+    font-size: var(--font-size--xl);
+  }
+}
+
+h4 {
+  + .tagline,
+  ~ div .tagline {
+    font-size: var(--font-size--lg);
+  }
+}
+
+h5 {
+  + .tagline,
+  ~ div .tagline {
+    font-size: var(--font-size--md);
+  }
 }
