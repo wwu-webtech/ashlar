@@ -1,65 +1,25 @@
-/**
-* @file
-* 01-atoms/01-text/_taxonomy-term.scss
-*/
-
+/*------------------------------------------------------------------------------
+Atom: Text - Taxonomy Terms
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .taxonomy-term,
 .job-title,
 .pronouns {
   display: inline-block;
-  float: left;
-  margin: 0 $standard-spacing $standard-spacing 0;
-  padding: $standard-spacing;
-  color: $dark-blue;
-  border: none;
-  background-color: $light-green;
-  font-size: $p-font-size--smaller;
-
+  margin: 0 var(--space--md) var(--space--md) 0;
+  padding: var(--space--xs) var(--space--sm);
+  color: var(--blue--darker--20);
+  border: solid var(--border-width--lg) var(--blue--darker--20);
+  background-color: var(--white);
+  font-size: var(--font-size--sm);
+  font-weight: var(--font-weight--bold);
   font-display: fallback;
+  transition: background-size var(--transition-speed--fast)
+    cubic-bezier(0.33, 0.66, 0.66, 1);
 
-  &.darkest-blue-bg {
-    background-color: $darkest-blue;
-    color: $white;
-  }
-  &.dark-blue-bg {
-    background-color: $dark-blue;
-    color: $white;
-  }
-  &.blue-bg {
-    background-color: $blue;
-    color: $white;
-  }
-  &.light-blue-bg {
-    background-color: $light-blue;
-    color: $black;
-  }
-  &.dark-green-bg {
-    background-color: $dark-green;
-    color: $white;
-  }
-  &.green-bg {
-    background-color: $green;
-    color: $white;
-  }
-  &.light-green-bg {
-    background-color: $light-green;
-    color: $dark-blue;
-  }
-  &.lightest-green-bg {
-    background-color: $lightest-green;
-    color: $dark-blue;
-  }
-}
-
-a.taxonomy-term,
-.taxonomy-term a,
-.dark-mode .taxonomy-term a {
-  color: $dark-blue;
-  &:hover,
+  &:active,
   &:focus,
-  &:active {
-    color: $light-green;
-    background-color: $dark-blue;
-    outline-color: $dark-blue;
+  &:hover {
+    text-decoration: none;
   }
 }
