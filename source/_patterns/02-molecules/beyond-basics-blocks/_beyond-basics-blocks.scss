@@ -1,0 +1,21 @@
+/*------------------------------------------------------------------------------
+Molecule: Beyond Basics Block
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+.block--beyond-basics-block,
+.paragraph--type--majors-aside {
+  margin: var(--space--md) 0;
+
+  &[class*="-bg"] {
+    padding: var(--space--xl);
+
+    .block__title {
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &.no-margin {
+    margin: 0;
+  }
+}
