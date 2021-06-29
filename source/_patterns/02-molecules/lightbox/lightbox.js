@@ -71,7 +71,7 @@ function lightbox() {
 
   // visually-hidden heading, needed to name dialog
   var lbHeading = document.createElement("h2");
-  lbHeading.innerHTML = "";
+  lbHeading.innerHTML = "Lightbox Video";
   lbHeading.setAttribute("id", "dialog-heading");
   lbHeading.classList.add("visually-hidden");
 
@@ -79,10 +79,13 @@ function lightbox() {
 
   // create CTA link element
   var ctaLink = document.createElement("a");
-  ctaLink.setAttribute("href", "");
-  ctaLink.classList.add("button", "lightbox-cta-link");
-  ctaLink.innerHTML = "";
-  lbContainer.appendChild(ctaLink);
+
+  function makeCTA(href, html) {
+    ctaLink.classList.add("button", "lightbox-cta-link");
+    ctaLink.setAttribute("href", href.dataset.ctaUrl);
+    ctaLink.innerHTML = html.dataset.ctaText;
+    lbContainer.appendChild(ctaLink);
+  }
 
   // // end lightbox creation // //
 
@@ -108,10 +111,7 @@ function lightbox() {
         button.dataset.ctaText !== undefined ||
         button.dataset.ctaLink !== undefined
       ) {
-        ctaLink.setAttribute("href", this.dataset.ctaUrl);
-        ctaLink.innerHTML = this.dataset.ctaText;
-
-        // if CTA exists and shift + tab pressed on close button, send focus to cta link
+        makeCTA(this, this);
         closeButton.addEventListener("keydown", closeShiftTabFocus);
 
         // if CTA exists and tab pressed on cta link, send focus to close button
@@ -127,9 +127,8 @@ function lightbox() {
             }
           }
         });
-      } else {
-        ctaLink.style.display = "none";
       }
+
       // reveal dialog
       overlay.classList.replace("invisible", "shown");
       closeButton.focus();
@@ -164,7 +163,7 @@ function lightbox() {
     },
     false
   );
-
+  // if CTA exists and shift + tab pressed on close button, send focus to cta link
   function closeShiftTabFocus(e) {
     if (document.activeElement == this) {
       if ((e.key === "Tab" || e.keyCode === 9) && e.shiftKey) {
@@ -185,13 +184,11 @@ function lightbox() {
     for (var i = 0; i < bgFocusable.length; i++) {
       bgFocusable[i].removeAttribute("tabindex");
     }
-    ctaLink.setAttribute("href", "");
-    ctaLink.innerHTML = "";
-    ctaLink.removeAttribute("style");
+    ctaLink.remove();
     closeButton.removeEventListener("keyup", closeShiftTabFocus);
     iframe.setAttribute("title", "");
     iframe.setAttribute("src", "");
-    lbHeading.innerHTML = "";
+    lbHeading.innerHTML = "Lightbox Video";
     playButtonFocused.focus();
   }
 }
