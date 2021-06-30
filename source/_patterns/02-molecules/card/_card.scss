@@ -1,185 +1,66 @@
-/**
-* @file
-* molecules/components/card/_card.scss
-*/
-@mixin horizontal-card {
-  display: -ms-grid;
-  display: grid;
-  padding-bottom: 0;
-
-  grid-column-gap: $standard-spacing;
-  -ms-grid-columns: 1fr 1fr;
-  -ms-grid-rows: auto 1fr;
-  grid-template-areas: "image taxonomy"
-  "image title"
-  "image body";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto 1fr;
-
-  > div {
-    @include breakpoint($medium) {
-      padding: $triple-spacing;
-      padding-left: $double-spacing;
-    }
-    padding: $standard-spacing;
-    padding-left: $half-spacing;
-  }
-
-  .image {
-    margin-bottom: 0;
-    padding: 0;
-
-    grid-area: image;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-
-    > div {
-      width: 100%;
-      height: 100%;
-    }
-
-    img {
-      width: 100%;
-      height: 100%;
-
-      object-fit: cover;
-    }
-  }
-
-  .taxonomy-terms {
-    margin-bottom: 0;
-    padding-bottom: 0;
-
-    grid-area: taxonomy;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-  }
-
-  .title {
-    margin-top: 0;
-    padding-bottom: 0;
-
-    grid-area: title;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-  }
-
-  .body {
-    grid-area: body;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
-  }
+/*------------------------------------------------------------------------------
+Molecule: Cards
+--------------------------------------------------------------------------------
+1. General styles
+2. Dark Mode
+3. Print
+------------------------------------------------------------------------------*/
+.layout-builder-block.card .title a::after,
+.layout-builder-block.block--card .title a::after {
+  position: initial;
 }
-
-@mixin card-bg-link-text-colors($bg-color, $link-color, $text-color: false) {
-  &.card, 
-  &.block--card {
-    transition: $medium-transition-speed $standard-ease;
-
-    &:hover, 
-    &:focus-within {
-      background-color: $bg-color;
-      
-      .title {
-        a {
-          &:hover,
-          &:focus,
-          &:active {
-            color: $link-color;
-          }
-        }
-      }
-      
-      @if $text-color {
-        color: $text-color;
-      }
-    }
-  }
-}
-
+/*------------------------------------------------------------------------------
+1. General styles
+------------------------------------------------------------------------------*/
 .card,
 .block--card {
   position: relative;
   display: flex;
   flex-flow: row wrap;
-  align-items: start;
-  margin-bottom: $standard-spacing;
-  padding-bottom: $standard-spacing;
-
-  a {
-    &:after {
-      transition: $medium-transition-speed $standard-ease;
-      box-shadow: $unfocus-shadow;
-    }
-
-    &:before {
-      @media print {
-        content: " [" attr(href) "] ";
-        font-size: 10pt;
-      }
-    }
-  }
+  align-content: start;
+  margin-bottom: var(--space--md);
+  padding-bottom: var(--space--md);
 
   &:hover,
   &:focus-within {
     z-index: 1;
-
-    a {
-      &:after {
-        box-shadow: $focus-shadow;
+    .title {
+      a:after {
+        box-shadow: var(--shadow--soft--hover);
       }
     }
   }
 
   &:focus-within {
-    a:after {
-      @include breakpoint($medium) {
-        outline: $focus-outline--thicker $dark-blue;
+    .title {
+      a:after {
+        outline: dotted var(--border-width--md);
+        outline-offset: var(--border-width--md);
       }
-      outline: $focus-outline $dark-blue;
-      outline-offset: $border-width--thicker;
     }
   }
 
   .image {
-    overflow: hidden;
     flex: 0 1 100%;
     order: 1;
     width: 100%;
-    margin-bottom: $half-spacing;
+    margin-bottom: var(--space--xs);
 
     img {
       display: block;
+      object-fit: cover;
       width: 100%;
       height: 100%;
-
-      object-fit: cover;
     }
-  }
-
-  .taxonomy-terms {
-    flex: 0 1 100%;
-    order: 2;
-    padding: 0 $half-spacing;
   }
 
   .title {
     flex: 0 1 100%;
-    order: 3;
-    padding: 0 $half-spacing;
+    order: 2;
+    padding: 0 var(--space--xs);
 
     .block__title {
       margin-top: 0;
-      font-size: $p-font-size;
-      font-weight: $font-weight--bold;
       line-height: initial;
     }
 
@@ -194,6 +75,19 @@
         bottom: 0;
         left: 0;
         content: "";
+        transition: var(--transition-speed--md) var(--ease--standard) box-shadow;
+        box-shadow: var(--shadow--soft);
+      }
+
+      &:hover,
+      &:focus-within {
+        z-index: 1;
+
+        a {
+          &:after {
+            box-shadow: var(--shadow--soft--hover);
+          }
+        }
       }
 
       &:hover,
@@ -205,561 +99,70 @@
     }
   }
 
+  .taxonomy-terms {
+    flex: 0 1 100%;
+    order: 3;
+    padding: 0 var(--space--xs);
+
+    a {
+      position: relative;
+    }
+  }
+
   .date {
     flex: 0 1 100%;
     order: 4;
-    padding: 0 $half-spacing;
+    padding: 0 var(--space--xs);
     font-weight: bold;
   }
 
   .location {
     flex: 0 1 100%;
     order: 4;
-    margin-bottom: $standard-spacing;
-    padding: 0 $half-spacing;
+    margin-bottom: var(--space--md);
+    padding: 0 var(--space--xs);
     font-style: italic;
   }
 
   .body {
     flex: 0 1 100%;
     order: 5;
-    padding: 0 $half-spacing;
+    padding: 0 var(--space--xs);
 
     .date {
-      font-weight: $font-weight--semibold;
+      font-weight: var(--font-weight--semibold);
+    }
+
+    a {
+      position: relative;
     }
 
     a[href^="mailto:"] {
-      position: relative;
       word-break: break-all;
     }
   }
-
-  /* Cards with .event class */
-  &.event {
-    align-content: start;
-
-    .image {
-      margin-bottom: -$double-spacing;
-    }
-
-    .date {
-      flex: 0 1 40%;
-      order: 2;
-      margin-right: -$standard-spacing;
-      padding-left: $standard-spacing;
-      text-align: center;
-      text-transform: uppercase;
-      line-height: 1;
-
-      .month {
-        display: block;
-        padding: $standard-spacing $one-point-five-spacing 0
-        $one-point-five-spacing;
-        color: $white;
-        background-color: $blue;
-        font-size: $h4-font-size;
-        font-weight: $font-weight--regular;
-
-        @media (min-width: $large) {
-          font-size: $h4-font-size--max;
-        }
-      }
-
-      .day {
-        display: block;
-        padding: 0 $one-point-five-spacing $standard-spacing
-        $one-point-five-spacing;
-        white-space: nowrap;
-        word-spacing: -0.2em;
-        color: $white;
-        background-color: $blue;
-        font-size: $h2-font-size;
-        font-weight: $font-weight--semibold;
-
-        @media (min-width: $large) {
-          font-size: $h2-font-size--max;
-        }
-      }
-    }
-
-    .location {
-      flex: 1 1 60%;
-      order: 2;
-      align-self: flex-end;
-      margin-bottom: 0;
-      padding: $standard-spacing $standard-spacing $standard-spacing
-      $double-spacing;
-      text-transform: uppercase;
-      color: $blue;
-      font-style: normal;
-    }
-
-    .title {
-      margin-top: $standard-spacing;
-      padding-right: $double-spacing;
-      padding-left: $double-spacing;
-
-      h2,
-      h3,
-      h4 {
-        font-family: $sans-serif;
-      }
-    }
-
-    .body {
-      padding-right: $double-spacing;
-      padding-left: $double-spacing;
-    }
-
-    /* event cards with additional .alt class */
-    &.alt {
-      display: grid;
-
-      grid-template-areas: "image image"
-      "date title"
-      "date location"
-      "body body"
-      "terms terms";
-      grid-template-columns: 20% 80%;
-      grid-template-rows: auto;
-
-      .title {
-        @include blue-bg;
-        display: flex;
-        align-items: end;
-        height: 100%;
-        margin: 0;
-        padding-top: $standard-spacing;
-
-        grid-area: title;
-      }
-
-      .image {
-        margin-bottom: 0;
-
-        grid-area: image;
-      }
-
-      .date {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-
-        grid-area: date;
-
-        .month {
-          background-color: $dark-blue;
-        }
-
-        .day {
-          color: $dark-blue;
-          background-color: $light-green;
-        }
-      }
-
-      .location {
-        @include blue-bg;
-        display: flex;
-        align-items: start;
-        height: 100%;
-        padding-top: 0;
-
-        grid-area: location;
-      }
-
-      .body {
-        padding: $standard-spacing;
-        padding-bottom: 0;
-
-        grid-area: body;
-      }
-
-      .taxonomy-terms {
-        padding: $standard-spacing;
-
-        grid-area: terms;
-      }
-    }
-  }
-
-  /* Cards with .simple class */
-  &.simple {
-    text-align: center;
-    background-color: mix($lightest-gray, $white, 50%);
-
-    &:hover,
-    &:focus-within {
-      a {
-        &:after {
-          box-shadow: $focus-shadow;
-        }
-      }
-    }
-
-    &:focus-within {
-      .taxonomy-term {
-        border: $focus-outline--thicker;
-      }
-    }
-
-    .title {
-      order: 1;
-      padding: $double-spacing;
-      background-color: $blue;
-
-      .block__title {
-        color: $white;
-
-        a {
-          color: $white;
-
-          &:hover,
-          &:focus,
-          &:active {
-            color: $white;
-            background: transparent;
-          }
-        }
-      }
-    }
-
-    .body {
-      padding: $double-spacing;
-    }
-
-    .taxonomy-terms {
-      order: 6;
-      padding-bottom: $triple-spacing;
-    }
-
-    .taxonomy-term {
-      float: none;
-      padding: $standard-spacing $double-spacing;
-      color: $white;
-      border-radius: $border-radius--round-square;
-      background-color: $blue;
-    }
-  }
-
-  /* Cards with .tile class */
-  &.tile {
-    padding: $standard-spacing;
-    border-radius: $triple-spacing;
-    background-color: $light-blue;
-    font-family: $title-font;
-
-    a {
-      &:after {
-        border-radius: $triple-spacing;
-      }
-    }
-
-    &:hover {
-      a {
-        &:after {
-          border-radius: $triple-spacing;
-          outline: transparent;
-          box-shadow: $focus-shadow;
-        }
-      }
-    }
-
-    &:focus-within {
-      a {
-        &:after {
-          @include breakpoint($medium) {
-            border: $focus-outline--thicker;
-          }
-          border: $focus-outline $dark-blue;
-          outline: transparent;
-        }
-      }
-    }
-
-    .image {
-      display: flex;
-      order: 1;
-      justify-content: flex-end;
-      margin: 0 0 $standard-spacing;
-      border-radius: 0 $triple-spacing 0 0;
-      img {
-        display: block;
-        width: auto;
-        max-height: 6.25rem;
-        margin: 0;
-        opacity: 25%;
-
-        object-fit: scale-down;
-      }
-    }
-
-    .taxonomy-terms {
-      padding: 0 $half-spacing;
-      .taxonomy-term {
-        margin: 0;
-        padding: 0;
-        color: $darkest-blue;
-        background-color: transparent;
-        font-size: $menu-font-size;
-      }
-    }
-
-    .title {
-      margin: 0;
-      padding: 0 $half-spacing $half-spacing;
-      text-transform: uppercase;
-      .block__title {
-        margin: 0;
-        a {
-          color: $darkest-blue;
-          font-family: $title-font;
-          font-size: $h4-font-size;
-        }
-      }
-    }
-  }
-
-  /* Cards with .solid-round class */
-  &.solid-round {
-    border-radius: $triple-spacing;
-    box-shadow: none;
-
-    a {
-      &:after {
-        display: none;
-      }
-      &:before {
-        display: none;
-      }
-    }
-
-    &:focus,
-    &:active {
-      outline: $focus-outline currentColor;
-    }
-
-    .title {
-      padding: 0;
-      .block__title {
-        padding: $double-spacing $double-spacing 0;
-        font-family: $title-font;
-        font-size: $h3-font-size--larger;
-        font-weight: 800;
-      }
-    }
-
-    .image {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      overflow: hidden;
-      flex: 0 1 100%;
-      order: 2;
-      max-width: 50%;
-      max-height: 100%;
-      margin: 0;
-      border-radius: 0 $triple-spacing $triple-spacing 0;
-      img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        margin: 0 $triple-spacing 0;
-        opacity: 25%;
-
-        object-fit: contain;
-      }
-    }
-
-    .body {
-      max-width: 23rem;
-      padding: $standard-spacing $double-spacing 0;
-      p {
-        margin: 0 0 $double-spacing;
-        font-size: $p-font-size--smaller;
-      }
-      .button.white {
-        box-shadow: none;
-        font-family: $title-font;
-        font-size: $min-base-font-size;
-      }
-    }
-
-    &.blue {
-      background-color: $light-blue;
-      .title {
-        .block__title {
-          a {
-            color: $dark-blue;
-          }
-        }
-      }
-      .body {
-        color: $darkest-blue;
-        a.button.white {
-          color: $blue;
-          &:hover,
-          &:focus {
-            color: $white;
-            background-color: $blue;
-          }
-        }
-      }
-    }
-
-    &.green {
-      background-color: $lightest-green;
-      .title {
-        .block__title {
-          a {
-            color: $dark-green;
-          }
-        }
-      }
-      .body {
-        color: darken($dark-green,10%);
-        a.button.white {
-          color: $green;
-          &:hover,
-          &:focus {
-            color: $white;
-            background-color: $green;
-          }
-        }
-      }
-    }
-  }
-
-  /* Cards with .color-block-title class */
-  &.color-block-title {
-    .title {
-      order: 0;
-      padding: $standard-spacing;
-      background-color: $blue;
-
-      a,
-      p,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        color: $lightest-green;
-      }
-    }
-
-    &.dark-blue {
-      .title {
-        background-color: $dark-blue;
-
-        a,
-        p,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-          color: $light-green;
-        }
-      }
-    }
-  }
-
-  &.light-green {
-    .title {
-      background-color: $light-green;
-
-      a,
-      p,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        color: $dark-blue;
-      }
-    }
-  }
-
-  &.horizontal {
-    @include horizontal-card;
-  }
 }
 
-/* Make sure configure button works in layout builder */
-.layout-builder-block.card .title a::after,
-.layout-builder-block.block--card .title a::after {
-  position: initial;
-}
-
-/* Hover/focus styles for card with -bg classes */
-
-.blue-bg {
-  @include card-bg-link-text-colors($dark-blue, $light-green);
-}
-
-.blue-gradient-bg {
-  @include card-bg-link-text-colors($dark-blue, $light-green);
-}
-
-.dark-blue-gradient-bg {
-  @include card-bg-link-text-colors($dark-blue, $light-green);
-}
-
-.dark-blue-bg {
-  @include card-bg-link-text-colors($blue, $light-green);
-}
-
-.darkest-blue-bg {
-  @include card-bg-link-text-colors($dark-blue, $light-green);
-}
-
-.green-bg {
-  @include card-bg-link-text-colors($dark-green, $white);
-}
-
-.dark-green-bg {
-  @include card-bg-link-text-colors($green, $white);
-}
-
-.light-green-bg {
-  @include card-bg-link-text-colors($green, $white, $white);
-}
-
-/* Display preferences styles */
+/*------------------------------------------------------------------------------
+2. Dark Mode
+------------------------------------------------------------------------------*/
 .dark-mode {
+  .card,
   .block--card {
-    a {
-      &:hover,
-      &:active,
-      &:focus {
-        color: $white;
-      }
-    }
+    .block__title {
+      a {
+        &:after {
+          box-shadow: var(--shadow--dark-mode);
+        }
 
-    &:focus-within {
-      a:after {
-        outline-color: $white;
-      }
-    }
-  }
-  
-  .dark-blue-bg, 
-  .darkest-blue-bg {
-    &.card, 
-    &.block--card {
-      &:hover, 
-      &:focus-within {
-        background-color: $dark-blue;
-        
-        .title {
-          a {
-            &:hover,
-            &:focus,
-            &:active {
-              color: $light-green;
-              background-color: $darkest-blue;
-            }
+        &:active,
+        &:focus,
+        &:hover {
+          color: var(--blue--lighter--40);
+
+          &:after {
+            color: var(--blue--lighter--40);
+            box-shadow: var(--shadow--dark-mode--hover);
           }
         }
       }
@@ -767,28 +170,15 @@
   }
 }
 
-.font--dyslexia-friendly {
+/*------------------------------------------------------------------------------
+3. Print
+------------------------------------------------------------------------------*/
+@media print {
   .card,
   .block--card {
-    .title {
-      h2,
-      h3,
-      h4 {
-        font-family: var(--font--dyslexia-friendly);
-      }
-    }
-  }
-}
-
-.font--hyperlegible {
-  .card,
-  .block--card {
-    .title {
-      h2,
-      h3,
-      h4 {
-        font-family: var(--font--hyperlegible);
-      }
+    a:before {
+      content: " [" attr(href) "] ";
+      font-size: 10pt;
     }
   }
 }

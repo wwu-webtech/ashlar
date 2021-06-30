@@ -5,17 +5,16 @@ Atom: Text - Taxonomy Terms
 .taxonomy-term,
 .job-title,
 .pronouns {
+  @include darkest-blue-bg;
+
   display: inline-block;
-  margin: 0 var(--space--md) var(--space--md) 0;
+  margin: 0 var(--space--2xs) var(--space--sm) 0;
   padding: var(--space--xs) var(--space--sm);
-  color: var(--blue--darker--20);
-  border: solid var(--border-width--lg) var(--blue--darker--20);
-  background-color: var(--white);
+  transition: background-size var(--transition-speed--fast)
+    cubic-bezier(0.33, 0.66, 0.66, 1);
   font-size: var(--font-size--sm);
   font-weight: var(--font-weight--bold);
   font-display: fallback;
-  transition: background-size var(--transition-speed--fast)
-    cubic-bezier(0.33, 0.66, 0.66, 1);
 
   &:active,
   &:focus,

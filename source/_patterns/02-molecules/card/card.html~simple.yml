@@ -12,6 +12,6 @@ block_content:
       url: "#"
 content:
   body: "<p>Card body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><p><a href='#' class='cta'>Apply Now</a></p>"
   field_image:
-  field_highlighted_terms: "<div class='taxonomy-terms'><span class='taxonomy-term'>Apply Now</span></div>"
+  field_highlighted_terms: 

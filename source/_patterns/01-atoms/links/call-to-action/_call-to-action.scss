@@ -20,7 +20,7 @@ a.cta {
   border-radius: var(--border-radius--roundest);
   outline-offset: calc(-1 * var(--border-width--lg));
   background: var(--blue);
-  box-shadow: var(--shadow--button--soft);
+  box-shadow: var(--shadow--soft);
   font-size: var(--font-size--md);
   line-height: 1;
 
@@ -35,7 +35,7 @@ a.cta {
   &:hover {
     color: var(--white);
     background: var(--dark-blue--darker--40);
-    box-shadow: var(--shadow--button--soft--hover);
+    box-shadow: var(--shadow--soft--hover);
   }
 
   &.square {
@@ -64,7 +64,7 @@ a.cta {
     &:focus,
     &:hover {
       background: var(--blue--lighter--60);
-      box-shadow: var(--shadow--button--soft--hover);
+      box-shadow: var(--shadow--soft--hover);
     }
   }
 
@@ -75,7 +75,7 @@ a.cta {
     &:focus,
     &:hover {
       background: var(--dark-blue--darker--60);
-      box-shadow: var(--shadow--button--soft--hover);
+      box-shadow: var(--shadow--soft--hover);
     }
   }
 
@@ -87,7 +87,7 @@ a.cta {
     &:focus,
     &:hover {
       background: var(--light-green--lighter--60);
-      box-shadow: var(--shadow--button--soft--hover);
+      box-shadow: var(--shadow--soft--hover);
     }
   }
 
@@ -99,7 +99,7 @@ a.cta {
     &:hover {
       color: var(--white);
       background: var(--green--darker--40);
-      box-shadow: var(--shadow--button--soft--hover);
+      box-shadow: var(--shadow--soft--hover);
     }
   }
 
@@ -111,7 +111,7 @@ a.cta {
     &:hover {
       color: var(--white);
       background: var(--dark-green--darker--60);
-      box-shadow: var(--shadow--button--soft--hover);
+      box-shadow: var(--shadow--soft--hover);
     }
   }
 
@@ -123,7 +123,7 @@ a.cta {
     &:focus,
     &:hover {
       background: var(--gray--lighter--60);
-      box-shadow: var(--shadow--button--soft--hover);
+      box-shadow: var(--shadow--soft--hover);
     }
   }
 
