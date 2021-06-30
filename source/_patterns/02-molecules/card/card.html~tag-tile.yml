@@ -1,10 +1,11 @@
 attributes:
   Attribute():
     class:
-    - block
-    - block--card
-    - headings--sans-serif
-    - tile
+      - block
+      - block--card
+      - headings--sans-serif--alt
+      - tile
+      - font--title
 label: Card Title
 block_content:
   field_link:

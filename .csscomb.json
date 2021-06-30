@@ -68,6 +68,7 @@
       "overflow-y",
       "-ms-overflow-x",
       "-ms-overflow-y",
+      "object-fit",
       "-webkit-overflow-scrolling",
       "clip",
       "zoom",
