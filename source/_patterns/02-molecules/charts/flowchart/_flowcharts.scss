@@ -1,14 +1,12 @@
-/**
-* @file
-* 02-molecules/org-charts/_flowcharts.scss
-*/
-$flowchart-item-width: 22.5rem;
-
+/*------------------------------------------------------------------------------
+Molecule: Charts - Flow Chart
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .flowchart {
   figcaption {
     text-align: center;
   }
-  
+
   ol {
     @include breakpoint($small) {
       flex-flow: row wrap;
@@ -23,11 +21,11 @@ $flowchart-item-width: 22.5rem;
   li {
     @include breakpoint($small) {
       flex-flow: row nowrap;
-      margin: $standard-spacing 0 0;
+      margin: var(--space--md) 0 0;
     }
     display: flex;
     flex-flow: column;
-    max-width: $flowchart-item-width;
+    max-width: 22.5rem;
     margin: auto;
 
     &:last-of-type {
@@ -38,10 +36,12 @@ $flowchart-item-width: 22.5rem;
     }
   }
 
+  .block__title {
+    margin-top: 0;
+  }
+
   .item {
-    display: flex;
-    align-items: center;
-    padding: $standard-spacing;
+    padding: var(--space--md);
   }
 
   .material-icons {
@@ -54,7 +54,7 @@ $flowchart-item-width: 22.5rem;
     }
     display: block;
     margin: auto;
-    padding: $standard-spacing;
+    padding: var(--space--md);
   }
 
   .flow-right {
@@ -63,6 +63,6 @@ $flowchart-item-width: 22.5rem;
     }
     display: none;
     align-self: center;
-    padding: $standard-spacing;
+    padding: var(--space--md);
   }
 }

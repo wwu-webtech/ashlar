@@ -1,14 +1,41 @@
-/**
-* @file
-* 02-molecules/charts/donut-chart/_donut-chart.scss
-*/
-
-$chart-size: 18.75rem;
-$chart-blues: (#429ad2,#003f87,#7ab4da,#0060ab,#afcee1,#007ac8,#e3e7e9,#002f5e);
-$chart-light-blues: (#006ebb,#57b8f7,#1681ca,#7ecafa,#2c93d9,#b3d9f1,#42a6e8,#e3e7e9);
-$chart-greens: (#006b3f,#c2dc2c,#358a30,#d3e570,#6aa921,#e4edb3,#9fc812,#f5f6f7);
+/*------------------------------------------------------------------------------
+Molecule: Charts - Donut Chart
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+$chart-blues: (
+  #429ad2,
+  #003f87,
+  #7ab4da,
+  #0060ab,
+  #afcee1,
+  #007ac8,
+  #e3e7e9,
+  #002f5e
+);
+$chart-light-blues: (
+  #006ebb,
+  #57b8f7,
+  #1681ca,
+  #7ecafa,
+  #2c93d9,
+  #b3d9f1,
+  #42a6e8,
+  #e3e7e9
+);
+$chart-greens: (
+  #006b3f,
+  #c2dc2c,
+  #358a30,
+  #d3e570,
+  #6aa921,
+  #e4edb3,
+  #9fc812,
+  #f5f6f7
+);
 
 .donut-chart {
+  --chart-size: 18.75rem;
+
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -18,12 +45,12 @@ $chart-greens: (#006b3f,#c2dc2c,#358a30,#d3e570,#6aa921,#e4edb3,#9fc812,#f5f6f7)
   }
 
   svg {
-    width: $chart-size;
-    height: $chart-size;
+    width: var(--chart-size);
+    height: var(--chart-size);
     transform: rotate(-90deg);
     background: transparent;
     border-radius: 50%;
-    margin: $double-spacing;
+    margin: var(--space--lg);
   }
 
   circle {
@@ -43,11 +70,11 @@ $chart-greens: (#006b3f,#c2dc2c,#358a30,#d3e570,#6aa921,#e4edb3,#9fc812,#f5f6f7)
 
       &:before {
         position: relative;
-        top: $border-width--thicker;
+        top: var(--border-width--lg);
         display: inline-block;
-        width: $double-spacing;
-        height: $double-spacing;
-        margin-right: $half-spacing;
+        width: var(--space--lg);
+        height: var(--space--lg);
+        margin-right: var(--space--xs);
         content: "";
       }
 
@@ -61,7 +88,7 @@ $chart-greens: (#006b3f,#c2dc2c,#358a30,#d3e570,#6aa921,#e4edb3,#9fc812,#f5f6f7)
     }
   }
 
-  &.green{
+  &.green {
     circle {
       @for $i from 1 through length($chart-greens) {
         &:nth-of-type(#{$i}) {
@@ -83,7 +110,7 @@ $chart-greens: (#006b3f,#c2dc2c,#358a30,#d3e570,#6aa921,#e4edb3,#9fc812,#f5f6f7)
     }
   }
 
-  &.light-blue{
+  &.light-blue {
     circle {
       @for $i from 1 through length($chart-light-blues) {
         &:nth-of-type(#{$i}) {

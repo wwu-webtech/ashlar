@@ -1,0 +1,13 @@
+<figure{{ attributes }}>
+  <figcaption>Simple Flowchart Caption</figcaption>
+
+  <ol{{ list_attributes }}>
+  {% for item in items %}
+    <li>
+      <div class="item light-gray-bg">{{ item.content }}</div>
+      <div class="flow-right" aria-hidden="true"><span class="material-icons">arrow_forward</span></div>
+      <div class="flow-down" aria-hidden="true"><span class="material-icons">arrow_downward</span></div>
+    </li>
+  {% endfor %}
+  </ol>
+</figure>
