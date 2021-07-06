@@ -1,32 +1,28 @@
-/**
-* @file
-* 02-molecules/org-charts/_org-charts.scss
-*/
-$chart-background-color: $white;
-$chart-background-color--dark-mode: $black;
-$chart-standard-spacing: 12px;
-$chart-border-width: 3px;
-$line-color: mix($light-gray, $gray, 50%);
-$max-box-size: 18.75rem;
-
+/*------------------------------------------------------------------------------
+Molecule: Charts - Org Chart
+--------------------------------------------------------------------------------
+1. Dark mode
+------------------------------------------------------------------------------*/
 .org-chart {
-  @include breakpoint($medium) {
-    font-size: $p-font-size--smaller;
-  }
+  --chart-background-color: var(--white);
+  --chart-background-color--dark-mode: var(--black);
+  --chart-border-width: 3px;
+  --chart-line-color: var(--gray--lighter--40);
+  --chart-max-size: 18.75rem;
+  --chart-spacing: var(--space--md);
+
   position: relative;
   display: grid;
   justify-content: center;
-  max-width: $max-content-width;
-  color: $black;
-  background: $chart-background-color;
-  font-size: $p-font-size--smaller;
+  max-width: var(--content-area-max-width);
+  color: var(--black);
 
   ul {
     position: relative;
     display: flex;
     flex-flow: column;
     margin-bottom: 0;
-    margin-left: $chart-standard-spacing;
+    margin-left: var(--chart-spacing);
     padding: 0;
     list-style: none;
 
@@ -38,30 +34,30 @@ $max-box-size: 18.75rem;
         @include breakpoint($medium) {
           max-width: none;
         }
+
         position: relative;
         display: block;
-        max-width: $max-box-size;
+        max-width: var(--chart-max-size);
         margin: 0;
-        margin-top: $chart-standard-spacing;
-        margin-left: $chart-standard-spacing;
-        padding: ($chart-standard-spacing / 2);
+        margin-top: var(--chart-spacing);
+        margin-left: var(--chart-spacing);
+        padding: calc(var(--chart-spacing) / 2);
         text-align: center;
         text-decoration: none;
       }
 
       & > span {
-        background: $light-gray;
+        background: var(--gray--lighter--60);
       }
 
       & > a {
-        color: $white;
-        background-color: $blue;
+        color: var(--white);
+        background-color: var(--blue);
 
         &:hover,
         &:focus,
         &:active {
-          color: $dark-blue;
-          background-color: $light-green;
+          color: var(--dark-blue);
         }
       }
     }
@@ -69,45 +65,48 @@ $max-box-size: 18.75rem;
     &.level-sub-a {
       @include breakpoint($medium) {
         display: grid;
-        margin-left: 0;
-
         grid-template-columns: repeat(10, auto);
+        margin-left: 0;
       }
+
       margin-left: 0;
     }
 
     &.level-a {
       @include breakpoint($medium) {
         display: grid;
-        margin-left: 0;
-
         grid-template-columns: repeat(10, auto);
+        margin-left: 0;
       }
+
       margin-left: 0;
 
       .item-level-a {
-        margin-bottom: $chart-standard-spacing;
+        margin-bottom: var(--chart-spacing);
 
         > span,
         > a {
           @include breakpoint($medium) {
-            max-width: $max-box-size;
+            max-width: var(--chart-max-size);
             margin: auto;
           }
+
           max-width: none;
           margin: 0;
-          color: $white;
-          background: $gray;
+        }
+
+        > span {
+          color: var(--white);
+          background: var(--gray);
         }
 
         > a {
-          background: $dark-blue;
+          background-color: var(--dark-blue);
 
           &:hover,
           &:focus,
           &:active {
-            color: $dark-blue;
-            background-color: $light-green;
+            color: var(--dark-blue);
           }
         }
       }
@@ -116,18 +115,18 @@ $max-box-size: 18.75rem;
     &.level-b {
       @include breakpoint($medium) {
         display: grid;
-        margin-top: $chart-standard-spacing;
-        margin-left: 0;
-
         grid-template-columns: repeat(10, auto);
+        margin-top: var(--chart-spacing);
+        margin-left: 0;
       }
+
       margin-left: 0;
 
       .item-level-b {
         > span > a {
           max-width: none;
-          margin-right: ($chart-standard-spacing / 2);
-          margin-left: $chart-standard-spacing;
+          margin-right: calc(var(--chart-spacing) / 2);
+          margin-left: var(--chart-spacing);
         }
       }
     }
@@ -137,11 +136,13 @@ $max-box-size: 18.75rem;
         .level-c {
           display: flex;
           flex-flow: column;
-          margin-left: ($chart-standard-spacing / 2);
+          margin-left: calc(var(--chart-spacing) / 2);
         }
       }
     }
   }
+  background: var(--chart-background-color);
+  font-size: var(--font-size--sm);
 
   /* LINES */
   .item-level-b,
@@ -155,7 +156,7 @@ $max-box-size: 18.75rem;
   .item-level-j,
   .item-level-k {
     /* vertical bar for nested items */
-    border-left: solid $chart-border-width $line-color;
+    border-left: solid var(--chart-border-width) var(--chart-line-color);
 
     /* horizontal bar for nested items */
     > span:before,
@@ -164,11 +165,11 @@ $max-box-size: 18.75rem;
       bottom: 0;
       left: 0;
       display: block;
-      width: $chart-standard-spacing + $chart-border-width;
+      width: calc(var(--chart-spacing) + var(--chart-border-width));
       height: 50%;
       content: "";
       transform: translate(-100%);
-      border-top: solid $line-color $chart-border-width;
+      border-top: solid var(--chart-border-width) var(--chart-line-color);
       background: transparent;
     }
 
@@ -176,7 +177,7 @@ $max-box-size: 18.75rem;
     &:last-of-type {
       > span:before,
       > a:before {
-        background: $chart-background-color;
+        background: var(--chart-background-color);
       }
     }
   }
@@ -195,11 +196,11 @@ $max-box-size: 18.75rem;
     bottom: 0;
     left: 0;
     display: block;
-    width: $chart-standard-spacing + $chart-border-width;
+    width: calc(var(--chart-spacing) + var(--chart-border-width));
     height: 100%;
     content: "";
     transform: translate(-100%);
-    background: $chart-background-color;
+    background: var(--chart-background-color);
   }
 }
 
@@ -211,13 +212,15 @@ $max-box-size: 18.75rem;
       > a:before {
         position: absolute;
         bottom: 0;
-        left: 50%;
+        left: calc(
+          (var(--chart-spacing) / 2) + (var(--chart-border-width) / 2) + 50%
+        );
         display: block;
-        width: $chart-border-width;
-        height: $chart-standard-spacing;
+        width: var(--chart-border-width);
+        height: var(--chart-spacing);
         content: "";
-        transform: translate(-50%, $chart-standard-spacing);
-        background: $line-color;
+        transform: translate(-50%, var(--chart-spacing));
+        background: var(--chart-line-color);
       }
       &.no-children {
         > span:before,
@@ -246,29 +249,33 @@ $max-box-size: 18.75rem;
         left: 0;
         display: block;
         width: 100%;
-        height: $chart-border-width;
+        height: var(--chart-border-width);
         content: "";
-        background: $line-color;
+        background: var(--chart-line-color);
       }
 
       &:first-child {
         &:before {
-          left: 50%;
+          left: calc(
+            (var(--chart-spacing) / 2) + (var(--chart-border-width) / 2) + 50%
+          );
           display: block;
           width: 50%;
-          height: $chart-border-width;
+          height: var(--chart-border-width);
           content: "";
-          background: $line-color;
+          background: var(--chart-line-color);
         }
       }
 
       &:last-child {
         &:before {
           display: block;
-          width: 50%;
-          height: $chart-border-width;
+          width: calc(
+            (var(--chart-spacing) / 2) + (var(--chart-border-width) / 2) + 50%
+          );
+          height: var(--chart-border-width);
           content: "";
-          background: $line-color;
+          background: var(--chart-line-color);
         }
       }
 
@@ -284,34 +291,31 @@ $max-box-size: 18.75rem;
       &:last-of-type > span:before,
       &:last-of-type > a:before {
         position: absolute;
-        top: -$chart-standard-spacing;
+        top: calc(-1 * var(--chart-spacing));
         left: 50%;
         display: block;
-        width: $chart-border-width;
-        height: $chart-standard-spacing;
+        width: var(--chart-border-width);
+        height: var(--chart-spacing);
         content: "";
         transform: translate(
-          -(($chart-standard-spacing / 2) + ($chart-border-width / 2))
+          (calc(var(--chart-spacing) / -2) + (var(--chart-border-width) / 2))
         );
         border: none;
-        background: $line-color;
+        background: var(--chart-line-color);
       }
     }
   }
 }
 
+/*------------------------------------------------------------------------------
+1. Dark mode
+------------------------------------------------------------------------------*/
 .dark-mode {
   .org-chart {
-    background: $chart-background-color--dark-mode;
+    background: var(--chart-background-color--dark-mode);
 
     a {
-      color: $white;
-
-      &:active,
-      &:hover,
-      &:focus {
-        color: $white;
-      }
+      color: var(--white);
     }
 
     .item-level-b,
@@ -327,7 +331,7 @@ $max-box-size: 18.75rem;
       &:last-of-type {
         > span:before,
         > a:before {
-          background: $chart-background-color--dark-mode;
+          background: var(--chart-background-color--dark-mode);
         }
       }
     }
@@ -341,7 +345,7 @@ $max-box-size: 18.75rem;
     .item-level-h:last-child > .level-i:before,
     .item-level-i:last-child > .level-j:before,
     .item-level-j:last-child > .level-k:before {
-      background: $chart-background-color--dark-mode;
+      background: var(--chart-background-color--dark-mode);
     }
 
     .item-level-b {
@@ -349,7 +353,7 @@ $max-box-size: 18.75rem;
       > a:before,
       &:last-of-type > span:before,
       &:last-of-type > a:before {
-        background: $line-color;
+        background: var(--chart-line-color);
       }
     }
   }
