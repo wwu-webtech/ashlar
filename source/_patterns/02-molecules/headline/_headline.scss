@@ -104,7 +104,7 @@ $headline-gradient-end: transparentize($darkest-blue, 0.5);
     margin-bottom: $triple-spacing;
     padding: $double-spacing;
     color: $white;
-    background: transparentize($blue, 0.1);
+    background: transparentize(scale-color($blue, $lightness: -18%), 0.2);
 
     h1,
     h2 {
