@@ -605,6 +605,7 @@ Molecule: Cards - Alternate styles
       margin: 0;
 
       a {
+<<<<<<< HEAD
         font-size: var(--font-size--2xl);
       }
 
@@ -616,6 +617,11 @@ Molecule: Cards - Alternate styles
           background: none;
         }
       }
+=======
+        color: var(--blue--darker--40);
+        font-size: var(--font-size--2xl);
+      }
+>>>>>>> 2282717abe53f0e4473fc7041afa9d7d99ab2ad9
     }
   }
 }
