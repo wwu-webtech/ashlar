@@ -13,7 +13,9 @@
     </a>
   </div>
 
-  {% include "@molecules/display-settings/display-settings.html.twig" %}
+  {% block display_settings %}
+    {% include "@molecules/display-settings/display-settings.html.twig" %}
+  {% endblock %}
 
   <button class="icon-with-text toggle-menu" aria-expanded="false" aria-controls="mobile-menu">
       <span class="material-icons" aria-hidden="true">menu</span>
