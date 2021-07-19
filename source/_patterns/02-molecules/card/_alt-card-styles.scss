@@ -550,6 +550,7 @@ Molecule: Cards - Alternate styles
 .card.tile,
 .block--card.tile {
   @include light-blue-bg;
+
   padding: var(--space--md);
   border-radius: var(--space--2xl);
 
@@ -603,9 +604,10 @@ Molecule: Cards - Alternate styles
 
     .block__title {
       margin: 0;
+      color: var(--blue--darker--40);
+      font-size: var(--font-size--2xl);
 
       a {
-<<<<<<< HEAD
         font-size: var(--font-size--2xl);
       }
 
@@ -617,11 +619,6 @@ Molecule: Cards - Alternate styles
           background: none;
         }
       }
-=======
-        color: var(--blue--darker--40);
-        font-size: var(--font-size--2xl);
-      }
->>>>>>> 2282717abe53f0e4473fc7041afa9d7d99ab2ad9
     }
   }
 }

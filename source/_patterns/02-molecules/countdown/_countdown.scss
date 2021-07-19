@@ -1,26 +1,28 @@
-/**
-* @file
-* molecules/countdown/_countdown.scss
-*/
+/*------------------------------------------------------------------------------
+Molecule: Countdown
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 
 .block--countdown {
-  padding: $double-spacing;
+  padding: var(--space--xl);
 
   div[role="timer"] {
     @include breakpoint($medium) {
       flex-flow: row wrap;
     }
+
     display: flex;
     flex-flow: column;
     justify-content: center;
-    margin-top: $double-spacing;
+    margin-top: var(--space--xl);
     list-style: none;
 
     p {
       @include breakpoint($medium) {
-        border-right: $border-width solid;
+        border-right: var(--border-width--md) solid;
       }
-      padding: $triple-spacing ($double-spacing * 2);
+
+      padding: var(--space--2xl) (var(--space--xl) * 2);
       text-align: center;
       font-size: 1.5;
 
@@ -30,7 +32,7 @@
 
       .number {
         display: block;
-        margin-bottom: $standard-spacing;
+        margin-bottom: var(--space--md);
         font-size: 2.5em;
       }
     }
@@ -38,22 +40,5 @@
 
   .hidden {
     display: none;
-  }
-
-  .test {
-    color: red !important;
-  }
-}
-
-.black-bg,
-.gray-bg,
-.blue-bg,
-.dark-blue-bg,
-.green-bg,
-.dark-green-bg,
-.dark-blue-gradient-bg,
-.blue-gradient-bg {
-  .block--countdown {
-    color: $white;
   }
 }

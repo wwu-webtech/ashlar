@@ -98,6 +98,10 @@ Black, darkest blue, dark blue, and dark green are black based.
       outline-color: var(--white);
     }
   }
+
+  .block--countdown {
+    color: var(--white);
+  }
 }
 
 @mixin darkest-blue-bg {
@@ -234,6 +238,10 @@ Gray, blue, and green backgrounds are gray based.
     &:focus {
       outline-color: var(--white);
     }
+  }
+
+  .block--countdown {
+    color: var(--white);
   }
 }
 

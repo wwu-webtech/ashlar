@@ -16,6 +16,8 @@ Molecule: Charts - Org Chart
   justify-content: center;
   max-width: var(--content-area-max-width);
   color: var(--black);
+  background: var(--chart-background-color);
+  font-size: var(--font-size--sm);
 
   ul {
     position: relative;
@@ -60,6 +62,41 @@ Molecule: Charts - Org Chart
           color: var(--dark-blue);
         }
       }
+
+      &.dark {
+        & > span {
+          background: var(--gray);
+          color: var(--white);
+        }
+
+        & > a {
+          color: var(--white);
+          background-color: var(--dark-blue);
+
+          &:hover,
+          &:focus,
+          &:active {
+            color: var(--dark-blue);
+          }
+        }
+      }
+
+      &.light {
+        & > span {
+          background: var(--gray--lighter--80);
+        }
+
+        & > a {
+          background-color: var(--blue--lighter--40);
+          color: var(--dark-blue--darker--60);
+
+          &:hover,
+          &:focus,
+          &:active {
+            color: var(--dark-blue);
+          }
+        }
+      }
     }
 
     &.level-sub-a {
@@ -94,21 +131,6 @@ Molecule: Charts - Org Chart
           max-width: none;
           margin: 0;
         }
-
-        > span {
-          color: var(--white);
-          background: var(--gray);
-        }
-
-        > a {
-          background-color: var(--dark-blue);
-
-          &:hover,
-          &:focus,
-          &:active {
-            color: var(--dark-blue);
-          }
-        }
       }
     }
 
@@ -141,8 +163,6 @@ Molecule: Charts - Org Chart
       }
     }
   }
-  background: var(--chart-background-color);
-  font-size: var(--font-size--sm);
 
   /* LINES */
   .item-level-b,
