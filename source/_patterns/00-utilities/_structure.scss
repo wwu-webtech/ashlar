@@ -11,7 +11,7 @@ $one-point-five-spacing: $standard-spacing * 1.5;
 $double-spacing: $standard-spacing * 2;
 $triple-spacing: $standard-spacing * 3;
 
-$min-target-spacing: $standard-spacing * .65; // above 44px
+$min-target-spacing: $standard-spacing * 0.65; // above 44px
 
 /* Borders and Lines */
 $border-width--thinner: 0.0625rem;
@@ -38,3 +38,5 @@ $large-screen-columns: 1fr $max-content-width 1fr;
 
 /* Toggle/Menu Button Sizes */
 $toggle-size: 4rem;
+
+$dyslexic-icon-smaller: $p-font-size--min * 0.8;

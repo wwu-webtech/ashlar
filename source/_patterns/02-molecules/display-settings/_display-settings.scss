@@ -2,8 +2,6 @@
 Molecule: Display Settings
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-$dyslexic-icon-smaller: $p-font-size--min * 0.8;
-
 .display-settings {
   @include breakpoint($medium) {
     z-index: 2;
