@@ -3,8 +3,6 @@ Molecule: Headline
 --------------------------------------------------------------------------------
 1. Style 1: Box Headline
 ------------------------------------------------------------------------------*/
-$headline-gradient-start: transparentize($darkest-blue, 0.2);
-$headline-gradient-end: transparentize($darkest-blue, 0.5);
 
 .headline {
   /*----------------------------------------------------------------------------

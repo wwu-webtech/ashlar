@@ -28,14 +28,14 @@
 {%
   set classes = [
     'block',
-    'block--image-button',
+    'block--image-link',
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
     block_content.field_custom_classes.0.value,
   ]
 %}
 {% set attributes = attributes.addClass(classes) %}
 {% set title_attributes = title_attributes.addClass('block__title') %}
-{% set link_classes = ['image', 'button', 'stylized'] %}
+{% set link_classes = ['image', 'link', 'stylized'] %}
 {% set link_attributes = create_attribute() %}
 {% set link_attributes = link_attributes.addClass(link_classes) %}
 {% if block_content.field_tracking_event_category is not empty %}
@@ -43,5 +43,5 @@
 {% endif %}
 
 {% block template %}
-  {% include "@molecules/buttons/image-buttons/image-button.html.twig" %}
+  {% include "@molecules/image-link/image-link.html.twig" %}
 {% endblock %}

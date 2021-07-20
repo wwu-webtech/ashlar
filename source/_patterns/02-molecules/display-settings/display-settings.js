@@ -145,7 +145,12 @@ function global_reset(event) {
         return;
       }
       body.classList.add("default-theme", "default-font");
-      body.classList.remove("dark-mode", "opendyslexic", "font--hyperlegible", "serif");
+      body.classList.remove(
+        "dark-mode",
+        "font--dyslexia-friendly",
+        "font--hyperlegible",
+        "serif"
+      );
       theme_default.checked = true;
       font_default.checked = true;
     }
