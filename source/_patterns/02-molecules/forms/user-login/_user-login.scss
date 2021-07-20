@@ -3,7 +3,7 @@ Molecule: Forms - User Login
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 .user-login-form {
-  var(--max-login-width): 6.25rem;
+  --max-login-width: 6.25rem;
   display: grid;
   grid-template-rows: repeat(4, auto);
   grid-template-columns: repeat(auto-fit, minmax(var(--max-login-width), 1fr));

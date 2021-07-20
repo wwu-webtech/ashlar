@@ -99,6 +99,7 @@ Black, darkest blue, dark blue, and dark green are black based.
     }
   }
 
+  caption,
   .block--countdown {
     color: var(--white);
   }
@@ -240,6 +241,7 @@ Gray, blue, and green backgrounds are gray based.
     }
   }
 
+  caption,
   .block--countdown {
     color: var(--white);
   }
@@ -425,40 +427,12 @@ backgrounds are light gray based.
 .dark-blue-gradient-bg {
   @include blue-bg;
 
-  background-image: linear-gradient(
-    to left bottom,
-    #1c2023,
-    #18242d,
-    #122738,
-    #0a2a44,
-    #022d4f,
-    #00335c,
-    #013a69,
-    #044077,
-    #074e8b,
-    #085c9f,
-    #066bb3,
-    #007ac8
-  );
+  background-image: var(--gradient--diagonal--dark-blue-to-black);
 }
 .blue-gradient-bg {
   @include blue-bg;
 
-  background-image: linear-gradient(
-    to right bottom,
-    #002f5e,
-    #003266,
-    #00356d,
-    #003875,
-    #003b7d,
-    #004186,
-    #01478e,
-    #004d97,
-    #0058a3,
-    #0063b0,
-    #006ebc,
-    #007ac8
-  );
+  background-image: var(--gradient--diagonal--blue-to-dark-blue);
 }
 
 /*------------------------------------------------------------------------------

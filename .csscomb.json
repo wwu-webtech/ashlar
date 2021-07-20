@@ -106,10 +106,11 @@
       "-ms-grid-row-span",
       "align",
       "align-self",
-      "justify-items",
-      "justify-content",
       "align-items",
       "align-content",
+      "justify-self",
+      "justify-items",
+      "justify-content",
       "flex-align",
 
       "-webkit-box-sizing",

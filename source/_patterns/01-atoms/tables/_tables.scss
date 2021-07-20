@@ -36,17 +36,18 @@ Atom: Tables
   }
 }
 
+[class*="-bg"] table,
 table {
   --table-blue: #cce4f4;
-  --table-blue--darker--5: #e6f2fa;
   --table-blue--darker--10: #b1cfe6;
   --table-blue--darker--15: #99bbd9;
+  --table-blue--darker--5: #e6f2fa;
   --table-gray: #f5f6f7;
-  --table-gray--darker--5: #e9e9ea;
   --table-gray--darker--10: #dcddde;
   --table-gray--darker--15: #d0d1d2;
   --table-gray--darker--20: #c4c5c6;
   --table-gray--darker--25: #b8b8b9;
+  --table-gray--darker--5: #e9e9ea;
   --table-gray--darker--50: #7a7b7b;
   --table-gray--darker--55: #6e6f6f;
   --table-gray--darker--60: #626263;
@@ -87,10 +88,6 @@ caption {
   font-weight: var(--font-weight--bold);
 }
 
-tbody {
-  border: none;
-}
-
 tr,
 td,
 th {
@@ -102,6 +99,7 @@ tr {
   border-right: none;
   border-bottom: none;
   border-left: none;
+
   &.even,
   &.odd {
     border-bottom: none;
