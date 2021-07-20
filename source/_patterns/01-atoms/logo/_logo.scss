@@ -3,8 +3,8 @@ Atom: Logo
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 .logo {
-  width: var(--logo--size);
-  height: var(--logo--size);
+  width: var(--logo-size);
+  height: var(--logo-size);
 
   &.horizontal {
     width: var(--logo--horizontal--width);

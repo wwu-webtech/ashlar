@@ -25,10 +25,9 @@ $image-button--smaller-size--medium: 11.25rem;
   width: $image-button-size;
   height: $image-button-size;
   margin: $image-button-size / 4.5;
-  transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   border-radius: 50%;
   box-shadow: $unfocus-shadow;
-
 
   &:before,
   &:after {
@@ -64,7 +63,6 @@ $image-button--smaller-size--medium: 11.25rem;
   &:focus-within {
     box-shadow: $focus-shadow;
   }
-
 
   &:hover:before,
   &:focus-within:before {
@@ -271,7 +269,7 @@ $image-button--smaller-size--medium: 11.25rem;
 }
 
 /* Internet Explorer Fix */
-@media screen and (min-width:0\0) {
+@media screen and (min-width: 0\0) {
   .layout--flex .layout__region .block--image-button {
     margin: 0 ($double-spacing * 2);
   }
@@ -311,7 +309,7 @@ $image-button--smaller-size--medium: 11.25rem;
   }
 }
 
-hyperlegible,
+.font--hyperlegible,
 .font--dyslexia-friendly {
   .block--image-button {
     &.smaller {

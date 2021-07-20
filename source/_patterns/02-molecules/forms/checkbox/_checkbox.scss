@@ -1,9 +1,9 @@
-/**
-* @file
-* molecules/forms/checkbox/_checkbox.scss
-*/
-$checkbox-size: 1.5rem;
-$checkbox-size--smaller: 1.25rem;
+/*------------------------------------------------------------------------------
+Molecule: Forms - Checkbox
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+$checkbox-size: 1rem;
+$checkbox-size--smaller: 0.75rem;
 
 .checkbox,
 .radio {
