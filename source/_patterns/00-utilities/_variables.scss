@@ -2,24 +2,26 @@
 VARIABLES
 --------------------------------------------------------------------------------
 1. Color
-a. Brand
-b. Special use
-c. Gradients
+  a. Brand
+  b. Special use
+  c. Gradients
 2. Typography
-a. Font families
-b. Font weights
+  a. Font families
+  b. Font weights
 3. Page layout
-a. Spacing
-b. Content areas
-c. Content area grids
-d. Breakpoints
+  a. Spacing
+  b. Content areas
+  c. Content area grids
+  d. Breakpoints
 4. Decoration
-a. Borders and outlines
-b. Shadows
-c. Icons
-d. Toggles
+  a. Borders and outlines
+  b. Shadows
+  c. Icons
+  d. Toggles
+  e. Logo
+  f. Forms
 e. Logo
-5. Animation
+  5. Animation
 ------------------------------------------------------------------------------*/
 :root {
 /*------------------------------------------------------------------------------
@@ -230,6 +232,9 @@ to left bottom,
 --logo-size: 10.25rem;
 --logo--horizontal--width: 25rem;
 --logo--horizontal--height: 6.25rem;
+
+/* f. Forms ------------------------------------------------------------------*/
+--checkbox-size: 1rem;
 
 /*------------------------------------------------------------------------------
 5. Animation

@@ -1,27 +1,24 @@
-/**
-* @file
-* molecules/forms/user-login/_user-login.scss
-* Additional styles for the user login form
-*/
-
-$max-box-width: 6.25rem;
-
+/*------------------------------------------------------------------------------
+Molecule: Forms - User Login
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .user-login-form {
+  var(--max-login-width): 6.25rem;
   display: grid;
   grid-template-rows: repeat(4, auto);
-  grid-template-columns: repeat(auto-fit, minmax($max-box-width, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(var(--max-login-width), 1fr));
   grid-template-areas:
     "login manual . ."
     "username username . ."
     "password password  . ."
     "submit submit  . .";
 
-  grid-column-gap: $double-spacing;
-  grid-row-gap: $double-spacing;
+  grid-column-gap: var(--space--lg);
+  grid-row-gap: var(--space--lg);
   justify-content: center;
 
   -ms-grid-rows: auto auto auto auto;
-  -ms-grid-columns: 2fr $double-spacing 1fr $double-spacing 2fr;
+  -ms-grid-columns: 2fr var(--space--lg) 1fr var(--space--lg) 2fr;
 
   .manual-login {
     grid-area: manual;
@@ -34,10 +31,7 @@ $max-box-width: 6.25rem;
 
   .cas-login-link {
     margin: 0;
-    @extend
-      .button,
-      .dark-blue,
-      .square;
+    @extend .button, .dark-blue, .square;
     grid-area: login;
 
     -ms-grid-column: 1;
