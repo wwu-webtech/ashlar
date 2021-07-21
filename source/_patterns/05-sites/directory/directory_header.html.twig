@@ -1,0 +1,26 @@
+<header class="site-header">
+  <a href="#main-content" class="skip-link visually-hidden focusable">Skip to main content</a>
+
+  {% block top %}
+  {% endblock %}
+
+  {% block wwu_header %}
+    {% embed "@organisms/headers/wwu-header/wwu-header.html.twig" %}
+      {% block display_settings %}        
+      {% endblock %}
+
+      {% block site_name %}
+        <a href="/" class="home-link">Campus Directory</a>
+      {% endblock %}
+
+      {% block main_navigation %}
+        {% include "@sites/directory/directory_navigation.twig" %}
+      {% endblock %}
+    {% endembed %}
+  {% endblock %}
+
+  {% block splash %}
+    <!--div class="splash">
+    </div-->
+  {% endblock %}
+</header>
