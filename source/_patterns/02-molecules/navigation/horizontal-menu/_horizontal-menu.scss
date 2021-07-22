@@ -1,9 +1,8 @@
-/**
-* @file
-* 00-molecules/navigation/horizontal-menu/_horizontal-menu.scss
-*/
-
-.menu  {
+/*------------------------------------------------------------------------------
+Molecule: Horizontal menus
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+.menu {
   &.horizontal {
     display: flex;
     justify-content: center;

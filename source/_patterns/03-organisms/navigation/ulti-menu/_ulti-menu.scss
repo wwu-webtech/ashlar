@@ -1,12 +1,11 @@
-/**
-* @file
-* 03-organisms/navigation/ulti-menu/_ulti-menu.scss
-*/
-
-/* Overrides for ultimenu styles & functionality */
+/*------------------------------------------------------------------------------
+Organism: Ultimenu
+--------------------------------------------------------------------------------
+Overrides for ultimenu module
+------------------------------------------------------------------------------*/
 .ultimenu {
-  overflow: visible;
   z-index: initial;
+  overflow: visible;
 
   > li {
     min-width: initial;
@@ -18,28 +17,29 @@
       right: 0 !important;
       display: none !important;
     }
+
     z-index: initial;
     display: block;
     visibility: hidden;
-    max-height: 0;
-    margin: 0;
-    padding: 0;
-    transition: $medium-transition-speed $standard-ease;
-    opacity: 0;
-    border-radius: 0;
-    box-shadow: none;
-
     grid-area: flyout;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     -ms-grid-row: 2;
+    max-height: 0;
+    margin: 0;
+    padding: 0;
+    transition: var(--transition-speed--md) var(--ease--standard);
+    opacity: 0;
+    border-radius: 0;
+    box-shadow: none;
 
     &.open {
       @include breakpoint($medium) {
         position: absolute;
-        display: block !important;
         z-index: 2;
+        display: block !important;
       }
+
       visibility: visible;
       max-height: none;
       opacity: 1;
@@ -87,14 +87,12 @@
   opacity: 1;
 }
 
-/* Prevent a region in Drupal from getting position relative, which pushes menu below header area */
 #block-ultimenumainnavigation {
   &.contextual-region {
     position: inherit;
   }
 }
 
-/* Hide the default ultimenu mobile menu toggle */
 .button {
   &.button--ultimenu {
     display: none;
