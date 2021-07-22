@@ -15,7 +15,7 @@
       <h2>{{ menu.title }}</h2>
       <ul class="menu">
         {% for item in menu.items %}
-        <li class="menu-item">
+        <li{{ item.attributes.addClass('menu-item') }}>
           <a href="{{ item.url }}">
             {{ item.title }}
           </a>

@@ -1,13 +1,17 @@
-/**
-* @file
-* 00-molecules/navigation/menu/_menu.scss
-*/
-
+/*------------------------------------------------------------------------------
+Molecule: Menu
+--------------------------------------------------------------------------------
+1. Nested menus
+2. Block system menus
+3. Dark mode
+------------------------------------------------------------------------------*/
 .menu {
   padding: 0;
   list-style: none;
 
-  /* nested menus */
+  /*----------------------------------------------------------------------------
+  1. Nested menus
+  ----------------------------------------------------------------------------*/
   .menu {
     margin: 0;
 
@@ -16,54 +20,54 @@
 
       li > a {
         &[aria-current="page"] {
-          background-color: $lightest-green;
-          color: $black;
+          background-color: var(--blue--lighter--40);
+          color: var(--black);
         }
       }
     }
 
     a {
-      padding-left: $double-spacing;
-      font-size: $p-font-size--smaller;
-
-      @include breakpoint($large) {
-        font-size: $p-font-size--max--smaller;
-      }
+      padding-left: var(--space--md);
+      font-size: var(--font-size--sm);
     }
   }
 }
 
-/* Block system menus */
-
+/*------------------------------------------------------------------------------
+2. Block system menus
+------------------------------------------------------------------------------*/
 .block--menu {
   .menu {
     li > a {
       &[aria-current="page"] {
-        background-color: $lightest-green;
-        font-weight: $font-weight--bold;
+        background-color: var(--blue--lighter--40);
+        font-weight: var(--font-weight--bold);
 
         &:hover,
         &:focus,
         &:active {
-          background-color: $light-gray;
+          background-color: var(--gray--lighter--80);
         }
       }
     }
   }
 }
 
+/*------------------------------------------------------------------------------
+3. Dark mode
+------------------------------------------------------------------------------*/
 .dark-mode {
   .page-content .block--menu {
     .menu {
       li > a {
         &[aria-current="page"] {
-          color: $black;
+          color: var(--black);
 
           &:hover,
           &:focus,
           &:active {
-            background-color: $dark-blue;
-            color: $light-green;
+            background-color: var(--dark-blue);
+            color: var(--light-green);
           }
         }
       }

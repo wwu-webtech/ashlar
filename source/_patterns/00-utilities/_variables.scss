@@ -120,11 +120,19 @@ e. Logo
   var(--blue--lighter--40) 0,
   var(--blue--lighter--60) 100%
 );
+
+--gradient--vertical--blue-to-dark-blue: linear-gradient(
+  to bottom,
+  var(--blue),
+  rgba(var(--dark-blue--darker--40--rgb), 0.9)
+);
+
 --gradient--horizontal--dark-blue-to-transparent: linear-gradient(
   to right,
   rgba(var(--dark-blue--darker--40--rgb), 1) 0%,
   rgba(var(--dark-blue--darker--40--rgb), 0.5) 100%
 );
+
 --gradient--diagonal--blue-to-dark-blue: linear-gradient(
   to right bottom,
   #002f5e,

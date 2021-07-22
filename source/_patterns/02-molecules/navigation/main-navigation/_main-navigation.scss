@@ -1,7 +1,8 @@
 /*------------------------------------------------------------------------------
 Molecule: Main navigation/ultimenu custom styles
 --------------------------------------------------------------------------------
-Active link trail
+1. Active link trail
+2. Display preferences
 ------------------------------------------------------------------------------*/
 .main-navigation,
 #block-system-main-menu {
@@ -67,7 +68,7 @@ Active link trail
         min-height: var(--touch-target--min);
         margin: 0;
         padding: var(--space--sm);
-        transition: var(--transition-speed--md) var(--ease--standard) background;
+        transition: none;
         text-align: left;
         white-space: normal;
         text-decoration: none;
@@ -114,9 +115,8 @@ Active link trail
       }
 
       /*------------------------------------------------------------------------
-      Active link trail
+      1. Active link trail
       ------------------------------------------------------------------------*/
-      /* Active trail / top-level item ---------------------------------------*/
       &.is-active-trail {
         @include breakpoint($medium) {
           border-left: none;
@@ -126,30 +126,20 @@ Active link trail
             height: var(--border-width--lg);
             margin-top: calc(-1 * var(--border-width--lg));
             content: "";
-            background: var(--blue--lighter--60);
+            background: var(--light-green--lighter--20);
           }
         }
 
-        border-left: solid var(--border-width--lg) var(--blue--lighter--60);
-      }
-
-      /* Active menu item ----------------------------------------------------*/
-      &.menu-item--active-page {
-        background-color: var(--blue--lighter--60);
-
-        a {
-          color: var(--dark-blue--darker--60);
-          font-weight: $font-weight--bold;
-        }
+        border-left: solid var(--border-width--lg)
+          var(--light-green--lighter--20);
       }
     }
   }
 }
 
-#block-system-main-menu ul ul {
-  display: none; // hide nested menus on non ultimenu main nav blocks
-}
-
+/*------------------------------------------------------------------------------
+2. Display preferences
+------------------------------------------------------------------------------*/
 .font--dyslexia-friendly {
   .main-navigation,
   #block-system-main-menu {
@@ -162,4 +152,8 @@ Active link trail
   #block-system-main-menu {
     font-family: var(--font--hyperlegible);
   }
+}
+
+#block-system-main-menu ul ul {
+  display: none; // hide nested menus on non ultimenu main nav blocks
 }
