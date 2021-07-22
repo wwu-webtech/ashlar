@@ -1,117 +1,79 @@
 /*------------------------------------------------------------------------------
 Molecule: Status Alert
 --------------------------------------------------------------------------------
+1. Dark mode
 ------------------------------------------------------------------------------*/
-$status-icon-size: 4.5rem;
-
 .status-alert {
-  @include font-size--smaller;
-  border-width: $border-width--thicker;
-
   h2,
   h3,
   h4,
   h5,
   h6 {
     text-align: center;
-    font-family: $sans-serif;
   }
 
   .material-icons {
     display: block;
     text-align: center;
-    font-size: $status-icon-size;
+    color: var(--blue--darker--60);
+    font-size: var(--icon-size--lg);
   }
 
   .status {
-    @include breakpoint($large) {
-      font-size: $h5-font-size--max;
-    }
     text-align: center;
-    font-size: $h5-font-size;
-    font-weight: $font-weight--bold;
+    color: var(--blue--darker--60);
+    font-size: var(--font-size--xl);
+    font-weight: var(--font-weight--bold);
   }
 
   .severity {
     text-align: center;
+    color: var(--blue--darker--60);
   }
 
   summary {
-    @include breakpoint($large) {
-      font-size: $h6-font-size--max;
-    }
-    margin-bottom: $standard-spacing;
-    padding: $half-spacing;
+    margin-bottom: var(--space--md);
+    padding: var(--space--xs);
     cursor: pointer;
     text-align: center;
-    font-size: $h6-font-size;
+    font-size: var(--font-size--lg);
   }
 }
 
 .status-alert--message {
-  @include message($blue, $black);
-  padding: $standard-spacing;
+  padding: var(--space--md);
+  border: solid var(--border-width--md);
+  border-color: rgba(var(--blue--rgb), 0.75);
+  background-color: rgba(var(--blue--rgb), 0.15);
 
   &.status-alert--minor {
-    @include message($blue, $black);
+    border-color: rgba(var(--blue--rgb), 0.75);
+    background-color: rgba(var(--blue--rgb), 0.15);
   }
 
   &.status-alert--major {
-    @include message($yellow, $black);
+    border-color: rgba(var(--yellow--rgb), 0.75);
+    background-color: rgba(var(--yellow--rgb), 0.15);
   }
 
   &.status-alert--critical {
-    @include message($red, $black);
+    border-color: rgba(var(--red--rgb), 0.75);
+    background-color: rgba(var(--red--rgb), 0.15);
   }
 
   &.status-alert--resolved {
-    @include message($green, $black);
+    border-color: rgba(var(--green--rgb), 0.75);
+    background-color: rgba(var(--green--rgb), 0.15);
   }
 }
 
+/*------------------------------------------------------------------------------
+1. Dark mode
+------------------------------------------------------------------------------*/
 .dark-mode {
-  .status-alert--message {
-    @include message($blue, $white);
-    padding: $standard-spacing;
-
-    &.status-alert--minor {
-      @include message($blue, $white);
-    }
-
-    &.status-alert--major {
-      @include message($yellow, $white);
-    }
-
-    &.status-alert--critical {
-      @include message($red, $white);
-    }
-
-    &.status-alert--resolved {
-      @include message($green, $white);
-    }
-  }
-}
-
-.font--dyslexia-friendly {
-  .status-alert {
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: var(--font--dyslexia-friendly);
-    }
-  }
-}
-
-.font--hyperlegible {
-  .status-alert {
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: var(--font--hyperlegible);
-    }
+  .material-icons,
+  .status,
+  .severity {
+    color: var(--light-green--lighter--20);
   }
 }

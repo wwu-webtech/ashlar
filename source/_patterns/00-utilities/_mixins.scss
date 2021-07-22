@@ -12,31 +12,3 @@
   outline: dotted var(--border-width--md);
   outline-offset: var(--border-width--md);
 }
-
-@mixin message($color, $blend) {
-  border: solid $border-width transparentize($color, 0.25);
-  background-color: transparentize($color, 0.75);
-
-  a:not([class]) {
-    text-decoration: underline;
-    color: mix($blend, $color, 75%);
-
-    &:focus,
-    &:hover,
-    &:active {
-      text-decoration: none;
-      color: mix($blend, $color, 90%);
-    }
-  }
-
-  p,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  details,
-  .status-color {
-    color: mix($blend, $color, 65%);
-  }
-}

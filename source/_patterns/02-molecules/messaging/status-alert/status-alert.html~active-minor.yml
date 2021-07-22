@@ -4,7 +4,7 @@ attributes:
     - status-alert
 label: Upgrade TODAY 8:00 AM to 5:00 PM
 content:
-  body: "<p><strong>11/25/2019, 8:00 AM</strong>: To perform important software updates, this system will be unavailable Monday, Nov 25th  from 8:00am to 5:00pm:</p>
+  body: "<p><strong>11/25/2019, 8:00 AM</strong>: To <a href='#'>perform important software updates</a>, this system will be unavailable Monday, Nov 25th  from 8:00am to 5:00pm:</p>
 
       <p>View the full announcement for details.</p>"
   status: active

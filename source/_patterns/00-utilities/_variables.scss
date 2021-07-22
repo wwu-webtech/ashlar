@@ -4,7 +4,8 @@ VARIABLES
 1. Color
   a. Brand
   b. Special use
-  c. Gradients
+  c. RGB values
+  d. Gradients
 2. Typography
   a. Font families
   b. Font weights
@@ -103,36 +104,51 @@ e. Logo
 --purple--lighter--20: #ae3fb9;
 --purple: #9a0fa8;
 
-/* c. Gradients --------------------------------------------------------------*/
+/* c. RGB Values (for easy use with rgba/transparency, added only as needed) -*/
+--black--rgb: 28, 32, 35;
+--blue--rgb: 0, 122, 200;
+--dark-blue--darker--40--rgb: 0, 38, 81;
+--green--rgb: 93, 162, 37;
+--light-green--rgb: 186, 216, 10;
+--red--rgb: 204, 45, 48;
+--yellow--rgb: 255, 198, 30;
+--white--rgb: 255, 255, 255;
+
+/* d. Gradients --------------------------------------------------------------*/
+--gradient--horizontal--dark-blue-to-transparent: linear-gradient(
+  to right,
+  rgba(var(--dark-blue--darker--40--rgb), 1) 0%,
+  rgba(var(--dark-blue--darker--40--rgb), 0.5) 100%
+);
 --gradient--diagonal--blue-to-dark-blue: linear-gradient(
-to right bottom,
-#002f5e,
-#003266,
-#00356d,
-#003875,
-#003b7d,
-#004186,
-#01478e,
-#004d97,
-#0058a3,
-#0063b0,
-#006ebc,
-#007ac8
+  to right bottom,
+  #002f5e,
+  #003266,
+  #00356d,
+  #003875,
+  #003b7d,
+  #004186,
+  #01478e,
+  #004d97,
+  #0058a3,
+  #0063b0,
+  #006ebc,
+  #007ac8
 );
 --gradient--diagonal--dark-blue-to-black: linear-gradient(
-to left bottom,
-#1c2023,
-#18242d,
-#122738,
-#0a2a44,
-#022d4f,
-#00335c,
-#013a69,
-#044077,
-#074e8b,
-#085c9f,
-#066bb3,
-#007ac8
+  to left bottom,
+  #1c2023,
+  #18242d,
+  #122738,
+  #0a2a44,
+  #022d4f,
+  #00335c,
+  #013a69,
+  #044077,
+  #074e8b,
+  #085c9f,
+  #066bb3,
+  #007ac8
 );
 
 /*------------------------------------------------------------------------------

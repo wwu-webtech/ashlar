@@ -3,7 +3,8 @@ Molecule: Image Link
 --------------------------------------------------------------------------------
 1. Multiple links
 2. Variations
-3. Dark Mode
+3. Dark mode
+4. Display preferences
 ------------------------------------------------------------------------------*/
 .image-link,
 .image-link {
@@ -38,14 +39,14 @@ Molecule: Image Link
     width: 70%;
     height: 70%;
     transform: translate(-20%, -10%);
-    background: rgba(0, 122, 200, 0.2);
+    background: rgba(var(--blue--rgb), 0.2);
   }
 
   &:after {
     width: 105%;
     height: 105%;
     transform: translate(15%, 10%);
-    background: rgba(0, 122, 200, 0.1);
+    background: rgba(var(--blue--rgb), 0.1);
   }
 
   &:hover,
@@ -87,14 +88,14 @@ Molecule: Image Link
     text-decoration: none;
     color: var(--white);
     border-radius: 50%;
-    background: rgba(0, 38, 81, 0.7);
+    background: rgba(var(--dark-blue--darker--40--rgb), 0.7);
     font-size: var(--font-size--lg);
     font-weight: bold;
 
     &:active,
     &:focus,
     &:hover {
-      background: rgba(0, 38, 81, 0.9);
+      background: rgba(var(--dark-blue--darker--40--rgb), 0.9);
       outline-color: var(--dark-blue);
     }
 
@@ -220,21 +221,21 @@ Molecule: Image Link
 
     a {
       color: var(--dark-blue--darker--40);
-      background-color: rgba(186, 216, 10, 0.8);
+      background-color: rgba(var(--light-green--rgb), 0.8);
 
       &:active,
       &:focus,
       &:hover {
-        background: rgba(186, 216, 10, 0.95);
+        background: rgba(var(--light-green--rgb), 0.95);
       }
     }
 
     &:before {
-      background: rgba(186, 216, 10, 0.5);
+      background: rgba(var(--light-green--rgb), 0.5);
     }
 
     &:after {
-      background: rgba(186, 216, 10, 0.3);
+      background: rgba(var(--light-green--rgb), 0.3);
     }
   }
 }
@@ -255,11 +256,11 @@ Molecule: Image Link
     }
 
     &:before {
-      background: rgba(0, 122, 200, 0.5);
+      background: rgba(var(--blue--rgb), 0.5);
     }
 
     &:after {
-      background: rgba(0, 122, 200, 0.7);
+      background: rgba(var(--blue--rgb), 0.7);
     }
   }
 
@@ -276,6 +277,9 @@ Molecule: Image Link
   }
 }
 
+/*------------------------------------------------------------------------------
+4. Display preferences
+------------------------------------------------------------------------------*/
 .font--dyslexia-friendly {
   .block--image-link {
     word-spacing: -0.5em;

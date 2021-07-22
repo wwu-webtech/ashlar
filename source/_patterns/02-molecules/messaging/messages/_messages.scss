@@ -3,7 +3,6 @@ Molecule: Messages
 --------------------------------------------------------------------------------
 Drupal system messages
 ------------------------------------------------------------------------------*/
-
 .messages {
   ul {
     margin-bottom: 0;
@@ -13,46 +12,33 @@ Drupal system messages
 .messages--warning,
 .messages--error {
   display: block;
-  margin-bottom: $half-spacing;
-  padding: $half-spacing;
+  margin-bottom: var(--space--sm);
+  padding: var(--space--sm);
   text-align: center;
+  border: solid var(--border-width--md);
 }
 
 .messages--status {
-  @include message($blue, $black);
+  border-color: rgba(var(--blue--rgb), 0.75);
+  background-color: rgba(var(--blue--rgb), 0.15);
 }
 .messages--warning {
-  @include message($yellow, $black);
+  border-color: rgba(var(--yellow--rgb), 0.75);
+  background-color: rgba(var(--yellow--rgb), 0.15);
 }
 .messages--error {
-  @include message($red, $black);
+  border-color: rgba(var(--red--rgb), 0.75);
+  background-color: rgba(var(--red--rgb), 0.15);
 }
 
 .node--unpublished {
-  border-top: solid $border-width $warning-color;
+  border-top: solid var(--border-width--md--rgb) var(--yellow);
 
   &:before {
-    @include message($warning-color, $black);
     position: absolute;
     right: 0;
     content: "Unpublished";
-  }
-}
-
-.dark-mode {
-  .messages--status {
-    @include message($blue, $white);
-  }
-  .messages--warning {
-    @include message($yellow, $white);
-  }
-  .messages--error {
-    @include message($red, $white);
-  }
-
-  .node--unpublished {
-    &:before {
-      @include message($warning-color, $white);
-    }
+    border-color: rgba(var(--yellow--rgb), 0.75);
+    background-color: rgba(var(--yellow--rgb), 0.15);
   }
 }

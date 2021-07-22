@@ -13,18 +13,14 @@ Molecule: Headline
     @include breakpoint($medium) {
       margin-top: 5%;
       margin-left: 5%;
-      background: linear-gradient(
-        to right,
-        rgba(0, 38, 81, 1) 0%,
-        rgba(0, 38, 81, 0.5) 100%
-      );
+      background: var(--gradient--horizontal--dark-blue-to-transparent);
     }
 
     align-self: start;
     max-width: calc((2 * var(--content-area-max-width)) / 3);
     margin: var(--space--md);
     padding: var(--space--lg);
-    background-color: rgba(0, 38, 81, 0.7);
+    background-color: rgba(var(--dark-blue--darker--40--rgb), 0.7);
   }
 
   /*----------------------------------------------------------------------------
@@ -42,7 +38,7 @@ Molecule: Headline
     margin-top: 25vh;
     margin-bottom: var(--space--xl);
     padding: var(--space--md);
-    background: rgba(0, 122, 200, 0.8);
+    background: rgba(var(--blue--rgb), 0.8);
   }
 
   &.right-aligned-bar {
