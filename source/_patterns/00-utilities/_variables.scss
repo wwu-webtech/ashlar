@@ -115,6 +115,11 @@ e. Logo
 --white--rgb: 255, 255, 255;
 
 /* d. Gradients --------------------------------------------------------------*/
+--gradient--vertical--light-blue: linear-gradient(
+  to bottom,
+  var(--blue--lighter--40) 0,
+  var(--blue--lighter--60) 100%
+);
 --gradient--horizontal--dark-blue-to-transparent: linear-gradient(
   to right,
   rgba(var(--dark-blue--darker--40--rgb), 1) 0%,
@@ -243,6 +248,7 @@ e. Logo
 --toggle-size--lg: 4.5rem;
 --toggle-size--xl: 5.5rem;
 --toggle-size--2xl: 6.5rem;
+--touch-target--min: 44px;
 
 /* e. Logo  ------------------------------------------------------------------*/
 --logo-size: 10.25rem;

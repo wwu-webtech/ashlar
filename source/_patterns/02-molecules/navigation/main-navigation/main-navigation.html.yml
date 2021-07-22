@@ -15,20 +15,20 @@ content:
     with:
       items:
         - title: Main nav 1
-          url: ""
+          url: "#"
         - title: Main nav two longer title
-          url: ""
+          url: "#"
         - title: Main nav 3
-          url: ""
+          url: "#"
         - title: Active Trail
           attributes:
             Attribute():
               class:
                 - is-active-trail
-          url: ""
+          url: "#"
         - title: Fifth Item Sorta Long
-          url: ""
+          url: "#"
         - title: Short
-          url: ""
+          url: "#"
         - title: Tiny
-          url: ""
+          url: "#"

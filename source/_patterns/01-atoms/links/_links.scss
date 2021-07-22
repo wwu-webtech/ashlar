@@ -27,11 +27,7 @@ a {
     transition: 0.25s ease-out;
     text-decoration-color: var(--blue--lighter--60);
     color: var(--dark-blue);
-    background-image: linear-gradient(
-      to bottom,
-      var(--blue--lighter--40) 0,
-      var(--blue--lighter--60) 100%
-    );
+    background-image: var(--gradient--vertical--light-blue);
     background-size: 100% 100%;
 
     &:visited {
