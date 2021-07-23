@@ -1,0 +1,12 @@
+/*------------------------------------------------------------------------------
+Molecule: Navigation - myWestern links
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+.my-western-links {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  max-width: 38rem;
+  padding: 0;
+  list-style: none;
+}

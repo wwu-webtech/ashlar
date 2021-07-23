@@ -1,76 +1,44 @@
 /*------------------------------------------------------------------------------
 Atom: Icons - My Western Icons
 --------------------------------------------------------------------------------
+1. Dark mode
 ------------------------------------------------------------------------------*/
-.my-western-links {
-  .social-media-links {
-    @include breakpoint($medium) {
-      max-width: 37.5rem;
-      margin-top: -3.375rem;
-      margin-left: 50%;
-      transform: translatex(-50%);
-    }
-    @include breakpoint(67.5rem) {
-      margin-top: -4.5rem;
-    }
+.my-western-icon {
+  display: block;
+  padding: var(--space--xs);
+  text-align: center;
+  color: var(--dark-blue);
+  background-size: 100%;
+}
 
-    justify-content: center;
-    width: 100%;
-    max-width: none;
-  }
+svg {
+  fill: var(--dark-blue);
 
-  .social-icon {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    width: initial;
-    height: initial;
-    padding: var(--space--md);
-    text-align: center;
-    text-decoration: none;
-    background: transparent;
-    font-size: var(--font-size--xs);
-    line-height: 1em;
+  display: block;
+  width: var(--toggle-size--md);
+  margin: auto;
+  margin-bottom: var(--space--xs);
+  transition: var(--ease-standard) var(--transition-speed--fast) fill;
 
-    &:hover,
-    &:active,
-    &:focus {
-      outline-color: var(--white);
-      background: var(--blue);
-    }
-
-    svg {
-      @include breakpoint($medium) {
-        width: var(--toggle-size--md);
-        height: var(--toggle-size--md);
-      }
-
-      width: var(--toggle-size--sm);
-      height: var(--toggle-size--sm);
-      margin-bottom: var(--space--xs);
-    }
-
-    .icon-text {
-      margin-bottom: var(--space--md);
-    }
+  @media print {
+    fill: var(--black);
   }
 }
 
+/*------------------------------------------------------------------------------
+1. Dark mode
+------------------------------------------------------------------------------*/
 .dark-mode {
-  .social-icon {
-    .icon-text {
-      color: var(--white);
+  .my-western-icon {
+    svg {
+      fill: var(--blue--lighter--40);
     }
-  }
 
-  .my-western-links {
-    .social-icon {
+    &:active,
+    &:focus,
+    &:hover {
       svg {
-        fill: var(--white);
-      }
-
-      .icon-text {
-        color: var(--dark-blue);
+        fill: var(--dark-blue--darker--60);
       }
     }
   }
