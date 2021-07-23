@@ -53,8 +53,7 @@ Black, darkest blue, dark blue, and dark green are black based.
     color: var(--light-green--lighter--40);
   }
 
-  a:not([class*="cta"]),
-  a:not([class*="button"]),
+  a:not([class*="cta"]):not([class*="button"]),
   a.patternLink {
     color: var(--blue--lighter--40);
 
@@ -123,8 +122,7 @@ Black, darkest blue, dark blue, and dark green are black based.
 
   background: var(--dark-green);
 
-  a:not([class*="cta"]),
-  a:not([class*="button"]) {
+  a:not([class*="cta"]):not([class*="button"]) {
     text-decoration-color: var(--light-green--lighter--20);
     color: var(--green--lighter--80);
 
@@ -187,8 +185,7 @@ Gray, blue, and green backgrounds are gray based.
     color: var(--white);
   }
 
-  a:not([class*="cta"]),
-  a:not([class*="button"]) {
+  a:not([class*="cta"]):not([class*="button"]) {
     text-decoration-color: var(--blue--lighter--60);
     color: var(--white);
 
@@ -267,8 +264,7 @@ Gray, blue, and green backgrounds are gray based.
     }
   }
 
-  a:not([class*="cta"]),
-  a:not([class*="button"]) {
+  a:not([class*="cta"]):not([class*="button"]) {
     text-decoration-color: var(--light-green--lighter--20);
 
     &:hover,

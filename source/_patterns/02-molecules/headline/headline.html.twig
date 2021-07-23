@@ -14,7 +14,7 @@
 
   {% block links %}
     {% if content.link %}
-      <a class="button" href="{{ content.link.url }}" class="button">{{ content.link.text }}</a>
+      <a href="{{ content.link.url }}" class="cta">{{ content.link.text }}</a>
     {% endif %}
 
     {% if content.video.type == "YouTube" %}

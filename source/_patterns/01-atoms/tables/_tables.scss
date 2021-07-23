@@ -36,7 +36,7 @@ Atom: Tables
   }
 }
 
-[class*="-bg"] table,
+[class$="-bg"] table,
 table {
   --table-blue: #cce4f4;
   --table-blue--darker--10: #b1cfe6;

@@ -51,7 +51,7 @@ Molecule: Image with Description
     }
     padding: var(--space--sm);
 
-    &:not([class*="-bg"]) {
+    &:not([class$="-bg"]) {
       @include breakpoint(max-width $medium) {
         border-top: none;
       }
@@ -81,7 +81,7 @@ Molecule: Image with Description
 .dark-mode {
   .block--image-with-description {
     .body {
-      &:not([class*="-bg"]) {
+      &:not([class$="-bg"]) {
         background-color: var(--gray--darker--80);
       }
     }
