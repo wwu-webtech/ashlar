@@ -3,13 +3,14 @@ Atom: Text - Blockquotes
 --------------------------------------------------------------------------------
 1. Dark Mode
 ------------------------------------------------------------------------------*/
-blockquote:not([class*="-bg"]) {
+blockquote:not([class]) {
   @include lightest-gray-bg;
 }
 
 blockquote {
   margin: var(--space--md) 0;
   padding: var(--space--md);
+  line-height: 1.5em;
 }
 
 .pullquote,
