@@ -1,25 +1,26 @@
-/**
-* @file
-* 00-molecules/navigation/wwu-menu/_wwu-menu.scss
-*/
+/*------------------------------------------------------------------------------
+Molecule: Navigation - Western menu
+--------------------------------------------------------------------------------
+1. Display preferences
+------------------------------------------------------------------------------*/
+#molecules-wwu-menu-html,
+#molecules-wwu-mobile-menu-html {
+  background-color: var(--dark-blue);
+}
 
 .western-menu {
   @include breakpoint($medium) {
-    margin: 0;
-
     grid-area: none;
     grid-column: 2 / span all;
     grid-row: 1 / span 1;
   }
+
   display: flex;
+  grid-area: wwu-menu;
   align-self: start;
   justify-content: flex-end;
   max-width: 100vw;
-  margin-top: $double-spacing;
-  margin-bottom: $standard-spacing;
-  font-family: $condensed;
-
-  grid-area: wwu-menu;
+  font-family: var(--font--condensed);
 
   .icon-with-text {
     @include breakpoint($medium) {
@@ -27,38 +28,29 @@
       align-items: center;
       width: initial;
       height: initial;
-      padding: $min-target-spacing $standard-spacing $min-target-spacing $half-spacing;
+      background-size: 100%;
 
       .material-icons {
         position: relative;
         top: 0.125rem;
-        margin-right: $border-width;
-        font-size: var(--icon-size--lg);
+        margin-right: var(--space--2xs);
+        font-size: var(--icon-size--sm);
       }
     }
-    padding: 0;
-    color: $white;
-    border-radius: 0;
-    background: transparent;
-    box-shadow: none;
 
-    &:hover,
+    min-height: var(--touch-target--min);
+    padding: var(--space--2xs) var(--space--xs);
+    color: var(--white);
+
+    &:visited {
+      color: var(--white);
+    }
+
     &:active,
-    &:focus {
-      color: $darkest-blue;
-      background-color: $lightest-green;
-    }
-
-    &:focus {
-      outline-color: $darkest-blue;
-      outline-offset: -$border-width;
-    }
-
-    &.my-western-link {
-      @include breakpoint($medium) {
-        width: initial;
-      }
-      width: $toggle-size + $standard-spacing;
+    &:focus,
+    &:hover {
+      color: var(--dark-blue--darker--60);
+      outline-offset: var(--border-width--lg);
     }
   }
 
@@ -67,23 +59,17 @@
   }
 }
 
+/*------------------------------------------------------------------------------
+1. Display preferences
+------------------------------------------------------------------------------*/
 .font--dyslexia-friendly {
   .western-menu {
-    @include breakpoint($medium) {
-      .icon-with-text {
-        font-size: $dyslexic-icon-smaller;
-      }
-    }
     font-family: var(--font--dyslexia-friendly);
   }
 }
 
 .font--hyperlegible {
   .western-menu {
-    @include breakpoint($medium) {
-      font-size: 1rem;
-    }
     font-family: var(--font--hyperlegible);
-    font-size: $dyslexic-icon-smaller;
   }
 }
