@@ -1,12 +1,10 @@
-/**
-* @file
-* molecules/statistic/statistic.scss
-*/
-$vertical-statistic-width--min: 11.25rem;
-$vertical-statistic-width--max: 15rem;
-
+/*------------------------------------------------------------------------------
+Molecule: Statistic
+--------------------------------------------------------------------------------
+1. Stacked version
+------------------------------------------------------------------------------*/
 .block--statistic {
-  margin: $half-spacing 0;
+  margin: var(--space--xs) 0;
 
   .material-icons {
     font-size: var(--icon-size--lg);
@@ -14,10 +12,9 @@ $vertical-statistic-width--max: 15rem;
 
   .statistic-heading {
     position: relative;
-    margin: 0 0 $standard-spacing 0;
-    padding-bottom: $one-point-five-spacing;
-    font-family: $title-font;
-    font-size: $h5-font-size;
+    margin: 0 0 var(--space--sm) 0;
+    padding-bottom: var(--space--md);
+    font-size: var(--font-size--xl);
 
     &:after {
       position: absolute;
@@ -27,36 +24,36 @@ $vertical-statistic-width--max: 15rem;
       max-width: 12.5rem;
       content: "";
       transform: translatex(-50%);
-      border-width: $border-width--thicker;
+      border-width: var(--border-width--lg);
       border-style: solid;
     }
   }
 
   .number {
-    font-weight: $font-weight--bold;
+    font-weight: var(--font-weight--bold);
   }
 
   &.white-bg {
-    color: $blue;
-    background-color: $white;
+    color: inherit;
+    background-color: inherit;
 
     .block__title {
-      padding-bottom: $standard-spacing;
-      color: $blue;
+      padding-bottom: var(--space--sm);
+      color: inherit;
 
       &:after {
-        border-width: $border-width;
+        border-width: var(--border-width--md);
       }
     }
 
     a {
-      color: $blue;
+      color: inherit;
 
       &:active,
       &:focus,
       &:hover {
-        color: $link-color--hover;
-        background-color: $light-gray;
+        color: inherit;
+        background-color: inherit;
       }
     }
   }
@@ -65,40 +62,40 @@ $vertical-statistic-width--max: 15rem;
 /* Vertically styled blocks, which get laid out side-by-side in a collection */
 .block--statistic.statistic--vertical,
 .statistics-collection--side-by-side .block--statistic {
-  min-width: $vertical-statistic-width--min;
-  max-width: $vertical-statistic-width--max;
-  margin: 0 $half-spacing $standard-spacing;
-  padding: $standard-spacing;
+  min-width: 11.25rem;
+  max-width: 15rem;
+  margin: 0 var(--space--xs) var(--space--sm);
+  padding: var(--space--sm);
   text-align: center;
-  border-radius: $border-radius--round-square;
+  border-radius: var(--border-radius--rounder);
 
   .block__title {
     margin-top: 0;
-    font-family: $sans-serif;
   }
 
   .number {
-    margin-bottom: $standard-spacing;
-    font-size: $p-font-size--larger;
+    margin-bottom: var(--space--sm);
+    font-size: var(--font-size--lg);
   }
 
   .text {
-    margin-bottom: $standard-spacing;
-    font-size: $p-font-size--smaller;
+    margin-bottom: var(--space--sm);
+    font-size: var(--font-size--sm);
   }
 }
 
-/* Horizontally styled blocks, which get laid out stacked on top of one another in a collection */
+/*------------------------------------------------------------------------------
+1. Stacked version
+------------------------------------------------------------------------------*/
 .block--statistic.statistic--horizontal,
 .statistics-collection--stacked .block--statistic {
   display: grid;
-  justify-content: left;
-  align-items: center;
-  padding: $standard-spacing $double-spacing;
-  border-radius: $border-radius--round-square;
-
-  grid-column-gap: $double-spacing;
+  grid-column-gap: var(--space--md);
   grid-template-areas: "heading heading heading" "icon number text";
+  align-items: center;
+  justify-content: left;
+  padding: var(--space--sm) var(--space--md);
+  border-radius: var(--border-radius--rounder);
 
   .statistic-heading {
     grid-area: heading;
@@ -114,40 +111,13 @@ $vertical-statistic-width--max: 15rem;
   }
 
   .number {
-    @include breakpoint($large) {
-      font-size: $h3-font-size--max--largest;
-    }
     grid-area: number;
-    font-size: $h3-font-size--largest;
     margin: 0;
+    font-size: var(--font-size--3xl);
   }
 
   .text {
     grid-area: text;
     margin: 0;
-  }
-}
-
-.font--dyslexia-friendly {
-  .block--statistic {
-    &.white-bg,
-    &.statistic--vertical,
-    &.statistic--horizontal {
-      .block__title {
-        font-family: var(--font--dyslexia-friendly);
-      }
-    }
-  }
-}
-
-.font--hyperlegible {
-  .block--statistic {
-    &.white-bg,
-    &.statistic--vertical,
-    &.statistic--horizontal {
-      .block__title {
-        font-family: var(--font--hyperlegible);
-      }
-    }
   }
 }
