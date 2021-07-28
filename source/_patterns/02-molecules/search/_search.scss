@@ -1,45 +1,31 @@
-/**
-* @file
-* 02-molecules/content/search/_search.scss
-*/
-$search-input-size: 12.5rem;
-
+/*------------------------------------------------------------------------------
+Molecule: Search
+--------------------------------------------------------------------------------
+1. Display preferences
+------------------------------------------------------------------------------*/
 .search {
   @include breakpoint($medium) {
     right: inherit;
     left: inherit;
   }
+
   z-index: 0;
-  top: $toggle-size;
   display: flex;
   justify-content: end;
 
-  .toggle {
-    @include breakpoint($medium) {
-      &:hover,
-      &:focus,
-      &:active {
-        background-color: $dark-blue;
-      }
-    }
-    min-width: $toggle-size;
-
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: $darkest-blue;
-    }
-  }
-
-  .toggle-search {
-    @include breakpoint($medium) {
-      width: 5.45em;
-    }
+  .toggle-search,
+  .submit-search {
     order: 2;
-    border: $focus-outline--thicker transparent;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
 
+    &:active,
+    &:hover,
     &:focus {
-      border-color: inherit;
+      border: none;
+      background-image: var(--gradient--vertical--light-blue);
+      color: var(--dark-blue--darker--60);
     }
   }
 
@@ -49,13 +35,10 @@ $search-input-size: 12.5rem;
 
     .search-box {
       input {
-        width: $search-input-size;
         height: 100%;
         margin: 0;
-        padding: $half-spacing;
-        border-color: $blue;
         border-radius: 0;
-        font-size: $p-font-size--min;
+        font-size: var(--font-size--sm);
       }
     }
 
@@ -63,16 +46,12 @@ $search-input-size: 12.5rem;
       margin: 0;
       font-size: 0;
     }
-
-    .submit-search {
-      &:focus,
-      &:active {
-        border-color: inherit;
-      }
-    }
   }
 }
 
+/*------------------------------------------------------------------------------
+1. Display preferences
+------------------------------------------------------------------------------*/
 .font--dyslexia-friendly {
   .search .search-area .search-box {
     input {

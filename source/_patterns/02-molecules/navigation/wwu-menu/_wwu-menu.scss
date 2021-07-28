@@ -2,6 +2,7 @@
 Molecule: Navigation - Western menu
 --------------------------------------------------------------------------------
 1. Display preferences
+2. Dark mode
 ------------------------------------------------------------------------------*/
 #molecules-wwu-menu-html,
 #molecules-wwu-mobile-menu-html {
@@ -71,5 +72,32 @@ Molecule: Navigation - Western menu
 .font--hyperlegible {
   .western-menu {
     font-family: var(--font--hyperlegible);
+  }
+}
+
+/*------------------------------------------------------------------------------
+2. Dark mode
+------------------------------------------------------------------------------*/
+.dark-mode {
+  .western-menu {
+    .icon-with-text {
+      span {
+        color: var(--white);
+      }
+
+      &:visited {
+        span {
+          color: var(--white);
+        }
+      }
+
+      &:active,
+      &:focus,
+      &:hover {
+        span {
+          color: var(--dark-blue--darker--40);
+        }
+      }
+    }
   }
 }
