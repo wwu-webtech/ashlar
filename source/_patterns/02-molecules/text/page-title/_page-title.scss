@@ -1,30 +1,8 @@
-/**
-* @file
-* molecules/text/page-title/_page-title.scss
-*/
+/*------------------------------------------------------------------------------
+Molecule: Text - Page title
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .page-title,
 .pane-page-title h1 {
-  @include breakpoint($large) {
-    font-size: $h1-font-size--max--larger;
-  }
   text-align: left;
-  font-size: $h1-font-size--larger;
-}
-
-.font-size--smaller {
-  .page-title {
-    @include breakpoint($large) {
-      font-size: $h1-font-size--max--smaller;
-    }
-    font-size: $h1-font-size--smaller;
-  }
-}
-
-.font-size--larger {
-  .page-title {
-    @include breakpoint($large) {
-      font-size: $h1-font-size--max--larger;
-    }
-    font-size: $h1-font-size--larger;
-  }
 }
