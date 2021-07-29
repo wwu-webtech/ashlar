@@ -1,19 +1,17 @@
-/**
-* @file
-* organisms/cards/_cards.scss
-*/
-$spotlight-height--medium: 12.5rem;
-$spotlight-height--large: 18.75rem;
-
-.spotlight {
-  @include breakpoint($large) {
-    height: $spotlight-height--large;
-  }
-  height: $spotlight-height--medium;
-}
-
-/* Column card layouts, grid style */
-/* All grid column layouts collapse down to a single column on small screens*/
+/*------------------------------------------------------------------------------
+Organism: Cards
+--------------------------------------------------------------------------------
+1. Column layouts
+  a. Grid
+  b. Flex
+  c. Section divider
+2. Vertical layouts
+3. Flex layouts
+4. IE fix
+--------------------------------------------------------------------------------
+1. Column layouts
+------------------------------------------------------------------------------*/
+/* a. Grid -------------------------------------------------------------------*/
 .card-2col,
 .card-3col,
 .card-4col,
@@ -22,7 +20,7 @@ $spotlight-height--large: 18.75rem;
 .card-4col--view .view-content {
   display: grid;
 
-  grid-column-gap: $standard-spacing;
+  grid-column-gap: var(--space--sm);
   grid-template-columns: 1fr;
   grid-template-rows: auto;
 }
@@ -51,8 +49,7 @@ $spotlight-height--large: 18.75rem;
   }
 }
 
-/* Column card layouts, flex style */
-/* All flex column layouts collapse down to a single column on small screens*/
+/* b. Flex -------------------------------------------------------------------*/
 .card-2col--flex,
 .card-3col--flex,
 .card-4col--flex {
@@ -72,8 +69,8 @@ $spotlight-height--large: 18.75rem;
   .block--card,
   .event {
     @include breakpoint($small) {
-      flex: 0 0 calc(50% - #{$half-spacing});
-      margin-right: $half-spacing;
+      flex: 0 0 calc(50% - var(--space--xs));
+      margin-right: var(--space--xs);
     }
   }
 }
@@ -83,8 +80,8 @@ $spotlight-height--large: 18.75rem;
   .block--card,
   .event {
     @include breakpoint($small) {
-      flex: 0 0 calc(33.33% - #{$half-spacing});
-      margin-right: $half-spacing;
+      flex: 0 0 calc(33.33% - var(--space--xs));
+      margin-right: var(--space--xs);
     }
   }
 }
@@ -94,18 +91,20 @@ $spotlight-height--large: 18.75rem;
   .block--card,
   .event {
     @include breakpoint($small) {
-      flex: 0 0 calc(25% - #{$half-spacing});
-      margin-right: $half-spacing;
+      flex: 0 0 calc(25% - var(--space--xs));
+      margin-right: var(--space--xs);
     }
   }
 }
 
-/* For layouts using --flex, use this class to break out of the columns */
+/* a. Section divider --------------------------------------------------------*/
 .card--flex--section-divider {
   flex: 0 0 100%;
 }
 
-/* Vertical Card List */
+/*------------------------------------------------------------------------------
+1. Vertical layouts
+------------------------------------------------------------------------------*/
 .card-list {
   .card,
   .block--card,
@@ -114,18 +113,22 @@ $spotlight-height--large: 18.75rem;
   }
 }
 
-/* Additional styles for card blocks used in "flex layout" sections*/
+/*------------------------------------------------------------------------------
+1. Flex layouts
+------------------------------------------------------------------------------*/
 .layout--flex {
   .layout__region {
     .block--card {
       flex: 1;
-      margin: 0 $half-spacing;
+      margin: 0 var(--space--xs);
     }
   }
 }
 
-/* Internet exploreer */
-@media screen and (min-width:0\0) {
+/*------------------------------------------------------------------------------
+1. IE fix
+------------------------------------------------------------------------------*/
+@media screen and (min-width: 0\0) {
   .card-2col,
   .card-2col--view,
   .card-2col--flex {
