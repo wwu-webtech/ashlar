@@ -1,7 +1,8 @@
-/**
-* @file
-* organisms/site-header/_site-header.scss
-*/
+/*------------------------------------------------------------------------------
+Organism: Headers - Western header
+--------------------------------------------------------------------------------
+1. Mobile menu
+------------------------------------------------------------------------------*/
 .western-header {
   position: relative;
 }
@@ -13,61 +14,62 @@
       "logo site-name site-name"
       "logo western-header-region western-header-region"
       "main-nav main-nav main-nav";
-    grid-template-columns: (var(--logo-size) + ($triple-spacing * 2)) 1fr 2fr;
-    grid-template-rows: (var(--logo-size) / 3) (var(--logo-size) / 3) auto auto;
+    grid-template-columns: calc((var(--logo-size) + (var(--space--md) * 2))) 1fr 2fr;
+    grid-template-rows:
+      calc((var(--logo-size) / 3)) calc((var(--logo-size) / 3))
+      auto auto;
   }
-  display: grid;
-  background-color: $dark-blue;
 
+  display: grid;
   grid-template-areas:
     ".... logo menu-toggle"
     "site-name site-name site-name"
     "western-header-region western-header-region western-header-region";
-  grid-template-columns: $toggle-size auto $toggle-size;
+  grid-template-columns: var(--toggle-size--sm) auto var(--toggle-size--sm);
   grid-template-rows: var(--logo-size) auto auto;
+
+  a:not([class*="cta"]):not([class*="button"]) {
+    color: var(--white);
+
+    &:visited {
+      color: var(--white);
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: var(--dark-blue--darker--60);
+      }
+    }
+  }
 
   .site-name {
     @include breakpoint($medium) {
+      margin: 0;
+      padding: 0;
       padding: 0;
       text-align: left;
       border-top: none;
       border-bottom: none;
     }
-    @include breakpoint($large) {
-      font-size: $p-font-size--max--larger;
-    }
-    align-self: center;
-    margin: $standard-spacing;
-    margin: 0 !important;
-    padding: $standard-spacing;
-    text-align: center;
-    color: $white;
-    border-top: solid $border-width--thinner $blue;
-    border-bottom: solid $border-width--thinner $blue;
-    font-size: $p-font-size--larger;
 
     grid-area: site-name;
-
-    &.mobile {
-      .block--secondary-site-name {
-        margin: -$standard-spacing;
-        margin-top: $standard-spacing;
-        border-top: $border-width--thinner $blue solid;
-      }
-    }
+    align-self: center;
+    margin: var(--space--sm);
+    padding: var(--space--sm);
+    text-align: center;
+    border-top: solid var(--border-width--sm) var(--blue);
+    border-bottom: solid var(--border-width--sm) var(--blue);
+    font-size: var(--font-size--lg);
 
     .home-link {
       text-decoration: none;
-      color: $white;
+    }
 
-      &:hover,
-      &:active,
-      &:focus {
-        color: $dark-blue;
-      }
-
-      &:focus {
-        outline-color: $light-gray;
+    &.mobile {
+      .block--secondary-site-name {
+        margin: -var(--space--sm);
+        margin-top: var(--space--sm);
+        border-top: var(--border-width--sm) var(--blue) solid;
       }
     }
   }
@@ -75,31 +77,15 @@
   .western-logo {
     @include breakpoint($medium) {
       margin: initial;
+      padding: 0;
     }
+
     position: relative;
-    width: var(--logo-size) + $double-spacing;
+    grid-area: logo;
+    width: var(--logo-size) + var(--space--md);
     height: var(--logo-size);
     margin: auto;
-    padding-right: $toggle-size;
-
-    grid-area: logo;
-
-    .western-home-link {
-      color: $white;
-
-      &:focus {
-        outline-color: $white;
-        outline-offset: -$border-width;
-      }
-    }
-
-    .logo {
-      @include breakpoint($medium) {
-        margin-left: $triple-spacing;
-        background: transparent;
-      }
-      margin: auto;
-    }
+    padding-right: var(--toggle-size--sm);
   }
 
   .western-header-region {
@@ -111,30 +97,25 @@
   }
 }
 
-/* Mobile Menu */
+/*------------------------------------------------------------------------------
+1. Mobile menu
+------------------------------------------------------------------------------*/
 .toggle-menu {
   @include breakpoint($medium) {
     display: none;
   }
+
   position: relative;
+  grid-area: menu-toggle;
   width: initial;
-  color: $white;
+  color: var(--white);
+  border: none;
   border-radius: 0;
   background: transparent;
-  box-shadow: none;
   line-height: 1.1;
 
-  grid-area: menu-toggle;
-
-  &:hover,
-  &:focus {
-    color: $darkest-blue;
-    background: $lightest-green;
-    box-shadow: none;
-  }
-
-  &:focus {
-    outline-color: $darkest-blue;
+  &:active {
+    border: none;
   }
 }
 
@@ -143,20 +124,18 @@
   z-index: 1;
   top: 0;
   display: grid;
-  align-content: start;
-  min-height: 100vh;
-  transition: $fast-transition-speed $standard-ease;
-  transition-property: opacity, transform;
-  transform: translatex(0);
-  opacity: 1;
-  background-color: $dark-blue;
-
   grid-template-areas:
     "display-settings menu-toggle"
     "wwu-menu wwu-menu"
     "main-nav main-nav";
-  grid-template-columns: auto $toggle-size;
-  grid-template-rows: $toggle-size auto auto;
+  grid-template-columns: auto var(--toggle-size--sm);
+  grid-template-rows: auto;
+  align-content: start;
+  min-height: 100vh;
+  transition: var(--transition-speed--fast) var(--ease--standard);
+  transition-property: opacity, transform;
+  transform: translatex(0);
+  opacity: 1;
 
   &.open {
     visibility: visible;
@@ -180,9 +159,10 @@
         @include breakpoint($medium) {
           font-size: 1rem;
         }
+
         width: calc(var(--toggle-size--lg) + 1);
         height: calc(var(--toggle-size--lg) + 1);
-        font-size: 0.8rem;
+        font-size: var(--font-size--sm);
       }
     }
   }

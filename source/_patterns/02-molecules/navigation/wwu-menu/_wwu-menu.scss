@@ -22,6 +22,7 @@ Molecule: Navigation - Western menu
   justify-content: flex-end;
   max-width: 100vw;
   font-family: var(--font--condensed);
+  margin-top: var(--space--xs);
 
   .icon-with-text {
     @include breakpoint($medium) {
@@ -29,6 +30,7 @@ Molecule: Navigation - Western menu
       align-items: center;
       width: initial;
       height: initial;
+      min-height: var(--touch-target--min);
       background-size: 100%;
 
       .material-icons {
@@ -39,9 +41,12 @@ Molecule: Navigation - Western menu
       }
     }
 
-    min-height: var(--touch-target--min);
     padding: var(--space--2xs) var(--space--xs);
     color: var(--white);
+
+    &.report-bias-quick-link {
+      width: initial;
+    }
 
     &:visited {
       color: var(--white);

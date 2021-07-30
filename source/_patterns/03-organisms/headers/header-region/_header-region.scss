@@ -1,8 +1,7 @@
-/**
- * @file
- * organisms/headers/header-region/header-region.scss
- */
-
+/*------------------------------------------------------------------------------
+Organism: Headers - Header region
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .western-header-region {
   .block {
     @include breakpoint($medium) {
@@ -11,64 +10,26 @@
       text-align: left;
       border: none;
     }
-    @include breakpoint($large) {
-      font-size: $p-font-size--max--smaller;
-    }
     @include dark-blue-bg;
-    padding: $standard-spacing;
+    padding: var(--space--sm);
     text-align: center;
-    color: $white;
-    border-bottom: solid $border-width--thinner $blue;
-    font-size: $p-font-size--smaller;
-
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      margin: 0;
-      font-family: $sans-serif;
-      font-size: $p-font-size--smaller;
-      font-weight: $font-weight--regular;
-    }
-
-    a:not([class]) {
-      text-decoration: none;
-      color: $white;
-    }
+    border-bottom: solid var(--border-width--sm) var(--blue);
   }
 
   .menu {
-    @include breakpoint ($small) {
+    @include breakpoint($small) {
       justify-content: end;
     }
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     margin-bottom: 0;
-    padding: $standard-spacing 0;
+    padding: var(--space--sm) 0;
 
     li {
-      margin-right: $standard-spacing;
-      margin-bottom: $half-spacing;
+      margin-right: var(--space--sm);
+      margin-bottom: var(--space--xs);
       border: none;
-
-      a {
-        padding: $half-spacing;
-        text-align: center;
-        color: white;
-        border: solid $border-width--thinner $white;
-        border-radius: $border-radius--round;
-        font-size: 1rem;
-        line-height: 1em;
-
-        &:hover,
-        &:active,
-        &:focus {
-          color: $dark-blue;
-          outline-color: $white;
-        }
-      }
     }
   }
 }

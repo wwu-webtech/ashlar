@@ -6,8 +6,8 @@ Atom: Icons - Icons with Text
 ------------------------------------------------------------------------------*/
 .icon-with-text {
   display: inline-grid;
-  justify-content: center;
   align-content: center;
+  justify-content: center;
   width: var(--toggle-size--lg);
   height: var(--toggle-size--lg);
   text-align: center;
@@ -25,6 +25,10 @@ Atom: Icons - Icons with Text
   &.small {
     width: var(--toggle-size--md);
     height: var(--toggle-size--md);
+
+    .material-icons {
+      font-size: var(--icon-size--sm);
+    }
   }
 
   &.medium {

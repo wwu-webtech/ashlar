@@ -15,7 +15,6 @@ Molecule: Display Settings
   grid-area: display-settings;
   align-self: start;
   justify-content: flex-start;
-  margin-bottom: var(--space--xl);
   font-family: var(--font--condensed);
 
   .wwu-menu {
@@ -40,20 +39,17 @@ Molecule: Display Settings
   }
 
   .toggle-display-settings {
-    @include breakpoint($medium) {
-      margin-left: -0.525rem;
-    }
-
     width: initial;
     height: initial;
+    min-height: var(--touch-target--min);
     border: none;
     outline-offset: calc(-1 * var(--border-width--md));
 
     &:hover,
     &:active,
     &:focus {
-      color: var(--dark-blue--darker--40);
-      background-color: var(--light-green--lighter--40);
+      color: var(--dark-blue--darker--60);
+      background-image: var(--gradient--vertical--light-blue);
     }
 
     &:focus {
