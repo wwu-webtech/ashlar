@@ -33,9 +33,9 @@ page:
                                           with:
                                             label: "Spotlight"
                                             cards:
-                                              - molecules-card-html-tag
-                                              - molecules-card-html-tag
-                                              - molecules-card-html-tag
+                                              - molecules-card-html
+                                              - molecules-card-html
+                                              - molecules-card-html
                                       - include():
                                           pattern: organisms-block-template-html
                                           with:

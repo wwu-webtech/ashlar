@@ -457,7 +457,7 @@ backgrounds are light gray based.
   }
 
   .blue-bg {
-    @include dark-blue-bg;
+    background-color: var(--blue--darker--40);
   }
 }
 

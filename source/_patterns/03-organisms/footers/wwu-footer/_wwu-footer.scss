@@ -1,46 +1,39 @@
-/**
-* @file
-* organisms/wwu-footer/_wwu-footer.scss
-*/
-
+/*------------------------------------------------------------------------------
+Organism: Footers - Western footer
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .wwu-footer {
-  @include dark-blue-bg;
   @include breakpoint($small) {
-    -ms-grid-columns: $standard-spacing 1fr 1fr $standard-spacing;
-    -ms-grid-rows: $triple-spacing auto auto $triple-spacing;
-    grid-template-areas: ". ... ... ."
-    ". logo info  ."
-    ". statement icons ."
-    ". copyright copyright .";
-    grid-template-columns: $standard-spacing 1fr 1fr $standard-spacing;
-    grid-template-rows: $triple-spacing auto auto $triple-spacing;
+    -ms-grid-columns: var(--space--sm) 1fr 1fr var(--space--sm);
+    -ms-grid-rows: var(--space--lg) auto auto var(--space--lg);
+
+    grid-template-areas:
+      ". ... ... ."
+      ". logo info  ."
+      ". statement icons ."
+      ". copyright copyright .";
+    grid-template-columns: var(--space--sm) 1fr 1fr var(--space--sm);
+    grid-template-rows: var(--space--lg) auto auto var(--space--lg);
     justify-items: end;
   }
   @include breakpoint($large) {
+    -ms-grid-columns: calc((100vw - var(--content-area-max-width)) / 2) auto
+      auto auto calc((100vw - var(--content-area-max-width)) / 2);
+
     display: -ms-grid;
     display: grid;
-
-    -ms-grid-columns: calc((100vw - #{$max-content-width})/2) auto auto auto calc((100vw - #{$max-content-width})/2);
-    grid-template-areas: ". ... ... ... ."
-    ". logo statement info  ."
-    ". logo statement icons ."
-    ". copyright copyright copyright .";
-    grid-template-columns: calc((100vw - #{$max-content-width})/2) auto auto auto calc((100vw - #{$max-content-width})/2);
+    grid-template-areas:
+      ". ... ... ... ."
+      ". logo statement info  ."
+      ". logo statement icons ."
+      ". copyright copyright copyright .";
+    grid-template-columns: calc((100vw - var(--content-area-max-width)) / 2) auto auto auto calc(
+        (100vw - var(--content-area-max-width)) / 2
+      );
   }
+
   display: flex;
   flex-flow: column;
-
-  a {
-    color: $white;
-    border-bottom-color: $light-green;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: $light-blue;
-      border-bottom-color: transparent;
-    }
-  }
 
   .logo {
     @include breakpoint($small) {
@@ -52,8 +45,10 @@
       justify-self: center;
     }
     @include breakpoint($medium) {
+      align-self: center;
       justify-self: start;
     }
+
     width: var(--logo-size);
     height: var(--logo-size);
     margin: 0 auto;
@@ -67,56 +62,58 @@
       -ms-grid-row: 2;
       -ms-grid-row-span: 2;
     }
-    align-self: start;
-    padding: 0 $double-spacing;
+
+    align-self: center;
+    margin-top: var(--sapce--sm);
+    padding: 0 var(--space--md);
+    text-align: center;
 
     p {
-      font-size: $p-font-size--smaller;
-      font-weight: $font-weight--light;
+      font-weight: var(--font-weight--light);
     }
   }
 
   .western-info {
     @include breakpoint($large) {
-      align-self: end;
-      text-align: right;
-
       grid-area: info;
       -ms-grid-column: 4;
       -ms-grid-column-span: 1;
       -ms-grid-row: 2;
       -ms-grid-row-span: 1;
+      align-self: end;
+      text-align: right;
     }
+
     text-align: center;
   }
 
   .social-media-links {
     @include breakpoint($small) {
-      justify-content: end;
-      align-content: start;
-
       grid-area: icons;
       -ms-grid-column: 4;
       -ms-grid-column-span: 1;
       -ms-grid-row: 3;
       -ms-grid-row-span: 1;
+      align-content: start;
+      justify-content: end;
     }
+
     justify-content: center;
     margin: 0.75rem auto;
 
     .social-icon {
-      margin: $standard-spacing 0 0 $standard-spacing;
+      margin: var(--space--sm) 0 0 var(--space--sm);
     }
   }
 
   .copyright {
     @include breakpoint($small) {
-      margin: auto;
-
       grid-area: copyright;
+      margin: auto;
     }
+
     text-align: center;
-    font-size: $p-font-size--smaller;
-    font-weight: $font-weight--light;
+    font-size: var(--font-size--sm);
+    font-weight: var(--font-weight--light);
   }
 }
