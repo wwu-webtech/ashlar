@@ -1,12 +1,9 @@
-/**
-* @file
-* sites/mabel/_mabel.scss
-*/
-$mabel-site-name-height: 2.75rem;
-
-/* General MABEL styles */
+/*------------------------------------------------------------------------------
+Templates: Sites - MABEL
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .page-islandora {
-  /* Hide WWU Search as it's confusing to have multiple searches */
+  /* Hide WWU Search as it's confusing to have multiple searches -------------*/
   .western-header {
     .search {
       display: none;
@@ -19,13 +16,13 @@ $mabel-site-name-height: 2.75rem;
     }
   }
 
-  /* Fix contextual links in splash with no header image */
+  /* Fix contextual links in splash with no header image ---------------------*/
   .splash > div:nth-of-type(1) div {
     width: initial;
     height: initial;
   }
 
-  /* Reorder so left sidebar goes below main content area on 25/75 layouts */
+  /* Reorder so left sidebar goes below main content area on 25/75 layouts ---*/
   .layout--twocol-25-75 {
     .layout__region--top {
       order: 0;
@@ -50,44 +47,30 @@ $mabel-site-name-height: 2.75rem;
   /* Style sidebar blocks */
   .layout__region--first {
     .panel-pane {
-      margin-bottom: $standard-spacing;
-      padding: $standard-spacing;
-      background: $lightest-gray;
-      font-size: $p-font-size--smaller;
-    }
-
-    a {
-      border-bottom-color: transparent;
-
-      &:hover,
-      &:focus,
-      &:active {
-        color: $dark-green;
-        border-bottom-color: $dark-green;
-      }
+      @include lightest-gray-bg margin-bottom: var(--space--sm);
+      padding: var(--space--sm);
+      font-size: var(--font-size--sm);
     }
 
     h2 {
       margin-top: 0;
-      padding-bottom: $standard-spacing;
-      border-bottom-width: $border-width--thicker;
-      font-family: $sans-serif;
-      font-size: $p-font-size;
+      padding-bottom: var(--space--sm);
+      border-bottom-width: var(--border-width--lg);
+      font-size: var(--font-size--md);
     }
 
     h3 {
-      color: $dark-green;
-      font-family: $sans-serif;
-      font-size: $p-font-size--smaller;
+      color: var(--dark-green);
+      font-size: var(--font-size--sm);
     }
 
     input,
     select {
-      border-width: $border-width;
+      border-width: var(--border-width--md);
     }
 
     input[type="submit"] {
-      padding: $half-spacing $standard-spacing;
+      padding: var(--space--xs) var(--space--sm);
     }
 
     label {
@@ -95,7 +78,7 @@ $mabel-site-name-height: 2.75rem;
     }
   }
 
-  /* Date picker resets */
+  /* Date picker resets ------------------------------------------------------*/
   .ui-datepicker {
     a {
       margin: initial;
@@ -115,20 +98,10 @@ $mabel-site-name-height: 2.75rem;
       .form-submit {
         width: 100%;
         font-size: 1em;
-
-        &:hover,
-        &:focus,
-        &:active {
-          background: $darkest-blue;
-        }
       }
 
       .item-list {
         display: none;
-      }
-
-      h2 {
-        font-size: $h4-font-size;
       }
     }
 
@@ -143,31 +116,5 @@ $mabel-site-name-height: 2.75rem;
 
   .form-select {
     max-width: 100%;
-  }
-}
-
-.font--dyslexia-friendly {
-  .page-islandora {
-    .layout__region--first {
-      .panel-pane {
-        h2,
-        h3 {
-          font-family: var(--font--dyslexia-friendly);
-        }
-      }
-    }
-  }
-}
-
-.font--hyperlegible {
-  .page-islandora {
-    .layout__region--first {
-      .panel-pane {
-        h2,
-        h3 {
-          font-family: var(--font--hyperlegible);
-        }
-      }
-    }
   }
 }

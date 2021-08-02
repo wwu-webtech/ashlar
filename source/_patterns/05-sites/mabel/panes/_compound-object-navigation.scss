@@ -1,14 +1,13 @@
-/**
-* @file
-* sites/mabel/panes/_compound-object-navigation.scss
-*/
-
+/*------------------------------------------------------------------------------
+Templates: Sites - MABEL - Compound object navigation
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .compound-navigation {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: end;
-  font-size: $p-font-size--smaller;
+  font-size: var(--font-size--sm);
 }
 
 #islandora-compound-sequence-position {
@@ -20,16 +19,16 @@
 #islandora-compound-next-link {
   float: none;
   margin: 0;
-  padding: $half-spacing $standard-spacing;
-  color: $black;
-  background: $light-gray;
+  padding: var(--space--xs) var(--space--sm);
+  color: var(--black);
+  background: var(--gray--lighter--60);
   line-height: inherit;
 
   &:hover,
   &:focus,
   &:active {
-    color: $white;
-    background: $gray;
+    color: var(--white);
+    background: var(--gray);
   }
 }
 

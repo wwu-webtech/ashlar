@@ -1,25 +1,25 @@
-/**
-* @file
-* sites/mabel/panes/_oral-histories.scss
-*/
+/*------------------------------------------------------------------------------
+Templates: Sites - MABEL - Oral histories
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .islandora-oralhistories-content {
   .ui-widget {
-    font-size: $p-font-size--smaller;
+    font-size: var(--font-size--sm);
   }
 
   .ui-widget-header {
     border: none;
-    border-bottom: solid $border-width--thicker $gray;
+    border-bottom: solid var(--border-width--lg) var(--gray);
     background: transparent;
   }
 
   .ui-tabs {
-    padding: $half-spacing 0 0 0;
+    padding: var(--space--xs) 0 0 0;
     border: none;
   }
 
   .ui-tabs .ui-tabs-nav {
-    margin-bottom: $half-spacing;
+    margin-bottom: var(--space--xs);
   }
 
   .ui-state-active,
@@ -27,13 +27,13 @@
   .ui-widget-header .ui-state-active {
     border: none;
     border-radius: 0;
-    background: $gray;
+    background: var(--gray);
   }
 
   .ui-state-active a,
   .ui-state-active a:link,
   .ui-state-active a:visited {
-    color: $white;
+    color: var(--white);
   }
 
   .ui-tabs .ui-tabs-panel {

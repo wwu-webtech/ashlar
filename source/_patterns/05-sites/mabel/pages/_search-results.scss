@@ -1,14 +1,14 @@
-/**
-* @file
-* sites/mabel/pages/_search-results.scss
-*/
+/*------------------------------------------------------------------------------
+Templates: Sites - MABEL - Search results
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 
 .page-islandora-search {
   .pane-page-title {
     h1 {
       display: inline-block;
       margin-top: 0;
-      margin-right: $standard-spacing;
+      margin-right: var(--space--sm);
     }
   }
 
@@ -17,8 +17,8 @@
   }
 
   .islandora-solr-search-result {
-    padding: 0 $standard-spacing $double-spacing;
-    border-bottom: solid $border-width--thinner $gray;
+    padding: 0 var(--space--sm) var(--space--md);
+    border-bottom: solid var(--border-width--sm) var(--gray);
 
     &:last-of-type {
       border-bottom: none;
@@ -34,7 +34,7 @@
     }
     .solr-fields dt,
     .solr-fields dd {
-      border-color: $light-gray;
+      border-color: var(--gray--lighter--60);
     }
 
     dl {
@@ -53,7 +53,7 @@
 
     .islandora-inline-metadata {
       dt {
-        font-weight: $font-weight--regular;
+        font-weight: var(--font-weight--regular);
       }
     }
   }
@@ -63,26 +63,27 @@
       margin: 0;
       padding: 0;
       border: none;
-      font-size: $p-font-size--smaller;
+      font-size: var(--font-size--sm);
     }
   }
 
   .layout__region--second {
     position: relative;
-    padding-top: $double-spacing;
+    padding-top: var(--space--md);
   }
 }
 
-/* The following are for the resul limit/sort/display options, which also affect object 'result' pages, ie 'browse the collection' */
+/* The following are for the resul limit/sort/display options, which also affect
+object 'result' pages, ie 'browse the collection' ----------------------------*/
 .expand-solr-panel {
   position: relative;
   width: 100%;
   margin: 0;
-  padding: $half-spacing $standard-spacing;
+  padding: var(--space--xs) var(--space--sm);
   text-align: left;
-  color: $black;
+  color: var(--black);
   border-radius: 0;
-  background-color: $light-gray;
+  background-color: var(--gray--lighter--60);
 
   .material-icons {
     position: absolute;
@@ -104,12 +105,12 @@
 
 #skip-to-search-results:focus {
   position: relative !important;
-  margin-right: $double-spacing;
+  margin-right: var(--space--md);
 }
 
 #islandora-solr-result-count {
   display: inline-block;
-  margin-right: $double-spacing;
+  margin-right: var(--space--md);
 }
 
 #secondary-display-profiles {
@@ -127,5 +128,5 @@
 }
 #edit-date-filter-date-filter-from,
 #edit-date-filter-date-filter-to {
-  padding: $half-spacing;
+  padding: var(--space--xs);
 }
