@@ -212,7 +212,7 @@ e. Logo
 
 /* b. Content areas ---------------------------------------------------------*/
 --content-area-max-width: 81.25rem; // replaces $max-content-width
---content-area-max-width--smaller: 62.5rem;
+--content-area-max-width--sm: 62.5rem;
 
 /* c. Content area grids ----------------------------------------------------*/
 --grid-columns--sm: var(--standard-spacing), 1fr, var(--standard-spacing);

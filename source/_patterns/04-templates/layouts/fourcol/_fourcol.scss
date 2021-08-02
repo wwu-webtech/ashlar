@@ -1,8 +1,7 @@
-/*
-* @file
-* templates/layouts/fourcol/_fourcol.scss
-*/
-
+/*------------------------------------------------------------------------------
+Templates: Layouts - Four column
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .layout--fourcol-section {
   display: flex;
   flex-wrap: wrap;
@@ -25,8 +24,8 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 100vw;
-  margin-right: -$standard-spacing;
-  margin-left: -$standard-spacing;
+  margin-right: calc(-1 * var(--space--sm));
+  margin-left: calc(-1 * var(--space--sm));
 
   > .layout__region {
     flex: 0 1 100%;
