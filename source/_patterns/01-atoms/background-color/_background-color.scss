@@ -320,11 +320,9 @@ backgrounds are light gray based.
     color: var(--dark-blue);
   }
 
-  a:not([class*="cta"]),
-  a:not([class*="button"]) {
+  a:not([class*="cta"]):not([class*="button"]) {
     text-decoration-color: var(--dark-blue);
     color: var(--blue--darker--40);
-
     &:visited {
       color: var(--purple);
     }

@@ -1,35 +1,35 @@
-/**
-* @file
-* organisms/page-404/_page-404.scss
-*/
-
+/*------------------------------------------------------------------------------
+Organism: Page-404
+--------------------------------------------------------------------------------
+1. Animations
+  a. Boat timing
+  b. Boat waves
+  c. Fog timing
+  d. Big waves
+  e. Rock waves
+2. Colors
+------------------------------------------------------------------------------*/
 .wrapper--404 {
-  @include breakpoint($medium) {
-    margin-top: -$toggle-size * 2;
-  }
-  @include breakpoint($large) {
-    margin-top: -$toggle-size * 2;
-  }
-  background: $dark-blue;
+  background: var(--dark-blue);
 
   h1 {
     padding: 0;
-    color: $lightest-green;
-    font-size: $h1-font-size--larger;
+    color: var(--light-green--lighter--40);
+    font-size: var(--font-size--9xl);
   }
 
   .text {
-    padding: $triple-spacing;
+    padding-bottom: var(--space--lg);
     text-align: center;
 
     .tagline {
-      color: $white;
+      color: var(--white);
     }
   }
-}
 
-.svg-box {
-  margin-bottom: -5vw;
+  svg {
+    width: 100%;
+  }
 }
 
 .site-header {
@@ -43,8 +43,10 @@
   }
 }
 
-/* Animations */
-/* Boat times */
+/*------------------------------------------------------------------------------
+1. Animations
+------------------------------------------------------------------------------*/
+/*  a. Boat timing -----------------------------------------------------------*/
 #tossingboat {
   transform-origin: 50% 50%;
   -webkit-animation-name: tossingboat;
@@ -81,7 +83,7 @@
   }
 }
 
-/* Boat waves */
+/*  b. Boat waves ------------------------------------------------------------*/
 #rockingwaves {
   transform-origin: 50% 50%;
   -webkit-animation-name: rockingwaves;
@@ -119,7 +121,7 @@
   }
 }
 
-/* Fog times */
+/*  c. Fog timing ------------------------------------------------------------*/
 #fog {
   -webkit-animation-name: fog;
   -moz-animation-name: fog;
@@ -170,7 +172,8 @@
 
   30%,
   50% {
-    -webkit-transform: scale(1.3) rotate(-4deg) translate3d(-3.125, -1rem, -1rem);
+    -webkit-transform: scale(1.3) rotate(-4deg)
+      translate3d(-3.125, -1rem, -1rem);
     opacity: 0.4;
   }
 
@@ -210,7 +213,7 @@
   }
 }
 
-/* Big Waves */
+/*  d. Big waves -------------------------------------------------------------*/
 #over_waves {
   transform-origin: 50% 50%;
   -webkit-animation-name: wave;
@@ -247,7 +250,7 @@
   }
 }
 
-/* Back Rock Waves */
+/*  e. Rock waves ------------------------------------------------------------*/
 #backrock_waves {
   transform-origin: 50% 50%;
   -webkit-animation-name: backnforth;
@@ -301,36 +304,38 @@
   }
 }
 
-/* Colors */
+/*------------------------------------------------------------------------------
+2. Colors
+------------------------------------------------------------------------------*/
 .vik-st0 {
   opacity: 1;
 
-  fill: #72b8db;
+  fill: var(--dark-blue--darker--20);
 }
 .vik-st1 {
-  fill: #f7f7f7;
+  fill: var(--gray--lighter--80);
 }
 .vik-st2 {
-  fill: #e0e0e0;
+  fill: var(--gray--lighter--60);
 }
 .vik-st3 {
-  fill: #ccc;
+  fill: var(--gray--lighter--40);
 }
 .vik-st4 {
-  fill: #bfbfbf;
+  fill: var(--gray--lighter--20);
 }
 .vik-st5 {
-  fill: #808080;
+  fill: var(--gray--darker--20);
 }
 .vik-st6 {
-  fill: $dark-blue;
+  fill: var(--dark-blue);
 }
 .vik-st7 {
-  fill: #444;
+  fill: var(--gray--darker--40);
 }
 .vik-st8 {
   fill: none;
-  stroke: #211e1c;
+  stroke: var(--gray--darker--80);
   stroke-miterlimit: 10;
   stroke-width: 2;
 }
@@ -338,28 +343,28 @@
   opacity: 0.85;
 }
 .vik-st10 {
-  fill: $blue;
+  fill: var(--blue);
 }
 .vik-st11 {
-  fill: $white;
+  fill: var(--white);
 }
 .vik-st12 {
-  stroke: #211e1c;
+  stroke: var(--gray--darker--80);
   stroke-miterlimit: 10;
   stroke-width: 5;
 }
 .vik-st13 {
   opacity: 0.87;
 
-  fill: $dark-blue;
+  fill: var(--dark-blue);
 }
 .vik-st14 {
   opacity: 0.85;
 
-  fill: $dark-blue;
+  fill: var(--dark-blue);
 }
 .vik-st15 {
-  fill: #353535;
+  fill: var(--gray--darker--60);
 }
 .vik-st16 {
   opacity: 0.87;
@@ -386,23 +391,6 @@
 .vik-st25 {
   font-size: 3.06rem;
 }
-
-.font--dyslexia-friendly {
-  .wrapper--404 {
-    .headings--big-bold {
-      h1 {
-        font-family: var(--font--dyslexia-friendly);
-      }
-    }
-  }
-}
-
-.font--hyperlegible {
-  .wrapper--404 {
-    .headings--big-bold {
-      h1 {
-        font-family: var(--font--hyperlegible);
-      }
-    }
-  }
+.vik-st26 {
+  fill: var(--gray--darker--80);
 }

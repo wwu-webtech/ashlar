@@ -9,22 +9,21 @@ Atom: Icons - My Western Icons
   text-align: center;
   color: var(--dark-blue);
   background-size: 100%;
-}
 
-svg {
-  fill: var(--dark-blue);
+  svg {
+    fill: var(--dark-blue);
 
-  display: block;
-  width: var(--toggle-size--md);
-  margin: auto;
-  margin-bottom: var(--space--xs);
-  transition: var(--ease-standard) var(--transition-speed--fast) fill;
+    display: block;
+    width: var(--toggle-size--md);
+    margin: auto;
+    margin-bottom: var(--space--xs);
+    transition: var(--ease-standard) var(--transition-speed--fast) fill;
 
-  @media print {
-    fill: var(--black);
+    @media print {
+      fill: var(--black);
+    }
   }
 }
-
 /*------------------------------------------------------------------------------
 1. Dark mode
 ------------------------------------------------------------------------------*/
