@@ -80,11 +80,6 @@ Molecule: Main navigation/ultimenu custom styles
         &:hover {
           background-size: 0 0;
         }
-
-        &:focus {
-          outline-color: var(--black);
-          outline-offset: calc(-1 * var(--border-width--md));
-        }
       }
 
       .expand-icon {

@@ -2,8 +2,9 @@
 Atom: Tables
 --------------------------------------------------------------------------------
 1. Base Styles
-2. Alternates
-3. Dark Mode
+2. Responsive table container
+3. Alternates
+4. Dark Mode
 ------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------
 1. Base Styles
@@ -73,6 +74,10 @@ table {
 
   &.fixed {
     table-layout: auto;
+  }
+
+  a {
+    line-height: 1.2rem;
   }
 }
 
@@ -178,26 +183,8 @@ td {
 }
 
 /*------------------------------------------------------------------------------
-1. Alternates
+2. Responsive table container
 ------------------------------------------------------------------------------*/
-.light-blue {
-  @include color-table(
-    var(--table-blue),
-    var(--table-blue--darker--5),
-    var(--table-blue--darker--10),
-    var(--table-blue--darker--15)
-  );
-}
-
-.lightest-gray {
-  @include color-table(
-    var(--white),
-    var(--table-gray),
-    var(--table-gray--darker--5),
-    var(--table-gray--darker--10)
-  );
-}
-
 .responsive-table {
   @include breakpoint($medium) {
     overflow-x: revert;
@@ -220,6 +207,27 @@ td {
 
     text-align: left;
   }
+}
+
+/*------------------------------------------------------------------------------
+3. Alternates
+------------------------------------------------------------------------------*/
+.light-blue {
+  @include color-table(
+    var(--table-blue),
+    var(--table-blue--darker--5),
+    var(--table-blue--darker--10),
+    var(--table-blue--darker--15)
+  );
+}
+
+.lightest-gray {
+  @include color-table(
+    var(--white),
+    var(--table-gray),
+    var(--table-gray--darker--5),
+    var(--table-gray--darker--10)
+  );
 }
 
 .align-top {
@@ -249,7 +257,7 @@ td {
 }
 
 /*------------------------------------------------------------------------------
-3. Dark Mode
+4. Dark Mode
 ------------------------------------------------------------------------------*/
 .dark-mode {
   @include color-table(

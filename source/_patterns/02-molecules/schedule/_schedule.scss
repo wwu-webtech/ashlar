@@ -21,6 +21,10 @@ Molecule: Schedule
       &:focus-within {
         border-radius: var(--border-radius--rounder);
       }
+
+      a {
+        color: inherit;
+      }
     }
   }
 
@@ -28,7 +32,7 @@ Molecule: Schedule
     margin: var(--space--xs) 0;
     font-size: var(--font-size--lg);
 
-    a:not([class*="cta"]) {
+    a:not([class*="cta"]):not([class*="button"]) {
       text-decoration: none;
 
       &:after {
@@ -41,11 +45,6 @@ Molecule: Schedule
         transition: var(--transition-speed--fast) var(--ease--standard)
           box-shadow;
         box-shadow: var(--shadow--soft);
-
-        &:focus {
-          outline: dotted var(--border-width--md);
-          outline-offset: var(--border-width--md);
-        }
       }
 
       &:active,
@@ -56,6 +55,11 @@ Molecule: Schedule
 
       &:focus {
         outline: none;
+
+        &:after {
+          outline: dotted var(--border-width--md);
+          outline-offset: var(--border-width--md);
+        }
       }
 
       &:hover:after,
