@@ -1,8 +1,7 @@
-/*
- * @file
- * templates/layouts/onecol/_layout--twocol.scss
- */
-
+/*------------------------------------------------------------------------------
+Templates: Layouts - Retired Layouts - Two col
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .layout--twocol {
   display: flex;
   flex-wrap: wrap;
@@ -16,7 +15,7 @@
   @include breakpoint($medium) {
     flex: 0 1 50%;
     max-width: 50%;
-    padding-right: $standard-spacing;
+    padding-right: var(--space--sm);
   }
 }
 
@@ -24,6 +23,6 @@
   @include breakpoint($medium) {
     flex: 0 1 50%;
     max-width: 50%;
-    padding-left: $standard-spacing;
+    padding-left: var(--space--sm);
   }
 }
