@@ -1,16 +1,13 @@
-/**
- * @file
- * helpers/_align.scss
- * Helper classes to adjust alignments
- */
-
-
-/* For align classes, added by drupal to float block elements, add spacing from text */
+/*------------------------------------------------------------------------------
+Helpers: Align
+--------------------------------------------------------------------------------
+For adjusting alignments.
+------------------------------------------------------------------------------*/
 .align-right {
-  margin-left: $standard-spacing;
+  margin-left: var(--space--sm);
 }
 .align-left {
-  margin-right: $standard-spacing;
+  margin-right: var(--space--sm);
 }
 .align-center {
   margin-right: auto;
@@ -27,7 +24,6 @@
   }
 }
 
-/* Adjust text-align properties */
 .text-align-left {
   text-align: left;
 }
