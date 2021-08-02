@@ -1,27 +1,26 @@
-/**
-* @file
-* organisms/views/views-exposed-form/_views-exposed-form.scss
-*/
-
+/*------------------------------------------------------------------------------
+Organism: Views - Views exposed form
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .views-exposed-form {
   display: flex;
   flex: 0 1 100%;
   flex-flow: row wrap;
   align-items: flex-end;
-  margin-bottom: $standard-spacing;
+  margin-bottom: var(--space--sm);
 
   > div {
-    margin-right: $half-spacing;
+    margin-right: var(--space--xs);
   }
 
   input,
   select,
   label {
     @include font-size--smaller;
-    margin-bottom: $half-spacing;
+    margin-bottom: var(--space--xs);
   }
 
   .form-actions {
-    margin-bottom: $half-spacing;
+    margin-bottom: var(--space--xs);
   }
 }
