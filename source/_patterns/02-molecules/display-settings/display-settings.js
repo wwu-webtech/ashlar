@@ -98,7 +98,7 @@ function set_font_preference() {
     return;
   } else {
     try {
-      localStorage.setItem("wwu_preferred_font", "default-font");
+      localStorage.setItem("wwu_preferred_font", "font--default");
     } catch (e) {
       return;
     }
@@ -129,27 +129,27 @@ function global_reset(event) {
   if (event.target == reset_preferences) {
     if (
       current_theme_value !== "default-theme" ||
-      current_font_value !== "default-font"
+      current_font_value !== "font--default"
     ) {
       var theme_default = theme_options.querySelector(
         'input[value="default-theme"]'
       );
       var font_default = font_options.querySelector(
-        'input[value="default-font"]'
+        'input[value="font--default"]'
       );
 
       try {
         localStorage.setItem("wwu_preferred_theme", "default-theme");
-        localStorage.setItem("wwu_preferred_font", "default-font");
+        localStorage.setItem("wwu_preferred_font", "font--default");
       } catch (e) {
         return;
       }
-      body.classList.add("default-theme", "default-font");
+      body.classList.add("default-theme", "font--default");
       body.classList.remove(
         "dark-mode",
         "font--dyslexia-friendly",
         "font--hyperlegible",
-        "serif"
+        "font--serif"
       );
       theme_default.checked = true;
       font_default.checked = true;

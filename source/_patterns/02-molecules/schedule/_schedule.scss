@@ -92,6 +92,16 @@ Molecule: Schedule
   .block--schedule {
     .schedule-item {
       @include dark-blue-bg;
+
+      a:not([class*="cta"]):not([class*="button"]) {
+        color: inherit;
+
+        &:active,
+        &:hover,
+        &:focus {
+          color: inherit;
+        }
+      }
     }
   }
 }

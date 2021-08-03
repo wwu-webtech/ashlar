@@ -245,13 +245,14 @@ Molecule: Image Link
 ------------------------------------------------------------------------------*/
 .dark-mode {
   .image-link {
-    a {
+    a:not([class*="cta"]):not([class*="button"]) {
       color: var(--white);
 
       &:active,
       &:focus,
       &:hover {
         color: var(--white);
+        background-image: none;
       }
     }
 
@@ -266,7 +267,9 @@ Molecule: Image Link
 
   .green {
     .image-link {
-      a {
+      a:not([class*="cta"]):not([class*="button"]) {
+        color: var(--dark-blue--darker--40);
+
         &:hover,
         &:focus,
         &:active {

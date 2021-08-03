@@ -66,6 +66,7 @@ Black, darkest blue, dark blue, and dark green are black based.
     &:active {
       color: var(--black);
       outline-color: var(--blue--lighter--40);
+      background-image: var(--gradient--vertical--light-blue);
     }
   }
 
@@ -92,10 +93,6 @@ Black, darkest blue, dark blue, and dark green are black based.
     &:focus,
     &:active {
       background: var(--blue--lighter--60);
-    }
-
-    &:focus {
-      outline-color: var(--white);
     }
   }
 
@@ -130,11 +127,7 @@ Black, darkest blue, dark blue, and dark green are black based.
     &:focus,
     &:active {
       outline-color: var(--light-green);
-      background-image: linear-gradient(
-        to bottom,
-        var(--light-green--lighter--20) 0,
-        var(--light-green) 100%
-      );
+      background-image: var(--gradient--vertical--light-green);
     }
   }
 
@@ -198,11 +191,7 @@ Gray, blue, and green backgrounds are gray based.
     &:active {
       color: var(--black);
       outline-color: var(--white);
-      background-image: linear-gradient(
-        to bottom,
-        var(--blue--lighter--40) 0,
-        var(--blue--lighter--60) 100%
-      );
+      background-image: var(--gradient--vertical--light-blue);
     }
   }
 
@@ -234,10 +223,6 @@ Gray, blue, and green backgrounds are gray based.
     &:focus,
     &:active {
       background: var(--blue--lighter--60);
-    }
-
-    &:focus {
-      outline-color: var(--white);
     }
   }
 
@@ -271,11 +256,7 @@ Gray, blue, and green backgrounds are gray based.
     &:focus,
     &:active {
       outline-color: var(--light-green--lighter--20);
-      background-image: linear-gradient(
-        to bottom,
-        var(--light-green--lighter--20) 0,
-        var(--light-green) 100%
-      );
+      background-image: var(--gradient--vertical--light-green);
     }
   }
 
@@ -332,11 +313,7 @@ backgrounds are light gray based.
     &:active {
       color: var(--white);
       outline-color: var(--dark-blue);
-      background-image: linear-gradient(
-        to bottom,
-        var(--dark-blue--darker--40) 0,
-        var(--dark-blue) 100%
-      );
+      background-image: var(--gradient--vertical--dark-blue);
     }
   }
 

@@ -138,7 +138,7 @@ Molecule: Cards - Alternate styles
     "date location"
     "body body"
     "terms terms";
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: auto;
 
   .title {
@@ -176,10 +176,14 @@ Molecule: Cards - Alternate styles
     padding: 0;
 
     .month {
+      display: grid;
+      align-content: end;
+      padding: var(--space--sm);
       background-color: var(--dark-blue);
     }
 
     .day {
+      padding: var(--space--sm);
       color: var(--dark-blue);
       background-color: var(--light-green);
     }

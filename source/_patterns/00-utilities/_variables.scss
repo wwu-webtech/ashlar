@@ -121,6 +121,18 @@ e. Logo
   var(--blue--lighter--60) 100%
 );
 
+--gradient--vertical--dark-blue: linear-gradient(
+  to bottom,
+  var(--dark-blue--darker--40) 0,
+  var(--dark-blue) 100%
+);
+
+--gradient--vertical--light-green: linear-gradient(
+  to bottom,
+  var(--light-green--lighter--20) 0,
+  var(--light-green) 100%
+);
+
 --gradient--vertical--blue-to-dark-blue: linear-gradient(
   to bottom,
   var(--blue),

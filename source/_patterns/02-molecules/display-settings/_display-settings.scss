@@ -44,6 +44,7 @@ Molecule: Display Settings
     min-height: var(--touch-target--min);
     border: none;
     outline-offset: calc(-1 * var(--border-width--md));
+    background-color: var(--dark-blue);
 
     &:hover,
     &:active,

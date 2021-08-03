@@ -22,8 +22,8 @@ input[type="submit"] {
   }
 
   &:focus {
-    outline: dotted var(--border-width--md) var(--black);
-    outline-offset: var(--border-width--md);
+    outline: dotted var(--border-width--md);
+    outline-offset: calc(-1 * var(--border-width--lg));
 
     &:not(:focus-visible) {
       outline: none;

@@ -94,6 +94,7 @@ Molecule: Charts - Org Chart
           &:focus,
           &:active {
             color: var(--dark-blue);
+            background-image: var(--gradient--vertical--dark-blue);
           }
         }
       }
@@ -334,8 +335,27 @@ Molecule: Charts - Org Chart
   .org-chart {
     background: var(--chart-background-color--dark-mode);
 
-    a {
+    a:not([class*="cta"]):not([class*="button"]) {
       color: var(--white);
+
+      &:active,
+      &:hover,
+      &:focus {
+        color: var(--dark-blue--darker--60);
+      }
+    }
+
+    .light {
+      & > a:not([class*="cta"]):not([class*="button"]) {
+        color: var(--dark-blue--darker--60);
+
+        &:active,
+        &:hover,
+        &:focus {
+          color: var(--white);
+          background-image: var(--gradient--vertical--dark-blue);
+        }
+      }
     }
 
     .item-level-b,

@@ -74,6 +74,7 @@ AKA The edit tabs in Drupal
   .block--local-tasks-block {
     ul:not(.contextual-links) {
       a {
+        color: var(--black);
         border-color: var(--black);
       }
     }
