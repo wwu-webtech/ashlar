@@ -359,14 +359,9 @@ backgrounds are light gray based.
 /*------------------------------------------------------------------------------
 4. Classes
 ------------------------------------------------------------------------------*/
-.black-bg,
-.dark-mode {
+.black-bg {
   @include black-bg;
 }
-.dark-mode {
-  background-color: var(--gray--darker--80);
-}
-
 .dark-blue-bg {
   @include dark-blue-bg;
 }
@@ -414,6 +409,10 @@ backgrounds are light gray based.
 /*------------------------------------------------------------------------------
 5. Dark Mode
 ------------------------------------------------------------------------------*/
+.dark-mode {
+  @include black-bg;
+  background-color: var(--gray--darker--80);
+}
 .dark-mode {
   .gray-bg,
   .light-blue-bg,
