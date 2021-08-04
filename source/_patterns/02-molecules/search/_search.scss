@@ -56,7 +56,7 @@ Molecule: Search
 .font--dyslexia-friendly {
   .search .search-area .search-box {
     input {
-      font-size: $dyslexic-icon-smaller;
+      font-size: var(--icon-size--sm);
     }
   }
 }

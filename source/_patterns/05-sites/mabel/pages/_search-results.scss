@@ -87,7 +87,7 @@ object 'result' pages, ie 'browse the collection' ----------------------------*/
 
   .material-icons {
     position: absolute;
-    top: $quarter-spacing;
+    top: var(--space--2xs);
     top: 50%;
     right: 0;
     transform: translate(-0.25rem, -50%);

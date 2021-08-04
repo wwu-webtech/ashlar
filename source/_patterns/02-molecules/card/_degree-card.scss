@@ -5,23 +5,21 @@
 .degree-card {
   display: grid;
 
-  grid-template-areas: "taxonomy"
-  "title"
-  "body"
-  "more";
+  grid-template-areas:
+    "taxonomy"
+    "title"
+    "body"
+    "more";
   grid-template-rows: auto auto 1fr auto;
 
   .title {
-    padding: $double-spacing $double-spacing 0 $double-spacing;
+    padding: var(--space--md) var(--space--md) 0 var(--space--md);
 
     grid-area: title;
 
     h3 {
-      @include breakpoint($large) {
-        font-size: $h4-font-size--max--smaller
-      }
       margin-top: 0;
-      font-size: $h4-font-size--smaller;
+      font-size: var(--font-size--3xl);
     }
   }
 
@@ -32,8 +30,8 @@
   }
 
   .taxonomy-term {
-    margin-right: $half-spacing;
-    padding: $half-spacing $standard-spacing;
+    margin-right: var(--space--xs);
+    padding: var(--space--xs) var(--space--sm);
   }
 
   .taxonomy-term .material-icons {
@@ -41,40 +39,27 @@
   }
 
   .body {
-    padding: 0 $double-spacing $standard-spacing $double-spacing;
+    padding: 0 var(--space--md) var(--space--sm) var(--space--md);
 
     grid-area: body;
 
     h4 {
-      @include breakpoint($large) {
-        font-size: $p-font-size--max--smaller
-      }
       margin-bottom: 0;
       text-transform: uppercase;
-      color: $black;
-      font-size: $p-font-size--smaller;
+      color: var(--black);
+      font-size: var(--font-size--sm);
       font-weight: bold;
     }
   }
 
   .department-links > div {
-    margin: $double-spacing 0;
+    margin: var(--space--md) 0;
   }
 
   .department-link {
-    @include breakpoint($large) {
-      font-size: $p-font-size--max;
-    }
     text-decoration: none;
-    font-size: $p-font-size;
+    font-size: var(--font-size--md);
     font-weight: bold;
-
-    &:hover,
-    &:active,
-    &:focus {
-      color: $black;
-      background-color: #b3c5db;
-    }
 
     .material-icons {
       font-size: var(--icon-size--sm);
@@ -82,7 +67,7 @@
   }
 
   .more-link {
-    margin-left: $double-spacing;
+    margin-left: var(--space--md);
 
     grid-area: more;
   }
@@ -90,19 +75,19 @@
 
 .dark-mode .degree-card {
   .department-link {
-    color: $white;
+    color: var(--white);
 
     &:hover,
     &:active,
     &:focus {
-      background-color: $black;
-      color: $light-green;
+      background-color: var(--black);
+      color: var(--light-green);
     }
   }
 
   .body {
     h4 {
-      color: $lightest-green;
+      color: var(--light-green--lighter--40);
     }
   }
 }

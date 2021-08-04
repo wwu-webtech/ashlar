@@ -62,27 +62,10 @@ form {
 .webform-progress-tracker {
   .progress-step {
     &.is-complete {
-      &:hover,
-      &:focus {
-        .progress-marker {
-          @include default-link-hover();
-        }
-      }
-
       .progress-title {
         &[role="link"] {
           text-decoration: underline;
           color: var(--darker--20);
-
-          &:active,
-          &:focus,
-          &:hover {
-            @include default-link-hover();
-          }
-
-          &:focus {
-            @include default-link-focus();
-          }
         }
 
         &:after {
@@ -130,9 +113,6 @@ form {
       &:hover,
       &:focus {
         background-color: var(--blue--darker--20);
-      }
-      &:focus {
-        @include default-link-focus();
       }
     }
   }

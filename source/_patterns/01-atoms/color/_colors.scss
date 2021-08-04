@@ -23,20 +23,20 @@ Atom: Colors
   &.black,
   &.gray,
   &.red {
-    color: $white;
+    color: var(--white);
 
     h3 {
-      color: $white;
+      color: var(--white);
     }
   }
 
   &.light-green,
   &.white,
   &.yellow {
-    color: $black;
+    color: var(--black);
 
     h3 {
-      color: $black;
+      color: var(--black);
     }
   }
 

@@ -88,7 +88,7 @@ Molecule: Cards - Alternate styles
       color: var(--white);
       background-color: var(--blue);
       font-size: var(--font-size--2xl);
-      font-weight: $font-weight--regular;
+      font-weight: var(--font-weight--regular);
     }
 
     .day {

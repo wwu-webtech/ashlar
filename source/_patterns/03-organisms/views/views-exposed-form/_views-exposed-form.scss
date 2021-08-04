@@ -16,8 +16,8 @@ Organism: Views - Views exposed form
   input,
   select,
   label {
-    @include font-size--smaller;
     margin-bottom: var(--space--xs);
+    font-size: var(--font-size--sm);
   }
 
   .form-actions {

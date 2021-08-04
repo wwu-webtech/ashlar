@@ -3,7 +3,7 @@ Templates: Layouts - One column
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 .layout--onecol .layout__region {
-  @include breakpoint($max-one-col-width) {
+  @include breakpoint(62.5rem) {
     max-width: var(--content-area-max-width--sm);
   }
 

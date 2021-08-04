@@ -14,12 +14,13 @@ Templates: Layouts - Retired Layouts - Three col 25/50/25
 }
 
 .layout--threecol-25-50-25 > .layout__region--first {
-  @include font-size--smaller;
   @include breakpoint($medium) {
     flex: 0 1 25%;
     max-width: 25%;
     padding-right: var(--space--sm);
   }
+
+  font-size: var(--font-size--sm);
 }
 
 .layout--threecol-25-50-25 > .layout__region--second {
@@ -31,10 +32,11 @@ Templates: Layouts - Retired Layouts - Three col 25/50/25
 }
 
 .layout--threecol-25-50-25 > .layout__region--third {
-  @include font-size--smaller;
   @include breakpoint($medium) {
     flex: 0 1 25%;
     max-width: 25%;
     padding-left: var(--space--sm);
   }
+
+  font-size: var(--font-size--sm);
 }

@@ -7,7 +7,7 @@ Atom: Off Canvas
 }
 
 #drupal-off-canvas ul {
-  padding: $half-spacing 0;
+  padding: var(--space--xs) 0;
 }
 
 #drupal-off-canvas a {

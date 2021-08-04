@@ -45,10 +45,11 @@ Templates: Layouts - Three column
   &.layout--threecol-section--25-25-50 > .layout__region--second,
   &.layout--threecol-section--50-25-25 > .layout__region--second,
   &.layout--threecol-section--50-25-25 > .layout__region--third {
-    @include font-size--smaller;
     @include breakpoint($small) {
       flex: 0 1 25%;
     }
+
+    font-size: var(--font-size--sm);
   }
   &.layout--threecol-section--25-50-25 > .layout__region--second,
   &.layout--threecol-section--25-25-50 > .layout__region--third,
@@ -59,16 +60,18 @@ Templates: Layouts - Three column
   }
   &.layout--threecol-section--33-34-33 > .layout__region--first,
   &.layout--threecol-section--33-34-33 > .layout__region--third {
-    @include font-size--smaller;
     @include breakpoint($small) {
       flex: 0 1 33%;
     }
+
+    font-size: var(--font-size--sm);
   }
   &.layout--threecol-section--33-34-33 > .layout__region--second {
-    @include font-size--smaller;
     @include breakpoint($small) {
       flex: 0 1 34%;
     }
+
+    font-size: var(--font-size--sm);
   }
 }
 
@@ -77,11 +80,12 @@ Templates: Layouts - Three column
     margin-right: calc(50% - 50vw);
     margin-left: calc(50% - 50vw);
   }
+
   display: flex;
   flex-wrap: wrap;
   max-width: 100vw;
-  margin-left: calc(-1 * var(--space--sm));
   margin-right: calc(-1 * var(--space--sm));
+  margin-left: calc(-1 * var(--space--sm));
 
   > .layout__region {
     flex: 0 1 100%;

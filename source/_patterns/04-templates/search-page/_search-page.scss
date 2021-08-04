@@ -4,12 +4,12 @@ Templates: Layouts - Search page
 Styles for search2.wwu.edu
 ------------------------------------------------------------------------------*/
 .search-wrapper {
-  max-width: calc(100vw - #{$double-spacing});
-  margin-top: $double-spacing;
+  max-width: calc(100vw - var(--space--md));
+  margin-top: var(--space--md);
 
   * {
-    font-family: $sans-serif;
-    font-size: $p-font-size;
+    font-family: var(--font--sans-serif);
+    font-size: var(--font-size--md);
   }
 
   .search {
@@ -29,7 +29,7 @@ Styles for search2.wwu.edu
         max-width: none;
       }
       flex: 1;
-      max-width: calc(100vw - #{$double-spacing} - 7.5rem);
+      max-width: calc(100vw - var(--space--md) - 7.5rem);
     }
 
     .search-submit {
@@ -39,25 +39,25 @@ Styles for search2.wwu.edu
   }
 
   .result-number {
-    margin-right: $half-spacing;
-    color: $black;
-    font-weight: $font-weight--bold;
+    margin-right: var(--space--xs);
+    color: var(--black);
+    font-weight: var(--font-weight--bold);
   }
 
   .result-title {
     display: inline;
-    margin-left: $half-spacing;
-    font-weight: $font-weight--bold;
+    margin-left: var(--space--xs);
+    font-weight: var(--font-weight--bold);
   }
 
   .search-results-summary {
     @include light-gray-bg;
-    margin-top: $double-spacing;
-    padding: $standard-spacing;
+    margin-top: var(--space--md);
+    padding: var(--space--sm);
   }
 
   .number-of-results a {
-    margin-left: $standard-spacing;
+    margin-left: var(--space--sm);
   }
 
   .search-pager {
@@ -65,17 +65,17 @@ Styles for search2.wwu.edu
     justify-content: space-between;
     max-width: 80%;
     margin: auto;
-    margin-top: $standard-spacing;
+    margin-top: var(--space--sm);
 
     a {
-      padding: $half-spacing;
+      padding: var(--space--xs);
       border: none;
-      font-weight: $font-weight--bold;
+      font-weight: var(--font-weight--bold);
     }
   }
 
   .query {
-    font-weight: $font-weight--bold;
+    font-weight: var(--font-weight--bold);
   }
 }
 

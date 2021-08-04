@@ -22,7 +22,6 @@ Molecule: Navigation - Western menu
   justify-content: flex-end;
   max-width: 100vw;
   font-family: var(--font--condensed);
-  margin-top: var(--space--xs);
 
   .icon-with-text {
     @include breakpoint($medium) {
