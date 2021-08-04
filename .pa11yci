@@ -41,10 +41,6 @@
     "rootElement": ".sg-pattern-example"
   },
   {
-    "url": "http://localhost:8000/patterns/01-atoms-transitions/index.html",
-    "rootElement": ".sg-pattern-example"
-  },
-  {
     "url": "http://localhost:8000/patterns/02-molecules-accordion/index.html",
     "rootElement": ".sg-pattern-example"
   },
@@ -61,7 +57,7 @@
     "rootElement": ".sg-pattern-example"
   },
   {
-    "url": "http://localhost:8000/patterns/02-molecules-buttons/index.html",
+    "url": "http://localhost:8000/patterns/02-molecules-image-link/index.html",
     "rootElement": ".sg-pattern-example"
   },
   {
@@ -210,10 +206,6 @@
   },
   {
     "url": "http://localhost:8000/patterns/04-templates-search-page/index.html",
-    "rootElement": ".sg-pattern-example"
-  },
-  {
-    "url": "http://localhost:8000/patterns/05-sites-homepage/index.html",
     "rootElement": ".sg-pattern-example"
   },
   {
