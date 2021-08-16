@@ -1,9 +1,8 @@
-/**
- * @file
- * 00-utilities/_font-families.scss
- */
+/*------------------------------------------------------------------------------
+Utilities - Font Families
+------------------------------------------------------------------------------*/
 
-/* Material Icons */
+/* Material Icons ------------------------------------------------------------*/
 @font-face {
   font-family: "Material Icons";
   font-style: normal;
@@ -11,7 +10,7 @@
   src: url(../fonts/material-icons.woff2) format("woff2");
 }
 
-/* Style them up, latin characters included only */
+/* Style them up, latin characters included only -----------------------------*/
 @font-face {
   font-family: "Fira Sans";
   font-style: italic;
