@@ -14,9 +14,6 @@ Templates: Layouts - Three column
     @include breakpoint($small) {
       padding-right: var(--space--xs);
     }
-    @include breakpoint($medium) {
-      padding-right: var(--space--sm);
-    }
   }
 
   > .layout__region--second {
@@ -24,18 +21,11 @@ Templates: Layouts - Three column
       padding-right: var(--space--xs);
       padding-left: var(--space--xs);
     }
-    @include breakpoint($medium) {
-      padding-right: var(--space--sm);
-      padding-left: var(--space--sm);
-    }
   }
 
   > .layout__region--third {
     @include breakpoint($small) {
       padding-left: var(--space--xs);
-    }
-    @include breakpoint($medium) {
-      padding-left: var(--space--sm);
     }
   }
 

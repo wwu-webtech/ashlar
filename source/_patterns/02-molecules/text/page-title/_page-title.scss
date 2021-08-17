@@ -6,3 +6,7 @@ Molecule: Text - Page title
 .pane-page-title h1 {
   text-align: left;
 }
+
+.path-frontpage .block--page-title-block {
+  display: none;
+}

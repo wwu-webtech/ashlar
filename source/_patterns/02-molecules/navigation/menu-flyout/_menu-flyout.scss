@@ -36,7 +36,8 @@ Display preferences
       }
 
       &.menu-item--active-page {
-        a {
+        a:not(.button),
+        a:not([class*="cta"]) {
           color: var(--dark-blue--darker--60);
           background-color: var(--light-green--lighter--20);
         }

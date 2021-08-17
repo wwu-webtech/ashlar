@@ -78,5 +78,9 @@ AKA The edit tabs in Drupal
         border-color: var(--black);
       }
     }
+
+    a:not([class*="cta"]):not([class*="button"]) {
+      border-right: var(--gray--darker--80);
+    }
   }
 }

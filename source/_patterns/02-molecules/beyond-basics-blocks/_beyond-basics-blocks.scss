@@ -4,10 +4,10 @@ Molecule: Beyond Basics Block
 ------------------------------------------------------------------------------*/
 .block--beyond-basics-block,
 .paragraph--type--majors-aside {
-  margin: var(--space--md) 0;
+  margin: var(--space--xs) 0;
 
   &[class$="-bg"] {
-    padding: var(--space--xl);
+    padding: var(--space--md);
 
     .block__title {
       margin-top: 0;
