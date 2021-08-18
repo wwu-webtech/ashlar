@@ -10,7 +10,6 @@ Molecule: Testimonial
   }
 
   display: flex;
-  overflow-x: hidden;
   flex-flow: column;
 
   .image--stylized {
@@ -46,7 +45,7 @@ Molecule: Testimonial
     }
 
     &:after {
-      right: 1rem;
+      right: -0.5rem;
       bottom: -3.5rem;
       width: 120%;
       height: 120%;
