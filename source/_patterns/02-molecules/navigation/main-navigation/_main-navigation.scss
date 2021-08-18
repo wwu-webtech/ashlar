@@ -7,7 +7,7 @@ Molecule: Main navigation/ultimenu custom styles
 .main-navigation,
 #block-system-main-menu {
   @include breakpoint($medium) {
-    width: 100vw;
+    width: calc(100vw - var(--space--md));
     height: inherit;
     border-top: none;
   }

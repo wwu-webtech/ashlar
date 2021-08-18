@@ -54,9 +54,10 @@ Display preferences
   h2,
   h3 {
     margin-top: 0;
+    margin-bottom: var(--space--xs);
     color: var(--light-green--lighter--20);
-    text-shadow: var(--shadow--soft);
-    font-size: var(--font-size--md);
+    text-shadow: var(--shadow--hard);
+    font-size: var(--font-size--2xl);
     font-weight: var(--font-weight--semibold);
 
     a:not(.button),

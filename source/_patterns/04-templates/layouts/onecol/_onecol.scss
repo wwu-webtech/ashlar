@@ -22,8 +22,8 @@ Templates: Layouts - One column
 
 .layout--onecol--page-width {
   @include breakpoint($large) {
-    margin-right: calc(50% - 50vw);
-    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw - var(--space--xs));
+    margin-left: calc(50% - 50vw - var(--space--xs));
   }
 
   max-width: 100vw;
