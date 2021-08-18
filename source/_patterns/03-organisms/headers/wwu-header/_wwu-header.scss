@@ -63,6 +63,7 @@ Organism: Headers - Western header
 
     .home-link {
       text-decoration: none;
+      padding: var(--space--2xs) var(--space--xs);
     }
 
     &.mobile {

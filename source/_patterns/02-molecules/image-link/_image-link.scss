@@ -98,6 +98,10 @@ Molecule: Image Link
       outline-color: var(--dark-blue);
     }
 
+    &:visited {
+      color: var(--purple--lighter--80);
+    }
+
     &:after {
       content: ""; //overrides file extension style in link atom css
 

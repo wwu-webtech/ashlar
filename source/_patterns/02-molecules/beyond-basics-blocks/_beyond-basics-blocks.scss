@@ -6,7 +6,7 @@ Molecule: Beyond Basics Block
 .paragraph--type--majors-aside {
   margin: var(--space--xs) 0;
 
-  &[class$="-bg"] {
+  &[class*="-bg"] {
     padding: var(--space--md);
 
     .block__title {

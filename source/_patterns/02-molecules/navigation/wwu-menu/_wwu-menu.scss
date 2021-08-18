@@ -40,7 +40,8 @@ Molecule: Navigation - Western menu
       }
     }
 
-    padding: var(--space--2xs) var(--space--xs);
+    padding: var(--space--2xs) var(--space--xs) var(--space--xs)
+      var(--space--xs);
     color: var(--white);
 
     &.report-bias-quick-link {

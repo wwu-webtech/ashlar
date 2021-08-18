@@ -232,8 +232,8 @@ $large: 81.25rem;
 --content-area-max-width--sm: 62.5rem;
 
 /* c. Content area grids ----------------------------------------------------*/
---grid-columns--sm: var(--standard-spacing), 1fr, var(--standard-spacing);
---grid-columns--lg: 1fr, var(--content-area-max-width), 1fr;
+--grid-columns--sm: var(--space--sm) 1fr var(--space--sm);
+--grid-columns--lg: 1fr var(--content-area-max-width) 1fr;
 
 /* d. Breakpoints ------------------------------------------------------------*/
 --breakpoint--sm: 36.3125rem; // replaces $small
