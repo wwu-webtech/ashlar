@@ -4,7 +4,12 @@ Molecule: Text - Page title
 ------------------------------------------------------------------------------*/
 .page-title,
 .pane-page-title h1 {
-  text-align: left;
+  text-align: center;
+
+  &:after {
+    left: 50%;
+    transform: translatex(-50%);
+  }
 }
 
 .path-frontpage .block--page-title-block {
