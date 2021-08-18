@@ -4,6 +4,8 @@ Molecule: Messages
 Drupal system messages
 ------------------------------------------------------------------------------*/
 .messages {
+  margin-top: var(--space--md);
+
   ul {
     margin-bottom: 0;
   }

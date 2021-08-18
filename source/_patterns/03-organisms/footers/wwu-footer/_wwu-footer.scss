@@ -115,5 +115,9 @@ Organism: Footers - Western footer
     text-align: center;
     font-size: var(--font-size--sm);
     font-weight: var(--font-weight--light);
+
+    p {
+      margin: 0;
+    }
   }
 }
