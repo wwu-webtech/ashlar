@@ -3,80 +3,35 @@ Molecule: Forms - User Login
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 .user-login-form {
-  --max-login-width: 6.25rem;
-  display: grid;
-  grid-template-rows: repeat(4, auto);
-  grid-template-columns: repeat(auto-fit, minmax(var(--max-login-width), 1fr));
-  grid-template-areas:
-    "login manual . ."
-    "username username . ."
-    "password password  . ."
-    "submit submit  . .";
-
-  grid-column-gap: var(--space--lg);
-  grid-row-gap: var(--space--lg);
-  justify-content: center;
-
-  -ms-grid-rows: auto auto auto auto;
-  -ms-grid-columns: 2fr var(--space--lg) 1fr var(--space--lg) 2fr;
-
-  .manual-login {
-    grid-area: manual;
-
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-  }
+  display: flex;
+  flex-flow: column;
+  width: 50%;
+  margin: auto;
+  padding: var(--space--md);
 
   .cas-login-link {
+    @extend .cta, .square;
+
     margin: 0;
-    @extend .button, .dark-blue, .square;
-    grid-area: login;
-
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-  }
-  .cancel-cas {
-    grid-area: cancel;
-
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
+    order: -1;
   }
 
-  .textfield {
-    grid-area: username;
-
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-  }
-  .password {
-    grid-area: password;
-
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
-  }
-  .form-actions {
-    grid-area: submit;
-    justify-self: start;
-
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    -ms-grid-row: 4;
-    -ms-grid-row-span: 1;
+  .manual-login {
+    margin-bottom: var(--space--md);
+    width: 50%;
   }
 
   .textfield,
   .password,
   .form-actions {
     display: none;
+  }
+}
+
+.dark-mode {
+  .user-login-form {
+    .cas-login-link:not([class*="cta"]):not([class*="button"]) {
+      color: var(--white);
+    }
   }
 }
