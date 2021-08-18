@@ -228,8 +228,8 @@ $large: 81.25rem;
 --space--3xl: 4rem;
 
 /* b. Content areas ---------------------------------------------------------*/
---content-area-max-width: 81.25rem; // replaces $max-content-width
---content-area-max-width--sm: 62.5rem;
+--content-area-max-width: 70.5rem; // replaces $max-content-width
+--content-area-max-width--sm: 40rem;
 
 /* c. Content area grids ----------------------------------------------------*/
 --grid-columns--sm: var(--space--sm) 1fr var(--space--sm);

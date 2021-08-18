@@ -8,7 +8,7 @@ AKA The edit tabs in Drupal
 .block--local-tasks-block {
   overflow: auto;
   max-width: calc(100vw - var(--space--lg));
-  margin-bottom: var(--space--sm);
+  margin: var(--space--sm) 0;
   font-size: var(--font-size--sm);
 
   ul:not(.contextual-links) {
