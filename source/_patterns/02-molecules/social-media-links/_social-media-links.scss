@@ -1,0 +1,18 @@
+/*------------------------------------------------------------------------------
+Molecule: Social media links
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+.social-media-links {
+  @include breakpoint($medium) {
+    max-width: none;
+  }
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 25rem;
+  padding: 0;
+  list-style: none;
+
+  .social-icon {
+    margin: var(--space--md) var(--space--md) 0 0;
+  }
+}

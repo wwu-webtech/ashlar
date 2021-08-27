@@ -1,7 +1,7 @@
-/*
- * @file
- * templates/layouts/threecol_33_34_33/_layout--threecol-33-34-33.scss
- */
+/*------------------------------------------------------------------------------
+Templates: Layouts - Retired Layouts - Three col 33/34/33
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 
 .layout--threecol-33-34-33 {
   display: flex;
@@ -12,29 +12,32 @@
   flex: 0 1 100%;
 }
 
-.layout--threecol-33-34-33 > .layout__region--first{
-  @include font-size--smaller;
+.layout--threecol-33-34-33 > .layout__region--first {
   @include breakpoint($medium) {
     flex: 0 1 33%;
     max-width: 33%;
-    padding-right: $standard-spacing;
+    padding-right: var(--space--sm);
   }
+
+  font-size: var(--font-size--sm);
 }
 
 .layout--threecol-33-34-33 > .layout__region--second {
-  @include font-size--smaller;
   @include breakpoint($medium) {
     flex: 0 1 34%;
     max-width: 34%;
-    padding: 0 $standard-spacing;
+    padding: 0 var(--space--sm);
   }
+
+  font-size: var(--font-size--sm);
 }
 
 .layout--threecol-33-34-33 > .layout__region--third {
-  @include font-size--smaller;
   @include breakpoint($medium) {
     flex: 0 1 33%;
     max-width: 33%;
-    padding-left: $standard-spacing;
+    padding-left: var(--space--sm);
   }
+
+  font-size: var(--font-size--sm);
 }

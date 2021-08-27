@@ -1,34 +1,27 @@
-/**
- * @file
- * 01-atoms/01-text/_blockquotes.scss
- */
+/*------------------------------------------------------------------------------
+Atom: Text - Blockquotes
+--------------------------------------------------------------------------------
+1. Dark Mode
+------------------------------------------------------------------------------*/
+blockquote:not([class]) {
+  @include lightest-gray-bg;
+}
 
 blockquote {
-  @include light-gray-bg;
-  margin: $standard-spacing 0;
-  padding: $double-spacing;
+  margin: var(--space--md) 0;
+  padding: var(--space--md);
+  line-height: 1.5em;
 }
 
 .pullquote,
 .paragraph--type--majors-pull-quote {
-  margin: 0 $standard-spacing;
-  padding: $standard-spacing;
-  font-style: italic;
-  border-left: solid $border-width--thicker $green;
-
-  &.style-thin-border {
-    border: 0;
-
-    &:before {
-      border-top: solid $border-width--thicker $blue;
-    }
-
-    &:after {
-      border-top: solid $border-width--thicker $blue;
-    }
-  }
+  padding: var(--space--md);
+  border-left: solid var(--border-width--lg) var(--blue--lighter--40);
 }
 
+/*------------------------------------------------------------------------------
+1. Dark Mode
+------------------------------------------------------------------------------*/
 .dark-mode {
   blockquote:not([class]) {
     @include gray-bg;

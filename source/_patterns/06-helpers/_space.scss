@@ -1,47 +1,45 @@
-/**
- * @file
- * helpers/_space.scss
- * Helper classes to adjust spacing
- */
-
+/*------------------------------------------------------------------------------
+Helpers: Space
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .standard-margin {
-  margin: $standard-spacing;
+  margin: var(--space--sm);
 }
 
 .standard-margin--top {
-  margin-top: $standard-spacing;
+  margin-top: var(--space--sm);
 }
 
 .standard-margin--right {
-  margin-right: $standard-spacing;
+  margin-right: var(--space--sm);
 }
 
 .standard-margin--bottom {
-  margin-bottom: $standard-spacing;
+  margin-bottom: var(--space--sm);
 }
 
 .standard-margin--left {
-  margin-left: $standard-spacing;
+  margin-left: var(--space--sm);
 }
 
 .double-margin {
-  margin: $double-spacing;
+  margin: var(--space--md);
 }
 
 .double-margin--top {
-  margin-top: $double-spacing;
+  margin-top: var(--space--md);
 }
 
 .double-margin--right {
-  margin-right: $double-spacing;
+  margin-right: var(--space--md);
 }
 
 .double-margin--bottom {
-  margin-bottom: $double-spacing;
+  margin-bottom: var(--space--md);
 }
 
 .double-margin--left {
-  margin-left: $double-spacing;
+  margin-left: var(--space--md);
 }
 
 .no-margin {
@@ -65,43 +63,43 @@
 }
 
 .standard-padding {
-  padding: $standard-spacing;
+  padding: var(--space--sm);
 }
 
 .standard-padding--top {
-  padding-top: $standard-spacing;
+  padding-top: var(--space--sm);
 }
 
 .standard-padding--right {
-  padding-right: $standard-spacing;
+  padding-right: var(--space--sm);
 }
 
 .standard-padding--bottom {
-  padding-bottom: $standard-spacing;
+  padding-bottom: var(--space--sm);
 }
 
 .standard-padding--left {
-  padding-left: $standard-spacing;
+  padding-left: var(--space--sm);
 }
 
 .double-padding {
-  padding: $double-spacing;
+  padding: var(--space--md);
 }
 
 .double-padding--top {
-  padding-top: $double-spacing;
+  padding-top: var(--space--md);
 }
 
 .double-padding--right {
-  padding-right: $double-spacing;
+  padding-right: var(--space--md);
 }
 
 .double-padding--bottom {
-  padding-bottom: $double-spacing;
+  padding-bottom: var(--space--md);
 }
 
 .double-padding--left {
-  padding-left: $double-spacing;
+  padding-left: var(--space--md);
 }
 
 .no-padding {
@@ -127,59 +125,48 @@
 /* space creating blocks */
 .vertical-space--1x {
   @include breakpoint($medium) {
-    height: $standard-spacing;
+    height: var(--space--sm);
   }
 }
 
 .vertical-space--2x {
   @include breakpoint($medium) {
-    height: $standard-spacing * 2;
+    height: calc(var(--space--sm) * 2);
   }
 }
 
 .vertical-space--3x {
   @include breakpoint($medium) {
-    height: $standard-spacing * 3;
+    height: calc(var(--space--sm) * 3);
   }
 }
 
 .vertical-space--4x {
   @include breakpoint($medium) {
-    height: $standard-spacing * 4;
+    height: calc(var(--space--sm) * 4);
   }
 }
 
 .vertical-space--5x {
   @include breakpoint($medium) {
-    height: $standard-spacing * 5;
+    height: calc(var(--space--sm) * 5);
   }
 }
 
 .vertical-space--6x {
   @include breakpoint($medium) {
-    height: $standard-spacing * 6;
+    height: calc(var(--space--sm) * 6);
   }
 }
 
 .vertical-space--7x {
   @include breakpoint($medium) {
-    height: $standard-spacing * 7;
+    height: calc(var(--space--sm) * 7);
   }
 }
 
 .vertical-space--8x {
   @include breakpoint($medium) {
-    height: $standard-spacing * 8;
-  }
-}
-
-.close-menu-gap {
-  margin-top: -$standard-spacing;
-
-  @include breakpoint($medium) {
-    margin-top: -$toggle-size;
-  }
-  @include breakpoint($large) {
-    margin-top: -$toggle-size;
+    height: calc(var(--space--sm) * 8);
   }
 }

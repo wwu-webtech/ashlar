@@ -1,10 +1,7 @@
-/**
-* @file
-* molecules/display-settings/_display-settings.scss
-*/
-
-$dyslexic-icon-smaller: $p-font-size--min * 0.8;
-
+/*------------------------------------------------------------------------------
+Molecule: Display Settings
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .display-settings {
   @include breakpoint($medium) {
     z-index: 2;
@@ -12,14 +9,13 @@ $dyslexic-icon-smaller: $p-font-size--min * 0.8;
     min-height: initial;
     margin-bottom: 0;
   }
+
   display: flex;
   flex-flow: row wrap;
+  grid-area: display-settings;
   align-self: start;
   justify-content: flex-start;
-  margin-bottom: $triple-spacing;
-  font-family: $condensed;
-
-  grid-area: display-settings;
+  font-family: var(--font--condensed);
 
   .wwu-menu {
     display: flex;
@@ -29,44 +25,36 @@ $dyslexic-icon-smaller: $p-font-size--min * 0.8;
     display: flex;
     align-items: center;
     width: initial;
-    padding: $half-spacing $standard-spacing $half-spacing $half-spacing;
-    color: $white;
+    padding: var(--space--2xs);
+    color: var(--white);
     border-radius: 0;
     background: transparent;
     box-shadow: none;
 
     .material-icons {
       position: relative;
-      margin-right: $border-width;
-      font-size: $icon-size--medium;
-    }
-
-    &.my-western-link {
-      @include breakpoint($medium) {
-        width: initial;
-      }
-      width: $toggle-size + $standard-spacing;
+      margin-right: var(--border-width--md);
+      font-size: var(--icon-size--xs);
     }
   }
 
   .toggle-display-settings {
-    @include breakpoint($medium) {
-      margin-left: -0.525rem;
-    }
     width: initial;
     height: initial;
-    padding-top: $standard-spacing;
-    border: $focus-outline--thicker transparent;
+    min-height: var(--touch-target--min);
+    border: none;
+    outline-offset: calc(-1 * var(--border-width--md));
+    background-color: var(--dark-blue);
 
     &:hover,
     &:active,
     &:focus {
-      color: $darkest-blue;
-      background-color: $lightest-green;
+      color: var(--dark-blue--darker--60);
+      background-image: var(--gradient--vertical--light-blue);
     }
 
     &:focus {
-      border-color: $darkest-blue;
+      border-color: var(--dark-blue--darker--40);
     }
   }
 
@@ -75,18 +63,19 @@ $dyslexic-icon-smaller: $p-font-size--min * 0.8;
       flex: 0 0 100%;
       margin-left: -0.575rem;
     }
+
     position: relative;
     z-index: 3;
     flex: 0 0 75%;
-    padding: $double-spacing;
-    transition: $standard-ease $fast-transition-speed all;
-    color: $white;
-    background: $darkest-blue;
+    padding: var(--space--sm);
+    transition: var(--ease--standard) var(--transition-speed--fast) all;
+    color: var(--white);
+    background: var(--dark-blue--darker--40);
 
     &.closed {
       visibility: hidden;
-      opacity: 0;
       height: 0;
+      opacity: 0;
     }
 
     &.open {
@@ -113,13 +102,13 @@ $dyslexic-icon-smaller: $p-font-size--min * 0.8;
 
         legend {
           margin: 0;
-          padding: $half-spacing;
+          padding: var(--space--xs);
         }
 
         input[type="radio"],
         input[type="radio"] + label {
           &:not(:last-of-type) {
-            margin-bottom: $standard-spacing;
+            margin-bottom: var(--space--md);
           }
         }
 
@@ -131,50 +120,27 @@ $dyslexic-icon-smaller: $p-font-size--min * 0.8;
 
     .reset-button {
       display: flex;
-      margin: $double-spacing auto 0;
-      font-size: $p-font-size--smaller;
+      margin: var(--space--md) auto 0;
+      font-size: var(--font-size--sm);
 
       .material-icons {
         position: relative;
         align-self: center;
-        margin-right: $half-spacing;
+        margin-right: var(--space--xs);
         font-size: inherit;
       }
     }
   }
 }
 
-.atkinson,
-.opendyslexic {
+.font--dyslexia-friendly {
   .display-settings {
-    .icon-with-text.small {
-      @include breakpoint($medium) {
-        font-size: 1rem;
-      }
-      width: initial;
-      height: initial;
-      font-size: $dyslexic-icon-smaller;
-
-      &.toggle-display-settings {
-        @include breakpoint($medium) {
-          justify-content: initial;
-          width: initial;
-        }
-        justify-content: flex-start;
-        width: $toggle-size * 3.5;
-      }
-    }
+    font-family: var(--font--dyslexia-friendly);
   }
 }
 
-.opendyslexic {
+.font--hyperlegible {
   .display-settings {
-    font-family: $opendyslexic;
-  }
-}
-
-.atkinson {
-  .display-settings {
-    font-family: $atkinson;
+    font-family: var(--font--hyperlegible);
   }
 }

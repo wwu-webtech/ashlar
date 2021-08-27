@@ -1,567 +1,366 @@
-/**
-* @file
-* molecules/background-colors/_background-colors.scss
-*/
+/*------------------------------------------------------------------------------
+Atom: Background Colors
+--------------------------------------------------------------------------------
+1. Black based backgrounds
+2. Gray based backgrounds
+3. Light gray based backgrounds
+4. Classes
+5. Dark mode
+6. Print styles
+------------------------------------------------------------------------------*/
+.pattern-lab-bg {
+  padding: var(--space--md);
+}
 
-
-// Base styles for different color backgrounds. Use @include to utilize these styles inside of other components.
-// Note the cascade here, as the blue styles inherit from the gray styles of same shades (EG Dark blue inherits from black, blue inherits from gray, etc.)
+/*------------------------------------------------------------------------------
+1. Black based backgrounds
+--------------------------------------------------------------------------------
+Black, darkest blue, dark blue, and dark green are black based.
+------------------------------------------------------------------------------*/
 @mixin black-bg {
-  color: $white;
-  background: $black;
+  color: var(--white);
+  background: var(--black);
 
   h1 {
-    color: $white;
+    color: var(--light-green);
     &:after {
-      border-color: $lightest-green;
+      border-color: var(--white);
     }
   }
 
   h2 {
-    color: $white;
-    border-bottom-color: $lightest-green;
+    color: var(--light-green--lighter--20);
   }
 
   h3 {
-    color: $lightest-green;
+    color: var(--light-green--lighter--40);
   }
 
   h4 {
-    color: $light-green;
+    color: var(--light-green--lighter--60);
   }
 
   h5 {
-    color: $white;
+    color: var(--light-green--lighter--80);
   }
 
   h6 {
-    color: $white;
+    color: var(--light-green);
   }
 
+  .intro,
   .tagline {
-    color: $lightest-green;
+    color: var(--light-green--lighter--40);
   }
 
-  a:not([class]) {
-    color: $light-blue;
+  a:not([class*="cta"]):not([class*="button"]),
+  a.patternLink {
+    color: var(--blue--lighter--40);
+
+    &:visited {
+      color: var(--purple--lighter--80);
+    }
 
     &:hover,
     &:focus,
     &:active {
-      color: $lightest-green;
-      background-color: $darkest-blue;
+      color: var(--black);
+      outline-color: var(--blue--lighter--40);
+      background-image: var(--gradient--vertical--light-blue);
     }
   }
 
   .menu {
     li {
       @include breakpoint($medium) {
-        border-left-width: $border-width--thicker;
+        border-left-width: var(--border-width--lg);
       }
-      border-left: solid $border-width $dark-blue;
 
-      a {
-        color: $white;
-
-        &:hover,
-        &:focus,
-        &:active {
-          color: $lightest-green;
-          background-color: $dark-blue;
-        }
-      }
+      border-left: solid var(--border-width--md) var(--blue--lighter--40);
     }
   }
 
-  .social-icon {
-    color: $dark-blue;
-    background-color: $white;
+  .social-icon,
+  .play-button {
+    color: var(--dark-blue);
+    background: var(--white);
 
     svg {
-      fill: $black;
+      fill: var(--dark-blue);
     }
 
     &:hover,
     &:focus,
     &:active {
-      background-color: $light-green;
-    }
-
-    &:focus {
-      outline-color: $white;
+      background: var(--blue--lighter--60);
     }
   }
 
-  .play-link {
-    svg path {
-      fill: $white;
-    }
-
-    &:hover,
-    &:active,
-    &:focus {
-      svg path {
-        fill: $light-blue;
-      }
-    }
-
-    &:focus {
-      border-color: $light-blue;
-    }
-  }
-}
-
-@mixin gray-bg {
-  color: $white;
-  background: $gray;
-
-  a:not([class]) {
-    color: $white;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: $light-green;
-      background: $black;
-    }
-  }
-
-  h1,
-  h2,
-  h3 {
-    color: $lightest-green;
-  }
-
-  h4,
-  h5,
-  h6 {
-    color: $white;
-  }
-
-  h1 {
-    &:after {
-      border-color: $light-blue;
-    }
-  }
-
-  .tagline {
-    color: $white;
-  }
-
-  .menu {
-    li {
-      @include breakpoint($medium) {
-        border-left-width: $border-width--thicker;
-      }
-      border-left: solid $border-width $black;
-
-      a {
-        color: $white;
-
-        &:hover,
-        &:focus,
-        &:active {
-          background: $black;
-        }
-      }
-    }
-  }
-
-  .social-icon {
-    color: $dark-blue;
-    background-color: $white;
-
-    svg {
-      fill: $gray;
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: $lightest-green;
-    }
-
-    &:focus {
-      outline-color: $lightest-green;
-    }
-  }
-
-  .play-link {
-    svg path {
-      fill: $white;
-    }
-
-    &:hover,
-    &:active,
-    &:focus {
-      svg path {
-        fill: $lightest-green;
-      }
-    }
-  }
-}
-
-@mixin light-gray-bg {
-  color: $black;
-  background: $light-gray;
-
-  h2 {
-    color: $darkest-blue;
-  }
-
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: $dark-blue;
-  }
-
-  a:not([class]) {
-    color: $link-blue--darker;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: $black;
-      background-color: mix(black, $light-gray, 20%);
-    }
-  }
-
-  .menu {
-    li {
-      @include breakpoint($medium) {
-        border-left-width: $border-width--thicker;
-      }
-      border-left: solid $border-width mix(black, $light-gray, 20%);
-
-      a {
-        color: $black;
-
-        &:hover,
-        &:focus,
-        &:active {
-          background: mix(black, $light-gray, 20%);
-        }
-      }
-    }
-  }
-
-  .play-link {
-    svg path {
-      fill: $blue;
-    }
-
-    &:hover,
-    &:active,
-    &:focus {
-      svg path {
-        fill: $dark-blue;
-      }
-    }
-  }
-}
-
-@mixin lightest-gray-bg {
-  @include light-gray-bg;
-  background: $lightest-gray;
-
-  a:not([class]) {
-    color: $link-blue;
-  }
-}
-
-@mixin dark-blue-bg {
-  @include black-bg;
-  background: $dark-blue;
-
-  .menu {
-    li {
-      border-left-color: $darkest-blue;
-
-      a {
-        &:hover,
-        &:focus,
-        &:active {
-          background-color: $darkest-blue;
-        }
-      }
-    }
-  }
-
-
-  .social-icon {
-    svg {
-      fill: $dark-blue;
-    }
+  caption,
+  .block--countdown {
+    color: var(--white);
   }
 }
 
 @mixin darkest-blue-bg {
   @include black-bg;
-  background: $darkest-blue;
 
-  a:not([class]) {
+  background: var(--dark-blue--darker--20);
+}
+
+@mixin dark-blue-bg {
+  @include black-bg;
+
+  background: var(--dark-blue);
+}
+
+@mixin dark-green-bg {
+  @include black-bg;
+
+  background: var(--dark-green);
+
+  a:not([class*="cta"]):not([class*="button"]) {
+    text-decoration-color: var(--light-green--lighter--20);
+    color: var(--green--lighter--80);
+
     &:hover,
-    &:active,
-    &:focus {
-      background: $dark-blue;
+    &:focus,
+    &:active {
+      outline-color: var(--light-green);
+      background-image: var(--gradient--vertical--light-green);
     }
   }
 
   .menu {
     li {
-      border-left-color: $dark-blue;
-
-      a {
-        &:hover,
-        &:focus,
-        &:active {
-          background-color: $dark-blue;
-        }
-      }
+      border-left-color: var(--green--lighter--80);
     }
   }
 
-  .social-icon {
-    svg {
-      fill: $dark-blue;
+  &.pullquote {
+    border-left-color: var(--green--lighter--80);
+  }
+}
+
+/*------------------------------------------------------------------------------
+2. Gray based backgrounds
+--------------------------------------------------------------------------------
+Gray, blue, and green backgrounds are gray based.
+------------------------------------------------------------------------------*/
+@mixin gray-bg {
+  color: var(--white);
+  background: var(--gray);
+
+  h1 {
+    color: var(--light-green--lighter--20);
+    &:after {
+      border-color: var(--blue--lighter--40);
     }
+  }
+
+  h2 {
+    color: var(--light-green--lighter--40);
+  }
+
+  h3 {
+    color: var(--light-green--lighter--60);
+  }
+
+  h4 {
+    color: var(--light-green--lighter--80);
+  }
+
+  h5 {
+    color: var(--white);
+  }
+
+  h6 {
+    color: var(--white);
+  }
+
+  a:not([class*="cta"]):not([class*="button"]) {
+    text-decoration-color: var(--blue--lighter--60);
+    color: var(--white);
+
+    &:visited {
+      text-decoration-color: var(--purple--lighter--60);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--black);
+      outline-color: var(--white);
+      background-image: var(--gradient--vertical--light-blue);
+    }
+  }
+
+  .intro,
+  .tagline {
+    color: var(--light-green--lighter--80);
+  }
+
+  .menu {
+    li {
+      @include breakpoint($medium) {
+        border-left-width: var(--border-width--lg);
+      }
+
+      border-left: solid var(--border-width--md) var(--blue--lighter--60);
+    }
+  }
+
+  .social-icon,
+  .play-button {
+    color: var(--dark-blue);
+    background: var(--white);
+
+    svg {
+      fill: var(--dark-blue);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: var(--blue--lighter--60);
+    }
+  }
+
+  caption,
+  .block--countdown {
+    color: var(--white);
   }
 }
 
 @mixin blue-bg {
   @include gray-bg;
-  background: $blue;
 
-  h2 {
-    border-bottom-color: $lightest-green;
-  }
-
-  h4 {
-    border-bottom-color: $light-green;
-  }
-
-  a:not([class]) {
-    &:hover,
-    &:focus,
-    &:active {
-      color: $darkest-blue;
-      outline-color: $white;
-      background: $light-blue;
-    }
-  }
-
-  .menu {
-    li {
-      border-left-color: mix(black, $blue, 20%);
-
-      a {
-        &:hover,
-        &:focus,
-        &:active {
-          color: $lightest-green;
-          background: mix(black, $blue, 20%);
-        }
-      }
-    }
-  }
-
-  .social-icon {
-    svg {
-      fill: $blue;
-    }
-  }
-
-  .play-link {
-    &:focus {
-      border-color: $lightest-green;
-    }
-  }
-}
-
-
-@mixin light-blue-bg {
-  @include light-gray-bg;
-  background: $light-bg-blue;
-
-  a:not([class]) {
-    &:hover,
-    &:focus,
-    &:active {
-      color: $dark-blue;
-      border-bottom-color: transparent;
-      background-color: mix(white, $dark-blue, 60%);
-    }
-  }
-
-  .menu {
-    li {
-      border-left-color: mix(white, $dark-blue, 60%);
-
-      a {
-        color: $black;
-
-        &:hover,
-        &:focus,
-        &:active {
-          background: mix(white, $dark-blue, 60%);
-        }
-      }
-    }
-  }
-}
-
-@mixin lightest-blue-bg {
-  @include lightest-gray-bg;
-  background: $lightest-bg-blue;
-
-  a:not([class]) {
-    &:hover,
-    &:focus,
-    &:active {
-      background: mix(white, $dark-blue, 70%);
-    }
-  }
-
-  .menu {
-    li {
-      border-left-color: mix(white, $dark-blue, 70%);
-
-      a {
-        color: $black;
-
-        &:hover,
-        &:focus,
-        &:active {
-          background: mix(white, $dark-blue, 70%);
-        }
-      }
-    }
-  }
-}
-
-@mixin gradient-blue-bg {
-  @include blue-bg;
-  .menu {
-    li {
-      border-left-color: $light-blue;
-
-      a {
-        &:hover,
-        &:focus,
-        &:active {
-          color: $darkest-blue;
-          background-color: $light-blue;
-        }
-      }
-    }
-  }
-}
-
-@mixin dark-green-bg {
-  @include black-bg;
-  background: $dark-green;
-
-  a:not([class]) {
-    color: $lightest-green;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: $white;
-      background-color: $black;
-    }
-  }
-
-  .menu {
-    li {
-      border-left-color: $light-green;
-
-      a {
-        color: $white;
-
-        &:hover,
-        &:focus,
-        &:active {
-          color: $white;
-          background-color: $black;
-        }
-      }
-    }
-  }
-
-  .social-icon {
-    svg {
-      fill: $dark-green;
-    }
-  }
+  background: var(--blue);
 }
 
 @mixin green-bg {
   @include gray-bg;
-  background: $green;
+
+  background: var(--green);
 
   h1 {
     &:after {
-      border-color: $light-green;
+      border-color: var(--light-green--lighter--80);
     }
   }
 
-  .social-icon {
-    svg {
-      fill: $green;
-    }
-  }
-}
+  a:not([class*="cta"]):not([class*="button"]) {
+    text-decoration-color: var(--light-green--lighter--20);
 
-@mixin light-green-bg {
-  @include light-gray-bg;
-  background: $light-green;
-
-  a:not([class]) {
     &:hover,
     &:focus,
     &:active {
-      color: $white;
-      outline-color: $blue;
-      background-color: $blue;
+      outline-color: var(--light-green--lighter--20);
+      background-image: var(--gradient--vertical--light-green);
+    }
+  }
+
+  &.pullquote {
+    border-left-color: var(--light-green--lighter--40);
+  }
+}
+
+/*------------------------------------------------------------------------------
+3. Light gray based backgrounds
+--------------------------------------------------------------------------------
+Light gray, lightest gray, light blue, lightest blue, and light green
+backgrounds are light gray based.
+------------------------------------------------------------------------------*/
+@mixin light-gray-bg {
+  background: var(--gray--lighter--60);
+
+  h1 {
+    color: var(--dark-blue--darker--80);
+    &:after {
+      border-color: var(--dark-blue--darker--80);
+    }
+  }
+
+  h2 {
+    color: var(--dark-blue--darker--60);
+  }
+
+  h3 {
+    color: var(--dark-blue--darker--40);
+  }
+
+  h4 {
+    color: var(--dark-blue--darker--20);
+  }
+
+  h5 {
+    color: var(--dark-blue);
+  }
+
+  h6 {
+    color: var(--dark-blue);
+  }
+
+  a:not([class*="cta"]):not([class*="button"]) {
+    text-decoration-color: var(--dark-blue);
+    color: var(--blue--darker--40);
+    &:visited {
+      color: var(--purple);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--white);
+      outline-color: var(--dark-blue);
+      background-image: var(--gradient--vertical--dark-blue);
     }
   }
 
   .menu {
     li {
-      border-left-color: $lightest-green;
-
-      a {
-        &:hover,
-        &:focus,
-        &:active {
-          color: $black;
-          background-color: $lightest-green;
-        }
+      @include breakpoint($medium) {
+        border-left-width: var(--border-width--lg);
       }
+
+      border-left: solid var(--border-width--md) var(--blue--darker--40);
     }
+  }
+
+  &.pullquote {
+    border-left-color: var(--dark-blue);
   }
 }
 
-.black-bg,
-.dark-mode {
-  @include black-bg;
-}
-
-.dark-mode {
-  @include dark-mode-links;
-  background-color: $dark-mode-black;
-}
-
-.gray-bg {
-  @include gray-bg;
-}
-.light-gray-bg {
+@mixin lightest-gray-bg {
   @include light-gray-bg;
+
+  background: var(--gray--lighter--80);
 }
-.lightest-gray-bg {
+
+@mixin light-blue-bg {
+  @include light-gray-bg;
+
+  background: var(--blue--lighter--60);
+}
+
+@mixin lightest-blue-bg {
   @include lightest-gray-bg;
+
+  background: var(--blue--lighter--80);
+}
+
+@mixin light-green-bg {
+  @include light-gray-bg;
+
+  background: var(--light-green);
+}
+
+/*------------------------------------------------------------------------------
+4. Classes
+------------------------------------------------------------------------------*/
+.black-bg {
+  @include black-bg;
 }
 .dark-blue-bg {
   @include dark-blue-bg;
@@ -569,8 +368,23 @@
 .darkest-blue-bg {
   @include darkest-blue-bg;
 }
+.dark-green-bg {
+  @include dark-green-bg;
+}
+.green-bg {
+  @include green-bg;
+}
+.gray-bg {
+  @include gray-bg;
+}
 .blue-bg {
   @include blue-bg;
+}
+.light-gray-bg {
+  @include light-gray-bg;
+}
+.lightest-gray-bg {
+  @include lightest-gray-bg;
 }
 .light-blue-bg {
   @include light-blue-bg;
@@ -578,25 +392,27 @@
 .lightest-blue-bg {
   @include lightest-blue-bg;
 }
-.dark-green-bg {
-  @include dark-green-bg;
-}
-.green-bg {
-  @include green-bg;
-}
 .light-green-bg {
   @include light-green-bg;
 }
-
 .dark-blue-gradient-bg {
-  @include gradient-blue-bg;
-  background-image: linear-gradient(to left bottom, #1c2023, #18242d, #122738, #0a2a44, #022d4f, #00335c, #013a69, #044077, #074e8b, #085c9f, #066bb3, #007ac8);
+  @include blue-bg;
+
+  background-image: var(--gradient--diagonal--dark-blue-to-black);
 }
 .blue-gradient-bg {
-  @include gradient-blue-bg;
-  background-image: linear-gradient(to right bottom, #002f5e, #003266, #00356d, #003875, #003b7d, #004186, #01478e, #004d97, #0058a3, #0063b0, #006ebc, #007ac8);
+  @include blue-bg;
+
+  background-image: var(--gradient--diagonal--blue-to-dark-blue);
 }
 
+/*------------------------------------------------------------------------------
+5. Dark Mode
+------------------------------------------------------------------------------*/
+.dark-mode {
+  @include black-bg;
+  background-color: var(--gray--darker--80);
+}
 .dark-mode {
   .gray-bg,
   .light-blue-bg,
@@ -615,11 +431,13 @@
   }
 
   .blue-bg {
-    @include dark-blue-bg;
+    background-color: var(--blue--darker--40);
   }
 }
 
-/* Print styles */
+/*------------------------------------------------------------------------------
+6. Print Styles
+------------------------------------------------------------------------------*/
 @media print {
   .black-bg,
   .gray-bg,
@@ -635,9 +453,9 @@
   .light-green-bg,
   .dark-blue-gradient-bg,
   .blue-gradient-bg {
-    color: $black;
-    border: solid $border-width--thinner $black;
-    background-color: $white;
+    color: var(--black);
+    border: solid var(--border-width--sm) var(--black);
+    background-color: var(--white);
 
     h1,
     h2,
@@ -645,7 +463,7 @@
     h4,
     h5,
     h6 {
-      color: $dark-blue;
+      color: var(--dark-blue);
     }
 
     .block--beyond-basics-block {

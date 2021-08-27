@@ -1,25 +1,26 @@
-/**
-* @file
-* 01-atoms/lists/_menu-items.scss
-*/
-
+/*------------------------------------------------------------------------------
+Atom: Text - Lists - Menu Items
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .menu {
   li {
     @include breakpoint($medium) {
-      border-left-width: $border-width--thicker;
+      border-left-width: var(--border-width--lg);
     }
+
     margin-bottom: 0;
-    border-left: solid $border-width $light-gray;
+    border-left: solid var(--border-width--md) var(--blue--lighter--60);
 
     a {
       display: inline-block;
       width: 100%;
       margin: inherit;
       margin-bottom: 0;
-      padding: $half-spacing ($half-spacing * 4) $half-spacing ($half-spacing * 2);
-      transition: $medium-transition-speed $standard-ease background-color;
+      padding: var(--space--xs) var(--space--xl) var(--space--xs)
+        var(--space--md);
+      transition: var(--transition-speed--fast) var(--ease--standard) all;
       text-decoration: none;
-      color: $black;
+      background-size: 100% 100%;
     }
   }
 }

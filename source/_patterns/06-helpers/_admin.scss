@@ -1,0 +1,14 @@
+/*------------------------------------------------------------------------------
+Helpers: Admin
+--------------------------------------------------------------------------------
+Fixes for Drupal administration theme.
+------------------------------------------------------------------------------*/
+.toolbar-bar button,
+.si-button {
+  box-shadow: none;
+}
+
+/* Prevent contextual links in splash from breaking layout -------------------*/
+.splash > div:nth-of-type(1) div[data-contextual-id] {
+  height: initial;
+}

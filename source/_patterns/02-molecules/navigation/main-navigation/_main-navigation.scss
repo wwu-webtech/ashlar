@@ -1,171 +1,104 @@
-/**
-* @file
-* 02-molecules/navigation/main-navigation/_main-navigation.scss
-*/
+/*------------------------------------------------------------------------------
+Molecule: Main navigation/ultimenu custom styles
+--------------------------------------------------------------------------------
+1. Active link trail
+2. Display preferences
+------------------------------------------------------------------------------*/
 .main-navigation,
 #block-system-main-menu {
   @include breakpoint($medium) {
-    width: 100vw;
+    width: 100%;
     height: inherit;
     border-top: none;
   }
-  border-top: solid $darkest-blue $border-width--thinner;
-  background-color: $dark-blue;
 
   grid-area: main-nav;
+  border-top: solid var(--blue--darker--40) var(--border-width--sm);
+  font-family: var(--font--condensed);
 
   & > .menu,
-  .ultimenu--horizontal,
-  .ultimenu-main-menu {
-    @include breakpoint($medium) {
-      background-color: $blue;
-    }
+  .ultimenu--horizontal {
+    @include blue-bg;
+
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     margin: 0;
     padding-left: 0;
-    background-color: initial;
-    min-height: $standard-spacing * 4.27;
 
     & > li {
       @include breakpoint($medium) {
+        grid-template-columns: 1fr var(--icon-size--xs);
         width: inherit;
         border-bottom: none;
-        grid-template-columns: 1fr $icon-size--small;
       }
-      display: grid;
-      width: 100%;
-      transition: $button-transition-speed background-color $standard-ease;
-      border-bottom: $border-width--thinner solid $darkest-blue;
-      border-left: none;
 
+      display: grid;
       grid-template-areas:
         "link icon"
         "flyout flyout";
-      grid-template-columns: 1fr $toggle-size;
+      grid-template-columns: 1fr var(--toggle-size--sm);
       grid-template-rows: auto auto;
-
-      &:last-of-type {
-        @include breakpoint($small) {
-          margin-bottom: 0;
-        }
-        margin-bottom: 50vh;
-      }
-
-      /* active page styles for non-dropdown items */
-      &.ultimenu__item--active-page:not(.has-ultimenu) {
-        @include breakpoint($medium) {
-          border-left: 0;
-          background-color: $lightest-green;
-
-          &:hover,
-          &:focus-within,
-          &:active {
-            background-color: $dark-blue;
-          }
-          a {
-            color: $black;
-
-            &:hover,
-            &:focus,
-            &:active {
-              color: $white;
-            }
-          }
-        }
-        font-weight: $font-weight--bold;
-        border-left: $border-width--thicker solid $lightest-green;
-      }
-
-      & > a {
-        @include breakpoint($large) {
-          font-size: $menu-font-size--max;
-        }
-        @include breakpoint($medium) {
-          display: flex;
-          align-items: center;
-          padding: $one-point-five-spacing;
-          padding-right: $icon-size--small + $standard-spacing;
-          text-align: center;
-          font-size: $menu-font-size;
-        }
-        position: relative;
-        display: grid;
-        align-items: center;
-        width: 100%;
-        margin: 0;
-        padding: $one-point-five-spacing;
-        text-align: left;
-        white-space: normal;
-        text-decoration: none;
-        color: $white;
-        font-family: $condensed;
-        font-size: $p-font-size;
-        line-height: 1;
-
-        grid-column: 1 / span all;
-        grid-row: 1 / span 1;
-
-        &:hover,
-        &:focus,
-        &:active {
-          text-decoration: none;
-          outline: none;
-          background-color: transparent;
-        }
-      }
+      width: 100%;
+      border-bottom: var(--border-width--sm) solid var(--blue--darker--20);
+      border-left: none;
 
       &:hover,
       &:focus-within {
-        @include breakpoint($medium) {
-          background-color: $dark-blue;
-        }
-        background-color: $light-green;
+        background-image: var(--gradient--vertical--light-blue);
 
-        > a {
-          @include breakpoint($medium) {
-            color: $white;
-          }
-          color: $black;
-        }
-
-        .expand-icon.mobile {
-          color: $black;
+        .expand-icon {
+          color: var(--dark-blue--darker--60);
         }
       }
 
-      &:focus-within {
+      & > a {
         @include breakpoint($medium) {
-          outline-color: $white;
+          display: flex;
+          align-items: center;
+          padding: var(--space--sm);
+          padding-right: var(--icon-size--xs);
+          text-align: center;
         }
-        outline: dotted $black $border-width;
-        outline-offset: -$border-width;
+
+        position: relative;
+        grid-column: 1 / span all;
+        grid-row: 1 / span 1;
+        width: 100%;
+        min-height: var(--touch-target--min);
+        margin: 0;
+        padding: var(--space--sm);
+        transition: none;
+        text-align: left;
+        white-space: normal;
+        text-decoration: none;
+        font-weight: var(--font-weight--regular);
+        line-height: 1;
+
+        &:active,
+        &:focus,
+        &:hover {
+          background-size: 0 0;
+        }
       }
 
       .expand-icon {
-        @include breakpoint($medium) {
-          display: none;
-        }
         display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        color: $white;
-        border: none;
-        font-size: $icon-size--small;
-
         grid-area: icon;
         -ms-grid-column: 2;
         -ms-grid-column-span: 1;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        border: none;
+        font-size: var(--icon-size--xs);
 
         &.desktop {
           @include breakpoint($medium) {
-            right: $half-spacing;
             display: flex;
-            position: relative;
           }
+
           display: none;
         }
 
@@ -175,40 +108,47 @@
           }
         }
       }
+
+      /*------------------------------------------------------------------------
+      1. Active link trail
+      ------------------------------------------------------------------------*/
+      &.is-active-trail {
+        @include breakpoint($medium) {
+          border-left: none;
+          &:after {
+            display: block;
+            grid-column: 1 / span all;
+            height: var(--border-width--lg);
+            margin-top: calc(-1 * var(--border-width--lg));
+            content: "";
+            background: var(--light-green--lighter--20);
+          }
+        }
+
+        border-left: solid var(--border-width--lg)
+          var(--light-green--lighter--20);
+      }
     }
+  }
+}
+
+/*------------------------------------------------------------------------------
+2. Display preferences
+------------------------------------------------------------------------------*/
+.font--dyslexia-friendly {
+  .main-navigation,
+  #block-system-main-menu {
+    font-family: var(--font--dyslexia-friendly);
+  }
+}
+
+.font--hyperlegible {
+  .main-navigation,
+  #block-system-main-menu {
+    font-family: var(--font--hyperlegible);
   }
 }
 
 #block-system-main-menu ul ul {
   display: none; // hide nested menus on non ultimenu main nav blocks
-}
-
-.opendyslexic {
-  .main-navigation,
-  #block-system-main-menu {
-    & > .menu,
-    .ultimenu--horizontal,
-    .ultimenu-main-menu {
-      & > li {
-        & > a {
-          font-family: $opendyslexic;
-        }
-      }
-    }
-  }
-}
-
-.atkinson {
-  .main-navigation,
-  #block-system-main-menu {
-    & > .menu,
-    .ultimenu--horizontal,
-    .ultimenu-main-menu {
-      & > li {
-        & > a {
-          font-family: $atkinson;
-        }
-      }
-    }
-  }
 }

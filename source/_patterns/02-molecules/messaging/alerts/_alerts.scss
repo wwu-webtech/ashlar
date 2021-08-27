@@ -1,31 +1,29 @@
-/**
- * @file
- * organisms/page/_alerts.scss
- */
-$alert-logo-size: 4.25rem;
-
+/*------------------------------------------------------------------------------
+Molecule: Alerts
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .alert {
+  --alert-logo-size: 4.25rem;
   width: 100%;
-  padding: $double-spacing;
+  padding: var(--space--md);
 
   .alert-header {
-    font-family: $sans-serif;
     border-bottom: none;
     margin-top: 0;
   }
 
   .alert-body {
-    margin: $double-spacing 0;
+    margin: var(--space--md) 0;
   }
 
   .alert-icon {
-    width: $alert-logo-size;
+    width: var(--alert-logo-size);
     float: left;
-    margin-right: $double-spacing;
+    margin-right: var(--space--md);
 
     svg {
       position: relative;
-      width: $alert-logo-size;
+      width: var(--alert-logo-size);
       height: auto;
     }
   }
@@ -35,44 +33,28 @@ $alert-logo-size: 4.25rem;
   }
 
   &.emergency {
-    color: $white;
-    background-color: $red;
+    color: var(--white);
+    background-color: var(--red);
 
     .alert-header {
-      color: $white;
+      color: var(--white);
     }
 
     svg {
-      fill: $white;
+      fill: var(--white);
     }
   }
 
   &.weather {
-    color: $dark-blue;
-    background-color: $yellow;
+    color: var(--dark-blue);
+    background-color: var(--yellow);
 
     .alert-header {
-      color: $dark-blue;
+      color: var(--dark-blue);
     }
 
     svg {
-      fill: $dark-blue;
-    }
-  }
-}
-
-.opendyslexic {
-  .alert {
-    .alert-header {
-      font-family: $opendyslexic;
-    }
-  }
-}
-
-.atkinson {
-  .alert {
-    .alert-header {
-      font-family: $atkinson;
+      fill: var(--dark-blue);
     }
   }
 }

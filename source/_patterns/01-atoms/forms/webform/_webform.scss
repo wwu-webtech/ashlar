@@ -1,28 +1,27 @@
-/**
- * @file
- * 01-atoms/forms/webform/_webform.scss
- * Styles specifically for the Drupal Webform module
- */
+/*------------------------------------------------------------------------------
+Atom: Forms - Webforms
+--------------------------------------------------------------------------------
+1. File Input
+2. Grids
+3. Wizard Pages
+------------------------------------------------------------------------------*/
 
-$checkmark-size: 3.75rem;
-
-@mixin current-progress-hover {
-  color: $lightest-green;
-  background: mix(black, $blue, 20%);
-}
-
-/* File Input */
+/*------------------------------------------------------------------------------
+1. File Input
+------------------------------------------------------------------------------*/
 .form-managed-file {
   .form-file {
     display: inline-block;
-    margin-right: $standard-spacing;
-    margin-bottom: $standard-spacing;
+    margin-right: var(--space--md);
+    margin-bottom: var(--space--md);
   }
 }
 
-/* Grids */
-// Overwrite our radio button styles for default radio buttons
+/*------------------------------------------------------------------------------
+2. Grids
+------------------------------------------------------------------------------*/
 .webform-grid {
+  // Overwrite our radio button styles for default radio buttons
   input[type="radio"] {
     position: relative;
     width: inherit;
@@ -30,10 +29,8 @@ $checkmark-size: 3.75rem;
     margin: auto;
     opacity: 1;
   }
-}
 
-// Make the whole table cell clickable
-.webform-grid {
+  // Make the whole table cell clickable
   .checkbox {
     label {
       top: 0;
@@ -49,87 +46,73 @@ $checkmark-size: 3.75rem;
 
 form {
   .description {
-    margin-bottom: $standard-spacing;
-    color: $gray;
-    font-size: $p-font-size--smaller;
+    margin-bottom: var(--space--md);
+    color: var(--gray);
+    font-size: var(--font-size--sm);
   }
 
   .form-item {
-    margin-bottom: $standard-spacing;
+    margin-bottom: var(--space--md);
   }
 }
 
-/* Wizard page styles */
+/*------------------------------------------------------------------------------
+3. Wizard Pages
+------------------------------------------------------------------------------*/
 .webform-progress-tracker {
-
   .progress-step {
-
     &.is-complete {
-      &:hover, &:focus {
-        .progress-marker {
-          @include default-link-hover-focus();
-        }
-      }
-
       .progress-title {
         &[role="link"] {
-          color: $link-color;
           text-decoration: underline;
-
-          &:active,
-          &:focus,
-          &:hover {
-            @include default-link-hover-focus();
-          }
-
-          &:focus {
-            @include default-link-focus-border();
-          }
+          color: var(--darker--20);
         }
 
         &:after {
+          --checkmark-size: 3.75rem;
+
           @include breakpoint($large) {
-            left: $checkmark-size;
+            left: var(--checkmark-size);
           }
           @include breakpoint($medium) {
-            left: $standard-spacing * 3;
+            left: var(--space--2xl);
           }
-          content: '';
+
+          position: relative;
+          top: calc(-1 * var(--space--md));
+          left: var(--space--2xl);
+          display: block;
+          width: calc(var(--checkmark-size) * 2);
+          height: var(--checkmark-size);
+          content: "";
+          transform: scale(0.5);
           background-image: url("../images/forms/green-check.png");
           background-repeat: no-repeat;
-          transform: scale(0.5);
-          display: block;
-          height: $checkmark-size;
-          width: $checkmark-size + 3.75rem;
-          position: relative;
-          top: -($standard-spacing);
-          left: ($standard-spacing / 3);
         }
       }
     }
 
     &.is-active {
-
       &:hover .progress-marker {
-        @include current-progress-hover();
+        color: var(--light-green--lighter--40);
+        background: var(--blue--darker--20);
       }
 
       .progress-marker {
-        background-color: $blue;
+        background-color: var(--blue);
 
         &:hover,
         &:active {
-          @include current-progress-hover();
+          color: var(--light-green--lighter--40);
+          background: var(--blue--darker--20);
         }
       }
     }
 
     .progress-marker {
-      &:hover, &:focus {
-        background-color: $link-color;
-      }
+      &:hover,
       &:focus {
-        @include default-link-focus-border();
+        background-color: var(--blue--darker--20);
       }
     }
   }

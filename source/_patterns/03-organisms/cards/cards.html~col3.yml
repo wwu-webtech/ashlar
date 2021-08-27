@@ -4,6 +4,6 @@ attributes:
       - card-3col
 label: "3 Column Card Row"
 cards:
-- molecules-card-html-tag
+- molecules-card-html
 - molecules-card-html-event
 - molecules-card-html

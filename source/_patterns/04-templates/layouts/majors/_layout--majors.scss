@@ -1,35 +1,29 @@
-/**
- * @file
- * templates/layouts/majors/_layout--majors.scss
- */
-
+/*------------------------------------------------------------------------------
+Templates: Layouts - Majors pages
+--------------------------------------------------------------------------------
+Semi deprecated, can be removed when all majors pages have been switched
+to new version.
+------------------------------------------------------------------------------*/
 .layout--majors {
   display: flex;
   flex-wrap: wrap;
-
 
   > .layout__region {
     flex: 0 1 100%;
   }
 
   > .layout__region--sample-jobs {
-    @include font-size--smaller;
+    @include blue-bg;
     @include breakpoint($medium) {
       flex: 0 1 25%;
       max-width: 25%;
-      padding: $double-spacing $standard-spacing;
+      padding: var(--space--md) var(--space--lg);
     }
-    margin-top: $double-spacing;
-    padding: $standard-spacing $half-spacing;
-    background-color: $blue;
-
-    h2 {
-      border-bottom-color: $lightest-green;
-      font-size: $h4-font-size;
-    }
+    margin-top: var(--space--md);
+    padding: var(--space--lg) var(--space--xs);
 
     ul {
-      padding-right: $standard-spacing;
+      padding-right: var(--space--lg);
     }
   }
 
@@ -37,30 +31,30 @@
     @include breakpoint($medium) {
       flex: 0 1 75%;
       max-width: 75%;
-      padding-right: $double-spacing;
+      padding-right: var(--space--md);
     }
   }
 
   > .layout__region--catalog {
-    @include font-size--larger;
+    font-size: var(--font-size--lg);
   }
 
   > .layout__region--related-majors {
     @include breakpoint($medium) {
       flex: 0 1 50%;
       max-width: 50%;
-      padding-right: $standard-spacing;
+      padding-right: var(--space--lg);
     }
-    margin-top: $double-spacing;
+    margin-top: var(--space--md);
   }
 
   > .layout__region--department {
     @include breakpoint($medium) {
       flex: 0 1 50%;
       max-width: 50%;
-      padding-left: $standard-spacing;
+      padding-left: var(--space--lg);
     }
-    margin-top: $double-spacing;
+    margin-top: var(--space--md);
   }
 }
 
@@ -73,5 +67,35 @@
 
   div {
     display: inline;
+  }
+}
+
+.view--majors-list {
+  .menu {
+    @include breakpoint($small) {
+      column-count: 2;
+    }
+  }
+}
+
+/* Individual major */
+.page-node-type-major {
+  #block-pagetitle {
+    display: none;
+  }
+
+  .layout--majors {
+    .layout__region--related-majors,
+    .layout__region--sample-jobs,
+    .layout__region--department {
+      img {
+        display: block;
+        margin: auto;
+      }
+
+      h2 {
+        text-align: center;
+      }
+    }
   }
 }

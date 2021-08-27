@@ -1,8 +1,7 @@
-/**
-* @file
-* 02-molecules/content/switcher.scss
-*/
-
+/*------------------------------------------------------------------------------
+Molecule: Switcher
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .content-switcher,
 .mabel-content-switcher {
   display: flex;
@@ -11,39 +10,30 @@
   padding: 0;
 
   button {
-    @include breakpoint($medium) {
-      padding: $standard-spacing $double-spacing;
-    }
     width: 100%;
     max-width: none;
-    margin-right: $standard-spacing / 3;
-    padding: $half-spacing;
-    color: $white;
+    margin-right: var(--space--xs);
+    color: var(--white);
     border: none;
     border-radius: 0;
-    background-color: $blue;
+    background-color: var(--dark-blue);
     box-shadow: none;
 
     &:hover,
     &:focus,
     &:active {
       transform: none;
-      color: $dark-blue;
-      background-color: $light-green;
+      color: var(--dark-blue--darker--40);
+      background-image: var(--gradient--vertical--light-blue);
       box-shadow: none;
-    }
-
-    &:focus {
-      border: none;
-      outline: $border-width--thicker dotted $black;
-      outline-offset: 1px;
+      outline-offset: calc(-1 * var(--border-width--lg));
     }
 
     &.active,
     &:disabled {
       opacity: 1;
-      color: $black;
-      background-color: $light-green;
+      color: var(--dark-blue--darker--60);
+      background-color: var(--light-green--lighter--20);
     }
 
     &:last-child {
@@ -52,16 +42,15 @@
 
     .material-icons {
       &.show {
-        @include breakpoint($large) {
-          font-size: $icon-size--small + 0.125rem;
-        }
         @include breakpoint($small) {
-          display: inline-block;
           position: relative;
-          top: $border-width--thicker;
+          top: 0.3rem;
+          display: inline-block;
         }
+
         display: block;
-        font-size: $icon-size--small;
+        color: inherit;
+        font-size: var(--icon-size--xs);
       }
     }
   }
@@ -74,12 +63,11 @@
 
   .content {
     display: none;
-    margin-top: $standard-spacing;
-
-    -ms-grid-column: 1;
     grid-column-start: 1;
-    -ms-grid-row: 1;
     grid-row-start: 1;
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    margin-top: var(--space--md);
 
     &.active {
       display: block;
@@ -91,17 +79,6 @@
   .content-switcher-container {
     .content {
       display: block;
-    }
-  }
-}
-
-.dark-mode {
-  .content-switcher {
-    button {
-      background-color: $dark-blue;
-      &:focus {
-        outline-color: $white;
-      }
     }
   }
 }

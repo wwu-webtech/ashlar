@@ -1,19 +1,20 @@
-/**
-* @file
-* sites/mabel/pages/_object.scss
-*/
+/*------------------------------------------------------------------------------
+Templates: Sites - MABEL - Object
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 
 .download-link {
-  margin-top: $standard-spacing;
+  margin-top: var(--space--sm);
 }
 
 a#clip {
   @include breakpoint($medium) {
-    font-size: $p-font-size--smaller;
+    font-size: var(--font-size--sm);
   }
-  margin-bottom: $standard-spacing;
+
+  margin-bottom: var(--space--sm);
   margin-left: 0;
-  font-size: $p-font-size--smaller;
+  font-size: var(--font-size--sm);
 }
 
 .islandora-object-thumb,
@@ -28,30 +29,28 @@ a#clip {
 
   ul {
     display: flex;
-    margin: $half-spacing 0;
+    margin: var(--space--xs) 0;
     padding: 0;
     list-style: none;
   }
 
   a {
-    margin-right: $standard-spacing;
-    padding: $half-spacing $standard-spacing;
+    margin-right: var(--space--sm);
+    padding: var(--space--xs) var(--space--sm);
     text-decoration: none;
-    color: $black;
-    background-color: $light-gray;
+    color: var(---black);
+    background-color: var(--gray--lighter--60);
 
     &:hover,
     &:focus,
     &:active {
-      color: $white;
-      background-color: $gray;
+      color: var(--white);
+      background-color: var(--gray);
     }
   }
 }
 
-
-
-/* Gray box around objects */
+/* Gray box around objects ---------------------------------------------------*/
 .islandora-audio-content,
 .islandora-basic-image-content,
 .islandora-large-image-content,
@@ -68,19 +67,19 @@ body.page-islandora-object {
     h1 {
       display: inline-block;
       margin-top: 0;
-      margin-right: $standard-spacing;
-      font-size: $h4-font-size;
+      margin-right: var(--space--sm);
+      font-size: var(--font-size--2xl);
     }
   }
 
-  /* grid view */
+  /* grid view ---------------------------------------------------------------*/
   .islandora-objects-grid-item {
-    font-size: $p-font-size--smaller;
-
     break-word: break-all;
+
+    font-size: var(--font-size--sm);
   }
 
-  /* image viewer on single object page */
+  /* image viewer on single object page --------------------------------------*/
   .islandora-large-image-content {
     float: none;
     width: 100%;
@@ -89,58 +88,45 @@ body.page-islandora-object {
   /* Sidebar panels */
   .layout__region--first {
     .panel-pane {
-      margin-bottom: $standard-spacing;
-      padding: $standard-spacing;
-      background: $lightest-gray;
-      font-size: $p-font-size--smaller;
+      @include lightest-gray-bg;
+
+      margin-bottom: var(--space--sm);
+      padding: var(--space--sm);
+      font-size: var(--font-size--sm);
     }
-
-    a {
-      border-bottom-color: transparent;
-
-      &:hover,
-      &:focus,
-      &:active {
-        color: $dark-green;
-        border-bottom-color: $dark-green;
-      }
-    }
-
 
     h2 {
       margin-top: 0;
-      font-family: $sans-serif;
-      font-size: $p-font-size;
+      font-size: var(--font-size--md);
     }
   }
 
   .layout__region--second {
     position: relative;
-    padding-top: $double-spacing;
+    padding-top: var(--space--lg);
   }
 }
-
 
 /* Details */
 .islandora-metadata-set {
   legend {
     margin: 0;
-    padding: 0 $standard-spacing;
-    color: $darkest-blue;
+    padding: 0 var(--space--sm);
+    color: var(--dark-blue--darker--40);
   }
 }
 
 .islandora-metadata-set fieldset,
 fieldset.islandora-metadata-set {
-  margin-bottom: $half-spacing;
+  margin-bottom: var(--space--xs);
 }
 
 /* Side by side details */
 .layout--twocol-section {
   dl.islandora-inline-metadata {
     display: grid;
-    font-size: $p-font-size--smaller;
     margin-top: 0;
+    font-size: var(--font-size--sm);
 
     dt {
       width: initial;
@@ -150,7 +136,7 @@ fieldset.islandora-metadata-set {
     dd {
       width: initial;
       margin: 0;
-      padding: $half-spacing 0 $half-spacing $one-point-five-spacing;
+      padding: var(--space--xs) 0 var(--space--xs) var(--space--md);
       border: none;
     }
   }

@@ -1,5 +1,9 @@
-/* Dark mode overlay helper--mutes images in dark mode */
-
+/*------------------------------------------------------------------------------
+Helpers: Overlays
+--------------------------------------------------------------------------------
+These classes are useful for improving contrast between text and background
+images for banners, image CTAs, etc.
+------------------------------------------------------------------------------*/
 .dark-mode {
   .block--banner,
   .block--image-button,
@@ -13,66 +17,63 @@
   }
 }
 
-/* Darken bg image to improve contrast as needed, 
-mainly for image buttons and banner images with overlays on top */
-
-.image-darker--10 {
+.image-darker---10 {
   .image,
   .background-image {
     filter: brightness(0.9);
   }
 }
 
-.image-darker--20 {
+.image-darker---20 {
   .image,
   .background-image {
     filter: brightness(0.8);
   }
 }
 
-.image-darker--30 {
+.image-darker---30 {
   .image,
   .background-image {
     filter: brightness(0.7);
   }
 }
 
-.image-darker--40 {
+.image-darker---40 {
   .image,
   .background-image {
     filter: brightness(0.6);
   }
 }
 
-.image-darker--50 {
+.image-darker---50 {
   .image,
   .background-image {
     filter: brightness(0.5);
   }
 }
 
-.image-darker--60 {
+.image-darker---60 {
   .image,
   .background-image {
     filter: brightness(0.4);
   }
 }
 
-.image-darker--70 {
+.image-darker---70 {
   .image,
   .background-image {
     filter: brightness(0.3);
   }
 }
 
-.image-darker--80 {
+.image-darker---80 {
   .image,
   .background-image {
     filter: brightness(0.2);
   }
 }
 
-.image-darker--90 {
+.image-darker---90 {
   .image,
   .background-image {
     filter: brightness(0.1);

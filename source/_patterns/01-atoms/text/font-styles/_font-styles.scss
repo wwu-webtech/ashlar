@@ -1,0 +1,44 @@
+/*------------------------------------------------------------------------------
+Atom: Text - Font Styles
+--------------------------------------------------------------------------------
+Note: The backup declarations (eg var(--font--serif), "PT Serif";) are to
+be sure that SASS will import all of the @font-face declarations. It seems to
+have trouble recognizing the fonts as being used in the var() declarations alone
+------------------------------------------------------------------------------*/
+.font-size--smaller {
+  font-size: var(--font-size--sm);
+}
+
+.font-size--regular {
+  font-size: var(--font-size--md);
+}
+
+.font-size--larger {
+  font-size: var(--font-size--lg);
+}
+
+.font--sans-serif {
+  font-family: var(--font--sans-serif), "Fira Sans";
+}
+
+.font--condensed {
+  font-family: var(--font--condensed), "Fira Sans Extra Condensed";
+}
+
+.font--serif {
+  font-family: var(--font--serif), "PT Serif";
+}
+
+.font--title {
+  font-family: var(--font--title), "Montserrat";
+}
+
+.font--dyslexia-friendly {
+  font-family: var(--font--dyslexia-friendly), "Open Dyslexic";
+
+  font-feature-settings: unset;
+}
+
+.font--hyperlegible {
+  font-family: var(--font--hyperlegible), "Atkinson Hyperlegible";
+}

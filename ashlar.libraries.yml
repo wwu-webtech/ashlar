@@ -34,7 +34,7 @@ alerts:
 bg-video:
   version: 1.x
   js:
-    build/js/bg-video.js: {}
+    build/js/background-video.js: {}
   dependencies:
     - core/jquery
 breadcrumb-viewpage:

@@ -1,0 +1,44 @@
+/*------------------------------------------------------------------------------
+Atom: Icons - My Western Icons
+--------------------------------------------------------------------------------
+1. Dark mode
+------------------------------------------------------------------------------*/
+.my-western-icon {
+  display: block;
+  padding: var(--space--xs);
+  text-align: center;
+  color: var(--dark-blue);
+  background-size: 100%;
+
+  svg {
+    fill: var(--dark-blue);
+
+    display: block;
+    width: var(--toggle-size--md);
+    margin: auto;
+    margin-bottom: var(--space--xs);
+    transition: var(--ease-standard) var(--transition-speed--fast) fill;
+
+    @media print {
+      fill: var(--black);
+    }
+  }
+}
+/*------------------------------------------------------------------------------
+1. Dark mode
+------------------------------------------------------------------------------*/
+.dark-mode {
+  .my-western-icon {
+    svg {
+      fill: var(--blue--lighter--40);
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      svg {
+        fill: var(--dark-blue--darker--60);
+      }
+    }
+  }
+}

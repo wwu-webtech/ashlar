@@ -1,7 +1,7 @@
-/*
-* @file
-* templates/layouts/twcol/_twocol.scss
-*/
+/*------------------------------------------------------------------------------
+Templates: Layouts - Two column
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 
 .layout--twocol-section {
   display: flex;
@@ -13,18 +13,12 @@
 
   > .layout__region--first {
     @include breakpoint($small) {
-      padding-right: $half-spacing;
-    }
-    @include breakpoint($medium) {
-      padding-right: $standard-spacing;
+      padding-right: var(--space--xs);
     }
   }
   > .layout__region--second {
     @include breakpoint($small) {
-      padding-left: $half-spacing;
-    }
-    @include breakpoint($medium) {
-      padding-left: $standard-spacing;
+      padding-left: var(--space--xs);
     }
   }
 
@@ -37,10 +31,11 @@
 
   &.layout--twocol-section--33-67 > .layout__region--first,
   &.layout--twocol-section--67-33 > .layout__region--second {
-    @include font-size--smaller;
     @include breakpoint($small) {
       flex: 0 1 33%;
     }
+
+    font-size: var(--font-size--sm);
   }
 
   &.layout--twocol-section--33-67 > .layout__region--second,
@@ -52,10 +47,11 @@
 
   &.layout--twocol-section--25-75 > .layout__region--first,
   &.layout--twocol-section--75-25 > .layout__region--second {
-    @include font-size--smaller;
     @include breakpoint($small) {
       flex: 0 1 25%;
     }
+
+    font-size: var(--font-size--sm);
   }
 
   &.layout--twocol-section--25-75 > .layout__region--second,
@@ -71,11 +67,12 @@
     margin-right: calc(50% - 50vw);
     margin-left: calc(50% - 50vw);
   }
+
   display: flex;
   flex-wrap: wrap;
   max-width: 100vw;
-  margin-left: -$standard-spacing;
-  margin-right: -$standard-spacing;
+  margin-right: calc(-1 * var(--space--sm));
+  margin-left: calc(-1 * var(--space--sm));
 
   > .layout__region {
     flex: 0 1 100%;

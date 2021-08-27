@@ -1,12 +1,20 @@
-/**
-* @file
-* molecules/media/splash/_splash.scss
-*/
+/*------------------------------------------------------------------------------
+Molecule: Splash
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .splash,
 .featured-major-splash-area {
   position: relative;
   z-index: 0;
   display: grid;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
 }
 
 .splash > div,

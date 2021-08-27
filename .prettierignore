@@ -1,3 +1,4 @@
 *.html.twig
-_timeline-block.scss
+_font-families.scss
+_variables.scss
 accessible-mega-menu.js

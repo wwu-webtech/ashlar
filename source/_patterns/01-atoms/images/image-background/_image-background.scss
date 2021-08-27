@@ -1,10 +1,11 @@
-/**
-* @file
-* 01-atoms/images/image-background/_image-background.scss
-*/
-
+/*------------------------------------------------------------------------------
+Atom: Images - Image Backgrounds
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .background-image,
 .background-image > div {
+  object-fit: cover;
+
   position: absolute;
   z-index: 0;
   top: 0;
@@ -14,13 +15,11 @@
   width: 100%;
   height: 100%;
 
-  object-fit: cover;
-
   img {
+    object-fit: cover;
+
     display: block;
     width: 100%;
     height: 100%;
-
-    object-fit: cover;
   }
 }

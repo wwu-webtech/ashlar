@@ -41,7 +41,8 @@
   },
   "dependencies": {
     "acorn": "^6.4.1",
-    "breakpoint-sass": "^2.7.1"
+    "breakpoint-sass": "^2.7.1",
+    "prettier": "2.2.1"
   },
   "husky": {
     "hooks": {

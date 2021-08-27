@@ -1,14 +1,14 @@
-/**
-* @file
-* sites/mabel/panes/_sort.scss
-*/
+/*------------------------------------------------------------------------------
+Templates: Sites - MABEL - Sort
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .pane-islandora-solr-sort {
   display: flex;
   align-items: center;
-  margin-top: -$double-spacing;
+  margin-top: calc(-1 * var(--space--md));
 
   .pane-title {
-    margin-right: $standard-spacing;
+    margin-right: var(--space--sm);
   }
 
   .item-list {
@@ -16,11 +16,10 @@
 
     ul {
       display: grid;
+      grid-column-gap: var(--space--xs);
+      grid-template-columns: repeat(4, 1fr);
       margin: 0;
       list-style: none;
-
-      grid-column-gap: $half-spacing;
-      grid-template-columns: repeat(4, 1fr);
     }
 
     li {
@@ -30,47 +29,47 @@
 
       a {
         display: flex;
-        justify-content: center;
         align-items: center;
-        padding: $quarter-spacing;
+        justify-content: center;
+        padding: var(--space--2xs);
         text-decoration: none;
-        color: $white;
-        background: $blue;
+        color: var(--white);
+        background: var(--blue);
 
         &:hover,
         &:focus,
         &:active {
-          outline-color: $dark-blue;
-          background: $dark-blue;
+          outline-color: var(--dark-blue);
+          background: var(--dark-blue);
         }
 
         &.active {
-          color: $dark-blue;
-          background: $light-green;
+          color: var(--dark-blue);
+          background: var(--light-green);
 
           &:hover,
           &:focus,
           &:active {
-            color: $light-green;
-            background: $dark-blue;
+            color: var(--light-green);
+            background: var(--dark-blue);
           }
         }
       }
     }
 
     .sort-asc {
-      margin-left: $standard-spacing;
+      margin-left: var(--space--sm);
       transform: rotate(-90deg);
       &.material-icons {
-        font-size: $double-spacing;
+        font-size: var(--space--lg);
       }
     }
 
     .sort-desc {
-      margin-left: $standard-spacing;
+      margin-left: var(--space--sm);
       transform: rotate(90deg);
       &.material-icons {
-        font-size: $double-spacing;
+        font-size: var(--space--lg);
       }
     }
   }

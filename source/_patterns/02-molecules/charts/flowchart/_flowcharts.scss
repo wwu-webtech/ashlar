@@ -1,0 +1,68 @@
+/*------------------------------------------------------------------------------
+Molecule: Charts - Flow Chart
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+.flowchart {
+  figcaption {
+    text-align: center;
+  }
+
+  ol {
+    @include breakpoint($small) {
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+    display: flex;
+    flex-flow: column;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  li {
+    @include breakpoint($small) {
+      flex-flow: row nowrap;
+      margin: var(--space--md) 0 0;
+    }
+    display: flex;
+    flex-flow: column;
+    max-width: 22.5rem;
+    margin: auto;
+
+    &:last-of-type {
+      .flow-right,
+      .flow-left {
+        display: none;
+      }
+    }
+  }
+
+  .block__title {
+    margin-top: 0;
+  }
+
+  .item {
+    padding: var(--space--md);
+  }
+
+  .material-icons {
+    display: block;
+  }
+
+  .flow-down {
+    @include breakpoint($small) {
+      display: none;
+    }
+    display: block;
+    margin: auto;
+    padding: var(--space--md);
+  }
+
+  .flow-right {
+    @include breakpoint($small) {
+      display: block;
+    }
+    display: none;
+    align-self: center;
+    padding: var(--space--md);
+  }
+}

@@ -1,33 +1,33 @@
-/**
- * @file
- * molecules/links/link-list/_link-list.scss
- */
+/*------------------------------------------------------------------------------
+Molecule: Link list
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 
 .link-list {
   @include breakpoint($medium) {
-    padding: $standard-spacing;
     display: flex;
+    padding: var(--space--sm);
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       &.col {
-        margin: -($standard-spacing) auto;
+        margin: calc(-1 * (var(--space--sm))) auto;
       }
     }
   }
-  padding: 0 $standard-spacing;
+
+  padding: 0 var(--space--sm);
 }
 
 .col {
+  padding: var(--space--xs);
   &.left {
     @include breakpoint($medium) {
-      flex: 1;
+      flex: 0 0 15%;
     }
   }
-
-  &.right {
-    @include breakpoint($medium) {
-      flex: 2;
-    }
-  }
-  padding: $half-spacing;
 }

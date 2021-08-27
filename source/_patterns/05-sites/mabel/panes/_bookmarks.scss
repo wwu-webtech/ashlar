@@ -1,11 +1,10 @@
-/**
-* @file
-* sites/mabel/panes/_bookmarks.scss
-*/
-
+/*------------------------------------------------------------------------------
+Templates: Sites - MABEL - Bookmarks
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 #islandora-bookmark {
-  margin-bottom: $half-spacing;
-  font-size: $p-font-size--smaller;
+  margin-bottom: var(--space--xs);
+  font-size: var(--font-size--sm);
   h3 {
     display: none;
   }
@@ -14,7 +13,7 @@
   }
   input {
     margin: 0;
-    padding: $standard-spacing;
+    padding: var(--space--sm);
     border-radius: 0;
   }
 }

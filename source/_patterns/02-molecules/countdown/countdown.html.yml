@@ -3,7 +3,7 @@ attributes:
     class:
     - block
     - block--countdown
-    - big-bold-headings
+    - headings--big-bold
 title_attributes:
   Attribute():
     class:

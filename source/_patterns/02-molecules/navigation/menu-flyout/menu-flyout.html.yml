@@ -1,33 +1,35 @@
 attributes:
   Attribute():
     class:
-    - menu
+      - menu
 items:
-- title: Menu item 1
-  url: ''
-  attributes:
-    Attribute(): {}
-- title: Menu item 2
-  url: ''
-  attributes:
-    Attribute(): {}
-- title: Menu item three
-  url: ''
-  attributes:
-    Attribute(): {}
-- title: Menu item 4
-  url: ''
-  attributes:
-    Attribute(): {}
-- title: Menu item 5
-  url: ''
-  attributes:
-    Attribute(): {}
-- title: Menu item six
-  url: ''
-  attributes:
-    Attribute(): {}
-- title: Menu item 7
-  url: ''
-  attributes:
-    Attribute(): {}
+  - title: Menu item 1
+    url: ""
+    attributes:
+      Attribute(): {}
+  - title: Menu item 2
+    url: ""
+    attributes:
+      Attribute(): {}
+  - title: Menu item three
+    url: ""
+    attributes:
+      Attribute(): {}
+  - title: Menu item 4
+    url: ""
+    attributes:
+      Attribute():
+        class:
+          - menu-item--active-page
+  - title: Menu item 5
+    url: ""
+    attributes:
+      Attribute(): {}
+  - title: Menu item six
+    url: ""
+    attributes:
+      Attribute(): {}
+  - title: Menu item 7
+    url: ""
+    attributes:
+      Attribute(): {}

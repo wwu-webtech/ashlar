@@ -1,7 +1,7 @@
-/**
-* @file
-* organisms/email-signature/email-signature.scss
-*/
+/*------------------------------------------------------------------------------
+Organism: Email signature
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .email_signature_table {
   width: initial;
 
@@ -15,13 +15,5 @@
 
   p {
     font-size: inherit;
-  }
-}
-
-#copy_button {
-  &:focus {
-    background-color: $lightest-gray;
-    color: $black;
-    border-color: $black;
   }
 }

@@ -1,8 +1,7 @@
-/**
- * @file
- * molecules/navigation/pager/_pager.scss
- */
-
+/*------------------------------------------------------------------------------
+Molecule: Navigation - Pager
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .pager ul {
   padding: 0;
   list-style: none;
@@ -11,10 +10,16 @@
     display: inline-block;
     padding: 0 0.5625rem;
 
+    a {
+      display: inline-block;
+      text-align: center;
+      min-width: var(--touch-target--min);
+      min-height: var(--touch-target--min);
+    }
+
     &.is-active {
       a {
-        text-decoration: none;
-        color: $black;
+        background-color: var(--light-green--lighter--40);
       }
     }
   }

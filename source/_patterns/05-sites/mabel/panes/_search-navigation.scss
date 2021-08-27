@@ -1,8 +1,7 @@
-/**
-* @file
-* sites/mabel/panes/_search-navigation.scss
-*/
-
+/*------------------------------------------------------------------------------
+Templates: Sites - MABEL - Navigation
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .pane-islandora-solr-search-navigation {
   @include breakpoint($small) {
     display: grid;
@@ -12,22 +11,19 @@
   }
   display: flex;
   justify-content: space-between;
-  margin-bottom: $standard-spacing;
+  margin-bottom: var(--space--sm);
 
   div {
-    @include breakpoint($medium) {
-      font-size: $p-font-size--smaller;
-    }
     display: inline-block;
-    font-size: $p-font-size--smaller;
+    font-size: var(--font-size--sm);
   }
 
   .button {
     @include breakpoint($medium) {
-      padding: $standard-spacing;
+      padding: var(--space--sm);
     }
     margin-bottom: 0;
-    padding: $half-spacing;
+    padding: var(--space--xs);
   }
 
   #islandora-solr-search-prev-link,
