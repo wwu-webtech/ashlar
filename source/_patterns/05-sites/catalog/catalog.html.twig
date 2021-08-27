@@ -33,6 +33,10 @@
 
     {% block wwu_header %}
       {% embed "@organisms/headers/wwu-header/wwu-header.html.twig" %}
+        {% block site_name %}
+          <a href="https://catalog.wwu.edu/" class="home-link">University Catalog</a>
+        {% endblock %}
+
         {% block main_navigation %}
           {% include "@sites/catalog/catalog_navigation.twig" %}
         {% endblock %}
