@@ -1,0 +1,75 @@
+/* Set Acalog class on document ***********************************************/
+document.querySelector("html").classList.add("acalog");
+
+/* Load CSS and font files ****************************************************/
+var css = document.createElement("link");
+var fonts = document.createElement("link");
+var icons = document.createElement("link");
+var head = document.getElementsByTagName("head")[0];
+
+css.rel = "stylesheet";
+css.type = "text/css";
+css.href = "https://www.wwu.edu/themes/contrib/ashlar/build/css/components.css";
+
+fonts.rel = "stylesheet";
+fonts.href =
+"https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@300;400&family=Fira+Sans:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400&family=Montserrat:wght@700;900&family=PT+Serif:wght@400;700&display=swap";
+
+icons.rel = "stylesheet";
+icons.href = "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+head.appendChild(css);
+head.appendChild(fonts);
+head.appendChild(icons);
+
+/* Get rid of table layout for better accessibility ***************************/
+var wwu_header = document.querySelector(".site-header");
+document.querySelector("body").appendChild(wwu_header);
+
+/** set up main region **/
+var main_region = document.createElement("main");
+var region_wrapper = document.createElement("div");
+var region_content = document.createElement("div");
+main_region.id = "main-content";
+main_region.classList.add("page-content");
+
+document.querySelector("body").appendChild(main_region);
+region_wrapper.classList.add("region-wrapper");
+main_region.appendChild(region_wrapper);
+region_content.classList.add("region--content");
+region_wrapper.appendChild(region_content);
+
+/** move main acalog content  **/
+var catalog_search = document.getElementsByName("n2_search")[0];
+var select_catalog = document.getElementsByName("select_catalog")[0];
+var acalog_toolbar = document.getElementById("gateway-toolbar-1");
+var page_title = document.getElementById("acalog-page-title");
+var back_to_top = document.getElementById("gateway-back-to-top-icon-container");
+var main_gateway_content = document.querySelector(
+  ".block_content_outer .block_content"
+);
+var layout_region = document.createElement("div");
+
+if (catalog_search) { region_content.appendChild(catalog_search); }
+if (select_catalog) { region_content.appendChild(select_catalog); }
+if (acalog_toolbar) { region_content.appendChild(acalog_toolbar); }
+if (page_title) { region_content.appendChild(page_title); }
+if (layout_region) { region_content.appendChild(layout_region); }
+if (back_to_top) { region_content.appendChild(back_to_top); }
+
+if (main_gateway_content) {
+  layout_region.classList.add("layout--onecol--full-content-width");
+  layout_region.innerHTML =
+  "<div class='layout__region'>" + main_gateway_content.innerHTML + "</div>";
+}
+
+/* move footer */
+var wwu_footer = document.querySelector(".page-footer");
+document.querySelector("body").appendChild(wwu_footer);
+
+/* remove remaining markup */
+var title_table = document.querySelector(".layout__region .table_default");
+if (title_table) {title_table.parentNode.removeChild(title_table);}
+
+var outer_table = document.querySelector(".toplevel");
+if (outer_table) {outer_table.parentNode.removeChild(outer_table);}

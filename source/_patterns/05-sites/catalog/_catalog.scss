@@ -2,20 +2,14 @@
 Templates: Sites - Catalog
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-table.toplevel {
-  margin: 0;
-
-  tr:nth-of-type(2n),
-  tr:nth-of-type(2n + 1) {
-    background-color: initial;
+.acalog {
+  body {
+    margin: 0;
   }
 
-  td:nth-of-type(n) {
-    border: none;
-    padding: 0;
+  #acalog-client-header {
+    .display-settings {
+      display: none;
+    }
   }
-}
-
-#acalog-navigation {
-  display: none;
 }
