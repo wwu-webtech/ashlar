@@ -33,7 +33,13 @@
     }
   },
   "require": {
-    "aleksip/plugin-data-transform": "^1",
+    "aleksip/plugin-data-transform": "dev-wwuweb",
     "composer/installers": "^1.2"
+  },
+  "repositories": {
+    "aleksip/plugin-data-transform": {
+      "type": "vcs",
+      "url": "https://bitbucket.org/wwuweb/plugin-data-transform.git"
+    }
   }
 }
