@@ -40,6 +40,10 @@
     "aleksip/plugin-data-transform": {
       "type": "vcs",
       "url": "https://bitbucket.org/wwuweb/plugin-data-transform.git"
+    },
+    "pattern-lab/core": {
+      "type": "vcs",
+      "url": "https://bitbucket.org/wwuweb/patternlab-php-core.git"
     }
   }
 }
