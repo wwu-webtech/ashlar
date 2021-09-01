@@ -47,6 +47,10 @@ Display preferences
       li {
         border-left: none;
       }
+
+      a {
+        padding-left: var(--space--lg);
+      }
     }
   }
 

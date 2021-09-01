@@ -23,13 +23,21 @@ var header = document.querySelector(".western-header");
 var splash = document.querySelector(".splash");
 var content = document.querySelector(".page-content");
 var footer = document.querySelector(".page-footer");
-
 var screen_width = window.innerWidth;
+
+var safariAgent = navigator.userAgent.indexOf("Safari") > -1;
+function convertRemToPixels(rem) {
+  return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+}
 
 function position_elements() {
   screen_width = window.innerWidth;
 
-  if (screen_width < 951) {
+  if (
+    /* Safari calculates rem breakpoints oddly, so needs conversion */
+    (safariAgent && screen_width < convertRemToPixels(59.4375)) ||
+    (!safariAgent && screen_width < 951)
+  ) {
     mobile_menu_wrapper.appendChild(header_display_settings);
     mobile_menu_wrapper.appendChild(header_quick_links);
     if (header_main_nav) {

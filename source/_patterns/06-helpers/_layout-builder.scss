@@ -23,3 +23,16 @@ Affects the layout builder interface
 #drupal-off-canvas .ui-autocomplete li a {
   color: #63c2ff !important;
 }
+
+.dark-mode {
+  .layout-builder {
+    @include black-bg;
+  }
+
+  .layout-builder,
+  .layout-builder-block,
+  .layout-builder__add-section,
+  .layout-builder__add-block {
+    background-color: var(--dark-gray--darker--80);
+  }
+}
