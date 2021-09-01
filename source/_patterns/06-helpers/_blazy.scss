@@ -1,9 +1,8 @@
-/**
- * @file
- * helpers/_blazy.scss
- * CSS fixes for some blazy issues
- */
-
+/*------------------------------------------------------------------------------
+Helpers: Blazy
+--------------------------------------------------------------------------------
+Blazy image fixes. If these don't work, add data-unblazy as an attribute.
+------------------------------------------------------------------------------*/
 .background-image .blazy,
 .background-image .media {
   width: 100%;

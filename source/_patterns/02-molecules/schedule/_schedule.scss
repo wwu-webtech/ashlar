@@ -1,80 +1,107 @@
-/**
-* @file
-* molecules/schedule/_schedule.scss
-*/
+/*------------------------------------------------------------------------------
+Molecule: Schedule
+--------------------------------------------------------------------------------
+1. Dark mode
+------------------------------------------------------------------------------*/
 
 .block--schedule {
   .schedule-item {
+    @include lightest-gray-bg;
+
     position: relative;
-    margin-bottom: $one-point-five-spacing;
-    padding: $standard-spacing;
-    background-color: $lightest-bg-blue;
+    margin-bottom: var(--space--sm);
+    padding: var(--space--sm);
   }
 
   &.round-edges {
     .schedule-item {
-      border-radius: $border-radius--round-square;
+      border-radius: var(--border-radius--rounder);
 
       a:hover:after,
       &:focus-within {
-        border-radius: $border-radius--round-square;
+        border-radius: var(--border-radius--rounder);
+      }
+
+      a {
+        color: inherit;
       }
     }
   }
 
   .schedule-heading {
-    margin: 0;
+    margin: var(--space--xs) 0;
+    font-size: var(--font-size--lg);
 
-    a:after {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: -$border-radius--round-square;
-      content: "";
-      transition: $fast-transition-speed $standard-ease;
-    }
+    a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]){
+      text-decoration: none;
 
-    a:hover:after,
-    &:focus-within {
-      box-shadow: $focus-shadow;
-    }
+      &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: calc(-1 * var(--border-radius--rounder));
+        content: "";
+        transition: var(--transition-speed--fast) var(--ease--standard)
+          box-shadow;
+        box-shadow: var(--shadow--soft);
+      }
 
-    a:focus {
-      outline: none;
-    }
+      &:active,
+      &:hover,
+      &:focus {
+        color: inherit;
+      }
 
-    a:focus:after {
-      outline: $focus-outline;
-      border: $focus-outline;
-      outline-offset: -$border-width--thicker;
+      &:focus {
+        outline: none;
+
+        &:after {
+          outline: dotted var(--border-width--md);
+          outline-offset: var(--border-width--md);
+        }
+      }
+
+      &:hover:after,
+      &:focus-within {
+        box-shadow: var(--shadow--soft--hover);
+      }
     }
   }
 
   .time,
   .label {
-    @include breakpoint($large) {
-      font-size: $h5-font-size--max--smaller;
-    }
     display: block;
-    font-size: $h5-font-size--smaller;
+    font-size: var(--font-size--lg);
     line-height: 1.2em;
   }
 
   div:nth-of-type(odd) .schedule-item {
-    border-left: solid $blue $border-radius--round-square;
+    border-left: solid var(--blue) var(--border-radius--rounder);
   }
 
   div:nth-of-type(even) .schedule-item {
-    border-left: solid $light-blue $border-radius--round-square;
+    border-left: solid var(--blue--lighter--40) var(--border-radius--rounder);
   }
 }
 
-
+/*------------------------------------------------------------------------------
+1. Dark mode
+------------------------------------------------------------------------------*/
 .dark-mode {
   .block--schedule {
     .schedule-item {
-      background-color: $dark-blue;
+      @include dark-blue-bg;
+
+      a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]){
+        color: inherit;
+
+        &:active,
+        &:hover,
+        &:focus {
+          color: inherit;
+        }
+      }
     }
   }
 }

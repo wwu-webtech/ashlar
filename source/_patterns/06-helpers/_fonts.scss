@@ -1,17 +1,21 @@
-.sans-serif {
-  font-family: $sans-serif;
+/*------------------------------------------------------------------------------
+Helper Classes: Fonts
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+.font--sans-serif {
+  font-family: var(--font--sans-serif);
 }
 
-.serif {
-  font-family: $serif;
+.font--serif {
+  font-family: var(--font--serif);
 }
 
-.title-font {
-  font-family: $title-font;
+.font--title-font {
+  font-family: var(--font--title-font);
 }
 
 .bold {
-  font-weight: $font-weight--bold;
+  font-weight: var(--font-weight--bold);
 }
 
 .italic {

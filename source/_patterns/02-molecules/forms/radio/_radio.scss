@@ -1,8 +1,8 @@
-/**
- * @file
- * molecules/forms/radio/_radio.scss
- * radio buttons inherit some styles from molecules/forms/checkbox/_checbox.scss
- */
+/*------------------------------------------------------------------------------
+Molecule: Forms - Radios
+--------------------------------------------------------------------------------
+Radios share most styles with Checkboxes, see checkbox.scss for more
+------------------------------------------------------------------------------*/
 
 input[type="radio"] {
   + label {

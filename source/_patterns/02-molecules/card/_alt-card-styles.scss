@@ -1,0 +1,628 @@
+/*------------------------------------------------------------------------------
+Molecule: Cards - Alternate styles
+--------------------------------------------------------------------------------
+1. Color block title
+2. Event
+3. Event alternate
+4. Horizontal
+5. Information
+6. Information - Split style
+7. Simple
+8. Solid round
+9. Tile
+--------------------------------------------------------------------------------
+1. Color block title
+------------------------------------------------------------------------------*/
+.card.color-block-title,
+.block--card.color-block-title {
+  .title {
+    @include blue-bg;
+
+    order: 0;
+    padding: var(--space--md);
+
+    a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]){
+      &:active,
+      &:hover,
+      &:focus {
+        color: inherit;
+        background: none;
+      }
+    }
+  }
+
+  &.dark-blue {
+    .title {
+      @include dark-blue-bg;
+
+      a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]){
+        &:active,
+        &:hover,
+        &:focus {
+          color: inherit;
+          background: none;
+        }
+      }
+    }
+  }
+
+  &.light-green {
+    .title {
+      @include light-green-bg;
+
+      a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]){
+        &:active,
+        &:hover,
+        &:focus {
+          color: inherit;
+          background: none;
+        }
+      }
+    }
+  }
+}
+
+/*------------------------------------------------------------------------------
+2. Event
+------------------------------------------------------------------------------*/
+.card.event,
+.block--card.event {
+  align-content: start;
+
+  .image {
+    margin-bottom: calc(-1 * var(--space--lg));
+  }
+
+  .date {
+    flex: 0 1 40%;
+    order: 1;
+    margin-right: calc(-1 * var(--space--md));
+    padding-left: var(--space--md);
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+
+    .month {
+      display: block;
+      padding: var(--space--md) var(--space--lg) 0 var(--space--lg);
+      color: var(--white);
+      background-color: var(--blue);
+      font-size: var(--font-size--2xl);
+      font-weight: var(--font-weight--regular);
+    }
+
+    .day {
+      display: block;
+      padding: 0 var(--space--lg) var(--space--md) var(--space--lg);
+      white-space: nowrap;
+      word-spacing: -0.2em;
+      color: var(--white);
+      background-color: var(--blue);
+      font-size: var(--font-size--5xl);
+      font-weight: var(--font-weight--semibold);
+    }
+  }
+
+  .location {
+    flex: 1 1 60%;
+    order: 2;
+    align-self: flex-end;
+    margin-bottom: 0;
+    padding: var(--space--md) var(--space--md) var(--space--md) var(--space--lg);
+    text-transform: uppercase;
+    color: var(--blue);
+    font-style: normal;
+  }
+
+  .title {
+    margin-top: var(--space--md);
+    padding-right: var(--space--lg);
+    padding-left: var(--space--lg);
+  }
+
+  .body {
+    padding-right: var(--space--lg);
+    padding-left: var(--space--lg);
+  }
+}
+
+/*------------------------------------------------------------------------------
+3. Event Alternate
+------------------------------------------------------------------------------*/
+.card.event.alt,
+.block--card.event.alt {
+  display: grid;
+  grid-template-areas:
+    "image image"
+    "date title"
+    "date location"
+    "body body"
+    "terms terms";
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+
+  .title {
+    @include blue-bg;
+
+    display: flex;
+    grid-area: title;
+    align-items: end;
+    height: 100%;
+    margin: 0;
+    padding-top: var(--space--md);
+
+    a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]){
+      &:active,
+      &:hover,
+      &:focus {
+        color: inherit;
+        background: none;
+      }
+    }
+  }
+
+  .image {
+    grid-area: image;
+    margin-bottom: 0;
+  }
+
+  .date {
+    display: grid;
+    grid-area: date;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    .month {
+      display: grid;
+      align-content: end;
+      padding: var(--space--sm);
+      background-color: var(--dark-blue);
+    }
+
+    .day {
+      padding: var(--space--sm);
+      color: var(--dark-blue);
+      background-color: var(--light-green);
+    }
+  }
+
+  .location {
+    @include blue-bg;
+
+    display: flex;
+    grid-area: location;
+    align-items: start;
+    height: 100%;
+    padding-top: 0;
+  }
+
+  .body {
+    grid-area: body;
+    padding: var(--space--md);
+    padding-bottom: 0;
+  }
+
+  .taxonomy-terms {
+    grid-area: terms;
+    padding: var(--space--md);
+  }
+}
+
+/*------------------------------------------------------------------------------
+4. Horizontal
+------------------------------------------------------------------------------*/
+@mixin horizontal-card {
+  -ms-grid-columns: 1fr 1fr;
+  -ms-grid-rows: auto 1fr;
+
+  display: -ms-grid;
+  display: grid;
+  grid-template-areas:
+    "image title"
+    "image taxonomy"
+    "image body";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto 1fr;
+  padding-bottom: 0;
+
+  .image {
+    grid-area: image;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    margin-bottom: 0;
+    padding: 0;
+
+    > div {
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .taxonomy-terms {
+    grid-area: taxonomy;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .title {
+    grid-area: title;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    margin-top: var(--space--sm);
+  }
+
+  .body {
+    grid-area: body;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+  }
+}
+
+.card.horizontal,
+.block--card.horizontal {
+  @include horizontal-card;
+}
+
+/*------------------------------------------------------------------------------
+5. Information
+------------------------------------------------------------------------------*/
+.card.information,
+.block--card.information {
+  padding: 0;
+
+  .sorting-term {
+    order: 0;
+    min-width: 30%;
+    margin-left: var(--space--lg);
+    padding: var(--space--xs);
+    color: var(--white);
+    background-color: var(--blue);
+    font-size: var(--font-size--sm);
+  }
+
+  .title {
+    margin-top: var(--space--md);
+    margin-right: var(--space--lg);
+    margin-left: var(--space--lg);
+    padding: 0;
+    border-bottom: solid var(--border-width--md) var(--blue);
+
+    .block__title {
+      color: var(--blue);
+    }
+  }
+
+  .body {
+    padding: var(--space--md) var(--space--lg);
+  }
+
+  .taxonomy-terms {
+    display: flex;
+    flex-flow: column;
+    order: 6;
+    align-self: end;
+    padding: 0;
+    background-color: var(--blue);
+    font-weight: var(--font-weight--regular);
+  }
+
+  .taxonomy-term {
+    display: flex;
+    float: none;
+    align-items: center;
+    margin: 0;
+    padding: var(--space--xs);
+    color: var(--white);
+    background-color: transparent;
+    font-size: var(--font-size--sm);
+  }
+
+  .material-icons {
+    margin-right: var(--space--sm);
+    font-size: var(--space--lg);
+  }
+}
+
+/*------------------------------------------------------------------------------
+6. Information - Split style
+------------------------------------------------------------------------------*/
+.card.information.split-style,
+.block--card.information.split-style {
+  display: grid;
+  grid-template-areas:
+    "title body"
+    "sorting body"
+    "terms body";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto auto;
+  align-items: initial;
+  align-content: start;
+
+  .title {
+    @include blue-bg;
+
+    grid-area: title;
+    margin: 0;
+    padding: var(--space--lg) var(--space--lg);
+
+    a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]){
+      &:active,
+      &:hover,
+      &:focus {
+        color: inherit;
+        background: none;
+      }
+    }
+  }
+
+  .block__title {
+    color: var(--white);
+  }
+
+  .sorting-term {
+    display: flex;
+    grid-area: sorting;
+    align-items: center;
+    margin: 0;
+    background-color: var(--dark-blue);
+  }
+
+  .taxonomy-terms {
+    grid-area: terms;
+    background-color: var(--dark-blue);
+  }
+
+  .body {
+    grid-area: body;
+  }
+}
+
+/*------------------------------------------------------------------------------
+7. Simple
+------------------------------------------------------------------------------*/
+.card.simple,
+.block--card.simple {
+  @include lightest-gray-bg;
+
+  padding: 0;
+  text-align: center;
+
+  .title {
+    @include blue-bg;
+
+    order: 1;
+    padding: var(--space--lg);
+
+    a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]){
+      &:active,
+      &:hover,
+      &:focus {
+        color: inherit;
+        background: none;
+      }
+    }
+  }
+
+  .body {
+    padding: var(--space--lg);
+  }
+}
+
+.dark-mode {
+  .card.simple,
+  .block--card.simple {
+    @include gray-bg;
+  }
+}
+
+/*------------------------------------------------------------------------------
+8. Solid round
+------------------------------------------------------------------------------*/
+.card.solid-round,
+.block--card.solid-round {
+  border-radius: var(--space--2xl);
+  box-shadow: none;
+
+  a {
+    &:after {
+      display: none;
+    }
+    &:before {
+      display: none;
+    }
+  }
+
+  .title {
+    padding: 0;
+
+    .block__title {
+      padding: var(--space--lg) var(--space--lg) 0;
+      font-weight: var(--font-weight--black);
+    }
+  }
+
+  .image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    flex: 0 1 100%;
+    order: 2;
+    max-width: 50%;
+    max-height: 100%;
+    margin: 0;
+    border-radius: 0 var(--space--2xl) var(--space--2xl) 0;
+    img {
+      display: block;
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+      margin: 0 var(--space--2xl) 0;
+      opacity: 25%;
+    }
+  }
+
+  .body {
+    max-width: 23rem;
+    padding: var(--space--md) var(--space--lg) 0;
+
+    p {
+      margin: 0 0 var(--space--lg);
+      font-size: var(--font-size--sm);
+    }
+
+    .button.white,
+    .cta.white {
+      box-shadow: none;
+      font-size: var(--font-size--sm);
+    }
+  }
+
+  &.blue {
+    background-color: var(--blue--lighter--40);
+
+    .title {
+      .block__title {
+        a {
+          color: var(--dark-blue);
+        }
+      }
+    }
+    .body {
+      color: var(--blue--darker--40);
+
+      a.button.white,
+      a.cta.white {
+        color: var(--blue);
+        &:hover,
+        &:focus {
+          color: var(--white);
+          background-color: var(--blue);
+        }
+      }
+    }
+  }
+
+  &.green {
+    background-color: var(--light-green--lighter--40);
+    .title {
+      .block__title {
+        a {
+          color: var(--dark-green);
+        }
+      }
+    }
+    .body {
+      color: var(--dark-green--darker--20);
+
+      a.button.white,
+      a.cta.white {
+        color: var(--green);
+
+        &:hover,
+        &:focus {
+          color: var(--white);
+          background-color: var(--green);
+        }
+      }
+    }
+  }
+}
+
+/*------------------------------------------------------------------------------
+9. Tile
+------------------------------------------------------------------------------*/
+.card.tile,
+.block--card.tile {
+  @include light-blue-bg;
+
+  padding: var(--space--md);
+  border-radius: var(--space--2xl);
+
+  a {
+    &:after {
+      border-radius: var(--space--2xl);
+    }
+  }
+
+  &:hover {
+    a {
+      &:after {
+        border-radius: var(--space--2xl);
+        outline: transparent;
+      }
+    }
+  }
+
+  .image {
+    display: flex;
+    order: 1;
+    justify-content: flex-end;
+    margin: 0 0 var(--space--md);
+    border-radius: 0 var(--space--2xl) 0 0;
+    img {
+      display: block;
+      object-fit: scale-down;
+      width: auto;
+      max-height: 6.25rem;
+      margin: 0;
+      opacity: 25%;
+    }
+  }
+
+  .taxonomy-terms {
+    padding: 0 var(--space--xs);
+
+    .taxonomy-term {
+      margin: 0;
+      padding: 0;
+      color: var(--blue--darker--40);
+      background-color: transparent;
+      font-size: var(--font-size--lg);
+    }
+  }
+
+  .title {
+    margin: 0;
+    padding: 0 var(--space--xs) var(--space--xs);
+    text-transform: uppercase;
+
+    .block__title {
+      margin: 0;
+      color: var(--blue--darker--40);
+      font-size: var(--font-size--2xl);
+
+      a {
+        font-size: var(--font-size--2xl);
+      }
+
+      a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]){
+        &:active,
+        &:hover,
+        &:focus {
+          color: inherit;
+          background: none;
+        }
+      }
+    }
+  }
+}

@@ -1,84 +1,70 @@
-/**
-* @file
-* 01-atoms/buttons/_buttons.scss
-*/
-$soft-button-shadow: 0 0.1875rem 0.375rem transparentize(black, 0.84), 0 0.1875rem 0.375rem transparentize(black, 0.77);
-$soft-button-shadow--hover: 0 0.0625rem 0.1875rem rgba(0,0,0,0.12), 0 0.0625rem 0.125rem rgba(0,0,0,0.24);
-
-@mixin button-box-shadow($color) {
-  box-shadow: 0.125rem 0.125rem 0 $color;
-}
-
-/* Real buttons - few options */
+/*------------------------------------------------------------------------------
+Atom: Buttons
+--------------------------------------------------------------------------------
+These are true buttons. For links that are styled to look similar to buttons,
+see Atom - Links - Button Styled
+------------------------------------------------------------------------------*/
 button,
 input[type="submit"] {
-  @include button-box-shadow($gray);
-  padding: ($standard-spacing * 0.75) $standard-spacing;
-  transition: background $button-transition-speed, color $button-transition-speed, box-shadow $fast-transition-speed;
-  color: $black;
-  border: solid $border-width transparent;
-  border-radius: $border-radius--round-square;
-  background: $light-gray;
+  padding: var(--space--xs);
+  transition: background var(--transition-speed--fast),
+    color var(--transition-speed--fast),
+    box-shadow var(--transition-speed--fast);
+  color: var(--black);
+  border: var(--border-width--md) outset var(--gray--lighter--80);
+  border-radius: var(--border-radius--round);
+  background: var(--gray--lighter--80);
 
   &:hover,
   &:focus {
-    @include button-box-shadow($black);
-    color: $white;
-    background: $gray;
-  }
-
-  &:active {
-    box-shadow: none;
+    color: var(--white);
+    background: var(--gray);
   }
 
   &:focus {
-    border-style: dotted;
-    border-color: $white;
-    outline: none;
-  }
+    outline: dotted var(--border-width--md);
+    outline-offset: calc(-1 * var(--border-width--lg));
 
-
-  &.alt {
-    color: $black;
-    border: solid $border-width $gray;
-    background: $lightest-gray;
-
-    &:hover,
-    &:focus {
-      color: $white;
-      background: $blue;
-    }
-
-    &:focus {
-      border: $border-width dotted;
+    &:not(:focus-visible) {
       outline: none;
     }
   }
 
-  &.warning {
-    @include button-box-shadow($dark-blue);
-    color: $black;
-    border-color: transparent;
-    background: $yellow;
+  &:active {
+    border-style: inset;
+  }
+
+  &.alt {
+    color: var(--white);
+    border-color: var(--blue--lighter--20);
+    background: var(--blue);
 
     &:hover,
     &:focus {
-      background: mix($yellow, $white, 50%);
+      background: var(--dark-blue);
+    }
+  }
+
+  &.warning {
+    color: var(--black);
+    border-color: var(--yellow--lighter--40);
+    background: var(--yellow);
+
+    &:hover,
+    &:focus {
+      background: var(--yellow--lighter--40);
     }
 
     &:active {
       box-shadow: none;
     }
-
-    &:focus {
-      border-color: $red;
-    }
   }
 
   &:disabled {
-    color: scale-color($gray, $lightness: -15%);
-    border-color: mix($gray, $light-gray, 50%);
-    background: $light-gray;
+    color: var(--gray--darker--40);
+    border-style: solid;
+    border-color: var(--gray--lighter--60);
+    background: var(--gray--lighter--60);
     box-shadow: none;
   }
 }
@@ -88,309 +74,4 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   cursor: default;
-}
-/* Links styled as buttons - many options */
-.button {
-  @include button-box-shadow($dark-blue);
-  display: inline-block;
-  box-sizing: border-box;
-  margin-bottom: $standard-spacing;
-  padding: $standard-spacing $double-spacing;
-  user-select: none;
-  transition: background-color $button-transition-speed, color $button-transition-speed, border-color $button-transition-speed, box-shadow $fast-transition-speed;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-  color: $white;
-  border-width: $border-width;
-  border-style: solid;
-  border-color: transparent;
-  border-radius: $border-radius--round;
-  background: $blue;
-  font-size: $p-font-size;
-  line-height: 1;
-
-  .material-icons {
-    position: relative;
-    top: $half-spacing / 2;
-    font-size: $p-font-size;
-  }
-
-  &:active {
-    box-shadow: none;
-  }
-
-  &:focus {
-    border-style: dotted;
-    border-color: $white;
-    outline: none;
-  }
-
-  &:hover,
-  &:focus {
-    color: $white;
-    background: $darkest-blue;
-  }
-
-  &.square {
-    border-radius: $border-radius--square;
-  }
-
-  &.small {
-    padding: $half-spacing $standard-spacing;
-    font-size: $p-font-size--smaller;
-  }
-
-  &.medium {
-    padding: ($standard-spacing * 1.5) ($triple-spacing);
-    font-size: $h5-font-size;
-
-    .material-icons {
-      font-size: $h5-font-size;;
-    }
-  }
-
-  &.large {
-    padding: $double-spacing ($double-spacing * 2);
-    font-size: $h3-font-size;
-
-    .material-icons {
-      font-size: $h3-font-size;;
-    }
-  }
-
-  &.light-blue {
-    @include button-box-shadow($blue);
-    color: $black;
-    background: $light-blue;
-
-    &:active,
-    &:hover,
-    &:focus {
-      color: $white;
-      background: $blue;
-    }
-  }
-
-  &.dark-blue {
-    @include button-box-shadow($blue);
-    background: $dark-blue;
-
-    &:active,
-    &:hover,
-    &:focus {
-      background: $blue;
-    }
-  }
-
-  &.light-green {
-    @include button-box-shadow($dark-blue);
-    color: $dark-blue;
-    background: $light-green;
-
-    &:active,
-    &:hover,
-    &:focus {
-      color: $lightest-green;
-      background: $darkest-blue;
-    }
-
-    &:active {
-      box-shadow: none;
-    }
-  }
-
-  &.green {
-    @include button-box-shadow($dark-green);
-    background: $green;
-
-    &:active,
-    &:hover,
-    &:focus {
-      color: $black;
-      background: $light-green;
-    }
-
-    &:focus {
-      border-color: $dark-green;
-    }
-  }
-
-  &.dark-green {
-    @include button-box-shadow($light-green);
-    background: $dark-green;
-
-    &:active,
-    &:hover,
-    &:focus {
-      color: $black;
-      background: $light-green;
-    }
-
-    &:focus {
-      border-color: $dark-green;
-    }
-  }
-
-  &.white {
-    @include button-box-shadow($dark-blue);
-    color: $blue;
-    background: $white;
-
-    &:active,
-    &:hover,
-    &:focus {
-      color: $white;
-      background: $blue;
-    }
-  }
-
-  &.outline {
-    @include button-box-shadow($blue);
-    color: $blue;
-    border-color: $blue;
-    background: $white;
-
-    &:active,
-    &:hover,
-    &:focus {
-      color: $white;
-      border-color: transparent;
-      background: $dark-blue;
-    }
-
-    &:focus {
-      border-color: $white;
-    }
-
-    &.light-blue {
-      @include button-box-shadow($light-blue);
-      color: $light-blue;
-      border-color: $light-blue;
-      background-color: transparent;
-
-      &:active,
-      &:hover,
-      &:focus {
-        color: $dark-blue;
-        border-color: $light-gray;
-        background: $light-gray;
-      }
-    }
-
-    &.dark-blue {
-      @include button-box-shadow($dark-blue);
-      color: $dark-blue;
-      border-color: $dark-blue;
-
-      &:active,
-      &:hover,
-      &:focus {
-        color: $white;
-        border-color: transparent;
-        background: $blue;
-      }
-    }
-
-    &.light-green {
-      @include button-box-shadow($light-green);
-      color: $green;
-      border-color: $light-green;
-
-      &:active,
-      &:hover,
-      &:focus {
-        color: $dark-blue;
-        border-color: transparent;
-        background: $lightest-green;
-      }
-
-      &:focus {
-        border-color: $green;
-      }
-    }
-
-    &.green {
-      @include button-box-shadow($green);
-      color: $green;
-      border-color: $green;
-
-      &:active,
-      &:hover,
-      &:focus {
-        color: $white;
-        border-color: transparent;
-        background: $dark-green;
-      }
-    }
-
-    &.dark-green {
-      @include button-box-shadow($dark-green);
-      color: $dark-green;
-      border-color: $dark-green;
-
-      &:active,
-      &:hover,
-      &:focus {
-        color: $white;
-        border-color: transparent;
-        background: $green;
-      }
-    }
-
-    &.white {
-      @include button-box-shadow($white);
-      color: $white;
-      border-color: $white;
-      background: transparent;
-
-      &:active,
-      &:hover,
-      &:focus {
-        color: $dark-blue;
-        border-color: transparent;
-        background: $light-gray;
-      }
-    }
-  }
-
-  &.dark-blue,
-  &.green,
-  &.dark-green,
-  &.white {
-    &:active {
-      box-shadow: none;
-    }
-    &.outline {
-      &:active {
-        box-shadow: none;
-      }
-      &:focus {
-        border: dotted $border-width $white;
-      }
-    }
-  }
-
-  &.soft-shadow {
-    box-shadow: $soft-button-shadow;
-
-    &:hover,
-    &:active,
-    &:focus {
-      box-shadow: $soft-button-shadow--hover;
-    }
-  }
-
-  &:after {
-    @media print {
-      content: " [" attr(href) "] ";
-      font-size: 10pt;
-    }
-  }
-}
-
-/* Admin toolbar button overrides */
-.toolbar-bar button,
-.si-button {
-  box-shadow: none;
 }

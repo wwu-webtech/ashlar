@@ -1,11 +1,15 @@
-<div class="{{ background_class }}">
+<div class="{{ background_class }} pattern-lab-bg">
   <h1>H1 Heading <a href="#">and link</a></h1>
   <h2>H2 Heading <a href="#">and link</a></h2>
   <h3>H3 Heading <a href="#">and link</a></h3>
   <h4>H4 Heading <a href="#">and link</a></h4>
   <h5>H5 Heading <a href="#">and link</a></h5>
 
-  <p>Regular Text with <a href="#">a regular link</a></p>
+  <p class="tagline">Tagline Text</p>
+
+  <p class="intro">Intro Text</p>
+
+  <p>Regular Text with <a href="#">a regular link</a> and a <a href="https://wwu.edu/">visited link</a></p>
 
   <ul>
     <li><a href="#">Regular</a></li>
@@ -13,7 +17,7 @@
     <li>background, and a <a href="#">bunch of links</a></li>
   </ul>
 
-  <div class="aside">
+  <div class="block--beyond-basics-block">
     <ul class="menu">
       <li><a href="#">List of links</a></li>
       <li><a href="#">with of links</a></li>
@@ -21,5 +25,9 @@
     </ul>
   </div>
 
-  {% include "@molecules/social-media/social-media-icons.html.twig" %}
+  {% include "@atoms/buttons/play-button/play-button.twig" %}
+
+  {% include "@molecules/social-media-links/social-media-links.html.twig" %}
+
+  {% include "@atoms/tables/tables--customized.twig" %}
 </div>

@@ -1,24 +1,22 @@
-/**
- * @file
- * organisms/content-region/_content-region.scss
- */
-
+/*------------------------------------------------------------------------------
+Organism: Content - Content region
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .page-content {
   @include breakpoint($large) {
-    -ms-grid-columns: $large-screen-columns;
-    grid-template-columns: $large-screen-columns;
+    -ms-grid-columns: var(--grid-columns--lg);
+    grid-template-columns: var(--grid-columns--lg);
   }
   display: -ms-grid;
   display: grid;
-  margin: 0 0 $double-spacing 0;
 
-  -ms-grid-columns: $small-screen-columns;
+  -ms-grid-columns: var(--grid-columns--sm);
   -ms-grid-rows: auto;
-  grid-template-areas: " . skip_to_content . "
-  " . content         . ";
-  grid-template-columns: $small-screen-columns;
+  grid-template-areas:
+    " . skip_to_content . "
+    " . content         . ";
+  grid-template-columns: var(--grid-columns--sm);
   grid-template-rows: auto;
-
 
   #main-content {
     margin: 0;

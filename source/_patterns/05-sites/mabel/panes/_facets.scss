@@ -1,16 +1,15 @@
-/**
-* @file
-* sites/mabel/panes/_facets.scss
-*/
-$plus-minus-size: 0.533rem;
-
+/*------------------------------------------------------------------------------
+Templates: Sites - MABEL - Facets
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .pane-islandora-solr-basic-facets {
-  /* Date range slider */
+  --plus-minus-sizer: 0.533rem;
+  /* Date range slider -------------------------------------------------------*/
   .islandora-solr-range-slider {
     text-align: right;
 
     .ui-slider-range {
-      background: $darkest-blue;
+      background: var(--dark-blue--darker--40);
     }
 
     .ui-slider-handle.ui-state-default {
@@ -20,16 +19,16 @@ $plus-minus-size: 0.533rem;
       margin-right: 0;
       padding: 0;
       border-top: transparent solid 0;
-      border-right: transparent solid $standard-spacing;
-      border-bottom: $darkest-blue solid $double-spacing;
-      border-left: transparent solid $standard-spacing;
+      border-right: transparent solid var(--space--sm);
+      border-bottom: var(--dark-blue--darker--40) solid var(--space--md);
+      border-left: transparent solid var(--space--sm);
       border-radius: 0;
       background: none;
     }
 
     .ui-slider-horizontal {
-      max-height: $border-width;
-      margin-bottom: $double-spacing;
+      max-height: var(--border-width--md);
+      margin-bottom: var(--space--md);
       border: none;
     }
 
@@ -44,19 +43,19 @@ $plus-minus-size: 0.533rem;
 
       .slider-popup-from,
       .slider-popup-to {
-        padding: 0 $standard-spacing $border-width $standard-spacing;
-        color: $black;
-        color: $white;
+        padding: 0 var(--space--sm) var(--border-width--md) var(--space--sm);
+        color: var(--black);
+        color: var(--white);
         border: none;
         border-radius: 0.625rem;
-        background-color: $gray;
+        background-color: var(--gray);
         font-size: 0.75rem;
       }
     }
   }
 
   #edit-range-slider-submit {
-    margin-top: $half-spacing;
+    margin-top: var(--space--xs);
   }
 
   .range-slider-fromto,
@@ -71,19 +70,20 @@ $plus-minus-size: 0.533rem;
 
     li {
       display: grid;
-      align-items: center;
-
-      grid-template-areas: "plusminus link"
-      "count    count";
-      grid-template-columns: ($plus-minus-size*2 + $standard-spacing) auto;
+      grid-template-areas:
+        "plusminus link"
+        "count    count";
+      grid-template-columns: calc(
+          var(--plus-minus-sizer) * 2 + var(--space--sm)
+        ) auto;
       grid-template-rows: auto auto;
+      align-items: center;
       justify-items: start;
 
       > a {
-        margin: 0;
-        padding: $half-spacing 0 $half-spacing $standard-spacing;
-
         grid-area: link;
+        margin: 0;
+        padding: var(--space--xs) 0 var(--space--xs) var(--space--sm);
       }
     }
 
@@ -97,20 +97,20 @@ $plus-minus-size: 0.533rem;
 
       a {
         display: inline-grid;
-        justify-content: center;
         align-content: center;
-        width: $plus-minus-size;
-        height: $plus-minus-size;
-        margin-right: $quarter-spacing;
+        justify-content: center;
+        width: var(--plus-minus-sizer);
+        height: var(--plus-minus-sizer);
+        margin-right: var(--space--2xs);
         text-decoration: none;
-        color: $white;
-        background: $blue;
+        color: var(--white);
+        background: var(--blue);
 
         &:hover,
         &:focus,
         &:active {
-          color: $white;
-          background-color: $dark-blue;
+          color: var(--white);
+          background-color: var(--dark-blue);
         }
       }
     }

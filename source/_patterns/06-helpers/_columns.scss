@@ -1,15 +1,13 @@
-/**
-* @file
-* helpers/_columns.scss
-* Helper classes to create multi column layouts.
-* Handy for creating columns for view outputs, or adding columns to ckeditor content.
-* Options available for both css columns and grid layouts.
-*/
-
+/*------------------------------------------------------------------------------
+Helpers: Columns
+--------------------------------------------------------------------------------
+For creating multi-column layouts, handy for Drupal views or full HTML content.
+Columns will collapse on mobile.
+------------------------------------------------------------------------------*/
 .column-count--2,
 .column-count--3,
 .column-count--4 {
-  column-gap: $double-spacing;
+  column-gap: var(--space--md);
 }
 
 .column-count--2 {
@@ -38,12 +36,12 @@
 .grid-column-count--5,
 .grid-column-count--6 {
   display: grid;
-  grid-column-gap: $standard-spacing;
+  grid-column-gap: var(--space--sm);
   align-items: stretch;
   grid-template-columns: auto auto;
 }
 
-@include breakpoint($medium){
+@include breakpoint($medium) {
   .grid-column-count--2 {
     grid-template-columns: auto auto;
   }

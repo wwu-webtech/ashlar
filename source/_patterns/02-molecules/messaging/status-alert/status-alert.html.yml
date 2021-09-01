@@ -4,6 +4,6 @@ attributes:
     - status-alert
 label: No alerts at this time!
 content:
-  body:
+  body: Things are <a href="#">all clear</a>!
   status: none
   severity: none

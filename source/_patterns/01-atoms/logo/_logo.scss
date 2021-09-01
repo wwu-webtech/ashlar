@@ -1,60 +1,18 @@
-/**
-* @file
-* 01-atoms/logo/_logo.scss
-*/
-$logo-size: 10.25rem;
-$logo-size--larger: 15.375rem;
-
-$logo-width--horizontal: 25rem;
-$logo-height--horizontal: 6.25rem;
-
+/*------------------------------------------------------------------------------
+Atom: Logo
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .logo {
-  @include breakpoint($medium) {
-    width: $logo-size;
-    height: $logo-size;
-  }
-  width: $logo-size;
-  height: $logo-size;
-  padding: $standard-spacing;
-  background-color: $dark-blue;
+  width: var(--logo-size);
+  height: var(--logo-size);
 
   &.horizontal {
-    width: $logo-width--horizontal;
-    height: $logo-height--horizontal;
+    width: var(--logo--horizontal--width);
+    height: var(--logo--horizontal--height);
   }
 
   svg {
     width: 100%;
     height: 100%;
-  }
-
-  &.full-color,
-  &.grayscale,
-  &.black {
-    background-color: $white;
-  }
-
-  &.reversed {
-    background-color: $black;
-  }
-
-  .cls-1 {
-    fill: $dark-blue;
-  }
-
-  .cls-2 {
-    fill: $blue;
-  }
-
-  .cls-3 {
-    fill: $black;
-  }
-
-  .cls-4 {
-    fill: #808285;
-  }
-
-  .cls-5 {
-    fill: $white;
   }
 }

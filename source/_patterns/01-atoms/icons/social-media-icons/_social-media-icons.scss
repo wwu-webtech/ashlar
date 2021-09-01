@@ -1,151 +1,45 @@
-/**
-* @file
-* 01-atoms/icons/social-media-icons/_social-media-icons.scss
-*/
-$icon-space: (($toggle-size - $icon-size) / 2) - 1;
-
+/*------------------------------------------------------------------------------
+Atom: Icons - Social Media Icons
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .social-icon {
   display: block;
-  width: $toggle-size;
-  height: $toggle-size;
-  transition: $standard-ease $button-transition-speed background-color;
-  color: $white;
-  background-color: $blue;
+  width: var(--toggle-size--sm);
+  height: var(--toggle-size--sm);
+  transition: var(--ease-standard) var(--transition-speed--fast)
+    background-color;
+  color: var(--white);
+  background: var(--blue);
 
   svg {
-    width: 100%;
-    padding: (($toggle-size - $icon-size) / 2);
-    transition: fill $standard-ease $button-transition-speed;
+    fill: var(--white);
 
-    fill: $white;
+    width: 100%;
+    padding: 0.5em;
+    transition: var(--ease-standard) var(--transition-speed--fast) fill;
 
     @media print {
-      fill: $black;
+      fill: var(--black);
     }
   }
 
-  &:hover,
+  &:active,
   &:focus,
-  &:active {
-    color: $white;
-    background-color: $dark-blue;
+  &:hover {
+    background: var(--dark-blue);
   }
 
   &:focus {
-    @include breakpoint($medium) {
-      outline-width: $border-width--thicker;
-      outline-offset: $border-width--thicker;
-    }
-    outline: $focus-outline;
-    outline-color: $dark-blue;
-    outline-offset: $border-width;
+    outline: dotted var(--border-width--md);
   }
 
   &.medium {
-    width: $icon-with-text-size--medium;
-    height: $icon-with-text-size--medium;
-
-    span {
-      font-size: $p-font-size;
-    }
+    width: var(--toggle-size--md);
+    height: var(--toggle-size--md);
   }
 
   &.large {
-    width: $icon-with-text-size--large;
-    height: $icon-with-text-size--large;
-
-    span {
-      font-size: $h4-font-size;
-    }
-  }
-}
-
-.social-media-links {
-  @include breakpoint($medium) {
-    max-width: none;
-  }
-  display: flex;
-  flex-flow: row wrap;
-  max-width: 25rem;
-  padding: 0;
-  list-style: none;
-
-  .social-icon {
-    margin: $standard-spacing $standard-spacing 0 0;
-  }
-}
-
-.my-western-links {
-  .social-media-links {
-    @include breakpoint($medium) {
-      max-width: 37.5rem;
-      margin-top: -$triple-spacing * 1.5;
-      margin-left: 50%;
-      transform: translatex(-50%);
-    }
-    @include breakpoint(67.5rem) {
-      margin-top: -$triple-spacing * 2;
-    }
-    justify-content: center;
-    width: 100%;
-    max-width: none;
-  }
-
-  .social-icon {
-    @include breakpoint($medium) {
-      font-size: $min-base-font-size;
-    }
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    width: initial;
-    height: initial;
-    padding: $standard-spacing;
-    text-align: center;
-    text-decoration: none;
-    background: transparent;
-    font-size: 0.875rem;
-    line-height: 1em;
-
-    &:hover,
-    &:active,
-    &:focus {
-      outline-color: $white;
-      background: $blue;
-    }
-
-    svg {
-      @include breakpoint($medium) {
-        width: $toggle-size;
-        height: $toggle-size;
-      }
-      width: $toggle-size;
-      height: $toggle-size;
-      margin-bottom: $half-spacing;
-    }
-
-    .icon-text {
-      margin-bottom: $standard-spacing;
-    }
-  }
-}
-
-.dark-mode {
-  .social-icon {
-    .icon-text {
-      color: $white;
-    }
-  }
-
-  .my-western-links {
-    .social-icon {
-      svg {
-        fill: $white;
-      }
-
-      .icon-text {
-        color: $dark-blue;
-      }
-    }
+    width: var(--toggle-size--lg);
+    height: var(--toggle-size--lg);
   }
 }

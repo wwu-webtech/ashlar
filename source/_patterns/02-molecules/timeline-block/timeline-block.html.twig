@@ -14,10 +14,22 @@
   {% block content %}
     {% for item in items %}
       {% if item.highlight == true %}
-        <aside class="timeline-item--highlighted">{{ item.text }}</aside>
+        <aside class="timeline-item--highlighted">
+          {% if item.icon %}
+            <span class="material-icons" aria-hidden="true">{{ item.icon }}</span>
+          {% endif %}
+          
+          {{ item.text }}
+        </aside>
 
       {% else %}
-        <p class="timeline-item">{{ item.text }}</p>
+        <p class="timeline-item">
+          {% if item.icon %}
+            <span class="material-icons" aria-hidden="true">{{ item.icon }}</span>
+          {% endif %}
+
+          {{ item.text }}
+        </p>
       {% endif %}
     {% endfor %}
   {% endblock %}

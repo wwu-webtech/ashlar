@@ -1,3 +1,0 @@
----
-title: Line illustration placeholder
----

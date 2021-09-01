@@ -1,25 +1,20 @@
-/**
- * @file
- * 01-atoms/icons/_icons.scss
- */
-
-$icon-size: 2.25rem;
-$icon-size--small: 1.125rem;
-$icon-size--medium: 1.5rem;
-$icon-size--large: 3rem;
-
+/*------------------------------------------------------------------------------
+Atom: Icons
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: $icon-size;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
+  -moz-font-feature-settings: "liga";
+  -moz-osx-font-smoothing: grayscale;
+
   display: inline-block;
   white-space: nowrap;
+  letter-spacing: normal;
+  text-transform: none;
   word-wrap: normal;
   direction: ltr;
-  -moz-font-feature-settings: 'liga';
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Material Icons";
+  font-size: var(--icon-size--md);
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
 }

@@ -1,108 +1,121 @@
-/**
-* @file
-* 01-atoms/icons/icons-with-text/_icons-with-text.scss
-*/
-$icon-with-text-size--small: $toggle-size;
-$icon-with-text-size: 5em;
-$icon-with-text-size--medium: 6.5em;
-$icon-with-text-size--large: 7.5em;
-
+/*------------------------------------------------------------------------------
+Atom: Icons - Icons with Text
+--------------------------------------------------------------------------------
+1. Dark Mode
+2. Display Preferences
+------------------------------------------------------------------------------*/
 .icon-with-text {
   display: inline-grid;
-  justify-content: center;
   align-content: center;
-  width: $icon-with-text-size;
-  height: $icon-with-text-size;
+  justify-content: center;
+  width: var(--toggle-size--lg);
+  height: var(--toggle-size--lg);
   text-align: center;
   text-decoration: none;
-  font-family: $condensed;
-  font-size: $p-font-size--min;
-  font-weight: $font-weight--light;
-
+  font-family: var(--font--condensed);
+  font-size: var(--font-size--sm);
+  font-weight: var(--font-weight--light);
   font-display: fallback;
 
   .icon-text {
     display: block;
-    margin-top: $half-spacing;
+    margin-top: var(--space--xs);
   }
 
   &.small {
-    width: $icon-with-text-size--small;
-    height: $icon-with-text-size--small;
+    width: var(--toggle-size--md);
+    height: var(--toggle-size--md);
+
+    .material-icons {
+      font-size: var(--icon-size--sm);
+    }
   }
 
   &.medium {
-    width: $icon-with-text-size--medium;
-    height: $icon-with-text-size--medium;
-    font-size: $h6-font-size--min;
+    width: var(--toggle-size--xl);
+    height: var(--toggle-size--xl);
+    font-size: var(--font-size--lg);
 
     .material-icons {
-      font-size: $icon-size * 2;
+      font-size: var(--icon-size--md);
 
       &:last-of-type {
-        font-size: $h6-font-size--min;
+        font-size: var(--font-size--lg);
       }
     }
   }
 
   &.large {
-    width: $icon-with-text-size--large;
-    height: $icon-with-text-size--large;
-    font-size: $h4-font-size--min;
+    width: var(--toggle-size--2xl);
+    height: var(--toggle-size--2xl);
+    font-size: var(--font-size--2xl);
 
     .material-icons {
-      font-size: $icon-size--large * 2;
+      font-size: var(--icon-size--lg);
 
       &:last-of-type {
-        font-size: $h4-font-size--min;
+        font-size: var(--font-size--2xl);
       }
     }
   }
 }
 
+/*------------------------------------------------------------------------------
+1. Dark Mode
+------------------------------------------------------------------------------*/
 .dark-mode {
-  .page-content  a {
+  .sg-pattern-example a,
+  .page-content a {
     &.icon-with-text {
-      color: $light-blue;
+      color: var(--blue--lighter--40);
 
       &:hover,
-      &:focus, 
+      &:focus,
       &:active {
-        color: $dark-blue;
+        color: var(--dark-blue);
       }
-  
+
       &:focus {
-        outline-color: $white;
+        outline-color: var(--white);
       }
 
       &.blue-bg,
       &.dark-blue-bg {
-        color: $white;
-      }
-
-      &.white-bg {
-        background-color: $white;
-        color: $link-color;
+        color: var(--white);
 
         &:hover,
         &:focus,
         &:active {
-          background-color: $link-color;
-          color: $white;
+          background-color: var(--blue);
+        }
+      }
+
+      &.white-bg {
+        color: (var--blue--darker--20);
+        background-color: var(--white);
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: var(--white);
+          background-color: (var--blue--darker--20);
         }
       }
     }
   }
 }
 
-.opendyslexic {
+/*------------------------------------------------------------------------------
+2. Display Preferences
+------------------------------------------------------------------------------*/
+.font--dyslexia-friendly {
   .icon-with-text {
-    font-family: $opendyslexic;
+    font-family: var(--font--dyslexia-friendly);
   }
 }
 
-.atkinson {
+.font--hyperlegible {
   .icon-with-text {
-    font-family: $atkinson;
+    font-family: var(--font--hyperlegible);
   }
 }

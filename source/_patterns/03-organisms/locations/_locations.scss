@@ -1,20 +1,21 @@
-/**
-* @file
-* organisms/locations/_locations.scss
-*/
-$locations-block-width: 37.5rem;
-$locations-block-width--bigger: 56.25rem;
-$location-button-size: 10rem;
-$location-icon-height: 5.625rem;
-$stroke-width--heavy: 0.75rem;
-$stroke-width--medium: 0.5rem;
-$locations-icon-spacing: 1.875rem;
-$locations-font-size: 1.125rem;
-$locations-transition-speed: 500ms;
-
-// Containers and Buttons
+/*------------------------------------------------------------------------------
+Molecule: Locations
+--------------------------------------------------------------------------------
+1. Growing circle interaction
+2. SVGs
+------------------------------------------------------------------------------*/
 .wwu-locations {
-  max-width: $locations-block-width;
+  --locations-block-width: 37.5rem;
+  --locations-block-width--bigger: 56.25rem;
+  --location-button-size: 10rem;
+  --location-icon-height: 5.625rem;
+  --stroke-width--heavy: 0.75rem;
+  --stroke-width--medium: 0.5rem;
+  --locations-icon-spacing: 1.875rem;
+  --locations-font-size: 1.125rem;
+  --locations-transition-speed: 500ms;
+
+  max-width: var(--locations-block-width);
   margin: 0 auto;
 
   .button-cluster {
@@ -27,20 +28,22 @@ $locations-transition-speed: 500ms;
     display: block;
     flex: 0 1 33%;
     margin: 0 auto;
-    padding: $locations-icon-spacing 0;
+    padding: var(--locations-icon-spacing) 0;
   }
 
   .svg-container {
     position: relative;
     display: block;
-    width: $location-button-size;
-    height: $location-button-size;
+    width: var(--location-button-size);
+    height: var(--location-button-size);
   }
 
-  // Growing circle interaction
+  /*----------------------------------------------------------------------------
+  1. Growing circle interaction
+  ----------------------------------------------------------------------------*/
   .grow {
     .svg-container {
-      transition: background-color $locations-transition-speed;
+      transition: background-color var(--locations-transition-speed);
       -webkit-animation-name: pulse;
       animation-name: pulse;
       border-radius: 31.25rem;
@@ -53,7 +56,7 @@ $locations-transition-speed: 500ms;
     &:hover,
     &:focus-within {
       .svg-container {
-        transition: background-color $locations-transition-speed;
+        transition: background-color var(--locations-transition-speed);
         -webkit-transform: scale(1.03, 1.03);
         transform: scale(1.03, 1.03);
         background-color: #d8f1ff;
@@ -62,7 +65,7 @@ $locations-transition-speed: 500ms;
 
     &:focus-within {
       .svg-container {
-        border: $focus-outline $dark-blue;
+        border: var(--focus-outline) var(--dark-blue);
       }
     }
   }
@@ -71,8 +74,8 @@ $locations-transition-speed: 500ms;
   .link {
     display: block;
     width: 100%;
-    height: $locations-icon-spacing;
-    margin-top: -$half-spacing;
+    height: var(--locations-icon-spacing);
+    margin-top: -var(--half-spacing);
     text-align: center;
     outline: 0;
     background: transparent;
@@ -93,12 +96,12 @@ $locations-transition-speed: 500ms;
     display: inline-block;
     text-align: center;
     text-decoration: none;
-    color: $link-blue;
+    color: var(blue--darker--20);
     outline: 0;
     background-color: transparent;
-    font-size: $locations-font-size;
+    font-size: var(--locations-font-size);
     font-weight: 600;
-    line-height: $locations-icon-spacing;
+    line-height: var(--locations-icon-spacing);
 
     &:after {
       position: absolute;
@@ -108,7 +111,7 @@ $locations-transition-speed: 500ms;
       height: 0.1875rem;
       content: "";
       transition: 0.3s ease all 0.1s;
-      background-color: $link-blue;
+      background-color: var(blue--darker--20);
     }
   }
 
@@ -122,11 +125,13 @@ $locations-transition-speed: 500ms;
     }
   }
 
-  // SVGS
+  /*----------------------------------------------------------------------------
+  2. SVGs
+  ----------------------------------------------------------------------------*/
   svg {
     width: 100%;
-    height: $location-icon-height;
-    margin-top: $standard-spacing;
+    height: var(--location-icon-height);
+    margin-top: var(--standard-spacing);
   }
 
   .cls-1,
@@ -136,29 +141,29 @@ $locations-transition-speed: 500ms;
   .st3,
   .st4 {
     fill: none;
-    stroke: $link-blue;
+    stroke: var(--blue--darker--20);
     stroke-linecap: round;
     stroke-linejoin: round;
-    stroke-width: $stroke-width--heavy;
+    stroke-width: var(--stroke-width--heavy);
   }
 
   .cls-2,
   .st0,
   .st1 {
-    fill: $white;
+    fill: var(--white);
   }
 
   .cls-3 {
     fill: none;
-    stroke: $link-blue;
+    stroke: var(blue--darker--20);
     stroke-linejoin: round;
     stroke-miterlimit: 10;
-    stroke-width: $stroke-width--medium;
+    stroke-width: var(--stroke-width--medium);
   }
 
   &.single-row {
     @include breakpoint($medium) {
-      max-width: $locations-block-width--bigger;
+      max-width: var(--locations-block-width--bigger);
     }
 
     .button-cluster {
@@ -168,7 +173,7 @@ $locations-transition-speed: 500ms;
       }
 
       .button-animated {
-        padding: $half-spacing;
+        padding: var(--half-spacing);
       }
     }
   }

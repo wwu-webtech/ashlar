@@ -1,24 +1,26 @@
-/**
-* @file
-* 02-molecules/content/image-with-description/_image-with-description.scss
-*/
+/*------------------------------------------------------------------------------
+Molecule: Image with Description
+--------------------------------------------------------------------------------
+1. Dark Mode
+------------------------------------------------------------------------------*/
 .block--image-with-description {
   @include breakpoint($medium) {
     grid-template-areas: none;
-    grid-template-columns: 3fr ($standard-spacing * 4) $double-spacing 4fr;
-    grid-template-rows: ($standard-spacing * 4) 1fr $triple-spacing;
+    grid-template-columns: 3fr var(--space--2xl) var(--space--lg) 4fr;
+    grid-template-rows: var(--space--2xl) 1fr var(--space--xl);
   }
   display: grid;
-  margin-bottom: $double-spacing;
+  margin-bottom: var(--space--lg);
 
   grid-area: body;
-  grid-template-areas: "image"
-  "body";
+  grid-template-areas:
+    "image"
+    "body";
   grid-template-columns: auto;
   grid-template-rows: auto auto auto;
 
   .block__title {
-    margin-top: $standard-spacing;
+    margin-top: var(--space--sm);
   }
 
   .image {
@@ -41,36 +43,34 @@
   }
 
   .body {
-    @include font-size--smaller;
     @include breakpoint($medium) {
-      padding: $triple-spacing;
-      padding-left: ($standard-spacing * 6);
+      padding-left: var(--space--3xl);
 
       grid-column: 2 / span 3;
       grid-row: 1 / span all;
     }
-    padding: $standard-spacing;
+    padding: var(--space--sm);
 
-    &:not(.black-bg):not(.gray-bg):not(.light-gray-bg):not(.lightest-gray-bg):not(.dark-blue-bg):not(.darkest-blue-bg):not(.blue-bg):not(.light-blue-bg):not(.lightest-blue-bg):not(.dark-green-bg):not(.green-bg):not(.light-green-bg):not(.dark-blue-gradient-bg):not(.blue-gradient-bg) {
+    &:not([class$="-bg"]) {
       @include breakpoint(max-width $medium) {
         border-top: none;
       }
-      border: solid $border-width $blue;
-      background: $white;
+      border: solid var(--border-width--md) var(--blue);
+      background: var(--white);
     }
   }
 
   &.mirror {
     @include breakpoint($medium) {
-      grid-template-columns: 4fr $double-spacing ($standard-spacing * 4) 3fr;
+      grid-template-columns: 4fr var(--space--lg) var(--space--2xl) 3fr;
 
       .image {
         grid-column: 3 / span 2;
       }
 
       .body {
-        padding-right: ($standard-spacing * 6);
-        padding-left: $triple-spacing;
+        padding-right: var(--space--3xl);
+        padding-left: var(--space--md);
 
         grid-column: 1 / span 3;
       }
@@ -81,8 +81,8 @@
 .dark-mode {
   .block--image-with-description {
     .body {
-      &:not(.black-bg):not(.gray-bg):not(.light-gray-bg):not(.lightest-gray-bg):not(.dark-blue-bg):not(.darkest-blue-bg):not(.blue-bg):not(.light-blue-bg):not(.lightest-blue-bg):not(.dark-green-bg):not(.green-bg):not(.light-green-bg):not(.dark-blue-gradient-bg):not(.blue-gradient-bg) {
-        background: $black;
+      &:not([class$="-bg"]) {
+        background-color: var(--gray--darker--80);
       }
     }
   }

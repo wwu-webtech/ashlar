@@ -1,9 +1,7 @@
-/**
-* @file
-* helpers/_size.scss
-* Helper classes to adjust spacing
-*/
-
+/*------------------------------------------------------------------------------
+Helpers: Size
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .full-width {
   width: 100%;
   max-width: none;
@@ -30,7 +28,14 @@
 }
 
 .max-width--content {
-  max-width: $max-content-width;
+  max-width: var(--content-max-width);
   margin-left: auto;
   margin-right: auto;
+}
+
+.full-vw {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding-left: calc(50vw - 50%);
+  padding-right: calc(50vw - 50%);
 }

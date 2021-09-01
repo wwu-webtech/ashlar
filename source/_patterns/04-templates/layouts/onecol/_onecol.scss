@@ -1,32 +1,34 @@
-/*
-* @file
-* templates/layouts/onecol/_onecol.scss
-*/
-
+/*------------------------------------------------------------------------------
+Templates: Layouts - One column
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .layout--onecol .layout__region {
-  @include breakpoint($max-one-col-width) {
-    max-width: $max-one-col-width;
+  @include breakpoint(62.5rem) {
+    max-width: var(--content-area-max-width--sm);
   }
+
   width: 100%;
   margin: auto;
 }
 
 .layout--onecol--full .layout__region {
   @include breakpoint($large) {
-    max-width: $max-content-width;
+    max-width: var(--content-area-max-width);
     margin: auto;
   }
+
   width: 100%;
 }
 
 .layout--onecol--page-width {
   @include breakpoint($large) {
-    margin-right: calc(50% - 50vw);
-    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw - var(--space--xs));
+    margin-left: calc(50% - 50vw - var(--space--xs));
   }
+
   max-width: 100vw;
-  margin-left: -$standard-spacing;
-  margin-right: -$standard-spacing;
+  margin-right: calc(-1 * (var--space--sm));
+  margin-left: calc(-1 * (var--space--sm));
 
   .layout__region {
     max-width: none;

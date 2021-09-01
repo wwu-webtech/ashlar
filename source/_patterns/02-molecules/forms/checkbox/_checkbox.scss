@@ -1,14 +1,11 @@
-/**
-* @file
-* molecules/forms/checkbox/_checkbox.scss
-*/
-$checkbox-size: 1.5rem;
-$checkbox-size--smaller: 1.25rem;
-
+/*------------------------------------------------------------------------------
+Molecule: Forms - Checkbox
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .checkbox,
 .radio {
   position: relative;
-  margin-bottom: $half-spacing;
+  margin-bottom: var(--space--xs);
 }
 
 input[type="checkbox"],
@@ -16,8 +13,8 @@ input[type="radio"] {
   position: absolute;
   top: 0;
   left: 0;
-  width: $checkbox-size;
-  height: $checkbox-size;
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
   margin: 0;
   padding: 0;
   opacity: 0;
@@ -25,51 +22,41 @@ input[type="radio"] {
   outline: 0;
 
   + label {
-    @include breakpoint($medium) {
-      margin-left: $checkbox-size;
-      line-height: $checkbox-size;
-    }
     position: relative;
     display: inline-block;
     align-self: center;
     margin: 0;
-    margin-left: $checkbox-size--smaller;
-    padding-left: $half-spacing;
-    font-weight: $font-weight--regular;
-    line-height: $checkbox-size--smaller;
+    margin-left: var(--checkbox-size);
+    padding-left: var(--space--xs);
+    font-weight: var(--font-weight--regular);
+    line-height: var(--checkbox-size);
 
     &:before {
-      @include breakpoint($medium) {
-        width: $checkbox-size;
-        height: $checkbox-size;
-        background-size: $checkbox-size / 2;
-      }
       position: absolute;
       left: 0;
       display: grid;
+      justify-items: center;
       align-items: center;
       box-sizing: border-box;
-      width: $checkbox-size--smaller;
-      height: $checkbox-size--smaller;
+      width: var(--checkbox-size);
+      height: var(--checkbox-size);
       content: "";
       transform: translatex(-100%);
-      border-width: $border-width;
+      border-width: var(--border-width--md);
       border-style: solid;
-      border-color: $light-gray;
-      background-color: $lightest-gray;
+      border-color: var(--gray--lighter--60);
+      background-color: var(--gray--lighter--80);
       background-repeat: no-repeat;
       background-position: 50%;
-      background-size: $checkbox-size--smaller / 2;
-
-      justify-items: center;
+      background-size: calc(var(--checkbox-size) / 1.5);
     }
   }
 
   &:focus {
     + label {
       &:before {
-        border-color: $light-blue;
-        box-shadow: $focus-shadow;
+        border-color: var(blue--lighter--40);
+        box-shadow: var(--shadow--soft);
 
         @media (-ms-high-contrast: active) {
           border-style: dotted;

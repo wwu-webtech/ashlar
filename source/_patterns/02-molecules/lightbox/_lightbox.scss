@@ -1,66 +1,63 @@
-/**
-* @file
-* 02-molecules/content/lightbox/_lightbox.scss
-*/
-
+/*------------------------------------------------------------------------------
+Molecule: Lightbox
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .lightbox-overlay {
-  height: 100vh;
-  width: 100%;
   position: fixed;
+  z-index: 5;
   top: 0;
   left: 0;
-  background: transparentize($black, .1);
-  z-index: 5;
-  transition: opacity $fast-transition-speed ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  transition: opacity var(--transition-speed--fast) ease-out;
+  background: rgba(0, 0, 0, 0.9);
 
   .lightbox {
     &-dialog {
-      @include breakpoint($large) {
-        width: 65%;
-      }
-      @include breakpoint($medium) {
-        grid-template-areas: 
-        "... ... button" 
-        "content content content" 
-        "... cta ...";
-        width: 80%;
-      }
+      -ms-grid-columns: 33% 34% 33%;
+
       @include breakpoint($small) {
         width: 75%;
       }
-      display: -ms-grid;
-      -ms-grid-columns: 33% 34% 33%;
+      @include breakpoint($medium) {
+        grid-template-areas:
+          "... ... button"
+          "content content content"
+          "... cta ...";
+        width: 80%;
+      }
+      @include breakpoint($large) {
+        width: 65%;
+      }
+
       display: grid;
-      grid-template-columns: 33% 34% 33%;
-      grid-template-areas: 
-        "... ... button" 
-        "content content content" 
+      grid-template-areas:
+        "... ... button"
+        "content content content"
         "cta cta cta";
+      grid-template-columns: 33% 34% 33%;
       width: 100%;
-      background-color: $white;
-      padding: $half-spacing $double-spacing $double-spacing;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
     }
 
     &-close-dialog {
-      @include breakpoint($medium) {
-        margin: 5% 0;
-        font-size: $p-font-size;
-      }
       grid-area: button;
       align-self: start;
       justify-self: end;
-      margin: 12% 0 5%;
-      font-size: $p-font-size--smaller;
+      margin-bottom: var(--space--sm);
+      border: 0;
+      outline-color: var(--white);
 
       .material-icons {
-        position: relative;
-        top: $half-spacing / 1.5;
-        left: $quarter-spacing;
-        font-size: inherit;
+        display: block;
+        font-size: var(--icon-size--sm);
+      }
+
+      .button-text {
+        display: block;
+        font-size: var(--font-size--xs);
       }
     }
 
@@ -73,7 +70,7 @@
       grid-area: cta;
       max-width: 100%;
       margin: 0 auto;
-      margin-top: $double-spacing;
+      margin-top: var(--space--lg);
     }
   }
 

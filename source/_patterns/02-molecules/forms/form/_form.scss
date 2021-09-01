@@ -1,13 +1,13 @@
-/**
- * @file
- * molecules/forms/form/_form.scss
- */
+/*------------------------------------------------------------------------------
+Molecule: Forms - Form
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 
 .form {
   .form-item {
-    margin-bottom: $half-spacing;
+    margin-bottom: var(--space--xs);
   }
   .description {
-    color: $gray;
+    color: var(--gray);
   }
 }

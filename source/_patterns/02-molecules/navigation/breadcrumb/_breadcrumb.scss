@@ -1,22 +1,21 @@
-/**
- * @file
- * molecules/navigation/breadcrumb/_breadcrumb.scss
- */
-
+/*------------------------------------------------------------------------------
+Molecule: Breadcrumbs
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .breadcrumb {
-  margin-top: $standard-spacing;
-  font-size: $p-font-size--smaller;
+  margin-top: var(--space--sm);
+  font-size: var(--font-size--sm);
 
   ol {
-    list-style: none;
     padding: 0;
+    list-style: none;
 
     li {
       display: inline-block;
-      margin-right: $half-spacing;
+      margin-right: var(--space--xs);
 
       &:last-child {
-        font-weight: $font-weight--bold;
+        font-weight: var(--font-weight--bold);
 
         &::before {
           font-weight: initial;
@@ -24,7 +23,7 @@
       }
 
       &:before {
-        margin-right: $half-spacing;
+        margin-right: var(--space--xs);
       }
     }
   }

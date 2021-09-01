@@ -53,7 +53,7 @@ function lightbox() {
   var closeButton = document.createElement("button");
   closeButton.classList.add("lightbox-close-dialog", "alt");
   closeButton.innerHTML =
-    '<span class="material-icons" aria-hidden="true">clear</span> Close <span class="visually-hidden">dialog</span>';
+    '<span class="material-icons" aria-hidden="true">clear</span> <span class="button-text">Close</span> <span class="visually-hidden">dialog</span>';
   lbContainer.appendChild(closeButton);
 
   // video iframe
@@ -81,7 +81,7 @@ function lightbox() {
   var ctaLink = document.createElement("a");
 
   function makeCTA(href, html) {
-    ctaLink.classList.add("button", "lightbox-cta-link");
+    ctaLink.classList.add("cta", "square", "lightbox-cta-link");
     ctaLink.setAttribute("href", href.dataset.ctaUrl);
     ctaLink.innerHTML = html.dataset.ctaText;
     lbContainer.appendChild(ctaLink);

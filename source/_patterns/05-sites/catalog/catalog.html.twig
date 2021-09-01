@@ -1,0 +1,68 @@
+<!-- Start Client Javascript
+<div class="acalog-custom" id="acalog-client-javascript">
+  <script type="text/javascript">
+  jQuery(document).ready( function($) { if ($('#gateway-page').length) {}});
+</script>
+<script src="//acalog-clients.s3.amazonaws.com/production/wwu/img/gateway/js_IwLksrG8sKkrR2rg_KLQ1vbcNXBo3jnW5xFRgs7Fjjc.js"></script>
+<script type="application/json" data-drupal-selector="drupal-settings-json">
+{ "path": { "baseUrl": "\/", "scriptPath": null, "pathPrefix": "", "currentPath": "node\/18", "currentPathIsAdmin": false, "isFront": false, "currentLanguage": "en" }, "pluralDelimiter": "\u0003", "suppressDeprecationErrors": true, "google_analytics": { "trackOutbound": true, "trackMailto": true, "trackDownload": true, "trackDownloadExtensions": "7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip" }, "statistics": { "data": { "nid": "18" }, "url": "\/core\/modules\/statistics\/statistics.php" }, "blazy": { "loadInvisible": false, "offset": 100, "saveViewportOffsetDelay": 50, "validateDelay": 25, "container": "" }, "blazyIo": { "enabled": false, "disconnect": false, "rootMargin": "0px", "threshold": [0] }, "ultimenu": { "canvasOff": "#header", "canvasOn": "#main-wrapper, .featured-top, .site-footer" }, "user": { "uid": 0, "permissionsHash": "94a58490fe78f7d949028893ef39390ef671125eea31e1ad0de730d091ce3d5a" } }
+</script>
+<script>
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = 'https://www.wwu.edu/webtechdemo/ashlar/components.css';
+  document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+<script src="//acalog-clients.s3.amazonaws.com/production/wwu/img/gateway/js_Fp-mOUxrFRbZdxrCQmpvXb3wIqqZfJDO2Ys52BQZkHs.js"></script>
+<script src="//acalog-clients.s3.amazonaws.com/production/wwu/img/gateway/jquery-migrate.min.js"></script>
+<script src="//acalog-clients.s3.amazonaws.com/production/wwu/img/gateway/js_aWPb5XQ_fEmXBlIdETY37IhVVg6PJ7QjbKPiX1n_Xnc.js"></script>
+<script src="//acalog-clients.s3.amazonaws.com/production/wwu/img/gateway/js_3Qk-bOIS5CT6SvpRZwiroyCagV3S2M83fas4fjkSup8.js"></script>
+<script src="//acalog-clients.s3.amazonaws.com/production/wwu/img/gateway/js_0cffCKJbXGk1ftbLzYeCDi_x9I4bRmYWPZder9q56hw.js"></script>
+<script src="//acalog-clients.s3.amazonaws.com/production/wwu/img/gateway/js_VohkKT-RNXVTGjVBEFEX74GUF-PB1SsRjPSJClC_-Uo.js"></script>
+</div>
+<!-- End Client Javascript -->
+
+<!-- Start Client Header -->
+<div class="acalog-custom" id="acalog-client-header">
+  <header class="site-header">
+    <a href="#main-content" class="skip-link visually-hidden focusable">Skip to main content</a>
+
+    {% block top %}
+    {% endblock %}
+
+    {% block wwu_header %}
+      {% embed "@organisms/headers/wwu-header/wwu-header.html.twig" %}
+        {% block main_navigation %}
+          {% include "@sites/catalog/catalog_navigation.twig" %}
+        {% endblock %}
+      {% endembed %}
+    {% endblock %}
+
+    {% block splash %}
+      <div class="splash">
+        {% include "@sites/catalog/catalog_splash.twig" %}
+      </div>
+    {% endblock %}
+  </header>
+</div>
+<!-- End Client Header -->
+
+<!-- Start Client Footer -->
+<div class="acalog-custom" id="acalog-client-footer">
+  {% block footer %}
+    <footer role="contentinfo" class="page-footer region region--footer">
+      {% block site_footer %}
+        {% embed "@organisms/footers/site-footer/site-footer.html.twig" %}
+          {% block footer_regions %}
+            {% include "@sites/catalog/catalog_footer.twig" %}
+          {% endblock %}
+        {% endembed %}
+      {% endblock %}
+      {% block wwu_footer %}
+        {% include "@organisms/footers/wwu-footer/wwu-footer.html.twig" %}
+      {% endblock %}
+    </footer>
+  {% endblock %}
+</div>
+<!-- End Client Footer -->

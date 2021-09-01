@@ -1,7 +1,7 @@
-/**
-* @file
-* sites/mabel/pages/_front.scss
-*/
+/*------------------------------------------------------------------------------
+Templates: Sites - MABEL - Front page
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 .islandora-front-page {
   .page-content {
     h2 {
@@ -20,26 +20,25 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    margin: $double-spacing auto;
-
+    margin: var(--space--md) auto;
 
     .icon-with-text {
-      padding: $standard-spacing;
-      border: solid $border-width transparent;
+      padding: var(--space--sm);
+      border: solid var(--border-width--md) transparent;
 
       .icon-text {
-        font-size: $h5-font-size;
+        font-size: var(--icon-size--sm);
       }
 
       .material-icons {
-        color: $dark-blue;
-        font-size: $h1-font-size;
+        color: var(--dark-blue);
+        font-size: var(--icon-size--lg);
       }
 
       &:hover,
       &:focus-within {
         transform: translate(-0.125rem, -0.125rem);
-        border-color: $dark-blue;
+        border-color: var(--dark-blue);
         outline: none;
         background: transparent;
       }
@@ -57,7 +56,7 @@
   display: -ms-grid;
   display: grid;
 
-  grid-column-gap: $standard-spacing;
+  grid-column-gap: var(--space--sm);
   -ms-grid-columns: 1fr;
   -ms-grid-rows: auto;
   grid-template-columns: 1fr;
@@ -65,5 +64,5 @@
 }
 
 #block-masquerade-masquerade .description {
-  color: $white;
+  color: var(--white);
 }

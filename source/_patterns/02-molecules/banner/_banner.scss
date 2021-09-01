@@ -1,17 +1,18 @@
-/**
-* @file
-* 02-molecules/banner/_banner.scss
-*/
+/*------------------------------------------------------------------------------
+Molecule: Banner
+--------------------------------------------------------------------------------
+1. Print styles
+------------------------------------------------------------------------------*/
 .block--banner {
   position: relative;
   display: grid;
   align-content: center;
-  padding: $triple-spacing;
+  padding: var(--space--xl);
   text-align: center;
 
   .body {
     position: relative;
-    max-width: $max-content-width;
+    max-width: var(--content-area-max-width);
     margin: auto;
   }
 
@@ -19,61 +20,10 @@
   .block__title {
     z-index: 1;
   }
-
-  &.blue-overlay,
-  &.dark-blue-overlay {
-    .background-image {
-      filter: brightness(0.5);
-    }
-  }
 }
-
-.dark-mode {
-  .block--banner {
-    &:not([class*="-overlay"]) {
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        color: $dark-blue;
-      }
-
-      a:not([class]) {
-        color: $link-blue--darker;
-
-        &:hover,
-        &:focus,
-        &:active {
-          color: $lightest-green;
-        }
-
-        &:focus {
-          outline-color: $darkest-blue;
-        }
-      }
-    }
-
-    &.gray-overlay {
-      a:not([class]) {
-        &:focus {
-          outline-color: $darkest-blue;
-        }
-      }
-    }
-  }
-}
-
-/* Retrofit for existing pages with beyond basic block banners */
-.block--half-page,
-.block--full-page {
-  h1,
-  h2 {
-    z-index: 1;
-  }
-}
-
+/*------------------------------------------------------------------------------
+1. Print styles
+------------------------------------------------------------------------------*/
 @media print {
   .block--banner {
     min-height: none;

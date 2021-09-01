@@ -1,7 +1,7 @@
-/*
- * @file
- * templates/layouts/threecol_25_50_25/_layout--threecol-25-50-25.scss
- */
+/*------------------------------------------------------------------------------
+Templates: Layouts - Retired Layouts - Three col 25/50/25
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 
 .layout--threecol-25-50-25 {
   display: flex;
@@ -14,27 +14,29 @@
 }
 
 .layout--threecol-25-50-25 > .layout__region--first {
-  @include font-size--smaller;
   @include breakpoint($medium) {
     flex: 0 1 25%;
     max-width: 25%;
-    padding-right: $standard-spacing;
+    padding-right: var(--space--sm);
   }
+
+  font-size: var(--font-size--sm);
 }
 
 .layout--threecol-25-50-25 > .layout__region--second {
   @include breakpoint($medium) {
     flex: 0 1 50%;
     max-width: 50%;
-    padding: 0 $standard-spacing;
+    padding: 0 var(--space--sm);
   }
 }
 
 .layout--threecol-25-50-25 > .layout__region--third {
-  @include font-size--smaller;
   @include breakpoint($medium) {
     flex: 0 1 25%;
     max-width: 25%;
-    padding-left: $standard-spacing;
+    padding-left: var(--space--sm);
   }
+
+  font-size: var(--font-size--sm);
 }

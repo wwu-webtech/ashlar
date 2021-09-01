@@ -1,7 +1,7 @@
-/**
- * @file
- * templates/layouts/twocol_75_25/_layout--twocol075-25.scss
- */
+/*------------------------------------------------------------------------------
+Templates: Layouts - Retired Layouts - Two col 75/25
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 
 .layout--twocol-75-25 {
   display: flex;
@@ -16,15 +16,16 @@
   @include breakpoint($medium) {
     flex: 0 1 75%;
     max-width: 75%;
-    padding-right: $standard-spacing;
+    padding-right: var(--space--sm);
   }
 }
 
 .layout--twocol-75-25 > .layout__region--second {
-  @include font-size--smaller;
   @include breakpoint($medium) {
     flex: 0 1 25%;
     max-width: 25%;
-    padding-left: $standard-spacing;
+    padding-left: var(--space--sm);
   }
+
+  font-size: var(--font-size--sm);
 }

@@ -1,21 +1,20 @@
-/**
-* @file
-* sites/mabel/panes/_compound-object-jail.scss
-*/
-$jail-height: 46.875rem;
-
+/*------------------------------------------------------------------------------
+Templates: Sites - MABEL - Object jail
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 #block-islandora-compound-object-compound-jail-display {
   @include breakpoint($medium) {
-    border: solid $light-gray $border-width--thicker;
+    border: solid var(--gray--lighter--60) var(--border-width--lg);
   }
+
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
   align-content: start;
-  height: $jail-height;
-  padding: $standard-spacing;
-  border: solid $light-gray $border-width;
-  font-size: $p-font-size--smaller;
+  justify-content: space-between;
+  height: 46.875rem;
+  padding: var(--space--sm);
+  border: solid var(--gray--lighter--60) var(--border-width--md);
+  font-size: var(--font-size--sm);
 
   .form-item {
     flex: 0 0 100%;
@@ -36,7 +35,7 @@ $jail-height: 46.875rem;
       vertical-align: top;
 
       a:first-of-type {
-        margin-bottom: $half-spacing;
+        margin-bottom: var(--space--xs);
       }
     }
   }

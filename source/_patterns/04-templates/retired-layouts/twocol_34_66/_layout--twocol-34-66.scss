@@ -1,7 +1,7 @@
-/**
- * @file
- * templates/layouts/twocol_34_66/_layout--twocol-34-66.scss
- */
+/*------------------------------------------------------------------------------
+Templates: Layouts - Retired Layouts - Two col 33/66
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 
 .layout--twocol-34-66 {
   display: flex;
@@ -13,18 +13,19 @@
 }
 
 .layout--twocol-34-66 > .layout__region--first {
-  @include font-size--smaller;
   @include breakpoint($medium) {
     flex: 0 1 34%;
     max-width: 34%;
-    padding-right: $standard-spacing;
+    padding-right: var(--space--sm);
   }
+
+  font-size: var(--font-size--sm);
 }
 
 .layout--twocol-34-66 > .layout__region--second {
   @include breakpoint($medium) {
     flex: 0 1 66%;
     max-width: 66%;
-    padding-left: $standard-spacing;
+    padding-left: var(--space--sm);
   }
 }

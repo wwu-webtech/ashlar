@@ -1,23 +1,23 @@
-/**
- * @file
- * molecules/links/skip-content/_skip-content.scss
- */
+/*------------------------------------------------------------------------------
+Molecule: Navigation - Skip content link
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
 
 .skip-link {
   &.focusable {
     &:focus {
+      clip-path: initial;
+
       position: absolute !important;
       z-index: 3;
       top: 0;
-      left: $standard-spacing;
+      left: var(--space--sm);
       clip: initial; // IE support
-      clip-path: initial;
       width: inherit;
       height: inherit;
-      padding: $standard-spacing;
-      color: $black;
-      outline-color: $white;
-      background: $light-green;
+      padding: var(--space--sm);
+      outline-color: var(--dark-blue--darker--60);
+      outline-offset: calc(-1 * var(--border-width--lg));
     }
   }
 }

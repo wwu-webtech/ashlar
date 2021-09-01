@@ -24,9 +24,7 @@
       <video{{ item.attributes.addClass(item_classes) }} autoplay=""  id="{{ item.id }}" loop="" muted="" preload="auto"><source src="{{ item.source }}" /></video>
       <p class="visually-hidden">{{ item.description }}</p>
 
+      <button{{ button.attributes.addClass(button_classes) }}>Pause animation</button>    
     </div>
-
-    <button{{ button.attributes.addClass(button_classes) }}>Pause animation</button>
-    
   </div>
 {% endfor %}

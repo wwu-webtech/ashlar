@@ -6,7 +6,8 @@ attributes:
   Attribute():
     class:
       - bg-video-container
-      - big-bold-headings
+      - min-height--50vh
+      - headings--big-bold
       - black-overlay
 title_attributes:
   Attribute():
