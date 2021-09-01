@@ -82,9 +82,9 @@ Molecule: Cards
       &:hover,
       &:focus,
       &:active {
+        color: inherit;
         outline: none;
         background: none;
-        color: inherit;
       }
     }
   }
@@ -118,6 +118,7 @@ Molecule: Cards
     flex: 0 1 100%;
     order: 5;
     padding: 0 var(--space--xs);
+    line-height: 1.8;
 
     .date {
       font-weight: var(--font-weight--semibold);

@@ -183,6 +183,7 @@ Gray, blue, and green backgrounds are gray based.
     color: var(--white);
 
     &:visited {
+      color: var(--white);
       text-decoration-color: var(--purple--lighter--60);
     }
 

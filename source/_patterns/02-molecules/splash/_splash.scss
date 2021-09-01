@@ -7,20 +7,19 @@ Molecule: Splash
   position: relative;
   z-index: 0;
   display: grid;
+  margin-bottom: var(--space--md);
 
   img {
     display: block;
+    object-fit: cover;
     width: 100%;
     height: 100%;
-
-    object-fit: cover;
   }
 }
 
 .splash > div,
 .featured-major-splash-area > div {
   z-index: 0;
-
   grid-column: 1;
   grid-row: 1;
 
