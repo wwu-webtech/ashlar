@@ -7,6 +7,7 @@ Molecule: Navigation - myWestern links
   flex-flow: row wrap;
   justify-content: space-evenly;
   max-width: 38rem;
+  margin: var(--space--md) auto;
   padding: 0;
   list-style: none;
 }
