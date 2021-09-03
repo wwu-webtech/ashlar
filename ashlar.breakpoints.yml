@@ -1,27 +1,27 @@
 ashlar.xsmall:
   label: XS
-  mediaQuery: "all and (max-width: 36.3124rem)"
+  mediaQuery: "all and (max-width: 580px)"
   weight: 0
   multipliers:
     - 1x
     - 2x
 ashlar.small:
   label: S
-  mediaQuery: "all and (min-width: 36.3125rem) and (max-width: 59.4374rem)"
+  mediaQuery: "all and (min-width: 581px) and (max-width: 950px)"
   weight: 1
   multipliers:
     - 1x
     - 2x
 ashlar.medium:
   label: M
-  mediaQuery: "all and (min-width: 59.4375rem) and (max-width: 81.24rem)"
+  mediaQuery: "all and (min-width: 951px) and (max-width: 1300px)"
   weight: 2
   multipliers:
     - 1x
     - 2x
 ashlar.large:
   label: L
-  mediaQuery: "all and (min-width: 81.25rem)"
+  mediaQuery: "all and (min-width: 1301px)"
   weight: 3
   multipliers:
     - 1x

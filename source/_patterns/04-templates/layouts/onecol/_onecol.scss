@@ -27,8 +27,8 @@ Templates: Layouts - One column
   }
 
   max-width: 100vw;
-  margin-right: calc(-1 * (var--space--sm));
-  margin-left: calc(-1 * (var--space--sm));
+  margin-right: calc(-1 * var(--space--sm));
+  margin-left: calc(-1 * var(--space--sm));
 
   .layout__region {
     max-width: none;

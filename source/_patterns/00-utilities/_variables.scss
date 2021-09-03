@@ -24,9 +24,9 @@ e. Logo
   5. Animation
 ------------------------------------------------------------------------------*/
 /* Breakpoints, which don't mesh well with CSS variables ---------------------*/
-$small: 36.3125rem;
-$medium: 59.4375rem;
-$large: 81.25rem;
+$small: 580px;
+$medium: 950px;
+$large: 1300px;
 
 :root {
 /*------------------------------------------------------------------------------
@@ -200,7 +200,7 @@ $large: 81.25rem;
 
 /* c. Font sizes (mostly based on major second scale) ------------------------*/
 --font-size--xs: 0.6em;
---font-size--sm: 0.8em;
+--font-size--sm: 0.9em;
 --font-size--md: 1em;
 --font-size--lg: 1.125em;
 --font-size--xl: 1.266em;

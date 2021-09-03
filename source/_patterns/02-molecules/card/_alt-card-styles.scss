@@ -289,6 +289,7 @@ Molecule: Cards - Alternate styles
 ------------------------------------------------------------------------------*/
 .card.information,
 .block--card.information {
+  align-content: space-between;
   padding: 0;
 
   .sorting-term {

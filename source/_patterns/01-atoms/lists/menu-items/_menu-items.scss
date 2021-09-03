@@ -22,6 +22,7 @@ Atom: Text - Lists - Menu Items
       transition: var(--transition-speed--fast) var(--ease--standard) all;
       text-decoration: none;
       background-size: 100% 100%;
+      font-weight: var(--font-weight--regular);
     }
   }
 }
