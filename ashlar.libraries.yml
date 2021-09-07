@@ -146,7 +146,3 @@ wwu-header:
     build/js/wwu-header.js: {}
   dependencies:
     - core/jquery
-wwu-mobile-menu:
-  version: 2.x
-  js:
-    build/js/wwu-mobile-menu.js: {}
