@@ -29,12 +29,20 @@ a.button,
     font-size: var(--font-size--md);
   }
 
+  &:visited {
+    color: var(--white);
+  }
+
   &:active,
   &:focus,
   &:hover {
     color: var(--white);
     background: var(--dark-blue--darker--40);
     box-shadow: var(--shadow--soft--hover);
+
+    &:visited {
+      color: var(--white);
+    }
   }
 
   &.square {
@@ -59,11 +67,19 @@ a.button,
     color: var(--black);
     background: var(--blue--lighter--40);
 
+    &:visited {
+      color: var(--black);
+    }
+
     &:active,
     &:focus,
     &:hover {
       background: var(--blue--lighter--60);
       box-shadow: var(--shadow--soft--hover);
+
+      &:visited {
+        color: var(--black);
+      }
     }
   }
 
@@ -82,6 +98,10 @@ a.button,
     color: var(--dark-blue);
     background: var(--light-green);
 
+    &:visited {
+      color: var(--dark-blue);
+    }
+
     &:active,
     &:focus,
     &:hover {
@@ -99,6 +119,10 @@ a.button,
       color: var(--white);
       background: var(--green--darker--40);
       box-shadow: var(--shadow--soft--hover);
+
+      &:visited {
+        color: var(--white);
+      }
     }
   }
 
@@ -111,6 +135,10 @@ a.button,
       color: var(--white);
       background: var(--dark-green--darker--60);
       box-shadow: var(--shadow--soft--hover);
+
+      &:visited {
+        color: var(--white);
+      }
     }
   }
 
@@ -118,11 +146,19 @@ a.button,
     color: var(--dark-blue);
     background: var(--white);
 
+    &:visited {
+      color: var(--dark-blue);
+    }
+
     &:active,
     &:focus,
     &:hover {
       background: var(--gray--lighter--60);
       box-shadow: var(--shadow--soft--hover);
+
+      &:visited {
+        color: var(--dark-blue);
+      }
     }
   }
 
@@ -145,11 +181,19 @@ a.button,
       border-color: var(--blue--lighter--40);
       background-color: transparent;
 
+      &:visited {
+        color: var(--blue--lighter--40);
+      }
+
       &:active,
       &:focus,
       &:hover {
         color: var(--black);
         background: var(--blue--lighter--60);
+
+        &:visited {
+          color: var(--black);
+        }
       }
     }
 
@@ -157,11 +201,19 @@ a.button,
       color: var(--dark-blue);
       border-color: var(--dark-blue);
 
+      &:visited {
+        color: var(--dark-blue);
+      }
+
       &:active,
       &:focus,
       &:hover {
         color: var(--white);
         background: var(--dark-blue--darker--60);
+
+        &:visited {
+          color: var(--white);
+        }
       }
     }
 
@@ -170,11 +222,19 @@ a.button,
       border-color: var(--light-green);
       background-color: transparent;
 
+      &:visited {
+        color: var(--light-green);
+      }
+
       &:active,
       &:focus,
       &:hover {
         color: var(--dark-blue);
         background: var(--light-green--lighter--60);
+
+        &:visited {
+          color: var(--dark-blue);
+        }
       }
     }
 
@@ -182,11 +242,19 @@ a.button,
       color: var(--green);
       border-color: var(--green);
 
+      &:visited {
+        color: var(--green);
+      }
+
       &:active,
       &:focus,
       &:hover {
         color: var(--white);
         background: var(--green--darker--40);
+
+        &:visited {
+          color: var(--white);
+        }
       }
     }
 
@@ -194,11 +262,19 @@ a.button,
       color: var(--dark-green);
       border-color: var(--dark-green);
 
+      &:visited {
+        color: var(--dark-green);
+      }
+
       &:active,
       &:focus,
       &:hover {
         color: var(--white);
         background: var(--dark-green--darker--60);
+
+        &:visited {
+          color: var(--white);
+        }
       }
     }
 
@@ -213,6 +289,10 @@ a.button,
         color: var(--dark-blue);
         border-color: transparent;
         background: var(--gray--lighter--60);
+
+        &:visited {
+          color: var(--dark-blue);
+        }
       }
     }
   }
