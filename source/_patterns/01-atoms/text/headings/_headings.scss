@@ -81,7 +81,8 @@ h5 + h6 {
 /*------------------------------------------------------------------------------
 2. Alternate Styles
 ------------------------------------------------------------------------------*/
-.headings--serif {
+.headings--serif,
+.sans-serif-headings {
   h1,
   h2,
   h3,
@@ -175,7 +176,8 @@ h5 + h6 {
   }
 }
 
-.big-bold-headings {
+.big-bold-headings,
+.headings--big-and-bold {
   h1,
   h2,
   h3,
