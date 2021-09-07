@@ -8,7 +8,6 @@ libraries:
   - ashlar/display-settings
   - ashlar/search
   - ashlar/wwu-header
-  - ashlar/wwu-mobile-menu
 libraries-override:
   core/drupal.dialog.off_canvas:
     css:
