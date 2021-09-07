@@ -87,9 +87,9 @@ select {
   }
 }
 
-
 input,
-textarea {
+textarea,
+select {
   &:focus {
     border-color: var(--dark-blue--lighter--60);
     box-shadow: var(--shadow--soft);
