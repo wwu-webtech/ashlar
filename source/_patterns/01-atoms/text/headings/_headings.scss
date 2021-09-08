@@ -82,7 +82,7 @@ h5 + h6 {
 2. Alternate Styles
 ------------------------------------------------------------------------------*/
 .headings--serif,
-.sans-serif-headings {
+.serif-headings {
   h1,
   h2,
   h3,
@@ -90,6 +90,18 @@ h5 + h6 {
   h5,
   h6 {
     font-family: var(--font--serif);
+  }
+}
+
+.headings--sans-serif,
+.sans-serif-headings {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font--sans-serif);
   }
 }
 
