@@ -47,13 +47,12 @@ Molecule: Statistic
     }
 
     a {
-      color: inherit;
+      color: var(--blue--darker--40);
 
       &:active,
       &:focus,
       &:hover {
-        color: inherit;
-        background-color: inherit;
+        color: var(--white);
       }
     }
   }
