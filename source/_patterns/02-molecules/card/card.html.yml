@@ -3,6 +3,7 @@ attributes:
     class:
     - block
     - block--card
+    - light-blue-bg
 title_attributes:
   Attribute():
     class:

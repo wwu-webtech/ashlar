@@ -6,7 +6,7 @@ Organism: Headers - Header region
   .block {
     @include breakpoint($medium) {
       margin: initial;
-      padding: 0;
+      padding: 0 var(--space--2xs);
       text-align: left;
       border: none;
     }

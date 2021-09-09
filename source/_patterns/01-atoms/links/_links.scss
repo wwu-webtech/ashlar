@@ -8,7 +8,10 @@ a {
   transition: background-size var(--transition-speed--fast)
       cubic-bezier(0.33, 0.66, 0.66, 1),
     text-decoration var(--transition-speed--fast) ease-out;
-  text-decoration: underline var(--border-width--md) var(--blue--lighter--60);
+  text-decoration-color: var(--blue--lighter--60);
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: var(--border-width--md);
   text-underline-offset: 0.3125rem;
   color: var(--blue--darker--20);
   background-image: none;

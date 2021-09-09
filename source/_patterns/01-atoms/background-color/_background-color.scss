@@ -53,7 +53,7 @@ Black, darkest blue, dark blue, and dark green are black based.
     color: var(--light-green--lighter--40);
   }
 
-  a:not([class*="cta"]):not([class*="button"]),
+  a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]),
   a.patternLink {
     color: var(--blue--lighter--40);
 
@@ -119,7 +119,7 @@ Black, darkest blue, dark blue, and dark green are black based.
 
   background: var(--dark-green);
 
-  a:not([class*="cta"]):not([class*="button"]) {
+  a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
     text-decoration-color: var(--light-green--lighter--20);
     color: var(--green--lighter--80);
 
@@ -178,11 +178,12 @@ Gray, blue, and green backgrounds are gray based.
     color: var(--white);
   }
 
-  a:not([class*="cta"]):not([class*="button"]) {
+  a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
     text-decoration-color: var(--blue--lighter--60);
     color: var(--white);
 
     &:visited {
+      color: var(--white);
       text-decoration-color: var(--purple--lighter--60);
     }
 
@@ -249,7 +250,7 @@ Gray, blue, and green backgrounds are gray based.
     }
   }
 
-  a:not([class*="cta"]):not([class*="button"]) {
+  a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
     text-decoration-color: var(--light-green--lighter--20);
 
     &:hover,
@@ -301,7 +302,7 @@ backgrounds are light gray based.
     color: var(--dark-blue);
   }
 
-  a:not([class*="cta"]):not([class*="button"]) {
+  a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
     text-decoration-color: var(--dark-blue);
     color: var(--blue--darker--40);
     &:visited {

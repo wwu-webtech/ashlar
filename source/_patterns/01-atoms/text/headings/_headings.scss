@@ -81,7 +81,8 @@ h5 + h6 {
 /*------------------------------------------------------------------------------
 2. Alternate Styles
 ------------------------------------------------------------------------------*/
-.headings--serif {
+.headings--serif,
+.serif-headings {
   h1,
   h2,
   h3,
@@ -89,6 +90,18 @@ h5 + h6 {
   h5,
   h6 {
     font-family: var(--font--serif);
+  }
+}
+
+.headings--sans-serif,
+.sans-serif-headings {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font--sans-serif);
   }
 }
 
@@ -175,7 +188,8 @@ h5 + h6 {
   }
 }
 
-.headings--big-bold {
+.big-bold-headings,
+.headings--big-and-bold {
   h1,
   h2,
   h3,

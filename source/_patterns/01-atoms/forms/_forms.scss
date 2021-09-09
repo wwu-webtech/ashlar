@@ -13,7 +13,7 @@ form {
   .webform-section-title {
     display: inline-block;
     margin: 0;
-    padding: 0 var(space--xl);
+    padding: 0 var(--space--lg);
     transform: translatey(-1.2em);
     color: var(--dark-blue);
     background-color: var(--white);
@@ -23,15 +23,15 @@ form {
       margin-top: -1.2em;
 
       fieldset {
-        margin-left: var(space--xl);
+        margin-left: var(--space--lg);
       }
     }
   }
 
   > fieldset,
   .webform-section {
-    margin-top: var(space--xl);
-    padding: var(space--xl);
+    margin-top: var(--space--lg);
+    padding: var(--space--lg);
     border: solid var(--border-width--lg) var(--gray--lighter--80);
   }
 }
@@ -87,9 +87,9 @@ select {
   }
 }
 
-
 input,
-textarea {
+textarea,
+select {
   &:focus {
     border-color: var(--dark-blue--lighter--60);
     box-shadow: var(--shadow--soft);

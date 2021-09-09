@@ -25,7 +25,7 @@ Molecule: Cards
   &:focus-within {
     z-index: 1;
     .title {
-      a:after {
+      a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]):after {
         box-shadow: var(--shadow--soft--hover);
       }
     }
@@ -64,7 +64,7 @@ Molecule: Cards
       line-height: initial;
     }
 
-    a:not([class*="cta"]):not([class*="button"]) {
+    a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
       display: inline-block;
       text-decoration: none;
 
@@ -82,6 +82,7 @@ Molecule: Cards
       &:hover,
       &:focus,
       &:active {
+        color: inherit;
         outline: none;
         background: none;
       }
@@ -117,6 +118,7 @@ Molecule: Cards
     flex: 0 1 100%;
     order: 5;
     padding: 0 var(--space--xs);
+    line-height: 1.8;
 
     .date {
       font-weight: var(--font-weight--semibold);
@@ -138,8 +140,8 @@ Molecule: Cards
 .dark-mode {
   .card,
   .block--card {
-    .block__title {
-      a {
+    .title {
+      a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
         &:after {
           box-shadow: var(--shadow--dark-mode);
         }

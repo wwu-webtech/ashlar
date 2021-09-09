@@ -12,3 +12,7 @@ Fixes for Drupal administration theme.
 .splash > div:nth-of-type(1) div[data-contextual-id] {
   height: initial;
 }
+
+.contextual-links li {
+  position: relative;
+}

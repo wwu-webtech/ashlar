@@ -12,6 +12,7 @@ Molecule: Charts - Flow Chart
       flex-flow: row wrap;
       justify-content: center;
     }
+
     display: flex;
     flex-flow: column;
     padding: 0;
@@ -23,10 +24,12 @@ Molecule: Charts - Flow Chart
       flex-flow: row nowrap;
       margin: var(--space--md) 0 0;
     }
+
     display: flex;
     flex-flow: column;
     max-width: 22.5rem;
     margin: auto;
+    color: var(--black);
 
     &:last-of-type {
       .flow-right,
@@ -52,6 +55,7 @@ Molecule: Charts - Flow Chart
     @include breakpoint($small) {
       display: none;
     }
+
     display: block;
     margin: auto;
     padding: var(--space--md);
@@ -61,6 +65,7 @@ Molecule: Charts - Flow Chart
     @include breakpoint($small) {
       display: block;
     }
+
     display: none;
     align-self: center;
     padding: var(--space--md);

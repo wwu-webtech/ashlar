@@ -21,7 +21,7 @@ Molecule: Cards - Alternate styles
     order: 0;
     padding: var(--space--md);
 
-    a:not([class*="cta"]):not([class*="button"]) {
+    a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
       &:active,
       &:hover,
       &:focus {
@@ -35,7 +35,7 @@ Molecule: Cards - Alternate styles
     .title {
       @include dark-blue-bg;
 
-      a:not([class*="cta"]):not([class*="button"]) {
+      a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
         &:active,
         &:hover,
         &:focus {
@@ -50,7 +50,7 @@ Molecule: Cards - Alternate styles
     .title {
       @include light-green-bg;
 
-      a:not([class*="cta"]):not([class*="button"]) {
+      a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
         &:active,
         &:hover,
         &:focus {
@@ -151,7 +151,7 @@ Molecule: Cards - Alternate styles
     margin: 0;
     padding-top: var(--space--md);
 
-    a:not([class*="cta"]):not([class*="button"]) {
+    a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
       &:active,
       &:hover,
       &:focus {
@@ -274,6 +274,8 @@ Molecule: Cards - Alternate styles
     -ms-grid-column-span: 1;
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
+    line-height: 1.4;
+    padding: var(--space--sm);
   }
 }
 
@@ -287,6 +289,7 @@ Molecule: Cards - Alternate styles
 ------------------------------------------------------------------------------*/
 .card.information,
 .block--card.information {
+  align-content: space-between;
   padding: 0;
 
   .sorting-term {
@@ -364,7 +367,7 @@ Molecule: Cards - Alternate styles
     margin: 0;
     padding: var(--space--lg) var(--space--lg);
 
-    a:not([class*="cta"]):not([class*="button"]) {
+    a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
       &:active,
       &:hover,
       &:focus {
@@ -412,7 +415,7 @@ Molecule: Cards - Alternate styles
     order: 1;
     padding: var(--space--lg);
 
-    a:not([class*="cta"]):not([class*="button"]) {
+    a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
       &:active,
       &:hover,
       &:focus {
@@ -511,7 +514,7 @@ Molecule: Cards - Alternate styles
       color: var(--blue--darker--40);
 
       a.button.white,
-      a.cta.white {
+      .cta.white {
         color: var(--blue);
         &:hover,
         &:focus {
@@ -535,7 +538,7 @@ Molecule: Cards - Alternate styles
       color: var(--dark-green--darker--20);
 
       a.button.white,
-      a.cta.white {
+      .cta.white {
         color: var(--green);
 
         &:hover,
@@ -615,7 +618,7 @@ Molecule: Cards - Alternate styles
         font-size: var(--font-size--2xl);
       }
 
-      a:not([class*="cta"]):not([class*="button"]) {
+      a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
         &:active,
         &:hover,
         &:focus {

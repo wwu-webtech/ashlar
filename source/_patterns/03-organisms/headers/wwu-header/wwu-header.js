@@ -23,7 +23,6 @@ var header = document.querySelector(".western-header");
 var splash = document.querySelector(".splash");
 var content = document.querySelector(".page-content");
 var footer = document.querySelector(".page-footer");
-
 var screen_width = window.innerWidth;
 
 function position_elements() {
