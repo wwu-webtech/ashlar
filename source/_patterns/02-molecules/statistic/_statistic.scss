@@ -34,8 +34,8 @@ Molecule: Statistic
   }
 
   &.white-bg {
-    color: inherit;
-    background-color: inherit;
+    color: var(--blue);
+    background-color: var(--white);
 
     .block__title {
       padding-bottom: var(--space--sm);
