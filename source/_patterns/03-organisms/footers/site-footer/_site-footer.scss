@@ -17,13 +17,13 @@ Organism: Footers - Site footer
     grid-template-rows: auto auto;
   }
   @include breakpoint($large) {
-    -ms-grid-columns: 1fr (var(--content-area-max-width) / 3) var(--space--sm)
-      (var(--content-area-max-width) / 3) var(--space--sm)
-      (var(--content-area-max-width) / 3) 1fr;
-    grid-template-columns: 1fr (var(--content-area-max-width) / 3) var(
-        --space--sm
-      ) (var(--content-area-max-width) / 3) var(--space--sm) (
-        var(--content-area-max-width) / 3
+    -ms-grid-columns: 1fr calc(var(--content-area-max-width) / 3)
+      var(--space--sm) calc(var(--content-area-max-width) / 3) var(--space--sm)
+      calc(var(--content-area-max-width) / 3) 1fr;
+    grid-template-columns:
+      1fr calc(var(--content-area-max-width) / 3) var(--space--sm)
+      calc(var(--content-area-max-width) / 3) var(--space--sm) (
+        calc(var(--content-area-max-width) / 3)
       ) 1fr;
   }
   display: -ms-grid;
