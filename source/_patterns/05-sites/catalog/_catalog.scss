@@ -1,7 +1,7 @@
 /*------------------------------------------------------------------------------
 Templates: Sites - Catalog
 --------------------------------------------------------------------------------
-1. Search form
+1. Search form & archive drop down
 ------------------------------------------------------------------------------*/
 .acalog {
   body {
@@ -30,7 +30,7 @@ Templates: Sites - Catalog
 }
 
 /* -----------------------------------------------------------------------------
-1. Search Form
+1. Search form & archive drop down
 ------------------------------------------------------------------------------*/
 form[name="n2_search"] {
   color: var(--white);
@@ -81,44 +81,6 @@ form[name="n2_search"] {
     }
   }
 
-  #location_select_parent {
-    min-height: 100%;
-  }
-
-  #location_select_parent .select2-container {
-    position: relative;
-    height: 100%;
-  }
-
-  .select2-container .select2-selection--single {
-    display: flex;
-    align-items: center;
-    height: 100%;
-  }
-
-  .select2-container .select2-selection--single .select2-selection__rendered {
-    font-size: var(--font-size--sm);
-  }
-
-  .select2-container--default .select2-selection--single {
-    color: var(--black);
-    border: solid var(--border-width--md) var(--gray--lighter--80);
-    border-radius: var(--border-radius-round);
-    background-color: var(--gray--lighter--90);
-  }
-
-  .select2-container--default
-    .select2-selection--single
-    .select2-selection__rendered {
-    line-height: 1.5;
-  }
-
-  .select2-container--default
-    .select2-selection--single
-    .select2-selection__arrow {
-    height: 100%;
-  }
-
   .n2_search_header {
     javascript: void(0);
 
@@ -160,29 +122,73 @@ form[name="n2_search"] {
     height: 100%;
     margin: 0;
   }
+}
 
-  #gateway-page #keyword-submit-icon {
-    position: absolute !important;
-    right: 0;
-    float: none;
-    align-content: center;
-    width: initial !important;
-    height: 100% !important;
-    margin: 0 !important;
-    background-color: var(--gray--lighter--60);
-    font-size: 1rem !important;
-  }
+#location_select_parent {
+  min-height: 100%;
+}
 
-  #gateway-page #keyword-submit-icon::before {
-    width: var(--touch-target--min);
-  }
+#location_select_parent .select2-container {
+  position: relative;
+  height: 100%;
+}
 
-  #keyword-submit-icon .acalog-icons-visible,
-  .gateway-toolbar-item .acalog-icons-visible {
-    display: grid;
-    align-content: center;
-    justify-content: center;
-    width: 2rem;
-    height: 100%;
-  }
+.select2-container .select2-selection--single {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+  font-size: var(--font-size--sm);
+}
+
+.select2-container--default .select2-selection--single {
+  color: var(--black);
+  border: solid var(--border-width--md) var(--gray--lighter--80);
+  border-radius: var(--border-radius-round);
+  background-color: var(--gray--lighter--90);
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  line-height: 1.5;
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  height: 100%;
+}
+
+#gateway-page #keyword-submit-icon {
+  position: absolute !important;
+  right: 0;
+  float: none;
+  align-content: center;
+  width: initial !important;
+  height: 100% !important;
+  margin: 0 !important;
+  background-color: var(--gray--lighter--60);
+  font-size: 1rem !important;
+}
+
+#gateway-page #keyword-submit-icon::before {
+  width: var(--touch-target--min);
+}
+
+#keyword-submit-icon .acalog-icons-visible,
+.gateway-toolbar-item .acalog-icons-visible {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  width: 2rem;
+  height: 100%;
+}
+
+form[name="select_catalog"] table {
+  background: transparent;
+  display: flex;
+  justify-content: end;
 }
