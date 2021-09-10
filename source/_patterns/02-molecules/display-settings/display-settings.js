@@ -207,8 +207,9 @@ if (theme_options) {
 if (font_options) {
   font_options.addEventListener("click", select_font);
 }
-
-reset_preferences.addEventListener("click", global_reset);
+if (reset_preferences) {
+  reset_preferences.addEventListener("click", global_reset);
+}
 
 set_initial_theme(system_theme);
 set_font_preference();

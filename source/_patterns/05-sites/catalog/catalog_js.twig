@@ -24,6 +24,7 @@ head.appendChild(icons);
 
 /* Get rid of table layout for better accessibility ***************************/
 var wwu_header = document.querySelector(".site-header");
+var wwu_splash = document.querySelector(".splash");
 document.querySelector("body").appendChild(wwu_header);
 
 /** set up main region **/
@@ -50,7 +51,7 @@ var main_gateway_content = document.querySelector(
 );
 var layout_region = document.createElement("div");
 
-if (catalog_search) { region_content.appendChild(catalog_search); }
+if (catalog_search) { wwu_splash.appendChild(catalog_search); }
 if (select_catalog) { region_content.appendChild(select_catalog); }
 if (acalog_toolbar) { region_content.appendChild(acalog_toolbar); }
 if (page_title) { region_content.appendChild(page_title); }
