@@ -3,27 +3,38 @@ Molecule: Forms - User Login
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 .user-login-form {
+  @include breakpoint($medium) {
+    width: 75%;
+    justify-content: flex-start;
+  }
   display: flex;
-  flex-flow: column;
-  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
   margin: auto;
   padding: var(--space--md);
+  
+  .manual-login, 
+  .cas-login-link {
+    @include breakpoint($medium) {
+      width: 50%;
+      margin: var(--space--xs) auto;
+    }
+  }
 
   .cas-login-link {
     @extend .cta, .square;
-
-    margin: 0;
     order: -1;
   }
-
+  
   .manual-login {
     margin-bottom: var(--space--md);
-    width: 50%;
   }
 
   .textfield,
   .password,
-  .form-actions {
+  .form-actions,
+  .manual-login {
     display: none;
   }
 }
