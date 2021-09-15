@@ -25,6 +25,11 @@ Templates: Sites - Catalog
   .ultimenu__region > div {
     flex: 1 1 auto;
   }
+
+  .toplevel,
+  .layout__region .table_default {
+    display: none;
+  }
 }
 
 /* -----------------------------------------------------------------------------
