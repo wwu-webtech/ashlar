@@ -10,9 +10,14 @@
 <script src="//acalog-clients.s3.amazonaws.com/production/wwu/img/gateway/js_Fp-mOUxrFRbZdxrCQmpvXb3wIqqZfJDO2Ys52BQZkHs.js"></script>
 <script src="//acalog-clients.s3.amazonaws.com/production/wwu/img/gateway/jquery-migrate.min.js"></script>
 <script src="//acalog-clients.s3.amazonaws.com/production/wwu/img/gateway/js_aWPb5XQ_fEmXBlIdETY37IhVVg6PJ7QjbKPiX1n_Xnc.js"></script>
-<script src="//acalog-clients.s3.amazonaws.com/production/wwu/img/gateway/js_3Qk-bOIS5CT6SvpRZwiroyCagV3S2M83fas4fjkSup8.js"></script>
-<script src="//acalog-clients.s3.amazonaws.com/production/wwu/img/gateway/js_0cffCKJbXGk1ftbLzYeCDi_x9I4bRmYWPZder9q56hw.js"></script>
-<script src="//acalog-clients.s3.amazonaws.com/production/wwu/img/gateway/js_VohkKT-RNXVTGjVBEFEX74GUF-PB1SsRjPSJClC_-Uo.js"></script>
+<script>
+Drupal.debounce=function(n,e,t){var r=void 0,u=void 0;return function(){for(var l=arguments.length,a=Array(l),i=0;i<l;i++){a[i]=arguments[i]};var o=this,f=function(){r=null;if(!t){u=n.apply(o,a)}},p=t&&!r;clearTimeout(r);r=setTimeout(f,e);if(p){u=n.apply(o,a)};return u}};
+</script>
+
+<script src="https://www.wwu.edu/themes/contrib/ashlar/build/js/search.js"></script>
+<script src="https://www.wwu.edu/themes/contrib/ashlar/build/js/wwu-header.js"></script>
+<script src="https://www.wwu.edu/themes/contrib/ashlar/dist/js/accessible-mega-menu.js"></script>
+<script src="https://www.wwu.edu/themes/contrib/ashlar/build/js/menu-extras.js"></script>
 </div>
 <!-- End Client Javascript -->
 
@@ -38,7 +43,7 @@
 
     {% block splash %}
       <div class="splash">
-          
+
       </div>
     {% endblock %}
   </header>
