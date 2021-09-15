@@ -8,10 +8,8 @@ Templates: Sites - Catalog
     margin: 0;
   }
 
-  #acalog-client-header {
-    .display-settings {
-      display: none;
-    }
+  .display-settings {
+    display: none;
   }
 
   .ultimenu section.ultimenu__flyout.open {
@@ -188,7 +186,7 @@ form[name="n2_search"] {
 }
 
 form[name="select_catalog"] table {
-  background: transparent;
   display: flex;
   justify-content: end;
+  background: transparent;
 }
