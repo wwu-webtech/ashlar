@@ -153,6 +153,7 @@ a.button,
     &:active,
     &:focus,
     &:hover {
+      color: var(--dark-blue);
       background: var(--gray--lighter--60);
       box-shadow: var(--shadow--soft--hover);
 
