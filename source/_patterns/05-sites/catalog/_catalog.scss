@@ -27,7 +27,8 @@ Templates: Sites - Catalog
   }
 
   .toplevel,
-  .layout__region .table_default {
+  .layout__region .table_default,
+  #gateway-back-to-top-icon-container {
     display: none;
   }
 }
