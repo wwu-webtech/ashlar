@@ -28,7 +28,7 @@ Templates: Sites - Catalog
 
   .toplevel,
   .layout__region .table_default,
-  #gateway-back-to-top-icon-container {
+  .acalog_top_link {
     display: none;
   }
 }
@@ -37,6 +37,7 @@ Templates: Sites - Catalog
 1. Search form & archive drop down
 ------------------------------------------------------------------------------*/
 form[name="n2_search"] {
+  margin-top: calc(-1 * var(--space--lg));
   color: var(--white);
   background-image: linear-gradient(
     to bottom right,
@@ -67,10 +68,11 @@ form[name="n2_search"] {
     @media (min-width: $medium) {
       grid-template-areas:
         "header header header"
+        "...... ...... ......"
         "select search search"
         "... option advanced";
       grid-template-columns: 2fr 1fr 1fr;
-      grid-template-rows: auto 2rem auto;
+      grid-template-rows: auto 0 2rem auto;
     }
   }
 
@@ -99,7 +101,17 @@ form[name="n2_search"] {
 
     a {
       color: var(--white);
+
+      &:active,
+      &:hover,
+      &:focus {
+        color: var(--dark-blue--darker--40);
+      }
     }
+  }
+
+  .show:nth-of-type(2) {
+    grid-area: select;
   }
 
   .show:nth-of-type(3) {
@@ -109,6 +121,7 @@ form[name="n2_search"] {
   .show:nth-of-type(4) {
     grid-area: option;
     justify-self: end;
+    margin-top: calc(-1 * var(--space--lg));
 
     @media (min-width: $medium) {
       justify-self: start;
@@ -168,6 +181,7 @@ form[name="n2_search"] {
 
 #gateway-page #keyword-submit-icon {
   position: absolute !important;
+  top: 0;
   right: 0;
   float: none;
   align-content: center;
