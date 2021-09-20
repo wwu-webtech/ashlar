@@ -203,32 +203,52 @@ h5 + h6 {
     padding-bottom: 0;
     text-transform: uppercase;
     border-bottom: none;
-    font-size: var(--font-size--9xl);
+    font-size: var(--font-size--7xl);
     font-weight: var(--font-weight--black);
 
     &:after {
       display: none;
+    }
+
+    @include breakpoint($medium) {
+      font-size: var(--font-size--9xl);
     }
   }
 
   h2 {
     text-transform: uppercase;
     border-bottom: none;
-    font-size: var(--font-size--8xl);
+    font-size: var(--font-size--6xl);
     font-weight: var(--font-weight--black);
+
+    @include breakpoint($medium) {
+      font-size: var(--font-size--8xl);
+    }
   }
 
   h3 {
     display: inline-block;
-    font-size: var(--font-size--7xl);
+    font-size: var(--font-size--5xl);
+
+    @include breakpoint($medium) {
+      font-size: var(--font-size--7xl);
+    }
   }
 
   h4 {
-    font-size: var(--font-size--6xl);
+    font-size: var(--font-size--4xl);
+
+    @include breakpoint($medium) {
+      font-size: var(--font-size--6xl);
+    }
   }
 
   h5 {
-    font-size: var(--font-size--5xl);
+    font-size: var(--font-size--3xl);
+
+    @include breakpoint($medium) {
+      font-size: var(--font-size--5xl);
+    }
   }
 }
 
