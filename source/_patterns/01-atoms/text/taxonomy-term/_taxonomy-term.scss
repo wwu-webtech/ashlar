@@ -3,8 +3,14 @@ Atom: Text - Taxonomy Terms
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 .taxonomy-term,
+.dark-mode .taxonomy-term,
+[class*="-bg"] .taxonomy-term,
 .job-title,
-.pronouns {
+.dark-mode .job-title,
+[class*="-bg"] .job-title,
+.pronouns,
+.dark-mode .pronouns,
+[class*="-bg"] .pronouns {
   @include darkest-blue-bg;
 
   display: inline-block;
@@ -12,6 +18,7 @@ Atom: Text - Taxonomy Terms
   padding: var(--space--xs) var(--space--sm);
   transition: background-size var(--transition-speed--fast)
     cubic-bezier(0.33, 0.66, 0.66, 1);
+  color: var(--white);
   font-size: var(--font-size--sm);
   font-weight: var(--font-weight--bold);
   font-display: fallback;

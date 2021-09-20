@@ -335,7 +335,7 @@ Molecule: Charts - Org Chart
   .org-chart {
     background: var(--chart-background-color--dark-mode);
 
-    a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
+    a {
       color: var(--white);
 
       &:active,
@@ -347,7 +347,7 @@ Molecule: Charts - Org Chart
 
     .light {
       &
-        > a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
+        > a {
         color: var(--dark-blue--darker--60);
 
         &:active,

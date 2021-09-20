@@ -71,9 +71,11 @@ Molecule: Status Alert
 1. Dark mode
 ------------------------------------------------------------------------------*/
 .dark-mode {
-  .material-icons,
-  .status,
-  .severity {
-    color: var(--light-green--lighter--20);
+  .status-alert {
+    .material-icons,
+    .status,
+    .severity {
+      color: var(--light-green--lighter--20);
+    }
   }
 }

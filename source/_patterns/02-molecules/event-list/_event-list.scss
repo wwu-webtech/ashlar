@@ -133,7 +133,7 @@ Molecule: Event List
       box-shadow: var(--shadow--dark-mode);
     }
 
-    a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
+    a {
       &:active,
       &:focus,
       &:hover {
