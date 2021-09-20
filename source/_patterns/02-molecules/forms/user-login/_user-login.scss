@@ -41,7 +41,7 @@ Molecule: Forms - User Login
 
 .dark-mode {
   .user-login-form {
-    .cas-login-link:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]){
+    .cas-login-link:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
       color: var(--white);
     }
   }

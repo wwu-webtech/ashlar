@@ -32,7 +32,7 @@ Molecule: Schedule
     margin: var(--space--xs) 0;
     font-size: var(--font-size--lg);
 
-    a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]){
+    a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
       text-decoration: none;
 
       &:after {
@@ -93,7 +93,7 @@ Molecule: Schedule
     .schedule-item {
       @include dark-blue-bg;
 
-      a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]){
+      a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
         color: inherit;
 
         &:active,

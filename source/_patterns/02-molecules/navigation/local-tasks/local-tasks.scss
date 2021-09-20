@@ -27,7 +27,7 @@ AKA The edit tabs in Drupal
       margin-bottom: 0;
     }
 
-    a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]){
+    a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
       display: block;
       padding: var(--space--2xs) var(--space--sm);
       text-decoration: none;
@@ -56,7 +56,7 @@ AKA The edit tabs in Drupal
     border-bottom-color: var(--gray--lighter--80);
   }
 
-  a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]){
+  a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
     display: block;
     margin: 0;
     padding: var(--space--xs) var(--space--sm);
@@ -79,7 +79,7 @@ AKA The edit tabs in Drupal
       }
     }
 
-    a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]){
+    a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
       border-right: var(--gray--darker--80);
     }
   }
