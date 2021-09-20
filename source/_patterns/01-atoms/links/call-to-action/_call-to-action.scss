@@ -3,7 +3,11 @@ Atom: Text - Links - Call to Action
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 a.button,
-.cta {
+.dark-mode a.button,
+[class*="-bg"] a.button,
+.cta,
+.dark-mode .cta,
+[class*="-bg"] .cta {
   display: inline-block;
   box-sizing: border-box;
   margin-bottom: var(--space--md);
@@ -89,6 +93,7 @@ a.button,
     &:active,
     &:focus,
     &:hover {
+      color: var(--white);
       background: var(--dark-blue--darker--60);
       box-shadow: var(--shadow--soft--hover);
     }

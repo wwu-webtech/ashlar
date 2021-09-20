@@ -21,7 +21,7 @@ Molecule: Cards - Alternate styles
     order: 0;
     padding: var(--space--md);
 
-    a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
+    a {
       &:active,
       &:hover,
       &:focus {
@@ -35,7 +35,7 @@ Molecule: Cards - Alternate styles
     .title {
       @include dark-blue-bg;
 
-      a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
+      a {
         &:active,
         &:hover,
         &:focus {
@@ -50,7 +50,7 @@ Molecule: Cards - Alternate styles
     .title {
       @include light-green-bg;
 
-      a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
+      a {
         &:active,
         &:hover,
         &:focus {
@@ -151,7 +151,7 @@ Molecule: Cards - Alternate styles
     margin: 0;
     padding-top: var(--space--md);
 
-    a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
+    a {
       &:active,
       &:hover,
       &:focus {
@@ -367,7 +367,7 @@ Molecule: Cards - Alternate styles
     margin: 0;
     padding: var(--space--lg) var(--space--lg);
 
-    a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
+    a {
       &:active,
       &:hover,
       &:focus {
@@ -415,7 +415,7 @@ Molecule: Cards - Alternate styles
     order: 1;
     padding: var(--space--lg);
 
-    a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
+    a {
       &:active,
       &:hover,
       &:focus {
@@ -618,7 +618,7 @@ Molecule: Cards - Alternate styles
         font-size: var(--font-size--2xl);
       }
 
-      a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
+      a {
         &:active,
         &:hover,
         &:focus {

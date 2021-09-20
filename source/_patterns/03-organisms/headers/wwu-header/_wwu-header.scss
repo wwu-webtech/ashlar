@@ -28,7 +28,7 @@ Organism: Headers - Western header
   grid-template-columns: var(--toggle-size--sm) auto var(--toggle-size--sm);
   grid-template-rows: var(--logo-size) auto auto;
 
-  a:not([class*="cta"]):not([class*="button"]):not([class*="taxonomy-term"]) {
+  a {
     color: var(--white);
 
     &:visited {

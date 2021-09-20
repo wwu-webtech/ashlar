@@ -36,7 +36,7 @@ Display preferences
       }
 
       &.menu-item--active-page {
-        a:not(.button):not([class*="cta"]):not([class*="taxonomy-term"]) {
+        a {
           color: var(--dark-blue--darker--60);
           background-color: var(--light-green--lighter--20);
         }
@@ -63,8 +63,7 @@ Display preferences
     font-size: var(--font-size--2xl);
     font-weight: var(--font-weight--semibold);
 
-    a:not(.button),
-    a:not([class*="cta"]) {
+    a {
       color: var(--light-green--lighter--20);
     }
   }
