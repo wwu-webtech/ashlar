@@ -5,9 +5,11 @@ Atom: Text - Links - Call to Action
 a.button,
 .dark-mode a.button,
 [class*="-bg"] a.button,
+[class*="-overlay"] a.button,
 .cta,
 .dark-mode .cta,
-[class*="-bg"] .cta {
+[class*="-bg"] .cta,
+[class*="-overlay"] .cta {
   display: inline-block;
   box-sizing: border-box;
   margin-bottom: var(--space--md);
