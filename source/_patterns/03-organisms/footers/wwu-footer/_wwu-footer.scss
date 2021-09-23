@@ -85,6 +85,14 @@ Organism: Footers - Western footer
     }
 
     text-align: center;
+
+    a {
+      font-weight: var(--font-weight--regular);
+    }
+
+    p {
+      margin-bottom: var(--space--2xs);
+    }
   }
 
   .social-media-links {
