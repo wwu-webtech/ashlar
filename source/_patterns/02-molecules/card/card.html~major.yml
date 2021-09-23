@@ -20,9 +20,8 @@ content:
   body: "<p>Card body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
   veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat.</p>"
+  consequat.</p><p>Another paragraph of text.</p><p class='read-more'><span class='material-icons' aria-hidden='true'>arrow_forward</span></p>"
   field_image: atoms-landscape-3x2
-  field_sorting_term: 'Category'
   field_highlighted_terms:
     "
     <div class='taxonomy-terms'>
@@ -31,4 +30,3 @@ content:
       <span class='taxonomy-term'><span class='material-icons' aria-hidden='true'>favorite</span> Term Three</span>
     </div>
     "
-  field_read_more: "<span class='material-icons' aria-hidden='true'>arrow_forward</span>"

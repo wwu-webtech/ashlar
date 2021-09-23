@@ -69,7 +69,6 @@ Molecule: Cards - Alternate styles
 ------------------------------------------------------------------------------*/
 .degree-card {
   display: grid;
-
   grid-template-areas:
     "taxonomy"
     "title"
@@ -78,9 +77,8 @@ Molecule: Cards - Alternate styles
   grid-template-rows: auto auto 1fr auto;
 
   .title {
-    padding: var(--space--md) var(--space--md) 0 var(--space--md);
-
     grid-area: title;
+    padding: var(--space--md) var(--space--md) 0 var(--space--md);
 
     h3 {
       margin-top: 0;
@@ -89,9 +87,8 @@ Molecule: Cards - Alternate styles
   }
 
   .taxonomy-terms {
-    padding: 0;
-
     grid-area: taxonomy;
+    padding: 0;
   }
 
   .taxonomy-term {
@@ -104,9 +101,8 @@ Molecule: Cards - Alternate styles
   }
 
   .body {
-    padding: 0 var(--space--md) var(--space--sm) var(--space--md);
-
     grid-area: body;
+    padding: 0 var(--space--md) var(--space--sm) var(--space--md);
 
     h4 {
       margin-bottom: 0;
@@ -132,9 +128,8 @@ Molecule: Cards - Alternate styles
   }
 
   .more-link {
-    margin-left: var(--space--md);
-
     grid-area: more;
+    margin-left: var(--space--md);
   }
 }
 
@@ -145,8 +140,8 @@ Molecule: Cards - Alternate styles
     &:hover,
     &:active,
     &:focus {
-      background-color: var(--black);
       color: var(--light-green);
+      background-color: var(--black);
     }
   }
 
@@ -732,6 +727,47 @@ Molecule: Cards - Alternate styles
 ------------------------------------------------------------------------------*/
 .card.major,
 .block--card.major {
+  display: grid;
+  grid-row-gap: var(--space--sm);
+  padding-bottom: 0;
+
+  .image {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    margin: 0;
+  }
+
+  .title {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    align-self: end;
+    padding: var(--space--xs);
+    background-color: rgba(var(--dark-blue--darker--40--rgb), 0.9);
+
+    h2 {
+      margin: 0;
+      font-family: var(--font--title);
+      font-size: var(--font-size--lg);
+    }
+
+    a {
+      color: var(--white);
+    }
+  }
+
+  .body {
+    display: grid;
+
+    > p {
+      grid-column: 1 / span 1;
+      margin: 0;
+    }
+
+    > .read-more {
+      grid-column: 2 / span 1;
+    }
+  }
+
   @media (min-width: $small) and (prefers-reduced-motion: no-preference) {
   }
 }
