@@ -10,7 +10,7 @@ Molecule: Accordion
 --------------------------------------------------------------------------------
 Borders only added to accordions without custom background classes added
 ------------------------------------------------------------------------------*/
-.accordion-set:not([class$="-bg"]) {
+.accordion-set:not([class*="-bg"]) {
   .item {
     border-top: var(--dark-blue--darker--20) solid var(--border-width--lg);
     border-right: var(--dark-blue--darker--20) solid var(--border-width--lg);
@@ -51,6 +51,7 @@ Borders only added to accordions without custom background classes added
       margin-bottom: 0;
       padding: var(--space--sm);
       text-align: left;
+      text-decoration: none;
       color: inherit;
       border: none;
       border-radius: 0;

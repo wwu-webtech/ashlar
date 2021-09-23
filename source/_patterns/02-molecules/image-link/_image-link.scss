@@ -13,6 +13,7 @@ Molecule: Image Link
   position: relative;
   width: var(--image-link-size);
   height: var(--image-link-size);
+  margin-top: var(--space--3xl);
   margin-bottom: var(--space--3xl);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   border-radius: 50%;
