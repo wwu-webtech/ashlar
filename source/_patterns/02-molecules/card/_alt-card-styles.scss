@@ -8,10 +8,9 @@ Molecule: Cards - Alternate styles
 5. Horizontal
 6. Information
 7. Information - Split style
-8. Majors
-9. Simple
-10. Solid round
-11. Tile
+8. Simple
+9. Solid round
+10. Tile
 --------------------------------------------------------------------------------
 1. Color block title
 ------------------------------------------------------------------------------*/
@@ -492,7 +491,7 @@ Molecule: Cards - Alternate styles
 }
 
 /*------------------------------------------------------------------------------
-9. Simple
+8. Simple
 ------------------------------------------------------------------------------*/
 .card.simple,
 .block--card.simple {
@@ -530,7 +529,7 @@ Molecule: Cards - Alternate styles
 }
 
 /*------------------------------------------------------------------------------
-10. Solid round
+9. Solid round
 ------------------------------------------------------------------------------*/
 .card.solid-round,
 .block--card.solid-round {
@@ -644,7 +643,7 @@ Molecule: Cards - Alternate styles
 }
 
 /*------------------------------------------------------------------------------
-11. Tile
+10. Tile
 ------------------------------------------------------------------------------*/
 .card.tile,
 .block--card.tile {
@@ -719,55 +718,5 @@ Molecule: Cards - Alternate styles
         }
       }
     }
-  }
-}
-
-/*------------------------------------------------------------------------------
-8. Majors
-------------------------------------------------------------------------------*/
-.card.major,
-.block--card.major {
-  display: grid;
-  grid-row-gap: var(--space--sm);
-  padding-bottom: 0;
-
-  .image {
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 1;
-    margin: 0;
-  }
-
-  .title {
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 1;
-    align-self: end;
-    padding: var(--space--xs);
-    background-color: rgba(var(--dark-blue--darker--40--rgb), 0.9);
-
-    h2 {
-      margin: 0;
-      font-family: var(--font--title);
-      font-size: var(--font-size--lg);
-    }
-
-    a {
-      color: var(--white);
-    }
-  }
-
-  .body {
-    display: grid;
-
-    > p {
-      grid-column: 1 / span 1;
-      margin: 0;
-    }
-
-    > .read-more {
-      grid-column: 2 / span 1;
-    }
-  }
-
-  @media (min-width: $small) and (prefers-reduced-motion: no-preference) {
   }
 }

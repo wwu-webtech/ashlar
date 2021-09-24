@@ -1,15 +1,23 @@
 attributes:
   Attribute():
     class:
-    - major-card
+    - hover-card
 title_attributes:
   Attribute():
     class:
     - block__title
 label: Card Title
+block_content:
+  field_heading_level:
+    0:
+      value: "h2"
+  field_link:
+    0:
+      url: "#"
 content:
   body: "<p>Card body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
   veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat.</p><p>Another paragraph of text.</p><p class='read-more'><span class='material-icons' aria-hidden='true'>arrow_forward</span></p>"
+  consequat.</p><p>Another paragraph of text.</p>"
   field_image: atoms-landscape-3x2
+  field_read_more: "<span class='material-icons' aria-hidden='true'>arrow_forward</span>"
