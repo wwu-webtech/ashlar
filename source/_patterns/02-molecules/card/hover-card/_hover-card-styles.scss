@@ -1,9 +1,14 @@
 .hover-card {
   position: relative;
 
+  p {
+    line-height: 1.2;
+    font-size: var(--font-size--sm);
+  }
+
   .title {
     padding: var(--space--sm);
-    background-color: rgba(var(--dark-blue--darker--40--rgb), 0.9);
+    background-color: rgba(var(--dark-blue--darker--40--rgb), 0.75);
 
     a {
       text-decoration: none;
@@ -19,18 +24,12 @@
         content: "";
         transition: var(--transition-speed--md) var(--ease--standard) box-shadow;
         box-shadow: var(--shadow--soft);
-
-        &:active,
-        &:hover,
-        &:focus {
-          background: none;
-        }
       }
 
       &:active,
       &:hover,
       &:focus {
-        background: none;
+        background-image: none;
       }
 
       &:focus {
@@ -119,7 +118,7 @@
     }
 
     .body {
-      padding: var(--space--md);
+      padding-left: var(--space--md);
       padding-right: calc(var(--space--sm) + var(--toggle-size--sm));
       color: var(--white);
     }
