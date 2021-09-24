@@ -2,8 +2,8 @@
   position: relative;
 
   p {
-    line-height: 1.2;
     font-size: var(--font-size--sm);
+    line-height: 1.2;
   }
 
   .title {
@@ -118,8 +118,10 @@
     }
 
     .body {
+      padding-top: 0;
+      padding-right: var(--space--md);
+      padding-bottom: calc(var(--toggle-size--md) * (2 / 3));
       padding-left: var(--space--md);
-      padding-right: calc(var(--space--sm) + var(--toggle-size--sm));
       color: var(--white);
     }
 
