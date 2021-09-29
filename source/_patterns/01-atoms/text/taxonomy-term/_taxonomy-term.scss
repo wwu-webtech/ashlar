@@ -28,4 +28,10 @@ Atom: Text - Taxonomy Terms
   &:hover {
     text-decoration: none;
   }
+
+  .material-icons {
+    position: relative;
+    top: 0.1em;
+    font-size: var(--icon-size--xs);
+  }
 }
