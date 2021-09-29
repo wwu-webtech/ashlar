@@ -42,7 +42,7 @@ Molecule: Cards
 
   .image {
     flex: 0 1 100%;
-    order: 1;
+    order: -1;
     width: 100%;
     margin-bottom: var(--space--xs);
 
@@ -56,7 +56,6 @@ Molecule: Cards
 
   .title {
     flex: 0 1 100%;
-    order: 2;
     padding: 0 var(--space--xs);
 
     .block__title {
@@ -91,7 +90,7 @@ Molecule: Cards
 
   .taxonomy-terms {
     flex: 0 1 100%;
-    order: 3;
+
     padding: 0 var(--space--xs);
 
     a {
@@ -101,14 +100,14 @@ Molecule: Cards
 
   .date {
     flex: 0 1 100%;
-    order: 4;
+
     padding: 0 var(--space--xs);
     font-weight: bold;
   }
 
   .location {
     flex: 0 1 100%;
-    order: 4;
+
     margin-bottom: var(--space--md);
     padding: 0 var(--space--xs);
     font-style: italic;
@@ -116,7 +115,7 @@ Molecule: Cards
 
   .body {
     flex: 0 1 100%;
-    order: 5;
+
     padding: 0 var(--space--xs);
     line-height: 1.8;
 

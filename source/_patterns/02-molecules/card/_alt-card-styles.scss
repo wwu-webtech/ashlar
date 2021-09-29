@@ -2,14 +2,15 @@
 Molecule: Cards - Alternate styles
 --------------------------------------------------------------------------------
 1. Color block title
-2. Event
-3. Event alternate
-4. Horizontal
-5. Information
-6. Information - Split style
-7. Simple
-8. Solid round
-9. Tile
+2. Degree
+3. Event
+4. Event alternate
+5. Horizontal
+6. Information
+7. Information - Split style
+8. Simple
+9. Solid round
+10. Tile
 --------------------------------------------------------------------------------
 1. Color block title
 ------------------------------------------------------------------------------*/
@@ -18,7 +19,7 @@ Molecule: Cards - Alternate styles
   .title {
     @include blue-bg;
 
-    order: 0;
+    order: -2;
     padding: var(--space--md);
 
     a {
@@ -63,7 +64,95 @@ Molecule: Cards - Alternate styles
 }
 
 /*------------------------------------------------------------------------------
-2. Event
+2. Degree (from wwu.edu/majors individual pages)
+------------------------------------------------------------------------------*/
+.degree-card {
+  display: grid;
+  grid-template-areas:
+    "taxonomy"
+    "title"
+    "body"
+    "more";
+  grid-template-rows: auto auto 1fr auto;
+
+  .title {
+    grid-area: title;
+    padding: var(--space--md) var(--space--md) 0 var(--space--md);
+
+    h3 {
+      margin-top: 0;
+      font-size: var(--font-size--3xl);
+    }
+  }
+
+  .taxonomy-terms {
+    grid-area: taxonomy;
+    padding: 0;
+  }
+
+  .taxonomy-term {
+    margin-right: var(--space--xs);
+    padding: var(--space--xs) var(--space--sm);
+  }
+
+  .taxonomy-term .material-icons {
+    font-size: var(--icon-size--sm);
+  }
+
+  .body {
+    grid-area: body;
+    padding: 0 var(--space--md) var(--space--sm) var(--space--md);
+
+    h4 {
+      margin-bottom: 0;
+      text-transform: uppercase;
+      color: var(--black);
+      font-size: var(--font-size--sm);
+      font-weight: bold;
+    }
+  }
+
+  .department-links > div {
+    margin: var(--space--md) 0;
+  }
+
+  .department-link {
+    text-decoration: none;
+    font-size: var(--font-size--md);
+    font-weight: bold;
+
+    .material-icons {
+      font-size: var(--icon-size--sm);
+    }
+  }
+
+  .more-link {
+    grid-area: more;
+    margin-left: var(--space--md);
+  }
+}
+
+.dark-mode .degree-card {
+  .department-link {
+    color: var(--white);
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--light-green);
+      background-color: var(--black);
+    }
+  }
+
+  .body {
+    h4 {
+      color: var(--light-green--lighter--40);
+    }
+  }
+}
+
+/*------------------------------------------------------------------------------
+3. Event
 ------------------------------------------------------------------------------*/
 .card.event,
 .block--card.event {
@@ -75,7 +164,7 @@ Molecule: Cards - Alternate styles
 
   .date {
     flex: 0 1 40%;
-    order: 1;
+    order: 0;
     margin-right: calc(-1 * var(--space--md));
     padding-left: var(--space--md);
     text-align: center;
@@ -103,6 +192,13 @@ Molecule: Cards - Alternate styles
     }
   }
 
+  .title {
+    order: 1;
+    margin-top: var(--space--md);
+    padding-right: var(--space--lg);
+    padding-left: var(--space--lg);
+  }
+
   .location {
     flex: 1 1 60%;
     order: 2;
@@ -114,20 +210,15 @@ Molecule: Cards - Alternate styles
     font-style: normal;
   }
 
-  .title {
-    margin-top: var(--space--md);
-    padding-right: var(--space--lg);
-    padding-left: var(--space--lg);
-  }
-
   .body {
+    order: 3;
     padding-right: var(--space--lg);
     padding-left: var(--space--lg);
   }
 }
 
 /*------------------------------------------------------------------------------
-3. Event Alternate
+4. Event Alternate
 ------------------------------------------------------------------------------*/
 .card.event.alt,
 .block--card.event.alt {
@@ -212,7 +303,7 @@ Molecule: Cards - Alternate styles
 }
 
 /*------------------------------------------------------------------------------
-4. Horizontal
+5. Horizontal
 ------------------------------------------------------------------------------*/
 @mixin horizontal-card {
   -ms-grid-columns: 1fr 1fr;
@@ -274,8 +365,8 @@ Molecule: Cards - Alternate styles
     -ms-grid-column-span: 1;
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
-    line-height: 1.4;
     padding: var(--space--sm);
+    line-height: 1.4;
   }
 }
 
@@ -285,7 +376,7 @@ Molecule: Cards - Alternate styles
 }
 
 /*------------------------------------------------------------------------------
-5. Information
+6. Information
 ------------------------------------------------------------------------------*/
 .card.information,
 .block--card.information {
@@ -346,7 +437,7 @@ Molecule: Cards - Alternate styles
 }
 
 /*------------------------------------------------------------------------------
-6. Information - Split style
+7. Information - Split style
 ------------------------------------------------------------------------------*/
 .card.information.split-style,
 .block--card.information.split-style {
@@ -400,7 +491,7 @@ Molecule: Cards - Alternate styles
 }
 
 /*------------------------------------------------------------------------------
-7. Simple
+8. Simple
 ------------------------------------------------------------------------------*/
 .card.simple,
 .block--card.simple {
@@ -438,7 +529,7 @@ Molecule: Cards - Alternate styles
 }
 
 /*------------------------------------------------------------------------------
-8. Solid round
+9. Solid round
 ------------------------------------------------------------------------------*/
 .card.solid-round,
 .block--card.solid-round {
@@ -552,7 +643,7 @@ Molecule: Cards - Alternate styles
 }
 
 /*------------------------------------------------------------------------------
-9. Tile
+10. Tile
 ------------------------------------------------------------------------------*/
 .card.tile,
 .block--card.tile {
