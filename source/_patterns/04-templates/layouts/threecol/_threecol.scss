@@ -67,8 +67,8 @@ Templates: Layouts - Three column
 
 .layout--threecol--page-width {
   @include breakpoint($large) {
-    margin-right: calc(50% - 50vw);
-    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw - var(--space--xs));
+    margin-left: calc(50% - 50vw - var(--space--xs));
   }
 
   display: flex;
