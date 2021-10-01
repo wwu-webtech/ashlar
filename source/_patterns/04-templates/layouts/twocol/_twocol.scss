@@ -75,14 +75,14 @@ Templates: Layouts - Two column
   margin-left: calc(-1 * var(--space--sm));
 
   > .layout__region {
-    flex: 0 1 100%;
+    flex: 1 1 100%;
     max-width: none;
   }
 
   > .layout__region--first,
   > .layout__region--second {
     @include breakpoint($small) {
-      flex: 0 1 50%;
+      flex: 1 1 50%;
     }
   }
 }

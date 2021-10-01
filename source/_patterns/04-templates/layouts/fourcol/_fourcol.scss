@@ -30,7 +30,7 @@ Templates: Layouts - Four column
   margin-left: calc(-1 * var(--space--sm));
 
   > .layout__region {
-    flex: 0 1 100%;
+    flex: 1 1 100%;
     max-width: none;
   }
 
@@ -39,7 +39,7 @@ Templates: Layouts - Four column
   > .layout__region--third,
   > .layout__region--fourth {
     @include breakpoint($small) {
-      flex: 0 1 25%;
+      flex: 1 1 25%;
     }
   }
 }
