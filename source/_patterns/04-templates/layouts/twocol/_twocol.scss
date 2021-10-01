@@ -64,8 +64,8 @@ Templates: Layouts - Two column
 
 .layout--twocol--page-width {
   @include breakpoint($large) {
-    margin-right: calc(50% - 50vw);
-    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw - var(--space--xs));
+    margin-left: calc(50% - 50vw - var(--space--xs));
   }
 
   display: flex;
@@ -75,14 +75,14 @@ Templates: Layouts - Two column
   margin-left: calc(-1 * var(--space--sm));
 
   > .layout__region {
-    flex: 0 1 100%;
+    flex: 1 1 100%;
     max-width: none;
   }
 
   > .layout__region--first,
   > .layout__region--second {
     @include breakpoint($small) {
-      flex: 0 1 50%;
+      flex: 1 1 50%;
     }
   }
 }
