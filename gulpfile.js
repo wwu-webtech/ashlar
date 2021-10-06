@@ -15,7 +15,7 @@
   const iife = require("gulp-iife");
   const concat = require("gulp-concat");
   const rename = require("gulp-rename");
-  const uglify = require("gulp-uglify");
+  const terser = require("gulp-terser");
   const sourcemaps = require("gulp-sourcemaps");
   const sass = require("gulp-sass");
   const sassGlob = require("gulp-sass-glob");
@@ -117,7 +117,7 @@
    *   properties.
    * rename: Options map to pass to the rename plugin.
    * iife: Options map to pass to the iife plugin.
-   * uglify: Options map to pass to the uglify plugin.
+   * terser: Options map to pass to the terser plugin.
    */
   config.js = {
     src: ["source/js/**/*.js", "source/_patterns/**/*.js"],
@@ -136,7 +136,7 @@
       params: ["$", "window", "document", "undefined"],
       args: ["jQuery", "this", "this.document"],
     },
-    uglify: {
+    terser: {
       compress: false,
       mangle: false,
       output: {
@@ -230,7 +230,7 @@
           // Wrap the JS in an immediately-invoked function expression.
           iife(config.js.iife),
           // Format the source.
-          uglify(config.js.uglify)
+          terser(config.js.terser)
         );
       }),
       // Flatten file path globs.
@@ -284,7 +284,7 @@
       sourcemaps.init(),
       concat(config.patternLab.jsFile),
       wrap(config.patternLab.jsTemplate),
-      uglify(config.js.uglify),
+      terser(config.js.terser),
       sourcemaps.write(),
       gulp.dest(config.patternLab.jsDest),
       callback
