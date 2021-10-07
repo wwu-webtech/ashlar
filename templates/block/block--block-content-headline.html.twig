@@ -42,7 +42,7 @@
 
   {% block links %}
     {% if block_content.field_link.0.url is not empty %}
-      <a class="button" href="{{ block_content.field_link.0.url }}">{{ block_content.field_link.0.title }}</a>
+      <a {% if attributes.hasClass('box-headline') %} class="cta light-blue" {% else %} class="cta" {% endif %}href="{{ block_content.field_link.0.url }}">{{ block_content.field_link.0.title }}</a>
     {% endif %}
 
     {% if block_content.field_video_source.0.value == "YouTube" %}
