@@ -23,6 +23,15 @@ Molecule: Headline
     margin: var(--space--md);
     padding: var(--space--lg);
     background-color: rgba(var(--dark-blue--darker--40--rgb), 0.7);
+
+    a[class*="cta"],
+    a[class*="button"] {
+      color: var(--black);
+
+      &:visited {
+        color: initial;
+      }
+    }
   }
 
   /*----------------------------------------------------------------------------
