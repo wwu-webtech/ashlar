@@ -19,7 +19,7 @@
     "gulp-sass-glob": "^1.0.9",
     "gulp-sass-lint": "^1.4.0",
     "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.1",
+    "gulp-terser": "^2.1.0",
     "gulp-wrap": "^0.15.0",
     "husky": "^2.7.0",
     "jquery": "^3.5.1",
