@@ -6,7 +6,7 @@ title_attributes:
   Attribute():
     class:
     - block__title
-label: Card Title
+label: Card Title Make Sure it Can Span a Few Lines
 block_content:
   field_heading_level:
     0:

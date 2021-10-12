@@ -67,7 +67,8 @@ Organism: Cards
 .card-2col--flex {
   .card,
   .block--card,
-  .event {
+  .event,
+  .hover-card {
     @include breakpoint($small) {
       flex: 0 0 calc(50% - var(--space--xs));
       margin-right: var(--space--xs);
@@ -78,7 +79,8 @@ Organism: Cards
 .card-3col--flex {
   .card,
   .block--card,
-  .event {
+  .event,
+  .hover-card {
     @include breakpoint($small) {
       flex: 0 0 calc(33.33% - var(--space--xs));
       margin-right: var(--space--xs);
@@ -89,7 +91,8 @@ Organism: Cards
 .card-4col--flex {
   .card,
   .block--card,
-  .event {
+  .event,
+  .hover-card {
     @include breakpoint($small) {
       flex: 0 0 calc(25% - var(--space--xs));
       margin-right: var(--space--xs);
@@ -136,7 +139,8 @@ Organism: Cards
 
     .card,
     .block--card,
-    .event {
+    .event,
+    .hover-card {
       float: left;
       width: 50%;
     }
@@ -149,7 +153,8 @@ Organism: Cards
 
     .card,
     .block--card,
-    .event {
+    .event,
+    .hover-card {
       float: left;
       width: 33%;
     }
@@ -162,7 +167,8 @@ Organism: Cards
 
     .card,
     .block--card,
-    .event {
+    .event,
+    .hover-card {
       float: left;
       width: 25%;
     }
