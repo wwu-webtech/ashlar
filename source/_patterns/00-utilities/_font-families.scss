@@ -6,6 +6,7 @@ Utilities - Font Families
   font-style: normal;
   font-weight: 400;
   src: url(../fonts/material-icons.woff2) format('woff2');
+  font-display: swap;
 }
 
 @font-face {
@@ -14,6 +15,7 @@ Utilities - Font Families
   font-weight: 300;
   src: local('Fira Sans Light Italic'), local('FiraSans-LightItalic'), url(../fonts/fira-sans-light-italic.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-display: swap;
 }
 
 @font-face {
@@ -22,6 +24,7 @@ Utilities - Font Families
   font-weight: 400;
   src: local('Fira Sans Italic'), local('FiraSans-Italic'), url(../fonts/fira-sans-italic.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-display: swap;
 }
 
 @font-face {
@@ -30,6 +33,7 @@ Utilities - Font Families
   font-weight: 300;
   src: local('Fira Sans Light'), local('FiraSans-Light'), url(../fonts/fira-sans-normal-300.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-display: swap;
 }
 
 @font-face {
@@ -38,6 +42,7 @@ Utilities - Font Families
   font-weight: 400;
   src: local('Fira Sans Regular'), local('FiraSans-Regular'), url(../fonts/fira-sans-normal-400.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-display: swap;
 }
 
 @font-face {
@@ -46,6 +51,7 @@ Utilities - Font Families
   font-weight: 600;
   src: local('Fira Sans SemiBold'), local('FiraSans-SemiBold'), url(../fonts/fira-sans-normal-600.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-display: swap;
 }
 
 @font-face {
@@ -54,6 +60,7 @@ Utilities - Font Families
   font-weight: 700;
   src: local('Fira Sans Bold'), local('FiraSans-Bold'), url(../fonts/fira-sans-normal-700.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Fira Sans';
@@ -61,6 +68,7 @@ Utilities - Font Families
   font-weight: 900;
   src: local('Fira Sans Black'), local('FiraSans-Black'), url(../fonts/fira-sans-normal-900.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Fira Sans Extra Condensed';
@@ -68,6 +76,7 @@ Utilities - Font Families
   font-weight: 300;
   src: local('Fira Sans Extra Condensed Light'), local('FiraSansExtraCondensed-Light'), url(../fonts/fira-sans-extra-condensed-300.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-display: swap;
 }
 
 @font-face {
@@ -76,6 +85,7 @@ Utilities - Font Families
   font-weight: 400;
   src: local('Fira Sans Extra Condensed Regular'), local('FiraSansExtraCondensed-Regular'), url(../fonts/fira-sans-extra-condensed-400.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-display: swap;
 }
 
 @font-face {
@@ -84,6 +94,7 @@ Utilities - Font Families
   font-weight: 700;
   src: local('Montserrat Bold'), local('Montserrat-Bold'), url(../fonts/montserrat-700.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-display: swap;
 }
 
 @font-face {
@@ -92,6 +103,7 @@ Utilities - Font Families
   font-weight: 900;
   src: local('Montserrat Black'), local('Montserrat-Black'), url(../fonts/montserrat-900.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-display: swap;
 }
 
 @font-face {
@@ -100,6 +112,7 @@ Utilities - Font Families
   font-weight: 400;
   src: local('PT Serif'), local('PTSerif-Regular'), url(../fonts/pt-serif-400.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-display: swap;
 }
 
 @font-face {
@@ -108,6 +121,7 @@ Utilities - Font Families
   font-weight: 700;
   src: local('PT Serif Bold'), local('PTSerif-Bold'), url(../fonts/pt-serif-700.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-display: swap;
 }
 
 @font-face {
@@ -116,6 +130,7 @@ Utilities - Font Families
   font-weight: 400;
   src: url('../fonts/OpenDyslexic3-Regular.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-display: swap;
 }
 
 @font-face {
@@ -124,6 +139,7 @@ Utilities - Font Families
   font-weight: 400;
   src: url('../fonts/Atkinson-Hyperlegible-Regular-102a.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-display: swap;
 }
 
 @font-face {
@@ -132,6 +148,7 @@ Utilities - Font Families
   font-weight: 700;
   src: url('../fonts/Atkinson-Hyperlegible-Bold-102a.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-display: swap;
 }
 
 @font-face {
@@ -140,6 +157,7 @@ Utilities - Font Families
   font-weight: 400;
   src: url('../fonts/Atkinson-Hyperlegible-Italic-102a.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-display: swap;
 }
 
 @font-face {
@@ -148,4 +166,5 @@ Utilities - Font Families
   font-weight: 700;
   src: url('../fonts/Atkinson-Hyperlegible-BoldItalic-102a.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-display: swap;
 }
