@@ -106,6 +106,17 @@
       padding: var(--space--sm);
       padding-right: var(--toggle-size--sm);
       background-color: transparent;
+
+      a {
+        &:focus {
+          outline: none;
+
+          &:after {
+            outline: dotted var(--border-width--md) var(--white);
+            outline-offset: calc(-1 * var(--border-width--md));
+          }
+        }
+      }
     }
 
     .content {
