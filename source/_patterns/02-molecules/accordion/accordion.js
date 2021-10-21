@@ -68,9 +68,9 @@ $accordionButton.on("click", function () {
 });
 
 $accordionMockButton.on("click keypress", function (event) {
-  event.preventDefault();
   if (keyPressed(event) === true) {
     toggleExpansion($(this));
+    event.preventDefault();
   }
 });
 
