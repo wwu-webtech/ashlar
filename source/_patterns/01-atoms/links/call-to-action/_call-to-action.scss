@@ -45,6 +45,7 @@ a.button,
   &:focus,
   &:hover {
     color: var(--white);
+    outline-color: inherit;
     background: var(--dark-blue--darker--40);
     box-shadow: var(--shadow--soft--hover);
 
