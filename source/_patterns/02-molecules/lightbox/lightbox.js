@@ -6,7 +6,7 @@ if (context !== document) {
 // Lightbox dialog component, replaces featherlight video functionality
 var body = document.querySelector("body");
 var main = body.querySelector(".page-content");
-var lbPlayButton = document.querySelectorAll(".play-link");
+var lbPlayButton = document.querySelectorAll(".play-link, .play-button");
 
 // 'if': Make this work in Pattern Lab
 // 'else if': other async scripts are on page, delay lightbox loading in case scripts load focusable items, so this one can set tabindex="-1" as needed.
