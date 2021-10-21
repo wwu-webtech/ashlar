@@ -6,55 +6,52 @@ Molecule: Headline
 3. Dark mode
 ------------------------------------------------------------------------------*/
 
-.headline {
-  /*----------------------------------------------------------------------------
-  1. Style 1: Box Headline
-  ----------------------------------------------------------------------------*/
-  &.box-headline {
-    @include dark-blue-bg;
-    @include breakpoint($medium) {
-      margin-top: 5%;
-      margin-left: 5%;
-      background: var(--gradient--horizontal--dark-blue-to-transparent);
-    }
-
-    align-self: start;
-    max-width: calc((2 * var(--content-area-max-width)) / 3);
-    margin: var(--space--md);
-    padding: var(--space--lg);
-    background-color: rgba(var(--dark-blue--darker--40--rgb), 0.7);
-
-    a[class*="cta"],
-    a[class*="button"] {
-      color: var(--black);
-
-      &:visited {
-        color: initial;
-      }
-    }
+/*----------------------------------------------------------------------------
+1. Style 1: Box Headline
+----------------------------------------------------------------------------*/
+.box-headline {
+  @include dark-blue-bg;
+  @include breakpoint($medium) {
+    margin-top: 5%;
+    margin-left: 5%;
+    background: var(--gradient--horizontal--dark-blue-to-transparent);
   }
 
-  /*----------------------------------------------------------------------------
-  2. Style 2: Left/Right Aligned Blue Box
-  ----------------------------------------------------------------------------*/
-  &.left-aligned-bar {
-    @include blue-bg;
-    @include breakpoint($large) {
-      max-width: 70vw;
-    }
+  align-self: start;
+  max-width: calc((2 * var(--content-area-max-width)) / 3);
+  margin: var(--space--md);
+  padding: var(--space--lg);
+  background-color: rgba(var(--dark-blue--darker--40--rgb), 0.7);
 
-    position: relative;
-    align-self: end;
-    width: 90vw;
-    margin-top: 25vh;
-    margin-bottom: var(--space--xl);
-    padding: var(--space--md);
-    background: rgba(var(--blue--rgb), 0.8);
+  .block__title {
+    margin-top: 0;
+  }
+}
+
+/*----------------------------------------------------------------------------
+2. Style 2: Left/Right Aligned Blue Box
+----------------------------------------------------------------------------*/
+.left-aligned-bar {
+  @include blue-bg;
+  @include breakpoint($large) {
+    max-width: 70vw;
   }
 
-  &.right-aligned-bar {
-    justify-self: end;
+  position: relative;
+  align-self: end;
+  width: 90vw;
+  margin-top: 25vh;
+  margin-bottom: var(--space--xl);
+  padding: var(--space--md);
+  background: rgba(var(--blue--rgb), 0.8);
 
-    @extend .left-aligned-bar;
+  .block__title {
+    margin-top: 0;
   }
+}
+
+.right-aligned-bar {
+  @extend .left-aligned-bar;
+
+  justify-self: end;
 }

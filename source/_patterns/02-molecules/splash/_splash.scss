@@ -32,11 +32,12 @@ Molecule: Splash
       &.contextual {
         height: initial;
       }
+
+      &.box-headline,
+      &.left-aligned-bar,
+      &.right-aligned-bar {
+        height: initial;
+      }
     }
   }
-}
-
-.featured-major-splash-area .headline.box-headline,
-.featured-major-splash-area .headline.simple-centered {
-  height: initial;
 }
