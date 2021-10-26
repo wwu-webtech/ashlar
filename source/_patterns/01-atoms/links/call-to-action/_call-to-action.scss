@@ -6,10 +6,12 @@ a.button,
 .dark-mode a.button,
 [class*="-bg"] a.button,
 [class*="-overlay"] a.button,
+[class*="headline"] a.button,
 .cta,
 .dark-mode .cta,
 [class*="-bg"] .cta,
-[class*="-overlay"] .cta {
+[class*="-overlay"] .cta,
+[class*="headline"] .cta {
   display: inline-block;
   box-sizing: border-box;
   margin-bottom: var(--space--md);
@@ -43,6 +45,7 @@ a.button,
   &:focus,
   &:hover {
     color: var(--white);
+    outline-color: inherit;
     background: var(--dark-blue--darker--40);
     box-shadow: var(--shadow--soft--hover);
 
