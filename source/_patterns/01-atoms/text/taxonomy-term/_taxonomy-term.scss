@@ -35,3 +35,9 @@ Atom: Text - Taxonomy Terms
     font-size: var(--icon-size--xs);
   }
 }
+
+a.taxonomy-term {
+  &:visited {
+    color: var(--purple--lighter--80);
+  }
+}

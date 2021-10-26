@@ -14,11 +14,11 @@
 
   {% block links %}
     {% if content.link %}
-      <a href="{{ content.link.url }}" {% if attributes.hasClass('box-headline') %} class="cta light-blue" {% else %} class="cta" {% endif %}> {{ content.link.text }}</a>
+      <a href="{{ content.link.url }}" {% if attributes.hasClass('box-headline') %} class="cta" {% else %} class="cta" {% endif %}> {{ content.link.text }}</a>
     {% endif %}
 
     {% if content.video %}
-      <button class="cta">Watch Video <span aria-hidden="true" class="material-icons" style="font-size: 1.125rem">play_arrow</span></a>
+      <button class="alt">Watch Video <span aria-hidden="true" class="material-icons" style="font-size: 1.125rem">play_arrow</span></a>
     {% endif %}
   {% endblock %}
 </div>

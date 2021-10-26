@@ -42,12 +42,12 @@
 
   {% block links %}
     {% if block_content.field_link.0.url is not empty %}
-      <a {% if attributes.hasClass('box-headline') %} class="cta light-blue" {% else %} class="cta" {% endif %}href="{{ block_content.field_link.0.url }}">{{ block_content.field_link.0.title }}</a>
+      <a {% if attributes.hasClass('box-headline') %} class="cta" {% else %} class="cta" {% endif %}href="{{ block_content.field_link.0.url }}">{{ block_content.field_link.0.title }}</a>
     {% endif %}
 
     {% if block_content.field_video_source.0.value == "YouTube" %}
       {{ attach_library('ashlar/lightbox') }}
-      <button class="play-link" data-lightbox-title="{{ block_content.field_video_title.0.value }}" data-lightbox-url="https://www.youtube.com/embed/{{ block_content.field_video_embed.0.value }}?rel=0&amp;autoplay=1"><span>Watch Video</span>
+      <button class="alt" data-lightbox-title="{{ block_content.field_video_title.0.value }}" data-lightbox-url="https://www.youtube.com/embed/{{ block_content.field_video_embed.0.value }}?rel=0&amp;autoplay=1"><span>Watch Video</span>
         {% if block_content.field_video_title.0.value is not empty %}
           <span class="visually-hidden">: {{ block_content.field_video_title.0.value }}</span>
         {% endif %}
@@ -56,7 +56,7 @@
 
     {% elseif block_content.field_video_source.0.value == "Vimeo" %}
       {{ attach_library('ashlar/lightbox') }}
-      <button class="play-link" data-lightbox-title="{{ block_content.field_video_title.0.value }}" data-lightbox-url="https://player.vimeo.com/video/{{ block_content.field_video_embed.0.value }}?rel=0&amp;autoplay=1"><span>Watch Video</span>
+      <button class="alt" data-lightbox-title="{{ block_content.field_video_title.0.value }}" data-lightbox-url="https://player.vimeo.com/video/{{ block_content.field_video_embed.0.value }}?rel=0&amp;autoplay=1"><span>Watch Video</span>
         {% if block_content.field_video_title.0.value is not empty %}
           <span class="visually-hidden">: {{ block_content.field_video_title.0.value }}</span>
         {% endif %}
