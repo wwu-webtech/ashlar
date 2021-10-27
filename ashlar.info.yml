@@ -25,7 +25,7 @@ regions:
   footer_center: Center Footer
   footer_right: Right Footer
   footer_bottom: Bottom Footer
-component-libraries:
+components:
   atoms:
     paths:
       - source/_patterns/01-atoms
