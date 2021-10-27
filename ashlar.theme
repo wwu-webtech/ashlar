@@ -330,7 +330,7 @@ function ashlar_preprocess_breadcrumb(&$variables) {
   if(($node = \Drupal::routeMatch()->getParameter('node')) && $variables['breadcrumb']) {
     $variables['breadcrumb'][] = array(
       'text' => $node->getTitle(),
-      'url' => $node->URL()
+      'url' => $node->toUrl()->toString()
     );
     $variables['#cache']['contexts'][] = 'url.path';
   }
