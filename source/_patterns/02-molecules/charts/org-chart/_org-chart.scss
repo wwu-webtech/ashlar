@@ -60,6 +60,7 @@ Molecule: Charts - Org Chart
         &:focus,
         &:active {
           color: var(--dark-blue);
+          outline-offset: calc(-1 * var(--border-width--lg));
         }
       }
 
@@ -95,10 +96,6 @@ Molecule: Charts - Org Chart
           &:active {
             color: var(--blue--lighter--80);
             background-image: var(--gradient--vertical--dark-blue);
-          }
-
-          &:focus {
-            outline-color: var(--dark-blue);
           }
         }
       }
