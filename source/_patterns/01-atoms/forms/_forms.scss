@@ -21,10 +21,6 @@ form {
 
     + .webform-section-wrapper {
       margin-top: -1.2em;
-
-      fieldset {
-        margin-left: var(--space--lg);
-      }
     }
   }
 
@@ -34,12 +30,16 @@ form {
     padding: var(--space--lg);
     border: solid var(--border-width--lg) var(--gray--lighter--80);
   }
+
+  .webform-flexbox {
+    margin: 0;
+  }
 }
 
 legend,
 label {
   display: block;
-  margin-bottom: var(--space--md);
+  margin-bottom: var(--space--2xs);
   padding: 0;
   font-weight: var(--font-weight--semibold);
 
