@@ -3,7 +3,7 @@ Molecule: Navigation - Skip content link
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 .skip-link.focusable,
-.skipto--custom button {
+.skip-to--custom button {
   &:focus {
     clip-path: initial;
     position: absolute !important;
