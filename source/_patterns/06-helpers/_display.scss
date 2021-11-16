@@ -2,7 +2,8 @@
 Helpers: Display
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-.visually-hidden {
+.visually-hidden,
+.skipto--custom button {
   position: absolute;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px); // IE support mainly, clip path is preferred

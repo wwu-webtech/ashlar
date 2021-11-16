@@ -117,6 +117,11 @@ search:
     build/js/search.js: {}
   dependencies:
     - core/jquery
+skip-to:
+  version: 4.1
+  js:
+    dist/js/skipto.js: {}
+    dist/js/skipto-extras.js: {}
 switcher:
   version: 1.x
   js:
