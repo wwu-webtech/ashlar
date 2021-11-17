@@ -18,3 +18,15 @@ Molecule: Navigation - Skip content link
     outline-offset: calc(-1 * var(--border-width--lg));
   }
 }
+
+.skip-to--custom {
+  button {
+    padding: var(--space--xs);
+    border-width: var(--border-width--md);
+    border-style: outset;
+
+    &:focus {
+      outline-offset: calc(-1.5 * var(--border-width--lg));
+    }
+  }
+}
