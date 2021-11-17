@@ -9,7 +9,7 @@ var SkipToConfig = {
   },
 };
 
-const skipto_button = document.getElementsByClassName("skipto--custom");
-const skip_link = document.querySelector(".skip-link");
+let skipto_button = document.getElementsByClassName("skipto--custom");
+let skip_link = document.querySelector(".skip-link");
 
 if (skipto_button) skip_link.classList.add("hidden");
