@@ -18,6 +18,7 @@ Helpers: Display
     padding: var(--space--sm);
     border: var(--border-width--md) outset var(--gray--lighter--80);
     border-radius: var(--border-radius--round);
+
     &:focus {
       padding: var(--space--sm);
       border: var(--border-width--md) outset var(--gray--lighter--80);
