@@ -2,8 +2,7 @@
 Helpers: Display
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-.visually-hidden,
-.skip-to--custom button {
+.visually-hidden {
   position: absolute;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px); // IE support mainly, clip path is preferred
@@ -12,4 +11,19 @@ Helpers: Display
   width: 1px;
   height: 1px;
   white-space: nowrap;
+}
+
+.skip-to.skip-to--custom {
+  button {
+    padding: var(--space--sm);
+    border: var(--border-width--md) outset var(--gray--lighter--80);
+    border-radius: var(--border-radius--round);
+    &:focus {
+      padding: var(--space--sm);
+      border: var(--border-width--md) outset var(--gray--lighter--80);
+      border-radius: var(--border-radius--round);
+      outline: dotted var(--border-width--md);
+      outline-offset: calc(-1.5 * var(--border-width--lg));
+    }
+  }
 }
