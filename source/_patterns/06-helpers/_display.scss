@@ -13,18 +13,20 @@ Helpers: Display
   white-space: nowrap;
 }
 
-.skip-to.skip-to--custom {
-  button {
-    padding: var(--space--sm);
-    border: var(--border-width--md) outset var(--gray--lighter--80);
-    border-radius: var(--border-radius--round);
-
-    &:focus {
+.skip-to {
+  &.skip-to--custom {
+    button {
       padding: var(--space--sm);
       border: var(--border-width--md) outset var(--gray--lighter--80);
       border-radius: var(--border-radius--round);
-      outline: dotted var(--border-width--md);
-      outline-offset: calc(-1.5 * var(--border-width--lg));
+
+      &:focus {
+        padding: var(--space--sm);
+        border: var(--border-width--md) outset var(--gray--lighter--80);
+        border-radius: var(--border-radius--round);
+        outline: dotted var(--border-width--md);
+        outline-offset: calc(-1.5 * var(--border-width--lg));
+      }
     }
   }
 }
