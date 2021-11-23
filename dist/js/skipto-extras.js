@@ -13,6 +13,7 @@ var SkipToConfig = {
 
 // only hide default skip link if skip-to library loads correctly
 // ensures skip link is available when JS isn't available
+
 let skipto_button = document.getElementsByClassName("skip-to--custom");
 let skip_link = document.querySelector(".skip-link");
 
