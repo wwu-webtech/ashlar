@@ -65,7 +65,7 @@ Molecule: Locations
 
     &:focus-within {
       .svg-container {
-        border: var(--focus-outline) var(--dark-blue);
+        border: var(--border-width--md) dotted var(--dark-blue);
       }
     }
   }
