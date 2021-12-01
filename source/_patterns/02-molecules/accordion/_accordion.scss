@@ -2,8 +2,9 @@
 Molecule: Accordion
 --------------------------------------------------------------------------------
 1. No background colors
-2. General accordion styles
-3. Dark mode
+2. With background colors
+3. General accordion styles
+4. Dark mode
 ------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------
 1. No background colors
@@ -33,7 +34,18 @@ Borders only added to accordions without custom background classes added
 }
 
 /*------------------------------------------------------------------------------
-2. General accordion styles
+2. With background colors
+------------------------------------------------------------------------------*/
+.block--accordion[class*="-bg"] {
+  padding: var(--space--md);
+
+  .block__title {
+    margin-top: 0;
+  }
+}
+
+/*------------------------------------------------------------------------------
+3. General accordion styles
 ------------------------------------------------------------------------------*/
 .accordion-set {
   margin-bottom: var(--space--md);
@@ -88,7 +100,7 @@ Borders only added to accordions without custom background classes added
 }
 
 /*------------------------------------------------------------------------------
-2. Dark Mode
+4. Dark Mode
 ------------------------------------------------------------------------------*/
 .dark-mode {
   .block--accordion:not([class*="-bg"]) {
