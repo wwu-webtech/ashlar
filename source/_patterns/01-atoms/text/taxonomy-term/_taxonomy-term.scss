@@ -41,6 +41,7 @@ a.taxonomy-term {
   border-bottom: solid var(--blue--lighter--60) var(--border-width--lg);
 
   &:visited {
+    color: var(--purple--lighter--80);
     border-bottom-color: var(--purple--lighter--80);
   }
 }
