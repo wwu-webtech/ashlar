@@ -311,6 +311,10 @@ Molecule: Cards - Alternate styles
   grid-template-rows: repeat(10, auto);
   padding-bottom: 0;
 
+  &.image-optional {
+    grid-template-columns: auto 1fr;
+  }
+
   .image {
     grid-column: 1 / span 1;
     grid-row: 1 / span all;
