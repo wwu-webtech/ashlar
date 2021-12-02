@@ -306,27 +306,14 @@ Molecule: Cards - Alternate styles
 5. Horizontal
 ------------------------------------------------------------------------------*/
 @mixin horizontal-card {
-  -ms-grid-columns: 1fr 1fr;
-  -ms-grid-rows: auto 1fr;
-
-  display: -ms-grid;
   display: grid;
-  grid-template-areas:
-    "image title"
-    "image taxonomy"
-    "image date"
-    "image location"
-    "image body";
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: repeat(10, auto);
   padding-bottom: 0;
 
   .image {
-    grid-area: image;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span all;
     margin-bottom: 0;
     padding: 0;
 
@@ -342,42 +329,8 @@ Molecule: Cards - Alternate styles
     }
   }
 
-  .taxonomy-terms,
-  .sorting-term {
-    grid-area: taxonomy;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-
-  .title {
-    grid-area: title;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-    margin-top: var(--space--sm);
-  }
-
-  .body {
-    grid-area: body;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
-    padding: var(--space--sm);
-    line-height: 1.4;
-  }
-
-  .location {
-    grid-area: location;
-  }
-
-  .date {
-    grid-area: date;
+  > * {
+    grid-column: 2 / span 1;
   }
 }
 
