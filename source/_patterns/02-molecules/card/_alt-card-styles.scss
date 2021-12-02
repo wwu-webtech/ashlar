@@ -314,6 +314,8 @@ Molecule: Cards - Alternate styles
   grid-template-areas:
     "image title"
     "image taxonomy"
+    "image date"
+    "image location"
     "image body";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto 1fr;
@@ -340,7 +342,8 @@ Molecule: Cards - Alternate styles
     }
   }
 
-  .taxonomy-terms {
+  .taxonomy-terms,
+  .sorting-term {
     grid-area: taxonomy;
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
@@ -367,6 +370,14 @@ Molecule: Cards - Alternate styles
     -ms-grid-row-span: 1;
     padding: var(--space--sm);
     line-height: 1.4;
+  }
+
+  .location {
+    grid-area: location;
+  }
+
+  .date {
+    grid-area: date;
   }
 }
 
