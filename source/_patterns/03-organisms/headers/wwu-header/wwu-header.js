@@ -134,6 +134,6 @@ function toggle_mobile_menu() {
 
 if (western_header) {
   position_elements();
-  window.addEventListener("resize", position_elements);
+  window.addEventListener("orientationchange", position_elements);
   mobile_menu_toggle.addEventListener("click", toggle_mobile_menu);
 }

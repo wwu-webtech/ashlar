@@ -3,6 +3,10 @@ Molecule: Search
 --------------------------------------------------------------------------------
 1. Display preferences
 ------------------------------------------------------------------------------*/
+input[type="search"] {
+  box-sizing: border-box;
+}
+
 .search {
   @include breakpoint($medium) {
     right: inherit;
