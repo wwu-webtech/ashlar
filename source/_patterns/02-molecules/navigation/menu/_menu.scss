@@ -40,12 +40,14 @@ Molecule: Menu
     li > a {
       &[aria-current="page"] {
         background-color: var(--blue--lighter--40);
+        color: var(--dark-blue--darker--40);
         font-weight: var(--font-weight--bold);
 
         &:hover,
         &:focus,
         &:active {
-          background-color: var(--gray--lighter--80);
+          background: var(--gray--lighter--80);
+          color: var(--dark-blue);
         }
       }
     }
