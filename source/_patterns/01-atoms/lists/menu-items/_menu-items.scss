@@ -23,6 +23,10 @@ Atom: Text - Lists - Menu Items
       text-decoration: none;
       background-size: 100% 100%;
       font-weight: var(--font-weight--regular);
+
+      &[aria-current="page"] {
+        font-weight: var(--font-weight--bold);
+      }
     }
   }
 }
