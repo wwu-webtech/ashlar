@@ -65,7 +65,7 @@ Molecule: Menu
           &:hover,
           &:focus,
           &:active {
-            background-color: var(--dark-blue);
+            background: var(--dark-blue);
             color: var(--light-green);
           }
         }
