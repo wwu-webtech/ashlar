@@ -309,6 +309,14 @@ Molecule: Cards - Alternate styles
     grid-area: terms;
     padding: var(--space--md);
   }
+
+  &:focus-within {
+    .title {
+      a:after {
+        outline-color: var(--dark-blue--darker--80);
+      }
+    }
+  }
 }
 
 /*------------------------------------------------------------------------------
@@ -465,6 +473,14 @@ Molecule: Cards - Alternate styles
   .body {
     grid-area: body;
   }
+
+  &:focus-within {
+    .title {
+      a:after {
+        outline-color: var(--dark-blue--darker--80);
+      }
+    }
+  }
 }
 
 /*------------------------------------------------------------------------------
@@ -480,7 +496,6 @@ Molecule: Cards - Alternate styles
   .title {
     @include blue-bg;
 
-    order: 1;
     padding: var(--space--lg);
 
     a {
@@ -714,11 +729,16 @@ Molecule: Cards - Alternate styles
         }
       }
     }
+  }
 
-    &:focus-within {
-      .title {
-        a:after {
-          outline-color: var(--white);
+  .block--card,
+  .card {
+    &.color-block-title,
+    &.event.alt,
+    &.information.split-style {
+      &:focus-within {
+        .title a:after {
+          outline-color: var(--blue--lighter--40);
         }
       }
     }
