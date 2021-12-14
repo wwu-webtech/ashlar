@@ -32,6 +32,14 @@ Molecule: Cards - Alternate styles
     }
   }
 
+  &:focus-within {
+    .title {
+      a:after {
+        outline-color: var(--dark-blue--darker--80);
+      }
+    }
+  }
+
   &.dark-blue {
     .title {
       @include dark-blue-bg;
