@@ -11,6 +11,7 @@ Molecule: Cards - Alternate styles
 8. Simple
 9. Solid round
 10. Tile
+11. Dark Mode
 --------------------------------------------------------------------------------
 1. Color block title
 ------------------------------------------------------------------------------*/
@@ -691,6 +692,33 @@ Molecule: Cards - Alternate styles
         &:focus {
           color: inherit;
           background: none;
+        }
+      }
+    }
+  }
+}
+
+/*--------------------------------------------------------------------------------
+11. Dark Mode
+------------------------------------------------------------------------------*/
+
+.dark-mode {
+  .card.color-block-title,
+  .block--card.color-block-title {
+    &:not(.light-green) .title {
+      a {
+        &:active,
+        &:focus,
+        &:hover {
+          color: var(--light-green);
+        }
+      }
+    }
+
+    &:focus-within {
+      .title {
+        a:after {
+          outline-color: var(--white);
         }
       }
     }
