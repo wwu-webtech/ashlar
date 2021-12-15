@@ -579,10 +579,7 @@ Molecule: Cards - Alternate styles
 
   a {
     &:after {
-      display: none;
-    }
-    &:before {
-      display: none;
+      border-radius: var(--space--2xl);
     }
   }
 
