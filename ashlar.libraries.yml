@@ -17,6 +17,9 @@ accessible-mega-menu:
     - core/jquery
 accordion:
   version: 1.x
+  css:
+    theme:
+      build/css/components/accordion.css: {}
   js:
     build/js/accordion.js: {}
   dependencies:
@@ -45,11 +48,14 @@ components:
   version: 1.x
   css:
     theme:
-      build/css/components.css: {}
+      build/css/ashlar_all.css: {}
   dependencies:
     - core/normalize
 countdown:
   version: 1.x
+  css:
+    theme:
+      build/css/components/countdown.css: {}
   js:
     build/js/countdown.js: {}
 display-settings:
@@ -119,6 +125,9 @@ search:
     - core/jquery
 switcher:
   version: 1.x
+  css:
+    theme:
+      build/css/components/switcher.css: {}
   js:
     build/js/switcher.js: {}
   dependencies:
