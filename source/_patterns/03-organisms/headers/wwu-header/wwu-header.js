@@ -8,7 +8,6 @@ var western_header = document.querySelector(".western-header");
 var mobile_menu_toggle = document.querySelector(".toggle-menu");
 var mobile_menu_wrapper = document.querySelector(".mobile-menu");
 var header_site_name = document.querySelector(".site-name");
-var header_display_settings = document.querySelector(".display-settings");
 var header_quick_links = document.querySelector(".western-menu");
 var header_main_nav = document.querySelector(".main-navigation");
 var menu_links = Array.from(
@@ -29,7 +28,6 @@ function position_elements() {
   screen_width = window.innerWidth;
 
   if (screen_width < 951) {
-    mobile_menu_wrapper.appendChild(header_display_settings);
     mobile_menu_wrapper.appendChild(header_quick_links);
     if (header_main_nav) {
       mobile_menu_wrapper.appendChild(header_main_nav);
@@ -37,7 +35,6 @@ function position_elements() {
     return;
   } else {
     close_mobile_menu();
-    western_header.insertBefore(header_display_settings, mobile_menu_toggle);
     western_header.insertBefore(header_quick_links, header_site_name);
     if (header_main_nav) {
       western_header.appendChild(header_main_nav);
@@ -89,7 +86,6 @@ function open_mobile_menu() {
   mobile_menu_wrapper.addEventListener("transitionend", set_focus);
   mobile_menu_wrapper.classList.add("open");
   mobile_menu_wrapper.classList.remove("closed");
-  mobile_menu_wrapper.insertBefore(mobile_menu_toggle, header_display_settings);
 
   mobile_menu_toggle.querySelector(".material-icons").innerText = "close";
   mobile_menu_toggle.querySelector(".toggle-text").innerText = "Close Menu";

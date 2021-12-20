@@ -4,6 +4,17 @@
  */
 #}
 
-{% block page_header %}
-  {{ content }}
-{% endblock %}
+<header class="site-header">
+  <wwu-pre-header></wwu-pre-header>
+
+  {% block wwu_header %}
+    {% include "@organisms/headers/wwu-header/wwu-header.html.twig" %}
+  {% endblock %}
+
+  {% block splash %}
+    <div class="splash">
+      {{ page.header }}
+    </div>
+  {% endblock %}
+</header>
+

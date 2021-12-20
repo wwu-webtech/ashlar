@@ -1,7 +1,10 @@
 /*------------------------------------------------------------------------------
 Organism: Headers - Western header
 --------------------------------------------------------------------------------
-1. Mobile menu
+1. Desktop Menu
+2. Mobile menu
+3. Display preferences
+4. Dark mode
 ------------------------------------------------------------------------------*/
 .western-header {
   position: relative;
@@ -99,9 +102,73 @@ Organism: Headers - Western header
 }
 
 /*------------------------------------------------------------------------------
-1. Mobile menu
+1. Desktop menu
 ------------------------------------------------------------------------------*/
-.toggle-menu {
+#molecules-wwu-menu-html,
+#molecules-wwu-mobile-menu-html {
+  background-color: var(--dark-blue);
+}
+
+.western-menu {
+  @include breakpoint($medium) {
+    grid-area: none;
+    grid-column: 2 / span all;
+    grid-row: 1 / span 1;
+  }
+
+  display: flex;
+  grid-area: wwu-menu;
+  align-self: start;
+  justify-content: flex-end;
+  max-width: 100vw;
+  font-family: var(--font--condensed);
+
+  .icon-with-text {
+    @include breakpoint($medium) {
+      display: flex;
+      align-items: center;
+      width: initial;
+      height: initial;
+      min-height: var(--touch-target--min);
+      background-size: 100%;
+
+      .material-icons {
+        position: relative;
+        top: 0.125rem;
+        margin-right: var(--space--2xs);
+        font-size: var(--icon-size--sm);
+      }
+    }
+
+    padding: var(--space--2xs) var(--space--xs) var(--space--xs)
+      var(--space--xs);
+    color: var(--white);
+
+    &.report-bias-quick-link {
+      width: initial;
+    }
+
+    &:visited {
+      color: var(--white);
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: var(--dark-blue--darker--60);
+      outline-offset: var(--border-width--lg);
+    }
+  }
+
+  .wwu-menu {
+    display: flex;
+  }
+}
+
+/*------------------------------------------------------------------------------
+2. Mobile menu
+------------------------------------------------------------------------------*/
+.icon-with-text.toggle-menu {
   @include breakpoint($medium) {
     display: none;
   }
@@ -164,6 +231,48 @@ Organism: Headers - Western header
         width: calc(var(--toggle-size--lg) + 1);
         height: calc(var(--toggle-size--lg) + 1);
         font-size: var(--font-size--sm);
+      }
+    }
+  }
+}
+
+/*------------------------------------------------------------------------------
+3. Display preferences
+------------------------------------------------------------------------------*/
+.font--dyslexia-friendly {
+  .western-menu {
+    font-family: var(--font--dyslexia-friendly);
+  }
+}
+
+.font--hyperlegible {
+  .western-menu {
+    font-family: var(--font--hyperlegible);
+  }
+}
+
+/*------------------------------------------------------------------------------
+4. Dark mode
+------------------------------------------------------------------------------*/
+.dark-mode {
+  .western-menu {
+    .icon-with-text {
+      span {
+        color: var(--white);
+      }
+
+      &:visited {
+        span {
+          color: var(--white);
+        }
+      }
+
+      &:active,
+      &:focus,
+      &:hover {
+        span {
+          color: var(--dark-blue--darker--40);
+        }
       }
     }
   }

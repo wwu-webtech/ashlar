@@ -6,22 +6,9 @@
 
 <div class="page">
 
-  <header class="site-header">
-    <a href="#main-content" class="skip-link visually-hidden focusable">Skip to main content</a>
-
-    {% block top %}
-    {% endblock %}
-
-    {% block wwu_header %}
-      {% include "@organisms/headers/wwu-header/wwu-header.html.twig" %}
-    {% endblock %}
-
-    {% block splash %}
-      <div class="splash">
-        {{ page.header }}
-      </div>
-    {% endblock %}
-  </header>
+  {% block page_header %}
+    {{ page.header }}
+  {% endblock %}
 
   {% block content %}
     {{ page.content }}
