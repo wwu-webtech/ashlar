@@ -1,0 +1,102 @@
+/*------------------------------------------------------------------------------
+Organism: Pre-header
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+wwu-pre-header {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  grid-template-rows: auto auto;
+  justify-items: end;
+  font-size: var(--font-size--xs);
+  .material-icons {
+    position: relative;
+    top: 2px;
+    font-size: var(--icon-size--2xs);
+  }
+  a.skip-link {
+    min-height: var(--touch-target--min);
+    padding: var(--space--xs);
+    transition: background-image var(--transition-speed--fast)
+    var(--ease--standard);
+    text-decoration: none;
+    background-size: 100% 100%;
+    font-weight: var(--font-weight--regular);
+    &:visited {
+      color: inherit;
+    }
+    &:active,
+    &:hover,
+    &:focus {
+      color: var(--dark-blue--darker--60);
+      background-image: var(--gradient--vertical--light-blue);
+    }
+  }
+  button.toggle-settings {
+    min-height: var(--touch-target--min);
+    transition: background-image var(--transition-speed--fast)
+    var(--ease--standard);
+    color: inherit;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    background-repeat: no-repeat;
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--dark-blue--darker--60);
+      background-image: var(--gradient--vertical--light-blue);
+      background-size: 100% 100%;
+    }
+    &:active {
+      border: none;
+    }
+  }
+}
+.settings-menu {
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  grid-column: 1 / span all;
+  transition: opacity var(--ease--standard) var(--transition-speed--fast),
+  height var(--ease--standard) var(--transition-speed--fast);
+  &.closed {
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+  }
+  &.open {
+    visibility: visible;
+    padding: 0 var(--space--sm) var(--space--sm) var(--space--sm);
+    opacity: 1;
+  }
+  .menu-container {
+    display: flex;
+    flex: 0 0 100%;
+    flex-flow: row wrap;
+    .font-selection {
+      flex: 1;
+    }
+    fieldset {
+      display: flex;
+      flex: 1 1 0;
+      flex-flow: column nowrap;
+      legend {
+        margin: 0;
+        padding: var(--space--xs);
+      }
+      input[type="radio"],
+      input[type="radio"] + label {
+        &:not(:last-of-type) {
+          margin-bottom: var(--space--md);
+        }
+      }
+      input[type="radio"] + label {
+        align-self: flex-start;
+      }
+    }
+  }
+  .reset-button {
+    margin-top: var(--space--xs);
+  }
+}
