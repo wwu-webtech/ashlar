@@ -1,12 +1,12 @@
 const pre_header_template = document.createElement("template");
 pre_header_template.innerHTML = `
 <a href="#main-content" class="skip-link focusable">
-    <span class="skip-link-text">Skip to Content</span>
+    <span class="skip-link-text">Skip to Content </span>
     <span class="material-icons" aria-hidden="true">keyboard_arrow_down</span>
 </a>    
 
 <button class="toggle-settings" aria-expanded="false" aria-controls="settings-menu">
-    <span class="toggle-text"><span class="visually-hidden">Open</span> Settings</span>
+    <span class="toggle-text"><span class="visually-hidden">Open</span> Settings </span>
     <span class="material-icons toggle-icon" aria-hidden="true">settings</span>
 </button>
 
@@ -44,6 +44,8 @@ pre_header_template.innerHTML = `
     </div>
     <button id="reset-display-preferences" class="reset-button"><span class="material-icons" aria-hidden="true">replay</span> Reset preferences</button>
 </div>    
+
+<wwu-search role="search" aria-label="Western"></wwu-search>
 `;
 
 class PreHeader extends HTMLElement {
@@ -52,12 +54,12 @@ class PreHeader extends HTMLElement {
   }
 
   connectedCallback() {
-    /* Create the custom element by appending the template */
+    /* Create the custom element by appending the template -----------------------*/
     this.appendChild(pre_header_template.content.cloneNode(true));
 
     /*------------------------------------------------------------------------------
         Menu functionality
-        ---------------------------------------------------------------------------*/
+        --------------------------------------------------------------------------*/
 
     var display_toggle = this.querySelector(".toggle-settings");
     var settings_menu = this.querySelector(".settings-menu");
@@ -82,7 +84,7 @@ class PreHeader extends HTMLElement {
       display_toggle.querySelector(".toggle-text").innerHTML =
         "<span class='visually-hidden'>Close</span> Settings";
 
-      settings_menu.removeAttribute("hidden");
+      settings_menu.removeAttribute("aria-hidden");
       settings_menu.classList.remove("closed");
       settings_menu.classList.add("open");
     }
@@ -96,6 +98,7 @@ class PreHeader extends HTMLElement {
       display_toggle.querySelector(".toggle-text").innerHTML =
         "<span class='visually-hidden'>Open</span> Settings";
 
+      settings_menu.setAttribute("aria-hidden", true);
       settings_menu.classList.remove("open");
       settings_menu.classList.add("closed");
     }

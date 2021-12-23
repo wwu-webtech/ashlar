@@ -5,9 +5,24 @@
 #}
 
 <div class="page">
+  {% block header %}
+    <header class="site-header">
+      <wwu-pre-header class="light-gray-bg"></wwu-pre-header>
 
-  {% block page_header %}
-    {{ page.header }}
+      {% block wwu_header %}
+        {% include "@organisms/headers/wwu-header/wwu-header.html.twig" %}
+      {% endblock %}
+
+      {% block splash %}
+        <div class="splash">
+          {{ page.header }}
+        </div>
+      {% endblock %}
+
+      {% block main_navigation %}
+        {{ page.main_navigation }}
+      {% endblock %}
+     </header>
   {% endblock %}
 
   {% block content %}

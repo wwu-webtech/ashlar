@@ -1,42 +1,29 @@
-var $toggle_search = $(".toggle-search", context);
-var $search_icon = $toggle_search.children(".material-icons");
-var $search_box = $("#search-box");
-var $search_toggle_prefix = $toggle_search.children(".toggle-prefix");
-var $search_toggle_text = $toggle_search.children(".toggle-text");
-var $search_toggle_suffix = $toggle_search.children(".toggle-suffix");
+const search_template = document.createElement("template");
+search_template.innerHTML = `
+<form class="search-area" method="get" action="https://search2.wwu.edu/texis/search">
+  <div class="search-box">
+    <input id="search-box" placeholder="Enter terms" name="query" type="search">
+    <label for="search-box" class="search-label">Enter the terms you wish to search for.</label>
+  </div>
 
-function toggle_search(event) {
-  $toggle_search.off("click", toggle_search);
+  <button class="submit-search">
+    <span class="material-icons" aria-hidden="true">search</span>
+    <span class="toggle-text">Search</span>
+  </button>
 
-  $toggle_search.siblings(".search-area").animate(
-    {
-      width: "toggle",
-    },
-    {
-      duration: "normal",
-      easing: "swing",
-      complete: function () {
-        $toggle_search.toggleClass("is-expanded");
+  <input type="hidden" name="pr" value="Default-WWU-Base">
+</form>
+`;
 
-        if ($toggle_search.hasClass("is-expanded")) {
-          $search_icon.text("close");
-          $search_toggle_prefix.html("");
-          $search_toggle_text.html("Close");
-          $search_toggle_suffix.html(" Search");
-          $search_box.focus();
-        } else {
-          $search_icon.text("search");
-          $search_toggle_prefix.html("Open ");
-          $search_toggle_text.html("Search");
-          $search_toggle_suffix.html("");
-        }
+class WWUSearch extends HTMLElement {
+  constructor() {
+    super();
+  }
 
-        $toggle_search.on("click", toggle_search);
-      },
-    }
-  );
-
-  event.stopPropagation();
+  connectedCallback() {
+    /* Create the custom element by appending the template */
+    this.appendChild(search_template.content.cloneNode(true));
+  }
 }
 
-$toggle_search.on("click", toggle_search);
+window.customElements.define("wwu-search", WWUSearch);

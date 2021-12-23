@@ -1,66 +1,37 @@
 /*------------------------------------------------------------------------------
 Molecule: Search
 --------------------------------------------------------------------------------
-1. Display preferences
 ------------------------------------------------------------------------------*/
-input[type="search"] {
-  box-sizing: border-box;
-}
-
-.search {
-  @include breakpoint($medium) {
-    right: inherit;
-    left: inherit;
+wwu-search {
+  display: block;
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 1;
+  justify-self: end;
+  input[type="search"] {
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    border-width: var(--border-width--md);
   }
-
-  z-index: 0;
+}
+.search-area {
   display: flex;
-  justify-content: end;
-
-  .toggle-search,
-  .submit-search {
-    order: 2;
-    border: none;
-    border-radius: 0;
-    background-color: transparent;
-
-    &:active,
-    &:hover,
-    &:focus {
-      border: none;
-      background-image: var(--gradient--vertical--light-blue);
-      color: var(--dark-blue--darker--60);
-    }
-  }
-
-  .search-area {
-    display: flex;
-    order: 1;
-
-    .search-box {
-      input {
-        height: 100%;
-        margin: 0;
-        border-radius: 0;
-        font-size: var(--font-size--sm);
-        min-width: 12rem;
-      }
-    }
-
-    .search-label {
-      margin: 0;
-      font-size: 0;
-    }
+  height: 100%;
+  .material-icons {
+    font-size: var(--icon-size--xs);
   }
 }
+.search-label {
+  margin: 0;
+  font-size: 0;
+}
+.search-box {
+  flex: 1 1 0;
+}
+.submit-search {
+  place-items: center;
 
-/*------------------------------------------------------------------------------
-1. Display preferences
-------------------------------------------------------------------------------*/
-.font--dyslexia-friendly {
-  .search .search-area .search-box {
-    input {
-      font-size: var(--icon-size--sm);
-    }
-  }
+  display: flex;
+  border: none;
+  border-radius: 0;
 }

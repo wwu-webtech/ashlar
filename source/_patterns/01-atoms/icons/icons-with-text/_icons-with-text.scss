@@ -16,50 +16,41 @@ Atom: Icons - Icons with Text
   font-size: var(--font-size--sm);
   font-weight: var(--font-weight--light);
   font-display: fallback;
-
   .icon-text {
     display: block;
     margin-top: var(--space--xs);
   }
-
   &.small {
     width: var(--toggle-size--md);
     height: var(--toggle-size--md);
-
+    font-size: var(--font-size--xs);
     .material-icons {
       font-size: var(--icon-size--sm);
     }
   }
-
   &.medium {
     width: var(--toggle-size--xl);
     height: var(--toggle-size--xl);
     font-size: var(--font-size--lg);
-
     .material-icons {
       font-size: var(--icon-size--md);
-
       &:last-of-type {
         font-size: var(--font-size--lg);
       }
     }
   }
-
   &.large {
     width: var(--toggle-size--2xl);
     height: var(--toggle-size--2xl);
     font-size: var(--font-size--2xl);
-
     .material-icons {
       font-size: var(--icon-size--lg);
-
       &:last-of-type {
         font-size: var(--font-size--2xl);
       }
     }
   }
 }
-
 /*------------------------------------------------------------------------------
 1. Dark Mode
 ------------------------------------------------------------------------------*/
@@ -68,32 +59,26 @@ Atom: Icons - Icons with Text
   .page-content a {
     &.icon-with-text {
       color: var(--blue--lighter--40);
-
       &:hover,
       &:focus,
       &:active {
         color: var(--dark-blue);
       }
-
       &:focus {
         outline-color: var(--white);
       }
-
       &.blue-bg,
       &.dark-blue-bg {
         color: var(--white);
-
         &:hover,
         &:focus,
         &:active {
           background-color: var(--blue);
         }
       }
-
       &.white-bg {
         color: (var--blue--darker--20);
         background-color: var(--white);
-
         &:hover,
         &:focus,
         &:active {
@@ -104,7 +89,6 @@ Atom: Icons - Icons with Text
     }
   }
 }
-
 /*------------------------------------------------------------------------------
 2. Display Preferences
 ------------------------------------------------------------------------------*/
@@ -113,7 +97,6 @@ Atom: Icons - Icons with Text
     font-family: var(--font--dyslexia-friendly);
   }
 }
-
 .font--hyperlegible {
   .icon-with-text {
     font-family: var(--font--hyperlegible);
