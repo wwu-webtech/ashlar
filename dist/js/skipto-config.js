@@ -3,7 +3,6 @@ var SkipToConfig = {
     skipTo: {
       landmarks:
         'main, [role="main"], header, [role="banner"], [role="search"], nav,[role="navigation"], footer, [role="contentinfo"]',
-      headings: "main h1, main h2, main h3",
       displayOption: "popup",
       headerLabel: "Header",
       footerLabel: "Footer",
