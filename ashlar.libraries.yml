@@ -128,12 +128,6 @@ switcher:
     build/js/switcher.js: {}
   dependencies:
     - core/jquery
-timeline-block:
-  version: 1.x
-  js:
-    build/js/timeline-block.js: {}
-  dependencies:
-    - core/jquery
 user-login:
   version: 1.x
   js:

@@ -14,7 +14,7 @@ Atom: Text - Taxonomy Terms
   @include darkest-blue-bg;
 
   display: inline-block;
-  margin: 0 var(--space--2xs) var(--space--sm) 0;
+  margin: 0 var(--space--2xs) var(--space--2xs) 0;
   padding: var(--space--xs) var(--space--sm);
   transition: background-size var(--transition-speed--fast)
     cubic-bezier(0.33, 0.66, 0.66, 1);
@@ -37,7 +37,11 @@ Atom: Text - Taxonomy Terms
 }
 
 a.taxonomy-term {
+  text-decoration: none;
+  border-bottom: solid var(--blue--lighter--60) var(--border-width--lg);
+
   &:visited {
     color: var(--purple--lighter--80);
+    border-bottom-color: var(--purple--lighter--80);
   }
 }

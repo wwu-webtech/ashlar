@@ -7,27 +7,25 @@ Columns will collapse on mobile.
 .column-count--2,
 .column-count--3,
 .column-count--4 {
-  column-gap: var(--space--md);
+  column-gap: var(--space--sm);
 }
 
-.column-count--2 {
-  column-count: 2;
-}
-
-.column-count--3 {
-  column-count: 3;
-}
-
-.column-count--4 {
-  column-count: 4;
-}
-
-.column-count--5 {
-  column-count: 5;
-}
-
-.column-count--6 {
-  column-count: 6;
+@include breakpoint($medium) {
+  .column-count--2 {
+    column-count: 2;
+  }
+  .column-count--3 {
+    column-count: 3;
+  }
+  .column-count--4 {
+    column-count: 4;
+  }
+  .column-count--5 {
+    column-count: 5;
+  }
+  .column-count--6 {
+    column-count: 6;
+  }
 }
 
 .grid-column-count--2,
