@@ -68,7 +68,6 @@ class WWUHeader extends HTMLElement {
     ];
     const mobile_menu = [
       this.querySelector(".wwu-menu"),
-      this.querySelector("wwu-search"),
       document.querySelector(".main-navigation"),
     ];
 
