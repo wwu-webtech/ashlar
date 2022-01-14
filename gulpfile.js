@@ -19,7 +19,6 @@
   const sourcemaps = require("gulp-sourcemaps");
   const sass = require("gulp-sass");
   const sassGlob = require("gulp-sass-glob");
-  const imagemin = require("gulp-imagemin");
   const group = require("gulp-group-css-media-queries");
   const cleancss = require("gulp-clean-css");
 
@@ -244,12 +243,7 @@
    * Minify images.
    */
   gulp.task("images", function (callback) {
-    pump(
-      gulp.src(config.images.src),
-      imagemin(),
-      gulp.dest(config.images.dest),
-      callback
-    );
+    pump(gulp.src(config.images.src), gulp.dest(config.images.dest), callback);
   });
 
   /**
@@ -319,7 +313,6 @@
   gulp.task("patternlab:images", function (callback) {
     pump(
       gulp.src(config.patternLab.imagesSrc),
-      imagemin(),
       gulp.dest(config.patternLab.imagesDest),
       callback
     );
