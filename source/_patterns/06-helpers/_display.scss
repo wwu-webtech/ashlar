@@ -15,6 +15,11 @@ Helpers: Display
 
 .skip-to {
   &.skip-to--custom {
+    [role="menu"] {
+      max-height: calc(100vh * 0.75);
+      overflow-y: scroll;
+    }
+
     button {
       padding: var(--space--sm);
       border: var(--border-width--md) outset var(--gray--lighter--80);
