@@ -6,30 +6,23 @@ Templates: Sites - Directory
   .material-icons {
     font-size: var(--icon-size--xs);
   }
-
   .mat-tab-nav-bar.mat-background-primary > .mat-tab-link-container {
     background-color: var(--blue);
   }
-
   .mat-tab-links {
     justify-content: center;
   }
-
-  .mat-tab-link {
+  .mat-tab-nav-bar .mat-tab-link {
     opacity: 1;
   }
-
-  .mat-tab-nav-bar.mat-background-primary
-    > .mat-tab-link-container
-    .mat-tab-link:hover {
+  .mat-tab-nav-bar.mat-background-primary > .mat-tab-link-container
+  .mat-tab-link:hover {
     color: var(--dark-blue--darker--20);
   }
-
   .mat-tab-group.mat-accent .mat-ink-bar,
   .mat-tab-nav-bar.mat-accent .mat-ink-bar {
     background-color: var(--light-green--lighter--20);
   }
-
   .heading,
   .mat-nav-list {
     max-width: var(--content-area-max-width);
