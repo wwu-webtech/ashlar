@@ -32,6 +32,14 @@ Molecule: Cards - Alternate styles
     }
   }
 
+  &:focus-within {
+    .title {
+      a:after {
+        outline-color: var(--dark-blue--darker--80);
+      }
+    }
+  }
+
   &.dark-blue {
     .title {
       @include dark-blue-bg;
@@ -63,6 +71,26 @@ Molecule: Cards - Alternate styles
   }
 }
 
+.dark-mode {
+  .card.color-block-title,
+  .block--card.color-block-title {
+    &:not(.light-green) .title {
+      a {
+        &:active,
+        &:focus,
+        &:hover {
+          color: var(--light-green);
+        }
+      }
+    }
+
+    &:focus-within {
+      .title a:after {
+        outline-color: var(--blue--lighter--40);
+      }
+    }
+  }
+}
 /*------------------------------------------------------------------------------
 2. Degree (from wwu.edu/majors individual pages)
 ------------------------------------------------------------------------------*/
@@ -300,6 +328,25 @@ Molecule: Cards - Alternate styles
     grid-area: terms;
     padding: var(--space--md);
   }
+
+  &:focus-within {
+    .title {
+      a:after {
+        outline-color: var(--dark-blue--darker--80);
+      }
+    }
+  }
+}
+
+.dark-mode {
+  .card.event.alt,
+  .block--card.event.alt {
+    &:focus-within {
+      .title a:after {
+        outline-color: var(--blue--lighter--40);
+      }
+    }
+  }
 }
 
 /*------------------------------------------------------------------------------
@@ -456,6 +503,25 @@ Molecule: Cards - Alternate styles
   .body {
     grid-area: body;
   }
+
+  &:focus-within {
+    .title {
+      a:after {
+        outline-color: var(--dark-blue--darker--80);
+      }
+    }
+  }
+}
+
+.dark-mode {
+  .card.information.split-style,
+  .block--card.information.split-style {
+    &:focus-within {
+      .title a:after {
+        outline-color: var(--blue--lighter--40);
+      }
+    }
+  }
 }
 
 /*------------------------------------------------------------------------------
@@ -471,7 +537,6 @@ Molecule: Cards - Alternate styles
   .title {
     @include blue-bg;
 
-    order: 1;
     padding: var(--space--lg);
 
     a {
@@ -487,12 +552,45 @@ Molecule: Cards - Alternate styles
   .body {
     padding: var(--space--lg);
   }
+
+  &:focus-within {
+    .title {
+      a:after {
+        outline-color: var(--dark-blue--darker--80);
+      }
+    }
+  }
 }
 
 .dark-mode {
   .card.simple,
   .block--card.simple {
     @include gray-bg;
+
+    .title {
+      a {
+        &:active,
+        &:hover,
+        &:focus {
+          color: inherit;
+          background: none;
+        }
+      }
+    }
+
+    .cta {
+      &:hover,
+      &:focus,
+      &:active {
+        outline-color: inherit;
+      }
+    }
+
+    &:focus-within {
+      .title a:after {
+        outline-color: var(--blue--lighter--40);
+      }
+    }
   }
 }
 
@@ -506,10 +604,7 @@ Molecule: Cards - Alternate styles
 
   a {
     &:after {
-      display: none;
-    }
-    &:before {
-      display: none;
+      border-radius: var(--space--2xl);
     }
   }
 

@@ -4,6 +4,7 @@ Atom: Forms - Webforms
 1. File Input
 2. Grids
 3. Wizard Pages
+4. Flexbox
 ------------------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------------------
@@ -16,7 +17,6 @@ Atom: Forms - Webforms
     margin-bottom: var(--space--md);
   }
 }
-
 /*------------------------------------------------------------------------------
 2. Grids
 ------------------------------------------------------------------------------*/
@@ -29,7 +29,6 @@ Atom: Forms - Webforms
     margin: auto;
     opacity: 1;
   }
-
   // Make the whole table cell clickable
   .checkbox {
     label {
@@ -43,19 +42,16 @@ Atom: Forms - Webforms
     }
   }
 }
-
 form {
   .description {
     margin-bottom: var(--space--md);
     color: var(--gray);
     font-size: var(--font-size--sm);
   }
-
   .form-item {
     margin-bottom: var(--space--md);
   }
 }
-
 /*------------------------------------------------------------------------------
 3. Wizard Pages
 ------------------------------------------------------------------------------*/
@@ -67,7 +63,6 @@ form {
           text-decoration: underline;
           color: var(--darker--20);
         }
-
         &:after {
           --checkmark-size: 3.75rem;
 
@@ -91,16 +86,13 @@ form {
         }
       }
     }
-
     &.is-active {
       &:hover .progress-marker {
         color: var(--light-green--lighter--40);
         background: var(--blue--darker--20);
       }
-
       .progress-marker {
         background-color: var(--blue);
-
         &:hover,
         &:active {
           color: var(--light-green--lighter--40);
@@ -108,12 +100,25 @@ form {
         }
       }
     }
-
     .progress-marker {
       &:hover,
       &:focus {
         background-color: var(--blue--darker--20);
       }
     }
+  }
+}
+/*------------------------------------------------------------------------------
+1. Flexbox
+------------------------------------------------------------------------------*/
+.webform-name {
+  > .webform-flexbox {
+    margin: 0;
+  }
+  .webform-flex--container {
+    margin-left: 0;
+  }
+  .webform-flex:last-of-type .webform-flex--container {
+    margin-right: 0;
   }
 }
