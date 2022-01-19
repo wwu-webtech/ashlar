@@ -1,14 +1,11 @@
 const search_template = document.createElement("template");
 search_template.innerHTML = `
 <form class="search-area" method="get" action="https://search2.wwu.edu/texis/search">
-  <div class="search-box">
-    <input id="search-box" placeholder="Enter terms" name="query" type="search">
-    <label for="search-box" class="search-label">Enter the terms you wish to search for.</label>
-  </div>
-
+  <label for="search-box" class="search-label">Search:</label>
+  <input id="search-box" name="query" type="search">
   <button class="submit-search">
     <span class="material-icons" aria-hidden="true">search</span>
-    <span class="toggle-text">Search</span>
+    <span class="toggle-text">Go</span>
   </button>
 
   <input type="hidden" name="pr" value="Default-WWU-Base">

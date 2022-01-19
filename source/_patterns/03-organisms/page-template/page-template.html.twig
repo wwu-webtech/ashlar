@@ -6,8 +6,8 @@
 
 <div class="page">
   {% block header %}
-    <header class="site-header">
-      <wwu-pre-header class="light-gray-bg"></wwu-pre-header>
+    <header class="site-header" role="banner">
+      <wwu-pre-header class="black-bg"></wwu-pre-header>
 
       {% block wwu_header %}
         {% include "@organisms/headers/wwu-header/wwu-header.html.twig" %}
@@ -30,7 +30,7 @@
   {% endblock %}
 
   {% block footer %}
-    <footer role="contentinfo" class="page-footer region region--footer">
+    <footer class="page-footer region region--footer" role="contentinfo">
       {% block site_footer %}
         {% include "@organisms/footers/site-footer/site-footer.html.twig" %}
       {% endblock %}

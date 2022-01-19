@@ -10,7 +10,7 @@ pre_header_template.innerHTML = `
     <span class="material-icons toggle-icon" aria-hidden="true">settings</span>
 </button>
 
-<div id="settings-menu" class="settings-menu light-gray-bg closed">
+<div id="settings-menu" class="settings-menu black-bg closed">
     <div class="menu-container">            
         <fieldset class="theme-selection">
             <legend>Theme</legend>

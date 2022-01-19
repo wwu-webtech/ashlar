@@ -14,16 +14,21 @@ wwu-search {
     border-width: var(--border-width--md);
   }
 }
+.search-label {
+  place-items: center;
+
+  display: flex;
+  margin: 0;
+  padding: var(--space--2xs);
+  padding-right: var(--space--xs);
+  font-weight: var(--font-weight--regular);
+}
 .search-area {
   display: flex;
   height: 100%;
   .material-icons {
     font-size: var(--icon-size--xs);
   }
-}
-.search-label {
-  margin: 0;
-  font-size: 0;
 }
 .search-box {
   flex: 1 1 0;

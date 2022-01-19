@@ -15,12 +15,13 @@ wwu-pre-header {
 
     display: flex;
     min-height: var(--touch-target--min);
-    padding: var(--space--xs);
+    padding: var(--space--2xs);
     transition: background-image var(--transition-speed--fast)
     var(--ease--standard);
     text-decoration: none;
     background-size: 100% 100%;
     font-weight: var(--font-weight--regular);
+    color: var(--white);
     &:visited {
       color: inherit;
     }
@@ -37,6 +38,7 @@ wwu-pre-header {
 
     display: flex;
     min-height: var(--touch-target--min);
+    padding: var(--space--xs);
     transition: background-image var(--transition-speed--fast)
     var(--ease--standard);
     color: inherit;
