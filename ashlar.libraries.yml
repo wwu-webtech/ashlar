@@ -34,6 +34,11 @@ alerts:
     build/js/alerts.js: {}
   dependencies:
     - core/jquery
+announcement:
+  version: 1.x
+  css:
+    theme:
+      build/css/components/announcement.css: {}
 ashlar-base:
   version: 1.x
   css:
@@ -41,6 +46,16 @@ ashlar-base:
       build/css/ashlar-base.css: {}
   dependencies:
     - core/normalize
+banner:
+  version: 1.x
+  css:
+    theme:
+      build/css/components/banner.css: {}
+beyond-basics:
+  version: 1.x
+  css:
+    theme:
+      build/css/components/beyond-basics-blocks.css: {}
 bg-video:
   version: 1.x
   js:
@@ -62,6 +77,11 @@ display-settings:
   version: 1.x
   js:
     build/js/display-settings.js: {}
+donut-chart:
+  version: 1.x
+  css:
+    theme:
+      build/css/components/donut-chart.css: {}
 event-tracking:
   version: 1.x
   js:
@@ -80,6 +100,16 @@ fullpage:
       dist/js/fullPage/fullpage.css: {}
   js:
     dist/js/fullPage/fullpage.js: {}
+image-link:
+  version: 1.x
+  css:
+    theme:
+      build/css/components/image-link.css: {}
+image-with-description:
+  version: 1.x
+  css:
+    theme:
+      build/css/components/image-with-description.css: {}
 language-select:
   version: 1.x
   js:
@@ -108,6 +138,11 @@ profile:
     build/js/profile.js: {}
   dependencies:
     - core/jquery
+pullquote:
+  version: 1.x
+  css:
+    theme:
+      build/css/components/pullquote.css: {}
 quicksearch:
   version: 1.x
   js:
@@ -117,6 +152,11 @@ quicksearch:
     build/js/quicksearch.js: {}
   dependencies:
     - core/jquery
+schedule:
+  version: 1.x
+  css:
+    theme:
+      build/css/components/schedule.css: {}
 search:
   version: 1.x
   css:
@@ -135,6 +175,11 @@ switcher:
     build/js/switcher.js: {}
   dependencies:
     - core/jquery
+testimonial:
+  version: 1.x
+  css:
+    theme:
+      build/css/components/testimonial.css: {}
 user-login:
   version: 1.x
   js:
