@@ -34,13 +34,13 @@ pre_header_template.innerHTML = `
             <label for="font--hyperlegible">Hyperlegible</label>
         </fieldset>
         
-        <fieldset class="language-selection">
+        <!--fieldset class="language-selection">
             <legend>Language</legend>
             <input id="language--english" type="radio" name="font-select" value="language--english" checked="checked">
             <label for="language--english">English</label>
             <input id="language--spanish" type="radio" name="font-select" value="language--spanish">
             <label for="language--spanish">Español</label>
-        </fieldset>            
+        </fieldset-->            
     </div>
     <button id="reset-display-preferences" class="reset-button"><span class="material-icons" aria-hidden="true">replay</span> Reset preferences</button>
 </div>    

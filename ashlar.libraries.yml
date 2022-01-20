@@ -34,6 +34,13 @@ alerts:
     build/js/alerts.js: {}
   dependencies:
     - core/jquery
+ashlar-base:
+  version: 1.x
+  css:
+    theme:
+      build/css/ashlar-base.css: {}
+  dependencies:
+    - core/normalize
 bg-video:
   version: 1.x
   js:
@@ -44,13 +51,6 @@ breadcrumb-viewpage:
   version: 1.x
   js:
     build/js/breadcrumb-viewpage.js: {}
-components:
-  version: 1.x
-  css:
-    theme:
-      build/css/ashlar_all.css: {}
-  dependencies:
-    - core/normalize
 countdown:
   version: 1.x
   css:
@@ -119,6 +119,9 @@ quicksearch:
     - core/jquery
 search:
   version: 1.x
+  css:
+    theme:
+      build/css/components/search.css: {}
   js:
     build/js/search.js: {}
   dependencies:
@@ -145,7 +148,13 @@ vimeo-tracking:
       { type: external, attributes: { defer: true } }
 wwu-header:
   version: 1.x
+  css:
+    theme:
+      build/css/components/pre-header.css: {}
+      build/css/components/wwu-header.css: {}
   js:
-    build/js/wwu-header.js: {}
+    build/js/logo.js: {}
+    build/js/pre-header.js: {}
+    build/js/wwu-header.js: {}    
   dependencies:
     - core/jquery

@@ -2,6 +2,9 @@
 Organism: Headers - Western header
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
+@import "../../../../sass/partials/imports";
+@import "../../../00-utilities/breakpoints.scss";
+
 wwu-header {
   @include breakpoint($small) {
     display: grid;

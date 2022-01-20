@@ -1,3 +1,7 @@
+if (context !== document) {
+  return;
+}
+
 const search_template = document.createElement("template");
 search_template.innerHTML = `
 <form class="search-area" method="get" action="https://search2.wwu.edu/texis/search">

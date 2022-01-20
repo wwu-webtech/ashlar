@@ -4,7 +4,7 @@ description: An atomic design Drupal theme for Western Washington University
 core_version_requirement: ^8.8 || ^9
 base theme: stable
 libraries:
-  - ashlar/components
+  - ashlar/ashlar-base
   - ashlar/display-settings
   - ashlar/search
   - ashlar/wwu-header

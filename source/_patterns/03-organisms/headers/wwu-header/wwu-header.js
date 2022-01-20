@@ -1,3 +1,7 @@
+if (context !== document) {
+  return;
+}
+
 const header_template = document.createElement("template");
 header_template.innerHTML = `
 <button class="small icon-with-text toggle-menu" aria-expanded="false">
