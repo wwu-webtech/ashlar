@@ -166,6 +166,11 @@ search:
     build/js/search.js: {}
   dependencies:
     - core/jquery
+skip-to:
+  version: 4.1.x
+  js:
+    https://paypal.github.io/skipto/downloads/js/skipto.min.js: {}
+    dist/js/skipto-config.js: {}
 switcher:
   version: 1.x
   css:
