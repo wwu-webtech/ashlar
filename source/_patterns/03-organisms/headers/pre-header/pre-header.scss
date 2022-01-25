@@ -5,7 +5,7 @@ Organism: Pre-header
 wwu-pre-header {
   position: relative;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   font-size: var(--font-size--xs);
   .material-icons {
     font-size: var(--icon-size--2xs);
@@ -30,6 +30,7 @@ wwu-pre-header {
     &:hover,
     &:focus {
       color: var(--dark-blue--darker--60);
+      background-color: var(--dark-blue--darker--60);
       outline-offset: calc(-1 * var(--border-width--md));
       background-image: var(--gradient--vertical--light-blue);
     }
