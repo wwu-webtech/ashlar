@@ -13,10 +13,3 @@ var SkipToConfig = {
     },
   },
 };
-
-// only hide default skip link if JS version loads
-
-let skipto_button = document.getElementsByClassName("skip-to--custom");
-let skip_link = document.querySelector(".skip-link");
-
-if (skipto_button) skip_link.classList.add("hidden");

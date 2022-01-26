@@ -18,7 +18,7 @@ wwu-pre-header {
     min-height: var(--touch-target--min);
     padding: var(--space--2xs);
     transition: background-image var(--transition-speed--fast)
-    var(--ease--standard);
+      var(--ease--standard);
     text-decoration: none;
     background-size: 100% 100%;
     font-weight: var(--font-weight--regular);
@@ -30,7 +30,7 @@ wwu-pre-header {
     &:hover,
     &:focus {
       color: var(--dark-blue--darker--60);
-      background-color: var(--dark-blue--darker--60);
+      outline-color: var(--dark-blue--darker--60);
       outline-offset: calc(-1 * var(--border-width--md));
       background-image: var(--gradient--vertical--light-blue);
     }
@@ -42,7 +42,7 @@ wwu-pre-header {
     min-height: var(--touch-target--min);
     padding: var(--space--xs);
     transition: background-image var(--transition-speed--fast)
-    var(--ease--standard);
+      var(--ease--standard);
     color: inherit;
     border: none;
     border-radius: 0;
