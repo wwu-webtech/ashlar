@@ -19,6 +19,16 @@ Molecule: Charts - Org Chart
   background: var(--chart-background-color);
   font-size: var(--font-size--sm);
 
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: var(--font-size--regular);
+    color: var(--black);
+    font-weight: var(--font-weight--regular);
+  }
+
   ul {
     position: relative;
     display: flex;
@@ -32,7 +42,12 @@ Molecule: Charts - Org Chart
       position: relative;
 
       span,
-      a {
+      a,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         @include breakpoint($medium) {
           max-width: none;
         }
@@ -41,20 +56,33 @@ Molecule: Charts - Org Chart
         display: block;
         max-width: var(--chart-max-size);
         margin: 0;
-        margin-top: var(--chart-spacing);
-        margin-left: var(--chart-spacing);
-        padding: calc(var(--chart-spacing) / 2);
         text-align: center;
         text-decoration: none;
       }
 
-      & > span {
+      & > span,
+      & > h2 span,
+      & > h3 span,
+      & > h4 span,
+      & > h5 span,
+      & > h6 span {
         background: var(--gray--lighter--60);
+        margin-top: var(--chart-spacing);
+        margin-left: var(--chart-spacing);
+        padding: calc(var(--chart-spacing) / 2);
       }
 
-      & > a {
+      & > a,
+      & > h2 a,
+      & > h3 a,
+      & > h4 a,
+      & > h5 a,
+      & > h6 a {
         color: var(--white);
         background-color: var(--blue);
+        margin-top: var(--chart-spacing);
+        margin-left: var(--chart-spacing);
+        padding: calc(var(--chart-spacing) / 2);
 
         &:hover,
         &:focus,
@@ -182,7 +210,17 @@ Molecule: Charts - Org Chart
 
     /* horizontal bar for nested items */
     > span:before,
-    > a:before {
+    > h2 span:before,
+    > h3 span:before,
+    > h4 span:before,
+    > h5 span:before,
+    > h6 span:before,
+    > a:before,
+    > h2 a:before,
+    > h3 a:before,
+    > h4 a:before,
+    > h5 a:before,
+    > h6 a:before {
       position: absolute;
       bottom: 0;
       left: 0;
@@ -198,7 +236,17 @@ Molecule: Charts - Org Chart
     /* mask vertical bar for end items */
     &:last-of-type {
       > span:before,
-      > a:before {
+      > h2 span:before,
+      > h3 span:before,
+      > h4 span:before,
+      > h5 span:before,
+      > h6 span:before,
+      > a:before,
+      > h2 a:before,
+      > h3 a:before,
+      > h4 a:before,
+      > h5 a:before,
+      > h6 a:before {
         background: var(--chart-background-color);
       }
     }
@@ -231,12 +279,20 @@ Molecule: Charts - Org Chart
     /* vertical bar for top level items */
     .item-level-a {
       > span:before,
-      > a:before {
+      > h2 span:before,
+      > h3 span:before,
+      > h4 span:before,
+      > h5 span:before,
+      > h6 span:before,
+      > a:before,
+      > h2 a:before,
+      > h3 a:before,
+      > h4 a:before,
+      > h5 a:before,
+      > h6 a:before {
         position: absolute;
         bottom: 0;
-        left: calc(
-          (var(--chart-spacing) / 2) + (var(--chart-border-width) / 2) + 50%
-        );
+        left: calc(50% + ((var(--chart-border-width) / 2)));
         display: block;
         width: var(--chart-border-width);
         height: var(--chart-spacing);
@@ -244,9 +300,20 @@ Molecule: Charts - Org Chart
         transform: translate(-50%, var(--chart-spacing));
         background: var(--chart-line-color);
       }
+
       &.no-children {
         > span:before,
-        > a:before {
+        > h2 span:before,
+        > h3 span:before,
+        > h4 span:before,
+        > h5 span:before,
+        > h6 span:before,
+        > a:before,
+        > h2 a:before,
+        > h3 a:before,
+        > h4 a:before,
+        > h5 a:before,
+        > h6 a:before {
           display: none;
         }
       }
@@ -257,9 +324,29 @@ Molecule: Charts - Org Chart
 
       /* remove second level lines */
       > span:before,
+      > h2 span:before,
+      > h3 span:before,
+      > h4 span:before,
+      > h5 span:before,
+      > h6 span:before,
       > a:before,
+      > h2 a:before,
+      > h3 a:before,
+      > h4 a:before,
+      > h5 a:before,
+      > h6 a:before,
       &:last-of-type > span:before,
+      &:last-of-type > h2 span:before,
+      &:last-of-type > h3 span:before,
+      &:last-of-type > h4 span:before,
+      &:last-of-type > h5 span:before,
+      &:last-of-type > h6 span:before,
       &:last-of-type > a:before,
+      &:last-of-type > h2 a:before,
+      &:last-of-type > h3 a:before,
+      &:last-of-type > h4 a:before,
+      &:last-of-type > h5 a:before,
+      &:last-of-type > h6 a:before,
       &:last-child > .level-c:before {
         display: none;
       }
@@ -309,9 +396,29 @@ Molecule: Charts - Org Chart
 
       /* vertical bar for second level items */
       > span:before,
+      > h2 span:before,
+      > h3 span:before,
+      > h4 span:before,
+      > h5 span:before,
+      > h6 span:before,
       > a:before,
+      > h2 a:before,
+      > h3 a:before,
+      > h4 a:before,
+      > h5 a:before,
+      > h6 a:before,
       &:last-of-type > span:before,
-      &:last-of-type > a:before {
+      &:last-of-type > h2 span:before,
+      &:last-of-type > h3 span:before,
+      &:last-of-type > h4 span:before,
+      &:last-of-type > h5 span:before,
+      &:last-of-type > h6 span:before,
+      &:last-of-type > a:before,
+      &:last-of-type > h2 a:before,
+      &:last-of-type > h3 a:before,
+      &:last-of-type > h4 a:before,
+      &:last-of-type > h5 a:before,
+      &:last-of-type > h6 a:before {
         position: absolute;
         top: calc(-1 * var(--chart-spacing));
         left: 50%;
@@ -371,7 +478,17 @@ Molecule: Charts - Org Chart
     .item-level-k {
       &:last-of-type {
         > span:before,
-        > a:before {
+        > h2 span:before,
+        > h3 span:before,
+        > h4 span:before,
+        > h5 span:before,
+        > h6 span:before,
+        > a:before,
+        > h2 a:before,
+        > h3 a:before,
+        > h4 a:before,
+        > h5 a:before,
+        > h6 a:before {
           background: var(--chart-background-color--dark-mode);
         }
       }
@@ -391,9 +508,29 @@ Molecule: Charts - Org Chart
 
     .item-level-b {
       > span:before,
+      > h2 span:before,
+      > h3 span:before,
+      > h4 span:before,
+      > h5 span:before,
+      > h6 span:before,
       > a:before,
+      > h2 a:before,
+      > h3 a:before,
+      > h4 a:before,
+      > h5 a:before,
+      > h6 a:before,
       &:last-of-type > span:before,
-      &:last-of-type > a:before {
+      &:last-of-type > h2 span:before,
+      &:last-of-type > h3 span:before,
+      &:last-of-type > h4 span:before,
+      &:last-of-type > h5 span:before,
+      &:last-of-type > h6 span:before,
+      &:last-of-type > a:before,
+      &:last-of-type > h2 a:before,
+      &:last-of-type > h3 a:before,
+      &:last-of-type > h4 a:before,
+      &:last-of-type > h5 a:before,
+      &:last-of-type > h6 a:before {
         background: var(--chart-line-color);
       }
     }
