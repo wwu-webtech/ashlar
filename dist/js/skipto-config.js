@@ -7,9 +7,8 @@ var SkipToConfig = {
       headerLabel: "Header",
       footerLabel: "Footer",
       asideLabel: "Aside",
-      customClass: "skip-to--custom",
       positionLeft: "0",
-      buttonBackgroundColor: "#e0e4e7",
+      buttonBackgroundColor: "transparent",
     },
   },
 };

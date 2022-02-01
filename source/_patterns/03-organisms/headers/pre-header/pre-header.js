@@ -294,6 +294,23 @@ if (context == document) {
 
       set_initial_theme(system_theme);
       set_font_preference();
+
+      /*------------------------------------------------------------------------------
+        Initialize SkipTo
+        ---------------------------------------------------------------------------*/
+      const skip_to = document.querySelector(".skip-to");
+      const wwu_skip_link = document.querySelector(".skip-link");
+      let skip_icon = document.createElement("span");
+      skip_icon.classList.add("material-icons");
+      skip_icon.setAttribute("aria-hidden", "true");
+      skip_icon.innerText = "keyboard_arrow_down";
+
+      if (skip_to && wwu_skip_link) {
+        skip_to.querySelector("button").append(skip_icon);
+        this.append(skip_to);
+        this.insertBefore(skip_to, wwu_skip_link);
+        wwu_skip_link.remove();
+      }
     }
   }
 
