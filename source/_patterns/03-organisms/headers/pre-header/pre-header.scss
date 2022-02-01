@@ -41,13 +41,7 @@ wwu-pre-header {
     }
   }
   .skip-to {
-    &.popup {
-      position: relative;
-      top: 0;
-      &.focus {
-        position: relative;
-      }
-    }
+    position: relative;
 
     [role="menu"] {
       max-height: calc(100vh * 0.75);
