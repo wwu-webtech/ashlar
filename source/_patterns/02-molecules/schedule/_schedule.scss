@@ -22,7 +22,7 @@ Molecule: Schedule
         border-radius: var(--border-radius--rounder);
       }
 
-      a {
+      a:not([class*="cta"]) {
         color: inherit;
       }
     }
