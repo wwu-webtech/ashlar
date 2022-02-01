@@ -15,6 +15,15 @@ wwu-header {
   position: relative;
   display: block;
   background-color: var(--dark-blue);
+
+  noscript {
+    grid-column: 1 / span all;
+    grid-row: 1 / span all;
+    display: grid;
+    grid-template-columns: var(--logo-size) 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
   .toggle-menu {
     @include breakpoint($small) {
       display: none;
@@ -75,9 +84,10 @@ wwu-header {
     grid-column-gap: var(--space--sm);
     grid-row: 1 / span all;
     grid-row-gap: var(--space--xs);
-    grid-template-areas: "logo ........"
-    "logo site-name"
-    "logo region";
+    grid-template-areas:
+      "logo ........"
+      "logo site-name"
+      "logo region";
     grid-template-columns: var(--logo-size) auto;
     grid-template-rows: var(--toggle-size--md) auto 1fr;
   }
