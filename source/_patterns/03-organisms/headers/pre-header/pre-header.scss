@@ -7,6 +7,10 @@ wwu-pre-header {
   display: flex;
   justify-content: flex-end;
   font-size: var(--font-size--xs);
+  noscript {
+    display: flex;
+    justify-content: flex-end;
+  }
   .material-icons {
     font-size: var(--icon-size--2xs);
     margin-left: var(--space--2xs);

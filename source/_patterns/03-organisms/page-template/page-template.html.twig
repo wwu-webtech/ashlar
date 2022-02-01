@@ -7,7 +7,9 @@
 <div class="page">
   {% block header %}
     <header class="site-header" role="banner">
-      <wwu-pre-header class="black-bg"></wwu-pre-header>
+      {% block wwu_pre_header %}
+        {% include "@organisms/headers/pre-header/pre-header.html.twig" %}
+      {% endblock %}
 
       {% block wwu_header %}
         {% include "@organisms/headers/wwu-header/wwu-header.html.twig" %}
