@@ -25,6 +25,14 @@ blockquote {
 .dark-mode {
   blockquote:not([class]) {
     @include gray-bg;
+
+    a.cta {
+      &:hover,
+      &:focus,
+      &:active {
+        outline-color: unset;
+      }
+    }
   }
 
   blockquote.pullquote {
