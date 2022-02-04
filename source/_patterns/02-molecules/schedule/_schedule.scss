@@ -1,7 +1,7 @@
 /*------------------------------------------------------------------------------
 Molecule: Schedule
 --------------------------------------------------------------------------------
-1. Default styles
+1. Dark mode
 ------------------------------------------------------------------------------*/
 
 .block--schedule {
@@ -76,6 +76,12 @@ Molecule: Schedule
     line-height: 1.2em;
   }
 
+  .content {
+    a {
+      position: relative;
+    }
+  }
+
   div:nth-of-type(odd) .schedule-item {
     border-left: solid var(--blue) var(--border-radius--rounder);
   }
@@ -86,15 +92,19 @@ Molecule: Schedule
 }
 
 /*------------------------------------------------------------------------------
-2. Dark mode
+1. Dark mode
 ------------------------------------------------------------------------------*/
 .dark-mode {
   .block--schedule {
     .schedule-item {
-      @include dark-blue-bg;
+      @include gray-bg;
+    }
 
-      a {
-        text-decoration-color: unset;
+    .schedule-heading {
+      a:active,
+      a:focus,
+      a:hover {
+        color: var(--blue--lighter--80);
       }
     }
   }
