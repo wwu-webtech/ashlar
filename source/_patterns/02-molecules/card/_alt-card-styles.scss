@@ -783,3 +783,18 @@ Molecule: Cards - Alternate styles
     }
   }
 }
+
+.dark-mode {
+  .card.tile, 
+  .block--card.tile {
+    background: var(--blue--lighter--40);
+
+    .body {
+      color: var(--black);
+    }
+
+    &.green {
+      background: var(--light-green);
+    }
+  }
+}
