@@ -94,22 +94,7 @@ Molecule: Schedule
       @include dark-blue-bg;
 
       a {
-        color: inherit;
-
-        &:active,
-        &:hover,
-        &:focus {
-          color: inherit;
-        }
-      }
-
-      a.cta {
-        &:hover,
-        &:focus,
-        &:active {
-          color: var(--black);
-          outline-color: var(--black);
-        }
+        text-decoration-color: unset;
       }
     }
   }
