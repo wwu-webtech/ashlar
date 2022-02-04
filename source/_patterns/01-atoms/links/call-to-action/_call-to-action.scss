@@ -2,22 +2,8 @@
 Atom: Text - Links - Call to Action
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-a.button,
-.dark-mode a.button,
-[class*="-bg"] a.button,
-[class*="-overlay"] a.button,
-[class*="headline"] a.button,
-.cta,
-.dark-mode .cta,
-[class*="-bg"] .cta,
-[class*="-overlay"] .cta,
-[class*="headline"] .cta, 
-.block--schedule .schedule-item .cta,
-.dark-mode .block--schedule .schedule-item .cta,
-.block--quote .cta,
-.block--card .cta,
-.block--card.simple .cta,
-.block--card.tile .cta { 
+a.button.button.button,
+.cta.cta.cta.cta {
   display: inline-block;
   box-sizing: border-box;
   margin-bottom: var(--space--md);

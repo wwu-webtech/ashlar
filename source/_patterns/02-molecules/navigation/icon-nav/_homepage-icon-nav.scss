@@ -1,0 +1,61 @@
+.icon-nav-container[class*="-bg"] {
+  margin: 0;
+  padding: var(--space--2xs);
+}
+.icon-nav {
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    place-items: center;
+    text-align: center;
+    width: 20%;
+    min-width: 4rem;
+  }
+
+  svg {
+    width: 100%;
+    order: 1;
+    max-width: 5.5rem !important;
+    cls-1 {
+      transition: var(--ease--standard) var(--transition-speed--md);
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: var(--font-weight--regular);
+    font-size: var(--font-size--xs);
+    line-height: 1.2;
+    order: 2;
+
+    &:after {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      background: none;
+      color: var(--light-green--lighter--20);
+    }
+
+    &:hover + svg .cls-1 {
+      fill: var(--blue--lighter--60);
+    }
+  }
+}

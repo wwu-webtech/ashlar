@@ -20,6 +20,6 @@ content:
   body: "<p>Card body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
   veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat.</p>"
+  consequat.</p><p><a class='cta'>Call to Action</a></p>"
   field_image: atoms-landscape-3x2
   field_highlighted_terms: "<div class='taxonomy-terms'><span class='taxonomy-term'>Term 1</span></div>"

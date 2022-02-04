@@ -18,7 +18,7 @@ items:
     field_content: If you could see the earth illuminated when you were in a place as dark
       as night, it would look to you more splendid than the moon. Curious that we spend
       more time congratulating people who have succeeded than encouraging people who
-      have not.
+      have not. <a href class="cta">Call to Action</a>
     field_item_heading_level: h3
   - field_time: 1:15 - 2 pm
     field_content: Astronomy compels the soul to look upward, and leads us from this world
