@@ -78,6 +78,14 @@ table {
 
   a {
     line-height: 1.2rem;
+
+    &:hover,
+    &:focus,
+    &:active {
+      &:visited {
+        color: var(--purple--lighter--80);
+      }
+    }
   }
 }
 

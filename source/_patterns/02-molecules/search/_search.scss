@@ -31,6 +31,10 @@ input[type="search"] {
       background-image: var(--gradient--vertical--light-blue);
       color: var(--dark-blue--darker--60);
     }
+
+    &:focus {
+      outline-color: var(--blue--lighter--40);
+    }
   }
 
   .search-area {

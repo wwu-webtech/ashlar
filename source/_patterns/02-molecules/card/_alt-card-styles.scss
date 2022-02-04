@@ -746,16 +746,8 @@ Molecule: Cards - Alternate styles
     }
   }
 
-  .taxonomy-terms {
-    padding: 0 var(--space--xs);
-
-    .taxonomy-term {
-      margin: 0;
-      padding: 0;
-      color: var(--blue--darker--40);
-      background-color: transparent;
-      font-size: var(--font-size--lg);
-    }
+  .taxonomy-term {
+    border-radius: var(--border-radius--rounder);
   }
 
   .title {
@@ -765,7 +757,6 @@ Molecule: Cards - Alternate styles
 
     .block__title {
       margin: 0;
-      color: var(--blue--darker--40);
       font-size: var(--font-size--2xl);
 
       a {
@@ -776,10 +767,16 @@ Molecule: Cards - Alternate styles
         &:active,
         &:hover,
         &:focus {
-          color: inherit;
           background: none;
         }
       }
     }
+  }
+}
+
+.dark-mode {
+  .card.tile,
+  .block--card.tile {
+    @include dark-blue-bg;
   }
 }
