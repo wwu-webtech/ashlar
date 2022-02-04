@@ -87,6 +87,18 @@ Organism: Headers - Western header
     height: var(--logo-size);
     margin: auto;
     padding-right: var(--toggle-size--sm);
+
+    .western-home-link {
+      display: inline-flex;
+      padding: 0;
+      background-image: none;
+
+      &:hover,
+      &:focus,
+      &:active {
+        outline-offset: calc(-1 * var(--border-width--md));
+      }
+    }
   }
 
   .western-header-region {
