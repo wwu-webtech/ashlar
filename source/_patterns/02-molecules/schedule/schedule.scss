@@ -79,6 +79,12 @@ Molecule: Schedule
     line-height: 1.2em;
   }
 
+  .content {
+    a {
+      position: relative;
+    }
+  }
+
   div:nth-of-type(odd) .schedule-item {
     border-left: solid var(--blue) var(--border-radius--rounder);
   }
@@ -94,16 +100,14 @@ Molecule: Schedule
 .dark-mode {
   .block--schedule {
     .schedule-item {
-      @include dark-blue-bg;
+      @include gray-bg;
+    }
 
-      a {
-        color: inherit;
-
-        &:active,
-        &:hover,
-        &:focus {
-          color: inherit;
-        }
+    .schedule-heading {
+      a:active,
+      a:focus,
+      a:hover {
+        color: var(--blue--lighter--80);
       }
     }
   }
