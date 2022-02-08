@@ -18,7 +18,7 @@ var SkipToConfig = {
 /*------------------------------------------------------------------------------
 Remove extra skip link
 ---------------------------------------------------------------------------*/
-const observer = new MutationObserver((mutations, obs) => {
+const skiplink_observer = new MutationObserver((mutations, obs) => {
   const wwu_skip_link = document.querySelector(".skip-link");
   if (wwu_skip_link) {
     wwu_skip_link.remove();
@@ -27,7 +27,26 @@ const observer = new MutationObserver((mutations, obs) => {
   }
 });
 
-observer.observe(document, {
+skiplink_observer.observe(document, {
+  childList: true,
+  subtree: true,
+});
+
+/*------------------------------------------------------------------------------
+Add icon to SkipTo button
+---------------------------------------------------------------------------*/
+const skipto_observer = new MutationObserver((mutations, obs) => {
+  const wwu_skipto_button = document.querySelector(".skip-to button");
+  const material_expand = "<span class='material-icons' aria-hidden='true'>expand_more</span>";
+
+  if (wwu_skipto_button) {
+    wwu_skipto_button.innerHTML += material_expand;
+    obs.disconnect();
+    return;
+  }
+});
+
+skipto_observer.observe(document, {
   childList: true,
   subtree: true,
 });
