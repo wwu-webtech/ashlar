@@ -40,7 +40,7 @@ wwu-header {
     }
   }
   .western-home-link {
-    color: var(--blue-lighter--60);
+    color: var(--blue--lighter--60);
     &:active,
     &:focus,
     &:hover {
@@ -74,6 +74,11 @@ wwu-header {
     color: var(--white);
     &:visited {
       color: var(--white);
+    }
+    &:active,
+    &:focus,
+    &:hover {
+      color: var(--dark-blue--darker--60);
     }
   }
 }
