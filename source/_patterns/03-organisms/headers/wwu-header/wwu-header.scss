@@ -105,7 +105,7 @@ wwu-header {
   @include breakpoint($small) {
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
-    justify-content: end;
+    justify-content: flex-end;
     padding-right: 0;
   }
 
