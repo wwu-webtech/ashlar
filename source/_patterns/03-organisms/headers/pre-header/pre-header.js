@@ -7,7 +7,7 @@ if (context == document) {
 </a>    
 
 <button class="toggle-settings" aria-expanded="false" aria-controls="settings-menu">
-    <span class="toggle-text"><span class="visually-hidden">Open</span> Settings </span>
+    <span class="toggle-text"><span class="visually-hidden" role="presentation">Open</span> Settings </span>
     <span class="material-icons toggle-icon" aria-hidden="true">settings</span>
 </button>
 

@@ -55,7 +55,7 @@ input[type="radio"] {
   &:focus {
     + label {
       &:before {
-        border-color: var(blue--lighter--40);
+        border-color: var(--blue--lighter--40);
         box-shadow: var(--shadow--soft);
 
         @media (-ms-high-contrast: active) {
