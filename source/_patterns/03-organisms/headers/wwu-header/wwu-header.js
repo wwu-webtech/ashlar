@@ -1,4 +1,7 @@
-if (context == document) {
+if (
+  typeof context == "undefined" ||
+  (typeof context != "undefined" && context == document)
+) {
   const header_template = document.createElement("template");
   header_template.innerHTML = `
   <button class="small icon-with-text toggle-menu" aria-expanded="false">
@@ -43,22 +46,22 @@ if (context == document) {
   </a>
   </nav>
   `;
-  
+
   class WWUHeader extends HTMLElement {
     constructor() {
       super();
     }
-    
+
     connectedCallback() {
       /* Create the custom element by appending the template */
       this.appendChild(header_template.content.cloneNode(true));
-      
+
       const site_name = this.attributes.sitename.value;
       const region_content = this.attributes.regioncontent.value;
-      
+
       this.querySelector(".home-link").innerText = site_name;
       this.querySelector(".western-header-region").innerHTML = region_content;
-      
+
       /*------------------------------------------------------------------------------
       Mobile menu functionality
       --------------------------------------------------------------------------*/
@@ -71,39 +74,39 @@ if (context == document) {
         this.querySelector(".wwu-menu"),
         document.querySelector(".main-navigation"),
       ];
-      
+
       function open_menu() {
         menu_toggle.setAttribute("aria-expanded", true);
         menu_toggle.querySelector(".material-icons").innerText = "close";
         menu_toggle.querySelector(".toggle-text").innerHTML = "Close Menu";
-        
+
         site_content.forEach(function (item) {
           item.classList.remove("wwu-menu-open");
           item.classList.add("wwu-menu-closed");
         });
-        
+
         mobile_menu.forEach(function (item) {
           item.classList.remove("wwu-menu-closed");
           item.classList.add("wwu-menu-open");
         });
       }
-      
+
       function close_menu() {
         menu_toggle.setAttribute("aria-expanded", false);
         menu_toggle.querySelector(".material-icons").innerText = "menu";
         menu_toggle.querySelector(".toggle-text").innerHTML = "Open Menu";
-        
+
         site_content.forEach(function (item) {
           item.classList.remove("wwu-menu-closed");
           item.classList.add("wwu-menu-open");
         });
-        
+
         mobile_menu.forEach(function (item) {
           item.classList.remove("wwu-menu-open");
           item.classList.add("wwu-menu-closed");
         });
       }
-      
+
       function toggle_menu() {
         if (menu_toggle.querySelector(".material-icons").innerText == "menu") {
           open_menu();
@@ -113,10 +116,10 @@ if (context == document) {
           return;
         }
       }
-      
+
       menu_toggle.addEventListener("click", toggle_menu);
     }
   }
-  
+
   window.customElements.define("wwu-header", WWUHeader);
 }

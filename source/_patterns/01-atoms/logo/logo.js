@@ -1,4 +1,7 @@
-if (context == document) {
+if (
+  typeof context == "undefined" ||
+  (typeof context != "undefined" && context == document)
+) {
   const logo_template = document.createElement("template");
   logo_template.innerHTML = `
 <div class="logo make-waves">

@@ -1,4 +1,7 @@
-if (context == document) {
+if (
+  typeof context == "undefined" ||
+  (typeof context != "undefined" && context == document)
+) {
   const search_template = document.createElement("template");
   search_template.innerHTML = `
   <form class="search-area" method="get" action="https://search2.wwu.edu/texis/search">
@@ -12,17 +15,17 @@ if (context == document) {
   <input type="hidden" name="pr" value="Default-WWU-Base">
   </form>
   `;
-  
+
   class WWUSearch extends HTMLElement {
     constructor() {
       super();
     }
-    
+
     connectedCallback() {
       /* Create the custom element by appending the template */
       this.appendChild(search_template.content.cloneNode(true));
     }
   }
-  
+
   window.customElements.define("wwu-search", WWUSearch);
 }

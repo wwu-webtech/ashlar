@@ -1,4 +1,7 @@
-if (context == document) {
+if (
+  typeof context == "undefined" ||
+  (typeof context != "undefined" && context == document)
+) {
   const pre_header_template = document.createElement("template");
   pre_header_template.innerHTML = `
 <a href="#main-content" class="skip-link focusable">
