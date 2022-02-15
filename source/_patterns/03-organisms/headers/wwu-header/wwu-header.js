@@ -44,6 +44,11 @@ if (
   <span class="material-icons" aria-hidden="true">person_pin</span>
   <span class="icon-text">myWestern</span>
   </a>
+
+  <a class="small icon-with-text jobs-link" href="https://www.wwu.edu/workatwestern">
+  <span class="material-icons" aria-hidden="true">business_center</span>
+  <span class="icon-text">Jobs</span>
+  </a>
   </nav>
   `;
 
