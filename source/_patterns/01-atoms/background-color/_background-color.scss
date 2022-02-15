@@ -357,6 +357,12 @@ backgrounds are light gray based.
   background: var(--light-green);
 }
 
+@mixin yellow-bg {
+  @include light-gray-bg;
+
+  background: var(--yellow);
+}
+
 /*------------------------------------------------------------------------------
 4. Classes
 ------------------------------------------------------------------------------*/
@@ -395,6 +401,9 @@ backgrounds are light gray based.
 }
 .light-green-bg {
   @include light-green-bg;
+}
+.yellow-bg {
+  @include yellow-bg;
 }
 .dark-blue-gradient-bg {
   @include blue-bg;
