@@ -9,21 +9,6 @@ if (
   <span class="toggle-text">Open Menu</span>
   </button>
   
-  <div class="site-info wwu-menu-open">
-  <div class="western-logo">
-  <a class="western-home-link" href="https://www.wwu.edu">
-  <wwu-logo></wwu-logo>
-  </a>
-  </div>
-  
-  <div class="site-name">
-  <a href="/" class="home-link"></a>
-  </div>
-  
-  <div class="western-header-region">
-  </div>
-  </div>   
-  
   <nav class="wwu-menu wwu-menu-closed" aria-label="Western Quick Links">
   <a class="small icon-with-text apply-quick-link" href="https://admissions.wwu.edu/apply">
   <span class="material-icons" aria-hidden="true">how_to_reg</span>
@@ -50,6 +35,21 @@ if (
   <span class="icon-text">Jobs</span>
   </a>
   </nav>
+
+  <div class="site-info wwu-menu-open">
+  <div class="western-logo">
+  <a class="western-home-link" href="https://www.wwu.edu">
+  <wwu-logo></wwu-logo>
+  </a>
+  </div>
+  
+  <div class="site-name">
+  <a href="/" class="home-link"></a>
+  </div>
+  
+  <div class="western-header-region">
+  </div>
+  </div>   
   `;
 
   class WWUHeader extends HTMLElement {

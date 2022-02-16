@@ -10,7 +10,7 @@ if (
 </a>    
 
 <button class="toggle-settings" aria-expanded="false" aria-controls="settings-menu">
-    <span class="toggle-text"><span class="visually-hidden" role="presentation">Open</span> Settings </span>
+    <span class="toggle-text">Display Settings</span>
     <span class="material-icons toggle-icon" aria-hidden="true">settings</span>
 </button>
 
@@ -85,8 +85,6 @@ if (
 
         display_toggle.setAttribute("aria-expanded", true);
         display_toggle.querySelector(".material-icons").innerText = "close";
-        display_toggle.querySelector(".toggle-text").innerHTML =
-          "<span class='visually-hidden'>Close</span> Settings";
 
         settings_menu.removeAttribute("aria-hidden");
         settings_menu.classList.remove("closed");
@@ -99,8 +97,6 @@ if (
 
         display_toggle.setAttribute("aria-expanded", false);
         display_toggle.querySelector(".material-icons").innerText = "settings";
-        display_toggle.querySelector(".toggle-text").innerHTML =
-          "<span class='visually-hidden'>Open</span> Settings";
 
         settings_menu.setAttribute("aria-hidden", true);
         settings_menu.classList.remove("open");
