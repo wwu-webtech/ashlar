@@ -112,6 +112,7 @@ wwu-header {
   display: flex;
   justify-content: space-evenly;
   padding-right: var(--toggle-size--sm);
+  z-index: 1;
   .icon-with-text {
     @include breakpoint($medium) {
       place-items: center;
