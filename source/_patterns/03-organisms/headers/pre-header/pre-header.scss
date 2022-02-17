@@ -132,6 +132,8 @@ wwu-pre-header {
   top: 100%;
   grid-column: 1 / span all;
   padding: var(--space--xs);
+  width: 25rem;
+  max-width: 100%;
   &.closed {
     visibility: hidden;
     overflow: hidden;
