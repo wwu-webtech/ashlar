@@ -4,53 +4,53 @@ if (
 ) {
   const pre_header_template = document.createElement("template");
   pre_header_template.innerHTML = `
-<a href="#main-content" class="skip-link focusable">
+    <a href="#main-content" class="skip-link focusable">
     <span class="skip-link-text">Skip to Content </span>
     <span class="material-icons" aria-hidden="true">keyboard_arrow_down</span>
-</a>    
-
-<button class="toggle-settings" aria-expanded="false" aria-controls="settings-menu">
+    </a>    
+    
+    <button class="toggle-settings" aria-expanded="false" aria-controls="settings-menu">
     <span class="toggle-text">Display Settings</span>
     <span class="material-icons toggle-icon" aria-hidden="true">settings</span>
-</button>
-
-<div id="settings-menu" class="settings-menu black-bg closed">
+    </button>
+    
+    <div id="settings-menu" class="settings-menu black-bg closed">
     <div class="menu-container">            
-        <fieldset class="theme-selection">
-            <legend>Theme</legend>
-            <input id="default-theme" type="radio" name="theme-select" value="default-theme" checked="checked">
-            <label for="default-theme">Default (System)</label>
-            <input id="dark-mode" type="radio" name="theme-select" value="dark-mode">
-            <label for="dark-mode">Dark</label>
-            <input id="light-mode" type="radio" name="theme-select" value="light-mode">
-            <label for="light-mode">Light</label>
-        </fieldset>
-        
-        <fieldset class="font-selection">
-            <legend>Font</legend>
-            <input id="font--default" type="radio" name="font-select" value="font--default" checked="checked">
-            <label for="font--default">Default</label>
-            <input id="font--serif" type="radio" name="font-select" value="font--serif">
-            <label for="font--serif">Serif</label>
-            <input id="font--dyslexia-friendly" type="radio" name="font-select" value="font--dyslexia-friendly">
-            <label for="font--dyslexia-friendly">Open Dyslexic</label>
-            <input id="font--hyperlegible" type="radio" name="font-select" value="font--hyperlegible">
-            <label for="font--hyperlegible">Hyperlegible</label>
-        </fieldset>
-        
-        <!--fieldset class="language-selection">
-            <legend>Language</legend>
-            <input id="language--english" type="radio" name="font-select" value="language--english" checked="checked">
-            <label for="language--english">English</label>
-            <input id="language--spanish" type="radio" name="font-select" value="language--spanish">
-            <label for="language--spanish">Español</label>
-        </fieldset-->            
+    <fieldset class="theme-selection">
+    <legend>Theme</legend>
+    <input id="default-theme" type="radio" name="theme-select" value="default-theme" checked="checked">
+    <label for="default-theme">Default (System)</label>
+    <input id="dark-mode" type="radio" name="theme-select" value="dark-mode">
+    <label for="dark-mode">Dark</label>
+    <input id="light-mode" type="radio" name="theme-select" value="light-mode">
+    <label for="light-mode">Light</label>
+    </fieldset>
+    
+    <fieldset class="font-selection">
+    <legend>Font</legend>
+    <input id="font--default" type="radio" name="font-select" value="font--default" checked="checked">
+    <label for="font--default">Default</label>
+    <input id="font--serif" type="radio" name="font-select" value="font--serif">
+    <label for="font--serif">Serif</label>
+    <input id="font--dyslexia-friendly" type="radio" name="font-select" value="font--dyslexia-friendly">
+    <label for="font--dyslexia-friendly">Open Dyslexic</label>
+    <input id="font--hyperlegible" type="radio" name="font-select" value="font--hyperlegible">
+    <label for="font--hyperlegible">Hyperlegible</label>
+    </fieldset>
+    
+    <!--fieldset class="language-selection">
+    <legend>Language</legend>
+    <input id="language--english" type="radio" name="font-select" value="language--english" checked="checked">
+    <label for="language--english">English</label>
+    <input id="language--spanish" type="radio" name="font-select" value="language--spanish">
+    <label for="language--spanish">Español</label>
+    </fieldset-->            
     </div>
     <button id="reset-display-preferences" class="reset-button"><span class="material-icons" aria-hidden="true">replay</span> Reset preferences</button>
-</div>    
-
-<wwu-search role="search" aria-label="Western"></wwu-search>
-`;
+    </div>    
+    
+    <wwu-search role="search" aria-label="Western"></wwu-search>
+    `;
 
   class PreHeader extends HTMLElement {
     constructor() {
@@ -135,8 +135,8 @@ if (
       }
 
       /*------------------------------------------------------------------------------
-        Theme settings
-        ---------------------------------------------------------------------------*/
+          Theme settings
+          ---------------------------------------------------------------------------*/
       function set_initial_theme(system_theme) {
         /* Check if there is a preference stored -----------------------------------*/
         if (localStorage.getItem("wwu_preferred_theme")) {
@@ -195,8 +195,8 @@ if (
       }
 
       /*------------------------------------------------------------------------------
-        Font settings
-        ---------------------------------------------------------------------------*/
+              Font settings
+              ---------------------------------------------------------------------------*/
       // Set font in local storage
       function set_font_preference() {
         if (localStorage.getItem("wwu_preferred_font")) {
@@ -274,8 +274,8 @@ if (
       }
 
       /*------------------------------------------------------------------------------
-        Initialize settings menu
-        ---------------------------------------------------------------------------*/
+                          Initialize settings menu
+                          ---------------------------------------------------------------------------*/
       if (display_toggle) {
         display_toggle.addEventListener("click", toggle_settings);
         display_toggle.addEventListener("keyup", keyboard_close);
