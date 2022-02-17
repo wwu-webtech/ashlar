@@ -15,14 +15,14 @@
         {% include "@organisms/headers/wwu-header/wwu-header.html.twig" %}
       {% endblock %}
 
+      {% block main_navigation %}
+        {{ page.main_navigation }}
+      {% endblock %}
+
       {% block splash %}
         <div class="splash">
           {{ page.header }}
         </div>
-      {% endblock %}
-
-      {% block main_navigation %}
-        {{ page.main_navigation }}
       {% endblock %}
      </header>
   {% endblock %}

@@ -143,6 +143,7 @@ wwu-pre-header {
     visibility: visible;
     transition: opacity var(--ease--standard) var(--transition-speed--fast);
     opacity: 1;
+    z-index: 2;
   }
   .menu-container {
     display: flex;
