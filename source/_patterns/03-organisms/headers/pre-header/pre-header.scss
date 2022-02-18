@@ -106,7 +106,7 @@ wwu-pre-header {
 
     display: flex;
     min-height: var(--touch-target--min);
-    padding: var(--space--xs);
+    padding: var(--space--2xs);
     transition: background-image var(--transition-speed--fast)
       var(--ease--standard);
     color: inherit;
