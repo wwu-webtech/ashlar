@@ -93,6 +93,11 @@ external-links-a11y:
   version: 1.x
   js:
     build/js/external-links-a11y.js: {}
+fonts:
+  version: 1.x
+  css:
+    theme:
+      build/css/components/font-families.css: {}
 fullpage:
   version: 3.0.7
   css:
@@ -205,6 +210,6 @@ wwu-header:
   js:
     build/js/logo.js: {}
     build/js/pre-header.js: {}
-    build/js/wwu-header.js: {}    
+    build/js/wwu-header.js: {}
   dependencies:
     - core/jquery

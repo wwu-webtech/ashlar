@@ -6,6 +6,7 @@ base theme: stable
 libraries:
   - ashlar/ashlar-base
   - ashlar/display-settings
+  - ashlar/fonts
   - ashlar/search
   - ashlar/skip-to
   - ashlar/wwu-header

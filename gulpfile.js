@@ -105,9 +105,14 @@
     },
   };
   config.sassComponents = {
-    src: ["source/_patterns/02-molecules/**/*.scss", "source/_patterns/03-organisms/**/*.scss"],
+    src: [
+      "source/_patterns/00-utilities/**/*.scss",
+      "source/_patterns/02-molecules/**/*.scss",
+      "source/_patterns/03-organisms/**/*.scss",
+    ],
     dest: "build/css/components",
     watch: [
+      "source/_patterns/00-utilities/**/*.scss",
       "source/_patterns/02-molecules/**/*.scss",
       "source/_patterns/03-organisms/**/*.scss",
       config.patternLab.patterns + "/**/*.scss",
