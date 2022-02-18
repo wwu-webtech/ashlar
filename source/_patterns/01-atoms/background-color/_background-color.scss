@@ -47,6 +47,9 @@ Atom: Background Colors
 .light-green-bg {
   @include light-green-bg;
 }
+.yellow-bg {
+  @include yellow-bg;
+}
 .dark-blue-gradient-bg {
   @include blue-bg;
 

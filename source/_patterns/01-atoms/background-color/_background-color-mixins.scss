@@ -349,3 +349,9 @@ backgrounds are light gray based.
 
   background: var(--light-green);
 }
+
+@mixin yellow-bg {
+  @include light-gray-bg;
+
+  background: var(--yellow);
+}
