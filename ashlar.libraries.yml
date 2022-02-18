@@ -97,7 +97,7 @@ fonts:
   version: 1.x
   css:
     theme:
-      build/css/components/font-families.css: {}
+      dist/css/font-families.css: {}
 fullpage:
   version: 3.0.7
   css:
