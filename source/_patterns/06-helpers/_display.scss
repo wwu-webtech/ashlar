@@ -14,7 +14,6 @@ Helpers: Display
   
   &-space-before {
     @extend .visually-hidden;
-
     &:before {
       content: '\00A0';
     }
@@ -22,7 +21,6 @@ Helpers: Display
 
   &-space-after {
     @extend .visually-hidden;
-    
     &:after {
       content: '\00A0';
     }
