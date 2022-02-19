@@ -1,18 +1,38 @@
 /*------------------------------------------------------------------------------
 Helpers: Display
 --------------------------------------------------------------------------------
+1. Visually hidden
 ------------------------------------------------------------------------------*/
 .visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
   position: absolute;
   overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px); // IE support mainly, clip path is preferred
-  -webkit-clip-path: inset(50%);
-  clip-path: inset(50%);
-  width: 1px;
-  height: 1px;
   white-space: nowrap;
+  height: 1px;
+  width: 1px;
+  
+  &-space-after, 
+  &-space-before {
+    @extend .visually-hidden;
+  }
+
+  &-space-before {
+    &:before {
+      content: '\00A0';
+    }
+  }
+
+  &-space-after {
+    &:after {
+      content: '\00A0';
+    }
+  }
 }
 
+/*--------------------------------------------------------------------------------
+2. SkipTo
+------------------------------------------------------------------------------*/
 .skip-to {
   &.skip-to--custom {
     [role="menu"] {
