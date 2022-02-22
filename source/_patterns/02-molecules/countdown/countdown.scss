@@ -2,7 +2,8 @@
 Molecule: Countdown
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-
+@import "../../../sass/partials/imports";
+@import "../../00-utilities/breakpoints.scss";
 .block--countdown {
   padding: var(--space--xl);
 

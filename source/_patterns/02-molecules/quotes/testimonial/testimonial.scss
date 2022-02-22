@@ -3,6 +3,8 @@ Molecule: Testimonial
 --------------------------------------------------------------------------------
 1. Mirror
 ------------------------------------------------------------------------------*/
+@import "../../../../sass/partials/imports";
+@import "../../../00-utilities/breakpoints.scss";
 .block--testimonial {
   @include breakpoint($medium) {
     flex-flow: row;

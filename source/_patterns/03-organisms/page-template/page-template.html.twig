@@ -5,30 +5,34 @@
 #}
 
 <div class="page">
+  {% block header %}
+    <header class="site-header" role="banner">
+      {% block wwu_pre_header %}
+        {% include "@organisms/headers/pre-header/pre-header.html.twig" %}
+      {% endblock %}
 
-  <header class="site-header" role="banner">
-    <a href="#main-content" class="skip-link visually-hidden focusable">Skip to main content</a>
+      {% block wwu_header %}
+        {% include "@organisms/headers/wwu-header/wwu-header.html.twig" %}
+      {% endblock %}
 
-    {% block top %}
-    {% endblock %}
+      {% block main_navigation %}
+        {{ page.main_navigation }}
+      {% endblock %}
 
-    {% block wwu_header %}
-      {% include "@organisms/headers/wwu-header/wwu-header.html.twig" %}
-    {% endblock %}
-
-    {% block splash %}
-      <div class="splash">
-        {{ page.header }}
-      </div>
-    {% endblock %}
-  </header>
+      {% block splash %}
+        <div class="splash">
+          {{ page.header }}
+        </div>
+      {% endblock %}
+     </header>
+  {% endblock %}
 
   {% block content %}
     {{ page.content }}
   {% endblock %}
 
   {% block footer %}
-    <footer role="contentinfo" class="page-footer region region--footer">
+    <footer class="page-footer region region--footer" role="contentinfo">
       {% block site_footer %}
         {% include "@organisms/footers/site-footer/site-footer.html.twig" %}
       {% endblock %}

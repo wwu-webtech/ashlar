@@ -1,0 +1,13 @@
+/**
+ * @file
+ * sass/ashlar_base.scss
+ *
+ * Required styles for any site using Ashlar or it's components
+ */
+
+@import "partials/imports";
+@import "../_patterns/00-utilities/**/+(_)*.scss";
+@import "../_patterns/01-atoms/**/+(_)*.scss";
+@import "../_patterns/02-molecules/**/+(_)*.scss";
+@import "../_patterns/03-organisms/**/+(_)*.scss";
+@import "../_patterns/06-helpers/**/+(_)*.scss";

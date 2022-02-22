@@ -28,6 +28,4 @@ if (breadcrumb_list) {
 
   current_listitem.appendChild(current_link);
   breadcrumb_list.appendChild(current_listitem);
-} else {
-  return;
 }
