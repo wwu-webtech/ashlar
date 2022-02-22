@@ -11,6 +11,7 @@ var SkipToConfig = {
       positionLeft: "0",
       buttonBackgroundColor: "transparent",
       buttonLabel: "Skip to Content",
+      buttonTooltipAccesskey: "Skip menu access key: $key",
     },
   },
 };

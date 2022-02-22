@@ -79,6 +79,7 @@ wwu-header {
     &:active,
     &:focus,
     &:hover {
+      outline-color: var(--blue--lighter--60);
       color: var(--dark-blue--darker--60);
     }
   }
