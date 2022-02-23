@@ -12,15 +12,13 @@ Helpers: Display
   height: 1px;
   width: 1px;
   
-  &-space-before {
-    @extend .visually-hidden;
+  &.space-before {
     &:before {
       content: '\00A0';
     }
   }
 
-  &-space-after {
-    @extend .visually-hidden;
+  &.space-after {
     &:after {
       content: '\00A0';
     }
