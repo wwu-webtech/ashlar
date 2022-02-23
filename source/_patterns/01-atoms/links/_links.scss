@@ -27,7 +27,6 @@ a {
   &:active,
   &:focus,
   &:hover {
-    transition: 0.25s ease-out;
     text-decoration-color: var(--blue--lighter--60);
     color: var(--dark-blue);
     background-image: var(--gradient--vertical--light-blue);

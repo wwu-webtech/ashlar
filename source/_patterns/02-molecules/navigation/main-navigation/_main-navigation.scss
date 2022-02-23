@@ -6,7 +6,7 @@ Molecule: Main navigation/ultimenu custom styles
 ------------------------------------------------------------------------------*/
 .main-navigation,
 #block-system-main-menu {
-  @include breakpoint($medium) {
+  @include breakpoint($small) {
     width: 100%;
     height: inherit;
     border-top: none;
@@ -15,45 +15,43 @@ Molecule: Main navigation/ultimenu custom styles
   grid-area: main-nav;
   border-top: solid var(--blue--darker--40) var(--border-width--sm);
   font-family: var(--font--condensed);
-
   & > .menu,
   .ultimenu--horizontal {
     @include blue-bg;
+    @include breakpoint($small) {
+      background-color: var(--blue);
+    }
 
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     margin: 0;
     padding-left: 0;
-
+    background-color: var(--dark-blue);
     & > li {
-      @include breakpoint($medium) {
+      @include breakpoint($small) {
         grid-template-columns: 1fr var(--icon-size--xs);
         width: inherit;
         border-bottom: none;
       }
 
       display: grid;
-      grid-template-areas:
-        "link icon"
-        "flyout flyout";
+      grid-template-areas: "link icon"
+      "flyout flyout";
       grid-template-columns: 1fr var(--toggle-size--sm);
       grid-template-rows: auto auto;
       width: 100%;
       border-bottom: var(--border-width--sm) solid var(--blue--darker--20);
       border-left: none;
-
       &:hover,
       &:focus-within {
         background-image: var(--gradient--vertical--light-blue);
-
         .expand-icon {
           color: var(--dark-blue--darker--60);
         }
       }
-
       & > a {
-        @include breakpoint($medium) {
+        @include breakpoint($small) {
           display: flex;
           align-items: center;
           padding: var(--space--sm);
@@ -74,14 +72,12 @@ Molecule: Main navigation/ultimenu custom styles
         text-decoration: none;
         font-weight: var(--font-weight--regular);
         line-height: 1;
-
         &:active,
         &:focus,
         &:hover {
           background-size: 0 0;
         }
       }
-
       .expand-icon {
         display: flex;
         grid-area: icon;
@@ -93,27 +89,24 @@ Molecule: Main navigation/ultimenu custom styles
         height: 100%;
         border: none;
         font-size: var(--icon-size--xs);
-
         &.desktop {
-          @include breakpoint($medium) {
+          @include breakpoint($small) {
             display: flex;
           }
 
           display: none;
         }
-
         &.mobile {
-          @include breakpoint($medium) {
+          @include breakpoint($small) {
             display: none;
           }
         }
       }
-
       /*------------------------------------------------------------------------
       1. Active link trail
       ------------------------------------------------------------------------*/
       &.is-active-trail {
-        @include breakpoint($medium) {
+        @include breakpoint($small) {
           border-left: none;
           &:after {
             display: block;
@@ -126,12 +119,11 @@ Molecule: Main navigation/ultimenu custom styles
         }
 
         border-left: solid var(--border-width--lg)
-          var(--light-green--lighter--20);
+        var(--light-green--lighter--20);
       }
     }
   }
 }
-
 /*------------------------------------------------------------------------------
 2. Display preferences
 ------------------------------------------------------------------------------*/
@@ -141,14 +133,12 @@ Molecule: Main navigation/ultimenu custom styles
     font-family: var(--font--dyslexia-friendly);
   }
 }
-
 .font--hyperlegible {
   .main-navigation,
   #block-system-main-menu {
     font-family: var(--font--hyperlegible);
   }
 }
-
 #block-system-main-menu ul ul {
   display: none; // hide nested menus on non ultimenu main nav blocks
 }

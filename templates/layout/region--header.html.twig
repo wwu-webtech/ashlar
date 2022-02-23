@@ -1,5 +1,7 @@
 {% extends "region.html.twig" %}
 
 {% block template %}
-  {% include "@organisms/headers/header-region/header-region.html.twig" %}
+  {% block page_header %}
+    {{ content }}
+  {% endblock %}
 {% endblock %}

@@ -104,6 +104,35 @@
       sourceMap: true,
     },
   };
+  config.sassComponents = {
+    src: [
+      "source/_patterns/02-molecules/**/*.scss",
+      "source/_patterns/03-organisms/**/*.scss",
+    ],
+    dest: "build/css/components",
+    watch: [
+      "source/_patterns/02-molecules/**/*.scss",
+      "source/_patterns/03-organisms/**/*.scss",
+      config.patternLab.patterns + "/**/*.scss",
+    ],
+    options: {
+      includePaths: [
+        "node_modules/breakpoint-sass/stylesheets",
+        "node_modules/sass-toolkit/stylesheets",
+        "node_modules/singularitygs/stylesheets",
+      ],
+      outputStyle: "expanded",
+    },
+    cleancss: {
+      format: "beautify",
+      inline: ["all"],
+      level: {
+        1: { all: true },
+        2: { all: true },
+      },
+      sourceMap: true,
+    },
+  };
 
   /**
    * JS configuration.
@@ -190,6 +219,27 @@
       // Flatten filepath globs.
       flatten(),
       gulp.dest(config.sass.dest),
+      callback
+    );
+  });
+  gulp.task("sassComponents", function (callback) {
+    pump(
+      gulp.src(config.sassComponents.src),
+      // Parse globbing patterns in @include statements.
+      sassGlob(),
+      // Initialize source maps.
+      sourcemaps.init(),
+      // Compile Sass.
+      sass(config.sassComponents.options),
+      // Group media queries.
+      group(),
+      // Optimize css.
+      cleancss(config.sassComponents.cleancss),
+      // Output source maps.
+      sourcemaps.write(),
+      // Flatten filepath globs.
+      flatten(),
+      gulp.dest(config.sassComponents.dest),
       callback
     );
   });
@@ -393,5 +443,8 @@
   /**
    * Gulp default task.
    */
-  gulp.task("default", gulp.parallel(["sass", "js", "images", "fonts"]));
+  gulp.task(
+    "default",
+    gulp.parallel(["sass", "sassComponents", "js", "images", "fonts"])
+  );
 })();

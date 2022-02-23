@@ -1,3 +1,9 @@
+if (
+  typeof context == "undefined" ||
+  (typeof context != "undefined" && context == document)
+) {
+  const logo_template = document.createElement("template");
+  logo_template.innerHTML = `
 <div class="logo make-waves">
   <span class="visually-hidden">Western Washington University - Make Waves.</span>
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 576 537.7" style="enable-background:new 0 0 576 537.7;" xml:space="preserve" aria-hidden="true">
@@ -218,3 +224,18 @@
     <line style="fill:none;stroke:#007AC8;stroke-width:4;stroke-miterlimit:10;" x1="60.5" y1="405.1" x2="516.7" y2="405.1"/>
   </svg>
 </div>
+`;
+
+  class Logo extends HTMLElement {
+    constructor() {
+      super();
+    }
+
+    connectedCallback() {
+      /* Create the custom element by appending the template */
+      this.appendChild(logo_template.content.cloneNode(true));
+    }
+  }
+
+  window.customElements.define("wwu-logo", Logo);
+}

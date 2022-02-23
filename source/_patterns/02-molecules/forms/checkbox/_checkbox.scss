@@ -55,7 +55,7 @@ input[type="radio"] {
   &:focus {
     + label {
       &:before {
-        border-color: var(blue--lighter--40);
+        border-color: var(--blue--lighter--40);
         box-shadow: var(--shadow--soft);
 
         @media (-ms-high-contrast: active) {
@@ -70,7 +70,7 @@ input[type="checkbox"] {
   &:checked {
     + label {
       &:before {
-        background-image: url("../images/forms/check.png");
+        background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/forms/check.png");
       }
     }
   }

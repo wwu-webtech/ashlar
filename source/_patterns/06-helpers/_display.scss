@@ -26,29 +26,3 @@ Helpers: Display
     }
   }
 }
-
-/*--------------------------------------------------------------------------------
-2. SkipTo
-------------------------------------------------------------------------------*/
-.skip-to {
-  &.skip-to--custom {
-    [role="menu"] {
-      max-height: calc(100vh * 0.75);
-      overflow-y: scroll;
-    }
-
-    button {
-      padding: var(--space--sm);
-      border: var(--border-width--md) outset var(--gray--lighter--80);
-      border-radius: var(--border-radius--round);
-
-      &:focus {
-        padding: var(--space--sm);
-        border: var(--border-width--md) outset var(--gray--lighter--80);
-        border-radius: var(--border-radius--round);
-        outline: dotted var(--border-width--md);
-        outline-offset: calc(-1.5 * var(--border-width--lg));
-      }
-    }
-  }
-}

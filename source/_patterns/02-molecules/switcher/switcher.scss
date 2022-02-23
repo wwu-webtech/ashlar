@@ -2,6 +2,8 @@
 Molecule: Switcher
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
+@import "../../../sass/partials/imports";
+@import "../../00-utilities/breakpoints.scss";
 .content-switcher,
 .mabel-content-switcher {
   display: flex;
