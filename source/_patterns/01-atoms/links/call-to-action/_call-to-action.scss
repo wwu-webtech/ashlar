@@ -29,6 +29,11 @@ a.button.button.button,
     font-size: var(--font-size--md);
   }
 
+  &.align-center {
+    margin-left: 50%;
+    transform: translatex(-50%);
+  }
+
   &:visited {
     color: var(--white);
   }
