@@ -62,10 +62,6 @@ bg-video:
     build/js/background-video.js: {}
   dependencies:
     - core/jquery
-breadcrumb-viewpage:
-  version: 1.x
-  js:
-    build/js/breadcrumb-viewpage.js: {}
 countdown:
   version: 1.x
   css:
