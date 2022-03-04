@@ -324,21 +324,19 @@ function ashlar_preprocess_views_view(&$variables) {
 
 /**
 * Implements template_preprocess_breadcrumb().
-* Adds current page to end of breadcrumb navigation.
+* Adds current page to end of breadcrumb navigation. See https://www.drupal.org/node/743366, and 
+* https://www.drupal.org/node/743366#comment-11619361 for retiring node-based solution.
 */
 function ashlar_preprocess_breadcrumb(&$variables) {
   if($variables['breadcrumb']) {
     $request = \Drupal::request();
     $route_match = \Drupal::routeMatch();
     $variables['current_page_text'] = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
-    $current_page_text = $variables['current_page_text'];
-    
     $variables['current_page_url'] = \Drupal::request()->getRequestUri();
-    $current_page_url = $variables['current_page_url'];
 
     $variables['breadcrumb'][] = array(
-      'text' => $current_page_text,
-      'url' => $current_page_url
+      'text' => $variables['current_page_text'],
+      'url' => $variables['current_page_url']
     );
     $variables['#cache']['contexts'][] = 'url.path';
     $variables['#cache']['max-age'] = 0;
