@@ -69,10 +69,6 @@ countdown:
       build/css/components/countdown.css: {}
   js:
     build/js/countdown.js: {}
-display-settings:
-  version: 1.x
-  js:
-    build/js/display-settings.js: {}
 donut-chart:
   version: 1.x
   css:

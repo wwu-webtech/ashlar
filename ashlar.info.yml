@@ -5,7 +5,6 @@ core_version_requirement: ^8.8 || ^9
 base theme: stable
 libraries:
   - ashlar/ashlar-base
-  - ashlar/display-settings
   - ashlar/fonts
   - ashlar/search
   - ashlar/skip-to
