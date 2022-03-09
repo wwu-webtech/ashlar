@@ -170,8 +170,8 @@ search:
 skip-to:
   version: 4.1.x
   js:
-    dist/js/skipto-backup.js: 
-      { attributes: { async: true } }
+    https://paypal.github.io/skipto/downloads/js/skipto.min.js: 
+      { type: external, minified: true, attributes: { async: true } }
     dist/js/skipto-config.js: {}
 switcher:
   version: 1.x
