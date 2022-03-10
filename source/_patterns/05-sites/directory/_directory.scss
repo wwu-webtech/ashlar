@@ -50,9 +50,14 @@ directory-banner-person-list {
     height: inherit;
   }
 }
-.font--default.mat-typography,
-.mat-typography.mat-typography h2 {
+.font--default.mat-typography {
   font: inherit;
+}
+.mat-typography.mat-typography h2,
+.mat-typography.mat-typography h3,
+.mat-typography.mat-typography h4 {
+  font: inherit;
+  font-weight: var(--font-weight--bold);
 }
 .mat-filter-input:focus {
   box-shadow: none;
