@@ -1,18 +1,19 @@
 // Set vars and aria attributes
-var $accordionToggles = $(".accordion-set .expand", context);
-var $accordionButton = $(".accordion-set button.expand", context);
-var $accordionMockButton = $(".accordion-set a.expand", context);
-var $accordionContent = $(".accordion-set .content");
+const $accordionToggles = $(".accordion-set .expand", context);
+const $accordionButton = $(".accordion-set button.expand", context);
+const $accordionMockButton = $(".accordion-set a.expand", context);
+const $accordionContent = $(".accordion-set .content");
 
 $accordionToggles.filter(".is-expanded").attr("aria-expanded", "true");
 $accordionToggles.not(".is-expanded").attr("aria-expanded", "false");
 
-for (var i = 0; i < $accordionContent.length; i++) {
+// Set up aria-controls
+for (let i = 0; i < $accordionContent.length; i++) {
   $accordionContent[i].setAttribute("id", "accordion-content-" + i);
 }
 
 $accordionToggles.each(function () {
-  var $contentID = $(this).parent().siblings($accordionContent).attr("id");
+  let $contentID = $(this).parent().siblings($accordionContent).attr("id");
   $(this).attr("aria-controls", $contentID);
 });
 
@@ -30,10 +31,25 @@ function keyPressed(event) {
   }
 }
 
+// Add href/role if not added to view-based accordion "button"
+if ($accordionMockButton) {
+  $accordionMockButton.each(function(){
+    let $mockButton = $(this);
+  
+    if (!$mockButton.attr('href')) {
+      $mockButton.attr('href', '#');
+    }
+
+    if(!$mockButton.attr('role')) {
+      $mockButton.attr('role', 'button');
+    }
+  });
+}
+
 // Toggle expansion/collapse
 function toggleExpansion(button) {
-  var accordionButtonClicked = button;
-  var accordionContent = button.parent().siblings(".content");
+  let accordionButtonClicked = button;
+  let accordionContent = button.parent().siblings(".content");
 
   accordionButtonClicked.toggleClass("is-expanded");
   accordionContent.slideToggle();
@@ -50,9 +66,9 @@ function toggleExpansion(button) {
 
 // On Esc press, close accordion content
 function closeAccordion(event) {
-  var accordionButtonClicked = $(this);
-  var accordionContent = accordionButtonClicked.parent().siblings(".content");
-  var $code = event.charCode || event.keyCode;
+  let accordionButtonClicked = $(this);
+  let accordionContent = accordionButtonClicked.parent().siblings(".content");
+  let $code = event.charCode || event.keyCode;
 
   if ($code === 27) {
     accordionContent.slideUp();
