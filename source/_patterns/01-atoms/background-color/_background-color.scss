@@ -60,12 +60,12 @@ Atom: Background Colors
 
   background-image: var(--gradient--diagonal--blue-to-dark-blue);
 }
-
 /*------------------------------------------------------------------------------
 2. Dark Mode
 ------------------------------------------------------------------------------*/
 .dark-mode {
   @include black-bg;
+
   background-color: var(--gray--darker--80);
 }
 .dark-mode {
@@ -76,20 +76,19 @@ Atom: Background Colors
   .lightest-gray-bg {
     @include gray-bg;
   }
-
   .light-green-bg {
     @include green-bg;
   }
-
   .green-bg {
     @include green-bg;
   }
-
   .blue-bg {
     background-color: var(--blue--darker--60);
   }
+  .yellow-bg {
+    color: var(--black);
+  }
 }
-
 /*------------------------------------------------------------------------------
 3. Print Styles
 ------------------------------------------------------------------------------*/
@@ -111,7 +110,6 @@ Atom: Background Colors
     color: var(--black);
     border: solid var(--border-width--sm) var(--black);
     background-color: var(--white);
-
     h1,
     h2,
     h3,
@@ -120,7 +118,6 @@ Atom: Background Colors
     h6 {
       color: var(--dark-blue);
     }
-
     .block--beyond-basics-block {
       padding: 0.8rem;
     }
