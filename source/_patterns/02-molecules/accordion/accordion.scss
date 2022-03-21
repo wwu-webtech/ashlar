@@ -68,6 +68,7 @@ Borders only added to accordions without custom background classes added
       border: none;
       border-radius: 0;
       background: none;
+      cursor: default;
 
       &:active {
         transform: none;
