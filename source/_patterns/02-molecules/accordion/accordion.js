@@ -33,7 +33,7 @@ function keyPressed(event) {
 
 // Add href/role if not added to view-based accordion "button"
 if ($accordionMockButton) {
-  $accordionMockButton.each(function(){
+  $accordionMockButton.each(function () {
     let $mockButton = $(this);
   
     if (!$mockButton.attr('href')) {
