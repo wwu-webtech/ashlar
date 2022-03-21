@@ -36,11 +36,11 @@ if ($accordionMockButton) {
   $accordionMockButton.each(function () {
     let $mockButton = $(this);
   
-    if (!$mockButton.attr('href')) {
+    if (!$mockButton.attr('href') || $mockButton.attr('href') !== '#') {
       $mockButton.attr('href', '#');
     }
 
-    if(!$mockButton.attr('role')) {
+    if(!$mockButton.attr('role') || $mockButton.attr('role') !== 'button') {
       $mockButton.attr('role', 'button');
     }
   });
