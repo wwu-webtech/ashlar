@@ -76,3 +76,16 @@ layout_flex:
   regions:
     flex:
       label: Flex
+layout_majors:
+  label: 'Deprecated'
+  path: atoms/layouts/twocol
+  template: twocol--page-width
+  category: "Columns: 2"
+  default_region: first
+  icon_map:
+    - [first, second]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
