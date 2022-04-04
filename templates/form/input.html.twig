@@ -10,4 +10,11 @@
  * @see template_preprocess_input()
  */
 #}
+
+{% if element['#description'] %}
+  {% set description_id = element['#attributes']['id']|clean_id ~ '--description' %}
+  
+  {% set attributes = attributes.setAttribute('aria-describedby', description_id) %}
+{% endif %}
+
 {% include "@atoms/forms/input/input.html.twig" %}
