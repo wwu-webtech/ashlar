@@ -277,8 +277,7 @@ td {
   );
 
   table {
-    @include gray-bg;
-
+    &:not([class]), 
     &.lightest-gray {
       @include gray-bg;
       @include color-table(
