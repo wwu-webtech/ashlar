@@ -9,6 +9,7 @@ libraries:
   - ashlar/search
   - ashlar/skip-to
   - ashlar/wwu-header
+  - ashlar/wwu-footer
 libraries-override:
   core/drupal.dialog.off_canvas:
     css:

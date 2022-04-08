@@ -77,14 +77,15 @@ To get started with this, use the following commands (starting in the `wwu_drupa
 
     # Install gulp task runner
     cd ashlar
-    lando npm install gulp
-
+    lando npm install
+    lando npm install gulp-cli -g
 #### Development
 
-When developing in Ashlar with a Drupal 8 site directly, the only thing you'll need to do is run gulp and clear the caches on your Drupal site to see the changes. You can run the following commands from anywhere in your Lando instance (i.e. in any folder that is within the `wwu_drupal` directory) after you have made changes to files in the `ashlar` directory.
+When developing in Ashlar with a Drupal 8 site directly, the only thing you'll need to do is run gulp and clear the caches on your Drupal site to see the changes. You can run the following command from anywhere in your Lando instance (i.e. in any folder that is within the `wwu_drupal` directory) after you have made changes to files in the `ashlar` directory.
 
     lando gulp
-    lando drush cr
+
+Now navigate to the site and select "Clear all Caches" from the administration menu.
 
 ### IV. Pattern Lab
 
