@@ -43,5 +43,12 @@ a.taxonomy-term {
   &:visited {
     color: var(--purple--lighter--80);
     border-bottom-color: var(--purple--lighter--80);
+
+    &:hover, 
+    &:focus, 
+    &:active {
+      color: var(--purple);
+      border-bottom-color: var(--purple);
+    }
   }
 }

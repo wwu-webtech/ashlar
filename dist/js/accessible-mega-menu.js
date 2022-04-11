@@ -1,12 +1,9 @@
 /*
 Copyright © 2013 Adobe Systems Incorporated.
-
 Licensed under the Apache License, Version 2.0 (the “License”);
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
-
 http://www.apache.org/licenses/LICENSE-2.0
-
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an “AS IS” BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -239,16 +236,25 @@ limitations under the License.
 
             _toggleExpandedEventHandlers.call(this, true);
 
+            // Hide all panels.
             if (hide) {
+                // Get the first top level menu item.
                 topli = menu.find('.' + settings.topNavItemClass + ' .' + settings.openClass + ':first').closest('.' + settings.topNavItemClass);
+                // Validate event.
                 if (!(topli.is(event.relatedTarget) || topli.has(event.relatedTarget).length > 0)) {
                     if ((event.type === 'mouseout' || event.type === 'focusout') && topli.has(document.activeElement).length > 0) {
                         return;
                     }
+
+                    // Close top level link.
                     topli.find('[aria-expanded]')
                         .attr('aria-expanded', 'false')
                         .removeClass(settings.openClass)
-                        .filter('.' + settings.panelClass)
+                    // Close panel.
+                    topli.find('.' + settings.panelClass)
+                        .removeClass(settings.openClass)
+                        // .attr('aria-hidden', 'true');
+
                     if ((event.type === 'keydown' && event.keyCode === Keyboard.ESCAPE) || event.type === 'DOMAttrModified') {
                         newfocus = topli.find(':tabbable:first');
                         setTimeout(function () {
@@ -261,25 +267,39 @@ limitations under the License.
                     menu.find('[aria-expanded=true]')
                         .attr('aria-expanded', 'false')
                         .removeClass(settings.openClass)
-                        .filter('.' + settings.panelClass)
+                        .closest('.' + settings.panelClass)
+                        .removeClass(settings.openClass)
+                        // .attr('aria-hidden', 'true');
                 }
-            } else {
+            }
+            // Toggle panels.
+            else {
                 clearTimeout(that.focusTimeoutID);
-                topli.siblings()
-                    .find('[aria-expanded]')
-                    .attr('aria-expanded', 'false')
-                    .removeClass(settings.openClass)
-                    .filter('.' + settings.panelClass)
+                // Close previously open top level link and its panel.
+                var openli = menu.find('[aria-expanded=true]').parent();
+                if (!openli.is(topli)) {
+                    openli.find('[aria-expanded]')
+                        .attr('aria-expanded', 'false')
+                        .removeClass(settings.openClass)
+                        .siblings('.' + settings.panelClass)
+                        .removeClass(settings.openClass)
+                        // .attr('aria-hidden', 'true');
+                }
+                // Open current top level link and its panel.
                 topli.find('[aria-expanded]')
                     .attr('aria-expanded', 'true')
                     .addClass(settings.openClass)
-                    .filter('.' + settings.panelClass)
+                    .siblings('.' + settings.panelClass)
+                    .addClass(settings.openClass)
+                    // .attr('aria-hidden', 'false');
 
-                var pageScrollPosition = $('html')[0].scrollTop;
-                var openPanelTopPosition = $('.' + settings.panelClass + '.' + settings.openClass).parent().offset().top;
+                if (topli.length) {
+                    var pageScrollPosition = $('html')[0].scrollTop;
+                    var openPanelTopPosition = topli.offset().top;
 
-                if(pageScrollPosition > openPanelTopPosition) {
-                    $('html')[0].scrollTop = openPanelTopPosition;
+                    if (pageScrollPosition > openPanelTopPosition) {
+                        $('html')[0].scrollTop = openPanelTopPosition;
+                    }
                 }
 
                 if (event.type === 'mouseover' && target.is(':tabbable') && topli.length === 1 && panel.length === 0 && menu.has(document.activeElement).length > 0) {
@@ -303,25 +323,33 @@ limitations under the License.
             var target = $(event.target).closest(':tabbable'),
                 topli = target.closest('.' + this.settings.topNavItemClass),
                 panel = target.closest('.' + this.settings.panelClass);
-            if (topli.length === 1
-                    && panel.length === 0
-                    && topli.find('.' + this.settings.panelClass).length === 1) {
+            // With panel.
+            if (topli.length === 1 && panel.length === 0 && topli.find('.' + this.settings.panelClass).length === 1) {
+                // Handle click event.
                 if (!target.hasClass(this.settings.openClass)) {
                     event.preventDefault();
                     event.stopPropagation();
                     _togglePanel.call(this, event);
                     this.justFocused = false;
-                } else {
+                }
+                else {
+                    // Handle focus event.
                     if (this.justFocused) {
                         event.preventDefault();
                         event.stopPropagation();
                         this.justFocused = false;
-                    } else if (isTouch || !isTouch && !this.settings.openOnMouseover) {
+                    }
+                    // Handle touch/click event.
+                    else if (isTouch || !isTouch && !this.settings.openOnMouseover) {
                         event.preventDefault();
                         event.stopPropagation();
                         _togglePanel.call(this, event, target.hasClass(this.settings.openClass));
                     }
                 }
+            }
+            // Without panel on enter event.
+            else if (topli.length === 1 && panel.length === 0 && event.type == "keydown") {
+                window.location.href = target.attr("href");
             }
         };
 
@@ -407,7 +435,7 @@ limitations under the License.
             target
                 .removeClass(this.settings.focusClass);
 
-            if (window.cvox) {
+            if (typeof window.cvox === 'object' && typeof window.cvox.Api !== 'object') {
                 // If ChromeVox is running...
                 that.focusTimeoutID = setTimeout(function () {
                     window.cvox.Api.getCurrentNode(function (node) {
@@ -504,6 +532,7 @@ limitations under the License.
                             .attr('aria-expanded', 'true')
                             .addClass(settings.openClass)
                             .filter('.' + settings.panelClass)
+                            // .attr('aria-hidden', 'false')
                             .find(':tabbable:last')
                             .focus() === 1);
                     }
@@ -560,6 +589,7 @@ limitations under the License.
                             .attr('aria-expanded', 'true')
                             .addClass(settings.openClass)
                             .filter('.' + settings.panelClass)
+                            // .attr('aria-hidden', 'false')
                             .find(':tabbable:last')
                             .focus();
                     }
@@ -583,11 +613,22 @@ limitations under the License.
                 break;
             case Keyboard.SPACE:
             case Keyboard.ENTER:
+                // Top level links.
                 if (isTopNavItem && target.attr('role')) {
                     event.preventDefault();
-                    _clickHandler.call(that, event);
-                } else {
-                    return true;
+                    // Handle enter event on open top level link as escape event.
+                    if (target.hasClass("open")) {
+                        this.mouseFocused = false;
+                        _togglePanel.call(that, event, true);
+                    }
+                    // Handle enter event on top level link as a click.
+                    else {
+                        _clickHandler.call(that, event);
+                    }
+                }
+                // Sub level links.
+                else {
+                  return true;
                 }
                 break;
             default:
@@ -731,7 +772,7 @@ limitations under the License.
          */
         _clickToggleHandler = function () {
             var isExpanded = this.toggleButton.attr('aria-expanded') === 'true';
-            this.toggleButton.attr({'aria-expanded': !isExpanded, 'aria-pressed': !isExpanded});
+            this.toggleButton.attr({'aria-expanded': !isExpanded});
         };
 
         _toggleExpandedEventHandlers = function (hide) {
@@ -815,23 +856,25 @@ limitations under the License.
                     var topnavitemlink, topnavitempanel;
                     topnavitem = $(topnavitem);
                     topnavitem.addClass(settings.topNavItemClass);
-                    topnavitemlink = topnavitem.find(":tabbable:first");
-                    topnavitempanel = topnavitem.children(":not(:tabbable):last");
+                    topnavitemlink = topnavitem.find("a").first();
+                    topnavitempanel = topnavitem.find('.' + settings.panelClass);
                     _addUniqueId.call(that, topnavitemlink);
+                    // When sub nav exists.
                     if (topnavitempanel.length) {
                         _addUniqueId.call(that, topnavitempanel);
+                        // Add attributes to top level link.
                         topnavitemlink.attr({
                             "role": "button",
                             "aria-controls": topnavitempanel.attr("id"),
                             "aria-expanded": false,
                             "tabindex": 0
                         });
-
+                        // Add attributes to sub nav.
                         topnavitempanel.attr({
-                            "aria-expanded": false,
-                        })                            
-                            .not("[aria-labelledby]")
-                            .attr("aria-labelledby", topnavitemlink.attr("id"));
+                          class: settings.panelClass,
+                        })
+                        .not("[aria-labelledby]")
+                        .attr("aria-labelledby", topnavitemlink.attr("id"));
                     }
                 });
 
@@ -840,7 +883,7 @@ limitations under the License.
                 menu.find("hr").attr("role", "separator");
 
                 toggleButton.addClass(settings.toggleButtonClass);
-                toggleButton.attr({'aria-expanded': false, 'aria-pressed': false, 'aria-controls': menu.attr('id')});
+                toggleButton.attr({'aria-expanded': false, 'aria-controls': menu.attr('id')});
 
                 _addEventHandlers.call(this);
             },
