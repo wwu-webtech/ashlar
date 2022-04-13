@@ -5,22 +5,34 @@ Organism: Views - Views exposed form
 .views-exposed-form {
   display: flex;
   flex: 0 1 100%;
-  flex-flow: row wrap;
-  align-items: flex-end;
+  flex-flow: column nowrap;
+  align-items: flex-start;
   margin-bottom: var(--space--sm);
-
   > div {
     margin-right: var(--space--xs);
   }
+  .form {
+    gap: var(--space--sm);
 
+    display: flex;
+    flex-flow: row wrap;
+    align-items: start;
+  }
   input,
   select,
   label {
     margin-bottom: var(--space--xs);
     font-size: var(--font-size--sm);
   }
-
   .form-actions {
+    align-self: end;
     margin-bottom: var(--space--xs);
   }
+}
+form.views-exposed-form {
+  flex-flow: row wrap;
+  align-items: flex-end;
+}
+.view--header {
+  flex: 0 1 100%;
 }
