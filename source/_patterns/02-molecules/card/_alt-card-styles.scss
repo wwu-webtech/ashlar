@@ -21,7 +21,6 @@ Molecule: Cards - Alternate styles
 
     order: -2;
     padding: var(--space--md);
-
     a {
       &:active,
       &:hover,
@@ -31,7 +30,6 @@ Molecule: Cards - Alternate styles
       }
     }
   }
-
   &:focus-within {
     .title {
       a:after {
@@ -39,11 +37,9 @@ Molecule: Cards - Alternate styles
       }
     }
   }
-
   &.dark-blue {
     .title {
       @include dark-blue-bg;
-
       a {
         &:active,
         &:hover,
@@ -54,11 +50,9 @@ Molecule: Cards - Alternate styles
       }
     }
   }
-
   &.light-green {
     .title {
       @include light-green-bg;
-
       a {
         &:active,
         &:hover,
@@ -70,7 +64,6 @@ Molecule: Cards - Alternate styles
     }
   }
 }
-
 .dark-mode {
   .card.color-block-title,
   .block--card.color-block-title {
@@ -83,7 +76,6 @@ Molecule: Cards - Alternate styles
         }
       }
     }
-
     &:focus-within {
       .title a:after {
         outline-color: var(--blue--lighter--40);
@@ -96,41 +88,33 @@ Molecule: Cards - Alternate styles
 ------------------------------------------------------------------------------*/
 .degree-card {
   display: grid;
-  grid-template-areas:
-    "taxonomy"
-    "title"
-    "body"
-    "more";
+  grid-template-areas: "taxonomy"
+  "title"
+  "body"
+  "more";
   grid-template-rows: auto auto 1fr auto;
-
   .title {
     grid-area: title;
     padding: var(--space--md) var(--space--md) 0 var(--space--md);
-
     h3 {
       margin-top: 0;
       font-size: var(--font-size--3xl);
     }
   }
-
   .taxonomy-terms {
     grid-area: taxonomy;
     padding: 0;
   }
-
   .taxonomy-term {
     margin-right: var(--space--xs);
     padding: var(--space--xs) var(--space--sm);
   }
-
   .taxonomy-term .material-icons {
     font-size: var(--icon-size--sm);
   }
-
   .body {
     grid-area: body;
     padding: 0 var(--space--md) var(--space--sm) var(--space--md);
-
     h4 {
       margin-bottom: 0;
       text-transform: uppercase;
@@ -139,31 +123,25 @@ Molecule: Cards - Alternate styles
       font-weight: bold;
     }
   }
-
   .department-links > div {
     margin: var(--space--md) 0;
   }
-
   .department-link {
     text-decoration: none;
     font-size: var(--font-size--md);
     font-weight: bold;
-
     .material-icons {
       font-size: var(--icon-size--sm);
     }
   }
-
   .more-link {
     grid-area: more;
     margin-left: var(--space--md);
   }
 }
-
 .dark-mode .degree-card {
   .department-link {
     color: var(--white);
-
     &:hover,
     &:active,
     &:focus {
@@ -171,25 +149,21 @@ Molecule: Cards - Alternate styles
       background-color: var(--black);
     }
   }
-
   .body {
     h4 {
       color: var(--light-green--lighter--40);
     }
   }
 }
-
 /*------------------------------------------------------------------------------
 3. Event
 ------------------------------------------------------------------------------*/
 .card.event,
 .block--card.event {
   align-content: start;
-
   .image {
     margin-bottom: calc(-1 * var(--space--lg));
   }
-
   .date {
     flex: 0 1 40%;
     order: 0;
@@ -198,7 +172,6 @@ Molecule: Cards - Alternate styles
     text-align: center;
     text-transform: uppercase;
     line-height: 1;
-
     .month {
       display: block;
       padding: var(--space--md) var(--space--lg) 0 var(--space--lg);
@@ -207,7 +180,6 @@ Molecule: Cards - Alternate styles
       font-size: var(--font-size--2xl);
       font-weight: var(--font-weight--regular);
     }
-
     .day {
       display: block;
       padding: 0 var(--space--lg) var(--space--md) var(--space--lg);
@@ -219,14 +191,12 @@ Molecule: Cards - Alternate styles
       font-weight: var(--font-weight--semibold);
     }
   }
-
   .title {
     order: 1;
     margin-top: var(--space--md);
     padding-right: var(--space--lg);
     padding-left: var(--space--lg);
   }
-
   .location {
     flex: 1 1 60%;
     order: 2;
@@ -237,29 +207,25 @@ Molecule: Cards - Alternate styles
     color: var(--blue);
     font-style: normal;
   }
-
   .body {
     order: 3;
     padding-right: var(--space--lg);
     padding-left: var(--space--lg);
   }
 }
-
 /*------------------------------------------------------------------------------
 4. Event Alternate
 ------------------------------------------------------------------------------*/
 .card.event.alt,
 .block--card.event.alt {
   display: grid;
-  grid-template-areas:
-    "image image"
-    "date title"
-    "date location"
-    "body body"
-    "terms terms";
+  grid-template-areas: "image image"
+  "date title"
+  "date location"
+  "body body"
+  "terms terms";
   grid-template-columns: 1fr 2fr;
   grid-template-rows: auto;
-
   .title {
     @include blue-bg;
 
@@ -269,7 +235,6 @@ Molecule: Cards - Alternate styles
     height: 100%;
     margin: 0;
     padding-top: var(--space--md);
-
     a {
       &:active,
       &:hover,
@@ -279,12 +244,10 @@ Molecule: Cards - Alternate styles
       }
     }
   }
-
   .image {
     grid-area: image;
     margin-bottom: 0;
   }
-
   .date {
     display: grid;
     grid-area: date;
@@ -293,21 +256,18 @@ Molecule: Cards - Alternate styles
     height: 100%;
     margin: 0;
     padding: 0;
-
     .month {
       display: grid;
       align-content: end;
       padding: var(--space--sm);
       background-color: var(--dark-blue);
     }
-
     .day {
       padding: var(--space--sm);
       color: var(--dark-blue);
       background-color: var(--light-green);
     }
   }
-
   .location {
     @include blue-bg;
 
@@ -317,18 +277,15 @@ Molecule: Cards - Alternate styles
     height: 100%;
     padding-top: 0;
   }
-
   .body {
     grid-area: body;
     padding: var(--space--md);
     padding-bottom: 0;
   }
-
   .taxonomy-terms {
     grid-area: terms;
     padding: var(--space--md);
   }
-
   &:focus-within {
     .title {
       a:after {
@@ -337,7 +294,6 @@ Molecule: Cards - Alternate styles
     }
   }
 }
-
 .dark-mode {
   .card.event.alt,
   .block--card.event.alt {
@@ -357,39 +313,32 @@ Molecule: Cards - Alternate styles
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(10, auto);
   padding-bottom: 0;
-
   &.image-optional {
     grid-template-columns: auto 1fr;
   }
-
   .image {
     grid-column: 1 / span 1;
     grid-row: 1 / span all;
     margin-bottom: 0;
     padding: 0;
-
     > div {
       width: 100%;
       height: 100%;
     }
-
     img {
       object-fit: cover;
       width: 100%;
       height: 100%;
     }
   }
-
   > * {
     grid-column: 2 / span 1;
   }
 }
-
 .card.horizontal,
 .block--card.horizontal {
   @include horizontal-card;
 }
-
 /*------------------------------------------------------------------------------
 6. Information
 ------------------------------------------------------------------------------*/
@@ -397,7 +346,6 @@ Molecule: Cards - Alternate styles
 .block--card.information {
   align-content: space-between;
   padding: 0;
-
   .sorting-term {
     order: 0;
     min-width: 30%;
@@ -407,23 +355,19 @@ Molecule: Cards - Alternate styles
     background-color: var(--blue);
     font-size: var(--font-size--sm);
   }
-
   .title {
     margin-top: var(--space--md);
     margin-right: var(--space--lg);
     margin-left: var(--space--lg);
     padding: 0;
     border-bottom: solid var(--border-width--md) var(--blue);
-
     .block__title {
       color: var(--blue);
     }
   }
-
   .body {
     padding: var(--space--md) var(--space--lg);
   }
-
   .taxonomy-terms {
     display: flex;
     flex-flow: column;
@@ -433,7 +377,6 @@ Molecule: Cards - Alternate styles
     background-color: var(--blue);
     font-weight: var(--font-weight--regular);
   }
-
   .taxonomy-term {
     display: flex;
     float: none;
@@ -444,35 +387,30 @@ Molecule: Cards - Alternate styles
     background-color: transparent;
     font-size: var(--font-size--sm);
   }
-
   .material-icons {
     margin-right: var(--space--sm);
     font-size: var(--space--lg);
   }
 }
-
 /*------------------------------------------------------------------------------
 7. Information - Split style
 ------------------------------------------------------------------------------*/
 .card.information.split-style,
 .block--card.information.split-style {
   display: grid;
-  grid-template-areas:
-    "title body"
-    "sorting body"
-    "terms body";
+  grid-template-areas: "title body"
+  "sorting body"
+  "terms body";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr auto auto;
   align-items: initial;
   align-content: start;
-
   .title {
     @include blue-bg;
 
     grid-area: title;
     margin: 0;
     padding: var(--space--lg) var(--space--lg);
-
     a {
       &:active,
       &:hover,
@@ -482,11 +420,9 @@ Molecule: Cards - Alternate styles
       }
     }
   }
-
   .block__title {
     color: var(--white);
   }
-
   .sorting-term {
     display: flex;
     grid-area: sorting;
@@ -494,16 +430,13 @@ Molecule: Cards - Alternate styles
     margin: 0;
     background-color: var(--dark-blue);
   }
-
   .taxonomy-terms {
     grid-area: terms;
     background-color: var(--dark-blue);
   }
-
   .body {
     grid-area: body;
   }
-
   &:focus-within {
     .title {
       a:after {
@@ -512,7 +445,6 @@ Molecule: Cards - Alternate styles
     }
   }
 }
-
 .dark-mode {
   .card.information.split-style,
   .block--card.information.split-style {
@@ -523,7 +455,6 @@ Molecule: Cards - Alternate styles
     }
   }
 }
-
 /*------------------------------------------------------------------------------
 8. Simple
 ------------------------------------------------------------------------------*/
@@ -533,12 +464,10 @@ Molecule: Cards - Alternate styles
 
   padding: 0;
   text-align: center;
-
   .title {
     @include blue-bg;
 
     padding: var(--space--lg);
-
     a {
       &:active,
       &:hover,
@@ -548,11 +477,9 @@ Molecule: Cards - Alternate styles
       }
     }
   }
-
   .body {
     padding: var(--space--lg);
   }
-
   &:focus-within {
     .title {
       a:after {
@@ -561,12 +488,10 @@ Molecule: Cards - Alternate styles
     }
   }
 }
-
 .dark-mode {
   .card.simple,
   .block--card.simple {
     @include gray-bg;
-
     .title {
       a {
         &:active,
@@ -577,7 +502,6 @@ Molecule: Cards - Alternate styles
         }
       }
     }
-
     .cta {
       &:hover,
       &:focus,
@@ -585,7 +509,6 @@ Molecule: Cards - Alternate styles
         outline-color: inherit;
       }
     }
-
     &:focus-within {
       .title a:after {
         outline-color: var(--blue--lighter--40);
@@ -593,7 +516,6 @@ Molecule: Cards - Alternate styles
     }
   }
 }
-
 /*------------------------------------------------------------------------------
 9. Solid round
 ------------------------------------------------------------------------------*/
@@ -601,22 +523,18 @@ Molecule: Cards - Alternate styles
 .block--card.solid-round {
   border-radius: var(--space--2xl);
   box-shadow: none;
-
   a {
     &:after {
       border-radius: var(--space--2xl);
     }
   }
-
   .title {
     padding: 0;
-
     .block__title {
       padding: var(--space--lg) var(--space--lg) 0;
       font-weight: var(--font-weight--black);
     }
   }
-
   .image {
     position: absolute;
     right: 0;
@@ -637,26 +555,21 @@ Molecule: Cards - Alternate styles
       opacity: 25%;
     }
   }
-
   .body {
     max-width: 23rem;
     padding: var(--space--md) var(--space--lg) 0;
-
     p {
       margin: 0 0 var(--space--lg);
       font-size: var(--font-size--sm);
     }
-
     .button.white,
     .cta.white {
       box-shadow: none;
       font-size: var(--font-size--sm);
     }
   }
-
   &.blue {
     background-color: var(--blue--lighter--40);
-
     .title {
       .block__title {
         a {
@@ -666,7 +579,6 @@ Molecule: Cards - Alternate styles
     }
     .body {
       color: var(--blue--darker--40);
-
       a.button.white,
       .cta.white {
         color: var(--blue);
@@ -678,7 +590,6 @@ Molecule: Cards - Alternate styles
       }
     }
   }
-
   &.green {
     background-color: var(--light-green--lighter--40);
     .title {
@@ -690,11 +601,9 @@ Molecule: Cards - Alternate styles
     }
     .body {
       color: var(--dark-green--darker--20);
-
       a.button.white,
       .cta.white {
         color: var(--green);
-
         &:hover,
         &:focus {
           color: var(--white);
@@ -704,7 +613,17 @@ Molecule: Cards - Alternate styles
     }
   }
 }
-
+.dark-mode {
+  .card.solid-round,
+  .block--card.solid-round {
+    h2,
+    h3,
+    h4,
+    h5 {
+      color: var(--dark-blue);
+    }
+  }
+}
 /*------------------------------------------------------------------------------
 10. Tile
 ------------------------------------------------------------------------------*/
@@ -714,13 +633,11 @@ Molecule: Cards - Alternate styles
 
   padding: var(--space--md);
   border-radius: var(--space--2xl);
-
   a {
     &:after {
       border-radius: var(--space--2xl);
     }
   }
-
   &:hover {
     a {
       &:after {
@@ -729,7 +646,6 @@ Molecule: Cards - Alternate styles
       }
     }
   }
-
   .image {
     display: flex;
     order: 1;
@@ -745,24 +661,19 @@ Molecule: Cards - Alternate styles
       opacity: 25%;
     }
   }
-
   .taxonomy-term {
     border-radius: var(--border-radius--rounder);
   }
-
   .title {
     margin: 0;
     padding: 0 var(--space--xs) var(--space--xs);
     text-transform: uppercase;
-
     .block__title {
       margin: 0;
       font-size: var(--font-size--2xl);
-
       a {
         font-size: var(--font-size--2xl);
       }
-
       a {
         &:active,
         &:hover,
@@ -773,7 +684,6 @@ Molecule: Cards - Alternate styles
     }
   }
 }
-
 .dark-mode {
   .card.tile,
   .block--card.tile {
