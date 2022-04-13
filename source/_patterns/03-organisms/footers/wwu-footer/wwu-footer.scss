@@ -2,40 +2,39 @@
 Organism: Footers - Western footer
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
+@import "../../../../sass/partials/imports";
+@import "../../../00-utilities/breakpoints.scss";
 .wwu-footer {
   @include breakpoint($small) {
     -ms-grid-columns: var(--space--sm) 1fr 1fr var(--space--sm);
     -ms-grid-rows: var(--space--lg) auto auto var(--space--lg);
 
-    grid-template-areas:
-      ". ... ... ."
-      ". logo info  ."
-      ". statement icons ."
-      ". copyright copyright .";
+    grid-template-areas: ". ... ... ."
+    ". logo info  ."
+    ". statement icons ."
+    ". copyright copyright .";
     grid-template-columns: var(--space--sm) 1fr 1fr var(--space--sm);
     grid-template-rows: var(--space--lg) auto auto var(--space--lg);
     justify-items: end;
   }
   @include breakpoint($large) {
     -ms-grid-columns: calc((100vw - var(--content-area-max-width)) / 2) auto
-      auto auto calc((100vw - var(--content-area-max-width)) / 2);
+    auto auto calc((100vw - var(--content-area-max-width)) / 2);
 
     display: -ms-grid;
     display: grid;
-    grid-template-areas:
-      ". ... ... ... ."
-      ". logo statement info  ."
-      ". logo statement icons ."
-      ". copyright copyright copyright .";
+    grid-template-areas: ". ... ... ... ."
+    ". logo statement info  ."
+    ". logo statement icons ."
+    ". copyright copyright copyright .";
     grid-template-columns: calc((100vw - var(--content-area-max-width)) / 2) auto auto auto calc(
-        (100vw - var(--content-area-max-width)) / 2
-      );
+    (100vw - var(--content-area-max-width)) / 2
+    );
   }
 
   display: flex;
   flex-flow: column;
-
-  .logo {
+  wwu-logo {
     @include breakpoint($small) {
       grid-area: logo;
       -ms-grid-column: 2;
@@ -53,7 +52,6 @@ Organism: Footers - Western footer
     height: var(--logo-size);
     margin: 0 auto;
   }
-
   .tribal-lands-statement {
     @include breakpoint($small) {
       grid-area: statement;
@@ -67,12 +65,10 @@ Organism: Footers - Western footer
     margin-top: var(--sapce--sm);
     padding: 0 var(--space--md);
     text-align: center;
-
     p {
       font-weight: var(--font-weight--light);
     }
   }
-
   .western-info {
     @include breakpoint($large) {
       grid-area: info;
@@ -85,16 +81,13 @@ Organism: Footers - Western footer
     }
 
     text-align: center;
-
     a {
       font-weight: var(--font-weight--regular);
     }
-
     p {
       margin-bottom: var(--space--2xs);
     }
   }
-
   .social-media-links {
     @include breakpoint($small) {
       grid-area: icons;
@@ -108,12 +101,10 @@ Organism: Footers - Western footer
 
     justify-content: center;
     margin: 0.75rem auto;
-
     .social-icon {
       margin: var(--space--sm) 0 0 var(--space--sm);
     }
   }
-
   .copyright {
     @include breakpoint($small) {
       grid-area: copyright;
@@ -123,7 +114,6 @@ Organism: Footers - Western footer
     text-align: center;
     font-size: var(--font-size--sm);
     font-weight: var(--font-weight--light);
-
     p {
       margin: 0;
     }

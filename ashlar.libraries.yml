@@ -204,5 +204,11 @@ wwu-header:
     build/js/logo.js: {}
     build/js/pre-header.js: {}
     build/js/wwu-header.js: {}
-  dependencies:
-    - core/jquery
+wwu-footer:
+  version: 1.x
+  css:
+    theme:
+      build/css/components/wwu-footer.css: {}
+  js:
+    build/js/logo.js: {}
+    build/js/wwu-footer.js: {}
