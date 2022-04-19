@@ -28,6 +28,10 @@ input[type="submit"] {
     &:not(:focus-visible) {
       outline: none;
     }
+
+    @media (forced-colors: active) {
+      outline-offset: calc(1 * var(--border-width--lg));
+    }
   }
 
   &:active {
