@@ -57,10 +57,8 @@ input[type="radio"] {
       &:before {
         border-color: var(--blue--lighter--40);
         box-shadow: var(--shadow--soft);
-
-        @media (-ms-high-contrast: active) {
-          border-style: dotted;
-        }
+        outline: 3px dotted transparent;
+        outline-offset: calc(0.2 * var(--space--sm));
       }
     }
   }
@@ -71,6 +69,18 @@ input[type="checkbox"] {
     + label {
       &:before {
         background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/forms/check.png");
+      }
+    }
+
+    @media (forced-colors: active) {
+      border: 2px solid LinkText;
+
+      + label {
+        color: LinkText;
+
+        &::before {
+          background-color: LinkText;
+        }
       }
     }
   }
