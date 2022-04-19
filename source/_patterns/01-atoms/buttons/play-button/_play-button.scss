@@ -8,13 +8,18 @@ Atom: Buttons - Play Button
   height: var(--toggle-size--sm);
   padding: var(--space--sm) var(--space--sm) var(--space--md) var(--space--md);
   color: var(--white);
-  border-style: none;
+  border-style: solid;
+  border-color: transparent;
   border-radius: 50%;
   background-color: var(--blue);
 
   svg {
     fill: var(--white);
     width: 100%;
+
+    @media (forced-colors: active) {
+      fill: ButtonText;
+    }
   }
 
   &:active,
