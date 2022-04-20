@@ -278,6 +278,7 @@ $large: 1300px;
 
 /* f. Forms ------------------------------------------------------------------*/
 --checkbox-size: 1rem;
+--checkmark-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/forms/check.png");
 
 /*------------------------------------------------------------------------------
 5. Animation
@@ -286,4 +287,10 @@ $large: 1300px;
 --transition-speed--md: 400ms;
 --transition-speed--fast: 200ms;
 --ease--standard: ease;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --checkmark-image: url('../images/forms/check-white.png');
+  }
 }
