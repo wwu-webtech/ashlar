@@ -18,25 +18,20 @@ Atom: Tables
       background-color: $dark-rows;
     }
   }
-
   td {
     border-left-color: $light-rows;
   }
-
   th {
     background-color: $light-headers;
-
     &[colspan],
     &[rowspan] {
       background-color: $dark-headers;
     }
-
     &:after {
       background-color: $light-headers;
     }
   }
 }
-
 [class$="-bg"] table,
 table {
   --table-blue: #cce4f4;
@@ -58,10 +53,10 @@ table {
 
   @include light-gray-bg;
   @include color-table(
-    var(--table-gray),
-    var(--table-gray--darker--5),
-    var(--table-gray--darker--10),
-    var(--table-gray--darker--15)
+  var(--table-gray),
+  var(--table-gray--darker--5),
+  var(--table-gray--darker--10),
+  var(--table-gray--darker--15)
   );
 
   grid-template-columns: auto;
@@ -71,14 +66,11 @@ table {
   word-wrap: break-word;
   color: var(--black);
   border-collapse: collapse;
-
   &.fixed {
     table-layout: auto;
   }
-
   a {
     line-height: 1.2rem;
-
     &:hover,
     &:focus,
     &:active {
@@ -88,37 +80,31 @@ table {
     }
   }
 }
-
 .fixed {
   table {
     table-layout: fixed;
   }
 }
-
 caption {
   padding-bottom: var(--space--md);
   font-size: var(--font-size--sm);
   font-weight: var(--font-weight--bold);
 }
-
 tr,
 td,
 th {
   vertical-align: middle;
 }
-
 tr {
   border-top: none;
   border-right: none;
   border-bottom: none;
   border-left: none;
-
   &.even,
   &.odd {
     border-bottom: none;
   }
 }
-
 th {
   padding: var(--space--xs);
   text-align: left;
@@ -127,11 +113,9 @@ th {
   border-bottom: none;
   border-left: none;
   font-size: var(--font-size--sm);
-
   &[colspan],
   &[rowspan] {
     position: relative;
-
     &:after {
       position: absolute;
       z-index: 1;
@@ -139,7 +123,6 @@ th {
       content: "";
     }
   }
-
   &[colspan] {
     text-align: center;
     &:after {
@@ -153,7 +136,6 @@ th {
       width: var(--border-width--md);
     }
   }
-
   &[rowspan] {
     &:after {
       @include breakpoint($medium) {
@@ -168,7 +150,6 @@ th {
     }
   }
 }
-
 td {
   @include breakpoint($medium) {
     border-width: var(--border-width--md) --thicker;
@@ -181,16 +162,13 @@ td {
   border-left: solid;
   font-size: var(--font-size--sm);
   line-height: 1.45rem;
-
   &:first-of-type {
     border-left: none;
   }
-
   &:last-of-type {
     border-right: var(--border-width--md) solid var(--table-gray--lighter);
   }
 }
-
 /*------------------------------------------------------------------------------
 2. Responsive table container
 ------------------------------------------------------------------------------*/
@@ -200,7 +178,6 @@ td {
   }
 
   overflow-x: scroll;
-
   table {
     @include breakpoint($medium) {
       width: 100%;
@@ -208,7 +185,6 @@ td {
 
     width: auto;
   }
-
   caption {
     @include breakpoint($medium) {
       text-align: center;
@@ -217,86 +193,77 @@ td {
     text-align: left;
   }
 }
-
 /*------------------------------------------------------------------------------
 3. Alternates
 ------------------------------------------------------------------------------*/
 .light-blue {
   @include color-table(
-    var(--table-blue),
-    var(--table-blue--darker--5),
-    var(--table-blue--darker--10),
-    var(--table-blue--darker--15)
+  var(--table-blue),
+  var(--table-blue--darker--5),
+  var(--table-blue--darker--10),
+  var(--table-blue--darker--15)
   );
 }
-
 .lightest-gray {
   @include color-table(
-    var(--white),
-    var(--table-gray),
-    var(--table-gray--darker--5),
-    var(--table-gray--darker--10)
+  var(--white),
+  var(--table-gray),
+  var(--table-gray--darker--5),
+  var(--table-gray--darker--10)
   );
 }
-
 .align-top {
   td,
   th {
     vertical-align: top;
   }
 }
-
 .align-bottom {
   td,
   th {
     vertical-align: bottom;
   }
 }
-
 .font-size--smaller {
   td {
     padding: var(--space--2xs);
     font-size: var(--font-size--sm);
   }
-
   th {
     padding: var(--space--2xs);
     font-size: var(--font-size--md);
   }
 }
-
 /*------------------------------------------------------------------------------
 4. Dark Mode
 ------------------------------------------------------------------------------*/
 .dark-mode {
   @include color-table(
-    var(--table-gray--darker--60),
-    var(--table-gray--darker--65),
-    var(--table-gray--darker--70),
-    var(--table-gray--darker--75)
+  var(--table-gray--darker--60),
+  var(--table-gray--darker--65),
+  var(--table-gray--darker--70),
+  var(--table-gray--darker--75)
   );
-
   table {
-    &:not([class]), 
+    color: var(--white);
+    &:not([class]),
     &.lightest-gray {
       @include gray-bg;
       @include color-table(
-        var(--table-gray--darker--50),
-        var(--table-gray--darker--55),
-        var(--table-gray--darker--60),
-        var(--table-gray--darker--65)
+      var(--table-gray--darker--50),
+      var(--table-gray--darker--55),
+      var(--table-gray--darker--60),
+      var(--table-gray--darker--65)
       );
     }
-
     &.light-blue {
       @include blue-bg;
       @include color-table(
-        var(--blue),
-        var(--blue--darker--20),
-        var(--blue--darker--40),
-        var(--blue--darker--60)
+      var(--blue),
+      var(--blue--darker--20),
+      var(--blue--darker--40),
+      var(--blue--darker--60)
       );
-
       td:last-of-type {
         border-right: none;
       }
