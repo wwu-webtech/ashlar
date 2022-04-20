@@ -279,6 +279,7 @@ $large: 1300px;
 /* f. Forms ------------------------------------------------------------------*/
 --checkbox-size: 1rem;
 --checkmark-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/forms/check.png");
+--radio-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/forms/radio.png");
 
 /*------------------------------------------------------------------------------
 5. Animation
@@ -294,3 +295,10 @@ $large: 1300px;
     --checkmark-image: url('../images/forms/check-white.png');
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --radio-image: url('../images/forms/radio-white.png');
+  }
+}
+
