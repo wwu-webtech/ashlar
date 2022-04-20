@@ -73,13 +73,11 @@ input[type="checkbox"] {
     }
 
     @media (forced-colors: active) {
-      border: 2px solid LinkText;
+      border: var(--border-width--sm) solid CanvasText;
 
       + label {
-        color: LinkText;
-
-        &::before {
-          background-color: LinkText;
+        &:before {
+          background-color: CanvasText;
         }
       }
     }
