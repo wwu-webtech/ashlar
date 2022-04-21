@@ -32,6 +32,14 @@ Atom: Icons - Social Media Icons
   &:focus,
   &:hover {
     background: var(--dark-blue);
+
+    @media (forced-colors: active) {
+      background-color: LinkText;
+
+      svg {
+        fill: Canvas;
+      }
+    }
   }
 
   &:focus {
@@ -39,7 +47,6 @@ Atom: Icons - Social Media Icons
 
     @media (forced-colors: active) {
       outline-color: LinkText;
-      outline-offset: calc(.5 * var(--space--xs));
     }
   }
 
