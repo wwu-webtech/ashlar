@@ -22,6 +22,10 @@ Atom: Icons - My Western Icons
     @media print {
       fill: var(--black);
     }
+
+    @media (forced-colors: active) {
+      fill: LinkText;
+    }
   }
 }
 /*------------------------------------------------------------------------------
