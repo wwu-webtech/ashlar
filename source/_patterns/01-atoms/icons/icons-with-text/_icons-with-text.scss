@@ -10,6 +10,7 @@ Atom: Icons - Icons with Text
   justify-content: center;
   width: var(--toggle-size--lg);
   height: var(--toggle-size--lg);
+  border: calc(.75 * var(--space--2xs)) solid transparent;
   text-align: center;
   text-decoration: none;
   font-family: var(--font--condensed);
@@ -100,5 +101,25 @@ Atom: Icons - Icons with Text
 .font--hyperlegible {
   .icon-with-text {
     font-family: var(--font--hyperlegible);
+  }
+}
+
+@media (forced-colors: active) {
+ .icon-with-text, 
+ .icon-with-text[class*='-bg'],
+ .dark-mode .icon-with-text, 
+ .dark-mode .icon-with-text[class*='-bg'] { 
+    &:hover,
+    &:focus,
+    &:active {
+      forced-color-adjust: none;
+      background-image: none;
+      background-color: LinkText;
+      color: Canvas;
+    }
+
+    &:focus {
+      outline-color: LinkText;
+    }
   }
 }
