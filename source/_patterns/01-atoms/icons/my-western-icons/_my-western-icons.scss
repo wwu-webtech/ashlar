@@ -27,6 +27,19 @@ Atom: Icons - My Western Icons
       fill: LinkText;
     }
   }
+
+  &:hover,
+  &:focus,
+  &:active {
+    @media (forced-colors: active) {
+      outline-color: LinkText;
+      text-decoration-line: none;
+      
+      svg {
+        fill: Canvas;
+      }
+    }
+  }
 }
 /*------------------------------------------------------------------------------
 1. Dark mode
