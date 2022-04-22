@@ -19,15 +19,10 @@ Atom: Text - Taxonomy Terms
   transition: background-size var(--transition-speed--fast)
     cubic-bezier(0.33, 0.66, 0.66, 1);
   color: var(--white);
+  border: var(--border-width--sm) solid transparent;
   font-size: var(--font-size--sm);
   font-weight: var(--font-weight--bold);
   font-display: fallback;
-
-  &:active,
-  &:focus,
-  &:hover {
-    text-decoration: none;
-  }
 
   .material-icons {
     position: relative;
@@ -36,9 +31,26 @@ Atom: Text - Taxonomy Terms
   }
 }
 
-a.taxonomy-term {
+a.taxonomy-term, 
+a.pronouns, 
+a.job-title {
   text-decoration: none;
   border-bottom: solid var(--blue--lighter--60) var(--border-width--lg);
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+    
+    @media (forced-colors: active) {
+      forced-color-adjust: none;
+      background-image: none;
+      color: Canvas;
+      background-color: LinkText;
+      border-bottom-color: LinkText;
+      outline-color: LinkText;
+    }
+  }
 
   &:visited {
     color: var(--purple--lighter--80);
