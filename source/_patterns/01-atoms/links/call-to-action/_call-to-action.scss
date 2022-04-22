@@ -321,21 +321,20 @@ a.button.button.button,
 }
 
 @media (forced-colors: active) {
+  /* enforce background/color/border unsets, rather than duplicate queries for each cta variation */
   .cta.cta.cta.cta,
   .button.button.button.button {
     transition: none;
     color: LinkText;
     background: Canvas;
-    border-color: LinkText;
+    border-color: LinkText !important;
 
     &:hover,
     &:focus,
     &:active {
       forced-color-adjust: none;
-      /* enforce background/color/border unset, rather than duplicate queries for each cta variation */
       background: LinkText !important; 
       color: Canvas !important;
-      border-color: LinkText !important;
     }
 
     &:focus {
