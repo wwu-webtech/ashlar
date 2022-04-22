@@ -11,6 +11,9 @@ blockquote {
   margin: var(--space--md) 0;
   padding: var(--space--md);
   line-height: 1.5em;
+  border-width: var(--border-width--sm);
+  border-style: solid;
+  border-color: transparent;
 }
 
 .pullquote,
