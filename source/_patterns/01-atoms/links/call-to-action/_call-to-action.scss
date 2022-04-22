@@ -16,12 +16,19 @@ a.button.button.button,
   text-align: center;
   text-decoration: none;
   color: var(--white);
+  border-width: var(--border-width--md);
+  border-style: solid;
+  border-color: transparent;
   border-radius: var(--border-radius--roundest);
   outline-offset: calc(-1 * var(--border-width--lg));
   background: var(--blue);
   box-shadow: var(--shadow--soft);
   font-size: var(--font-size--md);
   line-height: 1;
+
+  @media (forced-colors: active) {
+    outline-offset: var(--border-width--lg);
+  }
 
   .material-icons {
     position: relative;
@@ -309,6 +316,30 @@ a.button.button.button,
     @media print {
       content: " [" attr(href) "] ";
       font-size: 10pt;
+    }
+  }
+}
+
+@media (forced-colors: active) {
+  .cta.cta.cta.cta,
+  .button.button.button.button {
+    transition: none;
+    color: LinkText;
+    background: Canvas;
+    border-color: LinkText;
+
+    &:hover,
+    &:focus,
+    &:active {
+      forced-color-adjust: none;
+      /* enforce background/color/border unset, rather than duplicate queries for each cta variation */
+      background: LinkText !important; 
+      color: Canvas !important;
+      border-color: LinkText !important;
+    }
+
+    &:focus {
+      outline-color: LinkText;
     }
   }
 }
