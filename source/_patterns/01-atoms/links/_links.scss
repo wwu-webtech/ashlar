@@ -32,6 +32,14 @@ a {
     background-image: var(--gradient--vertical--light-blue);
     background-size: 100% 100%;
 
+    @media (forced-colors: active) {
+      forced-color-adjust: none;
+      color: Canvas;
+      background-color: LinkText;
+      background-image: none;
+      outline-color: LinkText;
+   }
+
     &:visited {
       color: var(--dark-blue);
     }
