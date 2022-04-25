@@ -18,17 +18,15 @@ Molecule: Charts - Org Chart
   color: var(--black);
   background: var(--chart-background-color);
   font-size: var(--font-size--sm);
-
   h2,
   h3,
   h4,
   h5,
   h6 {
-    font-size: var(--font-size--regular);
     color: var(--black);
+    font-size: var(--font-size--regular);
     font-weight: var(--font-weight--regular);
   }
-
   ul {
     position: relative;
     display: flex;
@@ -37,10 +35,8 @@ Molecule: Charts - Org Chart
     margin-left: var(--chart-spacing);
     padding: 0;
     list-style: none;
-
     li {
       position: relative;
-
       span,
       a,
       h2,
@@ -59,31 +55,28 @@ Molecule: Charts - Org Chart
         text-align: center;
         text-decoration: none;
       }
-
       & > span,
       & > h2 span,
       & > h3 span,
       & > h4 span,
       & > h5 span,
       & > h6 span {
-        background: var(--gray--lighter--60);
         margin-top: var(--chart-spacing);
         margin-left: var(--chart-spacing);
         padding: calc(var(--chart-spacing) / 2);
+        background: var(--gray--lighter--60);
       }
-
       & > a,
       & > h2 a,
       & > h3 a,
       & > h4 a,
       & > h5 a,
       & > h6 a {
-        color: var(--white);
-        background-color: var(--blue);
         margin-top: var(--chart-spacing);
         margin-left: var(--chart-spacing);
         padding: calc(var(--chart-spacing) / 2);
-
+        color: var(--white);
+        background-color: var(--blue);
         &:hover,
         &:focus,
         &:active {
@@ -91,17 +84,24 @@ Molecule: Charts - Org Chart
           outline-offset: calc(-1 * var(--border-width--lg));
         }
       }
-
       &.dark {
-        & > span {
-          background: var(--gray);
+        & > span,
+        & > h2 span,
+        & > h3 span,
+        & > h4 span,
+        & > h5 span,
+        & > h6 span {
           color: var(--white);
+          background: var(--gray);
         }
-
-        & > a {
+        & > a,
+        & > h2 a,
+        & > h3 a,
+        & > h4 a,
+        & > h5 a,
+        & > h6 a {
           color: var(--white);
           background-color: var(--dark-blue);
-
           &:hover,
           &:focus,
           &:active {
@@ -109,16 +109,23 @@ Molecule: Charts - Org Chart
           }
         }
       }
-
       &.light {
-        & > span {
+        & > span,
+        & > h2 span,
+        & > h3 span,
+        & > h4 span,
+        & > h5 span,
+        & > h6 span {
           background: var(--gray--lighter--80);
         }
-
-        & > a {
-          background-color: var(--blue--lighter--40);
+        & > a,
+        & > h2 a,
+        & > h3 a,
+        & > h4 a,
+        & > h5 a,
+        & > h6 a {
           color: var(--dark-blue--darker--60);
-
+          background-color: var(--blue--lighter--40);
           &:hover,
           &:focus,
           &:active {
@@ -128,7 +135,6 @@ Molecule: Charts - Org Chart
         }
       }
     }
-
     &.level-sub-a {
       @include breakpoint($medium) {
         display: grid;
@@ -138,7 +144,6 @@ Molecule: Charts - Org Chart
 
       margin-left: 0;
     }
-
     &.level-a {
       @include breakpoint($medium) {
         display: grid;
@@ -147,10 +152,8 @@ Molecule: Charts - Org Chart
       }
 
       margin-left: 0;
-
       .item-level-a {
         margin-bottom: var(--chart-spacing);
-
         > span,
         > a {
           @include breakpoint($medium) {
@@ -163,7 +166,6 @@ Molecule: Charts - Org Chart
         }
       }
     }
-
     &.level-b {
       @include breakpoint($medium) {
         display: grid;
@@ -173,7 +175,6 @@ Molecule: Charts - Org Chart
       }
 
       margin-left: 0;
-
       .item-level-b {
         > span > a {
           max-width: none;
@@ -182,7 +183,6 @@ Molecule: Charts - Org Chart
         }
       }
     }
-
     &.level-c {
       @include breakpoint($medium) {
         .level-c {
@@ -193,7 +193,6 @@ Molecule: Charts - Org Chart
       }
     }
   }
-
   /* LINES */
   .item-level-b,
   .item-level-c,
@@ -207,7 +206,6 @@ Molecule: Charts - Org Chart
   .item-level-k {
     /* vertical bar for nested items */
     border-left: solid var(--chart-border-width) var(--chart-line-color);
-
     /* horizontal bar for nested items */
     > span:before,
     > h2 span:before,
@@ -232,7 +230,6 @@ Molecule: Charts - Org Chart
       border-top: solid var(--chart-border-width) var(--chart-line-color);
       background: transparent;
     }
-
     /* mask vertical bar for end items */
     &:last-of-type {
       > span:before,
@@ -251,7 +248,6 @@ Molecule: Charts - Org Chart
       }
     }
   }
-
   /* mask vertical bar for end items */
   .item-level-b:last-child > .level-c:before,
   .item-level-c:last-child > .level-d:before,
@@ -300,7 +296,6 @@ Molecule: Charts - Org Chart
         transform: translate(-50%, var(--chart-spacing));
         background: var(--chart-line-color);
       }
-
       &.no-children {
         > span:before,
         > h2 span:before,
@@ -318,10 +313,8 @@ Molecule: Charts - Org Chart
         }
       }
     }
-
     .item-level-b {
       border-left: none;
-
       /* remove second level lines */
       > span:before,
       > h2 span:before,
@@ -350,7 +343,6 @@ Molecule: Charts - Org Chart
       &:last-child > .level-c:before {
         display: none;
       }
-
       /* horizontal bar for second level items */
       &:before {
         position: absolute;
@@ -362,11 +354,10 @@ Molecule: Charts - Org Chart
         content: "";
         background: var(--chart-line-color);
       }
-
       &:first-child {
         &:before {
           left: calc(
-            (var(--chart-spacing) / 2) + (var(--chart-border-width) / 2) + 50%
+          (var(--chart-spacing) / 2) + (var(--chart-border-width) / 2) + 50%
           );
           display: block;
           width: 50%;
@@ -375,25 +366,22 @@ Molecule: Charts - Org Chart
           background: var(--chart-line-color);
         }
       }
-
       &:last-child {
         &:before {
           display: block;
           width: calc(
-            (var(--chart-spacing) / 2) + (var(--chart-border-width) / 2) + 50%
+          (var(--chart-spacing) / 2) + (var(--chart-border-width) / 2) + 50%
           );
           height: var(--chart-border-width);
           content: "";
           background: var(--chart-line-color);
         }
       }
-
       &:only-child {
         &:before {
           display: none;
         }
       }
-
       /* vertical bar for second level items */
       > span:before,
       > h2 span:before,
@@ -427,7 +415,7 @@ Molecule: Charts - Org Chart
         height: var(--chart-spacing);
         content: "";
         transform: translate(
-          (calc(var(--chart-spacing) / -2) + (var(--chart-border-width) / 2))
+        (calc(var(--chart-spacing) / -2) + (var(--chart-border-width) / 2))
         );
         border: none;
         background: var(--chart-line-color);
@@ -435,28 +423,23 @@ Molecule: Charts - Org Chart
     }
   }
 }
-
 /*------------------------------------------------------------------------------
 1. Dark mode
 ------------------------------------------------------------------------------*/
 .dark-mode {
   .org-chart {
     background: var(--chart-background-color--dark-mode);
-
     a {
       color: var(--white);
-
       &:active,
       &:hover,
       &:focus {
         color: var(--dark-blue--darker--60);
       }
     }
-
     .light {
       & > a {
         color: var(--dark-blue--darker--60);
-
         &:active,
         &:hover,
         &:focus {
@@ -465,7 +448,6 @@ Molecule: Charts - Org Chart
         }
       }
     }
-
     .item-level-b,
     .item-level-c,
     .item-level-d,
@@ -493,7 +475,6 @@ Molecule: Charts - Org Chart
         }
       }
     }
-
     .item-level-b:last-child > .level-c:before,
     .item-level-c:last-child > .level-d:before,
     .item-level-d:last-child > .level-e:before,
@@ -505,7 +486,6 @@ Molecule: Charts - Org Chart
     .item-level-j:last-child > .level-k:before {
       background: var(--chart-background-color--dark-mode);
     }
-
     .item-level-b {
       > span:before,
       > h2 span:before,
