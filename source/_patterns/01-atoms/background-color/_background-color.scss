@@ -4,6 +4,7 @@ Atom: Background Colors
 1. Classes
 2. Dark mode
 3. Print styles
+4. Forced colors
 ------------------------------------------------------------------------------*/
 .pattern-lab-bg {
   padding: var(--space--md);
@@ -120,6 +121,69 @@ Atom: Background Colors
     }
     .block--beyond-basics-block {
       padding: 0.8rem;
+    }
+  }
+}
+/*------------------------------------------------------------------------------
+4. Forced colors mode
+------------------------------------------------------------------------------*/
+@media (forced-colors: active) {
+  div[class*="-bg"] {
+    a,
+    a.patternLink {
+      &:hover,
+      &:focus,
+      &:active {
+        forced-color-adjust: none;
+        color: Canvas;
+        background-color: LinkText;
+        background-image: none;
+        outline-color: LinkText;
+      }
+    }
+
+    .play-button {
+      svg {
+        fill: ButtonText;
+      }
+  
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: ButtonText;
+        outline-color: ButtonText;
+        border-color: ButtonText;
+  
+        svg {
+          fill: ButtonFace;
+        }
+      }
+    }
+
+    .social-icon {
+      svg {
+        fill: LinkText;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: LinkText;
+        
+        svg {
+          fill: Canvas;
+        }
+      }
+    }
+
+    table {
+      a {
+        &:hover,
+        &:focus,
+        &:active {
+          background-image: none;
+        }
+      }
     }
   }
 }
