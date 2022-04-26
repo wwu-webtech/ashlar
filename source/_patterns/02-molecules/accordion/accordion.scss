@@ -92,6 +92,10 @@ Borders only added to accordions without custom background classes added
           .material-icons {
             color: inherit;
           }
+
+          @media (forced-colors: active) {
+            outline-offset: calc(-2 * var(--border-width--md));
+          }
         }
   
         .material-icons {
