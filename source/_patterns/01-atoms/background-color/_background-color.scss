@@ -182,6 +182,8 @@ Atom: Background Colors
         &:focus,
         &:active {
           background-image: none;
+          color: Canvas;
+          outline-color: LinkText;
         }
       }
     }
