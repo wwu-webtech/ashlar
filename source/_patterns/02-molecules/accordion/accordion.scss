@@ -50,52 +50,68 @@ Borders only added to accordions without custom background classes added
 .accordion-set {
   margin-bottom: var(--space--md);
 
-  .title {
-    margin: 0;
-    padding-bottom: 0;
-    font-size: var(--font-size--md);
-    font-weight: var(--font-weight--semibold);
+  .item {
+    border-top: transparent solid var(--border-width--lg);
+    border-right: transparent solid var(--border-width--lg);
+    border-left: transparent solid var(--border-width--lg);
 
-    .expand {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      margin-bottom: 0;
-      padding: var(--space--sm);
-      text-align: left;
-      text-decoration: none;
-      color: inherit;
-      border: var(--border-width--md) solid transparent;
-      border-radius: 0;
-      background: none;
-      cursor: default;
-
-      &:active {
-        transform: none;
-      }
-
-      &:focus {
-        color: var(--white);
-        outline-color: var(--white);
-        outline-offset: calc(-1 * var(--border-width--md));
-        background-color: var(--blue);
-
-        .material-icons {
-          color: inherit;
-        }
-      }
-
-      .material-icons {
-        margin-right: var(--space--sm);
-        font-size: var(--icon-size--sm);
-      }
+    &:last-of-type {
+      border-bottom: transparent solid var(--border-width--lg);
     }
 
-    & + .content {
-      display: none;
-      margin-top: var(--space--sm);
-      padding: 0 var(--space--md) var(--space--md) var(--space--md);
-      word-wrap: break-word;
+    .title {
+      margin: 0;
+      padding-bottom: 0;
+      font-size: var(--font-size--md);
+      font-weight: var(--font-weight--semibold);
+  
+      .expand {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 0;
+        padding: var(--space--sm);
+        text-align: left;
+        text-decoration: none;
+        color: inherit;
+        border: none;
+        border-radius: 0;
+        background: none;
+        cursor: default;
+  
+        &:active {
+          transform: none;
+        }
+  
+        &:focus {
+          color: var(--white);
+          outline-color: var(--white);
+          outline-offset: calc(-1 * var(--border-width--md));
+          background-color: var(--blue);
+  
+          .material-icons {
+            color: inherit;
+          }
+        }
+  
+        .material-icons {
+          margin-right: var(--space--sm);
+          font-size: var(--icon-size--sm);
+        }
+
+        &[role="button"] {
+          @media (forced-colors: active) {
+             color: ButtonText;
+          }
+        }
+      }
+  
+      & + .content {
+        display: none;
+        margin-top: var(--space--sm);
+        padding: 0 var(--space--md) var(--space--md) var(--space--md);
+        word-wrap: break-word;
+      }
     }
   }
 }
