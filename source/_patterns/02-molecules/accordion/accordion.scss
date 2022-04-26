@@ -65,7 +65,7 @@ Borders only added to accordions without custom background classes added
       text-align: left;
       text-decoration: none;
       color: inherit;
-      border: none;
+      border: var(--border-width--md) solid transparent;
       border-radius: 0;
       background: none;
       cursor: default;
