@@ -13,7 +13,7 @@ input[type="radio"] {
   &:checked {
     + label {
       &:before {
-        background-image: var(--radio-image);
+        background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/forms/radio.png");
       }
     }
   }

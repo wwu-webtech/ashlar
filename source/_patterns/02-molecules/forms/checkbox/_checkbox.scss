@@ -68,7 +68,7 @@ input[type="checkbox"] {
   &:checked {
     + label {
       &:before {
-        background-image: var(--checkmark-image);
+        background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/forms/check.png");
       }
     }
 
