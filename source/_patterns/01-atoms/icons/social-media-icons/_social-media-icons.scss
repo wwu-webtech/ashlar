@@ -43,11 +43,8 @@ Atom: Icons - Social Media Icons
   }
 
   &:focus {
-    outline: dotted var(--border-width--md);
-
-    @media (forced-colors: active) {
-      outline-color: LinkText;
-    }
+    outline-style: dotted; 
+    outline-width: var(--border-width--md);
   }
 
   &.medium {
