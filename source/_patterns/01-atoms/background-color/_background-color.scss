@@ -128,14 +128,26 @@ Atom: Background Colors
 4. Forced colors mode
 ------------------------------------------------------------------------------*/
 @media (forced-colors: active) {
-  div[class*="-bg"] {
+  .black-bg,
+  .gray-bg,
+  .light-gray-bg,
+  .lightest-gray-bg,
+  .dark-blue-bg,
+  .darkest-blue-bg,
+  .blue-bg,
+  .light-blue-bg,
+  .lightest-blue-bg,
+  .dark-green-bg,
+  .green-bg,
+  .light-green-bg,
+  .dark-blue-gradient-bg,
+  .blue-gradient-bg {
     a,
     a.patternLink {
       &:hover,
       &:focus,
       &:active {
         background-image: none;
-        outline-color: LinkText;
       }
     }
 
@@ -148,7 +160,6 @@ Atom: Background Colors
       &:focus,
       &:active {
         background-color: ButtonText;
-        outline-color: ButtonText;
         border-color: ButtonText;
   
         svg {
@@ -179,8 +190,6 @@ Atom: Background Colors
         &:focus,
         &:active {
           background-image: none;
-          color: Canvas;
-          outline-color: LinkText;
         }
       }
     }
