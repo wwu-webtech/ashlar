@@ -134,9 +134,6 @@ Atom: Background Colors
       &:hover,
       &:focus,
       &:active {
-        forced-color-adjust: none;
-        color: Canvas;
-        background-color: LinkText;
         background-image: none;
         outline-color: LinkText;
       }
