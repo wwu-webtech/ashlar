@@ -10,7 +10,7 @@ Atom: Icons - Icons with Text
   justify-content: center;
   width: var(--toggle-size--lg);
   height: var(--toggle-size--lg);
-  border: calc(.75 * var(--space--2xs)) solid transparent;
+  border: var(--border-width--sm) solid transparent;
   text-align: center;
   text-decoration: none;
   font-family: var(--font--condensed);
@@ -112,14 +112,14 @@ Atom: Icons - Icons with Text
     &:hover,
     &:focus,
     &:active {
-      forced-color-adjust: none;
-      background-image: none;
-      background-color: LinkText;
-      color: Canvas;
-    }
+      border: calc(2 * var(--border-width--sm)) solid transparent;
 
-    &:focus {
-      outline-color: LinkText;
+      @supports (forced-color-adjust: none) {
+        forced-color-adjust: none;
+        background-image: none;
+        background-color: LinkText;
+        color: Canvas;
+      }
     }
   }
 }
