@@ -46,7 +46,8 @@ a {
   }
 
   &:focus {
-    outline: dotted var(--border-width--md);
+    outline-style: dotted;
+    outline-width: var(--border-width--md);
     outline-offset: var(--border-width--md);
   }
 
