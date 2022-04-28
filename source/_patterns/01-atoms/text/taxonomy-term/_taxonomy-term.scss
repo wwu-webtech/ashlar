@@ -43,12 +43,17 @@ a.job-title {
     text-decoration: none;
     
     @media (forced-colors: active) {
-      forced-color-adjust: none;
       background-image: none;
-      color: Canvas;
-      background-color: LinkText;
-      border-bottom-color: LinkText;
+      border-bottom-width: calc(1.5 * var(--border-width--lg));
       outline-color: LinkText;
+      border-bottom-color: LinkText;
+      
+      @supports (forced-color-adjust: none) {
+        forced-color-adjust: none;
+        border-bottom-width: var(--border-width--lg);
+        background-color: LinkText;
+        color: Canvas;
+      }
     }
   }
 
