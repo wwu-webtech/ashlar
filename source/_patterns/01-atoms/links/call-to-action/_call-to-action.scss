@@ -26,10 +26,6 @@ a.button.button.button,
   font-size: var(--font-size--md);
   line-height: 1;
 
-  @media (forced-colors: active) {
-    outline-offset: var(--border-width--lg);
-  }
-
   .material-icons {
     position: relative;
     top: 2px;
@@ -325,20 +321,21 @@ a.button.button.button,
   .cta.cta.cta.cta,
   .button.button.button.button {
     transition: none;
-    color: LinkText;
-    background: Canvas;
     border-color: LinkText !important;
-
+    
     &:hover,
     &:focus,
     &:active {
-      forced-color-adjust: none;
-      background: LinkText !important; 
-      color: Canvas !important;
-    }
+      border-width: var(--border-width--lg);
+      margin: -(calc(var(--border-width--lg) - var(--border-width--md)));
+      /* margin-bottom: needs work */
+      outline-offset: var(--border-width--lg);
 
-    &:focus {
-      outline-color: LinkText;
+     @supports (forced-color-adjust: none) {
+        forced-color-adjust: none;
+        background: LinkText !important; 
+        color: Canvas !important;
+      }
     }
   }
 }
