@@ -326,16 +326,15 @@ a.button.button.button,
     &:hover,
     &:focus,
     &:active {
-      border-width: var(--border-width--lg);
-      margin: -(calc(var(--border-width--lg) - var(--border-width--md)));
-      /* margin-bottom: needs work */
-      outline-offset: var(--border-width--lg);
-
-     @supports (forced-color-adjust: none) {
+      @supports (forced-color-adjust: none) {
         forced-color-adjust: none;
         background: LinkText !important; 
         color: Canvas !important;
       }
+    }
+
+    &:focus {
+      outline-offset: calc(1.5 * var(--border-width--md));
     }
   }
 }
