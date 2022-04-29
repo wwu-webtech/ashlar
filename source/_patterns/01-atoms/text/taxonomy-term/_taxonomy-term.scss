@@ -41,18 +41,16 @@ a.job-title {
   &:focus,
   &:active {
     text-decoration: none;
+    outline-offset: var(--border-width--md);
     
     @media (forced-colors: active) {
-      background-image: none;
-      border-bottom-width: calc(1.5 * var(--border-width--lg));
-      outline-color: LinkText;
-      border-bottom-color: LinkText;
-      
       @supports (forced-color-adjust: none) {
         forced-color-adjust: none;
-        border-bottom-width: var(--border-width--lg);
+        background-image: none;
         background-color: LinkText;
         color: Canvas;
+        border-bottom: solid LinkText var(--border-width--lg);
+        outline-color: LinkText;
       }
     }
   }
