@@ -32,13 +32,6 @@ a {
     background-image: var(--gradient--vertical--light-blue);
     background-size: 100% 100%;
 
-    @media (forced-colors: active) {
-      background-image: none;
-      text-decoration-thickness: calc(1.5 * var(--border-width--md));
-      text-underline-offset: .1175rem;
-      outline-offset: calc(1.5 * var(--border-width--md));
-   }
-
     &:visited {
       color: var(--dark-blue);
     }
@@ -49,6 +42,20 @@ a {
     outline-width: var(--border-width--md);
     outline-offset: var(--border-width--md);
   }
+
+  @media (forced-colors: active) {
+    &:hover,
+    &:focus,
+    &:active {
+      outline-style: solid;
+      outline-width: var(--border-width--md);
+      outline-offset: calc(1.5 * var(--border-width--md));
+    }
+
+    &:focus {
+      outline-style: dotted;
+    }
+ }
 
   &[target="_blank"],
   &[target="blank"] {
