@@ -45,13 +45,18 @@ a.button.button.button,
   &:focus,
   &:hover {
     color: var(--white);
-    outline-color: inherit;
+    outline: var(--border-width--md) solid transparent;
     background: var(--dark-blue--darker--40);
     box-shadow: var(--shadow--soft--hover);
-
+  
     &:visited {
       color: var(--white);
     }
+  }
+
+  &:focus {
+    outline-color: inherit;
+    outline-style: dotted;
   }
 
   &.square {
@@ -335,6 +340,7 @@ a.button.button.button,
 
     &:focus {
       outline-offset: calc(1.5 * var(--border-width--md));
+      outline-color: LinkText !important;
     }
   }
 }
