@@ -2,169 +2,162 @@
 Helpers: Space
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-.standard-margin {
+.standard-margin,
+.block.standard-margin {
   margin: var(--space--sm);
 }
-
-.standard-margin--top {
+.standard-margin--top,
+.block.standard-margin--top {
   margin-top: var(--space--sm);
 }
-
-.standard-margin--right {
+.standard-margin--right,
+.block.standard-margin--right {
   margin-right: var(--space--sm);
 }
-
-.standard-margin--bottom {
+.standard-margin--bottom,
+.block.standard-margin--bottom {
   margin-bottom: var(--space--sm);
 }
-
-.standard-margin--left {
+.standard-margin--left,
+.block.standard-margin--left {
   margin-left: var(--space--sm);
 }
-
-.double-margin {
+.double-margin,
+.block.double-margin {
   margin: var(--space--md);
 }
-
-.double-margin--top {
+.double-margin--top,
+.block.double-margin--top {
   margin-top: var(--space--md);
 }
-
-.double-margin--right {
+.double-margin--right,
+.block.double-margin--right {
   margin-right: var(--space--md);
 }
-
-.double-margin--bottom {
+.double-margin--bottom,
+.block.double-margin--bottom {
   margin-bottom: var(--space--md);
 }
-
-.double-margin--left {
+.double-margin--left,
+.block.double-margin--left {
   margin-left: var(--space--md);
 }
-
-.no-margin {
+.no-margin,
+.block.no-margin {
   margin: 0;
 }
-
-.no-margin--top {
+.no-margin--top,
+.block.no-margin--top {
   margin-top: 0;
 }
-
-.no-margin--right {
+.no-margin--right,
+.block.no-margin--right {
   margin-right: 0;
 }
-
-.no-margin--bottom {
+.no-margin--bottom,
+.block.no-margin--bottom {
   margin-bottom: 0;
 }
-
-.no-margin--left {
+.no-margin--left,
+.block.no-margin--left {
   margin-left: 0;
 }
-
-.standard-padding {
+.standard-padding,
+.block.standard-padding {
   padding: var(--space--sm);
 }
-
-.standard-padding--top {
+.standard-padding--top,
+.block.standard-padding--top {
   padding-top: var(--space--sm);
 }
-
-.standard-padding--right {
+.standard-padding--right,
+.block.standard-padding--right {
   padding-right: var(--space--sm);
 }
-
-.standard-padding--bottom {
+.standard-padding--bottom,
+.block.standard-padding--bottom {
   padding-bottom: var(--space--sm);
 }
-
-.standard-padding--left {
+.standard-padding--left,
+.block.standard-padding--left {
   padding-left: var(--space--sm);
 }
-
-.double-padding {
+.double-padding,
+.block.double-padding {
   padding: var(--space--md);
 }
-
-.double-padding--top {
+.double-padding--top,
+.block.double-padding--top {
   padding-top: var(--space--md);
 }
-
-.double-padding--right {
+.double-padding--right,
+.block.double-padding--right {
   padding-right: var(--space--md);
 }
-
-.double-padding--bottom {
+.double-padding--bottom,
+.block.double-padding--bottom {
   padding-bottom: var(--space--md);
 }
-
-.double-padding--left {
+.double-padding--left,
+.block.double-padding--left {
   padding-left: var(--space--md);
 }
-
-.no-padding {
+.no-padding,
+.block.no-padding {
   padding: 0;
 }
-
-.no-padding--top {
+.no-padding--top,
+.block.no-padding--top {
   padding-top: 0;
 }
-
-.no-padding--right {
+.no-padding--right,
+.block.no-padding--right {
   padding-right: 0;
 }
-
-.no-padding--bottom {
+.no-padding--bottom,
+.block.no-padding--bottom {
   padding-bottom: 0;
 }
-
-.no-padding--left {
+.no-padding--left,
+.block.no-padding--left {
   padding-left: 0;
 }
-
 /* space creating blocks */
 .vertical-space--1x {
   @include breakpoint($medium) {
     height: var(--space--sm);
   }
 }
-
 .vertical-space--2x {
   @include breakpoint($medium) {
     height: calc(var(--space--sm) * 2);
   }
 }
-
 .vertical-space--3x {
   @include breakpoint($medium) {
     height: calc(var(--space--sm) * 3);
   }
 }
-
 .vertical-space--4x {
   @include breakpoint($medium) {
     height: calc(var(--space--sm) * 4);
   }
 }
-
 .vertical-space--5x {
   @include breakpoint($medium) {
     height: calc(var(--space--sm) * 5);
   }
 }
-
 .vertical-space--6x {
   @include breakpoint($medium) {
     height: calc(var(--space--sm) * 6);
   }
 }
-
 .vertical-space--7x {
   @include breakpoint($medium) {
     height: calc(var(--space--sm) * 7);
   }
 }
-
 .vertical-space--8x {
   @include breakpoint($medium) {
     height: calc(var(--space--sm) * 8);
