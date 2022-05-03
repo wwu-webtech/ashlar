@@ -75,6 +75,7 @@ $chart-greens: (
         width: var(--space--lg);
         height: var(--space--lg);
         margin-right: var(--space--xs);
+        border: var(--border-width--md) solid transparent;
         content: "";
       }
 
@@ -82,6 +83,12 @@ $chart-greens: (
         &:nth-of-type(#{$i}) {
           &:before {
             background: nth($chart-blues, $i);
+
+            @media (forced-colors: active) {
+              @supports (forced-color-adjust: none) {
+                forced-color-adjust: none;
+              }
+            }
           }
         }
       }
@@ -103,6 +110,12 @@ $chart-greens: (
           &:nth-of-type(#{$i}) {
             &:before {
               background: nth($chart-greens, $i);
+
+              @media (forced-colors: active) {
+                @supports (forced-color-adjust: none) {
+                  forced-color-adjust: none;
+                }
+              }
             }
           }
         }
@@ -125,6 +138,12 @@ $chart-greens: (
           &:nth-of-type(#{$i}) {
             &:before {
               background: nth($chart-light-blues, $i);
+
+              @media (forced-colors: active) {
+                @supports (forced-color-adjust: none) {
+                  forced-color-adjust: none;
+                }
+              }
             }
           }
         }
