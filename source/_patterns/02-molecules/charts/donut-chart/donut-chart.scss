@@ -12,6 +12,16 @@ $chart-blues: (
   #e3e7e9,
   #002f5e
 );
+$chart-blues-images: (
+  url('../images/charts/donut-blue-1.png'),
+  url('../images/charts/donut-blue-2.png'),
+  url('../images/charts/donut-blue-3.png'),
+  url('../images/charts/donut-blue-4.png'),
+  url('../images/charts/donut-blue-5.png'),
+  url('../images/charts/donut-blue-6.png'),
+  url('../images/charts/donut-blue-7.png'),
+  url('../images/charts/donut-blue-8.png'),
+);
 $chart-light-blues: (
   #006ebb,
   #57b8f7,
@@ -82,12 +92,10 @@ $chart-greens: (
       @for $i from 1 through length($chart-blues) {
         &:nth-of-type(#{$i}) {
           &:before {
-            background: nth($chart-blues, $i);
-
-            @media (forced-colors: active) {
-              @supports (forced-color-adjust: none) {
-                forced-color-adjust: none;
-              }
+            background: nth($chart-blues-images, $i);
+            
+            @media (forced-colors: none) {
+              background: nth($chart-blues, $i);
             }
           }
         }
