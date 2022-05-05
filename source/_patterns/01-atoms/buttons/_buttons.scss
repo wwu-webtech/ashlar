@@ -19,10 +19,12 @@ input[type="submit"] {
   &:focus {
     color: var(--white);
     background: var(--gray);
+    outline: var(--border-width--md) solid transparent;
   }
 
   &:focus {
-    outline: dotted var(--border-width--md);
+    outline-style: dotted;
+    outline-color: inherit;
     outline-offset: calc(-1 * var(--border-width--lg));
 
     &:not(:focus-visible) {
@@ -30,7 +32,7 @@ input[type="submit"] {
     }
 
     @media (forced-colors: active) {
-      outline-offset: calc(1 * var(--border-width--lg));
+      outline-offset: var(--border-width--lg);
     }
   }
 
