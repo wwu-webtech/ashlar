@@ -19,10 +19,19 @@ Molecule: Event List
     &:hover,
     &:focus-within {
       box-shadow: var(--shadow--soft--hover);
+      outline: var(--border-width--md) solid transparent;
     }
 
     &:focus-within {
-      outline: var(--border-width--md) dotted;
+      outline-style: dotted;
+      outline-color: inherit;
+    }
+
+    @media (forced-colors: active) {
+      &:hover, 
+      &:focus-within {
+        outline-color: LinkText;
+      }
     }
 
     p {
@@ -91,6 +100,7 @@ Molecule: Event List
       text-transform: uppercase;
       background-color: var(--blue);
       line-height: 1.5;
+      border: var(--border-width--sm) solid transparent;
 
       .day,
       .month {
