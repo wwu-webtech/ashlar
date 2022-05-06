@@ -164,6 +164,12 @@
       params: ["$", "window", "document", "undefined"],
       args: ["jQuery", "this", "this.document"],
     },
+    iifeNoJquery: {
+      useStrict: true,
+      trimCode: true,
+      params: ["$", "window", "document", "undefined"],
+      args: ["this", "this.document"],
+    },
     terser: {
       compress: false,
       mangle: false,
@@ -290,6 +296,29 @@
   });
 
   /**
+   * Generate JS without Drupal behaviors
+   */
+   gulp.task("js-nowrap", function (callback) {
+    pump(
+      gulp.src(config.js.src),
+      // Process each file in the source stream.
+      flatmap(function (stream, file) {
+        return pump(
+          stream,
+          // Wrap the JS in an immediately-invoked function expression.
+          iife(config.js.iifeNoJquery),
+          // Format the source.
+          terser(config.js.terser)
+        );
+      }),
+      // Flatten file path globs.
+      flatten(),
+      gulp.dest(config.js.dest),
+      callback
+    );
+  });
+
+  /**
    * Minify images.
    */
   gulp.task("images", function (callback) {
@@ -392,6 +421,20 @@
     ])
   );
 
+  /**
+   * Run js build without drupal behaviors via js-nowrap
+   */
+   gulp.task(
+    "wp-cdn",
+    gulp.parallel([
+      "sass",
+      "sassComponents",
+      "js-nowrap",
+      "images",
+      "fonts",
+    ])
+  );
+   
   /**
    * Set watch tasks.
    */
