@@ -28,10 +28,10 @@ Atom: Icons - My Western Icons
     }
   }
 
-  &:hover,
-  &:focus,
-  &:active {
-    @media (forced-colors: active) {
+  @media (forced-colors: active) {
+    &:hover,
+    &:focus,
+    &:active {
       text-decoration-line: none;
     }
   }
