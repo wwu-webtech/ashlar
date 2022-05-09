@@ -13,6 +13,7 @@ Molecule: Testimonial
 
   display: flex;
   flex-flow: column;
+  border-style: none;
 
   .image--stylized {
     @include breakpoint($medium) {
