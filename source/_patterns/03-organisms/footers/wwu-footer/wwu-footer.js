@@ -91,7 +91,7 @@ if (
               
           </li>
           <li>
-              <a href="" class="social-icon western-today">
+              <a href="https://westerntoday.wwu.edu" class="social-icon western-today">
                   <span class="visually-hidden">Western Today</span>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" aria-hidden="true">
                       <polygon points="11.8,17.5 9.4,9.5 7.1,17.5 5.2,17.5 2,6.4 4.1,6.4 6.2,14.1 8.5,6.4 10.4,6.4 12.7,14.1 14.9,6.4 16.9,6.4
