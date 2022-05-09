@@ -35,6 +35,7 @@ Molecule: Pullquote
       border-top: var(--blue) var(--border-width--lg) solid;
       border-bottom: var(--blue) var(--border-width--lg) solid;
       border-left: none;
+      border-right: none;
       background-color: initial;
 
       .block__title {
@@ -59,6 +60,7 @@ Molecule: Pullquote
       display: grid;
       width: var(--quote-icon-size);
       height: var(--quote-icon-size);
+      overflow: hidden;
       padding: var(--space--xs);
       transform: translate(-50%, -50%);
       text-align: center;
