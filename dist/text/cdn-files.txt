@@ -1,7 +1,7 @@
 # This is a list of files to be uploaded to the ashlar or wordpress cdn.  The file is used by gulp and the paths are relative to the ashlar directory. 
 # If the path contains a pipe (|) sign, that indicates that the path under ashlar differs than the path on the CDN and the Jenkins script that uses
 # this file will copy the file found at the location indcated by the path before the pipe to the path found after the pipe sign.  
-build/css/alerts.css|dist/css/alerts.css
+build/css/alerts.css
 build/css/ashlar-base.css
 build/css/normalize.css
 build/fonts/Atkinson-Hyperlegible-Bold-102a.woff2
