@@ -38,6 +38,16 @@ wwu-search {
   place-items: center;
 
   display: flex;
-  border: var(--border-width--md) solid transparent;
+  border: var(--border-width--sm) solid transparent;
   border-radius: 0;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: var(--border-width--md) solid;
+  }
+
+  &:focus {
+    outline-style: dotted;
+  }
 }
