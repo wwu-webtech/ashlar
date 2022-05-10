@@ -26,7 +26,7 @@ function ashlar_form_system_theme_settings_alter(&$form, FormStateInterface &$fo
 
   $form['theme_settings']['alert_display'] = array(
     '#type' => 'checkbox',
-    '#title' => t('Dispaly Western Alerts'),
+    '#title' => t('Display Western Alerts'),
     '#default_value' => theme_get_setting('alert_display'),
   );
 }
