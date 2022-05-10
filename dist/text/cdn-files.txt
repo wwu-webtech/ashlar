@@ -4,7 +4,7 @@
 # For instance, if the first uncommented line read 'build/css/alerts.css|dist/css/alerts.css', the script would look for build/css/alerts.css and copy it to 
 # dist/css/alerts.css on the CDN.
 # Alex W.  
-build/css/alerts.css|dist/css/alerts.css
+build/css/alerts.css
 build/css/ashlar-base.css
 build/css/normalize.css
 build/fonts/Atkinson-Hyperlegible-Bold-102a.woff2
