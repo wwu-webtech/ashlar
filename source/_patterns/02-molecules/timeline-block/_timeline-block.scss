@@ -14,6 +14,7 @@ Molecule: Text - Timeline
 
   width: 80%;
   padding: var(--space--sm);
+  border: var(--border-width--md) solid transparent;
 
   &:nth-of-type(odd) {
     @include lightest-blue-bg;
@@ -23,12 +24,14 @@ Molecule: Text - Timeline
     .timeline-heading {
       margin-right: calc(-1 * var(--space--xl));
       color: var(--white);
+      border: var(--border-width--md) solid transparent;
     }
 
     .timeline-item--highlighted {
       background-color: var(--blue--lighter--60);
       margin-left: var(--space--3xl);
       margin-right: calc(-1 * var(--space--xl));
+      border: var(--border-width--md) solid transparent;
     }
   }
 
