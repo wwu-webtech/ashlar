@@ -110,7 +110,7 @@ wwu-pre-header {
     transition: background-image var(--transition-speed--fast)
       var(--ease--standard);
     color: inherit;
-    border: none;
+    border: var(--border-width--sm) solid transparent;
     border-radius: 0;
     background: transparent;
     background-repeat: no-repeat;
@@ -120,9 +120,10 @@ wwu-pre-header {
       color: var(--dark-blue--darker--60);
       background-image: var(--gradient--vertical--light-blue);
       background-size: 100% 100%;
+      outline-offset: calc(-1.5 * var(--border-width--md));
     }
     &:active {
-      border: none;
+      border: var(--border-width--sm) solid transparent;
     }
   }
 }
@@ -134,6 +135,8 @@ wwu-pre-header {
   padding: var(--space--xs);
   width: 25rem;
   max-width: 100%;
+  border: var(--border-width--lg) solid transparent;
+
   &.closed {
     visibility: hidden;
     overflow: hidden;
@@ -153,9 +156,17 @@ wwu-pre-header {
     flex-flow: row wrap;
   }
   fieldset {
-    display: flex;
-    flex: 1 1 0;
-    flex-flow: column nowrap;
+    @include breakpoint($medium) {
+      width: 49%;
+    }
+    width: 100%;
+
+    @media (forced-colors: none) {
+      width: unset;
+      display: flex;
+      flex: 1 1 0;
+      flex-flow: column nowrap;  
+    }
     legend {
       margin: 0;
       padding: var(--space--xs);
