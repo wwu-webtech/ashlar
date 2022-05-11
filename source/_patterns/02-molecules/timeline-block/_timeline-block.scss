@@ -24,14 +24,12 @@ Molecule: Text - Timeline
     .timeline-heading {
       margin-right: calc(-1 * var(--space--xl));
       color: var(--white);
-      border: var(--border-width--md) solid transparent;
     }
 
     .timeline-item--highlighted {
       background-color: var(--blue--lighter--60);
       margin-left: var(--space--3xl);
       margin-right: calc(-1 * var(--space--xl));
-      border: var(--border-width--md) solid transparent;
     }
   }
 
@@ -56,11 +54,13 @@ Molecule: Text - Timeline
     margin-top: 0;
     padding: var(--space--sm);
     background-color: var(--blue);
+    border: var(--border-width--md) solid transparent;
   }
 
   .timeline-item--highlighted {
     padding: var(--space--sm);
     margin-bottom: var(--space--sm);
+    border: var(--border-width--md) solid transparent;
   }
 
   .material-icons {
