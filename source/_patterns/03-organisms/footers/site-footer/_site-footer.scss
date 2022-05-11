@@ -41,7 +41,7 @@ Organism: Footers - Site footer
     ". footer_bottom .";
   grid-template-columns: var(--grid-columns--sm);
   grid-template-rows: auto var(--space--sm) auto var(--space--sm) auto;
-  border: var(--border-width--md) solid transparent;
+  border: var(--border-width--sm) solid transparent;
   border-bottom: none;
 
   .block-title {
