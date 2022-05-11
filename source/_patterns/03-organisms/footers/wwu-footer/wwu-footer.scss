@@ -34,6 +34,7 @@ Organism: Footers - Western footer
 
   display: flex;
   flex-flow: column;
+  border: var(--border-width--md) solid transparent;
   wwu-logo {
     @include breakpoint($small) {
       grid-area: logo;
