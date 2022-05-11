@@ -64,6 +64,7 @@ Molecule: Charts - Org Chart
         margin-top: var(--chart-spacing);
         margin-left: var(--chart-spacing);
         padding: calc(var(--chart-spacing) / 2);
+        border: var(--border-width--md) solid transparent;
         background: var(--gray--lighter--60);
       }
       & > a,
@@ -75,6 +76,7 @@ Molecule: Charts - Org Chart
         margin-top: var(--chart-spacing);
         margin-left: var(--chart-spacing);
         padding: calc(var(--chart-spacing) / 2);
+        border: var(--border-width--md) solid transparent;
         color: var(--white);
         background-color: var(--blue);
         &:hover,
@@ -245,6 +247,10 @@ Molecule: Charts - Org Chart
       > h5 a:before,
       > h6 a:before {
         background: var(--chart-background-color);
+
+        @media (forced-colors: active) {
+           background: transparent;
+        }
       }
     }
   }
@@ -294,6 +300,7 @@ Molecule: Charts - Org Chart
         height: var(--chart-spacing);
         content: "";
         transform: translate(-50%, var(--chart-spacing));
+        border-left: var(--border-width--md) solid transparent;
         background: var(--chart-line-color);
       }
       &.no-children {
@@ -352,6 +359,7 @@ Molecule: Charts - Org Chart
         width: 100%;
         height: var(--chart-border-width);
         content: "";
+        border-top: var(--border-width--md) solid transparent;
         background: var(--chart-line-color);
       }
       &:first-child {
@@ -363,6 +371,7 @@ Molecule: Charts - Org Chart
           width: 50%;
           height: var(--chart-border-width);
           content: "";
+          border-top: var(--border-width--md) solid transparent;
           background: var(--chart-line-color);
         }
       }
@@ -374,6 +383,7 @@ Molecule: Charts - Org Chart
           );
           height: var(--chart-border-width);
           content: "";
+          border-top: var(--border-width--md) solid transparent;
           background: var(--chart-line-color);
         }
       }
@@ -417,7 +427,7 @@ Molecule: Charts - Org Chart
         transform: translate(
         (calc(var(--chart-spacing) / -2) + (var(--chart-border-width) / 2))
         );
-        border: none;
+        border-left: var(--border-width--md) solid transparent;
         background: var(--chart-line-color);
       }
     }
