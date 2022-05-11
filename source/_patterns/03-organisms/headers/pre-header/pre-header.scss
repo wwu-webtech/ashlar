@@ -49,14 +49,14 @@ wwu-pre-header {
 
       padding: var(--space--2xs);
       background-color: var(--black);
-      border: none;
+      border: var(--border-width--lg) solid transparent;
       border-radius: 0;
     }
 
     [role="separator"] {
       margin: 0;
       padding: var(--space--2xs);
-      border: none;
+      border: var(--border-width--sm) solid transparent;
       background-color: transparent;
       color: var(--white);
     }
@@ -65,13 +65,27 @@ wwu-pre-header {
       color: var(--white);
       background-color: var(--gray--darker--40);
       padding: 0;
+      border: var(--border-width--sm) solid transparent;
       cursor: pointer;
 
-      &:focus {
+      &:hover,
+      &:focus,
+      &:active {
         padding: 0;
         border: none;
-        outline: dotted var(--border-width--md);
+        outline: solid var(--border-width--md);
         outline-offset: calc(-1 * var(--border-width--md));
+        @media (forced-colors: active) {
+          outline-color: CanvasText;
+        }
+
+        .label {
+          font-weight: var(--font-weight--semibold);
+        }
+      }
+
+      &:focus {
+        outline-style: dotted;
       }
 
       &.last {
