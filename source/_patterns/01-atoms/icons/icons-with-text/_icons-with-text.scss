@@ -51,6 +51,12 @@ Atom: Icons - Icons with Text
       }
     }
   }
+
+  &:hover,
+  &:focus,
+  &:active {
+    font-weight: var(--font-weight--regular);
+  }
 }
 /*------------------------------------------------------------------------------
 1. Dark Mode
@@ -104,22 +110,15 @@ Atom: Icons - Icons with Text
   }
 }
 
-@media (forced-colors: active) {
- .icon-with-text, 
- .icon-with-text[class*='-bg'],
- .dark-mode .icon-with-text, 
- .dark-mode .icon-with-text[class*='-bg'] { 
-    &:hover,
-    &:focus,
-    &:active {
-      border: calc(2 * var(--border-width--sm)) solid transparent;
-
-      @supports (forced-color-adjust: none) {
-        forced-color-adjust: none;
-        background-image: none;
-        background-color: LinkText;
-        color: Canvas;
-      }
-    }
-  }
-}
+// @media (forced-colors: active) {
+//  .icon-with-text, 
+//  .icon-with-text[class*='-bg'],
+//  .dark-mode .icon-with-text, 
+//  .dark-mode .icon-with-text[class*='-bg'] { 
+//     &:hover,
+//     &:focus,
+//     &:active {
+//       border: calc(2 * var(--border-width--sm)) solid transparent;
+//     }
+//   }
+// }
