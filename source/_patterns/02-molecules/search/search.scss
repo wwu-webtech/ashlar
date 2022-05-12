@@ -44,7 +44,7 @@ wwu-search {
   &:hover,
   &:focus,
   &:active {
-    outline: var(--border-width--md) solid;
+    outline: var(--border-width--md) solid transparent;
   }
 
   &:focus {
