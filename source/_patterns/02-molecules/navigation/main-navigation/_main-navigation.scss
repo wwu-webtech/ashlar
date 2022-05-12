@@ -114,7 +114,12 @@ Molecule: Main navigation/ultimenu custom styles
             height: var(--border-width--lg);
             margin-top: calc(-1 * var(--border-width--lg));
             content: "";
+            border-bottom: solid var(--border-width--md) transparent;
             background: var(--light-green--lighter--20);
+
+            @media (forced-colors: active) {
+              border-bottom-width: var(--border-width--lg);
+            }
           }
         }
 
