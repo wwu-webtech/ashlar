@@ -2,6 +2,8 @@
 Organism: Pre-header
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
+@import "../../../../sass/partials/imports";
+@import "../../../00-utilities/breakpoints.scss";
 wwu-pre-header {
   position: relative;
   display: flex;
