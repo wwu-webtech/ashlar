@@ -140,6 +140,16 @@ wwu-pre-header {
       border: var(--border-width--sm) solid transparent;
     }
   }
+
+  wwu-search {
+    .submit-search {
+      &:hover,
+      &:focus,
+      &:active {
+        outline-offset: calc(-2 * var(--border-width--md))
+      }
+    }
+  }
 }
 .settings-menu {
   position: absolute;
