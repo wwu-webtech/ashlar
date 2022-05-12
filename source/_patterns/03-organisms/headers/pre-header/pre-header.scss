@@ -142,6 +142,10 @@ wwu-pre-header {
   }
 
   wwu-search {
+    input[type="search"] {
+      border-width: var(--border-width--sm);
+    }
+
     .submit-search {
       &:hover,
       &:focus,
