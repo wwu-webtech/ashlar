@@ -9,12 +9,11 @@ Molecule: Main navigation/ultimenu custom styles
   @include breakpoint($small) {
     width: 100%;
     height: inherit;
-    border-top: var(--border-width--sm) solid transparent;
   }
 
   grid-area: main-nav;
-  border: var(--border-width--sm) solid transparent;
-  border-top: solid var(--blue--darker--40) var(--border-width--sm);
+  border-bottom: calc(.4 * var(--border-width--sm)) solid transparent;
+  border-top: solid var(--blue--darker--40) calc(.4 * var(--border-width--sm));
   font-family: var(--font--condensed);
   & > .menu,
   .ultimenu--horizontal {
