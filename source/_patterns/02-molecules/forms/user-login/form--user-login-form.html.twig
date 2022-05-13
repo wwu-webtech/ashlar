@@ -4,6 +4,9 @@
  */
 #}
 <form{{ attributes }}>
-  <button class="manual-login">Manual Login</button>
-    {{ children }}
+  {{ element.cas_login_link }}
+  <button class="manual-login">Manual Login (non-Western accounts)</button>
+  {{ element.name }}
+  {{ element.pass }}
+  {{ element.actions }}
 </form>

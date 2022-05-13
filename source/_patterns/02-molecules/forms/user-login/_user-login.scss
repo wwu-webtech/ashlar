@@ -4,7 +4,7 @@ Molecule: Forms - User Login
 ------------------------------------------------------------------------------*/
 .user-login-form {
   @include breakpoint($medium) {
-    width: 75%;
+    width: var(--content-area-max-width--sm);
     justify-content: flex-start;
   }
   display: flex;
@@ -24,7 +24,6 @@ Molecule: Forms - User Login
 
   .cas-login-link {
     @extend .cta, .square;
-    order: -1;
   }
   
   .manual-login {
@@ -33,8 +32,7 @@ Molecule: Forms - User Login
 
   .textfield,
   .password,
-  .form-actions,
-  .manual-login {
+  .form-actions {
     display: none;
   }
 }
