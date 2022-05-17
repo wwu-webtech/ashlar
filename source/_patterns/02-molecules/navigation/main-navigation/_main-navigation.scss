@@ -46,6 +46,8 @@ Molecule: Main navigation/ultimenu custom styles
       &:hover,
       &:focus-within {
         background-image: var(--gradient--vertical--light-blue);
+        
+        a, 
         .expand-icon {
           color: var(--dark-blue--darker--60);
         }
