@@ -51,11 +51,13 @@ Atom: Icons - Icons with Text
       }
     }
   }
-
-  &:hover,
-  &:focus,
-  &:active {
-    font-weight: var(--font-weight--regular);
+  
+  @media (forced-colors: active) {     
+    &:hover,
+    &:focus,
+    &:active {
+      font-weight: var(--font-weight--regular);
+    }
   }
 }
 /*------------------------------------------------------------------------------

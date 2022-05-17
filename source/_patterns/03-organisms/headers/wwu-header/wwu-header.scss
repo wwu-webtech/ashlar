@@ -125,7 +125,6 @@ wwu-header {
       height: initial !important;
       padding: var(--space--2xs);
       border: none;
-      outline-color: var(--blue--lighter--60);
     }
 
     color: var(--white);
@@ -144,10 +143,15 @@ wwu-header {
     &:focus,
     &:hover {
       color: var(--dark-blue--darker--80);
+      outline-color: transparent;
 
       @media (forced-colors: active) {
         outline-offset: calc(-1 * var(--border-width--md));
       }
+    }
+
+    &:focus {
+      outline-color: var(--blue--lighter--60);
     }
   }
 }
