@@ -340,7 +340,6 @@ a.button.button.button,
 
     &:focus {
       outline-offset: calc(1.5 * var(--border-width--md));
-      outline-color: LinkText !important;
     }
   }
 }
