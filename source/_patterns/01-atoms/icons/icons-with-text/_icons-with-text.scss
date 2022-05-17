@@ -109,16 +109,3 @@ Atom: Icons - Icons with Text
     font-family: var(--font--hyperlegible);
   }
 }
-
-// @media (forced-colors: active) {
-//  .icon-with-text, 
-//  .icon-with-text[class*='-bg'],
-//  .dark-mode .icon-with-text, 
-//  .dark-mode .icon-with-text[class*='-bg'] { 
-//     &:hover,
-//     &:focus,
-//     &:active {
-//       border: calc(2 * var(--border-width--sm)) solid transparent;
-//     }
-//   }
-// }
