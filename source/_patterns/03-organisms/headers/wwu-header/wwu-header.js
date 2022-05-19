@@ -15,7 +15,7 @@ if (
     <span class="icon-text">Apply</span>
     </a>
     
-    <a class="small icon-with-text give-quick-link" href="https://wwu.edu./give">
+    <a class="small icon-with-text give-quick-link" href="https://wwu.edu/give">
     <span class="material-icons" aria-hidden="true">favorite_border</span>
     <span class="icon-text">Give</span>
     </a>
