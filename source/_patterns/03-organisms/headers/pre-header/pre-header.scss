@@ -37,9 +37,18 @@ wwu-pre-header {
     &:hover,
     &:focus {
       color: var(--dark-blue--darker--60);
-      outline-color: var(--dark-blue--darker--60);
+      outline: var(--border-width--md) solid transparent;
       outline-offset: calc(-1 * var(--border-width--md));
       background-image: var(--gradient--vertical--light-blue);
+
+      @media (forced-colors: active) {
+        outline-offset: calc(-2 * var(--border-width--md));
+      }
+    }
+
+    &:focus {
+      outline-color: var(--dark-blue--darker--60);
+      outline-style: dotted;
     }
   }
   .skip-to {
@@ -111,7 +120,6 @@ wwu-pre-header {
 
       &:focus {
         padding: var(--space--2xs);
-        border: none;
         outline: dotted var(--border-width--md);
         outline-offset: calc(-1 * var(--border-width--lg));
       }
