@@ -47,10 +47,20 @@ Molecule: Main navigation/ultimenu custom styles
       &:focus-within {
         background-image: var(--gradient--vertical--light-blue);
         
-        a, 
+        & > a,
         .expand-icon {
-          color: var(--dark-blue--darker--60);
+          color: var(--black);
         }
+
+        .menu li {
+          a:visited {
+            &:hover,
+            &:focus,
+            &:active {
+              color: var(--black);
+            }
+          } 
+        } 
       }
       & > a {
         @include breakpoint($small) {
