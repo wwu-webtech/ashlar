@@ -10,6 +10,7 @@ Atom: Icons - Icons with Text
   justify-content: center;
   width: var(--toggle-size--lg);
   height: var(--toggle-size--lg);
+  border: var(--border-width--sm) solid transparent;
   text-align: center;
   text-decoration: none;
   font-family: var(--font--condensed);
@@ -48,6 +49,14 @@ Atom: Icons - Icons with Text
       &:last-of-type {
         font-size: var(--font-size--2xl);
       }
+    }
+  }
+  
+  @media (forced-colors: active) {     
+    &:hover,
+    &:focus,
+    &:active {
+      font-weight: var(--font-weight--regular);
     }
   }
 }

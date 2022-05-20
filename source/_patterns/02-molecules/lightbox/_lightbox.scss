@@ -27,10 +27,12 @@ Molecule: Lightbox
           "... ... button"
           "content content content"
           "... cta ...";
-        width: 80%;
+        width: 84%;
+        padding: 2%;
       }
       @include breakpoint($large) {
         width: 65%;
+        padding: 3%;
       }
 
       display: grid;
@@ -40,6 +42,12 @@ Molecule: Lightbox
         "cta cta cta";
       grid-template-columns: 33% 34% 33%;
       width: 100%;
+      border: calc(2.5 * var(--border-width--lg)) solid transparent;
+      padding: 5%;
+
+      @media (forced-colors: active) {
+         background-color: Canvas;
+      }
     }
 
     &-close-dialog {
@@ -47,7 +55,7 @@ Molecule: Lightbox
       align-self: start;
       justify-self: end;
       margin-bottom: var(--space--sm);
-      border: 0;
+      border: var(--border-width--md) solid transparent;
       outline-color: var(--white);
 
       .material-icons {

@@ -39,6 +39,7 @@ styling happens in Molecules - Navigation - Main navigation.
         position: absolute;
         z-index: 2;
         display: block !important;
+        margin-top: -2px;
       }
 
       visibility: visible;

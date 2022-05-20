@@ -12,6 +12,16 @@ $chart-blues: (
   #e3e7e9,
   #002f5e
 );
+$chart-blues-images: (
+  url('../images/charts/donut-blue-1.png'),
+  url('../images/charts/donut-blue-2.png'),
+  url('../images/charts/donut-blue-3.png'),
+  url('../images/charts/donut-blue-4.png'),
+  url('../images/charts/donut-blue-5.png'),
+  url('../images/charts/donut-blue-6.png'),
+  url('../images/charts/donut-blue-7.png'),
+  url('../images/charts/donut-blue-8.png'),
+);
 $chart-light-blues: (
   #006ebb,
   #57b8f7,
@@ -22,6 +32,17 @@ $chart-light-blues: (
   #42a6e8,
   #e3e7e9
 );
+
+$chart-light-blues-images: (
+  url('../images/charts/donut-light-blue-1.png'),
+  url('../images/charts/donut-light-blue-2.png'),
+  url('../images/charts/donut-light-blue-3.png'),
+  url('../images/charts/donut-light-blue-4.png'),
+  url('../images/charts/donut-light-blue-5.png'),
+  url('../images/charts/donut-light-blue-6.png'),
+  url('../images/charts/donut-light-blue-7.png'),
+  url('../images/charts/donut-blue-7.png'),
+);
 $chart-greens: (
   #006b3f,
   #c2dc2c,
@@ -31,6 +52,16 @@ $chart-greens: (
   #e4edb3,
   #9fc812,
   #f5f6f7
+);
+$chart-greens-images: (
+  url('../images/charts/donut-green-1.png'),
+  url('../images/charts/donut-green-2.png'),
+  url('../images/charts/donut-green-3.png'),
+  url('../images/charts/donut-green-4.png'),
+  url('../images/charts/donut-green-5.png'),
+  url('../images/charts/donut-green-6.png'),
+  url('../images/charts/donut-green-7.png'),
+  url('../images/charts/donut-green-8.png'),
 );
 
 .donut-chart {
@@ -75,13 +106,18 @@ $chart-greens: (
         width: var(--space--lg);
         height: var(--space--lg);
         margin-right: var(--space--xs);
+        border: var(--border-width--md) solid transparent;
         content: "";
       }
 
       @for $i from 1 through length($chart-blues) {
         &:nth-of-type(#{$i}) {
           &:before {
-            background: nth($chart-blues, $i);
+            background: nth($chart-blues-images, $i);
+            
+            @media (forced-colors: none) {
+              background: nth($chart-blues, $i);
+            }
           }
         }
       }
@@ -102,7 +138,11 @@ $chart-greens: (
         @for $i from 1 through length($chart-greens) {
           &:nth-of-type(#{$i}) {
             &:before {
-              background: nth($chart-greens, $i);
+              background: nth($chart-greens-images, $i);
+              
+              @media (forced-colors: none) {
+                background: nth($chart-greens, $i);
+              }
             }
           }
         }
@@ -124,7 +164,11 @@ $chart-greens: (
         @for $i from 1 through length($chart-light-blues) {
           &:nth-of-type(#{$i}) {
             &:before {
-              background: nth($chart-light-blues, $i);
+              background: nth($chart-light-blues-images, $i);
+              
+              @media (forced-colors: none) {
+                background: nth($chart-light-blues, $i);
+              }
             }
           }
         }

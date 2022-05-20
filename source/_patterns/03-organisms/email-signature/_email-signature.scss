@@ -10,7 +10,7 @@ Organism: Email signature
   }
 
   td {
-    border: none;
+    border: var(--border-width--sm) solid transparent;
   }
 
   p {

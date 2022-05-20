@@ -20,12 +20,15 @@ Molecule: Cards
   align-content: start;
   margin-bottom: var(--space--md);
   padding-bottom: var(--space--md);
+  border: var(--border-width--sm) solid transparent;
 
   &:hover,
   &:focus-within {
     z-index: 1;
     .title {
       a:after {
+        outline: var(--border-width--md) solid transparent;
+        outline-offset: var(--space--2xs);
         box-shadow: var(--shadow--soft--hover);
       }
     }
@@ -34,8 +37,8 @@ Molecule: Cards
   &:focus-within {
     .title {
       a:after {
-        outline: dotted var(--border-width--md);
-        outline-offset: var(--border-width--md);
+        outline-style: dotted;
+        outline-color: inherit;
       }
     }
   }

@@ -58,8 +58,12 @@ Black, darkest blue, dark blue, and dark green are black based.
     &:focus,
     &:active {
       color: var(--black);
-      outline-color: var(--blue--lighter--40);
+      outline-color: transparent;
       background-image: var(--gradient--vertical--light-blue);
+    }
+
+    &:focus {
+      outline-color: var(--blue--lighter--40);
     }
   }
 
@@ -119,8 +123,12 @@ Black, darkest blue, dark blue, and dark green are black based.
     &:hover,
     &:focus,
     &:active {
-      outline-color: var(--light-green);
+      outline-color: transparent;
       background-image: var(--gradient--vertical--light-green);
+    }
+
+    &:focus {
+      outline-color: var(--light-green);
     }
   }
 
@@ -184,8 +192,12 @@ Gray, blue, and green backgrounds are gray based.
     &:focus,
     &:active {
       color: var(--black);
-      outline-color: var(--white);
+      outline-color: transparent;
       background-image: var(--gradient--vertical--light-blue);
+    }
+
+    &:focus {
+      outline-color: var(--white);
     }
   }
 
@@ -249,8 +261,12 @@ Gray, blue, and green backgrounds are gray based.
     &:hover,
     &:focus,
     &:active {
-      outline-color: var(--light-green--lighter--20);
+      outline-color: transparent;
       background-image: var(--gradient--vertical--light-green);
+    }
+
+    &:focus {
+      outline-color: var(--light-green--lighter--20);
     }
   }
 
@@ -306,8 +322,12 @@ backgrounds are light gray based.
     &:focus,
     &:active {
       color: var(--white);
-      outline-color: var(--dark-blue);
+      outline-color: transparent;
       background-image: var(--gradient--vertical--dark-blue);
+    }
+    
+    &:focus {
+      outline-color: var(--dark-blue);
     }
   }
 

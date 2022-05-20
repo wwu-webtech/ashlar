@@ -68,9 +68,6 @@ select {
   font-size: var(--font-size--md);
   &:focus {
     outline: none;
-    @media (-ms-high-contrast: active) {
-      border-style: dotted;
-    }
   }
   &:disabled {
     cursor: not-allowed;

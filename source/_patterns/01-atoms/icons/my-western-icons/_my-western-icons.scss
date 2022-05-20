@@ -22,6 +22,18 @@ Atom: Icons - My Western Icons
     @media print {
       fill: var(--black);
     }
+
+    @media (forced-colors: active) {
+      fill: LinkText;
+    }
+  }
+
+  @media (forced-colors: active) {
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration-line: none;
+    }
   }
 }
 /*------------------------------------------------------------------------------

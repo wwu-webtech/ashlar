@@ -16,6 +16,9 @@ a.button.button.button,
   text-align: center;
   text-decoration: none;
   color: var(--white);
+  border-width: var(--border-width--md);
+  border-style: solid;
+  border-color: transparent;
   border-radius: var(--border-radius--roundest);
   outline-offset: calc(-1 * var(--border-width--lg));
   background: var(--blue);
@@ -42,13 +45,18 @@ a.button.button.button,
   &:focus,
   &:hover {
     color: var(--white);
-    outline-color: inherit;
+    outline: var(--border-width--md) solid transparent;
     background: var(--dark-blue--darker--40);
     box-shadow: var(--shadow--soft--hover);
-
+  
     &:visited {
       color: var(--white);
     }
+  }
+
+  &:focus {
+    outline-color: inherit;
+    outline-style: dotted;
   }
 
   &.square {
@@ -309,6 +317,29 @@ a.button.button.button,
     @media print {
       content: " [" attr(href) "] ";
       font-size: 10pt;
+    }
+  }
+}
+
+@media (forced-colors: active) {
+  /* enforce background/color/border unsets, rather than duplicate queries for each cta variation */
+  .cta.cta.cta.cta,
+  .button.button.button.button {
+    transition: none;
+    border-color: LinkText !important;
+    
+    &:hover,
+    &:focus,
+    &:active {
+      @supports (forced-color-adjust: none) {
+        forced-color-adjust: none;
+        background: LinkText !important; 
+        color: Canvas !important;
+      }
+    }
+
+    &:focus {
+      outline-offset: calc(1.5 * var(--border-width--md));
     }
   }
 }

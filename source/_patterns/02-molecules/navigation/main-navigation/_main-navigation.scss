@@ -9,11 +9,11 @@ Molecule: Main navigation/ultimenu custom styles
   @include breakpoint($small) {
     width: 100%;
     height: inherit;
-    border-top: none;
   }
 
   grid-area: main-nav;
-  border-top: solid var(--blue--darker--40) var(--border-width--sm);
+  border-bottom: calc(.4 * var(--border-width--sm)) solid transparent;
+  border-top: solid var(--blue--darker--40) calc(.4 * var(--border-width--sm));
   font-family: var(--font--condensed);
   & > .menu,
   .ultimenu--horizontal {
@@ -46,9 +46,21 @@ Molecule: Main navigation/ultimenu custom styles
       &:hover,
       &:focus-within {
         background-image: var(--gradient--vertical--light-blue);
+        
+        & > a,
         .expand-icon {
-          color: var(--dark-blue--darker--60);
+          color: var(--black);
         }
+
+        .menu li {
+          a:visited {
+            &:hover,
+            &:focus,
+            &:active {
+              color: var(--black);
+            }
+          } 
+        } 
       }
       & > a {
         @include breakpoint($small) {
@@ -114,7 +126,12 @@ Molecule: Main navigation/ultimenu custom styles
             height: var(--border-width--lg);
             margin-top: calc(-1 * var(--border-width--lg));
             content: "";
+            border-bottom: solid var(--border-width--md) transparent;
             background: var(--light-green--lighter--20);
+
+            @media (forced-colors: active) {
+              border-bottom-width: var(--border-width--lg);
+            }
           }
         }
 

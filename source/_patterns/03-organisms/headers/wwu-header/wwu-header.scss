@@ -32,7 +32,7 @@ wwu-header {
     position: absolute;
     right: 0;
     color: var(--white);
-    border: none;
+    border: var(--border-width--sm) solid transparent;
     border-radius: 0;
     background: transparent;
     &:active {
@@ -124,7 +124,7 @@ wwu-header {
       width: initial !important;
       height: initial !important;
       padding: var(--space--2xs);
-      outline-color: var(--blue--lighter--60);
+      border: none;
     }
 
     color: var(--white);
@@ -143,6 +143,15 @@ wwu-header {
     &:focus,
     &:hover {
       color: var(--dark-blue--darker--80);
+      outline-color: transparent;
+
+      @media (forced-colors: active) {
+        outline-offset: calc(-1 * var(--border-width--md));
+      }
+    }
+
+    &:focus {
+      outline-color: var(--blue--lighter--60);
     }
   }
 }

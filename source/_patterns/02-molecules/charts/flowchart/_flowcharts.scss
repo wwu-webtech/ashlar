@@ -45,6 +45,7 @@ Molecule: Charts - Flow Chart
 
   .item {
     padding: var(--space--md);
+    border: var(--border-width--md) solid transparent;
   }
 
   .material-icons {
