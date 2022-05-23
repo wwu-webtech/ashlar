@@ -11,6 +11,7 @@ Molecule: Cards - Alternate styles
 8. Simple
 9. Solid round
 10. Tile
+11. Institute
 --------------------------------------------------------------------------------
 1. Color block title
 ------------------------------------------------------------------------------*/
@@ -688,5 +689,96 @@ Molecule: Cards - Alternate styles
   .card.tile,
   .block--card.tile {
     @include dark-blue-bg;
+  }
+}
+/*------------------------------------------------------------------------------
+11. Institute
+------------------------------------------------------------------------------*/
+.card.institute,
+.block--card.institute {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  padding: 0;
+  .image {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    margin-bottom: 0;
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      content: "";
+      opacity: 0.9;
+      background-color: var(--white);
+    }
+  }
+  .content {
+    z-index: 1;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    padding: var(--space--xs);
+    color: var(--black);
+    p {
+      font-size: var(--font-size--xs);
+      line-height: 1.3;
+    }
+  }
+  .intro {
+    text-transform: uppercase;
+    color: var(--dark-blue--darker--40);
+  }
+  .title {
+    gap: var(--space--xs);
+
+    display: flex;
+    align-items: center;
+    .block__title {
+      text-transform: uppercase;
+      font-family: var(--font--title);
+      font-size: var(--font-size--md);
+    }
+    a {
+      color: var(--dark-blue);
+      &:hover {
+        color: var(--blue);
+      }
+      &:visited {
+        color: var(--purple);
+      }
+    }
+  }
+  .material-icons {
+    color: var(--white);
+    background-color: var(--dark-blue--darker--20);
+    font-size: var(--icon-size--md);
+  }
+}
+.dark-mode {
+  .card.institute,
+  .block--card.institute {
+    .intro {
+      color: var(--blue--lighter--80);
+    }
+    .image:after {
+      background-color: var(--black);
+    }
+    .content {
+      color: var(--white);
+    }
+    .title {
+      a {
+        color: var(--blue--lighter--40);
+        &:hover {
+          color: var(--white);
+        }
+        :visited {
+          color: var(--purple--lighter--80);
+        }
+      }
+    }
   }
 }
