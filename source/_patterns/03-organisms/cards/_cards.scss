@@ -56,7 +56,7 @@ Organism: Cards
   .block--card,
   .pager,
   .event {
-    flex: 1 1 100%;
+    flex: 0 1 100%;
   }
 }
 .card-2col--flex {
@@ -65,7 +65,7 @@ Organism: Cards
   .event,
   .hover-card {
     @include breakpoint($small) {
-      flex: 1 1 calc(50% - var(--space--xs));
+      flex: 0 1 calc(50% - var(--space--xs));
     }
   }
 }
@@ -75,7 +75,7 @@ Organism: Cards
   .event,
   .hover-card {
     @include breakpoint($small) {
-      flex: 1 1 calc(33.33% - var(--space--xs));
+      flex: 0 1 calc(33.33% - var(--space--xs));
     }
   }
 }
@@ -85,7 +85,7 @@ Organism: Cards
   .event,
   .hover-card {
     @include breakpoint($small) {
-      flex: 1 1 calc(25% - var(--space--xs));
+      flex: 0 1 calc(25% - var(--space--xs));
     }
   }
 }
