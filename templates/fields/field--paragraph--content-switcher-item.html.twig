@@ -41,15 +41,16 @@
   {% if multiple %}
       {% for item in items %}
         {{ item.content }}
-      {% endfor %}    
+      {% endfor %}
   {% else %}
+    {% for item in items %}
+        {{ item.content }}
+    {% endfor %}
+  {% endif %}
+{% else %}
+    {{ label }}
+
     {% for item in items %}
       {{ item.content }}
     {% endfor %}
-  {% endif %}
-{% else %}  
-  {{ label }}
-  {% for item in items %}
-    {{ item.content }}
-  {% endfor %}
 {% endif %}

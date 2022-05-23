@@ -3,14 +3,12 @@
     {% include "@atoms/text/label/label.twig" %}
   {% endblock %}
 
-  <div class="content-switcher" role="tablist" aria-label="{{ configuration.label }}">
-  </div>
-
-  <div class="content-switcher-container">
-    {% block content %}
+  <wwu-switcher label="{{ configuration.label }}">
+  {% block content %}    
       {% for item in items %}
-        {% include "@molecules/switcher/switcher-items.html.twig" with {content: item} %}
-      {% endfor %}
-    {% endblock %}
-  </div>
+        {% include "@molecules/switcher/switcher-items.html.twig" %}
+      {% endfor %}      
+  {% endblock %}
+  </wwu-switcher>
 </div>
+
