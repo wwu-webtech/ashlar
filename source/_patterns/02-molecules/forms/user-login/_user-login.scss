@@ -32,7 +32,8 @@ Molecule: Forms - User Login
 
   .textfield,
   .password,
-  .form-actions {
+  .form-actions,
+  .manual-login {
     display: none;
   }
 }
