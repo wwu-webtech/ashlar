@@ -298,7 +298,7 @@ function ashlar_preprocess_ds_entity_view(&$variables) {
  * Implements hook_form_alter().
  */
 function ashlar_form_user_login_form_alter(&$form, &$form_state, $form_id) {
-  $form['cas_login_link']['#title'] = 'Universal Login';
+  $form['cas_login_link']['#title'] = 'Universal Login (Western accounts)';
 }
 
 /**
