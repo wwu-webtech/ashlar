@@ -18,6 +18,8 @@ Display preferences
   flex-flow: column;
   padding: var(--space--md);
   font-family: var(--font--condensed);
+  border: var(--border-width--md) solid transparent;
+  border-top-color: var(--blue);
 
   .menu {
     li {

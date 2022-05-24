@@ -36,11 +36,16 @@ Templates: Sites - MABEL - Front page
       }
 
       &:hover,
-      &:focus-within {
+      &:focus {
         transform: translate(-0.125rem, -0.125rem);
         border-color: var(--dark-blue);
-        outline: none;
+        outline: var(--border-width--md) solid transparent;
+        outline-offset: var(--space--2xs);
         background: transparent;
+      }
+
+      &:focus {
+        outline-style: dotted;
       }
     }
   }

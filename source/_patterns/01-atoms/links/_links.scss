@@ -31,6 +31,7 @@ a {
     color: var(--dark-blue);
     background-image: var(--gradient--vertical--light-blue);
     background-size: 100% 100%;
+    outline: var(--border-width--md) solid transparent;
 
     &:visited {
       color: var(--dark-blue);
@@ -38,9 +39,17 @@ a {
   }
 
   &:focus {
-    outline: dotted var(--border-width--md);
+    outline: var(--border-width--md) dotted;
     outline-offset: var(--border-width--md);
   }
+
+  @media (forced-colors: active) {
+    &:hover,
+    &:focus,
+    &:active {
+      outline-offset: calc(1.5 * var(--border-width--md));
+    }
+ }
 
   &[target="_blank"],
   &[target="blank"] {

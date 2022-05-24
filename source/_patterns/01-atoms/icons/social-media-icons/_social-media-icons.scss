@@ -10,6 +10,7 @@ Atom: Icons - Social Media Icons
     background-color;
   color: var(--white);
   background: var(--blue);
+  border: var(--border-width--sm) solid transparent;
 
   svg {
     fill: var(--white);
@@ -21,16 +22,29 @@ Atom: Icons - Social Media Icons
     @media print {
       fill: var(--black);
     }
+ 
+    @media (forced-colors: active) {
+      fill: LinkText;
+    }
   }
 
   &:active,
   &:focus,
   &:hover {
     background: var(--dark-blue);
+
+    @media (forced-colors: active) {
+      background-color: LinkText;
+
+      svg {
+        fill: Canvas;
+      }
+    }
   }
 
   &:focus {
-    outline: dotted var(--border-width--md);
+    outline-style: dotted; 
+    outline-width: var(--border-width--md);
   }
 
   &.medium {

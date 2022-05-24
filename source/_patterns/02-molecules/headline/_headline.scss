@@ -15,6 +15,10 @@ Molecule: Headline
     margin-top: 5%;
     margin-left: 5%;
     background: var(--gradient--horizontal--dark-blue-to-transparent);
+
+    @media (forced-colors: active) {
+       background: rgba(var(--dark-blue--darker--40--rgb), .8)
+    }
   }
 
   align-self: start;

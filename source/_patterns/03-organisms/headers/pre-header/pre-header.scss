@@ -2,6 +2,8 @@
 Organism: Pre-header
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
+@import "../../../../sass/partials/imports";
+@import "../../../00-utilities/breakpoints.scss";
 wwu-pre-header {
   position: relative;
   display: flex;
@@ -35,9 +37,18 @@ wwu-pre-header {
     &:hover,
     &:focus {
       color: var(--dark-blue--darker--60);
-      outline-color: var(--dark-blue--darker--60);
+      outline: var(--border-width--md) solid transparent;
       outline-offset: calc(-1 * var(--border-width--md));
       background-image: var(--gradient--vertical--light-blue);
+
+      @media (forced-colors: active) {
+        outline-offset: calc(-2 * var(--border-width--md));
+      }
+    }
+
+    &:focus {
+      outline-color: var(--dark-blue--darker--60);
+      outline-style: dotted;
     }
   }
   .skip-to {
@@ -49,14 +60,14 @@ wwu-pre-header {
 
       padding: var(--space--2xs);
       background-color: var(--black);
-      border: none;
+      border: var(--border-width--lg) solid transparent;
       border-radius: 0;
     }
 
     [role="separator"] {
       margin: 0;
       padding: var(--space--2xs);
-      border: none;
+      border: var(--border-width--sm) solid transparent;
       background-color: transparent;
       color: var(--white);
     }
@@ -65,13 +76,27 @@ wwu-pre-header {
       color: var(--white);
       background-color: var(--gray--darker--40);
       padding: 0;
+      border: var(--border-width--sm) solid transparent;
       cursor: pointer;
 
-      &:focus {
+      &:hover,
+      &:focus,
+      &:active {
         padding: 0;
         border: none;
-        outline: dotted var(--border-width--md);
+        outline: solid var(--border-width--md);
         outline-offset: calc(-1 * var(--border-width--md));
+        @media (forced-colors: active) {
+          outline-color: CanvasText;
+        }
+
+        .label {
+          font-weight: var(--font-weight--semibold);
+        }
+      }
+
+      &:focus {
+        outline-style: dotted;
       }
 
       &.last {
@@ -95,7 +120,6 @@ wwu-pre-header {
 
       &:focus {
         padding: var(--space--2xs);
-        border: none;
         outline: dotted var(--border-width--md);
         outline-offset: calc(-1 * var(--border-width--lg));
       }
@@ -110,7 +134,7 @@ wwu-pre-header {
     transition: background-image var(--transition-speed--fast)
       var(--ease--standard);
     color: inherit;
-    border: none;
+    border: var(--border-width--sm) solid transparent;
     border-radius: 0;
     background: transparent;
     background-repeat: no-repeat;
@@ -120,9 +144,24 @@ wwu-pre-header {
       color: var(--dark-blue--darker--60);
       background-image: var(--gradient--vertical--light-blue);
       background-size: 100% 100%;
+      outline-offset: calc(-1.5 * var(--border-width--md));
     }
     &:active {
-      border: none;
+      border: var(--border-width--sm) solid transparent;
+    }
+  }
+
+  wwu-search {
+    input[type="search"] {
+      border-width: var(--border-width--sm);
+    }
+
+    .submit-search {
+      &:hover,
+      &:focus,
+      &:active {
+        outline-offset: calc(-2 * var(--border-width--md))
+      }
     }
   }
 }
@@ -134,6 +173,8 @@ wwu-pre-header {
   padding: var(--space--xs);
   width: 25rem;
   max-width: 100%;
+  border: var(--border-width--lg) solid transparent;
+
   &.closed {
     visibility: hidden;
     overflow: hidden;
@@ -153,9 +194,17 @@ wwu-pre-header {
     flex-flow: row wrap;
   }
   fieldset {
-    display: flex;
-    flex: 1 1 0;
-    flex-flow: column nowrap;
+    @include breakpoint($medium) {
+      width: 49%;
+    }
+    width: 100%;
+
+    @media (forced-colors: none) {
+      width: unset;
+      display: flex;
+      flex: 1 1 0;
+      flex-flow: column nowrap;  
+    }
     legend {
       margin: 0;
       padding: var(--space--xs);

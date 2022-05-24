@@ -14,6 +14,7 @@ Molecule: Schedule
     position: relative;
     margin-bottom: var(--space--sm);
     padding: var(--space--sm);
+    border: var(--border-width--md) solid transparent;
   }
 
   &.round-edges {
@@ -62,6 +63,10 @@ Molecule: Schedule
         &:after {
           outline: dotted var(--border-width--md);
           outline-offset: var(--border-width--md);
+
+          @media (forced-colors: active) {
+             outline-offset: calc(1.5 * var(--border-width--lg));
+          }
         }
       }
 

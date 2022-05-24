@@ -43,7 +43,7 @@ Molecule: Mabel search
       height: 100%;
       margin: 0;
       padding: var(--space--sm);
-      border: none;
+      border: var(--border-width--md) solid transparent;
       border-radius: 0;
       box-shadow: none;
     }
@@ -63,7 +63,7 @@ input[title="Remove field"] {
   height: var(--toggle-size--sm);
   padding: 0;
   color: var(--white);
-  border: none;
+  border: var(--border-width--md) solid transparent;
   border-radius: 0;
   background: var(--blue);
   box-shadow: none;

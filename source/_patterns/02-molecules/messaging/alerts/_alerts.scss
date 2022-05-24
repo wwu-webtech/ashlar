@@ -35,6 +35,7 @@ Molecule: Alerts
   &.emergency {
     color: var(--white);
     background-color: var(--red);
+    border-top: var(--border-width--md) solid transparent;
 
     .alert-header {
       color: var(--white);
@@ -48,6 +49,8 @@ Molecule: Alerts
   &.weather {
     color: var(--dark-blue);
     background-color: var(--yellow);
+    border-top: var(--border-width--md) solid transparent;
+    border-bottom: var(--border-width--md) solid transparent;
 
     .alert-header {
       color: var(--dark-blue);
@@ -57,4 +60,13 @@ Molecule: Alerts
       fill: var(--dark-blue);
     }
   }
+}
+
+@media (forced-colors: active) {
+   .alert.weather, 
+   .alert.emergency {
+     svg {
+       fill: CanvasText;
+     }
+   }
 }

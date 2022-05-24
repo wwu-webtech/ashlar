@@ -5,43 +5,44 @@ Molecule: Switcher
 @import "../../../sass/partials/imports";
 @import "../../00-utilities/breakpoints.scss";
 .content-switcher,
+.switcher,
 .mabel-content-switcher {
   display: flex;
   width: 100%;
   margin: 0;
   padding: 0;
-
   button {
     width: 100%;
     max-width: none;
     margin-right: var(--space--xs);
     color: var(--white);
-    border: none;
+    border: var(--border-width--md) solid transparent;
     border-radius: 0;
     background-color: var(--dark-blue);
     box-shadow: none;
-
     &:hover,
     &:focus,
     &:active {
       transform: none;
       color: var(--dark-blue--darker--40);
+      outline-offset: calc(-1 * var(--border-width--lg));
+      outline-offset: calc(-1 * var(--border-width--lg));
       background-image: var(--gradient--vertical--light-blue);
       box-shadow: none;
-      outline-offset: calc(-1 * var(--border-width--lg));
+      @media (forced-colors: active) {
+        outline-offset: var(--border-width--lg);
+      }
     }
-
     &.active,
     &:disabled {
       opacity: 1;
       color: var(--dark-blue--darker--60);
       background-color: var(--light-green--lighter--20);
+      font-weight: var(--font-weight--semibold);
     }
-
     &:last-child {
       margin-right: 0;
     }
-
     .material-icons {
       &.show {
         @include breakpoint($small) {
@@ -57,26 +58,23 @@ Molecule: Switcher
     }
   }
 }
-
 .content-switcher-container,
+.switcher-container,
 .mabel-content-switcher-container {
   display: grid;
   display: -ms-grid;
-
-  .content {
+  [role="tabpanel"] {
     display: none;
     grid-column-start: 1;
     grid-row-start: 1;
     -ms-grid-column: 1;
     -ms-grid-row: 1;
     margin-top: var(--space--md);
-
     &.active {
       display: block;
     }
   }
 }
-
 .layout-builder--layout {
   .content-switcher-container {
     .content {

@@ -36,6 +36,21 @@
  * @see template_preprocess_field()
  */
 #}
-{% for item in items %}
-  {{ item.content }}
-{% endfor %}
+
+{% if label_hidden %}
+  {% if multiple %}
+      {% for item in items %}
+        {{ item.content }}
+      {% endfor %}
+  {% else %}
+    {% for item in items %}
+        {{ item.content }}
+    {% endfor %}
+  {% endif %}
+{% else %}
+    {{ label }}
+
+    {% for item in items %}
+      {{ item.content }}
+    {% endfor %}
+{% endif %}

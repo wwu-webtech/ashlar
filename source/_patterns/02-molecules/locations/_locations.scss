@@ -60,12 +60,23 @@ Molecule: Locations
         -webkit-transform: scale(1.03, 1.03);
         transform: scale(1.03, 1.03);
         background-color: #d8f1ff;
+        outline: var(--border-width--md) solid transparent;
       }
     }
 
     &:focus-within {
       .svg-container {
-        border: var(--border-width--md) dotted var(--dark-blue);
+        outline-style: dotted;
+        outline-color: inherit;
+      }
+    }
+
+    @media (forced-colors: active) {
+      &:hover, 
+      &:focus-within {
+        .svg-container {
+          outline-color: LinkText;
+        }
       }
     }
   }

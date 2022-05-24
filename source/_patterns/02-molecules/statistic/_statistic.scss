@@ -66,6 +66,7 @@ Molecule: Statistic
   margin: 0 var(--space--xs) var(--space--sm);
   padding: var(--space--sm);
   text-align: center;
+  border: var(--border-width--md) solid transparent;
   border-radius: var(--border-radius--rounder);
 
   .block__title {
@@ -94,6 +95,7 @@ Molecule: Statistic
   align-items: center;
   justify-content: left;
   padding: var(--space--sm) var(--space--md);
+  border: var(--border-width--md) solid transparent;
   border-radius: var(--border-radius--rounder);
 
   .statistic-heading {

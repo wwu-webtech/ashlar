@@ -5,6 +5,8 @@ Molecule: Ribbon
 .ribbon {
   --ribbon-tail-height: 3.125rem;
   --ribbon-width: 12rem;
+  --ribbon-tail--before: polygon(0 0, 0 100%, 100% 0);
+  --ribbon-tail--after: polygon(0 0, 100% 100%, 100% 0);
 
   position: relative;
   display: block;
@@ -14,25 +16,32 @@ Molecule: Ribbon
   text-align: center;
   color: var(--black);
   background: var(--gray--lighter--80);
+  border: var(--border-width--md) solid transparent;
+  
+  @media (forced-colors: active) {
+     background: CanvasText;
+  }
 
   &:before,
   &:after {
     position: absolute;
     bottom: calc(-1 * var(--ribbon-tail-height));
     display: block;
-    width: 0;
+    width: 3%;
     height: 0;
     content: "";
     border-top: var(--ribbon-tail-height) solid var(--gray--lighter--80);
   }
 
   &:before {
-    left: 0;
+    clip-path: var(--ribbon-tail--before);
     border-right: calc(var(--ribbon-width) / 2) solid transparent;
+    left: -.1rem;
   }
 
   &:after {
-    right: 0;
+    clip-path: var(--ribbon-tail--after);
     border-left: calc(var(--ribbon-width) / 2) solid transparent;
+    right: -.1rem;
   }
 }
