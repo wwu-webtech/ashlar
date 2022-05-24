@@ -21,6 +21,7 @@
   const sassGlob = require("gulp-sass-glob");
   const group = require("gulp-group-css-media-queries");
   const cleancss = require("gulp-clean-css");
+  const uglify = require('gulp-uglify');
 
   /**
    * Process the name of the input JS file to be used as the object key for a
@@ -296,27 +297,21 @@
   });
 
   /**
-   * Generate JS without Drupal behaviors
+   * Generate wordpress friendly JS
    */
-   gulp.task("js-nowrap", function (callback) {
-    pump(
-      gulp.src(config.js.src),
-      // Process each file in the source stream.
-      flatmap(function (stream, file) {
-        return pump(
-          stream,
-          // Wrap the JS in an immediately-invoked function expression.
-          iife(config.js.iifeNoJquery),
-          // Format the source.
-          terser(config.js.terser)
-        );
-      }),
-      // Flatten file path globs.
-      flatten(),
-      gulp.dest(config.js.dest),
-      callback
-    );
-  });
+  const minifyJS = () =>
+  gulp.src(config.js.src)
+    .pipe(terser({
+       mangle: {
+         toplevel: true
+       }
+    }))
+    .on('error', function (error) {
+      this.emit('end')
+    })
+    .pipe(gulp.dest(config.js.src))
+ 
+  gulp.task('minifyJS', minifyJS)
 
   /**
    * Minify images.
@@ -422,14 +417,14 @@
   );
 
   /**
-   * Run js build without drupal behaviors via js-nowrap
+   * Run js build without drupal behaviors via js-wp-cdn
    */
    gulp.task(
     "wp-cdn",
     gulp.parallel([
       "sass",
       "sassComponents",
-      "js-nowrap",
+      "minifyJS",
       "images",
       "fonts",
     ])
