@@ -309,7 +309,7 @@
     .on('error', function (error) {
       this.emit('end')
     })
-    .pipe(gulp.dest(config.js.src))
+    .pipe(gulp.dest(config.js.dest))
  
   gulp.task('minifyJS', minifyJS)
 
