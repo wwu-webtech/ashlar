@@ -30,9 +30,9 @@ function ashlar_form_system_theme_settings_alter(&$form, FormStateInterface &$fo
     '#default_value' => theme_get_setting('alert_display'),
   );
 
-  $form['theme_settings']['manual_user_login'] = array(
+  $form['theme_settings']['show_manual_login'] = array(
     '#type' => 'checkbox',
     '#title' => t('Show Manual Login Form'),
-    '#default_value' => theme_get_setting('manual_user_login'),
+    '#default_value' => theme_get_setting('show_manual_login'),
   );
 }

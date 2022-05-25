@@ -60,8 +60,10 @@ function ashlar_preprocess_page(&$variables) {
  * Implements hook_preprocess_form().
  */
 function ashlar_preprocess_form(&$variables) {
-  if ($variables['element']['#form_id'] == 'user_login_form') {
-    $variables['manual_user_login'] = (bool) theme_get_setting('manual_user_login');
+  $form = $variables['element'];
+
+  if ($form['#form_id'] == 'user_login_form') {
+    $variables['show_manual_login'] = (bool) theme_get_setting('show_manual_login');
   }
 }
 
