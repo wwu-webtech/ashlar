@@ -5,13 +5,11 @@
 #}
 <form{{ attributes }}>
   {{ element.cas_login_link }}
-  
   {% if show_manual_login %}
     <button class="manual-login">Manual Login (non-Western accounts)</button>
-    {{ element.name }}
-    {{ element.pass }}
-    {{ element.actions }}
- {% endif %}
-
+  {% endif %}
+  {{ element.name }}
+  {{ element.pass }}
+  {{ element.actions }}
 </form>
   

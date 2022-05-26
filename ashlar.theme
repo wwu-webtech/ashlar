@@ -57,17 +57,6 @@ function ashlar_preprocess_page(&$variables) {
 }
 
 /**
- * Implements hook_preprocess_form().
- */
-function ashlar_preprocess_form(&$variables) {
-  $form = $variables['element'];
-
-  if ($form['#form_id'] == 'user_login_form') {
-    $variables['show_manual_login'] = (bool) theme_get_setting('show_manual_login');
-  }
-}
-
-/**
  * Implements hook_preprocess_block().
  */
 function ashlar_preprocess_block(&$variables) {
@@ -305,11 +294,25 @@ function ashlar_preprocess_ds_entity_view(&$variables) {
   }
 }
 
+function ashlar_preprocess_form(&$variables) {
+  $form = $variables['element'];
+  if ($form['#form_id'] == 'user_login_form') {
+    $variables['show_manual_login'] = (bool) theme_get_setting('show_manual_login');
+  }
+}
+
+
 /**
  * Implements hook_form_alter().
  */
 function ashlar_form_user_login_form_alter(&$form, &$form_state, $form_id) {
   $form['cas_login_link']['#title'] = 'Universal Login (Western accounts)';
+
+  if ($variables['show_manual_login'] == false) {
+    $form['name']['#access'] = false;
+    $form['pass']['#access'] = false;
+    $form['actions']['#access'] = false;
+  }
 }
 
 /**

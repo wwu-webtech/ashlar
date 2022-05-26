@@ -3,6 +3,10 @@ var $username = $('.textfield', context);
 var $password = $('.password', context);
 var $submit = $('.form-actions', context);
 
+// if (window.history.replaceState) {
+//   window.history.replaceState(null, null, window.location.href);
+// }
+
 function show_login(event) {
   $manual_login.off('click', show_login);
 
