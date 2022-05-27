@@ -297,7 +297,9 @@ a.button.button.button,
     &.white {
       color: var(--white);
       border-color: var(--white);
-      background: transparent;
+      @media (forced-colors: none) {
+        background: transparent;
+      }
 
       &:active,
       &:focus,
