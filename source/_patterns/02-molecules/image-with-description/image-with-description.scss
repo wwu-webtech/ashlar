@@ -52,12 +52,13 @@ Molecule: Image with Description
       grid-row: 1 / span all;
     }
     padding: var(--space--sm);
+    border: var(--border-width--md) solid transparent;
 
     &:not([class$="-bg"]) {
       @include breakpoint(max-width $medium) {
         border-top: none;
       }
-      border: solid var(--border-width--md) var(--blue);
+      border-color: var(--blue);
       background: var(--white);
     }
   }
