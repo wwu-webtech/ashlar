@@ -18,10 +18,6 @@ Molecule: Ribbon
   background: var(--gray--lighter--80);
   border: var(--border-width--md) solid transparent;
   
-  @media (forced-colors: active) {
-     background: CanvasText;
-  }
-
   &:before,
   &:after {
     position: absolute;
@@ -43,5 +39,15 @@ Molecule: Ribbon
     clip-path: var(--ribbon-tail--after);
     border-left: calc(var(--ribbon-width) / 2) solid transparent;
     right: -.1rem;
+  }
+}
+
+@media (forced-colors: active) {
+  .ribbon {
+    background: CanvasText;
+  }
+  
+  a.ribbon {
+    background: LinkText;
   }
 }

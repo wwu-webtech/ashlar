@@ -21,7 +21,9 @@
   const sassGlob = require("gulp-sass-glob");
   const group = require("gulp-group-css-media-queries");
   const cleancss = require("gulp-clean-css");
-  const uglify = require('gulp-uglify');
+  const minify = require("gulp-minify");
+  const jshint = require('gulp-jshint');
+  const plumber = require('gulp-plumber');
 
   /**
    * Process the name of the input JS file to be used as the object key for a
@@ -297,21 +299,37 @@
   });
 
   /**
+   * Check js for errors
+   */
+  gulp.task('lint', function() {
+    return gulp.src(config.js.src)
+      .pipe(jshint())
+      .pipe(jshint.reporter('default'));
+  });
+
+  /**
    * Generate wordpress friendly JS
    */
-  const minifyJS = () =>
-  gulp.src(config.js.src)
-    .pipe(terser({
-       mangle: {
-         toplevel: true
-       }
-    }))
-    .on('error', function (error) {
-      this.emit('end')
-    })
-    .pipe(gulp.dest(config.js.dest))
- 
-  gulp.task('minifyJS', minifyJS)
+   gulp.task("minify", function (callback) {
+    pump(
+      gulp.src(config.js.src),
+      // Process each file in the source stream.
+      flatmap(function (stream, file) {
+        return pump(
+          stream,
+          
+          // Wrap the JS in an immediately-invoked function expression.
+          iife(config.js.iife),
+          // Format the source.
+          terser(config.js.terser)
+        );
+      }),
+      // Flatten file path globs.
+      flatten(),
+      gulp.dest(config.js.dest),
+      callback
+    );
+  });
 
   /**
    * Minify images.
@@ -424,7 +442,7 @@
     gulp.parallel([
       "sass",
       "sassComponents",
-      "minifyJS",
+      "minify",
       "images",
       "fonts",
     ])
