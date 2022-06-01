@@ -295,10 +295,31 @@ function ashlar_preprocess_ds_entity_view(&$variables) {
 }
 
 /**
+ * Implements template_preprocess_form().
+ */
+function ashlar_preprocess_form(&$variables) {
+  $form = $variables['element'];
+  if ($form['#form_id'] === 'user_login_form') {
+    $variables['show_manual_login'] = (bool) theme_get_setting('show_manual_login');
+  }
+}
+
+/**
  * Implements hook_form_alter().
  */
 function ashlar_form_user_login_form_alter(&$form, &$form_state, $form_id) {
   $form['cas_login_link']['#title'] = 'Universal Login (Western accounts)';
+
+  if ((bool) theme_get_setting('show_manual_login')) {
+    $form['name']['#access'] = true;
+    $form['pass']['#access'] = true;
+    $form['actions']['#access'] = true;
+  }
+  else {
+    $form['name']['#access'] = false;
+    $form['pass']['#access'] = false;
+    $form['actions']['#access'] = false;
+  }
 }
 
 /**

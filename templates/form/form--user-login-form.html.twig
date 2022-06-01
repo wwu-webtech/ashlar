@@ -10,5 +10,8 @@
  * @see template_preprocess_form()
  */
 #}
-{{ attach_library('ashlar/user-login') }}
+{% if show_manual_login == true %}
+  {{ attach_library('ashlar/user-login') }}
+{% endif %}
+
 {% include "@molecules/forms/user-login/user-login-form.html.twig" %}
