@@ -726,6 +726,10 @@ Molecule: Cards - Alternate styles
       font-size: var(--font-size--xs);
       line-height: 1.3;
     }
+    img {
+      float: left;
+      max-width: 40%;
+    }
   }
   .intro {
     text-transform: uppercase;
