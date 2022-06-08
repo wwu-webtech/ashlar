@@ -12,8 +12,8 @@ Molecule: Main navigation/ultimenu custom styles
   }
 
   grid-area: main-nav;
-  border-bottom: calc(.4 * var(--border-width--sm)) solid transparent;
-  border-top: solid var(--blue--darker--40) calc(.4 * var(--border-width--sm));
+  border-top: solid var(--blue--darker--40) calc(0.4 * var(--border-width--sm));
+  border-bottom: calc(0.4 * var(--border-width--sm)) solid transparent;
   font-family: var(--font--condensed);
   & > .menu,
   .ultimenu--horizontal {
@@ -30,9 +30,13 @@ Molecule: Main navigation/ultimenu custom styles
     background-color: var(--dark-blue);
     & > li {
       @include breakpoint($small) {
+        flex: 1 1 min-content;
         grid-template-columns: 1fr var(--icon-size--xs);
         width: inherit;
         border-bottom: none;
+      }
+      @include breakpoint($medium) {
+        flex: initial;
       }
 
       display: grid;
@@ -46,12 +50,10 @@ Molecule: Main navigation/ultimenu custom styles
       &:hover,
       &:focus-within {
         background-image: var(--gradient--vertical--light-blue);
-        
         & > a,
         .expand-icon {
           color: var(--black);
         }
-
         .menu li {
           a:visited {
             &:hover,
@@ -59,8 +61,8 @@ Molecule: Main navigation/ultimenu custom styles
             &:active {
               color: var(--black);
             }
-          } 
-        } 
+          }
+        }
       }
       & > a {
         @include breakpoint($small) {
@@ -128,7 +130,6 @@ Molecule: Main navigation/ultimenu custom styles
             content: "";
             border-bottom: solid var(--border-width--md) transparent;
             background: var(--light-green--lighter--20);
-
             @media (forced-colors: active) {
               border-bottom-width: var(--border-width--lg);
             }
