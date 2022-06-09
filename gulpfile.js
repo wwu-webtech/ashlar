@@ -8,7 +8,6 @@
   const source = require("vinyl-source-stream");
   const del = require("del");
   const gulp = require("gulp");
-  const run = require("gulp-run");
   const flatten = require("gulp-flatten");
   const flatmap = require("gulp-flatmap");
   const wrap = require("gulp-wrap");
@@ -17,7 +16,7 @@
   const rename = require("gulp-rename");
   const terser = require("gulp-terser");
   const sourcemaps = require("gulp-sourcemaps");
-  const sass = require("gulp-sass");
+  const sass = require('gulp-sass')(require('sass'));
   const sassGlob = require("gulp-sass-glob");
   const group = require("gulp-group-css-media-queries");
   const cleancss = require("gulp-clean-css");
