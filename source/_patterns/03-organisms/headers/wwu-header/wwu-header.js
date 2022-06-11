@@ -60,12 +60,17 @@ if (
     connectedCallback() {
       /* Create the custom element by appending the template */
       this.appendChild(header_template.content.cloneNode(true));
+      let site_name;
+      let region_content;
 
-      const site_name = this.attributes.sitename.value;
-      const region_content = this.attributes.regioncontent.value;
-
-      this.querySelector(".home-link").innerText = site_name;
-      this.querySelector(".western-header-region").innerHTML = region_content;
+      if(this.attributes.sitename) { 
+        site_name = this.attributes.sitename.value; 
+        this.querySelector(".home-link").innerText = site_name;
+      }
+      if(this.attributes.regioncontent) { 
+        region_content  = this.attributes.regioncontent.value; 
+        this.querySelector(".western-header-region").innerHTML = region_content;
+      }     
 
       /*------------------------------------------------------------------------------
         Mobile menu functionality
