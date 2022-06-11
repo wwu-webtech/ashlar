@@ -1,0 +1,206 @@
+/*------------------------------------------------------------------------------
+Financial Aid Custom Styles
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+header {
+  height: initial;
+  margin: 0;
+  border: none;
+  background: none;
+}
+
+header .western-logo {
+  position: inherit;
+  z-index: inherit;
+  float: inherit;
+  order: inherit;
+  width: inherit;
+  height: inherit;
+  margin: inherit;
+  background: inherit;
+}
+
+header .site-name {
+  position: inherit;
+  clear: both;
+  order: inherit;
+  text-align: inherit;
+  color: inherit;
+  text-shadow: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.header .home-link {
+  content: "Financial Aid";
+}
+
+body {
+  border: none;
+  background: inherit;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.zen-wrapper {
+  max-width: none;
+  margin: 0;
+}
+
+.body-wrapper {
+  max-width: var(--content-area-max-width);
+  margin: auto;
+  background: inherit;
+}
+
+.category_name {
+  background-color: inherit;
+}
+
+.main-nav {
+  margin-top: 6rem;
+  font-size: var(--font-size--xs);
+}
+
+.main-nav ul {
+  margin-bottom: 0;
+}
+
+main a:not(.image-link):focus,
+main a:not(.image-link):hover {
+  color: var(--white);
+}
+
+/*------------------------------------------------------------------------------
+Forms
+------------------------------------------------------------------------------*/
+.formBox {
+  font-size: var(--font-size--xs);
+}
+
+.formBox br {
+  display: none;
+}
+
+.formBox .text {
+  margin: 0;
+  font-weight: normal;
+}
+
+.formBox label {
+  font-weight: var(--font-weight--normal);
+}
+
+.textField {
+  text-align: left;
+}
+
+.newrow,
+.newrow2 {
+  gap: var(--space--xs);
+
+  display: flex;
+  align-items: start;
+  height: initial;
+  margin-top: var(--space--xs);
+}
+
+.lleft {
+  display: flex;
+  float: none;
+}
+
+.lleft input,
+.inputBox {
+  margin-bottom: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  position: relative;
+  top: 2px;
+  opacity: 1;
+}
+
+input[type="checkbox"]+label,
+input[type="radio"]+label {
+  margin-left: 0;
+  padding-left: var(--space--2xs);
+}
+
+input[type="checkbox"]+label:before,
+input[type="radio"]+label:before {
+  display: none;
+  width: 0;
+}
+
+input[type="radio"]+* label {
+  padding-left: var(--space--2xs);
+}
+
+.job-search {
+  font-size: var(--font-size--xs);
+}
+
+.job-search label {
+  line-height: 1.2;
+}
+
+fieldset {
+  border: solid var(--white) var(--border-width--sm);
+}
+
+.settings-menu input[type="checkbox"],
+.settings-menu input[type="radio"] {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+
+.settings-menu input[type="checkbox"]+label,
+.settings-menu input[type="radio"]+label {
+  margin-left: var(--checkbox-size);
+  padding-left: var(--space--xs);
+}
+
+.settings-menu input[type="checkbox"]+label:before,
+.settings-menu input[type="radio"]+label:before {
+  display: inherit;
+  width: var(--checkbox-size);
+}
+
+/*------------------------------------------------------------------------------
+Dark Mode
+------------------------------------------------------------------------------*/
+.dark-mode .main-nav a:visited {
+  color: var(--purple);
+}
+
+.dark-mode .call-out-box-right,
+.dark-mode .call-out-box-left,
+.dark-mode .call-out-box-center .dark-mode .box2,
+.dark-mode .moreinfo,
+.dark-mode .category_name,
+.dark-mode .design_content,
+.dark-mode .toggle_container {
+  background-color: var(--dark-blue);
+}
+
+.dark-mode #mc_embed_signup {
+  background-color: var(--gray);
+}
+
+.dark-mode .box1 {
+  background-color: var(--dark-blue--darker--20);
+}
+
+.dark-mode ul.faqs li:nth-child(2n+1) {
+  background-color: var(--dark-blue--darker--20);
+  border-color: var(--dark-blue);
+}
+
+.dark-mode ul.faqs li:nth-child(2n) {
+  background-color: var(--dark-blue--darker--40);
+  border-color: var(--dark-blue);
+}

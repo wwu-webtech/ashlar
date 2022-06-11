@@ -105,12 +105,11 @@ input[type="submit"] {
 ------------------------------------------------------------------------------*/
 .dark-mode {
   form {
-    .description, 
+    .description,
     .webform-element-description {
       color: var(--gray--lighter--60);
     }
   }
-
   .webform-section-title {
     color: var(--light-green);
     background-color: var(--gray--darker--80);
