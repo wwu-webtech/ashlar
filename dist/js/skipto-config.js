@@ -3,6 +3,7 @@ var SkipToConfig = {
     skipTo: {
       landmarks:
         'main, [role="main"], header, [role="banner"], [role="search"], nav,[role="navigation"], footer, [role="contentinfo"]',
+      headings: 'main h1, [role="main"] h1, main h2, [role="main"] h2, header h1, [role="banner"] h1, header h2, [role="banner"] h2',
       displayOption: "static",
       attachElement: "wwu-pre-header",
       headerLabel: "Header",
