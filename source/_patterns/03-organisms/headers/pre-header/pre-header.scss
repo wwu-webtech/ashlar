@@ -77,6 +77,7 @@ wwu-pre-header {
       background-color: var(--gray--darker--40);
       padding: 0;
       border: var(--border-width--sm) solid transparent;
+      overflow-y: unset;
       cursor: pointer;
 
       &:hover,
