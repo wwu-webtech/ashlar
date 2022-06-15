@@ -44,9 +44,13 @@ wwu-header {
     &:active,
     &:focus,
     &:hover {
-      outline-color: var(--white);
+      outline-color: transparent;
       outline-offset: calc(-1 * var(--border-width--md));
       background: transparent;
+    }
+
+    &:focus {
+      outline-color: var(--white);
     }
   }
   .western-logo {
@@ -79,8 +83,12 @@ wwu-header {
     &:active,
     &:focus,
     &:hover {
-      outline-color: var(--blue--lighter--60);
+      outline-color: transparent;
       color: var(--dark-blue--darker--60);
+    }
+
+    &:focus {
+      outline-color: var(--blue--lighter--60);
     }
   }
 }
