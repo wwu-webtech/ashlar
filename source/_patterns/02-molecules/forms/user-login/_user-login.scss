@@ -21,10 +21,6 @@ Molecule: Forms - User Login
       margin: var(--space--xs) auto;
     }
   }
-
-  .cas-login-link {
-    @extend .cta, .square;
-  }
   
   .manual-login {
     margin-bottom: var(--space--md);
@@ -35,6 +31,10 @@ Molecule: Forms - User Login
   .form-actions {
     display: none;
   }
+}
+
+.cas-login-link {
+  @extend .cta, .square;
 }
 
 .dark-mode {
