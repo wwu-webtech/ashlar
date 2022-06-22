@@ -2,6 +2,10 @@
 Financial Aid Custom Styles
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
+h1 {
+  margin-top: var(--space--sm);
+}
+
 header {
   height: initial;
   margin: 0;
@@ -59,7 +63,7 @@ body {
 }
 
 .main-nav {
-  margin-top: 6rem;
+  margin-top: var(--space--sm);
   font-size: var(--font-size--xs);
 }
 
@@ -75,7 +79,7 @@ main a:not(.image-link):hover {
 /*------------------------------------------------------------------------------
 Forms
 ------------------------------------------------------------------------------*/
-.formBox {
+.formBox.formBox {
   font-size: var(--font-size--xs);
 }
 
@@ -83,13 +87,13 @@ Forms
   display: none;
 }
 
-.formBox .text {
+.formBox.formBox .text {
   margin: 0;
   font-weight: normal;
 }
 
-.formBox label {
-  font-weight: var(--font-weight--normal);
+.formBox.formBox label {
+  font-weight: var(--font-weight--regular);
 }
 
 .textField {
@@ -102,13 +106,13 @@ Forms
 
   display: flex;
   align-items: start;
-  height: initial;
+  height: initial !important;
   margin-top: var(--space--xs);
 }
 
 .lleft {
   display: flex;
-  float: none;
+  float: none !important;
 }
 
 .lleft input,
@@ -118,25 +122,25 @@ Forms
 
 input[type="checkbox"],
 input[type="radio"] {
-  position: relative;
-  top: 2px;
-  opacity: 1;
+  position: relative !important;
+  top: 2px !important;
+  opacity: 1 !important;
 }
 
 input[type="checkbox"]+label,
 input[type="radio"]+label {
-  margin-left: 0;
-  padding-left: var(--space--2xs);
+  margin-left: 0 !important;
+  padding-left: var(--space--2xs) !important;
 }
 
 input[type="checkbox"]+label:before,
 input[type="radio"]+label:before {
-  display: none;
-  width: 0;
+  display: none !important;
+  width: 0 !important;
 }
 
 input[type="radio"]+* label {
-  padding-left: var(--space--2xs);
+  padding-left: var(--space--2xs) !important;
 }
 
 .job-search {
@@ -196,11 +200,11 @@ Dark Mode
 }
 
 .dark-mode ul.faqs li:nth-child(2n+1) {
-  background-color: var(--dark-blue--darker--20);
   border-color: var(--dark-blue);
+  background-color: var(--dark-blue--darker--20);
 }
 
 .dark-mode ul.faqs li:nth-child(2n) {
-  background-color: var(--dark-blue--darker--40);
   border-color: var(--dark-blue);
+  background-color: var(--dark-blue--darker--40);
 }
