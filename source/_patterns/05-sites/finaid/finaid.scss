@@ -5,14 +5,12 @@ Financial Aid Custom Styles
 h1 {
   margin-top: var(--space--sm);
 }
-
 header {
   height: initial;
   margin: 0;
   border: none;
   background: none;
 }
-
 header .western-logo {
   position: inherit;
   z-index: inherit;
@@ -23,7 +21,6 @@ header .western-logo {
   margin: inherit;
   background: inherit;
 }
-
 header .site-name {
   position: inherit;
   clear: both;
@@ -35,71 +32,81 @@ header .site-name {
   font-size: inherit;
   line-height: inherit;
 }
-
+header nav {
+  position: inherit;
+  top: 0;
+  right: 0;
+  width: initial;
+  height: initial;
+  background: initial;
+  box-shadow: none;
+}
+.toggle-menu {
+  z-index: 2;
+}
 .header .home-link {
   content: "Financial Aid";
 }
-
+.main-nav {
+  display: initial;
+}
 body {
   border: none;
   background: inherit;
   font-family: inherit;
   font-size: 1rem;
 }
-
 .zen-wrapper {
   max-width: none;
   margin: 0;
 }
-
 .body-wrapper {
   max-width: var(--content-area-max-width);
   margin: auto;
   background: inherit;
 }
-
 .category_name {
   background-color: inherit;
 }
-
 .main-nav {
-  margin-top: var(--space--sm);
+  margin-top: 0;
   font-size: var(--font-size--xs);
 }
-
 .main-nav ul {
   margin-bottom: 0;
 }
-
+.main-nav .site-nav a {
+  display: grid;
+  align-content: center;
+  min-height: var(--touch-target--min);
+}
+.twitter-timeline {
+  margin-left: 50%;
+  transform: translatex(-50%);
+}
 main a:not(.image-link):focus,
 main a:not(.image-link):hover {
   color: var(--white);
 }
-
 /*------------------------------------------------------------------------------
 Forms
 ------------------------------------------------------------------------------*/
 .formBox.formBox {
   font-size: var(--font-size--xs);
 }
-
 .formBox br {
   display: none;
 }
-
 .formBox.formBox .text {
   margin: 0;
   font-weight: normal;
 }
-
 .formBox.formBox label {
   font-weight: var(--font-weight--regular);
 }
-
 .textField {
   text-align: left;
 }
-
 .newrow,
 .newrow2 {
   gap: var(--space--xs);
@@ -109,78 +116,64 @@ Forms
   height: initial !important;
   margin-top: var(--space--xs);
 }
-
 .lleft {
   display: flex;
   float: none !important;
 }
-
 .lleft input,
 .inputBox {
   margin-bottom: 0;
 }
-
 input[type="checkbox"],
 input[type="radio"] {
   position: relative !important;
   top: 2px !important;
   opacity: 1 !important;
 }
-
-input[type="checkbox"]+label,
-input[type="radio"]+label {
+input[type="checkbox"] + label,
+input[type="radio"] + label {
   margin-left: 0 !important;
   padding-left: var(--space--2xs) !important;
 }
-
-input[type="checkbox"]+label:before,
-input[type="radio"]+label:before {
+input[type="checkbox"] + label:before,
+input[type="radio"] + label:before {
   display: none !important;
   width: 0 !important;
 }
-
-input[type="radio"]+* label {
+input[type="radio"] + * label {
   padding-left: var(--space--2xs) !important;
 }
-
 .job-search {
   font-size: var(--font-size--xs);
 }
-
 .job-search label {
   line-height: 1.2;
 }
-
 fieldset {
   border: solid var(--white) var(--border-width--sm);
 }
-
 .settings-menu input[type="checkbox"],
 .settings-menu input[type="radio"] {
   position: absolute;
   top: 0;
   opacity: 0;
 }
-
-.settings-menu input[type="checkbox"]+label,
-.settings-menu input[type="radio"]+label {
+.settings-menu input[type="checkbox"] + label,
+.settings-menu input[type="radio"] + label {
   margin-left: var(--checkbox-size);
   padding-left: var(--space--xs);
 }
-
-.settings-menu input[type="checkbox"]+label:before,
-.settings-menu input[type="radio"]+label:before {
+.settings-menu input[type="checkbox"] + label:before,
+.settings-menu input[type="radio"] + label:before {
   display: inherit;
   width: var(--checkbox-size);
 }
-
 /*------------------------------------------------------------------------------
 Dark Mode
 ------------------------------------------------------------------------------*/
 .dark-mode .main-nav a:visited {
   color: var(--purple);
 }
-
 .dark-mode .call-out-box-right,
 .dark-mode .call-out-box-left,
 .dark-mode .call-out-box-center .dark-mode .box2,
@@ -190,20 +183,16 @@ Dark Mode
 .dark-mode .toggle_container {
   background-color: var(--dark-blue);
 }
-
 .dark-mode #mc_embed_signup {
   background-color: var(--gray);
 }
-
 .dark-mode .box1 {
   background-color: var(--dark-blue--darker--20);
 }
-
 .dark-mode ul.faqs li:nth-child(2n+1) {
   border-color: var(--dark-blue);
   background-color: var(--dark-blue--darker--20);
 }
-
 .dark-mode ul.faqs li:nth-child(2n) {
   border-color: var(--dark-blue);
   background-color: var(--dark-blue--darker--40);

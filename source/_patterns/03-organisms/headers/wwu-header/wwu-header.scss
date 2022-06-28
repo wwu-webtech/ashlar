@@ -4,7 +4,6 @@ Organism: Headers - Western header
 ------------------------------------------------------------------------------*/
 @import "../../../../sass/partials/imports";
 @import "../../../00-utilities/breakpoints.scss";
-
 wwu-header {
   @include breakpoint($small) {
     display: grid;
@@ -15,21 +14,20 @@ wwu-header {
   position: relative;
   display: block;
   background-color: var(--dark-blue);
-
   noscript {
+    display: grid;
     grid-column: 1 / span all;
     grid-row: 1 / span all;
-    display: grid;
     grid-template-columns: var(--logo-size) 1fr;
     grid-template-rows: auto 1fr;
   }
-
   .toggle-menu {
     @include breakpoint($small) {
       display: none;
     }
 
     position: absolute;
+    z-index: 2;
     right: 0;
     color: var(--white);
     border: var(--border-width--sm) solid transparent;
@@ -48,7 +46,6 @@ wwu-header {
       outline-offset: calc(-1 * var(--border-width--md));
       background: transparent;
     }
-
     &:focus {
       outline-color: var(--white);
     }
@@ -83,10 +80,9 @@ wwu-header {
     &:active,
     &:focus,
     &:hover {
-      outline-color: transparent;
       color: var(--dark-blue--darker--60);
+      outline-color: transparent;
     }
-
     &:focus {
       outline-color: var(--blue--lighter--60);
     }
@@ -99,10 +95,9 @@ wwu-header {
     grid-column-gap: var(--space--sm);
     grid-row: 1 / span all;
     grid-row-gap: var(--space--xs);
-    grid-template-areas:
-      "logo ........"
-      "logo site-name"
-      "logo region";
+    grid-template-areas: "logo ........"
+    "logo site-name"
+    "logo region";
     grid-template-columns: var(--logo-size) auto;
     grid-template-rows: var(--toggle-size--md) auto 1fr;
   }
@@ -119,10 +114,10 @@ wwu-header {
     padding-right: 0;
   }
 
+  z-index: 1;
   display: flex;
   justify-content: space-evenly;
   padding-right: var(--toggle-size--sm);
-  z-index: 1;
   .icon-with-text {
     @include breakpoint($medium) {
       place-items: center;
@@ -152,12 +147,10 @@ wwu-header {
     &:hover {
       color: var(--dark-blue--darker--80);
       outline-color: transparent;
-
       @media (forced-colors: active) {
         outline-offset: calc(-1 * var(--border-width--md));
       }
     }
-
     &:focus {
       outline-color: var(--blue--lighter--60);
     }
