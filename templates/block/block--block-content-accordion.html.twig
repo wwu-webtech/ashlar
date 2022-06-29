@@ -40,10 +40,14 @@
 {% set attributes = attributes.addClass(classes) %}
 {% set title_attributes = title_attributes.addClass('block__title', block_content.field_heading_font.0.value ) %}
 {% block template %}
-  {% embed "@organisms/blocks/block-template/block-template.html.twig" %}
+  {% embed "@molecules/accordion/accordion.html.twig" %}
 
   {% block title %}
     {% include "@atoms/text/label/label-customized.twig" %}
+  {% endblock %}
+
+  {% block content %}
+    {{ content }}
   {% endblock %}
 
   {% endembed %}

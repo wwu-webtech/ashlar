@@ -6,7 +6,7 @@ attributes:
     id: example
 configuration:
   label: Title of Content Switcher
-items:
+content:
 - field_heading: Content 1
   field_content: We have an infinite amount to learn both from nature and from each other.
     Science has not yet mastered prophecy. We predict too much for the next year and

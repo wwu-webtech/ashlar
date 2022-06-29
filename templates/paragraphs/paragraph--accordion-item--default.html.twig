@@ -38,27 +38,6 @@
  * @ingroup themeable
  */
 #}
-{%
-  set classes = [
-    'paragraph',
-    'paragraph--type--' ~ paragraph.bundle|clean_class,
-    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    not paragraph.isPublished() ? 'paragraph--unpublished'
-  ]
-%}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
-    {% block content %}
-      <{{ content['field_item_heading_level'][0]['#markup'] }} class="title">
-        <button class="expand">
-          <span class="material-icons" aria-hidden="true">add</span>
-          {{ content['field_heading'][0]['#context']['value'] }}
-        </button>
-      </{{ content['field_item_heading_level'][0]['#markup'] }}>
-
-      <div class="content">
-        {{ content.field_content }}
-      </div>
-    {% endblock %}
-  </div>
+  {% include "@molecules/accordion/accordion-items.html.twig" %}
 {% endblock paragraph %}
