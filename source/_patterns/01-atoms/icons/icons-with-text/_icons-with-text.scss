@@ -55,6 +55,8 @@ Atom: Icons - Icons with Text
   &.black-bg,
   &.darkest-blue-bg,
   &.dark-blue-bg,
+  &.blue-gradient-bg,
+  &.dark-blue-gradient-bg,
   &.dark-green-bg {
     &:visited {
       color: var(--purple--lighter--80);
@@ -106,7 +108,9 @@ Atom: Icons - Icons with Text
         outline-color: var(--white);
       }
       &.blue-bg,
-      &.dark-blue-bg {
+      &.dark-blue-bg,
+      &.blue-gradient-bg,
+      &.dark-blue-gradient-bg {
         color: var(--white);
         &:hover,
         &:focus,
