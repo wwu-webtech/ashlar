@@ -51,7 +51,38 @@ Atom: Icons - Icons with Text
       }
     }
   }
+
+  &.black-bg,
+  &.darkest-blue-bg,
+  &.dark-blue-bg,
+  &.blue-gradient-bg,
+  &.dark-blue-gradient-bg,
+  &.dark-green-bg {
+    &:visited {
+      color: var(--purple--lighter--80);
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: var(--dark-blue);
+      }
+    }
+  }
   
+  &.gray-bg,
+  &.blue-bg,
+  &.green-bg {
+    &:visited {
+      color: var(--white);
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: var(--dark-blue);
+      }
+    }
+  }
+
   @media (forced-colors: active) {     
     &:hover,
     &:focus,
@@ -77,7 +108,9 @@ Atom: Icons - Icons with Text
         outline-color: var(--white);
       }
       &.blue-bg,
-      &.dark-blue-bg {
+      &.dark-blue-bg,
+      &.blue-gradient-bg,
+      &.dark-blue-gradient-bg {
         color: var(--white);
         &:hover,
         &:focus,
@@ -85,8 +118,33 @@ Atom: Icons - Icons with Text
           background-color: var(--blue);
         }
       }
+
+      &.green-bg,
+      &.light-green-bg {
+        color: var(--white);
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: var(--dark-blue);
+        }
+      }
+
+      &.gray-bg,
+      &.light-gray-bg,
+      &.light-blue-bg,
+      &.lightest-blue-bg {
+        color: var(--white);
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: var(--dark-blue);
+        }
+      }
+
       &.white-bg {
-        color: (var--blue--darker--20);
+        color: var(--blue--darker--20);
         background-color: var(--white);
         &:hover,
         &:focus,
