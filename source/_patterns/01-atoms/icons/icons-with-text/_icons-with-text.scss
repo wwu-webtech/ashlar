@@ -118,8 +118,33 @@ Atom: Icons - Icons with Text
           background-color: var(--blue);
         }
       }
+
+      &.green-bg,
+      &.light-green-bg {
+        color: var(--white);
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: var(--dark-blue);
+        }
+      }
+
+      &.gray-bg,
+      &.light-gray-bg,
+      &.light-blue-bg,
+      &.lightest-blue-bg {
+        color: var(--white);
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: var(--dark-blue);
+        }
+      }
+
       &.white-bg {
-        color: (var--blue--darker--20);
+        color: var(--blue--darker--20);
         background-color: var(--white);
         &:hover,
         &:focus,
