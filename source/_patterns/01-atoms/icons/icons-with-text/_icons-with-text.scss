@@ -51,7 +51,36 @@ Atom: Icons - Icons with Text
       }
     }
   }
+
+  &.black-bg,
+  &.darkest-blue-bg,
+  &.dark-blue-bg,
+  &.dark-green-bg {
+    &:visited {
+      color: var(--purple--lighter--80);
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: var(--dark-blue);
+      }
+    }
+  }
   
+  &.gray-bg,
+  &.blue-bg,
+  &.green-bg {
+    &:visited {
+      color: var(--white);
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: var(--dark-blue);
+      }
+    }
+  }
+
   @media (forced-colors: active) {     
     &:hover,
     &:focus,
