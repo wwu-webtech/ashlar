@@ -12,7 +12,8 @@ Molecule: Accordion
 Borders only added to accordions without custom background classes added
 ------------------------------------------------------------------------------*/
 .block--accordion:not([class*="-bg"]) {
-  .item {
+  .item,
+  wwu-accordion-item {
     border-top: var(--dark-blue--darker--20) solid var(--border-width--lg);
     border-right: var(--dark-blue--darker--20) solid var(--border-width--lg);
     border-left: var(--dark-blue--darker--20) solid var(--border-width--lg);
@@ -44,7 +45,9 @@ Borders only added to accordions without custom background classes added
 wwu-accordion,
 .accordion-set {
   margin-bottom: var(--space--md);
-  .item {
+  .item,
+  wwu-accordion-item {
+    display: block;
     border-top: transparent solid var(--border-width--lg);
     border-right: transparent solid var(--border-width--lg);
     border-left: transparent solid var(--border-width--lg);
@@ -108,7 +111,8 @@ wwu-accordion,
 ------------------------------------------------------------------------------*/
 .dark-mode {
   .block--accordion:not([class*="-bg"]) {
-    .item {
+    .item,
+    wwu-accordion-item {
       border-color: var(--blue--lighter--40);
       &:last-of-type {
         border-bottom-color: var(--blue--lighter--40);

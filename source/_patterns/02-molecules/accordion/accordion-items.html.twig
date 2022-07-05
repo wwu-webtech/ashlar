@@ -1,12 +1,3 @@
-<div class="item">
-    <{{ content['field_item_heading_level'][0]['#markup'] }} class="title">
-        <button class="expand">
-            <span class="material-icons" aria-hidden="true">add</span>
-            {{ content['field_heading'][0]['#context']['value'] }}
-        </button>
-    </{{ content['field_item_heading_level'][0]['#markup'] }}>
-
-    <div class="content">
-        {{ content.field_content }}
-    </div>
-</div>
+<wwu-accordion-item label="{{ content['field_heading'][0]['#context']['value'] }}" heading-level="{{ content['field_item_heading_level'][0]['#markup'] }}">
+    {{ content.field_content }}
+</wwu-accordion-item>
