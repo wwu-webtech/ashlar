@@ -17,8 +17,18 @@ if (
 
           if (item_content.classList.contains("is-expanded")) {
             item_content.classList.remove("is-expanded");
+            this.querySelector(".material-icons").innerText = "add";
           } else {
             item_content.classList.add("is-expanded");
+            this.querySelector(".material-icons").innerText = "clear";
+          }
+        }
+        function close_item(event) {
+          const key_pressed = event.code;
+
+          if(key_pressed == "Escape") {
+            this.parentNode.nextElementSibling.classList.remove("is-expanded");
+            this.querySelector(".material-icons").innerText = "add";
           }
         }
         /* Create the custom element by appending the template */
@@ -47,6 +57,7 @@ if (
           items[i].prepend(label);
 
           items[i].querySelector(".expand").addEventListener("click", toggle_item);
+          items[i].querySelector(".expand").addEventListener("keyup", close_item);
         }
     }
   }
