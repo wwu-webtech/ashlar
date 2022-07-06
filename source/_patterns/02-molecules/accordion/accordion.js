@@ -12,6 +12,15 @@ if (
     }
 
     connectedCallback() {
+        function toggle_item() {
+          const item_content = this.parentNode.nextElementSibling;
+
+          if (item_content.classList.contains("is-expanded")) {
+            item_content.classList.remove("is-expanded");
+          } else {
+            item_content.classList.add("is-expanded");
+          }
+        }
         /* Create the custom element by appending the template */
         this.appendChild(accordion_template.content.cloneNode(true));
 
@@ -35,7 +44,9 @@ if (
               ${label_text}
             </button>
           `
-          items[i].prepend(label);          
+          items[i].prepend(label);
+
+          items[i].querySelector(".expand").addEventListener("click", toggle_item);
         }
     }
   }

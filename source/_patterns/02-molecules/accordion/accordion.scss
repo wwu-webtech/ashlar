@@ -48,6 +48,7 @@ wwu-accordion,
   .item,
   wwu-accordion-item {
     display: block;
+    transition: all var(--transition-speed--fast) var(--ease--standard);
     border-top: transparent solid var(--border-width--lg);
     border-right: transparent solid var(--border-width--lg);
     border-left: transparent solid var(--border-width--lg);
@@ -98,10 +99,19 @@ wwu-accordion,
         }
       }
       & + .content {
-        display: none;
-        margin-top: var(--space--sm);
-        padding: 0 var(--space--md) var(--space--md) var(--space--md);
+        visibility: hidden;
+        height: 0;
+        transform-origin: top;
         word-wrap: break-word;
+        opacity: 0;
+        &.is-expanded {
+          visibility: visible;
+          height: initial;
+          margin-top: var(--space--sm);
+          padding: 0 var(--space--md) var(--space--md) var(--space--md);
+          transition: all var(--transition-speed--md) var(--ease--standard);
+          opacity: 1;
+        }
       }
     }
   }
