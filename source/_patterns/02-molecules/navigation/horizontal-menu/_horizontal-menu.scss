@@ -5,8 +5,8 @@ Molecule: Horizontal menus
 .menu {
   &.horizontal {
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
-
     li {
       border-left: none;
     }
