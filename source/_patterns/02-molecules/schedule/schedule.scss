@@ -6,7 +6,6 @@ Molecule: Schedule
 @import "../../../sass/partials/imports";
 @import "../../00-utilities/breakpoints.scss";
 @import "../../01-atoms/background-color/background-color-mixins.scss";
-
 .block--schedule {
   .schedule-item {
     @include lightest-gray-bg;
@@ -16,29 +15,23 @@ Molecule: Schedule
     padding: var(--space--sm);
     border: var(--border-width--md) solid transparent;
   }
-
   &.round-edges {
     .schedule-item {
       border-radius: var(--border-radius--rounder);
-
       a:hover:after,
       &:focus-within {
         border-radius: var(--border-radius--rounder);
       }
-
       a {
         color: inherit;
       }
     }
   }
-
   .schedule-heading {
     margin: var(--space--xs) 0;
     font-size: var(--font-size--lg);
-
     a {
       text-decoration: none;
-
       &:after {
         position: absolute;
         top: 0;
@@ -47,58 +40,49 @@ Molecule: Schedule
         left: calc(-1 * var(--border-radius--rounder));
         content: "";
         transition: var(--transition-speed--fast) var(--ease--standard)
-          box-shadow;
+        box-shadow;
         box-shadow: var(--shadow--soft);
       }
-
       &:active,
       &:hover,
       &:focus {
         color: inherit;
+        background-image: none;
       }
-
       &:focus {
         outline: none;
-
         &:after {
           outline: dotted var(--border-width--md);
           outline-offset: var(--border-width--md);
-
           @media (forced-colors: active) {
-             outline-offset: calc(1.5 * var(--border-width--lg));
+            outline-offset: calc(1.5 * var(--border-width--lg));
           }
         }
       }
-
       &:hover:after,
       &:focus-within {
         box-shadow: var(--shadow--soft--hover);
       }
     }
   }
-
   .time,
   .label {
     display: block;
     font-size: var(--font-size--lg);
     line-height: 1.2em;
   }
-
   .content {
     a {
       position: relative;
     }
   }
-
   div:nth-of-type(odd) .schedule-item {
     border-left: solid var(--blue) var(--border-radius--rounder);
   }
-
   div:nth-of-type(even) .schedule-item {
     border-left: solid var(--blue--lighter--40) var(--border-radius--rounder);
   }
 }
-
 /*------------------------------------------------------------------------------
 1. Dark mode
 ------------------------------------------------------------------------------*/
@@ -107,12 +91,21 @@ Molecule: Schedule
     .schedule-item {
       @include gray-bg;
     }
-
     .schedule-heading {
-      a:active,
-      a:focus,
-      a:hover {
-        color: var(--blue--lighter--80);
+      a {
+        &:active,
+        &:focus,
+        &:hover {
+          color: var(--blue--lighter--80);
+          background-image: none;
+        }
+        &:after {
+          box-shadow: var(--shadow--dark-mode);
+        }
+        &:hover:after,
+        &:focus-within {
+          box-shadow: var(--shadow--dark-mode--hover);
+        }
       }
     }
   }
