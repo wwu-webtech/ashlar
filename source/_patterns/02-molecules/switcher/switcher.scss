@@ -8,13 +8,15 @@ Molecule: Switcher
 .switcher,
 .mabel-content-switcher {
   display: flex;
+  flex-flow: row wrap;
   width: 100%;
   margin: 0;
   padding: 0;
   button {
-    width: 100%;
+    flex: 1 1 0;
     max-width: none;
     margin-right: var(--space--xs);
+    margin-bottom: var(--space--xs);
     color: var(--white);
     border: var(--border-width--md) solid transparent;
     border-radius: 0;
@@ -72,6 +74,28 @@ Molecule: Switcher
     margin-top: var(--space--md);
     &.active {
       display: block;
+    }
+  }
+}
+.column-layout {
+  @include breakpoint($small) {
+    wwu-switcher {
+      gap: var(--space--sm);
+
+      display: flex;
+    }
+    .switcher {
+      flex: 1 1 25%;
+      flex-flow: column;
+      button {
+        width: 100%;
+      }
+    }
+    .switcher-container {
+      flex: 1 1 75%;
+      [role="tabpanel"] {
+        margin: 0;
+      }
     }
   }
 }
