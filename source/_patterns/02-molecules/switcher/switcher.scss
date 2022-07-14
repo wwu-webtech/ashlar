@@ -16,7 +16,7 @@ Molecule: Switcher
     flex: 1 1 0;
     max-width: none;
     margin-right: var(--space--xs);
-    margin-bottom: var(--space--xs);
+    margin-bottom: var(--space--2xs);
     color: var(--white);
     border: var(--border-width--md) solid transparent;
     border-radius: 0;
@@ -85,14 +85,17 @@ Molecule: Switcher
       display: flex;
     }
     .switcher {
-      flex: 1 1 25%;
+      flex: 1 1 20%;
       flex-flow: column;
       button {
         width: 100%;
+        .material-icons.show {
+          top: 0;
+        }
       }
     }
     .switcher-container {
-      flex: 1 1 75%;
+      flex: 1 1 80%;
       [role="tabpanel"] {
         margin: 0;
       }
