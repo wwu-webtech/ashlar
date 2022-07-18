@@ -50,22 +50,28 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      {% if content.field_link.0['#url'] %}
-        <a href="{{ content.field_link.0['#url'] }}">
-      {% endif %}
-        {% if content.field_item_heading_level.0['#markup'] %}
-          <{{ content.field_item_heading_level.0['#markup'] }} class="schedule-heading">
-            {{ content.field_time }}
-            {{ content.field_item_label }}
-          </{{ content.field_item_heading_level.0['#markup'] }}>
-        {% else %}
-          <div class="schedule-heading">
-            {{ content.field_time }}
-            {{ content.field_item_label }}
-          </div>
-        {% endif %}
-      {% if content.field_link.0['#url'] %}
-        </a>
+      {% if content.field_item_heading_level.0['#markup'] %}
+        <{{ content.field_item_heading_level.0['#markup'] }} class="schedule-heading">
+          {% if content.field_link.0['#url'] %}
+            <a href="{{ content.field_link.0['#url'] }}">
+          {% endif %}
+          {{ content.field_time }}
+          {{ content.field_item_label }}
+        </{{ content.field_item_heading_level.0['#markup'] }}>
+          {% if content.field_link.0['#url'] %}
+            </a>
+          {% endif %}
+      {% else %}
+        <div class="schedule-heading">
+          {% if content.field_link.0['#url'] %}
+            <a href="{{ content.field_link.0['#url'] }}">
+          {% endif %}
+          {{ content.field_time }}
+          {{ content.field_item_label }}
+          {% if content.field_link.0['#url'] %}
+            </a>
+          {% endif %}
+        </div>
       {% endif %}
 
       <div class="content">
