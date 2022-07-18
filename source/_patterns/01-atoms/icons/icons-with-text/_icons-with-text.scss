@@ -51,35 +51,23 @@ Atom: Icons - Icons with Text
       }
     }
   }
-
-  &.black-bg,
-  &.darkest-blue-bg,
-  &.dark-blue-bg,
-  &.blue-gradient-bg,
-  &.dark-blue-gradient-bg,
-  &.dark-green-bg {
-    &:visited {
-      color: var(--purple--lighter--80);
-
-      &:hover,
-      &:focus,
-      &:active {
-        color: var(--dark-blue);
-      }
-    }
-  }
   
-  &.gray-bg,
-  &.blue-bg,
-  &.green-bg {
-    &:visited {
-      color: var(--white);
+  &:hover,
+  &:focus,
+  &:active {
+    outline-offset: calc(-1 * var(--border-width--lg));
+  }
 
-      &:hover,
-      &:focus,
-      &:active {
-        color: var(--dark-blue);
-      }
+  &.blue-bg,
+  &.dark-blue-bg,
+  &.darkest-blue-bg,
+  &.green-bg, 
+  &.dark-green-bg,
+  &.gray-bg,
+  &.blue-gradient-bg,
+  &.dark-blue-gradient-bg {
+    &:focus {
+      outline-color: var(--black);
     }
   }
 
@@ -104,9 +92,11 @@ Atom: Icons - Icons with Text
       &:active {
         color: var(--dark-blue);
       }
+
       &:focus {
-        outline-color: var(--white);
+        outline-color: var(--dark-blue);
       }
+
       &.blue-bg,
       &.dark-blue-bg,
       &.blue-gradient-bg,
