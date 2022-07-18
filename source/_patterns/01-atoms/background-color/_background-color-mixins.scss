@@ -47,7 +47,8 @@ Black, darkest blue, dark blue, and dark green are black based.
   }
 
   a,
-  a.patternLink {
+  a.patternLink,
+  &.icon-with-text {
     color: var(--blue--lighter--40);
 
     &:visited {
@@ -116,7 +117,8 @@ Black, darkest blue, dark blue, and dark green are black based.
 
   background: var(--dark-green);
 
-  a {
+  a,
+  &.icon-with-text {
     text-decoration-color: var(--light-green--lighter--20);
     color: var(--green--lighter--80);
 
@@ -179,7 +181,8 @@ Gray, blue, and green backgrounds are gray based.
     color: var(--white);
   }
 
-  a {
+  a,
+  &.icon-with-text {
     text-decoration-color: var(--blue--lighter--60);
     color: var(--white);
 
@@ -255,7 +258,8 @@ Gray, blue, and green backgrounds are gray based.
     }
   }
 
-  a {
+  a,
+  &.icon-with-text {
     text-decoration-color: var(--light-green--lighter--20);
 
     &:hover,
@@ -328,6 +332,25 @@ backgrounds are light gray based.
     
     &:focus {
       outline-color: var(--dark-blue);
+    }
+  }
+
+  &.icon-with-text {
+    color: var(--blue--darker--40);
+    
+    &:visited {
+      color: var(--purple);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--white);
+      background-image: var(--gradient--vertical--dark-blue);
+    }
+
+    &:focus {
+      outline-color: var(--white);
     }
   }
 
