@@ -17,14 +17,12 @@ Display preferences
   display: flex;
   flex-flow: column;
   padding: var(--space--md);
-  font-family: var(--font--condensed);
   border: var(--border-width--md) solid transparent;
   border-top-color: var(--blue);
-
+  font-family: var(--font--condensed);
   .menu {
     li {
       border-left-color: var(--light-green--lighter--20);
-
       a {
         @include breakpoint($medium) {
           min-height: none;
@@ -36,7 +34,6 @@ Display preferences
         padding: 0 var(--space--sm);
         font-weight: var(--font-weight--md);
       }
-
       &.menu-item--active-page {
         a {
           color: var(--dark-blue--darker--60);
@@ -44,18 +41,15 @@ Display preferences
         }
       }
     }
-
     .menu {
       li {
         border-left: none;
       }
-
       a {
         padding-left: var(--space--lg);
       }
     }
   }
-
   h2,
   h3 {
     margin-top: 0;
@@ -64,16 +58,13 @@ Display preferences
     text-shadow: var(--shadow--hard);
     font-size: var(--font-size--2xl);
     font-weight: var(--font-weight--semibold);
-
     a {
       color: var(--light-green--lighter--20);
     }
   }
-
   h3 {
     font-size: var(--font-size--sm);
   }
-
   > div {
     @include breakpoint($medium) {
       flex: 0 1 auto;
@@ -83,7 +74,6 @@ Display preferences
     margin: 0 var(--space--sm);
   }
 }
-
 /*------------------------------------------------------------------------------
 Display preferences
 ------------------------------------------------------------------------------*/
@@ -92,7 +82,6 @@ Display preferences
     font-family: var(--font--dyslexia-friendly);
   }
 }
-
 .font--hyperlegible {
   .ultimenu__region {
     font-family: var(--font--hyperlegible);

@@ -5,7 +5,7 @@ Organism: Headers - Western header
 @import "../../../../sass/partials/imports";
 @import "../../../00-utilities/breakpoints.scss";
 wwu-header {
-  @include breakpoint($small) {
+  @include breakpoint($medium) {
     display: grid;
     grid-template-columns: var(--logo-size) 1fr;
     grid-template-rows: auto 1fr;
@@ -22,7 +22,7 @@ wwu-header {
     grid-template-rows: auto 1fr;
   }
   .toggle-menu {
-    @include breakpoint($small) {
+    @include breakpoint($medium) {
       display: none;
     }
 
@@ -107,7 +107,7 @@ wwu-header {
   }
 }
 .wwu-menu {
-  @include breakpoint($small) {
+  @include breakpoint($medium) {
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
     justify-content: flex-end;
@@ -179,7 +179,7 @@ wwu-header {
   }
 }
 .wwu-menu-closed {
-  @include breakpoint(max-width $small) {
+  @include breakpoint(max-width $medium) {
     visibility: hidden;
     overflow: hidden;
     height: 0;
@@ -188,7 +188,7 @@ wwu-header {
   }
 }
 .wwu-menu-open {
-  @include breakpoint(max-width $small) {
+  @include breakpoint(max-width $medium) {
     visibility: visible;
     transition: opacity var(--ease--standard) var(--transition-speed--fast);
     opacity: 1;

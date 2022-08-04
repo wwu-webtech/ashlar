@@ -6,7 +6,7 @@ Molecule: Main navigation/ultimenu custom styles
 ------------------------------------------------------------------------------*/
 .main-navigation,
 #block-system-main-menu {
-  @include breakpoint($small) {
+  @include breakpoint($medium) {
     width: 100%;
     height: inherit;
   }
@@ -18,7 +18,7 @@ Molecule: Main navigation/ultimenu custom styles
   & > .menu,
   .ultimenu--horizontal {
     @include blue-bg;
-    @include breakpoint($small) {
+    @include breakpoint($medium) {
       background-color: var(--blue);
     }
 
@@ -29,14 +29,11 @@ Molecule: Main navigation/ultimenu custom styles
     padding-left: 0;
     background-color: var(--dark-blue);
     & > li {
-      @include breakpoint($small) {
-        flex: 1 1 min-content;
+      @include breakpoint($medium) {
+        flex: initial;
         grid-template-columns: 1fr var(--icon-size--xs);
         width: inherit;
         border-bottom: none;
-      }
-      @include breakpoint($medium) {
-        flex: initial;
       }
 
       display: grid;
@@ -65,7 +62,7 @@ Molecule: Main navigation/ultimenu custom styles
         }
       }
       & > a {
-        @include breakpoint($small) {
+        @include breakpoint($medium) {
           display: flex;
           align-items: center;
           padding: var(--space--sm);
@@ -104,14 +101,14 @@ Molecule: Main navigation/ultimenu custom styles
         border: none;
         font-size: var(--icon-size--xs);
         &.desktop {
-          @include breakpoint($small) {
+          @include breakpoint($medium) {
             display: flex;
           }
 
           display: none;
         }
         &.mobile {
-          @include breakpoint($small) {
+          @include breakpoint($medium) {
             display: none;
           }
         }
@@ -120,7 +117,7 @@ Molecule: Main navigation/ultimenu custom styles
       1. Active link trail
       ------------------------------------------------------------------------*/
       &.is-active-trail {
-        @include breakpoint($small) {
+        @include breakpoint($medium) {
           border-left: none;
           &:after {
             display: block;
