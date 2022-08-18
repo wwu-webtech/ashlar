@@ -44,6 +44,19 @@ Borders only added to accordions without custom background classes added
   }
 }
 
+.block--accordion,
+.accordion-set {
+  &[class*="blue-bg"],
+  &[class*="green-bg"],
+  &[class*="gray-bg"] {
+    .item .title {
+      .expand {
+        color: var(--white);
+      }
+    }
+  }
+}
+
 /*------------------------------------------------------------------------------
 3. General accordion styles
 ------------------------------------------------------------------------------*/
