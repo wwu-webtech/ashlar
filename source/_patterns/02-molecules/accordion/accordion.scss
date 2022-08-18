@@ -44,6 +44,19 @@ Borders only added to accordions without custom background classes added
   }
 }
 
+.block--accordion,
+.accordion-set {
+  &[class*="blue-bg"],
+  &[class*="green-bg"],
+  &[class*="gray-bg"] {
+    .item .title {
+      .expand {
+        color: var(--white);
+      }
+    }
+  }
+}
+
 /*------------------------------------------------------------------------------
 3. General accordion styles
 ------------------------------------------------------------------------------*/
@@ -62,7 +75,7 @@ Borders only added to accordions without custom background classes added
     .title {
       margin: 0;
       padding-bottom: 0;
-      font-size: var(--font-size--lg);
+      font-size: var(--font-size--md);
       font-weight: var(--font-weight--semibold);
   
       .expand {
