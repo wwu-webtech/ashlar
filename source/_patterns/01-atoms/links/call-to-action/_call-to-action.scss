@@ -297,8 +297,10 @@ a.button.button.button,
     &.white {
       color: var(--white);
       border-color: var(--white);
-      @media (forced-colors: none) {
-        background: transparent;
+      background: transparent;
+      
+      @media (forced-colors: active) {
+        background: Canvas;
       }
 
       &:active,
