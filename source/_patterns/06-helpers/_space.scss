@@ -63,62 +63,77 @@ Helpers: Space
   margin-left: 0;
 }
 .standard-padding,
+.block.standard-padding[class*="-bg"],
 .block.standard-padding {
   padding: var(--space--sm);
 }
 .standard-padding--top,
+.block.standard-padding--top[class*="-bg"],
 .block.standard-padding--top {
   padding-top: var(--space--sm);
 }
 .standard-padding--right,
+.block.standard-padding--right[class*="-bg"],
 .block.standard-padding--right {
   padding-right: var(--space--sm);
 }
 .standard-padding--bottom,
+.block.standard-padding--bottom[class*="-bg"],
 .block.standard-padding--bottom {
   padding-bottom: var(--space--sm);
 }
 .standard-padding--left,
+.block.standard-padding--left[class*="-bg"],
 .block.standard-padding--left {
   padding-left: var(--space--sm);
 }
 .double-padding,
+.block.double-padding[class*="-bg"],
 .block.double-padding {
-  padding: var(--space--md);
+  padding: var(--space--lg);
 }
 .double-padding--top,
+.block.double-padding--top[class*="-bg"],
 .block.double-padding--top {
-  padding-top: var(--space--md);
+  padding-top: var(--space--lg);
 }
 .double-padding--right,
+.block.double-padding--right[class*="-bg"],
 .block.double-padding--right {
-  padding-right: var(--space--md);
+  padding-right: var(--space--lg);
 }
 .double-padding--bottom,
+.block.double-padding--bottom[class*="-bg"],
 .block.double-padding--bottom {
-  padding-bottom: var(--space--md);
+  padding-bottom: var(--space--lg);
 }
 .double-padding--left,
+.block.double-padding--left[class*="-bg"],
 .block.double-padding--left {
-  padding-left: var(--space--md);
+  padding-left: var(--space--lg);
 }
 .no-padding,
+.block.no-padding[class*="-bg"],
 .block.no-padding {
   padding: 0;
 }
 .no-padding--top,
+.block.no-padding--top[class*="-bg"],
 .block.no-padding--top {
   padding-top: 0;
 }
 .no-padding--right,
+.block.no-padding--right[class*="-bg"],
 .block.no-padding--right {
   padding-right: 0;
 }
 .no-padding--bottom,
+.block.no-padding--bottom[class*="-bg"],
 .block.no-padding--bottom {
   padding-bottom: 0;
 }
 .no-padding--left,
+.block.no-padding--left[class*="-bg"],
 .block.no-padding--left {
   padding-left: 0;
 }
