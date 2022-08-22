@@ -398,12 +398,18 @@ Molecule: Cards - Alternate styles
 ------------------------------------------------------------------------------*/
 .card.information.split-style,
 .block--card.information.split-style {
+  @include breakpoint($medium) {
+    grid-template-areas: "title body"
+    "sorting body"
+    "terms body";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto auto;
+  }
+
   display: grid;
-  grid-template-areas: "title body"
-  "sorting body"
-  "terms body";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr auto auto;
+  grid-template-areas: "title" "sorting" "terms" "body";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
   align-items: initial;
   align-content: start;
   .title {
@@ -423,6 +429,9 @@ Molecule: Cards - Alternate styles
   }
   .block__title {
     color: var(--white);
+  }
+  .image {
+    margin-bottom: 0;
   }
   .sorting-term {
     display: flex;
