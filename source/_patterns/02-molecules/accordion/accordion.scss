@@ -49,9 +49,11 @@ Borders only added to accordions without custom background classes added
   &[class*="blue-bg"],
   &[class*="green-bg"],
   &[class*="gray-bg"] {
-    .item .title {
-      .expand {
-        color: var(--white);
+    &:not([class*="lightest-"]) {
+      .item .title {
+        .expand {
+          color: var(--white);
+        }
       }
     }
   }
