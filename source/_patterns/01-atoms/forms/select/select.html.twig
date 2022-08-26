@@ -3,7 +3,7 @@
  * @see templates/form/select.html.twig
  */
 #}
-{% spaceless %}
+{% apply spaceless %}
   <select{{ attributes }}>
     {% for option in options %}
       {% if option.type == 'optgroup' %}
@@ -17,4 +17,4 @@
       {% endif %}
     {% endfor %}
   </select>
-{% endspaceless %}
+{% endapply %}
