@@ -19,12 +19,16 @@ function playVideo(vid, btn) {
   });
   vid.classList.remove("paused");
   btn.innerHTML = material_pause + "Pause animation";
+  btn.classList.remove("bg-video--paused");
+  btn.classList.add('bg-video--playing');
 }
 
 function pauseVideo(vid, btn) {
   vid.pause();
   vid.classList.add("paused");
   btn.innerHTML = material_play + "Resume animation";
+  btn.classList.remove("bg-video--playing");
+  btn.classList.add('bg-video--paused');
 }
 
 function prefersReducedMotion() {
@@ -39,10 +43,12 @@ function prefersReducedMotion() {
   });
   play_pause_button.forEach(function (button) {
     if (motionQuery.matches) {
-      button.classList.add("bg-video--pause");
+      button.classList.remove("bg-video--paused");
+      button.classList.add("bg-video--playing");
       button.innerHTML = material_pause + "Pause animation";
     } else {
-      button.classList.add("bg-video--play");
+      button.classList.remove("bg-video--playing");
+      button.classList.add("bg-video--paused");
       button.innerHTML = material_play + "Resume animation";
     }
   });
@@ -54,7 +60,7 @@ play_pause_button.forEach(function (button) {
 
   if (custom_classes.classList.contains("paused")) {
     pauseVideo(video, button);
-    button.classList.add("bg-video--pause");
+    button.classList.add("bg-video--paused");
   } else {
     playVideo(video, button);
   }
@@ -65,9 +71,9 @@ play_pause_button.forEach(function (button) {
       .querySelector(".bg-video-container video");
 
     video_elm.classList.toggle("paused");
-    button.classList.toggle("bg-video--pause");
+    button.classList.toggle("bg-video--paused");
 
-    if (button.classList.contains("bg-video--pause")) {
+    if (button.classList.contains("bg-video--paused")) {
       pauseVideo(video_elm, button);
     } else {
       playVideo(video_elm, button);
