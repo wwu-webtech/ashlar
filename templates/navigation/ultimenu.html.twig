@@ -44,10 +44,10 @@
   ]
 %}
 {% set id_attributes = attributes.id|clean_id %}
-{% spaceless %}
+{% apply spaceless %}
   {% embed '@organisms/navigation/ulti-menu/ulti-menu.html.twig' %}
     {% block home %}
       <a class="ultimenu__link" href="{{ url('<front>') }}"><span class="material-icons">home</span></a>
     {% endblock %}
   {% endembed %}
-{% endspaceless %}
+{% endapply %}
