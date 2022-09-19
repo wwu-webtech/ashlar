@@ -39,6 +39,19 @@ Display preferences
           color: var(--dark-blue--darker--60);
           background-color: var(--light-green--lighter--20);
         }
+
+        @media (forced-colors: active) {
+          border: var(--border-width--md) solid transparent;
+          border-left-width: var(--border-width--lg);
+
+          a {
+            &:hover,
+            &:focus,
+            &:active {
+              outline-offset: calc(2 * var(--border-width--md));
+            }
+          }
+        }
       }
     }
     .menu {
