@@ -1,13 +1,11 @@
 {
   "name": "wwuweb/ashlar",
   "type": "drupal-theme",
-  "description": "Ashlar theme for Drupal 8",
+  "description": "Ashlar theme for Drupal",
   "keywords": [
     "drupal",
     "theme",
-    "twig",
-    "pattern lab",
-    "starterkit"
+    "twig"
   ],
   "homepage": "https://bitbucket.org/wwuweb/ashlar/",
   "license": "GPL-2.0",
@@ -21,29 +19,12 @@
     "source": "https://bitbucket.org/wwuweb/ashlar/"
   },
   "minimum-stability": "dev",
-  "extra": {
-    "patternlab": {
-      "dist": {
-        "sourceDir": [
-          {
-            "*": "*"
-          }
-        ]
-      }
-    }
-  },
-  "require": {
-    "aleksip/plugin-data-transform": "dev-wwuweb",
+  "require": {    
     "composer/installers": "^1.2"
   },
-  "repositories": {
-    "aleksip/plugin-data-transform": {
-      "type": "vcs",
-      "url": "https://bitbucket.org/wwuweb/plugin-data-transform.git"
-    },
-    "pattern-lab/core": {
-      "type": "vcs",
-      "url": "https://bitbucket.org/wwuweb/patternlab-php-core.git"
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
     }
   }
 }
