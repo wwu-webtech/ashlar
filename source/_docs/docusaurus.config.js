@@ -37,6 +37,10 @@ const config = {
           routeBasePath: 'patterns',
           sidebarPath: require.resolve('./sidebars.js'),
         },
+          blog: {
+          path: 'changelog',
+          routeBasePath: 'changelog',
+        },
         theme: {
           customCss: require.resolve('../../build/css/ashlar-base.css'),
         },
@@ -56,11 +60,11 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'overview',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Patterns',
           },
-          {to: '/_changelog', label: 'Changelog', position: 'left'},
+          {to: '/changelog', label: 'Changelog', position: 'left'},
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
@@ -75,8 +79,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Patterns',
+                to: '/docs/overview',
               },
             ],
           },
@@ -102,7 +106,7 @@ const config = {
             items: [
               {
                 label: 'Chagelog',
-                to: '/_changelog',
+                to: '/changelog',
               },
               {
                 label: 'GitHub',
