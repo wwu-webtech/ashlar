@@ -353,13 +353,10 @@ function ashlar_preprocess_breadcrumb(&$variables) {
     $request = \Drupal::request();
     $route_match = \Drupal::routeMatch();
     $variables['current_page_text'] = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
-    $variables['current_page_url'] = \Drupal::request()->getRequestUri();
 
     $variables['breadcrumb'][] = array(
-      'text' => $variables['current_page_text'],
-      'url' => $variables['current_page_url']
+      'text' => $variables['current_page_text']    
     );
-    $variables['#cache']['contexts'][] = 'url.path';
     $variables['#cache']['max-age'] = 0;
   }
 }
