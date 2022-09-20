@@ -11,23 +11,18 @@ Molecule: Breadcrumbs
     list-style: none;
 
     li {
-      display: inline-block;
-      margin-right: var(--space--xs);
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space--xs);
 
       &:last-child {
         font-weight: var(--font-weight--bold);
-
-        &::before {
-          font-weight: initial;
-        }
       }
 
-      &:before {
-        margin-right: var(--space--xs);
+      .material-icons {
+        font-size: inherit;
+        margin-right: var(--space--2xs);
       }
     }
-  }
-  li + li::before {
-    content: ">";
   }
 }
