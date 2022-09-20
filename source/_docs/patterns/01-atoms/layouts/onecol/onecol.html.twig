@@ -1,0 +1,14 @@
+{#
+/**
+ * @file
+ * Single column layout. This layout does not get used by Drupal, but imitates the layout for docs.
+ */
+ #}
+
+{% if content %}
+  <div{{ attributes }}>
+    <div {{ region_attributes }}>
+      {{ content }}
+    </div>
+  </div>
+{% endif %}

@@ -49,7 +49,7 @@
    * imagesDest: The destination directory for image files.
    */
   config.patternLab = {
-    patterns: "source/_patterns",
+    patterns: "source/_docs/patterns",
     sassFile: "wwu-styleguide.css",
     sassSrc: [
       "source/sass/styleguide/normalize.scss",
@@ -61,7 +61,7 @@
     sassDest: "source/pattern-lab/css",
     jsFile: "wwu-styleguide.js",
     jsSrc: [
-      "source/_patterns/**/*.js",
+      "source/_docs/patterns/**/*.js",
       "dist/js/*.js",
       "!dist/js/acalog.js",
       "source/js/menu-extras.js",
@@ -108,13 +108,13 @@
   };
   config.sassComponents = {
     src: [
-      "source/_patterns/02-molecules/**/*.scss",
-      "source/_patterns/03-organisms/**/*.scss",
+      "source/_docs/patterns/02-Molecules/**/*.scss",
+      "source/_docs/patterns/03-Organisms/**/*.scss",
     ],
     dest: "build/css/components",
     watch: [
-      "source/_patterns/02-molecules/**/*.scss",
-      "source/_patterns/03-organisms/**/*.scss",
+      "source/_docs/patterns/02-Molecules/**/*.scss",
+      "source/_docs/patterns/03-Organisms/**/*.scss",
       config.patternLab.patterns + "/**/*.scss",
     ],
     options: {
@@ -150,9 +150,9 @@
    * terser: Options map to pass to the terser plugin.
    */
   config.js = {
-    src: ["source/js/**/*.js", "source/_patterns/**/*.js"],
+    src: ["source/js/**/*.js", "source/_docs/patterns/**/*.js"],
     dest: "build/js",
-    watch: ["source/js/**/*.js", "source/_patterns/**/*.js"],
+    watch: ["source/js/**/*.js", "source/_docs/patterns/**/*.js"],
     template: {
       src: "source/js/behavior.lodash",
     },

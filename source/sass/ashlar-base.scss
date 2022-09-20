@@ -6,9 +6,9 @@
  */
 
 @import "partials/imports";
-@import "../_patterns/00-utilities/**/+(_)*.scss";
-@import "../_patterns/01-atoms/**/+(_)*.scss";
-@import "../_patterns/02-molecules/**/+(_)*.scss";
-@import "../_patterns/03-organisms/**/+(_)*.scss";
-@import "../_patterns/06-helpers/**/+(_)*.scss";
-@import "../_patterns/05-sites/**/_directory.scss";
+@import "../_docs/patterns/00-utilities/**/+(_)*.scss";
+@import "../_docs/patterns/01-Atoms/**/+(_)*.scss";
+@import "../_docs/patterns/02-Molecules/**/+(_)*.scss";
+@import "../_docs/patterns/03-Organisms/**/+(_)*.scss";
+@import "../_docs/patterns/06-helpers/**/+(_)*.scss";
+@import "../_docs/patterns/05-sites/**/_directory.scss";

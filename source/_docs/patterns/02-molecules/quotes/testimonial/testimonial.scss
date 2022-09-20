@@ -1,0 +1,95 @@
+/*------------------------------------------------------------------------------
+Molecule: Testimonial
+--------------------------------------------------------------------------------
+1. Mirror
+------------------------------------------------------------------------------*/
+@import "../../../../../sass/partials/imports";
+@import "../../../00-utilities/breakpoints.scss";
+.block--testimonial {
+  @include breakpoint($medium) {
+    flex-flow: row;
+    padding-bottom: var(--space--3xl);
+  }
+
+  display: flex;
+  flex-flow: column;
+  border-style: none;
+
+  .image--stylized {
+    @include breakpoint($medium) {
+      flex: 0 0 auto;
+      margin: 0;
+      margin-right: var(--space--md);
+    }
+
+    position: relative;
+    width: calc(100vw - (2 * var(--space--md)));
+    max-width: calc(var(--content-area-max-width) / 4);
+    height: calc(100vw - (2 * var(--space--md)));
+    max-height: calc(var(--content-area-max-width) / 4);
+    margin: auto;
+    box-shadow: var(--shadow--soft);
+
+    &:before,
+    &:after {
+      position: absolute;
+      z-index: -1;
+      display: block;
+      content: "";
+      border-radius: 50%;
+    }
+
+    &:before {
+      right: -4rem;
+      bottom: 1rem;
+      width: 100%;
+      height: 100%;
+      background: rgba(var(--blue--rgb), 0.15);
+    }
+
+    &:after {
+      right: -0.5rem;
+      bottom: -3.5rem;
+      width: 120%;
+      height: 120%;
+      background: rgba(var(--blue--rgb), 0.1);
+    }
+  }
+
+  .credit {
+    margin-top: var(--space--md);
+  }
+
+  .name {
+    display: block;
+    font-weight: var(--font-weight--bold);
+  }
+
+  .description {
+    font-style: italic;
+  }
+
+  /*----------------------------------------------------------------------------
+  1. Mirror
+  ----------------------------------------------------------------------------*/
+  &.mirror {
+    .image--stylized {
+      @include breakpoint($medium) {
+        margin-right: 0;
+        margin-left: var(--space--md);
+      }
+    }
+    .image {
+      @include breakpoint($medium) {
+        order: 2;
+      }
+    }
+
+    .body {
+      @include breakpoint($medium) {
+        order: 1;
+        text-align: right;
+      }
+    }
+  }
+}

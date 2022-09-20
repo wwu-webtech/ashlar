@@ -30,10 +30,10 @@ regions:
 components:
   namespaces:
     atoms:
-      - source/_patterns/01-atoms
+      - source/_docs/patterns/01-Atoms
     molecules:
-      - source/_patterns/02-molecules
+      - source/_docs/patterns/02-Molecules
     organisms:    
-      - source/_patterns/03-organisms
+      - source/_docs/patterns/03-Organisms
     templates:
-      - source/_patterns/04-templates
+      - source/_docs/patterns/04-Templates

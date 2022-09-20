@@ -1,0 +1,122 @@
+/*------------------------------------------------------------------------------
+Organism: Footers - Western footer
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+@import "../../../../../sass/partials/imports";
+@import "../../../00-utilities/breakpoints.scss";
+.wwu-footer {
+  @include breakpoint($small) {
+    -ms-grid-columns: var(--space--sm) 1fr 1fr var(--space--sm);
+    -ms-grid-rows: var(--space--lg) auto auto var(--space--lg);
+
+    grid-template-areas: ". ... ... ."
+    ". logo info  ."
+    ". statement icons ."
+    ". copyright copyright .";
+    grid-template-columns: var(--space--sm) 1fr 1fr var(--space--sm);
+    grid-template-rows: var(--space--lg) auto auto var(--space--lg);
+    justify-items: end;
+  }
+  @include breakpoint($large) {
+    -ms-grid-columns: calc((100vw - var(--content-area-max-width)) / 2) auto
+    auto auto calc((100vw - var(--content-area-max-width)) / 2);
+
+    display: -ms-grid;
+    display: grid;
+    grid-template-areas: ". ... ... ... ."
+    ". logo statement info  ."
+    ". logo statement icons ."
+    ". copyright copyright copyright .";
+    grid-template-columns: calc((100vw - var(--content-area-max-width)) / 2) auto auto auto calc(
+    (100vw - var(--content-area-max-width)) / 2
+    );
+  }
+
+  display: flex;
+  flex-flow: column;
+  border-top: var(--border-width--sm) solid transparent;
+  wwu-logo {
+    @include breakpoint($small) {
+      grid-area: logo;
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 1;
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 2;
+      justify-self: center;
+    }
+    @include breakpoint($medium) {
+      align-self: center;
+      justify-self: start;
+    }
+
+    width: var(--logo-size);
+    height: var(--logo-size);
+    margin: 0 auto;
+  }
+  .tribal-lands-statement {
+    @include breakpoint($small) {
+      grid-area: statement;
+      -ms-grid-column: 3;
+      -ms-grid-column-span: 1;
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 2;
+    }
+
+    align-self: center;
+    margin-top: var(--sapce--sm);
+    padding: 0 var(--space--md);
+    text-align: center;
+    p {
+      font-weight: var(--font-weight--light);
+    }
+  }
+  .western-info {
+    @include breakpoint($large) {
+      grid-area: info;
+      -ms-grid-column: 4;
+      -ms-grid-column-span: 1;
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 1;
+      align-self: end;
+      text-align: right;
+    }
+
+    text-align: center;
+    a {
+      font-weight: var(--font-weight--regular);
+    }
+    p {
+      margin-bottom: var(--space--2xs);
+    }
+  }
+  .social-media-links {
+    @include breakpoint($small) {
+      grid-area: icons;
+      -ms-grid-column: 4;
+      -ms-grid-column-span: 1;
+      -ms-grid-row: 3;
+      -ms-grid-row-span: 1;
+      align-content: start;
+      justify-content: end;
+    }
+
+    justify-content: center;
+    margin: 0.75rem auto;
+    .social-icon {
+      margin: var(--space--sm) 0 0 var(--space--sm);
+    }
+  }
+  .copyright {
+    @include breakpoint($small) {
+      grid-area: copyright;
+      margin: auto;
+    }
+
+    text-align: center;
+    font-size: var(--font-size--sm);
+    font-weight: var(--font-weight--light);
+    p {
+      margin: 0;
+    }
+  }
+}

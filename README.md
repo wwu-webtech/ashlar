@@ -136,15 +136,15 @@ If pa11y-ci is working, it will run through the commands listed in the husky pre
 
 #### SASS/CSS and JavaScript
 
-Changes to the theme will mostly happen in files contained in `ashlar/source/_patterns`. The `_patterns` folder is organized into the atoms -> molecules -> organisms -> templates -> pages scheme. Sub folders dictate how the static site will nest different components.
+Changes to the theme will mostly happen in files contained in `ashlar/source/_docs/patterns`. The `_docs/patterns` folder is organized into the atoms -> molecules -> organisms -> templates -> pages scheme. Sub folders dictate how the static site will nest different components.
 
 #### Templates
 
-There are template files in two places. Most templates are also found in the `_patterns` folder. These templates are used by Drupal and are also generated in the Pattern Lab instance and can be useful for other purposes.
+There are template files in two places. Most templates are also found in the `_docs/patterns` folder. These templates are used by Drupal and are also generated in the Pattern Lab instance and can be useful for other purposes.
 
 The files in the `templates` folder in the base `ashlar` directory are specific to Drupal, and do not appear in Pattern Lab.
 
-Drupal [loads templates based on naming conventions](https://www.drupal.org/docs/8/theming/twig/twig-template-naming-conventions). The Component Libraries module allows Drupal to look in the `_patterns` folder for template files, and it will look here first. If there are templates in the `_patterns` folder that match the name in the base `templates` folder, it will prefer the templates in the `_patterns` folder. If you create a template in the `templates` folder, and Drupal doesn't load it, check in the `_patterns` to see if a file there is overriding your template.
+Drupal [loads templates based on naming conventions](https://www.drupal.org/docs/8/theming/twig/twig-template-naming-conventions). The Component Libraries module allows Drupal to look in the `_docs/patterns` folder for template files, and it will look here first. If there are templates in the `_docs/patterns` folder that match the name in the base `templates` folder, it will prefer the templates in the `_docs/patterns` folder. If you create a template in the `templates` folder, and Drupal doesn't load it, check in the `_docs/patterns` to see if a file there is overriding your template.
 
 #### Compiling
 
