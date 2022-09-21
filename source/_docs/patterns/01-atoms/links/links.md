@@ -1,6 +1,12 @@
+--- 
+sidebar_position: 1
+---
+
+# Links
+
 <div>This <a href="#">link</a> appears outside of a paragraph.</div>
 
-<p>This is a <a href="#">link is very long, (it may overlap in smaller containers) has a descenders (yjgpq)</a> and is in a regular paragraph of text.</a></p>
+<p>This is a <a href="#">link is very long, (it may overlap in smaller containers) has a descenders (yjgpq)</a> and is in a regular paragraph of text.</p>
 
 <ul>
   <li><a href="#">This is a list of links</a></li>
