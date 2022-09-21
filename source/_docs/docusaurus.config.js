@@ -18,7 +18,7 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'wwu-stephanie', // Usually your GitHub org/user name.
   projectName: 'ashlar', // Usually your repo name.
-  deploymentBranch: 'masons7/docusaurus'
+  deploymentBranch: 'masons7/docusaurus',
   trailingSlash: false,
 
   // Even if you don't use internalization, you can use this field to set useful
