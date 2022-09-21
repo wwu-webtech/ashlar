@@ -5,7 +5,7 @@ Molecule: Schedule
 ------------------------------------------------------------------------------*/
 @import "../../../../sass/partials/imports";
 @import "../../00-utilities/breakpoints.scss";
-@import "../../01-Atoms/background-color/background-color-mixins.scss";
+@import "../../01-atoms/background-color/background-color-mixins.scss";
 .block--schedule {
   .schedule-item {
     @include lightest-gray-bg;
