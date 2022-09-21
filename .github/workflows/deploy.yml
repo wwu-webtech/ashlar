@@ -20,13 +20,13 @@ jobs:
 
       - name: Install Ashlar dependencies
         run: npm ci
-      - name: Run automated tasks
+      - name: Run gulp tasks
         run: gulp
-      - name: Go to docusaurus
-        run: cd source/_docs
       - name: Install dependencies
+        working-directory: source/_docs
         run: npm ci
       - name: Build website
+        working-directory: source/_docs
         run: npm run build
 
       # Popular action to deploy to GitHub Pages:
@@ -36,7 +36,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # Build output to publish to the `gh-pages` branch:
-          publish_dir: ./build
+          publish_dir: source/_docs/build
           # The following lines assign commit authorship to the official
           # GH-Actions bot for deploys to `gh-pages` branch:
           # https://github.com/actions/checkout/issues/13#issuecomment-724415212

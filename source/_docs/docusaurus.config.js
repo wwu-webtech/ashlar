@@ -10,7 +10,7 @@ const config = {
   tagline: 'Western Washington University\'s theme and component library',
   url: 'https://wwu.edu',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 

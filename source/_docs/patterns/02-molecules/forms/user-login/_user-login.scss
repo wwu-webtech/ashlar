@@ -33,10 +33,6 @@ Molecule: Forms - User Login
   }
 }
 
-.cas-login-link {
-  @extend .cta, .square;
-}
-
 .dark-mode {
   .user-login-form {
     .cas-login-link {
