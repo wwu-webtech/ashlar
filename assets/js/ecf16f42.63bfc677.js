@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkashlar_docs=self.webpackChunkashlar_docs||[]).push([[751],{3011:a=>{a.exports=JSON.parse('{"permalink":"/changelog/tags/facebook","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
