@@ -9,7 +9,7 @@ const config = {
   title: 'Ashlar',
   tagline: 'Western Washington University\'s theme and component library',
   url: 'https://wwu.edu',
-  baseUrl: '/',
+  baseUrl: '/ashlar/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
