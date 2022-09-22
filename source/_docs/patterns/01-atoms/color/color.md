@@ -1,5 +1,8 @@
-<h2>Brand Colors</h2>
-<p>These are the “go to” colors when designing or building communications for Western’s audiences. They should be the most prominent color in designs.</p>
+# Color
+
+## Brand Colors
+
+These are the “go to” colors when designing or building communications for Western’s audiences. They should be the most prominent color in designs.
 
 <div class="swatch-wrapper">
   <div class="dark-blue color-swatch">
@@ -43,7 +46,7 @@
   </div>
 </div>
 
-<h2>Neutral Colors</h2>
+## Neutral Colors
 <p>These are the neutral tones that are complementary to the brand colors.</p>
 <div class="swatch-wrapper">
   <div class="black color-swatch">
@@ -66,7 +69,7 @@
   </div>
 </div>
 
-<h2>Special Use Colors</h2>
+## Special Use Colors
 <p>Use of these colors should be limited to warnings, cautions, alerts, and other cases where special attention is needed. They can also be used sparingly as secondary or accent colors.</p>
 <div class="swatch-wrapper">
   <div class="red color-swatch">
@@ -83,7 +86,7 @@
   </div>
 </div>
 
-<h2>Brand Tints & Shades</h2>
+## Brand Tints & Shades
 <p>You may also use tints and shades of the brand colors and gray. These should be used as accent colors only, when one more more of the brand colors are also in use as the most prominent color(s). The tints and shades shown here are in 20% increments for web use, but you are not limited to these options for print. Any tint or shade of a brand or neutral (mixing pure white or black) is acceptable for print.</p>
 <div class="swatch-wrapper">
   <div class="dark-blue color-swatch tint-80">

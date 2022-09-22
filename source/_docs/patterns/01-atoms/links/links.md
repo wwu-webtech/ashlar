@@ -1,7 +1,3 @@
---- 
-sidebar_position: 1
----
-
 # Links
 
 <div>This <a href="#">link</a> appears outside of a paragraph.</div>
@@ -19,3 +15,11 @@ sidebar_position: 1
 <h3><a href="#">This is an H3 link</a></h3>
 <h4><a href="#">This is an H4 link</a></h4>
 <h5><a href="#">This is an H5 link</a></h5>
+
+## Call to Action Links
+
+To style a call to action link, add the class 'cta'
+
+<a href="#" class="cta">I'm a link!</a>
+
+    <a href="#" class="cta">I'm a link!</a>

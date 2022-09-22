@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 import WWUBackgroundColor from "./background-color.js"
 
 # Background Color
