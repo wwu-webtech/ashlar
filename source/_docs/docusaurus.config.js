@@ -13,14 +13,14 @@ const config = {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-
+  
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'wwu-stephanie', // Usually your GitHub org/user name.
+  organizationName: 'Western Washington University', // Usually your GitHub org/user name.
   projectName: 'ashlar', // Usually your repo name.
   deploymentBranch: 'masons7/docusaurus',
   trailingSlash: false,
-
+  
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
@@ -28,7 +28,7 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
+  
   presets: [
     [
       'classic',
@@ -39,7 +39,7 @@ const config = {
           routeBasePath: 'patterns',
           sidebarPath: require.resolve('./sidebars.js'),
         },
-          blog: {
+        blog: {
           path: 'changelog',
           routeBasePath: 'changelog',
         },
@@ -49,81 +49,83 @@ const config = {
       }),
     ],
   ],
-
+  
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      navbar: {
-        title: 'Ashlar',
-        logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+  ({
+    announcementBar: {
+      id: 'support_us',
+      content:
+      'This is a work in progress.',
+      backgroundColor: '#007ac8',
+      textColor: '#fff',
+      isCloseable: false,
+    },
+    navbar: {
+      title: 'Ashlar',
+      items: [
+        {
+          type: 'doc',
+          docId: 'overview',
+          position: 'left',
+          label: 'Patterns',
         },
-        items: [
+        {
+          to: '/changelog', 
+          label: 'Changelog', 
+          position: 'left'},
           {
-            type: 'doc',
-            docId: 'overview',
-            position: 'left',
-            label: 'Patterns',
+            to: 'https://bitbucket.org/wwuweb/ashlar/',
+            target: '_self',
+            label: 'BitBucket',
+            position: 'right',
           },
-          {to: '/changelog', label: 'Changelog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            type: 'search',
             position: 'right',
           },
         ],
       },
       footer: {
-        style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Helpful Links',
             items: [
               {
-                label: 'Patterns',
-                to: '/docs/overview',
-              },
+                label: 'Western Washington University',
+                to: 'https://wwu.edu',
+                target: '_self',
+              },              
+              {
+                label: 'Brand & Communication Guide',
+                to: 'https://brand.wwu.edu',
+                target: '_self',
+              },              
             ],
           },
           {
-            title: 'Community',
+            title: 'Get in Touch',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Chagelog',
-                to: '/changelog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'web.help@wwu.edu',
+                href: 'mailto:web.help@wwu.edu',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        logo: {
+          alt: 'Western Washington University: Make Waves',
+          src: 'img/logo.svg',
+          className: 'logo',
+        },
+        copyright: `Copyright © ${new Date().getFullYear()} Western Washington University. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
     }),
-};
-
-module.exports = config;
+  };
+  
+  module.exports = config;
+  
