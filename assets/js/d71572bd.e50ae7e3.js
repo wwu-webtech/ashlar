@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkashlar_docs=self.webpackChunkashlar_docs||[]).push([[915],{6659:a=>{a.exports=JSON.parse('{"label":"hola","permalink":"/changelog/tags/hola","allTagsPath":"/changelog/tags","count":1}')}}]);
