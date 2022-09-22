@@ -27,7 +27,7 @@
 <nav aria-label="Glossary" {{ attributes.addClass(summary_classes) }}>
   <ul>
   {% for row in rows %}
-    <li><a href="#letter-{{ row.title_truncated }}"{{ row.attributes.addClass(row.active ? 'is-active')|without('href') }}>{{ row.title_truncated }}</a>
+    <li><a href="#letter-{{ row.title_truncated }}" {{ row.attributes.addClass(row.active ? 'is-active')|without('href') }}>{{ row.title_truncated }}</a>
       {% if options.count %}
         ({{ row.count }})
       {% endif %}
