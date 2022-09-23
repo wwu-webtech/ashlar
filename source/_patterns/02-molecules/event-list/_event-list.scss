@@ -8,41 +8,34 @@ Molecule: Event List
     position: relative;
     display: grid;
     grid-column-gap: var(--space--sm);
-    grid-template-areas:
-      "date title"
-      "date location"
-      "icon body"
-      "icon body";
+    grid-template-areas: "date title"
+    "date location"
+    "icon body"
+    "icon body";
     grid-template-columns: var(--toggle-size--md) auto;
     margin-bottom: var(--space--sm);
-
     &:hover,
     &:focus-within {
-      box-shadow: var(--shadow--soft--hover);
       outline: var(--border-width--md) solid transparent;
+      box-shadow: var(--shadow--soft--hover);
     }
-
     &:focus-within {
       outline-style: dotted;
       outline-color: inherit;
     }
-
     @media (forced-colors: active) {
-      &:hover, 
+      &:hover,
       &:focus-within {
         outline-color: LinkText;
       }
     }
-
     p {
       margin: 0;
     }
-
     .title {
       flex: 1 0 70%;
       grid-area: title;
       margin-top: var(--space--md);
-
       h2,
       h3,
       h4,
@@ -51,17 +44,14 @@ Molecule: Event List
         margin: 0;
         line-height: 0.75em;
       }
-
       a {
         text-decoration: none;
-
         &:active,
         &:hover,
         &:focus {
-          background: transparent;
           outline: none;
+          background: transparent;
         }
-
         &:after {
           position: absolute;
           top: 0;
@@ -72,14 +62,11 @@ Molecule: Event List
         }
       }
     }
-
     .body {
       grid-area: body;
     }
-
     .icon {
       grid-area: icon;
-
       .icon-with-text {
         max-width: 100%;
         color: var(--dark-blue--darker--40);
@@ -92,57 +79,58 @@ Molecule: Event List
         margin-top: 0;
       }
     }
-
     .date {
       grid-area: date;
       width: var(--toggle-size--md);
+      padding: var(--space--sm);
       text-align: center;
       text-transform: uppercase;
-      background-color: var(--blue);
-      line-height: 1.5;
       border: var(--border-width--sm) solid transparent;
-
+      background-color: var(--blue);
       .day,
-      .month {
+      .month,
+      .year {
         display: flex;
         justify-content: center;
-        height: 50%;
-        padding: 0 var(--space--sm);
+        height: 33.333%;
         color: var(--white);
         background-color: var(--blue);
       }
-
-      .month {
-        align-items: end;
-        font-size: var(--font-size--2xl);
-        font-weight: var(--font-weight--regular);
+      .year {
+        font-size: var(--font-size--sm);
       }
-
+      .month {
+        font-size: var(--font-size--lg);
+        font-weight: var(--font-weight--regular);
+        line-height: 1.5;
+      }
       .day {
-        align-items: start;
         white-space: nowrap;
         word-spacing: -0.2em;
         font-size: var(--font-size--3xl);
         font-weight: var(--font-weight--semibold);
+        line-height: 1;
       }
     }
-
     .location {
       grid-area: location;
     }
   }
 }
-
 /*------------------------------------------------------------------------------
 1. Dark Mode
 ------------------------------------------------------------------------------*/
 .dark-mode {
   .event {
+    .title {
+      h3 {
+        color: var(--white);
+      }
+    }
     &:hover,
     &:focus-within {
       box-shadow: var(--shadow--dark-mode);
     }
-
     a {
       &:active,
       &:focus,
