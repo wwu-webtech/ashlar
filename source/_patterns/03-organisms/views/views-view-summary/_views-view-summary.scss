@@ -2,21 +2,19 @@
   &--a-z-glossary {
     ul {
       display: flex;
-      gap: var(--space--xs);
       flex-wrap: wrap;
       justify-content: space-evenly;
       list-style: none;
-
+      text-transform: uppercase;
       li {
         margin-bottom: var(--space--sm);
-        
         a {
           display: inline-block;
-          text-align: center;
           min-width: var(--touch-target--min);
           min-height: var(--touch-target--min);
+          text-align: center;
         }
-      } 
+      }
     }
   }
 }
