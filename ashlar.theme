@@ -207,6 +207,17 @@ function ashlar_theme_suggestions_page_alter(array &$suggestions, array $variabl
 }
 
 /**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ *
+ * Add views summary template suggestions.
+ * 
+ * @inheritdoc
+ */
+function ashlar_theme_suggestions_views_view_summary_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'views_view__summary__' . $variables['view']->id();
+}
+
+/**
  * Implements hook_preprocess_HOOK() for menu.html.twig.
  *
  * Adds classes to menu links. This cannot be done in Twig templates without
