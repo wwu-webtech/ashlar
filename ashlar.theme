@@ -336,10 +336,10 @@ function ashlar_form_user_login_form_alter(&$form, &$form_state, $form_id) {
 /**
  * Helper function to pass views pager info into views-mini-pager array.
  */
-function _get_view_machine_name ($view_title = NULL) {
+function _get_view_machine_name ($machine_name = NULL) {
   $variables = &drupal_static(__FUNCTION__, array());
-  if ($view_title) {
-    $variables[] = $view_title;
+  if ($machine_name) {
+    $variables[] = $view_titlemachine_name;
   }
   return $variables;
 }
