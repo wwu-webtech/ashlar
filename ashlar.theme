@@ -365,7 +365,7 @@ function ashlar_preprocess_views_view(&$variables) {
         $variables['#attached']['library'][] = 'ashlar/profile';
     }
   }
-  if (isset($variables['pager'])) {
+  if ($variables['view']->pager->definition['theme'] == 'views_mini_pager') {
     _get_view_machine_name($variables['pager']['#theme'][1]);
   }
 }
