@@ -334,6 +334,17 @@ function ashlar_form_user_login_form_alter(&$form, &$form_state, $form_id) {
 }
 
 /**
+ * Helper function to pass views pager info into views-mini-pager array.
+ */
+function _get_view_machine_name ($machine_name = NULL) {
+  $variables = &drupal_static(__FUNCTION__, array());
+  if ($machine_name) {
+    $variables[] = $machine_name;
+  }
+  return $variables;
+}
+
+/**
 * Implements hook_views_pre_render().
 * Note:  If your site would like to use pattern lab scalable social icons then
 *  you can create a view with a machine name that resolves to one of the names
@@ -341,6 +352,8 @@ function ashlar_form_user_login_form_alter(&$form, &$form_state, $form_id) {
 *  field to encapsulate the social media url and link text.  The code below attaches
 *  the profile.js script to your view which will replace the link text with a very
 *  nice social icon svg.  See profile.js if confused.
+*
+* Also gets pager name to pass to views-mini-pager.
 */
 function ashlar_preprocess_views_view(&$variables) {
   $view_array = $variables['view_array'];
@@ -352,6 +365,17 @@ function ashlar_preprocess_views_view(&$variables) {
         $variables['#attached']['library'][] = 'ashlar/profile';
     }
   }
+  if ($variables['view']->pager->definition['theme'] == 'views_mini_pager') {
+    _get_view_machine_name($variables['pager']['#theme'][1]);
+  }
+}
+
+/**
+ * Implements template_preprocess_views_mini_pager().
+ * Adds variable pager_name to use for nav aria-label.
+ */
+function ashlar_preprocess_views_mini_pager(&$variables) {
+  $variables['pager_name'] = _get_view_machine_name();
 }
 
 /**

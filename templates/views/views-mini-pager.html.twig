@@ -10,7 +10,7 @@
  */
 #}
 {% if items.previous or items.next %}
-  <nav class="pager" role="navigation" aria-label="Pagination">
+  <nav class="pager" aria-label="Pagination for {{ pager_name.0|replace({'views_mini_pager__': '','_': ' '}) }}">
     <ul class="js-pager__items">
       {% if items.previous %}
         <li>
