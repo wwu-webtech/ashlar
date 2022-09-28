@@ -372,7 +372,7 @@ function ashlar_preprocess_views_view(&$variables) {
 
 /**
  * Implements template_preprocess_views_mini_pager().
- * Adds variable view_title to use for nav aria-label.
+ * Adds variable pager_name to use for nav aria-label.
  */
 function ashlar_preprocess_views_mini_pager(&$variables) {
   $variables['pager_name'] = _get_view_machine_name();
