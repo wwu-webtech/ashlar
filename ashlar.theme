@@ -336,7 +336,7 @@ function ashlar_form_user_login_form_alter(&$form, &$form_state, $form_id) {
 /**
  * Helper function to pass views pager info into views-mini-pager array.
  */
-function _get_view_title ($view_title = NULL) {
+function _get_view_machine_name ($view_title = NULL) {
   $variables = &drupal_static(__FUNCTION__, array());
   if ($view_title) {
     $variables[] = $view_title;
@@ -365,7 +365,7 @@ function ashlar_preprocess_views_view(&$variables) {
         $variables['#attached']['library'][] = 'ashlar/profile';
     }
   }
-  _get_view_title($variables['pager']['#theme'][1]);
+  _get_view_machine_name($variables['pager']['#theme'][1]);
 }
 
 /**
@@ -373,7 +373,7 @@ function ashlar_preprocess_views_view(&$variables) {
  * Adds variable view_title to use for nav aria-label.
  */
 function ashlar_preprocess_views_mini_pager(&$variables) {
-  $variables['view_title'] = _get_view_title();
+  $variables['pager_name'] = _get_view_machine_name();
 }
 
 /**
