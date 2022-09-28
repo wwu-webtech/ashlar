@@ -339,7 +339,7 @@ function ashlar_form_user_login_form_alter(&$form, &$form_state, $form_id) {
 function _get_view_machine_name ($machine_name = NULL) {
   $variables = &drupal_static(__FUNCTION__, array());
   if ($machine_name) {
-    $variables[] = $view_titlemachine_name;
+    $variables[] = $machine_name;
   }
   return $variables;
 }
