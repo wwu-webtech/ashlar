@@ -365,7 +365,9 @@ function ashlar_preprocess_views_view(&$variables) {
         $variables['#attached']['library'][] = 'ashlar/profile';
     }
   }
-  _get_view_machine_name($variables['pager']['#theme'][1]);
+  if (isset($variables['pager'])) {
+    _get_view_machine_name($variables['pager']['#theme'][1]);
+  }
 }
 
 /**
