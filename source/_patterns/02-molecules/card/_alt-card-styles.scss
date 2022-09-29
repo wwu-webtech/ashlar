@@ -176,6 +176,8 @@ Molecule: Cards - Alternate styles
     .year {
       display: block;
       padding: 0 var(--space--lg) var(--space--md) var(--space--lg);
+      border: var(--border-width--md) solid transparent;
+      border-top: none;
       color: var(--white);
       background-color: var(--blue);
       font-size: var(--font-size--lg);
@@ -184,6 +186,8 @@ Molecule: Cards - Alternate styles
     .month {
       display: block;
       padding: var(--space--md) var(--space--lg) 0 var(--space--lg);
+      border: var(--border-width--md) solid transparent;
+      border-bottom: none;
       color: var(--white);
       background-color: var(--blue);
       font-size: var(--font-size--2xl);
@@ -191,6 +195,8 @@ Molecule: Cards - Alternate styles
     }
     .day {
       display: block;
+      border-left: var(--border-width--md) solid transparent;
+      border-right: var(--border-width--md) solid transparent;
       white-space: nowrap;
       word-spacing: -0.2em;
       color: var(--white);
@@ -242,6 +248,7 @@ Molecule: Cards - Alternate styles
     align-items: end;
     height: 100%;
     margin: 0;
+    border-top: var(--border-width--sm) solid transparent;
     padding-top: var(--space--md);
     a {
       &:active,
@@ -268,10 +275,13 @@ Molecule: Cards - Alternate styles
       display: grid;
       align-content: end;
       padding: var(--space--sm);
+      border: var(--border-width--sm) solid transparent;
       background-color: var(--dark-blue);
     }
     .day {
       padding: var(--space--sm);
+      border-width: var(--border-width--sm);
+      border-bottom: var(--border-width--sm) solid transparent;
       color: var(--dark-blue);
       background-color: var(--light-green);
     }
@@ -284,6 +294,7 @@ Molecule: Cards - Alternate styles
     align-items: start;
     height: 100%;
     padding-top: 0;
+    border-bottom: var(--border-width--sm) solid transparent;
   }
   .body {
     grid-area: body;
