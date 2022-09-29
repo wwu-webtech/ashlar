@@ -248,6 +248,7 @@ Molecule: Cards - Alternate styles
     align-items: end;
     height: 100%;
     margin: 0;
+    border-top: var(--border-width--sm) solid transparent;
     padding-top: var(--space--md);
     a {
       &:active,
@@ -274,10 +275,13 @@ Molecule: Cards - Alternate styles
       display: grid;
       align-content: end;
       padding: var(--space--sm);
+      border: var(--border-width--sm) solid transparent;
       background-color: var(--dark-blue);
     }
     .day {
       padding: var(--space--sm);
+      border-width: var(--border-width--sm);
+      border-bottom: var(--border-width--sm) solid transparent;
       color: var(--dark-blue);
       background-color: var(--light-green);
     }
@@ -290,6 +294,7 @@ Molecule: Cards - Alternate styles
     align-items: start;
     height: 100%;
     padding-top: 0;
+    border-bottom: var(--border-width--sm) solid transparent;
   }
   .body {
     grid-area: body;
