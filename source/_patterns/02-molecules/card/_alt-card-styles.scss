@@ -176,6 +176,8 @@ Molecule: Cards - Alternate styles
     .year {
       display: block;
       padding: 0 var(--space--lg) var(--space--md) var(--space--lg);
+      border: var(--border-width--md) solid transparent;
+      border-top: none;
       color: var(--white);
       background-color: var(--blue);
       font-size: var(--font-size--lg);
@@ -184,6 +186,8 @@ Molecule: Cards - Alternate styles
     .month {
       display: block;
       padding: var(--space--md) var(--space--lg) 0 var(--space--lg);
+      border: var(--border-width--md) solid transparent;
+      border-bottom: none;
       color: var(--white);
       background-color: var(--blue);
       font-size: var(--font-size--2xl);
@@ -191,6 +195,8 @@ Molecule: Cards - Alternate styles
     }
     .day {
       display: block;
+      border-left: var(--border-width--md) solid transparent;
+      border-right: var(--border-width--md) solid transparent;
       white-space: nowrap;
       word-spacing: -0.2em;
       color: var(--white);
