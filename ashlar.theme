@@ -358,6 +358,8 @@ function _get_view_machine_name ($machine_name = NULL) {
 function ashlar_preprocess_views_view(&$variables) {
   $view_array = $variables['view_array'];
   $variables['#cache']['contexts'][] = 'route';
+  $view_pager_theme = $variables['view']->pager->definition['theme'];
+
   if (isset($view_array['#name'])) {
     switch ($view_array['#name']) {
       case 'profile_page':
@@ -365,7 +367,8 @@ function ashlar_preprocess_views_view(&$variables) {
         $variables['#attached']['library'][] = 'ashlar/profile';
     }
   }
-  if ($variables['view']->pager->definition['theme'] == 'views_mini_pager') {
+  
+  if (isset($view_pager_theme) && $view_pager_theme == 'views_mini_pager') {
     _get_view_machine_name($variables['pager']['#theme'][1]);
   }
 }
