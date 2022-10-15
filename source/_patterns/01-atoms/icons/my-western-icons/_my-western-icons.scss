@@ -11,7 +11,7 @@ Atom: Icons - My Western Icons
   background-size: 100%;
 
   svg {
-    fill: var(--dark-blue);
+    fill: currentColor;
 
     display: block;
     width: var(--toggle-size--md);
@@ -21,10 +21,6 @@ Atom: Icons - My Western Icons
 
     @media print {
       fill: var(--black);
-    }
-
-    @media (forced-colors: active) {
-      fill: LinkText;
     }
   }
 
@@ -41,15 +37,17 @@ Atom: Icons - My Western Icons
 ------------------------------------------------------------------------------*/
 .dark-mode {
   .my-western-icon {
+    color: var(--blue--lighter--40);
     svg {
-      fill: var(--blue--lighter--40);
+      fill: currentColor;
     }
 
     &:active,
     &:focus,
     &:hover {
+      color: var(--dark-blue--darker--60);
       svg {
-        fill: var(--dark-blue--darker--60);
+        fill: currentColor;
       }
     }
   }
