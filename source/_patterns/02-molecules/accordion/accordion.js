@@ -1,7 +1,7 @@
 // Set vars and aria attributes
 const $accordionToggles = $(".accordion-set .expand", context);
 const $accordionButton = $(".accordion-set button.expand", context);
-const $accordionMockButton = $(".accordion-set a.expand", context);
+const $accordionMockButton = $(".accordion-set a.expand, .accordion-set div.expand", context);
 const $accordionContent = $(".accordion-set .content");
 
 $accordionToggles.filter(".is-expanded").attr("aria-expanded", "true");
@@ -35,9 +35,16 @@ function keyPressed(event) {
 if ($accordionMockButton) {
   $accordionMockButton.each(function () {
     let $mockButton = $(this);
-  
-    if (!$mockButton.attr('href') || $mockButton.attr('href') !== '#') {
-      $mockButton.attr('href', '#');
+    let $mockButtonTag = $mockButton.prop('tagName').toLowerCase();
+    
+    if ($mockButtonTag === 'a') {
+      if (!$mockButton.attr('href') || $mockButton.attr('href') !== '#') {
+        $mockButton.attr('href', '#');
+      }
+    } else {
+      if (!$mockButton.attr('tabindex') || $mockButton.attr('tabindex') !== '0') {
+        $mockButton.attr('tabindex', '0');
+      }
     }
 
     if(!$mockButton.attr('role') || $mockButton.attr('role') !== 'button') {

@@ -119,6 +119,16 @@ Borders only added to accordions without custom background classes added
         }
 
         &[role="button"] {
+          &:hover,
+          &:focus,
+          &:active {
+            outline: var(--border-width--md) solid transparent;
+            outline-color: var(--white);
+          }
+
+          &:focus {
+            outline-style: dotted;
+          }
           @media (forced-colors: active) {
              color: ButtonText;
           }
