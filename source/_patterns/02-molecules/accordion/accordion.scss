@@ -123,11 +123,11 @@ Borders only added to accordions without custom background classes added
           &:focus,
           &:active {
             outline: var(--border-width--md) solid transparent;
-            outline-color: var(--white);
           }
-
+          
           &:focus {
             outline-style: dotted;
+            outline-color: var(--white);
           }
           @media (forced-colors: active) {
              color: ButtonText;
