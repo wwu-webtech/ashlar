@@ -1,7 +1,7 @@
 // Set vars and aria attributes
 const $accordionToggles = $(".accordion-set .expand", context);
 const $accordionButton = $(".accordion-set button.expand", context);
-const $accordionMockButton = $(".accordion-set a.expand, .accordion-set div.expand", context);
+const $accordionMockButton = $(".accordion-set div.expand", context);
 const $accordionContent = $(".accordion-set .content");
 
 $accordionToggles.filter(".is-expanded").attr("aria-expanded", "true");
@@ -17,7 +17,7 @@ $accordionToggles.each(function () {
   $(this).attr("aria-controls", $contentID);
 });
 
-// Kbd support function for mock button toggles
+// Keyboard support for mock button toggles
 function keyPressed(event) {
   if (event.type === "click") {
     return true;
@@ -31,22 +31,14 @@ function keyPressed(event) {
   }
 }
 
-// Add href/role if not added to view-based accordion "button"
+// Add tabindex/role if not added to view-based accordion "button"
 if ($accordionMockButton) {
   $accordionMockButton.each(function () {
     let $mockButton = $(this);
-    let $mockButtonTag = $mockButton.prop('tagName').toLowerCase();
     
-    if ($mockButtonTag === 'a') {
-      if (!$mockButton.attr('href') || $mockButton.attr('href') !== '#') {
-        $mockButton.attr('href', '#');
-      }
-    } else {
-      if (!$mockButton.attr('tabindex') || $mockButton.attr('tabindex') !== '0') {
-        $mockButton.attr('tabindex', '0');
-      }
+    if (!$mockButton.attr('tabindex') || $mockButton.attr('tabindex') !== '0') {
+      $mockButton.attr('tabindex', '0');
     }
-
     if(!$mockButton.attr('role') || $mockButton.attr('role') !== 'button') {
       $mockButton.attr('role', 'button');
     }
@@ -75,9 +67,9 @@ function toggleExpansion(button) {
 function closeAccordion(event) {
   let accordionButtonClicked = $(this);
   let accordionContent = accordionButtonClicked.parent().siblings(".content");
-  let $code = event.charCode || event.keyCode;
+  let $keycode = event.charCode || event.keyCode;
 
-  if ($code === 27) {
+  if ($keycode === 27) {
     accordionContent.slideUp();
     accordionButtonClicked.removeClass("is-expanded");
     accordionButtonClicked.children(".material-icons").text("add");
@@ -93,7 +85,6 @@ $accordionButton.on("click", function () {
 $accordionMockButton.on("click keypress", function (event) {
   if (keyPressed(event) === true) {
     toggleExpansion($(this));
-    event.preventDefault();
   }
 });
 
