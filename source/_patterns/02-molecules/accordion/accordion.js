@@ -1,5 +1,5 @@
 // Set vars and aria attributes
-const $accordionToggles = $(".accordion-set .expand", context);
+const $accordionToggles = $(".accordion-set button.expand, .accordion-set div.expand", context);
 const $accordionButton = $(".accordion-set button.expand", context);
 const $accordionMockButton = $(".accordion-set div.expand", context);
 const $accordionContent = $(".accordion-set .content");
