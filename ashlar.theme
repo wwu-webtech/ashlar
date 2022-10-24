@@ -358,7 +358,6 @@ function _get_view_machine_name ($machine_name = NULL) {
 function ashlar_preprocess_views_view(&$variables) {
   $view_array = $variables['view_array'];
   $variables['#cache']['contexts'][] = 'route';
-  $view_pager_theme = $variables['pager']['#theme'][1];
 
   if (isset($view_array['#name'])) {
     switch ($view_array['#name']) {
@@ -368,8 +367,12 @@ function ashlar_preprocess_views_view(&$variables) {
     }
   }
   
-  if ($view_pager_theme && str_contains($view_pager_theme, 'views_mini_pager')) {
-    _get_view_machine_name($view_pager_theme);
+  if (!empty($variables['pager'])) {
+    $view_pager_theme = $variables['pager']['#theme'][1];
+    
+    if (str_contains($view_pager_theme, 'views_mini_pager')) {
+      _get_view_machine_name($view_pager_theme);
+    }
   }
 }
 
