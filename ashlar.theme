@@ -368,7 +368,7 @@ function ashlar_preprocess_views_view(&$variables) {
     }
   }
   
-  if (isset($view_pager_theme) && str_contains($view_pager_theme, 'views_mini_pager')) {
+  if ($view_pager_theme && str_contains($view_pager_theme, 'views_mini_pager')) {
     _get_view_machine_name($view_pager_theme);
   }
 }
