@@ -200,17 +200,18 @@ wwu-pre-header {
     flex-flow: row wrap;
   }
   fieldset {
-    @include breakpoint($medium) {
-      width: 49%;
+    display: flex;
+    flex: 1 1 0;
+    flex-flow: column nowrap;  
+    
+    @media (forced-colors: active) {
+      @include breakpoint($medium) {
+        width: 49%;
+      }
+      display: revert;
+      width: 100%;
     }
-    width: 100%;
 
-    @media (forced-colors: none) {
-      width: unset;
-      display: flex;
-      flex: 1 1 0;
-      flex-flow: column nowrap;  
-    }
     legend {
       margin: 0;
       padding: var(--space--xs);
