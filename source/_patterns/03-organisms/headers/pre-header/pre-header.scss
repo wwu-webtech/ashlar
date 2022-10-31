@@ -202,30 +202,18 @@ wwu-pre-header {
   fieldset {
     display: flex;
     flex: 1 1 0;
-    flex-flow: column nowrap;  
-    
-    @media (forced-colors: active) {
-      @include breakpoint($medium) {
-        width: 49%;
-      }
-      display: revert;
-      width: 100%;
-    }
+    flex-flow: column nowrap;
 
     legend {
       margin: 0;
       padding: var(--space--xs);
     }
-    input[type="radio"],
-    input[type="radio"] + label {
-      &:not(:last-of-type) {
-        margin-bottom: var(--space--md);
-      }
-    }
-    input[type="radio"] + label {
-      align-self: flex-start;
+
+    .radio {
+      margin-bottom: var(--space--md);
     }
   }
+
   .reset-button {
     margin-top: var(--space--xs);
   }
