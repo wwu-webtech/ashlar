@@ -200,31 +200,20 @@ wwu-pre-header {
     flex-flow: row wrap;
   }
   fieldset {
-    @include breakpoint($medium) {
-      width: 49%;
-    }
-    width: 100%;
+    display: flex;
+    flex: 1 1 0;
+    flex-flow: column nowrap;
 
-    @media (forced-colors: none) {
-      width: unset;
-      display: flex;
-      flex: 1 1 0;
-      flex-flow: column nowrap;  
-    }
     legend {
       margin: 0;
       padding: var(--space--xs);
     }
-    input[type="radio"],
-    input[type="radio"] + label {
-      &:not(:last-of-type) {
-        margin-bottom: var(--space--md);
-      }
-    }
-    input[type="radio"] + label {
-      align-self: flex-start;
+
+    .radio {
+      margin-bottom: var(--space--md);
     }
   }
+
   .reset-button {
     margin-top: var(--space--xs);
   }

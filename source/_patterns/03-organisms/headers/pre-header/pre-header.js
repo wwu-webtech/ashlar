@@ -18,24 +18,38 @@ if (
     <div class="menu-container">            
     <fieldset class="theme-selection">
     <legend>Theme</legend>
+    <div class="radio">
     <input id="default-theme" type="radio" name="theme-select" value="default-theme" checked="checked">
     <label for="default-theme">Default (System)</label>
+    </div>
+    <div class="radio">
     <input id="dark-mode" type="radio" name="theme-select" value="dark-mode">
     <label for="dark-mode">Dark</label>
+    </div>
+    <div class="radio">
     <input id="light-mode" type="radio" name="theme-select" value="light-mode">
     <label for="light-mode">Light</label>
+    </div>
     </fieldset>
     
     <fieldset class="font-selection">
     <legend>Font</legend>
+    <div class="radio">
     <input id="font--default" type="radio" name="font-select" value="font--default" checked="checked">
     <label for="font--default">Default</label>
+    </div>
+    <div class="radio">
     <input id="font--serif" type="radio" name="font-select" value="font--serif">
     <label for="font--serif">Serif</label>
+    </div>
+    <div class="radio">
     <input id="font--dyslexia-friendly" type="radio" name="font-select" value="font--dyslexia-friendly">
     <label for="font--dyslexia-friendly">Open Dyslexic</label>
+    </div>
+    <div class="radio">
     <input id="font--hyperlegible" type="radio" name="font-select" value="font--hyperlegible">
     <label for="font--hyperlegible">Hyperlegible</label>
+    </div>
     </fieldset>
     
     <!--fieldset class="language-selection">
