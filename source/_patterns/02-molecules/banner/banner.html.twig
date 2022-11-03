@@ -1,4 +1,4 @@
-<div{{ attributes }}>
+<div{{ attributes.addClass(classes) }}>
   {% block content %}
     {% block title %}
       {% include "@atoms/text/label/label.twig" %}
@@ -10,9 +10,10 @@
       </div>
     {% endblock %}
 
-    <div {{ body_attributes }}>
-      {{ content.body }}
-    </div>
+    {% block body %}
+      <div {{ body_attributes }}>
+        {{ content.body }}
+      </div>
+    {% endblock %}
   {% endblock %}
-
 </div>
