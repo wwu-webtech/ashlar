@@ -41,6 +41,20 @@ Molecule: Forms - User Login
   .user-login-form {
     .cas-login-link {
       color: var(--white);
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: var(--black);
+      }
+    
+      &:visited {
+        &:hover,
+        &:focus,
+        &:active {
+          color: var(--black);
+        }
+      }
     }
   }
 }
