@@ -2,3 +2,122 @@
 Atom: Text - Links - Call to Action
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
+.cta {
+  place-content: center;
+
+  position: relative;
+  display: inline-grid;
+  height: 3rem;
+  margin-bottom: var(--space--sm);
+  padding-right: calc(var(--space--md) + 2rem);
+  padding-left: calc(var(--space--md) + 3rem);
+  animation: cta-animate-back 400ms ease-out forwards;
+  text-decoration-color: var(--link-color);
+  text-underline-offset: 1rem;
+  border-radius: var(--border-radius--roundest);
+  background-size: 0 100%;
+  &:before {
+    // the arrow
+    position: absolute;
+    top: 1.2rem;
+    left: 1.2rem;
+    display: inline-block;
+    padding: 5px;
+    content: "";
+    transform: rotate(-45deg);
+    animation: cta-animate-before-back 400ms ease-out forwards;
+    border: solid var(--link-color);
+    border-width: 0 var(--border-width--md) var(--border-width--md) 0;
+  }
+  &:after {
+    // the circle
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    content: "";
+    animation: cta-animate-after-back 400ms ease-out forwards;
+    border: solid var(--border-width--md) var(--link-color);
+    border-radius: 50%;
+  }
+  &:active,
+  &:focus,
+  &:hover {
+    animation: cta-animate 400ms ease-out forwards;
+    text-decoration: none;
+    &:after {
+      animation: cta-animate-after 400ms ease-out forwards;
+    }
+    &:before {
+      animation: cta-animate-before 400ms ease-out forwards;
+    }
+  }
+}
+@keyframes cta-animate {
+  0% {
+    padding-right: var(--space--sm);
+    padding-left: calc(var(--space--md) + 3rem);
+    background-size: 0;
+  }
+  100% {
+    padding-right: calc(var(--space--md) + 2rem);
+    padding-left: var(--space--sm);
+    transform: translatex(0);
+    background-size: 100%;
+  }
+}
+@keyframes cta-animate-back {
+  0% {
+    padding-right: calc(var(--space--md) + 2rem);
+    padding-left: var(--space--sm);
+    transform: translatex(0);
+    background-size: 100%;;
+  }
+  100% {
+    padding-right: var(--space--sm);
+    padding-left: calc(var(--space--md) + 3rem);
+    background-size: 0;
+  }
+}
+@keyframes cta-animate-before {
+  0% {
+    left: 1.2rem;
+  }
+  100% {
+    left: calc(100% - 2rem);
+    border-color: var(--link-color--active);
+  }
+}
+@keyframes cta-animate-before-back {
+  0% {
+    left: calc(100% - 2rem);
+    border-color: var(--link-color--active);
+  }
+  100% {
+    left: 1.2rem;
+  }
+}
+@keyframes cta-animate-after {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+    transform: translatex(-100%);
+    border: none;
+  }
+}
+@keyframes cta-animate-after-back {
+  0% {
+    left: 100%;
+    transform: translatex(-100%);
+    border: none;
+  }
+  100% {
+    left: 0;
+  }
+}

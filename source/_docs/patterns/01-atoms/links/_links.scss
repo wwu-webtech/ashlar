@@ -3,54 +3,55 @@ Atom: Text - Links
 --------------------------------------------------------------------------------
 1. Print Styles
 ------------------------------------------------------------------------------*/
+:root {
+  --link-background: var(--gradient--vertical--light-blue);
+  --link-color: var(--blue--darker--20);
+  --link-color--active: var(--dark-blue);
+  --link-color--visited: var(--purple);
+  --link-decoration-color: var(--blue--lighter--60);
+  --link-decoration-color--visited: var(--purple--lighter--60);
+}
 a {
-  padding: 0.1563rem 0;
-  transition: background-size var(--transition-speed--fast)
-      cubic-bezier(0.33, 0.66, 0.66, 1),
-    text-decoration var(--transition-speed--fast) ease-out;
-  text-decoration-color: var(--blue--lighter--60);
   text-decoration-line: underline;
   text-decoration-style: solid;
   text-decoration-thickness: var(--border-width--md);
+
+  padding: 0.1563rem 0;
+  transition: background-size var(--transition-speed--fast)
+  cubic-bezier(0.33, 0.66, 0.66, 1),
+  text-decoration var(--transition-speed--fast) ease-out;
+  text-decoration-color: var(--link-decoration-color);
   text-underline-offset: 0.3125rem;
-  color: var(--blue--darker--20);
+  color: var(--link-color);
   background-image: none;
   background-repeat: no-repeat;
   background-position: 0 100%;
   background-size: 100% 0;
   font-weight: var(--font-weight--semibold);
-
   &:visited {
-    color: var(--purple);
+    text-decoration-color: var(--link-decoration-color--visited);
+    color: var(--link-color--visited);
   }
-
   &:active,
   &:focus,
   &:hover {
-    text-decoration-color: var(--blue--lighter--60);
-    color: var(--dark-blue);
-    background-image: var(--gradient--vertical--light-blue);
-    background-size: 100% 100%;
+    text-decoration-color: var(--link-decoration-color);
+    color: var(--link-color--active);
     outline: var(--border-width--md) solid transparent;
-
-    &:visited {
-      color: var(--dark-blue);
-    }
+    background-image: var(--link-background);
+    background-size: 100% 100%;
   }
-
   &:focus {
     outline: var(--border-width--md) dotted;
     outline-offset: var(--border-width--md);
   }
-
   @media (forced-colors: active) {
     &:hover,
     &:focus,
     &:active {
       outline-offset: calc(1.5 * var(--border-width--md));
     }
- }
-
+  }
   &[target="_blank"],
   &[target="blank"] {
     .material-icons {
@@ -60,7 +61,6 @@ a {
       font-size: inherit;
     }
   }
-
   &[href$=".mp4"],
   &[href$=".mov"],
   &[href$=".flv"],
@@ -70,19 +70,16 @@ a {
       content: " (video)";
     }
   }
-
   &[href$=".mp3"] {
     &:after {
       content: " (audio)";
     }
   }
-
   &[href$=".ai"] {
     &:after {
       content: " (Illustrator)";
     }
   }
-
   &[href$=".dwt"],
   &[href$=".css"],
   &[href$=".xml"] {
@@ -90,37 +87,31 @@ a {
       content: " (web file)";
     }
   }
-
   &[href$=".psd"] {
     &:after {
       content: " (Photoshop)";
     }
   }
-
   &[href$=".eps"] {
     &:after {
       content: " (PostScript)";
     }
   }
-
   &[href$=".id"] {
     &:after {
       content: " (InDesign)";
     }
   }
-
   &[href$=".wmv"] {
     &:after {
       content: " (WMV)";
     }
   }
-
   &[href$=".swf"] {
     &:after {
       content: " (Flash)";
     }
   }
-
   &[href$=".doc"],
   &[href$=".docx"],
   &[href$=".dot"],
@@ -132,7 +123,6 @@ a {
       content: " (Word)";
     }
   }
-
   &[href$=".ppt"],
   &[href$=".pptx"],
   &[href$=".pptm"],
@@ -147,7 +137,6 @@ a {
       content: " (PowerPoint)";
     }
   }
-
   &[href$=".xls"],
   &[href$=".xlsx"],
   &[href$=".xlsb"],
@@ -159,14 +148,12 @@ a {
       content: " (Excel)";
     }
   }
-
   &[href$=".pdf"] {
     &:after {
       content: " (PDF)";
     }
   }
 }
-
 /*------------------------------------------------------------------------------
 1. Print Styles
 ------------------------------------------------------------------------------*/

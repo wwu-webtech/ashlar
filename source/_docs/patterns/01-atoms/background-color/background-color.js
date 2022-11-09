@@ -32,13 +32,8 @@ if (
     </div>
 
     <div class="ctas">
-        <a class="light-blue cta" href="#">Call to Action</a>
         <a class="cta" href="#">Call to Action</a>
-        <a class="dark-blue cta" href="#">Call to Action</a>
-        <a class="light-green cta" href="#">Call to Action</a>
-        <a class="green cta" href="#">Call to Action</a>
-        <a class="dark-green cta" href="#">Call to Action</a>
-        <a class="white cta" href="#">Call to Action</a> 
+        <a class="cta" href="https://wwu.edu/">Visited CTA</a>
     </div>
 
     {% include "@atoms/buttons/play-button/play-button.twig" %}

@@ -13,61 +13,35 @@ Black, darkest blue, dark blue, and dark green are black based.
 @mixin black-bg {
   color: var(--white);
   background: var(--black);
-
   h1 {
     color: var(--light-green);
     &:after {
       border-color: var(--white);
     }
   }
-
   h2 {
     color: var(--light-green--lighter--20);
   }
-
   h3 {
     color: var(--light-green--lighter--40);
   }
-
   h4 {
     color: var(--light-green--lighter--60);
   }
-
   h5 {
     color: var(--light-green--lighter--80);
   }
-
   h6 {
     color: var(--light-green);
   }
-
   .intro,
   .tagline {
     color: var(--light-green--lighter--40);
   }
-
-  a,
-  a.patternLink,
-  &.icon-with-text {
-    color: var(--blue--lighter--40);
-
-    &:visited {
-      color: var(--purple--lighter--80);
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: var(--black);
-      outline-color: transparent;
-      background-image: var(--gradient--vertical--light-blue);
-    }
-
-    &:focus {
-      outline-color: var(--blue--lighter--40);
-    }
+  a {
+    --link-color: var(--blue--lighter--40);
+    --link-color--visited: var(--purple--lighter--80);
   }
-
   .menu {
     li {
       @include breakpoint($medium) {
@@ -77,23 +51,19 @@ Black, darkest blue, dark blue, and dark green are black based.
       border-left: solid var(--border-width--md) var(--blue--lighter--40);
     }
   }
-
   .social-icon,
   .play-button {
     color: var(--dark-blue);
     background: var(--white);
-
     svg {
       fill: var(--dark-blue);
     }
-
     &:hover,
     &:focus,
     &:active {
       background: var(--blue--lighter--60);
     }
   }
-
   caption,
   .block--countdown {
     color: var(--white);
@@ -116,30 +86,14 @@ Black, darkest blue, dark blue, and dark green are black based.
   @include black-bg;
 
   background: var(--dark-green);
-
-  a,
-  &.icon-with-text {
-    text-decoration-color: var(--light-green--lighter--20);
-    color: var(--green--lighter--80);
-
-    &:hover,
-    &:focus,
-    &:active {
-      outline-color: transparent;
-      background-image: var(--gradient--vertical--light-green);
-    }
-
-    &:focus {
-      outline-color: var(--light-green);
-    }
+  a {
+    --link-background: var(--gradient--vertical--light-green);
   }
-
   .menu {
     li {
       border-left-color: var(--green--lighter--80);
     }
   }
-
   &.pullquote {
     border-left-color: var(--green--lighter--80);
   }
@@ -153,62 +107,36 @@ Gray, blue, and green backgrounds are gray based.
 @mixin gray-bg {
   color: var(--white);
   background: var(--gray);
-
   h1 {
     color: var(--light-green--lighter--20);
     &:after {
       border-color: var(--blue--lighter--40);
     }
   }
-
   h2 {
     color: var(--light-green--lighter--40);
   }
-
   h3 {
     color: var(--light-green--lighter--60);
   }
-
   h4 {
     color: var(--light-green--lighter--80);
   }
-
   h5 {
     color: var(--white);
   }
-
   h6 {
     color: var(--white);
   }
-
-  a,
-  &.icon-with-text {
-    text-decoration-color: var(--blue--lighter--60);
-    color: var(--white);
-
-    &:visited {
-      color: var(--white);
-      text-decoration-color: var(--purple--lighter--60);
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: var(--black);
-      outline-color: transparent;
-      background-image: var(--gradient--vertical--light-blue);
-    }
-
-    &:focus {
-      outline-color: var(--white);
-    }
+  a {
+    --link-color: var(--white);
+    --link-color--visited: var(--white);
+    --link-decoration-color--visited: var(--purple--lighter--80);
   }
-
   .intro,
   .tagline {
     color: var(--light-green--lighter--80);
   }
-
   .menu {
     li {
       @include breakpoint($medium) {
@@ -218,23 +146,19 @@ Gray, blue, and green backgrounds are gray based.
       border-left: solid var(--border-width--md) var(--blue--lighter--60);
     }
   }
-
   .social-icon,
   .play-button {
     color: var(--dark-blue);
     background: var(--white);
-
     svg {
       fill: var(--dark-blue);
     }
-
     &:hover,
     &:focus,
     &:active {
       background: var(--blue--lighter--60);
     }
   }
-
   caption,
   .block--countdown {
     color: var(--white);
@@ -251,29 +175,14 @@ Gray, blue, and green backgrounds are gray based.
   @include gray-bg;
 
   background: var(--green);
-
   h1 {
     &:after {
       border-color: var(--light-green--lighter--80);
     }
   }
-
-  a,
-  &.icon-with-text {
-    text-decoration-color: var(--light-green--lighter--20);
-
-    &:hover,
-    &:focus,
-    &:active {
-      outline-color: transparent;
-      background-image: var(--gradient--vertical--light-green);
-    }
-
-    &:focus {
-      outline-color: var(--light-green--lighter--20);
-    }
+  a {
+    --link-background: var(--gradient--vertical--light-green);
   }
-
   &.pullquote {
     border-left-color: var(--light-green--lighter--40);
   }
@@ -287,73 +196,34 @@ backgrounds are light gray based.
 ------------------------------------------------------------------------------*/
 @mixin light-gray-bg {
   background: var(--gray--lighter--60);
-
   h1 {
     color: var(--dark-blue--darker--80);
     &:after {
       border-color: var(--dark-blue--darker--80);
     }
   }
-
   h2 {
     color: var(--dark-blue--darker--60);
   }
-
   h3 {
     color: var(--dark-blue--darker--40);
   }
-
   h4 {
     color: var(--dark-blue--darker--20);
   }
-
   h5 {
     color: var(--dark-blue);
   }
-
   h6 {
     color: var(--dark-blue);
   }
-
   a {
-    text-decoration-color: var(--dark-blue);
-    color: var(--blue--darker--40);
-    &:visited {
-      color: var(--purple);
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: var(--white);
-      outline-color: transparent;
-      background-image: var(--gradient--vertical--dark-blue);
-    }
-    
-    &:focus {
-      outline-color: var(--dark-blue);
-    }
+    --link-background: var(--gradient--vertical--dark-blue);
+    --link-color: var(--dark-blue--darker--60);
+    --link-color--active: var(--white);
+    --link-decoration-color: var(--blue--darker--60);
+    --link-decoration-color--visited: var(--purple);
   }
-
-  &.icon-with-text {
-    color: var(--blue--darker--40);
-    
-    &:visited {
-      color: var(--purple);
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: var(--white);
-      background-image: var(--gradient--vertical--dark-blue);
-    }
-
-    &:focus {
-      outline-color: var(--white);
-    }
-  }
-
   .menu {
     li {
       @include breakpoint($medium) {
@@ -363,7 +233,6 @@ backgrounds are light gray based.
       border-left: solid var(--border-width--md) var(--blue--darker--40);
     }
   }
-
   &.pullquote {
     border-left-color: var(--dark-blue);
   }

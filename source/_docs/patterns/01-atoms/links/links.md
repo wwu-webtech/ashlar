@@ -20,6 +20,6 @@
 
 To style a call to action link, add the class 'cta'
 
-<a href="#" class="cta">I'm a link!</a>
+<a href="#" class="cta">Apply for this program</a>
 
-    <a href="#" class="cta">I'm a link!</a>
+    <a href="#" class="cta">Apply for this program</a>
