@@ -16,6 +16,6 @@
 <p class="font--hyperlegible"><strong>Hyperlegible font bold: "Atkinson", serif;</strong></p>
 
 ## Dyslexia-friendly
-<p class="font--opendyslexic">Dyslexia-friendly font: "Opendyslexic", serif;</p>
-<p class="font--opendyslexic"><em>Dyslexia-friendly font italic: "Opendyslexic", serif;</em></p>
-<p class="font--opendyslexic"><strong>Dyslexia-friendly font bold: "Opendyslexic", serif;</strong></p>
+<p class="font--dyslexia-friendly">Dyslexia-friendly font: "Opendyslexic", serif;</p>
+<p class="font--dyslexia-friendly"><em>Dyslexia-friendly font italic: "Opendyslexic", serif;</em></p>
+<p class="font--dyslexia-friendly"><strong>Dyslexia-friendly font bold: "Opendyslexic", serif;</strong></p>

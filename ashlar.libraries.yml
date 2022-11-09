@@ -85,11 +85,6 @@ external-links-a11y:
   version: 1.x
   js:
     build/js/external-links-a11y.js: {}
-fonts:
-  version: 1.x
-  css:
-    theme:
-      dist/css/font-families.css: {}
 fullpage:
   version: 3.0.7
   css:
