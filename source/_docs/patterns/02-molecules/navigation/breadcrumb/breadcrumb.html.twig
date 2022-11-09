@@ -5,15 +5,13 @@
   <ol>
     {% for item in breadcrumb %} 
       {% if loop.last %}
-      <li>
-        <a href="{{ item.url }}" aria-current="page">{{ item.text }}</a>
-      </li>
+      <li aria-current="page">{{ item.text }}</li>
       {% else %}
       <li>
         {% if item.url %}
-          <a href="{{ item.url }}">{{ item.text }}</a>
+          <a href="{{ item.url }}">{{ item.text }}</a><span class="material-icons" aria-hidden="true">chevron_right</span>
         {% else %}
-          {{ item.text }}
+          {{ item.text }}<span class="material-icons" aria-hidden="true">chevron_right</span>
         {% endif %}
       </li>
       {% endif %} 

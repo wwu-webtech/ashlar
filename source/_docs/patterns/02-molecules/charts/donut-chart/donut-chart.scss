@@ -113,10 +113,10 @@ $chart-greens-images: (
       @for $i from 1 through length($chart-blues) {
         &:nth-of-type(#{$i}) {
           &:before {
-            background: nth($chart-blues-images, $i);
+            background: nth($chart-blues, $i);
             
-            @media (forced-colors: none) {
-              background: nth($chart-blues, $i);
+            @media (forced-colors: active) {
+              background: nth($chart-blues-images, $i);
             }
           }
         }
@@ -138,10 +138,10 @@ $chart-greens-images: (
         @for $i from 1 through length($chart-greens) {
           &:nth-of-type(#{$i}) {
             &:before {
-              background: nth($chart-greens-images, $i);
+              background: nth($chart-greens, $i);
               
-              @media (forced-colors: none) {
-                background: nth($chart-greens, $i);
+              @media (forced-colors: active) {
+                background: nth($chart-greens-images, $i);
               }
             }
           }
@@ -164,10 +164,10 @@ $chart-greens-images: (
         @for $i from 1 through length($chart-light-blues) {
           &:nth-of-type(#{$i}) {
             &:before {
-              background: nth($chart-light-blues-images, $i);
+              background: nth($chart-light-blues, $i);
               
-              @media (forced-colors: none) {
-                background: nth($chart-light-blues, $i);
+              @media (forced-colors: active) {
+                background: nth($chart-light-blues-images, $i);
               }
             }
           }

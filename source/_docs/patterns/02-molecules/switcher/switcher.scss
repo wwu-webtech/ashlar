@@ -85,7 +85,7 @@ Molecule: Switcher
       display: flex;
     }
     .switcher {
-      flex: 1 1 10%;
+      flex: 1 1 12%;
       flex-flow: column;
       button {
         width: 100%;
@@ -95,7 +95,7 @@ Molecule: Switcher
       }
     }
     .switcher-container {
-      flex: 1 1 90%;
+      flex: 1 1 88%;
       [role="tabpanel"] {
         margin: 0;
       }

@@ -207,6 +207,17 @@ function ashlar_theme_suggestions_page_alter(array &$suggestions, array $variabl
 }
 
 /**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ *
+ * Add views summary template suggestions.
+ * 
+ * @inheritdoc
+ */
+function ashlar_theme_suggestions_views_view_summary_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'views_view__summary__' . $variables['view']->id();
+}
+
+/**
  * Implements hook_preprocess_HOOK() for menu.html.twig.
  *
  * Adds classes to menu links. This cannot be done in Twig templates without
@@ -323,6 +334,17 @@ function ashlar_form_user_login_form_alter(&$form, &$form_state, $form_id) {
 }
 
 /**
+ * Helper function to pass views pager info into views-mini-pager array.
+ */
+function _get_view_machine_name ($machine_name = NULL) {
+  $variables = &drupal_static(__FUNCTION__, array());
+  if ($machine_name) {
+    $variables[] = $machine_name;
+  }
+  return $variables;
+}
+
+/**
 * Implements hook_views_pre_render().
 * Note:  If your site would like to use pattern lab scalable social icons then
 *  you can create a view with a machine name that resolves to one of the names
@@ -330,10 +352,13 @@ function ashlar_form_user_login_form_alter(&$form, &$form_state, $form_id) {
 *  field to encapsulate the social media url and link text.  The code below attaches
 *  the profile.js script to your view which will replace the link text with a very
 *  nice social icon svg.  See profile.js if confused.
+*
+* Also gets pager name to pass to views-mini-pager.
 */
 function ashlar_preprocess_views_view(&$variables) {
   $view_array = $variables['view_array'];
   $variables['#cache']['contexts'][] = 'route';
+
   if (isset($view_array['#name'])) {
     switch ($view_array['#name']) {
       case 'profile_page':
@@ -341,6 +366,22 @@ function ashlar_preprocess_views_view(&$variables) {
         $variables['#attached']['library'][] = 'ashlar/profile';
     }
   }
+  
+  if (!empty($variables['pager'])) {
+    $view_pager_theme = $variables['pager']['#theme'][1];
+    
+    if (str_contains($view_pager_theme, 'views_mini_pager')) {
+      _get_view_machine_name($view_pager_theme);
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_views_mini_pager().
+ * Adds variable pager_name to use for nav aria-label.
+ */
+function ashlar_preprocess_views_mini_pager(&$variables) {
+  $variables['pager_name'] = _get_view_machine_name();
 }
 
 /**
@@ -353,13 +394,10 @@ function ashlar_preprocess_breadcrumb(&$variables) {
     $request = \Drupal::request();
     $route_match = \Drupal::routeMatch();
     $variables['current_page_text'] = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
-    $variables['current_page_url'] = \Drupal::request()->getRequestUri();
 
     $variables['breadcrumb'][] = array(
-      'text' => $variables['current_page_text'],
-      'url' => $variables['current_page_url']
+      'text' => $variables['current_page_text']    
     );
-    $variables['#cache']['contexts'][] = 'url.path';
     $variables['#cache']['max-age'] = 0;
   }
 }
