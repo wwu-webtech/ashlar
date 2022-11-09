@@ -1,0 +1,222 @@
+/*------------------------------------------------------------------------------
+Atom: Text - Headings
+--------------------------------------------------------------------------------
+1. Default
+2. Alternate styles
+3. Display Preferences
+------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------
+1. Default
+------------------------------------------------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: var(--space--xl) 0 var(--space--xs);
+  font-display: fallback;
+  line-height: 1.2em;
+  font-family: var(--font--title);
+
+  @media print {
+    margin-bottom: 0;
+    page-break-inside: avoid;
+  }
+}
+
+h1 {
+  position: relative;
+  display: block;
+  padding-bottom: var(--space--md);
+  color: var(--blue--darker--80);
+  font-family: var(--font--title);
+  font-size: var(--font-size--5xl);
+  font-weight: var(--font-weight--bold);
+
+  &:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    max-width: 6em;
+    content: "";
+    border-width: 0.12em;
+    border-style: solid;
+  }
+}
+
+h2 {
+  color: var(--blue--darker--60);
+  font-size: var(--font-size--4xl);
+  font-weight: var(--font-weight--bold);
+}
+h3 {
+  color: var(--blue--darker--40);
+  font-size: var(--font-size--3xl);
+  font-weight: var(--font-weight--semibold);
+}
+h4 {
+  color: var(--blue--darker--20);
+  font-size: var(--font-size--2xl);
+  font-weight: var(--font-weight--semibold);
+}
+h5 {
+  color: var(--blue);
+  font-size: var(--font-size--xl);
+  font-weight: var(--font-weight--semibold);
+}
+h6 {
+  color: var(--blue);
+  font-size: var(--font-size--lg);
+  font-weight: var(--font-weight--semibold);
+}
+
+h1 + h2,
+h2 + h3,
+h3 + h4,
+h4 + h5,
+h5 + h6 {
+  margin-top: 0;
+}
+
+/*------------------------------------------------------------------------------
+2. Alternate Styles
+------------------------------------------------------------------------------*/
+.headings--big-and-bold {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font--title);
+  }
+
+  h1 {
+    padding-bottom: 0;
+    text-transform: uppercase;
+    border-bottom: none;
+    font-size: var(--font-size--7xl);
+    font-weight: var(--font-weight--black);
+
+    &:after {
+      display: none;
+    }
+
+    @include breakpoint($medium) {
+      font-size: var(--font-size--9xl);
+    }
+  }
+
+  h2 {
+    text-transform: uppercase;
+    border-bottom: none;
+    font-size: var(--font-size--6xl);
+    font-weight: var(--font-weight--black);
+
+    @include breakpoint($medium) {
+      font-size: var(--font-size--8xl);
+    }
+  }
+
+  h3 {
+    display: inline-block;
+    font-size: var(--font-size--5xl);
+
+    @include breakpoint($medium) {
+      font-size: var(--font-size--7xl);
+    }
+  }
+
+  h4 {
+    font-size: var(--font-size--4xl);
+
+    @include breakpoint($medium) {
+      font-size: var(--font-size--6xl);
+    }
+  }
+
+  h5 {
+    font-size: var(--font-size--3xl);
+
+    @include breakpoint($medium) {
+      font-size: var(--font-size--5xl);
+    }
+  }
+}
+
+.font-size--smaller {
+  h1 {
+    font-size: var(--font-size--3xl);
+  }
+
+  h2 {
+    padding-bottom: none;
+    border-bottom: none;
+    font-size: var(--font-size--2xl);
+  }
+
+  h3 {
+    font-size: var(--font-size--xl);
+  }
+
+  h4 {
+    font-size: var(--font-size--lg);
+  }
+
+  h5 {
+    font-size: var(--font-size--md);
+  }
+
+  h6 {
+    font-size: var(--font-size--sm);
+  }
+}
+
+/*------------------------------------------------------------------------------
+3. Display Preferences
+------------------------------------------------------------------------------*/
+.font--dyslexia-friendly {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font--dyslexia-friendly);
+  }
+
+  [class^="headings--"] {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: var(--font--dyslexia-friendly);
+    }
+  }
+}
+
+.font--hyperlegible {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font--hyperlegible);
+  }
+
+  [class^="headings"] {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: var(--font--hyperlegible);
+    }
+  }
+}
