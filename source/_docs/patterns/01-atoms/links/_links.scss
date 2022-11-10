@@ -27,7 +27,6 @@ a {
   background-repeat: no-repeat;
   background-position: 0 100%;
   background-size: 100% 0;
-  font-weight: var(--font-weight--semibold);
   &:visited {
     text-decoration-color: var(--link-decoration-color--visited);
     color: var(--link-color--visited);
@@ -35,7 +34,7 @@ a {
   &:active,
   &:focus,
   &:hover {
-    text-decoration-color: var(--link-decoration-color);
+    text-decoration: none;
     color: var(--link-color--active);
     outline: var(--border-width--md) solid transparent;
     background-image: var(--link-background);

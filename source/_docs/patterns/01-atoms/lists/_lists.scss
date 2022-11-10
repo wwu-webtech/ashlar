@@ -6,21 +6,9 @@ ul,
 ol {
   margin: 0 0 var(--space--md);
 }
-
 li {
-  line-height: 1.8;
+  line-height: 1.5;
 }
-
-.spaced {
-  li {
-    @include breakpoint($medium) {
-      margin-bottom: var(--space--md);
-    }
-
-    margin-bottom: var(--space--xs);
-  }
-}
-
 dl {
   margin-bottom: var(--space--xs);
   dt {

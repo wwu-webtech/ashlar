@@ -238,9 +238,9 @@ $large: 1300px;
 4. Decoration
 ------------------------------------------------------------------------------*/
 /* a. Borders and outlines----------------------------------------------------*/
---border-width--sm: 0.0625rem; // replaces $border-width--thinner
---border-width--md: 0.125rem; // replaces $border-width
---border-width--lg: 0.1875rem; // replaces $border-width--thicker
+--border-width--sm: 0.0625rem; 
+--border-width--md: 0.1rem; 
+--border-width--lg: 0.15rem;
 --border-radius--roundest: 6.25rem;
 --border-radius--rounder: 0.625rem;
 --border-radius--round: 0.125rem;

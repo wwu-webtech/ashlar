@@ -3,10 +3,9 @@ Atom: Text - Links - Call to Action
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 .cta {
-  place-content: center;
-
   position: relative;
   display: inline-grid;
+  place-content: center;
   height: 3rem;
   margin: var(--space--sm);
   margin-bottom: var(--space--sm);
@@ -16,6 +15,7 @@ Atom: Text - Links - Call to Action
   text-underline-offset: 1rem;
   border-radius: var(--border-radius--roundest);
   background-size: 0 100%;
+  font-weight: var(--font-weight--semibold);
   @media (prefers-reduced-motion: no-preference) {
     animation: cta-animate-back 400ms ease-out forwards;
   }
