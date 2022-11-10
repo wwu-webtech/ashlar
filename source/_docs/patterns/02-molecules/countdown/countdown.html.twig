@@ -2,7 +2,7 @@
   <span id="countdown_date" style="display: none;">{{ content.field_date }}</span>
   <div class="container">
     {% block title %}
-      {% include "@atoms/text/label/label.twig" %}
+      {% include "@atoms/label/label.twig" %}
     {% endblock %}
 
     <div role="timer" aria-label="{{ block_content.field_accessible_label.0.value }}">

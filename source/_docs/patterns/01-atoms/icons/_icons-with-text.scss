@@ -10,12 +10,11 @@ Atom: Icons - Icons with Text
   justify-content: center;
   width: var(--toggle-size--lg);
   height: var(--toggle-size--lg);
-  border: var(--border-width--sm) solid transparent;
   text-align: center;
   text-decoration: none;
+  border: var(--border-width--sm) solid transparent;
   font-family: var(--font--condensed);
   font-size: var(--font-size--sm);
-  font-weight: var(--font-weight--light);
   font-display: fallback;
   .icon-text {
     display: block;
@@ -51,17 +50,15 @@ Atom: Icons - Icons with Text
       }
     }
   }
-  
   &:hover,
   &:focus,
   &:active {
     outline-offset: calc(-1 * var(--border-width--lg));
   }
-
   &.blue-bg,
   &.dark-blue-bg,
   &.darkest-blue-bg,
-  &.green-bg, 
+  &.green-bg,
   &.dark-green-bg,
   &.gray-bg,
   &.blue-gradient-bg,
@@ -70,8 +67,7 @@ Atom: Icons - Icons with Text
       outline-color: var(--black);
     }
   }
-
-  @media (forced-colors: active) {     
+  @media (forced-colors: active) {
     &:hover,
     &:focus,
     &:active {
@@ -92,11 +88,9 @@ Atom: Icons - Icons with Text
       &:active {
         color: var(--dark-blue);
       }
-
       &:focus {
         outline-color: var(--dark-blue);
       }
-
       &.blue-bg,
       &.dark-blue-bg,
       &.blue-gradient-bg,
@@ -108,31 +102,26 @@ Atom: Icons - Icons with Text
           background-color: var(--blue);
         }
       }
-
       &.green-bg,
       &.light-green-bg {
         color: var(--white);
-
         &:hover,
         &:focus,
         &:active {
           color: var(--dark-blue);
         }
       }
-
       &.gray-bg,
       &.light-gray-bg,
       &.light-blue-bg,
       &.lightest-blue-bg {
         color: var(--white);
-
         &:hover,
         &:focus,
         &:active {
           color: var(--dark-blue);
         }
       }
-
       &.white-bg {
         color: var(--blue--darker--20);
         background-color: var(--white);

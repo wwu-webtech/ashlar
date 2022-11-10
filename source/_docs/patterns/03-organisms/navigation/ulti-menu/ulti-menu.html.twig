@@ -5,7 +5,7 @@
 #}
 {% if items -%}
 <nav class="main-navigation wwu-menu-closed" aria-label="Main">
-  {% include "@atoms/text/label/label.twig" %}
+  {% include "@atoms/label/label.twig" %}
 
   <ul{{ attributes.addClass(classes) }}>
     {%- for item in items -%}

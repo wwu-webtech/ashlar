@@ -1,5 +1,8 @@
 # Icons
 
+## Material Symbol Icons
+We utilize [Material Symbols](https://fonts.google.com/icons) as icons. You can use any symbol in that library with the "material-icons" class on a span.
+
 <span class="material-icons">home</span>
 
     <span class="material-icons">home</span>
@@ -12,74 +15,68 @@
 
     <span class="material-icons">menu</span>
 
-<span class="material-icons">mail</span>
 
-    <span class="material-icons">mail</span>
+## Icon Links with Labels
 
-<span class="material-icons" aria-hidden="true">add</span>
+### Default
+<a href="#" class="icon-with-text">
+    <span class="material-icons" aria-hidden="true">home</span>
+    <span class="icon-text">Home</span>
+</a>
 
-    <span class="material-icons" aria-hidden="true">add</span>
+<a href="#" class="icon-with-text blue-bg">
+    <span class="material-icons" aria-hidden="true">search</span>
+    <span class="icon-text">Search</span>
+</a>
 
-<span class="material-icons" aria-hidden="true">clear</span>
+    <a href="#" class="icon-with-text">
+        <span class="material-icons" aria-hidden="true">home</span>
+        <span class="icon-text">Home</span>
+    </a>
 
-    <span class="material-icons" aria-hidden="true">clear</span>
+    <a href="#" class="icon-with-text blue-bg">
+        <span class="material-icons" aria-hidden="true">search</span>
+        <span class="icon-text">Search</span>
+    </a>
 
-<span class="material-icons" aria-hidden="true">check</span>
+### Medium
+<a href="#" class="icon-with-text medium blue-bg">
+    <span class="material-icons" aria-hidden="true">home</span>
+    <span class="icon-text">Home</span>
+</a>
 
-    <span class="material-icons" aria-hidden="true">check</span>
+<a href="#" class="icon-with-text medium">
+    <span class="material-icons" aria-hidden="true">search</span>
+    <span class="icon-text">Search</span>
+</a>
 
-<span class="material-icons" aria-hidden="true">chevron_right</span>
+    <a href="#" class="icon-with-text medium blue-bg">
+        <span class="material-icons" aria-hidden="true">home</span>
+        <span class="icon-text">Home</span>
+    </a>
 
-    <span class="material-icons" aria-hidden="true">chevron_right</span>
+    <a href="#" class="icon-with-text medium">
+        <span class="material-icons" aria-hidden="true">search</span>
+        <span class="icon-text">Search</span>
+    </a>
 
-<span class="material-icons" aria-hidden="true">chevron_left</span>
+### Large
+<a href="#" class="icon-with-text large">
+    <span class="material-icons" aria-hidden="true">home</span>
+    <span class="icon-text">Home</span>
+</a>
 
-    <span class="material-icons" aria-hidden="true">chevron_left</span>
+<a href="#" class="icon-with-text large blue-bg">
+    <span class="material-icons" aria-hidden="true">search</span>
+    <span class="icon-text">Search</span>
+</a>
 
-<span class="material-icons" aria-hidden="true">arrow_upward</span>
+    <a href="#" class="icon-with-text large">
+        <span class="material-icons" aria-hidden="true">home</span>
+        <span class="icon-text">Home</span>
+    </a>
 
-    <span class="material-icons" aria-hidden="true">arrow_upward</span>
-
-<span class="material-icons" aria-hidden="true">person</span>
-
-    <span class="material-icons" aria-hidden="true">person</span>
-
-<span class="material-icons" aria-hidden="true">person_outline</span>
-
-    <span class="material-icons" aria-hidden="true">person_outline</span>
-
-<span class="material-icons" aria-hidden="true">group</span>
-
-    <span class="material-icons" aria-hidden="true">group</span>
-
-<span class="material-icons" aria-hidden="true">event</span>
-
-    <span class="material-icons" aria-hidden="true">event</span>
-
-<span class="material-icons" aria-hidden="true">list</span>
-
-    <span class="material-icons" aria-hidden="true">list</span>
-
-<span class="material-icons" aria-hidden="true">place</span>
-
-    <span class="material-icons" aria-hidden="true">place</span>
-
-<span class="material-icons" aria-hidden="true">star_border</span>
-
-    <span class="material-icons" aria-hidden="true">star_border</span>
-
-<span class="material-icons" aria-hidden="true">star</span>
-
-    <span class="material-icons" aria-hidden="true">star</span>
-
-<span class="material-icons" aria-hidden="true">favorite_border</span>
-
-    <span class="material-icons" aria-hidden="true">favorite_border</span>
-
-<span class="material-icons" aria-hidden="true">favorite</span>
-
-    <span class="material-icons" aria-hidden="true">favorite</span>
-
-
-
-
+    <a href="#" class="icon-with-text large blue-bg">
+        <span class="material-icons" aria-hidden="true">search</span>
+        <span class="icon-text">Search</span>
+    </a>

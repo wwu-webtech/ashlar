@@ -1,5 +1,6 @@
 # Details
 
+
 <details>
   <summary>Here's some summary text</summary>
   <p>I can contain all kinds of content, even <a href="#">links</a> and list items like:</p>

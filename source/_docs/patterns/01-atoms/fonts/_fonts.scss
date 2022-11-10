@@ -13,48 +13,37 @@ html {
   color: var(--black);
   font-family: var(--font--sans-serif);
   font-size: calc(1rem + 0.5vw);
-
   font-display: auto;
-
   @media (print) {
     font-size: 12pt;
   }
 }
-
 .font-size--smaller {
   font-size: var(--font-size--sm);
 }
-
 .font-size--regular {
   font-size: var(--font-size--md);
 }
-
 .font-size--larger {
   font-size: var(--font-size--lg);
 }
-
 .font--sans-serif {
   font-family: var(--font--sans-serif), "Fira Sans";
 }
-
 .font--condensed {
   font-family: var(--font--condensed), "Fira Sans Extra Condensed";
 }
-
 .font--serif {
   font-family: var(--font--serif), "PT Serif";
 }
-
 .font--title {
   font-family: var(--font--title), "Montserrat";
 }
-
 .font--dyslexia-friendly {
-  font-family: var(--font--dyslexia-friendly), "Open Dyslexic";
-
   font-feature-settings: unset;
-}
 
+  font-family: var(--font--dyslexia-friendly), "Open Dyslexic";
+}
 .font--hyperlegible {
   font-family: var(--font--hyperlegible), "Atkinson Hyperlegible";
 }

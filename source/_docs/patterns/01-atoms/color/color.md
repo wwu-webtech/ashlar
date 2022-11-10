@@ -22,7 +22,9 @@ These are the “go to” colors when designing or building communications for W
     <p>rgba(0, 122, 200, 1)</p>
     <p>CSS: var(--blue)</p>
   </div>
+</div>
 
+<div class="swatch-wrapper">
   <div class="dark-green color-swatch">
     <h3>Dark Green</h3>
     <p>Pantone 349</p>
