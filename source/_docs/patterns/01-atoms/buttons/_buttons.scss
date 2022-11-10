@@ -6,66 +6,59 @@ see Atom - Links - Button Styled
 ------------------------------------------------------------------------------*/
 button,
 input[type="submit"] {
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-gap: var(--space--xs);
+  place-items: center;
   padding: var(--space--xs);
   transition: background var(--transition-speed--fast),
-    color var(--transition-speed--fast),
-    box-shadow var(--transition-speed--fast);
+  color var(--transition-speed--fast),
+  box-shadow var(--transition-speed--fast);
   color: var(--black);
   border: var(--border-width--md) outset var(--gray--lighter--80);
   border-radius: var(--border-radius--round);
   background: var(--gray--lighter--80);
-
   &:hover,
   &:focus {
     color: var(--white);
-    background: var(--gray);
     outline: var(--border-width--md) solid transparent;
+    background: var(--gray);
   }
-
   &:focus {
     outline-style: dotted;
     outline-color: inherit;
     outline-offset: calc(-1 * var(--border-width--lg));
-
     &:not(:focus-visible) {
       outline: none;
     }
-
     @media (forced-colors: active) {
       outline-offset: var(--border-width--lg);
     }
   }
-
   &:active {
     border-style: inset;
   }
-
   &.alt {
     color: var(--white);
     border-color: var(--blue--lighter--20);
     background: var(--blue);
-
     &:hover,
     &:focus {
       background: var(--dark-blue);
     }
   }
-
   &.warning {
     color: var(--black);
     border-color: var(--yellow--lighter--40);
     background: var(--yellow);
-
     &:hover,
     &:focus {
       background: var(--yellow--lighter--40);
     }
-
     &:active {
       box-shadow: none;
     }
   }
-
   &:disabled {
     color: var(--gray--darker--40);
     border-style: solid;
@@ -73,8 +66,10 @@ input[type="submit"] {
     background: var(--gray--lighter--60);
     box-shadow: none;
   }
+  .material-icons {
+    font-size: var(--font-size--md);
+  }
 }
-
 button,
 input[type="button"],
 input[type="reset"],

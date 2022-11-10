@@ -152,40 +152,33 @@ Atom: Background Colors
         background-image: none;
       }
     }
-
     .play-button {
       svg {
         fill: ButtonText;
       }
-  
       &:hover,
       &:focus,
       &:active {
-        background-color: ButtonText;
         border-color: ButtonText;
-  
+        background-color: ButtonText;
         svg {
           fill: ButtonFace;
         }
       }
     }
-
     .social-icon {
       svg {
         fill: LinkText;
       }
-
       &:hover,
       &:focus,
       &:active {
         background-color: LinkText;
-        
         svg {
           fill: Canvas;
         }
       }
     }
-
     table {
       a {
         &:hover,

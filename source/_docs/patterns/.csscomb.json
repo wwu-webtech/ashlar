@@ -113,6 +113,8 @@
       "justify-items",
       "justify-content",
       "flex-align",
+      "place-items",
+      "place-content",
 
       "-webkit-box-sizing",
       "-moz-box-sizing",

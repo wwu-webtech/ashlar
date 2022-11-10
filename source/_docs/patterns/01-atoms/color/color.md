@@ -11,6 +11,7 @@ These are the “go to” colors when designing or building communications for W
     <p>CMYK(100, 58, 0, 21)</p>
     <p>#003f87</p>
     <p>rgba(0, 63, 135, 1)</p>
+    <p>CSS: var(--dark-blue)</p>
   </div>
 
   <div class="blue color-swatch">
@@ -19,6 +20,7 @@ These are the “go to” colors when designing or building communications for W
     <p>CMYK(85, 24, 0, 0)</p>
     <p>#007ac8</p>
     <p>rgba(0, 122, 200, 1)</p>
+    <p>CSS: var(--blue)</p>
   </div>
 
   <div class="dark-green color-swatch">
@@ -27,6 +29,7 @@ These are the “go to” colors when designing or building communications for W
     <p>CMYK(100, 0, 95, 55)</p>
     <p>#006b3f</p>
     <p>rgba(0, 107, 63, 1)</p>
+    <p>CSS: var(--dark-green)</p>
   </div>
 
   <div class="green color-swatch">
@@ -35,6 +38,7 @@ These are the “go to” colors when designing or building communications for W
     <p>CMYK(43, 0, 77, 36)</p>
     <p>#4A821E</p>
     <p>rgba(93, 162, 37, 1)</p>
+    <p>CSS: var(--green)</p>
   </div>
 
   <div class="light-green color-swatch">
@@ -43,51 +47,60 @@ These are the “go to” colors when designing or building communications for W
     <p>CMYK(29, 0, 100, 0)</p>
     <p>#bad80a</p>
     <p>rgba(186, 216, 10, 1)</p>
+    <p>CSS: var(--light-green)</p>
   </div>
 </div>
 
 ## Neutral Colors
-<p>These are the neutral tones that are complementary to the brand colors.</p>
+These are the neutral tones that are complementary to the brand colors.
+
 <div class="swatch-wrapper">
   <div class="black color-swatch">
     <h3>Black</h3>
     <p>CMYK(20, 9, 0, 86)</p>
     <p>#1c2023</p>
     <p>rgba(28, 32, 35, 1)</p>
+    <p>CSS: var(--black)</p>
   </div>
   <div class="gray color-swatch">
     <h3>Gray</h3>
     <p>CMYK(24, 10, 0, 47)</p>
     <p>#667986</p>
     <p>rgba(102, 121, 134, 1)</p>
+    <p>CSS: var(--gray)</p>
   </div>
   <div class="white color-swatch">
     <h3>White</h3>
     <p>CMYK(0, 0, 0, 0)</p>
     <p>#ffffff</p>
     <p>rgba(255, 255, 255, 1)</p>
+    <p>CSS: var(--white)</p>
   </div>
 </div>
 
 ## Special Use Colors
-<p>Use of these colors should be limited to warnings, cautions, alerts, and other cases where special attention is needed. They can also be used sparingly as secondary or accent colors.</p>
+Use of these colors should be limited to warnings, cautions, alerts, and other cases where special attention is needed. They can also be used sparingly as secondary or accent colors.
+
 <div class="swatch-wrapper">
   <div class="red color-swatch">
     <h3>Red</h3>
     <p>CMYK(0, 78, 78, 20)</p>
     <p>#cc2d30</p>
     <p>rgba(204, 45, 48, 1)</p>
+    <p>CSS: var(--red)</p>
   </div>
   <div class="yellow color-swatch">
     <h3>Yellow</h3>
     <p>CMYK(0, 22, 88, 0)</p>
     <p>#ffc61e</p>
     <p>rgba(255, 198, 30, 1)</p>
+    <p>CSS: var(--yellow)</p>
   </div>
 </div>
 
 ## Brand Tints & Shades
-<p>You may also use tints and shades of the brand colors and gray. These should be used as accent colors only, when one more more of the brand colors are also in use as the most prominent color(s). The tints and shades shown here are in 20% increments for web use, but you are not limited to these options for print. Any tint or shade of a brand or neutral (mixing pure white or black) is acceptable for print.</p>
+You may also use tints and shades of the brand colors and gray. These should be used as accent colors only, when one more more of the brand colors are also in use as the most prominent color(s). The tints and shades shown here are in 20% increments for web use, but you are not limited to these options for print. Any tint or shade of a brand or neutral (mixing pure white or black) is acceptable for print. See [variables](../utilities/variables) if using these colors with CSS.
+
 <div class="swatch-wrapper">
   <div class="dark-blue color-swatch tint-80">
     <p>80%</p>

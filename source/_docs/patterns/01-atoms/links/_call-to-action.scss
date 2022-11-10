@@ -8,14 +8,17 @@ Atom: Text - Links - Call to Action
   position: relative;
   display: inline-grid;
   height: 3rem;
+  margin: var(--space--sm);
   margin-bottom: var(--space--sm);
   padding-right: calc(var(--space--md) + 2rem);
   padding-left: calc(var(--space--md) + 3rem);
-  animation: cta-animate-back 400ms ease-out forwards;
   text-decoration-color: var(--link-color);
   text-underline-offset: 1rem;
   border-radius: var(--border-radius--roundest);
   background-size: 0 100%;
+  @media (prefers-reduced-motion: no-preference) {
+    animation: cta-animate-back 400ms ease-out forwards;
+  }
   &:before {
     // the arrow
     position: absolute;
@@ -25,9 +28,11 @@ Atom: Text - Links - Call to Action
     padding: 5px;
     content: "";
     transform: rotate(-45deg);
-    animation: cta-animate-before-back 400ms ease-out forwards;
     border: solid var(--link-color);
     border-width: 0 var(--border-width--md) var(--border-width--md) 0;
+    @media (prefers-reduced-motion: no-preference) {
+      animation: cta-animate-before-back 400ms ease-out forwards;
+    }
   }
   &:after {
     // the circle
@@ -37,23 +42,27 @@ Atom: Text - Links - Call to Action
     display: grid;
     align-content: center;
     justify-content: center;
-    width: 3rem;
-    height: 3rem;
+    width: 2.8rem;
+    height: 2.8rem;
     content: "";
-    animation: cta-animate-after-back 400ms ease-out forwards;
     border: solid var(--border-width--md) var(--link-color);
     border-radius: 50%;
+    @media (prefers-reduced-motion: no-preference) {
+      animation: cta-animate-after-back 400ms ease-out forwards;
+    }
   }
   &:active,
   &:focus,
   &:hover {
-    animation: cta-animate 400ms ease-out forwards;
     text-decoration: none;
-    &:after {
-      animation: cta-animate-after 400ms ease-out forwards;
-    }
-    &:before {
-      animation: cta-animate-before 400ms ease-out forwards;
+    @media (prefers-reduced-motion: no-preference) {
+      animation: cta-animate 400ms ease-out forwards;
+      &:after {
+        animation: cta-animate-after 400ms ease-out forwards;
+      }
+      &:before {
+        animation: cta-animate-before 400ms ease-out forwards;
+      }
     }
   }
 }

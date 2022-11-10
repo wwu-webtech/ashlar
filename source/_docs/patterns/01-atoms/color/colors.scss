@@ -4,18 +4,16 @@ Atom: Colors
 ------------------------------------------------------------------------------*/
 .swatch-wrapper {
   display: flex;
+  width: 100%;
 }
-
 .color-swatch {
   margin-top: var(--space--md);
   padding: var(--space--md);
   color: var(--white);
-  font-size: var(--font-size--xl);
-
+  font-size: var(--font-size--sm);
   h3 {
     margin-top: 0;
   }
-
   &.dark-blue,
   &.blue,
   &.dark-green,
@@ -24,25 +22,20 @@ Atom: Colors
   &.gray,
   &.red {
     color: var(--white);
-
     h3 {
       color: var(--white);
     }
   }
-
   &.light-green,
   &.white,
   &.yellow {
     color: var(--black);
-
     h3 {
       color: var(--black);
     }
   }
-
   &.dark-blue {
     background-color: var(--dark-blue);
-
     &.tint-80 {
       color: var(--black);
       background-color: var(--dark-blue--lighter--80);
@@ -71,10 +64,8 @@ Atom: Colors
       background-color: var(--dark-blue--darker--20);
     }
   }
-
   &.blue {
     background-color: var(--blue);
-
     &.tint-80 {
       color: var(--black);
       background-color: var(--blue--lighter--80);
@@ -104,10 +95,8 @@ Atom: Colors
       background-color: var(--blue--darker--20);
     }
   }
-
   &.dark-green {
     background-color: var(--dark-green);
-
     &.tint-80 {
       color: var(--black);
       background-color: var(--dark-green--lighter--80);
@@ -137,10 +126,8 @@ Atom: Colors
       background-color: var(--dark-green--darker--20);
     }
   }
-
   &.green {
     background-color: var(--green);
-
     &.tint-80 {
       color: var(--black);
       background-color: var(--green--lighter--80);
@@ -170,10 +157,8 @@ Atom: Colors
       background-color: var(--green--darker--20);
     }
   }
-
   &.light-green {
     background-color: var(--light-green);
-
     &.tint-80 {
       background-color: var(--light-green--lighter--80);
     }
@@ -202,14 +187,11 @@ Atom: Colors
       background-color: var(--light-green--darker--20);
     }
   }
-
   &.black {
     background-color: var(--black);
   }
-
   &.gray {
     background-color: var(--gray);
-
     &.tint-80 {
       color: var(--black);
       background-color: var(--gray--lighter--80);
@@ -239,16 +221,13 @@ Atom: Colors
       background-color: var(--gray--darker--20);
     }
   }
-
   &.white {
     border: solid var(--border-width--md) var(--gray--lighter--90);
     background-color: var(--white);
   }
-
   &.red {
     background-color: var(--red);
   }
-
   &.yellow {
     background-color: var(--yellow);
   }

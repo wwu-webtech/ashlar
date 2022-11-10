@@ -44,7 +44,13 @@ const config = {
           routeBasePath: 'changelog',
         },
         theme: {
-          customCss: [require.resolve('../../build/css/ashlar-base.css'),require.resolve('../../dist/css/font-families.css')],
+          customCss: [
+            require.resolve('../../dist/css/font-families.css'),
+
+            require.resolve('../../build/css/ashlar-base.css'),
+            
+            require.resolve('../../build/css/components/colors.css'),
+          ],
         },
       }),
     ],
