@@ -129,8 +129,11 @@ Gray, blue, and green backgrounds are gray based.
     color: var(--white);
   }
   a {
+    --link-background: var(--gradient--vertical--light-blue);
     --link-color: var(--white);
+    --link-color--active: var(--dark-blue);
     --link-color--visited: var(--white);
+    --link-decoration-color: var(--blue--lighter--60);
     --link-decoration-color--visited: var(--purple--lighter--80);
   }
   .intro,

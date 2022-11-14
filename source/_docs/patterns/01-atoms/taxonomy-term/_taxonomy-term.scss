@@ -3,13 +3,13 @@ Atom: Text - Taxonomy Terms
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 .taxonomy-term,
-.dark-mode .taxonomy-term,
+[data-theme="dark"] .taxonomy-term,
 [class*="-bg"] .taxonomy-term,
 .job-title,
-.dark-mode .job-title,
+[data-theme="dark"] .job-title,
 [class*="-bg"] .job-title,
 .pronouns,
-.dark-mode .pronouns,
+[data-theme="dark"] .pronouns,
 [class*="-bg"] .pronouns {
   @include darkest-blue-bg;
 
@@ -17,49 +17,44 @@ Atom: Text - Taxonomy Terms
   margin: 0 var(--space--2xs) var(--space--2xs) 0;
   padding: var(--space--xs) var(--space--sm);
   transition: background-size var(--transition-speed--fast)
-    cubic-bezier(0.33, 0.66, 0.66, 1);
+  cubic-bezier(0.33, 0.66, 0.66, 1);
   color: var(--white);
   border: var(--border-width--sm) solid transparent;
   font-size: var(--font-size--sm);
   font-weight: var(--font-weight--bold);
   font-display: fallback;
-
   .material-icons {
     position: relative;
     top: 0.1em;
     font-size: var(--icon-size--xs);
   }
 }
-
-a.taxonomy-term, 
-a.pronouns, 
+a.taxonomy-term,
+a.pronouns,
 a.job-title {
   text-decoration: none;
   border-bottom: solid var(--blue--lighter--60) var(--border-width--lg);
-
   &:hover,
   &:focus,
   &:active {
     text-decoration: none;
     outline-offset: var(--border-width--md);
-    
     @media (forced-colors: active) {
       @supports (forced-color-adjust: none) {
         forced-color-adjust: none;
-        background-image: none;
-        background-color: LinkText;
+
         color: Canvas;
         border-bottom: solid LinkText var(--border-width--lg);
+        background-color: LinkText;
+        background-image: none;
       }
     }
   }
-
   &:visited {
     color: var(--purple--lighter--80);
     border-bottom-color: var(--purple--lighter--80);
-
-    &:hover, 
-    &:focus, 
+    &:hover,
+    &:focus,
     &:active {
       color: var(--purple);
       border-bottom-color: var(--purple);

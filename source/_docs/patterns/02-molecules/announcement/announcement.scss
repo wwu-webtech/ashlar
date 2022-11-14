@@ -6,7 +6,6 @@ Molecule: Announcement
 @import "../../../../sass/partials/imports";
 @import "../../00-utilities/breakpoints.scss";
 @import "../../01-atoms/background-color/background-color-mixins.scss";
-
 .block--announcement {
   -ms-grid-columns: 1fr 3fr;
   -ms-grid-rows: auto;
@@ -16,37 +15,34 @@ Molecule: Announcement
   grid-template-areas: "icon text";
   grid-template-columns: 1fr 3fr;
   grid-template-rows: auto;
-  justify-items: center;
   align-items: center;
+  justify-items: center;
   margin: auto;
   border: var(--border-width--md) solid transparent;
-
   .block__title {
     margin-top: 0;
     padding-bottom: 0;
     text-align: center;
   }
-
   .material-icons {
     @include dark-blue-bg;
     @include breakpoint($medium) {
       font-size: var(--icon-size--lg);
     }
 
+    display: -ms-grid;
+    display: grid;
     grid-area: icon;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
-    display: -ms-grid;
-    display: grid;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
     align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     border-right: var(--border-width--md) solid transparent;
   }
-
   .body {
     @include light-green-bg;
 
@@ -61,27 +57,22 @@ Molecule: Announcement
     height: 100%;
     padding: var(--space--md);
   }
-
   &.layout-builder-block {
     padding: 0;
   }
-
   &.full-width {
     max-width: none;
   }
 }
-
 /*------------------------------------------------------------------------------
 1. Dark Mode
 ------------------------------------------------------------------------------*/
-.dark-mode {
+[data-theme="dark"] {
   .block--announcement {
     background-color: var(--dark-green);
-
     .material-icons {
       @include dark-green-bg;
     }
-
     .body {
       @include green-bg;
     }

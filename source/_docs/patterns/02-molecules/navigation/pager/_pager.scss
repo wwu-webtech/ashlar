@@ -10,18 +10,15 @@ Molecule: Navigation - Pager
 .pager ul {
   padding: 0;
   list-style: none;
-
   li {
     display: inline-block;
     padding: 0 0.5625rem;
-
     a {
       display: inline-block;
-      text-align: center;
       min-width: var(--touch-target--min);
       min-height: var(--touch-target--min);
+      text-align: center;
     }
-
     &.is-active {
       a {
         background-color: var(--light-green--lighter--40);
@@ -29,17 +26,15 @@ Molecule: Navigation - Pager
     }
   }
 }
-
 /*------------------------------------------------------------------------------
 2. Dark Mode
 ------------------------------------------------------------------------------*/
 
-.dark-mode {
+[data-theme="dark"] {
   .pager ul {
     li.is-active {
       a {
         color: var(--blue--darker--20);
-
         &:hover,
         &:focus,
         &:active {

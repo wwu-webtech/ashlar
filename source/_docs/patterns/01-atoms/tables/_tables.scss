@@ -10,6 +10,12 @@ Atom: Tables
 1. Base Styles
 ------------------------------------------------------------------------------*/
 @mixin color-table($light-rows, $dark-rows, $light-headers, $dark-headers) {
+  table,
+  tr,
+  td,
+  th {
+    border: solid 1px $light-rows;
+  }
   tr {
     &:nth-of-type(odd) {
       background-color: $light-rows;
@@ -17,9 +23,6 @@ Atom: Tables
     &:nth-of-type(even) {
       background-color: $dark-rows;
     }
-  }
-  td {
-    border-left-color: $light-rows;
   }
   th {
     background-color: $light-headers;
@@ -64,20 +67,12 @@ table {
   margin: var(--space--md) 0;
   table-layout: auto;
   word-wrap: break-word;
-  color: var(--black);
-  border-collapse: collapse;
+  background: transparent;
   &.fixed {
     table-layout: auto;
   }
   a {
     line-height: 1.2rem;
-    &:hover,
-    &:focus,
-    &:active {
-      &:visited {
-        color: var(--purple--lighter--80);
-      }
-    }
   }
 }
 .fixed {
@@ -95,24 +90,9 @@ td,
 th {
   vertical-align: middle;
 }
-tr {
-  border-top: var(--border-width--sm) solid transparent;
-  border-right: var(--border-width--sm) solid transparent;
-  border-bottom: var(--border-width--sm) solid transparent;
-  border-left: var(--border-width--sm) solid transparent;
-
-  &.even,
-  &.odd {
-    border-bottom: var(--border-width--sm) solid transparent;
-  }
-}
 th {
   padding: var(--space--xs);
   text-align: left;
-  border-top: var(--border-width--sm) solid transparent;
-  border-right: var(--border-width--sm) solid transparent;
-  border-bottom: var(--border-width--sm) solid transparent;
-  border-left: var(--border-width--sm) solid transparent;
   font-size: var(--font-size--sm);
   &[colspan],
   &[rowspan] {
@@ -124,51 +104,11 @@ th {
       content: "";
     }
   }
-  &[colspan] {
-    text-align: center;
-    &:after {
-      @include breakpoint($medium) {
-        right: -var(--border-width--md) --thicker - 0.0625rem;
-        width: var(--border-width--md) --thicker;
-      }
-
-      top: 0;
-      right: -var(--border-width--md) - 0.0625rem;
-      width: var(--border-width--md);
-    }
-  }
-  &[rowspan] {
-    &:after {
-      @include breakpoint($medium) {
-        bottom: 0;
-        height: var(--border-width--md) --thicker;
-      }
-
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: var(--border-width--md);
-    }
-  }
 }
 td {
-  @include breakpoint($medium) {
-    border-width: var(--border-width--md) --thicker;
-  }
-
   padding: var(--space--xs);
-  border-width: var(--border-width--md);
-  border-top: var(--border-width--sm) solid transparent;
-  border-bottom: var(--border-width--sm) solid transparent;
-  border-left: solid;
   font-size: var(--font-size--sm);
   line-height: 1.45rem;
-  &:first-of-type {
-    border-left: none;
-  }
-  &:last-of-type {
-    border-right: var(--border-width--md) solid var(--table-gray--lighter);
-  }
 }
 /*------------------------------------------------------------------------------
 2. Responsive table container
@@ -238,16 +178,14 @@ td {
 /*------------------------------------------------------------------------------
 4. Dark Mode
 ------------------------------------------------------------------------------*/
-.dark-mode {
-  @include color-table(
-  var(--table-gray--darker--60),
-  var(--table-gray--darker--65),
-  var(--table-gray--darker--70),
-  var(--table-gray--darker--75)
-  );
+[data-theme="dark"] {
   table {
-    color: var(--white);
-    &:not([class]),
+    @include gray-bg;
+    @include color-table(
+    var(--table-gray--darker--50),
+    var(--table-gray--darker--55),
+    var(--table-gray--darker--60),
+    var(--table-gray--darker--65));
     &.lightest-gray {
       @include gray-bg;
       @include color-table(
@@ -265,9 +203,6 @@ td {
       var(--blue--darker--40),
       var(--blue--darker--60)
       );
-      td:last-of-type {
-        border-right: var(--border-width--sm) solid transparent;
-      }
     }
   }
 }

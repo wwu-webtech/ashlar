@@ -11,77 +11,65 @@ Molecule: Image with Description
     grid-template-columns: 3fr var(--space--2xl) var(--space--lg) 4fr;
     grid-template-rows: var(--space--2xl) 1fr var(--space--xl);
   }
-  display: grid;
-  margin-bottom: var(--space--lg);
 
+  display: grid;
   grid-area: body;
-  grid-template-areas:
-    "image"
-    "body";
+  grid-template-areas: "image"
+  "body";
   grid-template-columns: auto;
   grid-template-rows: auto auto auto;
-
+  margin-bottom: var(--space--lg);
   .block__title {
     margin-top: var(--space--sm);
   }
-
   .image {
     @include breakpoint($medium) {
       z-index: 1;
-
       grid-column: 1 / span 2;
       grid-row: 2 / span 1;
     }
 
     grid-area: image;
-
     img {
       display: block;
+      object-fit: cover;
       width: 100%;
       height: 100%;
-
-      object-fit: cover;
     }
   }
-
   .body {
     @include breakpoint($medium) {
-      padding-left: var(--space--3xl);
-
       grid-column: 2 / span 3;
       grid-row: 1 / span all;
+      padding-left: var(--space--3xl);
     }
+
     padding: var(--space--sm);
     border: var(--border-width--md) solid transparent;
-
     &:not([class$="-bg"]) {
       @include breakpoint(max-width $medium) {
         border-top: none;
       }
+
       border-color: var(--blue);
       background: var(--white);
     }
   }
-
   &.mirror {
     @include breakpoint($medium) {
       grid-template-columns: 4fr var(--space--lg) var(--space--2xl) 3fr;
-
       .image {
         grid-column: 3 / span 2;
       }
-
       .body {
+        grid-column: 1 / span 3;
         padding-right: var(--space--3xl);
         padding-left: var(--space--md);
-
-        grid-column: 1 / span 3;
       }
     }
   }
 }
-
-.dark-mode {
+[data-theme="dark"] {
   .block--image-with-description {
     .body {
       &:not([class$="-bg"]) {

@@ -64,13 +64,11 @@ Atom: Background Colors
 /*------------------------------------------------------------------------------
 2. Dark Mode
 ------------------------------------------------------------------------------*/
-.dark-mode,
 [data-theme="dark"] {
   @include black-bg;
 
   background-color: var(--gray--darker--80);
 }
-.dark-mode,
 [data-theme="dark"] {
   .gray-bg,
   .light-blue-bg,

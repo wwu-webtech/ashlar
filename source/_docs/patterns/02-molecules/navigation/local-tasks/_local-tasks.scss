@@ -10,23 +10,19 @@ AKA The edit tabs in Drupal
   max-width: calc(100vw - var(--space--lg));
   margin: var(--space--sm) 0;
   font-size: var(--font-size--sm);
-
   ul:not(.contextual-links) {
     display: flex;
     padding-left: 0;
     list-style: none;
     border-bottom: solid var(--border-width--lg) var(--gray);
-
     &:nth-of-type(2) {
       margin-top: var(--space--xs);
       margin-left: var(--space--sm);
       border-bottom-color: var(--gray--lighter--80);
     }
-
     li {
       margin-bottom: 0;
     }
-
     a {
       display: block;
       padding: var(--space--2xs) var(--space--sm);
@@ -37,7 +33,6 @@ AKA The edit tabs in Drupal
     }
   }
 }
-
 /*------------------------------------------------------------------------------
 1. Drupal 7 (for MABEL) tabs
 ------------------------------------------------------------------------------*/
@@ -49,13 +44,11 @@ AKA The edit tabs in Drupal
   list-style: none;
   border-bottom: solid var(--border-width--lg) var(--gray);
   font-size: var(--font-size--sm);
-
   &:nth-of-type(2) {
     margin-top: var(--space--xs);
     margin-left: var(--space--sm);
     border-bottom-color: var(--gray--lighter--80);
   }
-
   a {
     display: block;
     margin: 0;
@@ -66,11 +59,10 @@ AKA The edit tabs in Drupal
     background-color: var(--gray--lighter--80);
   }
 }
-
 /*------------------------------------------------------------------------------
 2. Dark mode
 ------------------------------------------------------------------------------*/
-.dark-mode {
+[data-theme="dark"] {
   .block--local-tasks-block {
     ul:not(.contextual-links) {
       a {
@@ -78,7 +70,6 @@ AKA The edit tabs in Drupal
         border-color: var(--black);
       }
     }
-
     a {
       border-right: var(--gray--darker--80);
     }

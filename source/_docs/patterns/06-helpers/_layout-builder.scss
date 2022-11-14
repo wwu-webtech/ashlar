@@ -7,14 +7,12 @@ Affects the layout builder interface
   width: initial;
   min-height: initial;
 }
-
 #drupal-off-canvas .field--name-field-accordion-item tr.draggable,
 #drupal-off-canvas .field--name-field-content-switcher-item tr.draggable,
 #drupal-off-canvas .field--name-field-statistic tr.draggable,
 #drupal-off-canvas .field--name-field-schedule-item tr.draggable {
   display: flex;
 }
-
 #drupal-off-canvas .messages--error {
   background-repeat: no-repeat;
   background-position-x: 1%;
@@ -23,12 +21,10 @@ Affects the layout builder interface
 #drupal-off-canvas .ui-autocomplete li a {
   color: #63c2ff !important;
 }
-
-.dark-mode {
+[data-theme="dark"] {
   .layout-builder {
     @include black-bg;
   }
-
   .layout-builder,
   .layout-builder-block,
   .layout-builder__add-section,

@@ -171,29 +171,29 @@ fieldset {
 /*------------------------------------------------------------------------------
 Dark Mode
 ------------------------------------------------------------------------------*/
-.dark-mode .main-nav a:visited {
+[data-theme="dark"] .main-nav a:visited {
   color: var(--purple);
 }
-.dark-mode .call-out-box-right,
-.dark-mode .call-out-box-left,
-.dark-mode .call-out-box-center .dark-mode .box2,
-.dark-mode .moreinfo,
-.dark-mode .category_name,
-.dark-mode .design_content,
-.dark-mode .toggle_container {
+[data-theme="dark"] .call-out-box-right,
+[data-theme="dark"] .call-out-box-left,
+[data-theme="dark"] .call-out-box-center [data-theme="dark"] .box2,
+[data-theme="dark"] .moreinfo,
+[data-theme="dark"] .category_name,
+[data-theme="dark"] .design_content,
+[data-theme="dark"] .toggle_container {
   background-color: var(--dark-blue);
 }
-.dark-mode #mc_embed_signup {
+[data-theme="dark"] #mc_embed_signup {
   background-color: var(--gray);
 }
-.dark-mode .box1 {
+[data-theme="dark"] .box1 {
   background-color: var(--dark-blue--darker--20);
 }
-.dark-mode ul.faqs li:nth-child(2n+1) {
+[data-theme="dark"] ul.faqs li:nth-child(2n+1) {
   border-color: var(--dark-blue);
   background-color: var(--dark-blue--darker--20);
 }
-.dark-mode ul.faqs li:nth-child(2n) {
+[data-theme="dark"] ul.faqs li:nth-child(2n) {
   border-color: var(--dark-blue);
   background-color: var(--dark-blue--darker--40);
 }

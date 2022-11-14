@@ -82,6 +82,7 @@ if (
       var display_toggle = this.querySelector(".toggle-settings");
       var settings_menu = this.querySelector(".settings-menu");
       var body = document.querySelector("body");
+      var html = document.querySelector("html");
 
       var theme_options = this.querySelector(".theme-selection");
       var system_theme = window.matchMedia("(prefers-color-scheme: dark)");
@@ -195,16 +196,16 @@ if (
       function set_theme(theme) {
         if (theme == "light-mode") {
           /* If light mode is selected, use light mode ---------------------------*/
-          body.classList.remove("dark-mode");
+          html.setAttribute("data-theme", "light");
         } else if (theme == "dark-mode") {
           /* If dark mode is selected, use dark mode -----------------------------*/
-          body.classList.add("dark-mode");
+          html.setAttribute("data-theme", "dark");
         } else if (theme == "default-theme" && system_theme.matches) {
           /* If default is selected & system settings prefer dark mode, use dark -*/
-          body.classList.add("dark-mode");
+          html.setAttribute("data-theme", "dark");
         } else {
           /* Otherwise, use the default (light mode) -----------------------------*/
-          body.classList.remove("dark-mode");
+          html.setAttribute("data-theme", "light");
         }
       }
 

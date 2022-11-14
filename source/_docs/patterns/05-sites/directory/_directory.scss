@@ -105,7 +105,7 @@ western-footer {
     color: var(--dark-blue--darker--80);
   }
 }
-.dark-mode {
+[data-theme="dark"] {
   directory-banner-person-list {
     .mat-form-field-appearance-legacy .mat-form-field-label,
     .mat-form-field-appearance-legacy .mat-hint,

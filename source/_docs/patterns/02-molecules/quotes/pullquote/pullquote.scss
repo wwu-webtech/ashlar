@@ -7,25 +7,20 @@ Molecule: Pullquote
   --quote-icon-size: 3.125rem;
 
   position: relative;
-
   blockquote {
     margin: 0 var(--space--md);
     border-left: solid var(--border-width--lg) var(--green);
     background-color: transparent;
-
     .body {
       margin-bottom: var(--space--md);
     }
-
     .name {
       font-weight: var(--font-weight--bold);
     }
   }
-
   .decoration {
     display: none;
   }
-
   &.pullquote--editorial {
     blockquote {
       position: relative;
@@ -33,24 +28,20 @@ Molecule: Pullquote
       margin: var(--quote-icon-size) auto 0;
       padding-top: calc(var(--quote-icon-size) + var(--space--sm));
       border-top: var(--blue) var(--border-width--lg) solid;
+      border-right: none;
       border-bottom: var(--blue) var(--border-width--lg) solid;
       border-left: none;
-      border-right: none;
       background-color: initial;
-
       .block__title {
         border-bottom: none;
       }
-
       .credit {
         text-align: center;
       }
-
       .name {
         display: block;
       }
     }
-
     .decoration {
       position: absolute;
       z-index: 1;
@@ -58,9 +49,9 @@ Molecule: Pullquote
       left: 50%;
       display: block;
       display: grid;
+      overflow: hidden;
       width: var(--quote-icon-size);
       height: var(--quote-icon-size);
-      overflow: hidden;
       padding: var(--space--xs);
       transform: translate(-50%, -50%);
       text-align: center;
@@ -73,11 +64,10 @@ Molecule: Pullquote
     }
   }
 }
-
 /*------------------------------------------------------------------------------
 1. Dark mode
 ------------------------------------------------------------------------------*/
-.dark-mode {
+[data-theme="dark"] {
   .block--pullquote {
     blockquote {
       background-color: transparent;

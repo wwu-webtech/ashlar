@@ -9,7 +9,6 @@ Atom: Icons - My Western Icons
   text-align: center;
   color: var(--dark-blue);
   background-size: 100%;
-
   svg {
     fill: currentColor;
 
@@ -18,12 +17,10 @@ Atom: Icons - My Western Icons
     margin: auto;
     margin-bottom: var(--space--xs);
     transition: var(--ease-standard) var(--transition-speed--fast) fill;
-
     @media print {
       fill: var(--black);
     }
   }
-
   @media (forced-colors: active) {
     &:hover,
     &:focus,
@@ -35,13 +32,12 @@ Atom: Icons - My Western Icons
 /*------------------------------------------------------------------------------
 1. Dark mode
 ------------------------------------------------------------------------------*/
-.dark-mode {
+[data-theme="dark"] {
   .my-western-icon {
     color: var(--blue--lighter--40);
     svg {
       fill: currentColor;
     }
-
     &:active,
     &:focus,
     &:hover {

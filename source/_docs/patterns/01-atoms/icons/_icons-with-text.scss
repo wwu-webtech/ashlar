@@ -78,7 +78,7 @@ Atom: Icons - Icons with Text
 /*------------------------------------------------------------------------------
 1. Dark Mode
 ------------------------------------------------------------------------------*/
-.dark-mode {
+[data-theme="dark"] {
   .sg-pattern-example a,
   .page-content a {
     &.icon-with-text {

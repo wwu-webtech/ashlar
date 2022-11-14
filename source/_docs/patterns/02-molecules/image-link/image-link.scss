@@ -20,7 +20,6 @@ Molecule: Image Link
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   border-radius: 50%;
   box-shadow: var(--shadow--soft);
-
   &:before,
   &:after {
     position: absolute;
@@ -31,31 +30,26 @@ Molecule: Image Link
     content: "";
     transition: 0.5s ease all;
     border-radius: 50%;
-
     @media print {
       display: none;
     }
   }
-
   &:before {
     width: 70%;
     height: 70%;
     transform: translate(-20%, -10%);
     background: rgba(var(--blue--rgb), 0.2);
   }
-
   &:after {
     width: 105%;
     height: 105%;
     transform: translate(15%, 10%);
     background: rgba(var(--blue--rgb), 0.1);
   }
-
   &:hover,
   &:focus-within {
     box-shadow: var(--shadow--soft--hover);
   }
-
   &:hover:before,
   &:focus-within:before {
     transform: translate(60%, 45%);
@@ -64,17 +58,14 @@ Molecule: Image Link
   &:focus-within:after {
     transform: translate(-20%, -10%);
   }
-
   .image {
     background-color: var(--dark-blue);
-
     img {
       @media print {
         display: none;
       }
     }
   }
-
   a {
     position: absolute;
     z-index: 1;
@@ -93,20 +84,18 @@ Molecule: Image Link
     background: rgba(var(--dark-blue--darker--40--rgb), 0.7);
     font-size: var(--font-size--lg);
     font-weight: bold;
-
     &:active,
     &:focus,
     &:hover {
-      background: rgba(var(--dark-blue--darker--40--rgb), 0.9);
       outline-color: var(--dark-blue);
+      background: rgba(var(--dark-blue--darker--40--rgb), 0.9);
     }
-
     &:visited {
       color: var(--white);
     }
-
     &:after {
-      content: ""; //overrides file extension style in link atom css
+      content: "";
+      //overrides file extension style in link atom css
 
       @media print {
         position: absolute;
@@ -116,17 +105,14 @@ Molecule: Image Link
         font-size: 10pt;
       }
     }
-
     @media print {
       overflow: visible;
       font-size: 12pt;
     }
   }
-
   .image {
     filter: brightness(0.75);
   }
-
   @media print {
     display: inline-block;
     margin: 0;
@@ -134,7 +120,6 @@ Molecule: Image Link
     box-shadow: none;
   }
 }
-
 /*------------------------------------------------------------------------------
 1. Multiple links
 ------------------------------------------------------------------------------*/
@@ -151,14 +136,12 @@ Molecule: Image Link
         height: 80%;
         transform: translate(20%, -13%);
       }
-
       &:hover:before,
       &:focus-within:before {
         width: 100%;
         height: 100%;
         transform: translate(10%, -18%);
       }
-
       &:hover:after,
       &:focus-within:after {
         width: 80%;
@@ -167,7 +150,6 @@ Molecule: Image Link
       }
     }
   }
-
   &:nth-of-type(3) {
     .image-link {
       &:before {
@@ -180,12 +162,10 @@ Molecule: Image Link
         height: 80%;
         transform: translate(-12%, 30%);
       }
-
       &:hover:before,
       &:focus-within:before {
         transform: translate(-12%, -20%);
       }
-
       &:hover:after,
       &:focus-within:after {
         transform: translate(50%, 14%);
@@ -193,7 +173,6 @@ Molecule: Image Link
     }
   }
 }
-
 /*------------------------------------------------------------------------------
 2. Variations
 ------------------------------------------------------------------------------*/
@@ -206,54 +185,45 @@ Molecule: Image Link
     }
   }
 }
-
 .smaller {
   .image-link {
     width: var(--image-link-size--sm);
     height: var(--image-link-size--sm);
     margin-bottom: var(--space--md);
-
     a {
       font-size: var(--font-size--md);
     }
   }
 }
-
 .green {
   .image-link:not(.green) {
     .image {
       background-color: var(--light-green);
     }
-
     a {
       color: var(--dark-blue--darker--40);
       background-color: rgba(var(--light-green--rgb), 0.8);
-
       &:active,
       &:focus,
       &:hover {
         background: rgba(var(--light-green--rgb), 0.95);
       }
     }
-
     &:before {
       background: rgba(var(--light-green--rgb), 0.5);
     }
-
     &:after {
       background: rgba(var(--light-green--rgb), 0.3);
     }
   }
 }
-
 /*------------------------------------------------------------------------------
 3. Dark Mode
 ------------------------------------------------------------------------------*/
-.dark-mode {
+[data-theme="dark"] {
   .image-link {
     a {
       color: var(--white);
-
       &:active,
       &:focus,
       &:hover {
@@ -261,21 +231,17 @@ Molecule: Image Link
         background-image: none;
       }
     }
-
     &:before {
       background: rgba(var(--blue--rgb), 0.5);
     }
-
     &:after {
       background: rgba(var(--blue--rgb), 0.7);
     }
   }
-
   .green {
     .image-link {
       a {
         color: var(--dark-blue--darker--40);
-
         &:hover,
         &:focus,
         &:active {
@@ -285,7 +251,6 @@ Molecule: Image Link
     }
   }
 }
-
 /*------------------------------------------------------------------------------
 4. Display preferences
 ------------------------------------------------------------------------------*/
@@ -293,14 +258,11 @@ Molecule: Image Link
   .block--image-link {
     word-spacing: -0.5em;
     line-height: 2em;
-
     a {
       font-size: font-size(var--font-size--sm);
     }
-
     &.smaller {
       line-height: 1.2em;
-
       a {
         font-size: var(--font-size--xs);
       }
