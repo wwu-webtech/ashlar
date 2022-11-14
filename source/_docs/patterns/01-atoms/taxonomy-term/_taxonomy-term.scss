@@ -3,14 +3,15 @@ Atom: Text - Taxonomy Terms
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 .taxonomy-term,
-[data-theme="dark"] .taxonomy-term,
-[class*="-bg"] .taxonomy-term,
 .job-title,
-[data-theme="dark"] .job-title,
-[class*="-bg"] .job-title,
-.pronouns,
-[data-theme="dark"] .pronouns,
-[class*="-bg"] .pronouns {
+.pronouns {
+  --link-background: var(--gradient--vertical--light-blue);
+  --link-color: var(--white);
+  --link-color--active: var(--dark-blue);
+  --link-color--visited: var(--purple--lighter--80);
+  --link-decoration-color: var(--blue--lighter--60);
+  --link-decoration-color--visited: var(--purple--lighter--60);
+
   @include darkest-blue-bg;
 
   display: inline-block;
@@ -18,6 +19,7 @@ Atom: Text - Taxonomy Terms
   padding: var(--space--xs) var(--space--sm);
   transition: background-size var(--transition-speed--fast)
   cubic-bezier(0.33, 0.66, 0.66, 1);
+  text-decoration: none;
   color: var(--white);
   border: var(--border-width--sm) solid transparent;
   font-size: var(--font-size--sm);
@@ -32,32 +34,5 @@ Atom: Text - Taxonomy Terms
 a.taxonomy-term,
 a.pronouns,
 a.job-title {
-  text-decoration: none;
   border-bottom: solid var(--blue--lighter--60) var(--border-width--lg);
-  &:hover,
-  &:focus,
-  &:active {
-    text-decoration: none;
-    outline-offset: var(--border-width--md);
-    @media (forced-colors: active) {
-      @supports (forced-color-adjust: none) {
-        forced-color-adjust: none;
-
-        color: Canvas;
-        border-bottom: solid LinkText var(--border-width--lg);
-        background-color: LinkText;
-        background-image: none;
-      }
-    }
-  }
-  &:visited {
-    color: var(--purple--lighter--80);
-    border-bottom-color: var(--purple--lighter--80);
-    &:hover,
-    &:focus,
-    &:active {
-      color: var(--purple);
-      border-bottom-color: var(--purple);
-    }
-  }
 }
