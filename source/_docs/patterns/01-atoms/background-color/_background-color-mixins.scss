@@ -8,66 +8,20 @@ Atom: Background Color Mixins
 /*------------------------------------------------------------------------------
 1. Black based backgrounds
 --------------------------------------------------------------------------------
-Black, darkest blue, dark blue, and dark green are black based.
+Black, darkest blue, and dark blue are black based and share link/heading colors.
 ------------------------------------------------------------------------------*/
 @mixin black-bg {
+  --h1-color: var(--light-green);
+  --h2-color: var(--light-green--lighter--20);
+  --h3-color: var(--light-green--lighter--40);
+  --h4-color: var(--light-green--lighter--60);
+  --h5-color: var(--light-green--lighter--80);
+  --h6-color: var(--light-green);
+  --link-color: var(--blue--lighter--40);
+  --link-color--visited: var(--purple--lighter--80);
+
   color: var(--white);
   background: var(--black);
-  h1 {
-    color: var(--light-green);
-    &:after {
-      border-color: var(--white);
-    }
-  }
-  h2 {
-    color: var(--light-green--lighter--20);
-  }
-  h3 {
-    color: var(--light-green--lighter--40);
-  }
-  h4 {
-    color: var(--light-green--lighter--60);
-  }
-  h5 {
-    color: var(--light-green--lighter--80);
-  }
-  h6 {
-    color: var(--light-green);
-  }
-  .intro,
-  .tagline {
-    color: var(--light-green--lighter--40);
-  }
-  a {
-    --link-color: var(--blue--lighter--40);
-    --link-color--visited: var(--purple--lighter--80);
-  }
-  .menu {
-    li {
-      @include breakpoint($medium) {
-        border-left-width: var(--border-width--lg);
-      }
-
-      border-left: solid var(--border-width--md) var(--blue--lighter--40);
-    }
-  }
-  .social-icon,
-  .play-button {
-    color: var(--dark-blue);
-    background: var(--white);
-    svg {
-      fill: var(--dark-blue);
-    }
-    &:hover,
-    &:focus,
-    &:active {
-      background: var(--blue--lighter--60);
-    }
-  }
-  caption,
-  .block--countdown {
-    color: var(--white);
-  }
 }
 
 @mixin darkest-blue-bg {
@@ -82,90 +36,27 @@ Black, darkest blue, dark blue, and dark green are black based.
   background: var(--dark-blue);
 }
 
-@mixin dark-green-bg {
-  @include black-bg;
-
-  background: var(--dark-green);
-  a {
-    --link-background: var(--gradient--vertical--light-green);
-  }
-  .menu {
-    li {
-      border-left-color: var(--green--lighter--80);
-    }
-  }
-  &.pullquote {
-    border-left-color: var(--green--lighter--80);
-  }
-}
-
 /*------------------------------------------------------------------------------
 2. Gray based backgrounds
 --------------------------------------------------------------------------------
 Gray, blue, and green backgrounds are gray based.
 ------------------------------------------------------------------------------*/
 @mixin gray-bg {
+  --h1-color: var(--light-green--lighter--20);
+  --h2-color: var(--light-green--lighter--40);
+  --h3-color: var(--light-green--lighter--60);
+  --h4-color: var(--light-green--lighter--80);
+  --h5-color: var(--white);
+  --h6-color: var(--white);
+  --link-background: var(--gradient--vertical--light-blue);
+  --link-color: var(--white);
+  --link-color--active: var(--dark-blue);
+  --link-color--visited: var(--white);
+  --link-decoration-color: var(--blue--lighter--60);
+  --link-decoration-color--visited: var(--purple--lighter--80);
+
   color: var(--white);
   background: var(--gray);
-  h1 {
-    color: var(--light-green--lighter--20);
-    &:after {
-      border-color: var(--blue--lighter--40);
-    }
-  }
-  h2 {
-    color: var(--light-green--lighter--40);
-  }
-  h3 {
-    color: var(--light-green--lighter--60);
-  }
-  h4 {
-    color: var(--light-green--lighter--80);
-  }
-  h5 {
-    color: var(--white);
-  }
-  h6 {
-    color: var(--white);
-  }
-  a {
-    --link-background: var(--gradient--vertical--light-blue);
-    --link-color: var(--white);
-    --link-color--active: var(--dark-blue);
-    --link-color--visited: var(--white);
-    --link-decoration-color: var(--blue--lighter--60);
-    --link-decoration-color--visited: var(--purple--lighter--80);
-  }
-  .intro,
-  .tagline {
-    color: var(--light-green--lighter--80);
-  }
-  .menu {
-    li {
-      @include breakpoint($medium) {
-        border-left-width: var(--border-width--lg);
-      }
-
-      border-left: solid var(--border-width--md) var(--blue--lighter--60);
-    }
-  }
-  .social-icon,
-  .play-button {
-    color: var(--dark-blue);
-    background: var(--white);
-    svg {
-      fill: var(--dark-blue);
-    }
-    &:hover,
-    &:focus,
-    &:active {
-      background: var(--blue--lighter--60);
-    }
-  }
-  caption,
-  .block--countdown {
-    color: var(--white);
-  }
 }
 
 @mixin blue-bg {
@@ -175,20 +66,11 @@ Gray, blue, and green backgrounds are gray based.
 }
 
 @mixin green-bg {
+  --link-background: var(--gradient--vertical--light-green);
+
   @include gray-bg;
 
   background: var(--green);
-  h1 {
-    &:after {
-      border-color: var(--light-green--lighter--80);
-    }
-  }
-  a {
-    --link-background: var(--gradient--vertical--light-green);
-  }
-  &.pullquote {
-    border-left-color: var(--light-green--lighter--40);
-  }
 }
 
 /*------------------------------------------------------------------------------
@@ -198,47 +80,19 @@ Light gray, lightest gray, light blue, lightest blue, and light green
 backgrounds are light gray based.
 ------------------------------------------------------------------------------*/
 @mixin light-gray-bg {
-  background: var(--gray--lighter--60);
-  h1 {
-    color: var(--dark-blue--darker--80);
-    &:after {
-      border-color: var(--dark-blue--darker--80);
-    }
-  }
-  h2 {
-    color: var(--dark-blue--darker--60);
-  }
-  h3 {
-    color: var(--dark-blue--darker--40);
-  }
-  h4 {
-    color: var(--dark-blue--darker--20);
-  }
-  h5 {
-    color: var(--dark-blue);
-  }
-  h6 {
-    color: var(--dark-blue);
-  }
-  a {
-    --link-background: var(--gradient--vertical--dark-blue);
-    --link-color: var(--dark-blue--darker--60);
-    --link-color--active: var(--white);
-    --link-decoration-color: var(--blue--darker--60);
-    --link-decoration-color--visited: var(--purple);
-  }
-  .menu {
-    li {
-      @include breakpoint($medium) {
-        border-left-width: var(--border-width--lg);
-      }
+  --h1-color: var(--dark-blue--darker--80);
+  --h2-color: var(--dark-blue--darker--60);
+  --h3-color: var(--dark-blue--darker--40);
+  --h4-color: var(--dark-blue--darker--30);
+  --h5-color: var(--dark-blue--darker--20);
+  --h6-color: var(--dark-blue--darker--10);
+  --link-background: var(--gradient--vertical--dark-blue);
+  --link-color: var(--dark-blue--darker--60);
+  --link-color--active: var(--white);
+  --link-decoration-color: var(--blue--darker--60);
+  --link-decoration-color--visited: var(--purple);
 
-      border-left: solid var(--border-width--md) var(--blue--darker--40);
-    }
-  }
-  &.pullquote {
-    border-left-color: var(--dark-blue);
-  }
+  background: var(--gray--lighter--60);
 }
 
 @mixin lightest-gray-bg {

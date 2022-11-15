@@ -4,7 +4,7 @@ if (
 ) {
   const background_color_template = document.createElement("template");
   background_color_template.innerHTML = `
-    <div class="bg-wrapper standard-padding">
+  <div class="bg-wrapper standard-padding">
     <h1>H1 Heading <a href="#">and link</a></h1>
     <h2>H2 Heading <a href="#">and link</a></h2>
     <h3>H3 Heading <a href="#">and link</a></h3>
@@ -13,9 +13,13 @@ if (
 
     <p class="tagline">Tagline Text</p>
 
-    <p class="intro">Intro Text</p>
-
     <p>Regular Text with <a href="#">a regular link</a> and a <a href="https://wwu.edu/">visited link</a></p>
+
+    <blockquote>Blockquote</blockquote>
+
+    <hr/>
+
+    <blockquote class="dark-blue-bg">Blockquote</blockquote>
 
     <ul>
         <li><a href="#">Regular</a></li>
@@ -36,12 +40,55 @@ if (
         <a class="cta" href="https://wwu.edu/">Visited CTA</a>
     </div>
 
-    {% include "@atoms/buttons/play-button/play-button.twig" %}
+    <div class="icons">
+      <a href="#" class="icon-with-text">
+          <span class="material-icons" aria-hidden="true">home</span>
+          <span class="icon-text">Home</span>
+      </a>
+
+      <a href="#" class="icon-with-text blue-bg">
+          <span class="material-icons" aria-hidden="true">search</span>
+          <span class="icon-text">Search</span>
+      </a>
+    </div>
 
     {% include "@molecules/social-media-links/social-media-links.html.twig" %}
 
-    {% include "@atoms/tables/tables--customized.twig" %}
-    </div>
+    <table class="light-blue auto-layout align-top">
+      <caption>Custom classes applied to this table: light-blue fixed align-top</caption>
+      <tr>
+          <th id="t1-row-1-col-1" scope="col"><a>Row Group</a></th>
+          <th id="t1-row-1-col-2" scope="col">Col Header</th>
+          <th id="t1-row-1-col-3" colspan="2" scope="col"><a>Col Group</a></th>
+          <th id="t1-row-1-col-4" colspan="3" scope="col">Col Group</th>
+      </tr>
+      <tr>
+          <th id="t1-row-2-col-1" rowspan="3" scope="row">Row Group</th>
+          <th id="t1-row-2-col-2" scope="row">Row Header</th>
+          <th id="t1-row-2-col-3" scope="col">Col Header</th>
+          <th id="t1-row-2-col-4" scope="col">Col Header</th>
+          <th id="t1-row-2-col-5" scope="col">Col Header</th>
+          <th id="t1-row-2-col-6" scope="col">Col Header</th>
+          <th id="t1-row-2-col-7" scope="col">Col Header</th>
+      </tr>
+      <tr>
+          <th id="t1-row-3-col-2" scope="row">Row Header</th>
+          <td headers="t1-row-1-col-3 t1-row-2-col-1 t1-row-3-col-2 t1-row-2-col-3"><a href="#">Link</a></td>
+          <td headers="t1-row-1-col-3 t1-row-2-col-1 t1-row-3-col-2 t1-row-2-col-4"><a href="#">Link</a></td>
+          <td headers="t1-row-1-col-4 t1-row-2-col-1 t1-row-3-col-2 t1-row-2-col-5">Many <br/>Lines <br/>of <br/>Data</td>
+          <td headers="t1-row-1-col-4 t1-row-2-col-1 t1-row-3-col-2 t1-row-2-col-6">Data</td>
+          <td headers="t1-row-1-col-4 t1-row-2-col-1 t1-row-3-col-2 t1-row-2-col-7">Data</td>
+      </tr>
+      <tr>
+          <th id="t1-row-4-col-2" scope="row">Row Header</th>
+          <td headers="t1-row-1-col-3 t1-row-2-col-1 t1-row-4-col-2 t1-row-2-col-3">More words taking up a single cell on table</td>
+          <td headers="t1-row-1-col-3 t1-row-2-col-1 t1-row-4-col-2 t1-row-2-col-4">Supercalifragilisticexpialidocious</td>
+          <td headers="t1-row-1-col-4 t1-row-2-col-1 t1-row-4-col-2 t1-row-2-col-5">Data</td>
+          <td headers="t1-row-1-col-4 t1-row-2-col-1 t1-row-4-col-2 t1-row-2-col-6">Data</td>
+          <td headers="t1-row-1-col-4 t1-row-2-col-1 t1-row-4-col-2 t1-row-2-col-7">Data</td>
+      </tr>
+    </table>
+  </div>
   `;
 
   class WWUBackgroundColor extends HTMLElement {

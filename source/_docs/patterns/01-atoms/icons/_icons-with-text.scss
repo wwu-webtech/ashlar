@@ -1,8 +1,7 @@
 /*------------------------------------------------------------------------------
 Atom: Icons - Icons with Text
 --------------------------------------------------------------------------------
-1. Dark Mode
-2. Display Preferences
+1. Display Preferences
 ------------------------------------------------------------------------------*/
 .icon-with-text {
   display: inline-grid;
@@ -50,93 +49,9 @@ Atom: Icons - Icons with Text
       }
     }
   }
-  &:hover,
-  &:focus,
-  &:active {
-    outline-offset: calc(-1 * var(--border-width--lg));
-  }
-  &.blue-bg,
-  &.dark-blue-bg,
-  &.darkest-blue-bg,
-  &.green-bg,
-  &.dark-green-bg,
-  &.gray-bg,
-  &.blue-gradient-bg,
-  &.dark-blue-gradient-bg {
-    &:focus {
-      outline-color: var(--black);
-    }
-  }
-  @media (forced-colors: active) {
-    &:hover,
-    &:focus,
-    &:active {
-      font-weight: var(--font-weight--regular);
-    }
-  }
 }
 /*------------------------------------------------------------------------------
-1. Dark Mode
-------------------------------------------------------------------------------*/
-[data-theme="dark"] {
-  .sg-pattern-example a,
-  .page-content a {
-    &.icon-with-text {
-      color: var(--blue--lighter--40);
-      &:hover,
-      &:focus,
-      &:active {
-        color: var(--dark-blue);
-      }
-      &:focus {
-        outline-color: var(--dark-blue);
-      }
-      &.blue-bg,
-      &.dark-blue-bg,
-      &.blue-gradient-bg,
-      &.dark-blue-gradient-bg {
-        color: var(--white);
-        &:hover,
-        &:focus,
-        &:active {
-          background-color: var(--blue);
-        }
-      }
-      &.green-bg,
-      &.light-green-bg {
-        color: var(--white);
-        &:hover,
-        &:focus,
-        &:active {
-          color: var(--dark-blue);
-        }
-      }
-      &.gray-bg,
-      &.light-gray-bg,
-      &.light-blue-bg,
-      &.lightest-blue-bg {
-        color: var(--white);
-        &:hover,
-        &:focus,
-        &:active {
-          color: var(--dark-blue);
-        }
-      }
-      &.white-bg {
-        color: var(--blue--darker--20);
-        background-color: var(--white);
-        &:hover,
-        &:focus,
-        &:active {
-          color: var(--white);
-          background-color: (var--blue--darker--20);
-        }
-      }
-    }
-  }
-}
-/*------------------------------------------------------------------------------
-2. Display Preferences
+1. Display Preferences
 ------------------------------------------------------------------------------*/
 .font--dyslexia-friendly {
   .icon-with-text {

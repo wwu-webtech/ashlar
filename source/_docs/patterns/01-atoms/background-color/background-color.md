@@ -29,10 +29,6 @@ import WWUBackgroundColor from "./background-color.js"
     <div class="lightest-blue-bg"></div>
 <wwu-background-color color="lightest-blue"></wwu-background-color>
 
-## Dark Green
-    <div class="dark-green-bg"></div>
-<wwu-background-color color="green"></wwu-background-color>
-
 ## Green
     <div class="green-bg"></div>
 <wwu-background-color color="green"></wwu-background-color>

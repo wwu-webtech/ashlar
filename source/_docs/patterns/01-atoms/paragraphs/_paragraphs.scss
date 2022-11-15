@@ -2,66 +2,57 @@
 Atom: Text - Paragraph
 --------------------------------------------------------------------------------
 1. Custom Styles
-2. Dark Mode
 ------------------------------------------------------------------------------*/
 p {
   margin: 0 0 var(--space--md);
   line-height: 1.7em;
-
   @media print {
     page-break-inside: avoid;
   }
 }
-
 /*------------------------------------------------------------------------------
 1. Custom Styles
 ------------------------------------------------------------------------------*/
-.intro {
-  color: var(--dark-blue);
-  font-size: var(--font-size--lg);
-}
-
 .tagline {
   display: block;
   margin-bottom: var(--space--md);
   margin-left: var(--space--md);
   color: var(--dark-blue);
   font-style: italic;
-
   font-display: swap;
 }
-
 h1 {
   + .tagline,
   ~ div .tagline {
+    color: var(--h1-color);
     font-size: var(--font-size--3xl);
   }
 }
-
 h2 {
   + .tagline,
   ~ div .tagline {
+    color: var(--h2-color);
     font-size: var(--font-size--2xl);
   }
 }
-
 h3 {
   + .tagline,
   ~ div .tagline {
+    color: var(--h3-color);
     font-size: var(--font-size--xl);
   }
 }
-
 h4 {
   + .tagline,
   ~ div .tagline {
+    color: var(--h4-color);
     font-size: var(--font-size--lg);
   }
 }
-
 h5 {
   + .tagline,
   ~ div .tagline {
+    color: var(--h5-color);
     font-size: var(--font-size--md);
   }
 }

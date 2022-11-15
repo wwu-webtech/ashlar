@@ -21,9 +21,6 @@ Atom: Background Colors
 .darkest-blue-bg {
   @include darkest-blue-bg;
 }
-.dark-green-bg {
-  @include dark-green-bg;
-}
 .green-bg {
   @include green-bg;
 }
@@ -103,7 +100,6 @@ Atom: Background Colors
   .blue-bg,
   .light-blue-bg,
   .lightest-blue-bg,
-  .dark-green-bg,
   .green-bg,
   .light-green-bg,
   .dark-blue-gradient-bg,
@@ -137,7 +133,6 @@ Atom: Background Colors
   .blue-bg,
   .light-blue-bg,
   .lightest-blue-bg,
-  .dark-green-bg,
   .green-bg,
   .light-green-bg,
   .dark-blue-gradient-bg,

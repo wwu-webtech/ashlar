@@ -69,9 +69,9 @@ Molecule: Announcement
 ------------------------------------------------------------------------------*/
 [data-theme="dark"] {
   .block--announcement {
-    background-color: var(--dark-green);
+    background-color: var(--green);
     .material-icons {
-      @include dark-green-bg;
+      @include green-bg;
     }
     .body {
       @include green-bg;

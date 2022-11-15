@@ -8,6 +8,14 @@ Atom: Text - Headings
 /*------------------------------------------------------------------------------
 1. Default
 ------------------------------------------------------------------------------*/
+:root {
+  --h1-color: var(--blue--darker--80);
+  --h2-color: var(--blue--darker--60);
+  --h3-color: var(--blue--darker--40);
+  --h4-color: var(--blue--darker--20);
+  --h5-color: var(--blue);
+  --h6-color: var(--blue);
+}
 h1,
 h2,
 h3,
@@ -15,60 +23,45 @@ h4,
 h5,
 h6 {
   margin: var(--space--xl) 0 var(--space--xs);
-  font-display: fallback;
-  line-height: 1.2em;
   font-family: var(--font--title);
   font-weight: var(--font-weight--semibold);
-
+  font-display: fallback;
+  line-height: 1.2em;
   @media print {
     margin-bottom: 0;
     page-break-inside: avoid;
   }
 }
-
 h1 {
   position: relative;
   display: block;
-  padding-bottom: var(--space--md);
-  color: var(--blue--darker--80);
+  text-transform: uppercase;
+  color: var(--h1-color);
   font-family: var(--font--title);
-  font-size: var(--font-size--5xl);
-  font-weight: var(--font-weight--bold);
-
-  &:after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50%;
-    max-width: 6em;
-    content: "";
-    border-width: 0.12em;
-    border-style: solid;
-  }
+  font-size: var(--font-size--7xl);
+  font-weight: var(--font-weight--black);
 }
-
 h2 {
-  color: var(--blue--darker--60);
+  color: var(--h2-color);
   font-size: var(--font-size--4xl);
   font-weight: var(--font-weight--bold);
 }
 h3 {
-  color: var(--blue--darker--40);
-  font-size: var(--font-size--3xl);  
+  color: var(--h3-color);
+  font-size: var(--font-size--3xl);
 }
 h4 {
-  color: var(--blue--darker--20);
+  color: var(--h4-color);
   font-size: var(--font-size--2xl);
 }
 h5 {
-  color: var(--blue);
+  color: var(--h5-color);
   font-size: var(--font-size--xl);
 }
 h6 {
-  color: var(--blue);
+  color: var(--h6-color);
   font-size: var(--font-size--lg);
 }
-
 h1 + h2,
 h2 + h3,
 h3 + h4,
@@ -76,7 +69,6 @@ h4 + h5,
 h5 + h6 {
   margin-top: 0;
 }
-
 /*------------------------------------------------------------------------------
 2. Alternate Styles
 ------------------------------------------------------------------------------*/
@@ -89,88 +81,70 @@ h5 + h6 {
   h6 {
     font-family: var(--font--title);
   }
-
   h1 {
-    padding-bottom: 0;
-    text-transform: uppercase;
-    border-bottom: none;
-    font-size: var(--font-size--7xl);
-    font-weight: var(--font-weight--black);
-
-    &:after {
-      display: none;
-    }
-
     @include breakpoint($medium) {
       font-size: var(--font-size--9xl);
     }
-  }
 
-  h2 {
+    padding-bottom: 0;
     text-transform: uppercase;
-    border-bottom: none;
-    font-size: var(--font-size--6xl);
+    font-size: var(--font-size--7xl);
     font-weight: var(--font-weight--black);
-
+    &:after {
+      display: none;
+    }
+  }
+  h2 {
     @include breakpoint($medium) {
       font-size: var(--font-size--8xl);
     }
+
+    text-transform: uppercase;
+    font-size: var(--font-size--6xl);
+    font-weight: var(--font-weight--black);
   }
-
   h3 {
-    display: inline-block;
-    font-size: var(--font-size--5xl);
-
     @include breakpoint($medium) {
       font-size: var(--font-size--7xl);
     }
+
+    font-size: var(--font-size--5xl);
   }
-
   h4 {
-    font-size: var(--font-size--4xl);
-
     @include breakpoint($medium) {
       font-size: var(--font-size--6xl);
     }
+
+    font-size: var(--font-size--4xl);
   }
-
   h5 {
-    font-size: var(--font-size--3xl);
-
     @include breakpoint($medium) {
       font-size: var(--font-size--5xl);
     }
+
+    font-size: var(--font-size--3xl);
   }
 }
-
 .font-size--smaller {
   h1 {
     font-size: var(--font-size--3xl);
   }
-
   h2 {
-    padding-bottom: none;
-    border-bottom: none;
     font-size: var(--font-size--2xl);
   }
-
   h3 {
     font-size: var(--font-size--xl);
   }
-
   h4 {
     font-size: var(--font-size--lg);
   }
-
   h5 {
     font-size: var(--font-size--md);
   }
-
   h6 {
     font-size: var(--font-size--sm);
   }
 }
-
 /*------------------------------------------------------------------------------
 3. Display Preferences
 ------------------------------------------------------------------------------*/
@@ -183,7 +157,6 @@ h5 + h6 {
   h6 {
     font-family: var(--font--dyslexia-friendly);
   }
-
   [class^="headings--"] {
     h1,
     h2,
@@ -195,7 +168,6 @@ h5 + h6 {
     }
   }
 }
-
 .font--hyperlegible {
   h1,
   h2,
@@ -205,7 +177,6 @@ h5 + h6 {
   h6 {
     font-family: var(--font--hyperlegible);
   }
-
   [class^="headings"] {
     h1,
     h2,

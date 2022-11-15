@@ -9,11 +9,12 @@ Atom: Tables
 /*------------------------------------------------------------------------------
 1. Base Styles
 ------------------------------------------------------------------------------*/
-@mixin color-table($light-rows, $dark-rows, $light-headers, $dark-headers) {
+@mixin color-table($text-color, $light-rows, $dark-rows, $light-headers, $dark-headers) {
   table,
   tr,
   td,
   th {
+    color: $text-color;
     border: solid 1px $light-rows;
   }
   tr {
@@ -56,6 +57,7 @@ table {
 
   @include light-gray-bg;
   @include color-table(
+  var(--black),
   var(--table-gray),
   var(--table-gray--darker--5),
   var(--table-gray--darker--10),
@@ -139,6 +141,7 @@ td {
 ------------------------------------------------------------------------------*/
 .light-blue {
   @include color-table(
+  var(--black),
   var(--table-blue),
   var(--table-blue--darker--5),
   var(--table-blue--darker--10),
@@ -147,6 +150,7 @@ td {
 }
 .lightest-gray {
   @include color-table(
+  var(--black),
   var(--white),
   var(--table-gray),
   var(--table-gray--darker--5),
@@ -182,6 +186,7 @@ td {
   table {
     @include gray-bg;
     @include color-table(
+    var(--white),
     var(--table-gray--darker--50),
     var(--table-gray--darker--55),
     var(--table-gray--darker--60),
@@ -189,6 +194,7 @@ td {
     &.lightest-gray {
       @include gray-bg;
       @include color-table(
+      var(--white),
       var(--table-gray--darker--50),
       var(--table-gray--darker--55),
       var(--table-gray--darker--60),
@@ -198,6 +204,7 @@ td {
     &.light-blue {
       @include blue-bg;
       @include color-table(
+      var(--white),
       var(--blue),
       var(--blue--darker--20),
       var(--blue--darker--40),
