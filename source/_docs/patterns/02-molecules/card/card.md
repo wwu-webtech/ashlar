@@ -24,7 +24,7 @@ sidebar_position: 1
       </div>
       {% else %}
       <div class="title">
-        {% include "@atoms/text/label/label-customized.twig" %}
+        {% include "@atoms/label/label-customized.twig" %}
       </div>
       {% endif %}
 

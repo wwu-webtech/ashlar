@@ -49,6 +49,7 @@ const config = {
 
             require.resolve('../../build/css/ashlar-base.css'),
             
+            require.resolve('../../build/css/components/accordion.css'),
             require.resolve('../../build/css/components/colors.css'),
           ],
         },
