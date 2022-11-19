@@ -40,16 +40,11 @@ if (
         <a class="cta" href="https://wwu.edu/">Visited CTA</a>
     </div>
 
-    <div class="icons">
-      <a href="#" class="icon-with-text">
-          <span class="material-icons" aria-hidden="true">home</span>
-          <span class="icon-text">Home</span>
-      </a>
-
-      <a href="#" class="icon-with-text blue-bg">
-          <span class="material-icons" aria-hidden="true">search</span>
-          <span class="icon-text">Search</span>
-      </a>
+    <div class="buttons">
+      <button>Button</button>
+      <button class="alt">With .alt class</button>
+      <button class="warning">With .warning class</button>
+      <button disabled>Disabled Button</button>
     </div>
 
     {% include "@molecules/social-media-links/social-media-links.html.twig" %}

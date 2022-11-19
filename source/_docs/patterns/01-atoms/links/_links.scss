@@ -27,30 +27,32 @@ a {
   background-repeat: no-repeat;
   background-position: 0 100%;
   background-size: 100% 0;
+  .material-icons {
+    position: relative;
+    top: 0.2em;
+    margin-right: var(--space--2xs);
+    font-size: var(--icon-size--xs);
+  }
   &:visited {
     text-decoration-color: var(--link-decoration-color--visited);
     color: var(--link-color--visited);
   }
   &:active,
-  &:focus,
-  &:hover {
+  &:hover,
+  &:focus {
     text-decoration: none;
     color: var(--link-color--active);
-    outline: var(--border-width--md) solid transparent;
     background-image: var(--link-background);
     background-size: 100% 100%;
+  }
+  &:active,
+  &:hover {
+    outline: var(--border-width--md) solid transparent;
   }
   &:focus {
     outline: var(--border-width--md) dotted;
     outline-color: var(--link-color);
     outline-offset: var(--border-width--md);
-  }
-  @media (forced-colors: active) {
-    &:hover,
-    &:focus,
-    &:active {
-      outline-offset: calc(1.5 * var(--border-width--md));
-    }
   }
   &[target="_blank"],
   &[target="blank"] {

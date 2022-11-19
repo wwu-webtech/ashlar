@@ -6,38 +6,49 @@ Molecule: Accordion
 
 wwu-accordion,
 .accordion-set {
+  display: block;
   margin-bottom: var(--space--md);
   .item,
   wwu-accordion-item {
     display: block;
-    .title {
-      margin: 0;
-      padding-bottom: 0;
-      font-size: var(--font-size--md);
+    &:last-of-type {
       .expand {
-        display: flex;
-        align-items: center;
-        width: 100%;
         margin-bottom: 0;
-        padding: var(--space--sm);
-        cursor: default;
-        .material-icons {
-          font-size: var(--icon-size--sm);
-        }
       }
-      & + .content {
-        visibility: hidden;
-        overflow: hidden;
-        max-height: 0;
-        padding: 0;
-        transition: var(--transition-speed--md) ease;
-        transition-property: max-height, opacity;
-        opacity: 0;
-        &.is-expanded {
-          visibility: visible;
-          padding: var(--space--sm);
-          opacity: 1;
-        }
+    }
+  }
+  .expand {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: default;
+    color: inherit;
+    border-radius: 0;
+    background: transparent;
+    .material-icons {
+      font-size: var(--icon-size--sm);
+    }
+    &:focus {
+      outline-color: var(--h3-color);
+      outline-offset: calc(-1 * var(--border-width--md));
+    }
+  }
+  .title {
+    margin: 0;
+    padding-bottom: 0;
+    font-size: var(--font-size--md);
+    & + .content {
+      visibility: hidden;
+      overflow: hidden;
+      max-height: 0;
+      padding: 0;
+      transition: var(--transition-speed--md) ease;
+      transition-property: max-height, opacity;
+      opacity: 0;
+      &.is-expanded {
+        visibility: visible;
+        padding: var(--space--sm);
+        opacity: 1;
       }
     }
   }

@@ -23,3 +23,10 @@ To style a call to action link, add the class 'cta'
 <a href="#" class="cta">Apply for this program</a>
 
     <a href="#" class="cta">Apply for this program</a>
+
+## Links with Icons
+<a href="#"><span class="material-icons" aria-hidden="true">home</span>Home</a>&nbsp;
+<a href="#"><span class="material-icons" aria-hidden="true">how_to_reg</span>Apply</a>
+
+    <a href="#"><span class="material-icons" aria-hidden="true">home</span>Home</a>
+    <a href="#"><span class="material-icons" aria-hidden="true">how_to_reg</span>Apply</a>
