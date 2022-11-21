@@ -40,5 +40,14 @@
 {% set title_attributes = title_attributes.addClass('block__title') %}
 
 {% block template %}
-  {% include "@molecules/announcement/announcement.html.twig" %}
+  <div{{ attributes }}>
+    {% block content %}
+      <span class="material-icons" aria-hidden="true">{{ content.field_icon }}</span>
+
+      <div class="body">
+        {% include "@atoms/label/label.twig" %}
+        {{ content.body }}
+      </div>
+    {% endblock %}
+  </div>
 {% endblock %}

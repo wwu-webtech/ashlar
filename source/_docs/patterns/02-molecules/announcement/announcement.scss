@@ -7,10 +7,6 @@ Molecule: Announcement
 @import "../../00-utilities/breakpoints.scss";
 @import "../../01-atoms/background-color/background-color-mixins.scss";
 .block--announcement {
-  -ms-grid-columns: 1fr 3fr;
-  -ms-grid-rows: auto;
-
-  display: -ms-grid;
   display: grid;
   grid-template-areas: "icon text";
   grid-template-columns: 1fr 3fr;
@@ -30,17 +26,13 @@ Molecule: Announcement
       font-size: var(--icon-size--lg);
     }
 
-    display: -ms-grid;
     display: grid;
     grid-area: icon;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
     align-content: center;
     justify-content: center;
     width: 100%;
     height: 100%;
+    color: var(--light-green);
     border-right: var(--border-width--md) solid transparent;
   }
   .body {
@@ -48,10 +40,6 @@ Molecule: Announcement
 
     display: grid;
     grid-area: text;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
     justify-items: center;
     width: 100%;
     height: 100%;
@@ -59,9 +47,6 @@ Molecule: Announcement
   }
   &.layout-builder-block {
     padding: 0;
-  }
-  &.full-width {
-    max-width: none;
   }
 }
 /*------------------------------------------------------------------------------
