@@ -8,20 +8,17 @@ Firefox needs additional reset query, based on /core/themes/stable/css/core/norm
 
 details {
   padding: var(--space--md);
-
   summary {
     display: revert;
-
+    margin-bottom: var(--space--md);
+    padding: var(--space--md);
+    border: var(--border-width--sm) solid transparent;
+    box-shadow: var(--shadow--soft);
     @media (min--moz-device-pixel-ratio: 0) {
       display: list-item;
-    }    
+    }
   }
-
-   & > *:not(summary) {
-    margin-left: var(--space--md);
-  }
-
-  &[class*='-bg'] {
-    border: var(--border-width--sm) solid transparent;
+  & > *:not(summary) {
+    margin: 0 var(--space--md);
   }
 }

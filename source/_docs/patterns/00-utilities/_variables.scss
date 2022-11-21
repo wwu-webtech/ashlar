@@ -287,3 +287,7 @@ $large: 1300px;
 --transition-speed--fast: 200ms;
 --ease--standard: ease;
 }
+[data-theme="dark"] {
+  --shadow--soft: var(--shadow--dark-mode);
+  --shadow--soft--hover: var(--shadow--dark-mode--hover);
+}

@@ -127,10 +127,6 @@ Molecule: Event List
         color: var(--white);
       }
     }
-    &:hover,
-    &:focus-within {
-      box-shadow: var(--shadow--dark-mode);
-    }
     a {
       &:active,
       &:focus,

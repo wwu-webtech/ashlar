@@ -1,9 +1,7 @@
 /*------------------------------------------------------------------------------
 Molecule: Accordion
 --------------------------------------------------------------------------------
-1.
 ------------------------------------------------------------------------------*/
-
 wwu-accordion,
 .accordion-set {
   display: block;
@@ -28,6 +26,7 @@ wwu-accordion,
     .material-icons {
       font-size: var(--icon-size--sm);
     }
+    &:active,
     &:focus {
       outline-color: var(--h3-color);
       outline-offset: calc(-1 * var(--border-width--md));

@@ -14,6 +14,7 @@ input[type="submit"] {
   padding: var(--space--xs);
   transition: background var(--transition-speed--fast),
   color var(--transition-speed--fast);
+  color: var(--black);
   border: none;
   border-radius: var(--border-radius--rounder);
   outline: var(--border-width--md) solid transparent;
@@ -25,10 +26,10 @@ input[type="submit"] {
   &:hover,
   &:focus {
     color: var(--white);
-    outline: var(--border-width--md) solid transparent;
     background: var(--gray);
     box-shadow: var(--shadow--soft--hover);
   }
+  &:active,
   &:focus {
     outline: var(--border-width--md) dotted;
     outline-color: var(--link-color);

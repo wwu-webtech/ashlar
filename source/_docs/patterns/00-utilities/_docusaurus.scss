@@ -1,0 +1,27 @@
+/*------------------------------------------------------------------------------
+Resets and styles for things in the docusaurus theme that are troublesome
+------------------------------------------------------------------------------*/
+:root {
+  --ifm-blockquote-color: initial;
+  --ifm-navbar-link-hover-color: initial;
+}
+.docs-wrapper {
+  body:not(.navigation-with-keyboard) {
+    button:not(input) {
+      outline: var(--border-width--md) solid transparent;
+      &:active,
+      &:focus {
+        outline: var(--border-width--md) dotted;
+        outline-color: var(--link-color);
+        outline-offset: var(--border-width--md);
+      }
+      &.expand {
+        &:active,
+        &:focus {
+          outline-color: var(--h3-color);
+          outline-offset: calc(-1 * var(--border-width--md));
+        }
+      }
+    }
+  }
+}

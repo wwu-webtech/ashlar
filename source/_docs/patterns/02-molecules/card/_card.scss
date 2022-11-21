@@ -122,16 +122,12 @@ Molecule: Cards
   .block--card {
     .title {
       a {
-        &:after {
-          box-shadow: var(--shadow--dark-mode);
-        }
         &:active,
         &:focus,
         &:hover {
           color: var(--blue--lighter--40);
           &:after {
             color: var(--blue--lighter--40);
-            box-shadow: var(--shadow--dark-mode--hover);
           }
         }
       }

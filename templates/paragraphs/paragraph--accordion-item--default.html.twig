@@ -39,5 +39,8 @@
  */
 #}
 {% block paragraph %}
-  {% include "@molecules/accordion/accordion-items.html.twig" %}
+  <wwu-accordion-item label="{{ content['field_heading'][0]['#context']['value'] }}" heading-level="{{ content['field_item_heading_level'][0]['#markup'] }}">
+    <noscript><{{ content['field_item_heading_level'][0]['#markup'] }}>{{ content['field_heading'][0]['#context']['value'] }}</{{ content['field_item_heading_level'][0]['#markup'] }}></noscript>
+    {{ content.field_content }}
+  </wwu-accordion-item>
 {% endblock paragraph %}

@@ -40,15 +40,18 @@
 {% set attributes = attributes.addClass(classes) %}
 {% set title_attributes = title_attributes.addClass('block__title', block_content.field_heading_font.0.value ) %}
 {% block template %}
-  {% embed "@molecules/accordion/accordion.html.twig" %}
-
-  {% block title %}
-    {% include "@atoms/label/label-customized.twig" %}
-  {% endblock %}
-
-  {% block content %}
-    {{ content }}
-  {% endblock %}
-
-  {% endembed %}
+  <div{{ attributes }}>
+    {% block title %}
+      {% include "@atoms/label/label-customized.twig" %}
+    {% endblock %}
+    
+    <wwu-accordion>
+    {% block content %}   
+      {% for item in items %}
+        {% include "@molecules/accordion/accordion-items.html.twig" %}
+      {% endfor %}
+    {% endblock %}
+    </wwu-accordion>
+  </div>
 {% endblock %}
+

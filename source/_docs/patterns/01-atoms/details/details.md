@@ -1,5 +1,5 @@
 # Details
-
+Docusaurus overwrites the details element with a react component. Because of this, this element may appear a little broken here, while it displays nicely in other environments.
 
 <details>
   <summary>Here's some summary text</summary>

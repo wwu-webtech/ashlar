@@ -99,13 +99,6 @@ Molecule: Schedule
           color: var(--blue--lighter--80);
           background-image: none;
         }
-        &:after {
-          box-shadow: var(--shadow--dark-mode);
-        }
-        &:hover:after,
-        &:focus-within {
-          box-shadow: var(--shadow--dark-mode--hover);
-        }
       }
     }
   }
