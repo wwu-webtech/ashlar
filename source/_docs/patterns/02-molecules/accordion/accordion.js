@@ -11,8 +11,7 @@ if (
         super();
       }
       
-      connectedCallback() {
-        /* Create the custom element by appending the template */
+      connectedCallback() {        
         this.appendChild(accordion_template.content.cloneNode(true));
         
         const items = this.querySelectorAll("wwu-accordion-item");        

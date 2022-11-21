@@ -2,31 +2,22 @@
 Molecule: Background Video
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
+wwu-background-video,
 .bg-video-container {
   position: relative;
   display: grid;
-  align-content: center;
-  padding: var(space--2xl);
+  place-content: center;
+  padding: var(--space--2xl);
   text-align: center;
-
   > * {
     z-index: 1;
   }
-
   > video {
     z-index: 0;
   }
-
   button {
     position: absolute;
     bottom: var(--space--sm);
     left: var(--space--sm);
-
-    .material-icons {
-      position: relative;
-      top: var(--space--2xs);
-      right: var(--space--2xs);
-      font-size: inherit;
-    }
   }
 }
