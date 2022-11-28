@@ -52,38 +52,26 @@ Organism: Cards
 
   display: flex;
   flex-flow: row wrap;
-  .card,
-  .block--card,
-  .pager,
-  .event {
+  > * {
     flex: 0 1 100%;
   }
 }
 .card-2col--flex {
-  .card,
-  .block--card,
-  .event,
-  .hover-card {
+  > * {
     @include breakpoint($small) {
       flex: 0 1 calc(50% - var(--space--xs));
     }
   }
 }
 .card-3col--flex {
-  .card,
-  .block--card,
-  .event,
-  .hover-card {
+  > * {
     @include breakpoint($small) {
       flex: 0 1 calc(33.33% - var(--space--xs));
     }
   }
 }
 .card-4col--flex {
-  .card,
-  .block--card,
-  .event,
-  .hover-card {
+  > * {
     @include breakpoint($small) {
       flex: 0 1 calc(25% - var(--space--xs));
     }
@@ -98,7 +86,7 @@ Organism: Cards
 ------------------------------------------------------------------------------*/
 .card-list {
   .card,
-  .block--card,
+  .wwu-card,
   .event {
     @include horizontal-card;
   }
@@ -108,7 +96,7 @@ Organism: Cards
 ------------------------------------------------------------------------------*/
 .layout--flex {
   .layout__region {
-    .block--card {
+    .wwu-card {
       flex: 1;
       margin: 0 var(--space--xs);
     }
@@ -123,7 +111,7 @@ Organism: Cards
   .card-2col--flex {
     display: initial;
     .card,
-    .block--card,
+    .wwu-card,
     .event,
     .hover-card {
       float: left;
@@ -135,7 +123,7 @@ Organism: Cards
   .card-3col--flex {
     display: initial;
     .card,
-    .block--card,
+    .wwu-card,
     .event,
     .hover-card {
       float: left;
@@ -147,7 +135,7 @@ Organism: Cards
   .card-4col--flex {
     display: initial;
     .card,
-    .block--card,
+    .wwu-card,
     .event,
     .hover-card {
       float: left;

@@ -1,6 +1,6 @@
 # Announcement
 
-<div class="block--announcement">
+<div class="wwu-announcement">
 <span class="material-icons" aria-hidden="true">warning</span>
 
 <div class="body">
@@ -9,7 +9,7 @@
 </div>
 </div>
 
-    <div class="block--announcement">
+    <div class="wwu-announcement">
         <span class="material-icons" aria-hidden="true">warning</span>
 
         <div class="body">

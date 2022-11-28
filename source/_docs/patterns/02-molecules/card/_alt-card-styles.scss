@@ -5,82 +5,50 @@ Molecule: Cards - Alternate styles
 2. Degree
 3. Event
 4. Event alternate
-5. Horizontal
 6. Information
 7. Information - Split style
 8. Simple
-9. Solid round
-10. Tile
-11. Institute
+9. Institute
 --------------------------------------------------------------------------------
 1. Color block title
 ------------------------------------------------------------------------------*/
 .card.color-block-title,
-.block--card.color-block-title {
+.wwu-card.color-block-title {
+  --h1-color: var(--white);
+  --h2-color: var(--white);
+  --h3-color: var(--white);
+  --h4-color: var(--white);
+  --h5-color: var(--white);
+  --h6-color: var(--white);
   .title {
-    @include blue-bg;
+    --link-color: var(--white);
+    --link-color--visited: var(--white);
 
     order: -2;
+    margin-bottom: 0;
     padding: var(--space--md);
-    a {
-      &:active,
-      &:hover,
-      &:focus {
-        color: inherit;
-        background: none;
-      }
-    }
-  }
-  &:focus-within {
-    .title {
-      a:after {
-        outline-color: var(--dark-blue--darker--80);
-      }
-    }
+    background-color: var(--blue);
   }
   &.dark-blue {
     .title {
-      @include dark-blue-bg;
-      a {
-        &:active,
-        &:hover,
-        &:focus {
-          color: inherit;
-          background: none;
-        }
-      }
+      --link-color: var(--blue--lighter--40);
+      --link-color--visited: var(--purple--lighter--80);
+
+      background-color: var(--dark-blue);
     }
   }
   &.light-green {
+    --h1-color: var(--dark-blue);
+    --h2-color: var(--dark-blue);
+    --h3-color: var(--dark-blue);
+    --h4-color: var(--dark-blue);
+    --h5-color: var(--dark-blue);
+    --h6-color: var(--dark-blue);
     .title {
-      @include light-green-bg;
-      a {
-        &:active,
-        &:hover,
-        &:focus {
-          color: inherit;
-          background: none;
-        }
-      }
-    }
-  }
-}
-[data-theme="dark"] {
-  .card.color-block-title,
-  .block--card.color-block-title {
-    &:not(.light-green) .title {
-      a {
-        &:active,
-        &:focus,
-        &:hover {
-          color: var(--light-green);
-        }
-      }
-    }
-    &:focus-within {
-      .title a:after {
-        outline-color: var(--blue--lighter--40);
-      }
+      --link-color: var()-dark-blue--darker--60;
+      --link-color--visited: var(--purple);
+
+      background-color: var(--light-green);
     }
   }
 }
@@ -140,27 +108,11 @@ Molecule: Cards - Alternate styles
     margin-left: var(--space--md);
   }
 }
-[data-theme="dark"] .degree-card {
-  .department-link {
-    color: var(--white);
-    &:hover,
-    &:active,
-    &:focus {
-      color: var(--light-green);
-      background-color: var(--black);
-    }
-  }
-  .body {
-    h4 {
-      color: var(--light-green--lighter--40);
-    }
-  }
-}
 /*------------------------------------------------------------------------------
 3. Event
 ------------------------------------------------------------------------------*/
 .card.event,
-.block--card.event {
+.wwu-card.event {
   align-content: start;
   .image {
     margin-bottom: calc(-1 * var(--space--lg));
@@ -216,10 +168,11 @@ Molecule: Cards - Alternate styles
     order: 2;
     align-self: flex-end;
     margin-bottom: 0;
-    padding: var(--space--md) var(--space--md) var(--space--md) var(--space--lg);
+    padding: 0 var(--space--sm) var(--space--sm) var(--space--lg);
     text-transform: uppercase;
     color: var(--blue);
     font-style: normal;
+    line-height: 1;
   }
   .body {
     order: 3;
@@ -231,7 +184,7 @@ Molecule: Cards - Alternate styles
 4. Event Alternate
 ------------------------------------------------------------------------------*/
 .card.event.alt,
-.block--card.event.alt {
+.wwu-card.event.alt {
   display: grid;
   grid-template-areas: "image image"
   "date title"
@@ -250,14 +203,6 @@ Molecule: Cards - Alternate styles
     margin: 0;
     padding-top: var(--space--md);
     border-top: var(--border-width--sm) solid transparent;
-    a {
-      &:active,
-      &:hover,
-      &:focus {
-        color: inherit;
-        background: none;
-      }
-    }
   }
   .image {
     grid-area: image;
@@ -278,12 +223,19 @@ Molecule: Cards - Alternate styles
       border: var(--border-width--sm) solid transparent;
       background-color: var(--dark-blue);
     }
-    .day {
+    .day,
+    .year {
       padding: var(--space--sm);
       color: var(--dark-blue);
       border-width: var(--border-width--sm);
       border-bottom: var(--border-width--sm) solid transparent;
       background-color: var(--light-green);
+    }
+    .day {
+      padding-bottom: 0;
+    }
+    .year {
+      padding-top: 0;
     }
   }
   .location {
@@ -293,7 +245,6 @@ Molecule: Cards - Alternate styles
     grid-area: location;
     align-items: start;
     height: 100%;
-    padding-top: 0;
     border-bottom: var(--border-width--sm) solid transparent;
   }
   .body {
@@ -313,416 +264,11 @@ Molecule: Cards - Alternate styles
     }
   }
 }
-[data-theme="dark"] {
-  .card.event.alt,
-  .block--card.event.alt {
-    &:focus-within {
-      .title a:after {
-        outline-color: var(--blue--lighter--40);
-      }
-    }
-  }
-}
-
 /*------------------------------------------------------------------------------
-5. Horizontal
-------------------------------------------------------------------------------*/
-@mixin horizontal-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(10, auto);
-  padding-bottom: 0;
-  &.image-optional {
-    grid-template-columns: auto 1fr;
-  }
-  .image {
-    grid-column: 1 / span 1;
-    grid-row: 1 / span all;
-    margin-bottom: 0;
-    padding: 0;
-    > div {
-      width: 100%;
-      height: 100%;
-    }
-    img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
-  }
-  > * {
-    grid-column: 2 / span 1;
-  }
-}
-.card.horizontal,
-.block--card.horizontal {
-  @include horizontal-card;
-}
-/*------------------------------------------------------------------------------
-6. Information
-------------------------------------------------------------------------------*/
-.card.information,
-.block--card.information {
-  align-content: space-between;
-  padding: 0;
-  .sorting-term {
-    order: 0;
-    min-width: 30%;
-    margin-left: var(--space--lg);
-    padding: var(--space--xs);
-    color: var(--white);
-    background-color: var(--blue);
-    font-size: var(--font-size--sm);
-  }
-  .title {
-    margin-top: var(--space--md);
-    margin-right: var(--space--lg);
-    margin-left: var(--space--lg);
-    padding: 0;
-    border-bottom: solid var(--border-width--md) var(--blue);
-    .block__title {
-      color: var(--blue);
-    }
-  }
-  .body {
-    padding: var(--space--md) var(--space--lg);
-  }
-  .taxonomy-terms {
-    display: flex;
-    flex-flow: column;
-    order: 6;
-    align-self: end;
-    padding: 0;
-    background-color: var(--blue);
-    font-weight: var(--font-weight--regular);
-  }
-  .taxonomy-term {
-    display: flex;
-    float: none;
-    align-items: center;
-    margin: 0;
-    padding: var(--space--xs);
-    color: var(--white);
-    background-color: transparent;
-    font-size: var(--font-size--sm);
-  }
-  .material-icons {
-    margin-right: var(--space--sm);
-    font-size: var(--space--lg);
-  }
-}
-/*------------------------------------------------------------------------------
-7. Information - Split style
-------------------------------------------------------------------------------*/
-.card.information.split-style,
-.block--card.information.split-style {
-  @include breakpoint($medium) {
-    grid-template-areas: "title body"
-    "sorting body"
-    "terms body";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr auto auto;
-  }
-
-  display: grid;
-  grid-template-areas: "title" "sorting" "terms" "body";
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto auto;
-  align-items: initial;
-  align-content: start;
-  .title {
-    @include blue-bg;
-
-    grid-area: title;
-    margin: 0;
-    padding: var(--space--lg) var(--space--lg);
-    a {
-      &:active,
-      &:hover,
-      &:focus {
-        color: inherit;
-        background: none;
-      }
-    }
-  }
-  .block__title {
-    color: var(--white);
-  }
-  .image {
-    margin-bottom: 0;
-  }
-  .sorting-term {
-    display: flex;
-    grid-area: sorting;
-    align-items: center;
-    margin: 0;
-    background-color: var(--dark-blue);
-  }
-  .taxonomy-terms {
-    grid-area: terms;
-    background-color: var(--dark-blue);
-  }
-  .body {
-    grid-area: body;
-  }
-  &:focus-within {
-    .title {
-      a:after {
-        outline-color: var(--dark-blue--darker--80);
-      }
-    }
-  }
-}
-[data-theme="dark"] {
-  .card.information.split-style,
-  .block--card.information.split-style {
-    &:focus-within {
-      .title a:after {
-        outline-color: var(--blue--lighter--40);
-      }
-    }
-  }
-}
-/*------------------------------------------------------------------------------
-8. Simple
-------------------------------------------------------------------------------*/
-.card.simple,
-.block--card.simple {
-  @include lightest-gray-bg;
-
-  padding: 0;
-  text-align: center;
-  .title {
-    @include blue-bg;
-
-    padding: var(--space--lg);
-    a {
-      &:active,
-      &:hover,
-      &:focus {
-        color: inherit;
-        background: none;
-      }
-    }
-  }
-  .body {
-    padding: var(--space--lg);
-  }
-  &:focus-within {
-    .title {
-      a:after {
-        outline-color: var(--dark-blue--darker--80);
-      }
-    }
-  }
-}
-[data-theme="dark"] {
-  .card.simple,
-  .block--card.simple {
-    @include gray-bg;
-    .title {
-      a {
-        &:active,
-        &:hover,
-        &:focus {
-          color: inherit;
-          background: none;
-        }
-      }
-    }
-    .cta {
-      &:hover,
-      &:focus,
-      &:active {
-        outline-color: inherit;
-      }
-    }
-    &:focus-within {
-      .title a:after {
-        outline-color: var(--blue--lighter--40);
-      }
-    }
-  }
-}
-/*------------------------------------------------------------------------------
-9. Solid round
-------------------------------------------------------------------------------*/
-.card.solid-round,
-.block--card.solid-round {
-  border-radius: var(--space--2xl);
-  box-shadow: none;
-  a {
-    &:after {
-      border-radius: var(--space--2xl);
-    }
-  }
-  .title {
-    padding: 0;
-    .block__title {
-      padding: var(--space--lg) var(--space--lg) 0;
-      font-weight: var(--font-weight--black);
-    }
-  }
-  .image {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-    flex: 0 1 100%;
-    order: 2;
-    max-width: 50%;
-    max-height: 100%;
-    margin: 0;
-    border-radius: 0 var(--space--2xl) var(--space--2xl) 0;
-    img {
-      display: block;
-      object-fit: contain;
-      width: 100%;
-      height: 100%;
-      margin: 0 var(--space--2xl) 0;
-      opacity: 25%;
-    }
-  }
-  .body {
-    max-width: 23rem;
-    padding: var(--space--md) var(--space--lg) 0;
-    p {
-      margin: 0 0 var(--space--lg);
-      font-size: var(--font-size--sm);
-    }
-    .button.white,
-    .cta.white {
-      box-shadow: none;
-      font-size: var(--font-size--sm);
-    }
-  }
-  &.blue {
-    background-color: var(--blue--lighter--40);
-    .title {
-      .block__title {
-        a {
-          color: var(--dark-blue);
-        }
-      }
-    }
-    .body {
-      color: var(--blue--darker--40);
-      a.button.white,
-      .cta.white {
-        color: var(--blue);
-        &:hover,
-        &:focus {
-          color: var(--white);
-          background-color: var(--blue);
-        }
-      }
-    }
-  }
-  &.green {
-    background-color: var(--light-green--lighter--40);
-    .title {
-      .block__title {
-        a {
-          color: var(--dark-green);
-        }
-      }
-    }
-    .body {
-      color: var(--dark-green--darker--20);
-      a.button.white,
-      .cta.white {
-        color: var(--green);
-        &:hover,
-        &:focus {
-          color: var(--white);
-          background-color: var(--green);
-        }
-      }
-    }
-  }
-}
-[data-theme="dark"] {
-  .card.solid-round,
-  .block--card.solid-round {
-    h2,
-    h3,
-    h4,
-    h5 {
-      color: var(--dark-blue);
-    }
-  }
-}
-/*------------------------------------------------------------------------------
-10. Tile
-------------------------------------------------------------------------------*/
-.card.tile,
-.block--card.tile {
-  @include light-blue-bg;
-
-  padding: var(--space--md);
-  border-radius: var(--space--2xl);
-  a {
-    &:after {
-      border-radius: var(--space--2xl);
-    }
-  }
-  &:hover {
-    a {
-      &:after {
-        border-radius: var(--space--2xl);
-        outline: transparent;
-      }
-    }
-  }
-  .image {
-    display: flex;
-    order: 1;
-    justify-content: flex-end;
-    margin: 0 0 var(--space--md);
-    border-radius: 0 var(--space--2xl) 0 0;
-    img {
-      display: block;
-      object-fit: scale-down;
-      width: auto;
-      max-height: 6.25rem;
-      margin: 0;
-      opacity: 25%;
-    }
-  }
-  .taxonomy-term {
-    border-radius: var(--border-radius--rounder);
-  }
-  .title {
-    margin: 0;
-    padding: 0 var(--space--xs) var(--space--xs);
-    text-transform: uppercase;
-    .block__title {
-      margin: 0;
-      font-size: var(--font-size--2xl);
-      a {
-        font-size: var(--font-size--2xl);
-      }
-      a {
-        &:active,
-        &:hover,
-        &:focus {
-          background: none;
-        }
-      }
-    }
-  }
-}
-[data-theme="dark"] {
-  .card.tile,
-  .block--card.tile {
-    @include dark-blue-bg;
-  }
-}
-/*------------------------------------------------------------------------------
-11. Institute
+9. Institute
 ------------------------------------------------------------------------------*/
 .card.institute,
-.block--card.institute {
+.wwu-card.institute {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -767,11 +313,9 @@ Molecule: Cards - Alternate styles
 
     display: flex;
     align-items: center;
-    .block__title {
-      text-transform: uppercase;
-      font-family: var(--font--title);
-      font-size: var(--font-size--md);
-    }
+    text-transform: uppercase;
+    font-family: var(--font--title);
+    font-size: var(--font-size--md);
     a {
       color: var(--dark-blue);
       &:hover {
@@ -788,26 +332,149 @@ Molecule: Cards - Alternate styles
     font-size: var(--icon-size--md);
   }
 }
-[data-theme="dark"] {
-  .card.institute,
-  .block--card.institute {
-    .intro {
-      color: var(--blue--lighter--80);
-    }
-    .image:after {
-      background-color: var(--black);
-    }
-    .content {
+/*------------------------------------------------------------------------------
+. Hover Variant
+------------------------------------------------------------------------------*/
+.hover-card {
+  position: relative;
+  margin-bottom: var(--space--md);
+  p {
+    font-size: var(--font-size--xs);
+    font-weight: var(--font-weight--light);
+    line-height: 1.2;
+  }
+  .title {
+    padding: var(--space--sm);
+    background-color: rgba(var(--dark-blue--darker--40--rgb), 0.75);
+    .block__title {
       color: var(--white);
     }
-    .title {
-      a {
-        color: var(--blue--lighter--40);
-        &:hover {
-          color: var(--white);
+    a {
+      text-decoration: none;
+      color: var(--white);
+      font-family: var(--font--title);
+      &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: "";
+        transition: var(--transition-speed--md) var(--ease--standard) box-shadow;
+        box-shadow: var(--shadow--soft);
+      }
+      &:active,
+      &:hover,
+      &:focus {
+        background-image: none;
+      }
+      &:focus {
+        outline: none;
+        &:after {
+          outline: dotted var(--border-width--md) var(--blue);
+          outline-offset: var(--border-width--md);
         }
-        :visited {
-          color: var(--purple--lighter--80);
+      }
+    }
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
+      font-size: var(--font-size--md);
+    }
+  }
+  .body {
+    padding: var(--space--sm);
+    padding-right: var(--toggle-size--sm);
+  }
+  .read-more {
+    position: absolute;
+    right: 0;
+    bottom: var(--space--sm);
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    width: var(--toggle-size--sm);
+    color: var(--blue);
+    .material-icons {
+      font-size: var(--icon-size--sm);
+    }
+  }
+  .image {
+    position: relative;
+    z-index: -1;
+    img {
+      display: block;
+    }
+  }
+  @media (min-width: $small) and (prefers-reduced-motion: no-preference) {
+    display: grid;
+    overflow-y: hidden;
+    .image {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+      img {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .title {
+      display: grid;
+      align-content: center;
+      min-height: calc((var(--font-size--md) * 3) + (var(--space--sm) * 3));
+      margin: 0;
+      padding: var(--space--sm);
+      padding-right: var(--toggle-size--sm);
+      background-color: transparent;
+      a {
+        &:focus {
+          outline: none;
+          &:after {
+            outline: dotted var(--border-width--md) var(--white);
+            outline-offset: calc(-1 * var(--border-width--md));
+          }
+        }
+      }
+    }
+    .content {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+      transition: 0.3s all ease-in;
+      transform: translatey(calc(100% - (var(--font-size--md) * 3) - (var(--space--sm) * 3)));
+      background-color: rgba(var(--dark-blue--darker--40--rgb), 0.9);
+    }
+    .body {
+      padding-top: 0;
+      padding-right: var(--space--md);
+      padding-bottom: calc(var(--toggle-size--md) * (2 / 3));
+      padding-left: var(--space--md);
+      color: var(--white);
+    }
+    .read-more {
+      bottom: 0;
+      width: var(--touch-target--min);
+      height: var(--touch-target--min);
+      transition: 0.3s all ease-in-out;
+      color: var(--white);
+      .material-icons {
+        transition: 0.3s all ease-in-out;
+        transform: translatey(-50%);
+      }
+    }
+    &:hover,
+    &:focus-within {
+      .content {
+        transition: 0.3s all ease-out;
+        transform: translatey(0%);
+      }
+      .read-more {
+        background-color: var(--blue);
+        .material-icons {
+          transform: translatey(0);
         }
       }
     }

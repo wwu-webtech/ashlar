@@ -2,8 +2,7 @@
 Molecule: Cards
 --------------------------------------------------------------------------------
 1. General styles
-2. Dark Mode
-3. Print
+2. Print
 ------------------------------------------------------------------------------*/
 .layout-builder-block.card .title a::after,
 .layout-builder-block.block--card .title a::after {
@@ -13,7 +12,7 @@ Molecule: Cards
 1. General styles
 ------------------------------------------------------------------------------*/
 .card,
-.block--card {
+.wwu-card {
   position: relative;
   display: flex;
   flex-flow: row wrap;
@@ -40,25 +39,10 @@ Molecule: Cards
       }
     }
   }
-  .image {
-    flex: 0 1 100%;
-    order: -1;
-    width: 100%;
-    margin-bottom: var(--space--xs);
-    img {
-      display: block;
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
-  }
   .title {
     flex: 0 1 100%;
+    margin-top: 0;
     padding: 0 var(--space--xs);
-    .block__title {
-      margin-top: 0;
-      line-height: initial;
-    }
     a {
       display: inline-block;
       text-decoration: none;
@@ -69,16 +53,26 @@ Molecule: Cards
         bottom: 0;
         left: 0;
         content: "";
-        transition: var(--transition-speed--md) var(--ease--standard) box-shadow;
+        transition: var(--transition-speed--fast) var(--ease--standard) box-shadow;
         box-shadow: var(--shadow--soft);
       }
       &:hover,
-      &:focus,
       &:active {
         color: inherit;
-        outline: none;
         background: none;
       }
+    }
+  }
+  .image {
+    flex: 0 1 100%;
+    order: -1;
+    width: 100%;
+    margin-bottom: var(--space--xs);
+    img {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
     }
   }
   .taxonomy-terms {
@@ -112,30 +106,13 @@ Molecule: Cards
     a[href^="mailto:"] {
       word-break: break-all;
     }
-  }
-}
-/*------------------------------------------------------------------------------
-2. Dark Mode
-------------------------------------------------------------------------------*/
-[data-theme="dark"] {
-  .card,
-  .block--card {
-    .title {
-      a {
-        &:active,
-        &:focus,
-        &:hover {
-          color: var(--blue--lighter--40);
-          &:after {
-            color: var(--blue--lighter--40);
-          }
-        }
-      }
+    p {
+      margin-bottom: var(--space--2xs);
     }
   }
 }
 /*------------------------------------------------------------------------------
-3. Print
+2. Print
 ------------------------------------------------------------------------------*/
 @media print {
   .card,

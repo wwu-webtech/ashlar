@@ -1,6 +1,5 @@
 <div {{ attributes }}>
   {% if block_content.field_link.0.url is not empty %}
-  <div class="title">
     {{ title_prefix }}
       {% if label %}
         {% if block_content.field_heading_level.0.value is not empty %}
@@ -14,11 +13,8 @@
         {% endif %}
       {% endif %}
     {{ title_suffix }}
-  </div>
   {% else %}
-  <div class="title">
     {% include "@atoms/label/label-customized.twig" %}
-  </div>
   {% endif %}
 
   {% if content.field_sorting_term %}
