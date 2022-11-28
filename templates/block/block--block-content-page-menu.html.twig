@@ -41,12 +41,7 @@
 
 {% block template %}
 
-  <nav{{ attributes }} 
-    {% if not configuration.label_display %} 
-      aria-label="{{ configuration.label }}" 
-    {% else %} 
-      aria-labelledby="{{ heading_id }}" 
-    {% endif %}>
+  <nav{{ attributes }} aria-labelledby="{{ heading_id }}">
     {# Label. If not displayed, we still provide it for screen readers. #}
     {% if not configuration.label_display %}
       {% set title_attributes = title_attributes.addClass('visually-hidden') %}
