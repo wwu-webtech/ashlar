@@ -30,7 +30,7 @@
   set classes = [
     'block',
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
-    'block--beyond-basics-block',
+    'wwu-beyond-basics-block',
     block_content.field_background_color.0.value,
     block_content.field_font_size.0.value,
     block_content.field_heading_style.0.value,
@@ -38,7 +38,7 @@
   ]
 %}
 {% set attributes = attributes.addClass(classes) %}
-{% set title_attributes = title_attributes.addClass('block__title', block_content.field_heading_font.0.value ) %}
+{% set title_attributes = title_attributes.addClass('title', block_content.field_heading_font.0.value ) %}
 {% block template %}
   {% embed "@organisms/blocks/block-template/block-template.html.twig" %}
 
