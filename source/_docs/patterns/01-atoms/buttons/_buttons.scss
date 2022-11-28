@@ -8,7 +8,7 @@ button,
 input[type="submit"] {
   display: inline-grid;
   grid-auto-flow: column;
-  grid-gap: var(--space--xs);
+  grid-gap: var(--space--2xs);
   place-items: center;
   margin: 0 var(--space--sm) var(--space--sm) 0;
   padding: var(--space--xs);

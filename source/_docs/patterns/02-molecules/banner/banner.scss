@@ -3,21 +3,19 @@ Molecule: Banner
 --------------------------------------------------------------------------------
 1. Print styles
 ------------------------------------------------------------------------------*/
-.block--banner {
+.wwu-banner {
   position: relative;
   display: grid;
-  align-content: center;
+  place-content: center;
   padding: var(--space--xl);
   text-align: center;
-
   .body {
     position: relative;
     max-width: var(--content-area-max-width);
     margin: auto;
   }
-
   .body,
-  .block__title {
+  .title {
     z-index: 1;
   }
 }
@@ -25,13 +23,12 @@ Molecule: Banner
 1. Print styles
 ------------------------------------------------------------------------------*/
 @media print {
-  .block--banner {
+  .wwu-banner {
     min-height: none;
-
     .background-image {
       display: none;
     }
-    .block__title {
+    .title {
       font-size: 40pt;
     }
     .body {
