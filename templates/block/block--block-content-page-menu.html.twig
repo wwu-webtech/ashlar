@@ -37,7 +37,7 @@
 
 {% set attributes = attributes.addClass(classes) %}
 {% set title_attributes = title_attributes.addClass('block__title') %}
-{% set heading_id = configuration.label|lower|replace({' ': '-'}) ~ '-menu' %}
+{% set heading_id = 'heading--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_id : plugin_id|clean_id) %}
 
 {% block template %}
 
