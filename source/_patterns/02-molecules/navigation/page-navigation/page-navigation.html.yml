@@ -1,0 +1,15 @@
+attributes:
+  Attribute():
+    class: ["page-menu", "lightest-gray-bg"]
+
+configuration:
+  label_display: "visible"
+  label: "On This Page"
+
+title_attributes:
+  Attribute():
+    class: ["block__title"]
+
+heading_id: "heading--page-menu"
+
+content: molecules-menu-html
