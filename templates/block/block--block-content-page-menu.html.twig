@@ -29,6 +29,7 @@
   set classes = [
     'block',
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
+    'page-menu',
     'block--page-menu',
     'lightest-gray-bg',
   ]
@@ -39,20 +40,5 @@
 {% set heading_id = 'heading--page-menu--' ~ elements['#weight']|clean_id %}
 
 {% block template %}
-
-  <nav{{ attributes }} aria-labelledby="{{ heading_id }}">
-    {# Label. If not displayed, we still provide it for screen readers. #}
-    {% if not configuration.label_display %}
-      {% set title_attributes = title_attributes.addClass('visually-hidden') %}
-    {% endif %}
-    {{ title_prefix }}
-    <h2{{ title_attributes.setAttribute('id', heading_id) }}>{{ configuration.label }}</h2>
-    {{ title_suffix }}
-  
-    {# Menu. #}
-    {% block content %}
-      {{ content }}
-    {% endblock %}
-  </nav>
-
+  {% include "@molecules/navigation/page-navigation/page-navigation.html.twig" %}
 {% endblock %}
