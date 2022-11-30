@@ -3,12 +3,15 @@ Helpers: Align
 --------------------------------------------------------------------------------
 For adjusting alignments.
 ------------------------------------------------------------------------------*/
+[data-align="right"],
 .align-right {
   margin-left: var(--space--sm);
 }
+[data-align="left"],
 .align-left {
   margin-right: var(--space--sm);
 }
+[data-align="center"],
 .align-center {
   margin-right: auto;
   margin-left: auto;
