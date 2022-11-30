@@ -63,6 +63,17 @@ Molecule: Cards
       }
     }
   }
+  .location {
+    flex: 0 1 100%;
+    margin-bottom: var(--space--md);
+    padding: 0 var(--space--xs);
+    font-style: italic;
+  }
+  .date {
+    flex: 0 1 100%;
+    padding: 0 var(--space--xs);
+    font-weight: bold;
+  }
   .image {
     flex: 0 1 100%;
     order: -1;
@@ -82,33 +93,22 @@ Molecule: Cards
       position: relative;
     }
   }
-  .date {
-    flex: 0 1 100%;
-    padding: 0 var(--space--xs);
-    font-weight: bold;
-  }
-  .location {
-    flex: 0 1 100%;
-    margin-bottom: var(--space--md);
-    padding: 0 var(--space--xs);
-    font-style: italic;
-  }
   .body {
     flex: 0 1 100%;
     padding: 0 var(--space--xs);
-    line-height: 1.8;
     .date {
       font-weight: var(--font-weight--semibold);
     }
     a {
       position: relative;
+      text-underline-offset: 0.1rem;
     }
     a[href^="mailto:"] {
       word-break: break-all;
     }
     p {
       margin-bottom: var(--space--2xs);
-      line-height: 1.2em;
+      line-height: 1.25em;
     }
   }
 }

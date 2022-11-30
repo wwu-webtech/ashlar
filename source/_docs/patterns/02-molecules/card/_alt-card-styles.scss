@@ -1,14 +1,11 @@
 /*------------------------------------------------------------------------------
 Molecule: Cards - Alternate styles
 --------------------------------------------------------------------------------
-1. Color block title
-2. Degree
-3. Event
-4. Event alternate
-6. Information
-7. Information - Split style
-8. Simple
-9. Institute
+1. Color block title variant
+2. Event
+3. Event alternate
+4. Hover variant
+5. Degree variant
 --------------------------------------------------------------------------------
 1. Color block title
 ------------------------------------------------------------------------------*/
@@ -53,108 +50,40 @@ Molecule: Cards - Alternate styles
   }
 }
 /*------------------------------------------------------------------------------
-2. Degree (from wwu.edu/majors individual pages)
-------------------------------------------------------------------------------*/
-.degree-card {
-  display: grid;
-  grid-template-areas: "taxonomy"
-  "title"
-  "body"
-  "more";
-  grid-template-rows: auto auto 1fr auto;
-  .title {
-    grid-area: title;
-    padding: var(--space--md) var(--space--md) 0 var(--space--md);
-    h3 {
-      margin-top: 0;
-      font-size: var(--font-size--3xl);
-    }
-  }
-  .taxonomy-terms {
-    grid-area: taxonomy;
-    padding: 0;
-  }
-  .taxonomy-term {
-    margin-right: var(--space--xs);
-    padding: var(--space--xs) var(--space--sm);
-  }
-  .taxonomy-term .material-icons {
-    font-size: var(--icon-size--sm);
-  }
-  .body {
-    grid-area: body;
-    padding: 0 var(--space--md) var(--space--sm) var(--space--md);
-    h4 {
-      margin-bottom: 0;
-      text-transform: uppercase;
-      color: var(--black);
-      font-size: var(--font-size--sm);
-      font-weight: bold;
-    }
-  }
-  .department-links > div {
-    margin: var(--space--md) 0;
-  }
-  .department-link {
-    text-decoration: none;
-    font-size: var(--font-size--md);
-    font-weight: bold;
-    .material-icons {
-      font-size: var(--icon-size--sm);
-    }
-  }
-  .more-link {
-    grid-area: more;
-    margin-left: var(--space--md);
-  }
-}
-/*------------------------------------------------------------------------------
-3. Event
+2. Event
 ------------------------------------------------------------------------------*/
 .card.event,
 .wwu-card.event {
   align-content: start;
   .image {
-    margin-bottom: calc(-1 * var(--space--lg));
+    margin-bottom: calc(-1 * var(--space--3xl));
   }
   .date {
     flex: 0 1 40%;
     order: 0;
-    margin-right: calc(-1 * var(--space--md));
-    padding-left: var(--space--md);
+    margin-left: var(--space--md);
     text-align: center;
     text-transform: uppercase;
+    color: var(--white);
+    border: var(--border-width--md) solid transparent;
+    background-color: var(--blue);
     line-height: 1;
-    .year {
-      display: block;
-      padding: 0 var(--space--lg) var(--space--md) var(--space--lg);
-      color: var(--white);
-      border: var(--border-width--md) solid transparent;
-      border-top: none;
-      background-color: var(--blue);
-      font-size: var(--font-size--lg);
-      font-weight: var(--font-weight--regular);
-    }
     .month {
       display: block;
       padding: var(--space--md) var(--space--lg) 0 var(--space--lg);
-      color: var(--white);
-      border: var(--border-width--md) solid transparent;
-      border-bottom: none;
-      background-color: var(--blue);
       font-size: var(--font-size--2xl);
-      font-weight: var(--font-weight--regular);
     }
     .day {
       display: block;
       white-space: nowrap;
       word-spacing: -0.2em;
-      color: var(--white);
-      border-right: var(--border-width--md) solid transparent;
-      border-left: var(--border-width--md) solid transparent;
-      background-color: var(--blue);
       font-size: var(--font-size--5xl);
       font-weight: var(--font-weight--semibold);
+    }
+    .year {
+      display: block;
+      padding: 0 var(--space--lg) var(--space--md) var(--space--lg);
+      font-size: var(--font-size--lg);
     }
   }
   .title {
@@ -181,17 +110,17 @@ Molecule: Cards - Alternate styles
   }
 }
 /*------------------------------------------------------------------------------
-4. Event Alternate
+3. Event Alternate
 ------------------------------------------------------------------------------*/
 .card.event.alt,
 .wwu-card.event.alt {
   display: grid;
   grid-template-areas: "image image"
-  "date title"
-  "date location"
+  "title date"
+  "location date"
   "body body"
   "terms terms";
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 2fr 1fr;
   grid-template-rows: auto;
   .title {
     @include blue-bg;
@@ -202,6 +131,7 @@ Molecule: Cards - Alternate styles
     height: 100%;
     margin: 0;
     padding-top: var(--space--md);
+    text-align: right;
     border-top: var(--border-width--sm) solid transparent;
   }
   .image {
@@ -209,34 +139,13 @@ Molecule: Cards - Alternate styles
     margin-bottom: 0;
   }
   .date {
-    display: grid;
     grid-area: date;
-    grid-template-rows: 1fr 1fr;
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
-    .month {
-      display: grid;
-      align-content: end;
-      padding: var(--space--sm);
-      border: var(--border-width--sm) solid transparent;
-      background-color: var(--dark-blue);
-    }
-    .day,
-    .year {
-      padding: var(--space--sm);
-      color: var(--dark-blue);
-      border-width: var(--border-width--sm);
-      border-bottom: var(--border-width--sm) solid transparent;
-      background-color: var(--light-green);
-    }
-    .day {
-      padding-bottom: 0;
-    }
-    .year {
-      padding-top: 0;
-    }
+    color: var(--dark-blue);
+    background-color: var(--light-green);
   }
   .location {
     @include blue-bg;
@@ -245,7 +154,6 @@ Molecule: Cards - Alternate styles
     grid-area: location;
     align-items: start;
     height: 100%;
-    border-bottom: var(--border-width--sm) solid transparent;
   }
   .body {
     grid-area: body;
@@ -256,103 +164,47 @@ Molecule: Cards - Alternate styles
     grid-area: terms;
     padding: var(--space--md);
   }
-  &:focus-within {
-    .title {
-      a:after {
-        outline-color: var(--dark-blue--darker--80);
-      }
-    }
-  }
 }
 /*------------------------------------------------------------------------------
-9. Institute
-------------------------------------------------------------------------------*/
-.card.institute,
-.wwu-card.institute {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  padding: 0;
-  .image {
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 1;
-    margin-bottom: 0;
-    &:after {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      display: block;
-      content: "";
-      opacity: 0.9;
-      background-color: var(--white);
-    }
-  }
-  .content {
-    z-index: 1;
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 1;
-    padding: var(--space--xs);
-    color: var(--black);
-    p {
-      font-size: var(--font-size--xs);
-      line-height: 1.3;
-    }
-    img {
-      float: left;
-      max-width: 40%;
-    }
-  }
-  .intro {
-    text-transform: uppercase;
-    color: var(--dark-blue--darker--40);
-  }
-  .title {
-    gap: var(--space--xs);
-
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-    font-family: var(--font--title);
-    font-size: var(--font-size--md);
-    a {
-      color: var(--dark-blue);
-      &:hover {
-        color: var(--blue);
-      }
-      &:visited {
-        color: var(--purple);
-      }
-    }
-  }
-  .material-icons {
-    color: var(--white);
-    background-color: var(--dark-blue--darker--20);
-    font-size: var(--icon-size--md);
-  }
-}
-/*------------------------------------------------------------------------------
-. Hover Variant
+4. Hover Variant
 ------------------------------------------------------------------------------*/
 .hover-card {
+  --h2-size: var(--font-size--md);
+  --h3-size: var(--font-size--md);
+  --h4-size: var(--font-size--md);
+  --h5-size: var(--font-size--md);
+  --h6-size: var(--font-size--md);
+  --link-background: var(--gradient--vertical--dark-blue);
+  --link-color: var(--white);
+  --link-color--active: var(--white);
+  --link-color--visited: var(--purple--lighter--80);
+  /* Static/base styles */
+
   position: relative;
   margin-bottom: var(--space--md);
+  border: var(--border-width--sm) solid transparent;
   p {
     font-size: var(--font-size--xs);
-    font-weight: var(--font-weight--light);
-    line-height: 1.2;
+    line-height: 1.25em;
+  }
+  &:hover,
+  &:focus-within {
+    z-index: 1;
+    .title {
+      a:after {
+        outline: var(--border-width--md) solid transparent;
+        outline-offset: var(--space--2xs);
+        box-shadow: var(--shadow--soft--hover);
+      }
+    }
   }
   .title {
+    margin-top: 0;
     padding: var(--space--sm);
-    background-color: rgba(var(--dark-blue--darker--40--rgb), 0.75);
-    .block__title {
-      color: var(--white);
-    }
+    background-color: var(--dark-blue--darker--40);
     a {
+      display: inline-block;
       text-decoration: none;
-      color: var(--white);
-      font-family: var(--font--title);
       &:after {
         position: absolute;
         top: 0;
@@ -363,31 +215,18 @@ Molecule: Cards - Alternate styles
         transition: var(--transition-speed--md) var(--ease--standard) box-shadow;
         box-shadow: var(--shadow--soft);
       }
-      &:active,
       &:hover,
-      &:focus {
-        background-image: none;
+      &:active {
+        background: none;
       }
-      &:focus {
-        outline: none;
-        &:after {
-          outline: dotted var(--border-width--md) var(--blue);
-          outline-offset: var(--border-width--md);
-        }
-      }
-    }
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      margin: 0;
-      font-size: var(--font-size--md);
     }
   }
   .body {
     padding: var(--space--sm);
     padding-right: var(--toggle-size--sm);
+    a {
+      text-underline-offset: 0.1rem;
+    }
   }
   .read-more {
     position: absolute;
@@ -397,7 +236,7 @@ Molecule: Cards - Alternate styles
     align-content: center;
     justify-content: center;
     width: var(--toggle-size--sm);
-    color: var(--blue);
+    color: var(--white);
     .material-icons {
       font-size: var(--icon-size--sm);
     }
@@ -409,6 +248,7 @@ Molecule: Cards - Alternate styles
       display: block;
     }
   }
+  /* Animated/hover styles */
   @media (min-width: $small) and (prefers-reduced-motion: no-preference) {
     display: grid;
     overflow-y: hidden;
@@ -430,15 +270,6 @@ Molecule: Cards - Alternate styles
       padding: var(--space--sm);
       padding-right: var(--toggle-size--sm);
       background-color: transparent;
-      a {
-        &:focus {
-          outline: none;
-          &:after {
-            outline: dotted var(--border-width--md) var(--white);
-            outline-offset: calc(-1 * var(--border-width--md));
-          }
-        }
-      }
     }
     .content {
       grid-column: 1 / span 1;
@@ -459,7 +290,6 @@ Molecule: Cards - Alternate styles
       width: var(--touch-target--min);
       height: var(--touch-target--min);
       transition: 0.3s all ease-in-out;
-      color: var(--white);
       .material-icons {
         transition: 0.3s all ease-in-out;
         transform: translatey(-50%);
@@ -478,5 +308,34 @@ Molecule: Cards - Alternate styles
         }
       }
     }
+  }
+}
+/*------------------------------------------------------------------------------
+5. Degree (from wwu.edu/majors individual pages)
+------------------------------------------------------------------------------*/
+.degree-card {
+  display: grid;
+  grid-template-areas: "taxonomy"
+  "title"
+  "body"
+  "more";
+  grid-template-rows: auto auto 1fr auto;
+  padding: var(--space--sm);
+  border: var(--border-width--sm) solid transparent;
+  font-size: var(--font-size--sm);
+  .title {
+    grid-area: title;
+    margin-top: var(--space--md);
+  }
+  .taxonomy-terms {
+    grid-area: taxonomy;
+    margin-top: calc(-1 * var(--space--sm));
+    margin-left: calc(-1 * var(--space--sm));
+  }
+  .taxonomy-term {
+    margin-right: var(--space--xs);
+  }
+  .body {
+    grid-area: body;
   }
 }
