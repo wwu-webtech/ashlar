@@ -1,6 +1,27 @@
 import Placeholder from "@site/static/img/placeholder.jpg";
 
-# Card
+# Cards
+
+## Card Containers
+The following classes are available to put on divs containing cards. The first three use a grid layout, the others use flexbox. Different situations may make one type desireable over the other, but the flex layouts work best in most cases.
+
+* card-2col
+* card-3col
+* card-4col
+* card-2col--flex
+* card-3col--flex
+* card-4col--flex 
+
+The class card--flex--section-divider can be used to break an element out of the flex container. For example, if you have a view using a card flex container, but would like headings as section dividers that span the full width of the container.
+
+```
+<div class="card-3col--flex">
+  <h2 class="card--flex--section-divider">Section Heading</h2>
+  <div class="wwu-card"></div>
+  <div class="wwu-card"></div>
+  <div class="wwu-card"></div>
+</div>
+```
 
 ## Basic
 <div class="card-3col">

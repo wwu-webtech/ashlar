@@ -1,13 +1,11 @@
 /*------------------------------------------------------------------------------
-Organism: Cards
+Molecule: Card Containers
 --------------------------------------------------------------------------------
 1. Column layouts
   a. Grid
   b. Flex
   c. Section divider
-2. Vertical layouts
-3. Flex layouts
-4. IE fix
+2. Flex layouts
 --------------------------------------------------------------------------------
 1. Column layouts
 ------------------------------------------------------------------------------*/
@@ -82,7 +80,7 @@ Organism: Cards
   flex: 0 0 100%;
 }
 /*------------------------------------------------------------------------------
-1. Flex layouts
+2. Flex layouts
 ------------------------------------------------------------------------------*/
 .layout--flex {
   .layout__region {
@@ -90,55 +88,5 @@ Organism: Cards
       flex: 1;
       margin: 0 var(--space--xs);
     }
-  }
-}
-/*------------------------------------------------------------------------------
-1. IE fix
-------------------------------------------------------------------------------*/
-@media screen and (min-width: 0\0) {
-  .card-2col,
-  .card-2col--view,
-  .card-2col--flex {
-    display: initial;
-    .card,
-    .wwu-card,
-    .event,
-    .hover-card {
-      float: left;
-      width: 50%;
-    }
-  }
-  .card-3col,
-  .card-3col--view,
-  .card-3col--flex {
-    display: initial;
-    .card,
-    .wwu-card,
-    .event,
-    .hover-card {
-      float: left;
-      width: 33%;
-    }
-  }
-  .card-4col,
-  .card-4col--view,
-  .card-4col--flex {
-    display: initial;
-    .card,
-    .wwu-card,
-    .event,
-    .hover-card {
-      float: left;
-      width: 25%;
-    }
-  }
-  .card-2col--view .view-content,
-  .card-3col--view .view-content,
-  .card-4col--view .view-content {
-    display: initial;
-  }
-  .card--flex--section-divider {
-    float: left;
-    width: 100%;
   }
 }
