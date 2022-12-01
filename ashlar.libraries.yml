@@ -74,6 +74,8 @@ donut-chart:
   css:
     theme:
       build/css/components/donut-chart.css: {}
+  js:
+    build/js/donut-chart.js: {}
 event-tracking:
   version: 1.x
   js:
