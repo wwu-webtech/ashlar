@@ -4,10 +4,9 @@ Molecule: Countdown
 ------------------------------------------------------------------------------*/
 @import "../../../../sass/partials/imports";
 @import "../../00-utilities/breakpoints.scss";
-.block--countdown {
+wwu-countdown {
   padding: var(--space--xl);
-
-  div[role="timer"] {
+  .timer {
     @include breakpoint($medium) {
       flex-flow: row wrap;
     }
@@ -17,7 +16,6 @@ Molecule: Countdown
     justify-content: center;
     margin-top: var(--space--xl);
     list-style: none;
-
     p {
       @include breakpoint($medium) {
         border-right: var(--border-width--md) solid;
@@ -26,11 +24,9 @@ Molecule: Countdown
       padding: var(--space--2xl) var(--space--3xl);
       text-align: center;
       font-size: 1.5;
-
       &:last-of-type {
         border: none;
       }
-
       .number {
         display: block;
         margin-bottom: var(--space--md);
@@ -38,7 +34,6 @@ Molecule: Countdown
       }
     }
   }
-
   .hidden {
     display: none;
   }

@@ -1,114 +1,101 @@
-var second = 1000,
-  minute = second * 60,
-  hour = minute * 60,
-  day = hour * 24;
-var days_left, hours_left, minutes_left, seconds_left;
-
-function findTimeLeft() {
-  var now = new Date().getTime(),
-    distance = countDown - now;
-
-  (days_left = Math.floor(distance / day)),
-    (hours_left = Math.floor((distance % day) / hour)),
-    (minutes_left = Math.floor((distance % hour) / minute));
-  seconds_left = Math.floor((distance % minute) / second);
-}
-
-function setDays() {
-  document.getElementById("days").innerText = days_left;
-}
-function setHours() {
-  document.getElementById("hours").innerText = hours_left;
-}
-function setMinutes() {
-  document.getElementById("minutes").innerText = minutes_left;
-}
-function setSeconds() {
-  document.getElementById("seconds").innerText = seconds_left;
-}
-function setMinuteAnnouncement() {
-  if (minutes_left == 1) {
-    document.getElementById("announced-time").innerText =
-      String(minutes_left) + " minute left";
-  } else {
-    document.getElementById("announced-time").innerText =
-      String(minutes_left) + " minutes left";
-  }
-}
-function setSecondAnnouncement() {
-  document.getElementById("announced-time").innerText = String(seconds_left);
-}
-
-function initializeCountDown() {
-  findTimeLeft();
-
-  /* Only set days & hours if there are any, otherwise hide those blocks */
-  if (days_left > 0) {
-    setDays();
-  } else {
-    document.getElementById("days-item").classList.add("hidden");
-  }
-  if (days_left > 0 || hours_left > 0) {
-    setHours();
-  } else {
-    document.getElementById("hours-item").classList.add("hidden");
-  }
-
-  /* Minutes & seconds should always show */
-  if (minutes_left >= 0) {
-    setMinutes();
-  }
-  if (seconds_left >= 0) {
-    setSeconds();
-  }
-}
-
-var countDownSeconds = setInterval(function () {
-  var prev_hours_left = hours_left,
-    prev_minutes_left = minutes_left;
-
-  findTimeLeft();
-
-  if (hours_left >= 0 && prev_hours_left != hours_left) {
-    setHours();
-  }
-  if (minutes_left >= 0 && prev_minutes_left != minutes_left) {
-    setMinutes();
-  }
-  if (seconds_left >= 0) {
-    setSeconds();
-  }
-
-  /* Only announce last 10 minutes, and only when the minute is about to change */
-  if (
-    days_left <= 0 &&
-    hours_left <= 0 &&
-    minutes_left <= 10 &&
-    minutes_left >= 1 &&
-    seconds_left == 0
+if (
+  (typeof context == "undefined" || (typeof context != "undefined" && context == document)) // makes it work in Drupal
+  && typeof window !== "undefined" // makes it work in Node.js server side rendering
   ) {
-    setMinuteAnnouncement();
+    const countdown_template = document.createElement("template");
+    countdown_template.innerHTML = `
+    <div role="timer" class="timer">
+      <p><span class="number days">0</span> Days</p>
+      <p><span class="number hours">0</span> Hours</p>
+      <p><span class="number minutes">0</span> Minutes</p>
+      <p><span class="number seconds">0</span> Seconds</p>
+    </div>
+    
+    <div class="announced-time" aria-live="polite" aria-atomic="true" class="visually-hidden"></div>
+    `;
+    
+    class WWUCountdown extends HTMLElement {
+      constructor() {
+        super();
+      }
+      
+      connectedCallback() {        
+        this.appendChild(countdown_template.content.cloneNode(true));        
+        this.querySelector(".timer").setAttribute("aria-label", "Countdown to " + this.getAttribute("to"));
+        let second = 1000, minute = second * 60, hour = minute * 60, day = hour * 24;
+        let d_left, h_left, m_left, s_left;
+        const days = this.querySelector(".days");
+        const hours = this.querySelector(".hours");
+        const minutes = this.querySelector(".minutes");
+        const seconds = this.querySelector(".seconds");
+        const announcement = this.querySelector(".announced-time");
+        
+        try {
+          const date = new Date(this.getAttribute("date")).getTime();          
+          
+          if (date) {        
+            initialize_count(date);
+            setInterval(function() { update_time(date) }, 1000);
+          }
+        } catch (err) {
+          console.log("No date provided");
+        }
+        
+        function set_days() { days.innerText = d_left; }
+        function set_hours() { hours.innerText = h_left; }
+        function set_minutes() { minutes.innerText = m_left; }
+        function set_seconds() { seconds.innerText = s_left; }     
+        
+        function minute_announce() {
+          if (m_left == 1) {
+            announcement.innerText = String(m_left) + " minute left";
+          } else {
+            announcement.innerText = String(m_left) + " minutes left";
+          }
+        }
+        function second_announce() { announcement.innerText = String(s_left); }
+        
+        function initialize_count(date) {
+          time_left(date);
+          
+          // Only set days & hours if there are any, otherwise hide those blocks 
+          if (d_left > 0) { set_days(); } 
+          else { days.parentElement.remove() }
+          if (d_left > 0 || h_left > 0) { set_hours(); } 
+          else { hours.parentElement.remove() }
+          
+          //Minutes & seconds should always show 
+          if (m_left >= 0) { set_minutes(); }
+          if (s_left >= 0) { set_seconds(); }
+        }
+        
+        function time_left(date) {
+          let now = new Date().getTime(), distance = date - now;      
+          
+          d_left = Math.floor(distance / day);
+          h_left = Math.floor((distance % day) / hour);
+          m_left = Math.floor((distance % hour) / minute);
+          s_left = Math.floor((distance % minute) / second);
+        }
+        
+        function update_time(date) {          
+          let prev_hours = h_left, prev_minutes = m_left;
+          time_left(date);
+          
+          if (h_left >= 0 && prev_hours != h_left) { set_hours(); }
+          if (m_left >= 0 && prev_minutes != m_left) { set_minutes(); }
+          if (s_left >= 0) { set_seconds(); }
+          
+          // Only announce last 10 minutes, and only when the minute is about to change
+          if (d_left <= 0 && h_left <= 0 && m_left <= 10 && m_left >= 1 && s_left == 0) { minute_announce(); }
+          // Only announce last 10 seconds
+          if (d_left <= 0 && h_left <= 0 && m_left <= 0 && s_left <= 10 && s_left > 0) { second_announce(); }
+        }
+        
+      } /* End of Connected Callback */      
+    }
+    
+    window.customElements.define("wwu-countdown", WWUCountdown);      
+    
   }
-  /* Only announce last 10 seconds */
-  if (
-    days_left <= 0 &&
-    hours_left <= 0 &&
-    minutes_left <= 0 &&
-    seconds_left <= 10 &&
-    seconds_left > 0
-  ) {
-    setSecondAnnouncement();
-  }
-}, second);
-
-try {
-  var countDown = new Date(
-    document.getElementById("countdown_date").innerText
-  ).getTime();
-
-  if (countDown) {
-    initializeCountDown();
-  }
-} catch (err) {
-  console.log("No countdown found");
-}
+  

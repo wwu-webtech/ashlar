@@ -95,5 +95,3 @@ if (
       items[i].addEventListener("keyup", close_item);
     }
   }
-  
-  

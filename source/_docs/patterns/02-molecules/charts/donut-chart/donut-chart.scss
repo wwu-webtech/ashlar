@@ -114,7 +114,7 @@ wwu-donut-chart {
           &:before {
             background-color: nth($chart-blues, $i);
             @media (forced-colors: active) {
-              background-color: nth($chart-blues-images, $i);
+              background-image: nth($chart-blues-images, $i);
             }
           }
         }
@@ -136,7 +136,7 @@ wwu-donut-chart {
             &:before {
               background-color: nth($chart-greens, $i);
               @media (forced-colors: active) {
-                background-color: nth($chart-greens-images, $i);
+                background-image: nth($chart-greens-images, $i);
               }
             }
           }
@@ -159,7 +159,7 @@ wwu-donut-chart {
             &:before {
               background-color: nth($chart-light-blues, $i);
               @media (forced-colors: active) {
-                background-color: nth($chart-light-blues-images, $i);
+                background-image: nth($chart-light-blues-images, $i);
               }
             }
           }

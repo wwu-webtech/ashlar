@@ -1,11 +1,10 @@
 /*------------------------------------------------------------------------------
 Molecule: Charts - Org Chart
 --------------------------------------------------------------------------------
-1. Dark mode
+1. Dark Mode
 ------------------------------------------------------------------------------*/
 .org-chart {
   --chart-background-color: var(--white);
-  --chart-background-color--dark-mode: var(--black);
   --chart-border-width: 3px;
   --chart-line-color: var(--gray--lighter--40);
   --chart-max-size: 18.75rem;
@@ -455,91 +454,6 @@ Molecule: Charts - Org Chart
 ------------------------------------------------------------------------------*/
 [data-theme="dark"] {
   .org-chart {
-    background: var(--chart-background-color--dark-mode);
-    a {
-      color: var(--white);
-      &:active,
-      &:hover,
-      &:focus {
-        color: var(--dark-blue--darker--60);
-      }
-    }
-    .light {
-      & > a {
-        color: var(--dark-blue--darker--60);
-        &:active,
-        &:hover,
-        &:focus {
-          color: var(--white);
-          background-image: var(--gradient--vertical--dark-blue);
-        }
-      }
-    }
-    .item-level-b,
-    .item-level-c,
-    .item-level-d,
-    .item-level-e,
-    .item-level-f,
-    .item-level-g,
-    .item-level-h,
-    .item-level-i,
-    .item-level-j,
-    .item-level-k {
-      &:last-of-type {
-        > span:before,
-        > h2 span:before,
-        > h3 span:before,
-        > h4 span:before,
-        > h5 span:before,
-        > h6 span:before,
-        > a:before,
-        > h2 a:before,
-        > h3 a:before,
-        > h4 a:before,
-        > h5 a:before,
-        > h6 a:before {
-          background: var(--chart-background-color--dark-mode);
-        }
-      }
-    }
-    .item-level-b:last-child > .level-c:before,
-    .item-level-c:last-child > .level-d:before,
-    .item-level-d:last-child > .level-e:before,
-    .item-level-e:last-child > .level-f:before,
-    .item-level-f:last-child > .level-g:before,
-    .item-level-g:last-child > .level-h:before,
-    .item-level-h:last-child > .level-i:before,
-    .item-level-i:last-child > .level-j:before,
-    .item-level-j:last-child > .level-k:before {
-      background: var(--chart-background-color--dark-mode);
-    }
-    .item-level-b {
-      > span:before,
-      > h2 span:before,
-      > h3 span:before,
-      > h4 span:before,
-      > h5 span:before,
-      > h6 span:before,
-      > a:before,
-      > h2 a:before,
-      > h3 a:before,
-      > h4 a:before,
-      > h5 a:before,
-      > h6 a:before,
-      &:last-of-type > span:before,
-      &:last-of-type > h2 span:before,
-      &:last-of-type > h3 span:before,
-      &:last-of-type > h4 span:before,
-      &:last-of-type > h5 span:before,
-      &:last-of-type > h6 span:before,
-      &:last-of-type > a:before,
-      &:last-of-type > h2 a:before,
-      &:last-of-type > h3 a:before,
-      &:last-of-type > h4 a:before,
-      &:last-of-type > h5 a:before,
-      &:last-of-type > h6 a:before {
-        background: var(--chart-line-color);
-      }
-    }
+    --chart-background-color: var(--black);
   }
 }

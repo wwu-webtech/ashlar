@@ -53,6 +53,7 @@ const config = {
             require.resolve('../../build/css/components/announcement.css'),
             require.resolve('../../build/css/components/banner.css'),
             require.resolve('../../build/css/components/colors.css'),
+            require.resolve('../../build/css/components/countdown.css'),
             require.resolve('../../build/css/components/donut-chart.css'),
           ],
         },
