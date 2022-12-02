@@ -185,7 +185,7 @@ Add the custom class **color-block-title**, and optionally **dark-blue, or light
 ```
 
 ## Events
-This variant is for use in views displaying events. These styles are not available for standard Drupal blocks.
+This variant is for use in views displaying events. These styles are not available for standard Drupal blocks. See also [event lists](/patterns/molecules/event-list), for events without images.
 
 <div class="card-2col">
 <div  class="wwu-card event">

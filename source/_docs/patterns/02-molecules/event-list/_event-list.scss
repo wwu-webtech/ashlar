@@ -1,7 +1,6 @@
 /*------------------------------------------------------------------------------
 Molecule: Event List
 --------------------------------------------------------------------------------
-1. Dark Mode
 ------------------------------------------------------------------------------*/
 .event-list {
   .event {
@@ -23,26 +22,20 @@ Molecule: Event List
       outline-style: dotted;
       outline-color: inherit;
     }
-    @media (forced-colors: active) {
-      &:hover,
-      &:focus-within {
-        outline-color: LinkText;
-      }
-    }
     p {
       margin: 0;
     }
     .title {
       flex: 1 0 70%;
       grid-area: title;
-      margin-top: var(--space--md);
+      margin-top: var(--space--sm);
+      line-height: 0.75em;
       h2,
       h3,
       h4,
       h5,
       h6 {
         margin: 0;
-        line-height: 0.75em;
       }
       a {
         text-decoration: none;
@@ -67,16 +60,15 @@ Molecule: Event List
     }
     .icon {
       grid-area: icon;
-      .icon-with-text {
-        max-width: 100%;
-        color: var(--dark-blue--darker--40);
-        background-color: var(--light-green);
-      }
-      .icon-with-text .material-icons {
+      max-width: 100%;
+      text-align: center;
+      color: var(--dark-blue--darker--40);
+      background-color: var(--light-green);
+      font-size: var(--font-size--xs);
+      .material-icons {
+        position: relative;
+        top: 0.5em;
         font-size: var(--icon-size--xs);
-      }
-      .icon-with-text .icon-text {
-        margin-top: 0;
       }
     }
     .date {
