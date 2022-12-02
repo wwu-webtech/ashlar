@@ -21,4 +21,6 @@
   ]
 %}
 {% set attributes = attributes.addClass(classes) %}
-{% include "@atoms/forms/label/label.html.twig" %}
+{% if title is not empty or required -%}
+  <label{{ attributes }}>{{ title }}</label>
+{%- endif %}

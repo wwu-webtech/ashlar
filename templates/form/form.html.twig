@@ -11,4 +11,9 @@
  */
 #}
 {% set attributes = attributes.addClass('form') %}
-{% include "@molecules/forms/form/form.html.twig" %}
+{% block form_help %}
+{% endblock %}
+
+<form{{ attributes }}>
+  {{ children }}
+</form>
