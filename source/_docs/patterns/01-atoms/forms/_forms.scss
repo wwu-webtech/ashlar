@@ -1,58 +1,42 @@
 /*------------------------------------------------------------------------------
 Atom: Forms
 --------------------------------------------------------------------------------
-1. Dark Mode
+1. Labels
+2. Inputs
+3. Checkboxes & Radios
 ------------------------------------------------------------------------------*/
-form {
-  fieldset,
-  .webform-section {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background-color: transparent;
-  }
-  .webform-section-title {
-    display: inline-block;
-    margin: 0;
-    padding: 0 var(--space--lg);
-    transform: translatey(-1.2em);
-    color: var(--dark-blue);
-    background-color: var(--white);
-    font-size: var(--font-size--4xl);
-    + .webform-section-wrapper {
-      margin-top: -1.2em;
-    }
-  }
-  > fieldset,
-  .webform-section {
-    margin-top: var(--space--lg);
-    padding: var(--space--lg);
-    border: solid var(--border-width--lg) var(--gray--lighter--80);
-  }
-  .webform-flexbox {
-    margin: 0;
-  }
+:root {
+  --input-background-color: var(--gray--lighter--90);
+  --input-text-color: var(--black);
 }
+[data-theme="dark"] {
+  --input-background-color: var(--gray--darker--60);
+  --input-text-color: var(--white);
+}
+/*------------------------------------------------------------------------------
+1. Labels
+------------------------------------------------------------------------------*/
 legend,
 label {
   display: block;
   margin-bottom: var(--space--2xs);
   padding: 0;
-  font-weight: var(--font-weight--semibold);
+  font-weight: var(--font-weight--sremibold);
   &.required:after,
   &.form-required:after,
   .form-required:after {
     content: " *";
     color: var(--blue);
-    font-weight: var(--font-weight--regular);
   }
 }
+/*------------------------------------------------------------------------------
+2. Inputs
+------------------------------------------------------------------------------*/
 input,
 textarea,
 select {
   @include breakpoint($medium) {
     width: auto;
-    border-width: var(--border-width--lg);
   }
 
   display: inline-block;
@@ -60,28 +44,23 @@ select {
   width: 100%;
   margin-bottom: var(--space--md);
   padding: var(--space--xs);
-  color: var(--black);
+  color: var(--input-text-color);
   border: solid var(--border-width--md) var(--gray--lighter--80);
-  border-radius: var(--border-radius-round);
-  background-color: var(--gray--lighter--90);
+  border-radius: var(--border-radius--round);
+  background-color: var(--input-background-color);
   box-shadow: none;
-  font-size: var(--font-size--md);
+  font-size: var(--font-size--sm);
   &:focus {
-    outline: none;
+    border-color: var(--dark-blue--lighter--60);
+    outline: var(--border-width--md) dotted transparent;
+    outline-offset: var(--border-width--md);
+    box-shadow: var(--shadow--soft);
   }
   &:disabled {
     cursor: not-allowed;
     color: var(--gray);
     border-color: var(--gray);
     background-color: var(--gray--lighter--60);
-  }
-}
-input,
-textarea,
-select {
-  &:focus {
-    border-color: var(--dark-blue--lighter--60);
-    box-shadow: var(--shadow--soft);
   }
 }
 input[type="submit"] {
@@ -92,26 +71,97 @@ input[type="submit"] {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: var(--gray);
 }
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: var(--gray);
-}
 ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: var(--gray);
 }
 /*------------------------------------------------------------------------------
-1. Dark Mode
+3. Checkboxes & Radios
 ------------------------------------------------------------------------------*/
-[data-theme="dark"] {
-  form {
-    .description,
-    .webform-element-description {
-      color: var(--gray--lighter--60);
+input[type="checkbox"],
+input[type="radio"] {
+  position: relative;
+  width: 0;
+  height: 0;
+  margin: 0;
+  opacity: 0;
+  + label {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: var(--font-weight--regular);
+    &:before {
+      /* checkbox/radio button */
+      position: relative;
+      top: 0.2rem;
+      display: inline-block;
+      width: var(--checkbox-size);
+      height: var(--checkbox-size);
+      margin-right: var(--space--2xs);
+      content: "";
+      border: solid var(--border-width--md) var(--gray--lighter--80);
+      background-color: var(--input-background-color);
+    }
+    &:after {
+      /* checkmark/radio dot */
+      position: absolute;
+      display: none;
+      content: "";
     }
   }
-  .webform-section-title {
-    color: var(--light-green);
-    background-color: var(--gray--darker--80);
+  &:focus {
+    + label {
+      &:before {
+        border-color: var(--dark-blue--lighter--60);
+        outline: var(--border-width--md) dotted transparent;
+        outline-offset: var(--border-width--md);
+        box-shadow: var(--shadow--soft);
+      }
+    }
+  }
+  &:checked {
+    + label {
+      &:before {
+        border-color: var(--blue);
+        background-color: var(--blue);
+      }
+      &:after {
+        display: block;
+      }
+    }
+  }
+}
+input[type="checkbox"] {
+  + label {
+    &:before {
+      border-radius: var(--border-radius--round);
+    }
+    &:after {
+      /* checkmark */
+      top: 0.35rem;
+      left: 0.4rem;
+      width: 0.2rem;
+      height: 0.6rem;
+      transform: rotate(45deg);
+      border: solid var(--white);
+      border-width: 0 3px 3px 0;
+    }
+  }
+}
+input[type="radio"] {
+  + label {
+    &:before {
+      border-radius: 50%;
+    }
+    &:after {
+      /* radio dot */
+      top: 0.4rem;
+      left: 0.19rem;
+      width: 0.5rem;
+      height: 0.5rem;
+      border: solid transparent var(--border-width--lg);
+      border-radius: 50%;
+      background-color: var(--white);
+    }
   }
 }

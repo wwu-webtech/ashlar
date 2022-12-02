@@ -13,6 +13,7 @@ Molecule: Event List
     "icon body";
     grid-template-columns: var(--toggle-size--md) auto;
     margin-bottom: var(--space--sm);
+    border: var(--border-width--md) solid transparent;
     &:hover,
     &:focus-within {
       outline: var(--border-width--md) solid transparent;
