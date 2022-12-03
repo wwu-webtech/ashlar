@@ -53,7 +53,7 @@ if (generateButton) {
     if(teams_id) { document.getElementById('field_teams_id').innerHTML = ' <span aria-hidden="true">|</span> <a href="https://teams.microsoft.com/l/chat/0/0?users=' + teams_id + '@wwu.edu">Message me on Teams</a>' }
     else { document.getElementById('field_teams_id').innerHTML= '' }
 
-    if(mail_stop) { document.getElementById('field_mail_stop').innerHTML = ' <span aria-hidden="true">|</span> ' + mail_stop }
+    if(mail_stop) { document.getElementById('field_mail_stop').innerHTML = ' <span aria-hidden="true">|</span> MS' + mail_stop }
     else { document.getElementById('field_mail_stop').innerText= '' }
 
     if(department_website) { document.getElementById('field_department').innerHTML = '<a href="' + department_website + '">' + department + '</a>'; }
