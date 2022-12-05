@@ -4,7 +4,6 @@ Molecule: Charts - Org Chart
 1. Dark Mode
 ------------------------------------------------------------------------------*/
 .org-chart {
-  --chart-background-color: var(--white);
   --chart-border-width: 3px;
   --chart-line-color: var(--gray--lighter--40);
   --chart-max-size: 18.75rem;
@@ -15,7 +14,7 @@ Molecule: Charts - Org Chart
   justify-content: center;
   max-width: var(--content-area-max-width);
   color: var(--black);
-  background: var(--chart-background-color);
+  background: var(--page-background);
   font-size: var(--font-size--sm);
   h2,
   h3,
@@ -249,7 +248,7 @@ Molecule: Charts - Org Chart
       > h4 a:before,
       > h5 a:before,
       > h6 a:before {
-        background: var(--chart-background-color);
+        background: var(--page-background);
         @media (forced-colors: active) {
           background: transparent;
         }
@@ -274,7 +273,7 @@ Molecule: Charts - Org Chart
     height: 100%;
     content: "";
     transform: translate(-100%);
-    background: var(--chart-background-color);
+    background: var(--page-background);
   }
 }
 
@@ -447,13 +446,5 @@ Molecule: Charts - Org Chart
         }
       }
     }
-  }
-}
-/*------------------------------------------------------------------------------
-1. Dark mode
-------------------------------------------------------------------------------*/
-[data-theme="dark"] {
-  .org-chart {
-    --chart-background-color: var(--black);
   }
 }

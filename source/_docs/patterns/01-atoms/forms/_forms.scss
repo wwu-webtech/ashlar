@@ -4,6 +4,7 @@ Atom: Forms
 1. Labels
 2. Inputs
 3. Checkboxes & Radios
+4. Fieldsets
 ------------------------------------------------------------------------------*/
 :root {
   --input-background-color: var(--gray--lighter--90);
@@ -21,7 +22,7 @@ label {
   display: block;
   margin-bottom: var(--space--2xs);
   padding: 0;
-  font-weight: var(--font-weight--sremibold);
+  font-weight: var(--font-weight--semibold);
   &.required:after,
   &.form-required:after,
   .form-required:after {
@@ -163,5 +164,33 @@ input[type="radio"] {
       border-radius: 50%;
       background-color: var(--white);
     }
+  }
+}
+table {
+  input[type="checkbox"],
+  input[type="radio"] {
+    width: unset;
+    height: unset;
+    margin: unset;
+    opacity: unset;
+    &:before {
+      display: none;
+    }
+  }
+}
+.webform-scale-options input + label {
+  border: none;
+}
+/*------------------------------------------------------------------------------
+4. Fieldsets
+------------------------------------------------------------------------------*/
+fieldset,
+.fieldgroup {
+  margin-bottom: var(--space--sm);
+  padding: var(--space--xs);
+  border: solid var(--dark-blue) var(--border-width--md);
+  legend {
+    margin: 0 var(--space--sm);
+    padding: 0 var(--space--sm);
   }
 }

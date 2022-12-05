@@ -2,7 +2,7 @@
 Resets and styles for things in the docusaurus theme that are troublesome
 ------------------------------------------------------------------------------*/
 :root {
-  --ifm-blockquote-color: initial;
+  --ifm-blockquote-color: inherit;
   --ifm-navbar-link-hover-color: initial;
 }
 .docs-wrapper {

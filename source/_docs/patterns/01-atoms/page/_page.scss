@@ -3,12 +3,17 @@ Atom: Page
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 html {
+  --page-background: var(--white);
   scroll-behavior: smooth;
+
+  color: var(--black);
   * {
     box-sizing: border-box;
   }
 }
-
+html[data-theme="dark"] {
+  --page-background: var(--black);
+}
 iframe {
   border: 0;
 }

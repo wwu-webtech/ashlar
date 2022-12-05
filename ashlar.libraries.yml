@@ -137,6 +137,11 @@ profile:
     build/js/profile.js: {}
   dependencies:
     - core/jquery
+progress-tracker:
+  version: 1.x
+  css:
+    theme:
+      build/css/components/progress-tracker.css: {}
 pullquote:
   version: 1.x
   css:
