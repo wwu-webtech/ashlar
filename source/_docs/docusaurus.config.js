@@ -55,6 +55,8 @@ const config = {
             require.resolve('../../build/css/components/colors.css'),
             require.resolve('../../build/css/components/countdown.css'),
             require.resolve('../../build/css/components/donut-chart.css'),
+            require.resolve('../../build/css/components/image-link.css'),
+            require.resolve('../../build/css/components/image-with-description.css'),
           ],
         },
       }),

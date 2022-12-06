@@ -29,13 +29,13 @@
 {%
   set classes = [
     'block',
-    'block--image-link',
+    'wwu-image-link',
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
     block_content.field_custom_classes.0.value,
   ]
 %}
 {% set attributes = attributes.addClass(classes) %}
-{% set title_attributes = title_attributes.addClass('block__title') %}
+{% set title_attributes = title_attributes.addClass('title') %}
 {% set link_classes = ['image', 'link', 'stylized'] %}
 {% set link_attributes = create_attribute() %}
 {% set link_attributes = link_attributes.addClass(link_classes) %}
@@ -44,5 +44,15 @@
 {% endif %}
 
 {% block template %}
-  {% include "@molecules/image-link/image-link.html.twig" %}
+<div{{ attributes }}>
+  {% include "@atoms/label/label.twig" %}
+
+  <div class="image-link">
+    {{ content.field_link }}
+
+    <div class="image image--stylized">
+      {{ content.field_image }}
+    </div>
+  </div>
+</div>
 {% endblock %}

@@ -43,17 +43,29 @@
 {% else %}
   {% set attributes = attributes.addClass(classes) %}
 {% endif %}
-{% set title_attributes = title_attributes.addClass('block__title', block_content.field_heading_font.0.value) %}
+{% set title_attributes = title_attributes.addClass('title', block_content.field_heading_font.0.value) %}
 {% set body_attributes = body_attributes.addClass('body', block_content.field_background_color.0.value) %}
 
 
-
 {% block template %}
-  {% embed "@molecules/image-with-description/image-with-description.html.twig" %}
+<div{{ attributes }}>
+  {% block content %}
 
-    {% block title %}
-      {% include "@atoms/label/label-customized.twig" %}
+    {% block image %}
+      <div class="image">
+        {{ content.field_image }}
+      </div>
     {% endblock %}
 
-  {% endembed %}
+    <div {{ body_attributes }}>
+      {% block title %}
+        {% include "@atoms/label/label-customized.twig" %}
+      {% endblock %}
+
+      {{ content.body }}
+
+    </div>
+
+  {% endblock %}
+</div>
 {% endblock %}
