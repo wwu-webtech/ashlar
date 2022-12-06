@@ -27,42 +27,25 @@
 #}
 {%
   set classes = [
-    'headline',
     'block',
-    'block--headline',
+    'wwu-headline',
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
   ]
 %}
 {% set attributes = attributes.addClass(classes, block_content.field_headline_style.0.value) %}
-{% set title_attributes = title_attributes.addClass('block__title') %}
-{% embed "@molecules/headline/headline.html.twig" %}
-  {% block container %}
+{% set title_attributes = title_attributes.addClass('title') %}
+
+{% block container %}
   <div{{ attributes }}>
-  {% endblock %}
 
-  {% block links %}
-    {% if block_content.field_link.0.url is not empty %}
-      <a {% if attributes.hasClass('box-headline') %} class="cta" {% else %} class="cta" {% endif %}href="{{ block_content.field_link.0.url }}">{{ block_content.field_link.0.title }}</a>
-    {% endif %}
+    {% block title %}  
+      {% include "@atoms/label/label-customized.twig" %}
+    {% endblock %}
 
-    {% if block_content.field_video_source.0.value == "YouTube" %}
-      {{ attach_library('ashlar/lightbox') }}
-      <button class="alt" data-lightbox-title="{{ block_content.field_video_title.0.value }}" data-lightbox-url="https://www.youtube.com/embed/{{ block_content.field_video_embed.0.value }}?rel=0&amp;autoplay=1"><span>Watch Video</span>
-        {% if block_content.field_video_title.0.value is not empty %}
-          <span class="visually-hidden">: {{ block_content.field_video_title.0.value }}</span>
-        {% endif %}
-        <span aria-hidden="true" class="material-icons">play_arrow</span>
-      </button>
-
-    {% elseif block_content.field_video_source.0.value == "Vimeo" %}
-      {{ attach_library('ashlar/lightbox') }}
-      <button class="alt" data-lightbox-title="{{ block_content.field_video_title.0.value }}" data-lightbox-url="https://player.vimeo.com/video/{{ block_content.field_video_embed.0.value }}?rel=0&amp;autoplay=1"><span>Watch Video</span>
-        {% if block_content.field_video_title.0.value is not empty %}
-          <span class="visually-hidden">: {{ block_content.field_video_title.0.value }}</span>
-        {% endif %}
-        <span aria-hidden="true" class="material-icons">play_arrow</span>
-      </button>
-
-    {% endif %}
-  {% endblock %}
-{% endembed %}
+    {% block content %}
+      <div class="body">
+      {{ content.body }}
+      </div>
+    {% endblock %}
+  </div>
+{% endblock %}

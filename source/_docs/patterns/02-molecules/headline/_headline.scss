@@ -15,9 +15,8 @@ Molecule: Headline
     margin-top: 5%;
     margin-left: 5%;
     background: var(--gradient--horizontal--dark-blue-to-transparent);
-
     @media (forced-colors: active) {
-       background: rgba(var(--dark-blue--darker--40--rgb), .8)
+      background: rgba(var(--dark-blue--darker--40--rgb), 0.8);
     }
   }
 
@@ -26,12 +25,10 @@ Molecule: Headline
   margin: var(--space--md);
   padding: var(--space--lg);
   background-color: rgba(var(--dark-blue--darker--40--rgb), 0.7);
-
-  .block__title {
+  .title {
     margin-top: 0;
   }
 }
-
 /*----------------------------------------------------------------------------
 2. Style 2: Left/Right Aligned Blue Box
 ----------------------------------------------------------------------------*/
@@ -48,12 +45,10 @@ Molecule: Headline
   margin-bottom: var(--space--xl);
   padding: var(--space--md);
   background: rgba(var(--blue--rgb), 0.8);
-
-  .block__title {
+  .title {
     margin-top: 0;
   }
 }
-
 .right-aligned-bar {
   @extend .left-aligned-bar;
 

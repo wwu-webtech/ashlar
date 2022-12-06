@@ -19,10 +19,13 @@ wwu-accordion,
     display: flex;
     align-items: center;
     width: 100%;
+    margin-bottom: calc(-1 * var(--border-width--md));
     cursor: default;
     color: inherit;
+    border: solid var(--border-width--md) var(--h3-color);
     border-radius: 0;
     background: transparent;
+    box-shadow: none;
     .material-icons {
       font-size: var(--icon-size--sm);
     }
