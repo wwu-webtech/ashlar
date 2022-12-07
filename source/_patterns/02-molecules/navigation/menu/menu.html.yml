@@ -4,8 +4,8 @@ attributes:
     - menu
 items:
 - title: Menu item 1
-  url: ''
+  url: "#"
 - title: Menu item 2
-  url: ''
+  url: "#"
 - title: Menu item 3
-  url: ''
+  url: "#"

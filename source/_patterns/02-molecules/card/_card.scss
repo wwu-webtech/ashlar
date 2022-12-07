@@ -21,7 +21,9 @@ Molecule: Cards
   margin-bottom: var(--space--md);
   padding-bottom: var(--space--md);
   border: var(--border-width--sm) solid transparent;
-
+  p {
+    line-height: 1.2em;
+  }
   &:hover,
   &:focus-within {
     z-index: 1;
@@ -33,7 +35,6 @@ Molecule: Cards
       }
     }
   }
-
   &:focus-within {
     .title {
       a:after {
@@ -42,13 +43,11 @@ Molecule: Cards
       }
     }
   }
-
   .image {
     flex: 0 1 100%;
     order: -1;
     width: 100%;
     margin-bottom: var(--space--xs);
-
     img {
       display: block;
       object-fit: cover;
@@ -56,20 +55,16 @@ Molecule: Cards
       height: 100%;
     }
   }
-
   .title {
     flex: 0 1 100%;
     padding: 0 var(--space--xs);
-
     .block__title {
       margin-top: 0;
       line-height: initial;
     }
-
     a {
       display: inline-block;
       text-decoration: none;
-
       &:after {
         position: absolute;
         top: 0;
@@ -80,7 +75,6 @@ Molecule: Cards
         transition: var(--transition-speed--md) var(--ease--standard) box-shadow;
         box-shadow: var(--shadow--soft);
       }
-
       &:hover,
       &:focus,
       &:active {
@@ -90,52 +84,39 @@ Molecule: Cards
       }
     }
   }
-
   .taxonomy-terms {
     flex: 0 1 100%;
-
     padding: 0 var(--space--xs);
-
     a {
       position: relative;
     }
   }
-
   .date {
     flex: 0 1 100%;
-
     padding: 0 var(--space--xs);
     font-weight: bold;
   }
-
   .location {
     flex: 0 1 100%;
-
     margin-bottom: var(--space--md);
     padding: 0 var(--space--xs);
     font-style: italic;
   }
-
   .body {
     flex: 0 1 100%;
-
     padding: 0 var(--space--xs);
     line-height: 1.8;
-
     .date {
       font-weight: var(--font-weight--semibold);
     }
-
     a {
       position: relative;
     }
-
     a[href^="mailto:"] {
       word-break: break-all;
     }
   }
 }
-
 /*------------------------------------------------------------------------------
 2. Dark Mode
 ------------------------------------------------------------------------------*/
@@ -147,12 +128,10 @@ Molecule: Cards
         &:after {
           box-shadow: var(--shadow--dark-mode);
         }
-
         &:active,
         &:focus,
         &:hover {
           color: var(--blue--lighter--40);
-
           &:after {
             color: var(--blue--lighter--40);
             box-shadow: var(--shadow--dark-mode--hover);
@@ -162,7 +141,6 @@ Molecule: Cards
     }
   }
 }
-
 /*------------------------------------------------------------------------------
 3. Print
 ------------------------------------------------------------------------------*/

@@ -31,9 +31,9 @@ if (generateButton) {
     teams_id = (teams_id.value) ? teams_id.value : '';
 
     if (document.getElementById('include_pronoun_link').checked) {
-      pronouns = (pronouns.value) ? ' | <a href="https://www.mypronouns.org/about">' + pronouns.value + '</a>' : '';
+      pronouns = (pronouns.value) ? ' <span aria-hidden="true">|</span> <a href="https://www.mypronouns.org/about">' + pronouns.value + '</a>' : '';
     } else {
-      pronouns = (pronouns.value) ? ' | ' + pronouns.value : '';
+      pronouns = (pronouns.value) ? ' <span aria-hidden="true">|</span> ' + pronouns.value : '';
     }
 
     document.getElementById('field_name').innerText = name;
@@ -45,15 +45,15 @@ if (generateButton) {
     document.getElementById('field_zip_code').innerText = zip_code;
     document.getElementById('field_email').innerHTML = '<a href="mailto:' + email + '">' + email + '</a>';
 
-    if(phone_one) { document.getElementById('field_phone_one').innerHTML = ' | <a href="tel:' + phone_one + '">' + phone_one + '</a>' }
+    if(phone_one) { document.getElementById('field_phone_one').innerHTML = ' <span aria-hidden="true">|</span> <a href="tel:' + phone_one + '">' + phone_one + '</a>' }
     else { document.getElementById('field_phone_one').innerHTML= '' }
-    if(phone_two) { document.getElementById('field_phone_two').innerHTML = ' | <a href="tel:' + phone_two + '">' + phone_two + '</a>' }
+    if(phone_two) { document.getElementById('field_phone_two').innerHTML = ' <span aria-hidden="true">|</span> <a href="tel:' + phone_two + '">' + phone_two + '</a>' }
     else { document.getElementById('field_phone_two').innerHTML= '' }
 
-    if(teams_id) { document.getElementById('field_teams_id').innerHTML = ' | <a href="https://teams.microsoft.com/l/chat/0/0?users=' + teams_id + '@wwu.edu">Message me on Teams</a>' }
+    if(teams_id) { document.getElementById('field_teams_id').innerHTML = ' <span aria-hidden="true">|</span> <a href="https://teams.microsoft.com/l/chat/0/0?users=' + teams_id + '@wwu.edu">Message me on Teams</a>' }
     else { document.getElementById('field_teams_id').innerHTML= '' }
 
-    if(mail_stop) { document.getElementById('field_mail_stop').innerText = ' | ' + mail_stop }
+    if(mail_stop) { document.getElementById('field_mail_stop').innerHTML = ' <span aria-hidden="true">|</span> MS' + mail_stop }
     else { document.getElementById('field_mail_stop').innerText= '' }
 
     if(department_website) { document.getElementById('field_department').innerHTML = '<a href="' + department_website + '">' + department + '</a>'; }
