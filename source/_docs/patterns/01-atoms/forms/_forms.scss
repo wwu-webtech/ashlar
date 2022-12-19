@@ -8,6 +8,8 @@ Atom: Forms
 ------------------------------------------------------------------------------*/
 :root {
   --input-background-color: var(--gray--lighter--90);
+  --input-border-color: var(--gray--lighter--20);
+  --input-border-color--focus: var(--blue--darker--20);
   --input-text-color: var(--black);
 }
 [data-theme="dark"] {
@@ -46,22 +48,22 @@ select {
   margin-bottom: var(--space--md);
   padding: var(--space--xs);
   color: var(--input-text-color);
-  border: solid var(--border-width--md) var(--gray--lighter--80);
+  border: solid var(--border-width--md) var(--input-border-color);
   border-radius: var(--border-radius--round);
   background-color: var(--input-background-color);
   box-shadow: none;
   font-size: var(--font-size--sm);
   &:focus {
-    border-color: var(--dark-blue--lighter--60);
+    border-color: var(--input-border-color--focus);
     outline: var(--border-width--md) dotted transparent;
     outline-offset: var(--border-width--md);
     box-shadow: var(--shadow--soft);
   }
   &:disabled {
+    --input-background-color: var(--gray--lighter--40);
+    --input-border-color: var(--gray);
+
     cursor: not-allowed;
-    color: var(--gray);
-    border-color: var(--gray);
-    background-color: var(--gray--lighter--60);
   }
 }
 input[type="submit"] {
@@ -100,7 +102,7 @@ input[type="radio"] {
       height: var(--checkbox-size);
       margin-right: var(--space--2xs);
       content: "";
-      border: solid var(--border-width--md) var(--gray--lighter--80);
+      border: solid var(--border-width--md) var(--input-border-color);
       background-color: var(--input-background-color);
     }
     &:after {
@@ -113,7 +115,7 @@ input[type="radio"] {
   &:focus {
     + label {
       &:before {
-        border-color: var(--dark-blue--lighter--60);
+        border-color: var(--input-border-color--focus);
         outline: var(--border-width--md) dotted transparent;
         outline-offset: var(--border-width--md);
         box-shadow: var(--shadow--soft);

@@ -56,5 +56,11 @@
   <input />
 </form>
 
+## Disabled Text Field
+<form>
+  <label>Textfield label</label>
+  <input disabled/>
+</form>
+
 ## Submit
 <input id="edit-submit" type="submit" value="Submit" />  

@@ -14,11 +14,11 @@ input[type="submit"] {
   padding: var(--space--xs);
   transition: background var(--transition-speed--fast),
   color var(--transition-speed--fast);
-  color: var(--black);
+  color: var(--white);
   border: none;
   border-radius: var(--border-radius--rounder);
   outline: var(--border-width--md) solid transparent;
-  background: var(--gray--lighter--80);
+  background: var(--blue);
   box-shadow: var(--shadow--soft);
   font-family: var(--font--sans-serif);
   font-size: var(--font-size--md);
@@ -26,7 +26,7 @@ input[type="submit"] {
   &:hover,
   &:focus {
     color: var(--white);
-    background: var(--gray);
+    background: var(--dark-blue);
     box-shadow: var(--shadow--soft--hover);
   }
   &:active,
@@ -34,14 +34,6 @@ input[type="submit"] {
     outline: var(--border-width--md) dotted;
     outline-color: var(--link-color);
     outline-offset: var(--border-width--md);
-  }
-  &.alt {
-    color: var(--white);
-    background: var(--blue);
-    &:hover,
-    &:focus {
-      background: var(--dark-blue);
-    }
   }
   &.warning {
     color: var(--black);
