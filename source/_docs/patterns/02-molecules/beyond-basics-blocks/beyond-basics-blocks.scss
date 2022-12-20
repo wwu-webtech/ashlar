@@ -3,6 +3,7 @@ Molecule: Beyond Basics Block
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 .wwu-beyond-basics-block {
+  clear: both;
   margin: var(--space--xs) 0;
   &[class*="-bg"] {
     padding: var(--space--md);
