@@ -15,7 +15,8 @@ Resets and styles for things in the docusaurus theme that are troublesome
         outline-color: var(--link-color);
         outline-offset: var(--border-width--md);
       }
-      &.expand {
+      &.expand,
+      &.close-modal {
         &:active,
         &:focus {
           outline-color: var(--h3-color);

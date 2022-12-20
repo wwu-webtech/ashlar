@@ -19,6 +19,18 @@ wwu-modal {
     position: absolute;
     top: 50%;
     left: 50%;
+    min-width: 50vw;
+    min-height: 30vh;
     transform: translate(-50%, -50%);
+    background: var(--black);
+  }
+  .close-modal {
+    position: absolute;
+    margin: 0;
+    border-radius: 0;
+    &:focus {
+      outline-color: var(--h3-color);
+      outline-offset: calc(-1 * var(--border-width--md));
+    }
   }
 }
