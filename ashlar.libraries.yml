@@ -115,10 +115,10 @@ language-select:
     language-select.js: {}
   dependencies:
     - core/jquery
-lightbox:
+modal:
   version: 1.x
   js:
-    build/js/lightbox.js: {}
+    build/js/modal.js: {}
 menu-extras:
   version: 1.x
   js:

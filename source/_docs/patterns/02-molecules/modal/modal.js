@@ -50,7 +50,7 @@ if (
         function close_modal() {
             this.parentNode.querySelector(".wrapper").classList.add("closed");
             this.setAttribute("aria-expanded", false);
-
+            this.parentNode.querySelector(".open-modal").focus();
                         
             /* Remove and re-add iframes to stop video playback without needing an api */
             const iframe = this.parentNode.querySelector("iframe");
