@@ -3,9 +3,24 @@ Molecule: Pullquote
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 .wwu-pullquote {
-  margin: var(--space--2xl) 0;
-  padding: var(--space--2xl);
-  text-align: center;
-  color: var(--blue--darker--20);
-  font-size: var(--font-size--xl);
+  blockquote {
+    margin: var(--space--2xl) 0;
+    padding: var(--space--2xl);
+    text-align: center;
+    border: none;
+    background: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/quote.svg") 50% 50%/contain no-repeat;
+  }
+  .body {
+    color: var(--h3-color);
+    font-size: var(--font-size--xl);
+  }
+  .credit {
+    margin-top: var(--space--lg);
+    p {
+      margin-bottom: 0;
+    }
+  }
+  .name {
+    font-weight: var(--font-weight--bold);
+  }
 }

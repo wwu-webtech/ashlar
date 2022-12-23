@@ -41,16 +41,15 @@
   {% block title %}
       {% include "@atoms/label/label-customized.twig" %}
   {% endblock %}
-
-  <span class="decoration" aria-hidden="true">“</span>
+  
   <blockquote>
     {% block content %}
       <div class="body">
         {{ content.body }}
       </div>
       <div class="credit">
-        <span class="name"> {{ content.field_name }}</span>
-        <span class="description">{{ content.field_description }}</span>
+        <p class="name"> {{ content.field_name }}</p>
+        <p class="description">{{ content.field_description }}</p>
       </div>
     {% endblock %}
   </blockquote>
