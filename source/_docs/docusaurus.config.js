@@ -58,6 +58,7 @@ const config = {
             require.resolve('../../build/css/components/image-link.css'),
             require.resolve('../../build/css/components/image-with-description.css'),
             require.resolve('../../build/css/components/pullquote.css'),
+            require.resolve('../../build/css/components/testimonial.css'),
           ],
         },
       }),

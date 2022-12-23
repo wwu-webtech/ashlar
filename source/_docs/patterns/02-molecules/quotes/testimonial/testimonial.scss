@@ -5,16 +5,34 @@ Molecule: Testimonial
 ------------------------------------------------------------------------------*/
 @import "../../../../../sass/partials/imports";
 @import "../../../00-utilities/breakpoints.scss";
-.block--testimonial {
+.wwu-testimonial {
   @include breakpoint($medium) {
-    flex-flow: row;
+    flex-flow: row wrap;
     padding-bottom: var(--space--3xl);
   }
 
   display: flex;
   flex-flow: column;
+  padding-left: var(--space--2xl);
   border-style: none;
-
+  blockquote {
+    flex: 1 1 50%;
+    border: none;
+  }
+  .title {
+    flex: 0 0 100%;
+    margin-bottom: var(--space--lg);
+  }
+  .credit {
+    margin-top: var(--space--md);
+  }
+  .name {
+    display: block;
+    font-weight: var(--font-weight--bold);
+  }
+  .description {
+    font-style: italic;
+  }
   .image--stylized {
     @include breakpoint($medium) {
       flex: 0 0 auto;
@@ -29,7 +47,6 @@ Molecule: Testimonial
     max-height: calc(var(--content-area-max-width) / 4);
     margin: auto;
     box-shadow: var(--shadow--soft);
-
     &:before,
     &:after {
       position: absolute;
@@ -38,7 +55,6 @@ Molecule: Testimonial
       content: "";
       border-radius: 50%;
     }
-
     &:before {
       right: -4rem;
       bottom: 1rem;
@@ -46,7 +62,6 @@ Molecule: Testimonial
       height: 100%;
       background: rgba(var(--blue--rgb), 0.15);
     }
-
     &:after {
       right: -0.5rem;
       bottom: -3.5rem;
@@ -55,20 +70,6 @@ Molecule: Testimonial
       background: rgba(var(--blue--rgb), 0.1);
     }
   }
-
-  .credit {
-    margin-top: var(--space--md);
-  }
-
-  .name {
-    display: block;
-    font-weight: var(--font-weight--bold);
-  }
-
-  .description {
-    font-style: italic;
-  }
-
   /*----------------------------------------------------------------------------
   1. Mirror
   ----------------------------------------------------------------------------*/
@@ -84,7 +85,6 @@ Molecule: Testimonial
         order: 2;
       }
     }
-
     .body {
       @include breakpoint($medium) {
         order: 1;
