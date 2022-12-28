@@ -80,6 +80,7 @@ Molecule: Image Link
     text-align: center;
     text-decoration: none;
     color: var(--white);
+    border: solid var(--border-width--md) transparent;
     border-radius: 50%;
     background: rgba(var(--dark-blue--darker--40--rgb), 0.7);
     font-size: var(--font-size--lg);
@@ -87,6 +88,7 @@ Molecule: Image Link
     &:active,
     &:focus,
     &:hover {
+      outline-style: dotted;
       outline-color: var(--dark-blue);
       background: rgba(var(--dark-blue--darker--40--rgb), 0.9);
     }

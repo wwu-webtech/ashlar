@@ -6,7 +6,7 @@ Molecule: Schedule
 @import "../../../../sass/partials/imports";
 @import "../../00-utilities/breakpoints.scss";
 @import "../../01-atoms/background-color/background-color-mixins.scss";
-.block--schedule {
+.wwu-schedule {
   .schedule-item {
     @include lightest-gray-bg;
 
@@ -14,18 +14,7 @@ Molecule: Schedule
     margin-bottom: var(--space--sm);
     padding: var(--space--sm);
     border: var(--border-width--md) solid transparent;
-  }
-  &.round-edges {
-    .schedule-item {
-      border-radius: var(--border-radius--rounder);
-      a:hover:after,
-      &:focus-within {
-        border-radius: var(--border-radius--rounder);
-      }
-      a {
-        color: inherit;
-      }
-    }
+    border-left: solid var(--blue) var(--border-radius--rounder);
   }
   .schedule-heading {
     margin: var(--space--xs) 0;
@@ -76,18 +65,12 @@ Molecule: Schedule
       position: relative;
     }
   }
-  div:nth-of-type(odd) .schedule-item {
-    border-left: solid var(--blue) var(--border-radius--rounder);
-  }
-  div:nth-of-type(even) .schedule-item {
-    border-left: solid var(--blue--lighter--40) var(--border-radius--rounder);
-  }
 }
 /*------------------------------------------------------------------------------
 1. Dark mode
 ------------------------------------------------------------------------------*/
 [data-theme="dark"] {
-  .block--schedule {
+  .wwu-schedule {
     .schedule-item {
       @include gray-bg;
     }
