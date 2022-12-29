@@ -37,7 +37,15 @@
   ]
 %}
 {% set attributes = attributes.addClass(classes) %}
-{% set title_attributes = title_attributes.addClass('block__title', block_content.field_heading_font.0.value ) %}
+{% set title_attributes = title_attributes.addClass('title', block_content.field_heading_font.0.value ) %}
 {% block template %}
-  {% include "@organisms/statistics-collection/statistics-collection.html.twig" %}
+<div{{ attributes }}>
+  {% block title %}
+    {% include "@atoms/label/label-customized.twig" %}
+  {% endblock %}
+
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</div>
 {% endblock %}
