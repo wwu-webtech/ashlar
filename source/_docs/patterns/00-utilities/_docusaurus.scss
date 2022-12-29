@@ -26,3 +26,6 @@ Resets and styles for things in the docusaurus theme that are troublesome
     }
   }
 }
+.markdown li + li {
+  margin: unset;
+}
