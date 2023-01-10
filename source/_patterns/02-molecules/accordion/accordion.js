@@ -1,3 +1,8 @@
+/* Prevent multiple calls in Drupal */
+if (context !== document) {
+  return;
+}
+
 // Set vars and aria attributes
 const $accordionToggles = $(".accordion-set button.expand, .accordion-set div.expand", context);
 const $accordionButton = $(".accordion-set button.expand", context);
