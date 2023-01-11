@@ -20,6 +20,12 @@ Molecule: Banner
     z-index: 1;
   }
 }
+.banner--page-width {
+  @media (min-width: 40rem) {
+    margin-right: calc((100vw - var(--content-area-max-width--sm))/-2);
+    margin-left: calc((100vw - var(--content-area-max-width--sm))/-2);
+  }
+}
 /*------------------------------------------------------------------------------
 1. Print styles
 ------------------------------------------------------------------------------*/
