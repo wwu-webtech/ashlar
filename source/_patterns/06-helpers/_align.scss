@@ -12,12 +12,10 @@ For adjusting alignments.
 .align-center {
   margin-right: auto;
   margin-left: auto;
-
   &.button {
     margin-left: 50%;
     transform: translatex(-50%);
   }
-
   .image-link {
     margin-right: auto;
     margin-left: auto;
@@ -29,7 +27,6 @@ For adjusting alignments.
     margin-right: auto;
   }
 }
-
 .text-align-left {
   text-align: left;
 }
@@ -38,4 +35,41 @@ For adjusting alignments.
 }
 .text-align-right {
   text-align: right;
+}
+.media-align-center {
+  display: grid;
+  justify-content: center;
+}
+.media-stretch {
+  display: grid;
+  justify-content: stretch;
+  img {
+    width: 100%;
+  }
+}
+.media-align-left {
+  @include breakpoint($large) {
+    width: 100%;
+    max-width: 50vw;
+    margin-left: calc((100vw - var(--content-area-max-width--sm))/-2);
+  }
+
+  display: grid;
+  float: left;
+  justify-content: end;
+  width: 60%;
+  margin-right: var(--space--sm);
+}
+.media-align-right {
+  @include breakpoint($large) {
+    width: 100%;
+    max-width: 50vw;
+    margin-right: calc((100vw - var(--content-area-max-width--sm))/-2);
+  }
+
+  display: grid;
+  float: right;
+  justify-content: start;
+  width: 60%;
+  margin-right: var(--space--sm);
 }
