@@ -7,7 +7,6 @@ libraries:
   - ashlar/ashlar-base
   - ashlar/fonts
   - ashlar/search
-  - ashlar/skip-to
   - ashlar/wwu-header
   - ashlar/wwu-footer
 libraries-override:
@@ -33,7 +32,7 @@ components:
       - source/_patterns/01-atoms
     molecules:
       - source/_patterns/02-molecules
-    organisms:    
+    organisms:
       - source/_patterns/03-organisms
     templates:
       - source/_patterns/04-templates
