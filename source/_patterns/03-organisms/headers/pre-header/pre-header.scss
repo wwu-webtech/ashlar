@@ -17,8 +17,7 @@ wwu-pre-header {
     font-size: var(--icon-size--2xs);
     margin-left: var(--space--2xs);
   }
-  a.skip-link,
-  .skip-to button {
+  a.skip-link {
     place-items: center;
 
     display: flex;
@@ -51,86 +50,7 @@ wwu-pre-header {
       outline-style: dotted;
     }
   }
-  .skip-to {
-    position: relative;
 
-    [role="menu"] {
-      max-height: calc(100vh * 0.75);
-      overflow-y: scroll;
-
-      padding: var(--space--2xs);
-      background-color: var(--black);
-      border: var(--border-width--lg) solid transparent;
-      border-radius: 0;
-    }
-
-    [role="separator"] {
-      margin: 0;
-      padding: var(--space--2xs);
-      border: var(--border-width--sm) solid transparent;
-      background-color: transparent;
-      color: var(--white);
-    }
-
-    [role="menuitem"] {
-      color: var(--white);
-      background-color: var(--gray--darker--40);
-      padding: 0;
-      border: var(--border-width--sm) solid transparent;
-      overflow-y: unset;
-      cursor: pointer;
-
-      &:hover,
-      &:focus,
-      &:active {
-        padding: 0;
-        border: none;
-        outline: solid var(--border-width--md);
-        outline-offset: calc(-1 * var(--border-width--md));
-        @media (forced-colors: active) {
-          outline-color: CanvasText;
-        }
-
-        .label {
-          font-weight: var(--font-weight--semibold);
-        }
-      }
-
-      &:focus {
-        outline-style: dotted;
-      }
-
-      &.last {
-        border-radius: 0;
-      }
-
-      .level,
-      .label {
-        background-color: transparent;
-        color: var(--white);
-        padding: var(--space--2xs);
-      }
-
-      .level {
-        padding-right: 0;
-      }
-
-      .label {
-        white-space: initial;
-        overflow: initial;
-      }
-    }
-
-    button {
-      border-radius: 0;
-
-      &:focus {
-        padding: var(--space--2xs);
-        outline: dotted var(--border-width--md);
-        outline-offset: calc(-1 * var(--border-width--lg));
-      }
-    }
-  }
   button.toggle-settings {
     place-items: center;
 
