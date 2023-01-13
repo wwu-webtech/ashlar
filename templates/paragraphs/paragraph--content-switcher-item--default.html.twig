@@ -39,5 +39,8 @@
  */
 #}
 {% block paragraph %}
-  {% include "@molecules/switcher/switcher-items.html.twig" %}
+  <wwu-switcher-item label="{{ content.field_heading }}">     
+    <noscript><h3>{{ content.field_heading }}</h3></noscript>
+    {{ content.field_content }}
+  </wwu-switcher-item>
 {% endblock paragraph %}

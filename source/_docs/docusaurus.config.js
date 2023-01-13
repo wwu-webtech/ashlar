@@ -61,6 +61,7 @@ const config = {
             require.resolve('../../build/css/components/testimonial.css'),
             require.resolve('../../build/css/components/schedule.css'),
             require.resolve('../../build/css/components/statistic.css'),
+            require.resolve('../../build/css/components/switcher.css'),
           ],
         },
       }),

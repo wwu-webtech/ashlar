@@ -4,76 +4,48 @@ Molecule: Switcher
 ------------------------------------------------------------------------------*/
 @import "../../../../sass/partials/imports";
 @import "../../00-utilities/breakpoints.scss";
-.content-switcher,
-.switcher,
-.mabel-content-switcher {
-  display: flex;
-  flex-flow: row wrap;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+wwu-switcher {
   button {
+    --button-background-color: transparent;
+    --button-background-color--active: magenta;
+    --button-color: var(--h3-color);
+    --button-color--active: var(--white);
+
     flex: 1 1 0;
-    max-width: none;
-    margin-right: var(--space--xs);
-    margin-bottom: var(--space--2xs);
-    color: var(--white);
-    border: var(--border-width--md) solid transparent;
+    width: 100%;
+    margin: 0;
+    cursor: default;
+    border: solid var(--border-width--md) var(--h3-color);
     border-radius: 0;
-    background-color: var(--dark-blue);
     box-shadow: none;
-    &:hover,
-    &:focus,
-    &:active {
-      transform: none;
-      color: var(--dark-blue--darker--40);
+    &:active,
+    &:focus {
       outline-offset: calc(-1 * var(--border-width--lg));
-      outline-offset: calc(-1 * var(--border-width--lg));
-      background-image: var(--gradient--vertical--light-blue);
-      box-shadow: none;
-      @media (forced-colors: active) {
-        outline-offset: var(--border-width--lg);
-      }
     }
-    &.active,
-    &:disabled {
-      opacity: 1;
-      color: var(--dark-blue--darker--60);
-      background-color: var(--light-green--lighter--20);
+    &.active {
       font-weight: var(--font-weight--semibold);
     }
-    &:last-child {
-      margin-right: 0;
-    }
-    .material-icons {
-      &.show {
-        @include breakpoint($small) {
-          position: relative;
-          top: 0.3rem;
-          display: inline-block;
-        }
-
-        display: block;
-        color: inherit;
-        font-size: var(--icon-size--xs);
-      }
+    &:not(:last-of-type) {
+      border-right: none;
     }
   }
-}
-.content-switcher-container,
-.switcher-container,
-.mabel-content-switcher-container {
-  display: grid;
-  display: -ms-grid;
-  [role="tabpanel"] {
-    display: none;
-    grid-column-start: 1;
-    grid-row-start: 1;
-    -ms-grid-column: 1;
-    -ms-grid-row: 1;
-    margin-top: var(--space--md);
-    &.active {
-      display: block;
+  .switcher {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .switcher-container {
+    display: grid;
+    [role="tabpanel"] {
+      display: none;
+      grid-column-start: 1;
+      grid-row-start: 1;
+      margin-top: var(--space--md);
+      &.active {
+        display: block;
+      }
     }
   }
 }
@@ -83,25 +55,27 @@ Molecule: Switcher
       gap: var(--space--sm);
 
       display: flex;
-    }
-    .switcher {
-      flex: 1 1 12%;
-      flex-flow: column;
       button {
-        width: 100%;
-        .material-icons.show {
-          top: 0;
+        &:not(:last-of-type) {
+          border-right: solid var(--border-width--md) var(--h3-color);
+          border-bottom: none;
         }
       }
-    }
-    .switcher-container {
-      flex: 1 1 88%;
-      [role="tabpanel"] {
-        margin: 0;
+      .switcher {
+        flex: 1 1 12%;
+        flex-flow: column;
+      }
+      .switcher-container {
+        flex: 1 1 88%;
+        [role="tabpanel"] {
+          margin: 0;
+        }
       }
     }
   }
 }
+
+/* 
 .layout-builder--layout {
   .content-switcher-container {
     .content {
@@ -109,3 +83,4 @@ Molecule: Switcher
     }
   }
 }
+*/

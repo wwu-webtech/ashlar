@@ -31,8 +31,8 @@ wwu-accordion,
     }
     &:active,
     &:focus {
-      outline-color: var(--h3-color);
-      outline-offset: calc(-1 * var(--border-width--md));
+      outline-offset: calc(-1 * var(--border-width--lg));
+      background-color: var(--h3-color);
     }
   }
   .title {

@@ -30,7 +30,6 @@
   set classes = [
     'block',
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
-    'block--content-switcher',
     block_content.field_background_color.0.value,
     block_content.field_font_size.0.value,
     block_content.field_heading_style.0.value,
@@ -40,15 +39,15 @@
 {% set attributes = attributes.addClass(classes) %}
 {% set title_attributes = title_attributes.addClass('block__title', block_content.field_heading_font.0.value ) %}
 {% block template %}
-  {% embed "@molecules/switcher/switcher.html.twig" %}
+  <div{{ attributes }}>
+    {% block title %}
+      {% include "@atoms/label/label-customized.twig" %}
+    {% endblock %}
 
-  {% block title %}
-    {% include "@atoms/label/label-customized.twig" %}
-  {% endblock %}
-
-  {% block content %}
-    {{ content }}
-  {% endblock %}
-
-  {% endembed %}
+    <wwu-switcher label="{{ configuration.label }}">
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+    </wwu-switcher>
+  </div>
 {% endblock %}
