@@ -244,6 +244,9 @@ $large: 1300px;
 --border-radius--roundest: 6.25rem;
 --border-radius--rounder: 0.625rem;
 --border-radius--round: 0.125rem;
+--outline-offset--outset: 0.1rem;
+--outline-offset--inset: -0.1rem;
+--outline-width: 0.1rem;
 
 /* b. Shadows ----------------------------------------------------------------*/
 --shadow--hard: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.4),0 0.0625rem 0.125rem rgba(0, 0, 0, 0.5);

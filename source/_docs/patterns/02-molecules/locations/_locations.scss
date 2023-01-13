@@ -5,39 +5,35 @@ Molecule: Locations
 2. SVGs
 ------------------------------------------------------------------------------*/
 .wwu-locations {
-  --locations-block-width: 37.5rem;
-  --locations-block-width--bigger: 56.25rem;
   --location-button-size: 10rem;
   --location-icon-height: 5.625rem;
+  --locations-block-width: 37.5rem;
+  --locations-block-width--bigger: 56.25rem;
+  --locations-font-size: 1.125rem;
+  --locations-icon-spacing: 1.875rem;
+  --locations-transition-speed: 500ms;
   --stroke-width--heavy: 0.75rem;
   --stroke-width--medium: 0.5rem;
-  --locations-icon-spacing: 1.875rem;
-  --locations-font-size: 1.125rem;
-  --locations-transition-speed: 500ms;
 
   max-width: var(--locations-block-width);
   margin: 0 auto;
-
   .button-cluster {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
-
   .button-animated {
     display: block;
     flex: 0 1 33%;
     margin: 0 auto;
     padding: var(--locations-icon-spacing) 0;
   }
-
   .svg-container {
     position: relative;
     display: block;
     width: var(--location-button-size);
     height: var(--location-button-size);
   }
-
   /*----------------------------------------------------------------------------
   1. Growing circle interaction
   ----------------------------------------------------------------------------*/
@@ -47,32 +43,28 @@ Molecule: Locations
       -webkit-animation-name: pulse;
       animation-name: pulse;
       border-radius: 31.25rem;
-
       &:active {
         border: 0.125rem solid #75cfff;
       }
     }
-
     &:hover,
     &:focus-within {
       .svg-container {
         transition: background-color var(--locations-transition-speed);
         -webkit-transform: scale(1.03, 1.03);
         transform: scale(1.03, 1.03);
+        outline: var(--outline-width) solid transparent;
         background-color: #d8f1ff;
-        outline: var(--border-width--md) solid transparent;
       }
     }
-
     &:focus-within {
       .svg-container {
         outline-style: dotted;
         outline-color: inherit;
       }
     }
-
     @media (forced-colors: active) {
-      &:hover, 
+      &:hover,
       &:focus-within {
         .svg-container {
           outline-color: LinkText;
@@ -80,7 +72,6 @@ Molecule: Locations
       }
     }
   }
-
   // Underline animation
   .link {
     display: block;
@@ -90,7 +81,6 @@ Molecule: Locations
     text-align: center;
     outline: 0;
     background: transparent;
-
     &:after {
       position: absolute;
       top: 0;
@@ -101,7 +91,6 @@ Molecule: Locations
       content: "";
     }
   }
-
   .custom-underline {
     position: relative;
     display: inline-block;
@@ -113,7 +102,6 @@ Molecule: Locations
     font-size: var(--locations-font-size);
     font-weight: 600;
     line-height: var(--locations-icon-spacing);
-
     &:after {
       position: absolute;
       top: 95%;
@@ -125,7 +113,6 @@ Molecule: Locations
       background-color: var(blue--darker--20);
     }
   }
-
   .svg-container {
     &:hover,
     &:focus-within {
@@ -135,7 +122,6 @@ Molecule: Locations
       }
     }
   }
-
   /*----------------------------------------------------------------------------
   2. SVGs
   ----------------------------------------------------------------------------*/
@@ -144,7 +130,6 @@ Molecule: Locations
     height: var(--location-icon-height);
     margin-top: var(--standard-spacing);
   }
-
   .cls-1,
   .cls-2,
   .st1,
@@ -157,13 +142,11 @@ Molecule: Locations
     stroke-linejoin: round;
     stroke-width: var(--stroke-width--heavy);
   }
-
   .cls-2,
   .st0,
   .st1 {
     fill: var(--white);
   }
-
   .cls-3 {
     fill: none;
     stroke: var(blue--darker--20);
@@ -171,18 +154,15 @@ Molecule: Locations
     stroke-miterlimit: 10;
     stroke-width: var(--stroke-width--medium);
   }
-
   &.single-row {
     @include breakpoint($medium) {
       max-width: var(--locations-block-width--bigger);
     }
-
     .button-cluster {
       @include breakpoint($medium) {
         flex-wrap: nowrap;
         justify-content: center;
       }
-
       .button-animated {
         padding: var(--half-spacing);
       }

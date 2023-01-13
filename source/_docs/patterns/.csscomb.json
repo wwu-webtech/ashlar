@@ -183,6 +183,7 @@
       "counter-increment",
       "resize",
       "cursor",
+      "scroll-behavior",
       "-webkit-user-select",
       "-moz-user-select",
       "-ms-user-select",

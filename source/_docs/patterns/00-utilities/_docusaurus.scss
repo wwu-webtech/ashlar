@@ -6,24 +6,9 @@ Resets and styles for things in the docusaurus theme that are troublesome
   --ifm-navbar-link-hover-color: initial;
 }
 .docs-wrapper {
-  body:not(.navigation-with-keyboard) {
-    button:not(input) {
-      outline: var(--border-width--md) solid transparent;
-      &:active,
-      &:focus {
-        outline: var(--border-width--md) dotted;
-        outline-color: var(--link-color);
-        outline-offset: var(--border-width--md);
-      }
-      &.expand,
-      &.close-modal {
-        &:active,
-        &:focus {
-          outline-color: var(--h3-color);
-          outline-offset: calc(-1 * var(--border-width--md));
-        }
-      }
-    }
+  body:not(.navigation-with-keyboard) :not(input):focus-visible {
+    outline: dotted var(--oline-color) var(--outline-width);
+    outline-offset: var(--oline-offset);
   }
 }
 .markdown li + li {

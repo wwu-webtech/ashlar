@@ -3,12 +3,19 @@ Atom: Page
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 html {
+  /* using "oline" for overwriteable props because csscomb doesn't handle sorting css variables well, this keeps them at the top */
+  --oline-color: magenta;
+  --oline-offset: var(--outline-offset--outset);
   --page-background: var(--white);
-  scroll-behavior: smooth;
 
+  scroll-behavior: smooth;
   color: var(--black);
   * {
     box-sizing: border-box;
+    &:focus-visible {
+      outline: dotted var(--oline-color) var(--outline-width);
+      outline-offset: var(--oline-offset);
+    }
   }
 }
 html[data-theme="dark"] {

@@ -206,7 +206,7 @@ Molecule: Cards - Alternate styles
     z-index: 1;
     .title {
       a:after {
-        outline: var(--border-width--md) solid transparent;
+        outline: var(--outline-width) solid transparent;
         outline-offset: var(--space--2xs);
         box-shadow: var(--shadow--soft--hover);
       }

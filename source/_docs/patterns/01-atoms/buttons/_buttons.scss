@@ -23,7 +23,7 @@ input[type="submit"] {
   color: var(--button-color);
   border: none;
   border-radius: var(--border-radius--rounder);
-  outline: var(--border-width--md) solid transparent;
+  outline: var(--outline-width) solid transparent;
   background: var(--button-background-color);
   box-shadow: var(--shadow--soft);
   font-family: var(--font--sans-serif);
@@ -34,12 +34,6 @@ input[type="submit"] {
     color: var(--button-color--active);
     background: var(--button-background-color--active);
     box-shadow: var(--shadow--soft--hover);
-  }
-  &:active,
-  &:focus {
-    outline: var(--border-width--md) dotted;
-    outline-color: var(--link-color);
-    outline-offset: var(--border-width--md);
   }
   &.warning {
     --button-background-color: var(--yellow);

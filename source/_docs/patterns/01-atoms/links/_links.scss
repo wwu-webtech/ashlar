@@ -47,12 +47,7 @@ a {
   }
   &:active,
   &:hover {
-    outline: var(--border-width--md) solid transparent;
-  }
-  &:focus {
-    outline: var(--border-width--md) dotted;
-    outline-color: var(--link-color);
-    outline-offset: var(--border-width--md);
+    outline: var(--outline-width) solid transparent;
   }
   &[target="_blank"],
   &[target="blank"] {

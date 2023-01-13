@@ -14,14 +14,13 @@ Molecule: Event List
     grid-template-columns: var(--toggle-size--md) auto;
     margin-bottom: var(--space--sm);
     border: var(--border-width--md) solid transparent;
-    &:hover,
-    &:focus-within {
-      outline: var(--border-width--md) solid transparent;
+    &:hover {
+      outline: var(--outline-width) dotted transparent;
       box-shadow: var(--shadow--soft--hover);
     }
     &:focus-within {
-      outline-style: dotted;
-      outline-color: inherit;
+      outline: dotted var(--oline-color) var(--outline-width);
+      outline-offset: var(--oline-offset);
     }
     p {
       margin: 0;

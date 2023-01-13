@@ -15,9 +15,8 @@ wwu-search {
   }
 }
 .search-label {
-  place-items: center;
-
   display: flex;
+  place-items: center;
   margin: 0;
   padding: var(--space--2xs);
   padding-right: var(--space--xs);
@@ -33,21 +32,4 @@ wwu-search {
 }
 .search-box {
   flex: 1 1 0;
-}
-.submit-search {
-  place-items: center;
-
-  display: flex;
-  border: var(--border-width--sm) solid transparent;
-  border-radius: 0;
-
-  &:hover,
-  &:focus,
-  &:active {
-    outline: var(--border-width--md) solid transparent;
-  }
-
-  &:focus {
-    outline-style: dotted;
-  }
 }

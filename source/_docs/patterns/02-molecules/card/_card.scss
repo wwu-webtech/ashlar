@@ -25,8 +25,8 @@ Molecule: Cards
     z-index: 1;
     .title {
       a:after {
-        outline: var(--border-width--md) solid transparent;
-        outline-offset: var(--space--2xs);
+        outline: solid transparent var(--outline-width);
+        outline-offset: var(--oline-offset);
         box-shadow: var(--shadow--soft--hover);
       }
     }
@@ -34,8 +34,7 @@ Molecule: Cards
   &:focus-within {
     .title {
       a:after {
-        outline-style: dotted;
-        outline-color: inherit;
+        outline: dotted var(--oline-color) var(--outline-width);
       }
     }
   }

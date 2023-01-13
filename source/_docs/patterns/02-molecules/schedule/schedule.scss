@@ -38,14 +38,11 @@ Molecule: Schedule
         color: inherit;
         background-image: none;
       }
-      &:focus {
+      &:focus-visible {
         outline: none;
         &:after {
-          outline: dotted var(--border-width--md);
-          outline-offset: var(--border-width--md);
-          @media (forced-colors: active) {
-            outline-offset: calc(1.5 * var(--border-width--lg));
-          }
+          outline: dotted var(--oline-color) var(--outline-width);
+          outline-offset: var(--oline-offset);
         }
       }
       &:hover:after,

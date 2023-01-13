@@ -36,10 +36,10 @@ Atom: Forms - Progress Tracker for Drupal Webforms
   flex: 1 1 0;
   text-align: center;
   color: var(--incomplete-color);
-  outline: solid var(--incomplete-color) var(--border-width--md);
+  outline: var(--outline-width) solid var(--incomplete-color);
   &.is-active {
     color: var(--complete-color);
-    outline: dashed var(--blue) var(--border-width--md);
+    outline: var(--outline-width) dashed var(--blue);
     font-weight: var(--font-weight--semibold);
   }
   &.is-complete {

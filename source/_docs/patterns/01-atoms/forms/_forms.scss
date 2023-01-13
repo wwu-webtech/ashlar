@@ -55,8 +55,6 @@ select {
   font-size: var(--font-size--sm);
   &:focus {
     border-color: var(--input-border-color--focus);
-    outline: var(--border-width--md) dotted transparent;
-    outline-offset: var(--border-width--md);
     box-shadow: var(--shadow--soft);
   }
   &:disabled {
@@ -116,10 +114,14 @@ input[type="radio"] {
     + label {
       &:before {
         border-color: var(--input-border-color--focus);
-        outline: var(--border-width--md) dotted transparent;
-        outline-offset: var(--border-width--md);
         box-shadow: var(--shadow--soft);
       }
+    }
+  }
+  &:focus-visible {
+    + label {
+      outline: dotted var(--oline-color) var(--outline-width);
+      outline-offset: var(--oline-offset);
     }
   }
   &:checked {

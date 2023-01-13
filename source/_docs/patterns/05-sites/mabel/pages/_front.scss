@@ -8,66 +8,60 @@ Templates: Sites - MABEL - Front page
       text-align: center;
     }
   }
-
   .layout__region--top {
     padding-top: 0;
   }
-
   .browse-by-icons {
     @include breakpoint($medium) {
       max-width: 80%;
     }
+
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     margin: var(--space--md) auto;
-
     .icon-with-text {
       padding: var(--space--sm);
       border: solid var(--border-width--md) transparent;
-
       .icon-text {
         font-size: var(--icon-size--sm);
       }
-
       .material-icons {
         color: var(--dark-blue);
         font-size: var(--icon-size--lg);
       }
-
       &:hover,
       &:focus {
         transform: translate(-0.125rem, -0.125rem);
         border-color: var(--dark-blue);
-        outline: var(--border-width--md) solid transparent;
+        outline: var(--outline-width) solid transparent;
         outline-offset: var(--space--2xs);
         background: transparent;
       }
-
       &:focus {
         outline-style: dotted;
       }
     }
   }
 }
-
 .card-4col--mabel-view .view-header {
+  -ms-grid-columns: 1fr;
+  -ms-grid-rows: auto;
+
   @include breakpoint($small) {
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
     -ms-grid-rows: auto;
+
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
   }
+
   display: -ms-grid;
   display: grid;
-
   grid-column-gap: var(--space--sm);
-  -ms-grid-columns: 1fr;
-  -ms-grid-rows: auto;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
 }
-
 #block-masquerade-masquerade .description {
   color: var(--white);
 }
