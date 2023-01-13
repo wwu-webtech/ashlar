@@ -12,11 +12,11 @@ The following classes are available to put on divs containing cards. The first t
 * card-3col--flex
 * card-4col--flex 
 
-The class card--flex--section-divider can be used to break an element out of the flex container. For example, if you have a view using a card flex container, but would like headings as section dividers that span the full width of the container.
+The class full-width can be used to break an element out of the flex container. For example, if you have a view using a card flex container, but would like headings as section dividers that span the full width of the container.
 
 ```
 <div class="card-3col--flex">
-  <h2 class="card--flex--section-divider">Section Heading</h2>
+  <h2 class="full-width">Section Heading</h2>
   <div class="wwu-card"></div>
   <div class="wwu-card"></div>
   <div class="wwu-card"></div>
@@ -104,6 +104,48 @@ The class card--flex--section-divider can be used to break an element out of the
 </div>
 ```
 
+## Horizontal
+<div  class="wwu-card horizontal">    
+  <h2 class="title">
+    <a href="#">Faolan Griogarach, PhD</a>
+  </h2>
+  
+  <div class="image">
+    <img src={Placeholder} alt="leaves in water placeholder" />
+  </div>
+  
+  <div class="taxonomy-terms">
+    <span class="taxonomy-term">Professor</span>
+  </div>   
+  
+  <div class="body">
+    <p>She/her/hers</p>
+    <p><a href="mailto:faolan.griogarach@wwu.edu">faolan.griogarach@wwu.edu</a></p>
+    <p><a href="tel:360-650-6820">360-650-6820</a> <span aria-hidden="true">|</span> OM 360</p>
+  </div>    
+</div>
+
+```
+<div  class="wwu-card horizontal">    
+  <h2 class="title">
+    <a href="#">Faolan Griogarach, PhD</a>
+  </h2>
+  
+  <div class="image">
+    <img src={Placeholder} alt="leaves in water placeholder" />
+  </div>
+  
+  <div class="taxonomy-terms">
+    <span class="taxonomy-term">Professor</span>
+  </div>   
+  
+  <div class="body">
+    <p>She/her/hers</p>
+    <p><a href="mailto:faolan.griogarach@wwu.edu">faolan.griogarach@wwu.edu</a></p>
+    <p><a href="tel:360-650-6820">360-650-6820</a> <span aria-hidden="true">|</span> OM 360</p>
+  </div>    
+</div>
+```
 
 ## Color Block Title Variant
 Add the custom class **color-block-title**, and optionally **dark-blue, or light-green**, to your card block's custom class field to use this style. 

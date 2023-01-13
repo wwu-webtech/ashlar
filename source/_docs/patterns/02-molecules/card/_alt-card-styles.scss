@@ -1,13 +1,27 @@
 /*------------------------------------------------------------------------------
 Molecule: Cards - Alternate styles
 --------------------------------------------------------------------------------
-1. Color block title variant
-2. Event
-3. Event alternate
-4. Hover variant
-5. Degree variant
+1. Horizontal variant
+2. Color block title variant
+3. Event
+4. Event alternate
+5. Hover variant
+6. Degree variant
 --------------------------------------------------------------------------------
-1. Color block title
+1. Horizontal
+------------------------------------------------------------------------------*/
+.wwu-card.horizontal {
+  display: grid;
+  grid-template-areas: "image ." "image ." "image ." "image ." "image ." "image .";
+  grid-template-columns: 2fr 3fr;
+  padding: 0;
+  .image {
+    grid-area: image;
+    margin: 0;
+  }
+}
+/*------------------------------------------------------------------------------
+2. Color block title
 ------------------------------------------------------------------------------*/
 .card.color-block-title,
 .wwu-card.color-block-title {
@@ -50,7 +64,7 @@ Molecule: Cards - Alternate styles
   }
 }
 /*------------------------------------------------------------------------------
-2. Event
+3. Event
 ------------------------------------------------------------------------------*/
 .card.event,
 .wwu-card.event {
@@ -110,7 +124,7 @@ Molecule: Cards - Alternate styles
   }
 }
 /*------------------------------------------------------------------------------
-3. Event Alternate
+4. Event Alternate
 ------------------------------------------------------------------------------*/
 .card.event.alt,
 .wwu-card.event.alt {
@@ -166,7 +180,7 @@ Molecule: Cards - Alternate styles
   }
 }
 /*------------------------------------------------------------------------------
-4. Hover Variant
+5. Hover Variant
 ------------------------------------------------------------------------------*/
 .hover-card {
   --h2-size: var(--font-size--md);
@@ -311,7 +325,7 @@ Molecule: Cards - Alternate styles
   }
 }
 /*------------------------------------------------------------------------------
-5. Degree (from wwu.edu/majors individual pages)
+6. Degree (from wwu.edu/majors individual pages)
 ------------------------------------------------------------------------------*/
 .degree-card {
   display: grid;
