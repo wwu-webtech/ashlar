@@ -4,7 +4,7 @@ Atom: Page
 ------------------------------------------------------------------------------*/
 html {
   /* using "oline" for overwriteable props because csscomb doesn't handle sorting css variables well, this keeps them at the top */
-  --oline-color: magenta;
+  --oline-color: var(--dark-blue);
   --oline-offset: var(--outline-offset--outset);
   --page-background: var(--white);
 
@@ -19,6 +19,7 @@ html {
   }
 }
 html[data-theme="dark"] {
+  --oline-color: var(--white);
   --page-background: var(--black);
 }
 iframe {

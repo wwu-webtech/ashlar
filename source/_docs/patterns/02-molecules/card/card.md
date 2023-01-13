@@ -125,6 +125,22 @@ The class full-width can be used to break an element out of the flex container. 
   </div>    
 </div>
 
+<div  class="wwu-card horizontal">    
+  <h2 class="title">
+    <a href="#">Faolan Griogarach, PhD</a>
+  </h2>
+  
+  <div class="taxonomy-terms">
+    <span class="taxonomy-term">Professor</span>
+  </div>   
+  
+  <div class="body">
+    <p>She/her/hers</p>
+    <p><a href="mailto:faolan.griogarach@wwu.edu">faolan.griogarach@wwu.edu</a></p>
+    <p><a href="tel:360-650-6820">360-650-6820</a> <span aria-hidden="true">|</span> OM 360</p>
+  </div>    
+</div>
+
 ```
 <div  class="wwu-card horizontal">    
   <h2 class="title">

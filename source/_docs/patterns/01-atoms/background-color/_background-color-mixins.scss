@@ -21,6 +21,7 @@ Black, darkest blue, and dark blue are black based and share link/heading colors
   --icon-color--active: var(--dark-blue);
   --link-color: var(--blue--lighter--40);
   --link-color--visited: var(--purple--lighter--80);
+  --oline-color: var(--white);
 
   color: var(--white);
   background: var(--black);
@@ -62,6 +63,7 @@ Gray, blue, and green backgrounds are gray based.
   --link-color--visited: var(--white);
   --link-decoration-color: var(--blue--lighter--60);
   --link-decoration-color--visited: var(--purple--lighter--80);
+  --oline-color: var(--white);
 
   color: var(--white);
   background: var(--gray);
@@ -99,6 +101,7 @@ backgrounds are light gray based.
   --link-color--active: var(--white);
   --link-decoration-color: var(--blue--darker--60);
   --link-decoration-color--visited: var(--purple);
+  --oline-color: var(--dark-blue--darker--60);
 
   background: var(--gray--lighter--60);
 }
