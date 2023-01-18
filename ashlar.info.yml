@@ -7,7 +7,6 @@ libraries:
   - ashlar/ashlar-base
   - ashlar/fonts
   - ashlar/search
-  - ashlar/skip-to
   - ashlar/wwu-header
   - ashlar/wwu-footer
 libraries-override:

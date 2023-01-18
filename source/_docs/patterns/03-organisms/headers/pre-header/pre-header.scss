@@ -17,9 +17,9 @@ wwu-pre-header {
     margin-left: var(--space--2xs);
     font-size: var(--icon-size--2xs);
   }
-  a.skip-link,
-  .skip-to button {
+  a.skip-link {
     display: flex;
+    place-items: center;
     place-items: center;
     min-height: var(--touch-target--min);
     padding: var(--space--2xs);
@@ -46,73 +46,6 @@ wwu-pre-header {
     &:focus {
       outline-style: dotted;
       outline-color: var(--dark-blue--darker--60);
-    }
-  }
-  .skip-to {
-    position: relative;
-    [role="menu"] {
-      overflow-y: scroll;
-      max-height: calc(100vh * 0.75);
-      padding: var(--space--2xs);
-      border: var(--border-width--lg) solid transparent;
-      border-radius: 0;
-      background-color: var(--black);
-    }
-    [role="separator"] {
-      margin: 0;
-      padding: var(--space--2xs);
-      color: var(--white);
-      border: var(--border-width--sm) solid transparent;
-      background-color: transparent;
-    }
-    [role="menuitem"] {
-      overflow-y: unset;
-      padding: 0;
-      cursor: pointer;
-      color: var(--white);
-      border: var(--border-width--sm) solid transparent;
-      background-color: var(--gray--darker--40);
-      &:hover,
-      &:focus,
-      &:active {
-        padding: 0;
-        border: none;
-        outline: solid var(--border-width--md);
-        outline-offset: calc(-1 * var(--border-width--md));
-        @media (forced-colors: active) {
-          outline-color: CanvasText;
-        }
-        .label {
-          font-weight: var(--font-weight--semibold);
-        }
-      }
-      &:focus {
-        outline-style: dotted;
-      }
-      &.last {
-        border-radius: 0;
-      }
-      .level,
-      .label {
-        padding: var(--space--2xs);
-        color: var(--white);
-        background-color: transparent;
-      }
-      .level {
-        padding-right: 0;
-      }
-      .label {
-        overflow: initial;
-        white-space: initial;
-      }
-    }
-    button {
-      border-radius: 0;
-      &:focus {
-        padding: var(--space--2xs);
-        outline: dotted var(--border-width--md);
-        outline-offset: calc(-1 * var(--border-width--lg));
-      }
     }
   }
   button.toggle-settings {

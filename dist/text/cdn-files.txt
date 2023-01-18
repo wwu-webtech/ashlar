@@ -26,11 +26,9 @@ fonts/montserrat-700.woff2
 fonts/montserrat-900.woff2
 fonts/pt-serif-400.woff2
 fonts/pt-serif-700.woff2
-dist/js/skipto-config.js
 js/logo.js
 js/pre-header.js
 js/search.js
-js/skipto.min.js
 js/wwu-footer.js
 js/wwu-header.js
 css/components/accordion.css
