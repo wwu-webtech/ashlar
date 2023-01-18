@@ -21,8 +21,8 @@ wwu-accordion,
     width: 100%;
     margin-bottom: calc(-1 * var(--border-width--md));
     cursor: default;
-    color: inherit;
-    border: solid var(--border-width--md) var(--h3-color);
+    color: var(--link-color);
+    border: solid var(--border-width--md) var(--link-color);
     border-radius: 0;
     background: transparent;
     box-shadow: none;
@@ -30,9 +30,11 @@ wwu-accordion,
       font-size: var(--icon-size--sm);
     }
     &:active,
-    &:focus {
-      outline-offset: calc(-1 * var(--border-width--lg));
-      background-color: var(--h3-color);
+    &:focus,
+    &:hover {
+      color: var(--link-color--active);
+      outline-offset: var(--outline-offset--inset);
+      background: var(--link-background);
     }
   }
   .title {

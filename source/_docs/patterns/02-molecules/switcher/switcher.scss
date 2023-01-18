@@ -6,21 +6,21 @@ Molecule: Switcher
 @import "../../00-utilities/breakpoints.scss";
 wwu-switcher {
   button {
-    --button-background-color: transparent;
-    --button-background-color--active: magenta;
-    --button-color: var(--h3-color);
-    --button-color--active: var(--white);
-
     flex: 1 1 0;
     width: 100%;
     margin: 0;
     cursor: default;
-    border: solid var(--border-width--md) var(--h3-color);
+    color: var(--link-color);
+    border: solid var(--border-width--md) var(--link-color);
     border-radius: 0;
+    background: transparent;
     box-shadow: none;
     &:active,
-    &:focus {
-      outline-offset: calc(-1 * var(--border-width--lg));
+    &:focus,
+    &:hover {
+      color: var(--link-color--active);
+      outline-offset: var(--outline-offset--inset);
+      background: var(--link-background);
     }
     &.active {
       font-weight: var(--font-weight--semibold);
@@ -74,13 +74,3 @@ wwu-switcher {
     }
   }
 }
-
-/* 
-.layout-builder--layout {
-  .content-switcher-container {
-    .content {
-      display: block;
-    }
-  }
-}
-*/

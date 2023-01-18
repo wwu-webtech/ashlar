@@ -1,5 +1,5 @@
 # Details
-Docusaurus overwrites the details element with a react component. Because of this, this element may appear a little broken here, while it displays nicely in other environments.
+<p><span class="material-icons" aria-hidden="true">warning</span> Docusaurus overwrites the details element with a react component. Because of this, this element may appear a little broken here, while it displays nicely in other environments.</p>
 
 <details>
   <summary>Here's some summary text</summary>
