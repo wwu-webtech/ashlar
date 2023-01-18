@@ -35,6 +35,11 @@ input[type="submit"] {
     background: var(--button-background-color--active);
     box-shadow: var(--shadow--soft--hover);
   }
+  &:active {
+    @media (forced-colors: active) {
+      outline: var(--outline-width) solid LinkText;
+    }
+  }
   &.warning {
     --button-background-color: var(--yellow);
     --button-background-color--active: var(--yellow--lighter--40);

@@ -2,6 +2,8 @@
 
 The styles show here are for true HTML buttons, which use either the &lt;button&gt; or &lt;input type="submit"&gt; HTML tags. They are typically used for things like form submissions, or to trigger some kind of action on a page. These styles are not to be used for [Call to Action Links](/patterns/atoms/links#call-to-action-links).
 
+<p><span class="material-icons" aria-hidden="true">warning</span> Docusaurus A11y Bug: When using forced colors, active (clicked) buttons will lose their outline. This only happens inside the docs.</p>
+
 <button>Button</button>
 <button class="alt">With .alt class</button>
 <button class="warning">With .warning class</button>

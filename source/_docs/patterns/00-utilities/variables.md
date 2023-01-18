@@ -26,28 +26,28 @@ Media queries don't allow you to use CSS variables, so they are only available a
     --gray: #667986;
     --gray--lighter--20: #8394a0;
     --gray--lighter--40: #a2afb8;
-    --gray--lighter--60: #c1cad0; // replaces $light-gray
-    --gray--lighter--80: #e0e4e7; // replaces $lightest-gray
+    --gray--lighter--60: #c1cad0; 
+    --gray--lighter--80: #e0e4e7; 
     --gray--lighter--90: #f0f2f3;
     --white: #fff;
 
     --dark-blue--darker--80: #000d1b;
     --dark-blue--darker--60: #001936;
     --dark-blue--darker--40: #002651;
-    --dark-blue--darker--20: #00326c; // replaces $darkest-blue
+    --dark-blue--darker--20: #00326c; 
     --dark-blue: #003f87;
     --dark-blue--lighter--20: #0062d2;
     --dark-blue--lighter--40: #1e87ff;
-    --dark-blue--lighter--60: #69afff; // replaces $light-bg-blue
-    --dark-blue--lighter--80: #b4d7ff; // replaces $lightest-bg-blue
+    --dark-blue--lighter--60: #69afff; 
+    --dark-blue--lighter--80: #b4d7ff; 
 
     --blue--darker--80: #001828;
     --blue--darker--60: #003150;
-    --blue--darker--40: #004978; // replaces $link-blue--darker
-    --blue--darker--20: #0062a0; // replaces $link-blue
+    --blue--darker--40: #004978; 
+    --blue--darker--20: #0062a0; 
     --blue: #007ac8;
     --blue--lighter--20: #079eff;
-    --blue--lighter--40: #45b6ff; // replaces $light-blue
+    --blue--lighter--40: #45b6ff; 
     --blue--lighter--60: #83cfff;
     --blue--lighter--80: #c1e7ff;
 
@@ -67,7 +67,7 @@ Media queries don't allow you to use CSS variables, so they are only available a
     --green--darker--20: #3b6818;
     --green: #4a821e;
     --green--lighter--20: #6e9b4b;
-    --green--lighter--40: #92b478; // possibly replaces $dark-green
+    --green--lighter--40: #92b478;
     --green--lighter--60: #b7cda5;
     --green--lighter--80: #dbe6d2;
 
@@ -77,7 +77,7 @@ Media queries don't allow you to use CSS variables, so they are only available a
     --light-green--darker--20: #95ad08;
     --light-green: #bad80a;
     --light-green--lighter--20: #c8e03b;
-    --light-green--lighter--40: #d6e86c; //replaces $lightest-green
+    --light-green--lighter--40: #d6e86c; 
     --light-green--lighter--60: #e3ef9d;
     --light-green--lighter--80: #f1f7ce;
 
@@ -92,6 +92,15 @@ Media queries don't allow you to use CSS variables, so they are only available a
     --purple--lighter--40: #c26fcb;
     --purple--lighter--20: #ae3fb9;
     --purple: #9a0fa8;
+
+    --table-blue: #edf8ff;
+    --table-blue--darker--10: #daecf8;
+    --table-blue--darker--15: #c5dff0;
+    --table-blue--darker--5: #e4f2fb;
+    --table-gray: #fdfdfd;
+    --table-gray--darker--10: #eeeeee;
+    --table-gray--darker--15: #e4e4e4;
+    --table-gray--darker--5: #f5f5f6;
 
 ### RGB Values
 
@@ -217,7 +226,7 @@ Mostly based on major second scale.
     --space--3xl: 4rem;
 
 ### Content areas
-    --content-area-max-width: 60rem; // replaces $max-content-width
+    --content-area-max-width: 60rem; 
     --content-area-max-width--sm: 40rem;
 
 ### Content area grids 
@@ -226,9 +235,9 @@ Mostly based on major second scale.
 
 ## Decoration
 ### Borders and outlines
-    --border-width--sm: 0.0625rem; // replaces $border-width--thinner
-    --border-width--md: 0.125rem; // replaces $border-width
-    --border-width--lg: 0.1875rem; // replaces $border-width--thicker
+    --border-width--sm: 0.0625rem; 
+    --border-width--md: 0.125rem; 
+    --border-width--lg: 0.1875rem; 
     --border-radius--roundest: 6.25rem;
     --border-radius--rounder: 0.625rem;
     --border-radius--round: 0.125rem;
@@ -248,11 +257,11 @@ Mostly based on major second scale.
     --icon-size--2xs: 1rem;
     --icon-size--xs: 1.125rem;
     --icon-size--sm: 1.5rem;
-    --icon-size--md: 2.25rem; // replaces $icon-size
+    --icon-size--md: 2.25rem; 
     --icon-size--lg: 3rem;
 
 ### Toggles 
-    --toggle-size--sm: 3rem; //replaces $toggle-size
+    --toggle-size--sm: 3rem; 
     --toggle-size--md: 3.5rem;
     --toggle-size--lg: 4.5rem;
     --toggle-size--xl: 5.5rem;
