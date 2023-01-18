@@ -98,12 +98,12 @@ if (
       </li>
     </ul>
 
-    <table class="light-blue auto-layout align-top">
+    <table class="blue auto-layout align-top">
       <caption>Custom classes applied to this table: light-blue fixed align-top</caption>
       <tr>
-          <th id="t1-row-1-col-1" scope="col"><a>Row Group</a></th>
+          <th id="t1-row-1-col-1" scope="col"><a href="#">Row Group</a></th>
           <th id="t1-row-1-col-2" scope="col">Col Header</th>
-          <th id="t1-row-1-col-3" colspan="2" scope="col"><a>Col Group</a></th>
+          <th id="t1-row-1-col-3" colspan="2" scope="col"><a href="#">Col Group</a></th>
           <th id="t1-row-1-col-4" colspan="3" scope="col">Col Group</th>
       </tr>
       <tr>

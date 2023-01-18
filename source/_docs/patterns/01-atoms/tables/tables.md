@@ -202,9 +202,9 @@
 <table>
   <caption>An example of a complex table, with grouped headers</caption>
   <tr>
-    <th id="row-1-col-1" scope="col"><a>Row Group</a></th>
+    <th id="row-1-col-1" scope="col"><a href="#">Row Group</a></th>
     <th id="row-1-col-2" scope="col">Col Header</th>
-    <th id="row-1-col-3" colspan="2" scope="col"><a>Col Group</a></th>
+    <th id="row-1-col-3" colspan="2" scope="col"><a href="#">Col Group</a></th>
     <th id="row-1-col-4" colspan="3" scope="col">Col Group</th>
   </tr>
   <tr>
@@ -262,9 +262,9 @@
     <table>
     <caption>An example of a complex table, with grouped headers</caption>
     <tr>
-        <th id="row-1-col-1" scope="col"><a>Row Group</a></th>
+        <th id="row-1-col-1" scope="col"><a href="#">Row Group</a></th>
         <th id="row-1-col-2" scope="col">Col Header</th>
-        <th id="row-1-col-3" colspan="2" scope="col"><a>Col Group</a></th>
+        <th id="row-1-col-3" colspan="2" scope="col"><a href="#">Col Group</a></th>
         <th id="row-1-col-4" colspan="3" scope="col">Col Group</th>
     </tr>
     <tr>
@@ -320,12 +320,12 @@
     </table>
 
 ## Custom Classes
-<table class="light-blue auto-layout align-top">
-  <caption>Custom classes applied to this table: light-blue fixed align-top</caption>
+<table class="blue auto-layout align-top">
+  <caption>Custom classes applied to this table: blue fixed align-top</caption>
   <tr>
-    <th id="t1-row-1-col-1" scope="col"><a>Row Group</a></th>
+    <th id="t1-row-1-col-1" scope="col"><a href="#">Row Group</a></th>
     <th id="t1-row-1-col-2" scope="col">Col Header</th>
-    <th id="t1-row-1-col-3" colspan="2" scope="col"><a>Col Group</a></th>
+    <th id="t1-row-1-col-3" colspan="2" scope="col"><a href="#">Col Group</a></th>
     <th id="t1-row-1-col-4" colspan="3" scope="col">Col Group</th>
   </tr>
   <tr>
@@ -380,12 +380,12 @@
   </tr>
 </table>
 
-    <table class="light-blue auto-layout align-top">
-    <caption>Custom classes applied to this table: light-blue fixed align-top</caption>
+    <table class="blue auto-layout align-top">
+    <caption>Custom classes applied to this table: blue fixed align-top</caption>
     <tr>
-        <th id="t1-row-1-col-1" scope="col"><a>Row Group</a></th>
+        <th id="t1-row-1-col-1" scope="col"><a href="#">Row Group</a></th>
         <th id="t1-row-1-col-2" scope="col">Col Header</th>
-        <th id="t1-row-1-col-3" colspan="2" scope="col"><a>Col Group</a></th>
+        <th id="t1-row-1-col-3" colspan="2" scope="col"><a href="#">Col Group</a></th>
         <th id="t1-row-1-col-4" colspan="3" scope="col">Col Group</th>
     </tr>
     <tr>
@@ -440,12 +440,12 @@
     </tr>
     </table>
 
-<table class="lightest-gray align-bottom font-size--smaller">
-  <caption>Custom classes applied to this table: lightest-gray align-bottom font-size--smaller</caption>
+<table class="align-bottom font-size--smaller">
+  <caption>Custom classes applied to this table: align-bottom font-size--smaller</caption>
   <tr>
-    <th id="t2-row-1-col-1" scope="col"><a>Row Group</a></th>
+    <th id="t2-row-1-col-1" scope="col"><a href="#">Row Group</a></th>
     <th id="t2-row-1-col-2" scope="col">Col Header</th>
-    <th id="t2-row-1-col-3" colspan="2" scope="col"><a>Col Group</a></th>
+    <th id="t2-row-1-col-3" colspan="2" scope="col"><a href="#">Col Group</a></th>
     <th id="t2-row-1-col-4" colspan="3" scope="col">Col Group</th>
   </tr>
   <tr>
@@ -500,12 +500,12 @@
   </tr>
 </table>
 
-    <table class="lightest-gray align-bottom font-size--smaller">
-    <caption>Custom classes applied to this table: lightest-gray align-bottom font-size--smaller</caption>
+    <table class="align-bottom font-size--smaller">
+    <caption>Custom classes applied to this table: align-bottom font-size--smaller</caption>
     <tr>
-        <th id="t2-row-1-col-1" scope="col"><a>Row Group</a></th>
+        <th id="t2-row-1-col-1" scope="col"><a href="#">Row Group</a></th>
         <th id="t2-row-1-col-2" scope="col">Col Header</th>
-        <th id="t2-row-1-col-3" colspan="2" scope="col"><a>Col Group</a></th>
+        <th id="t2-row-1-col-3" colspan="2" scope="col"><a href="#">Col Group</a></th>
         <th id="t2-row-1-col-4" colspan="3" scope="col">Col Group</th>
     </tr>
     <tr>

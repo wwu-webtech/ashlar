@@ -9,65 +9,27 @@ Atom: Tables
 /*------------------------------------------------------------------------------
 1. Base Styles
 ------------------------------------------------------------------------------*/
-@mixin color-table($text-color, $light-rows, $dark-rows, $light-headers, $dark-headers) {
-  table,
-  tr,
-  td,
-  th {
-    color: $text-color;
-    border: solid 1px $light-rows;
-  }
-  tr {
-    &:nth-of-type(odd) {
-      background-color: $light-rows;
-    }
-    &:nth-of-type(even) {
-      background-color: $dark-rows;
-    }
-  }
-  th {
-    background-color: $light-headers;
-    &[colspan],
-    &[rowspan] {
-      background-color: $dark-headers;
-    }
-    &:after {
-      background-color: $light-headers;
-    }
-  }
+:root {
+  --table-headers--dark: var(--table-gray--darker--15);
+  --table-headers--light: var(--table-gray--darker--10);
+  --table-rows--dark: var(--table-gray--darker--5);
+  --table-rows--light: var(--table-gray);
+  --table-text: var(--black);
 }
 table {
-  --table-blue: #cce4f4;
-  --table-blue--darker--10: #b1cfe6;
-  --table-blue--darker--15: #99bbd9;
-  --table-blue--darker--5: #e6f2fa;
-  --table-gray: #f5f6f7;
-  --table-gray--darker--10: #dcddde;
-  --table-gray--darker--15: #d0d1d2;
-  --table-gray--darker--20: #c4c5c6;
-  --table-gray--darker--25: #b8b8b9;
-  --table-gray--darker--5: #e9e9ea;
-  --table-gray--darker--50: #7a7b7b;
-  --table-gray--darker--55: #6e6f6f;
-  --table-gray--darker--60: #626263;
-  --table-gray--darker--65: #565656;
-  --table-gray--darker--70: #49494a;
-  --table-gray--darker--75: #3d3e3e;
-
-  @include light-gray-bg;
-  @include color-table(
-  var(--black),
-  var(--table-gray),
-  var(--table-gray--darker--5),
-  var(--table-gray--darker--10),
-  var(--table-gray--darker--15)
-  );
+  --link-background: var(--gradient--vertical--light-blue);
+  --link-color: var(--blue--darker--20);
+  --link-color--active: var(--dark-blue);
+  --link-color--visited: var(--purple);
+  --link-decoration-color: var(--blue--lighter--60);
+  --link-decoration-color--visited: var(--purple--lighter--60);
 
   grid-template-columns: auto;
   width: 100%;
   margin: var(--space--md) 0;
   table-layout: auto;
   word-wrap: break-word;
+  color: var(--table-text);
   background: transparent;
   &.fixed {
     table-layout: auto;
@@ -75,41 +37,50 @@ table {
   a {
     line-height: 1.2rem;
   }
+  tr,
+  td,
+  th {
+    vertical-align: middle;
+    border: solid 1px var(--table-headers--dark);
+  }
+  tr {
+    &:nth-of-type(odd) {
+      background-color: var(--table-rows--light);
+    }
+    &:nth-of-type(even) {
+      background-color: var(--table-rows--dark);
+    }
+  }
+  td {
+    padding: var(--space--xs);
+    font-size: var(--font-size--sm);
+    line-height: 1.45rem;
+  }
+  th {
+    padding: var(--space--xs);
+    text-align: left;
+    background-color: var(--table-headers--light);
+    font-size: var(--font-size--sm);
+    &[colspan],
+    &[rowspan] {
+      position: relative;
+    }
+    &[colspan],
+    &[rowspan] {
+      background-color: var(--table-headers--dark);
+    }
+  }
+  caption {
+    padding: var(--space--xs) 0;
+    background-color: var(--table-headers--dark);
+    font-size: var(--font-size--sm);
+    font-weight: var(--font-weight--bold);
+  }
 }
 .fixed {
   table {
     table-layout: fixed;
   }
-}
-caption {
-  padding-bottom: var(--space--md);
-  font-size: var(--font-size--sm);
-  font-weight: var(--font-weight--bold);
-}
-tr,
-td,
-th {
-  vertical-align: middle;
-}
-th {
-  padding: var(--space--xs);
-  text-align: left;
-  font-size: var(--font-size--sm);
-  &[colspan],
-  &[rowspan] {
-    position: relative;
-    &:after {
-      position: absolute;
-      z-index: 1;
-      height: 100%;
-      content: "";
-    }
-  }
-}
-td {
-  padding: var(--space--xs);
-  font-size: var(--font-size--sm);
-  line-height: 1.45rem;
 }
 /*------------------------------------------------------------------------------
 2. Responsive table container
@@ -138,23 +109,13 @@ td {
 /*------------------------------------------------------------------------------
 3. Alternates
 ------------------------------------------------------------------------------*/
-.light-blue {
-  @include color-table(
-  var(--black),
-  var(--table-blue),
-  var(--table-blue--darker--5),
-  var(--table-blue--darker--10),
-  var(--table-blue--darker--15)
-  );
-}
-.lightest-gray {
-  @include color-table(
-  var(--black),
-  var(--white),
-  var(--table-gray),
-  var(--table-gray--darker--5),
-  var(--table-gray--darker--10)
-  );
+table {
+  &.blue {
+    --table-headers--dark: var(--table-blue--darker--15);
+    --table-headers--light: var(--table-blue--darker--10);
+    --table-rows--dark: var(--table-blue--darker--5);
+    --table-rows--light: var(--table-blue);
+  }
 }
 .align-top {
   td,
@@ -183,32 +144,22 @@ td {
 ------------------------------------------------------------------------------*/
 [data-theme="dark"] {
   table {
-    @include gray-bg;
-    @include color-table(
-    var(--white),
-    var(--table-gray--darker--50),
-    var(--table-gray--darker--55),
-    var(--table-gray--darker--60),
-    var(--table-gray--darker--65));
-    &.lightest-gray {
-      @include gray-bg;
-      @include color-table(
-      var(--white),
-      var(--table-gray--darker--50),
-      var(--table-gray--darker--55),
-      var(--table-gray--darker--60),
-      var(--table-gray--darker--65)
-      );
-    }
-    &.light-blue {
-      @include blue-bg;
-      @include color-table(
-      var(--white),
-      var(--blue),
-      var(--blue--darker--20),
-      var(--blue--darker--40),
-      var(--blue--darker--60)
-      );
+    --link-background: var(--gradient--vertical--light-blue);
+    --link-color: var(--white);
+    --link-color--active: var(--dark-blue);
+    --link-color--visited: var(--white);
+    --link-decoration-color: var(--blue--lighter--60);
+    --link-decoration-color--visited: var(--purple--lighter--80);
+    --table-headers--dark: var(--gray--darker--20);
+    --table-headers--light: var(--gray--darker--40);
+    --table-rows--dark: var(--gray--darker--60);
+    --table-rows--light: var(--gray--darker--80);
+    --table-text: var(--white);
+    &.blue {
+      --table-headers--dark: var(--blue--darker--20);
+      --table-headers--light: var(--blue--darker--40);
+      --table-rows--dark: var(--blue--darker--60);
+      --table-rows--light: var(--blue--darker--80);
     }
   }
 }

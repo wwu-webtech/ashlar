@@ -172,14 +172,5 @@ Atom: Background Colors
         }
       }
     }
-    table {
-      a {
-        &:hover,
-        &:focus,
-        &:active {
-          background-image: none;
-        }
-      }
-    }
   }
 }
