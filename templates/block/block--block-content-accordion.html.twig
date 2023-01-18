@@ -30,7 +30,6 @@
   set classes = [
     'block',
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
-    block_content.field_background_color.0.value,
     block_content.field_font_size.0.value,
     block_content.field_heading_style.0.value,
     block_content.field_custom_classes.0.value
@@ -38,17 +37,16 @@
 %}
 {% set attributes = attributes.addClass(classes) %}
 {% set title_attributes = title_attributes.addClass('title', block_content.field_heading_font.0.value ) %}
+{% set component_attributes = create_attribute() %}
 {% block template %}
   <div{{ attributes }}>
     {% block title %}
       {% include "@atoms/label/label-customized.twig" %}
     {% endblock %}
     
-    <wwu-accordion>
-    {% block content %}   
-      {% for item in items %}
-        {% include "@molecules/accordion/accordion-items.html.twig" %}
-      {% endfor %}
+    <wwu-accordion{{ component_attributes.addClass(block_content.field_background_color.0.value) }}>
+    {% block content %}
+      {{ content }}
     {% endblock %}
     </wwu-accordion>
   </div>

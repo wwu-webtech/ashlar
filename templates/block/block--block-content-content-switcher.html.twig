@@ -30,7 +30,6 @@
   set classes = [
     'block',
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
-    block_content.field_background_color.0.value,
     block_content.field_font_size.0.value,
     block_content.field_heading_style.0.value,
     block_content.field_custom_classes.0.value
@@ -38,13 +37,14 @@
 %}
 {% set attributes = attributes.addClass(classes) %}
 {% set title_attributes = title_attributes.addClass('block__title', block_content.field_heading_font.0.value ) %}
+{% set component_attributes = create_attribute() %}
 {% block template %}
   <div{{ attributes }}>
     {% block title %}
       {% include "@atoms/label/label-customized.twig" %}
     {% endblock %}
 
-    <wwu-switcher label="{{ configuration.label }}">
+    <wwu-switcher label="{{ configuration.label }}" {{ component_attributes.addClass(block_content.field_background_color.0.value) }}>
     {% block content %}
       {{ content }}
     {% endblock %}
