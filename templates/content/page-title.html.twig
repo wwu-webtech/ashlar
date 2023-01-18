@@ -14,4 +14,9 @@
 #}
 {% set title %}{{ title }}{% endset %}
 {% set title_attributes = title_attributes.addClass('page-title') %}
-{% include "@molecules/text/page-title/page-title-template.html.twig" %}
+{{ title_prefix }}
+{% if title %}
+  <h1{{ title_attributes }}>{{ title }}</h1>
+{% endif %}
+{{ title_suffix }}
+
