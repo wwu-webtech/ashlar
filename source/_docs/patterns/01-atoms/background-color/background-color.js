@@ -5,15 +5,15 @@ if (
   const background_color_template = document.createElement("template");
   background_color_template.innerHTML = `
   <div class="bg-wrapper standard-padding">
-    <h1>H1 Heading <a href="#">and link</a></h1>
-    <h2>H2 Heading <a href="#">and link</a></h2>
-    <h3>H3 Heading <a href="#">and link</a></h3>
-    <h4>H4 Heading <a href="#">and link</a></h4>
-    <h5>H5 Heading <a href="#">and link</a></h5>
+    <h1>H1 Heading <a href="https://wwu.edu/#nowhere">and link</a></h1>
+    <h2>H2 Heading <a href="https://wwu.edu/#nowhere">and link</a></h2>
+    <h3>H3 Heading <a href="https://wwu.edu/#nowhere">and link</a></h3>
+    <h4>H4 Heading <a href="https://wwu.edu/#nowhere">and link</a></h4>
+    <h5>H5 Heading <a href="https://wwu.edu/#nowhere">and link</a></h5>
 
     <p class="tagline">Tagline Text</p>
 
-    <p>Regular Text with <a href="#">a regular link</a> and a <a href="https://wwu.edu/">visited link</a></p>
+    <p>Regular Text with <a href="https://wwu.edu/#nowhere">a regular link</a> and a <a href="https://wwu.edu/">visited link</a></p>
 
     <blockquote>Blockquote</blockquote>
 
@@ -22,21 +22,21 @@ if (
     <blockquote class="dark-blue-bg">Blockquote</blockquote>
 
     <ul>
-        <li><a href="#">Regular</a></li>
-        <li><a href="#">list with this</a></li>
-        <li>background, and a <a href="#">bunch of links</a></li>
+        <li><a href="https://wwu.edu/#nowhere">Regular</a></li>
+        <li><a href="https://wwu.edu/#nowhere">list with this</a></li>
+        <li>background, and a <a href="https://wwu.edu/#nowhere">bunch of links</a></li>
     </ul>
 
     <div class="block--beyond-basics-block">
         <ul class="menu">
-        <li><a href="#">List of links</a></li>
-        <li><a href="#">with of links</a></li>
-        <li><a href="#">.menu class of links</a></li>
+        <li><a href="https://wwu.edu/#nowhere">List of links</a></li>
+        <li><a href="https://wwu.edu/#nowhere">with of links</a></li>
+        <li><a href="https://wwu.edu/#nowhere">.menu class of links</a></li>
         </ul>
     </div>
 
     <div class="ctas">
-        <a class="cta" href="#">Call to Action</a>
+        <a class="cta" href="https://wwu.edu/#nowhere">Call to Action</a>
         <a class="cta" href="https://wwu.edu/">Visited CTA</a>
     </div>
 
@@ -101,9 +101,9 @@ if (
     <table class="blue auto-layout align-top">
       <caption>Custom classes applied to this table: light-blue fixed align-top</caption>
       <tr>
-          <th id="t1-row-1-col-1" scope="col"><a href="#">Row Group</a></th>
+          <th id="t1-row-1-col-1" scope="col"><a href="https://wwu.edu/#nowhere">Row Group</a></th>
           <th id="t1-row-1-col-2" scope="col">Col Header</th>
-          <th id="t1-row-1-col-3" colspan="2" scope="col"><a href="#">Col Group</a></th>
+          <th id="t1-row-1-col-3" colspan="2" scope="col"><a href="https://wwu.edu/#nowhere">Col Group</a></th>
           <th id="t1-row-1-col-4" colspan="3" scope="col">Col Group</th>
       </tr>
       <tr>
@@ -117,8 +117,8 @@ if (
       </tr>
       <tr>
           <th id="t1-row-3-col-2" scope="row">Row Header</th>
-          <td headers="t1-row-1-col-3 t1-row-2-col-1 t1-row-3-col-2 t1-row-2-col-3"><a href="#">Link</a></td>
-          <td headers="t1-row-1-col-3 t1-row-2-col-1 t1-row-3-col-2 t1-row-2-col-4"><a href="#">Link</a></td>
+          <td headers="t1-row-1-col-3 t1-row-2-col-1 t1-row-3-col-2 t1-row-2-col-3"><a href="https://wwu.edu/#nowhere">Link</a></td>
+          <td headers="t1-row-1-col-3 t1-row-2-col-1 t1-row-3-col-2 t1-row-2-col-4"><a href="https://wwu.edu/#nowhere">Link</a></td>
           <td headers="t1-row-1-col-4 t1-row-2-col-1 t1-row-3-col-2 t1-row-2-col-5">Many <br/>Lines <br/>of <br/>Data</td>
           <td headers="t1-row-1-col-4 t1-row-2-col-1 t1-row-3-col-2 t1-row-2-col-6">Data</td>
           <td headers="t1-row-1-col-4 t1-row-2-col-1 t1-row-3-col-2 t1-row-2-col-7">Data</td>

@@ -20,7 +20,6 @@ Molecule: Text - Timeline
     text-align: right;
     .timeline-heading {
       margin-right: calc(-1 * var(--space--xl));
-      color: var(--white);
     }
     .timeline-item--highlighted {
       margin-right: calc(-1 * var(--space--xl));
@@ -34,7 +33,6 @@ Molecule: Text - Timeline
     justify-self: flex-end;
     .timeline-heading {
       margin-left: calc(-1 * var(--space--xl));
-      color: var(--white);
     }
     .timeline-item--highlighted {
       margin-right: var(--space--3xl);
@@ -43,10 +41,11 @@ Molecule: Text - Timeline
     }
   }
   .timeline-heading {
+    @include blue-bg;
+
     margin-top: 0;
     padding: var(--space--sm);
     border: var(--border-width--md) solid transparent;
-    background-color: var(--blue);
   }
   .timeline-item--highlighted {
     margin-bottom: var(--space--sm);
