@@ -1,9 +1,0 @@
-attributes:
-  Attribute():
-    class:
-    - card-list
-label:
-cards:
-- molecules-card-html-event
-- molecules-card-html-event
-- molecules-card-html-event

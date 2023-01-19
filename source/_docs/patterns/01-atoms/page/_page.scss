@@ -25,3 +25,23 @@ html[data-theme="dark"] {
 iframe {
   border: 0;
 }
+.page-content {
+  @include breakpoint($large) {
+    grid-template-columns: var(--grid-columns--lg);
+  }
+
+  display: grid;
+  grid-template-areas: " . skip_to_content . "
+  " . content         . ";
+  grid-template-columns: var(--grid-columns--sm);
+  grid-template-rows: auto;
+  #main-content {
+    grid-area: skip_to_content;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  .region-wrapper {
+    grid-area: content;
+  }
+}
