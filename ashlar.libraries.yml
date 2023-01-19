@@ -125,12 +125,6 @@ menu-extras:
     build/js/menu-extras.js: {}
   dependencies:
     - core/jquery
-page-title:
-  version: 1.x
-  js:
-    build/js/page-title.js: {}
-  dependencies:
-    - core/jquery
 profile:
   version: 1.x
   js:

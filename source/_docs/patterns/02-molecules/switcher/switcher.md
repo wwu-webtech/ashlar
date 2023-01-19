@@ -27,21 +27,6 @@ import WWUSwitcher from "./switcher.js"
 </wwu-switcher>
 ```
 
-
-<wwu-switcher label="Accessible Label" class="blue-bg">
-    <wwu-switcher-item label="Content 1">
-        <p>We have an infinite amount to learn both from nature and from each other. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next 10.</p>
-    </wwu-switcher-item>
-    <wwu-switcher-item label="Content 2">
-        <p>If you could see the earth illuminated when you were in a place as dark as night, it would look to you more splendid than the moon. Curious that we spend more time congratulating people who have succeeded than encouraging people who have not.</p>
-    </wwu-switcher-item>
-    <wwu-switcher-item label="Content 3">
-        <p>Astronomy compels the soul to look upward, and leads us from this world to another.</p>
-    </wwu-switcher-item>
-</wwu-switcher>
-
-
-
 ## Column Layout
 <div class="column-layout">
 <wwu-switcher label="Accessible Label">
