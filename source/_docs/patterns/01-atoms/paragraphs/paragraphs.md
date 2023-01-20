@@ -4,28 +4,28 @@
 
 <h3>Taglines</h3>
 
-<p class="tagline">A tagline, or subhead, uses the .tagline to make it look like it goes with whatever heading it follows.</p>
+<p className="tagline">A tagline, or subhead, uses the .tagline to make it look like it goes with whatever heading it follows.</p>
 
 <h1>Heading level 1</h1>
-<p class="tagline">This one follows an H1</p>
+<p className="tagline">This one follows an H1</p>
 <p>This is regular text, This is regular text, This is regular text, This is regular text</p>
 
 <h2>Heading level 2</h2>
-<p class="tagline">This one follows an H2</p>
+<p className="tagline">This one follows an H2</p>
 <p>This is regular text, This is regular text, This is regular text, This is regular text</p>
 
 <h3>Heading level 3</h3>
-<p class="tagline">This one follows an H3</p>
+<p className="tagline">This one follows an H3</p>
 <p>This is regular text, This is regular text, This is regular text, This is regular text</p>
 
 <h4>Heading level 4</h4>
-<p class="tagline">This one follows an H4</p>
+<p className="tagline">This one follows an H4</p>
 <p>This is regular text, This is regular text, This is regular text, This is regular text</p>
 
 <h5>Heading level 5</h5>
-<p class="tagline">This one follows an H5</p>
+<p className="tagline">This one follows an H5</p>
 <p>This is regular text, This is regular text, This is regular text, This is regular text</p>
 
 <h6>Heading level 6</h6>
-<p class="tagline">This one follows an H6</p>
+<p className="tagline">This one follows an H6</p>
 <p>This is regular text, This is regular text, This is regular text, This is regular text</p>

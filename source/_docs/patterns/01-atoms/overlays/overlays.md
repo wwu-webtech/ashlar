@@ -6,9 +6,9 @@ Overlays can be used to shade a block. They're typically used in conjunction wit
 
 ## Blue
 
-<div class="block--banner blue-bg blue-overlay min-height--25vh">
- <div class="body"> <p>This block has a blue overlay.</p></div>
-  <div class="background-image">
+<div className="block--banner blue-bg blue-overlay min-height--25vh">
+ <div className="body"> <p>This block has a blue overlay.</p></div>
+  <div className="background-image">
     <img src={CampusImage} alt="aerial view of campus"/>
   </div>
 </div>
@@ -22,9 +22,9 @@ Overlays can be used to shade a block. They're typically used in conjunction wit
 
 ## Dark-Blue
 
-<div class="block dark-blue-bg dark-blue-overlay min-height--25vh">
-  <div class="body"><p>This block has a dark blue overlay.</p></div>
-  <div class="background-image">
+<div className="block dark-blue-bg dark-blue-overlay min-height--25vh">
+  <div className="body"><p>This block has a dark blue overlay.</p></div>
+  <div className="background-image">
     <img src={CampusImage} alt="aerial view of campus"/>
   </div>
 </div>
@@ -38,9 +38,9 @@ Overlays can be used to shade a block. They're typically used in conjunction wit
 
 ## Black
 
-<div class="block black-bg black-overlay min-height--25vh">
-  <div class="body"><p>This block has a black overlay.</p></div>
-  <div class="background-image">
+<div className="block black-bg black-overlay min-height--25vh">
+  <div className="body"><p>This block has a black overlay.</p></div>
+  <div className="background-image">
     <img src={CampusImage} alt="aerial view of campus"/>
   </div>
 </div>
@@ -54,9 +54,9 @@ Overlays can be used to shade a block. They're typically used in conjunction wit
 
 ## Gray
 
-<div class="block gray-bg gray-overlay min-height--25vh">
-  <div class="body"><p>This block has a gray overlay.</p></div>
-  <div class="background-image">
+<div className="block gray-bg gray-overlay min-height--25vh">
+  <div className="body"><p>This block has a gray overlay.</p></div>
+  <div className="background-image">
     <img src={CampusImage} alt="aerial view of campus"/>
   </div>
 </div>

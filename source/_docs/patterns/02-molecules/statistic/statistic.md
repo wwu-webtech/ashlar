@@ -2,48 +2,48 @@
 
 ## Default
 
-<div class="wwu-statistic-collection">
-    <div class="wwu-statistic blue-bg">               
-        <p class="number">
+<div className="wwu-statistic-collection">
+    <div className="wwu-statistic blue-bg">               
+        <p className="number">
             88,500
         </p>
         
-        <p class="text">
+        <p className="text">
             Person city with a thriving arts & music scene
         </p>
     </div>
     
-    <div class="wwu-statistic dark-blue-bg">            
-        <p class="number">
+    <div className="wwu-statistic dark-blue-bg">            
+        <p className="number">
             160+
         </p>
         
-        <p class="text">
-            academic programs, from the classics to those you get to design yourself
+        <p className="text">
+            academic programs, from the classNameics to those you get to design yourself
         </p>
     </div>
     
-    <div class="wwu-statistic dark-blue-bg">        
-        <h3 class="statistic-heading">Heading for this stat</h3>    
-        <p class="number">
+    <div className="wwu-statistic dark-blue-bg">        
+        <h3 className="statistic-heading">Heading for this stat</h3>    
+        <p className="number">
             160+
         </p>
         
-        <p class="text">
-            academic programs, from the classics to those you get to design yourself
+        <p className="text">
+            academic programs, from the classNameics to those you get to design yourself
         </p>
     </div>
     
-    <div class="wwu-statistic">
-        <span class="material-icons" aria-hidden="true">monetization_on</span>
+    <div className="wwu-statistic">
+        <span className="material-icons" aria-hidden="true">monetization_on</span>
         
-        <h3 class="statistic-heading">Cost</h3>
+        <h3 className="statistic-heading">Cost</h3>
         
-        <p class="number">
+        <p className="number">
             11,950
         </p>
         
-        <p class="text">
+        <p className="text">
             Discounts and scholarships available
         </p>
     </div>
@@ -51,48 +51,48 @@
 
 ## Stacked
 
-<div class="wwu-statistic-collection stacked">
-    <div class="wwu-statistic blue-bg">               
-        <p class="number">
+<div className="wwu-statistic-collection stacked">
+    <div className="wwu-statistic blue-bg">               
+        <p className="number">
             88,500
         </p>
         
-        <p class="text">
+        <p className="text">
             Person city with a thriving arts & music scene
         </p>
     </div>
     
-    <div class="wwu-statistic dark-blue-bg">            
-        <p class="number">
+    <div className="wwu-statistic dark-blue-bg">            
+        <p className="number">
             160+
         </p>
         
-        <p class="text">
-            academic programs, from the classics to those you get to design yourself
+        <p className="text">
+            academic programs, from the classNameics to those you get to design yourself
         </p>
     </div>
     
-    <div class="wwu-statistic dark-blue-bg">        
-        <h3 class="statistic-heading">Heading for this stat</h3>    
-        <p class="number">
+    <div className="wwu-statistic dark-blue-bg">        
+        <h3 className="statistic-heading">Heading for this stat</h3>    
+        <p className="number">
             160+
         </p>
         
-        <p class="text">
-            academic programs, from the classics to those you get to design yourself
+        <p className="text">
+            academic programs, from the classNameics to those you get to design yourself
         </p>
     </div>
     
-    <div class="wwu-statistic">
-        <span class="material-icons" aria-hidden="true">monetization_on</span>
+    <div className="wwu-statistic">
+        <span className="material-icons" aria-hidden="true">monetization_on</span>
         
-        <h3 class="statistic-heading">Cost</h3>
+        <h3 className="statistic-heading">Cost</h3>
         
-        <p class="number">
+        <p className="number">
             11,950
         </p>
         
-        <p class="text">
+        <p className="text">
             Discounts and scholarships available
         </p>
     </div>

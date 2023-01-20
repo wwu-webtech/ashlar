@@ -1,51 +1,51 @@
 # Event List
 See also [event cards](/patterns/molecules/card#events).
 
-<div class="event-list">
-    <div class="event">
-        <div class="title">
+<div className="event-list">
+    <div className="event">
+        <div className="title">
             <h3>
                 <a href="#">Quidditch Match
                 </a>
             </h3>
         </div>
-        <div class="date">
+        <div className="date">
             <div>
-                <span class="month" aria-hidden="true">
-                    <time datetime="00Z">Sep </time>
+                <span className="month" aria-hidden="true">
+                    <time dateTime="00Z">Sep </time>
                 </span>
-                <span class="day" aria-hidden="true">
-                    <time datetime="00Z">02</time>
+                <span className="day" aria-hidden="true">
+                    <time dateTime="00Z">02</time>
                 </span>
-                <span class="year" aria-hidden="true">
-                    <time datetime="00Z">2023</time>
+                <span className="year" aria-hidden="true">
+                    <time dateTime="00Z">2023</time>
                 </span>
             </div>
         </div>
-        <div class="icon">
+        <div className="icon">
             
-            <span class="material-icons" aria-hidden="true">sports</span>
+            <span className="material-icons" aria-hidden="true">sports</span>
             
-            <span class="icon-text">
-                <span class="visually-hidden">Category:</span>
+            <span className="icon-text">
+                <span className="visually-hidden">Category:</span>
                 Athletics
             </span>
         </div>
         
-        <div class="location">
+        <div className="location">
             <p>
                 Venue
             </p>
         </div>
         
-        <div class="body">
+        <div className="body">
             <p>
-                <time datetime="00Z">Thursday, September 2, 2021</time>
+                <time dateTime="00Z">Thursday, September 2, 2021</time>
             </p>
             
             <p>
                 <strong>
-                    <time datetime="00Z">7:00 pm</time>
+                    <time dateTime="00Z">7:00 pm</time>
                 </strong>
             </p>
         </div>

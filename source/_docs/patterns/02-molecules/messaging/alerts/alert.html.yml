@@ -1,5 +1,0 @@
-alerts:
-  emergency:
-    body: "This is only a test."
-  weather:
-    body: "Important weather alert for Bellingham, Washington: The big orange ball is out in the sky again, so be careful!"

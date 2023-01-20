@@ -1,4 +1,5 @@
 # Email Signature
+
 This is the markup that gets used on https://brand.wwu.edu/email-signature
 
 ```

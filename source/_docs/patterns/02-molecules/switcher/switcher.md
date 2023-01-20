@@ -28,7 +28,7 @@ import WWUSwitcher from "./switcher.js"
 ```
 
 ## Column Layout
-<div class="column-layout">
+<div className="column-layout">
 <wwu-switcher label="Accessible Label">
     <wwu-switcher-item label="Content 1">
         <p>We have an infinite amount to learn both from nature and from each other. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next 10.</p>

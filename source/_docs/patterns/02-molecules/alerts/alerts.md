@@ -1,3 +1,6 @@
+# Alerts
+Emergency/Weather alerts.
+
 <div class="emergency-live-region" role="alert">
   <div id="alert-emergency" class="alert emergency">
     <h2 class="alert-header">
@@ -50,7 +53,7 @@
 
     <div class="alert-body">
       <p>
-        {{ alerts.emergency.body }}
+        This is only a test alert.
       </p>
     </div>
     <div class="alert-footer">
@@ -65,7 +68,7 @@
       There are no weather alerts at this time.
     </h2>
     <div class="alert-icon">
-      <svg x="0px" y="0px" width="100" height="100" viewBox="0 0 35 35" style="enable-background:new 0 0 25 25;" aria-hidden="true">
+      <svg x="0px" y="0px" width="100" height="100" viewBox="0 0 35 35" aria-hidden="true">
         <polygon id="christmas-snowflake-icon_1_" class="st0" points="34.2,25.9 28.3,22.5 34,21 33.3,18.6 25.2,20.7 20.5,18 25.3,15.2
         33.3,17.4 34,15 28.3,13.5 34.2,10.1 33,7.9 27.1,11.3 28.6,5.7 26.2,5 24,13.1 19.2,15.8 19.2,10.3 25.1,4.4 23.4,2.7 19.2,6.8
         19.2,0 16.8,0 16.8,6.8 12.6,2.7 10.9,4.4 16.8,10.3 16.8,15.8 12,13.1 9.8,5 7.4,5.7 8.9,11.3 3,7.9 1.8,10.1 7.7,13.5 2,15
@@ -77,7 +80,7 @@
 
     <div class="alert-body">
       <p>
-        {{ alerts.weather.body }}
+        This is a test alert for weather notices.
       </p>
     </div>
     <div class="alert-footer">

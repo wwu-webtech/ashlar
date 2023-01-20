@@ -1,5 +1,5 @@
 # Details
-<p><span class="material-icons" aria-hidden="true">warning</span> Docusaurus overwrites the details element with a react component. Because of this, this element may appear a little broken here, while it displays nicely in other environments.</p>
+<p><span className="material-icons" aria-hidden="true">warning</span> Docusaurus overwrites the details element with a react component. Because of this, this element may appear a little broken here, while it displays nicely in other environments.</p>
 
 <details>
   <summary>Here's some summary text</summary>
@@ -21,7 +21,7 @@
         </ul>
     </details>
 
-<details class="lightest-blue-bg">
+<details className="lightest-blue-bg">
   <summary>Here's some summary text, but with background colors</summary>
   <p>I can contain all kinds of content, even <a href="#">links</a> and list items like:</p>
   <ul>
