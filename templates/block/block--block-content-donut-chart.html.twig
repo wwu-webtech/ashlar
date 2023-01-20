@@ -40,7 +40,7 @@
 {% block template %}
   <wwu-donut-chart label="{{ configuration.label }}" {{ attributes }}>
     {% block title %}  
-      {% include "@atoms/label/label-customized.twig" %}
+      {% include "@templates/label/label-customized.twig" %}
     {% endblock %}
 
     {% set numThings = content.field_chart_number['#items']|length - 1 %}

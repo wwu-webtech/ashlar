@@ -41,7 +41,7 @@
 {% block template %}
   <div{{ attributes }}>
     {% block title %}
-      {% include "@atoms/label/label-customized.twig" %}
+      {% include "@templates/label/label-customized.twig" %}
     {% endblock %}
 
     <wwu-switcher label="{{ configuration.label }}" {{ component_attributes.addClass(block_content.field_background_color.0.value) }}>

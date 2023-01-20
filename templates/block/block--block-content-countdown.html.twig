@@ -41,7 +41,7 @@
 {% block template %}
 <div{{ attributes }}>
   {% block title %}  
-    {% include "@atoms/label/label-customized.twig" %}
+    {% include "@templates/label/label-customized.twig" %}
   {% endblock %}
 
   <wwu-countdown to="{{ block_content.field_accessible_label.0.value }}" date="{{ block_content.field_date.0.value }}">
