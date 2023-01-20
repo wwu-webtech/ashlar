@@ -1,9 +1,0 @@
-attributes:
-  Attribute():
-    class:
-    - status-alert
-label: No alerts at this time!
-content:
-  body: Things are <a href="#">all clear</a>!
-  status: none
-  severity: none

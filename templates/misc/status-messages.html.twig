@@ -23,4 +23,21 @@
 #}
 {% set attributes = attributes|without('role', 'aria-label') %}
 {% set attributes = attributes.addClass('messages') %}
-{% include "@molecules/messaging/messages/messages.html.twig" %}
+{% for type, messages in message_list %}
+  <div{{ attributes }}>
+    <div class="messages--{{ type }}"{% if (type == 'error') or (type == 'warning') %} role="alert" {% else %} role="status" {% endif %}>
+    {% if status_headings[type] %}
+      <h2 class="visually-hidden">{{ status_headings[type] }}</h2>
+    {% endif %}
+    {% if messages|length > 1 %}
+      <ul>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      {{ messages|first }}
+    {% endif %}
+    </div>
+  </div>
+{% endfor %}

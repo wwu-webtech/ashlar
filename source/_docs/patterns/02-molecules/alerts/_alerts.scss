@@ -4,69 +4,54 @@ Molecule: Alerts
 ------------------------------------------------------------------------------*/
 .alert {
   --alert-logo-size: 4.25rem;
+
   width: 100%;
   padding: var(--space--md);
-
   .alert-header {
-    border-bottom: none;
     margin-top: 0;
+    border-bottom: none;
   }
-
   .alert-body {
     margin: var(--space--md) 0;
   }
-
   .alert-icon {
-    width: var(--alert-logo-size);
     float: left;
+    width: var(--alert-logo-size);
     margin-right: var(--space--md);
-
     svg {
       position: relative;
       width: var(--alert-logo-size);
       height: auto;
     }
   }
-
   .alert-footer {
     text-align: right;
   }
-
   &.emergency {
-    color: var(--white);
-    background-color: var(--red);
+    @include gray-bg;
+
     border-top: var(--border-width--md) solid transparent;
-
-    .alert-header {
-      color: var(--white);
-    }
-
+    background-color: var(--red);
     svg {
       fill: var(--white);
     }
   }
-
   &.weather {
-    color: var(--dark-blue);
-    background-color: var(--yellow);
+    @include light-green-bg;
+
     border-top: var(--border-width--md) solid transparent;
     border-bottom: var(--border-width--md) solid transparent;
-
-    .alert-header {
-      color: var(--dark-blue);
-    }
-
+    background-color: var(--yellow);
     svg {
       fill: var(--dark-blue);
     }
   }
 }
-
 @media (forced-colors: active) {
-   .alert.weather, 
-   .alert.emergency {
-     svg {
-       fill: CanvasText;
-     }
-   }
+  .alert.weather,
+  .alert.emergency {
+    svg {
+      fill: CanvasText;
+    }
+  }
 }

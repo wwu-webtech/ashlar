@@ -1,13 +1,14 @@
 # Alerts
-Emergency/Weather alerts.
 
-<div class="emergency-live-region" role="alert">
-  <div id="alert-emergency" class="alert emergency">
-    <h2 class="alert-header">
+## Emergency
+
+<div className="emergency-live-region" role="alert">
+  <div id="alert-emergency" className="alert emergency">
+    <h2 className="alert-header">
       There are no emergency alerts at this time.
     </h2>
-    <div class="alert-icon">
-      <svg class="alertIcon" x="0px" y="0px" width="612px" height="792px" viewBox="0 0 612 792" enable-background="new 0 0 612 792" role="img" aria-label="Western Alert">
+    <div className="alert-icon">
+      <svg className="alertIcon" x="0px" y="0px" width="612px" height="792px" viewBox="0 0 612 792" role="img" aria-label="Western Alert">
         <g>
           <path d="M490.8,346.1l17.8-61c-16.2-22.6-35.9-42-58.5-57.9l-12.4,48.3C460.6,294.3,478.7,318.4,490.8,346.1z"/>
           <path d="M420.2,262.5l-19.4-61.4c-24.8-9.5-51.8-15.3-79.8-15.9l14.9,46.7C366.8,235.8,395.4,246.2,420.2,262.5z"/>
@@ -50,26 +51,28 @@ Emergency/Weather alerts.
         </g>
       </svg>
     </div>
-
-    <div class="alert-body">
+    
+    <div className="alert-body">
       <p>
-        This is only a test alert.
+        This is only a style test.
       </p>
     </div>
-    <div class="alert-footer">
-      <a class="cta white outline" href="https://emergency.wwu.edu">Learn more <span class="visually-hidden">&nbsp;about this emergency alert</span></a>
+    <div className="alert-footer">
+      <a className="cta white outline" href="https://emergency.wwu.edu">Learn more <span className="visually-hidden">&nbsp;about this emergency alert</span></a>
     </div>
   </div>
 </div>
 
-<div class="weather-live-region" role="alert">
-  <div id="alert-weather" class="alert weather">
-    <h2 class="alert-header">
+## Weather
+
+<div className="weather-live-region" role="alert">
+  <div id="alert-weather" className="alert weather">
+    <h2 className="alert-header">
       There are no weather alerts at this time.
     </h2>
-    <div class="alert-icon">
+    <div className="alert-icon">
       <svg x="0px" y="0px" width="100" height="100" viewBox="0 0 35 35" aria-hidden="true">
-        <polygon id="christmas-snowflake-icon_1_" class="st0" points="34.2,25.9 28.3,22.5 34,21 33.3,18.6 25.2,20.7 20.5,18 25.3,15.2
+        <polygon id="christmas-snowflake-icon_1_" className="st0" points="34.2,25.9 28.3,22.5 34,21 33.3,18.6 25.2,20.7 20.5,18 25.3,15.2
         33.3,17.4 34,15 28.3,13.5 34.2,10.1 33,7.9 27.1,11.3 28.6,5.7 26.2,5 24,13.1 19.2,15.8 19.2,10.3 25.1,4.4 23.4,2.7 19.2,6.8
         19.2,0 16.8,0 16.8,6.8 12.6,2.7 10.9,4.4 16.8,10.3 16.8,15.8 12,13.1 9.8,5 7.4,5.7 8.9,11.3 3,7.9 1.8,10.1 7.7,13.5 2,15
         2.7,17.4 10.8,15.3 15.5,18 10.7,20.8 2.7,18.6 2,21 7.7,22.5 1.8,25.9 3,28.1 8.9,24.7 7.4,30.3 9.8,31 12,22.9 16.8,20.2
@@ -77,14 +80,14 @@ Emergency/Weather alerts.
         28.6,30.3 27.1,24.7 33,28.1 "/>
       </svg>
     </div>
-
-    <div class="alert-body">
+    
+    <div className="alert-body">
       <p>
-        This is a test alert for weather notices.
+        This is only a style test.
       </p>
     </div>
-    <div class="alert-footer">
-      <a class="cta dark-blue" href="https://emergency.wwu.edu/inclement-weather">Learn more <span class="visually-hidden">&nbsp;about this weather alert</span></a>
+    <div className="alert-footer">
+      <a className="cta dark-blue" href="https://emergency.wwu.edu/inclement-weather">Learn more <span className="visually-hidden">&nbsp;about this weather alert</span></a>
     </div>
   </div>
 </div>

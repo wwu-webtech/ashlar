@@ -1,7 +1,6 @@
 /*------------------------------------------------------------------------------
-Molecule: Messages
+Molecule: System Messages
 --------------------------------------------------------------------------------
-Drupal system messages
 ------------------------------------------------------------------------------*/
 .messages {
   margin-top: var(--space--md);
@@ -15,7 +14,6 @@ Drupal system messages
   display: block;
   margin-bottom: var(--space--sm);
   padding: var(--space--sm);
-  text-align: center;
   border: solid var(--border-width--md);
 }
 .messages--status {
