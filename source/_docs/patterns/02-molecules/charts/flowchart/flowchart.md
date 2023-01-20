@@ -10,7 +10,7 @@
       <div className="flow-down" aria-hidden="true"><span className="material-icons">arrow_downward</span></div>
     </li>
     <li>
-      <div className="item light-gray-bg"><h3 className="block__title">Step 2</h3><p>Here's a step</p></div>
+      <div className="item light-gray-bg"><h3 className="title">Step 2</h3><p>Here's a step</p></div>
       <div className="flow-right" aria-hidden="true"><span className="material-icons">arrow_forward</span></div>
       <div className="flow-down" aria-hidden="true"><span className="material-icons">arrow_downward</span></div>
     </li>

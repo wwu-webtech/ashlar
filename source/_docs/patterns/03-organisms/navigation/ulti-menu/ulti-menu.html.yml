@@ -13,7 +13,7 @@ configuration:
 title_attributes:
   Attribute():
     class:
-    - block__title
+    - title
 items:
 - link: '<a href=#" class="ultimenu__link">Menu Item 1</a>'
   attributes:

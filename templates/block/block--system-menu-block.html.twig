@@ -40,5 +40,21 @@
 %}
 {% set attributes = attributes.addClass(classes) %}
 {% block template %}
-  {% include "@molecules/navigation/menu-block/menu-block.html.twig" %}
+<div{{ attributes }}>
+  {{ title_prefix }}
+  {# Label. Not displayed, but provided for screen readers. #}
+  {% if not configuration.label_display %}
+    <div class="visually-hidden">
+  {% endif %}
+    <h2{{ title_attributes.setAttribute('id', heading_id) }}>{{ configuration.label }}</h2>
+  {% if not configuration.label_display %}
+    </div>
+  {% endif %}
+  {{ title_suffix }}
+
+  {# Menu. #}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</div>
 {% endblock %}
