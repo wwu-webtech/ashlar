@@ -44,10 +44,10 @@ const config = {
           routeBasePath: 'changelog',
         },
         theme: {
-          customCss: [
+          customCss: [            
             require.resolve('../../dist/css/font-families.css'),
-
             require.resolve('../../build/css/ashlar-base.css'),
+            require.resolve('../../build/css/components/docusaurus.css'),
             
             require.resolve('../../build/css/components/accordion.css'),
             require.resolve('../../build/css/components/announcement.css'),

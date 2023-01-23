@@ -1,112 +1,26 @@
 /*------------------------------------------------------------------------------
 Molecule: Menu
 --------------------------------------------------------------------------------
-1. Nested menus
-2. Block system menus
-3. Dark mode
-4. Print
 ------------------------------------------------------------------------------*/
 .menu {
-  padding: 0;
   list-style: none;
-  /*----------------------------------------------------------------------------
-  1. Nested menus
-  ----------------------------------------------------------------------------*/
-  .menu {
-    margin: 0;
+  a {
+    padding: var(--space--2xs) var(--space--sm);
+    text-decoration: none;
+    border-left: var(--border-width--md) var(--link-decoration-color) solid;
+  }
+  &.horizontal {
+    display: flex;
+    justify-content: center;
     li {
-      @include breakpoint($medium) {
-        border-left-width: var(--border-width--lg);
-      }
-
-      margin-bottom: 0;
-      border-left: solid var(--border-width--md) var(--blue--lighter--60);
-      line-height: 1.3;
-      a {
-        display: inline-block;
-        width: 100%;
-        margin: inherit;
-        margin-bottom: 0;
-        padding: var(--space--xs) var(--space--xl) var(--space--xs) var(--space--md);
-        transition: var(--transition-speed--fast) var(--ease--standard) all;
-        text-decoration: none;
-        background-size: 100% 100%;
-        font-weight: var(--font-weight--regular);
-        &[aria-current="page"] {
-          font-weight: var(--font-weight--bold);
-        }
-      }
-      li > a {
-        &[aria-current="page"] {
-          color: var(--black);
-          background-color: var(--blue--lighter--40);
-        }
+      border: var(--border-width--md) var(--link-decoration-color) solid;
+      &:not(:last-of-type) {
+        border-right: none;
       }
     }
     a {
-      padding-left: var(--space--md);
-    }
-  }
-}
-/*------------------------------------------------------------------------------
-2. Block system menus
-------------------------------------------------------------------------------*/
-.block--menu {
-  .menu {
-    li > a {
-      &[aria-current="page"] {
-        color: var(--dark-blue--darker--40);
-        background-color: var(--blue--lighter--40);
-        font-weight: var(--font-weight--bold);
-        &:hover,
-        &:focus,
-        &:active {
-          color: var(--dark-blue);
-          background: var(--gray--lighter--80);
-        }
-      }
-    }
-  }
-}
-/*------------------------------------------------------------------------------
-3. Dark mode
-------------------------------------------------------------------------------*/
-[data-theme="dark"] {
-  .page-content .block--menu {
-    .menu {
-      li > a {
-        &[aria-current="page"] {
-          color: var(--black);
-          &:hover,
-          &:focus,
-          &:active {
-            color: var(--light-green);
-            background: var(--dark-blue);
-          }
-        }
-      }
-    }
-  }
-}
-/*------------------------------------------------------------------------------
-4. Print
-------------------------------------------------------------------------------*/
-@media print {
-  .menu {
-    padding: 0 !important;
-    ul {
-      padding: 0;
-    }
-    li {
-      border-left: none !important;
-      a {
-        padding: 0;
-        font-size: 10pt;
-        line-height: 1em;
-        &:after {
-          content: " [" attr(href) "] ";
-        }
-      }
+      display: block;
+      border: none;
     }
   }
 }

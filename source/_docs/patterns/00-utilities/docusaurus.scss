@@ -17,3 +17,14 @@ Resets and styles for things in the docusaurus theme that are troublesome
 .prism-code {
   outline: var(--outline-width) solid transparent;
 }
+.menu {
+  overflow-x: unset;
+  &.thin-scrollbar {
+    overflow-x: hidden;
+  }
+  .menu__list {
+    a {
+      border: none;
+    }
+  }
+}
