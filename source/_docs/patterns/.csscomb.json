@@ -101,6 +101,7 @@
       "grid-template-areas",
       "grid-template-columns",
       "grid-template-rows",
+      "gap",
       "-ms-grid-column",
       "-ms-grid-column-span",
       "-ms-grid-row",
