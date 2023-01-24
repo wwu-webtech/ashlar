@@ -4,7 +4,14 @@ Organism: Pre-header
 ------------------------------------------------------------------------------*/
 @import "../../../../../sass/partials/imports";
 @import "../../../00-utilities/breakpoints.scss";
+@import "../../../01-atoms/background-color/_background-color-mixins.scss";
 wwu-pre-header {
+  --button-background-color: transparent;
+  --button-background-color--active: var(--blue--lighter--40);
+  --button-color--active: var(--dark-blue);
+
+  @include black-bg;
+
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -13,118 +20,58 @@ wwu-pre-header {
     display: flex;
     justify-content: flex-end;
   }
-  .material-icons {
-    margin-left: var(--space--2xs);
-    font-size: var(--icon-size--2xs);
-  }
-  a.skip-link {
+  form {
     display: flex;
-    place-items: center;
-    place-items: center;
-    min-height: var(--touch-target--min);
-    padding: var(--space--2xs);
-    transition: background-image var(--transition-speed--fast)
-    var(--ease--standard);
-    text-decoration: none;
-    color: var(--white);
-    background-size: 100% 100%;
-    font-weight: var(--font-weight--regular);
-    &:visited {
-      color: inherit;
-    }
-    &:active,
-    &:hover,
-    &:focus {
-      color: var(--dark-blue--darker--60);
-      outline: var(--outline-width) solid transparent;
-      outline-offset: calc(-1 * var(--border-width--md));
-      background-image: var(--gradient--vertical--light-blue);
-      @media (forced-colors: active) {
-        outline-offset: calc(-2 * var(--border-width--md));
-      }
-    }
-    &:focus {
-      outline-style: dotted;
-      outline-color: var(--dark-blue--darker--60);
-    }
+    align-items: end;
   }
-  button.toggle-settings {
-    display: flex;
-    place-items: center;
+  button,
+  .radio {
     min-height: var(--touch-target--min);
-    padding: var(--space--2xs);
-    transition: background-image var(--transition-speed--fast)
-    var(--ease--standard);
-    color: inherit;
-    border: var(--border-width--sm) solid transparent;
+  }
+  button,
+  input {
+    margin: 0;
     border-radius: 0;
-    background: transparent;
-    background-repeat: no-repeat;
-    &:hover,
-    &:focus,
-    &:active {
-      color: var(--dark-blue--darker--60);
-      outline-offset: calc(-1.5 * var(--border-width--md));
-      background-image: var(--gradient--vertical--light-blue);
-      background-size: 100% 100%;
-    }
-    &:active {
-      border: var(--border-width--sm) solid transparent;
-    }
+    box-shadow: none;
   }
-  wwu-search {
-    input[type="search"] {
-      border-width: var(--border-width--sm);
-    }
-    .submit-search {
-      &:hover,
-      &:focus,
-      &:active {
-        outline-offset: calc(-2 * var(--border-width--md));
-      }
-    }
+  .skip-link {
+    --link-color: var(--white);
+    --link-color--visited: var(--link-color);
+
+    padding-right: var(--space--xs);
+    text-decoration: none;
   }
-}
-.settings-menu {
-  position: absolute;
-  z-index: 1;
-  top: 100%;
-  grid-column: 1 / span all;
-  width: 25rem;
-  max-width: 100%;
-  padding: var(--space--xs);
-  border: var(--border-width--lg) solid transparent;
-  &.closed {
-    visibility: hidden;
-    overflow: hidden;
-    height: 0;
-    transition: opacity var(--ease--standard) var(--transition-speed--fast);
-    opacity: 0;
-  }
-  &.open {
-    z-index: 2;
-    visibility: visible;
-    transition: opacity var(--ease--standard) var(--transition-speed--fast);
-    opacity: 1;
+  .settings-menu {
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    width: 25rem;
+    max-width: 100%;
+    &.closed {
+      visibility: hidden;
+      overflow: hidden;
+      height: 0;
+      transition: opacity var(--ease--standard) var(--transition-speed--fast);
+      opacity: 0;
+    }
+    &.open {
+      z-index: 2;
+      visibility: visible;
+      transition: opacity var(--ease--standard) var(--transition-speed--fast);
+      opacity: 1;
+    }
   }
   .menu-container {
     display: flex;
-    flex: 0 0 100%;
     flex-flow: row wrap;
-  }
-  fieldset {
-    display: flex;
-    flex: 1 1 0;
-    flex-flow: column nowrap;
-    legend {
-      margin: 0;
-      padding: var(--space--xs);
-    }
-    .radio {
-      margin-bottom: var(--space--md);
+    fieldset {
+      flex: 1 1 0;
+      margin: 0 var(--space--xs);
     }
   }
   .reset-button {
+    justify-content: center;
+    width: 100%;
     margin-top: var(--space--xs);
   }
 }

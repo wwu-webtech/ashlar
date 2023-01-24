@@ -4,66 +4,66 @@ if (
 ) {
   const pre_header_template = document.createElement("template");
   pre_header_template.innerHTML = `
-    <a href="#main-content" class="skip-link focusable">
-    <span class="skip-link-text">Skip to Content </span>
-    <span class="material-icons" aria-hidden="true">keyboard_arrow_down</span>
-    </a>    
-    
-    <button class="toggle-settings" aria-expanded="false" aria-controls="settings-menu">
-    <span class="toggle-text">Display Settings</span>
-    <span class="material-icons toggle-icon" aria-hidden="true">settings</span>
-    </button>
-    
-    <div id="settings-menu" class="settings-menu black-bg closed">
-    <div class="menu-container">            
-    <fieldset class="theme-selection">
-    <legend>Theme</legend>
-    <div class="radio">
-    <input id="default-theme" type="radio" name="theme-select" value="default-theme" checked="checked">
-    <label for="default-theme">Default (System)</label>
-    </div>
-    <div class="radio">
-    <input id="dark-mode" type="radio" name="theme-select" value="dark-mode">
-    <label for="dark-mode">Dark</label>
-    </div>
-    <div class="radio">
-    <input id="light-mode" type="radio" name="theme-select" value="light-mode">
-    <label for="light-mode">Light</label>
-    </div>
-    </fieldset>
-    
-    <fieldset class="font-selection">
-    <legend>Font</legend>
-    <div class="radio">
-    <input id="font--default" type="radio" name="font-select" value="font--default" checked="checked">
-    <label for="font--default">Default</label>
-    </div>
-    <div class="radio">
-    <input id="font--serif" type="radio" name="font-select" value="font--serif">
-    <label for="font--serif">Serif</label>
-    </div>
-    <div class="radio">
-    <input id="font--dyslexia-friendly" type="radio" name="font-select" value="font--dyslexia-friendly">
-    <label for="font--dyslexia-friendly">Open Dyslexic</label>
-    </div>
-    <div class="radio">
-    <input id="font--hyperlegible" type="radio" name="font-select" value="font--hyperlegible">
-    <label for="font--hyperlegible">Hyperlegible</label>
-    </div>
-    </fieldset>
-    
-    <!--fieldset class="language-selection">
-    <legend>Language</legend>
-    <input id="language--english" type="radio" name="font-select" value="language--english" checked="checked">
-    <label for="language--english">English</label>
-    <input id="language--spanish" type="radio" name="font-select" value="language--spanish">
-    <label for="language--spanish">Español</label>
-    </fieldset-->            
-    </div>
-    <button id="reset-display-preferences" class="reset-button"><span class="material-icons" aria-hidden="true">replay</span> Reset preferences</button>
-    </div>    
-    
-    <wwu-search role="search" aria-label="Western"></wwu-search>
+  <a href="#main-content" class="skip-link focusable">
+      <span class="material-icons" aria-hidden="true">keyboard_double_arrow_down</span>
+      <span class="skip-link-text">Skip to Content </span>      
+  </a>    
+
+  <button class="toggle-settings" aria-expanded="false" aria-controls="settings-menu">
+      <span class="material-icons toggle-icon" aria-hidden="true">settings</span>
+      <span class="toggle-text">Display Settings</span>      
+  </button>
+
+  <div id="settings-menu" class="settings-menu black-bg closed">
+      <div class="menu-container">            
+          <fieldset class="theme-selection">
+              <legend>Theme</legend>
+              <div class="radio">
+                  <input id="default-theme" type="radio" name="theme-select" value="default-theme" checked="checked">
+                  <label for="default-theme">Default (System)</label>
+              </div>
+              <div class="radio">
+                  <input id="dark-mode" type="radio" name="theme-select" value="dark-mode">
+                  <label for="dark-mode">Dark</label>
+              </div>
+              <div class="radio">
+                  <input id="light-mode" type="radio" name="theme-select" value="light-mode">
+                  <label for="light-mode">Light</label>
+              </div>
+          </fieldset>
+          
+          <fieldset class="font-selection">
+              <legend>Font</legend>
+              <div class="radio">
+                  <input id="font--default" type="radio" name="font-select" value="font--default" checked="checked">
+                  <label for="font--default">Default</label>
+              </div>
+              <div class="radio">
+                  <input id="font--serif" type="radio" name="font-select" value="font--serif">
+                  <label for="font--serif">Serif</label>
+              </div>
+              <div class="radio">
+                  <input id="font--dyslexia-friendly" type="radio" name="font-select" value="font--dyslexia-friendly">
+                  <label for="font--dyslexia-friendly">Open Dyslexic</label>
+              </div>
+              <div class="radio">
+                  <input id="font--hyperlegible" type="radio" name="font-select" value="font--hyperlegible">
+                  <label for="font--hyperlegible">Hyperlegible</label>
+              </div>
+          </fieldset>
+          
+          <!--fieldset class="language-selection">
+              <legend>Language</legend>
+              <input id="language--english" type="radio" name="font-select" value="language--english" checked="checked">
+              <label for="language--english">English</label>
+              <input id="language--spanish" type="radio" name="font-select" value="language--spanish">
+              <label for="language--spanish">Español</label>
+          </fieldset-->            
+      </div>
+      <button class="reset-button"><span class="material-icons" aria-hidden="true">replay</span> Reset preferences</button>
+  </div>    
+
+  <wwu-search role="search" aria-label="Western"></wwu-search>
     `;
 
   class PreHeader extends HTMLElement {

@@ -8,7 +8,16 @@
   {% block header %}
     <header class="site-header" role="banner">
       {% block wwu_pre_header %}
-        {% include "@organisms/headers/pre-header/pre-header.html.twig" %}
+        <wwu-pre-header class="black-bg">
+          <noscript>
+              <a href="#main-content" class="skip-link focusable">
+                  <span class="skip-link-text">Skip to Content </span>
+                  <span class="material-icons" aria-hidden="true">keyboard_arrow_down</span>
+              </a>    
+
+              <wwu-search></wwu-search>
+          </noscript>
+        </wwu-pre-header> 
       {% endblock %}
       
       {% block top %}        

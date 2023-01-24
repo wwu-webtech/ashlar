@@ -5,27 +5,30 @@ The styles show here are for true HTML buttons, which use either the &lt;button&
 <p><span className="material-icons" aria-hidden="true">warning</span> Docusaurus A11y Bug: When using forced colors, active (clicked) buttons will lose their outline. This only happens inside the docs.</p>
 
 <button>Button</button>
-<button className="alt">With .alt className</button>
 <button className="warning">With .warning class</button>
 <button disabled>Disabled Button</button>
 
-    <button>Button</button>
-    <button class="alt">With .alt class</button>
-    <button class="warning">With .warning class</button>
-    <button disabled>Disabled Button</button>
+```
+<button>Button</button>
+<button class="alt">With .alt class</button>
+<button class="warning">With .warning class</button>
+<button disabled>Disabled Button</button>
+```
 
 ## Buttons with Icons
 
-<button className="alt">
+<button>
   <span aria-hidden="true" className="material-icons">
       play_arrow
   </span>
   Play Video
 </button>
 
-    <button class="alt">
-      <span aria-hidden="true" class="material-icons">
-          play_arrow
-      </span>
-      Play Video
-    </button>
+```
+<button>
+  <span aria-hidden="true" class="material-icons">
+      play_arrow
+  </span>
+  Play Video
+</button>
+```
