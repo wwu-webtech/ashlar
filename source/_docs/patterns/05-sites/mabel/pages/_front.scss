@@ -12,14 +12,13 @@ Templates: Sites - MABEL - Front page
     padding-top: 0;
   }
   .browse-by-icons {
-    @media (min-width: $medium) {
-      max-width: 80%;
-    }
-
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     margin: var(--space--md) auto;
+    @media (min-width: $medium) {
+      max-width: 80%;
+    }
     .icon-with-text {
       padding: var(--space--sm);
       border: solid var(--border-width--md) transparent;
@@ -45,22 +44,14 @@ Templates: Sites - MABEL - Front page
   }
 }
 .card-4col--mabel-view .view-header {
-  -ms-grid-columns: 1fr;
-  -ms-grid-rows: auto;
-
-  @media (min-width: $small) {
-    -ms-grid-columns: 1fr 1fr 1fr 1fr;
-    -ms-grid-rows: auto;
-
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-  }
-
-  display: -ms-grid;
   display: grid;
   grid-column-gap: var(--space--sm);
   grid-template-columns: 1fr;
   grid-template-rows: auto;
+  @media (min-width: $small) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
 }
 #block-masquerade-masquerade .description {
   color: var(--white);

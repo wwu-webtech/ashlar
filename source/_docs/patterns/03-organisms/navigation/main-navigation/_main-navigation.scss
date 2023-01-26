@@ -6,21 +6,17 @@ Molecule: Main navigation/ultimenu custom styles
 ------------------------------------------------------------------------------*/
 .main-navigation,
 #block-system-main-menu {
-  @media (min-width: $medium) {
-    width: 100%;
-    height: inherit;
-  }
-
   grid-area: main-nav;
   border-top: solid var(--blue--darker--40) calc(0.4 * var(--border-width--sm));
   border-bottom: calc(0.4 * var(--border-width--sm)) solid transparent;
   font-family: var(--font--condensed);
+  @media (min-width: $medium) {
+    width: 100%;
+    height: inherit;
+  }
   & > .menu,
   .ultimenu--horizontal {
     @include blue-bg;
-    @media (min-width: $medium) {
-      background-color: var(--blue);
-    }
 
     display: flex;
     flex-flow: row wrap;
@@ -28,14 +24,10 @@ Molecule: Main navigation/ultimenu custom styles
     margin: 0;
     padding-left: 0;
     background-color: var(--dark-blue);
+    @media (min-width: $medium) {
+      background-color: var(--blue);
+    }
     & > li {
-      @media (min-width: $medium) {
-        flex: initial;
-        grid-template-columns: 1fr var(--icon-size--xs);
-        width: inherit;
-        border-bottom: none;
-      }
-
       display: grid;
       grid-template-areas: "link icon"
       "flyout flyout";
@@ -44,6 +36,12 @@ Molecule: Main navigation/ultimenu custom styles
       width: 100%;
       border-bottom: var(--border-width--sm) solid var(--blue--darker--20);
       border-left: none;
+      @media (min-width: $medium) {
+        flex: initial;
+        grid-template-columns: 1fr var(--icon-size--xs);
+        width: inherit;
+        border-bottom: none;
+      }
       &:hover,
       &:focus-within {
         background-image: var(--gradient--vertical--light-blue);
@@ -62,14 +60,6 @@ Molecule: Main navigation/ultimenu custom styles
         }
       }
       & > a {
-        @media (min-width: $medium) {
-          display: flex;
-          align-items: center;
-          padding: var(--space--sm);
-          padding-right: var(--icon-size--xs);
-          text-align: center;
-        }
-
         position: relative;
         grid-column: 1 / span all;
         grid-row: 1 / span 1;
@@ -83,6 +73,13 @@ Molecule: Main navigation/ultimenu custom styles
         text-decoration: none;
         font-weight: var(--font-weight--regular);
         line-height: 1;
+        @media (min-width: $medium) {
+          display: flex;
+          align-items: center;
+          padding: var(--space--sm);
+          padding-right: var(--icon-size--xs);
+          text-align: center;
+        }
         &:active,
         &:focus,
         &:hover {
@@ -92,8 +89,6 @@ Molecule: Main navigation/ultimenu custom styles
       .expand-icon {
         display: flex;
         grid-area: icon;
-        -ms-grid-column: 2;
-        -ms-grid-column-span: 1;
         align-items: center;
         justify-content: center;
         width: 100%;
@@ -101,11 +96,10 @@ Molecule: Main navigation/ultimenu custom styles
         border: none;
         font-size: var(--icon-size--xs);
         &.desktop {
+          display: none;
           @media (min-width: $medium) {
             display: flex;
           }
-
-          display: none;
         }
         &.mobile {
           @media (min-width: $medium) {
@@ -117,6 +111,8 @@ Molecule: Main navigation/ultimenu custom styles
       1. Active link trail
       ------------------------------------------------------------------------*/
       &.is-active-trail {
+        border-left: solid var(--border-width--lg)
+        var(--light-green--lighter--20);
         @media (min-width: $medium) {
           border-left: none;
           &:after {
@@ -132,9 +128,6 @@ Molecule: Main navigation/ultimenu custom styles
             }
           }
         }
-
-        border-left: solid var(--border-width--lg)
-        var(--light-green--lighter--20);
       }
     }
   }

@@ -2,15 +2,12 @@
 Organism: Footers - Western footer
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-@import "../../../../../sass/partials/imports";
+@import "../../../00-utilities/breakpoints.scss";
 .wwu-footer {
   display: flex;
   flex-flow: column;
   border-top: var(--border-width--sm) solid transparent;
   @media (min-width: $small) {
-    -ms-grid-columns: var(--space--sm) 1fr 1fr var(--space--sm);
-    -ms-grid-rows: var(--space--lg) auto auto var(--space--lg);
-
     grid-template-areas: ". ... ... ."
     ". logo info  ."
     ". statement icons ."
@@ -20,10 +17,6 @@ Organism: Footers - Western footer
     justify-items: end;
   }
   @media (min-width: $large) {
-    -ms-grid-columns: calc((100vw - var(--content-area-max-width)) / 2) auto
-    auto auto calc((100vw - var(--content-area-max-width)) / 2);
-
-    display: -ms-grid;
     display: grid;
     grid-template-areas: ". ... ... ... ."
     ". logo statement info  ."
@@ -39,10 +32,6 @@ Organism: Footers - Western footer
     margin: 0 auto;
     @media (min-width: $small) {
       grid-area: logo;
-      -ms-grid-column: 2;
-      -ms-grid-column-span: 1;
-      -ms-grid-row: 2;
-      -ms-grid-row-span: 2;
       justify-self: center;
     }
     @media (min-width: $medium) {
@@ -57,20 +46,12 @@ Organism: Footers - Western footer
     text-align: center;
     @media (min-width: $small) {
       grid-area: statement;
-      -ms-grid-column: 3;
-      -ms-grid-column-span: 1;
-      -ms-grid-row: 2;
-      -ms-grid-row-span: 2;
     }
   }
   .western-info {
     text-align: center;
     @media (min-width: $large) {
       grid-area: info;
-      -ms-grid-column: 4;
-      -ms-grid-column-span: 1;
-      -ms-grid-row: 2;
-      -ms-grid-row-span: 1;
       align-self: end;
       text-align: right;
     }
@@ -83,10 +64,6 @@ Organism: Footers - Western footer
     margin: 0.75rem auto;
     @media (min-width: $small) {
       grid-area: icons;
-      -ms-grid-column: 4;
-      -ms-grid-column-span: 1;
-      -ms-grid-row: 3;
-      -ms-grid-row-span: 1;
       align-content: start;
       justify-content: end;
     }

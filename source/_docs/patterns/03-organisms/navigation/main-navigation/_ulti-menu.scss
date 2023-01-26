@@ -1,65 +1,53 @@
 /*------------------------------------------------------------------------------
 Organism: Navigation - ultimenu
 --------------------------------------------------------------------------------
-These styles are to overwrite the default ultimenu styles. Actual menu
-styling happens in Molecules - Navigation - Main navigation.
+Overwrite the reset default ultimenu styles.
 ------------------------------------------------------------------------------*/
 .ultimenu {
   z-index: initial;
   overflow: visible;
   font-size: var(--font-size--sm);
-
   > li {
     min-width: initial;
   }
-
   section.ultimenu__flyout {
-    @media (min-width: $medium) {
-      top: 100%;
-      right: 0 !important;
-      display: none !important;
-    }
-
     z-index: initial;
     display: block;
     visibility: hidden;
     grid-area: flyout;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    -ms-grid-row: 2;
     max-height: 0;
     margin: 0;
     padding: 0;
     opacity: 0;
     border-radius: 0;
     box-shadow: none;
-
+    @media (min-width: $medium) {
+      top: 100%;
+      right: 0 !important;
+      display: none !important;
+    }
     &.open {
+      visibility: visible;
+      max-height: none;
+      opacity: 1;
       @media (min-width: $medium) {
         position: absolute;
         z-index: 2;
         display: block !important;
         margin-top: -2px;
       }
-
-      visibility: visible;
-      max-height: none;
-      opacity: 1;
     }
   }
 }
-
 .ultimenu--basic {
   .region {
     padding: 0;
   }
 }
-
 .ultimenu--horizontal {
   .ultimenu__link {
     &.is-active {
       background: transparent;
-
       &.open {
         background: transparent;
       }
@@ -69,32 +57,27 @@ styling happens in Molecules - Navigation - Main navigation.
     }
   }
 }
-
 .ultimenu__region,
 .ultimenu--htb .ultimenu__flyout,
 .ultimenu--htb .ultimenu__region {
   border-radius: 0;
   box-shadow: none;
 }
-
 .ultimenu--hover li:hover > .ultimenu__flyout,
 .ultimenu--hover li a:active + .ultimenu__flyout,
 .ultimenu--hover li a:focus + .ultimenu__flyout,
 .ultimenu--hover li .ultimenu__flyout:focus-within {
   padding: 0;
 }
-
 .open {
   visibility: visible;
   opacity: 1;
 }
-
 #block-ultimenumainnavigation {
   &.contextual-region {
     position: inherit;
   }
 }
-
 .button {
   &.button--ultimenu {
     display: none;

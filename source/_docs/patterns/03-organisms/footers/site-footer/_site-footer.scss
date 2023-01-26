@@ -4,118 +4,52 @@ Organism: Footers - Site footer
 1. Print
 ------------------------------------------------------------------------------*/
 .site-footer {
+  display: grid;
+  grid-template-areas: ". footer_left   ."
+  ". ............. ."
+  ". footer_center ."
+  ". ............. ."
+  ". footer_right  ."
+  ". footer_bottom .";
+  grid-template-columns: var(--grid-columns--sm);
+  grid-template-rows: auto var(--space--sm) auto var(--space--sm) auto;
+  padding: var(--space--lg) 0;
+  border-top: var(--border-width--sm) solid transparent;
   @media (min-width: $medium) {
-    -ms-grid-columns: var(--space--sm) 1fr var(--space--sm) 1fr var(--space--sm)
-      1fr var(--space--sm);
-    -ms-grid-rows: auto auto;
-    grid-template-areas:
-      ". footer_left . footer_center . footer_right ."
-      ". footer_bottom footer_bottom footer_bottom footer_bottom footer_bottom .";
-    grid-template-columns:
-      var(--space--sm) 1fr var(--space--sm) 1fr var(--space--sm)
-      1fr var(--space--sm);
+    grid-template-areas: ". footer_left . footer_center . footer_right ."
+    ". footer_bottom footer_bottom footer_bottom footer_bottom footer_bottom .";
+    grid-template-columns: var(--space--sm) 1fr var(--space--sm) 1fr var(--space--sm)
+    1fr var(--space--sm);
     grid-template-rows: auto auto;
   }
   @media (min-width: $large) {
-    -ms-grid-columns: 1fr calc(var(--content-area-max-width) / 3)
-      var(--space--sm) calc(var(--content-area-max-width) / 3) var(--space--sm)
-      calc(var(--content-area-max-width) / 3) 1fr;
-    grid-template-columns:
-      1fr calc(var(--content-area-max-width) / 3) var(--space--sm)
-      calc(var(--content-area-max-width) / 3) var(--space--sm) (
-        calc(var(--content-area-max-width) / 3)
-      ) 1fr;
+    grid-template-columns: 1fr calc(var(--content-area-max-width) / 3) var(--space--sm)
+    calc(var(--content-area-max-width) / 3) var(--space--sm) (
+    calc(var(--content-area-max-width) / 3)
+    ) 1fr;
   }
-  display: -ms-grid;
-  display: grid;
-  padding: var(--space--lg) 0;
-
-  -ms-grid-columns: var(--grid-columns--sm);
-  -ms-grid-rows: auto var(--space--sm) auto var(--space--sm) auto;
-  grid-template-areas:
-    ". footer_left   ."
-    ". ............. ."
-    ". footer_center ."
-    ". ............. ."
-    ". footer_right  ."
-    ". footer_bottom .";
-  grid-template-columns: var(--grid-columns--sm);
-  grid-template-rows: auto var(--space--sm) auto var(--space--sm) auto;
-  border-top: var(--border-width--sm) solid transparent;
-
   .block-title {
     border-bottom: none;
   }
-
   .region--footer_left {
-    @media (min-width: $small) {
-      -ms-grid-column: 2;
-      -ms-grid-column-span: 1;
-      -ms-grid-row: 1;
-      -ms-grid-row-span: 1;
-    }
-
     grid-area: footer_left;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
   }
-
   .region--footer_center {
-    @media (min-width: $small) {
-      -ms-grid-column: 4;
-      -ms-grid-column-span: 1;
-      -ms-grid-row: 1;
-      -ms-grid-row-span: 1;
-    }
-
     grid-area: footer_center;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
   }
-
   .region--footer_right {
-    @media (min-width: $small) {
-      -ms-grid-column: 6;
-      -ms-grid-column-span: 1;
-      -ms-grid-row: 1;
-      -ms-grid-row-span: 1;
-    }
-
     grid-area: footer_right;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    -ms-grid-row: 5;
-    -ms-grid-row-span: 1;
   }
-
   .region--footer_bottom {
-    @media (min-width: $small) {
-      -ms-grid-column: 2;
-      -ms-grid-column-span: 5;
-      -ms-grid-row: 2;
-      -ms-grid-row-span: 1;
-    }
-
     grid-area: footer_bottom;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    -ms-grid-row: 6;
-    -ms-grid-row-span: 1;
   }
-
   .social-media-links {
     justify-content: flex-start;
   }
-
   .block--menu .menu li {
     & > a[aria-current="page"] {
       color: var(--black);
       font-weight: var(--font-weight--semibold);
-
       &:hover,
       &:focus,
       &:active {
@@ -125,7 +59,6 @@ Organism: Footers - Site footer
     }
   }
 }
-
 /*------------------------------------------------------------------------------
 1. Print
 ------------------------------------------------------------------------------*/
