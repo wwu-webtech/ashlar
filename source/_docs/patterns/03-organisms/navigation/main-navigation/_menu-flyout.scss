@@ -5,6 +5,12 @@ Display preferences
 ------------------------------------------------------------------------------*/
 .ultimenu__region {
   @include blue-bg;
+
+  display: flex;
+  flex-flow: column;
+  padding: var(--space--md);
+  border: var(--border-width--md) solid transparent;
+  border-top-color: var(--blue);
   @media (min-width: $medium) {
     flex-flow: row wrap;
     justify-content: space-around;
@@ -13,37 +19,27 @@ Display preferences
     height: inherit;
     background-image: var(--gradient--vertical--blue-to-dark-blue);
   }
-
-  display: flex;
-  flex-flow: column;
-  padding: var(--space--md);
-  border: var(--border-width--md) solid transparent;
-  border-top-color: var(--blue);
-  font-family: var(--font--condensed);
   .menu {
     li {
       border-left-color: var(--light-green--lighter--20);
       a {
-        @media (min-width: $medium) {
-          min-height: none;
-        }
-
         display: flex;
         align-items: center;
         min-height: var(--touch-target--min);
         padding: 0 var(--space--sm);
         font-weight: var(--font-weight--md);
+        @media (min-width: $medium) {
+          min-height: none;
+        }
       }
       &.menu-item--active-page {
         a {
           color: var(--dark-blue--darker--60);
           background-color: var(--light-green--lighter--20);
         }
-
         @media (forced-colors: active) {
           border: var(--border-width--md) solid transparent;
           border-left-width: var(--border-width--lg);
-
           a {
             &:hover,
             &:focus,
@@ -79,12 +75,11 @@ Display preferences
     font-size: var(--font-size--sm);
   }
   > div {
+    flex: 0 1 100%;
+    margin: 0 var(--space--sm);
     @media (min-width: $medium) {
       flex: 0 1 auto;
     }
-
-    flex: 0 1 100%;
-    margin: 0 var(--space--sm);
   }
 }
 /*------------------------------------------------------------------------------

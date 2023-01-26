@@ -9,7 +9,6 @@ Molecule: Main navigation/ultimenu custom styles
   grid-area: main-nav;
   border-top: solid var(--blue--darker--40) calc(0.4 * var(--border-width--sm));
   border-bottom: calc(0.4 * var(--border-width--sm)) solid transparent;
-  font-family: var(--font--condensed);
   @media (min-width: $medium) {
     width: 100%;
     height: inherit;

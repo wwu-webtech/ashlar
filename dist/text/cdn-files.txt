@@ -12,8 +12,6 @@ fonts/Atkinson-Hyperlegible-BoldItalic-102a.woff2
 fonts/Atkinson-Hyperlegible-Italic-102a.woff2
 fonts/Atkinson-Hyperlegible-Regular-102a.woff2
 fonts/OpenDyslexic3-Regular.woff2
-fonts/fira-sans-extra-condensed-300.woff2
-fonts/fira-sans-extra-condensed-400.woff2
 fonts/fira-sans-italic.woff2
 fonts/fira-sans-light-italic.woff2
 fonts/fira-sans-normal-300.woff2

@@ -186,7 +186,6 @@ For easy use with rgba/transparency, added only as needed.
     --font--hyperlegible: "Atkinson Hyperlegible", sans-serif;
     --font--dyslexia-friendly: "Open Dyslexic", sans-serif;
     --font--title: "Montserrat", sans-serif;
-    --font--condensed: "Fira Sans Extra Condensed", sans-serif;
 
 ### Font weights
     --font-weight--light: 300;

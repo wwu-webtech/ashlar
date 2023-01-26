@@ -3,83 +3,32 @@ Organism: Footers - Western footer
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 @import "../../../00-utilities/breakpoints.scss";
-.wwu-footer {
-  display: flex;
-  flex-flow: column;
-  border-top: var(--border-width--sm) solid transparent;
-  @media (min-width: $small) {
-    grid-template-areas: ". ... ... ."
-    ". logo info  ."
-    ". statement icons ."
-    ". copyright copyright .";
-    grid-template-columns: var(--space--sm) 1fr 1fr var(--space--sm);
-    grid-template-rows: var(--space--lg) auto auto var(--space--lg);
-    justify-items: end;
-  }
-  @media (min-width: $large) {
-    display: grid;
-    grid-template-areas: ". ... ... ... ."
-    ". logo statement info  ."
-    ". logo statement icons ."
-    ". copyright copyright copyright .";
-    grid-template-columns: calc((100vw - var(--content-area-max-width)) / 2) auto auto auto calc(
-    (100vw - var(--content-area-max-width)) / 2
-    );
+@import "../../../01-atoms/background-color/_background-color-mixins.scss";
+wwu-footer {
+  @include dark-blue-bg;
+
+  display: grid;
+  padding: var(--space--xs);
+  text-align: center;
+  font-size: var(--font-size--sm);
+  p {
+    margin-bottom: var(--space--2xs);
+    line-height: 1.5;
   }
   wwu-logo {
-    width: var(--logo-size);
-    height: var(--logo-size);
-    margin: 0 auto;
-    @media (min-width: $small) {
-      grid-area: logo;
-      justify-self: center;
-    }
-    @media (min-width: $medium) {
-      align-self: center;
-      justify-self: start;
-    }
+    margin: auto;
   }
   .tribal-lands-statement {
-    align-self: center;
-    margin-top: var(--sapce--sm);
-    padding: 0 var(--space--md);
-    text-align: center;
-    @media (min-width: $small) {
-      grid-area: statement;
-    }
+    margin-bottom: var(--space--md);
+    font-weight: var(--font-weight--light);
   }
-  .western-info {
-    text-align: center;
-    @media (min-width: $large) {
-      grid-area: info;
-      align-self: end;
-      text-align: right;
-    }
-    p {
-      margin-bottom: var(--space--2xs);
-    }
+  .cta {
+    text-align: left;
   }
   .social-media-links {
     justify-content: center;
-    margin: 0.75rem auto;
-    @media (min-width: $small) {
-      grid-area: icons;
-      align-content: start;
-      justify-content: end;
-    }
-    .social-icon {
-      margin: var(--space--sm) 0 0 var(--space--sm);
-    }
   }
   .copyright {
-    text-align: center;
-    font-size: var(--font-size--sm);
-    @media (min-width: $small) {
-      grid-area: copyright;
-      margin: auto;
-    }
-    p {
-      margin: 0;
-    }
+    font-size: var(--font-size--xs);
   }
 }

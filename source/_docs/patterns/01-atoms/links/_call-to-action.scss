@@ -1,21 +1,21 @@
 /*------------------------------------------------------------------------------
-Atom: Text - Links - Call to Action
+Atom: Call to Action Link
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 .cta {
   position: relative;
   display: inline-grid;
   place-content: center;
-  height: 3rem;
+  min-height: 3rem;
   margin: var(--space--sm);
   margin-bottom: var(--space--sm);
   padding-right: calc(var(--space--md) + 2rem);
   padding-left: calc(var(--space--md) + 3rem);
-  text-decoration-color: var(--link-color);
-  text-underline-offset: 1rem;
+  text-underline-offset: unset;
   border-radius: var(--border-radius--roundest);
   background-size: 0 100%;
   font-weight: var(--font-weight--semibold);
+  line-height: 1.2;
   @media (prefers-reduced-motion: no-preference) {
     animation: cta-animate-back 400ms ease-out forwards;
   }

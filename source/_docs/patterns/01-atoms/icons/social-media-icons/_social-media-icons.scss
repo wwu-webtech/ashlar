@@ -21,7 +21,7 @@ Atom: Icons - Social Media Icons
     fill: var(--icon-color);
 
     width: 100%;
-    padding: 0.5em;
+    height: 100%;
     transition: var(--ease-standard) var(--transition-speed--fast) fill;
     @media print {
       fill: var(--black);
@@ -58,15 +58,14 @@ Atom: Icons - Social Media Icons
   }
 }
 .social-media-links {
-  @media (min-width: $medium) {
-    max-width: none;
-  }
-
   display: flex;
   flex-flow: row wrap;
   max-width: 25rem;
   padding: 0;
   list-style: none;
+  @media (min-width: $medium) {
+    max-width: none;
+  }
   .social-icon {
     margin: var(--space--md) var(--space--md) 0 0;
   }
