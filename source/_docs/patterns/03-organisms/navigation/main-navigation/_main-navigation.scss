@@ -4,11 +4,8 @@ Molecule: Main navigation/ultimenu custom styles
 1. Active link trail
 2. Display preferences
 ------------------------------------------------------------------------------*/
-.main-navigation,
-#block-system-main-menu {
+.main-navigation {
   grid-area: main-nav;
-  border-top: solid var(--blue--darker--40) calc(0.4 * var(--border-width--sm));
-  border-bottom: calc(0.4 * var(--border-width--sm)) solid transparent;
   @media (min-width: $medium) {
     width: 100%;
     height: inherit;
@@ -22,10 +19,6 @@ Molecule: Main navigation/ultimenu custom styles
     justify-content: center;
     margin: 0;
     padding-left: 0;
-    background-color: var(--dark-blue);
-    @media (min-width: $medium) {
-      background-color: var(--blue);
-    }
     & > li {
       display: grid;
       grid-template-areas: "link icon"
@@ -33,30 +26,10 @@ Molecule: Main navigation/ultimenu custom styles
       grid-template-columns: 1fr var(--touch-target--min);
       grid-template-rows: auto auto;
       width: 100%;
-      border-bottom: var(--border-width--sm) solid var(--blue--darker--20);
-      border-left: none;
       @media (min-width: $medium) {
         flex: initial;
         grid-template-columns: 1fr var(--icon-size--xs);
         width: inherit;
-        border-bottom: none;
-      }
-      &:hover,
-      &:focus-within {
-        background-image: var(--gradient--vertical--light-blue);
-        & > a,
-        .expand-icon {
-          color: var(--black);
-        }
-        .menu li {
-          a:visited {
-            &:hover,
-            &:focus,
-            &:active {
-              color: var(--black);
-            }
-          }
-        }
       }
       & > a {
         position: relative;
@@ -66,11 +39,9 @@ Molecule: Main navigation/ultimenu custom styles
         min-height: var(--touch-target--min);
         margin: 0;
         padding: var(--space--sm);
-        transition: none;
         text-align: left;
         white-space: normal;
         text-decoration: none;
-        font-weight: var(--font-weight--regular);
         line-height: 1;
         @media (min-width: $medium) {
           display: flex;
@@ -79,20 +50,17 @@ Molecule: Main navigation/ultimenu custom styles
           padding-right: var(--icon-size--xs);
           text-align: center;
         }
-        &:active,
-        &:focus,
-        &:hover {
-          background-size: 0 0;
-        }
       }
       .expand-icon {
+        position: relative;
+        z-index: 1;
         display: flex;
         grid-area: icon;
         align-items: center;
         justify-content: center;
         width: 100%;
         height: 100%;
-        border: none;
+        transition: all var(--transition-speed--fast) cubic-bezier(0.33, 0.66, 0.66, 1);
         font-size: var(--icon-size--xs);
         &.desktop {
           display: none;
@@ -106,46 +74,20 @@ Molecule: Main navigation/ultimenu custom styles
           }
         }
       }
+      &:hover,
+      &:focus-within {
+        .expand-icon {
+          color: var(--link-color--active);
+        }
+      }
       /*------------------------------------------------------------------------
       1. Active link trail
       ------------------------------------------------------------------------*/
-      &.is-active-trail {
-        border-left: solid var(--border-width--lg)
-        var(--light-green--lighter--20);
-        @media (min-width: $medium) {
-          border-left: none;
-          &:after {
-            display: block;
-            grid-column: 1 / span all;
-            height: var(--border-width--lg);
-            margin-top: calc(-1 * var(--border-width--lg));
-            content: "";
-            border-bottom: solid var(--border-width--md) transparent;
-            background: var(--light-green--lighter--20);
-            @media (forced-colors: active) {
-              border-bottom-width: var(--border-width--lg);
-            }
-          }
-        }
+      [aria-current="page"] {
+        --link-background: var(--light-green);
+        --link-color: var(--dark-blue);
+        --link-color--visited: var(--dark-blue);
       }
     }
   }
-}
-/*------------------------------------------------------------------------------
-2. Display preferences
-------------------------------------------------------------------------------*/
-.font--dyslexia-friendly {
-  .main-navigation,
-  #block-system-main-menu {
-    font-family: var(--font--dyslexia-friendly);
-  }
-}
-.font--hyperlegible {
-  .main-navigation,
-  #block-system-main-menu {
-    font-family: var(--font--hyperlegible);
-  }
-}
-#block-system-main-menu ul ul {
-  display: none; // hide nested menus on non ultimenu main nav blocks
 }

@@ -1,9 +1,529 @@
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
+
 # Main Navigation
-Utilizes Ultimenu for generating the markup and region management in Drupal, and Adobe Megamenu for the interactions/accessibility
+Utilizes Ultimenu for generating the markup and region management in Drupal, and Adobe Megamenu for the interactions/accessibility. The megamenu script cannot currently be loaded in the documentaion, so this is a preview for styles only. Any change to menu functionality needs to be tested in a Drupal instance.
 
-<nav className="main-navigation wwu-menu-closed" aria-label="Main"><ul id="ultimenu-main" data-ultimenu="main" className="ultimenu ultimenu--hover ultimenu-- ultimenu--htb ultimenu--horizontal js-ultimenu"><li className="ultimenu__item uitem is-active-trail ultimenu__item--active-page"><a href="/home" data-drupal-link-system-path="node/1" className="ultimenu__link is-active" id="accessible-megamenu-1674755651211-1" aria-current="page">Home</a></li><li className="ultimenu__item uitem has-ultimenu"><span className="material-icons expand-icon mobile" aria-hidden="true">keyboard_arrow_right</span><span className="material-icons expand-icon desktop" aria-hidden="true">keyboard_arrow_down</span><a href="" data-drupal-link-system-path="" className="ultimenu__link" id="accessible-megamenu-1674755651211-2" role="button" aria-controls="accessible-megamenu-1674755651211-3" aria-expanded="false" tabindex="0">Has Children<span className="caret" aria-hidden="true"></span></a><section className="ultimenu__flyout" id="accessible-megamenu-1674755651211-3" aria-labelledby="accessible-megamenu-1674755651211-2"><div className="ultimenu__region region region--ultimenu_main_has_children"><div id="block-tools" className="contextual-region block--menu menu--tools"><h2>Tools</h2><div data-contextual-id="block:block=tools:langcode=en|menu:menu=tools:langcode=en" data-contextual-token="61WWSBHDo8QCRWoCamIVFwKxlaEFVQklLUnliovH2bM" data-once="contextual-render" className="contextual"><button className="trigger visually-hidden focusable" type="button" aria-pressed="false">Open Tools configuration options</button>
+<nav className="main-navigation" aria-label="Main">
+  <ul className="ultimenu ultimenu--horizontal ultimenu--htb ultimenu--basic">
+    <li className="ultimenu__item has-ultimenu">
+      <span className="material-icons expand-icon mobile" aria-hidden="true">keyboard_arrow_right</span>
+      <span className="material-icons expand-icon desktop" aria-hidden="true">keyboard_arrow_down</span>      
+      <a href="#" className="ultimenu__link">Menu Item 1</a>
+      
+      <section className="ultimenu__flyout">
+        
+        <div className="ultimenu__region">
+          <div className="ultimenusub">
+            <ul className="menu">              
+              <li className="menu-item">
+                <a href="">Menu item 1</a>
+              </li>
+              <li className="menu-item">
+                <a href="">Menu item 2</a>
+              </li>
+              <li className="menu-item">
+                <a href="">Menu item three</a>
+              </li>
+              <li className="menu-item--active-page menu-item">
+                <a href="">Menu item 4</a>
+              </li>
+              <li className="menu-item">
+                <a href="">Menu item 5</a>
+              </li>
+              <li className="menu-item">
+                <a href="">Menu item six</a>
+              </li>
+              <li className="menu-item">
+                <a href="">Menu item 7</a>
+              </li>              
+            </ul>            
+          </div>          
+        </div>   
+      </section>
+    </li>
+    <li className="ultimenu__item has-ultimenu">
+      <span className="material-icons expand-icon mobile" aria-hidden="true">keyboard_arrow_right</span>
+      <span className="material-icons expand-icon desktop" aria-hidden="true">keyboard_arrow_down</span>
+      <a href="#" className="ultimenu__link">Menu Item 2</a>
+      <section className="ultimenu__flyout">        
+        <div className="ultimenu__region">
+          <div className="ultimenusub">
+            <ul className="menu">              
+              <li className="menu-item">
+                <a href="">Menu item 1</a>
+              </li>
+              <li className="menu-item">
+                <a href="">Menu item 2</a>
+              </li>
+              <li className="menu-item">
+                <a href="">Menu item three</a>
+              </li>
+              <li className="menu-item--active-page menu-item">
+                <a href="">Menu item 4</a>
+              </li>
+              <li className="menu-item">
+                <a href="">Menu item 5</a>
+              </li>
+              <li className="menu-item">
+                <a href="">Menu item six</a>
+              </li>
+              <li className="menu-item">
+                <a href="">Menu item 7</a>
+              </li>              
+            </ul>            
+          </div>
+          
+          <div className="block--menu">
+            <h2 className="title">Second Menu</h2>
+            <ul className="menu">
+              <li>
+                <a href="">
+                  Secondary Menu Item 1
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Secondary Menu Item 2
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Secondary Menu Item 3
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Secondary Menu Item 4
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>       
+      </section>
+    </li>
+    
+    <li className="ultimenu__item has-ultimenu">
+      <span className="material-icons expand-icon mobile" aria-hidden="true">keyboard_arrow_right</span>
+      <span className="material-icons expand-icon desktop" aria-hidden="true">keyboard_arrow_down</span>
+      <a href="#" className="ultimenu__link">Menu Item 3</a>
+      <section className="ultimenu__flyout">
+        
+        <div className="ultimenu__region">
+          <div className="ultimenusub">
+            <ul className="menu">
+              
+              <li className="menu-item">
+                <a href="">Menu item 1</a>
+              </li>
+              <li className="menu-item">
+                <a href="">Menu item 2</a>
+              </li>
+              <li className="menu-item">
+                <a href="">Menu item three</a>
+              </li>
+              <li className="menu-item--active-page menu-item">
+                <a href="">Menu item 4</a>
+              </li>
+              <li className="menu-item">
+                <a href="">Menu item 5</a>
+              </li>
+              <li className="menu-item">
+                <a href="">Menu item six</a>
+              </li>
+              <li className="menu-item">
+                <a href="">Menu item 7</a>
+              </li>              
+            </ul>            
+          </div>
+          
+          <div className="block--menu">
+            <h2 className="title">Second Menu</h2>
+            <ul className="menu">
+              <li>
+                <a href="">
+                  Secondary Menu Item 1
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Secondary Menu Item 2
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Secondary Menu Item 3
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Secondary Menu Item 4
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          <div className="block--menu">
+            <h2 className="title">Third Menu</h2>
+            <ul className="menu">
+              <li>
+                <a href="">
+                  Tertiary Menu Item 1
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Tertiary Menu Item 2
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Tertiary Menu Item 3
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Tertiary Menu Item 4
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>        
+        
+      </section>
+    </li>
+    <li className="ultimenu__item has-ultimenu">
+      <span className="material-icons expand-icon mobile" aria-hidden="true">keyboard_arrow_right</span>
+      <span className="material-icons expand-icon desktop" aria-hidden="true">keyboard_arrow_down</span>
+      <a href="#" className="ultimenu__link">Menu Item Four</a>
+      <section className="ultimenu__flyout">
+        
+        <div className="ultimenu__region">
+          <div className="ultimenusub">
+            <ul className="menu">
+              
+              <li className="menu-item">
+                <a href="">Menu item 1</a>
+              </li>
+              <li className="menu-item">
+                <a href="">Menu item 2</a>
+              </li>
+              <li className="menu-item">
+                <a href="">Menu item three</a>
+              </li>
+              <li className="menu-item--active-page menu-item">
+                <a href="">Menu item 4</a>
+              </li>
+              <li className="menu-item">
+                <a href="">Menu item 5</a>
+              </li>
+              <li className="menu-item">
+                <a href="">Menu item six</a>
+              </li>
+              <li className="menu-item">
+                <a href="">Menu item 7</a>
+              </li>              
+            </ul>            
+          </div>
+          
+          <div className="block--menu">
+            <h2 className="title">Second Menu</h2>
+            <ul className="menu">
+              <li>
+                <a href="">
+                  Secondary Menu Item 1
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Secondary Menu Item 2
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Secondary Menu Item 3
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Secondary Menu Item 4
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          <div className="block--menu">
+            <h2 className="title">Third Menu</h2>
+            <ul className="menu">
+              <li>
+                <a href="">
+                  Tertiary Menu Item 1
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Tertiary Menu Item 2
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Tertiary Menu Item 3
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Tertiary Menu Item 4
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          <div className="block--menu">
+            <h2 className="title">Fourth Menu</h2>
+            <ul className="menu">
+              <li>
+                <a href="">
+                  Quaternary Menu Item 1
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Quaternary Menu Item 2
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Quaternary Menu Item 3
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Quaternary Menu Item 4
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          <div className="block--menu">
+            <h2 className="title">Fifth Menu</h2>
+            <ul className="menu">
+              <li>
+                <a href="">
+                  Quinary Menu Item 1
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Quinary Menu Item 2
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Quinary Menu Item 3
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Quinary Menu Item 4
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          <div className="block--menu">
+            <h2 className="title">Sixth Menu</h2>
+            <ul className="menu">
+              <li>
+                <a href="">
+                  Senary Menu Item 1
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Senary Menu Item 2
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Senary Menu Item 3
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  Senary Menu Item 4
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div> 
+      </section>
+    </li>
+    <li className="ultimenu__item"><a href="#" className="ultimenu__link">Menu Item Five</a>
+    </li><li className="ultimenu__item"><a href="#" className="ultimenu__link">Menu Item Six</a>
+    </li><li className="ultimenu__item"><a href="#" className="ultimenu__link">Menu Item Seven</a>
+    </li><li className="ultimenu__item"><a href="#" className="ultimenu__link">Menu Item Eight</a>
+    </li><li className="ultimenu__item"><a href="#" className="ultimenu__link">Menu Item Nine Is Extra Long</a>
+    </li>
+  </ul>
+</nav>
 
-   <ul className="contextual-links" hidden=""><li className="block-configure"><a href="/admin/structure/block/manage/tools?destination=/node/1">Configure block</a></li><li className="block-remove"><a href="/admin/structure/block/manage/tools/delete?destination=/node/1">Remove block</a></li><li className="entitymenuedit-form"><a href="/admin/structure/menu/manage/tools?destination=/node/1">Edit menu</a></li></ul>
+<section className="ultimenu__flyout">
    
-   
-</div><ul className="menu"><li className="menu-item"><a href="/node/add">Add content</a></li></ul></div></div></section></li><li className="ultimenu__item uitem"><a href="/tables" data-drupal-link-system-path="node/8" className="ultimenu__link" id="accessible-megamenu-1674755651211-4">Tables</a></li><li className="ultimenu__item uitem"><a href="/switcher" data-drupal-link-system-path="node/11" className="ultimenu__link" id="accessible-megamenu-1674755651211-5">Switcher</a></li></ul></nav>
+   <div className="ultimenu__region">
+      <div className="ultimenusub">
+      <ul className="menu">
+         
+         <li className="menu-item">
+            <a href="">Menu item 1</a>
+         </li>
+         <li className="menu-item">
+            <a href="">Menu item 2</a>
+         </li>
+         <li className="menu-item">
+            <a href="">Menu item three</a>
+         </li>
+         <li className="menu-item--active-page menu-item">
+            <a href="">Menu item 4</a>
+         </li>
+         <li className="menu-item">
+            <a href="">Menu item 5</a>
+         </li>
+         <li className="menu-item">
+            <a href="">Menu item six</a>
+         </li>
+         <li className="menu-item">
+            <a href="">Menu item 7</a>
+         </li>              
+      </ul>            
+      </div>
+      
+      <div className="block--menu">
+      <h2 className="title">Second Menu</h2>
+      <ul className="menu">
+         <li>
+            <a href="">
+            Secondary Menu Item 1
+            </a>
+         </li>
+         <li>
+            <a href="">
+            Secondary Menu Item 2
+            </a>
+         </li>
+         <li>
+            <a href="">
+            Secondary Menu Item 3
+            </a>
+         </li>
+         <li>
+            <a href="">
+            Secondary Menu Item 4
+            </a>
+         </li>
+      </ul>
+      </div>
+      
+      <div className="block--menu">
+      <h2 className="title">Third Menu</h2>
+      <ul className="menu">
+         <li>
+            <a href="">
+            Tertiary Menu Item 1
+            </a>
+         </li>
+         <li>
+            <a href="">
+            Tertiary Menu Item 2
+            </a>
+         </li>
+         <li>
+            <a href="">
+            Tertiary Menu Item 3
+            </a>
+         </li>
+         <li>
+            <a href="">
+            Tertiary Menu Item 4
+            </a>
+         </li>
+      </ul>
+      </div>
+      
+      <div className="block--menu">
+      <h2 className="title">Fourth Menu</h2>
+      <ul className="menu">
+         <li>
+            <a href="">
+            Quaternary Menu Item 1
+            </a>
+         </li>
+         <li>
+            <a href="">
+            Quaternary Menu Item 2
+            </a>
+         </li>
+         <li>
+            <a href="">
+            Quaternary Menu Item 3
+            </a>
+         </li>
+         <li>
+            <a href="">
+            Quaternary Menu Item 4
+            </a>
+         </li>
+      </ul>
+      </div>
+      
+      <div className="block--menu">
+      <h2 className="title">Fifth Menu</h2>
+      <ul className="menu">
+         <li>
+            <a href="">
+            Quinary Menu Item 1
+            </a>
+         </li>
+         <li>
+            <a href="">
+            Quinary Menu Item 2
+            </a>
+         </li>
+         <li>
+            <a href="">
+            Quinary Menu Item 3
+            </a>
+         </li>
+         <li>
+            <a href="">
+            Quinary Menu Item 4
+            </a>
+         </li>
+      </ul>
+      </div>
+      
+      <div className="block--menu">
+      <h2 className="title">Sixth Menu</h2>
+      <ul className="menu">
+         <li>
+            <a href="">
+            Senary Menu Item 1
+            </a>
+         </li>
+         <li>
+            <a href="">
+            Senary Menu Item 2
+            </a>
+         </li>
+         <li>
+            <a href="">
+            Senary Menu Item 3
+            </a>
+         </li>
+         <li>
+            <a href="">
+            Senary Menu Item 4
+            </a>
+         </li>
+      </ul>
+      </div>
+   </div> 
+</section>

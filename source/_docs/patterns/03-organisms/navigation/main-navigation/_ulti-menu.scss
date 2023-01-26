@@ -46,12 +46,6 @@ Overwrite the reset default ultimenu styles.
 }
 .ultimenu--horizontal {
   .ultimenu__link {
-    &.is-active {
-      background: transparent;
-      &.open {
-        background: transparent;
-      }
-    }
     .caret {
       display: none;
     }

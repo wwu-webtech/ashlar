@@ -34,7 +34,7 @@ wwu-accordion,
     &:hover {
       color: var(--link-color--active);
       outline-offset: var(--outline-offset--inset);
-      background: var(--link-background);
+      background: var(--link-background--active);
     }
   }
   .title {

@@ -90,7 +90,7 @@ if (
         <a class="icon-link" href="https://www.wwu.edu/campus-maps"><span class="material-icons" aria-hidden="true">map</span>Map</a>
         <a class="icon-link" href="https://www.wwu.edu/online-privacy-statement"><span class="material-icons" aria-hidden="true">policy</span>Privacy</a>
         <a class="icon-link" href="https://www.wwu.edu/commitment-accessibility"><span class="material-icons" aria-hidden="true">accessibility_new</span>Accessibility Notice</a>
-        <a class="icon-link" href="https://www.wwu.edu/equal-opportunity-policy"><span class="material-icons" aria-hidden="true">people</span>Equal Employment Opportunity Policy</a>
+        <a class="icon-link" href="https://www.wwu.edu/equal-opportunity-policy"><span class="material-icons" aria-hidden="true">diversity_3</span>Equal Employment Opportunity Policy</a>
     </nav>
   `;
 

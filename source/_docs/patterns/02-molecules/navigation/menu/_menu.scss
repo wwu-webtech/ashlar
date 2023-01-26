@@ -3,8 +3,11 @@ Molecule: Menu
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 .menu {
+  padding: 0;
   list-style: none;
   a {
+    display: block;
+    min-height: var(--touch-target--min);
     padding: var(--space--2xs) var(--space--sm);
     text-decoration: none;
     border-left: var(--border-width--md) var(--link-decoration-color) solid;
@@ -24,5 +27,11 @@ Molecule: Menu
         border: none;
       }
     }
+  }
+  /*------------------------------------------------------------------------------
+  Nested Menus
+  ------------------------------------------------------------------------------*/
+  .menu {
+    padding-left: var(--space--sm);
   }
 }

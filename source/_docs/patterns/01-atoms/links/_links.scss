@@ -4,7 +4,8 @@ Atom: Text - Links
 1. Print Styles
 ------------------------------------------------------------------------------*/
 :root {
-  --link-background: var(--gradient--vertical--light-blue);
+  --link-background: transparent;
+  --link-background--active: var(--gradient--vertical--light-blue);
   --link-color: var(--blue--darker--20);
   --link-color--active: var(--dark-blue);
   --link-color--visited: var(--purple);
@@ -17,16 +18,11 @@ a {
   text-decoration-thickness: var(--border-width--md);
 
   padding: 0.1563rem 0;
-  transition: background-size var(--transition-speed--fast)
-  cubic-bezier(0.33, 0.66, 0.66, 1),
-  text-decoration var(--transition-speed--fast) ease-out;
+  transition: all var(--transition-speed--fast) cubic-bezier(0.33, 0.66, 0.66, 1);
   text-decoration-color: var(--link-decoration-color);
   text-underline-offset: 0.3125rem;
   color: var(--link-color);
-  background-image: none;
-  background-repeat: no-repeat;
-  background-position: 0 100%;
-  background-size: 100% 0;
+  background: var(--link-background);
   .material-icons {
     position: relative;
     top: 0.2em;
@@ -42,8 +38,7 @@ a {
   &:focus {
     text-decoration: none;
     color: var(--link-color--active);
-    background-image: var(--link-background);
-    background-size: 100% 100%;
+    background: var(--link-background--active);
   }
   &:active,
   &:hover {

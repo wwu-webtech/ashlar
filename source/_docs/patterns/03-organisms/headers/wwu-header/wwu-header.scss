@@ -97,7 +97,7 @@ wwu-header {
   }
 }
 .wwu-home-link {
-  --link-background: none;
+  --link-background--active: none;
 }
 .wwu-menu {
   --link-color: var(--white);
@@ -107,6 +107,7 @@ wwu-header {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
+  width: 100%;
   font-size: var(--font-size--xs);
   @media (min-width: $medium) {
     grid-column: 2 / span 1;

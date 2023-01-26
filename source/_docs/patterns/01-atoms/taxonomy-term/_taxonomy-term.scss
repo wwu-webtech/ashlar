@@ -5,7 +5,7 @@ Atom: Text - Taxonomy Terms
 .taxonomy-term,
 .job-title,
 .pronouns {
-  --link-background: var(--gradient--vertical--light-blue);
+  --link-background--active: var(--gradient--vertical--light-blue);
   --link-color: var(--white);
   --link-color--active: var(--dark-blue);
   --link-color--visited: var(--purple--lighter--80);
