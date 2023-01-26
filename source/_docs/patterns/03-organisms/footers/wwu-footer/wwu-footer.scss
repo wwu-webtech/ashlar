@@ -8,9 +8,8 @@ wwu-footer {
   @include dark-blue-bg;
 
   display: grid;
-  padding: var(--space--xs);
   text-align: center;
-  font-size: var(--font-size--sm);
+  font-size: var(--font-size--xs);
   p {
     margin-bottom: var(--space--2xs);
     line-height: 1.5;
@@ -19,16 +18,18 @@ wwu-footer {
     margin: auto;
   }
   .tribal-lands-statement {
-    margin-bottom: var(--space--md);
-    font-weight: var(--font-weight--light);
+    max-width: var(--content-area-max-width);
+    margin: auto;
+    padding: 0 var(--space--sm);
   }
-  .cta {
-    text-align: left;
+  .copyright {
+    margin-bottom: var(--space--sm);
   }
   .social-media-links {
     justify-content: center;
   }
-  .copyright {
-    font-size: var(--font-size--xs);
+  .footer-nav {
+    width: 100%;
+    background-color: var(--dark-blue--darker--40);
   }
 }

@@ -11,7 +11,7 @@ Molecule: Event List
     "date location"
     "icon body"
     "icon body";
-    grid-template-columns: var(--toggle-size--md) auto;
+    grid-template-columns: 4rem auto;
     margin-bottom: var(--space--sm);
     border: var(--border-width--md) solid transparent;
     &:hover {
@@ -72,7 +72,7 @@ Molecule: Event List
     }
     .date {
       grid-area: date;
-      width: var(--toggle-size--md);
+      width: var(2rem);
       padding: var(--space--sm);
       text-align: center;
       text-transform: uppercase;

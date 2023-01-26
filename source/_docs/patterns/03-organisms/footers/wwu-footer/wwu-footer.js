@@ -6,20 +6,11 @@ if (
   wwu_footer.innerHTML = `
     <wwu-logo></wwu-logo>
 
-    <div class="contact-info">
-        <h2 class="visually-hidden">Western Contact Info</h2>
-        <p>516 High Street, Bellingham, WA 98225</p>
-        <p>
-            <a class="icon-link" href="https://www.wwu.edu/wwucontact/"><span class="material-icons" aria-hidden="true">send</span>Contact Western</a>
-            <a class="icon-link" href="tel:3606503000"><span class="material-icons" aria-hidden="true">phone</span>(360) 650-3000</a>            
-        </p>
-    </div>
-
     <div class="social">
         <h2 class="visually-hidden">Western social media links</h2>
         <ul class="social-media-links">
             <li>
-                <a href="https://www.facebook.com/westernwashingtonuniversity" class="social-icon facebook">
+                <a href="https://www.facebook.com/westernwashingtonuniversity" class="social-icon small facebook">
                     <span class="visually-hidden">Western on Facebook</span>
                     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path
@@ -28,7 +19,7 @@ if (
                 </a>
             </li>
             <li>
-                <a href="https://www.instagram.com/westernwashingtonuniversity/" class="social-icon instagram">
+                <a href="https://www.instagram.com/westernwashingtonuniversity/" class="social-icon small instagram">
                     <span class="visually-hidden">Western on Instagram</span>
                     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path
@@ -37,7 +28,7 @@ if (
                 </a>
             </li>
             <li>
-                <a href="https://www.youtube.com/wwu" class="social-icon youtube">
+                <a href="https://www.youtube.com/wwu" class="social-icon small youtube">
                     <span class="visually-hidden">Western on YouTube</span>
                     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path
@@ -46,7 +37,7 @@ if (
                 </a>
             </li>
             <li>
-                <a href="https://www.flickr.com/photos/wwu" class="social-icon flickr">
+                <a href="https://www.flickr.com/photos/wwu" class="social-icon small flickr">
                     <span class="visually-hidden">Western on Flickr</span>
                     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path
@@ -58,7 +49,7 @@ if (
                 
             </li>
             <li>
-                <a href="https://westerntoday.wwu.edu" class="social-icon western-today">
+                <a href="https://westerntoday.wwu.edu" class="social-icon small western-today">
                     <span class="visually-hidden">Western Today</span>
                     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <polygon points="11.8,17.5 9.4,9.5 7.1,17.5 5.2,17.5 2,6.4 4.1,6.4 6.2,14.1 8.5,6.4 10.4,6.4 12.7,14.1 14.9,6.4 16.9,6.4
@@ -84,21 +75,23 @@ if (
         </p>
     </div>
 
-    <div class="links">
-        <h2 class="visually-hidden">University Links & Policies</h2>
+    <div class="copyright">
+        <h2 class="visually-hidden">Copyright and Contact Info</h2>
         <p>
-            <a class="icon-link" href="https://calendar.wwu.edu/"><span class="material-icons" aria-hidden="true">calendar_month</span>Calendar</a>
-            <a class="icon-link" href="https://www.wwu.edu/directory"><span class="material-icons" aria-hidden="true">person_search</span>University Directory</a>
-            <a class="icon-link" href="https://www.wwu.edu/campus-maps"><span class="material-icons" aria-hidden="true">map</span>Map</a>
-            <a class="icon-link" href="https://www.wwu.edu/online-privacy-statement"><span class="material-icons" aria-hidden="true">policy</span>Privacy</a>
-            <a class="icon-link" href="https://www.wwu.edu/commitment-accessibility"><span class="material-icons" aria-hidden="true">accessibility_new</span>Accessibility Notice</a>
-            <a class="icon-link" href="https://www.wwu.edu/equal-opportunity-policy"><span class="material-icons" aria-hidden="true">people</span>Equal Employment Opportunity Policy</a>
+            © <span class="copyright-date">{{ "now"|date("Y") }}</span> Western Washington University <span aria-hidden="true">·</span> 516 High Street, Bellingham, WA 98225             
+            <span aria-hidden="true">·</span> <a href="tel:3606503000">(360) 650-3000</a>
         </p>
     </div>
 
-    <div class="copyright">
-        <p>© <span class="copyright-date">{{ "now"|date("Y") }}</span> Western Washington University</p>
-    </div>
+    <nav class="footer-nav" aria-label="University Links and Policy">
+        <a class="icon-link" href="https://www.wwu.edu/wwucontact/"><span class="material-icons" aria-hidden="true">send</span>Contact Western</a> 
+        <a class="icon-link" href="https://calendar.wwu.edu/"><span class="material-icons" aria-hidden="true">calendar_month</span>Calendar</a>
+        <a class="icon-link" href="https://www.wwu.edu/directory"><span class="material-icons" aria-hidden="true">person_search</span>University Directory</a>
+        <a class="icon-link" href="https://www.wwu.edu/campus-maps"><span class="material-icons" aria-hidden="true">map</span>Map</a>
+        <a class="icon-link" href="https://www.wwu.edu/online-privacy-statement"><span class="material-icons" aria-hidden="true">policy</span>Privacy</a>
+        <a class="icon-link" href="https://www.wwu.edu/commitment-accessibility"><span class="material-icons" aria-hidden="true">accessibility_new</span>Accessibility Notice</a>
+        <a class="icon-link" href="https://www.wwu.edu/equal-opportunity-policy"><span class="material-icons" aria-hidden="true">people</span>Equal Employment Opportunity Policy</a>
+    </nav>
   `;
 
   class WWUFooter extends HTMLElement {

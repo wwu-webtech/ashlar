@@ -55,7 +55,6 @@ wwu-header {
       "logo site-name"
       "logo region";
       grid-template-columns: var(--logo-size) auto;
-      grid-template-rows: var(--toggle-size--md) auto 1fr;
     }
     @media (min-width: $medium) {
       grid-row-gap: none;

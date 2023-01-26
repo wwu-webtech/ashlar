@@ -30,7 +30,7 @@ Molecule: Main navigation/ultimenu custom styles
       display: grid;
       grid-template-areas: "link icon"
       "flyout flyout";
-      grid-template-columns: 1fr var(--toggle-size--sm);
+      grid-template-columns: 1fr var(--touch-target--min);
       grid-template-rows: auto auto;
       width: 100%;
       border-bottom: var(--border-width--sm) solid var(--blue--darker--20);

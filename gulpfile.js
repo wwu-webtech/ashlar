@@ -35,48 +35,6 @@
   var config = {};
 
   /**
-   * Pattern Lab configuration.
-   *
-   * patterns: The patterns source directory.
-   * sassFile: The file name to be used for compiled CSS.
-   * sassSrc: The source patterns for Sass to be compiled for Pattern Lab.
-   * SassDest: The outpt directory for compiled CSS.
-   * jsFile: The file name to be used for compiled JS.
-   * jsSrc: The source patterns for JS to be compiled for Pattern Lab.
-   * jsDest: The output directory for compiled JS.
-   * jsTemplate: The template used to wrap all compiled JS.
-   * imagesSrc: The source patterns for image files.
-   * imagesDest: The destination directory for image files.
-   */
-  config.patternLab = {
-    patterns: "source/_docs/patterns",
-    sassFile: "wwu-styleguide.css",
-    sassSrc: [
-      "source/sass/styleguide/normalize.scss",
-      "source/sass/styleguide/pattern-scaffolding.scss",
-      "source/sass/styleguide/ultimenu-extras.scss",
-      "source/sass/styleguide/ultimenu.scss",
-      "source/sass/**/*.scss",
-    ],
-    sassDest: "source/pattern-lab/css",
-    jsFile: "wwu-styleguide.js",
-    jsSrc: [
-      "source/_docs/patterns/**/*.js",
-      "dist/js/*.js",
-      "!dist/js/acalog.js",
-      "source/js/menu-extras.js",
-    ],
-    jsDest: "source/pattern-lab/js",
-    jsTemplate: {
-      src: "source/js/patternlab.lodash",
-    },
-    imagesSrc: ["source/images/**/*.{jpg,jpeg,gif,png,svg}"],
-    imagesDest: "source/pattern-lab/images",
-    fontSrc: ["source/fonts/*.woff2"],
-    fontDest: "source/pattern-lab/fonts",
-  };
-
-  /**
    * Sass configuration.
    *
    * src: The source patterns for Sass files.
@@ -87,7 +45,7 @@
   config.sass = {
     src: ["source/sass/**/*.scss", "!source/sass/styleguide/*"],
     dest: "build/css",
-    watch: ["source/sass/**/*.scss", config.patternLab.patterns + "/**/*.scss"],
+    watch: ["source/sass/**/*.scss"],
     options: {
       includePaths: [
         "node_modules/sass-toolkit/stylesheets",
@@ -118,7 +76,6 @@
       "source/_docs/patterns/01-atoms/**/*.scss",
       "source/_docs/patterns/02-molecules/**/*.scss",
       "source/_docs/patterns/03-organisms/**/*.scss",
-      config.patternLab.patterns + "/**/*.scss",
     ],
     options: {
       includePaths: [
@@ -204,7 +161,10 @@
    * dest: Output pattern for font files.
    */
   config.fonts = {
-    src: ["source/fonts/*.woff2"],
+    src: [
+      "source/fonts/*.woff2",
+      "source/fonts/*.ttf",
+    ],
     dest: "build/fonts",
   };
 
@@ -347,95 +307,6 @@
   });
 
   /**
-   * Generate Pattern Lab CSS.
-   */
-  gulp.task("patternlab:sass", function (callback) {
-    pump(
-      gulp.src(config.patternLab.sassSrc),
-      sassGlob(),
-      sourcemaps.init(),
-      sass(config.sass.options),
-      concat(config.patternLab.sassFile),
-      sourcemaps.write(),
-      gulp.dest(config.patternLab.sassDest),
-      callback
-    );
-  });
-
-  /**
-   * Generate Pattern Lab JS pre.
-   */
-  gulp.task("patternlab:js:pre", function (callback) {
-    pump(
-      gulp.src(config.patternLab.jsSrc),
-      sourcemaps.init(),
-      concat(config.patternLab.jsFile),
-      wrap(config.patternLab.jsTemplate),
-      terser(config.js.terser),
-      sourcemaps.write(),
-      gulp.dest(config.patternLab.jsDest),
-      callback
-    );
-  });
-
-  /**
-   * Generate Pattern Lab JS post.
-   */
-  gulp.task(
-    "patternlab:js:post",
-    gulp.series(["patternlab:js:pre"], function (callback) {
-      pump(
-        browserify(config.patternLab.jsDest + "/" + config.patternLab.jsFile, {
-          debug: true,
-        }).bundle(),
-        source(config.patternLab.jsFile),
-        gulp.dest(config.patternLab.jsDest),
-        callback
-      );
-    })
-  );
-
-  /**
-   * Generate Pattern Lab JS.
-   */
-  gulp.task("patternlab:js", gulp.series(["patternlab:js:post"]));
-
-  /**
-   * Generate Pattern Lab images.
-   */
-  gulp.task("patternlab:images", function (callback) {
-    pump(
-      gulp.src(config.patternLab.imagesSrc),
-      gulp.dest(config.patternLab.imagesDest),
-      callback
-    );
-  });
-
-  /**
-   * Generate Pattern Lab Fonts.
-   */
-  gulp.task("patternlab:fonts", function (callback) {
-    pump(
-      gulp.src(config.patternLab.fontSrc),
-      gulp.dest(config.patternLab.fontDest),
-      callback
-    );
-  });
-
-  /**
-   * Run Pattern Lab tasks.
-   */
-  gulp.task(
-    "patternlab",
-    gulp.parallel([
-      "patternlab:sass",
-      "patternlab:js",
-      "patternlab:images",
-      "patternlab:fonts",
-    ])
-  );
-
-  /**
    * Run js build without drupal behaviors via js-wp-cdn
    */
    gulp.task(
@@ -453,8 +324,8 @@
    * Set watch tasks.
    */
   gulp.task("watch", function () {
-    gulp.watch(config.sass.watch, gulp.series(["sass:dev", "patternlab:sass"]));
-    gulp.watch(config.js.watch, gulp.series(["js", "patternlab:js"]));
+    gulp.watch(config.sass.watch, gulp.series(["sass:dev"]));
+    gulp.watch(config.js.watch, gulp.series(["js"]));
   });
 
   /**
@@ -479,22 +350,11 @@
   });
 
   /**
-   * Clean generated Pattern Lab files.
-   */
-  gulp.task("clean:patternlab", function () {
-    return del([
-      config.patternLab.sassDest,
-      config.patternLab.jsDest,
-      config.patternLab.imagesDest,
-    ]);
-  });
-
-  /**
    * Run clean tasks.
    */
   gulp.task(
     "clean",
-    gulp.parallel(["clean:css", "clean:js", "clean:images", "clean:patternlab"])
+    gulp.parallel(["clean:css", "clean:js", "clean:images"])
   );
 
   /**

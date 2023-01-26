@@ -259,13 +259,8 @@ Mostly based on major second scale.
     --icon-size--md: 2.25rem; 
     --icon-size--lg: 3rem;
 
-### Toggles 
-    --toggle-size--sm: 3rem; 
-    --toggle-size--md: 3.5rem;
-    --toggle-size--lg: 4.5rem;
-    --toggle-size--xl: 5.5rem;
-    --toggle-size--2xl: 6.5rem;
-    --touch-target--min: 44px;
+### Touch Targets
+--touch-target--min: 44px;
 
 ### Logo
     --logo-size: 8rem;

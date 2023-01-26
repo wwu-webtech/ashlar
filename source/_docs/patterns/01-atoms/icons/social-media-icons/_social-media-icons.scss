@@ -7,11 +7,13 @@ Atom: Icons - Social Media Icons
   --icon-background-color--active: var(--dark-blue);
   --icon-color: var(--white);
   --icon-color--active: var(--white);
+  --social-icon-size: 2.75rem;
 }
 .social-icon {
   display: block;
-  width: var(--toggle-size--sm);
-  height: var(--toggle-size--sm);
+  overflow: hidden;
+  width: var(--social-icon-size);
+  height: var(--social-icon-size);
   transition: var(--ease-standard) var(--transition-speed--fast)
   background-color;
   color: var(--white);
@@ -20,9 +22,13 @@ Atom: Icons - Social Media Icons
   svg {
     fill: var(--icon-color);
 
+    position: relative;
+    top: 33%;
+    left: 33%;
     width: 100%;
     height: 100%;
     transition: var(--ease-standard) var(--transition-speed--fast) fill;
+    transform: scale(125%);
     @media print {
       fill: var(--black);
     }
@@ -48,25 +54,22 @@ Atom: Icons - Social Media Icons
     outline-width: var(--border-width--md);
     outline-style: dotted;
   }
-  &.medium {
-    width: var(--toggle-size--md);
-    height: var(--toggle-size--md);
-  }
-  &.large {
-    width: var(--toggle-size--lg);
-    height: var(--toggle-size--lg);
+  &.small {
+    --social-icon-size: var(--touch-target--min);
+    svg {
+      top: 25%;
+      left: 25%;
+    }
   }
 }
 .social-media-links {
   display: flex;
   flex-flow: row wrap;
+  gap: var(--space--xs);
   max-width: 25rem;
   padding: 0;
   list-style: none;
   @media (min-width: $medium) {
     max-width: none;
-  }
-  .social-icon {
-    margin: var(--space--md) var(--space--md) 0 0;
   }
 }

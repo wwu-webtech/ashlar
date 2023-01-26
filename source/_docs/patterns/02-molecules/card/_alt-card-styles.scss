@@ -194,6 +194,7 @@ Molecule: Cards - Alternate styles
   --link-color: var(--white);
   --link-color--active: var(--white);
   --link-color--visited: var(--purple--lighter--80);
+  --read-more-size: 2.75rem;
   /* Static/base styles */
 
   position: relative;
@@ -239,7 +240,7 @@ Molecule: Cards - Alternate styles
   }
   .body {
     padding: var(--space--sm);
-    padding-right: var(--toggle-size--sm);
+    padding-right: var(--read-more-size);
     a {
       text-underline-offset: 0.1rem;
     }
@@ -251,7 +252,7 @@ Molecule: Cards - Alternate styles
     display: grid;
     align-content: center;
     justify-content: center;
-    width: var(--toggle-size--sm);
+    width: var(--read-more-size);
     color: var(--white);
     .material-icons {
       font-size: var(--icon-size--sm);
@@ -284,7 +285,7 @@ Molecule: Cards - Alternate styles
       min-height: calc((var(--font-size--md) * 3) + (var(--space--sm) * 3));
       margin: 0;
       padding: var(--space--sm);
-      padding-right: var(--toggle-size--sm);
+      padding-right: var(--read-more-size);
       background-color: transparent;
     }
     .content {
@@ -297,14 +298,14 @@ Molecule: Cards - Alternate styles
     .body {
       padding-top: 0;
       padding-right: var(--space--md);
-      padding-bottom: calc(var(--toggle-size--md) * (2 / 3));
+      padding-bottom: calc(var(--read-more-size) * (2 / 3));
       padding-left: var(--space--md);
       color: var(--white);
     }
     .read-more {
       bottom: 0;
-      width: var(--touch-target--min);
-      height: var(--touch-target--min);
+      width: var(--read-more-size);
+      height: var(--read-more-size);
       transition: 0.3s all ease-in-out;
       .material-icons {
         transition: 0.3s all ease-in-out;
