@@ -10,18 +10,18 @@ Templates: Layouts - Three column
     flex: 0 1 100%;
   }
   > .layout__region--first {
-    @include breakpoint($small) {
+    @media (min-width: $small) {
       padding-right: var(--space--xs);
     }
   }
   > .layout__region--second {
-    @include breakpoint($small) {
+    @media (min-width: $small) {
       padding-right: var(--space--xs);
       padding-left: var(--space--xs);
     }
   }
   > .layout__region--third {
-    @include breakpoint($small) {
+    @media (min-width: $small) {
       padding-left: var(--space--xs);
     }
   }
@@ -31,7 +31,7 @@ Templates: Layouts - Three column
   &.layout--threecol-section--25-25-50 > .layout__region--second,
   &.layout--threecol-section--50-25-25 > .layout__region--second,
   &.layout--threecol-section--50-25-25 > .layout__region--third {
-    @include breakpoint($small) {
+    @media (min-width: $small) {
       flex: 0 1 25%;
     }
 
@@ -40,20 +40,20 @@ Templates: Layouts - Three column
   &.layout--threecol-section--25-50-25 > .layout__region--second,
   &.layout--threecol-section--25-25-50 > .layout__region--third,
   &.layout--threecol-section--50-25-25 > .layout__region--first {
-    @include breakpoint($small) {
+    @media (min-width: $small) {
       flex: 0 1 50%;
     }
   }
   &.layout--threecol-section--33-34-33 > .layout__region--first,
   &.layout--threecol-section--33-34-33 > .layout__region--third {
-    @include breakpoint($small) {
+    @media (min-width: $small) {
       flex: 0 1 33%;
     }
 
     font-size: var(--font-size--sm);
   }
   &.layout--threecol-section--33-34-33 > .layout__region--second {
-    @include breakpoint($small) {
+    @media (min-width: $small) {
       flex: 0 1 34%;
     }
 
@@ -61,7 +61,7 @@ Templates: Layouts - Three column
   }
 }
 .layout--threecol--page-width {
-  @include breakpoint($large) {
+  @media (min-width: $large) {
     margin-right: calc(50% - 50vw - var(--space--xs));
     margin-left: calc(50% - 50vw - var(--space--xs));
   }
@@ -77,12 +77,12 @@ Templates: Layouts - Three column
   }
   > .layout__region--first,
   > .layout__region--third {
-    @include breakpoint($small) {
+    @media (min-width: $small) {
       flex: 1 1 33%;
     }
   }
   > .layout__region--second {
-    @include breakpoint($small) {
+    @media (min-width: $small) {
       flex: 1 1 34%;
     }
   }

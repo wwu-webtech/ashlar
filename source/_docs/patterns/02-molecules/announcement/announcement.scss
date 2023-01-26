@@ -4,7 +4,6 @@ Molecule: Announcement
 1. Dark mode
 ------------------------------------------------------------------------------*/
 @import "../../../../sass/partials/imports";
-@import "../../00-utilities/breakpoints.scss";
 @import "../../01-atoms/background-color/background-color-mixins.scss";
 .wwu-announcement {
   display: grid;
@@ -22,9 +21,6 @@ Molecule: Announcement
   }
   .material-icons {
     @include dark-blue-bg;
-    @include breakpoint($medium) {
-      font-size: var(--icon-size--lg);
-    }
 
     display: grid;
     grid-area: icon;
@@ -34,6 +30,9 @@ Molecule: Announcement
     height: 100%;
     color: var(--light-green);
     border-right: var(--border-width--md) solid transparent;
+    @media (min-width: $medium) {
+      font-size: var(--icon-size--lg);
+    }
   }
   .body {
     @include light-green-bg;

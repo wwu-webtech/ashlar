@@ -86,20 +86,20 @@ table {
 2. Responsive table container
 ------------------------------------------------------------------------------*/
 .responsive-table {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     overflow-x: revert;
   }
 
   overflow-x: scroll;
   table {
-    @include breakpoint($medium) {
+    @media (min-width: $medium) {
       width: 100%;
     }
 
     width: auto;
   }
   caption {
-    @include breakpoint($medium) {
+    @media (min-width: $medium) {
       text-align: center;
     }
 

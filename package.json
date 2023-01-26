@@ -38,7 +38,6 @@
   "license": "GPL-2.0",
   "dependencies": {
     "acorn": "^6.4.2",
-    "breakpoint-sass": "^2.7.1",
     "prettier": "2.2.1"
   }
 }

@@ -25,14 +25,14 @@ Templates: Sites - MABEL
       order: 0;
     }
     .layout__region--first {
-      @include breakpoint($medium) {
+      @media (min-width: $medium) {
         order: 1;
       }
 
       order: 2;
     }
     .layout__region--second {
-      @include breakpoint($medium) {
+      @media (min-width: $medium) {
         order: 2;
       }
 

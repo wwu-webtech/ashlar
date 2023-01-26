@@ -23,21 +23,21 @@ Molecule: Card Containers
 }
 .card-2col,
 .card-2col--view .view-content {
-  @include breakpoint($small) {
+  @media (min-width: $small) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
   }
 }
 .card-3col,
 .card-3col--view .view-content {
-  @include breakpoint($small) {
+  @media (min-width: $small) {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
   }
 }
 .card-4col,
 .card-4col--view .view-content {
-  @include breakpoint($small) {
+  @media (min-width: $small) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
   }
@@ -56,21 +56,21 @@ Molecule: Card Containers
 }
 .card-2col--flex {
   > * {
-    @include breakpoint($small) {
+    @media (min-width: $small) {
       flex: 0 1 calc(50% - var(--space--xs));
     }
   }
 }
 .card-3col--flex {
   > * {
-    @include breakpoint($small) {
+    @media (min-width: $small) {
       flex: 0 1 calc(33.33% - var(--space--xs));
     }
   }
 }
 .card-4col--flex {
   > * {
-    @include breakpoint($small) {
+    @media (min-width: $small) {
       flex: 0 1 calc(25% - var(--space--xs));
     }
   }

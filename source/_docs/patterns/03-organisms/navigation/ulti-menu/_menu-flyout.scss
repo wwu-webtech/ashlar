@@ -5,7 +5,7 @@ Display preferences
 ------------------------------------------------------------------------------*/
 .ultimenu__region {
   @include blue-bg;
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     flex-flow: row wrap;
     justify-content: space-around;
     width: 100%;
@@ -24,7 +24,7 @@ Display preferences
     li {
       border-left-color: var(--light-green--lighter--20);
       a {
-        @include breakpoint($medium) {
+        @media (min-width: $medium) {
           min-height: none;
         }
 
@@ -79,7 +79,7 @@ Display preferences
     font-size: var(--font-size--sm);
   }
   > div {
-    @include breakpoint($medium) {
+    @media (min-width: $medium) {
       flex: 0 1 auto;
     }
 

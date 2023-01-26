@@ -6,7 +6,7 @@ be sure that SASS will import all of the @font-face declarations. It seems to
 have trouble recognizing the fonts as being used in the var() declarations alone
 ------------------------------------------------------------------------------*/
 html {
-  @include breakpoint($large) {
+  @media (min-width: $large) {
     font-size: calc(1rem + (var(--content-area-max-width) * 0.005));
   }
 

@@ -10,7 +10,7 @@ Columns will collapse on mobile.
   column-gap: var(--space--sm);
 }
 
-@include breakpoint($medium) {
+@media (min-width: $medium) {
   .column-count--2 {
     column-count: 2;
   }
@@ -39,7 +39,7 @@ Columns will collapse on mobile.
   grid-template-columns: auto auto;
 }
 
-@include breakpoint($medium) {
+@media (min-width: $medium) {
   .grid-column-count--2 {
     grid-template-columns: auto auto;
   }

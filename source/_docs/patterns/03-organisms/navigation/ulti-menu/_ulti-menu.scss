@@ -14,7 +14,7 @@ styling happens in Molecules - Navigation - Main navigation.
   }
 
   section.ultimenu__flyout {
-    @include breakpoint($medium) {
+    @media (min-width: $medium) {
       top: 100%;
       right: 0 !important;
       display: none !important;
@@ -35,7 +35,7 @@ styling happens in Molecules - Navigation - Main navigation.
     box-shadow: none;
 
     &.open {
-      @include breakpoint($medium) {
+      @media (min-width: $medium) {
         position: absolute;
         z-index: 2;
         display: block !important;

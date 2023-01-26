@@ -3,27 +3,24 @@ Molecule: Countdown
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 @import "../../../../sass/partials/imports";
-@import "../../00-utilities/breakpoints.scss";
 wwu-countdown {
   padding: var(--space--xl);
   .timer {
-    @include breakpoint($medium) {
-      flex-flow: row wrap;
-    }
-
     display: flex;
     flex-flow: column;
     justify-content: center;
     margin-top: var(--space--xl);
     list-style: none;
+    @media (min-width: $medium) {
+      flex-flow: row wrap;
+    }
     p {
-      @include breakpoint($medium) {
-        border-right: var(--border-width--md) solid;
-      }
-
       padding: var(--space--2xl) var(--space--3xl);
       text-align: center;
       font-size: 1.5;
+      @media (min-width: $medium) {
+        border-right: var(--border-width--md) solid;
+      }
       &:last-of-type {
         border: none;
       }

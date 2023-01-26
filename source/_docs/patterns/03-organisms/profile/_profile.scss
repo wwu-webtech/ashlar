@@ -14,7 +14,7 @@ $profile-photo-size: 25rem;
   }
 
   .profile-right {
-    @include breakpoint($medium) {
+    @media (min-width: $medium) {
       padding-left: var(--space--md);
       text-align: left;
     }
@@ -23,15 +23,15 @@ $profile-photo-size: 25rem;
   }
 
   .profile-photo {
-    @include breakpoint($small) {
+    @media (min-width: $small) {
       width: $profile-photo-size;
       height: $profile-photo-size;
     }
-    @include breakpoint($medium) {
+    @media (min-width: $medium) {
       width: $profile-photo-size--smaller;
       height: $profile-photo-size--smaller;
     }
-    @include breakpoint($large) {
+    @media (min-width: $large) {
       width: $profile-photo-size;
       height: $profile-photo-size;
     }

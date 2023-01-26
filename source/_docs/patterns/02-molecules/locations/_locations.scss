@@ -155,11 +155,11 @@ Molecule: Locations
     stroke-width: var(--stroke-width--medium);
   }
   &.single-row {
-    @include breakpoint($medium) {
+    @media (min-width: $medium) {
       max-width: var(--locations-block-width--bigger);
     }
     .button-cluster {
-      @include breakpoint($medium) {
+      @media (min-width: $medium) {
         flex-wrap: nowrap;
         justify-content: center;
       }

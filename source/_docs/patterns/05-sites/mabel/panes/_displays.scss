@@ -3,10 +3,10 @@ Templates: Sites - MABEL - Displays
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 .pane-islandora-solr-display-switch {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     width: 11.25rem;
   }
-  @include breakpoint($large) {
+  @media (min-width: $large) {
     width: 12.5rem;
   }
   position: relative;

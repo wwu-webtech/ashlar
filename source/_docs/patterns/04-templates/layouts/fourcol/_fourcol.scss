@@ -7,7 +7,7 @@ Templates: Layouts - Four column
   flex-wrap: wrap;
   justify-content: space-evenly;
   > .layout__region {
-    @include breakpoint($small) {
+    @media (min-width: $small) {
       flex: 0 1 24%;
     }
 
@@ -16,7 +16,7 @@ Templates: Layouts - Four column
   }
 }
 .layout--fourcol--page-width {
-  @include breakpoint($large) {
+  @media (min-width: $large) {
     margin-right: calc(50% - 50vw);
     margin-left: calc(50% - 50vw);
   }
@@ -34,7 +34,7 @@ Templates: Layouts - Four column
   > .layout__region--second,
   > .layout__region--third,
   > .layout__region--fourth {
-    @include breakpoint($small) {
+    @media (min-width: $small) {
       flex: 1 1 25%;
     }
   }

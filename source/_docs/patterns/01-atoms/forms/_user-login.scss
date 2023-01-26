@@ -3,7 +3,7 @@ Molecule: Forms - User Login
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 .user-login-form {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     justify-content: flex-start;
     width: var(--content-area-max-width--sm);
   }
@@ -16,7 +16,7 @@ Molecule: Forms - User Login
   padding: var(--space--md);
   .manual-login,
   .cas-login-link {
-    @include breakpoint($medium) {
+    @media (min-width: $medium) {
       width: 50%;
       margin: var(--space--xs) auto;
     }

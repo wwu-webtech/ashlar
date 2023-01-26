@@ -10,7 +10,7 @@ Molecule: Menu
     border-left: var(--border-width--md) var(--link-decoration-color) solid;
   }
   &.horizontal {
-    @include breakpoint($small) {
+    @media (min-width: $small) {
       display: flex;
       justify-content: center;
       li {

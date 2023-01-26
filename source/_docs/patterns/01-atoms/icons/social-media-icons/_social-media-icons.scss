@@ -58,7 +58,7 @@ Atom: Icons - Social Media Icons
   }
 }
 .social-media-links {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     max-width: none;
   }
 

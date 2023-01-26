@@ -4,7 +4,7 @@ Organism: Footers - Site footer
 1. Print
 ------------------------------------------------------------------------------*/
 .site-footer {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     -ms-grid-columns: var(--space--sm) 1fr var(--space--sm) 1fr var(--space--sm)
       1fr var(--space--sm);
     -ms-grid-rows: auto auto;
@@ -16,7 +16,7 @@ Organism: Footers - Site footer
       1fr var(--space--sm);
     grid-template-rows: auto auto;
   }
-  @include breakpoint($large) {
+  @media (min-width: $large) {
     -ms-grid-columns: 1fr calc(var(--content-area-max-width) / 3)
       var(--space--sm) calc(var(--content-area-max-width) / 3) var(--space--sm)
       calc(var(--content-area-max-width) / 3) 1fr;
@@ -48,7 +48,7 @@ Organism: Footers - Site footer
   }
 
   .region--footer_left {
-    @include breakpoint($small) {
+    @media (min-width: $small) {
       -ms-grid-column: 2;
       -ms-grid-column-span: 1;
       -ms-grid-row: 1;
@@ -63,7 +63,7 @@ Organism: Footers - Site footer
   }
 
   .region--footer_center {
-    @include breakpoint($small) {
+    @media (min-width: $small) {
       -ms-grid-column: 4;
       -ms-grid-column-span: 1;
       -ms-grid-row: 1;
@@ -78,7 +78,7 @@ Organism: Footers - Site footer
   }
 
   .region--footer_right {
-    @include breakpoint($small) {
+    @media (min-width: $small) {
       -ms-grid-column: 6;
       -ms-grid-column-span: 1;
       -ms-grid-row: 1;
@@ -93,7 +93,7 @@ Organism: Footers - Site footer
   }
 
   .region--footer_bottom {
-    @include breakpoint($small) {
+    @media (min-width: $small) {
       -ms-grid-column: 2;
       -ms-grid-column-span: 5;
       -ms-grid-row: 2;

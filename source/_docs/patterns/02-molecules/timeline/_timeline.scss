@@ -7,7 +7,7 @@ Molecule: Text - Timeline
   display: grid;
 }
 .timeline-block {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     width: 60%;
   }
 

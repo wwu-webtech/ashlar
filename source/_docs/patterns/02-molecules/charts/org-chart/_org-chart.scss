@@ -42,7 +42,7 @@ Molecule: Charts - Org Chart
       h4,
       h5,
       h6 {
-        @include breakpoint($medium) {
+        @media (min-width: $medium) {
           max-width: none;
         }
 
@@ -140,7 +140,7 @@ Molecule: Charts - Org Chart
       }
     }
     &.level-sub-a {
-      @include breakpoint($medium) {
+      @media (min-width: $medium) {
         display: grid;
         grid-template-columns: repeat(10, auto);
         margin-left: 0;
@@ -149,7 +149,7 @@ Molecule: Charts - Org Chart
       margin-left: 0;
     }
     &.level-a {
-      @include breakpoint($medium) {
+      @media (min-width: $medium) {
         display: grid;
         grid-template-columns: repeat(10, auto);
         margin-left: 0;
@@ -160,7 +160,7 @@ Molecule: Charts - Org Chart
         margin-bottom: var(--chart-spacing);
         > span,
         > a {
-          @include breakpoint($medium) {
+          @media (min-width: $medium) {
             max-width: var(--chart-max-size);
             margin: auto;
           }
@@ -171,7 +171,7 @@ Molecule: Charts - Org Chart
       }
     }
     &.level-b {
-      @include breakpoint($medium) {
+      @media (min-width: $medium) {
         display: grid;
         grid-template-columns: repeat(10, auto);
         margin-top: var(--chart-spacing);
@@ -188,7 +188,7 @@ Molecule: Charts - Org Chart
       }
     }
     &.level-c {
-      @include breakpoint($medium) {
+      @media (min-width: $medium) {
         .level-c {
           display: flex;
           flex-flow: column;
@@ -277,7 +277,7 @@ Molecule: Charts - Org Chart
   }
 }
 
-@include breakpoint($medium) {
+@media (min-width: $medium) {
   .org-chart {
     /* vertical bar for top level items */
     .item-level-a {

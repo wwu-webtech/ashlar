@@ -13,7 +13,7 @@ Templates: Layouts - Retired Layouts - Two col 33/66
 }
 
 .layout--twocol-34-66 > .layout__region--first {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     flex: 0 1 34%;
     max-width: 34%;
     padding-right: var(--space--sm);
@@ -23,7 +23,7 @@ Templates: Layouts - Retired Layouts - Two col 33/66
 }
 
 .layout--twocol-34-66 > .layout__region--second {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     flex: 0 1 66%;
     max-width: 66%;
     padding-left: var(--space--sm);

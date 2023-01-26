@@ -25,7 +25,7 @@ Styles for search2.wwu.edu
     }
 
     .search-query {
-      @include breakpoint($large) {
+      @media (min-width: $large) {
         max-width: none;
       }
       flex: 1;

@@ -16,7 +16,7 @@ Templates: Layouts - Retired Layouts - Two col bricks
 .layout--twocol-bricks > .layout__region--second-above,
 .layout--twocol-bricks > .layout__region--first-below,
 .layout--twocol-bricks > .layout__region--second-below {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     flex: 0 1 50%;
     max-width: 50%;
   }
@@ -24,14 +24,14 @@ Templates: Layouts - Retired Layouts - Two col bricks
 
 .layout--twocol-bricks > .layout__region--first-above,
 .layout--twocol-bricks > .layout__region--first-below {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     padding-right: var(--space--sm);
   }
 }
 
 .layout--twocol-bricks > .layout__region--second-above,
 .layout--twocol-bricks > .layout__region--second-below {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     padding-left: var(--space--sm);
   }
 }

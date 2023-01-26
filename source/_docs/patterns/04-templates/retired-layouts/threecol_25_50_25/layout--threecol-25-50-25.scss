@@ -14,7 +14,7 @@ Templates: Layouts - Retired Layouts - Three col 25/50/25
 }
 
 .layout--threecol-25-50-25 > .layout__region--first {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     flex: 0 1 25%;
     max-width: 25%;
     padding-right: var(--space--sm);
@@ -24,7 +24,7 @@ Templates: Layouts - Retired Layouts - Three col 25/50/25
 }
 
 .layout--threecol-25-50-25 > .layout__region--second {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     flex: 0 1 50%;
     max-width: 50%;
     padding: 0 var(--space--sm);
@@ -32,7 +32,7 @@ Templates: Layouts - Retired Layouts - Three col 25/50/25
 }
 
 .layout--threecol-25-50-25 > .layout__region--third {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     flex: 0 1 25%;
     max-width: 25%;
     padding-left: var(--space--sm);

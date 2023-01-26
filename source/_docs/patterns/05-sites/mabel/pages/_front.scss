@@ -12,7 +12,7 @@ Templates: Sites - MABEL - Front page
     padding-top: 0;
   }
   .browse-by-icons {
-    @include breakpoint($medium) {
+    @media (min-width: $medium) {
       max-width: 80%;
     }
 
@@ -48,7 +48,7 @@ Templates: Sites - MABEL - Front page
   -ms-grid-columns: 1fr;
   -ms-grid-rows: auto;
 
-  @include breakpoint($small) {
+  @media (min-width: $small) {
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
     -ms-grid-rows: auto;
 

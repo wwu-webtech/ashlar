@@ -6,7 +6,7 @@ Molecule: Main navigation/ultimenu custom styles
 ------------------------------------------------------------------------------*/
 .main-navigation,
 #block-system-main-menu {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     width: 100%;
     height: inherit;
   }
@@ -18,7 +18,7 @@ Molecule: Main navigation/ultimenu custom styles
   & > .menu,
   .ultimenu--horizontal {
     @include blue-bg;
-    @include breakpoint($medium) {
+    @media (min-width: $medium) {
       background-color: var(--blue);
     }
 
@@ -29,7 +29,7 @@ Molecule: Main navigation/ultimenu custom styles
     padding-left: 0;
     background-color: var(--dark-blue);
     & > li {
-      @include breakpoint($medium) {
+      @media (min-width: $medium) {
         flex: initial;
         grid-template-columns: 1fr var(--icon-size--xs);
         width: inherit;
@@ -62,7 +62,7 @@ Molecule: Main navigation/ultimenu custom styles
         }
       }
       & > a {
-        @include breakpoint($medium) {
+        @media (min-width: $medium) {
           display: flex;
           align-items: center;
           padding: var(--space--sm);
@@ -101,14 +101,14 @@ Molecule: Main navigation/ultimenu custom styles
         border: none;
         font-size: var(--icon-size--xs);
         &.desktop {
-          @include breakpoint($medium) {
+          @media (min-width: $medium) {
             display: flex;
           }
 
           display: none;
         }
         &.mobile {
-          @include breakpoint($medium) {
+          @media (min-width: $medium) {
             display: none;
           }
         }
@@ -117,7 +117,7 @@ Molecule: Main navigation/ultimenu custom styles
       1. Active link trail
       ------------------------------------------------------------------------*/
       &.is-active-trail {
-        @include breakpoint($medium) {
+        @media (min-width: $medium) {
           border-left: none;
           &:after {
             display: block;

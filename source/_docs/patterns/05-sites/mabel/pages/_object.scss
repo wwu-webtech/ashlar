@@ -8,7 +8,7 @@ Templates: Sites - MABEL - Object
 }
 
 a#clip {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     font-size: var(--font-size--sm);
   }
 

@@ -3,10 +3,10 @@ Templates: Sites - MABEL - Result limit
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 .pane-islandora-solr-result-limit {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     width: 11.25rem;
   }
-  @include breakpoint($large) {
+  @media (min-width: $large) {
     width: 12.5rem;
   }
 

@@ -3,9 +3,11 @@ Organism: Footers - Western footer
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 @import "../../../../../sass/partials/imports";
-@import "../../../00-utilities/breakpoints.scss";
 .wwu-footer {
-  @include breakpoint($small) {
+  display: flex;
+  flex-flow: column;
+  border-top: var(--border-width--sm) solid transparent;
+  @media (min-width: $small) {
     -ms-grid-columns: var(--space--sm) 1fr 1fr var(--space--sm);
     -ms-grid-rows: var(--space--lg) auto auto var(--space--lg);
 
@@ -17,7 +19,7 @@ Organism: Footers - Western footer
     grid-template-rows: var(--space--lg) auto auto var(--space--lg);
     justify-items: end;
   }
-  @include breakpoint($large) {
+  @media (min-width: $large) {
     -ms-grid-columns: calc((100vw - var(--content-area-max-width)) / 2) auto
     auto auto calc((100vw - var(--content-area-max-width)) / 2);
 
@@ -31,12 +33,11 @@ Organism: Footers - Western footer
     (100vw - var(--content-area-max-width)) / 2
     );
   }
-
-  display: flex;
-  flex-flow: column;
-  border-top: var(--border-width--sm) solid transparent;
   wwu-logo {
-    @include breakpoint($small) {
+    width: var(--logo-size);
+    height: var(--logo-size);
+    margin: 0 auto;
+    @media (min-width: $small) {
       grid-area: logo;
       -ms-grid-column: 2;
       -ms-grid-column-span: 1;
@@ -44,31 +45,27 @@ Organism: Footers - Western footer
       -ms-grid-row-span: 2;
       justify-self: center;
     }
-    @include breakpoint($medium) {
+    @media (min-width: $medium) {
       align-self: center;
       justify-self: start;
     }
-
-    width: var(--logo-size);
-    height: var(--logo-size);
-    margin: 0 auto;
   }
   .tribal-lands-statement {
-    @include breakpoint($small) {
+    align-self: center;
+    margin-top: var(--sapce--sm);
+    padding: 0 var(--space--md);
+    text-align: center;
+    @media (min-width: $small) {
       grid-area: statement;
       -ms-grid-column: 3;
       -ms-grid-column-span: 1;
       -ms-grid-row: 2;
       -ms-grid-row-span: 2;
     }
-
-    align-self: center;
-    margin-top: var(--sapce--sm);
-    padding: 0 var(--space--md);
-    text-align: center;
   }
   .western-info {
-    @include breakpoint($large) {
+    text-align: center;
+    @media (min-width: $large) {
       grid-area: info;
       -ms-grid-column: 4;
       -ms-grid-column-span: 1;
@@ -77,14 +74,14 @@ Organism: Footers - Western footer
       align-self: end;
       text-align: right;
     }
-
-    text-align: center;
     p {
       margin-bottom: var(--space--2xs);
     }
   }
   .social-media-links {
-    @include breakpoint($small) {
+    justify-content: center;
+    margin: 0.75rem auto;
+    @media (min-width: $small) {
       grid-area: icons;
       -ms-grid-column: 4;
       -ms-grid-column-span: 1;
@@ -93,21 +90,17 @@ Organism: Footers - Western footer
       align-content: start;
       justify-content: end;
     }
-
-    justify-content: center;
-    margin: 0.75rem auto;
     .social-icon {
       margin: var(--space--sm) 0 0 var(--space--sm);
     }
   }
   .copyright {
-    @include breakpoint($small) {
+    text-align: center;
+    font-size: var(--font-size--sm);
+    @media (min-width: $small) {
       grid-area: copyright;
       margin: auto;
     }
-
-    text-align: center;
-    font-size: var(--font-size--sm);
     p {
       margin: 0;
     }

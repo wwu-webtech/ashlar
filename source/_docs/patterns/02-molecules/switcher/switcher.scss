@@ -3,7 +3,6 @@ Molecule: Switcher
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 @import "../../../../sass/partials/imports";
-@import "../../00-utilities/breakpoints.scss";
 wwu-switcher {
   button {
     flex: 1 1 0;
@@ -50,11 +49,10 @@ wwu-switcher {
   }
 }
 .column-layout {
-  @include breakpoint($small) {
+  @media (min-width: $small) {
     wwu-switcher {
-      gap: var(--space--sm);
-
       display: flex;
+      gap: var(--space--sm);
       button {
         &:not(:last-of-type) {
           border-right: solid var(--border-width--md) var(--link-decoration-color);

@@ -4,7 +4,6 @@ Molecule: Schedule
 1. Dark mode
 ------------------------------------------------------------------------------*/
 @import "../../../../sass/partials/imports";
-@import "../../00-utilities/breakpoints.scss";
 @import "../../01-atoms/background-color/background-color-mixins.scss";
 .wwu-schedule {
   .schedule-item {

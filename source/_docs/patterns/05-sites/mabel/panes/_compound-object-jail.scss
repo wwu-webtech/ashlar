@@ -3,7 +3,7 @@ Templates: Sites - MABEL - Object jail
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 #block-islandora-compound-object-compound-jail-display {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     border: solid var(--gray--lighter--60) var(--border-width--lg);
   }
 

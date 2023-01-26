@@ -11,24 +11,19 @@ Templates: Sites - MABEL - Search results
       margin-right: var(--space--sm);
     }
   }
-
   .page-content {
     margin-bottom: 0;
   }
-
   .islandora-solr-search-result {
     padding: 0 var(--space--sm) var(--space--md);
     border-bottom: solid var(--border-width--sm) var(--gray);
-
     &:last-of-type {
       border-bottom: none;
     }
-
     a {
       margin: initial;
       padding: 0;
     }
-
     dl.solr-fields {
       border: none;
     }
@@ -36,28 +31,24 @@ Templates: Sites - MABEL - Search results
     .solr-fields dd {
       border-color: var(--gray--lighter--60);
     }
-
     dl {
       &.solr-thumb,
       &.solr-fields {
-        @include breakpoint(max-width $medium) {
+        @media (max-width: $medium) {
           float: none;
           width: 100%;
         }
-
         &.solr-thumb {
           text-align: center;
         }
       }
     }
-
     .islandora-inline-metadata {
       dt {
         font-weight: var(--font-weight--regular);
       }
     }
   }
-
   .islandora-solr-grid {
     a {
       margin: 0;
@@ -66,13 +57,11 @@ Templates: Sites - MABEL - Search results
       font-size: var(--font-size--sm);
     }
   }
-
   .layout__region--second {
     position: relative;
     padding-top: var(--space--md);
   }
 }
-
 /* The following are for the resul limit/sort/display options, which also affect
 object 'result' pages, ie 'browse the collection' ----------------------------*/
 .expand-solr-panel {
@@ -84,7 +73,6 @@ object 'result' pages, ie 'browse the collection' ----------------------------*/
   color: var(--black);
   border-radius: 0;
   background-color: var(--gray--lighter--60);
-
   .material-icons {
     position: absolute;
     top: var(--space--2xs);
@@ -94,33 +82,26 @@ object 'result' pages, ie 'browse the collection' ----------------------------*/
     font-size: 1.125rem;
   }
 }
-
 .date-filter-toggle-text {
   display: none;
 }
-
 .date-range-filter-wrapper {
   display: block !important;
 }
-
 #skip-to-search-results:focus {
   position: relative !important;
   margin-right: var(--space--md);
 }
-
 #islandora-solr-result-count {
   display: inline-block;
   margin-right: var(--space--md);
 }
-
 #secondary-display-profiles {
   display: none;
 }
-
 #edit-range-slider-submit {
   border-radius: 0;
 }
-
 #edit-date-filter-date-filter-submit {
   margin-left: 100%;
   transform: translatex(-100%);

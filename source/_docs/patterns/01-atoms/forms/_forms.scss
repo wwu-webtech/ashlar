@@ -38,7 +38,7 @@ label {
 input,
 textarea,
 select {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     width: auto;
   }
 

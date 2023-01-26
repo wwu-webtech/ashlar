@@ -3,7 +3,7 @@ Templates: Sites - MABEL - Navigation
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 .pane-islandora-solr-search-navigation {
-  @include breakpoint($small) {
+  @media (min-width: $small) {
     display: grid;
 
     grid-template-columns: 3fr 1fr 1fr;
@@ -19,7 +19,7 @@ Templates: Sites - MABEL - Navigation
   }
 
   .button {
-    @include breakpoint($medium) {
+    @media (min-width: $medium) {
       padding: var(--space--sm);
     }
     margin-bottom: 0;

@@ -7,7 +7,7 @@ Molecule: Charts - Flow Chart
     text-align: center;
   }
   ol {
-    @include breakpoint($small) {
+    @media (min-width: $small) {
       flex-flow: row wrap;
       justify-content: center;
     }
@@ -18,7 +18,7 @@ Molecule: Charts - Flow Chart
     list-style-type: none;
   }
   li {
-    @include breakpoint($small) {
+    @media (min-width: $small) {
       flex-flow: row nowrap;
       margin: var(--space--md) 0 0;
     }
@@ -45,7 +45,7 @@ Molecule: Charts - Flow Chart
     display: block;
   }
   .flow-down {
-    @include breakpoint($small) {
+    @media (min-width: $small) {
       display: none;
     }
 
@@ -54,7 +54,7 @@ Molecule: Charts - Flow Chart
     padding: var(--space--md);
   }
   .flow-right {
-    @include breakpoint($small) {
+    @media (min-width: $small) {
       display: block;
     }
 

@@ -11,7 +11,7 @@ Molecule: Cards - Alternate styles
 1. Horizontal
 ------------------------------------------------------------------------------*/
 .wwu-card.horizontal {
-  @include breakpoint($small) {
+  @media (min-width: $small) {
     display: grid;
     grid-template-areas: "image ." "image ." "image ." "image ." "image ." "image .";
     grid-template-columns: 2fr 3fr;

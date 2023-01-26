@@ -4,17 +4,15 @@ Molecule: Testimonial
 1. Mirror
 ------------------------------------------------------------------------------*/
 @import "../../../../../sass/partials/imports";
-@import "../../../00-utilities/breakpoints.scss";
 .wwu-testimonial {
-  @include breakpoint($medium) {
+  display: flex;
+  flex-flow: column;
+  border-style: none;
+  @media (min-width: $medium) {
     flex-flow: row wrap;
     padding-bottom: var(--space--3xl);
     padding-left: var(--space--2xl);
   }
-
-  display: flex;
-  flex-flow: column;
-  border-style: none;
   blockquote {
     flex: 1 1 50%;
     border: none;
@@ -34,12 +32,6 @@ Molecule: Testimonial
     font-style: italic;
   }
   .image--stylized {
-    @include breakpoint($medium) {
-      flex: 0 0 auto;
-      margin: 0;
-      margin-right: var(--space--md);
-    }
-
     position: relative;
     width: calc(100vw - (2 * var(--space--md)));
     max-width: calc(var(--content-area-max-width) / 4);
@@ -47,6 +39,11 @@ Molecule: Testimonial
     max-height: calc(var(--content-area-max-width) / 4);
     margin: auto;
     box-shadow: var(--shadow--soft);
+    @media (min-width: $medium) {
+      flex: 0 0 auto;
+      margin: 0;
+      margin-right: var(--space--md);
+    }
     &:before,
     &:after {
       position: absolute;
@@ -75,18 +72,18 @@ Molecule: Testimonial
   ----------------------------------------------------------------------------*/
   &.mirror {
     .image--stylized {
-      @include breakpoint($medium) {
+      @media (min-width: $medium) {
         margin-right: 0;
         margin-left: var(--space--md);
       }
     }
     .image {
-      @include breakpoint($medium) {
+      @media (min-width: $medium) {
         order: 2;
       }
     }
     .body {
-      @include breakpoint($medium) {
+      @media (min-width: $medium) {
         order: 1;
         text-align: right;
       }

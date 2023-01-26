@@ -13,7 +13,7 @@ Templates: Layouts - Retired Layouts - Three col 33/34/33
 }
 
 .layout--threecol-33-34-33 > .layout__region--first {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     flex: 0 1 33%;
     max-width: 33%;
     padding-right: var(--space--sm);
@@ -23,7 +23,7 @@ Templates: Layouts - Retired Layouts - Three col 33/34/33
 }
 
 .layout--threecol-33-34-33 > .layout__region--second {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     flex: 0 1 34%;
     max-width: 34%;
     padding: 0 var(--space--sm);
@@ -33,7 +33,7 @@ Templates: Layouts - Retired Layouts - Three col 33/34/33
 }
 
 .layout--threecol-33-34-33 > .layout__region--third {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     flex: 0 1 33%;
     max-width: 33%;
     padding-left: var(--space--sm);

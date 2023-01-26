@@ -16,7 +16,7 @@ wwu-modal {
     }
   }
   .modal {
-    @include breakpoint($medium) {
+    @media (min-width: $medium) {
       min-width: 50vw;
     }
 

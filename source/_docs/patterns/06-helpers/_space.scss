@@ -139,42 +139,42 @@ Helpers: Space
 }
 /* space creating blocks */
 .vertical-space--1x {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     height: var(--space--sm);
   }
 }
 .vertical-space--2x {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     height: calc(var(--space--sm) * 2);
   }
 }
 .vertical-space--3x {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     height: calc(var(--space--sm) * 3);
   }
 }
 .vertical-space--4x {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     height: calc(var(--space--sm) * 4);
   }
 }
 .vertical-space--5x {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     height: calc(var(--space--sm) * 5);
   }
 }
 .vertical-space--6x {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     height: calc(var(--space--sm) * 6);
   }
 }
 .vertical-space--7x {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     height: calc(var(--space--sm) * 7);
   }
 }
 .vertical-space--8x {
-  @include breakpoint($medium) {
+  @media (min-width: $medium) {
     height: calc(var(--space--sm) * 8);
   }
 }

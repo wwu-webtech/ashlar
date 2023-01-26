@@ -23,7 +23,7 @@ Flex styles for Drupal Views using the Grid Format
   margin-right: 0;
 }
 
-@include breakpoint($small) {
+@media (min-width: $small) {
   .views-view-grid.cols-1 .views-col {
     flex: 0 1 calc(100% - var(--space--sm));
   }
@@ -44,7 +44,7 @@ Flex styles for Drupal Views using the Grid Format
   }
 }
 
-@include breakpoint($medium) {
+@media (min-width: $medium) {
   .views-view-grid.cols-6 .views-col {
     flex: 0 1 calc(16.666% - var(--space--sm));
   }
