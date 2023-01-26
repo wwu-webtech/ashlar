@@ -3,6 +3,10 @@ Molecule: Search
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 wwu-search {
+  form {
+    display: flex;
+    align-items: center;
+  }
   label {
     display: inline;
     padding: 0 var(--space--xs);

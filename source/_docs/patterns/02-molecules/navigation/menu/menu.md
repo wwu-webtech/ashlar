@@ -22,6 +22,7 @@
 ```
 
 ## Horizontal
+Will display as default on mobile/small screens.
 
 <ul className="menu horizontal">
       <li>

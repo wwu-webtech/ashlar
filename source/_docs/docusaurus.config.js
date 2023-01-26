@@ -64,6 +64,7 @@ const config = {
             require.resolve('../../build/css/components/statistic.css'),
             require.resolve('../../build/css/components/switcher.css'),
             require.resolve('../../build/css/components/pre-header.css'),
+            require.resolve('../../build/css/components/wwu-header.css'),
           ],
         },
       }),

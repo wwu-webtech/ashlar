@@ -37,13 +37,12 @@ Molecule: Alerts
     }
   }
   &.weather {
-    @include light-green-bg;
+    @include blue-bg;
 
     border-top: var(--border-width--md) solid transparent;
     border-bottom: var(--border-width--md) solid transparent;
-    background-color: var(--yellow);
     svg {
-      fill: var(--dark-blue);
+      fill: var(--white);
     }
   }
 }

@@ -10,17 +10,19 @@ Molecule: Menu
     border-left: var(--border-width--md) var(--link-decoration-color) solid;
   }
   &.horizontal {
-    display: flex;
-    justify-content: center;
-    li {
-      border: var(--border-width--md) var(--link-decoration-color) solid;
-      &:not(:last-of-type) {
-        border-right: none;
+    @include breakpoint($small) {
+      display: flex;
+      justify-content: center;
+      li {
+        border: var(--border-width--md) var(--link-decoration-color) solid;
+        &:not(:last-of-type) {
+          border-right: none;
+        }
       }
-    }
-    a {
-      display: block;
-      border: none;
+      a {
+        display: block;
+        border: none;
+      }
     }
   }
 }

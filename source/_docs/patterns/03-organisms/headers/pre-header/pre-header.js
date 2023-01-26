@@ -4,7 +4,7 @@ if (
 ) {
   const pre_header_template = document.createElement("template");
   pre_header_template.innerHTML = `
-  <a href="#main-content" class="skip-link focusable">
+  <a href="#main-content" class="skip-link focusable icon-link">
       <span class="material-icons" aria-hidden="true">keyboard_double_arrow_down</span>
       <span class="skip-link-text">Skip to Content </span>      
   </a>    

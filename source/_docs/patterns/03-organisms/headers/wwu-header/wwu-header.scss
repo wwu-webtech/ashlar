@@ -4,7 +4,9 @@ Organism: Headers - Western header
 ------------------------------------------------------------------------------*/
 @import "../../../../../sass/partials/imports";
 @import "../../../00-utilities/breakpoints.scss";
+@import "../../../01-atoms/background-color/_background-color-mixins.scss";
 wwu-header {
+  @include dark-blue-bg;
   @include breakpoint($medium) {
     display: grid;
     grid-template-columns: var(--logo-size) 1fr;
@@ -13,7 +15,6 @@ wwu-header {
 
   position: relative;
   display: block;
-  background-color: var(--dark-blue);
   noscript {
     display: grid;
     grid-column: 1 / span all;
@@ -37,24 +38,10 @@ wwu-header {
       border: none;
     }
   }
-  .western-home-link {
-    color: var(--blue--lighter--60);
-    &:active,
-    &:focus,
-    &:hover {
-      outline-color: transparent;
-      outline-offset: calc(-1 * var(--border-width--md));
-      background: transparent;
-    }
-    &:focus {
-      outline-color: var(--white);
-    }
-  }
   .western-logo {
-    place-content: center;
-
     display: flex;
     grid-area: logo;
+    place-content: center;
   }
   .site-name {
     @include breakpoint($small) {
@@ -73,19 +60,6 @@ wwu-header {
 
     display: block;
     text-decoration: none;
-    color: var(--white);
-    &:visited {
-      color: var(--white);
-    }
-    &:active,
-    &:focus,
-    &:hover {
-      color: var(--dark-blue--darker--60);
-      outline-color: transparent;
-    }
-    &:focus {
-      outline-color: var(--blue--lighter--60);
-    }
   }
 }
 .site-info {
@@ -120,10 +94,9 @@ wwu-header {
   padding-right: var(--toggle-size--sm);
   .icon-with-text {
     @include breakpoint($medium) {
-      place-items: center;
-
       display: flex;
       flex-flow: row nowrap;
+      place-items: center;
       width: initial !important;
       height: initial !important;
       padding: var(--space--2xs);

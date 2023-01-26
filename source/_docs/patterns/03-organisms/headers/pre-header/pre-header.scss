@@ -14,15 +14,12 @@ wwu-pre-header {
 
   position: relative;
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   font-size: var(--font-size--xs);
   noscript {
     display: flex;
     justify-content: flex-end;
-  }
-  form {
-    display: flex;
-    align-items: end;
   }
   button,
   .radio {
@@ -37,9 +34,6 @@ wwu-pre-header {
   .skip-link {
     --link-color: var(--white);
     --link-color--visited: var(--link-color);
-
-    padding-right: var(--space--xs);
-    text-decoration: none;
   }
   .settings-menu {
     position: absolute;

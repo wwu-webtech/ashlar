@@ -9,11 +9,11 @@ Molecule: Testimonial
   @include breakpoint($medium) {
     flex-flow: row wrap;
     padding-bottom: var(--space--3xl);
+    padding-left: var(--space--2xl);
   }
 
   display: flex;
   flex-flow: column;
-  padding-left: var(--space--2xl);
   border-style: none;
   blockquote {
     flex: 1 1 50%;
@@ -56,7 +56,7 @@ Molecule: Testimonial
       border-radius: 50%;
     }
     &:before {
-      right: -4rem;
+      right: -3rem;
       bottom: 1rem;
       width: 100%;
       height: 100%;

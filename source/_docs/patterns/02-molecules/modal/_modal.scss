@@ -16,11 +16,14 @@ wwu-modal {
     }
   }
   .modal {
+    @include breakpoint($medium) {
+      min-width: 50vw;
+    }
+
     position: absolute;
     top: 50%;
     left: 50%;
-    min-width: 50vw;
-    min-height: 30vh;
+    min-width: 100vw;
     transform: translate(-50%, -50%);
     background: var(--black);
   }
