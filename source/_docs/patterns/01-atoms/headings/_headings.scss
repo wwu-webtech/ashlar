@@ -32,7 +32,7 @@ h6 {
   font-family: var(--font--title);
   font-weight: var(--font-weight--semibold);
   font-display: fallback;
-  line-height: 1.2em;
+  line-height: 1.2;
   @media print {
     margin-bottom: 0;
     page-break-inside: avoid;

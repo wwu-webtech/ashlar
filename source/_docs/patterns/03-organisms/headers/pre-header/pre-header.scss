@@ -34,6 +34,8 @@ wwu-pre-header {
   .skip-link {
     --link-color: var(--white);
     --link-color--visited: var(--link-color);
+
+    padding: 0 var(--space--xs);
   }
   .settings-menu {
     position: absolute;

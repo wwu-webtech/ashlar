@@ -105,6 +105,8 @@ The class full-width can be used to break an element out of the flex container. 
 ```
 
 ## Horizontal
+Will look the same as basic cards on mobile/small screens
+
 <div  className="wwu-card horizontal">    
   <h2 className="title">
     <a href="#">Faolan Griogarach, PhD</a>

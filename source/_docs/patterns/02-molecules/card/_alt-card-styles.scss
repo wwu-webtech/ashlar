@@ -11,13 +11,15 @@ Molecule: Cards - Alternate styles
 1. Horizontal
 ------------------------------------------------------------------------------*/
 .wwu-card.horizontal {
-  display: grid;
-  grid-template-areas: "image ." "image ." "image ." "image ." "image ." "image .";
-  grid-template-columns: 2fr 3fr;
-  padding: 0;
-  .image {
-    grid-area: image;
-    margin: 0;
+  @include breakpoint($small) {
+    display: grid;
+    grid-template-areas: "image ." "image ." "image ." "image ." "image ." "image .";
+    grid-template-columns: 2fr 3fr;
+    padding: 0;
+    .image {
+      grid-area: image;
+      margin: 0;
+    }
   }
 }
 /*------------------------------------------------------------------------------
@@ -199,7 +201,7 @@ Molecule: Cards - Alternate styles
   border: var(--border-width--sm) solid transparent;
   p {
     font-size: var(--font-size--xs);
-    line-height: 1.25em;
+    line-height: 1.25;
   }
   &:hover,
   &:focus-within {

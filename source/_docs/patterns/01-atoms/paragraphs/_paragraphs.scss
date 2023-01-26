@@ -5,7 +5,7 @@ Atom: Text - Paragraph
 ------------------------------------------------------------------------------*/
 p {
   margin: 0 0 var(--space--md);
-  line-height: 1.7em;
+  line-height: 1.7;
   @media print {
     page-break-inside: avoid;
   }
