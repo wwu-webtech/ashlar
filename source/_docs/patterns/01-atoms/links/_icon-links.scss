@@ -11,6 +11,14 @@ Atom: Icon Links
   padding-right: var(--space--xs);
   text-decoration: none;
   line-height: 1.2;
+  .text {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: var(--border-width--md);
+
+    text-decoration: underline;
+    text-decoration-color: var(--link-decoration-color);
+  }
   .material-icons {
     top: 0;
   }
