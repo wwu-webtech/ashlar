@@ -1,6 +1,6 @@
 if (
-  typeof context == "undefined" ||
-  (typeof context != "undefined" && context == document)
+  (typeof context == "undefined" || (typeof context != "undefined" && context == document)) // makes it work in Drupal
+  && typeof window !== "undefined" // makes it work in Node.js server side rendering
 ) {
   const pre_header_template = document.createElement("template");
   pre_header_template.innerHTML = `
