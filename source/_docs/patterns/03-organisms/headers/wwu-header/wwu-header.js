@@ -12,27 +12,27 @@ if (
   <nav class="wwu-menu wwu-menu-closed" aria-label="Western Quick Links">
       <a class="small icon-link apply-quick-link" href="https://admissions.wwu.edu/apply">
           <span class="material-icons" aria-hidden="true">how_to_reg</span>
-          <span class="icon-text">Apply</span>
+          Apply
       </a>
       
       <a class="small icon-link give-quick-link" href="https://alumniq.wwu.edu/giving/make-a-gift">
           <span class="material-icons" aria-hidden="true">favorite_border</span>
-          <span class="icon-text">Give</span>
+          Give
       </a>
       
       <a class="small icon-link report-bias-quick-link" href="https://www.wwu.edu/sebrt/report-bias-incident">
           <span class="material-icons" aria-hidden="true">sms</span>
-          <span class="icon-text">Report Bias</span>
+          Report Bias
       </a>
       
       <a class="small icon-link my-western-link" href="https://mywestern.wwu.edu">
           <span class="material-icons" aria-hidden="true">person_pin</span>
-          <span class="icon-text">myWestern</span>
+          myWestern
       </a>
       
       <a class="small icon-link jobs-link" href="https://www.wwu.edu/workatwestern">
           <span class="material-icons" aria-hidden="true">business_center</span>
-          <span class="icon-text">Jobs</span>
+          Jobs
       </a>
   </nav>
 
