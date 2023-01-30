@@ -18,7 +18,8 @@ a {
   text-decoration-thickness: var(--border-width--md);
 
   padding: 0.1563rem 0;
-  transition: all var(--transition-speed--fast) cubic-bezier(0.33, 0.66, 0.66, 1);
+  transition: background-color var(--transition-speed--fast) cubic-bezier(0.33, 0.66, 0.66, 1),
+  background-image var(--transition-speed--fast) cubic-bezier(0.33, 0.66, 0.66, 1);
   text-decoration-color: var(--link-decoration-color);
   text-underline-offset: 0.3125rem;
   color: var(--link-color);

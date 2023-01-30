@@ -1,13 +1,22 @@
 /*------------------------------------------------------------------------------
-Molecule: Navigation - myWestern links
+Molecule: Navigation - myWestern Menu
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 .my-western-links {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
   max-width: 38rem;
   margin: var(--space--md) auto;
-  padding: 0;
-  list-style: none;
+  p {
+    margin: 0;
+    line-height: 1.5;
+  }
+  svg {
+    fill: var(--link-color);
+  }
+  .wwu-card {
+    padding: 0;
+    text-align: center;
+  }
+  .image {
+    padding: var(--space--md) var(--space--md) 0 var(--space--md);
+  }
 }

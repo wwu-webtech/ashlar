@@ -13,9 +13,11 @@ Molecule: Card Containers
 .card-2col,
 .card-3col,
 .card-4col,
+.card-5col,
 .card-2col--view .view-content,
 .card-3col--view .view-content,
-.card-4col--view .view-content {
+.card-4col--view .view-content,
+.card-5col--view .view-content {
   display: grid;
   grid-column-gap: var(--space--sm);
   grid-template-columns: 1fr;
@@ -42,14 +44,21 @@ Molecule: Card Containers
     grid-template-rows: auto;
   }
 }
+.card-5col,
+.card-5col--view .view-content {
+  @media (min-width: $small) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}
 /* b. Flex -------------------------------------------------------------------*/
 .card-2col--flex,
 .card-3col--flex,
-.card-4col--flex {
-  gap: var(--space--xs);
-
+.card-4col--flex,
+.card-5col--flex {
   display: flex;
   flex-flow: row wrap;
+  gap: var(--space--xs);
   > * {
     flex: 0 1 100%;
   }
@@ -72,6 +81,13 @@ Molecule: Card Containers
   > * {
     @media (min-width: $small) {
       flex: 0 1 calc(25% - var(--space--xs));
+    }
+  }
+}
+.card-5col--flex {
+  > * {
+    @media (min-width: $small) {
+      flex: 0 1 calc(20% - var(--space--xs));
     }
   }
 }

@@ -78,7 +78,8 @@ Molecule: Cards
     order: -1;
     width: 100%;
     margin-bottom: var(--space--xs);
-    img {
+    img,
+    svg {
       display: block;
       object-fit: cover;
       width: 100%;
