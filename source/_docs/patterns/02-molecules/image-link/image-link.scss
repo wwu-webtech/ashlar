@@ -3,18 +3,24 @@ Molecule: Image Link
 --------------------------------------------------------------------------------
 1. Multiple links
 2. Variations
-3. Dark mode
-4. Display preferences
+3. Display preferences
 ------------------------------------------------------------------------------*/
+.wwu-image-link {
+  display: inline-grid;
+  margin-right: var(--space--md);
+}
 .image-link {
+  --image-link-font-size: var(--font-size--lg);
+  --image-link-overlay-color: var(--dark-blue--darker--40);
   --image-link-size: 12.5rem;
-  --image-link-size--sm: 8.25rem;
+  --link-background--active: transparent;
+  --link-color: var(--white);
+  --link-color--active: var(--white);
+  --link-color--visited: var(--white);
 
   position: relative;
   width: var(--image-link-size);
   height: var(--image-link-size);
-  margin-top: var(--space--3xl);
-  margin-bottom: var(--space--3xl);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   border-radius: 50%;
   box-shadow: var(--shadow--soft);
@@ -36,13 +42,15 @@ Molecule: Image Link
     width: 70%;
     height: 70%;
     transform: translate(-20%, -10%);
-    background: rgba(var(--blue--rgb), 0.2);
+    opacity: 0.2;
+    background: var(--image-link-overlay-color);
   }
   &:after {
     width: 105%;
     height: 105%;
     transform: translate(15%, 10%);
-    background: rgba(var(--blue--rgb), 0.1);
+    opacity: 0.1;
+    background: var(--image-link-overlay-color);;
   }
   &:hover,
   &:focus-within {
@@ -57,7 +65,7 @@ Molecule: Image Link
     transform: translate(-20%, -10%);
   }
   .image {
-    background-color: var(--dark-blue);
+    background-color: var(--image-link-overlay-color);
     img {
       @media print {
         display: none;
@@ -77,20 +85,21 @@ Molecule: Image Link
     justify-content: center;
     text-align: center;
     text-decoration: none;
-    color: var(--white);
-    border: solid var(--border-width--md) transparent;
     border-radius: 50%;
-    background: rgba(var(--dark-blue--darker--40--rgb), 0.7);
-    font-size: var(--font-size--lg);
+    outline: var(--outline-width) solid transparent;
+    font-size: var(--image-link-font-size);
     font-weight: bold;
-    &:active,
-    &:focus,
-    &:hover {
-      outline-color: var(--dark-blue);
-      background: rgba(var(--dark-blue--darker--40--rgb), 0.9);
-    }
-    &:visited {
-      color: var(--white);
+    &:before {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      content: "";
+      opacity: 0.7;
+      background: var(--image-link-overlay-color);
     }
     &:after {
       content: "";
@@ -103,6 +112,12 @@ Molecule: Image Link
         content: " [" attr(href) "] ";
         font-size: 10pt;
       }
+    }
+    &:hover:before {
+      opacity: 0.9;
+    }
+    &:focus-visible {
+      outline: var(--outline-width) dotted var(--link-color--active);
     }
     @media print {
       overflow: visible;
@@ -175,7 +190,6 @@ Molecule: Image Link
 /*------------------------------------------------------------------------------
 2. Variations
 ------------------------------------------------------------------------------*/
-.image-link--simple,
 .simple {
   .image-link {
     &:before,
@@ -186,85 +200,39 @@ Molecule: Image Link
 }
 .smaller {
   .image-link {
-    width: var(--image-link-size--sm);
-    height: var(--image-link-size--sm);
-    margin-bottom: var(--space--md);
-    a {
-      font-size: var(--font-size--md);
-    }
+    --image-link-font-size: var(--font-size--md);
+    --image-link-size: 8.25rem;
+  }
+}
+.smallest {
+  .image-link {
+    --image-link-font-size: var(--font-size--sm);
+    --image-link-size: 6.5rem;
   }
 }
 .green {
-  .image-link:not(.green) {
-    .image {
-      background-color: var(--light-green);
-    }
-    a {
-      color: var(--dark-blue--darker--40);
-      background-color: rgba(var(--light-green--rgb), 0.8);
-      &:active,
-      &:focus,
-      &:hover {
-        background: rgba(var(--light-green--rgb), 0.95);
-      }
-    }
-    &:before {
-      background: rgba(var(--light-green--rgb), 0.5);
-    }
-    &:after {
-      background: rgba(var(--light-green--rgb), 0.3);
-    }
-  }
-}
-/*------------------------------------------------------------------------------
-3. Dark Mode
-------------------------------------------------------------------------------*/
-[data-theme="dark"] {
   .image-link {
-    a {
-      color: var(--white);
-      &:active,
-      &:focus,
-      &:hover {
-        color: var(--white);
-        background-image: none;
-      }
-    }
-    &:before {
-      background: rgba(var(--blue--rgb), 0.5);
-    }
-    &:after {
-      background: rgba(var(--blue--rgb), 0.7);
-    }
+    --image-link-overlay-color: var(--green);
   }
-  .green {
-    .image-link {
-      a {
-        color: var(--dark-blue--darker--40);
-        &:hover,
-        &:focus,
-        &:active {
-          color: var(--dark-blue--darker--40);
-        }
-      }
-    }
+}
+.blue {
+  .image-link {
+    --image-link-overlay-color: var(--blue--darker--20);
   }
 }
 /*------------------------------------------------------------------------------
-4. Display preferences
+3. Display preferences
 ------------------------------------------------------------------------------*/
 .font--dyslexia-friendly {
-  .block--image-link {
+  .image-link {
+    --image-link-font-size: var(--font-size--sm);
+
     word-spacing: -0.5em;
     line-height: 2;
-    a {
-      font-size: font-size(var--font-size--sm);
-    }
-    &.smaller {
-      line-height: 1.2;
-      a {
-        font-size: var(--font-size--xs);
-      }
-    }
+  }
+  .smaller .image-link {
+    --image-link-font-size: var(--font-size--xs);
+
+    line-height: 1.2;
   }
 }

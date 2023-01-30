@@ -64,6 +64,18 @@ import Placeholder from '@site/static/img/placeholder.jpg';
   </div>
 </div>
 
+<div className="wwu-image-link smaller simple blue"> 
+  <div className="image-link">
+    <a href="#">Prospective Students</a>
+    
+    <div className="image image--stylized">
+      <div className="field__item">
+        <img src={Placeholder} alt="leaves in water placeholder"/>
+      </div>
+    </div>
+  </div>
+</div>
+
 ```
 <div class="wwu-image-link green"> 
   <div class="image-link">
@@ -95,6 +107,18 @@ import Placeholder from '@site/static/img/placeholder.jpg';
     
     <div class="image image--stylized">
       <div class="field__item">
+        <img src={Placeholder} alt="leaves in water placeholder"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div className="wwu-image-link smaller simple blue"> 
+  <div className="image-link">
+    <a href="#">Prospective Students</a>
+    
+    <div className="image image--stylized">
+      <div className="field__item">
         <img src={Placeholder} alt="leaves in water placeholder"/>
       </div>
     </div>
