@@ -5,6 +5,7 @@ Molecule: Navigation - myWestern Menu
 .my-western-links {
   max-width: 38rem;
   margin: var(--space--md) auto;
+  font-size: var(--font-size--sm);
   p {
     margin: 0;
     line-height: 1.5;
@@ -13,6 +14,7 @@ Molecule: Navigation - myWestern Menu
     fill: var(--link-color);
   }
   .wwu-card {
+    align-content: space-between;
     padding: 0;
     text-align: center;
   }

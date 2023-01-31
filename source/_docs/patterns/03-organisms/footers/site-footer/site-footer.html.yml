@@ -1,8 +1,0 @@
-page:
-  footer_left: '
-  <div class="region region--footer_left">
-  <p><a href="#" class="cta">CTA Default</a></p><p><a href="#" class="cta outline white">White CTA Outline</a></p>
-  </div>'
-  footer_center: '<div class="region region--footer_center"><ul class="menu blue"> <li><a href="#">one</a></li> <li><a href="#">two</a></li> <li><a href="#">three</a></li></ul></div>'
-  footer_right: '<div class="region region--footer_right">Content for the right footer.<a href="#">Link in right footer region</a></div>'
-  footer_bottom: '<div class="region region--footer_bottom">Related links: <a href="#">one</a> <a href="#">two</a> <a href="#">three</a></div>'

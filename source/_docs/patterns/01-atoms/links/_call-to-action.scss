@@ -1,16 +1,20 @@
-/*------------------------------------------------------------------------------
+/*----------------------------------------
 Atom: Call to Action Link
---------------------------------------------------------------------------------
-------------------------------------------------------------------------------*/
+----------------------------------------
+----------------------------------------*/
 .cta {
+  --cta-decoration-adjustment: 0.85rem;
+  --cta-decoration-size: 2.3rem;
+  --cta-padding: 1.6rem;
+  --cta-size: 2.5rem;
+
   position: relative;
   display: inline-grid;
-  place-content: center;
-  min-height: 3rem;
-  margin: var(--space--sm);
-  margin-bottom: var(--space--sm);
-  padding-right: calc(var(--space--md) + 2rem);
-  padding-left: calc(var(--space--md) + 3rem);
+  align-content: center;
+  min-height: var(--cta-size);
+  margin-bottom: var(--space--md);
+  padding-right: calc(var(--space--md) + var(--cta-padding));
+  padding-left: calc(var(--space--sm) + var(--cta-size));
   text-underline-offset: unset;
   border-radius: var(--border-radius--roundest);
   background-size: 0 100%;
@@ -22,8 +26,8 @@ Atom: Call to Action Link
   &:before {
     // the arrow
     position: absolute;
-    top: 1.2rem;
-    left: 1.2rem;
+    top: var(--cta-decoration-adjustment);
+    left: var(--cta-decoration-adjustment);
     display: inline-block;
     padding: 5px;
     content: "";
@@ -42,8 +46,8 @@ Atom: Call to Action Link
     display: grid;
     align-content: center;
     justify-content: center;
-    width: 2.8rem;
-    height: 2.8rem;
+    width: var(--cta-decoration-size);
+    height: var(--cta-decoration-size);
     content: "";
     border: solid var(--border-width--md) var(--link-color);
     border-radius: 50%;
@@ -68,46 +72,46 @@ Atom: Call to Action Link
 }
 @keyframes cta-animate {
   0% {
-    padding-right: var(--space--sm);
-    padding-left: calc(var(--space--md) + 3rem);
+    padding-right: var(--space--md);
+    padding-left: calc(var(--space--sm) + var(--cta-size));
     background-size: 0;
   }
   100% {
-    padding-right: calc(var(--space--md) + 2rem);
-    padding-left: var(--space--sm);
+    padding-right: calc(var(--space--md) + var(--cta-padding));
+    padding-left: var(--space--md);
     transform: translatex(0);
     background-size: 100%;
   }
 }
 @keyframes cta-animate-back {
   0% {
-    padding-right: calc(var(--space--md) + 2rem);
-    padding-left: var(--space--sm);
+    padding-right: calc(var(--space--md) + var(--cta-padding));
+    padding-left: var(--space--md);
     transform: translatex(0);
     background-size: 100%;;
   }
   100% {
-    padding-right: var(--space--sm);
-    padding-left: calc(var(--space--md) + 3rem);
+    padding-right: var(--space--md);
+    padding-left: calc(var(--space--sm) + var(--cta-size));
     background-size: 0;
   }
 }
 @keyframes cta-animate-before {
   0% {
-    left: 1.2rem;
+    left: var(--cta-decoration-adjustment);
   }
   100% {
-    left: calc(100% - 2rem);
-    border-color: var(--link-color--active);
+    left: calc(100% - var(--cta-padding));
+    border-color: var(--link-color--focus);
   }
 }
 @keyframes cta-animate-before-back {
   0% {
-    left: calc(100% - 2rem);
-    border-color: var(--link-color--active);
+    left: calc(100% - var(--cta-padding));
+    border-color: var(--link-color--focus);
   }
   100% {
-    left: 1.2rem;
+    left: var(--cta-decoration-adjustment);
   }
 }
 @keyframes cta-animate-after {

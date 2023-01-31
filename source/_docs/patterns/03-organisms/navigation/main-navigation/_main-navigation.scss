@@ -77,16 +77,8 @@ Molecule: Main navigation/ultimenu custom styles
       &:hover,
       &:focus-within {
         .expand-icon {
-          color: var(--link-color--active);
+          color: var(--link-color--focus);
         }
-      }
-      /*------------------------------------------------------------------------
-      1. Active link trail
-      ------------------------------------------------------------------------*/
-      [aria-current="page"] {
-        --link-background: var(--light-green);
-        --link-color: var(--dark-blue);
-        --link-color--visited: var(--dark-blue);
       }
     }
   }

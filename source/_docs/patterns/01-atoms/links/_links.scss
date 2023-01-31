@@ -5,9 +5,11 @@ Atom: Text - Links
 ------------------------------------------------------------------------------*/
 :root {
   --link-background: transparent;
-  --link-background--active: var(--gradient--vertical--light-blue);
+  --link-background--active: var(--light-green);
+  --link-background--focus: var(--gradient--vertical--light-blue);
   --link-color: var(--blue--darker--20);
   --link-color--active: var(--dark-blue);
+  --link-color--focus: var(--dark-blue);
   --link-color--visited: var(--purple);
   --link-decoration-color: var(--blue--lighter--60);
   --link-decoration-color--visited: var(--purple--lighter--60);
@@ -38,12 +40,17 @@ a {
   &:hover,
   &:focus {
     text-decoration: none;
-    color: var(--link-color--active);
-    background: var(--link-background--active);
+    color: var(--link-color--focus);
+    background: var(--link-background--focus);
   }
   &:active,
   &:hover {
     outline: var(--outline-width) solid transparent;
+  }
+  &[aria-current="page"] {
+    --link-background: var(--link-background--active);
+    --link-color: var(--link-color--active);
+    --link-color--visited: var(--link-color--active);
   }
   &[target="_blank"],
   &[target="blank"] {

@@ -13,7 +13,7 @@ Links that appear at the top of myWestern
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67.15 73.72">
         <defs>
           <linearGradient id="email-gradient" x1="4.95" y1="13.35" x2="63.78" y2="41.12" gradientUnits="userSpaceOnUse">
-            <stop offset="0" stop-color="#003f87" />
+            <stop offset="0" stop-color="#45B6FF" />
             <stop offset="1" stop-color="#007ac8" />
           </linearGradient>
         </defs>

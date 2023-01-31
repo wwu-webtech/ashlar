@@ -19,9 +19,9 @@ Black, darkest blue, and dark blue are black based and share link/heading colors
   --h6-color: var(--light-green);
   --icon-background-color--active: var(--blue--lighter--40);
   --icon-color--active: var(--dark-blue);
-  --link-background--active: var(--gradient--vertical--light-blue);
+  --link-background--focus: var(--gradient--vertical--light-blue);
   --link-color: var(--blue--lighter--40);
-  --link-color--active: var(--dark-blue);
+  --link-color--focus: var(--dark-blue);
   --link-color--visited: var(--purple--lighter--80);
   --link-decoration-color: var(--blue--lighter--60);
   --oline-color: var(--white);
@@ -61,9 +61,9 @@ Gray, blue, and green backgrounds are gray based.
   --icon-background-color: var(--dark-blue);
   --icon-background-color--active: var(--dark-blue--darker--40);
   --icon-color--active: var(--white);
-  --link-background--active: var(--gradient--vertical--light-blue);
+  --link-background--focus: var(--gradient--vertical--light-blue);
   --link-color: var(--white);
-  --link-color--active: var(--dark-blue);
+  --link-color--focus: var(--dark-blue);
   --link-color--visited: var(--white);
   --link-decoration-color: var(--blue--lighter--60);
   --link-decoration-color--visited: var(--purple--lighter--80);
@@ -80,7 +80,7 @@ Gray, blue, and green backgrounds are gray based.
 }
 
 @mixin green-bg {
-  --link-background--active: var(--gradient--vertical--light-green);
+  --link-background--focus: var(--gradient--vertical--light-green);
 
   @include gray-bg;
 
@@ -100,9 +100,11 @@ backgrounds are light gray based.
   --h4-color: var(--dark-blue--darker--30);
   --h5-color: var(--dark-blue--darker--20);
   --h6-color: var(--dark-blue--darker--10);
-  --link-background--active: var(--gradient--vertical--dark-blue);
+  --link-background--active: var(--blue);
+  --link-background--focus: var(--gradient--vertical--dark-blue);
   --link-color: var(--dark-blue--darker--60);
   --link-color--active: var(--white);
+  --link-color--focus: var(--white);
   --link-decoration-color: var(--blue--darker--60);
   --link-decoration-color--visited: var(--purple);
   --oline-color: var(--dark-blue--darker--60);

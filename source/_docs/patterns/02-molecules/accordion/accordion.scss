@@ -32,9 +32,9 @@ wwu-accordion,
     &:active,
     &:focus,
     &:hover {
-      color: var(--link-color--active);
+      color: var(--link-color--focus);
       outline-offset: var(--outline-offset--inset);
-      background: var(--link-background--active);
+      background: var(--link-background--focus);
     }
   }
   .title {

@@ -17,9 +17,9 @@ Atom: Tables
   --table-text: var(--black);
 }
 table {
-  --link-background--active: var(--gradient--vertical--light-blue);
+  --link-background--focus: var(--gradient--vertical--light-blue);
   --link-color: var(--blue--darker--20);
-  --link-color--active: var(--dark-blue);
+  --link-color--focus: var(--dark-blue);
   --link-color--visited: var(--purple);
   --link-decoration-color: var(--blue--lighter--60);
   --link-decoration-color--visited: var(--purple--lighter--60);
@@ -141,9 +141,9 @@ table {
 ------------------------------------------------------------------------------*/
 [data-theme="dark"] {
   table {
-    --link-background--active: var(--gradient--vertical--light-blue);
+    --link-background--focus: var(--gradient--vertical--light-blue);
     --link-color: var(--white);
-    --link-color--active: var(--dark-blue);
+    --link-color--focus: var(--dark-blue);
     --link-color--visited: var(--white);
     --link-decoration-color: var(--blue--lighter--60);
     --link-decoration-color--visited: var(--purple--lighter--80);

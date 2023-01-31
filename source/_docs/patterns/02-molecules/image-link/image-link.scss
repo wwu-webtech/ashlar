@@ -13,9 +13,9 @@ Molecule: Image Link
   --image-link-font-size: var(--font-size--lg);
   --image-link-overlay-color: var(--dark-blue--darker--40);
   --image-link-size: 12.5rem;
-  --link-background--active: transparent;
+  --link-background--focus: transparent;
   --link-color: var(--white);
-  --link-color--active: var(--white);
+  --link-color--focus: var(--white);
   --link-color--visited: var(--white);
 
   position: relative;
@@ -117,7 +117,7 @@ Molecule: Image Link
       opacity: 0.9;
     }
     &:focus-visible {
-      outline: var(--outline-width) dotted var(--link-color--active);
+      outline: var(--outline-width) dotted var(--link-color--focus);
     }
     @media print {
       overflow: visible;

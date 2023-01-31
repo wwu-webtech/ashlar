@@ -4,59 +4,30 @@ Organism: Footers - Site footer
 1. Print
 ------------------------------------------------------------------------------*/
 .site-footer {
-  display: grid;
-  grid-template-areas: ". footer_left   ."
-  ". ............. ."
-  ". footer_center ."
-  ". ............. ."
-  ". footer_right  ."
-  ". footer_bottom .";
-  grid-template-columns: var(--grid-columns--sm);
-  grid-template-rows: auto var(--space--sm) auto var(--space--sm) auto;
-  padding: var(--space--lg) 0;
-  border-top: var(--border-width--sm) solid transparent;
-  @media (min-width: $medium) {
-    grid-template-areas: ". footer_left . footer_center . footer_right ."
-    ". footer_bottom footer_bottom footer_bottom footer_bottom footer_bottom .";
-    grid-template-columns: var(--space--sm) 1fr var(--space--sm) 1fr var(--space--sm)
-    1fr var(--space--sm);
-    grid-template-rows: auto auto;
-  }
-  @media (min-width: $large) {
-    grid-template-columns: 1fr calc(var(--content-area-max-width) / 3) var(--space--sm)
-    calc(var(--content-area-max-width) / 3) var(--space--sm) (
-    calc(var(--content-area-max-width) / 3)
-    ) 1fr;
-  }
-  .block-title {
-    border-bottom: none;
-  }
+  @include blue-bg;
+
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--space--lg);
+  padding: var(--space--lg);
   .region--footer_left {
-    grid-area: footer_left;
+    flex: 1 1 30%;
   }
   .region--footer_center {
-    grid-area: footer_center;
+    flex: 1 1 30%;
   }
   .region--footer_right {
-    grid-area: footer_right;
+    flex: 1 1 30%;
   }
   .region--footer_bottom {
-    grid-area: footer_bottom;
+    flex: 0 0 100%;
   }
-  .social-media-links {
-    justify-content: flex-start;
-  }
-  .block--menu .menu li {
-    & > a[aria-current="page"] {
-      color: var(--black);
-      font-weight: var(--font-weight--semibold);
-      &:hover,
-      &:focus,
-      &:active {
-        color: var(--dark-blue--darker--60);
-        background: var(--light-green--lighter--40);
-      }
-    }
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0;
   }
 }
 /*------------------------------------------------------------------------------

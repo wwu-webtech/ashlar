@@ -30,8 +30,8 @@ if (
     <div class="block--beyond-basics-block">
         <ul class="menu">
         <li><a href="https://wwu.edu/#nowhere">List of links</a></li>
-        <li><a href="https://wwu.edu/#nowhere">with of links</a></li>
-        <li><a href="https://wwu.edu/#nowhere">.menu class of links</a></li>
+        <li><a href="https://wwu.edu/#nowhere">with menu class</a></li>
+        <li><a href="https://wwu.edu/#nowhere" aria-current="page">this one is the current page</a></li>
         </ul>
     </div>
 
