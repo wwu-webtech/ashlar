@@ -66,3 +66,18 @@
     </div>    
 </section>
 
+```
+<section aria-label="Site Footer" className="site-footer">
+    <div className="region region--footer_left">
+    </div>
+    
+    <div className="region region--footer_center">
+    </div>
+    
+    <div className="region region--footer_right">
+    </div>
+    
+    <div className="region region--footer_bottom">
+    </div>
+</section>
+```
