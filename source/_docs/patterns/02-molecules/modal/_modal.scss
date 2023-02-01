@@ -16,16 +16,15 @@ wwu-modal {
     }
   }
   .modal {
-    @media (min-width: $medium) {
-      min-width: 50vw;
-    }
-
     position: absolute;
     top: 50%;
     left: 50%;
     min-width: 100vw;
     transform: translate(-50%, -50%);
     background: var(--black);
+    @media (min-width: $medium) {
+      min-width: 50vw;
+    }
   }
   .close-modal {
     position: absolute;
@@ -33,7 +32,7 @@ wwu-modal {
     border-radius: 0;
     &:focus {
       outline-color: var(--h3-color);
-      outline-offset: calc(-1 * var(--border-width--md));
+      outline-offset: var(--outline-offset--inset);
     }
   }
 }

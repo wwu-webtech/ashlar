@@ -42,16 +42,15 @@ Molecule: Charts - Org Chart
       h4,
       h5,
       h6 {
-        @media (min-width: $medium) {
-          max-width: none;
-        }
-
         position: relative;
         display: block;
         max-width: var(--chart-max-size);
         margin: 0;
         text-align: center;
         text-decoration: none;
+        @media (min-width: $medium) {
+          max-width: none;
+        }
       }
       & > span,
       & > h2 span,
@@ -82,7 +81,7 @@ Molecule: Charts - Org Chart
         &:focus,
         &:active {
           color: var(--dark-blue);
-          outline-offset: calc(-1 * var(--border-width--lg));
+          outline-offset: var(--outline-offset--inset);
         }
         @media (forced-colors: active) {
           border: var(--border-width--md) solid transparent;
@@ -140,45 +139,41 @@ Molecule: Charts - Org Chart
       }
     }
     &.level-sub-a {
+      margin-left: 0;
       @media (min-width: $medium) {
         display: grid;
         grid-template-columns: repeat(10, auto);
         margin-left: 0;
       }
-
-      margin-left: 0;
     }
     &.level-a {
+      margin-left: 0;
       @media (min-width: $medium) {
         display: grid;
         grid-template-columns: repeat(10, auto);
         margin-left: 0;
       }
-
-      margin-left: 0;
       .item-level-a {
         margin-bottom: var(--chart-spacing);
         > span,
         > a {
+          max-width: none;
+          margin: 0;
           @media (min-width: $medium) {
             max-width: var(--chart-max-size);
             margin: auto;
           }
-
-          max-width: none;
-          margin: 0;
         }
       }
     }
     &.level-b {
+      margin-left: 0;
       @media (min-width: $medium) {
         display: grid;
         grid-template-columns: repeat(10, auto);
         margin-top: var(--chart-spacing);
         margin-left: 0;
       }
-
-      margin-left: 0;
       .item-level-b {
         > span > a {
           max-width: none;
@@ -276,7 +271,6 @@ Molecule: Charts - Org Chart
     background: var(--page-background);
   }
 }
-
 @media (min-width: $medium) {
   .org-chart {
     /* vertical bar for top level items */

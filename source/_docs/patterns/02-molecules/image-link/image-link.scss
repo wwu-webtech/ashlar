@@ -118,6 +118,7 @@ Molecule: Image Link
     }
     &:focus-visible {
       outline: var(--outline-width) dotted var(--link-color--focus);
+      outline-offset: var(--outline-offset--inset);
     }
     @media print {
       overflow: visible;

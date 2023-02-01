@@ -25,7 +25,7 @@ Templates: Sites - Directory
         height: inherit;
         padding: var(--space--sm);
         outline-color: var(--dark-blue--darker--60);
-        outline-offset: calc(-1 * var(--border-width--lg));
+        outline-offset: var(--outline-offset--inset);
       }
     }
   }

@@ -1,9 +1,9 @@
 # Helpers
 
-Ashlar has a variety of helper classes that can be used on various components or parts of sites to make adjustments to things like spacing and layout. We also have styles in this section of the theme for fixing things like administration theme display bugs. This is an overview of the SASS files in this section, and what custom styles are available/what they do. If anything isn't working as expected, or you have a request for a helper class not found here, contact [WebTech](mailto:web.help@wwu.edu);
+Ashlar has a variety of helper classes that can be used on various components or parts of sites to make adjustments to things like spacing and layout. We also have styles in this section of the theme for fixing things like administration theme display bugs. This is an overview of what custom classes are available/what they do. If anything isn't working as expected, or you have a request for a helper class not found here, contact [WebTech](mailto:web.help@wwu.edu);
 
 ## Administration Theme
-Various fixes for Drupal's administration theme. If you notice something weird happening in the user interface while editing sites, get in touch with [WebTech](mailto:web.help@wwu.edu), we can probably fix it!
+Not custom classes, but in the theme there are some styles to improve Drupal's administration theme and fix display bugs. If you notice something weird happening in the user interface while editing sites, get in touch with [WebTech](mailto:web.help@wwu.edu), we can probably fix it!
 
 ## Alignment
 These are the custom classes available for adjusting alignment. There are many ways to align things in CSS, and some alignment methods are incompatible with others, so you may need to experiment with which element these classes are placed on to get the desired effect.

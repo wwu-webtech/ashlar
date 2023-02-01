@@ -30,6 +30,11 @@ Atom: Text - Taxonomy Terms
     top: 0.1em;
     font-size: var(--icon-size--xs);
   }
+  &:focus-visible {
+    --oline-color: var(--dark-blue);
+
+    outline-offset: var(--outline-offset--inset);
+  }
 }
 a.taxonomy-term,
 a.pronouns,

@@ -102,7 +102,7 @@ const config = {
     announcementBar: {
       id: 'support_us',
       content:
-      'This is a work in progress.',
+      'Ashlar 5.0, now ready for Review!',
       backgroundColor: '#007ac8',
       textColor: '#fff',
       isCloseable: false,
