@@ -4,18 +4,6 @@ Helpers: Overlays
 These classes are useful for improving contrast between text and background
 images for banners, image CTAs, etc.
 ------------------------------------------------------------------------------*/
-[data-theme="dark"] {
-  .block--banner,
-  .block--image-button,
-  .block--image {
-    .image,
-    .background-image {
-      img {
-        filter: brightness(0.8) contrast(1.2);
-      }
-    }
-  }
-}
 .image-darker---10 {
   .image,
   .background-image {
