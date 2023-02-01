@@ -14,6 +14,7 @@ wwu-pre-header {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  border-bottom: solid var(--border-width--md) transparent;
   font-size: var(--font-size--xs);
   noscript {
     display: flex;

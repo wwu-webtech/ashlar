@@ -51,6 +51,8 @@ a {
     --link-background: var(--link-background--active);
     --link-color: var(--link-color--active);
     --link-color--visited: var(--link-color--active);
+
+    border: solid var(--border-width--sm) transparent;
   }
   &[target="_blank"],
   &[target="blank"] {

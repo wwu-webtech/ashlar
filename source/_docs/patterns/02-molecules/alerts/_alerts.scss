@@ -30,7 +30,7 @@ Molecule: Alerts
   &.emergency {
     @include gray-bg;
 
-    border-top: var(--border-width--md) solid transparent;
+    border: var(--border-width--md) solid transparent;
     background-color: var(--red);
     svg {
       fill: var(--white);
@@ -39,8 +39,7 @@ Molecule: Alerts
   &.weather {
     @include blue-bg;
 
-    border-top: var(--border-width--md) solid transparent;
-    border-bottom: var(--border-width--md) solid transparent;
+    border: var(--border-width--md) solid transparent;
     svg {
       fill: var(--white);
     }

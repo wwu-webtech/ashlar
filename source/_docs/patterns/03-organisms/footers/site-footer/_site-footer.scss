@@ -10,6 +10,7 @@ Organism: Footers - Site footer
   flex-flow: row wrap;
   gap: var(--space--lg);
   padding: var(--space--lg);
+  border-top: solid var(--border-width--md) transparent;
   .region--footer_left {
     flex: 1 1 30%;
   }

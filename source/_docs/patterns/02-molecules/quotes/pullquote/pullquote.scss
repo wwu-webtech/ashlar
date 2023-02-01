@@ -7,7 +7,8 @@ Molecule: Pullquote
     margin: var(--space--2xl) 0;
     padding: var(--space--2xl);
     text-align: center;
-    border: none;
+    border-left: var(--border-width--sm) transparent;
+    border-radius: var(--border-radius--rounder);
     background: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/quote.svg") 50% 50%/contain no-repeat;
   }
   .body {

@@ -9,6 +9,7 @@ wwu-footer {
 
   display: grid;
   text-align: center;
+  border-top: solid var(--border-width--md) transparent;
   font-size: var(--font-size--xs);
   p {
     margin-bottom: var(--space--2xs);

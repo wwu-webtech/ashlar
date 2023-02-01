@@ -9,6 +9,7 @@ wwu-header {
 
   position: relative;
   display: block;
+  border-bottom: solid var(--border-width--md) transparent;
   @media (min-width: $medium) {
     display: grid;
     grid-template-columns: var(--logo-size) 1fr;
