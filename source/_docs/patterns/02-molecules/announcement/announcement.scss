@@ -54,9 +54,6 @@ Molecule: Announcement
 [data-theme="dark"] {
   .wwu-announcement {
     background-color: var(--green);
-    .material-icons {
-      @include green-bg;
-    }
     .body {
       @include green-bg;
     }

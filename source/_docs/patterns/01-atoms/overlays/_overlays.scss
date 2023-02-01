@@ -63,9 +63,7 @@ Atom: Overlays
 }
 .white-gradient-overlay {
   @include light-gray-bg;
-
-  color: var(--black);
-  &:after {
+  l  &:after {
     opacity: 1;
     background: linear-gradient(
     to right,

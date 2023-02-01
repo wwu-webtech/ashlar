@@ -28,3 +28,7 @@ Resets and styles for things in the docusaurus theme that are troublesome
     }
   }
 }
+.menu__link--active,
+.menu__link--active:not(.menu__link--sublist) {
+  background: var(--link-background);
+}

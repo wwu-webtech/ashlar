@@ -17,6 +17,8 @@ wwu-switcher {
     &:active,
     &:focus,
     &:hover {
+      --oline-color: var(--link-color--focus);
+
       color: var(--link-color--focus);
       outline-offset: var(--outline-offset--inset);
       background: var(--link-background--focus);

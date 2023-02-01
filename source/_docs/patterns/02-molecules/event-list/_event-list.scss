@@ -16,7 +16,7 @@ Molecule: Event List
     border: var(--border-width--md) solid transparent;
     &:hover {
       outline: var(--outline-width) dotted transparent;
-      box-shadow: var(--shadow--soft--hover);
+      box-shadow: var(--shadow--soft);
     }
     &:focus-within {
       outline: dotted var(--oline-color) var(--outline-width);
@@ -38,10 +38,8 @@ Molecule: Event List
       }
       a {
         text-decoration: none;
-        &:active,
-        &:hover,
-        &:focus {
-          outline: none;
+        &:hover {
+          color: inherit;
           background: transparent;
         }
         &:after {
