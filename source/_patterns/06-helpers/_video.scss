@@ -17,8 +17,8 @@ Helpers: Video
 ------------------------------------------------------------------------------*/
 div[class*='-bg'] {
   .able-transcript {
-    h4, 
-    span {
+    &-heading, 
+    &-caption {
       color: var(--black);
     }
   }
