@@ -6,20 +6,18 @@ Helpers: Video
 --------------------------------------------------------------------------------
 1. General styles
 ------------------------------------------------------------------------------*/
-.embed-container iframe{
- width: 100%;
- height: auto;
- aspect-ratio: 16 / 9;
+.embed-container iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
 }
 
 /*------------------------------------------------------------------------------
 2. AblePlayer fixes
 ------------------------------------------------------------------------------*/
-div[class*='-bg'] {
-  .able-transcript {
-    &-heading, 
-    &-caption {
-      color: var(--black);
-    }
+div[class*="-bg"] {
+  .able-transcript-heading,
+  .able-transcript-caption {
+    color: var(--black);
   }
 }
