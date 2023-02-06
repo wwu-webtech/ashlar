@@ -3,22 +3,40 @@ Molecule: Navigation - myWestern Menu
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 .my-western-links {
-  max-width: 38rem;
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--space--xs);
   margin: var(--space--md) auto;
   font-size: var(--font-size--sm);
-  p {
-    margin: 0;
-    line-height: 1.5;
-  }
   svg {
     fill: var(--link-color);
   }
+  p {
+    display: grid;
+    align-content: center;
+    margin: 0;
+    line-height: 1.2;
+  }
   .wwu-card {
+    flex: 0 1 15%;
+    flex-flow: column;
     align-content: space-between;
     padding: 0;
     text-align: center;
   }
   .image {
+    margin-bottom: var(--space--2xs);
     padding: var(--space--md) var(--space--md) 0 var(--space--md);
+  }
+  .disabled {
+    background-color: var(--gray--lighter--60);
+    box-shadow: var(--shadow--soft--hover);
+    .small {
+      margin-bottom: var(--space--xs);
+      font-size: var(--font-size--xs);
+    }
+    p {
+      color: var(--gray--darker--40);
+    }
   }
 }
