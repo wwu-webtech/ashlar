@@ -65,33 +65,31 @@ if (
     <div class="tribal-lands-statement">
         <h2 class="visually-hidden">Tribal Lands Statement</h2>
         <p>
-            Western Washington University's main campus is situated on the ancestral homelands of the Coast Salish
-            Peoples, who have lived in the Salish Sea basin, all throughout the San Juan Islands and the North Cascades
+            Western Washington University's main campus is <a href="href="https://www.wwu.edu/tribal-lands-statement">situated on the ancestral homelands of the Coast Salish
+            Peoples</a>, who have lived in the Salish Sea basin, all throughout the San Juan Islands and the North Cascades
             watershed from time immemorial. We express our deepest respect and gratitude to our Indigenous neighbors,
             for their enduring care and protection of our shared lands and waterways.
         </p>
-        <p>
-            <a class="icon-link" href="https://www.wwu.edu/tribal-lands-statement"><span class="material-icons" aria-hidden="true">landscape</span>Inclusive Tribal Lands Statement</a> 
-        </p>
     </div>
 
-    <div class="copyright">
-        <h2 class="visually-hidden">Copyright and Contact Info</h2>
-        <p>
-            © <span class="copyright-date">{{ "now"|date("Y") }}</span> Western Washington University <span aria-hidden="true">·</span> 516 High Street, Bellingham, WA 98225             
-            <span aria-hidden="true">·</span> <a href="tel:3606503000">(360) 650-3000</a>
-        </p>
-    </div>
+    <div class="footer-bottom">
+        <nav class="footer-nav" aria-label="University Links and Policy">
+            <a class="icon-link" href="https://www.wwu.edu/wwucontact/"><span class="material-icons" aria-hidden="true">send</span>Contact Western</a> 
+            <a class="icon-link" href="https://calendar.wwu.edu/"><span class="material-icons" aria-hidden="true">calendar_month</span>Calendar</a>
+            <a class="icon-link" href="https://www.wwu.edu/directory"><span class="material-icons" aria-hidden="true">person_search</span>University Directory</a>
+            <a class="icon-link" href="https://www.wwu.edu/campus-maps"><span class="material-icons" aria-hidden="true">map</span>Map</a>
+            <a class="icon-link" href="https://www.wwu.edu/online-privacy-statement"><span class="material-icons" aria-hidden="true">policy</span>Privacy</a>
+            <a class="icon-link" href="https://www.wwu.edu/commitment-accessibility"><span class="material-icons" aria-hidden="true">accessibility_new</span>Accessibility Notice</a>
+            <a class="icon-link" href="https://www.wwu.edu/equal-opportunity-policy"><span class="material-icons" aria-hidden="true">diversity_3</span>Equal Employment Opportunity Policy</a>        
+        </nav>
 
-    <nav class="footer-nav" aria-label="University Links and Policy">
-        <a class="icon-link" href="https://www.wwu.edu/wwucontact/"><span class="material-icons" aria-hidden="true">send</span>Contact Western</a> 
-        <a class="icon-link" href="https://calendar.wwu.edu/"><span class="material-icons" aria-hidden="true">calendar_month</span>Calendar</a>
-        <a class="icon-link" href="https://www.wwu.edu/directory"><span class="material-icons" aria-hidden="true">person_search</span>University Directory</a>
-        <a class="icon-link" href="https://www.wwu.edu/campus-maps"><span class="material-icons" aria-hidden="true">map</span>Map</a>
-        <a class="icon-link" href="https://www.wwu.edu/online-privacy-statement"><span class="material-icons" aria-hidden="true">policy</span>Privacy</a>
-        <a class="icon-link" href="https://www.wwu.edu/commitment-accessibility"><span class="material-icons" aria-hidden="true">accessibility_new</span>Accessibility Notice</a>
-        <a class="icon-link" href="https://www.wwu.edu/equal-opportunity-policy"><span class="material-icons" aria-hidden="true">diversity_3</span>Equal Employment Opportunity Policy</a>
-    </nav>
+        <div class="copyright">
+            <h2 class="visually-hidden">Copyright and Contact Info</h2>
+            <p>
+                © <span class="copyright-date">{{ "now"|date("Y") }}</span> Western Washington University <span aria-hidden="true">
+            </p>
+        </div>
+    </div>
   `;
 
   class WWUFooter extends HTMLElement {

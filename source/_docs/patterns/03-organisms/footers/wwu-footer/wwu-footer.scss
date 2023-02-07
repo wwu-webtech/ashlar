@@ -8,29 +8,28 @@ wwu-footer {
   @include dark-blue-bg;
 
   display: grid;
+  gap: var(--space--sm);
   text-align: center;
   border-top: solid var(--border-width--md) transparent;
   font-size: var(--font-size--xs);
   p {
-    margin-bottom: var(--space--2xs);
+    margin: 0;
     line-height: 1.5;
   }
   wwu-logo {
     margin: auto;
   }
-  .tribal-lands-statement {
-    max-width: var(--content-area-max-width);
-    margin: auto;
-    padding: 0 var(--space--sm);
-  }
-  .copyright {
-    margin-bottom: var(--space--sm);
-  }
   .social-media-links {
     justify-content: center;
   }
+  .tribal-lands-statement {
+    max-width: var(--content-area-max-width);
+    margin: auto;
+  }
+  .footer-bottom {
+    background-color: var(--dark-blue--darker--20);
+  }
   .footer-nav {
     width: 100%;
-    background-color: var(--dark-blue--darker--40);
   }
 }
