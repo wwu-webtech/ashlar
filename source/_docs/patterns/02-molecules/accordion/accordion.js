@@ -82,8 +82,9 @@ if (
       
       if(key_pressed == "Escape") {
         this.parentNode.nextElementSibling.classList.remove("is-expanded");
+        this.parentNode.nextElementSibling.style.maxHeight = null;
         this.querySelector(".material-icons").innerText = "add";
-        this.removeAttribute("aria-expanded", false);
+        this.setAttribute("aria-expanded", false);
       }
     }
     
