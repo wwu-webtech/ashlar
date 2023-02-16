@@ -58,7 +58,7 @@
       </p>
     </div>
     <div className="alert-footer">
-      <a className="cta white outline" href="https://emergency.wwu.edu">Learn more <span className="visually-hidden">&nbsp;about this emergency alert</span></a>
+      <a className="cta white outline" href="https://emergency.wwu.edu">Learn more about this emergency alert</a>
     </div>
   </div>
 </div>
@@ -87,7 +87,7 @@
       </p>
     </div>
     <div className="alert-footer">
-      <a className="cta dark-blue" href="https://emergency.wwu.edu/inclement-weather">Learn more <span className="visually-hidden">&nbsp;about this weather alert</span></a>
+      <a className="cta dark-blue" href="https://emergency.wwu.edu/inclement-weather">Learn more about this weather alert</a>
     </div>
   </div>
 </div>

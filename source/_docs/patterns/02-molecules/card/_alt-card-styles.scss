@@ -58,7 +58,7 @@ Molecule: Cards - Alternate styles
     --h5-color: var(--dark-blue);
     --h6-color: var(--dark-blue);
     .title {
-      --link-color: var()-dark-blue--darker--60;
+      --link-color: var(--dark-blue--darker--60);
       --link-color--visited: var(--purple);
 
       background-color: var(--light-green);
@@ -191,9 +191,9 @@ Molecule: Cards - Alternate styles
   --h5-size: var(--font-size--md);
   --h6-size: var(--font-size--md);
   --link-background--focus: var(--gradient--vertical--dark-blue);
-  --link-color: var(--white);
+  --link-color: var(--blue--darker--20);
   --link-color--focus: var(--white);
-  --link-color--visited: var(--purple--lighter--80);
+  --link-color--visited: var(--purple);
   --oline-color: var(--white);
   --read-more-size: 2.75rem;
   /* Static/base styles */
@@ -217,6 +217,9 @@ Molecule: Cards - Alternate styles
     }
   }
   .title {
+    --link-color: var(--white);
+    --link-color--visited: var(--purple--lighter--80);
+
     margin-top: 0;
     padding: var(--space--sm);
     background-color: var(--dark-blue--darker--40);
@@ -243,6 +246,7 @@ Molecule: Cards - Alternate styles
     padding: var(--space--sm);
     padding-right: var(--read-more-size);
     a {
+      position: relative;
       text-underline-offset: 0.1rem;
     }
   }
@@ -268,6 +272,9 @@ Molecule: Cards - Alternate styles
   }
   /* Animated/hover styles */
   @media (min-width: $small) and (prefers-reduced-motion: no-preference) {
+    --link-color: var(--white);
+    --link-color--visited: var(--purple--lighter--80);
+
     display: grid;
     overflow-y: hidden;
     .image {

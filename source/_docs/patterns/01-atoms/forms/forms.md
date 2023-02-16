@@ -46,20 +46,20 @@
 
 ## Text Area
 <form>
-  <label>Textarea label</label>
-  <textarea rows="5"></textarea>
+  <label htmlFor="text">Textarea label</label>
+  <textarea id="text" rows="5"></textarea>
 </form>
 
 ## Text Field
 <form>
-  <label>Textfield label</label>
-  <input />
+  <label htmlFor="input">Textfield label</label>
+  <input id="input" />
 </form>
 
 ## Disabled Text Field
 <form>
-  <label>Textfield label</label>
-  <input disabled/>
+  <label htmlFor="input-disabled">Textfield label</label>
+  <input id="input-disabled" disabled/>
 </form>
 
 ## Submit

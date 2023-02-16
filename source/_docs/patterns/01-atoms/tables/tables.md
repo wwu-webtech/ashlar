@@ -104,6 +104,8 @@
 ```
 
 ## Complex
+While we provide this example of complex table markup, in most cases a better practice is to break complex tables into multiple, simple tables.
+
 <table>
   <caption>An example of a table that has headers both for rows and for columns.</caption>
   <thead>

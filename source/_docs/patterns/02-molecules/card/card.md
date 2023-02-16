@@ -171,7 +171,7 @@ Add the custom class **color-block-title**, and optionally **dark-blue, or light
 <div className="card-3col--flex">
 <div  className="wwu-card color-block-title">    
   <h2  className="title">
-    <a href="#">Card Title</a>
+    <a href="#new">Card Title</a>
   </h2>
   
   <div className="image">
@@ -189,7 +189,7 @@ Add the custom class **color-block-title**, and optionally **dark-blue, or light
 
 <div  className="wwu-card color-block-title dark-blue">    
   <h2  className="title">
-    <a href="#">Unlinked Card</a>
+    <a href="#new">Unlinked Card</a>
   </h2>
   
   <div className="image">
@@ -207,7 +207,7 @@ Add the custom class **color-block-title**, and optionally **dark-blue, or light
 
 <div  className="wwu-card color-block-title light-green">    
   <h2  className="title">
-    <a href="#">Card Title</a>
+    <a href="#new">Card Title</a>
   </h2>
   
   <div className="image">
@@ -253,6 +253,10 @@ This variant is for use in views displaying events. These styles are not availab
     <a href="#">Event Title</a>
   </h2>
 
+  <div className="image">
+    <img src={Placeholder} alt="leaves in water placeholder"/>    
+  </div>  
+
   <div className="location">
     Old Main Theater but Make The Location Longer
   </div>
@@ -261,12 +265,7 @@ This variant is for use in views displaying events. These styles are not availab
     <span className="month">Apr</span> 
     <span className="day">04</span>
     <span className="year">2023</span>
-  </div>
-  
-  <div className="image">
-    <img src={Placeholder} alt="leaves in water placeholder"/>    
   </div>  
-  
   
   <div className="body">
     <p>Card body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -277,19 +276,19 @@ This variant is for use in views displaying events. These styles are not availab
   <h2  className="title">
     <a href="#">Event Title</a>
   </h2>
-  
+
   <div className="image">
     <img src={Placeholder} alt="leaves in water placeholder"/>    
   </div>  
+
+  <div className="location">
+    Old Main Theater but Make The Location Longer
+  </div>
   
   <div className="date">
     <span className="month">Apr</span> 
     <span className="day">04 - 07</span>
     <span className="year">2023</span>
-  </div>
-  
-  <div className="location">
-    Old Main Theater but Make The Location Longer
   </div>
   
   <div className="body">

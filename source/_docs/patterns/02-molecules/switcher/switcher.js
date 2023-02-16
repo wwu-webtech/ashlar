@@ -47,7 +47,7 @@ if (
       function tab_select(event) {
         const key_pressed = event.code;
 
-        if(key_pressed == "ArrowLeft" || key_pressed == "ArrowUp") {
+        if(key_pressed == "ArrowLeft" && layout != "column") {
           if(this.previousElementSibling) {
             activate_tab(this.previousElementSibling);
             this.previousElementSibling.focus();
@@ -56,7 +56,25 @@ if (
             this.parentElement.lastChild.focus();
           }
         }
-        if(key_pressed == "ArrowRight" || key_pressed =="ArrowDown") {
+        if(key_pressed == "ArrowUp" && layout == "column") {
+          if(this.previousElementSibling) {
+            activate_tab(this.previousElementSibling);
+            this.previousElementSibling.focus();
+          } else {
+            activate_tab(this.parentElement.lastChild);
+            this.parentElement.lastChild.focus();
+          }
+        }
+        if(key_pressed == "ArrowRight" && layout != "column") {
+          if(this.nextElementSibling) {            
+            activate_tab(this.nextElementSibling);        
+            this.nextElementSibling.focus();            
+          } else {
+            activate_tab(this.parentElement.querySelector("button"));
+            this.parentElement.querySelector("button").focus();
+          }
+        }
+        if(key_pressed == "ArrowDown" && layout == "column") {
           if(this.nextElementSibling) {            
             activate_tab(this.nextElementSibling);        
             this.nextElementSibling.focus();            
