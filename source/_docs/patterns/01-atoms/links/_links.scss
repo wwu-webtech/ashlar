@@ -53,6 +53,7 @@ a {
     --link-color--visited: var(--link-color--active);
 
     border: solid var(--border-width--sm) transparent;
+    font-weight: var(--font-weight--semibold);
   }
   &[target="_blank"],
   &[target="blank"] {
