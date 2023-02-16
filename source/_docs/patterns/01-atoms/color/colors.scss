@@ -4,10 +4,11 @@ Atom: Colors
 ------------------------------------------------------------------------------*/
 .swatch-wrapper {
   display: flex;
+  flex-flow: row wrap;
+  margin-top: var(--space--md);
 }
 .color-swatch {
-  width: 100%;
-  margin-top: var(--space--md);
+  flex: 1 1 10%;
   padding: var(--space--md);
   color: var(--white);
   font-size: var(--font-size--sm);

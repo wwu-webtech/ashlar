@@ -71,18 +71,20 @@ url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/charts/donut
 2. Chart styles
 ------------------------------------------------------------------------------*/
 wwu-donut-chart {
-  --chart-size: 18.75rem;
+  --chart-size: 100vw;
 
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+  @media (min-width: 18.75rem) {
+    --chart-size: 18.75rem;
+  }
   .title {
     flex: 0 0 100%;
   }
   svg {
     width: var(--chart-size);
     height: var(--chart-size);
-    margin: var(--space--lg);
     transform: rotate(-90deg);
     border-radius: 50%;
     background: transparent;

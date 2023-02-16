@@ -13,6 +13,7 @@ if (
     
     width: var(--logo-size);
     height: var(--logo-size);
+    max-width: 90vw;
   }
 
   .horizontal {

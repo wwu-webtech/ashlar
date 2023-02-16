@@ -15,16 +15,6 @@ import Placeholder from '@site/static/img/placeholder.jpg';
       <img src={Placeholder} alt="gray placeholder" />
     </div>
     
-    <div className="social-links">
-      <a href="https://twitter.com/GeordiLa4rge">twitter</a>
-      <a href="https://www.instagram.com/geordithecat/">instagram</a>
-      <a href="https://www.facebook.com/pages/Geordi-La-Forge/109436212415967">facebook</a>
-      <a href="https://www.wwu.edu">linkedin</a>
-      <a href="https://www.wwu.edu">pinterest</a>
-      <a href="https://www.wwu.edu">youtube</a>
-      <a href="https://www.wwu.edu">flickr</a>
-    </div>
-    
     <div className="website">
       <h3>Website</h3>
       <p><a href="https://www.wwu.edu/geordilaforge">Geordi La Forge's Homepage</a></p>

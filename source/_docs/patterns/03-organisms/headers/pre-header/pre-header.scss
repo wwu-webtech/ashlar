@@ -12,6 +12,7 @@ wwu-pre-header {
 
   position: relative;
   display: flex;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: flex-end;
   border-bottom: solid var(--border-width--md) transparent;
@@ -33,6 +34,9 @@ wwu-pre-header {
     margin: 0;
     border-radius: 0;
     box-shadow: none;
+  }
+  wwu-search {
+    flex: 1 1 10%;
   }
   .skip-link {
     --link-color: var(--white);
