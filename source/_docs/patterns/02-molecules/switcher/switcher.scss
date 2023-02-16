@@ -49,24 +49,23 @@ wwu-switcher {
       }
     }
   }
-}
-.column-layout {
-  @media (min-width: $small) {
-    wwu-switcher {
-      display: flex;
+  &[layout="column"] {
+    @media (min-width: $small) {
+      display: grid;
+      grid-template-columns: auto auto;
       gap: var(--space--sm);
       button {
+        display: flex;
+        flex-flow: column;
         &:not(:last-of-type) {
           border-right: solid var(--border-width--md) var(--link-decoration-color);
           border-bottom: none;
         }
       }
       .switcher {
-        flex: 1 1 12%;
         flex-flow: column;
       }
       .switcher-container {
-        flex: 1 1 88%;
         [role="tabpanel"] {
           margin: 0;
         }

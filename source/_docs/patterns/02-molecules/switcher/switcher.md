@@ -28,8 +28,7 @@ import WWUSwitcher from "./switcher.js"
 ```
 
 ## Column Layout
-<div className="column-layout">
-<wwu-switcher label="Accessible Label">
+<wwu-switcher label="Accessible Label" layout="column">
     <wwu-switcher-item label="Content 1">
         <p>We have an infinite amount to learn both from nature and from each other. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next 10.</p>
     </wwu-switcher-item>
@@ -40,7 +39,6 @@ import WWUSwitcher from "./switcher.js"
         <p>Astronomy compels the soul to look upward, and leads us from this world to another.</p>
     </wwu-switcher-item>
 </wwu-switcher>
-</div>
 
 ```
 <div class="column-layout">
