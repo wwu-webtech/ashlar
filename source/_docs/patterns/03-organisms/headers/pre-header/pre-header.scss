@@ -16,6 +16,10 @@ wwu-pre-header {
   justify-content: flex-end;
   border-bottom: solid var(--border-width--md) transparent;
   font-size: var(--font-size--xs);
+  * {
+    --oline-color: var(--dark-blue--darker--40);
+    --oline-offset: var(--outline-offset--inset);
+  }
   noscript {
     display: flex;
     justify-content: flex-end;
