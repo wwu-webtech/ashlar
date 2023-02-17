@@ -4,14 +4,16 @@ if (
   ) {
     const countdown_template = document.createElement("template");
     countdown_template.innerHTML = `
-    <div role="timer" class="timer">
-      <p><span class="number days">0</span> Days</p>
-      <p><span class="number hours">0</span> Hours</p>
-      <p><span class="number minutes">0</span> Minutes</p>
-      <p><span class="number seconds">0</span> Seconds</p>
-    </div>
+    <section aria-label="Countdown">
+      <div role="timer" class="timer">
+        <p><span class="number days">0</span> Days</p>
+        <p><span class="number hours">0</span> Hours</p>
+        <p><span class="number minutes">0</span> Minutes</p>
+        <p><span class="number seconds">0</span> Seconds</p>
+      </div>
     
-    <div class="announced-time" aria-live="polite" aria-atomic="true" class="visually-hidden"></div>
+      <div class="announced-time" aria-live="polite" aria-atomic="true" class="visually-hidden"></div>
+    </section>
     `;
     
     class WWUCountdown extends HTMLElement {
