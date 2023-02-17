@@ -11,10 +11,12 @@ Atom: Forms
   --input-border-color: var(--gray--lighter--20);
   --input-border-color--focus: var(--blue--darker--20);
   --input-text-color: var(--black);
+  --required-color: var(--blue);
 }
 [data-theme="dark"] {
   --input-background-color: var(--gray--darker--60);
   --input-text-color: var(--white);
+  --required-color: var(--blue--lighter--40);
 }
 /*------------------------------------------------------------------------------
 1. Labels
@@ -29,7 +31,7 @@ label {
   &.form-required:after,
   .form-required:after {
     content: " *";
-    color: var(--blue);
+    color: var(--required-color);
   }
 }
 /*------------------------------------------------------------------------------
@@ -38,10 +40,6 @@ label {
 input,
 textarea,
 select {
-  @media (min-width: $medium) {
-    width: auto;
-  }
-
   display: inline-block;
   box-sizing: border-box;
   width: 100%;
@@ -53,6 +51,9 @@ select {
   background-color: var(--input-background-color);
   box-shadow: none;
   font-size: var(--font-size--sm);
+  @media (min-width: $medium) {
+    width: auto;
+  }
   &:focus {
     border-color: var(--input-border-color--focus);
     box-shadow: var(--shadow--soft);

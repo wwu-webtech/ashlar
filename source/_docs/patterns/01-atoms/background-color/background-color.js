@@ -21,6 +21,11 @@ if (
 
     <blockquote class="dark-blue-bg">Blockquote</blockquote>
 
+    <form>
+      <label class="required" htmlFor="input">Form element</label>
+      <input id="input"/>
+    </form>
+
     <ul>
         <li><a href="https://wwu.edu/#nowhere">Regular</a></li>
         <li><a href="https://wwu.edu/#nowhere">list with this</a></li>

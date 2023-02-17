@@ -52,8 +52,8 @@
 
 ## Text Field
 <form>
-  <label htmlFor="input">Textfield label</label>
-  <input id="input" />
+  <label className="required" htmlFor="input">Textfield label</label>
+  <input id="input"/>
 </form>
 
 ## Disabled Text Field
