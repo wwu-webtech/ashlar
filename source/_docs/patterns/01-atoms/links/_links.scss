@@ -11,8 +11,8 @@ Atom: Text - Links
   --link-color--active: var(--dark-blue);
   --link-color--focus: var(--dark-blue);
   --link-color--visited: var(--purple);
-  --link-decoration-color: var(--blue--lighter--60);
-  --link-decoration-color--visited: var(--purple--lighter--60);
+  --link-decoration-color: var(--blue);
+  --link-decoration-color--visited: var(--purple--lighter--40);
 }
 a {
   text-decoration-line: underline;
