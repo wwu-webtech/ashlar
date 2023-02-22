@@ -4,31 +4,49 @@ Molecule: Modal (previously lightbox)
 ------------------------------------------------------------------------------*/
 wwu-modal {
   .wrapper {
+    --oline-color: var(--white);
+
     position: fixed;
     z-index: 5;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.9);
     &.closed {
       display: none;
     }
+    iframe {
+      &:focus-visible {
+        outline: none;
+      }
+      &:focus {
+        outline: dotted var(--oline-color) var(--outline-width);
+        outline-offset: 0;
+      }
+    }
   }
-  .modal {
+  .wwu-modal {
     position: absolute;
     top: 50%;
     left: 50%;
     min-width: 100vw;
     transform: translate(-50%, -50%);
-    background: var(--black);
+    outline: solid var(--outline-width) transparent;
+    outline-offset: var(--outline-offset--outset);
+    &:focus {
+      outline: dotted var(--oline-color) var(--outline-width);
+    }
     @media (min-width: $medium) {
       min-width: 50vw;
     }
   }
   .close-modal {
-    position: absolute;
-    margin: 0;
+    --oline-color: var(--white);
+
+    position: relative;
+    margin-left: 50%;
+    transform: translatex(-50%);
     border-radius: 0;
     &:focus {
       outline-color: var(--h3-color);
