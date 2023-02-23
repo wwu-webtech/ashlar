@@ -20,11 +20,10 @@ For adjusting alignments.
     margin-right: auto;
     margin-left: auto;
   }
-  
   img {
     display: block;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
   }
 }
 .text-align-left {
@@ -39,37 +38,53 @@ For adjusting alignments.
 .media-align-center {
   display: grid;
   justify-content: center;
+  img {
+    display: block;
+    width: 100%;
+  }
 }
 .media-stretch {
   display: grid;
   justify-content: stretch;
+  margin-bottom: var(--space--sm);
   img {
+    display: block;
     width: 100%;
   }
 }
 .media-align-left {
-  @include breakpoint($large) {
-    width: 100%;
-    max-width: 50vw;
-    margin-left: calc((100vw - var(--content-area-max-width--sm))/-2);
+  @include breakpoint($medium) {
+    float: left;
+    justify-content: end;
+    width: 50%;
+    margin-right: var(--space--sm);
+    margin-bottom: 0;
+    margin-left: -10vw;
   }
 
   display: grid;
-  float: left;
-  justify-content: end;
-  width: 60%;
-  margin-right: var(--space--sm);
+  width: 100%;
+  margin-bottom: var(--space--sm);
+  img {
+    display: block;
+    width: 100%;
+  }
 }
 .media-align-right {
-  @include breakpoint($large) {
-    width: 100%;
-    max-width: 50vw;
-    margin-right: calc((100vw - var(--content-area-max-width--sm))/-2);
+  @include breakpoint($medium) {
+    float: right;
+    justify-content: start;
+    width: 50%;
+    margin-right: -10vw;
+    margin-bottom: 0;
+    margin-left: var(--space--sm);
   }
 
   display: grid;
-  float: right;
-  justify-content: start;
-  width: 60%;
-  margin-right: var(--space--sm);
+  width: 100%;
+  margin-bottom: var(--space--sm);
+  img {
+    display: block;
+    width: 100%;
+  }
 }
