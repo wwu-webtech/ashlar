@@ -38,30 +38,20 @@
  * @ingroup themeable
  */
 #}
-{{ attach_library('ashlar/banner') }}
 {%
   set classes = [
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished',
-    content.field_background_color.0['#markup']|clean_class,
-    content.field_width.0['#markup']|clean_class
+    content.field_align[0]['#markup']|clean_class
   ]
 %}
 {% block paragraph %}
-  {% embed "@molecules/banner/banner.html.twig" %}
-    {% block image %}
-      <div class="background-image">
-        {{ content.field_media }}
-      </div>
-    {% endblock %}
-
     {% block body %}
-      <div class="body">              
+      <aside {{ attributes.addClass(classes) }}>              
         {{ content.field_paragraph_heading }}
         {{ content.field_body }}
-      </div>
+      </aside>
     {% endblock %}
-  {% endembed %}
 {% endblock paragraph %}

@@ -44,13 +44,14 @@
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished',
-    content.field_align[0]['#markup']
+    content.field_align[0]['#markup']|clean_class
   ]
 %}
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
       {{ content.field_media }}    
+      {{ content.field_caption }}
     {% endblock %}
   </div>
 {% endblock paragraph %}
