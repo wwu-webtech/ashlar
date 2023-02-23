@@ -1,0 +1,12 @@
+/*------------------------------------------------------------------------------
+Molecule: Media
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+@import "../../01-atoms/background-color/background-color-mixins.scss";
+.field--name-field-caption {
+  @include blue-bg;
+
+  margin-bottom: var(--space--md);
+  padding: var(--space--xs);
+  font-style: italic;
+}

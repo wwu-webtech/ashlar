@@ -48,10 +48,10 @@
   ]
 %}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
-    {% block content %}
-      {{ content.field_media }}    
-      {{ content.field_caption }}
+    {% block body %}
+      <aside {{ attributes.addClass(classes) }}>              
+        {{ content.field_paragraph_heading }}
+        {{ content.field_body }}
+      </aside>
     {% endblock %}
-  </div>
 {% endblock paragraph %}

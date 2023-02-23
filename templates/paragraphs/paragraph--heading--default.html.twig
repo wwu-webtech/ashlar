@@ -44,13 +44,13 @@
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished',
-    content.field_heading_style.0['#markup']
+    content.field_heading_style.0['#markup']|clean_class
   ]
 %}
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      <{{ content['field_heading_level'][0]['#markup'] }}>
+      <{{ content['field_heading_level'][0]['#markup'] }} class="title">
           {{ content.field_heading_text }}          
       </{{ content['field_heading_level'][0]['#markup'] }}>
     {% endblock %}
