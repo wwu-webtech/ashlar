@@ -176,9 +176,9 @@ Molecule: Cards - Alternate styles
     .year {
       display: block;
       padding: 0 var(--space--lg) var(--space--md) var(--space--lg);
+      color: var(--white);
       border: var(--border-width--md) solid transparent;
       border-top: none;
-      color: var(--white);
       background-color: var(--blue);
       font-size: var(--font-size--lg);
       font-weight: var(--font-weight--regular);
@@ -186,20 +186,20 @@ Molecule: Cards - Alternate styles
     .month {
       display: block;
       padding: var(--space--md) var(--space--lg) 0 var(--space--lg);
+      color: var(--white);
       border: var(--border-width--md) solid transparent;
       border-bottom: none;
-      color: var(--white);
       background-color: var(--blue);
       font-size: var(--font-size--2xl);
       font-weight: var(--font-weight--regular);
     }
     .day {
       display: block;
-      border-left: var(--border-width--md) solid transparent;
-      border-right: var(--border-width--md) solid transparent;
       white-space: nowrap;
       word-spacing: -0.2em;
       color: var(--white);
+      border-right: var(--border-width--md) solid transparent;
+      border-left: var(--border-width--md) solid transparent;
       background-color: var(--blue);
       font-size: var(--font-size--5xl);
       font-weight: var(--font-weight--semibold);
@@ -248,8 +248,8 @@ Molecule: Cards - Alternate styles
     align-items: end;
     height: 100%;
     margin: 0;
-    border-top: var(--border-width--sm) solid transparent;
     padding-top: var(--space--md);
+    border-top: var(--border-width--sm) solid transparent;
     a {
       &:active,
       &:hover,
@@ -280,9 +280,9 @@ Molecule: Cards - Alternate styles
     }
     .day {
       padding: var(--space--sm);
+      color: var(--dark-blue);
       border-width: var(--border-width--sm);
       border-bottom: var(--border-width--sm) solid transparent;
-      color: var(--dark-blue);
       background-color: var(--light-green);
     }
   }
@@ -329,7 +329,7 @@ Molecule: Cards - Alternate styles
 ------------------------------------------------------------------------------*/
 @mixin horizontal-card {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   grid-template-rows: repeat(10, auto);
   padding-bottom: 0;
   &.image-optional {
