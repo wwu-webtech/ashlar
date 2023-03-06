@@ -4,32 +4,30 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Inclusive Design',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        We developed this design system and our <a href="https://brand.wwu.edu/">Brand and Communication Guide</a> with inclusive, accessible design and practices as our number one priority. 
+        We are working hard to prevent and remove barriers across all our web platforms and communication efforts. 
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Accessibility',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Anyone carrying out recruitment or marketing work at Western should be well-versed in accessibility.
+        Check out the main <a href="https://brand.wwu.edu/accessibility">Western Digital Accessibility</a> site for an overview and training. 
+        For a deeper look, check out the guides for <a href="https://brand.wwu.edu/node/22">building accessible websites</a> and <a href="https://brand.wwu.edu/creating-accessible-documents">creating accessible documents.</a>
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({title, description}) {
   return (
     <div className={clsx('col col--6')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>

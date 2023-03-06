@@ -40,8 +40,12 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
         },
         blog: {
+          showReadingTime: false,
           path: 'changelog',
           routeBasePath: 'changelog',
+          postsPerPage: 10,
+          blogSidebarCount: 'ALL',
+          blogSidebarTitle: 'Update History',
         },
         theme: {
           customCss: [            
@@ -102,7 +106,7 @@ const config = {
     announcementBar: {
       id: 'support_us',
       content:
-      'Ashlar 5.0, now ready for Review! (This website still under development though.) ',
+      'Ashlar 5.0 is now under review!',
       backgroundColor: '#007ac8',
       textColor: '#fff',
       isCloseable: false,
