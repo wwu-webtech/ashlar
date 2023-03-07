@@ -83,38 +83,16 @@ Links that appear at the top of myWestern
     <p class="title">
       Web4U
     </p>
-    <p class="small">(Discontinued, use Banner Self-Service)</p>
     
     <div class="image">
       <svg aria-hidden="true" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
         <linearGradient id="w4u-gradient" x1="0" y1="0" x2="20" y2="12" gradientUnits="userSpaceOnUse">
-          <stop offset="0" stop-color="#8394A0" />
-          <stop offset="1" stop-color="#667986" />
+          <stop offset="0" stop-color="#003f87" />
+          <stop offset="1" stop-color="#007ac8"/>
         </linearGradient>      
       <path fill="url(#w4u-gradient)" d="M24.1,5.3l-4.5,14.2h-6L13,17.5H12l-0.6,1.9h-6L0.8,5.3h6.7l0.7,2.2h1.1l0.7-2.2h5.4L16,7.4h1.1l0.7-2.2H24.1z M20.2,13 V8.6h-1.8v4.3c0,0.7-0.2,1.3-0.5,1.6c-0.3,0.4-0.8,0.5-1.3,0.5c-1.2,0-1.8-0.7-1.8-2.1V8.6H13V13c0,1.2,0.3,2,0.9,2.7 c0.6,0.6,1.5,0.9,2.6,0.9c1.1,0,2-0.3,2.6-0.9C19.9,15.1,20.2,14.2,20.2,13z M12.1,14.8v-1.5h-1.3v-1.5H9.1v1.5H7l3.4-4.7H8.5
   		l-3.7,5v1.2H9v1.7h1.8v-1.6H12.1z">
       </path></svg>
-    </div>
-  </div>
-  
-  <div class="wwu-card">
-    <p class="title">
-      <a href="#">      
-        Banner Self-Service
-      </a>
-    </p>
-    
-    <div class="image">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" aria-hidden="true">
-        <linearGradient id="banner-gradient" x1="0" y1="0" x2="20" y2="12" gradientUnits="userSpaceOnUse">
-          <stop offset="0" stop-color="#003f87" />
-          <stop offset="1" stop-color="#007ac8"/>
-        </linearGradient>
-        <path fill="url(#banner-gradient)" d="M24.1,5.3l-4.5,14.2h-6L13,17.5H12l-0.6,1.9h-6L0.8,5.3h6.7l0.7,2.2h1.1l0.7-2.2h5.4L16,7.4h1.1l0.7-2.2p4.1z M20.2,13
-        V8.6h-1.8v4.3c0,0.7-0.2,1.3-0.5,1.6c-0.3,0.4-0.8,0.5-1.3,0.5c-1.2,0-1.8-0.7-1.8-2.1V8.6H13V13c0,1.2,0.3,2,0.9,2.7
-        c0.6,0.6,1.5,0.9,2.6,0.9c1.1,0,2-0.3,2.6-0.9C19.9,15.1,20.2,14.2,20.2,13z M12.1,14.8v-1.5h-1.3v-1.5H9.1v1.5H7l3.4-4.7H8.5
-        l-3.7,5v1.2H9v1.7h1.8v-1.6H12.1z" />
-      </svg>
     </div>
   </div>
   
