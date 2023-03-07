@@ -59,7 +59,7 @@ a {
   &[target="blank"] {
     .material-icons {
       position: relative;
-      top: var(--space--md) / 3;
+      top: calc(var(--space--md) / 3);
       left: 0.125rem;
       font-size: inherit;
     }

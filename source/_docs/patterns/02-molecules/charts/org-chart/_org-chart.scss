@@ -430,7 +430,7 @@ Molecule: Charts - Org Chart
         height: var(--chart-spacing);
         content: "";
         transform: translate(
-        (calc(var(--chart-spacing) / -2) + (var(--chart-border-width) / 2))
+        calc((var(--chart-spacing) / -2) + (var(--chart-border-width) / 2))
         );
         border: none;
         background: var(--chart-line-color);

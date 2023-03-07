@@ -28,7 +28,7 @@ Atom: Icons - Social Media Icons
     width: 100%;
     height: 100%;
     transition: var(--ease-standard) var(--transition-speed--fast) fill;
-    transform: scale(125%);
+    transform: scale(1.25);
     @media print {
       fill: var(--black);
     }

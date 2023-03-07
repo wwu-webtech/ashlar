@@ -31,7 +31,7 @@ Molecule: Banner
 ------------------------------------------------------------------------------*/
 @media print {
   .wwu-banner {
-    min-height: none;
+    min-height: unset;
     .background-image {
       display: none;
     }
