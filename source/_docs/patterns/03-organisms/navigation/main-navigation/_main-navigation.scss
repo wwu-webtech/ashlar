@@ -1,8 +1,6 @@
 /*------------------------------------------------------------------------------
 Molecule: Main navigation/ultimenu custom styles
 --------------------------------------------------------------------------------
-1. Active link trail
-2. Display preferences
 ------------------------------------------------------------------------------*/
 .main-navigation {
   grid-area: main-nav;
@@ -19,7 +17,7 @@ Molecule: Main navigation/ultimenu custom styles
     justify-content: center;
     margin: 0;
     padding-left: 0;
-    & > li {
+    .ultimenu__item {
       display: grid;
       grid-template-areas: "link icon"
       "flyout flyout";
@@ -31,55 +29,61 @@ Molecule: Main navigation/ultimenu custom styles
         grid-template-columns: 1fr var(--icon-size--xs);
         width: inherit;
       }
-      & > a {
-        position: relative;
-        grid-column: 1 / span all;
-        grid-row: 1 / span 1;
-        width: 100%;
-        min-height: var(--touch-target--min);
-        margin: 0;
-        padding: var(--space--sm);
-        text-align: left;
-        white-space: normal;
-        text-decoration: none;
-        line-height: 1;
-        @media (min-width: $medium) {
-          display: flex;
-          align-items: center;
-          padding: var(--space--sm);
-          padding-right: var(--icon-size--xs);
-          text-align: center;
-        }
-      }
-      .expand-icon {
-        position: relative;
-        z-index: 1;
-        display: flex;
-        grid-area: icon;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-        transition: all var(--transition-speed--fast) cubic-bezier(0.33, 0.66, 0.66, 1);
-        font-size: var(--icon-size--xs);
-        &.desktop {
-          display: none;
-          @media (min-width: $medium) {
-            display: flex;
-          }
-        }
-        &.mobile {
-          @media (min-width: $medium) {
-            display: none;
-          }
-        }
-      }
       &:hover,
       &:focus-within {
         .expand-icon {
           color: var(--link-color--focus);
         }
       }
+    }
+  }
+  .ultimenu__link {
+    position: relative;
+    grid-column: 1 / span all;
+    grid-row: 1 / span 1;
+    width: 100%;
+    min-height: var(--touch-target--min);
+    margin: 0;
+    padding: var(--space--sm);
+    text-align: left;
+    white-space: normal;
+    text-decoration: none;
+    line-height: 1;
+    @media (min-width: $medium) {
+      display: flex;
+      align-items: center;
+      padding: var(--space--sm);
+      text-align: center;
+    }
+  }
+  .expand-icon {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    grid-area: icon;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: all var(--transition-speed--fast) cubic-bezier(0.33, 0.66, 0.66, 1);
+    font-size: var(--icon-size--xs);
+    &.desktop {
+      display: none;
+      @media (min-width: $medium) {
+        display: flex;
+      }
+    }
+    &.mobile {
+      @media (min-width: $medium) {
+        display: none;
+      }
+    }
+  }
+  .is-active-trail {
+    border-left: solid var(--link-background--active) var(--border-width--lg);
+    @media (min-width: $medium) {
+      border-bottom: solid var(--link-background--active) var(--border-width--md);
+      border-left: none;
     }
   }
 }

@@ -4,7 +4,7 @@ if (
 ) {
   const header_template = document.createElement("template");
   header_template.innerHTML = `
-  <button class="small icon-link toggle-menu" aria-expanded="false">
+  <button class="small toggle-menu" aria-expanded="false">
       <span class="material-icons" aria-hidden="true">menu</span>
       <span class="toggle-text">Menu</span>
   </button>

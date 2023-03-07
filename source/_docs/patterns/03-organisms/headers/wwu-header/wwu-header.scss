@@ -8,10 +8,10 @@ wwu-header {
   @include dark-blue-bg;
 
   position: relative;
-  display: block;
+  display: grid;
+  grid-template-columns: auto auto;
   border-bottom: solid var(--border-width--md) transparent;
   @media (min-width: $medium) {
-    display: grid;
     grid-template-columns: var(--logo-size) 1fr;
     grid-template-rows: auto 1fr;
     align-items: center;
@@ -28,7 +28,6 @@ wwu-header {
     --button-background-color--active: var(--blue);
 
     z-index: 2;
-    float: right;
     min-height: var(--touch-target--min);
     margin: 0;
     border: var(--border-width--sm) solid var(--link-decoration-color);
@@ -41,14 +40,19 @@ wwu-header {
   .western-logo {
     display: flex;
     grid-area: logo;
-    place-items: center;
+    place-content: center;
+    margin-top: calc(-1 * var(--touch-target--min));
+    @media (min-width: $medium) {
+      margin-top: unset;
+    }
   }
   .site-info {
     --link-color: var(--white);
     --link-color--visited: var(--white);
+
+    grid-column: 1 / span all;
     @media (min-width: $medium) {
       display: grid;
-      grid-column: 1 / span all;
       grid-column-gap: var(--space--sm);
       grid-row: 1 / span all;
       grid-template-areas: "logo ........"
