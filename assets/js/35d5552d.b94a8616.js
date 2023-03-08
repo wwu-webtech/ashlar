@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkashlar_docs=self.webpackChunkashlar_docs||[]).push([[1889],{7523:a=>{a.exports=JSON.parse('[{"label":"major-release","permalink":"/ashlar/changelog/tags/major-release","count":5},{"label":"minor-release","permalink":"/ashlar/changelog/tags/minor-release","count":32}]')}}]);
