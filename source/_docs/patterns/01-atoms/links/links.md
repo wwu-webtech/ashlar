@@ -16,14 +16,6 @@
 <h4><a href="#">This is an H4 link</a></h4>
 <h5><a href="#">This is an H5 link</a></h5>
 
-## Call to Action Links
-
-To style a call to action link, add the class 'cta'
-
-<a href="#" className="cta">Apply for this program</a>
-
-    <a href="#" class="cta">Apply for this program</a>
-
 ## Icon Links
 <a href="#" className="icon-link"><span className="material-icons" aria-hidden="true">home</span><span class="text">Home</span></a>&nbsp;
 <a href="#" className="icon-link"><span className="material-icons" aria-hidden="true">how_to_reg</span><span class="text">Apply</span></a>

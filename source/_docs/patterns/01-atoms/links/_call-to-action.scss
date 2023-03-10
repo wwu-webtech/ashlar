@@ -4,6 +4,8 @@ Atom: Call to Action Link
 ----------------------------------------*/
 .cta {
   --cta-decoration-adjustment: 0.85rem;
+  --cta-decoration-bg: transparent;
+  --cta-decoration-color: var(--link-color);
   --cta-decoration-size: 2.3rem;
   --cta-padding: 1.6rem;
   --cta-size: 2.5rem;
@@ -24,21 +26,6 @@ Atom: Call to Action Link
     animation: cta-animate-back 400ms ease-out forwards;
   }
   &:before {
-    // the arrow
-    position: absolute;
-    top: var(--cta-decoration-adjustment);
-    left: var(--cta-decoration-adjustment);
-    display: inline-block;
-    padding: 5px;
-    content: "";
-    transform: rotate(-45deg);
-    border: solid var(--link-color);
-    border-width: 0 var(--border-width--md) var(--border-width--md) 0;
-    @media (prefers-reduced-motion: no-preference) {
-      animation: cta-animate-before-back 400ms ease-out forwards;
-    }
-  }
-  &:after {
     // the circle
     position: absolute;
     top: 0;
@@ -49,10 +36,27 @@ Atom: Call to Action Link
     width: var(--cta-decoration-size);
     height: var(--cta-decoration-size);
     content: "";
-    border: solid var(--border-width--md) var(--link-color);
+    border: solid var(--border-width--md) var(--cta-decoration-color);
     border-radius: 50%;
+    background-color: var(--cta-decoration-bg);
+    box-shadow: var(--shadow--soft);
     @media (prefers-reduced-motion: no-preference) {
-      animation: cta-animate-after-back 400ms ease-out forwards;
+      animation: cta-animate-circle-back 400ms ease-out forwards;
+    }
+  }
+  &:after {
+    // the arrow
+    position: absolute;
+    top: var(--cta-decoration-adjustment);
+    left: var(--cta-decoration-adjustment);
+    display: inline-block;
+    padding: 5px;
+    content: "";
+    transform: rotate(-45deg);
+    border: solid var(--cta-decoration-color);
+    border-width: 0 var(--border-width--md) var(--border-width--md) 0;
+    @media (prefers-reduced-motion: no-preference) {
+      animation: cta-animate-arrow-back 400ms ease-out forwards;
     }
   }
   &:active,
@@ -61,13 +65,37 @@ Atom: Call to Action Link
     text-decoration: none;
     @media (prefers-reduced-motion: no-preference) {
       animation: cta-animate 400ms ease-out forwards;
-      &:after {
-        animation: cta-animate-after 400ms ease-out forwards;
-      }
       &:before {
-        animation: cta-animate-before 400ms ease-out forwards;
+        animation: cta-animate-circle 400ms ease-out forwards;
+      }
+      &:after {
+        animation: cta-animate-arrow 400ms ease-out forwards;
       }
     }
+  }
+  &.blue,
+  &.dark-blue,
+  &.light-green,
+  &.white {
+    &:before {
+      border-color: var(--cta-decoration-bg);
+    }
+  }
+  &.blue {
+    --cta-decoration-bg: var(--blue);
+    --cta-decoration-color: var(--white);
+  }
+  &.dark-blue {
+    --cta-decoration-bg: var(--dark-blue);
+    --cta-decoration-color: var(--light-green--lighter--20);
+  }
+  &.light-green {
+    --cta-decoration-bg: var(--light-green);
+    --cta-decoration-color: var(--dark-blue);
+  }
+  &.white {
+    --cta-decoration-bg: var(--white);
+    --cta-decoration-color: var(--dark-blue);
   }
 }
 @keyframes cta-animate {
@@ -88,7 +116,7 @@ Atom: Call to Action Link
     padding-right: calc(var(--space--md) + var(--cta-padding));
     padding-left: var(--space--md);
     transform: translatex(0);
-    background-size: 100%;;
+    background-size: 100%;
   }
   100% {
     padding-right: var(--space--md);
@@ -96,7 +124,7 @@ Atom: Call to Action Link
     background-size: 0;
   }
 }
-@keyframes cta-animate-before {
+@keyframes cta-animate-arrow {
   0% {
     left: var(--cta-decoration-adjustment);
   }
@@ -105,7 +133,7 @@ Atom: Call to Action Link
     border-color: var(--link-color--focus);
   }
 }
-@keyframes cta-animate-before-back {
+@keyframes cta-animate-arrow-back {
   0% {
     left: calc(100% - var(--cta-padding));
     border-color: var(--link-color--focus);
@@ -114,7 +142,7 @@ Atom: Call to Action Link
     left: var(--cta-decoration-adjustment);
   }
 }
-@keyframes cta-animate-after {
+@keyframes cta-animate-circle {
   0% {
     left: 0;
   }
@@ -122,13 +150,17 @@ Atom: Call to Action Link
     left: 100%;
     transform: translatex(-100%);
     border: none;
+    background-color: transparent;
+    box-shadow: none;
   }
 }
-@keyframes cta-animate-after-back {
+@keyframes cta-animate-circle-back {
   0% {
     left: 100%;
     transform: translatex(-100%);
     border: none;
+    background-color: transparent;
+    box-shadow: none;
   }
   100% {
     left: 0;

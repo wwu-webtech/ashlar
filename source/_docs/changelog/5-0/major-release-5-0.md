@@ -35,7 +35,8 @@ Along with this change, we have also refreshed the actual semantic `<button>` st
 ![Screenshot of old CTA styles, which looked like buttons](./old-cta.png)
 
 #### New Call to Action Links
-<a class="cta" href="#new">Sample Call to Action</a>
+<a href="#" className="cta">Call to Action</a>
+<a href="#" className="cta blue">CTA with .blue class</a>
 
 #### Old Buttons
 ![Screenshot of old button styles](./old-buttons.png)
