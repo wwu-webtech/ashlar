@@ -59,3 +59,12 @@ wwu-accordion,
     }
   }
 }
+.block--accordion[class*="-bg"] {
+  padding: var(--space--sm);
+  .title {
+    margin-top: 0;
+  }
+  wwu-accordion {
+    margin-bottom: 0;
+  }
+}

@@ -12,6 +12,7 @@ Atom: Call to Action Link
 
   position: relative;
   display: inline-grid;
+  grid-auto-flow: column;
   align-content: center;
   min-height: var(--cta-size);
   margin-bottom: var(--space--md);
@@ -24,6 +25,9 @@ Atom: Call to Action Link
   line-height: 1.2;
   @media (prefers-reduced-motion: no-preference) {
     animation: cta-animate-back 400ms ease-out forwards;
+  }
+  .material-icons {
+    top: -0.2rem;
   }
   &:before {
     // the circle
@@ -107,7 +111,6 @@ Atom: Call to Action Link
   100% {
     padding-right: calc(var(--space--md) + var(--cta-padding));
     padding-left: var(--space--md);
-    transform: translatex(0);
     background-size: 100%;
   }
 }
@@ -115,7 +118,6 @@ Atom: Call to Action Link
   0% {
     padding-right: calc(var(--space--md) + var(--cta-padding));
     padding-left: var(--space--md);
-    transform: translatex(0);
     background-size: 100%;
   }
   100% {

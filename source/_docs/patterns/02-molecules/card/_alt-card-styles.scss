@@ -10,15 +10,19 @@ Molecule: Cards - Alternate styles
 --------------------------------------------------------------------------------
 1. Horizontal
 ------------------------------------------------------------------------------*/
-.wwu-card.horizontal {
+.card.horizontal,
+.wwu-card.horizontal, {
   @media (min-width: $small) {
     display: grid;
     grid-template-areas: "image ." "image ." "image ." "image ." "image ." "image .";
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr 1fr;
     padding: 0;
     .image {
       grid-area: image;
       margin: 0;
+      div {
+        height: 100%;
+      }
     }
   }
 }
@@ -62,6 +66,11 @@ Molecule: Cards - Alternate styles
       --link-color--visited: var(--purple);
 
       background-color: var(--light-green);
+    }
+  }
+  &.horizontal {
+    .title {
+      margin-bottom: var(--space--xs);
     }
   }
 }

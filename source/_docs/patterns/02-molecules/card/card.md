@@ -224,6 +224,27 @@ Add the custom class **color-block-title**, and optionally **dark-blue, or light
 </div>
 </div>
 
+<div  className="wwu-card horizontal color-block-title">    
+  <h2 className="title">
+    <a href="#">Faolan Griogarach, PhD</a>
+  </h2>
+  
+  <div className="image">
+    <img src={Placeholder} alt="leaves in water placeholder" />
+  </div>
+  
+  <div className="taxonomy-terms">
+    <span className="taxonomy-term">Professor</span>
+  </div>   
+  
+  <div className="body">
+    <p>She/her/hers</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Felis donec et odio pellentesque diam volutpat commodo sed egestas. Morbi enim nunc faucibus a pellentesque sit amet porttitor. </p>
+    <p><a href="mailto:faolan.griogarach@wwu.edu">faolan.griogarach@wwu.edu</a></p>
+    <p><a href="tel:360-650-6820">360-650-6820</a> <span aria-hidden="true">|</span> OM 360</p>
+  </div>    
+</div>
+
 ```
 <div  class="wwu-card color-block-title light-green">    
   <h2  class="title">

@@ -6,7 +6,7 @@ if (
   const horizontal_logo_template = document.createElement("template");
   logo_template.innerHTML = `
   <style>
-  .logo {
+  .wwu-logo {
     --logo-size: 8rem;
     --logo--horizontal--width: 25rem;
     --logo--horizontal--height: 6.25rem;
@@ -16,18 +16,18 @@ if (
     max-width: 90vw;
   }
 
-  .horizontal {
+  .wwu-logo.horizontal {
     width: var(--logo--horizontal--width);
     height: var(--logo--horizontal--height);
   }
 
-  svg {
+  .wwu-logo svg {
     width: 100%;
     height: 100%;
   }
   </style>
 
-  <div class="logo make-waves">
+  <div class="wwu-logo make-waves">
     <span class="visually-hidden">Western Washington University - Make Waves.</span>
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 576 537.7" style="enable-background:new 0 0 576 537.7;" xml:space="preserve" aria-hidden="true">
       <title>Western Logo</title>
@@ -249,7 +249,7 @@ if (
   </div>
 `;
   horizontal_logo_template.innerHTML = `
-  <div class="logo horizontal">
+  <div class="wwu-logo horizontal">
     <span class="visually-hidden">Western Washington University</span>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 113">
       <title>Western Logo</title>

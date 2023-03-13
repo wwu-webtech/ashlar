@@ -72,6 +72,13 @@ if (
         </p>
     </div>
 
+    <div class="copyright">
+        <h2 class="visually-hidden">Copyright and Contact Info</h2>
+        <p>
+            © <span class="copyright-date">{{ "now"|date("Y") }}</span> Western Washington University <span aria-hidden="true">
+        </p>
+    </div>
+
     <div class="footer-bottom">
         <nav class="footer-nav" aria-label="University Links and Policy">
             <a class="icon-link" href="https://www.wwu.edu/wwucontact/"><span class="material-icons" aria-hidden="true">send</span>Contact Western</a> 
@@ -82,13 +89,6 @@ if (
             <a class="icon-link" href="https://www.wwu.edu/commitment-accessibility"><span class="material-icons" aria-hidden="true">accessibility_new</span>Accessibility Notice</a>
             <a class="icon-link" href="https://www.wwu.edu/equal-opportunity-policy"><span class="material-icons" aria-hidden="true">diversity_3</span>Equal Employment Opportunity Policy</a>        
         </nav>
-
-        <div class="copyright">
-            <h2 class="visually-hidden">Copyright and Contact Info</h2>
-            <p>
-                © <span class="copyright-date">{{ "now"|date("Y") }}</span> Western Washington University <span aria-hidden="true">
-            </p>
-        </div>
     </div>
   `;
 

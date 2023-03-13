@@ -77,14 +77,14 @@ h5 + h6 {
 /*------------------------------------------------------------------------------
 2. Alternate Styles
 ------------------------------------------------------------------------------*/
-.headings--big-and-bold {
+.headings--big-and-bold,
+.big-bold-headings {
   --h1-size: var(--font-size--7xl);
   --h2-size: var(--font-size--6xl);
   --h3-size: var(--font-size--5xl);
   --h4-size: var(--font-size--4xl);
   --h5-size: var(--font-size--3xl);
   --h6-size: var(--font-size--2xl);
-
   @media (min-width: $medium) {
     --h1-size: var(--font-size--9xl);
     --h2-size: var(--font-size--8xl);

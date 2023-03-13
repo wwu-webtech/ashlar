@@ -5,7 +5,7 @@ Molecule: Cards
 2. Print
 ------------------------------------------------------------------------------*/
 .layout-builder-block.card .title a::after,
-.layout-builder-block.block--card .title a::after {
+.layout-builder-block.wwu-card .title a::after {
   position: initial;
 }
 /*------------------------------------------------------------------------------
@@ -117,7 +117,7 @@ Molecule: Cards
 ------------------------------------------------------------------------------*/
 @media print {
   .card,
-  .block--card {
+  .wwu-card {
     a:before {
       content: " [" attr(href) "] ";
       font-size: 10pt;

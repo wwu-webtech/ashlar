@@ -11,16 +11,10 @@ Organism: Footers - Site footer
   gap: var(--space--lg);
   padding: var(--space--lg);
   border-top: solid var(--border-width--md) transparent;
-  .region--footer_left {
+  .footer-region {
     flex: 1 1 30%;
   }
-  .region--footer_center {
-    flex: 1 1 30%;
-  }
-  .region--footer_right {
-    flex: 1 1 30%;
-  }
-  .region--footer_bottom {
+  .footer-region--bottom {
     flex: 0 0 100%;
   }
   h2,

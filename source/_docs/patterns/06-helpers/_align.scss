@@ -12,8 +12,8 @@ For adjusting alignments.
 .align-center {
   margin-right: auto;
   margin-left: auto;
-  &.button {
-    margin-left: 50%;
+  &.cta {
+    left: 50%;
     transform: translatex(-50%);
   }
   .image-link {
