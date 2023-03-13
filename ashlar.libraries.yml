@@ -29,7 +29,7 @@ alerts:
   version: 1.x
   css:
     theme:
-      build/css/alerts.css: {}
+      build/css/components/alerts.css: {}
   js:
     build/js/alerts.js: {}
   dependencies:
