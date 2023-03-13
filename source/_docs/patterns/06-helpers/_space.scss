@@ -2,6 +2,26 @@
 Helpers: Space
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
+.half-margin,
+.block.half-margin {
+  margin: var(--space--xs);
+}
+.half-margin--top,
+.block.half-margin--top {
+  margin-top: var(--space--xs);
+}
+.half-margin--right,
+.block.half-margin--right {
+  margin-right: var(--space--xs);
+}
+.half-margin--bottom,
+.block.half-margin--bottom {
+  margin-bottom: var(--space--xs);
+}
+.half-margin--left,
+.block.half-margin--left {
+  margin-left: var(--space--xs);
+}
 .standard-margin,
 .block.standard-margin {
   margin: var(--space--sm);
@@ -61,6 +81,31 @@ Helpers: Space
 .no-margin--left,
 .block.no-margin--left {
   margin-left: 0;
+}
+.half-padding,
+.block.half-padding[class*="-bg"],
+.block.half-padding {
+  padding: var(--space--xs);
+}
+.half-padding--top,
+.block.half-padding--top[class*="-bg"],
+.block.half-padding--top {
+  padding-top: var(--space--xs);
+}
+.half-padding--right,
+.block.half-padding--right[class*="-bg"],
+.block.half-padding--right {
+  padding-right: var(--space--xs);
+}
+.half-padding--bottom,
+.block.half-padding--bottom[class*="-bg"],
+.block.half-padding--bottom {
+  padding-bottom: var(--space--xs);
+}
+.half-padding--left,
+.block.half-padding--left[class*="-bg"],
+.block.half-padding--left {
+  padding-left: var(--space--xs);
 }
 .standard-padding,
 .block.standard-padding[class*="-bg"],

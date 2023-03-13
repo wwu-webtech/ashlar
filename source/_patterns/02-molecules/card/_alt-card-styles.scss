@@ -1,0 +1,815 @@
+/*------------------------------------------------------------------------------
+Molecule: Cards - Alternate styles
+--------------------------------------------------------------------------------
+1. Color block title
+2. Degree
+3. Event
+4. Event alternate
+5. Horizontal
+6. Information
+7. Information - Split style
+8. Simple
+9. Solid round
+10. Tile
+11. Institute
+--------------------------------------------------------------------------------
+1. Color block title
+------------------------------------------------------------------------------*/
+.card.color-block-title,
+.block--card.color-block-title {
+  .title {
+    @include blue-bg;
+
+    order: -2;
+    padding: var(--space--md);
+    a {
+      &:active,
+      &:hover,
+      &:focus {
+        color: inherit;
+        background: none;
+      }
+    }
+  }
+  &:focus-within {
+    .title {
+      a:after {
+        outline-color: var(--dark-blue--darker--80);
+      }
+    }
+  }
+  &.dark-blue {
+    .title {
+      @include dark-blue-bg;
+      a {
+        &:active,
+        &:hover,
+        &:focus {
+          color: inherit;
+          background: none;
+        }
+      }
+    }
+  }
+  &.light-green {
+    .title {
+      @include light-green-bg;
+      a {
+        &:active,
+        &:hover,
+        &:focus {
+          color: inherit;
+          background: none;
+        }
+      }
+    }
+  }
+}
+.dark-mode {
+  .card.color-block-title,
+  .block--card.color-block-title {
+    &:not(.light-green) .title {
+      a {
+        &:active,
+        &:focus,
+        &:hover {
+          color: var(--light-green);
+        }
+      }
+    }
+    &:focus-within {
+      .title a:after {
+        outline-color: var(--blue--lighter--40);
+      }
+    }
+  }
+}
+/*------------------------------------------------------------------------------
+2. Degree (from wwu.edu/majors individual pages)
+------------------------------------------------------------------------------*/
+.degree-card {
+  display: grid;
+  grid-template-areas: "taxonomy"
+  "title"
+  "body"
+  "more";
+  grid-template-rows: auto auto 1fr auto;
+  .title {
+    grid-area: title;
+    padding: var(--space--md) var(--space--md) 0 var(--space--md);
+    h3 {
+      margin-top: 0;
+      font-size: var(--font-size--3xl);
+    }
+  }
+  .taxonomy-terms {
+    grid-area: taxonomy;
+    padding: 0;
+  }
+  .taxonomy-term {
+    margin-right: var(--space--xs);
+    padding: var(--space--xs) var(--space--sm);
+  }
+  .taxonomy-term .material-icons {
+    font-size: var(--icon-size--sm);
+  }
+  .body {
+    grid-area: body;
+    padding: 0 var(--space--md) var(--space--sm) var(--space--md);
+    h4 {
+      margin-bottom: 0;
+      text-transform: uppercase;
+      color: var(--black);
+      font-size: var(--font-size--sm);
+      font-weight: bold;
+    }
+  }
+  .department-links > div {
+    margin: var(--space--md) 0;
+  }
+  .department-link {
+    text-decoration: none;
+    font-size: var(--font-size--md);
+    font-weight: bold;
+    .material-icons {
+      font-size: var(--icon-size--sm);
+    }
+  }
+  .more-link {
+    grid-area: more;
+    margin-left: var(--space--md);
+  }
+}
+.dark-mode .degree-card {
+  .department-link {
+    color: var(--white);
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--light-green);
+      background-color: var(--black);
+    }
+  }
+  .body {
+    h4 {
+      color: var(--light-green--lighter--40);
+    }
+  }
+}
+/*------------------------------------------------------------------------------
+3. Event
+------------------------------------------------------------------------------*/
+.card.event,
+.block--card.event {
+  align-content: start;
+  .image {
+    margin-bottom: calc(-1 * var(--space--lg));
+  }
+  .date {
+    flex: 0 1 40%;
+    order: 0;
+    margin-right: calc(-1 * var(--space--md));
+    padding-left: var(--space--md);
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+    .year {
+      display: block;
+      padding: 0 var(--space--lg) var(--space--md) var(--space--lg);
+      color: var(--white);
+      border: var(--border-width--md) solid transparent;
+      border-top: none;
+      background-color: var(--blue);
+      font-size: var(--font-size--lg);
+      font-weight: var(--font-weight--regular);
+    }
+    .month {
+      display: block;
+      padding: var(--space--md) var(--space--lg) 0 var(--space--lg);
+      color: var(--white);
+      border: var(--border-width--md) solid transparent;
+      border-bottom: none;
+      background-color: var(--blue);
+      font-size: var(--font-size--2xl);
+      font-weight: var(--font-weight--regular);
+    }
+    .day {
+      display: block;
+      white-space: nowrap;
+      word-spacing: -0.2em;
+      color: var(--white);
+      border-right: var(--border-width--md) solid transparent;
+      border-left: var(--border-width--md) solid transparent;
+      background-color: var(--blue);
+      font-size: var(--font-size--5xl);
+      font-weight: var(--font-weight--semibold);
+    }
+  }
+  .title {
+    order: 1;
+    margin-top: var(--space--md);
+    padding-right: var(--space--lg);
+    padding-left: var(--space--lg);
+  }
+  .location {
+    flex: 1 1 60%;
+    order: 2;
+    align-self: flex-end;
+    margin-bottom: 0;
+    padding: var(--space--md) var(--space--md) var(--space--md) var(--space--lg);
+    text-transform: uppercase;
+    color: var(--blue);
+    font-style: normal;
+  }
+  .body {
+    order: 3;
+    padding-right: var(--space--lg);
+    padding-left: var(--space--lg);
+  }
+}
+/*------------------------------------------------------------------------------
+4. Event Alternate
+------------------------------------------------------------------------------*/
+.card.event.alt,
+.block--card.event.alt {
+  display: grid;
+  grid-template-areas: "image image"
+  "date title"
+  "date location"
+  "body body"
+  "terms terms";
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+  .title {
+    @include blue-bg;
+
+    display: flex;
+    grid-area: title;
+    align-items: end;
+    height: 100%;
+    margin: 0;
+    padding-top: var(--space--md);
+    border-top: var(--border-width--sm) solid transparent;
+    a {
+      &:active,
+      &:hover,
+      &:focus {
+        color: inherit;
+        background: none;
+      }
+    }
+  }
+  .image {
+    grid-area: image;
+    margin-bottom: 0;
+  }
+  .date {
+    display: grid;
+    grid-area: date;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    .month {
+      display: grid;
+      align-content: end;
+      padding: var(--space--sm);
+      border: var(--border-width--sm) solid transparent;
+      background-color: var(--dark-blue);
+    }
+    .day {
+      padding: var(--space--sm);
+      color: var(--dark-blue);
+      border-width: var(--border-width--sm);
+      border-bottom: var(--border-width--sm) solid transparent;
+      background-color: var(--light-green);
+    }
+  }
+  .location {
+    @include blue-bg;
+
+    display: flex;
+    grid-area: location;
+    align-items: start;
+    height: 100%;
+    padding-top: 0;
+    border-bottom: var(--border-width--sm) solid transparent;
+  }
+  .body {
+    grid-area: body;
+    padding: var(--space--md);
+    padding-bottom: 0;
+  }
+  .taxonomy-terms {
+    grid-area: terms;
+    padding: var(--space--md);
+  }
+  &:focus-within {
+    .title {
+      a:after {
+        outline-color: var(--dark-blue--darker--80);
+      }
+    }
+  }
+}
+.dark-mode {
+  .card.event.alt,
+  .block--card.event.alt {
+    &:focus-within {
+      .title a:after {
+        outline-color: var(--blue--lighter--40);
+      }
+    }
+  }
+}
+
+/*------------------------------------------------------------------------------
+5. Horizontal
+------------------------------------------------------------------------------*/
+@mixin horizontal-card {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(10, auto);
+  padding-bottom: 0;
+  &.image-optional {
+    grid-template-columns: auto 1fr;
+  }
+  .image {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span all;
+    margin-bottom: 0;
+    padding: 0;
+    > div {
+      width: 100%;
+      height: 100%;
+    }
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  > * {
+    grid-column: 2 / span 1;
+  }
+}
+.card.horizontal,
+.block--card.horizontal {
+  @include horizontal-card;
+}
+/*------------------------------------------------------------------------------
+6. Information
+------------------------------------------------------------------------------*/
+.card.information,
+.block--card.information {
+  align-content: space-between;
+  padding: 0;
+  .sorting-term {
+    order: 0;
+    min-width: 30%;
+    margin-left: var(--space--lg);
+    padding: var(--space--xs);
+    color: var(--white);
+    background-color: var(--blue);
+    font-size: var(--font-size--sm);
+  }
+  .title {
+    margin-top: var(--space--md);
+    margin-right: var(--space--lg);
+    margin-left: var(--space--lg);
+    padding: 0;
+    border-bottom: solid var(--border-width--md) var(--blue);
+    .block__title {
+      color: var(--blue);
+    }
+  }
+  .body {
+    padding: var(--space--md) var(--space--lg);
+  }
+  .taxonomy-terms {
+    display: flex;
+    flex-flow: column;
+    order: 6;
+    align-self: end;
+    padding: 0;
+    background-color: var(--blue);
+    font-weight: var(--font-weight--regular);
+  }
+  .taxonomy-term {
+    display: flex;
+    float: none;
+    align-items: center;
+    margin: 0;
+    padding: var(--space--xs);
+    color: var(--white);
+    background-color: transparent;
+    font-size: var(--font-size--sm);
+  }
+  .material-icons {
+    margin-right: var(--space--sm);
+    font-size: var(--space--lg);
+  }
+}
+/*------------------------------------------------------------------------------
+7. Information - Split style
+------------------------------------------------------------------------------*/
+.card.information.split-style,
+.block--card.information.split-style {
+  @include breakpoint($medium) {
+    grid-template-areas: "title body"
+    "sorting body"
+    "terms body";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto auto;
+  }
+
+  display: grid;
+  grid-template-areas: "title" "sorting" "terms" "body";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+  align-items: initial;
+  align-content: start;
+  .title {
+    @include blue-bg;
+
+    grid-area: title;
+    margin: 0;
+    padding: var(--space--lg) var(--space--lg);
+    a {
+      &:active,
+      &:hover,
+      &:focus {
+        color: inherit;
+        background: none;
+      }
+    }
+  }
+  .block__title {
+    color: var(--white);
+  }
+  .image {
+    margin-bottom: 0;
+  }
+  .sorting-term {
+    display: flex;
+    grid-area: sorting;
+    align-items: center;
+    margin: 0;
+    background-color: var(--dark-blue);
+  }
+  .taxonomy-terms {
+    grid-area: terms;
+    background-color: var(--dark-blue);
+  }
+  .body {
+    grid-area: body;
+  }
+  &:focus-within {
+    .title {
+      a:after {
+        outline-color: var(--dark-blue--darker--80);
+      }
+    }
+  }
+}
+.dark-mode {
+  .card.information.split-style,
+  .block--card.information.split-style {
+    &:focus-within {
+      .title a:after {
+        outline-color: var(--blue--lighter--40);
+      }
+    }
+  }
+}
+/*------------------------------------------------------------------------------
+8. Simple
+------------------------------------------------------------------------------*/
+.card.simple,
+.block--card.simple {
+  @include lightest-gray-bg;
+
+  padding: 0;
+  text-align: center;
+  .title {
+    @include blue-bg;
+
+    padding: var(--space--lg);
+    a {
+      &:active,
+      &:hover,
+      &:focus {
+        color: inherit;
+        background: none;
+      }
+    }
+  }
+  .body {
+    padding: var(--space--lg);
+  }
+  &:focus-within {
+    .title {
+      a:after {
+        outline-color: var(--dark-blue--darker--80);
+      }
+    }
+  }
+}
+.dark-mode {
+  .card.simple,
+  .block--card.simple {
+    @include gray-bg;
+    .title {
+      a {
+        &:active,
+        &:hover,
+        &:focus {
+          color: inherit;
+          background: none;
+        }
+      }
+    }
+    .cta {
+      &:hover,
+      &:focus,
+      &:active {
+        outline-color: inherit;
+      }
+    }
+    &:focus-within {
+      .title a:after {
+        outline-color: var(--blue--lighter--40);
+      }
+    }
+  }
+}
+/*------------------------------------------------------------------------------
+9. Solid round
+------------------------------------------------------------------------------*/
+.card.solid-round,
+.block--card.solid-round {
+  border-radius: var(--space--2xl);
+  box-shadow: none;
+  a {
+    &:after {
+      border-radius: var(--space--2xl);
+    }
+  }
+  .title {
+    padding: 0;
+    .block__title {
+      padding: var(--space--lg) var(--space--lg) 0;
+      font-weight: var(--font-weight--black);
+    }
+  }
+  .image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    flex: 0 1 100%;
+    order: 2;
+    max-width: 50%;
+    max-height: 100%;
+    margin: 0;
+    border-radius: 0 var(--space--2xl) var(--space--2xl) 0;
+    img {
+      display: block;
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+      margin: 0 var(--space--2xl) 0;
+      opacity: 25%;
+    }
+  }
+  .body {
+    max-width: 23rem;
+    padding: var(--space--md) var(--space--lg) 0;
+    p {
+      margin: 0 0 var(--space--lg);
+      font-size: var(--font-size--sm);
+    }
+    .button.white,
+    .cta.white {
+      box-shadow: none;
+      font-size: var(--font-size--sm);
+    }
+  }
+  &.blue {
+    background-color: var(--blue--lighter--40);
+    .title {
+      .block__title {
+        a {
+          color: var(--dark-blue);
+        }
+      }
+    }
+    .body {
+      color: var(--blue--darker--40);
+      a.button.white,
+      .cta.white {
+        color: var(--blue);
+        &:hover,
+        &:focus {
+          color: var(--white);
+          background-color: var(--blue);
+        }
+      }
+    }
+  }
+  &.green {
+    background-color: var(--light-green--lighter--40);
+    .title {
+      .block__title {
+        a {
+          color: var(--dark-green);
+        }
+      }
+    }
+    .body {
+      color: var(--dark-green--darker--20);
+      a.button.white,
+      .cta.white {
+        color: var(--green);
+        &:hover,
+        &:focus {
+          color: var(--white);
+          background-color: var(--green);
+        }
+      }
+    }
+  }
+}
+.dark-mode {
+  .card.solid-round,
+  .block--card.solid-round {
+    h2,
+    h3,
+    h4,
+    h5 {
+      color: var(--dark-blue);
+    }
+  }
+}
+/*------------------------------------------------------------------------------
+10. Tile
+------------------------------------------------------------------------------*/
+.card.tile,
+.block--card.tile {
+  @include light-blue-bg;
+
+  padding: var(--space--md);
+  border-radius: var(--space--2xl);
+  a {
+    &:after {
+      border-radius: var(--space--2xl);
+    }
+  }
+  &:hover {
+    a {
+      &:after {
+        border-radius: var(--space--2xl);
+        outline: transparent;
+      }
+    }
+  }
+  .image {
+    display: flex;
+    order: 1;
+    justify-content: flex-end;
+    margin: 0 0 var(--space--md);
+    border-radius: 0 var(--space--2xl) 0 0;
+    img {
+      display: block;
+      object-fit: scale-down;
+      width: auto;
+      max-height: 6.25rem;
+      margin: 0;
+      opacity: 25%;
+    }
+  }
+  .taxonomy-term {
+    border-radius: var(--border-radius--rounder);
+  }
+  .title {
+    margin: 0;
+    padding: 0 var(--space--xs) var(--space--xs);
+    text-transform: uppercase;
+    .block__title {
+      margin: 0;
+      font-size: var(--font-size--2xl);
+      a {
+        font-size: var(--font-size--2xl);
+      }
+      a {
+        &:active,
+        &:hover,
+        &:focus {
+          background: none;
+        }
+      }
+    }
+  }
+}
+.dark-mode {
+  .card.tile,
+  .block--card.tile {
+    @include dark-blue-bg;
+  }
+}
+/*------------------------------------------------------------------------------
+11. Institute
+------------------------------------------------------------------------------*/
+.card.institute,
+.block--card.institute {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  padding: 0;
+  .image {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    margin-bottom: 0;
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      content: "";
+      opacity: 0.9;
+      background-color: var(--white);
+    }
+  }
+  .content {
+    z-index: 1;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    padding: var(--space--xs);
+    color: var(--black);
+    p {
+      font-size: var(--font-size--xs);
+      line-height: 1.3;
+    }
+    img {
+      float: left;
+      max-width: 40%;
+    }
+  }
+  .intro {
+    text-transform: uppercase;
+    color: var(--dark-blue--darker--40);
+  }
+  .title {
+    gap: var(--space--xs);
+
+    display: flex;
+    align-items: center;
+    .block__title {
+      text-transform: uppercase;
+      font-family: var(--font--title);
+      font-size: var(--font-size--md);
+    }
+    a {
+      color: var(--dark-blue);
+      &:hover {
+        color: var(--blue);
+      }
+      &:visited {
+        color: var(--purple);
+      }
+    }
+  }
+  .material-icons {
+    color: var(--white);
+    background-color: var(--dark-blue--darker--20);
+    font-size: var(--icon-size--md);
+  }
+}
+.dark-mode {
+  .card.institute,
+  .block--card.institute {
+    .intro {
+      color: var(--blue--lighter--80);
+    }
+    .image:after {
+      background-color: var(--black);
+    }
+    .content {
+      color: var(--white);
+    }
+    .title {
+      a {
+        color: var(--blue--lighter--40);
+        &:hover {
+          color: var(--white);
+        }
+        :visited {
+          color: var(--purple--lighter--80);
+        }
+      }
+    }
+  }
+}
