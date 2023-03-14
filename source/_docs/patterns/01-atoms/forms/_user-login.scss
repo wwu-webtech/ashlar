@@ -3,21 +3,19 @@ Molecule: Forms - User Login
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 .user-login-form {
-  @media (min-width: $medium) {
-    justify-content: flex-start;
-    width: var(--content-area-max-width--sm);
-  }
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 90%;
   margin: auto;
   padding: var(--space--md);
+  @media (min-width: $medium) {
+    justify-content: flex-start;
+    width: var(--content-area-max-width--sm);
+  }
   .manual-login,
   .cas-login-link {
     @media (min-width: $medium) {
-      width: 50%;
       margin: var(--space--xs) auto;
     }
   }
@@ -28,24 +26,5 @@ Molecule: Forms - User Login
   .password,
   .form-actions {
     display: none;
-  }
-}
-[data-theme="dark"] {
-  .user-login-form {
-    .cas-login-link {
-      color: var(--white);
-      &:hover,
-      &:focus,
-      &:active {
-        color: var(--black);
-      }
-      &:visited {
-        &:hover,
-        &:focus,
-        &:active {
-          color: var(--black);
-        }
-      }
-    }
   }
 }
