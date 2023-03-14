@@ -5,10 +5,6 @@ authors: [masons7]
 tags: [major-release]
 ---
 
-import WWULogo from "../../patterns/01-atoms/logo/logo.js"
-import WWUHeader from "../../patterns/03-organisms/headers/wwu-header/wwu-header.js"
-import WWUFooter from "../../patterns/03-organisms/footers/wwu-footer/wwu-footer.js"
-
 Ashlar is the university's Drupal theme, and basis for its [component library/design system](/patterns/overview) and [Brand and Communication Guide](https://brand.wwu.edu). And it is getting a major update this month! 
 
 Many of the updates are under the  hood. We have refactored almost all the SASS/CSS and Javascript, take advantage of the latest features those languages. We  have also completely redone the documentation and pattern library. We are moving away from Pattern Lab (which hasn't seen many update and is  starting to fall out of maintenance) and into [Docusaurus](https://docusaurus.io/)  (the website you're looking at now.)
@@ -143,7 +139,7 @@ On both mobile and desktop, the styes for fonts and icons have inherited change 
 ![Older header styles on large screens](./old-desktop-header.png)
 
 #### New Header
-<wwu-header sitename='A Western Website' regioncontent='<div><p><a href=#>Department of this College</a></p></div>'></wwu-header>
+![New header styles on large screens](./new-header.png)
 
 ### Western Footer
 The footer has been rearranged, and links have been placed at the bottom of the page.
@@ -152,7 +148,7 @@ The footer has been rearranged, and links have been placed at the bottom of the 
 ![Older footer styles, with content in three columns](./old-footer.png)
 
 #### New Footer
-<wwu-footer></wwu-footer>
+![New footer styles, with content stacked in a single column](./new-footer.png)
 
 ## Back End Changes
 There have been a LOT of code changes on the back end. Many things have been simplified, reorganized, and condensed.
