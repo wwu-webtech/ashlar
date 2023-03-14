@@ -43,7 +43,6 @@ Along with this change, we have also refreshed the actual semantic `<button>` st
 
 #### New Buttons
 <button>Button</button>
-<button class="alt">With .alt class</button>
 <button class="warning">With .warning class</button>
 <button disabled>Disabled Button</button>
 

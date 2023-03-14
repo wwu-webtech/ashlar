@@ -10,7 +10,6 @@ The styles show here are for true HTML buttons, which use either the &lt;button&
 
 ```
 <button>Button</button>
-<button class="alt">With .alt class</button>
 <button class="warning">With .warning class</button>
 <button disabled>Disabled Button</button>
 ```
