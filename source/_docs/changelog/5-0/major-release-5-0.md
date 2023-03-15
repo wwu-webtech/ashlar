@@ -115,6 +115,9 @@ This style has been removed.
 ### Schedule
 Round edges option has been removed.
 
+### Social Media Icons
+A [custom element has been created for social media icons](/patterns/atoms/icons/social-media-icons), to simplify the markup, and the styles have changed slightly. Old instances of social media markup will still be supported, but we recommend switching to the new markup and styles at your earliest convenience.
+
 ### Statistics
 The markup and CSS for these has been simplified. Drupal blocks will update automatically, but any existing custom markup will need to be replaced.
 

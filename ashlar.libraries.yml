@@ -164,6 +164,15 @@ switcher:
     build/js/switcher.js: {}
   dependencies:
     - core/jquery
+social-media-icons:
+  version: 1.x
+  css:
+    theme:
+      build/css/components/social-media-icons.css: {}
+  js:
+    build/js/social-media-icons.js: {}
+  dependencies:
+    - core/jquery
 testimonial:
   version: 1.x
   css:

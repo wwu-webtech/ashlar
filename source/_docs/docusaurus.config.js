@@ -66,6 +66,7 @@ const config = {
             require.resolve('../../build/css/components/testimonial.css'),
             require.resolve('../../build/css/components/schedule.css'),
             require.resolve('../../build/css/components/search.css'),
+            require.resolve('../../build/css/components/social-media-icons.css'),
             require.resolve('../../build/css/components/statistic.css'),
             require.resolve('../../build/css/components/switcher.css'),
             require.resolve('../../build/css/components/pre-header.css'),
