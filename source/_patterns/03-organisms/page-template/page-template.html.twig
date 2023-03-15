@@ -31,6 +31,24 @@
   {% endblock %}
 
   {% block content %}
+  {% if logged_in %}
+    <div class="status-alert max-width--content">
+      <div class="status-alert--message status-alert--major">
+          <p class="material-icons status-color" aria-hidden="true">
+              error_outline
+          </p>
+        
+        <div class="body">          
+          <h2>Coming Soon: Drupal Theme Update</h2>
+      
+         <p>Ashlar is receiving a major update soon. Some front end styles will be affected. WebTech recommends you <a href="https://wwu-stephanie.github.io/ashlar/changelog/version-5">read the release notes</a>. You can also <a href="https://wwu-stephanie.github.io/ashlar/patterns/overview">browse the new pattern library</a>.
+
+         <p class="font-size--smaller">You are seeing this message because you are logged into a Drupal site.</p>
+        </div>      
+      </div>
+    </div>
+    {% endif %}
+
     {{ page.content }}
   {% endblock %}
 
