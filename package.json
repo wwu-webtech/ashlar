@@ -22,12 +22,10 @@
     "gulp-terser": "^2.1.0",
     "gulp-uglify": "^3.0.2",
     "gulp-wrap": "^0.15.0",
-    "husky": "^2.7.0",
     "jquery": "^3.6.0",
     "jquery-listnav": "^2.4.10",
     "jquery-once": "^2.2.1",
     "jshint": "^2.13.4",
-    "pa11y-ci": "^2.4.2",
     "pump": "^3.0.0",
     "run-sequence": "^2.2.1",
     "sass": "^1.52.2",
@@ -45,10 +43,5 @@
     "acorn": "^6.4.2",
     "breakpoint-sass": "^2.7.1",
     "prettier": "2.2.1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "lando gulp patternlab && php pattern-lab/core/console --generate && pa11y-ci"
-    }
   }
 }
