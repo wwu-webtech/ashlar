@@ -46,3 +46,29 @@ Layout Builder
     background-color: var(--dark-gray--darker--80);
   }
 }
+/*------------------------------------------------------------------------------
+Media Library
+------------------------------------------------------------------------------*/
+#media-library-content {
+  font-size: var(--font-size--xs);
+  input[type="checkbox"].form-checkbox {
+    width: 1rem;
+    height: 1rem;
+    opacity: unset;
+  }
+  .js-media-library-views-form {
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--space--sm);
+    margin-top: var(--space--sm);
+  }
+  div.js-media-library-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space--sm);
+  }
+  div.views-field-rendered-entity {
+    overflow: hidden;
+    max-width: 6rem;
+  }
+}
