@@ -115,10 +115,10 @@ language-select:
     language-select.js: {}
   dependencies:
     - core/jquery
-modal:
+dialog:
   version: 1.x
   js:
-    build/js/modal.js: {}
+    build/js/dialog.js: {}
 menu-extras:
   version: 1.x
   js:
