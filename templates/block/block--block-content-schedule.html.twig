@@ -29,6 +29,7 @@
 {%
   set classes = [
     'block',
+    'wwu-schedule',
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
     'block--schedule',
     block_content.field_background_color.0.value,
