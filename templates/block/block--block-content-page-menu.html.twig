@@ -31,11 +31,12 @@
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
     'wwu-page-menu',
     'lightest-gray-bg',
+    'standard-padding',
   ]
 %}
 
 {% set attributes = attributes.addClass(classes) %}
-{% set title_attributes = title_attributes.addClass('title') %}
+{% set title_attributes = title_attributes.addClass('title, standard-margin--top') %}
 {% set heading_id = 'heading--page-menu--' ~ elements['#weight']|clean_id %}
 
 {% block template %}
