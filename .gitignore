@@ -29,10 +29,6 @@ Thumbs.db
 *.tar
 *.zip
 
-# Generated logo and screenshot images
-/logo.png
-/screenshot.png
-
 # Lando config file
 .lando.yml
 
