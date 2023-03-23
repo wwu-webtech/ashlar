@@ -6,7 +6,7 @@ if (
         wwu_dialog.innerHTML = `
         <button class="open-button"></button>
         
-        <dialog>
+        <dialog role="dialog" aria-modal="true">
         <div class="dialog-wrapper">        
             <div class="dialog-content">
             </div>
