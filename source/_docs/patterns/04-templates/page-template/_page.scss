@@ -3,13 +3,14 @@ Atom: Page
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 html {
+  --default-text-color: var(--black);
   /* using "oline" for overwriteable props because csscomb doesn't handle sorting css variables well, this keeps them at the top */
   --oline-color: var(--dark-blue);
   --oline-offset: var(--outline-offset--outset);
   --page-background: var(--white);
 
   scroll-behavior: smooth;
-  color: var(--black);
+  color: var(--default-text-color);
   * {
     box-sizing: border-box;
     &:focus-visible {
@@ -19,6 +20,7 @@ html {
   }
 }
 html[data-theme="dark"] {
+  --default-text-color: var(--white);
   --oline-color: var(--white);
   --page-background: var(--black);
 }
@@ -26,15 +28,14 @@ iframe {
   border: 0;
 }
 .page-content {
-  @media (min-width: $large) {
-    grid-template-columns: var(--grid-columns--lg);
-  }
-
   display: grid;
   grid-template-areas: " . skip_to_content . "
   " . content         . ";
   grid-template-columns: var(--grid-columns--sm);
   grid-template-rows: auto;
+  @media (min-width: $large) {
+    grid-template-columns: var(--grid-columns--lg);
+  }
   #main-content {
     grid-area: skip_to_content;
     margin: 0;

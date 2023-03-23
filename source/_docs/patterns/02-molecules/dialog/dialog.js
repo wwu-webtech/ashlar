@@ -5,12 +5,14 @@ if (
         const wwu_dialog = document.createElement("template");
         wwu_dialog.innerHTML = `
         <button class="open-button"></button>
+        
         <dialog>
-            <button class="close-button"><span class="material-icons" aria-hidden="true">close</span> Close</button>
-
+        <div class="dialog-wrapper">        
             <div class="dialog-content">
             </div>
-        <dialog>                    
+        </div>       
+        </dialog>             
+        
         `;
         
         class WWUDialog extends HTMLElement {
@@ -22,28 +24,56 @@ if (
                 const content = this.innerHTML;
                 this.innerHTML = ``;
                 this.appendChild(wwu_dialog.content.cloneNode(true));     
-                                
+                
                 const open_button = this.querySelector('.open-button');
-                const close_button = this.querySelector('.close-button');
+                const close_button = document.createElement('button');
                 const dialog = this.querySelector('dialog');  
                 const dialog_content = this.querySelector('.dialog-content');       
                 
                 open_button.innerText = this.getAttribute('button');
-                dialog.setAttribute('aria-label', this.getAttribute('label'));
-                dialog_content.innerHTML = content;
-                
+                close_button.innerHTML = `<span class="material-icons" aria-hidden="true">close</span> Close`;
+                close_button.classList.add("close-button");
 
+                dialog.setAttribute('aria-label', this.getAttribute('label'));
+                dialog_content.innerHTML = content;              
+                dialog_content.prepend(close_button);
+                
+                
                 open_button.addEventListener('click', () => {
-                    dialog.showModal();
+                    open_dialog(dialog);
                 });
+                /* close if close button is clicked */
                 close_button.addEventListener('click', () => {
-                    dialog.close();
+                    close_dialog(dialog);
                 });
+                /* close if area outside dialog is clicked */
+                document.addEventListener('click',(e) =>
+                {                    
+                    let elementClass = e.target.className;                    
+                    if (elementClass == 'dialog-wrapper') {
+                        close_dialog(dialog);
+                    }
+                }
+                );
                 
             }
         }
         
         window.customElements.define("wwu-dialog", WWUDialog);      
+        
+        function open_dialog(x) {
+            x.showModal();
+        }
+        
+        function close_dialog(x) {
+            x.close();
+            
+            /* Remove and re-add iframes to stop video playback without needing an api */
+            const iframe = x.parentNode.querySelector("iframe");
+            const iframe_container = iframe.parentNode;
+            iframe.remove();
+            iframe_container.appendChild(iframe);
+        }
     }  
     
     

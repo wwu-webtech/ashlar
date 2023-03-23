@@ -2,12 +2,7 @@
 Molecule: Dialog
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-dialog {
-  width: 100%;
-  max-width: 70vw;
-  padding: var(--space--lg);
-  border: solid var(--border-width--md) transparent;
-  background-color: var(--page-background);
+wwu-dialog {
   iframe {
     display: block;
   }
@@ -20,5 +15,27 @@ dialog {
     left: 0;
     margin: 0;
     border-radius: 0;
+  }
+}
+.dialog-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(var(--black--rgb), 0.5);
+}
+.dialog-content {
+  position: relative;
+  width: 100%;
+  padding: var(--space--lg);
+  color: var(--default-text-color);
+  border: solid var(--border-width--md) transparent;
+  background-color: var(--page-background);
+  @media (min-width: $medium) {
+    max-width: 70vw;
   }
 }
