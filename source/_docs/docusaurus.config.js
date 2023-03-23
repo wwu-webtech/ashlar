@@ -81,7 +81,7 @@ const config = {
   themeConfig:
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
   ({
-    algolia: {
+    /*algolia: {
       // The application ID provided by Algolia
       appId: 'W59HY4MAHN',
 
@@ -103,15 +103,15 @@ const config = {
       searchPagePath: 'search',
 
       //... other Algolia params
-    },
-    announcementBar: {
+    },*/
+    /*announcementBar: {
       id: 'support_us',
       content:
       'Ashlar 5.0 is now under review!',
       backgroundColor: '#007ac8',
       textColor: '#fff',
       isCloseable: false,
-    },
+    },*/
     navbar: {
       title: 'Ashlar',
       items: [
@@ -131,10 +131,10 @@ const config = {
             label: 'BitBucket',
             position: 'right',
           },
-          {
+          /*{
             type: 'search',
             position: 'right',
-          },
+          },*/
         ],
       },
       footer: {
