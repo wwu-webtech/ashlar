@@ -19,7 +19,7 @@ This is the markup that gets used on https://brand.wwu.edu/email-signature
 
     <div class="form-item">
       <input type="checkbox" id="include_pronoun_link" name="include_pronoun_link" value="link"></input>
-      <label for="include_pronoun_link">Link my pronouns to <a href='https://www.mypronouns.org/how'>MyPronouns.org</a></label>
+      <label for="include_pronoun_link">Link my pronouns to <a href='https://pronouns.org/'>Pronouns.org</a></label>
     </div>
   </div>
 

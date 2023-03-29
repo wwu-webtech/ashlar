@@ -31,7 +31,7 @@ if (generateButton) {
     teams_id = (teams_id.value) ? teams_id.value : '';
 
     if (document.getElementById('include_pronoun_link').checked) {
-      pronouns = (pronouns.value) ? ' <span aria-hidden="true">|</span> <a href="https://www.mypronouns.org/about">' + pronouns.value + '</a>' : '';
+      pronouns = (pronouns.value) ? ' <span aria-hidden="true">|</span> <a href="https://pronouns.org/">' + pronouns.value + '</a>' : '';
     } else {
       pronouns = (pronouns.value) ? ' <span aria-hidden="true">|</span> ' + pronouns.value : '';
     }
