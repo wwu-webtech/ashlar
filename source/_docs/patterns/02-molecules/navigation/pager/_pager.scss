@@ -1,0 +1,33 @@
+/*------------------------------------------------------------------------------
+Molecule: Navigation - Pager
+--------------------------------------------------------------------------------
+1. Default
+2. Dark Mode
+------------------------------------------------------------------------------
+1. Default
+------------------------------------------------------------------------------*/
+
+.pager {
+  ul {
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--space--sm);
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+    a {
+      display: inline-block;
+      min-width: var(--touch-target--min);
+      min-height: var(--touch-target--min);
+      text-align: center;
+    }
+    &.is-active {
+      a {
+        border: solid var(--border-width--md) var(--link-decoration-color);
+      }
+    }
+  }
+}

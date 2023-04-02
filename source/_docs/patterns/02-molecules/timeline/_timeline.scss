@@ -1,0 +1,77 @@
+/*------------------------------------------------------------------------------
+Molecule: Text - Timeline
+--------------------------------------------------------------------------------
+1. Dark mode
+------------------------------------------------------------------------------*/
+.timeline {
+  display: grid;
+}
+.timeline-block {
+  @media (min-width: $medium) {
+    width: 60%;
+  }
+
+  width: 80%;
+  padding: var(--space--sm);
+  border: var(--border-width--md) solid transparent;
+  &:nth-of-type(odd) {
+    @include lightest-blue-bg;
+
+    text-align: right;
+    .timeline-heading {
+      margin-right: calc(-1 * var(--space--xl));
+    }
+    .timeline-item--highlighted {
+      margin-right: calc(-1 * var(--space--xl));
+      margin-left: var(--space--3xl);
+      background-color: var(--blue--lighter--60);
+    }
+  }
+  &:nth-of-type(even) {
+    @include light-blue-bg;
+
+    justify-self: flex-end;
+    .timeline-heading {
+      margin-left: calc(-1 * var(--space--xl));
+    }
+    .timeline-item--highlighted {
+      margin-right: var(--space--3xl);
+      margin-left: calc(-1 * var(--space--xl));
+      background-color: var(--blue--lighter--80);
+    }
+  }
+  .timeline-heading {
+    @include blue-bg;
+
+    margin-top: 0;
+    padding: var(--space--sm);
+    border: var(--border-width--md) solid transparent;
+  }
+  .timeline-item--highlighted {
+    margin-bottom: var(--space--sm);
+    padding: var(--space--sm);
+    border: var(--border-width--md) solid transparent;
+  }
+  .material-icons {
+    position: relative;
+    top: var(--space--2xs);
+    font-size: var(--icon-size--sm);
+  }
+}
+/*------------------------------------------------------------------------------
+1. Dark mode
+------------------------------------------------------------------------------*/
+[data-theme="dark"] {
+  .timeline-block:nth-of-type(odd) {
+    @include dark-blue-bg;
+    .timeline-item--highlighted {
+      background-color: var(--blue--darker--20);
+    }
+  }
+  .timeline-block:nth-of-type(even) {
+    @include darkest-blue-bg;
+    .timeline-item--highlighted {
+      background-color: var(--blue--darker--20);
+    }
+  }
+}

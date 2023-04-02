@@ -29,13 +29,31 @@
 {%
   set classes = [
     'block',
-    'block--testimonial',
+    'wwu-testimonial',
     block_content.field_custom_classes.0.value,
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
   ]
 %}
 {% set attributes = attributes.addClass(classes) %}
-{% set title_attributes = title_attributes.addClass('block__title') %}
+{% set title_attributes = title_attributes.addClass('title') %}
 {% block template %}
-  {% include "@molecules/quotes/testimonial/testimonial.html.twig" %}
+<div{{ attributes }}>
+  {% block content %}
+    <div class="image image--stylized">
+      {{ content.field_image }}
+    </div>
+
+    <blockquote>
+      <div class="body">
+        {% include "@templates/label/label-customized.twig" %}
+        {{ content.body }}
+
+        <div class="credit">
+          <p class="name"> {{ content.field_name }}</p>
+          <p class="description">{{ content.field_description }}</p>
+        </div>
+      </div>
+  {% endblock %}
+  </blockquote>
+</div>
 {% endblock %}

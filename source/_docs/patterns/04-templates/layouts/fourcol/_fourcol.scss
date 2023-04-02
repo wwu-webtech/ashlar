@@ -1,0 +1,41 @@
+/*------------------------------------------------------------------------------
+Templates: Layouts - Four column
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+.layout--fourcol-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  > .layout__region {
+    @media (min-width: $small) {
+      flex: 0 1 24%;
+    }
+
+    flex: 0 1 100%;
+    font-size: var(--font-size--sm);
+  }
+}
+.layout--fourcol--page-width {
+  @media (min-width: $large) {
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100vw;
+  margin-right: calc(-1 * var(--space--sm));
+  margin-left: calc(-1 * var(--space--sm));
+  > .layout__region {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+  > .layout__region--first,
+  > .layout__region--second,
+  > .layout__region--third,
+  > .layout__region--fourth {
+    @media (min-width: $small) {
+      flex: 1 1 25%;
+    }
+  }
+}

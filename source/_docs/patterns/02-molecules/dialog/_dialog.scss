@@ -1,0 +1,41 @@
+/*------------------------------------------------------------------------------
+Molecule: Dialog
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+wwu-dialog {
+  iframe {
+    display: block;
+  }
+  .close-button {
+    --oline-color: var(--white);
+    --oline-offset: var(--outline-offset--inset);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    border-radius: 0;
+  }
+}
+.dialog-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(var(--black--rgb), 0.5);
+}
+.dialog-content {
+  position: relative;
+  width: 100%;
+  padding: var(--space--lg);
+  color: var(--default-text-color);
+  border: solid var(--border-width--md) transparent;
+  background-color: var(--page-background);
+  @media (min-width: $medium) {
+    max-width: 70vw;
+  }
+}

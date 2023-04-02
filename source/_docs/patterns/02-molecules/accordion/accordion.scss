@@ -1,0 +1,70 @@
+/*------------------------------------------------------------------------------
+Molecule: Accordion
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+wwu-accordion,
+.accordion-set {
+  display: block;
+  margin-bottom: var(--space--md);
+  .item,
+  wwu-accordion-item {
+    display: block;
+    &:last-of-type {
+      .expand {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .expand {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: calc(-1 * var(--border-width--md));
+    cursor: default;
+    color: var(--link-color);
+    border: solid var(--border-width--md) var(--link-decoration-color);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    .material-icons {
+      font-size: var(--icon-size--sm);
+    }
+    &:active,
+    &:focus,
+    &:hover {
+      --oline-color: var(--link-color--focus);
+
+      color: var(--link-color--focus);
+      outline-offset: var(--outline-offset--inset);
+      background: var(--link-background--focus);
+    }
+  }
+  .title {
+    margin: 0;
+    padding-bottom: 0;
+    font-size: var(--font-size--md);
+    & + .content {
+      visibility: hidden;
+      overflow: hidden;
+      max-height: 0;
+      padding: 0;
+      transition: var(--transition-speed--md) ease;
+      transition-property: max-height, opacity;
+      opacity: 0;
+      &.is-expanded {
+        visibility: visible;
+        padding: var(--space--sm);
+        opacity: 1;
+      }
+    }
+  }
+}
+.wwu-accordion[class*="-bg"] {
+  padding: var(--space--sm);
+  .title {
+    margin-top: 0;
+  }
+  wwu-accordion {
+    margin-bottom: 0;
+  }
+}

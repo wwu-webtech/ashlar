@@ -1,0 +1,23 @@
+/*------------------------------------------------------------------------------
+Molecule: Background Video
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+wwu-background-video,
+.bg-video-container {
+  position: relative;
+  display: grid;
+  place-content: center;
+  padding: var(--space--2xl);
+  text-align: center;
+  > * {
+    z-index: 1;
+  }
+  > video {
+    z-index: 0;
+  }
+  button {
+    position: absolute;
+    bottom: var(--space--sm);
+    left: var(--space--sm);
+  }
+}

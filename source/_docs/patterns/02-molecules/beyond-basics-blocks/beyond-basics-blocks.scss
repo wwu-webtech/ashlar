@@ -1,0 +1,22 @@
+/*------------------------------------------------------------------------------
+Molecule: Beyond Basics Block
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+.wwu-beyond-basics-block {
+  clear: both;
+  margin: var(--space--xs) 0;
+  &[class*="-bg"] {
+    padding: var(--space--md);
+    border: var(--border-width--md) solid transparent;
+    .title {
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+  }
+  &.no-margin {
+    margin: 0;
+  }
+  &.no-padding {
+    padding: 0;
+  }
+}

@@ -1,0 +1,201 @@
+/*------------------------------------------------------------------------------
+Atom: Forms
+--------------------------------------------------------------------------------
+1. Labels
+2. Inputs
+3. Checkboxes & Radios
+4. Fieldsets
+------------------------------------------------------------------------------*/
+:root {
+  --input-background-color: var(--gray--lighter--90);
+  --input-border-color: var(--gray--lighter--20);
+  --input-border-color--focus: var(--blue--darker--20);
+  --input-text-color: var(--black);
+  --required-color: var(--blue);
+}
+[data-theme="dark"] {
+  --input-background-color: var(--gray--darker--60);
+  --input-text-color: var(--white);
+  --required-color: var(--blue--lighter--40);
+}
+/*------------------------------------------------------------------------------
+1. Labels
+------------------------------------------------------------------------------*/
+legend,
+label {
+  display: block;
+  margin-bottom: var(--space--2xs);
+  padding: 0;
+  font-weight: var(--font-weight--semibold);
+  &.required:after,
+  &.form-required:after,
+  .form-required:after {
+    content: " *";
+    color: var(--required-color);
+  }
+}
+/*------------------------------------------------------------------------------
+2. Inputs
+------------------------------------------------------------------------------*/
+input,
+textarea,
+select {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: var(--space--md);
+  padding: var(--space--xs);
+  color: var(--input-text-color);
+  border: solid var(--border-width--md) var(--input-border-color);
+  border-radius: var(--border-radius--round);
+  background-color: var(--input-background-color);
+  box-shadow: none;
+  font-size: var(--font-size--sm);
+  @media (min-width: $medium) {
+    width: auto;
+  }
+  &:focus {
+    border-color: var(--input-border-color--focus);
+    box-shadow: var(--shadow--soft);
+  }
+  &:disabled {
+    --input-background-color: var(--gray--lighter--40);
+    --input-border-color: var(--gray);
+
+    cursor: not-allowed;
+  }
+}
+input[type="submit"] {
+  width: auto;
+}
+::placeholder {
+  opacity: 1; /* Firefox */
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--gray);
+}
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--gray);
+}
+/*------------------------------------------------------------------------------
+3. Checkboxes & Radios
+------------------------------------------------------------------------------*/
+input[type="checkbox"],
+input[type="radio"] {
+  position: relative;
+  width: 0;
+  height: 0;
+  margin: 0;
+  opacity: 0;
+  + label {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: var(--font-weight--regular);
+    &:before {
+      /* checkbox/radio button */
+      position: relative;
+      top: 0.2rem;
+      display: inline-block;
+      width: var(--checkbox-size);
+      height: var(--checkbox-size);
+      margin-right: var(--space--2xs);
+      content: "";
+      border: solid var(--border-width--md) var(--input-border-color);
+      background-color: var(--input-background-color);
+    }
+    &:after {
+      /* checkmark/radio dot */
+      position: absolute;
+      display: none;
+      content: "";
+    }
+  }
+  &:focus {
+    + label {
+      &:before {
+        border-color: var(--input-border-color--focus);
+        box-shadow: var(--shadow--soft);
+      }
+    }
+  }
+  &:focus-visible {
+    + label {
+      outline: dotted var(--oline-color) var(--outline-width);
+      outline-offset: var(--oline-offset);
+    }
+  }
+  &:checked {
+    + label {
+      &:before {
+        border-color: var(--blue);
+        background-color: var(--blue);
+      }
+      &:after {
+        display: block;
+      }
+    }
+  }
+}
+input[type="checkbox"] {
+  + label {
+    &:before {
+      border-radius: var(--border-radius--round);
+    }
+    &:after {
+      /* checkmark */
+      top: 0.35rem;
+      left: 0.4rem;
+      width: 0.2rem;
+      height: 0.6rem;
+      transform: rotate(45deg);
+      border: solid var(--white);
+      border-width: 0 3px 3px 0;
+    }
+  }
+}
+input[type="radio"] {
+  + label {
+    &:before {
+      border-radius: 50%;
+    }
+    &:after {
+      /* radio dot */
+      top: 0.4rem;
+      left: 0.19rem;
+      width: 0.5rem;
+      height: 0.5rem;
+      border: solid transparent var(--border-width--lg);
+      border-radius: 50%;
+      background-color: var(--white);
+    }
+  }
+}
+table {
+  input[type="checkbox"],
+  input[type="radio"] {
+    width: unset;
+    height: unset;
+    margin: unset;
+    opacity: unset;
+    + label:before {
+      display: none;
+    }
+  }
+}
+.webform-scale-options input + label {
+  border: none;
+}
+/*------------------------------------------------------------------------------
+4. Fieldsets
+------------------------------------------------------------------------------*/
+fieldset,
+.fieldgroup {
+  margin-bottom: var(--space--sm);
+  padding: var(--space--xs);
+  border: solid var(--link-color) var(--border-width--md);
+  legend {
+    margin: 0 var(--space--sm);
+    padding: 0 var(--space--sm);
+  }
+}

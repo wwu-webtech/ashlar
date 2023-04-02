@@ -1,0 +1,45 @@
+/*------------------------------------------------------------------------------
+Molecule: Banner
+--------------------------------------------------------------------------------
+1. Print styles
+------------------------------------------------------------------------------*/
+@import "../../01-atoms/background-color/background-color-mixins.scss";
+.wwu-banner {
+  position: relative;
+  display: grid;
+  place-content: center;
+  padding: var(--space--xl);
+  text-align: center;
+  .body {
+    position: relative;
+    max-width: var(--content-area-max-width);
+    margin: auto;
+  }
+  .body,
+  .title {
+    z-index: 1;
+  }
+}
+.banner--page-width {
+  @media (min-width: 40rem) {
+    margin-right: calc((100vw - var(--content-area-max-width--sm))/-2);
+    margin-left: calc((100vw - var(--content-area-max-width--sm))/-2);
+  }
+}
+/*------------------------------------------------------------------------------
+1. Print styles
+------------------------------------------------------------------------------*/
+@media print {
+  .wwu-banner {
+    min-height: unset;
+    .background-image {
+      display: none;
+    }
+    .title {
+      font-size: 40pt;
+    }
+    .body {
+      max-width: none;
+    }
+  }
+}

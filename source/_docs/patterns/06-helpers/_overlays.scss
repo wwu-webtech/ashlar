@@ -1,0 +1,60 @@
+/*------------------------------------------------------------------------------
+Helpers: Overlays
+--------------------------------------------------------------------------------
+These classes are useful for improving contrast between text and background
+images for banners, image CTAs, etc.
+------------------------------------------------------------------------------*/
+.image-darker---10 {
+  .image,
+  .background-image {
+    filter: brightness(0.9);
+  }
+}
+.image-darker---20 {
+  .image,
+  .background-image {
+    filter: brightness(0.8);
+  }
+}
+.image-darker---30 {
+  .image,
+  .background-image {
+    filter: brightness(0.7);
+  }
+}
+.image-darker---40 {
+  .image,
+  .background-image {
+    filter: brightness(0.6);
+  }
+}
+.image-darker---50 {
+  .image,
+  .background-image {
+    filter: brightness(0.5);
+  }
+}
+.image-darker---60 {
+  .image,
+  .background-image {
+    filter: brightness(0.4);
+  }
+}
+.image-darker---70 {
+  .image,
+  .background-image {
+    filter: brightness(0.3);
+  }
+}
+.image-darker---80 {
+  .image,
+  .background-image {
+    filter: brightness(0.2);
+  }
+}
+.image-darker---90 {
+  .image,
+  .background-image {
+    filter: brightness(0.1);
+  }
+}

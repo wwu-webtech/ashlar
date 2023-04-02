@@ -29,7 +29,7 @@
 {%
   set classes = [
     'block',
-    'block--banner',
+    'wwu-banner',
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
     block_content.field_overlay_color.0.value,
     block_content.field_minimum_height.0.value,
@@ -41,14 +41,25 @@
 
 {% set attributes = attributes.addClass(classes) %}
 {% set body_attributes = body_attributes.addClass('body') %}
-{% set title_attributes = title_attributes.addClass('block__title' ) %}
+{% set title_attributes = title_attributes.addClass('title' ) %}
 
 {% block template %}
-  {% embed "@molecules/banner/banner.html.twig" %}
+  <div{{ attributes }}>
+    {% block content %}
+      {% block title %}
+        {% include "@templates/label/label-customized.twig" %}
+      {% endblock %}
+      
+      {% block image %}
+        <div class="background-image">
+          {{ content.field_image }}
+        </div>
+      {% endblock %}
 
-  {% block title %}
-    {% include "@atoms/text/label/label-customized.twig" %}
-  {% endblock %}
+      <div {{ body_attributes }}>
+        {{ content.body }}
+      </div>
+    {% endblock %}
 
-  {% endembed %}
+  </div>
 {% endblock %}

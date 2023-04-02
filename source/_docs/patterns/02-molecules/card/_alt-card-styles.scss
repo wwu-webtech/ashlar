@@ -1,0 +1,380 @@
+/*------------------------------------------------------------------------------
+Molecule: Cards - Alternate styles
+--------------------------------------------------------------------------------
+1. Horizontal variant
+2. Color block title variant
+3. Event
+4. Event alternate
+5. Hover variant
+6. Degree variant
+--------------------------------------------------------------------------------
+1. Horizontal
+------------------------------------------------------------------------------*/
+.card.horizontal,
+.wwu-card.horizontal, {
+  @media (min-width: $small) {
+    display: grid;
+    grid-template-areas: "image ." "image ." "image ." "image ." "image ." "image .";
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    .image {
+      grid-area: image;
+      margin: 0;
+      div {
+        height: 100%;
+      }
+    }
+  }
+}
+/*------------------------------------------------------------------------------
+2. Color block title
+------------------------------------------------------------------------------*/
+.card.color-block-title,
+.wwu-card.color-block-title {
+  --h1-color: var(--white);
+  --h2-color: var(--white);
+  --h3-color: var(--white);
+  --h4-color: var(--white);
+  --h5-color: var(--white);
+  --h6-color: var(--white);
+  .title {
+    --link-color: var(--white);
+    --link-color--visited: var(--white);
+
+    order: -2;
+    margin-bottom: 0;
+    padding: var(--space--md);
+    background-color: var(--blue);
+  }
+  &.dark-blue {
+    .title {
+      --link-color: var(--blue--lighter--40);
+      --link-color--visited: var(--purple--lighter--80);
+
+      background-color: var(--dark-blue);
+    }
+  }
+  &.light-green {
+    --h1-color: var(--dark-blue);
+    --h2-color: var(--dark-blue);
+    --h3-color: var(--dark-blue);
+    --h4-color: var(--dark-blue);
+    --h5-color: var(--dark-blue);
+    --h6-color: var(--dark-blue);
+    .title {
+      --link-color: var(--dark-blue--darker--60);
+      --link-color--visited: var(--purple);
+
+      background-color: var(--light-green);
+    }
+  }
+  &.horizontal {
+    .title {
+      margin-bottom: var(--space--xs);
+    }
+  }
+}
+/*------------------------------------------------------------------------------
+3. Event
+------------------------------------------------------------------------------*/
+.card.event,
+.wwu-card.event {
+  align-content: start;
+  .image {
+    margin-bottom: calc(-1 * var(--space--3xl));
+  }
+  .date {
+    flex: 0 1 40%;
+    order: 0;
+    margin-left: var(--space--md);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white);
+    border: var(--border-width--md) solid transparent;
+    background-color: var(--blue);
+    line-height: 1;
+    .month {
+      display: block;
+      padding: var(--space--md) var(--space--lg) 0 var(--space--lg);
+      font-size: var(--font-size--2xl);
+    }
+    .day {
+      display: block;
+      white-space: nowrap;
+      word-spacing: -0.2em;
+      font-size: var(--font-size--5xl);
+      font-weight: var(--font-weight--semibold);
+    }
+    .year {
+      display: block;
+      padding: 0 var(--space--lg) var(--space--md) var(--space--lg);
+      font-size: var(--font-size--lg);
+    }
+  }
+  .title {
+    order: 1;
+    margin-top: var(--space--md);
+    padding-right: var(--space--lg);
+    padding-left: var(--space--lg);
+  }
+  .location {
+    flex: 1 1 60%;
+    order: 2;
+    align-self: flex-end;
+    margin-bottom: 0;
+    padding: 0 var(--space--sm) var(--space--sm) var(--space--lg);
+    text-transform: uppercase;
+    color: var(--blue);
+    font-style: normal;
+    line-height: 1;
+  }
+  .body {
+    order: 3;
+    padding-right: var(--space--lg);
+    padding-left: var(--space--lg);
+  }
+}
+/*------------------------------------------------------------------------------
+4. Event Alternate
+------------------------------------------------------------------------------*/
+.card.event.alt,
+.wwu-card.event.alt {
+  display: grid;
+  grid-template-areas: "image image"
+  "title date"
+  "location date"
+  "body body"
+  "terms terms";
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  .title {
+    @include blue-bg;
+
+    display: flex;
+    grid-area: title;
+    align-items: end;
+    height: 100%;
+    margin: 0;
+    padding-top: var(--space--md);
+    text-align: right;
+    border-top: var(--border-width--sm) solid transparent;
+  }
+  .image {
+    grid-area: image;
+    margin-bottom: 0;
+  }
+  .date {
+    grid-area: date;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: var(--dark-blue);
+    background-color: var(--light-green);
+  }
+  .location {
+    @include blue-bg;
+
+    display: flex;
+    grid-area: location;
+    align-items: start;
+    height: 100%;
+  }
+  .body {
+    grid-area: body;
+    padding: var(--space--md);
+    padding-bottom: 0;
+  }
+  .taxonomy-terms {
+    grid-area: terms;
+    padding: var(--space--md);
+  }
+}
+/*------------------------------------------------------------------------------
+5. Hover Variant
+------------------------------------------------------------------------------*/
+.hover-card {
+  --h1-color: var(--white);
+  --h1-size: var(--font-size--md);
+  --h2-color: var(--white);
+  --h2-size: var(--font-size--md);
+  --h3-color: var(--white);
+  --h3-size: var(--font-size--md);
+  --h4-color: var(--white);
+  --h4-size: var(--font-size--md);
+  --h5-color: var(--white);
+  --h5-size: var(--font-size--md);
+  --h6-color: var(--white);
+  --h6-size: var(--font-size--md);
+  --link-background--focus: var(--gradient--vertical--dark-blue);
+  --link-color: var(--blue--darker--20);
+  --link-color--focus: var(--white);
+  --link-color--visited: var(--purple);
+  --oline-color: var(--white);
+  --read-more-size: 2.75rem;
+  /* Static/base styles */
+
+  position: relative;
+  margin-bottom: var(--space--md);
+  border: var(--border-width--sm) solid transparent;
+  p {
+    font-size: var(--font-size--xs);
+    line-height: 1.25;
+  }
+  &:hover,
+  &:focus-within {
+    z-index: 1;
+    .title {
+      a:after {
+        outline: var(--outline-width) solid transparent;
+        outline-offset: var(--space--2xs);
+        box-shadow: var(--shadow--soft--hover);
+      }
+    }
+  }
+  .title {
+    --link-color: var(--white);
+    --link-color--visited: var(--purple--lighter--80);
+
+    margin-top: 0;
+    padding: var(--space--sm);
+    background-color: var(--dark-blue--darker--40);
+    a {
+      display: inline-block;
+      text-decoration: none;
+      &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: "";
+        transition: var(--transition-speed--md) var(--ease--standard) box-shadow;
+        box-shadow: var(--shadow--soft);
+      }
+      &:hover,
+      &:active {
+        background: none;
+      }
+    }
+  }
+  .body {
+    padding: var(--space--sm);
+    padding-right: var(--read-more-size);
+    a {
+      position: relative;
+      text-underline-offset: 0.1rem;
+    }
+  }
+  .read-more {
+    position: absolute;
+    right: 0;
+    bottom: var(--space--sm);
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    width: var(--read-more-size);
+    color: var(--white);
+    .material-icons {
+      font-size: var(--icon-size--sm);
+    }
+  }
+  .image {
+    position: relative;
+    z-index: -1;
+    img {
+      display: block;
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  /* Animated/hover styles */
+  @media (min-width: $small) and (prefers-reduced-motion: no-preference) {
+    --link-color: var(--white);
+    --link-color--visited: var(--purple--lighter--80);
+
+    display: grid;
+    overflow-y: hidden;
+    .image {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+    }
+    .title {
+      display: grid;
+      align-content: center;
+      min-height: calc((var(--font-size--md) * 3) + (var(--space--sm) * 3));
+      margin: 0;
+      padding: var(--space--sm);
+      padding-right: var(--read-more-size);
+      background-color: transparent;
+    }
+    .content {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+      transition: 0.3s all ease-in;
+      transform: translatey(calc(100% - (var(--font-size--md) * 3) - (var(--space--sm) * 3)));
+      background-color: rgba(var(--dark-blue--darker--40--rgb), 0.9);
+    }
+    .body {
+      padding-top: 0;
+      padding-right: var(--space--md);
+      padding-bottom: calc(var(--read-more-size) * (2 / 3));
+      padding-left: var(--space--md);
+      color: var(--white);
+    }
+    .read-more {
+      bottom: 0;
+      width: var(--read-more-size);
+      height: var(--read-more-size);
+      transition: 0.3s all ease-in-out;
+      .material-icons {
+        transition: 0.3s all ease-in-out;
+        transform: translatey(-50%);
+      }
+    }
+    &:hover,
+    &:focus-within {
+      .content {
+        transition: 0.3s all ease-out;
+        transform: translatey(0%);
+      }
+      .read-more {
+        background-color: var(--blue);
+        .material-icons {
+          transform: translatey(0);
+        }
+      }
+    }
+  }
+}
+/*------------------------------------------------------------------------------
+6. Degree (from wwu.edu/majors individual pages)
+------------------------------------------------------------------------------*/
+.degree-card {
+  display: grid;
+  grid-template-areas: "taxonomy"
+  "title"
+  "body"
+  "more";
+  grid-template-rows: auto auto 1fr auto;
+  padding: var(--space--sm);
+  border: var(--border-width--sm) solid transparent;
+  font-size: var(--font-size--sm);
+  .title {
+    grid-area: title;
+    margin-top: var(--space--md);
+  }
+  .taxonomy-terms {
+    grid-area: taxonomy;
+    margin-top: calc(-1 * var(--space--sm));
+    margin-left: calc(-1 * var(--space--sm));
+  }
+  .taxonomy-term {
+    margin-right: var(--space--xs);
+  }
+  .body {
+    grid-area: body;
+  }
+}

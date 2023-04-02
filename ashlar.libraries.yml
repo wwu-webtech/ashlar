@@ -29,7 +29,7 @@ alerts:
   version: 1.x
   css:
     theme:
-      build/css/alerts.css: {}
+      build/css/components/alerts.css: {}
   js:
     build/js/alerts.js: {}
   dependencies:
@@ -74,6 +74,8 @@ donut-chart:
   css:
     theme:
       build/css/components/donut-chart.css: {}
+  js:
+    build/js/donut-chart.js: {}
 event-tracking:
   version: 1.x
   js:
@@ -113,20 +115,14 @@ language-select:
     language-select.js: {}
   dependencies:
     - core/jquery
-lightbox:
+dialog:
   version: 1.x
   js:
-    build/js/lightbox.js: {}
+    build/js/dialog.js: {}
 menu-extras:
   version: 1.x
   js:
     build/js/menu-extras.js: {}
-  dependencies:
-    - core/jquery
-page-title:
-  version: 1.x
-  js:
-    build/js/page-title.js: {}
   dependencies:
     - core/jquery
 profile:
@@ -135,6 +131,11 @@ profile:
     build/js/profile.js: {}
   dependencies:
     - core/jquery
+progress-tracker:
+  version: 1.x
+  css:
+    theme:
+      build/css/components/progress-tracker.css: {}
 pullquote:
   version: 1.x
   css:
@@ -161,6 +162,15 @@ switcher:
       build/css/components/switcher.css: {}
   js:
     build/js/switcher.js: {}
+  dependencies:
+    - core/jquery
+social-media-icons:
+  version: 1.x
+  css:
+    theme:
+      build/css/components/social-media-icons.css: {}
+  js:
+    build/js/social-media-icons.js: {}
   dependencies:
     - core/jquery
 testimonial:

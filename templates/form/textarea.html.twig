@@ -13,4 +13,6 @@
  * @see template_preprocess_textarea()
  */
 #}
-{% include "@atoms/forms/textarea/textarea.html.twig" %}
+<div{{ wrapper_attributes }}>
+  <textarea{{ attributes }}>{{ value }}</textarea>
+</div>

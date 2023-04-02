@@ -1,0 +1,171 @@
+/*------------------------------------------------------------------------------
+Molecule: Locations
+--------------------------------------------------------------------------------
+1. Growing circle interaction
+2. SVGs
+------------------------------------------------------------------------------*/
+.wwu-locations {
+  --location-button-size: 10rem;
+  --location-icon-height: 5.625rem;
+  --locations-block-width: 37.5rem;
+  --locations-block-width--bigger: 56.25rem;
+  --locations-font-size: 1.125rem;
+  --locations-icon-spacing: 1.875rem;
+  --locations-transition-speed: 500ms;
+  --stroke-width--heavy: 0.75rem;
+  --stroke-width--medium: 0.5rem;
+
+  max-width: var(--locations-block-width);
+  margin: 0 auto;
+  .button-cluster {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .button-animated {
+    display: block;
+    flex: 0 1 33%;
+    margin: 0 auto;
+    padding: var(--locations-icon-spacing) 0;
+  }
+  .svg-container {
+    position: relative;
+    display: block;
+    width: var(--location-button-size);
+    height: var(--location-button-size);
+  }
+  /*----------------------------------------------------------------------------
+  1. Growing circle interaction
+  ----------------------------------------------------------------------------*/
+  .grow {
+    .svg-container {
+      transition: background-color var(--locations-transition-speed);
+      -webkit-animation-name: pulse;
+      animation-name: pulse;
+      border-radius: 31.25rem;
+      &:active {
+        border: 0.125rem solid #75cfff;
+      }
+    }
+    &:hover,
+    &:focus-within {
+      .svg-container {
+        transition: background-color var(--locations-transition-speed);
+        -webkit-transform: scale(1.03, 1.03);
+        transform: scale(1.03, 1.03);
+        outline: var(--outline-width) solid transparent;
+        background-color: #d8f1ff;
+      }
+    }
+    &:focus-within {
+      .svg-container {
+        outline-style: dotted;
+        outline-color: inherit;
+      }
+    }
+    @media (forced-colors: active) {
+      &:hover,
+      &:focus-within {
+        .svg-container {
+          outline-color: LinkText;
+        }
+      }
+    }
+  }
+  // Underline animation
+  .link {
+    display: block;
+    width: 100%;
+    height: var(--locations-icon-spacing);
+    margin-top: var(--half-spacing);
+    text-align: center;
+    outline: 0;
+    background: transparent;
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      content: "";
+    }
+  }
+  .custom-underline {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: var(--blue--darker--20);
+    outline: 0;
+    background-color: transparent;
+    font-size: var(--locations-font-size);
+    font-weight: 600;
+    line-height: var(--locations-icon-spacing);
+    &:after {
+      position: absolute;
+      top: 95%;
+      left: 30%;
+      width: 30%;
+      height: 0.1875rem;
+      content: "";
+      transition: 0.3s ease all 0.1s;
+      background-color: var(--blue--darker--20);
+    }
+  }
+  .svg-container {
+    &:hover,
+    &:focus-within {
+      .custom-underline::after {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+  /*----------------------------------------------------------------------------
+  2. SVGs
+  ----------------------------------------------------------------------------*/
+  svg {
+    width: 100%;
+    height: var(--location-icon-height);
+    margin-top: var(--standard-spacing);
+  }
+  .cls-1,
+  .cls-2,
+  .st1,
+  .st2,
+  .st3,
+  .st4 {
+    fill: none;
+    stroke: var(--blue--darker--20);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: var(--stroke-width--heavy);
+  }
+  .cls-2,
+  .st0,
+  .st1 {
+    fill: var(--white);
+  }
+  .cls-3 {
+    fill: none;
+    stroke: var(--blue--darker--20);
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    stroke-width: var(--stroke-width--medium);
+  }
+  &.single-row {
+    @media (min-width: $medium) {
+      max-width: var(--locations-block-width--bigger);
+    }
+    .button-cluster {
+      @media (min-width: $medium) {
+        flex-wrap: nowrap;
+        justify-content: center;
+      }
+      .button-animated {
+        padding: var(--half-spacing);
+      }
+    }
+  }
+}

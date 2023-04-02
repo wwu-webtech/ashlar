@@ -1,0 +1,12 @@
+/*------------------------------------------------------------------------------
+Atom: Text - Blockquotes
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+blockquote {
+  margin: var(--space--md) 0;
+  padding: var(--space--md);
+  padding: var(--space--md);
+  border: solid var(--border-width--sm) transparent;
+  border-left: solid var(--border-width--lg) var(--blue--lighter--40);
+  line-height: 1.5;
+}

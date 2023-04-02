@@ -1,0 +1,83 @@
+/*------------------------------------------------------------------------------
+Molecule: Schedule
+--------------------------------------------------------------------------------
+1. Dark mode
+------------------------------------------------------------------------------*/
+@import "../../01-atoms/background-color/background-color-mixins.scss";
+.wwu-schedule {
+  .schedule-item {
+    @include lightest-gray-bg;
+
+    position: relative;
+    margin-bottom: var(--space--sm);
+    padding: var(--space--sm);
+    border: var(--border-width--md) solid transparent;
+    border-left: solid var(--blue) var(--border-radius--rounder);
+  }
+  .schedule-heading {
+    margin: var(--space--xs) 0;
+    font-size: var(--font-size--lg);
+    a {
+      text-decoration: none;
+      &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: calc(-1 * var(--border-radius--rounder));
+        content: "";
+        transition: var(--transition-speed--fast) var(--ease--standard)
+        box-shadow;
+        box-shadow: var(--shadow--soft);
+      }
+      &:active,
+      &:hover,
+      &:focus {
+        color: inherit;
+        background-image: none;
+      }
+      &:focus-visible {
+        outline: none;
+        &:after {
+          outline: dotted var(--oline-color) var(--outline-width);
+          outline-offset: var(--oline-offset);
+        }
+      }
+      &:hover:after,
+      &:focus-within {
+        box-shadow: var(--shadow--soft--hover);
+      }
+    }
+  }
+  .time,
+  .label {
+    display: block;
+    font-size: var(--font-size--lg);
+    line-height: 1.2;
+  }
+  .content {
+    a {
+      position: relative;
+    }
+  }
+}
+/*------------------------------------------------------------------------------
+1. Dark mode
+------------------------------------------------------------------------------*/
+[data-theme="dark"] {
+  .wwu-schedule {
+    .schedule-item {
+      @include gray-bg;
+    }
+    .schedule-heading {
+      a {
+        &:active,
+        &:focus,
+        &:hover {
+          color: var(--blue--lighter--80);
+          background-image: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+/*------------------------------------------------------------------------------
+Molecule: Cards
+--------------------------------------------------------------------------------
+1. General styles
+2. Print
+------------------------------------------------------------------------------*/
+.layout-builder-block.card .title a::after,
+.layout-builder-block.wwu-card .title a::after {
+  position: initial;
+}
+/*------------------------------------------------------------------------------
+1. General styles
+------------------------------------------------------------------------------*/
+.card,
+.wwu-card {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: start;
+  margin-bottom: var(--space--md);
+  padding-bottom: var(--space--md);
+  border: var(--border-width--sm) solid transparent;
+  &:hover,
+  &:focus-within {
+    z-index: 1;
+    .title {
+      a:after {
+        outline: solid transparent var(--outline-width);
+        outline-offset: var(--oline-offset);
+        box-shadow: var(--shadow--soft--hover);
+      }
+    }
+  }
+  &:focus-within {
+    .title {
+      a:after {
+        outline: dotted var(--oline-color) var(--outline-width);
+      }
+    }
+  }
+  .title {
+    flex: 0 1 100%;
+    margin-top: 0;
+    padding: 0 var(--space--xs);
+    a {
+      display: inline-block;
+      text-decoration: none;
+      &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: "";
+        transition: var(--transition-speed--fast) var(--ease--standard) box-shadow;
+        box-shadow: var(--shadow--soft);
+      }
+      &:hover,
+      &:active {
+        color: inherit;
+        background: none;
+      }
+    }
+  }
+  .location {
+    flex: 0 1 100%;
+    margin-bottom: var(--space--md);
+    padding: 0 var(--space--xs);
+    font-style: italic;
+  }
+  .date {
+    flex: 0 1 100%;
+    padding: 0 var(--space--xs);
+    font-weight: bold;
+  }
+  .image {
+    flex: 0 1 100%;
+    order: -1;
+    width: 100%;
+    margin-bottom: var(--space--xs);
+    img,
+    svg {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .taxonomy-terms {
+    flex: 0 1 100%;
+    padding: 0 var(--space--xs);
+    a {
+      position: relative;
+    }
+  }
+  .body {
+    flex: 0 1 100%;
+    padding: 0 var(--space--xs);
+    .date {
+      font-weight: var(--font-weight--semibold);
+    }
+    a {
+      position: relative;
+      text-underline-offset: 0.1rem;
+    }
+    a[href^="mailto:"] {
+      word-break: break-all;
+    }
+    p {
+      margin-bottom: var(--space--2xs);
+      line-height: 1.5;
+    }
+  }
+}
+/*------------------------------------------------------------------------------
+2. Print
+------------------------------------------------------------------------------*/
+@media print {
+  .card,
+  .wwu-card {
+    a:before {
+      content: " [" attr(href) "] ";
+      font-size: 10pt;
+    }
+  }
+}

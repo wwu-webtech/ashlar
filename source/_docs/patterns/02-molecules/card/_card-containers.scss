@@ -1,0 +1,108 @@
+/*------------------------------------------------------------------------------
+Molecule: Card Containers
+--------------------------------------------------------------------------------
+1. Column layouts
+  a. Grid
+  b. Flex
+  c. Section divider
+2. Flex layouts
+--------------------------------------------------------------------------------
+1. Column layouts
+------------------------------------------------------------------------------*/
+/* a. Grid -------------------------------------------------------------------*/
+.card-2col,
+.card-3col,
+.card-4col,
+.card-5col,
+.card-2col--view .view-content,
+.card-3col--view .view-content,
+.card-4col--view .view-content,
+.card-5col--view .view-content {
+  display: grid;
+  grid-column-gap: var(--space--sm);
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+.card-2col,
+.card-2col--view .view-content {
+  @media (min-width: $small) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}
+.card-3col,
+.card-3col--view .view-content {
+  @media (min-width: $small) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}
+.card-4col,
+.card-4col--view .view-content {
+  @media (min-width: $small) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}
+.card-5col,
+.card-5col--view .view-content {
+  @media (min-width: $small) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}
+/* b. Flex -------------------------------------------------------------------*/
+.card-2col--flex,
+.card-3col--flex,
+.card-4col--flex,
+.card-5col--flex {
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--space--xs);
+  > * {
+    flex: 0 1 100%;
+  }
+}
+.card-2col--flex {
+  > * {
+    @media (min-width: $small) {
+      flex: 0 1 calc(50% - var(--space--xs));
+    }
+  }
+}
+.card-3col--flex {
+  > * {
+    @media (min-width: $small) {
+      flex: 0 1 calc(33.33% - var(--space--xs));
+    }
+  }
+}
+.card-4col--flex {
+  > * {
+    @media (min-width: $small) {
+      flex: 0 1 calc(25% - var(--space--xs));
+    }
+  }
+}
+.card-5col--flex {
+  > * {
+    @media (min-width: $small) {
+      flex: 0 1 calc(20% - var(--space--xs));
+    }
+  }
+}
+/* a. Section divider --------------------------------------------------------*/
+.card--flex--section-divider {
+  flex: 0 0 100%;
+}
+/*------------------------------------------------------------------------------
+2. Flex layouts
+------------------------------------------------------------------------------*/
+.layout--flex {
+  .layout__region {
+    .wwu-card {
+      flex: 1;
+      margin: 0 var(--space--xs);
+    }
+  }
+}

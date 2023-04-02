@@ -1,0 +1,56 @@
+/*------------------------------------------------------------------------------
+Molecule: Alerts
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+@import "../../01-atoms/background-color/background-color-mixins.scss";
+.alert {
+  --alert-logo-size: 4.25rem;
+
+  width: 100%;
+  padding: var(--space--md);
+  .alert-header {
+    margin-top: 0;
+    border-bottom: none;
+  }
+  .alert-body {
+    margin: var(--space--md) 0;
+  }
+  .alert-icon {
+    float: left;
+    width: var(--alert-logo-size);
+    margin-right: var(--space--md);
+    svg {
+      position: relative;
+      width: var(--alert-logo-size);
+      height: auto;
+    }
+  }
+  .alert-footer {
+    text-align: right;
+  }
+  &.emergency {
+    @include gray-bg;
+
+    border: var(--border-width--md) solid transparent;
+    background-color: var(--red);
+    svg {
+      fill: var(--white);
+    }
+  }
+  &.weather {
+    @include blue-bg;
+
+    border: var(--border-width--md) solid transparent;
+    svg {
+      fill: var(--white);
+    }
+  }
+}
+@media (forced-colors: active) {
+  .alert.weather,
+  .alert.emergency {
+    svg {
+      fill: CanvasText;
+    }
+  }
+}

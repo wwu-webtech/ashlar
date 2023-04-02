@@ -43,7 +43,7 @@
 #}
 
 <div class="layout-container">
-    {% embed "@organisms/page-template/page-template.html.twig" %}
+    {% embed "@templates/page-template/page-template.html.twig" %}
         
         {% block content %}
             {{ page.content|without(page.content['breadcrumbs']['#cache']['keys']) }}

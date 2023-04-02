@@ -1,0 +1,81 @@
+/*------------------------------------------------------------------------------
+Atom: Overlays
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+.blue-overlay,
+.dark-blue-overlay,
+.black-overlay,
+.gray-overlay,
+.white-gradient-overlay,
+.black-gradient-overlay {
+  position: relative;
+  .body {
+    position: relative;
+    z-index: 1;
+  }
+  &:after {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    opacity: 0.6;
+  }
+}
+.blue-overlay {
+  @include blue-bg;
+  &:after {
+    background: var(--blue);
+  }
+  .background-image {
+    filter: brightness(0.5);
+  }
+}
+.dark-blue-overlay {
+  @include dark-blue-bg;
+  &:after {
+    background: var(--dark-blue);
+  }
+  .background-image {
+    filter: brightness(0.5);
+  }
+}
+.black-overlay {
+  @include black-bg;
+  &:after {
+    filter: brightness(0.5);
+    background: var(--black);
+  }
+}
+.gray-overlay {
+  @include light-gray-bg;
+
+  color: var(--black);
+  &:after {
+    background: var(--gray--lighter--60);
+  }
+  .background-image {
+    filter: brightness(1.5);
+  }
+}
+.white-gradient-overlay {
+  @include light-gray-bg;
+  l  &:after {
+    opacity: 1;
+    background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0.2)
+    );
+  }
+}
+.black-gradient-overlay {
+  @include black-bg;
+  &:after {
+    opacity: 1;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3));
+  }
+}

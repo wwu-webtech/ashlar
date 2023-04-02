@@ -1,0 +1,71 @@
+/*------------------------------------------------------------------------------
+Molecule: Status Alert
+--------------------------------------------------------------------------------
+1. Dark mode
+------------------------------------------------------------------------------*/
+.status-alert {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-align: center;
+  }
+  .material-icons {
+    display: block;
+    text-align: center;
+    color: var(--blue--darker--60);
+    font-size: var(--icon-size--lg);
+  }
+  .status {
+    text-align: center;
+    color: var(--blue--darker--60);
+    font-size: var(--font-size--xl);
+    font-weight: var(--font-weight--bold);
+  }
+  .severity {
+    text-align: center;
+    color: var(--blue--darker--60);
+  }
+  summary {
+    margin-bottom: var(--space--md);
+    padding: var(--space--xs);
+    cursor: pointer;
+    text-align: center;
+    font-size: var(--font-size--lg);
+  }
+}
+.status-alert--message {
+  padding: var(--space--md);
+  border: solid var(--border-width--md);
+  border-color: rgba(var(--blue--rgb), 0.75);
+  background-color: rgba(var(--blue--rgb), 0.15);
+  &.status-alert--minor {
+    border-color: rgba(var(--blue--rgb), 0.75);
+    background-color: rgba(var(--blue--rgb), 0.15);
+  }
+  &.status-alert--major {
+    border-color: rgba(var(--yellow--rgb), 0.75);
+    background-color: rgba(var(--yellow--rgb), 0.15);
+  }
+  &.status-alert--critical {
+    border-color: rgba(var(--red--rgb), 0.75);
+    background-color: rgba(var(--red--rgb), 0.15);
+  }
+  &.status-alert--resolved {
+    border-color: rgba(var(--green--rgb), 0.75);
+    background-color: rgba(var(--green--rgb), 0.15);
+  }
+}
+/*------------------------------------------------------------------------------
+1. Dark mode
+------------------------------------------------------------------------------*/
+[data-theme="dark"] {
+  .status-alert {
+    .material-icons,
+    .status,
+    .severity {
+      color: var(--light-green--lighter--20);
+    }
+  }
+}

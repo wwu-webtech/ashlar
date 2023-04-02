@@ -1,0 +1,75 @@
+/**
+* @file
+* organisms/profile_profile.scss
+*/
+$profile-photo-size--smaller: 18.75rem;
+$profile-photo-size: 25rem;
+
+.user-profile {
+  display: flex;
+  flex-flow: row wrap;
+
+  .profile-left {
+    flex: 1 1 33%;
+  }
+
+  .profile-right {
+    @media (min-width: $medium) {
+      padding-left: var(--space--md);
+      text-align: left;
+    }
+    flex: 1 1 66%;
+    text-align: center;
+  }
+
+  .profile-photo {
+    @media (min-width: $small) {
+      width: $profile-photo-size;
+      height: $profile-photo-size;
+    }
+    @media (min-width: $medium) {
+      width: $profile-photo-size--smaller;
+      height: $profile-photo-size--smaller;
+    }
+    @media (min-width: $large) {
+      width: $profile-photo-size;
+      height: $profile-photo-size;
+    }
+    width: $profile-photo-size--smaller;
+    height: $profile-photo-size--smaller;
+    margin: auto;
+    margin-top: var(--space--lg);
+  }
+
+  .social-links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: var(--space--md);
+  }
+
+  .social-icon {
+    margin-right: var(--space--sm);
+    margin-bottom: var(--space--sm);
+  }
+
+  .office,
+  .contact,
+  .website {
+    display: flex;
+    flex-flow: row wrap;
+
+    h2 {
+      flex: 0 0 100%;
+      margin-bottom: 0;
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+
+    div {
+      flex: 0 1 50%;
+    }
+  }
+}

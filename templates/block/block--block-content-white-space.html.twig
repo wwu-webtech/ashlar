@@ -32,8 +32,16 @@
   ]
 %}
 {% set attributes = attributes.addClass(classes, block_content.field_blank_space_amount.0.value) %}
-{% set title_attributes = title_attributes.addClass('block__title') %}
+{% set title_attributes = title_attributes.addClass('title') %}
 
 {% block template %}
-  {% include "@organisms/blocks/block-template/block-template.html.twig" %}
+  <div{{ attributes }}>
+    {% block title %}
+      {% include "@templates/label/label.twig" %}
+    {% endblock %}
+
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
 {% endblock %}

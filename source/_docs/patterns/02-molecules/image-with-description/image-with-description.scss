@@ -1,0 +1,66 @@
+/*------------------------------------------------------------------------------
+Molecule: Image with Description
+--------------------------------------------------------------------------------
+1. Dark Mode
+------------------------------------------------------------------------------*/
+@import "../../00-utilities/breakpoints.scss";
+.wwu-image-with-description {
+  display: grid;
+  grid-area: body;
+  grid-template-areas: "image"
+  "body";
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  margin-bottom: var(--space--lg);
+  @media (min-width: $medium) {
+    grid-template-areas: none;
+    grid-template-columns: 3fr var(--space--2xl) var(--space--lg) 4fr;
+    grid-template-rows: var(--space--2xl) 1fr var(--space--xl);
+  }
+  .title {
+    margin-top: var(--space--sm);
+  }
+  .image {
+    grid-area: image;
+    @media (min-width: $medium) {
+      z-index: 1;
+      grid-column: 1 / span 2;
+      grid-row: 2 / span 1;
+    }
+    img {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .body {
+    padding: var(--space--sm);
+    border: var(--border-width--md) solid transparent;
+    @media (min-width: $medium) {
+      grid-column: 2 / span 3;
+      grid-row: 1 / span all;
+      padding-left: var(--space--3xl);
+    }
+    &:not([class$="-bg"]) {
+      border-color: var(--blue);
+      background: var(--page-background);
+      @media (max-width: $medium) {
+        border-top: none;
+      }
+    }
+  }
+  &.mirror {
+    @media (min-width: $medium) {
+      grid-template-columns: 4fr var(--space--lg) var(--space--2xl) 3fr;
+      .image {
+        grid-column: 3 / span 2;
+      }
+      .body {
+        grid-column: 1 / span 3;
+        padding-right: var(--space--3xl);
+        padding-left: var(--space--md);
+      }
+    }
+  }
+}

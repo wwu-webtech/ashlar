@@ -1,0 +1,19 @@
+/*------------------------------------------------------------------------------
+Atom: Icons
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+.material-icons {
+  -moz-font-feature-settings: "liga";
+  -moz-osx-font-smoothing: grayscale;
+
+  display: inline-block;
+  white-space: nowrap;
+  text-transform: none;
+  word-wrap: normal;
+  direction: ltr;
+  font-family: "Material Icons";
+  font-size: var(--icon-size--sm);
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+}

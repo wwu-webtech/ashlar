@@ -1,0 +1,74 @@
+/*------------------------------------------------------------------------------
+Helpers: Admin
+--------------------------------------------------------------------------------
+Fixes for Drupal administration theme.
+------------------------------------------------------------------------------*/
+.toolbar-bar button,
+.si-button {
+  box-shadow: none;
+}
+/* Prevent contextual links in splash from breaking layout -------------------*/
+.splash > div:nth-of-type(1) div[data-contextual-id] {
+  height: initial;
+}
+.contextual-links li {
+  position: relative;
+}
+.layout-builder--content-preview-disabled * {
+  width: initial;
+  min-height: initial;
+}
+/*------------------------------------------------------------------------------
+Layout Builder
+------------------------------------------------------------------------------*/
+#drupal-off-canvas .field--name-field-accordion-item tr.draggable,
+#drupal-off-canvas .field--name-field-content-switcher-item tr.draggable,
+#drupal-off-canvas .field--name-field-statistic tr.draggable,
+#drupal-off-canvas .field--name-field-schedule-item tr.draggable {
+  display: flex;
+}
+#drupal-off-canvas .messages--error {
+  background-repeat: no-repeat;
+  background-position-x: 1%;
+  background-position-y: 50%;
+}
+#drupal-off-canvas .ui-autocomplete li a {
+  color: #63c2ff !important;
+}
+[data-theme="dark"] {
+  .layout-builder {
+    @include black-bg;
+  }
+  .layout-builder,
+  .layout-builder-block,
+  .layout-builder__add-section,
+  .layout-builder__add-block {
+    background-color: var(--dark-gray--darker--80);
+  }
+}
+/*------------------------------------------------------------------------------
+Media Library
+------------------------------------------------------------------------------*/
+#media-library-content {
+  font-size: var(--font-size--xs);
+  input[type="checkbox"].form-checkbox {
+    width: 1rem;
+    height: 1rem;
+    opacity: unset;
+  }
+  .js-media-library-views-form {
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--space--sm);
+    margin-top: var(--space--sm);
+  }
+  div.js-media-library-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space--sm);
+  }
+  div.views-field-rendered-entity {
+    overflow: hidden;
+    max-width: 6rem;
+  }
+}

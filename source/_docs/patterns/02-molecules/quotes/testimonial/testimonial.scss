@@ -1,0 +1,93 @@
+/*------------------------------------------------------------------------------
+Molecule: Testimonial
+--------------------------------------------------------------------------------
+1. Mirror
+------------------------------------------------------------------------------*/
+@import "../../../00-utilities/breakpoints.scss";
+.wwu-testimonial {
+  display: flex;
+  overflow-y: hidden;
+  flex-flow: column;
+  border-style: none;
+  @media (min-width: $medium) {
+    flex-flow: row wrap;
+    padding-bottom: var(--space--3xl);
+    padding-left: var(--space--2xl);
+  }
+  blockquote {
+    flex: 1 1 50%;
+    border: none;
+  }
+  .title {
+    flex: 0 0 100%;
+    margin-bottom: var(--space--lg);
+  }
+  .credit {
+    margin-top: var(--space--md);
+  }
+  .name {
+    display: block;
+    font-weight: var(--font-weight--bold);
+  }
+  .description {
+    font-style: italic;
+  }
+  .image--stylized {
+    position: relative;
+    width: calc(100vw - (2 * var(--space--md)));
+    max-width: calc(var(--content-area-max-width) / 4);
+    height: calc(100vw - (2 * var(--space--md)));
+    max-height: calc(var(--content-area-max-width) / 4);
+    margin: auto;
+    box-shadow: var(--shadow--soft);
+    @media (min-width: $medium) {
+      flex: 0 0 auto;
+      margin: 0;
+      margin-right: var(--space--md);
+    }
+    &:before,
+    &:after {
+      position: absolute;
+      z-index: -1;
+      display: block;
+      content: "";
+      border-radius: 50%;
+    }
+    &:before {
+      right: -3rem;
+      bottom: 1rem;
+      width: 100%;
+      height: 100%;
+      background: rgba(var(--blue--rgb), 0.15);
+    }
+    &:after {
+      right: -0.5rem;
+      bottom: -3.5rem;
+      width: 120%;
+      height: 120%;
+      background: rgba(var(--blue--rgb), 0.1);
+    }
+  }
+  /*----------------------------------------------------------------------------
+  1. Mirror
+  ----------------------------------------------------------------------------*/
+  &.mirror {
+    .image--stylized {
+      @media (min-width: $medium) {
+        margin-right: 0;
+        margin-left: var(--space--md);
+      }
+    }
+    .image {
+      @media (min-width: $medium) {
+        order: 2;
+      }
+    }
+    .body {
+      @media (min-width: $medium) {
+        order: 1;
+        text-align: right;
+      }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+/*------------------------------------------------------------------------------
+Helpers: Align
+--------------------------------------------------------------------------------
+For adjusting alignments.
+------------------------------------------------------------------------------*/
+.align-right {
+  margin-left: var(--space--sm);
+}
+.align-left {
+  margin-right: var(--space--sm);
+}
+.align-center {
+  margin-right: auto;
+  margin-left: auto;
+  &.cta {
+    left: 50%;
+    transform: translatex(-50%);
+  }
+  .image-link {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+.text-align-left {
+  text-align: left;
+}
+.text-align-center {
+  text-align: center;
+}
+.text-align-right {
+  text-align: right;
+}
+.media-align-center {
+  display: grid;
+  justify-content: center;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+.media-stretch {
+  display: grid;
+  justify-content: stretch;
+  margin-bottom: var(--space--sm);
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+.media-align-left {
+  display: grid;
+  width: 100%;
+  margin-bottom: var(--space--sm);
+  @media (min-width: $medium) {
+    float: left;
+    justify-content: end;
+    width: 50%;
+    margin-right: var(--space--sm);
+    margin-bottom: 0;
+    margin-left: -10vw;
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+.media-align-right {
+  display: grid;
+  width: 100%;
+  margin-bottom: var(--space--sm);
+  @media (min-width: $medium) {
+    float: right;
+    justify-content: start;
+    width: 50%;
+    margin-right: -10vw;
+    margin-bottom: 0;
+    margin-left: var(--space--sm);
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+}

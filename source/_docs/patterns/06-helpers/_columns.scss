@@ -1,0 +1,57 @@
+/*------------------------------------------------------------------------------
+Helpers: Columns
+--------------------------------------------------------------------------------
+For creating multi-column layouts, handy for Drupal views or full HTML content.
+Columns will collapse on mobile.
+------------------------------------------------------------------------------*/
+.column-count--2,
+.column-count--3,
+.column-count--4,
+.column-count--5,
+.column-count--6 {
+  column-gap: var(--space--sm);
+}
+@media (min-width: $medium) {
+  .column-count--2 {
+    column-count: 2;
+  }
+  .column-count--3 {
+    column-count: 3;
+  }
+  .column-count--4 {
+    column-count: 4;
+  }
+  .column-count--5 {
+    column-count: 5;
+  }
+  .column-count--6 {
+    column-count: 6;
+  }
+}
+.grid-column-count--2,
+.grid-column-count--3,
+.grid-column-count--4,
+.grid-column-count--5,
+.grid-column-count--6 {
+  display: grid;
+  grid-column-gap: var(--space--sm);
+  grid-template-columns: auto auto;
+  align-items: stretch;
+}
+@media (min-width: $medium) {
+  .grid-column-count--2 {
+    grid-template-columns: auto auto;
+  }
+  .grid-column-count--3 {
+    grid-template-columns: auto auto auto;
+  }
+  .grid-column-count--4 {
+    grid-template-columns: auto auto auto auto;
+  }
+  .grid-column-count--5 {
+    grid-template-columns: auto auto auto auto auto;
+  }
+  .grid-column-count--6 {
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+}

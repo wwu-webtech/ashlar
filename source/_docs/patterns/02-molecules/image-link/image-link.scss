@@ -1,0 +1,239 @@
+/*------------------------------------------------------------------------------
+Molecule: Image Link
+--------------------------------------------------------------------------------
+1. Multiple links
+2. Variations
+3. Display preferences
+------------------------------------------------------------------------------*/
+.wwu-image-link {
+  display: inline-grid;
+  margin-right: var(--space--md);
+}
+.image-link {
+  --image-link-font-size: var(--font-size--lg);
+  --image-link-overlay-color: var(--dark-blue--darker--40);
+  --image-link-size: 12.5rem;
+  --link-background--focus: transparent;
+  --link-color: var(--white);
+  --link-color--focus: var(--white);
+  --link-color--visited: var(--white);
+
+  position: relative;
+  width: var(--image-link-size);
+  height: var(--image-link-size);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: 50%;
+  box-shadow: var(--shadow--soft);
+  &:before,
+  &:after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    display: block;
+    content: "";
+    transition: 0.5s ease all;
+    border-radius: 50%;
+    @media print {
+      display: none;
+    }
+  }
+  &:before {
+    width: 70%;
+    height: 70%;
+    transform: translate(-20%, -10%);
+    opacity: 0.2;
+    background: var(--image-link-overlay-color);
+  }
+  &:after {
+    width: 105%;
+    height: 105%;
+    transform: translate(15%, 10%);
+    opacity: 0.1;
+    background: var(--image-link-overlay-color);;
+  }
+  &:hover,
+  &:focus-within {
+    box-shadow: var(--shadow--soft--hover);
+  }
+  &:hover:before,
+  &:focus-within:before {
+    transform: translate(60%, 45%);
+  }
+  &:hover:after,
+  &:focus-within:after {
+    transform: translate(-20%, -10%);
+  }
+  .image {
+    background-color: var(--image-link-overlay-color);
+    img {
+      @media print {
+        display: none;
+      }
+    }
+  }
+  a {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    outline: var(--outline-width) solid transparent;
+    font-size: var(--image-link-font-size);
+    font-weight: bold;
+    &:before {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      content: "";
+      opacity: 0.7;
+      background: var(--image-link-overlay-color);
+    }
+    &:after {
+      content: "";
+      //overrides file extension style in link atom css
+
+      @media print {
+        position: absolute;
+        bottom: 10%;
+        display: block;
+        content: " [" attr(href) "] ";
+        font-size: 10pt;
+      }
+    }
+    &:hover:before {
+      opacity: 0.9;
+    }
+    &:focus-visible {
+      outline: var(--outline-width) dotted var(--link-color--focus);
+      outline-offset: var(--outline-offset--inset);
+    }
+    @media print {
+      overflow: visible;
+      font-size: 12pt;
+    }
+  }
+  .image {
+    filter: brightness(0.75);
+  }
+  @media print {
+    display: inline-block;
+    margin: 0;
+    border: solid var(--border-width--sm) var(--black);
+    box-shadow: none;
+  }
+}
+/*------------------------------------------------------------------------------
+1. Multiple links
+------------------------------------------------------------------------------*/
+.wwu-image-link {
+  &:nth-of-type(2) {
+    .image-link {
+      &:before {
+        width: 100%;
+        height: 100%;
+        transform: translate(4%, 20%);
+      }
+      &:after {
+        width: 80%;
+        height: 80%;
+        transform: translate(20%, -13%);
+      }
+      &:hover:before,
+      &:focus-within:before {
+        width: 100%;
+        height: 100%;
+        transform: translate(10%, -18%);
+      }
+      &:hover:after,
+      &:focus-within:after {
+        width: 80%;
+        height: 80%;
+        transform: translate(0%, 40%);
+      }
+    }
+  }
+  &:nth-of-type(3) {
+    .image-link {
+      &:before {
+        width: 110%;
+        height: 110%;
+        transform: translate(12%, -9%);
+      }
+      &:after {
+        width: 80%;
+        height: 80%;
+        transform: translate(-12%, 30%);
+      }
+      &:hover:before,
+      &:focus-within:before {
+        transform: translate(-12%, -20%);
+      }
+      &:hover:after,
+      &:focus-within:after {
+        transform: translate(50%, 14%);
+      }
+    }
+  }
+}
+/*------------------------------------------------------------------------------
+2. Variations
+------------------------------------------------------------------------------*/
+.simple {
+  .image-link {
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+}
+.smaller {
+  .image-link {
+    --image-link-font-size: var(--font-size--md);
+    --image-link-size: 8.25rem;
+  }
+}
+.smallest {
+  .image-link {
+    --image-link-font-size: var(--font-size--sm);
+    --image-link-size: 6.5rem;
+  }
+}
+.green {
+  .image-link {
+    --image-link-overlay-color: var(--green);
+  }
+}
+.blue {
+  .image-link {
+    --image-link-overlay-color: var(--blue--darker--20);
+  }
+}
+/*------------------------------------------------------------------------------
+3. Display preferences
+------------------------------------------------------------------------------*/
+.font--dyslexia-friendly {
+  .image-link {
+    --image-link-font-size: var(--font-size--sm);
+
+    word-spacing: -0.5em;
+    line-height: 2;
+  }
+  .smaller .image-link {
+    --image-link-font-size: var(--font-size--xs);
+
+    line-height: 1.2;
+  }
+}

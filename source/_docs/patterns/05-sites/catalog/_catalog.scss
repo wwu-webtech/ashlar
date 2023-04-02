@@ -1,0 +1,176 @@
+/*------------------------------------------------------------------------------
+Templates: Sites - Catalog
+--------------------------------------------------------------------------------
+1. Search form & archive drop down
+------------------------------------------------------------------------------*/
+.acalog {
+  body {
+    margin: 0;
+  }
+  .display-settings {
+    display: none;
+  }
+  .ultimenu section.ultimenu__flyout.open {
+    width: 100vw;
+  }
+  .ultimenu__region {
+    padding: var(--space--sm) calc((100vw - var(--content-area-max-width)) / 2);
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .ultimenu__region > div {
+    flex: 1 1 auto;
+  }
+  .toplevel,
+  .layout__region .table_default,
+  .acalog_top_link {
+    display: none;
+  }
+}
+/* -----------------------------------------------------------------------------
+1. Search form & archive drop down
+------------------------------------------------------------------------------*/
+form[name="n2_search"] {
+  margin-top: calc(-1 * var(--space--lg));
+  color: var(--white);
+  background-image: linear-gradient(
+  to bottom right,
+  var(--dark-blue),
+  var(--blue)
+  );
+  @media (min-width: $medium) {
+    padding: var(--space--lg) calc((100vw - var(--content-area-max-width)) / 2);
+  }
+  legend {
+    display: none;
+  }
+  #global-search-fieldset {
+    display: grid;
+    grid-column-gap: var(--space--xs);
+    grid-row-gap: var(--space--xs);
+    grid-template-areas: "header"
+    "select"
+    "search"
+    "option"
+    "advanced";
+    grid-template-rows: auto 2.5rem 2.5rem auto auto;
+    margin: 0;
+    @media (min-width: $medium) {
+      grid-template-areas: "header header header"
+      "...... ...... ......"
+      "select search search"
+      "... option advanced";
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: auto 0 2rem auto;
+    }
+  }
+  #global-search-fieldset span.n2_search a {
+    padding: var(--space--xs);
+    border-top: none;
+  }
+  > fieldset {
+    @media (min-width: $medium) {
+      padding: 0;
+    }
+  }
+  .n2_search_header {
+    grid-area: header;
+    font-size: var(--font-size--xl);
+    font-weight: var(--font-weight--bold);
+  }
+  .n2_search {
+    grid-area: advanced;
+    justify-self: end;
+    a {
+      color: var(--white);
+      &:active,
+      &:hover,
+      &:focus {
+        color: var(--dark-blue--darker--40);
+      }
+    }
+  }
+  .show:nth-of-type(2) {
+    grid-area: select;
+  }
+  .show:nth-of-type(3) {
+    grid-area: search;
+  }
+  .show:nth-of-type(4) {
+    grid-area: option;
+    justify-self: end;
+    margin-top: calc(-1 * var(--space--lg));
+    @media (min-width: $medium) {
+      justify-self: start;
+    }
+  }
+  #exact_match_n2 + label,
+  #exact_match + label {
+    padding: var(--space--xs);
+    padding-right: 0;
+  }
+  #keyword {
+    float: none;
+    height: 100%;
+    margin: 0;
+  }
+}
+#location_select_parent {
+  min-height: 100%;
+}
+#location_select_parent .select2-container {
+  position: relative;
+  height: 100%;
+}
+.select2-container .select2-selection--single {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.select2-container .select2-selection--single .select2-selection__rendered {
+  font-size: var(--font-size--sm);
+}
+.select2-container--default .select2-selection--single {
+  color: var(--black);
+  border: solid var(--border-width--md) var(--gray--lighter--80);
+  border-radius: var(--border-radius-round);
+  background-color: var(--gray--lighter--90);
+}
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  line-height: 1.5;
+}
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  height: 100%;
+}
+#gateway-page #keyword-submit-icon {
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  float: none;
+  align-content: center;
+  width: initial !important;
+  height: 100% !important;
+  margin: 0 !important;
+  background-color: var(--gray--lighter--60);
+  font-size: 1rem !important;
+}
+#gateway-page #keyword-submit-icon::before {
+  width: var(--touch-target--min);
+}
+#keyword-submit-icon .acalog-icons-visible,
+.gateway-toolbar-item .acalog-icons-visible {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  width: 2rem;
+  height: 100%;
+}
+form[name="select_catalog"] table {
+  display: flex;
+  justify-content: end;
+  background: transparent;
+}

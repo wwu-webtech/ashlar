@@ -1,0 +1,64 @@
+/*------------------------------------------------------------------------------
+Atom: Forms - Progress Tracker for Drupal Webforms
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+.progress-tracker {
+  --complete-color: var(--black);
+  --incomplete-color: var(--gray);
+
+  display: flex;
+  grid-gap: var(--space--md);
+  justify-content: space-evenly;
+  padding: 0;
+  list-style: none;
+}
+[data-theme="dark"] .progress-tracker {
+  --complete-color: var(--white);
+  --incomplete-color: var(--gray--lighter--20);
+}
+.progress-marker {
+  &:before {
+    display: block;
+    content: attr(data-text);
+  }
+  &:after {
+    position: absolute;
+    top: 25%;
+    right: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    content: "→";
+  }
+}
+.progress-step {
+  position: relative;
+  flex: 1 1 0;
+  text-align: center;
+  color: var(--incomplete-color);
+  outline: var(--outline-width) solid var(--incomplete-color);
+  &.is-active {
+    color: var(--complete-color);
+    outline: var(--outline-width) dashed var(--blue);
+    font-weight: var(--font-weight--semibold);
+  }
+  &.is-complete {
+    color: var(--complete-color);
+    outline: none;
+    .progress-marker:before {
+      content: "✔";
+    }
+  }
+  &:last-of-type {
+    .progress-marker:after {
+      display: none;
+    }
+  }
+}
+.progress-title {
+  &[role="link"] {
+    cursor: pointer;
+    text-decoration: underline;
+    color: var(--link-color);
+  }
+}

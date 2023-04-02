@@ -1,0 +1,25 @@
+/*------------------------------------------------------------------------------
+Molecule: Breadcrumbs
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+.breadcrumb {
+  margin-top: var(--space--sm);
+  font-size: var(--font-size--sm);
+  ol {
+    padding: 0;
+    list-style: none;
+    li {
+      gap: var(--space--xs);
+
+      display: inline-flex;
+      align-items: center;
+      &:last-child {
+        font-weight: var(--font-weight--bold);
+      }
+      .material-icons {
+        margin-right: var(--space--2xs);
+        font-size: inherit;
+      }
+    }
+  }
+}

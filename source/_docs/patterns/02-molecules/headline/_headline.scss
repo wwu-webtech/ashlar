@@ -1,0 +1,55 @@
+/*------------------------------------------------------------------------------
+Molecule: Headline
+--------------------------------------------------------------------------------
+1. Style 1: Box Headline
+2. Style 2: Left/Right Aligned Blue Box
+3. Dark mode
+------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------
+1. Style 1: Box Headline
+----------------------------------------------------------------------------*/
+.box-headline {
+  @include dark-blue-bg;
+  @media (min-width: $medium) {
+    margin-top: 5%;
+    margin-left: 5%;
+    background: var(--gradient--horizontal--dark-blue-to-transparent);
+  }
+
+  align-self: start;
+  max-width: calc((2 * var(--content-area-max-width)) / 3);
+  margin: var(--space--md);
+  padding: var(--space--lg);
+  border: solid var(--border-width--md) transparent;
+  background-color: rgba(var(--dark-blue--darker--40--rgb), 0.7);
+  .title {
+    margin-top: 0;
+  }
+}
+/*----------------------------------------------------------------------------
+2. Style 2: Left/Right Aligned Blue Box
+----------------------------------------------------------------------------*/
+.left-aligned-bar {
+  @include blue-bg;
+  @media (min-width: $large) {
+    max-width: 70vw;
+  }
+
+  position: relative;
+  align-self: end;
+  width: 90vw;
+  margin-top: 25vh;
+  margin-bottom: var(--space--xl);
+  padding: var(--space--md);
+  border: solid var(--border-width--md) transparent;
+  background: rgba(var(--blue--rgb), 0.8);
+  .title {
+    margin-top: 0;
+  }
+}
+.right-aligned-bar {
+  @extend .left-aligned-bar;
+
+  justify-self: end;
+}

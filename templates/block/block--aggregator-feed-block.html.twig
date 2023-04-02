@@ -33,14 +33,14 @@
 %}
 
 {% set attributes = attributes.addClass(classes) %}
-{% set title_attributes = title_attributes.addClass('block__title') %}
+{% set title_attributes = title_attributes.addClass('title') %}
 {% set more_link_title = 'Read more ' ~ configuration.label %}
 
 {% block template %}
 
 <div{{ attributes }}>
   {% block title %}
-    {% include "@atoms/text/label/label.twig" %}
+    {% include "@templates/label/label.twig" %}
   {% endblock %}
 
   {% block content %}

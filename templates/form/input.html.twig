@@ -17,4 +17,4 @@
   {% set attributes = attributes.setAttribute('aria-describedby', description_id) %}
 {% endif %}
 
-{% include "@atoms/forms/input/input.html.twig" %}
+<input{{ attributes }} />{{ children }}

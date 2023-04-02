@@ -1,0 +1,44 @@
+/*------------------------------------------------------------------------------
+Molecule: System Messages
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+.messages {
+  margin-top: var(--space--md);
+  ul {
+    margin-bottom: 0;
+  }
+}
+.messages--status,
+.messages--warning,
+.messages--error {
+  display: block;
+  margin-bottom: var(--space--sm);
+  padding: var(--space--sm);
+  border: solid var(--border-width--md);
+}
+.messages--status {
+  border-color: rgba(var(--blue--rgb), 0.75);
+  background-color: rgba(var(--blue--rgb), 0.15);
+}
+.messages--warning {
+  border-color: rgba(var(--yellow--rgb), 0.75);
+  background-color: rgba(var(--yellow--rgb), 0.15);
+}
+.messages--error {
+  border-color: rgba(var(--red--rgb), 0.75);
+  background-color: rgba(var(--red--rgb), 0.15);
+}
+.node--unpublished {
+  &:before {
+    position: absolute;
+    top: calc(-1 * var(--space--xl));
+    right: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: var(--space--2xs);
+    content: "Unpublished";
+    text-align: center;
+    color: var(--black);
+    background-color: var(--yellow);
+  }
+}

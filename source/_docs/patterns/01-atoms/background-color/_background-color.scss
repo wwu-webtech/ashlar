@@ -1,0 +1,176 @@
+/*------------------------------------------------------------------------------
+Atom: Background Colors
+--------------------------------------------------------------------------------
+1. Classes
+2. Dark mode
+3. Print styles
+4. Forced colors
+------------------------------------------------------------------------------*/
+.pattern-lab-bg {
+  padding: var(--space--md);
+}
+/*------------------------------------------------------------------------------
+1. Classes
+------------------------------------------------------------------------------*/
+.black-bg {
+  @include black-bg;
+}
+.dark-blue-bg {
+  @include dark-blue-bg;
+}
+.darkest-blue-bg {
+  @include darkest-blue-bg;
+}
+.green-bg {
+  @include green-bg;
+}
+.gray-bg {
+  @include gray-bg;
+}
+.blue-bg {
+  @include blue-bg;
+}
+.light-gray-bg {
+  @include light-gray-bg;
+}
+.lightest-gray-bg {
+  @include lightest-gray-bg;
+}
+.light-blue-bg {
+  @include light-blue-bg;
+}
+.lightest-blue-bg {
+  @include lightest-blue-bg;
+}
+.light-green-bg {
+  @include light-green-bg;
+}
+.yellow-bg {
+  @include yellow-bg;
+}
+.dark-blue-gradient-bg {
+  @include blue-bg;
+
+  background-image: var(--gradient--diagonal--dark-blue-to-black);
+}
+.blue-gradient-bg {
+  @include blue-bg;
+
+  background-image: var(--gradient--diagonal--blue-to-dark-blue);
+}
+/*------------------------------------------------------------------------------
+2. Dark Mode
+------------------------------------------------------------------------------*/
+[data-theme="dark"] {
+  @include black-bg;
+
+  background-color: var(--gray--darker--80);
+}
+[data-theme="dark"] {
+  .gray-bg,
+  .light-blue-bg,
+  .lightest-blue-bg,
+  .light-gray-bg,
+  .lightest-gray-bg {
+    @include gray-bg;
+  }
+  .light-green-bg {
+    @include green-bg;
+  }
+  .green-bg {
+    @include green-bg;
+  }
+  .blue-bg {
+    background-color: var(--blue--darker--60);
+  }
+  .yellow-bg {
+    color: var(--black);
+  }
+}
+/*------------------------------------------------------------------------------
+3. Print Styles
+------------------------------------------------------------------------------*/
+@media print {
+  .black-bg,
+  .gray-bg,
+  .light-gray-bg,
+  .lightest-gray-bg,
+  .dark-blue-bg,
+  .darkest-blue-bg,
+  .blue-bg,
+  .light-blue-bg,
+  .lightest-blue-bg,
+  .green-bg,
+  .light-green-bg,
+  .dark-blue-gradient-bg,
+  .blue-gradient-bg {
+    color: var(--black);
+    border: solid var(--border-width--sm) var(--black);
+    background-color: var(--white);
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--dark-blue);
+    }
+    .block--beyond-basics-block {
+      padding: 0.8rem;
+    }
+  }
+}
+/*------------------------------------------------------------------------------
+4. Forced colors mode
+------------------------------------------------------------------------------*/
+@media (forced-colors: active) {
+  .black-bg,
+  .gray-bg,
+  .light-gray-bg,
+  .lightest-gray-bg,
+  .dark-blue-bg,
+  .darkest-blue-bg,
+  .blue-bg,
+  .light-blue-bg,
+  .lightest-blue-bg,
+  .green-bg,
+  .light-green-bg,
+  .dark-blue-gradient-bg,
+  .blue-gradient-bg {
+    a,
+    a.patternLink {
+      &:hover,
+      &:focus,
+      &:active {
+        background-image: none;
+      }
+    }
+    .play-button {
+      svg {
+        fill: ButtonText;
+      }
+      &:hover,
+      &:focus,
+      &:active {
+        border-color: ButtonText;
+        background-color: ButtonText;
+        svg {
+          fill: ButtonFace;
+        }
+      }
+    }
+    .social-icon {
+      svg {
+        fill: LinkText;
+      }
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: LinkText;
+        svg {
+          fill: Canvas;
+        }
+      }
+    }
+  }
+}

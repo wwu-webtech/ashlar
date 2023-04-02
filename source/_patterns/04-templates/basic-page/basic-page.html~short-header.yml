@@ -1,6 +1,0 @@
-page:
-  include():
-    pattern: organisms-page-template-html
-    with:
-      page:
-        header:

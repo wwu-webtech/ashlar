@@ -1,0 +1,25 @@
+/*------------------------------------------------------------------------------
+Atom: Icon Links
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+.icon-link {
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-gap: var(--space--2xs);
+  align-items: center;
+  min-height: var(--touch-target--min);
+  padding-right: var(--space--xs);
+  text-decoration: none;
+  line-height: 1.2;
+  .text {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: var(--border-width--md);
+
+    text-decoration: underline;
+    text-decoration-color: var(--link-decoration-color);
+  }
+  .material-icons {
+    top: 0;
+  }
+}

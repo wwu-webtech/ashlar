@@ -1,0 +1,171 @@
+{#
+/**
+ * @see templates/layout/page-template.html.twig
+ */
+#}
+
+<div class="page">
+  {% block header %}
+    <header class="site-header" role="banner">
+      {% block wwu_pre_header %}
+        <wwu-pre-header>
+          <noscript>
+              <a href="#main-content" class="skip-link focusable">
+                  <span class="skip-link-text">Skip to Content </span>
+                  <span class="material-icons" aria-hidden="true">keyboard_arrow_down</span>
+              </a>    
+
+              <wwu-search></wwu-search>
+          </noscript>
+        </wwu-pre-header> 
+      {% endblock %}
+      
+      {% block top %}        
+      {% endblock %}
+
+      {% block wwu_header %}
+        <wwu-header sitename='{{ site_name }}' regioncontent='{{ page.wwu_header }}'>
+            <noscript>
+                <nav class="wwu-menu" aria-label="Western Quick Links">
+                    <a class="small icon-with-text apply-quick-link" href="https://admissions.wwu.edu/apply">
+                        <span class="material-icons" aria-hidden="true">how_to_reg</span>
+                        <span class="icon-text">Apply</span>
+                    </a>
+                    
+                    <a class="small icon-with-text give-quick-link" href="https://alumniq.wwu.edu/giving/make-a-gift">
+                        <span class="material-icons" aria-hidden="true">favorite_border</span>
+                        <span class="icon-text">Give</span>
+                    </a>
+                    
+                    <a class="small icon-with-text report-bias-quick-link" href="https://www.wwu.edu/sebrt/report-bias-incident">
+                        <span class="material-icons" aria-hidden="true">sms</span>
+                        <span class="icon-text">Report Bias</span>
+                    </a>
+                    
+                    <a class="small icon-with-text my-western-link" href="https://mywestern.wwu.edu">
+                        <span class="material-icons" aria-hidden="true">person_pin</span>
+                        <span class="icon-text">myWestern</span>
+                    </a>
+
+                    <a class="small icon-with-text jobs-link" href="https://www.wwu.edu/workatwestern">
+                        <span class="material-icons" aria-hidden="true">business_center</span>
+                        <span class="icon-text">Jobs</span>
+                    </a>
+                </nav>
+                <div class="site-info">
+                    <div class="western-logo">
+                        <a class="western-home-link" href="https://www.wwu.edu">
+                            <img src="/themes/contrib/ashlar/build/images/logos/western_logo.svg" style="width: 8rem; height: 8rem;" alt="Western Washington University: Make Waves (logo)"/>
+                        </a>
+                    </div>
+                    
+                    <div class="site-name">
+                        <a href="/" class="home-link"></a>
+                    </div>
+                    
+                    <div class="western-header-region">
+                    </div>
+                </div>
+            </noscript>
+        </wwu-header>
+      {% endblock %}
+
+      {% block main_navigation %}
+        {{ page.main_navigation }}
+      {% endblock %}
+
+      {% block splash %}
+        <div class="splash">
+          {{ page.header }}
+        </div>
+      {% endblock %}
+     </header>
+  {% endblock %}
+
+  {% block content %}
+  {% if logged_in %}
+    <div class="status-alert max-width--content">
+      <div class="status-alert--message status-alert--minor">
+          <p class="material-icons status-color" aria-hidden="true">
+              task_alt
+          </p>
+
+        <div class="body">
+          <h2>Theme Updates Complete</h2>
+
+         <p>Ashlar has <a href="https://wwu-stephanie.github.io/ashlar/changelog/version-5">received a major update</a>.</p>
+
+          <p>The administration theme has been <a href="https://westerntoday.wwu.edu/news/webtech-summer-recap-july-august-september-2022#claro">changed to Claro.</a></p>
+
+         <p class="font-size--smaller">You are seeing this message because you are logged into a Drupal site. This message will be posted until 4/10/2023</p>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    {{ page.content }}
+  {% endblock %}
+
+  {% block footer %}
+    <footer class="page-footer region region--footer" role="contentinfo">
+      {% block site_footer %}
+        <section aria-label="Site Footer" class="site-footer">
+          {% block footer_regions %}
+            <div class="footer-region">
+              {% if page.footer_left %}
+                {{ page.footer_left }}
+              {% endif %}
+            </div>
+            <div class="footer-region">
+              {% if page.footer_center %}
+                {{ page.footer_center }}
+              {% endif %}
+            </div>
+            <div class="footer-region">
+              {% if page.footer_right %}
+                {{ page.footer_right }}
+              {% endif %}
+            <div class="footer-region--bottom">
+              {% if page.footer_bottom %}
+                {{ page.footer_bottom }}
+              {% endif %}
+          {% endblock footer_regions %}
+        </section>
+      {% endblock %}
+      {% block wwu_footer %}
+        <wwu-footer aria-label="Western footer">
+          <noscript>
+              <div class="tribal-lands-statement">
+                  <h2 class="visually-hidden">Tribal Lands Statement</h2>
+                  <p>
+                      Western Washington University's main campus is <a href="href="https://www.wwu.edu/tribal-lands-statement">situated on the ancestral homelands of the Coast Salish Peoples</a>, who have lived in the Salish Sea basin, all throughout the San Juan Islands and the North Cascades watershed from time immemorial. We express our deepest respect and gratitude to our Indigenous neighbors, for their enduring care and protection of our shared lands and waterways.
+                  </p>
+              </div>
+
+              <div class="copyright">
+                  <h2 class="visually-hidden">Copyright and Contact Info</h2>
+                  <p>
+                      © <span class="copyright-date">{{ "now"|date("Y") }}</span> Western Washington University <span aria-hidden="true">
+                  </p>
+              </div>
+
+              <div class="footer-bottom">
+                  <nav class="footer-nav" aria-label="University Links and Policy">
+                      <a class="icon-link" href="https://www.wwu.edu/wwucontact/"><span class="material-icons" aria-hidden="true">send</span>Contact Western</a> 
+                      <a class="icon-link" href="https://calendar.wwu.edu/"><span class="material-icons" aria-hidden="true">calendar_month</span>Calendar</a>
+                      <a class="icon-link" href="https://www.wwu.edu/directory"><span class="material-icons" aria-hidden="true">person_search</span>University Directory</a>
+                      <a class="icon-link" href="https://www.wwu.edu/campus-maps"><span class="material-icons" aria-hidden="true">map</span>Map</a>
+                      <a class="icon-link" href="https://www.wwu.edu/online-privacy-statement"><span class="material-icons" aria-hidden="true">policy</span>Privacy</a>
+                      <a class="icon-link" href="https://www.wwu.edu/commitment-accessibility"><span class="material-icons" aria-hidden="true">accessibility_new</span>Accessibility Notice</a>
+                      <a class="icon-link" href="https://www.wwu.edu/equal-opportunity-policy"><span class="material-icons" aria-hidden="true">diversity_3</span>Equal Employment Opportunity Policy</a>        
+                  </nav>
+              </div>
+          </noscript>
+        </wwu-footer>
+      {% endblock %}
+    </footer>
+  {% endblock %}
+
+  {% block bottom %}
+  {% endblock %}
+</div>

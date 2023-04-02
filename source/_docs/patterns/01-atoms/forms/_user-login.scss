@@ -1,0 +1,30 @@
+/*------------------------------------------------------------------------------
+Molecule: Forms - User Login
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+.user-login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  margin: auto;
+  padding: var(--space--md);
+  @media (min-width: $medium) {
+    justify-content: flex-start;
+    width: var(--content-area-max-width--sm);
+  }
+  .manual-login,
+  .cas-login-link {
+    @media (min-width: $medium) {
+      margin: var(--space--xs) auto;
+    }
+  }
+  .manual-login {
+    margin-bottom: var(--space--md);
+  }
+  .textfield,
+  .password,
+  .form-actions {
+    display: none;
+  }
+}

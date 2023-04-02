@@ -29,13 +29,29 @@
 {%
   set classes = [
     'block',
-    'block--pullquote',
+    'wwu-pullquote',
     block_content.field_custom_classes.0.value,
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
   ]
 %}
 {% set attributes = attributes.addClass(classes) %}
-{% set title_attributes = title_attributes.addClass('block__title') %}
+{% set title_attributes = title_attributes.addClass('title') %}
 {% block template %}
-  {% include "@molecules/quotes/pullquote/pullquote.html.twig" %}
+<div{{ attributes }}>
+  {% block title %}
+      {% include "@templates/label/label-customized.twig" %}
+  {% endblock %}
+  
+  <blockquote>
+    {% block content %}
+      <div class="body">
+        {{ content.body }}
+      </div>
+      <div class="credit">
+        <p class="name"> {{ content.field_name }}</p>
+        <p class="description">{{ content.field_description }}</p>
+      </div>
+    {% endblock %}
+  </blockquote>
+</div>
 {% endblock %}

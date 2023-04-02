@@ -1,0 +1,107 @@
+/*------------------------------------------------------------------------------
+Molecule: Event List
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+.event-list {
+  .event {
+    position: relative;
+    display: grid;
+    grid-column-gap: var(--space--sm);
+    grid-template-areas: "date title"
+    "date location"
+    "icon body"
+    "icon body";
+    grid-template-columns: 4rem auto;
+    margin-bottom: var(--space--sm);
+    border: var(--border-width--md) solid transparent;
+    &:hover {
+      outline: var(--outline-width) dotted transparent;
+      box-shadow: var(--shadow--soft);
+    }
+    &:focus-within {
+      outline: dotted var(--oline-color) var(--outline-width);
+      outline-offset: var(--oline-offset);
+    }
+    p {
+      margin: 0;
+    }
+    .title {
+      flex: 1 0 70%;
+      grid-area: title;
+      margin-top: var(--space--sm);
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0;
+      }
+      a {
+        text-decoration: none;
+        &:hover {
+          color: inherit;
+          background: transparent;
+        }
+        &:after {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          content: "";
+        }
+      }
+    }
+    .body {
+      grid-area: body;
+    }
+    .icon {
+      grid-area: icon;
+      max-width: 100%;
+      text-align: center;
+      color: var(--dark-blue--darker--40);
+      background-color: var(--light-green);
+      font-size: var(--font-size--xs);
+      .material-icons {
+        position: relative;
+        top: 0.5em;
+        font-size: var(--icon-size--xs);
+      }
+    }
+    .date {
+      grid-area: date;
+      padding: var(--space--sm);
+      text-align: center;
+      text-transform: uppercase;
+      border: var(--border-width--sm) solid transparent;
+      background-color: var(--blue);
+      .day,
+      .month,
+      .year {
+        display: flex;
+        justify-content: center;
+        height: 33.333%;
+        color: var(--white);
+        background-color: var(--blue);
+      }
+      .year {
+        font-size: var(--font-size--sm);
+      }
+      .month {
+        font-size: var(--font-size--lg);
+        font-weight: var(--font-weight--regular);
+        line-height: 1.5;
+      }
+      .day {
+        white-space: nowrap;
+        word-spacing: -0.2em;
+        font-size: var(--font-size--3xl);
+        font-weight: var(--font-weight--semibold);
+        line-height: 1;
+      }
+    }
+    .location {
+      grid-area: location;
+    }
+  }
+}

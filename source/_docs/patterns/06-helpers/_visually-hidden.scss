@@ -1,0 +1,24 @@
+/*------------------------------------------------------------------------------
+Helpers: Visually hidden
+-------------------------------------------------------------------------------- 
+------------------------------------------------------------------------------*/
+.visually-hidden {
+  clip-path: inset(50%);
+
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  &.space-before {
+    &:before {
+      content: "\00A0";
+    }
+  }
+  &.space-after {
+    &:after {
+      content: "\00A0";
+    }
+  }
+}

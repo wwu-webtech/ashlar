@@ -29,10 +29,6 @@ Thumbs.db
 *.tar
 *.zip
 
-# Generated logo and screenshot images
-/logo.png
-/screenshot.png
-
 # Lando config file
 .lando.yml
 
@@ -42,9 +38,6 @@ Thumbs.db
 # DIRECTORY EXCLUSIONS
 #
 ################################################################################
-
-# Pattern Lab static assets dirrectory
-/source/pattern-lab/
 
 # Build directory
 /build/
@@ -66,8 +59,7 @@ Thumbs.db
 # composer and ruby artifacts
 /vendor/
 
-# PatternLab
-/pattern-lab/
+
 
 ################################################################################
 #

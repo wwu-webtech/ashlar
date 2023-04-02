@@ -7,6 +7,7 @@ libraries:
   - ashlar/ashlar-base
   - ashlar/fonts
   - ashlar/search
+  - ashlar/social-media-icons
   - ashlar/wwu-header
   - ashlar/wwu-footer
 libraries-override:
@@ -29,10 +30,10 @@ regions:
 components:
   namespaces:
     atoms:
-      - source/_patterns/01-atoms
+      - source/_docs/patterns/01-atoms
     molecules:
-      - source/_patterns/02-molecules
-    organisms:
-      - source/_patterns/03-organisms
+      - source/_docs/patterns/02-molecules
+    organisms:    
+      - source/_docs/patterns/03-organisms
     templates:
-      - source/_patterns/04-templates
+      - source/_docs/patterns/04-templates

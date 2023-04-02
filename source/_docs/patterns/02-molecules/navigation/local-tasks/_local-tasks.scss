@@ -1,0 +1,38 @@
+/*------------------------------------------------------------------------------
+Molecule: Local tasks
+--------------------------------------------------------------------------------
+AKA The edit tabs in Drupal
+------------------------------------------------------------------------------*/
+.block--local-tasks-block {
+  overflow: auto;
+  max-width: calc(100vw - var(--space--lg));
+  margin: var(--space--sm) 0;
+  font-size: var(--font-size--sm);
+}
+.block--local-tasks-block ul:not(.contextual-links),
+.js-media-library-menu {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-bottom: solid var(--border-width--lg) var(--gray);
+  &:nth-of-type(2) {
+    margin-top: var(--space--xs);
+    margin-left: var(--space--sm);
+    border-bottom-color: var(--gray--lighter--80);
+  }
+  li {
+    margin-bottom: 0;
+  }
+  a {
+    --oline-color: var(--link-color--focus);
+
+    display: block;
+    margin-right: var(--space--2xs);
+    padding: var(--space--2xs) var(--space--sm);
+    text-decoration: none;
+    color: var(--black);
+    border: solid var(--border-width--sm) transparent;
+    outline-offset: var(--outline-offset--inset);
+    background-color: var(--gray--lighter--80);
+  }
+}

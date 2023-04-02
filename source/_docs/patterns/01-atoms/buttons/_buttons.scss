@@ -1,0 +1,64 @@
+/*------------------------------------------------------------------------------
+Atom: Buttons
+--------------------------------------------------------------------------------
+These are true buttons. For links that are styled to look similar to buttons,
+see Atom - Links - Button Styled
+------------------------------------------------------------------------------*/
+:root {
+  --button-background-color: var(--blue);
+  --button-background-color--active: var(--dark-blue);
+  --button-color: var(--white);
+  --button-color--active: var(--white);
+}
+button,
+input[type="submit"] {
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-gap: var(--space--2xs);
+  place-items: center;
+  margin: 0 var(--space--sm) var(--space--sm) 0;
+  padding: var(--space--xs);
+  transition: background var(--transition-speed--fast),
+  color var(--transition-speed--fast);
+  color: var(--button-color);
+  border: none;
+  border-radius: var(--border-radius--rounder);
+  outline: var(--outline-width) solid transparent;
+  background: var(--button-background-color);
+  box-shadow: var(--shadow--soft);
+  font-family: var(--font--sans-serif);
+  font-size: var(--font-size--md);
+  &:active,
+  &:hover,
+  &:focus {
+    color: var(--button-color--active);
+    background: var(--button-background-color--active);
+    box-shadow: var(--shadow--soft--hover);
+  }
+  &:active {
+    @media (forced-colors: active) {
+      outline: var(--outline-width) solid LinkText;
+    }
+  }
+  &.warning {
+    --button-background-color: var(--yellow);
+    --button-background-color--active: var(--yellow--lighter--40);
+    --button-color: var(--black);
+    --button-color--active: var(--black);
+  }
+  &:disabled {
+    --button-background-color: var(--gray--darker--40);
+    --button-background-color--active: var(--gray--darker--40);
+    --button-color: var(--gray--lighter--60);
+    --button-color--active: var(--gray--lighter--60);
+  }
+  .material-icons {
+    font-size: var(--font-size--md);
+  }
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: default;
+}

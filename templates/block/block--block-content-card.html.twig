@@ -28,15 +28,69 @@
 {%
   set classes = [
     'block',
-    'block--card',
+    'wwu-card',
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
     block_content.field_heading_style.0.value,
     block_content.field_custom_classes.0.value
   ]
 %}
 {% set attributes = attributes.addClass(classes) %}
-{% set title_attributes = title_attributes.addClass('block__title', block_content.field_heading_font.0.value ) %}
+{% set title_attributes = title_attributes.addClass('title', block_content.field_heading_font.0.value ) %}
 
 {% block template %}
-  {% include "@molecules/card/card.html.twig" %}
+<div {{ attributes }}>
+  {% if block_content.field_link.0.url is not empty %}
+    {{ title_prefix }}
+      {% if label %}
+        {% if block_content.field_heading_level.0.value is not empty %}
+          <{{ block_content.field_heading_level.0.value }} {{ title_attributes }}>
+            <a href="{{ block_content.field_link.0.url }}">{{ label }}</a>
+          </{{ block_content.field_heading_level.0.value }}>
+        {% else %}
+          <p {{ title_attributes }}>
+            <a href="{{ block_content.field_link.0.url }}">{{ label }}</a>
+          </p>
+        {% endif %}
+      {% endif %}
+    {{ title_suffix }}
+  {% else %}
+    {% include "@templates/label/label-customized.twig" %}
+  {% endif %}
+
+  {% if content.field_sorting_term %}
+    <div class="sorting-term">
+      {{ content.field_sorting_term }}
+    </div>
+  {% endif %}
+
+  {% if content.field_image %}
+  <div class="image">
+    {{ content.field_image }}
+  </div>
+  {% endif %}
+
+  {% if content.field_highlighted_terms %}
+    {{ content.field_highlighted_terms }}
+  {% endif %}
+
+  {% if content.field_date %}
+    <div class="date">
+      {{ content.field_date }}
+    </div>
+  {% endif %}
+
+  {% if content.field_location %}
+    <div class="location">
+      {{ content.field_location }}
+    </div>
+  {% endif %}
+
+  <div class="body">
+    {% if content %}
+      {% block content %}
+        {{ content.body }}
+      {% endblock %}
+    {% endif %}
+  </div>
+</div>
 {% endblock %}

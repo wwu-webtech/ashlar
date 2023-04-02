@@ -1,0 +1,18 @@
+/*------------------------------------------------------------------------------
+Molecule: Search
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+wwu-search {
+  form {
+    display: flex;
+    align-items: center;
+  }
+  label {
+    display: inline;
+    padding: 0 var(--space--xs);
+    font-weight: var(--font-weight--regular);
+  }
+  input {
+    min-width: 6rem;
+  }
+}

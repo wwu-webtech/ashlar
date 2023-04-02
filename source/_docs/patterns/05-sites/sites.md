@@ -1,0 +1,3 @@
+# Sites
+
+For some sites, namely those that use third party services for all or part of their front end displays, custom styles and/or markup may be required. For such sites, the templating and CSS can be found in this section of the theme. The templates are generally not pulled from the theme directly, they are just stored here as backup/reference. Styles are either placed into their own component css file, are copied and pasted directly into the third party app, or are compiled into ashlar-base.css.

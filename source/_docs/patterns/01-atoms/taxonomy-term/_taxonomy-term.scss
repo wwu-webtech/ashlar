@@ -1,0 +1,43 @@
+/*------------------------------------------------------------------------------
+Atom: Text - Taxonomy Terms
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+.taxonomy-term,
+.job-title,
+.pronouns {
+  --link-background--focus: var(--gradient--vertical--light-blue);
+  --link-color: var(--white);
+  --link-color--focus: var(--dark-blue);
+  --link-color--visited: var(--purple--lighter--80);
+  --link-decoration-color: var(--blue--lighter--60);
+  --link-decoration-color--visited: var(--purple--lighter--60);
+
+  @include darkest-blue-bg;
+
+  display: inline-block;
+  margin: 0 var(--space--2xs) var(--space--2xs) 0;
+  padding: var(--space--xs) var(--space--sm);
+  transition: background-size var(--transition-speed--fast)
+  cubic-bezier(0.33, 0.66, 0.66, 1);
+  text-decoration: none;
+  color: var(--white);
+  border: var(--border-width--sm) solid transparent;
+  font-size: var(--font-size--sm);
+  font-weight: var(--font-weight--bold);
+  font-display: fallback;
+  .material-icons {
+    position: relative;
+    top: 0.1em;
+    font-size: var(--icon-size--xs);
+  }
+  &:focus-visible {
+    --oline-color: var(--dark-blue);
+
+    outline-offset: var(--outline-offset--inset);
+  }
+}
+a.taxonomy-term,
+a.pronouns,
+a.job-title {
+  border-bottom: solid var(--blue--lighter--60) var(--border-width--lg);
+}

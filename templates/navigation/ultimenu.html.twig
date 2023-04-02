@@ -45,9 +45,37 @@
 %}
 {% set id_attributes = attributes.id|clean_id %}
 {% apply spaceless %}
-  {% embed '@organisms/navigation/ulti-menu/ulti-menu.html.twig' %}
-    {% block home %}
-      <a class="ultimenu__link" href="{{ url('<front>') }}"><span class="material-icons">home</span></a>
-    {% endblock %}
-  {% endembed %}
+{% if items -%}
+<nav class="main-navigation wwu-menu-closed" aria-label="Main">
+  {% include "@templates/label/label.twig" %}
+
+  <ul{{ attributes.addClass(classes) }}>
+    {%- for item in items -%}
+      <li{{ item.attributes.addClass(item_classes, item.flyout ? 'has-ultimenu', item.config.is_active == true ? 'ultimenu__item--active-page')}}>
+        {%- if item.link -%}
+          {% if item.title == 'home-icon' %}
+            {% block home %}
+              <a class="ultimenu__link" href="{{ url('<front>') }}"><span class="material-icons">home</span></a>
+            {% endblock %}
+          {% else %}
+            {% if item.flyout %}
+              <span class="material-icons expand-icon mobile" aria-hidden="true">keyboard_arrow_right</span>
+              <span class="material-icons expand-icon desktop" aria-hidden="true">keyboard_arrow_down</span>
+            {% endif %}
+            {{ item.link }}
+          {% endif %}
+          {% if item.below %}
+            {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+          {% endif %}
+        {%- endif -%}
+        {%- if item.flyout -%}
+          <section{{ item.flyout_attributes.addClass('ultimenu__flyout') }}>
+            {{ item.flyout }}
+          </section>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+</nav>
+{%- endif %}
 {% endapply %}

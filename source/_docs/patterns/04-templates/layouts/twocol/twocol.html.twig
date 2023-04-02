@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Two column layout. This layout does not get used by Drupal, but imitates the layout for docs.
+ */
+ #}
+
+{% if content %}
+  <div{{ attributes }}>
+    {% if content.first %}
+      <div {{ region_attributes.first }}>
+        {{ content.first }}
+      </div>
+    {% endif %}
+
+    {% if content.second %}
+      <div {{ region_attributes.second }}>
+        {{ content.second }}
+      </div>
+    {% endif %}
+  </div>
+{% endif %}

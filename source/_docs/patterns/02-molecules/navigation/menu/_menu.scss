@@ -1,0 +1,37 @@
+/*------------------------------------------------------------------------------
+Molecule: Menu
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+.menu {
+  padding: 0;
+  list-style: none;
+  a {
+    display: block;
+    min-height: var(--touch-target--min);
+    padding: var(--space--2xs) var(--space--sm);
+    text-decoration: none;
+    border-left: var(--border-width--md) var(--link-decoration-color) solid;
+  }
+  &.horizontal {
+    @media (min-width: $small) {
+      display: flex;
+      justify-content: center;
+      li {
+        border: var(--border-width--md) var(--link-decoration-color) solid;
+        &:not(:last-of-type) {
+          border-right: none;
+        }
+      }
+      a {
+        display: block;
+        border: none;
+      }
+    }
+  }
+  /*------------------------------------------------------------------------------
+  Nested Menus
+  ------------------------------------------------------------------------------*/
+  .menu {
+    padding-left: var(--space--sm);
+  }
+}

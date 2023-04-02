@@ -1,0 +1,23 @@
+/*------------------------------------------------------------------------------
+Atom: Details
+--------------------------------------------------------------------------------
+normalize.css removes <summary>'s initial display, which can remove the arrow affordance that helps indicate it's interactive. This display unsets to the default user agent display and loads the arrow.
+
+Firefox needs additional reset query, based on /core/themes/stable/css/core/normalize-fixes.css
+------------------------------------------------------------------------------*/
+
+details {
+  padding: var(--space--md);
+  summary {
+    display: revert;
+    margin-bottom: var(--space--md);
+    padding: var(--space--md);
+    border: var(--border-width--sm) solid var(--h3-color);
+    @media (min--moz-device-pixel-ratio: 0) {
+      display: list-item;
+    }
+  }
+  & > *:not(summary) {
+    margin: 0 var(--space--md);
+  }
+}
