@@ -59,33 +59,38 @@ Molecule: Card Containers
   display: flex;
   flex-flow: row wrap;
   gap: var(--space--xs);
-  > * {
+  .card,
+  .wwu-card {
     flex: 0 1 100%;
   }
 }
 .card-2col--flex {
-  > * {
+  .card,
+  .wwu-card {
     @media (min-width: $small) {
       flex: 0 1 calc(50% - var(--space--xs));
     }
   }
 }
 .card-3col--flex {
-  > * {
+  .card,
+  .wwu-card {
     @media (min-width: $small) {
       flex: 0 1 calc(33.33% - var(--space--xs));
     }
   }
 }
 .card-4col--flex {
-  > * {
+  .card,
+  .wwu-card {
     @media (min-width: $small) {
       flex: 0 1 calc(25% - var(--space--xs));
     }
   }
 }
 .card-5col--flex {
-  > * {
+  .card,
+  .wwu-card {
     @media (min-width: $small) {
       flex: 0 1 calc(20% - var(--space--xs));
     }

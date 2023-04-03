@@ -7,7 +7,9 @@ Molecule: Image Link
 ------------------------------------------------------------------------------*/
 .wwu-image-link {
   display: inline-grid;
+  margin-top: var(--space--xl);
   margin-right: var(--space--md);
+  margin-bottom: var(--space--xl);
 }
 .image-link {
   --image-link-font-size: var(--font-size--lg);
