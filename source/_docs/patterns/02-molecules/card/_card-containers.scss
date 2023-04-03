@@ -60,13 +60,15 @@ Molecule: Card Containers
   flex-flow: row wrap;
   gap: var(--space--xs);
   .card,
-  .wwu-card {
+  .wwu-card,
+  .hover-card {
     flex: 0 1 100%;
   }
 }
 .card-2col--flex {
   .card,
-  .wwu-card {
+  .wwu-card,
+  .hover-card {
     @media (min-width: $small) {
       flex: 0 1 calc(50% - var(--space--xs));
     }
@@ -74,7 +76,8 @@ Molecule: Card Containers
 }
 .card-3col--flex {
   .card,
-  .wwu-card {
+  .wwu-card,
+  .hover-card {
     @media (min-width: $small) {
       flex: 0 1 calc(33.33% - var(--space--xs));
     }
@@ -82,7 +85,8 @@ Molecule: Card Containers
 }
 .card-4col--flex {
   .card,
-  .wwu-card {
+  .wwu-card,
+  .hover-card {
     @media (min-width: $small) {
       flex: 0 1 calc(25% - var(--space--xs));
     }
@@ -90,7 +94,8 @@ Molecule: Card Containers
 }
 .card-5col--flex {
   .card,
-  .wwu-card {
+  .wwu-card,
+  .hover-card {
     @media (min-width: $small) {
       flex: 0 1 calc(20% - var(--space--xs));
     }
