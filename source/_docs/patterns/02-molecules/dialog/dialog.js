@@ -27,10 +27,15 @@ if (
                 
                 const open_button = this.querySelector('.open-button');
                 const close_button = document.createElement('button');
+                const icon = document.createElement('span');
                 const dialog = this.querySelector('dialog');  
-                const dialog_content = this.querySelector('.dialog-content');       
+                const dialog_content = this.querySelector('.dialog-content');                       
                 
                 open_button.innerText = this.getAttribute('button');
+                icon.classList.add("material-icons");
+                icon.setAttribute("aria-hidden", true);
+                icon.innerText = this.getAttribute('icon');
+                open_button.appendChild(icon);
                 close_button.innerHTML = `<span class="material-icons" aria-hidden="true">close</span> Close`;
                 close_button.classList.add("close-button");
 
