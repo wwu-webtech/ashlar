@@ -8,6 +8,8 @@ To style a call to action link, add the class 'cta'
 <a href="#" className="cta light-green">With .light-green class</a><br/>
 <a href="#" className="cta white">With .white class</a><br/>
 
+<a href="something.pdf" className="cta">Contains a pdf</a><br/>
+
 <a href="#" className="cta align-center">Centered and with an Icon <span className="material-icons" aria-hidden="true">favorite_border</span></a><br/>
 
 ```
