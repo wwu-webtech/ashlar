@@ -27,9 +27,6 @@ Atom: Call to Action Link
   @media (prefers-reduced-motion: no-preference) {
     animation: cta-animate-back 400ms ease-out forwards;
   }
-  .material-icons {
-    top: -0.2rem;
-  }
   &:before {
     // the circle
     position: absolute;
@@ -64,6 +61,20 @@ Atom: Call to Action Link
       animation: cta-animate-arrow-back 400ms ease-out forwards;
     }
   }
+  .material-icons {
+    position: absolute;
+    top: 0.65rem;
+    transform: translatex(-0.18rem);
+    @media (prefers-reduced-motion: no-preference) {
+      animation: cta-animate-arrow-back 400ms ease-out forwards;
+    }
+  }
+  &.with-icon {
+    /* someday we can replace this with :has(.material-icon) */
+    &:after {
+      border: none;
+    }
+  }
   &:active,
   &:focus,
   &:hover {
@@ -73,7 +84,8 @@ Atom: Call to Action Link
       &:before {
         animation: cta-animate-circle 400ms ease-out forwards;
       }
-      &:after {
+      &:after,
+      .material-icons {
         animation: cta-animate-arrow 400ms ease-out forwards;
       }
     }
