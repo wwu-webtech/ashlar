@@ -81,6 +81,9 @@ wwu-header {
       display: inline;
     }
   }
+  @media print {
+    display: none;
+  }
 }
 .western-header-region {
   --link-color: var(--white);

@@ -20,7 +20,9 @@ wwu-accordion,
     align-items: center;
     width: 100%;
     margin-bottom: calc(-1 * var(--border-width--md));
+    padding: var(--space--xs);
     cursor: default;
+    text-align: left;
     color: var(--link-color);
     border: solid var(--border-width--md) var(--link-decoration-color);
     border-radius: 0;

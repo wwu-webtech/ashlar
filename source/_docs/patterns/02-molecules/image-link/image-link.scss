@@ -5,14 +5,21 @@ Molecule: Image Link
 2. Variations
 3. Display preferences
 ------------------------------------------------------------------------------*/
+@import "../../00-utilities/breakpoints.scss";
 .wwu-image-link {
   display: inline-grid;
+  margin-top: var(--space--2xl);
   margin-right: var(--space--md);
+  margin-bottom: var(--space--2xl);
+  &.align-center {
+    display: grid;
+    margin-right: auto;
+  }
 }
 .image-link {
   --image-link-font-size: var(--font-size--lg);
   --image-link-overlay-color: var(--dark-blue--darker--40);
-  --image-link-size: 12.5rem;
+  --image-link-size: 10rem;
   --link-background--focus: transparent;
   --link-color: var(--white);
   --link-color--focus: var(--white);
@@ -24,6 +31,9 @@ Molecule: Image Link
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   border-radius: 50%;
   box-shadow: var(--shadow--soft);
+  @media (min-width: $large) {
+    --image-link-size: 12.5rem;
+  }
   &:before,
   &:after {
     position: absolute;

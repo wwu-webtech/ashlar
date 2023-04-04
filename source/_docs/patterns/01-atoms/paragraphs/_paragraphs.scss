@@ -23,36 +23,36 @@ p {
 }
 h1 {
   + .tagline,
-  ~ div .tagline {
+  + div .tagline {
     color: var(--h1-color);
-    font-size: var(--font-size--3xl);
+    font-size: var(--font-size--5xl);
   }
 }
 h2 {
   + .tagline,
-  ~ div .tagline {
+  + div .tagline {
     color: var(--h2-color);
-    font-size: var(--font-size--2xl);
+    font-size: var(--font-size--4xl);
   }
 }
 h3 {
   + .tagline,
-  ~ div .tagline {
+  + div .tagline {
     color: var(--h3-color);
-    font-size: var(--font-size--xl);
+    font-size: var(--font-size--3xl);
   }
 }
 h4 {
   + .tagline,
-  ~ div .tagline {
+  + div .tagline {
     color: var(--h4-color);
-    font-size: var(--font-size--lg);
+    font-size: var(--font-size--2xl);
   }
 }
 h5 {
   + .tagline,
-  ~ div .tagline {
+  + div .tagline {
     color: var(--h5-color);
-    font-size: var(--font-size--md);
+    font-size: var(--font-size--xl);
   }
 }

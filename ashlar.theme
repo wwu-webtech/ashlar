@@ -156,6 +156,7 @@ function _ashlar_set_icon(&$items, $object) {
   if (!$object->field_icon->isEmpty()) {
     foreach ($items as &$item) {
       $item['content']['#title'] = array('#markup' =>  $item['content']['#title'] . ' <span class="material-icons" aria-hidden="true">' . $object->field_icon->value . '</span>');
+      $item['content']['#options']['attributes']['class'][] = 'cta with-icon';
     }
   }
 }
