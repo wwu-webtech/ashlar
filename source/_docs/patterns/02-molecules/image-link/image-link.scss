@@ -5,6 +5,7 @@ Molecule: Image Link
 2. Variations
 3. Display preferences
 ------------------------------------------------------------------------------*/
+@import "../../00-utilities/breakpoints.scss";
 .wwu-image-link {
   display: inline-grid;
   margin-top: var(--space--2xl);
