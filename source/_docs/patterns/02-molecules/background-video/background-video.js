@@ -4,7 +4,7 @@ if (
   ) {
     const background_video_template = document.createElement("template");
     background_video_template.innerHTML = `      
-    <video class="bg-video background-image" autoplay="" id="video-elem-1" loop="" muted="" preload="auto">        
+    <video class="bg-video background-image" autoplay loop muted preload="auto" id="video-elem-1">        
     </video>      
 
     <p class="description visually-hidden"></p>

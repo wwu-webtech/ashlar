@@ -11,6 +11,7 @@ Molecule: Testimonial
   border-style: none;
   @media (min-width: $medium) {
     flex-flow: row wrap;
+    padding-top: var(--space--3xl);
     padding-bottom: var(--space--3xl);
     padding-left: var(--space--2xl);
   }

@@ -66,6 +66,11 @@ These classes how much horizontal or vertical space an element takes up.
 ## Space
 These can be used to add additional margin or padding to an element.
 
+* half-margin
+* half-margin--top
+* half-margin--right
+* half-margin--bottom
+* half-margin--left
 * standard-margin
 * standard-margin--top
 * standard-margin--right
@@ -81,6 +86,11 @@ These can be used to add additional margin or padding to an element.
 * no-margin--right
 * no-margin--bottom
 * no-margin--left
+* half-padding
+* half-padding--top
+* half-padding--right
+* half-padding--bottom
+* half-padding--left
 * standard-padding
 * standard-padding--top
 * standard-padding--right
@@ -118,6 +128,9 @@ Classes to alter the font or styling of text. Be conscious of potential accessib
 * italic
 * uppercase
 * lowercase
+* tagline
+* font-size--smaller
+* font-size--larger
 
 ## Video
 When embedding video on a page, adding the following wrapper will make the iframe responsive:

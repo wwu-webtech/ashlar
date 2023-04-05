@@ -13,6 +13,9 @@ Molecule: Splash
     width: 100%;
     height: 100%;
   }
+  @media print {
+    display: none;
+  }
 }
 .splash > div,
 .featured-major-splash-area > div {

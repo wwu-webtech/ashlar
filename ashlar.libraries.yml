@@ -22,9 +22,6 @@ accordion:
       build/css/components/accordion.css: {}
   js:
     build/js/accordion.js: {}
-  dependencies:
-    - core/drupal
-    - core/jquery
 alerts:
   version: 1.x
   css:
@@ -60,8 +57,6 @@ bg-video:
   version: 1.x
   js:
     build/js/background-video.js: {}
-  dependencies:
-    - core/jquery
 countdown:
   version: 1.x
   css:
@@ -109,12 +104,6 @@ image-with-description:
   css:
     theme:
       build/css/components/image-with-description.css: {}
-language-select:
-  version: 1.x
-  js:
-    language-select.js: {}
-  dependencies:
-    - core/jquery
 dialog:
   version: 1.x
   js:
@@ -123,14 +112,10 @@ menu-extras:
   version: 1.x
   js:
     build/js/menu-extras.js: {}
-  dependencies:
-    - core/jquery
 profile:
   version: 1.x
   js:
     build/js/profile.js: {}
-  dependencies:
-    - core/jquery
 progress-tracker:
   version: 1.x
   css:
@@ -153,8 +138,6 @@ search:
       build/css/components/search.css: {}
   js:
     build/js/search.js: {}
-  dependencies:
-    - core/jquery
 switcher:
   version: 1.x
   css:
@@ -162,8 +145,11 @@ switcher:
       build/css/components/switcher.css: {}
   js:
     build/js/switcher.js: {}
-  dependencies:
-    - core/jquery
+statistics:
+  version: 1.x
+  css:
+    theme:
+      build/css/components/statistic.css: {}
 social-media-icons:
   version: 1.x
   css:
@@ -171,8 +157,6 @@ social-media-icons:
       build/css/components/social-media-icons.css: {}
   js:
     build/js/social-media-icons.js: {}
-  dependencies:
-    - core/jquery
 testimonial:
   version: 1.x
   css:
@@ -182,8 +166,6 @@ user-login:
   version: 1.x
   js:
     build/js/user-login.js: {}
-  dependencies:
-    - core/jquery
 vimeo-tracking:
   version: 309.54.810
   js:

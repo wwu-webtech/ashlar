@@ -51,7 +51,7 @@ Atom: Overlays
   }
 }
 .gray-overlay {
-  @include light-gray-bg;
+  @include lightest-gray-bg;
 
   color: var(--black);
   &:after {
@@ -62,8 +62,8 @@ Atom: Overlays
   }
 }
 .white-gradient-overlay {
-  @include light-gray-bg;
-  l  &:after {
+  @include lightest-gray-bg;
+  &:after {
     opacity: 1;
     background: linear-gradient(
     to right,
