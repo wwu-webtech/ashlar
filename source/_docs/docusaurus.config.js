@@ -18,7 +18,7 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Western Washington University', // Usually your GitHub org/user name.
   projectName: 'ashlar', // Usually your repo name.
-  deploymentBranch: 'masons7/docusaurus',
+  deploymentBranch: 'main',
   trailingSlash: false,
   
   // Even if you don't use internalization, you can use this field to set useful
@@ -54,6 +54,7 @@ const config = {
             require.resolve('../../build/css/components/docusaurus.css'),
             
             require.resolve('../../build/css/components/accordion.css'),
+            require.resolve('../../build/css/components/alerts.css'),
             require.resolve('../../build/css/components/announcement.css'),
             require.resolve('../../build/css/components/banner.css'),
             require.resolve('../../build/css/components/colors.css'),
