@@ -11,18 +11,18 @@ Molecule: Headline
 ----------------------------------------------------------------------------*/
 .box-headline {
   @include dark-blue-bg;
-  @media (min-width: $medium) {
-    margin-top: 5%;
-    margin-left: 5%;
-    background: var(--gradient--horizontal--dark-blue-to-transparent);
-  }
 
   align-self: start;
   max-width: calc((2 * var(--content-area-max-width)) / 3);
   margin: var(--space--md);
   padding: var(--space--lg);
-  border: solid var(--border-width--md) transparent;
+  outline: solid var(--border-width--md) transparent;
   background-color: rgba(var(--dark-blue--darker--40--rgb), 0.7);
+  @media (min-width: $medium) {
+    margin-top: 5%;
+    margin-left: 5%;
+    background: var(--gradient--horizontal--dark-blue-to-transparent);
+  }
   .title {
     margin-top: 0;
   }
@@ -32,9 +32,6 @@ Molecule: Headline
 ----------------------------------------------------------------------------*/
 .left-aligned-bar {
   @include blue-bg;
-  @media (min-width: $large) {
-    max-width: 70vw;
-  }
 
   position: relative;
   align-self: end;
@@ -44,6 +41,9 @@ Molecule: Headline
   padding: var(--space--md);
   border: solid var(--border-width--md) transparent;
   background: rgba(var(--blue--rgb), 0.8);
+  @media (min-width: $large) {
+    max-width: 70vw;
+  }
   .title {
     margin-top: 0;
   }
