@@ -54,6 +54,7 @@ const config = {
             require.resolve('../../build/css/components/docusaurus.css'),
             
             require.resolve('../../build/css/components/accordion.css'),
+            require.resolve('../../build/css/components/alert.css'),
             require.resolve('../../build/css/components/announcement.css'),
             require.resolve('../../build/css/components/banner.css'),
             require.resolve('../../build/css/components/colors.css'),
