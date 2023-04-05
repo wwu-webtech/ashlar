@@ -61,15 +61,20 @@ Atom: Call to Action Link
       animation: cta-animate-arrow-back 400ms ease-out forwards;
     }
   }
-  .material-icons {
+  .material-icons,
+  &[target="_blank"] .material-icons,
+  &[target="blank"] .material-icons {
     position: absolute;
     top: 0.65rem;
     transform: translatex(-0.18rem);
+    color: var(--cta-decoration-color);
     @media (prefers-reduced-motion: no-preference) {
       animation: cta-animate-arrow-back 400ms ease-out forwards;
     }
   }
-  &.with-icon {
+  &.with-icon,
+  &[target="_blank"],
+  &[target="blank"] {
     /* someday we can replace this with :has(.material-icon) */
     &:after {
       border: none;
