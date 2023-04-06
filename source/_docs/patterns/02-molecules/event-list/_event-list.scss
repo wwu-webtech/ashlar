@@ -14,9 +14,10 @@ Molecule: Event List
     grid-template-columns: 4rem auto;
     margin-bottom: var(--space--sm);
     border: var(--border-width--md) solid transparent;
+    box-shadow: var(--shadow--soft);
     &:hover {
       outline: var(--outline-width) dotted transparent;
-      box-shadow: var(--shadow--soft);
+      box-shadow: var(--shadow--soft--hover);
     }
     &:focus-within {
       outline: dotted var(--oline-color) var(--outline-width);
