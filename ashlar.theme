@@ -81,7 +81,7 @@ function ashlar_preprocess_field(&$variables) {
       _ashlar_set_icon($variables['items'], $object);
     }
 
-    if ($bundle === 'button' | $bundle === 'make_waves_button') {
+    if ($bundle === 'button') {
       _ashlar_set_cta_class($variables['items'], $object);
     }
   }

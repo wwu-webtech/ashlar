@@ -4,7 +4,7 @@
 <form>
   <div className="checkbox">
     <input type="checkbox" id="checkbox-option1" name="checkbox" value="First"/>
-        <label htmlFor="checkbox-option1">Option One</label>
+    <label htmlFor="checkbox-option1">Option One</label>
   </div>
   <div className="checkbox">
     <input type="checkbox" id="checkbox-option2" name="checkbox" value="Second"/>

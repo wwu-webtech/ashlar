@@ -83,20 +83,6 @@
   {% endblock %}
 
   {% block content %}
-  {% if logged_in %}
-    <div class="status-alert max-width--content">
-      <div class="status-alert--message status-alert--minor">
-        <div class="body">
-          <h2>Theme Updates Complete</h2>
-
-         <p class="text-align-center">Ashlar has <a href="https://wwu-stephanie.github.io/ashlar/changelog/version-5">received a major update</a>. The administration theme has been <a href="https://westerntoday.wwu.edu/news/webtech-summer-recap-july-august-september-2022#claro">changed to Claro.</a></p>
-
-         <p class="font-size--smaller text-align-center">You are seeing this message because you are logged into a Drupal site. This message will be posted until 4/10/2023</p>
-        </div>
-      </div>
-    </div>
-    {% endif %}
-
     {{ page.content }}
   {% endblock %}
 

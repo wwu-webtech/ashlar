@@ -11,3 +11,8 @@ Molecule: Aside
     margin-top: 0;
   }
 }
+[data-theme="dark"] {
+  .paragraph--type--aside {
+    @include gray-bg;
+  }
+}
