@@ -7,6 +7,7 @@ Atom: Forms
 4. Fieldsets
 ------------------------------------------------------------------------------*/
 :root {
+  --checkbox-size: 1.2rem;
   --input-background-color: var(--gray--lighter--90);
   --input-border-color: var(--gray--lighter--20);
   --input-border-color--focus: var(--blue--darker--20);
@@ -97,6 +98,7 @@ input[type="radio"] {
       position: relative;
       top: 0.2rem;
       display: inline-block;
+      box-sizing: border-box;
       width: var(--checkbox-size);
       height: var(--checkbox-size);
       margin-right: var(--space--2xs);
@@ -125,17 +127,6 @@ input[type="radio"] {
       outline-offset: var(--oline-offset);
     }
   }
-  &:checked {
-    + label {
-      &:before {
-        border-color: var(--blue);
-        background-color: var(--blue);
-      }
-      &:after {
-        display: block;
-      }
-    }
-  }
 }
 input[type="checkbox"] {
   + label {
@@ -153,21 +144,32 @@ input[type="checkbox"] {
       border-width: 0 3px 3px 0;
     }
   }
+  &:checked {
+    + label {
+      &:before {
+        border-color: var(--blue);
+        background-color: var(--blue);
+      }
+      &:after {
+        display: block;
+      }
+    }
+  }
 }
 input[type="radio"] {
   + label {
     &:before {
       border-radius: 50%;
     }
-    &:after {
-      /* radio dot */
-      top: 0.4rem;
-      left: 0.19rem;
-      width: 0.5rem;
-      height: 0.5rem;
-      border: solid transparent var(--border-width--lg);
-      border-radius: 50%;
-      background-color: var(--white);
+  }
+  &:checked {
+    + label {
+      &:before {
+        border: solid var(--blue) var(--border-width--lg);
+        outline: solid var(--white) var(--border-width--lg);
+        outline-offset: calc(-2 * var(--border-width--lg));
+        background-color: var(--blue);
+      }
     }
   }
 }
