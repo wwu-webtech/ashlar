@@ -233,7 +233,7 @@ Links that appear at the top of myWestern
   
   <div class="wwu-card highlight">
     <p class="title">
-      <a href="https://wwu.edu/web4u">
+      <a href="https://extensibility.banner.wwu.edu/BannerExtensibility/customPage/page/wwugHome">
         Web4U
       </a>
     </p>
