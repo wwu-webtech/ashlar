@@ -72,9 +72,9 @@ Overwrite to reset default ultimenu styles.
       position: inherit;
     }
   }
-  .button {
-    &.button--ultimenu {
-      display: none;
-    }
+}
+.button {
+  &.button--ultimenu {
+    display: none;
   }
 }
