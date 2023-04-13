@@ -50,6 +50,7 @@ if (
       const id = Math.random().toString(16).slice(2);      
 
       item.setAttribute("aria-controls", "accordion-content-" + id);
+      item.setAttribute("tabindex", "0");
       item_content.setAttribute("id", "accordion-content-" + id);
 
       if (item.classList.contains("is-expanded")) {
