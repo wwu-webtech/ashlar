@@ -38,61 +38,82 @@ if (
           items[i].prepend(label);
           
           setup(items[i].querySelector(".expand"));
-          items[i].querySelector(".expand").addEventListener("click", toggle_item);
-          items[i].querySelector(".expand").addEventListener("keyup", close_item);
+          items[i].querySelector(".expand").addEventListener("click", click_toggle);
+          items[i].querySelector(".expand").addEventListener("keyup", key_close);
         }
       }
     }
     window.customElements.define("wwu-accordion", WWUAccordion);
-
+    
     function setup(item) {
       const item_content = item.parentNode.nextElementSibling;         
       const id = Math.random().toString(16).slice(2);      
-
+      
       item.setAttribute("aria-controls", "accordion-content-" + id);
+      item.setAttribute("tabindex", "0");
       item_content.setAttribute("id", "accordion-content-" + id);
-
+      
       if (item.classList.contains("is-expanded")) {
         item.setAttribute("aria-expanded", "true");
       } else {
         item.setAttribute("aria-expanded", "false");
       }
     }
-
-    function toggle_item() {
+    
+    function click_toggle() {
       const item_content = this.parentNode.nextElementSibling;         
       
-      // close item
       if (item_content.classList.contains("is-expanded")) {
-        item_content.classList.remove("is-expanded");
-        item_content.style.maxHeight = null;
-        this.querySelector(".material-icons").innerText = "add";
-        this.setAttribute("aria-expanded", false);
-      } 
-      // open item
-      else {
-        item_content.classList.add("is-expanded");
-        item_content.style.maxHeight = item_content.scrollHeight + "px";
-        this.querySelector(".material-icons").innerText = "clear";
-        this.setAttribute("aria-expanded", true);     
+        close_item(this);
+      } else {
+        open_item(this);
       }
     }    
-    function close_item(event) {
+    function key_close (event) {
       const key_pressed = event.code;
+      if (key_pressed == "Escape") {
+        close_item(this);
+      }
+    }
+    function key_toggle(event) {
+      const key_pressed = event.code;
+      const item_content = this.parentNode.nextElementSibling;         
       
-      if(key_pressed == "Escape") {
-        this.parentNode.nextElementSibling.classList.remove("is-expanded");
-        this.parentNode.nextElementSibling.style.maxHeight = null;
-        this.querySelector(".material-icons").innerText = "add";
-        this.setAttribute("aria-expanded", false);
+      if (key_pressed == "Escape") {
+        close_item(this);
+      } else if (key_pressed == "Enter" || key_pressed == "Space") {
+        if (item_content.classList.contains("is-expanded")) {
+          close_item(this);
+        } else {
+          open_item(this);
+        }
       }
     }
     
+    function open_item(item) {
+      const item_content = item.parentNode.nextElementSibling;         
+      
+      item_content.classList.add("is-expanded");
+      item_content.style.maxHeight = item_content.scrollHeight + "px";
+      item.querySelector(".material-icons").innerText = "clear";
+      item.setAttribute("aria-expanded", true);     
+      
+    }    
+    function close_item(item) {
+      const item_content = item.parentNode.nextElementSibling;               
+      
+      item_content.classList.remove("is-expanded");
+      item_content.style.maxHeight = null;
+      item.querySelector(".material-icons").innerText = "add";
+      item.setAttribute("aria-expanded", false);
+      
+    }
+    
     /* HTML accordion markup support - mainly for Drupal Views, where custom elements are not supported */       
-    const items = document.querySelectorAll(".accordion-set .expand");
+    const items = document.querySelectorAll(".accordion-set div.expand");
     for (let i = 0; i < items.length; i++) {
       setup(items[i]);
-      items[i].addEventListener("click", toggle_item);
-      items[i].addEventListener("keyup", close_item);
+      items[i].addEventListener("click", click_toggle);
+      items[i].addEventListener("keyup", key_toggle);
     }
   }

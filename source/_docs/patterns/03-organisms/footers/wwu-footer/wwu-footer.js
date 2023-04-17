@@ -34,7 +34,8 @@ if (
     </div>
 
     <div class="footer-bottom">
-        <nav class="footer-nav" aria-label="University Links and Policy">
+        <nav class="footer-nav" aria-labelledby="wwu-footer-heading">
+            <h2 id="wwu-footer-heading" class="visually-hidden">University Links and Policy</h2>
             <a class="icon-link" href="https://www.wwu.edu/wwucontact/"><span class="material-icons" aria-hidden="true">send</span>Contact Western</a> 
             <a class="icon-link" href="https://calendar.wwu.edu/"><span class="material-icons" aria-hidden="true">calendar_month</span>Calendar</a>
             <a class="icon-link" href="https://www.wwu.edu/directory"><span class="material-icons" aria-hidden="true">person_search</span>University Directory</a>
