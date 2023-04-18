@@ -75,20 +75,19 @@ if (
         close_item(this);
       }
     }
-    function key_toggle(event) {
-      const key_pressed = event.code;
-      const item_content = this.parentNode.nextElementSibling;         
-      
-      if (key_pressed == "Escape") {
+  function key_toggle(event) {
+    const key_pressed = event.code;
+    const item_content = this.parentNode.nextElementSibling;
+    
+    if (key_pressed == "Enter" || key_pressed == "Space") {
+      event.preventDefault();
+      if (item_content.classList.contains("is-expanded")) {
         close_item(this);
-      } else if (key_pressed == "Enter" || key_pressed == "Space") {
-        if (item_content.classList.contains("is-expanded")) {
-          close_item(this);
-        } else {
-          open_item(this);
-        }
+      } else {
+        open_item(this);
       }
     }
+  }
     
     function open_item(item) {
       const item_content = item.parentNode.nextElementSibling;         
@@ -114,6 +113,7 @@ if (
     for (let i = 0; i < items.length; i++) {
       setup(items[i]);
       items[i].addEventListener("click", click_toggle);
-      items[i].addEventListener("keyup", key_toggle);
+      items[i].addEventListener("keypress", key_toggle);
+      items[i].addEventListener("keyup", key_close);
     }
   }
