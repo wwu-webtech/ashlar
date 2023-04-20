@@ -134,22 +134,22 @@ Atom: Call to Action Link
   }
   &[href$=".pdf"] {
     &::after {
-      content: 'PDF';
+      content: "PDF";
     }
   }
   &[href$=".docx"] {
     &::after {
-      content: 'DOCX';
+      content: "DOCX";
     }
   }
   &[href$=".xlsx"] {
     &::after {
-      content: 'XLSX';
+      content: "XLSX";
     }
   }
   &[href$=".pptx"] {
     &::after {
-      content: 'PPTX';
+      content: "PPTX";
     }
   }
 }
