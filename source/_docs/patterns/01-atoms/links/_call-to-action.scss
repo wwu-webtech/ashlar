@@ -66,7 +66,7 @@ Atom: Call to Action Link
   &[target="blank"] .material-icons {
     position: absolute;
     top: 0.65rem;
-    transform: translatex(-0.18rem);
+    left: var(--space--sm);
     color: var(--cta-decoration-color);
     @media (prefers-reduced-motion: no-preference) {
       animation: cta-animate-arrow-back 400ms ease-out forwards;
@@ -119,15 +119,37 @@ Atom: Call to Action Link
     --cta-decoration-bg: var(--white);
     --cta-decoration-color: var(--dark-blue);
   }
-  &[href$=".pdf"] {
+  &[href$=".pdf"], 
+  &[href$=".docx"], 
+  &[href$=".xlsx"], 
+  &[href$=".pptx"] {
     &:after {
       top: 0.8rem;
       padding: 0;
-      content: "PDF";
-      transform: translatex(-0.2rem);
+      transform: translatex(-0.3rem);
       color: var(--cta-decoration-color);
       border: none;
       font-size: var(--font-size--xs);
+    }
+  }
+  &[href$=".pdf"] {
+    &::after {
+      content: 'PDF';
+    }
+  }
+  &[href$=".docx"] {
+    &::after {
+      content: 'DOCX';
+    }
+  }
+  &[href$=".xlsx"] {
+    &::after {
+      content: 'XLSX';
+    }
+  }
+  &[href$=".pptx"] {
+    &::after {
+      content: 'PPTX';
     }
   }
 }

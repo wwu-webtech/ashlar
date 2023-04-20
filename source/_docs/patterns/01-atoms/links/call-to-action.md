@@ -9,6 +9,9 @@ To style a call to action link, add the class 'cta'
 <a href="#" className="cta white">With .white class</a><br/>
 
 <a href="something.pdf" className="cta">Contains a pdf</a><br/>
+<a href="something.docx" className="cta">Contains a Word doc</a><br/>
+<a href="something.xlsx" className="cta">Contains a Excel doc</a><br/>
+<a href="something.pptx" className="cta">Contains a PowerPoint doc</a><br/>
 
 <a href="#" className="cta align-center with-icon">Centered and with an Icon <span className="material-icons" aria-hidden="true">favorite_border</span></a><br/>
 
