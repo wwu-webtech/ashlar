@@ -35,8 +35,14 @@
   ]
 %}
 
+{% set title_classes = [
+    'title',
+    'standard-margin--top',
+  ] 
+%}
+
 {% set attributes = attributes.addClass(classes) %}
-{% set title_attributes = title_attributes.addClass('title, standard-margin--top') %}
+{% set title_attributes = title_attributes.addClass(title_classes) %}
 {% set heading_id = 'heading--page-menu--' ~ elements['#weight']|clean_id %}
 
 {% block template %}
