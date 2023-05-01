@@ -37,6 +37,32 @@ wwu-social {
 .wwu-icon-cls-2 {
   fill: var(--icon-color);
 }
+
+@media (forced-colors: active) {
+  .wwu-social-link {
+    svg {
+      border: var(--border-width--sm) solid;
+      border-radius: 50%;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      outline: var(--outline-width) solid transparent;
+      .wwu-icon-cls-1 {
+        fill: Canvas;
+      }
+    }
+    &:focus {
+      outline-style: dotted;
+    }
+    .wwu-icon-cls-1 {
+      fill: Canvas;
+    }
+    .wwu-icon-cls-2 {
+      fill: LinkText;
+    }
+  }
+}
 /* Legacy Icon Styles */
 .social-media-links {
   display: flex;
