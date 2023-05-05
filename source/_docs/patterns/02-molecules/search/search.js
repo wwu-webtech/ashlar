@@ -12,7 +12,7 @@ if (
     <span class="toggle-text">Go</span>
     </button>
     
-    <input type="hidden" name="pr" value="Default-WWU-Base">
+    <input id="profile" type="hidden" name="pr">
     </form>
     `;
     
@@ -24,6 +24,11 @@ if (
       connectedCallback() {
         /* Create the custom element by appending the template */
         this.appendChild(search_template.content.cloneNode(true));
+        if (this.getAttribute("profile") != null) {
+          this.querySelector("#profile").setAttribute("value", this.getAttribute("profile"));
+        } else {
+          this.querySelector("#profile").setAttribute("value", "Default-WWU-Base");
+        } 
       }
     }
     
