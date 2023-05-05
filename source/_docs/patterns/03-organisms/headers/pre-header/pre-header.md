@@ -22,5 +22,5 @@ Place near bottom of page
 ## With Alternate Search Profile
 The base component will use the default search profile. If your site has a custom profile set up, you can use the following attribute to set the default search to that:
 
-<wwu-pre-header search-profile="Financial-Aid"></wwu-pre-header>
+```<wwu-pre-header search-profile="My-Profile"></wwu-pre-header>```
 
