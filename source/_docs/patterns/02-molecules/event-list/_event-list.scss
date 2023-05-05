@@ -55,6 +55,9 @@ Molecule: Event List
     }
     .body {
       grid-area: body;
+      a {
+        position: relative;
+      }
     }
     .icon {
       grid-area: icon;

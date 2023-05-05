@@ -1,6 +1,7 @@
 /*------------------------------------------------------------------------------
 Molecule: Main navigation/ultimenu custom styles
 --------------------------------------------------------------------------------
+1. Wordpress
 ------------------------------------------------------------------------------*/
 .main-navigation {
   grid-area: main-nav;
@@ -9,6 +10,7 @@ Molecule: Main navigation/ultimenu custom styles
     height: inherit;
   }
   & > .menu,
+  & > .menu-primary,
   .ultimenu--horizontal {
     @include blue-bg;
 
@@ -17,7 +19,8 @@ Molecule: Main navigation/ultimenu custom styles
     justify-content: center;
     margin: 0;
     padding-left: 0;
-    .ultimenu__item {
+    .ultimenu__item,
+    .top-level-menu-item {
       display: grid;
       grid-template-areas: "link icon"
       "flyout flyout";
@@ -37,7 +40,8 @@ Molecule: Main navigation/ultimenu custom styles
       }
     }
   }
-  .ultimenu__link {
+  .ultimenu__link,
+  .top-level-menu-item > a {
     position: relative;
     grid-column: 1 / span all;
     grid-row: 1 / span 1;
@@ -84,6 +88,47 @@ Molecule: Main navigation/ultimenu custom styles
     @media (min-width: $medium) {
       border-bottom: solid var(--link-background--active) var(--border-width--md);
       border-left: none;
+    }
+  }
+}
+/*------------------------------------------------------------------------------
+1. Wordpress
+------------------------------------------------------------------------------*/
+.nav-primary {
+  .sub-nav {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: unset;
+    padding: var(--space--md);
+    border: none;
+    background-color: unset;
+    @media (min-width: $medium) {
+      position: absolute;
+      top: 100%;
+    }
+    ul {
+      width: var(--content-area-max-width--sm);
+      max-width: 100%;
+    }
+  }
+  .top-level-menu-item > a {
+    position: unset;
+    display: unset;
+    margin: 0;
+    padding: var(--space--sm);
+    text-decoration: none;
+    color: var(--link-color);
+    border: none;
+    &:active,
+    &:hover,
+    &:focus {
+      color: var(--link-color--focus);
+    }
+    &.open {
+      background: var(--link-background--focus);
+      background-color: unset;
     }
   }
 }

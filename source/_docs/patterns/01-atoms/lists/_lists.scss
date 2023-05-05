@@ -5,6 +5,11 @@ Atom: Text - Lists
 ul,
 ol {
   margin: 0 0 var(--space--md);
+  &.spaced {
+    li {
+      margin-bottom: var(--space--sm);
+    }
+  }
 }
 li {
   line-height: 1.5;

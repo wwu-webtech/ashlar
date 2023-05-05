@@ -31,12 +31,11 @@ Molecule: Navigation - myWestern Menu
   }
   .highlight {
     min-width: 7rem;
-    &:after {
+    .text {
       position: absolute;
       top: 2rem;
       left: 0rem;
       width: 100%;
-      content: "Upgraded!";
       transform: rotate(-40deg);
       text-transform: uppercase;
       opacity: 0.9;
