@@ -1,9 +1,10 @@
 /*------------------------------------------------------------------------------
 Molecule: Menu flyout
 --------------------------------------------------------------------------------
-Display preferences
+1. Wordpress
 ------------------------------------------------------------------------------*/
-.main-navigation .ultimenu__region {
+.main-navigation .ultimenu__region,
+.nav-primary .sub-nav.open {
   --h2-size: var(--font-size--xl);
   --h3-size: var(--font-size--xl);
   --h4-size: var(--font-size--xl);

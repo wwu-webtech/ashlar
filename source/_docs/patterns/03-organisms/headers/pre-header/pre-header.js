@@ -61,10 +61,8 @@ if (
           </fieldset-->            
       </div>
       <button class="reset-button"><span class="material-icons" aria-hidden="true">replay</span> Reset preferences</button>
-  </div>    
-
-  <wwu-search role="search" aria-label="Western"></wwu-search>
-    `;
+  </div>      
+  `;
 
   class PreHeader extends HTMLElement {
     constructor() {
@@ -76,9 +74,18 @@ if (
       this.appendChild(pre_header_template.content.cloneNode(true));
 
       /*------------------------------------------------------------------------------
-        Menu functionality
-        --------------------------------------------------------------------------*/
+      Search set up
+      --------------------------------------------------------------------------*/
+      const search = document.createElement("wwu-search");
+      search.setAttribute("role", "search");
+      search.setAttribute("aria-label", "Western");
+      if (this.getAttribute("search-profile") != null) { search.setAttribute("profile", this.getAttribute("search-profile"))};
+      this.appendChild(search);
+      
 
+      /*------------------------------------------------------------------------------
+      Menu functionality
+      --------------------------------------------------------------------------*/
       var display_toggle = this.querySelector(".toggle-settings");
       var settings_menu = this.querySelector(".settings-menu");
       var body = document.querySelector("body");
