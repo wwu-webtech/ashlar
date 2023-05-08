@@ -1,151 +1,70 @@
-# Ashlar and the WWU Design System
+# Ashlar
 
-## Overview
+Ashlar is Western Washington University's Component Library and Drupal Theme. Originally the basis for the design system, it still serves as the foundation for the [Brand and Communication Guide](https://brand.wwu.edu/). 
 
-We are developing a design system for Western's campus sites. Because we are planning on transitioning into Drupal, this is the perfect opportunity to use some of the newer tools available for both making development within Drupal easier, as well as tools created specifically for the purpose of making design systems and living style guides.
+With the adoption of [Custom Elements](https://developer.mozilla.org/en-US/docs/Web/API/Web_Components/Using_custom_elements), Ashlar is now extensible beyond Drupal and can be used to theme standalone web applications, as well as serve as a theming layer to Western's Wordpress sites.
 
-We have developed a component based Drupal theme that will serve both as a public facing style guide as well as a base theme for future Drupal and static sites.
+Ashlar utilizes [atomic design](https://atomicdesign.bradfrost.com/table-of-contents/) principles. Originally built in Pattern Lab, in 2023 Ashlar was transitioned to [Docusaurus](https://docusaurus.io/). 
 
-### Lando
+## Development in Ashlar
 
-[Lando](https://docs.devwithlando.io/) is a local development environment build on Docker. It allows you to very quickly spin up Drupal project without needing to have any sort of virtual machines running. Nifty!
+To get started developing, you will first need [Node.js](https://nodejs.org/en/download) installed on your local machine. If you are planning on developing and testing in Drupal, you will also need [Lando](https://github.com/lando/lando/releases). The latest version to be tested with these instructions is v3.0.21, but the latest stable version generally works. Installing Lando will also install Docker.
 
-### Pattern Lab
 
-[Pattern Lab](http://patternlab.io/) is a few things: In one sense, it is a design system based on the [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/) philosophy. It is also a static site generator, specifically for a style guide.
+### 1. Developing in Drupal (optional)
+If you are developing and testing in a local Drupal instance, first follow the instructions from the [wwu_drupal](https://bitbucket.org/wwuweb/wwu_drupal/src/11.x/) repository up until step **V. Compile and Enable Ashlar**
 
-The design system is, broadly, built around the idea of starting with small components and putting them together to create larger components. It uses a vocabulary of atoms -> molecules -> organisms -> templates -> pages. To read more about Atomic Design principles, I recommend perusing Brad Frost's [online book about the topic](http://atomicdesign.bradfrost.com/).
+Then, navigate to the `/web/themes/contrib` folder, *delete* the ashlar folder, and from the `/web/themes/contrib` execute the commands in the following section. 
 
-The static site that Pattern Lab generates isn't meant to be public facing, but it is very useful for developing the different levels of the atomic design. The static site itself makes it easy to navigate through different levels of the design, and it has some built in responsive design toggles. Pattern Lab has a number of different editions. One set is run on Node, and one set is PHP based. The PHP based editions have both Mustache templating and Twig templating versions. We are most interested in the Twig templating version. There is a Drupal edition, but it's still under development and not what I would currently recommend using.
+Because we use Lando as our container to run Drupal, you will have a cleaner experience if you execute the commands in section 2 with a lando prefix. Eg, `lando npm install` and `lando gulp`
 
-### Shila & Ashlar
+After completing section 2, you can navigate to the site in your browser and the theme should be compiled. After that, any changes you make should be compiled by running `lando gulp`, followed by a cache clear (either in the browser or via `lando drush cr`)
 
-[Shila](https://github.com/aleksip/shila-drupal-theme) is a Drupal starter theme created by [Alek Sip](https://www.aleksip.net/projects), which ties together Pattern Lab with a functional Drupal theme. It uses a plugin by the same author called [Data Transform Plugin](https://github.com/aleksip/plugin-data-transform) that is very useful for keeping patterns consistent between Pattern Lab and Drupal while allowing for unique data at each level. Our Drupal theme, Ashlar, was originally built from Shila.
+### 2. Download and compile Ashlar
 
-### Developing with Pattern Lab and Ashlar
+Clone this repository:
 
-The general idea is that you have Pattern Lab installed _inside_ of the Ashlar Theme. This Pattern Lab installation doesn't have any template files of it's own. Instead it goes down one folder and grabs all of its templates and styles from the theme to generate patterns. This theme has been developed for Drupal, so many of the twig templates use the structure of a Drupal site. However, the stylesheets and templates that are output by pattern lab are also useful for building static sites with these components.
+`git clone git@bitbucket.org:wwuweb/ashlar.git`
 
-### Ashlar Accessibility
+Get into the `/ashlar` folder, install packages, and run gulp to compile the theme files:
 
-[Western is committed to creating an inclusive web](https://www.wwu.edu/commitment-accessibility) for its community members, including students, staff, faculty, and guests. Because Ashlar reflects the current standards for branding and web development, we take extra care in making sure the end result is accessible.
+```
+cd ashlar
 
-This means adding accessibility checks to changes in the theme before those changes get submitted to the repository. These checks allow developers to address common issues before they are introduced into the live code, and prevents barriers that come from those issues.
+npm install
+npm install gulp-cli -g
 
-For additional instructions on setting up accessibility checks in Pattern Lab, see "Accessibility Testing in Ashlar" under the Pattern Lab section.
+gulp
+```
 
-## Getting Started
+### 3. Install and run Docusaurus
 
-Download and install the latest **stable** [version of Lando](https://github.com/lando/lando/releases). The latest version to be tested with these instructions is [v3.0.21](https://github.com/lando/lando/releases/tag/v3.0.21)
+Most development can happen without needing to install a local Drupal instance. After setting up Ashlar as in section 2:
 
-You will also need to have [PHP 7](https://www.php.net/) installed on your machine in order to serve Pattern Lab, and be able to run [Git](https://git-scm.com/) from the Terminal or Command Line.
+1. Navigate to the _docs directory `cd source/_docs`
+2. Install packages `npm install` (note: this command does not run inside a lando container)
+3. Run `npm docusaurus start`
 
-### IA. Lando container with working Drupal site
+After a minute or two, a browser window should launch for you pointed at http://localhost:3000/ashlar/
 
-Follow the instructions on the [composer installation profile](https://bitbucket.org/wwuweb/wwu_drupal). Once you get to step **IV. Compile Ashlar** on that page, skip that step and return here and proceed with Step **II. Ashlar** below.
+### Ashlar's File Structure
 
-> Don't forget: If using Drupal, you must remove Clean URLs after running `lando start` but before installing Drupal in the browser.
+Everything for basic component development exsists inside the _docs folder. Any given component is composed of up to three files:
 
-### IB. Lando container without a working Drupal site
+* .md Markdown files are what are displayed in Docusaurus. These contain sample markup and documentation, both for developers and for end users
+* .scss SASS files contain the styles for the component, written in SASS
+* .js JavaScript files contain any interactive scripting, including the custom element scripting for components that use it
 
-Even if you aren't planning on developing for a Drupal site specifically (and instead are planning on developing in Pattern Lab) the easiest way to get a Lando container running is to use the [composer installation profile](https://bitbucket.org/wwuweb/wwu_drupal). The difference is that you don't need to complete the Drupal installation.
+Not all components will have all three of these files. Every component should, at least, have an .scss file. Nearly all components will have .md files, with the rare exception of style overrides that exist specifically for Drupal. Only components that require interactive scripting will have .js files.
 
-To get started, run the following commands:
+Any changes to the .md and .js files will reload in real time in the Docusaurus browser, though it is a good idea to refresh the browser after making changes to JavaScript files.
 
-    git clone https://bitbucket.org/wwuweb/wwu_drupal.git
-    cd wwu_drupal
-    lando start
+Changes made to .scss files, however, will not automatically display in the browser. These require npm install gulp to be run in base /ashlar folder, and the gulp command to be run for the changes to be compiled. After they are compiled, Docusaurus will automatically reload to display the changes.
 
-This will create a workspace with the default name "my-new-site". If you would like to have multiple Lando containers running simultaneously, or would like to control the URL of your lando instance, edit the first line of the .lando.yml file with a different site name.
+Drupal specific twig templates live in the /ashlar/templates folder, and do not get displayed anywhere in Docusaurus.
 
-Lando will automatically run composer install, so just sit back and wait for the install to complete. It should take a minute or two.
+#### _file.scss vs file.scss
+Any SASS file that has an underscore prefix (_file.scss) will be compiled into ashlar-base.css, which is loaded on ALL pages using Ashlar. Most atoms and some molecules are loaded this way.
 
-### II. Ashlar
+SASS files that do not have the prefix (file.scss) are instead compiled into their own modular CSS file inside the /build/css/components folder. These CSS files are NOT included by default. They need to be loaded with a <link> element, via a Drupal Library, or in docusaurus.config.js to work on pages where those components are used.
 
-#### Installation
-
-The composer installation automatically fetches a copy of Ashlar. However, this copy may not be the most recent version. Additionally, in order to contribute to the theme you'll need to be working in an active git repository.
-
-To get started with this, use the following commands (starting in the `wwu_drupal` directory from above):
-
-    # Delete the existing ashlar directory
-    cd web/themes/contrib/
-    rm -rf ashlar
-
-    # Clone this repo in its place
-    git clone https://bitbucket.org/wwuweb/ashlar.git
-
-    # Install gulp task runner
-    cd ashlar
-    lando npm install
-    lando npm install gulp-cli -g
-#### Development
-
-When developing in Ashlar with a Drupal site directly, the only thing you'll need to do is run gulp and clear the caches on your Drupal site to see the changes. You can run the following command from anywhere in your Lando instance (i.e. in any folder that is within the `wwu_drupal` directory) after you have made changes to files in the `ashlar` directory.
-
-    lando gulp
-
-Now navigate to the site and select "Clear all Caches" from the administration menu.
-
-### IV. Pattern Lab
-
-#### Installation
-
-While still in the `ashlar` folder, install and provision pattern lab with these scripts:
-
-    ./patternlab-install.sh
-    ./patternlab-provision.sh
-
-#### Development
-
-The commands you will need to run, from the `ashlar` folder, to get a pattern lab site generated and served locally are:
-
-    lando gulp patternlab
-    php pattern-lab/core/console --generate
-    php pattern-lab/core/console --server --port 8000
-
-Run these commands each time you make changes, and navigate to http://localhost:8000 in your browser.
-
-It can be helpful to put these commands in a bash script (or two, with the server running constantly in a separate terminal window) to speed up workflow.
-
-Note: you can change the `--port 8000` to a different number if needed. Pattern Lab defaults to port 8080, but this often conflicts with other local server instances.
-
-Changing the port does mean that Pa11y accessibility checks in Ashlar will not work by default, since it refers to localhost:8000. If you do need to change the port, you can change the URLs in the .pa11yci to your chosen port so Pa11y can find the right URL.
-
-#### Accessibility Testing in Ashlar
-
-Running "lando npm install" in Pattern Lab will download Pa11y CI, an automated accessibiltiy engine that can check for code issues in the Pattern Lab components, typically at the following URL pattern:
-
-    http://localhost:8000/patterns/pattern-name/index.html
-
-This command will run if you are contributing to Ashlar development, when pushing changes to this repository. If all checks pass, the changes will finally get push into a new branch or existing branch.
-
-#### Possible Accessibility Testing Errors
-
-**"Failed to run"/"ERR_CONNECTION_REFUSED"**
-
-This error usually means the Pattern Lab server shut off, and the crawler can't access the localhost URLs. Check the Pattern Lab server is on by running `php pattern-lab/core/console --server --port 8000`.
-
-**"Chromium isn’t installed" Error**
-
-If you get a Pa11y error when pushing changes that says “Chromium isn’t installed,” it’s probably because lando npm install installs Chromium for the lando container which is linux. We haven’t found a way for Lando to talk to Chromium yet, so the patch for this error is to go into /ashlar/node_modules/puppeteer and run npm install. It should then install chromium for your OS and run pa11y-ci.
-
-If pa11y-ci is working, it will run through the commands listed in the husky pre-push hook.
-
-### V. Working with Patterns
-
-#### SASS/CSS and JavaScript
-
-Changes to the theme will mostly happen in files contained in `ashlar/source/_docs/patterns`. The `_docs/patterns` folder is organized into the atoms -> molecules -> organisms -> templates -> pages scheme. Sub folders dictate how the static site will nest different components.
-
-#### Templates
-
-There are template files in two places. Most templates are also found in the `_docs/patterns` folder. These templates are used by Drupal and are also generated in the Pattern Lab instance and can be useful for other purposes.
-
-The files in the `templates` folder in the base `ashlar` directory are specific to Drupal, and do not appear in Pattern Lab.
-
-Drupal [loads templates based on naming conventions](https://www.drupal.org/docs/8/theming/twig/twig-template-naming-conventions). The Component Libraries module allows Drupal to look in the `_docs/patterns` folder for template files, and it will look here first. If there are templates in the `_docs/patterns` folder that match the name in the base `templates` folder, it will prefer the templates in the `_docs/patterns` folder. If you create a template in the `templates` folder, and Drupal doesn't load it, check in the `_docs/patterns` to see if a file there is overriding your template.
-
-#### Compiling
-
-Once the `lando gulp` command is run, the sass files for these patterns are all compiled into a single `ashlar_all.css` stylesheet in the `buid/css` folder. JavaScript files are wrapped in Drupal friendly containers and are put into the `build/js` folder.
