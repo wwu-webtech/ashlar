@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkashlar_docs=self.webpackChunkashlar_docs||[]).push([[5735],{1904:a=>{a.exports=JSON.parse('{"permalink":"/ashlar/changelog","page":1,"postsPerPage":10,"totalPages":4,"totalCount":39,"nextPage":"/ashlar/changelog/page/2","blogDescription":"Blog","blogTitle":"Blog"}')}}]);
