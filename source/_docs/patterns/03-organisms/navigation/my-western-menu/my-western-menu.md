@@ -234,7 +234,7 @@ Links that appear at the top of myWestern
   <div class="wwu-card highlight">
     <p class="title">
       <a href="https://extensibility.banner.wwu.edu/BannerExtensibility/customPage/page/wwugHome">
-        Web4U
+        Web4U <span class="text">Upgraded!</span>
       </a>
     </p>
     

@@ -367,6 +367,7 @@ Molecule: Cards - Alternate styles
     margin-top: var(--space--md);
   }
   .taxonomy-terms {
+    display: flex;
     grid-area: taxonomy;
     margin-top: calc(-1 * var(--space--sm));
     margin-left: calc(-1 * var(--space--sm));
@@ -376,5 +377,8 @@ Molecule: Cards - Alternate styles
   }
   .body {
     grid-area: body;
+  }
+  .more-link {
+    grid-area: more;
   }
 }

@@ -56,6 +56,12 @@
 
 <ul{{ attributes.addClass(classes, 'field-items') }}>
   {% for item in items %}
-    <li{{ item.attributes.addClass('field-item') }}>{{ item.content }}</li>
+    {% if item.content.is_active_page %}
+      <li{{ item.attributes.addClass('field-item') }}>
+        <a href="{{ path('<current>') }}" aria-current="page">{{ item.content['#title'] }}</a>
+      </li>
+    {% else %}
+      <li{{ item.attributes.addClass('field-item') }}>{{ item.content }}</li>
+    {% endif %}
   {% endfor %}
 </ul>

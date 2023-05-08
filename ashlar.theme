@@ -84,6 +84,10 @@ function ashlar_preprocess_field(&$variables) {
     if ($bundle === 'button') {
       _ashlar_set_cta_class($variables['items'], $object);
     }
+
+    if ($bundle === 'page_menu') {
+      _ashlar_set_current_page($variables['items']);
+    }
   }
 
   //Invoke acalog code when the when body is present and matches 'acalog'
@@ -92,6 +96,18 @@ function ashlar_preprocess_field(&$variables) {
       if(strpos($variables['items']['0']['content']['#text'], 'acalog') !== false) {
         $variables['#attached']['library'][] = 'ashlar/acalog';
       }
+    }
+  }
+}
+
+/**
+ * Helper function, adds current page info to page menu block links
+ */
+function _ashlar_set_current_page(&$items) {
+  $current_path = \Drupal::request()->getRequestUri();
+  foreach ($items as &$item) {
+    if ($item['content']['#url']->toString() === $current_path) {
+      $item['content']['is_active_page'] = true;
     }
   }
 }

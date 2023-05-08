@@ -118,6 +118,10 @@ These vertical-space-- classes can be used to add additional white space between
 * vertical-space--7x
 * vertical-space--8x
 
+Lists can also be given breathing room by adding the "spaced" class to the ul element
+
+`<ul class="spaced">`
+
 ## Text
 Classes to alter the font or styling of text. Be conscious of potential accessibility issues when using these classes: for example, do not use italic on large bodies of text as it negatively affects readability.
 
