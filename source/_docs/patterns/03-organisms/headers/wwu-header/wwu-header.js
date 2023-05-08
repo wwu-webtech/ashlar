@@ -51,28 +51,33 @@ if (
         </div>
     </div>
     `;
-    
-    class WWUHeader extends HTMLElement {
-      constructor() {
-        super();
+
+  class WWUHeader extends HTMLElement {
+    constructor() {
+      super();
+    }
+
+    connectedCallback() {
+      /* Create the custom element by appending the template */
+      this.appendChild(header_template.content.cloneNode(true));
+      let site_name;
+      let site_name_link;
+      let region_content;
+
+      if(this.getAttribute("sitename") != null) { 
+        site_name = this.getAttribute("sitename"); 
+        this.querySelector(".home-link").innerText = site_name;
       }
-      
-      connectedCallback() {
-        /* Create the custom element by appending the template */
-        this.appendChild(header_template.content.cloneNode(true));
-        let site_name;
-        let region_content;
-        
-        if(this.attributes.sitename) { 
-          site_name = this.attributes.sitename.value; 
-          this.querySelector(".home-link").innerText = site_name;
-        }
-        if(this.attributes.regioncontent) { 
-          region_content  = this.attributes.regioncontent.value; 
-          this.querySelector(".western-header-region").innerHTML = region_content;
-        }     
-        
-        /*------------------------------------------------------------------------------
+      if(this.getAttribute("sitename-link") != null) { 
+        site_name_link = this.getAttribute("sitename-link"); 
+        this.querySelector(".home-link").setAttribute("href", site_name_link);
+      }
+      if(this.getAttribute("regioncontent") != null) { 
+        region_content  = this.getAttribute("regioncontent"); 
+        this.querySelector(".western-header-region").innerHTML = region_content;
+      }     
+
+      /*------------------------------------------------------------------------------
         Mobile menu functionality
         --------------------------------------------------------------------------*/
         const menu_toggle = this.querySelector(".toggle-menu");
