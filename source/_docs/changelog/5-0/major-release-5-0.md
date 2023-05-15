@@ -241,4 +241,4 @@ We've removed certain style variations so that there is more consistency across 
 
 That doesn't  mean we don't want to keep innovating and adding new styles. In fact,  simplifying makes this easier to do. We're  starting from a fresh slate, which means there are less style  conflicts and bugs to worry about.
 
-If you have any questions, or  notice that something on your page that doesn't just look different, but looks brokenplease reach out to [Web.Help@wwu.edu](Web.Help@wwu.edu) or contact [Stephanie](mailo:masons7@wwu.edu) directly.
+If you have any questions, or  notice that something on your page that doesn't just look different, but looks brokenplease reach out to [Web.Help@wwu.edu](mailto:Web.Help@wwu.edu) or contact [Stephanie](mailo:masons7@wwu.edu) directly.
