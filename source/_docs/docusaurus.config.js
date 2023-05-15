@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Ashlar',
   tagline: 'Western Washington University\'s theme and component library',
-  url: 'https://wwu.edu',
-  baseUrl: '/ashlar/',
+  url: 'https://ashlar.wwu.edu',
+  baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
