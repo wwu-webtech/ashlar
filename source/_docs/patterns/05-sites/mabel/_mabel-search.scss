@@ -1,0 +1,41 @@
+/*------------------------------------------------------------------------------
+Sites: MABEL
+--------------------------------------------------------------------------------
+Custom styles for MABEL. These are not compiled, but this is a backup of the
+styles used in a custom block on the site.
+------------------------------------------------------------------------------*/
+.block--solr-search-content-list,
+.block--solr-search-content-grid {
+  padding-top: var(--space--xl);
+  padding-bottom: var(--space--xl);
+  background: var(--gradient--diagonal--blue-to-dark-blue);
+}
+form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space--xs);
+  width: calc(100% - var(--space--lg));
+  max-width: var(--content-area-max-width--sm);
+  margin: auto;
+}
+label {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: 0;
+}
+.search_api_autocomplete,
+.block--solr-search-content-list .form-actions {
+  display: inline;
+  margin: 0;
+}
+.search_api_autocomplete input,
+.form-actions input {
+  width: 100%;
+  margin: 0;
+}
+wwu-search {
+  display: none;
+}
