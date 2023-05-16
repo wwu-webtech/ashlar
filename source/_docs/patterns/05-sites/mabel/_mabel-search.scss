@@ -1,16 +1,20 @@
 /*------------------------------------------------------------------------------
 Sites: MABEL
 --------------------------------------------------------------------------------
-Custom styles for MABEL. These are not compiled, but this is a backup of the
+Custom styles for MABEL. These are not compiled, this is simply a backup of the
 styles used in a custom block on the site.
 ------------------------------------------------------------------------------*/
-.block--solr-search-content-list,
-.block--solr-search-content-grid {
+wwu-search {
+  display: none;
+}
+.views-exposed-form.block--solr-search-content-ashlar-list,
+.views-exposed-form.block--solr-search-content-ashlar-grid {
   padding-top: var(--space--xl);
   padding-bottom: var(--space--xl);
   background: var(--gradient--diagonal--blue-to-dark-blue);
 }
-form {
+.views-exposed-form.block--solr-search-content-ashlar-list form,
+.views-exposed-form.block--solr-search-content-ashlar-grid form {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: var(--space--xs);
@@ -18,7 +22,8 @@ form {
   max-width: var(--content-area-max-width--sm);
   margin: auto;
 }
-label {
+.views-exposed-form.block--solr-search-content-ashlar-list label,
+.views-exposed-form.block--solr-search-content-ashlar-grid label {
   position: absolute !important;
   overflow: hidden;
   clip: rect(1px 1px 1px 1px);
@@ -26,16 +31,17 @@ label {
   height: 1px;
   margin: 0;
 }
-.search_api_autocomplete,
-.block--solr-search-content-list .form-actions {
+.views-exposed-form.block--solr-search-content-ashlar-list .search_api_autocomplete,
+.views-exposed-form.block--solr-search-content-ashlar-grid .search_api_autocomplete,
+.views-exposed-form.block--solr-search-content-ashlar-list .form-actions,
+.views-exposed-form.block--solr-search-content-ashlar-grid .form-actions {
   display: inline;
   margin: 0;
 }
-.search_api_autocomplete input,
-.form-actions input {
+.views-exposed-form.block--solr-search-content-ashlar-list .search_api_autocomplete input,
+.views-exposed-form.block--solr-search-content-ashlar-grid .search_api_autocomplete input,
+.views-exposed-form.block--solr-search-content-ashlar-list .form-actions input,
+.views-exposed-form.block--solr-search-content-ashlar-grid .form-actions input {
   width: 100%;
   margin: 0;
-}
-wwu-search {
-  display: none;
 }
