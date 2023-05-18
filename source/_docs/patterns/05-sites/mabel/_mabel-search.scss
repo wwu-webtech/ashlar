@@ -45,3 +45,7 @@ wwu-search {
   width: 100%;
   margin: 0;
 }
+.card-4col .view--header,
+.card-4col .pager {
+  grid-column: 1/span 4;
+}
