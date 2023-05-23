@@ -11,7 +11,7 @@ Molecule: Cards - Alternate styles
 1. Horizontal
 ------------------------------------------------------------------------------*/
 .card.horizontal,
-.wwu-card.horizontal, {
+.wwu-card.horizontal {
   @media (min-width: $small) {
     display: grid;
     grid-template-areas: "image ." "image ." "image ." "image ." "image ." "image .";
@@ -281,7 +281,6 @@ Molecule: Cards - Alternate styles
   }
   .image {
     position: relative;
-    z-index: -1;
     img {
       display: block;
       display: block;
