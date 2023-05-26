@@ -97,7 +97,7 @@ Media queries don't allow you to use CSS variables, so they are only available a
     --table-blue--darker--10: #daecf8;
     --table-blue--darker--15: #c5dff0;
     --table-blue--darker--5: #e4f2fb;
-    --table-gray: #fdfdfd;
+    --table-gray: #ffffff;
     --table-gray--darker--10: #eeeeee;
     --table-gray--darker--15: #e4e4e4;
     --table-gray--darker--5: #f5f5f6;
@@ -188,6 +188,7 @@ For easy use with rgba/transparency, added only as needed.
     --font--title: "Montserrat", sans-serif;
 
 ### Font weights
+    --font-weight--light: 300;
     --font-weight--regular: 400;
     --font-weight--semibold: 600;
     --font-weight--bold: 700;
