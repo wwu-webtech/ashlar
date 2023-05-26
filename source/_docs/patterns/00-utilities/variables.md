@@ -188,7 +188,6 @@ For easy use with rgba/transparency, added only as needed.
     --font--title: "Montserrat", sans-serif;
 
 ### Font weights
-    --font-weight--light: 300;
     --font-weight--regular: 400;
     --font-weight--semibold: 600;
     --font-weight--bold: 700;
