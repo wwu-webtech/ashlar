@@ -43,7 +43,10 @@
       <span class="material-icons" aria-hidden="true">{{ content.field_icon }}</span>
 
       <div class="body">
-        {% include "@templates/label/label.twig" %}
+        {% block title %}
+          {% include "@templates/label/label-customized.twig" %}
+        {% endblock %}
+        
         {{ content.body }}
       </div>
     {% endblock %}
