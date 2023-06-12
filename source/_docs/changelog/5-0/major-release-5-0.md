@@ -3,6 +3,7 @@ slug: version-5
 title: 'Major Upcoming Update: Ashlar 5.0'
 authors: [masons7]
 tags: [major-release]
+date: 2023-05-01T10:00
 ---
 
 Ashlar is the university's Drupal theme, and basis for its [component library/design system](/patterns/overview) and [Brand and Communication Guide](https://brand.wwu.edu). And it is getting a major update this month! 
