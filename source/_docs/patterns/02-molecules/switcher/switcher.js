@@ -17,6 +17,16 @@ if (
     }
 
     connectedCallback() {
+      function disable_page_scroll(event) {
+        const key_pressed = event.code;
+
+        if (key_pressed == "Tab") {
+          return;
+        }
+        if (key_pressed == "ArrowUp" || "ArrowDown") {
+          event.preventDefault();
+        }
+      }
       function activate_tab(tab) {      
         if(this) { tab = this };        
         deactivate_tab(active_tab);
@@ -143,9 +153,16 @@ if (
           active_tab = switcher_tab;
           activate_tab(switcher_tab);
         }
+        else {
+          deactivate_tab(switcher_tab);
+        }
 
         switcher_tab.addEventListener("click", activate_tab);
         switcher_tab.addEventListener("keyup", tab_select);
+        // In vertical tablists, remove page scroll behavior when arrow keys are used
+        if (layout == "column") {
+          switcher_tab.addEventListener("keydown", disable_page_scroll);
+        }
 
         switcher_items[i].remove();        
       }
