@@ -1,0 +1,102 @@
+/*------------------------------------------------------------------------------
+Wordpress Coblocks Adjustments
+--------------------------------------------------------------------------------
+1. Pullquote
+2. Media & Text
+------------------------------------------------------------------------------*/
+@import "../../00-utilities/breakpoints.scss";
+@import "../../01-atoms/background-color/background-color-mixins.scss";
+/*------------------------------------------------------------------------------
+1. Pullquote
+------------------------------------------------------------------------------*/
+.wp-block-pullquote {
+  text-align: unset;
+  font-size: unset;
+}
+/*------------------------------------------------------------------------------
+2. Media & Text
+------------------------------------------------------------------------------*/
+.wp-block-media-text .wp-block-media-text__content {
+  padding: var(--space--md);
+  border: solid var(--dark-blue) var(--border-width--md);
+}
+@media (min-width: $medium) {
+  .wp-block-media-text__media {
+    z-index: 1;
+  }
+  .wp-block-media-text .wp-block-media-text__content {
+    margin-left: calc(-1 * var(--space--lg));
+    padding-left: var(--space--xl);
+  }
+  .has-media-on-the-right .wp-block-media-text__content {
+    margin-right: calc(-1 * var(--space--lg));
+    margin-left: unset;
+    padding-right: var(--space--xl);
+    padding-left: var(--space--md);
+  }
+}
+/*------------------------------------------------------------------------------
+3. Author
+------------------------------------------------------------------------------*/
+.wp-block-coblocks-author {
+  margin-bottom: var(--space--md);
+}
+/*------------------------------------------------------------------------------
+4. Code
+------------------------------------------------------------------------------*/
+code {
+  padding: var(--space--xs);
+  font-size: var(--font-size--sm);
+}
+/*------------------------------------------------------------------------------
+5. Events
+------------------------------------------------------------------------------*/
+.wp-block-coblocks-event-item.swiper-slide {
+  align-items: stretch;
+  font-size: var(--font-size--md);
+}
+.wp-block-coblocks-events__date {
+  @include blue-bg;
+
+  padding: var(--space--xs);
+  text-align: center;
+}
+.wp-block-coblocks-events__day {
+  justify-content: center;
+  font-size: var(--font-size--4xl);
+}
+.wp-block-coblocks-events__month {
+  font-size: var(--font-size--lg);
+}
+.wp-block-coblocks-events__year {
+  font-size: var(--font-size--lg);
+}
+.wp-block-coblocks-events__content {
+  @include lightest-gray-bg;
+
+  padding: var(--space--xs);
+}
+.wp-block-coblocks-events__details {
+  @include light-gray-bg;
+
+  padding: var(--space--xs);
+  font-weight: var(--font-weight--bold);
+}
+/*------------------------------------------------------------------------------
+6. Hero
+------------------------------------------------------------------------------*/
+.wp-block-coblocks-hero::after {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: rgba(var(--dark-blue--darker--40--rgb), 0.4);
+}
+.wp-block-coblocks-hero__content-wrapper {
+  @include dark-blue-bg;
+
+  z-index: 1;
+  background: transparent;
+}

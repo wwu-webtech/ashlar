@@ -3,7 +3,8 @@ Atom: Call to Action Link
 ----------------------------------------
 ----------------------------------------*/
 .cta,
-.cas-login-link {
+.cas-login-link,
+a.wp-block-button__link {
   --cta-decoration-adjustment: 0.85rem;
   --cta-decoration-bg: transparent;
   --cta-decoration-color: var(--link-color);
@@ -119,9 +120,9 @@ Atom: Call to Action Link
     --cta-decoration-bg: var(--white);
     --cta-decoration-color: var(--dark-blue);
   }
-  &[href$=".pdf"], 
-  &[href$=".docx"], 
-  &[href$=".xlsx"], 
+  &[href$=".pdf"],
+  &[href$=".docx"],
+  &[href$=".xlsx"],
   &[href$=".pptx"] {
     &:after {
       top: 0.8rem;
