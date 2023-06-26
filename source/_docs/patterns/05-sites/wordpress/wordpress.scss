@@ -7,14 +7,45 @@ Wordpress Coblocks Adjustments
 @import "../../00-utilities/breakpoints.scss";
 @import "../../01-atoms/background-color/background-color-mixins.scss";
 /*------------------------------------------------------------------------------
-1. Pullquote
+1. Resets
+2. Pullquote
+3. Media & Text
+4. Author
+5. Code
+6. Events
+7. Hero
+8. FAQs
+------------------------------------------------------------------------------*/
+.menu-primary {
+  z-index: unset;
+}
+a.wp-block-button__link:not(:hover):not(:focus):not(:active) {
+  background: none !important;
+}
+a.wp-block-button__link {
+  padding: unset;
+}
+.wp-coblocks-post-carousel-nav-button__prev,
+.wp-coblocks-post-carousel-nav-button__next {
+  background-color: var(--gray--lighter--60);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 70%;
+}
+input[type="checkbox"] + label::before,
+input[type="radio"] + label::before {
+  min-width: 24px;
+  min-height: 24px;
+}
+/*------------------------------------------------------------------------------
+2. Pullquote
 ------------------------------------------------------------------------------*/
 .wp-block-pullquote {
   text-align: unset;
   font-size: unset;
 }
 /*------------------------------------------------------------------------------
-2. Media & Text
+3. Media & Text
 ------------------------------------------------------------------------------*/
 .wp-block-media-text .wp-block-media-text__content {
   padding: var(--space--md);
@@ -36,20 +67,20 @@ Wordpress Coblocks Adjustments
   }
 }
 /*------------------------------------------------------------------------------
-3. Author
+4. Author
 ------------------------------------------------------------------------------*/
 .wp-block-coblocks-author {
   margin-bottom: var(--space--md);
 }
 /*------------------------------------------------------------------------------
-4. Code
+5. Code
 ------------------------------------------------------------------------------*/
 code {
   padding: var(--space--xs);
   font-size: var(--font-size--sm);
 }
 /*------------------------------------------------------------------------------
-5. Events
+6. Events
 ------------------------------------------------------------------------------*/
 .wp-block-coblocks-event-item.swiper-slide {
   align-items: stretch;
@@ -77,13 +108,13 @@ code {
   padding: var(--space--xs);
 }
 .wp-block-coblocks-events__details {
-  @include light-gray-bg;
+  @include lightest-gray-bg;
 
   padding: var(--space--xs);
   font-weight: var(--font-weight--bold);
 }
 /*------------------------------------------------------------------------------
-6. Hero
+7. Hero
 ------------------------------------------------------------------------------*/
 .wp-block-coblocks-hero::after {
   position: absolute;
@@ -92,11 +123,31 @@ code {
   width: 100%;
   height: 100%;
   content: "";
-  background: rgba(var(--dark-blue--darker--40--rgb), 0.4);
+  filter: brightness(0.5);
+  background: rgba(var(--dark-blue--darker--40--rgb), 0.75);
 }
 .wp-block-coblocks-hero__content-wrapper {
   @include dark-blue-bg;
 
   z-index: 1;
   background: transparent;
+}
+/*------------------------------------------------------------------------------
+8. FAQ
+------------------------------------------------------------------------------*/
+.wp-block-coblocks-faq__heading {
+  margin-bottom: var(--space--sm) !important;
+}
+.wp-block-coblocks-faq-item {
+  padding: 0;
+  border: none;
+}
+.wp-block-coblocks-faq-item__question {
+  margin-bottom: var(--space--2xs);
+  border: solid var(--dark-blue--darker--40) var(--border-width--md);
+}
+.wp-block-coblocks-faq-item__question svg {
+  top: 50%;
+  right: var(--space--2xs);
+  transform: translatey(-50%) rotate(180deg);
 }
