@@ -8,14 +8,43 @@ These are the css variables that are available for use in the theme.
 
 ## Breakpoints
 
-Media queries don't allow you to use CSS variables, so they are only available as SASS variables at the moment. These are the theme's breakpoints:
+Media queries don't allow you to use CSS variables, so they are only available as SASS variables. These are the theme's breakpoints.
 
     $small: 580px;
     $medium: 950px;
     $large: 1300px;
 
+It is okay to use pixel values in media queries when making CSS styles overrides in-page. We recommend sticking to these breakpoint values for consistency. Whenever possible, use *mobile-first* design and adjust styles with *min-width* media queries:
+
+    @media (min-width: 581px) {   }
+    @media (min-width: 951px) {   }
+    @media (min-width: 1301x) {   }
+
+There are a few cases where you need to override a style specifically at a smaller screen. In these cases, max-width queries are acceptable:
+
+    @media (max-width: 580px) {   }
+    @media (max-width: 950px) {   }
+    @media (max-width: 1300px) {   }
+
 
 ## Color
+
+This is a complete list of color variables in the theme. We highly recommend that if you are altering color on something, you use a variable rather than a hex or rgb value, with a possible exception for rgba values that need alpha transparency.
+
+<div className="messages">
+      <div className="messages--warning" role="alert" >
+        <span class="material-icons" aria-hidden="true">warning</span>&nbsp;
+        If you alter an element's color, you *must* make sure that element meets contrast requirements both in light mode and in dark mode. You may need to add an alternate style for dark mode.
+    </div>
+</div>
+
+    .change-color {
+        color: var(--blue--darker--80);
+    }
+
+    [data-theme="dark"] .change-color {
+        color: var(--blue--lighter--80);
+    }
 
 ### Brand Colors 
     --black: #262b2f;
@@ -196,7 +225,7 @@ For easy use with rgba/transparency, added only as needed.
 
 ### Font sizes 
 
-Mostly based on major second scale.
+We use Fluid Typography, so our font sizes scale directly with the viewport size. Our font sizes are based on major second scale, with a few small adjustments.
 
     --font-size--xs: 0.75em;
     --font-size--sm: 0.9em;
@@ -211,6 +240,55 @@ Mostly based on major second scale.
     --font-size--7xl: 2.566em;
     --font-size--8xl: 3.653em;
     --font-size--9xl: 4.11em;
+
+### Headings
+
+Heading sizes and colors are set using the font size and color variables above. These are their default values the :root
+
+
+    --h1-color: var(--blue--darker--80);
+    --h1-size: var(--font-size--7xl);
+    --h2-color: var(--blue--darker--60);
+    --h2-size: var(--font-size--4xl);
+    --h3-color: var(--blue--darker--40);
+    --h3-size: var(--font-size--3xl);
+    --h4-color: var(--blue--darker--20);
+    --h4-size: var(--font-size--2xl);
+    --h5-color: var(--blue);
+    --h5-size: var(--font-size--xl);
+    --h6-color: var(--blue);
+    --h6-size: var(--font-size--lg);
+
+
+When altering heading styles, the recommended method is to reset the heading variables in the highest possible **containing element** and using **css variables**, rather than on a heading element itself. This helps keep selector specificity and overall CSS complexity lower. We also recommend resetting values with provided theme variables, rather than direct hex/pixel/em values, for consistency with brand, accessibility, and overall scaling.
+
+In other words, do this:
+
+    .some-container {
+        --h2-size: var(--font-size-md);
+        --h2-color: var(--blue);
+    }
+
+Not this:
+
+    h2 {
+        font-size: 20px;
+        color: #007ac8;
+    }
+
+<div className="messages">
+      <div className="messages--warning" role="alert" >
+        <span class="material-icons" aria-hidden="true">warning</span>&nbsp;
+        Remember: if you adjust <strong>any</strong> colors, you need to make sure that you account for and test in both light and dark mode!
+    </div>
+</div>
+
+    .some-container {
+        --h2-color: var(--blue);
+    }
+    [data-theme="dark"] .some-container {
+        --h2-color: var(--blue--lighter--20);
+    } 
 
 
 ## Page layout
@@ -260,7 +338,7 @@ Mostly based on major second scale.
     --icon-size--lg: 3rem;
 
 ### Touch Targets
---touch-target--min: 44px;
+    --touch-target--min: 44px;
 
 ### Logo
     --logo-size: 8rem;

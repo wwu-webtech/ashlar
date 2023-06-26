@@ -90,6 +90,11 @@ Molecule: Card Containers
   }
 }
 .card-3col--flex {
+  --h2-size: var(--font-size--2xl);
+  --h3-size: var(--font-size--xl);
+  --h4-size: var(--font-size--lg);
+  --h5-size: var(--font-size--md);
+  --h6-size: var(--font-size--md);
   .card,
   .wwu-card,
   .hover-card {
@@ -99,6 +104,11 @@ Molecule: Card Containers
   }
 }
 .card-4col--flex {
+  --h2-size: var(--font-size--xl);
+  --h3-size: var(--font-size--lg);
+  --h4-size: var(--font-size--md);
+  --h5-size: var(--font-size--md);
+  --h6-size: var(--font-size--md);
   .card,
   .wwu-card,
   .hover-card {
@@ -108,6 +118,11 @@ Molecule: Card Containers
   }
 }
 .card-5col--flex {
+  --h2-size: var(--font-size--lg);
+  --h3-size: var(--font-size--md);
+  --h4-size: var(--font-size--md);
+  --h5-size: var(--font-size--sm);
+  --h6-size: var(--font-size--sm);
   .card,
   .wwu-card,
   .hover-card {

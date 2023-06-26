@@ -135,6 +135,7 @@ Classes to alter the font or styling of text. Be conscious of potential accessib
 * tagline
 * font-size--smaller
 * font-size--larger
+* word-break--all
 
 ## Video
 When embedding video on a page, adding the following wrapper will make the iframe responsive:

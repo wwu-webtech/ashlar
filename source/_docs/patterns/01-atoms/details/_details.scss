@@ -7,11 +7,10 @@ Firefox needs additional reset query, based on /core/themes/stable/css/core/norm
 ------------------------------------------------------------------------------*/
 
 details {
-  padding: var(--space--md);
   summary {
     display: revert;
     margin-bottom: var(--space--md);
-    padding: var(--space--md);
+    padding: var(--space--sm);
     border: var(--border-width--sm) solid var(--h3-color);
     @media (min--moz-device-pixel-ratio: 0) {
       display: list-item;
