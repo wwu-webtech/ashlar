@@ -70,6 +70,7 @@
       "source/_docs/patterns/02-molecules/**/*.scss",
       "source/_docs/patterns/03-organisms/**/*.scss",
       "source/_docs/patterns/04-templates/**/*.scss",
+      "source/_docs/patterns/05-sites/**/*.scss",
     ],
     dest: "build/css/components",
     watch: [
@@ -78,6 +79,7 @@
       "source/_docs/patterns/02-molecules/**/*.scss",
       "source/_docs/patterns/03-organisms/**/*.scss",
       "source/_docs/patterns/04-templates/**/*.scss",
+      "source/_docs/patterns/05-sites/**/*.scss",
     ],
     options: {
       includePaths: [
