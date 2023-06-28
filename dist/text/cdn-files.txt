@@ -13,12 +13,9 @@ fonts/Atkinson-Hyperlegible-Italic-102a.woff2
 fonts/Atkinson-Hyperlegible-Regular-102a.woff2
 fonts/OpenDyslexic3-Regular.woff2
 fonts/fira-sans-italic.woff2
-fonts/fira-sans-light-italic.woff2
-fonts/fira-sans-normal-300.woff2
 fonts/fira-sans-normal-400.woff2
 fonts/fira-sans-normal-600.woff2
 fonts/fira-sans-normal-700.woff2
-fonts/fira-sans-normal-900.woff2
 fonts/MaterialIcons-Regular.ttf
 fonts/montserrat-700.woff2
 fonts/montserrat-900.woff2
