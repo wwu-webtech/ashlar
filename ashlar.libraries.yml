@@ -64,6 +64,10 @@ countdown:
       build/css/components/countdown.css: {}
   js:
     build/js/countdown.js: {}
+dialog:
+  version: 1.x
+  js:
+    build/js/dialog.js: {}
 donut-chart:
   version: 1.x
   css:
@@ -104,10 +108,11 @@ image-with-description:
   css:
     theme:
       build/css/components/image-with-description.css: {}
-dialog:
+material-icons:
   version: 1.x
-  js:
-    build/js/dialog.js: {}
+  css:
+    theme:
+      dist/css/material-icons.css: {}
 menu-extras:
   version: 1.x
   js:
