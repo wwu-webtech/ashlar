@@ -11,7 +11,7 @@ import WWUSearch from "./search.js"
                 <span class="material-icons" aria-hidden="true">search</span>
                 <span class="toggle-text">Go</span>
             </button>
-
+            
             <input type="hidden" name="pr" value="Default-WWU-Base" />
         </form>
     </noscript>
@@ -27,7 +27,7 @@ import WWUSearch from "./search.js"
                 <span class="material-icons" aria-hidden="true">search</span>
                 <span class="toggle-text">Go</span>
             </button>
-
+            
             <input type="hidden" name="pr" value="Default-WWU-Base">
         </form>
     </noscript>
