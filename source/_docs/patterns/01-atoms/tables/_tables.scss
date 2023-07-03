@@ -136,6 +136,22 @@ table {
     font-size: var(--font-size--md);
   }
 }
+.sticky-headers {
+  th {
+    position: sticky;
+    top: 0;
+  }
+}
+/* In admin view push headers below admin bar */
+@media (min-width: $medium) {
+  .toolbar-fixed.toolbar-tray-open {
+    .sticky-headers {
+      th {
+        top: calc(.5rem + var(--space--2xl));
+      }
+    }
+  }
+}
 /*------------------------------------------------------------------------------
 4. Dark Mode
 ------------------------------------------------------------------------------*/
