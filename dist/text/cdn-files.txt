@@ -40,6 +40,7 @@ css/components/schedule.css
 css/components/search.css
 css/components/switcher.css
 css/components/testimonial.css
+css/components/wordpress.css
 css/components/wwu-footer.css
 css/components/wwu-header.css
 images/forms/check-white.png
