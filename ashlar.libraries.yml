@@ -20,6 +20,7 @@ accordion:
   css:
     theme:
       build/css/components/accordion.css: {}
+      dist/css/material-icons.css: {}
   js:
     build/js/accordion.js: {}
 alerts:
