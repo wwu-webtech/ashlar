@@ -80,7 +80,7 @@
   {% if submitted %}
     <footer>
       {{ user_picture }}
-      <p>{{ submitted }}</p>
+      <p>Submitted by <span class="bold">{{ author|striptags }}</span> on {{ created }}</p>
 
       {#
         Indicate the semantic relationship between parent and child comments for
