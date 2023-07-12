@@ -424,7 +424,7 @@ Molecule: Charts - Org Chart
       &:last-of-type > h6 a:before {
         position: absolute;
         top: calc(-1 * var(--chart-spacing));
-        left: 50%;
+        left: calc(var(--chart-spacing)/2 + 50%);
         display: block;
         width: var(--chart-border-width);
         height: var(--chart-spacing);
