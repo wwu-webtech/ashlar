@@ -91,6 +91,7 @@ input[type="radio"] {
   + label {
     position: relative;
     display: inline-block;
+    min-height: var(--touch-target--min);
     margin-bottom: 0;
     font-weight: var(--font-weight--regular);
     &:before {
