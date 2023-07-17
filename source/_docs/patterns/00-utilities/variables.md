@@ -126,7 +126,7 @@ This is a complete list of color variables in the theme. We highly recommend tha
     --table-blue--darker--10: #daecf8;
     --table-blue--darker--15: #c5dff0;
     --table-blue--darker--5: #e4f2fb;
-    --table-gray: #fdfdfd;
+    --table-gray: #ffffff;
     --table-gray--darker--10: #eeeeee;
     --table-gray--darker--15: #e4e4e4;
     --table-gray--darker--5: #f5f5f6;

@@ -1,7 +1,7 @@
 # Icons
 
 ## Material Symbol Icons
-We utilize [Material Symbols](https://fonts.google.com/icons) as icons. You can use any symbol in that library with the "material-icons" class on a span.
+We utilize [Material Symbols](https://fonts.google.com/icons) as icons. These icons are included in blocks that have an icon field, and can also be loaded via the ashlar/material-icons library. For performance reasons, components in Ashlar now use SVG versions of these icons rather than the font.
 
 <span className="material-icons">home</span>
 
