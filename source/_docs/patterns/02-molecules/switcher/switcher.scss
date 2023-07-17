@@ -14,6 +14,9 @@ wwu-switcher {
     border-radius: 0;
     background: transparent;
     box-shadow: none;
+    .component-icon {
+      fill: var(--link-color);
+    }
     &:active,
     &:focus,
     &:hover {
@@ -22,6 +25,9 @@ wwu-switcher {
       color: var(--link-color--focus);
       outline-offset: var(--outline-offset--inset);
       background: var(--link-background--focus);
+      .component-icon {
+        fill: var(--link-color--focus);
+      }
     }
     &.active {
       font-weight: var(--font-weight--semibold);

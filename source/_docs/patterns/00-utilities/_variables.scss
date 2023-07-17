@@ -82,7 +82,7 @@ $large: 1300px;
 --green--darker--20: #3b6818;
 --green: #4a821e;
 --green--lighter--20: #6e9b4b;
---green--lighter--40: #92b478; // possib
+--green--lighter--40: #92b478; 
 --green--lighter--60: #b7cda5;
 --green--lighter--80: #dbe6d2;
 
@@ -112,7 +112,7 @@ $large: 1300px;
 --table-blue--darker--10: #daecf8;
 --table-blue--darker--15: #c5dff0;
 --table-blue--darker--5: #e4f2fb;
---table-gray: #fdfdfd;
+--table-gray: var(--white);
 --table-gray--darker--10: #eeeeee;
 --table-gray--darker--15: #e4e4e4;
 --table-gray--darker--5: #f5f5f6;
@@ -200,7 +200,6 @@ $large: 1300px;
 --font--title: "Montserrat", sans-serif;
 
 /* b. Font weights -----------------------------------------------------------*/
---font-weight--light: 300;
 --font-weight--regular: 400;
 --font-weight--semibold: 600;
 --font-weight--bold: 700;
