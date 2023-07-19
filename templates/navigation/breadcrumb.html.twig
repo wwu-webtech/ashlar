@@ -18,9 +18,9 @@
         {% else %}
         <li>
           {% if item.url %}
-            <a href="{{ item.url }}">{{ item.text }}</a><span class="material-icons" aria-hidden="true">chevron_right</span>
+            <a href="{{ item.url }}">{{ item.text }}</a><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
           {% else %}
-            {{ item.text }}<span class="material-icons" aria-hidden="true">chevron_right</span>
+            {{ item.text }}<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
           {% endif %}
         </li>
         {% endif %} 
