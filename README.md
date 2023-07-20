@@ -24,7 +24,7 @@ After completing section 2, you can navigate to the site in your browser and the
 
 Clone this repository:
 
-`git clone git@bitbucket.org:wwuweb/ashlar.git`
+`git clone https://bitbucket.org/wwuweb/ashlar.git`
 
 Get into the `/ashlar` folder, install packages, and run gulp to compile the theme files using the following commands:
 
@@ -36,6 +36,8 @@ npm install gulp-cli -g
 
 gulp
 ```
+
+If you are working in Drupal, be sure to clear the cache after compiling the theme.
 
 ### 3. Install and run Docusaurus
 
