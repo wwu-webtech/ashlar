@@ -9,7 +9,7 @@ Use these short tags to add social media links to your website. Group should be 
 <wwu-social group="Western" url="https://www.linkedin.com/school/western-washington-university/"></wwu-social>
 <wwu-social group="Western" url="https://www.pinterest.com/mywestern/"></wwu-social>
 <wwu-social group="Western" url="https://www.snapchat.com/add/"></wwu-social>
-<wwu-social group="Western" url="https://twitter.com/WWU"></wwu-social>
+<wwu-social group="Western" url="https://www.threads.net/@westernwashingtonuniversity "></wwu-social>
 <wwu-social group="Western" url="https://www.tiktok.com/@westernwauniversity"></wwu-social>
 <wwu-social group="Western" url="https://vimeo.com/user30954810"></wwu-social>
 <wwu-social group="Western" url="https://www.youtube.com/wwu"></wwu-social>
@@ -21,7 +21,7 @@ Use these short tags to add social media links to your website. Group should be 
 <wwu-social group="Western" url="https://www.linkedin.com/school/western-washington-university/"></wwu-social>
 <wwu-social group="Western" url="https://www.pinterest.com/mywestern/"></wwu-social>
 <wwu-social group="Western" url="https://www.snapchat.com/add/"></wwu-social>
-<wwu-social group="Western" url="https://twitter.com/WWU"></wwu-social>
+<wwu-social group="Western" url="https://www.threads.net/@westernwashingtonuniversity "></wwu-social>
 <wwu-social group="Western" url="https://www.tiktok.com/@westernwauniversity"></wwu-social>
 <wwu-social group="Western" url="https://vimeo.com/user30954810"></wwu-social>
 <wwu-social group="Western" url="https://www.youtube.com/wwu"></wwu-social>
