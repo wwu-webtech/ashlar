@@ -1,0 +1,7 @@
+@font-face {
+    font-family: "Material Icons";
+    src: url(../../build/fonts/MaterialIcons-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}

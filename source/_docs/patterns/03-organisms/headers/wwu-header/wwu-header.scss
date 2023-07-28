@@ -10,11 +10,13 @@ wwu-header {
   position: relative;
   display: grid;
   grid-template-columns: auto auto;
+  min-height: 13.75rem;
   border-bottom: solid var(--border-width--md) transparent;
   @media (min-width: $medium) {
     grid-template-columns: var(--logo-size) 1fr;
     grid-template-rows: auto 1fr;
     align-items: center;
+    min-height: 11rem;
   }
   noscript {
     display: grid;
