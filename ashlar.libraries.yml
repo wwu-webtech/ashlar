@@ -109,6 +109,11 @@ image-with-description:
   css:
     theme:
       build/css/components/image-with-description.css: {}
+mabel-facets:
+  version: 1.x
+  css:
+    theme:
+      build/css/components/mabel-facets.css: {}
 material-icons:
   version: 1.x
   css:

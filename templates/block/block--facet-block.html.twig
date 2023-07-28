@@ -2,6 +2,7 @@
 /**
  * @file
  * Theme override to display a block.
+ * This template is for MABEL's search facets.
  *
  * Available variables:
  * - plugin_id: The ID of the block implementation.
@@ -25,22 +26,35 @@
  * @see template_preprocess_block()
  */
 #}
+{{ attach_library('ashlar/mabel-facets') }}
 {%
   set classes = [
     'block',
+    'block--facet',
     'block--' ~ (derivative_plugin_id ? derivative_plugin_id|clean_class : plugin_id|clean_class),
   ]
 %}
 {% set attributes = attributes.addClass(classes) %}
 {% set title_attributes = title_attributes.addClass('title') %}
+
 {% block template %}
-<div{{ attributes }}>
+
+<details {{ attributes }}>
   {% block title %}
-    {% include "@templates/label/label.twig" %}
+    <summary>
+    {{ title_prefix }}
+      {% if label %}
+        <h3 {{ title_attributes }}>{{ label }}</h3>
+      {% endif %}
+    {{ title_suffix }}
+    </summary>
   {% endblock %}
-  
+
   {% block content %}
+  <div class="content">
     {{ content }}
+  </div>
   {% endblock %}
-</div>
+</details>
+
 {% endblock %}
