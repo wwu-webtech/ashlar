@@ -346,7 +346,7 @@ Not this:
     --logo--horizontal--height: 6.25rem;
 
 ### Forms
-    --checkbox-size: 1.4rem;
+    --checkbox-size: 1rem;
 
 ## Animation
     --transition-speed--slow: 800ms;
