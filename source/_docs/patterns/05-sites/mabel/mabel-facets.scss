@@ -1,0 +1,28 @@
+/*------------------------------------------------------------------------------
+Sites: MABEL
+--------------------------------------------------------------------------------
+Facets
+------------------------------------------------------------------------------*/
+.block--facet {
+  summary {
+    margin: 0;
+    margin-top: calc(-1 * var(--border-width--md));
+    border-width: var(--border-width--md);
+  }
+  .title {
+    --h3-size: var(--font-size--md);
+
+    display: inline;
+  }
+  .content {
+    overflow-y: auto;
+    max-height: 20rem;
+    margin: 0;
+    padding: var(--space--sm);
+    word-break: break-all;
+  }
+  ul {
+    padding-left: var(--space--xs);
+    font-size: var(--font-size--sm);
+  }
+}

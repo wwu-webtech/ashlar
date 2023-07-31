@@ -25,34 +25,34 @@ h1 {
   + .tagline,
   + div .tagline {
     color: var(--h1-color);
-    font-size: var(--font-size--5xl);
+    font-size: var(--h3-size);
   }
 }
 h2 {
   + .tagline,
   + div .tagline {
     color: var(--h2-color);
-    font-size: var(--font-size--4xl);
+    font-size: var(--h4-size);
   }
 }
 h3 {
   + .tagline,
   + div .tagline {
     color: var(--h3-color);
-    font-size: var(--font-size--3xl);
+    font-size: var(--h5-size);
   }
 }
 h4 {
   + .tagline,
   + div .tagline {
     color: var(--h4-color);
-    font-size: var(--font-size--2xl);
+    font-size: var(--h6-size);
   }
 }
 h5 {
   + .tagline,
   + div .tagline {
     color: var(--h5-color);
-    font-size: var(--font-size--xl);
+    font-size: var(--default-font-size);
   }
 }

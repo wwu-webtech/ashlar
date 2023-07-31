@@ -10,6 +10,7 @@ Resets and styles for things in the docusaurus theme that are troublesome
   --ifm-navbar-link-hover-color: initial;
 }
 .docs-wrapper {
+  scroll-padding: var(--ifm-navbar-height);
   body:not(.navigation-with-keyboard) :not(input):focus {
     outline: dotted var(--oline-color) var(--outline-width);
     outline-offset: var(--oline-offset);

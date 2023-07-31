@@ -13,7 +13,7 @@
     
     <div className="wwu-image-link blue smallest simple">
         <div className="image-link">
-            <a className="smallest simple" href="/advancement">Alumni &amp; Foundation </a>
+            <a className="smallest simple" href="https://foundation.wwu.edu ">Alumni &amp; Foundation </a>
             
             <div className="image image--stylized">
                 <img alt="network of people" height="500" loading="lazy" src="https://wwu.edu/files/styles/card_square/public/2022-12/Community%201color.png.webp?itok=nBYFmGHS" typeof="foaf:Image" width="500" />
