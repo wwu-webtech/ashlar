@@ -79,28 +79,33 @@ if (
         close_item(this);
       }
     }
-  function key_toggle(event) {
-    const key_pressed = event.code;
-    const item_content = this.parentNode.nextElementSibling;
-    
-    if (key_pressed == "Enter" || key_pressed == "Space") {
-      event.preventDefault();
-      if (item_content.classList.contains("is-expanded")) {
-        close_item(this);
-      } else {
-        open_item(this);
+    function key_toggle(event) {
+      const key_pressed = event.code;
+      const item_content = this.parentNode.nextElementSibling;
+      
+      if (key_pressed == "Enter" || key_pressed == "Space") {
+        event.preventDefault();
+        if (item_content.classList.contains("is-expanded")) {
+          close_item(this);
+        } else {
+          open_item(this);
+        }
       }
     }
-  }
     
     function open_item(item) {
       const item_content = item.parentNode.nextElementSibling;         
       const close_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>`;
       
       item_content.classList.add("is-expanded");
-      item_content.style.maxHeight = item_content.scrollHeight + "px";
-      item.querySelector(".component-icon").innerHTML = close_icon;
-      item.setAttribute("aria-expanded", true);     
+      item_content.style.maxHeight = item_content.scrollHeight + "px";      
+      item.setAttribute("aria-expanded", true);
+      
+      if(item.querySelector(".component-icon")) {
+        item.querySelector(".component-icon").innerHTML = close_icon;
+      } else if (item.querySelector(".material-icons")) {
+        item.querySelector(".material-icons").innerHTML = close_icon;
+      }
       
     }    
     function close_item(item) {
@@ -109,8 +114,13 @@ if (
       
       item_content.classList.remove("is-expanded");
       item_content.style.maxHeight = null;
-      item.querySelector(".component-icon").innerHTML = open_icon;
       item.setAttribute("aria-expanded", false);
+      
+      if(item.querySelector(".component-icon")) {
+        item.querySelector(".component-icon").innerHTML = open_icon;
+      } else if (item.querySelector(".material-icons")) {
+        item.querySelector(".material-icons").innerHTML = open_icon;
+      }
       
     }
     
