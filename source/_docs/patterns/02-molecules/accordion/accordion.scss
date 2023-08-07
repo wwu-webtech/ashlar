@@ -17,6 +17,7 @@ wwu-accordion,
   }
   .expand {
     display: flex;
+    gap: var(--space--2xs);
     align-items: center;
     width: 100%;
     margin-bottom: calc(-1 * var(--border-width--md));
@@ -29,7 +30,7 @@ wwu-accordion,
     background: transparent;
     box-shadow: none;
     .material-icons {
-      font-size: var(--icon-size--sm);
+      font-size: var(--icon-size--xs);
     }
     &:active,
     &:focus,
