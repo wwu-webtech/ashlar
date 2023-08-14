@@ -67,7 +67,7 @@ a.wp-block-button__link {
   &[target="blank"] .material-icons {
     position: absolute;
     top: 0.65rem;
-    left: var(--space--sm);
+    transform: translatex(-0.175rem);
     color: var(--cta-decoration-color);
     @media (prefers-reduced-motion: no-preference) {
       animation: cta-animate-arrow-back 400ms ease-out forwards;
@@ -140,17 +140,17 @@ a.wp-block-button__link {
   }
   &[href$=".docx"] {
     &::after {
-      content: "DOCX";
+      content: "DOC";
     }
   }
   &[href$=".xlsx"] {
     &::after {
-      content: "XLSX";
+      content: "XLS";
     }
   }
   &[href$=".pptx"] {
     &::after {
-      content: "PPTX";
+      content: "PPT";
     }
   }
 }
