@@ -17,6 +17,8 @@
 <h5><a href="#">This is an H5 link</a></h5>
 
 ## Icon Links
+In order to use this pattern, you must load the ashlar/material-icons library on the page. You can do this by including another block on the page that has the library attached, attaching it to a view, or hard coding it in with a ``link`` tag pointing to the font file.
+
 <a href="#" className="icon-link"><span className="material-icons" aria-hidden="true">home</span><span class="text">Home</span></a>&nbsp;
 <a href="#" className="icon-link"><span className="material-icons" aria-hidden="true">how_to_reg</span><span class="text">Apply</span></a>
 
