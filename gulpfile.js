@@ -99,6 +99,50 @@
     },
   };
 
+  config.cdn = {
+    src: [
+      "**/*/alerts.css",
+      "**/*/ashlar-base.css",
+      "**/*/Atkinson-Hyperlegible-Bold-102a.woff2",
+      "**/*/Atkinson-Hyperlegible-BoldItalic-102a.woff2",
+      "**/*/Atkinson-Hyperlegible-Italic-102a.woff2",
+      "**/*/Atkinson-Hyperlegible-Regular-102a.woff2",
+      "**/*/OpenDyslexic3-Regular.woff2",
+      "**/*/fira-sans-italic.woff2",
+      "**/*/fira-sans-normal-400.woff2",
+      "**/*/fira-sans-normal-600.woff2",
+      "**/*/fira-sans-normal-700.woff2",
+      "**/*/MaterialIcons-Regular.ttf",
+      "**/*/montserrat-700.woff2",
+      "**/*/montserrat-900.woff2",
+      "**/*/pt-serif-400.woff2",
+      "**/*/pt-serif-700.woff2",
+      "**/*/logo.js",
+      "**/*/pre-header.js",
+      "**/*/search.js",
+      "**/*/wwu-footer.js",
+      "**/*/wwu-header.js",
+      "**/*/accordion.css",
+      "**/*/announcement.css",
+      "**/*/banner.css",
+      "**/*/beyond-basics-blocks.css",
+      "**/*/countdown.css",
+      "**/*/donut-chart.css",
+      "**/*/image-link.css",
+      "**/*/image-with-description.css",
+      "**/*/pre-header.css",
+      "**/*/pullquote.css",
+      "**/*/schedule.css",
+      "**/*/search.css",
+      "**/*/switcher.css",
+      "**/*/testimonial.css",
+      "**/*/wordpress.css",
+      "**/*/wwu-footer.css",
+      "**/*/wwu-header.css",
+    ],
+    dest: "../cdn",
+  };
+
   /**
    * JS configuration.
    *
@@ -323,7 +367,20 @@
       "fonts",
     ])
   );
-   
+
+  /**
+   * Copy CDN files to ./cdn folder.  Use Azure Storage Explorer to upload to cdn.
+   * You can get it here: https://azure.microsoft.com/en-us/products/storage/storage-explorer/
+   */
+  gulp.task('cdn', function () {
+    del([config.cdn.dest]);
+    process.chdir('./build');
+
+    return gulp
+      .src(config.cdn.src)
+      .pipe(gulp.dest(config.cdn.dest))
+  })
+
   /**
    * Set watch tasks.
    */
