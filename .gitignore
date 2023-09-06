@@ -41,6 +41,7 @@ Thumbs.db
 
 # Build directory
 /build/
+/cdn/
 
 # Sass cache
 .sass-cache/
