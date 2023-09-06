@@ -17,7 +17,7 @@ Wordpress Coblocks Adjustments
 8. FAQs
 ------------------------------------------------------------------------------*/
 .menu-primary {
-  z-index: unset;
+  z-index: 1;
 }
 a.wp-block-button__link:not(:hover):not(:focus):not(:active) {
   background: none !important;

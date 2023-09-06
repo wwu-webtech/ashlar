@@ -132,6 +132,9 @@ a.wp-block-button__link {
       border: none;
       font-size: var(--font-size--xs);
     }
+    .material-icons {
+      display: none;
+    }
   }
   &[href$=".pdf"] {
     &::after {

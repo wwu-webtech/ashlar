@@ -45,6 +45,7 @@
   config.sass = {
     src: ["source/sass/**/*.scss", "!source/sass/styleguide/*"],
     dest: "build/css",
+    cdndest: "cdn/css",
     watch: ["source/sass/**/*.scss"],
     options: {
       includePaths: [
@@ -73,6 +74,7 @@
       "source/_docs/patterns/05-sites/**/*.scss",
     ],
     dest: "build/css/components",
+    cdndest: "cdn/css/components",
     watch: [
       "source/_docs/patterns/00-utilities/**/*.scss",
       "source/_docs/patterns/01-atoms/**/*.scss",
@@ -115,6 +117,7 @@
   config.js = {
     src: ["source/js/**/*.js", "source/_docs/patterns/**/*.js"],
     dest: "build/js",
+    cdndest: "cdn/js",
     watch: ["source/js/**/*.js", "source/_docs/patterns/**/*.js"],
     template: {
       src: "source/js/behavior.lodash",
@@ -156,6 +159,7 @@
   config.images = {
     src: ["source/images/**/*.{jpg,jpeg,gif,png,svg}"],
     dest: "build/images",
+    cdndest: "cdn/images",
   };
 
   /**
@@ -170,6 +174,7 @@
       "source/fonts/*.ttf",
     ],
     dest: "build/fonts",
+    cdndest: "cdn/fonts",
   };
 
   /**
@@ -193,6 +198,7 @@
       // Flatten filepath globs.
       flatten(),
       gulp.dest(config.sass.dest),
+      gulp.dest(config.sass.cdndest),
       callback
     );
   });
@@ -214,6 +220,7 @@
       // Flatten filepath globs.
       flatten(),
       gulp.dest(config.sassComponents.dest),
+      gulp.dest(config.sassComponents.cdndest),
       callback
     );
   });
@@ -230,6 +237,7 @@
       sourcemaps.write(),
       flatten(),
       gulp.dest(config.sass.dest),
+      gulp.dest(config.sass.cdndest),
       callback
     );
   });
@@ -273,9 +281,9 @@
   });
 
   /**
-   * Generate wordpress friendly JS
+   * Generate JS for non-drupal applications
    */
-   gulp.task("minify", function (callback) {
+   gulp.task("js-no-wrap", function (callback) {
     pump(
       gulp.src(config.js.src),
       // Process each file in the source stream.
@@ -291,7 +299,7 @@
       }),
       // Flatten file path globs.
       flatten(),
-      gulp.dest(config.js.dest),
+      gulp.dest(config.js.cdndest),
       callback
     );
   });
@@ -300,30 +308,16 @@
    * Minify images.
    */
   gulp.task("images", function (callback) {
-    pump(gulp.src(config.images.src), gulp.dest(config.images.dest), callback);
+    pump(gulp.src(config.images.src), gulp.dest(config.images.dest), gulp.dest(config.images.cdndest), callback);
   });
 
   /**
    * Put fonts in the right spot.
    */
   gulp.task("fonts", function (callback) {
-    pump(gulp.src(config.fonts.src), gulp.dest(config.fonts.dest), callback);
+    pump(gulp.src(config.fonts.src), gulp.dest(config.fonts.dest), gulp.dest(config.fonts.cdndest), callback);
   });
 
-  /**
-   * Run js build without drupal behaviors via js-wp-cdn
-   */
-   gulp.task(
-    "wp-cdn",
-    gulp.parallel([
-      "sass",
-      "sassComponents",
-      "minify",
-      "images",
-      "fonts",
-    ])
-  );
-   
   /**
    * Set watch tasks.
    */
@@ -366,6 +360,7 @@
    */
   gulp.task(
     "default",
-    gulp.parallel(["sass", "sassComponents", "js", "images", "fonts"])
+    gulp.parallel(["sass", "sassComponents", "js", "js-no-wrap", "images", "fonts"])
   );
+
 })();
