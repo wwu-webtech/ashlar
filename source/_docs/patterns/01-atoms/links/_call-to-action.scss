@@ -5,21 +5,24 @@ Atom: Call to Action Link
 .cta,
 .cas-login-link,
 a.wp-block-button__link {
+  --cta-arrow-size: 5px;
   --cta-decoration-adjustment: 0.85rem;
   --cta-decoration-bg: transparent;
   --cta-decoration-color: var(--link-color);
   --cta-decoration-size: 2.3rem;
-  --cta-padding: 1.6rem;
-  --cta-size: 2.5rem;
+  --cta-min-height: 2.5rem;
+  --cta-padding-left: calc(var(--space--lg) + var(--cta-space));
+  --cta-padding-right: calc(var(--space--md) + var(--cta-space));
+  --cta-space: 1.6rem;
 
   position: relative;
   display: inline-grid;
   grid-auto-flow: column;
   align-content: center;
-  min-height: var(--cta-size);
+  min-height: var(--cta-min-height);
   margin-bottom: var(--space--md);
-  padding-right: calc(var(--space--md) + var(--cta-padding));
-  padding-left: calc(var(--space--sm) + var(--cta-size));
+  padding-right: var(--cta-padding-right);
+  padding-left: var(--cta-padding-left);
   text-underline-offset: unset;
   border-radius: var(--border-radius--roundest);
   background-size: 0 100%;
@@ -53,7 +56,7 @@ a.wp-block-button__link {
     top: var(--cta-decoration-adjustment);
     left: var(--cta-decoration-adjustment);
     display: inline-block;
-    padding: 5px;
+    padding: var(--cta-arrow-size);
     content: "";
     transform: rotate(-45deg);
     border: solid var(--cta-decoration-color);
@@ -95,6 +98,15 @@ a.wp-block-button__link {
         animation: cta-animate-arrow 400ms ease-out forwards;
       }
     }
+  }
+  &.small {
+    --cta-arrow-size: 4px;
+    --cta-decoration-adjustment: 0.55rem;
+    --cta-decoration-size: 1.5rem;
+    --cta-min-height: 1.7rem;
+    --cta-padding-left: calc(var(--space--md) + var(--cta-space));
+    --cta-padding-right: calc(var(--space--sm) + var(--cta-space));
+    --cta-space: 1.22rem;
   }
   &.blue,
   &.dark-blue,
@@ -160,24 +172,24 @@ a.wp-block-button__link {
 @keyframes cta-animate {
   0% {
     padding-right: var(--space--md);
-    padding-left: calc(var(--space--sm) + var(--cta-size));
+    padding-left: var(--cta-padding-left);
     background-size: 0;
   }
   100% {
-    padding-right: calc(var(--space--md) + var(--cta-padding));
+    padding-right: var(--cta-padding-right);
     padding-left: var(--space--md);
     background-size: 100%;
   }
 }
 @keyframes cta-animate-back {
   0% {
-    padding-right: calc(var(--space--md) + var(--cta-padding));
+    padding-right: var(--cta-padding-right);
     padding-left: var(--space--md);
     background-size: 100%;
   }
   100% {
     padding-right: var(--space--md);
-    padding-left: calc(var(--space--sm) + var(--cta-size));
+    padding-left: var(--cta-padding-left);
     background-size: 0;
   }
 }
@@ -186,13 +198,13 @@ a.wp-block-button__link {
     left: var(--cta-decoration-adjustment);
   }
   100% {
-    left: calc(100% - var(--cta-padding));
+    left: calc(100% - var(--cta-space));
     border-color: var(--link-color--focus);
   }
 }
 @keyframes cta-animate-arrow-back {
   0% {
-    left: calc(100% - var(--cta-padding));
+    left: calc(100% - var(--cta-space));
     border-color: var(--link-color--focus);
   }
   100% {
