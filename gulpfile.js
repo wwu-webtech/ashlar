@@ -135,7 +135,7 @@
     iifeNoJquery: {
       useStrict: true,
       trimCode: true,
-      params: ["$", "window", "document", "undefined"],
+      params: ["window", "document", "undefined"],
       args: ["this", "this.document"],
     },
     terser: {
@@ -292,7 +292,7 @@
           stream,
           
           // Wrap the JS in an immediately-invoked function expression.
-          iife(config.js.iife),
+          iife(config.js.iifeNoJquery),
           // Format the source.
           terser(config.js.terser)
         );
