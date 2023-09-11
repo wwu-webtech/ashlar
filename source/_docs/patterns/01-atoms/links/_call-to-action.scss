@@ -5,28 +5,32 @@ Atom: Call to Action Link
 .cta,
 .cas-login-link,
 a.wp-block-button__link {
+  --cta-arrow-size: 5px;
   --cta-decoration-adjustment: 0.85rem;
   --cta-decoration-bg: transparent;
   --cta-decoration-color: var(--link-color);
   --cta-decoration-size: 2.3rem;
-  --cta-padding: 1.6rem;
-  --cta-size: 2.5rem;
+  --cta-min-height: 2.5rem;
+  --cta-padding-left: calc(var(--space--lg) + var(--cta-space));
+  --cta-padding-right: calc(var(--space--md) + var(--cta-space));
+  --cta-space: 1.6rem;
 
   position: relative;
   display: inline-grid;
   grid-auto-flow: column;
   align-content: center;
-  min-height: var(--cta-size);
+  min-height: var(--cta-min-height);
   margin-bottom: var(--space--md);
-  padding-right: calc(var(--space--md) + var(--cta-padding));
-  padding-left: calc(var(--space--sm) + var(--cta-size));
+  padding-right: var(--cta-padding-right);
+  padding-left: var(--cta-padding-left);
+  animation: cta-animate-back 400ms ease-out forwards;
   text-underline-offset: unset;
   border-radius: var(--border-radius--roundest);
   background-size: 0 100%;
   font-weight: var(--font-weight--semibold);
   line-height: 1.2;
-  @media (prefers-reduced-motion: no-preference) {
-    animation: cta-animate-back 400ms ease-out forwards;
+  @media (prefers-reduced-motion: reduce) {
+    animation: unset;
   }
   &:before {
     // the circle
@@ -39,12 +43,13 @@ a.wp-block-button__link {
     width: var(--cta-decoration-size);
     height: var(--cta-decoration-size);
     content: "";
+    animation: cta-animate-circle-back 400ms ease-out forwards;
     border: solid var(--border-width--md) var(--cta-decoration-color);
     border-radius: 50%;
     background-color: var(--cta-decoration-bg);
     box-shadow: var(--shadow--soft);
-    @media (prefers-reduced-motion: no-preference) {
-      animation: cta-animate-circle-back 400ms ease-out forwards;
+    @media (prefers-reduced-motion: reduce) {
+      animation: unset;
     }
   }
   &:after {
@@ -53,13 +58,14 @@ a.wp-block-button__link {
     top: var(--cta-decoration-adjustment);
     left: var(--cta-decoration-adjustment);
     display: inline-block;
-    padding: 5px;
+    padding: var(--cta-arrow-size);
     content: "";
     transform: rotate(-45deg);
+    animation: cta-animate-arrow-back 400ms ease-out forwards;
     border: solid var(--cta-decoration-color);
     border-width: 0 var(--border-width--md) var(--border-width--md) 0;
-    @media (prefers-reduced-motion: no-preference) {
-      animation: cta-animate-arrow-back 400ms ease-out forwards;
+    @media (prefers-reduced-motion: reduce) {
+      animation: unset;
     }
   }
   .material-icons,
@@ -68,9 +74,10 @@ a.wp-block-button__link {
     position: absolute;
     top: 0.65rem;
     transform: translatex(-0.175rem);
+    animation: cta-animate-arrow-back 400ms ease-out forwards;
     color: var(--cta-decoration-color);
-    @media (prefers-reduced-motion: no-preference) {
-      animation: cta-animate-arrow-back 400ms ease-out forwards;
+    @media (prefers-reduced-motion: reduce) {
+      animation: unset;
     }
   }
   &.with-icon,
@@ -84,17 +91,33 @@ a.wp-block-button__link {
   &:active,
   &:focus,
   &:hover {
+    animation: cta-animate 400ms ease-out forwards;
     text-decoration: none;
-    @media (prefers-reduced-motion: no-preference) {
-      animation: cta-animate 400ms ease-out forwards;
-      &:before {
-        animation: cta-animate-circle 400ms ease-out forwards;
-      }
-      &:after,
-      .material-icons {
-        animation: cta-animate-arrow 400ms ease-out forwards;
+    @media (prefers-reduced-motion: reduce) {
+      animation: unset;
+    }
+    &:before {
+      animation: cta-animate-circle 400ms ease-out forwards;
+      @media (prefers-reduced-motion: reduce) {
+        animation: unset;
       }
     }
+    &:after,
+    .material-icons {
+      animation: cta-animate-arrow 400ms ease-out forwards;
+      @media (prefers-reduced-motion: reduce) {
+        animation: unset;
+      }
+    }
+  }
+  &.small {
+    --cta-arrow-size: 4px;
+    --cta-decoration-adjustment: 0.55rem;
+    --cta-decoration-size: 1.5rem;
+    --cta-min-height: 1.7rem;
+    --cta-padding-left: calc(var(--space--md) + var(--cta-space));
+    --cta-padding-right: calc(var(--space--sm) + var(--cta-space));
+    --cta-space: 1.22rem;
   }
   &.blue,
   &.dark-blue,
@@ -160,24 +183,24 @@ a.wp-block-button__link {
 @keyframes cta-animate {
   0% {
     padding-right: var(--space--md);
-    padding-left: calc(var(--space--sm) + var(--cta-size));
+    padding-left: var(--cta-padding-left);
     background-size: 0;
   }
   100% {
-    padding-right: calc(var(--space--md) + var(--cta-padding));
+    padding-right: var(--cta-padding-right);
     padding-left: var(--space--md);
     background-size: 100%;
   }
 }
 @keyframes cta-animate-back {
   0% {
-    padding-right: calc(var(--space--md) + var(--cta-padding));
+    padding-right: var(--cta-padding-right);
     padding-left: var(--space--md);
     background-size: 100%;
   }
   100% {
     padding-right: var(--space--md);
-    padding-left: calc(var(--space--sm) + var(--cta-size));
+    padding-left: var(--cta-padding-left);
     background-size: 0;
   }
 }
@@ -186,13 +209,13 @@ a.wp-block-button__link {
     left: var(--cta-decoration-adjustment);
   }
   100% {
-    left: calc(100% - var(--cta-padding));
+    left: calc(100% - var(--cta-space));
     border-color: var(--link-color--focus);
   }
 }
 @keyframes cta-animate-arrow-back {
   0% {
-    left: calc(100% - var(--cta-padding));
+    left: calc(100% - var(--cta-space));
     border-color: var(--link-color--focus);
   }
   100% {
@@ -221,5 +244,23 @@ a.wp-block-button__link {
   }
   100% {
     left: 0;
+  }
+}
+.cta.no-animation {
+  animation: unset;
+  &:before,
+  &:after,
+  .material-icons {
+    animation: unset;
+  }
+  &:active,
+  &:hover,
+  &:focus {
+    animation: unset;
+    &:before,
+    &:after,
+    .material-icons {
+      animation: unset;
+    }
   }
 }
