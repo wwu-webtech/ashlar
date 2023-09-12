@@ -6,11 +6,6 @@ import WWUHeader from "./wwu-header.js"
 <wwu-header sitename='A Western Department' sitename-link='/' regioncontent='<div><p><a href=#>A Website of this Department</a></p></div>'></wwu-header>
 
 ```
-Place in or near <head>
-<link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/normalize.css" />
-<link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/ashlar-base.css" />
-<link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/components/wwu-header.css" />
-
 Place inside <header>
 <wwu-header sitename='A Western Website' sitename-link='/' regioncontent='<div><p><a href=#>Department of this College</a></p></div>'></wwu-header>
 
