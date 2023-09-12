@@ -4,6 +4,7 @@ if (
 ) {
   const pre_header_template = document.createElement("template");
   pre_header_template.innerHTML = `
+  <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/components/search.css" /-->
   <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/components/pre-header.css" /-->
 
   <a href="#main-content" class="skip-link focusable icon-link">
