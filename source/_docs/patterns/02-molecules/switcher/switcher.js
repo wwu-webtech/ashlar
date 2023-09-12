@@ -4,6 +4,7 @@ if (
   ) {
   const switcher_template = document.createElement("template");
   switcher_template.innerHTML = `
+  <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/components/switcher.css" /-->
   <div class="switcher" role="tablist">
   </div>
 

@@ -4,6 +4,8 @@ if (
   ) {
     const countdown_template = document.createElement("template");
     countdown_template.innerHTML = `
+    <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/components/countdown.css" /-->
+
     <section aria-label="Countdown">
       <div role="timer" class="timer">
         <p><span class="number days">0</span> Days</p>

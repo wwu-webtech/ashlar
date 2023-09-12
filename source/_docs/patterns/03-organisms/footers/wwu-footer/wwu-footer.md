@@ -7,5 +7,9 @@ import WWUFooter from "./wwu-footer.js"
 <wwu-footer></wwu-footer>
 
 ```
+Place inside <footer>
 <wwu-footer></wwu-footer>
+
+Place near bottom of page
+<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/wwu-footer.js"></script>
 ```

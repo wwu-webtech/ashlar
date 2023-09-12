@@ -4,6 +4,8 @@ if (
 ) {
   const pre_header_template = document.createElement("template");
   pre_header_template.innerHTML = `
+  <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/components/pre-header.css" /-->
+
   <a href="#main-content" class="skip-link focusable icon-link">
       <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px"><g><rect fill="none" height="24" width="24"/></g><g><g><polygon points="18,6.41 16.59,5 12,9.58 7.41,5 6,6.41 12,12.41"/><polygon points="18,13 16.59,11.59 12,16.17 7.41,11.59 6,13 12,19"/></g></g></svg></span>
       <span class="skip-link-text">Skip to Content </span>      
