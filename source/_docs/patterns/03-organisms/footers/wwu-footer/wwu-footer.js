@@ -4,6 +4,8 @@ if (
 ) {
   const wwu_footer = document.createElement("template");
   wwu_footer.innerHTML = `
+    <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/components/wwu-footer.css" /-->
+
     <wwu-logo></wwu-logo>
 
     <div class="social">

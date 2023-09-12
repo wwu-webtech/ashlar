@@ -23,6 +23,7 @@
   const minify = require("gulp-minify");
   const jshint = require('gulp-jshint');
   const plumber = require('gulp-plumber');
+  const replace = require('gulp-replace');
 
   /**
    * Process the name of the input JS file to be used as the object key for a
@@ -258,10 +259,12 @@
             { name: drupalBehaviorName(file) },
             { variable: config.js.templateVariable }
           ),
+          // Remove HTML comments
+          replace(/<!--.*-->/g, ''),
           // Wrap the JS in an immediately-invoked function expression.
           iife(config.js.iife),
           // Format the source.
-          terser(config.js.terser)
+          terser(config.js.terser)          
         );
       }),
       // Flatten file path globs.
@@ -290,6 +293,9 @@
       flatmap(function (stream, file) {
         return pump(
           stream,
+          // Expose external stylesheets
+          replace('<!--link', '<link'),
+          replace('/-->', '/>'),
           
           // Wrap the JS in an immediately-invoked function expression.
           iife(config.js.iifeNoJquery),
