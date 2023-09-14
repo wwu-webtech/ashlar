@@ -33,9 +33,11 @@ You can customize the icon in your CTA with material icons. This behavior is eas
 
 
 <a href="#" className="cta with-icon">With an Icon <span className="material-icons" aria-hidden="true">accessibility_new</span></a><br/>
+<a href="#" className="cta small with-icon">Small with an Icon <span className="material-icons" aria-hidden="true">park</span></a><br/>
 <a href="#" className="cta align-center with-icon">Centered and with an Icon <span className="material-icons" aria-hidden="true">favorite_border</span></a><br/>
 
 ```
 <a href="#" class="cta with-icon">With an Icon <span class="material-icons" aria-hidden="true">accessibility_new</span></a>
+<a href="#" class="cta small with-icon">Small with an Icon <span className="material-icons" aria-hidden="true">park</span></a><br/>
 <a href="#" class="cta align-center with-icon">Centered and with an Icon <span class="material-icons" aria-hidden="true">favorite_border</span></a>
 ```
