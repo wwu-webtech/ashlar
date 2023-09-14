@@ -118,6 +118,11 @@ a.wp-block-button__link {
     --cta-padding-left: calc(var(--space--md) + var(--cta-space));
     --cta-padding-right: calc(var(--space--sm) + var(--cta-space));
     --cta-space: 1.22rem;
+    .material-icons {
+      top: 0.35rem;
+      transform: translatex(-0.22rem);
+      font-size: var(--icon-size--2xs);
+    }
   }
   &.blue,
   &.dark-blue,

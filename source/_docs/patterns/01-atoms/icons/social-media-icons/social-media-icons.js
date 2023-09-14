@@ -4,6 +4,8 @@ if (
     ) {
         const social_template = document.createElement("template");
         social_template.innerHTML = `
+        <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/components/social-media-icons.css" /-->
+
         <a class="wwu-social-link">
         <span class="visually-hidden"></span>
         <div class="wwu-social-icon">
