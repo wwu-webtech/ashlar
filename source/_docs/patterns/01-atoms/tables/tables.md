@@ -611,10 +611,14 @@ While we provide this example of complex table markup, in most cases a better pr
 </table>
 ```
 
-## Responsive 
-<div className="responsive-table" tabIndex="0">
+## Responsive
+
+The responsive table requires a div container with tabindex, role, and aria-label/aria-labelledby attributes.
+See [A Responsive Accessible Table](https://adrianroselli.com/2017/11/a-responsive-accessible-table.html#ResponsiveScrollingKeyboard) for more details.
+
+<div className="responsive-table" tabIndex="0" role="region" aria-labelledby="table-example">
     <table>
-        <caption>Table with responsive-table class</caption>
+        <caption id="table-example">Table with responsive-table class</caption>
       <thead>
         <tr>
             <th scope="col">Table Header</th>
@@ -695,9 +699,9 @@ While we provide this example of complex table markup, in most cases a better pr
 </div>
 
 ```
-<div className="responsive-table" tabindex="0">
+<div className="responsive-table" tabIndex="0" role="region" aria-labelledby="table-example">
     <table>
-        <caption>Table with responsive-table class</caption>
+        <caption id="table-example">Table with responsive-table class</caption>
       <thead>
         <tr>
             <th scope="col">Table Header</th>
