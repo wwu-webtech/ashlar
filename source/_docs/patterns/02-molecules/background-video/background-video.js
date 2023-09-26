@@ -47,13 +47,13 @@ if (
         console.log(error);
       });
       btn.classList.add("play");
-      btn.innerHTML = `<span class="material-icons" aria-hidden="true">pause</span>Pause</button>`;
+      btn.innerHTML = `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>Pause</button>`;
     }
     
     function pause_video(vid, btn) {
       vid.pause();
       btn.classList.remove("play");
-      btn.innerHTML = `<span class="material-icons" aria-hidden="true">play_arrow</span>Play</button>`;
+      btn.innerHTML = `<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff"><path d="M0 0h24v24H0z" fill="none"/><path d="M8 5v14l11-7z"/></svg>Play</button>`;
     }    
     
     function reduced_motion_check(pref, vid, btn) {
@@ -71,5 +71,6 @@ if (
         }
       }
     }  
-  }
+  } 
+    
   
