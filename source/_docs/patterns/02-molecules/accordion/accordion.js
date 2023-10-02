@@ -4,6 +4,7 @@ if (
   ) {
     const accordion_template = document.createElement("template");
     accordion_template.innerHTML = `
+    <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/components/accordion.css" /-->
     `;
     
     class WWUAccordion extends HTMLElement {

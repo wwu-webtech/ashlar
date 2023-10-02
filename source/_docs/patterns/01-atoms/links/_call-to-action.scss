@@ -73,7 +73,7 @@ a.wp-block-button__link {
   &[target="blank"] .material-icons {
     position: absolute;
     top: 0.65rem;
-    transform: translatex(-0.175rem);
+    transform: translatex(0.175rem);
     animation: cta-animate-arrow-back 400ms ease-out forwards;
     color: var(--cta-decoration-color);
     @media (prefers-reduced-motion: reduce) {
@@ -249,8 +249,11 @@ a.wp-block-button__link {
 .cta.no-animation {
   animation: unset;
   &:before,
-  &:after,
+  &:after {
+    animation: unset;
+  }
   .material-icons {
+    transform: translatex(0.65rem);
     animation: unset;
   }
   &:active,

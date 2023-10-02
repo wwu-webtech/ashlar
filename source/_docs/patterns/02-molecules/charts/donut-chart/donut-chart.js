@@ -4,6 +4,7 @@ if (
   ) {
   const donut_chart_template = document.createElement("template");
   donut_chart_template.innerHTML = `
+    <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/components/donut-chart.css" /-->
     <svg viewBox="0 0 31.83 31.83" role="img"> 
     </svg>
   `;
