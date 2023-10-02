@@ -7,6 +7,11 @@ styles used in a custom block on the site.
 :root {
   --content-area-max-width: 65rem;
 }
+h1 {
+  --h1-size: var(--font-size--5xl);
+
+  text-transform: none;
+}
 /*------------------------
 Main Search Form & Results
 ------------------------*/
@@ -155,12 +160,6 @@ AMI Set User Interface
 .path-amiset .layout--onecol .layout__region {
   max-width: none;
   margin-top: var(--space--md);
-}
-.path-amiset h1,
-.path-metadatadisplay h1 {
-  --h1-size: var(--font-size--5xl);
-
-  text-transform: none;
 }
 .path-amiset .page-title .field-label,
 .path-metadatadisplay .page-title .field-label {
