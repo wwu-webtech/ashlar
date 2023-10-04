@@ -68,12 +68,18 @@ Card Tweaks
 }
 .card h3 {
   font-family: var(--font--sans-serif);
-  font-weight: var(--font-weight--regular);
 }
 .card .image {
+  overflow: hidden;
   max-width: 400px;
   max-height: 200px;
   text-align: center;
+}
+.card .image + .image {
+  display: none;
+}
+.card .material-icons {
+  font-size: var(--icon-size--2xs);
 }
 .horizontal.card {
   grid-template-columns: auto 1fr;

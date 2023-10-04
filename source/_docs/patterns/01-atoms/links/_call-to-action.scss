@@ -158,6 +158,11 @@ a.wp-block-button__link {
     .material-icons {
       display: none;
     }
+    &.small {
+      &:after {
+        top: 0.4rem;
+      }
+    }
   }
   &[href$=".pdf"] {
     &::after {
