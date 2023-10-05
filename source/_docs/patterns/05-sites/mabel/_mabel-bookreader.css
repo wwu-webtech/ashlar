@@ -32,6 +32,10 @@ on the site.
   border-radius: var(--border-radius--round) !important;
   background-color: var(--blue) !important;
 }
+.BRicon:focus {
+  outline-color: var(--blue--lighter--80);
+  outline-offset: calc(-1 * var(--border-width-md));
+}
 .BookReader .BRbooksearch.desktop {
   height: unset;
   padding: 0;
@@ -65,6 +69,12 @@ Info Boxes
   border: none;
   border-radius: 0;
   background-color: var(--black);
+}
+#colorbox *:focus {
+  outline-color: var(--white);
+}
+#colorbox:focus {
+  outline-color: var(--white);
 }
 .BRfloatHead {
   color: var(--light-green--lighter--40);
