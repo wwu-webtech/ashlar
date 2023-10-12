@@ -68,12 +68,18 @@ Card Tweaks
 }
 .card h3 {
   font-family: var(--font--sans-serif);
-  font-weight: var(--font-weight--regular);
 }
 .card .image {
+  overflow: hidden;
   max-width: 400px;
   max-height: 200px;
   text-align: center;
+}
+.card .image + .image {
+  display: none;
+}
+.card .material-icons {
+  font-size: var(--icon-size--2xs);
 }
 .horizontal.card {
   grid-template-columns: auto 1fr;
@@ -94,8 +100,30 @@ Object page tweaks
 }
 .exposed-detail {
   padding: var(--space--sm);
-  border: solid var(--blue) var(--border-width--md);
-  border-bottom: none;
+  border: solid var(--link-decoration-color) var(--border-width--md);
+}
+.exposed-detail .material-icons {
+  position: relative;
+  top: 4px;
+  font-size: var(--icon-size--xs);
+}
+.exposed-detail + wwu-accordion-item .expand {
+  border-top: none;
+}
+.exposed-detail h3 {
+  --h3-size: var(--font-size--lg);
+}
+.object-details {
+  --h3-color: var(--blue--darker--40);
+  --h3-size: var(--font-size--md);
+  --h4-color: var(--blue--darker--40);
+  --h4-size: var(--font-size--md);
+  --h5-size: var(--font-size--md);
+}
+.object-details h3,
+.object-details h4,
+.object-details h5, {
+  margin-bottom: 0;
 }
 /*------------------------
 Transcripts
