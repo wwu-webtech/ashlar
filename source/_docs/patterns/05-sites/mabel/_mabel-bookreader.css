@@ -1,0 +1,226 @@
+/*------------------------------------------------------------------------------
+Sites: MABEL
+--------------------------------------------------------------------------------
+Custom styles for objects using the IA Bookreader.
+These are not compiled, this is simply a backup of the styles used in a display
+on the site.
+------------------------------------------------------------------------------*/
+.BRtoolbarSection .info,
+.BRtoolbarSection .share {
+  display: none;
+}
+.BRtoolbar {
+  padding: var(--space--xs);
+  color: var(--default-text-color) !important;
+  background-color: unset !important;
+  font-family: var(--font--sans-serif) !important;
+  font-size: var(--font-size--xl) !important;
+}
+.BRtoolbar a,
+.BRtoolbar a:hover {
+  padding: var(--space--xs);
+  text-decoration: none;
+  color: unset;
+}
+.BRtoolbarbuttons .BRpill {
+  height: unset;
+  margin: 0;
+  margin-right: var(--space--2xs);
+  padding: var(--space--md) !important;
+  color: var(--white) !important;
+  border: none;
+  border-radius: var(--border-radius--round) !important;
+  background-color: var(--blue) !important;
+}
+.BRicon:focus {
+  outline-color: var(--blue--lighter--80);
+  outline-offset: calc(-1 * var(--border-width-md));
+}
+.BookReader .BRbooksearch.desktop {
+  height: unset;
+  padding: 0;
+}
+.BookReader .BRbooksearch.desktop .BRsearchInput {
+  min-width: 10rem;
+  padding: var(--space--xs);
+}
+.BookReader .BRbooksearch.desktop .BRsearchSubmit {
+  margin: 0;
+  color: unset;
+  border-radius: var(--border-radius--round);
+  background-color: var(--blue);
+}
+.BRtoolbar.header {
+  padding: 0;
+}
+.BRmobileHamburgerWrapper {
+  padding: 0;
+}
+.BRmobileHamburger {
+  left: 0;
+  margin: 0;
+  border-radius: var(--border-radius--round);
+  background-color: var(--blue);
+}
+/*------------------------------------------------------------------------------
+Info Boxes
+------------------------------------------------------------------------------*/
+#colorbox {
+  border: none;
+  border-radius: 0;
+  background-color: var(--black);
+}
+#colorbox *:focus {
+  outline-color: var(--white);
+}
+#colorbox:focus {
+  outline-color: var(--white);
+}
+.BRfloatHead {
+  color: var(--light-green--lighter--40);
+  border: none;
+  font-size: var(--font-size--2xl);
+}
+.BRfloat {
+  color: var(--light-green--lighter--40);
+  font-family: unset;
+}
+.BRfloat .floatShut {
+  display: none;
+  margin: 0;
+  border-radius: var(--border-radius--round);
+  background-color: var(--blue);
+}
+.BRfloat label.sub {
+  color: var(--white);
+}
+.BRinfoW {
+  display: flex;
+  flex-flow: row wrap;
+}
+.BRinfoLeftCol {
+  float: unset;
+  flex: 0 1 20%;
+  width: 0;
+}
+.BRinfoRightCol {
+  float: unset;
+  flex: 1 1 0;
+  width: 0;
+}
+.BRinfoMoreInfoWrapper {
+  text-align: left;
+  background: transparent;
+}
+.BRinfoMoreInfoWrapper a {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: var(--border-width--md);
+
+  color: var(--blue--lighter--40);
+}
+.BRinfoMoreInfoWrapper a:hover,
+.BRinfoMoreInfoWrapper a:active,
+.BRinfoMoreInfoWrapper a:focus {
+  color: var(--dark-blue);
+}
+#cboxClose {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block !important;
+  padding: var(--space--2xs);
+  border-radius: var(--border-radius--round);
+}
+/*------------------------------------------------------------------------------
+Mobile Menu
+------------------------------------------------------------------------------*/
+.BRmobileMenu {
+  background-color: var(--blue);
+  font-family: unset;
+}
+.mm-navbar,
+.mm-panel,
+.mm-panels {
+  background-color: var(--blue);
+  font-size: var(--font-size--lg);
+}
+.mm-panel {
+  padding: 0;
+}
+.mm-panel:before {
+  display: none;
+}
+.mm-menu .mm-navbar > * {
+  color: var(--white);
+  font-size: var(--font-size--xl);
+}
+.mm-menu .mm-btn::after,
+.mm-menu .mm-btn::before,
+.mm-menu .mm-listview > li .mm-next,
+.mm-menu .mm-listview > li .mm-next::before,
+.mm-menu .mm-listview > li::after,
+.mm-menu .mm-listview > li .mm-arrow::after,
+.mm-menu .mm-listview > li .mm-next::after {
+  border-color: var(--light-green--lighter--40);
+  border-bottom: none;
+}
+.mm-menu a,
+.mm-menu a:link,
+.mm-menu a:visited {
+  color: var(--white);
+}
+.mm-menu a:active,
+.mm-menu a:hover {
+  color: var(--dark-blue);
+}
+.mm-panels > .mm-panel > .mm-listview:first-child,
+.mm-panels > .mm-panel > .mm-navbar + .mm-listview {
+  margin: 0;
+}
+/* Settings */
+.DrawerSettingsWrapper {
+  padding: var(--space--sm);
+}
+.DrawerSettingsWrapper {
+  padding-top: 75px;
+}
+/* About */
+.BRinfoW {
+  padding: var(--space--sm);
+  color: var(--white);
+}
+.BRinfoLabel {
+  margin-bottom: var(--space--sm);
+  color: var(--light-green--lighter--40);
+  font-size: var(--font-size--xl);
+  font-weight: var(--font-weight--bold);
+}
+/* Search (Not sure this actually works, might need to be hidden */
+.BookReader #BRsearch_tray,
+.BRmobileMenu #BRsearch_tray,
+.BRfloat #BRsearch_tray {
+  top: 75px;
+  background: transparent;
+}
+.BRmobileMenu h3 {
+  color: var(--light-green--lighter--40);
+}
+.BRmobileMenu #BRsearch_tray [type="search"] {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: var(--space--md);
+  padding: var(--space--md);
+  color: var(--input-text-color);
+  border: solid var(--border-width--md) var(--input-border-color);
+  border-radius: var(--border-radius--round);
+  background-color: var(--input-background-color);
+  box-shadow: none;
+  font-size: var(--font-size--lg);
+}
+/* Share */
+.BRmobileShare {
+  padding: var(--space--sm);
+  color: var(--white);
+}

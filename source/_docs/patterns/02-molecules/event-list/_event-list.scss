@@ -4,6 +4,11 @@ Molecule: Event List
 ------------------------------------------------------------------------------*/
 .event-list {
   .event {
+    --h2-size: var(--font-size--lg);
+    --h3-size: var(--font-size--lg);
+    --h4-size: var(--font-size--lg);
+    --h5-size: var(--font-size--lg);
+
     position: relative;
     display: grid;
     grid-column-gap: var(--space--sm);
@@ -29,7 +34,7 @@ Molecule: Event List
     .title {
       flex: 1 0 70%;
       grid-area: title;
-      margin-top: var(--space--sm);
+      margin-top: var(--space--xs);
       h2,
       h3,
       h4,
