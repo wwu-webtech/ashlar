@@ -123,10 +123,6 @@ menu-extras:
   version: 1.x
   js:
     build/js/menu-extras.js: {}
-profile:
-  version: 1.x
-  js:
-    build/js/profile.js: {}
 progress-tracker:
   version: 1.x
   css:
