@@ -346,27 +346,9 @@ function _get_view_machine_name ($machine_name = NULL) {
 
 /**
 * Implements hook_views_pre_render().
-* Note:  If your site would like to use pattern lab scalable social icons then
-*  you can create a view with a machine name that resolves to one of the names
-*  below.  You'll also have to create the content type that includes a "Link"
-*  field to encapsulate the social media url and link text.  The code below attaches
-*  the profile.js script to your view which will replace the link text with a very
-*  nice social icon svg.  See profile.js if confused.
-*
-* Also gets pager name to pass to views-mini-pager.
+* Gets pager name to pass to views-mini-pager.
 */
-function ashlar_preprocess_views_view(&$variables) {
-  $view_array = $variables['view_array'];
-  $variables['#cache']['contexts'][] = 'route';
-
-  if (isset($view_array['#name'])) {
-    switch ($view_array['#name']) {
-      case 'profile_page':
-      case 'social_media_directory':
-        $variables['#attached']['library'][] = 'ashlar/profile';
-    }
-  }
-  
+function ashlar_preprocess_views_view(&$variables) {  
   if (!empty($variables['pager'])) {
     $view_pager_theme = $variables['pager']['#theme'][1];
     

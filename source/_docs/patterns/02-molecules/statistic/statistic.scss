@@ -6,10 +6,9 @@ Molecule: Statistic
 3. With Icons
 ------------------------------------------------------------------------------*/
 .wwu-statistic-collection {
-  gap: var(--space--sm);
-
   display: flex;
   flex-flow: row wrap;
+  gap: var(--space--sm);
   justify-content: center;
   .title {
     flex: 0 0 100%;
@@ -63,7 +62,8 @@ Molecule: Statistic
 /*------------------------------------------------------------------------------
 2. Stacked
 ------------------------------------------------------------------------------*/
-.wwu-statistic-collection.stacked {
+.wwu-statistic-collection.stacked,
+.wwu-statistic-collection.statistics-collection--stacked {
   flex-flow: column;
   .wwu-statistic {
     display: grid;
