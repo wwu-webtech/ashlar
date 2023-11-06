@@ -8,6 +8,8 @@ Molecule: Navigation - Pager
 ------------------------------------------------------------------------------*/
 
 .pager {
+  grid-column: 1 / span all;
+  width: 100%;
   ul {
     display: flex;
     flex-flow: row wrap;
