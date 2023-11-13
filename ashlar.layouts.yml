@@ -1,6 +1,6 @@
 layout_onecol_full:
   label: "One column - full content width"
-  path: atoms/layouts/onecol
+  path: templates/layouts/onecol
   template: onecol--full
   category: "Columns: 1"
   default_region: first
@@ -11,7 +11,7 @@ layout_onecol_full:
       label: First
 layout_onecol_page_width:
   label: "One column - full page width"
-  path: atoms/layouts/onecol
+  path: templates/layouts/onecol
   template: onecol--page-width
   category: "Columns: 1"
   default_region: first
@@ -22,7 +22,7 @@ layout_onecol_page_width:
       label: First
 layout_twocol_page_width:
   label: "Two column - full page width"
-  path: atoms/layouts/twocol
+  path: templates/layouts/twocol
   template: twocol--page-width
   category: "Columns: 2"
   default_region: first
@@ -35,7 +35,7 @@ layout_twocol_page_width:
       label: Second
 layout_threecol_page_width:
   label: "Three column - full page width"
-  path: atoms/layouts/threecol
+  path: templates/layouts/threecol
   template: threecol--page-width
   category: "Columns: 3"
   default_region: first
@@ -50,7 +50,7 @@ layout_threecol_page_width:
       label: Third
 layout_fourcol_page_width:
   label: "Four column - full page width"
-  path: atoms/layouts/fourcol
+  path: templates/layouts/fourcol
   template: fourcol--page-width
   category: "Columns: 4"
   default_region: first
@@ -67,7 +67,7 @@ layout_fourcol_page_width:
       label: Fourth
 layout_flex:
   label: "Flex Container"
-  path: atoms/layouts/flex
+  path: templates/layouts/flex
   template: layout--flex
   category: "Columns: 1"
   default_region: flex
@@ -78,7 +78,7 @@ layout_flex:
       label: Flex
 layout_majors:
   label: 'Deprecated'
-  path: atoms/layouts/twocol
+  path: templates/layouts/twocol
   template: twocol--page-width
   category: "Columns: 2"
   default_region: first
