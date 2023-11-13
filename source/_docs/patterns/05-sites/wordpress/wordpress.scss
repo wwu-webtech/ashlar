@@ -15,6 +15,7 @@ Wordpress Coblocks Adjustments
 6. Events
 7. Hero
 8. FAQs
+9. Misc
 ------------------------------------------------------------------------------*/
 .menu-primary {
   z-index: 1;
@@ -150,4 +151,10 @@ code {
   top: 50%;
   right: var(--space--2xs);
   transform: translatey(-50%) rotate(180deg);
+}
+/*------------------------------------------------------------------------------
+3. Miscellaneous fixes
+------------------------------------------------------------------------------*/
+.site-name {  // This is to fix when site's title is missing.
+    display: inline !important;
 }
