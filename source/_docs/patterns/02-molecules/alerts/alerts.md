@@ -2,8 +2,8 @@
 
 ## Emergency
 
-<div className="emergency-live-region" role="alert">
-  <div id="alert-emergency" className="alert emergency">
+  <div id="alert-emergency" class="alert emergency" style="display: none">
+    <h2 class="alert-header">
     <h2 className="alert-header">
       There are no emergency alerts at this time.
     </h2>
@@ -51,7 +51,7 @@
         </g>
       </svg>
     </div>
-    
+
     <div className="alert-body">
       <p>
         This is only a style test.
@@ -65,8 +65,8 @@
 
 ## Weather
 
-<div className="weather-live-region" role="alert">
-  <div id="alert-weather" className="alert weather">
+  <div id="alert-weather" class="alert weather" style="display: none;">
+    <h2 class="alert-header">
     <h2 className="alert-header">
       There are no weather alerts at this time.
     </h2>
@@ -80,7 +80,7 @@
         28.6,30.3 27.1,24.7 33,28.1 "/>
       </svg>
     </div>
-    
+
     <div className="alert-body">
       <p>
         This is only a style test.
