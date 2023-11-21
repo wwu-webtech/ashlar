@@ -4,15 +4,13 @@ if (
   ) {
     const search_template = document.createElement("template");
     search_template.innerHTML = `
-    <form class="search-area" method="get" action="https://search2.wwu.edu/texis/search/">
+    <form class="search-area" method="get" action="https://wwu-webtech.github.io/wwu-search/">
       <label for="search-box" class="search-label">Search:</label>
-      <input id="search-box" name="query" type="search">
+      <input id="search-box" name="q" type="search">
       <button class="submit-search">
         <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></span>
         <span class="toggle-text">Go</span>
-      </button>
-
-      <input id="profile" type="hidden" name="pr">
+      </button>      
     </form>
     `;
 
@@ -24,11 +22,6 @@ if (
       connectedCallback() {
         /* Create the custom element by appending the template */
         this.appendChild(search_template.content.cloneNode(true));
-        if (this.getAttribute("profile") != null) {
-          this.querySelector("#profile").setAttribute("value", this.getAttribute("profile"));
-        } else {
-          this.querySelector("#profile").setAttribute("value", "Default-WWU-Base");
-        }
       }
     }
 
