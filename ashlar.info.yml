@@ -1,8 +1,8 @@
 name: Ashlar
 type: theme
 description: An atomic design Drupal theme for Western Washington University
-core_version_requirement: ^8.8 || ^9
-base theme: stable
+core_version_requirement: ^8.8 || ^9 || ^10
+base theme: false
 libraries:
   - ashlar/ashlar-base
   - ashlar/fonts
@@ -10,14 +10,6 @@ libraries:
   - ashlar/social-media-icons
   - ashlar/wwu-header
   - ashlar/wwu-footer
-libraries-override:
-  core/drupal.dialog.off_canvas:
-    css:
-      base:
-        /core/themes/stable/css/core/dialog/off-canvas.reset.css: dist/css/off-canvas.reset.css
-        /core/themes/stable/css/core/dialog/off-canvas.base.css: /core/themes/stable/css/core/dialog/off-canvas.base.css
-        /core/themes/stable/css/core/dialog/off-canvas.css: /core/themes/stable/css/core/dialog/off-canvas.css
-        /core/themes/stable/css/core/dialog/off-canvas.theme.css: /core/themes/stable/css/core/dialog/off-canvas.theme.css
 regions:
   wwu_header: Western Header
   header: Splash Area
