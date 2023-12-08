@@ -29,6 +29,9 @@ Molecule: Card Containers
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
   }
+  .pager {
+    grid-column: 1 / span 2;
+  }
 }
 .card-3col,
 .card-3col--view .view-content {
@@ -40,6 +43,9 @@ Molecule: Card Containers
   @media (min-width: $small) {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
+  }
+  .pager {
+    grid-column: 1 / span 3;
   }
 }
 .card-4col,
@@ -53,6 +59,9 @@ Molecule: Card Containers
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
   }
+  .pager {
+    grid-column: 1 / span 4;
+  }
 }
 .card-5col,
 .card-5col--view .view-content {
@@ -64,6 +73,9 @@ Molecule: Card Containers
   @media (min-width: $small) {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
+  }
+  .pager {
+    grid-column: 1 / span 5;
   }
 }
 /* b. Flex -------------------------------------------------------------------*/
