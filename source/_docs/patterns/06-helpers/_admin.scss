@@ -46,6 +46,14 @@ Layout Builder
     background-color: var(--dark-gray--darker--80);
   }
 }
+#drupal-off-canvas a.tabledrag-handle .handle {
+  width: 40px;
+  height: 40px;
+}
+#drupal-off-canvas th:first-child,
+#drupal-off-canvas td:first-child {
+  width: unset;
+}
 /*------------------------------------------------------------------------------
 Media Library
 ------------------------------------------------------------------------------*/
