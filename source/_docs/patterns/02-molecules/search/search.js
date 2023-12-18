@@ -4,7 +4,7 @@ if (
   ) {
     const search_template = document.createElement("template");
     search_template.innerHTML = `
-    <form class="search-area" method="get" action="https://search.wwu.edu/>
+    <form class="search-area" method="get" action="https://search.wwu.edu/">
       <label for="search-box" class="search-label">Search:</label>
       <input id="search-box" name="q" type="search">
       <button class="submit-search">
