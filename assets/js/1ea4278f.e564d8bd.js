@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkashlar_docs=self.webpackChunkashlar_docs||[]).push([[9184],{5457:e=>{e.exports=JSON.parse('{"permalink":"/changelog/tags/minor-release/page/4","page":4,"postsPerPage":10,"totalPages":4,"totalCount":34,"previousPage":"/changelog/tags/minor-release/page/3","blogDescription":"Blog","blogTitle":"Blog"}')}}]);
