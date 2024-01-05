@@ -14,6 +14,7 @@ Molecule: Main navigation/ultimenu custom styles
   .ultimenu--horizontal {
     @include blue-bg;
 
+    position: relative;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -40,6 +41,10 @@ Molecule: Main navigation/ultimenu custom styles
       }
     }
   }
+  .ultimenu__flyout,
+  .ultimenu__region {
+    width: 100%;
+  }
   .ultimenu__link,
   .top-level-menu-item > a {
     position: relative;
@@ -57,6 +62,7 @@ Molecule: Main navigation/ultimenu custom styles
       display: flex;
       align-items: center;
       padding: var(--space--sm);
+      padding-right: var(--space--lg);
       text-align: center;
     }
   }

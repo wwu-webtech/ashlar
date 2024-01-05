@@ -1,7 +1,6 @@
 /*------------------------------------------------------------------------------
 Molecule: Menu flyout
 --------------------------------------------------------------------------------
-1. Wordpress
 ------------------------------------------------------------------------------*/
 .main-navigation .ultimenu__region,
 .nav-primary .sub-nav.open {
@@ -18,7 +17,7 @@ Molecule: Menu flyout
   padding: var(--space--md);
   @media (min-width: $medium) {
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
     max-width: 100vw;
     height: inherit;
