@@ -40,7 +40,7 @@ Molecule: Headline
   margin-bottom: var(--space--xl);
   padding: var(--space--md);
   border: solid var(--border-width--md) transparent;
-  background: rgba(var(--blue--rgb), 0.8);
+  background: var(--blue);
   @media (min-width: $large) {
     max-width: 70vw;
   }
