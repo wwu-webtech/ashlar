@@ -22,7 +22,7 @@ if (
     <blockquote class="dark-blue-bg">Blockquote</blockquote>
 
     <form>
-      <label class="required" htmlFor="input">Form element</label>
+      <label class="required" for="input">Form element</label>
       <input id="input"/>
     </form>
 

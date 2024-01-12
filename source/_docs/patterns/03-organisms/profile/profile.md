@@ -16,7 +16,7 @@ import Placeholder from '@site/static/img/placeholder.jpg';
     </div>
     
     <div className="website">
-      <h3>Website</h3>
+      <h2>Website</h2>
       <p><a href="https://www.wwu.edu/geordilaforge">Geordi La Forge's Homepage</a></p>
     </div>
   </div>
