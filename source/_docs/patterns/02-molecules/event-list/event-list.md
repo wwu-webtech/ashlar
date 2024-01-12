@@ -2,6 +2,7 @@
 See also [event cards](/patterns/molecules/card#events).
 
 <div className="event-list">
+  <h2>Upcoming Events</h2>
     <div className="event">
         <div className="title">
             <h3>
@@ -54,6 +55,7 @@ See also [event cards](/patterns/molecules/card#events).
 
 ```
 <div class="event-list">
+  <h2>Upcoming Events</h2>
     <div class="event">
         <div class="title">
             <h3>
