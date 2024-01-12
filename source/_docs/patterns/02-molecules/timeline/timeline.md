@@ -33,9 +33,9 @@
             Eat some <a href="#">ice cream</a>
         </p>
         
-        <aside className="timeline-item--highlighted">   
+        <div className="timeline-item--highlighted">   
             See a zebra!
-        </aside>
+        </div>
         
         <p className="timeline-item">  
             Visit the gift shop
@@ -59,9 +59,9 @@
             Eat some <a href="#">ice cream</a>
         </p>
         
-        <aside className="timeline-item--highlighted">   
+        <div className="timeline-item--highlighted">   
             See a zebra!
-        </aside>
+        </div>
         
         <p className="timeline-item">  
             Visit the gift shop
@@ -81,9 +81,9 @@
             Eat some <a href="#">ice cream</a>
         </p>
         
-        <aside className="timeline-item--highlighted">   
+        <div className="timeline-item--highlighted">   
             See a zebra!
-        </aside>
+        </div>
         
         <p className="timeline-item">  
             Visit the gift shop
