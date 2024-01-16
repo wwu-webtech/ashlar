@@ -95,6 +95,7 @@ if (
         ];
         const mobile_menu = [
           this.querySelector(".wwu-menu"),
+          document.querySelector("wwu-main-nav"),
           document.querySelector(".main-navigation"),
           document.querySelector(".main-nav"), // for finaid				
         ];
