@@ -2,7 +2,7 @@
 
 <p>A paragraph (from the Greek paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.</p>
 
-<h3>Taglines</h3>
+<h2>Taglines</h2>
 
 <p className="tagline">A tagline, or subhead, uses the .tagline to make it look like it goes with whatever heading it follows.</p>
 
