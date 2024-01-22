@@ -6,8 +6,7 @@ See also [event cards](/patterns/molecules/card#events).
     <div className="event">
         <div className="title">
             <h3>
-                <a href="#">Soccer Match
-                </a>
+                <a href="#">Soccer Match</a>
             </h3>
         </div>
         <div className="date">
