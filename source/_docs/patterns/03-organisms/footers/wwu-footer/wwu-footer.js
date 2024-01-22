@@ -56,6 +56,7 @@ if (
     }
 
     connectedCallback() {      
+      console.log("creating element?");
       /* Create the custom element by appending the template */
       this.appendChild(footer_template.content.cloneNode(true));
       let currentDate = new Date();
