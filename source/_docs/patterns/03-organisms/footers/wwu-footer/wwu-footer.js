@@ -56,11 +56,21 @@ if (
     }
 
     connectedCallback() {
+      let element_exists = false;
+      console.log("first test");
+      console.log(element_exists);
       /* Create the custom element by appending the template */
-      this.appendChild(footer_template.content.cloneNode(true));
-      let currentDate = new Date();
-      this.querySelector('.copyright-date').innerText =  currentDate.getFullYear();
-      this.setAttribute('aria-label', 'Western footer');
+      if (!element_exists) {
+        console.log("second test");
+        console.log(element_exists);
+        this.appendChild(footer_template.content.cloneNode(true));
+        let currentDate = new Date();
+        this.querySelector('.copyright-date').innerText =  currentDate.getFullYear();
+        this.setAttribute('aria-label', 'Western footer');
+        element_exists = true;
+      }
+      console.log("third test");
+      console.log(element_exists);
     }
   }
 
