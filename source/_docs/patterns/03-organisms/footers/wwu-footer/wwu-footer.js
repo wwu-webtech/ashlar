@@ -55,24 +55,15 @@ if (
       super();
     }
 
-    connectedCallback() {      
-      console.log("creating element?");
+    console.log("new test");
+    connectedCallback() {
       /* Create the custom element by appending the template */
       this.appendChild(footer_template.content.cloneNode(true));
       let currentDate = new Date();
       this.querySelector('.copyright-date').innerText =  currentDate.getFullYear();
-      this.setAttribute('aria-label', 'Western footer');      
+      this.setAttribute('aria-label', 'Western footer');
     }
   }
 
-  let element_exists = false;
-  console.log("first test");
-  console.log(element_exists);
-
-  if (!element_exists) {
-    console.log("second test");
-    console.log(element_exists);
-    window.customElements.define("wwu-footer", WWUFooter);
-    element_exists = true;
-  }
+  window.customElements.define("wwu-footer", WWUFooter);
 }
