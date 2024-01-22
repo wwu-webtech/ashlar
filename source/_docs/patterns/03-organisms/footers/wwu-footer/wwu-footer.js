@@ -55,24 +55,23 @@ if (
       super();
     }
 
-    connectedCallback() {
-      let element_exists = false;
-      console.log("first test");
-      console.log(element_exists);
+    connectedCallback() {      
       /* Create the custom element by appending the template */
-      if (!element_exists) {
-        console.log("second test");
-        console.log(element_exists);
-        this.appendChild(footer_template.content.cloneNode(true));
-        let currentDate = new Date();
-        this.querySelector('.copyright-date').innerText =  currentDate.getFullYear();
-        this.setAttribute('aria-label', 'Western footer');
-        element_exists = true;
-      }
-      console.log("third test");
-      console.log(element_exists);
+      this.appendChild(footer_template.content.cloneNode(true));
+      let currentDate = new Date();
+      this.querySelector('.copyright-date').innerText =  currentDate.getFullYear();
+      this.setAttribute('aria-label', 'Western footer');      
     }
   }
 
-  window.customElements.define("wwu-footer", WWUFooter);
+  let element_exists = false;
+  console.log("first test");
+  console.log(element_exists);
+
+  if (!element_exists) {
+    console.log("second test");
+    console.log(element_exists);
+    window.customElements.define("wwu-footer", WWUFooter);
+    element_exists = true;
+  }
 }
