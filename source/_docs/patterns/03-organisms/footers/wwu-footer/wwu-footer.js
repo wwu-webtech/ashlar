@@ -54,8 +54,7 @@ if (
     constructor() {
       super();
     }
-
-    console.log("new test");
+    
     connectedCallback() {
       /* Create the custom element by appending the template */
       this.appendChild(footer_template.content.cloneNode(true));
