@@ -5,8 +5,8 @@
     <h2 className="title">Headline Heading</h2>
     
     <div className="body">
-        <p>Headline material can go here. Try using different classes to style this headline in different ways.
-            Headlines might have <a href="#">links</a>.
+        <p>
+        Headline material can go here. Try using different classes to style this headline in different ways. Headlines might have <a href="#">links</a>.
         </p>
     </div>
     
@@ -18,8 +18,8 @@
     <h2 className="title">Headline Heading</h2>
     
     <div className="body">
-        <p>Headline material can go here. Try using different classes to style this headline in different ways.
-            Headlines might have <a href="#">links</a>.
+        <p>
+        Headline material can go here. Try using different classes to style this headline in different ways. Headlines might have <a href="#">links</a>.
         </p>
     </div>
     

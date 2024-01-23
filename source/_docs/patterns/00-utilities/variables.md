@@ -38,13 +38,15 @@ This is a complete list of color variables in the theme. We highly recommend tha
     </div>
 </div>
 
-    .change-color {
-        color: var(--blue--darker--80);
-    }
+```
+.change-color {
+    color: var(--blue--darker--80);
+}
 
-    [data-theme="dark"] .change-color {
-        color: var(--blue--lighter--80);
-    }
+[data-theme="dark"] .change-color {
+    color: var(--blue--lighter--80);
+}
+```
 
 ### Brand Colors 
     --black: #262b2f;
@@ -264,17 +266,20 @@ When altering heading styles, the recommended method is to reset the heading var
 
 In other words, do this:
 
-    .some-container {
-        --h2-size: var(--font-size-md);
-        --h2-color: var(--blue);
-    }
+```
+.some-container {
+    --h2-size: var(--font-size-md);
+    --h2-color: var(--blue);
+}
+```
 
 Not this:
-
-    h2 {
-        font-size: 20px;
-        color: #007ac8;
-    }
+```
+h2 {
+    font-size: 20px;
+    color: #007ac8;
+}
+```
 
 <div className="messages">
       <div className="messages--warning" role="alert" >
@@ -282,13 +287,14 @@ Not this:
         Remember: if you adjust <strong>any</strong> colors, you need to make sure that you account for and test in both light and dark mode!
     </div>
 </div>
-
-    .some-container {
-        --h2-color: var(--blue);
-    }
-    [data-theme="dark"] .some-container {
-        --h2-color: var(--blue--lighter--20);
-    } 
+```
+.some-container {
+    --h2-color: var(--blue);
+}
+[data-theme="dark"] .some-container {
+    --h2-color: var(--blue--lighter--20);
+} 
+```
 
 
 ## Page layout

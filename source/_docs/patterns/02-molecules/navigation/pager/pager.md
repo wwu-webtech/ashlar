@@ -16,37 +16,27 @@
         </li>
         <li class="pager__item">
             <a href="" title="Go to page 1">
-                <span class="visually-hidden">
-                    Page
-                </span>1
+                <span class="visually-hidden">Page </span>1
             </a>
         </li>
         <li class="pager__item">
             <a href="" title="Go to page 2">
-                <span class="visually-hidden">
-                    Page
-                </span>2
+                <span class="visually-hidden">Page </span>2
             </a>
         </li>
         <li class="pager__item is-active">
             <a href="" title="Go to page 3">
-                <span class="visually-hidden">
-                    Page
-                </span>3
+                <span class="visually-hidden">Page </span>3
             </a>
         </li>
         <li class="pager__item">
             <a href="" title="Go to page 4">
-                <span class="visually-hidden">
-                    Page
-                </span>4
+                <span class="visually-hidden">Page </span>4
             </a>
         </li>
         <li class="pager__item">
             <a href="" title="Go to page 5">
-                <span class="visually-hidden">
-                    Page
-                </span>5
+                <span class="visually-hidden">Page </span>5
             </a>
         </li>
         <li class="pager__item pager__item--next">
