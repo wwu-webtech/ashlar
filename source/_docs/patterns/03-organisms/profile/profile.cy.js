@@ -1,6 +1,6 @@
 describe("organism: profile", () => {
   beforeEach(() => {
-    cy.visit("/patterns/organisms/navigation/profile")
+    cy.visit("/patterns/organisms/profile")
   })
 
   context("automated accessibility tests", () => {
