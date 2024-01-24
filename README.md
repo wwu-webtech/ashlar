@@ -51,11 +51,12 @@ After a minute or two, a browser window should launch for you pointed at http://
 
 ### Ashlar's File Structure
 
-Everything for basic component development exsists inside the _docs folder. Any given component is composed of up to three files:
+Everything for basic component development exsists inside the _docs folder. Any given component is composed of up to four files:
 
 * .md Markdown files are what are displayed in Docusaurus. These contain sample markup and documentation, both for developers and for end users
 * .scss SASS files contain the styles for the component, written in SASS
 * .js JavaScript files contain any interactive scripting, including the custom element scripting for components that use it
+* .cy.js Cypress files contain end-to-end (E2E) tests for components to ensure functionality before going live. See "End-to-End Testing in Ashlar" for more info.
 
 Not all components will have all three of these files. Every component should, at least, have a .scss file. Nearly all components will have .md files, with the rare exception of style overrides that exist specifically for Drupal. Only components that require interactive scripting will have .js files.
 
@@ -70,3 +71,21 @@ Any SASS file that has an underscore prefix (_file.scss) will be compiled into a
 
 SASS files that do not have the prefix (file.scss) are instead compiled into their own modular CSS file inside the /build/css/components folder. These CSS files are NOT included by default. They need to be loaded with a <link> element, via a Drupal Library, or in docusaurus.config.js to work on pages where those components are used.
 
+### End-to-End Testing in Ashlar
+
+Ashlar uses the [Cypress testing framework](https://www.cypress.io/) for end-to-end (E2E) automated testing of patterns and components. These tests ensure the theme meets brand and accessibility guidelines, and the patterns continue working as expected.
+
+We use Cypress in our continuous integration (CI) workflow when creating pull requests, and run the tests through Github or Bitbucket. You can also run tests locally before committing code, if you want to verify locally the tests will pass. Cypress can be run either through the app, or through the command line.
+
+#### Using the Cypress app
+
+1. Make sure Docusaurus is running locally (see step 3 "Install and run Docusaurus")
+2. Navigate to the _docs directory `cd source/_docs`.
+3. In a new terminal window, run `npx cypress open`.
+4. When the Cypress app opens, choose "E2E testing" and the browser of your choice. Choose the "Start testing" button.
+5. Under "Specs", you will see a list of pattern tests you can run.
+
+#### Using the command line
+In source/_docs, run the command `npx cypress run`. **You must be in the source/_docs folder**, since this is where the Cypress config file lives. By default the entire test suite will run&mdash;to run a single test, pass the relative file path in a '--spec' flag.
+
+Example: `npx cypress run --spec "patterns/01-atoms/buttons/buttons.cy.js"`
