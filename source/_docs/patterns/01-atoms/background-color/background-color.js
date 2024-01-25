@@ -21,6 +21,12 @@ if (
 
     <blockquote class="dark-blue-bg">Blockquote</blockquote>
 
+    <div class="byline">
+        <div class="date">January 25, 2024</div>
+        <div class="credit">This is a Byline</div>
+        <div class="info">Information about the Author</div>
+    </div>
+
     <form>
       <label class="required" for="input">Form element</label>
       <input id="input"/>
