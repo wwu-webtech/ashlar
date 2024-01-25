@@ -1,0 +1,22 @@
+/*------------------------------------------------------------------------------
+Molecule: Byline
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+.byline {
+  color: var(--midtone-text-color);
+  font-size: var(--font-size--xs);
+  &:after {
+    display: block;
+    width: 5%;
+    margin-top: var(--space--sm);
+    margin-bottom: var(--space--md);
+    content: "";
+    border-bottom: solid var(--border-width--md) var(--text-accent-color);
+  }
+  .date {
+    text-transform: uppercase;
+  }
+  .credit {
+    font-style: italic;
+  }
+}

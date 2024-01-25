@@ -4,10 +4,12 @@ Atom: Page
 ------------------------------------------------------------------------------*/
 html {
   --default-text-color: var(--black);
+  --midtone-text-color: var(--gray);
   /* using "oline" for overwriteable props because csscomb doesn't handle sorting css variables well, this keeps them at the top */
   --oline-color: var(--dark-blue);
   --oline-offset: var(--outline-offset--outset);
   --page-background: var(--white);
+  --text-accent-color: var(--gray--lighter--80);
 
   scroll-behavior: smooth;
   color: var(--default-text-color);
