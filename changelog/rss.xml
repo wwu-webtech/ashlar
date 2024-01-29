@@ -4,10 +4,44 @@
         <title>Ashlar Blog</title>
         <link>https://ashlar.wwu.edu/changelog</link>
         <description>Ashlar Blog</description>
-        <lastBuildDate>Mon, 11 Dec 2023 12:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 29 Jan 2024 12:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[5.3.x Updates]]></title>
+            <link>https://ashlar.wwu.edu/changelog/version-5-3</link>
+            <guid>https://ashlar.wwu.edu/changelog/version-5-3</guid>
+            <pubDate>Mon, 29 Jan 2024 12:00:00 GMT</pubDate>
+            <description><![CDATA[5.3.0]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="530">5.3.0<a href="https://ashlar.wwu.edu/changelog/version-5-3#530" class="hash-link" aria-label="Direct link to 5.3.0" title="Direct link to 5.3.0">​</a></h2>
+<p>** January 29, 2024 **</p>
+<ul>
+<li>New: Cypress Testing integration! Automated testing for component development, woohoo!</li>
+<li>New <a href="https://ashlar.wwu.edu/patterns/molecules/byline">Byline Styles</a> available</li>
+<li>Docusaurus upgraded to version 3.1.0</li>
+</ul>]]></content:encoded>
+            <category>minor-release</category>
+        </item>
+        <item>
+            <title><![CDATA[5.2.x Updates]]></title>
+            <link>https://ashlar.wwu.edu/changelog/version-5-2</link>
+            <guid>https://ashlar.wwu.edu/changelog/version-5-2</guid>
+            <pubDate>Tue, 16 Jan 2024 12:00:00 GMT</pubDate>
+            <description><![CDATA[5.2.1]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="521">5.2.1<a href="https://ashlar.wwu.edu/changelog/version-5-2#521" class="hash-link" aria-label="Direct link to 5.2.1" title="Direct link to 5.2.1">​</a></h2>
+<p>** January 16, 2024 **</p>
+<ul>
+<li>Main navigation now useable as a standalone component</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="520">5.2.0<a href="https://ashlar.wwu.edu/changelog/version-5-2#520" class="hash-link" aria-label="Direct link to 5.2.0" title="Direct link to 5.2.0">​</a></h2>
+<p>** January 4, 2024 **</p>
+<ul>
+<li>New: Search now uses Google Search Console</li>
+<li>Updates for Drupal 10</li>
+</ul>]]></content:encoded>
+            <category>minor-release</category>
+        </item>
         <item>
             <title><![CDATA[5.1.x Updates]]></title>
             <link>https://ashlar.wwu.edu/changelog/version-5-1</link>
@@ -368,40 +402,6 @@
 <ul>
 <li>NEW Paragraph templates for banners, media, and headings</li>
 <li>NEW alignment helper classes added</li>
-</ul>]]></content:encoded>
-            <category>minor-release</category>
-        </item>
-        <item>
-            <title><![CDATA[5.3.x Updates]]></title>
-            <link>https://ashlar.wwu.edu/changelog/version-5-3</link>
-            <guid>https://ashlar.wwu.edu/changelog/version-5-3</guid>
-            <pubDate>Sun, 29 Jan 2023 12:00:00 GMT</pubDate>
-            <description><![CDATA[5.3.0]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="530">5.3.0<a href="https://ashlar.wwu.edu/changelog/version-5-3#530" class="hash-link" aria-label="Direct link to 5.3.0" title="Direct link to 5.3.0">​</a></h2>
-<p>** January 29, 2024 **</p>
-<ul>
-<li>New: Cypress Testing integration! Automated testing for component development, woohoo!</li>
-<li>New <a href="https://ashlar.wwu.edu/patterns/molecules/byline">Byline Styles</a> available</li>
-<li>Docusaurus upgraded to version 3.1.0</li>
-</ul>]]></content:encoded>
-            <category>minor-release</category>
-        </item>
-        <item>
-            <title><![CDATA[5.2.x Updates]]></title>
-            <link>https://ashlar.wwu.edu/changelog/version-5-2</link>
-            <guid>https://ashlar.wwu.edu/changelog/version-5-2</guid>
-            <pubDate>Mon, 16 Jan 2023 12:00:00 GMT</pubDate>
-            <description><![CDATA[5.2.1]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="521">5.2.1<a href="https://ashlar.wwu.edu/changelog/version-5-2#521" class="hash-link" aria-label="Direct link to 5.2.1" title="Direct link to 5.2.1">​</a></h2>
-<p>** January 16, 2024 **</p>
-<ul>
-<li>Main navigation now useable as a standalone component</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="520">5.2.0<a href="https://ashlar.wwu.edu/changelog/version-5-2#520" class="hash-link" aria-label="Direct link to 5.2.0" title="Direct link to 5.2.0">​</a></h2>
-<p>** January 4, 2024 **</p>
-<ul>
-<li>New: Search now uses Google Search Console</li>
-<li>Updates for Drupal 10</li>
 </ul>]]></content:encoded>
             <category>minor-release</category>
         </item>
