@@ -20,12 +20,14 @@ Black, darkest blue, and dark blue are black based and share link/heading colors
   --icon-background-color--active: var(--blue--lighter--40);
   --icon-color--active: var(--dark-blue);
   --link-background--focus: var(--gradient--vertical--light-blue);
-  --link-color: var(--blue--lighter--40);
+  --link-color: var(--blue--lighter--80);
   --link-color--focus: var(--dark-blue);
   --link-color--visited: var(--purple--lighter--80);
   --link-decoration-color: var(--blue--lighter--60);
+  --midtone-text-color: var(--gray--lighter--80);
   --oline-color: var(--white);
   --required-color: var(--blue--lighter--40);
+  --text-accent-color: var(--light-green--lighter--40);
 
   color: var(--white);
   background: var(--black);
@@ -68,8 +70,10 @@ Gray, blue, and green backgrounds are gray based.
   --link-color--visited: var(--white);
   --link-decoration-color: var(--blue--lighter--80);
   --link-decoration-color--visited: var(--purple--lighter--80);
+  --midtone-text-color: var(--white);
   --oline-color: var(--white);
   --required-color: var(--blue--lighter--80);
+  --text-accent-color: var(--light-green--lighter--80);
 
   color: var(--white);
   background: var(--gray);
@@ -109,8 +113,10 @@ backgrounds are light gray based.
   --link-color--focus: var(--white);
   --link-decoration-color: var(--blue--darker--60);
   --link-decoration-color--visited: var(--purple);
+  --midtone-text-color: var(--gray--darker--80);
   --oline-color: var(--dark-blue--darker--60);
   --required-color: var(--blue--darker--60);
+  --text-accent-color: var(--gray--darker--60);
 
   color: var(--black);
   background: var(--gray--lighter--60);
