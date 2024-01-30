@@ -300,7 +300,7 @@ if (
       if (this.attributes.type && this.attributes.type.value == "horizontal") {
         this.appendChild(horizontal_logo_template.content.cloneNode(true));
       } else {
-        this.appendChild(logo_template.content.cloneNode(true));
+        this.once(appendChild(logo_template.content.cloneNode(true)));
       }
     }
   }
