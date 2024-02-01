@@ -18,6 +18,12 @@ Fixes for Drupal administration theme.
   width: initial;
   min-height: initial;
 }
+.ck-button {
+  box-shadow: unset;
+}
+.ck-content {
+  font-size: 0.65rem;
+}
 /*------------------------------------------------------------------------------
 Layout Builder
 ------------------------------------------------------------------------------*/
