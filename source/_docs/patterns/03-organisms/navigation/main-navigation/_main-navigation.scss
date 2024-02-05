@@ -43,7 +43,9 @@ Molecule: Main navigation/ultimenu custom styles
   }
   .ultimenu__flyout,
   .ultimenu__region {
+    top: auto;
     width: 100%;
+    height: auto;
   }
   .ultimenu__link,
   .top-level-menu-item > a {
