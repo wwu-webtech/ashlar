@@ -12,8 +12,14 @@
         <id>https://ashlar.wwu.edu/changelog/version-5-3</id>
         <link href="https://ashlar.wwu.edu/changelog/version-5-3"/>
         <updated>2024-01-29T12:00:00.000Z</updated>
-        <summary type="html"><![CDATA[5.3.0]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="530">5.3.0<a href="https://ashlar.wwu.edu/changelog/version-5-3#530" class="hash-link" aria-label="Direct link to 5.3.0" title="Direct link to 5.3.0">​</a></h2>
+        <summary type="html"><![CDATA[5.3.1]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="531">5.3.1<a href="https://ashlar.wwu.edu/changelog/version-5-3#531" class="hash-link" aria-label="Direct link to 5.3.1" title="Direct link to 5.3.1">​</a></h2>
+<p>** February 5, 2024 **</p>
+<ul>
+<li>Ultimenu fix for Drupal 9.5</li>
+<li>Helper styles for CKEditor 5</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="530">5.3.0<a href="https://ashlar.wwu.edu/changelog/version-5-3#530" class="hash-link" aria-label="Direct link to 5.3.0" title="Direct link to 5.3.0">​</a></h2>
 <p>** January 29, 2024 **</p>
 <ul>
 <li>New: Cypress Testing integration! Automated testing for component development, woohoo!</li>
