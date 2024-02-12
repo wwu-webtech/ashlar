@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ashlar.wwu.edu/changelog</id>
     <title>Ashlar Blog</title>
-    <updated>2024-01-29T12:00:00.000Z</updated>
+    <updated>2024-02-12T12:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ashlar.wwu.edu/changelog"/>
     <subtitle>Ashlar Blog</subtitle>
@@ -11,9 +11,16 @@
         <title type="html"><![CDATA[5.3.x Updates]]></title>
         <id>https://ashlar.wwu.edu/changelog/version-5-3</id>
         <link href="https://ashlar.wwu.edu/changelog/version-5-3"/>
-        <updated>2024-01-29T12:00:00.000Z</updated>
-        <summary type="html"><![CDATA[5.3.1]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="531">5.3.1<a href="https://ashlar.wwu.edu/changelog/version-5-3#531" class="hash-link" aria-label="Direct link to 5.3.1" title="Direct link to 5.3.1">​</a></h2>
+        <updated>2024-02-12T12:00:00.000Z</updated>
+        <summary type="html"><![CDATA[5.3.2]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="532">5.3.2<a href="https://ashlar.wwu.edu/changelog/version-5-3#532" class="hash-link" aria-label="Direct link to 5.3.2" title="Direct link to 5.3.2">​</a></h2>
+<p>** February 12, 2024 **</p>
+<ul>
+<li>Various styles for MABEL's Archipelago launch</li>
+<li>Component fix to prevent duplication</li>
+<li>Main Navigation component a11y improvement</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="531">5.3.1<a href="https://ashlar.wwu.edu/changelog/version-5-3#531" class="hash-link" aria-label="Direct link to 5.3.1" title="Direct link to 5.3.1">​</a></h2>
 <p>** February 5, 2024 **</p>
 <ul>
 <li>Ultimenu fix for Drupal 9.5</li>
