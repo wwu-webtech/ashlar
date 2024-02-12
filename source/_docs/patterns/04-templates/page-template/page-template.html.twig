@@ -105,10 +105,12 @@
               {% if page.footer_right %}
                 {{ page.footer_right }}
               {% endif %}
+            </div>
             <div class="footer-region--bottom">
               {% if page.footer_bottom %}
                 {{ page.footer_bottom }}
               {% endif %}
+            </div>
           {% endblock footer_regions %}
         </section>
       {% endblock %}
@@ -125,7 +127,7 @@
               <div class="copyright">
                   <h2 class="visually-hidden">Copyright and Contact Info</h2>
                   <p>
-                      © <span class="copyright-date">{{ "now"|date("Y") }}</span> Western Washington University <span aria-hidden="true">
+                      © <span class="copyright-date">{{ "now"|date("Y") }}</span> Western Washington University
                   </p>
               </div>
 

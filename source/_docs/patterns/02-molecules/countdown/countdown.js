@@ -23,79 +23,82 @@ if (
         super();
       }
       
-      connectedCallback() {        
-        this.appendChild(countdown_template.content.cloneNode(true));        
-        this.querySelector(".timer").setAttribute("aria-label", "Countdown to " + this.getAttribute("to"));
-        let second = 1000, minute = second * 60, hour = minute * 60, day = hour * 24;
-        let d_left, h_left, m_left, s_left;
-        const days = this.querySelector(".days");
-        const hours = this.querySelector(".hours");
-        const minutes = this.querySelector(".minutes");
-        const seconds = this.querySelector(".seconds");
-        const announcement = this.querySelector(".announced-time");
-        
-        try {
-          const date = new Date(this.getAttribute("date")).getTime();          
+      connectedCallback() {    
+        let element_exists = this.classList.contains("element-created");
+        if (!element_exists) {
+          this.appendChild(countdown_template.content.cloneNode(true));        
+          this.classList.add("element-created");
+          this.querySelector(".timer").setAttribute("aria-label", "Countdown to " + this.getAttribute("to"));
+          let second = 1000, minute = second * 60, hour = minute * 60, day = hour * 24;
+          let d_left, h_left, m_left, s_left;
+          const days = this.querySelector(".days");
+          const hours = this.querySelector(".hours");
+          const minutes = this.querySelector(".minutes");
+          const seconds = this.querySelector(".seconds");
+          const announcement = this.querySelector(".announced-time");
           
-          if (date) {        
-            initialize_count(date);
-            setInterval(function() { update_time(date) }, 1000);
+          try {
+            const date = new Date(this.getAttribute("date")).getTime();          
+            
+            if (date) {        
+              initialize_count(date);
+              setInterval(function() { update_time(date) }, 1000);
+            }
+          } catch (err) {
+            console.log("No date provided");
           }
-        } catch (err) {
-          console.log("No date provided");
-        }
-        
-        function set_days() { days.innerText = d_left; }
-        function set_hours() { hours.innerText = h_left; }
-        function set_minutes() { minutes.innerText = m_left; }
-        function set_seconds() { seconds.innerText = s_left; }     
-        
-        function minute_announce() {
-          if (m_left == 1) {
-            announcement.innerText = String(m_left) + " minute left";
-          } else {
-            announcement.innerText = String(m_left) + " minutes left";
+          
+          function set_days() { days.innerText = d_left; }
+          function set_hours() { hours.innerText = h_left; }
+          function set_minutes() { minutes.innerText = m_left; }
+          function set_seconds() { seconds.innerText = s_left; }     
+          
+          function minute_announce() {
+            if (m_left == 1) {
+              announcement.innerText = String(m_left) + " minute left";
+            } else {
+              announcement.innerText = String(m_left) + " minutes left";
+            }
           }
-        }
-        function second_announce() { announcement.innerText = String(s_left); }
-        
-        function initialize_count(date) {
-          time_left(date);
+          function second_announce() { announcement.innerText = String(s_left); }
           
-          // Only set days & hours if there are any, otherwise hide those blocks 
-          if (d_left > 0) { set_days(); } 
-          else { days.parentElement.remove() }
-          if (d_left > 0 || h_left > 0) { set_hours(); } 
-          else { hours.parentElement.remove() }
+          function initialize_count(date) {
+            time_left(date);
+            
+            // Only set days & hours if there are any, otherwise hide those blocks 
+            if (d_left > 0) { set_days(); } 
+            else { days.parentElement.remove() }
+            if (d_left > 0 || h_left > 0) { set_hours(); } 
+            else { hours.parentElement.remove() }
+            
+            //Minutes & seconds should always show 
+            if (m_left >= 0) { set_minutes(); }
+            if (s_left >= 0) { set_seconds(); }
+          }
           
-          //Minutes & seconds should always show 
-          if (m_left >= 0) { set_minutes(); }
-          if (s_left >= 0) { set_seconds(); }
-        }
-        
-        function time_left(date) {
-          let now = new Date().getTime(), distance = date - now;      
+          function time_left(date) {
+            let now = new Date().getTime(), distance = date - now;      
+            
+            d_left = Math.floor(distance / day);
+            h_left = Math.floor((distance % day) / hour);
+            m_left = Math.floor((distance % hour) / minute);
+            s_left = Math.floor((distance % minute) / second);
+          }
           
-          d_left = Math.floor(distance / day);
-          h_left = Math.floor((distance % day) / hour);
-          m_left = Math.floor((distance % hour) / minute);
-          s_left = Math.floor((distance % minute) / second);
-        }
-        
-        function update_time(date) {          
-          let prev_hours = h_left, prev_minutes = m_left;
-          time_left(date);
-          
-          if (h_left >= 0 && prev_hours != h_left) { set_hours(); }
-          if (m_left >= 0 && prev_minutes != m_left) { set_minutes(); }
-          if (s_left >= 0) { set_seconds(); }
-          
-          // Only announce last 10 minutes, and only when the minute is about to change
-          if (d_left <= 0 && h_left <= 0 && m_left <= 10 && m_left >= 1 && s_left == 0) { minute_announce(); }
-          // Only announce last 10 seconds
-          if (d_left <= 0 && h_left <= 0 && m_left <= 0 && s_left <= 10 && s_left > 0) { second_announce(); }
-        }
-        
+          function update_time(date) {          
+            let prev_hours = h_left, prev_minutes = m_left;
+            time_left(date);
+            
+            if (h_left >= 0 && prev_hours != h_left) { set_hours(); }
+            if (m_left >= 0 && prev_minutes != m_left) { set_minutes(); }
+            if (s_left >= 0) { set_seconds(); }
+            
+            // Only announce last 10 minutes, and only when the minute is about to change
+            if (d_left <= 0 && h_left <= 0 && m_left <= 10 && m_left >= 1 && s_left == 0) { minute_announce(); }
+            // Only announce last 10 seconds
+            if (d_left <= 0 && h_left <= 0 && m_left <= 0 && s_left <= 10 && s_left > 0) { second_announce(); }
+          }
+        }  
       } /* End of Connected Callback */      
     }
     

@@ -18,15 +18,19 @@ if (
       }
       
       connectedCallback() {
-        this.appendChild(background_video_template.content.cloneNode(true));
-        this.querySelector("video").innerHTML = `<source src="${this.getAttribute("src")}" />`
-        this.querySelector(".description").innerText= this.getAttribute("alt");
-        const video = this.querySelector("video");
-        const pause_button = this.querySelector(".playback");     
-        let motion_preference = window.matchMedia("(prefers-reduced-motion: reduce)");                       
-        
-        pause_button.addEventListener("click", toggle_playback);       
-        reduced_motion_check(motion_preference, video, pause_button);
+        let element_exists = this.classList.contains("element-created");
+        if (!element_exists) {
+          this.appendChild(background_video_template.content.cloneNode(true));
+          this.classList.add("element-created");
+          this.querySelector("video").innerHTML = `<source src="${this.getAttribute("src")}" />`
+          this.querySelector(".description").innerText= this.getAttribute("alt");
+          const video = this.querySelector("video");
+          const pause_button = this.querySelector(".playback");     
+          let motion_preference = window.matchMedia("(prefers-reduced-motion: reduce)");                       
+          
+          pause_button.addEventListener("click", toggle_playback);       
+          reduced_motion_check(motion_preference, video, pause_button);
+        }
       }
     }
     

@@ -21,46 +21,49 @@ if (
             }
             
             connectedCallback() {
-                const content = this.innerHTML;
-                this.innerHTML = ``;
-                this.appendChild(wwu_dialog.content.cloneNode(true));     
-                
-                const open_button = this.querySelector('.open-button');
-                const close_button = document.createElement('button');
-                const icon = document.createElement('span');
-                const dialog = this.querySelector('dialog');  
-                const dialog_content = this.querySelector('.dialog-content');                       
-                
-                open_button.innerText = this.getAttribute('button');
-                icon.classList.add("material-icons");
-                icon.setAttribute("aria-hidden", true);
-                icon.innerText = this.getAttribute('icon');
-                open_button.appendChild(icon);
-                close_button.innerHTML = `<span class="material-icons" aria-hidden="true">close</span> Close`;
-                close_button.classList.add("close-button");
+                let element_exists = this.classList.contains("element-created");
+                if (!element_exists) {
+                    const content = this.innerHTML;
+                    this.innerHTML = ``;
+                    this.appendChild(wwu_dialog.content.cloneNode(true));    
+                    this.classList.add("element-created"); 
+                    
+                    const open_button = this.querySelector('.open-button');
+                    const close_button = document.createElement('button');
+                    const icon = document.createElement('span');
+                    const dialog = this.querySelector('dialog');  
+                    const dialog_content = this.querySelector('.dialog-content');                       
+                    
+                    open_button.innerText = this.getAttribute('button');
+                    icon.classList.add("material-icons");
+                    icon.setAttribute("aria-hidden", true);
+                    icon.innerText = this.getAttribute('icon');
+                    open_button.appendChild(icon);
+                    close_button.innerHTML = `<span class="material-icons" aria-hidden="true">close</span> Close`;
+                    close_button.classList.add("close-button");
 
-                dialog.setAttribute('aria-label', this.getAttribute('label'));
-                dialog_content.innerHTML = content;              
-                dialog_content.prepend(close_button);
-                
-                
-                open_button.addEventListener('click', () => {
-                    open_dialog(dialog);
-                });
-                /* close if close button is clicked */
-                close_button.addEventListener('click', () => {
-                    close_dialog(dialog);
-                });
-                /* close if area outside dialog is clicked */
-                document.addEventListener('click',(e) =>
-                {                    
-                    let elementClass = e.target.className;                    
-                    if (elementClass == 'dialog-wrapper') {
+                    dialog.setAttribute('aria-label', this.getAttribute('label'));
+                    dialog_content.innerHTML = content;              
+                    dialog_content.prepend(close_button);
+                    
+                    
+                    open_button.addEventListener('click', () => {
+                        open_dialog(dialog);
+                    });
+                    /* close if close button is clicked */
+                    close_button.addEventListener('click', () => {
                         close_dialog(dialog);
+                    });
+                    /* close if area outside dialog is clicked */
+                    document.addEventListener('click',(e) =>
+                    {                    
+                        let elementClass = e.target.className;                    
+                        if (elementClass == 'dialog-wrapper') {
+                            close_dialog(dialog);
+                        }
                     }
-                }
-                );
-                
+                    );
+                }    
             }
         }
         

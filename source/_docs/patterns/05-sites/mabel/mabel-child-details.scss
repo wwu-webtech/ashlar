@@ -1,0 +1,76 @@
+/*------------------------------------------------------------------------------
+Sites: MABEL
+--------------------------------------------------------------------------------
+Child object details (view)
+------------------------------------------------------------------------------*/
+@import "../../00-utilities/breakpoints.scss";
+.child-object-details {
+  --h3-size: var(--font-size--xl);
+  --h4-size: var(--font-size--lg);
+
+  font-size: var(--font-size--xs);
+  h3 {
+    margin-top: 0;
+  }
+  h4 {
+    margin-top: 0;
+    margin-bottom: var(--space--2xs);
+  }
+  p {
+    margin-bottom: var(--space--xs);
+  }
+  summary {
+    display: grid;
+    grid-column-gap: var(--space--xs);
+    grid-template-areas: "image title"
+    "image description"
+    "image more";
+    grid-template-columns: auto 1fr;
+    margin: 0;
+    margin-top: calc(-1 * var(--border-width--md));
+    padding: var(--space--2xs);
+    border-width: var(--border-width--md);
+    .details-expand {
+      grid-area: more;
+      width: 100%;
+      text-align: right;
+      color: var(--h3-color);
+      &:before {
+        content: "+ more ";
+      }
+    }
+    &[aria-expanded="true"] {
+      .details-expand {
+        &:before {
+          content: "- less ";
+        }
+      }
+    }
+  }
+  .image {
+    grid-area: image;
+    max-width: 8rem;
+  }
+  img {
+    display: block;
+  }
+  .title {
+    grid-area: title;
+  }
+  .description {
+    @media (min-width:$small) {
+      display: grid;
+      grid-area: description;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  span.summary {
+    display: none;
+  }
+  .detailed-description {
+    margin-top: var(--space--md);
+  }
+  .material-icons {
+    font-size: var(--icon-size--3xs);
+  }
+}

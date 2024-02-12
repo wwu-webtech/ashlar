@@ -114,6 +114,11 @@ mabel-facets:
   css:
     theme:
       build/css/components/mabel-facets.css: {}
+mabel-child-details:
+  version: 1.x
+  css:
+    theme:
+      build/css/components/mabel-child-details.css: {}
 material-icons:
   version: 1.x
   css:

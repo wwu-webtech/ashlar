@@ -10,9 +10,12 @@ To include logos in your project, place this script near the bottom of the page:
     <script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/logo.js"></script>
 
 <wwu-logo></wwu-logo>
-
-    <wwu-logo></wwu-logo>
+```
+<wwu-logo></wwu-logo>
+```
 
 <wwu-logo type="horizontal"></wwu-logo>
 
-    <wwu-logo type="horizontal"></wwu-logo>
+```
+<wwu-logo type="horizontal"></wwu-logo>
+```

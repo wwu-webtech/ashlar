@@ -296,11 +296,14 @@ if (
     }
 
     connectedCallback() {
+      let element_exists = this.classList.contains("element-created");
       /* Create the custom element by appending the template */
-      if (this.attributes.type && this.attributes.type.value == "horizontal") {
+      if (this.attributes.type && this.attributes.type.value == "horizontal" && !element_exists) {
         this.appendChild(horizontal_logo_template.content.cloneNode(true));
-      } else {
+        this.classList.add("element-created");
+      } else if (!element_exists) {
         this.appendChild(logo_template.content.cloneNode(true));
+        this.classList.add("element-created");
       }
     }
   }

@@ -32,7 +32,7 @@ if (
     <div class="copyright">
         <h2 class="visually-hidden">Copyright and Contact Info</h2>
         <p>
-            © <span class="copyright-date">{{ "now"|date("Y") }}</span> Western Washington University <span aria-hidden="true">
+            © <span class="copyright-date">{{ "now"|date("Y") }}</span> Western Washington University
         </p>
     </div>
 
@@ -54,13 +54,17 @@ if (
     constructor() {
       super();
     }
-
+    
     connectedCallback() {
+      let element_exists = this.classList.contains("element-created");
       /* Create the custom element by appending the template */
-      this.appendChild(footer_template.content.cloneNode(true));
-      let currentDate = new Date();
-      this.querySelector('.copyright-date').innerText =  currentDate.getFullYear();
-      this.setAttribute('aria-label', 'Western footer');
+      if (!element_exists) {
+        this.appendChild(footer_template.content.cloneNode(true));
+        this.classList.add("element-created");
+        let currentDate = new Date();
+        this.querySelector('.copyright-date').innerText =  currentDate.getFullYear();
+        this.setAttribute('aria-label', 'Western footer');
+      }
     }
   }
 

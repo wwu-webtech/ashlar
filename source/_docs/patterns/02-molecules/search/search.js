@@ -20,8 +20,12 @@ if (
       }
 
       connectedCallback() {
+        let element_exists = this.classList.contains("element-created");
         /* Create the custom element by appending the template */
-        this.appendChild(search_template.content.cloneNode(true));
+        if (!element_exists) {
+          this.appendChild(search_template.content.cloneNode(true));
+          this.classList.add("element-created");
+        }
       }
     }
 
