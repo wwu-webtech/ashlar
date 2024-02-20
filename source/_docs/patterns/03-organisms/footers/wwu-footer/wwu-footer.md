@@ -11,5 +11,6 @@ Place inside <footer>
 <wwu-footer></wwu-footer>
 
 Place near bottom of page
+<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/social-media-icons.js"></script>
 <script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/wwu-footer.js"></script>
 ```
