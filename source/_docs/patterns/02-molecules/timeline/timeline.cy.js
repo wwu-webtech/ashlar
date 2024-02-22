@@ -1,6 +1,7 @@
 describe("molecule: timeline", () => {
   beforeEach(() => {
     cy.visit("/patterns/molecules/timeline")
+    cy.get(".theme-doc-markdown").should("be.visible")
   })
 
   context("automated accessibility tests", () => {

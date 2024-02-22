@@ -1,6 +1,7 @@
 describe("molecule: statistic", () => {
   beforeEach(() => {
     cy.visit("/patterns/molecules/statistic")
+    cy.get(".theme-doc-markdown").should("be.visible")
   })
 
   context("automated accessibility tests", () => {

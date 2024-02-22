@@ -1,6 +1,7 @@
 describe("molecule: status alert", () => {
   beforeEach(() => {
     cy.visit("/patterns/molecules/status-alert")
+    cy.get(".theme-doc-markdown").should("be.visible")
   })
 
   context("automated accessibility tests", () => {

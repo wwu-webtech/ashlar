@@ -1,6 +1,7 @@
 describe("molecule: breadcrumb", () => {
   beforeEach(() => {
     cy.visit("/patterns/molecules/navigation/breadcrumb")
+    cy.get(".theme-doc-markdown").should("be.visible")
   })
 
   context("automated accessibility tests", () => {
