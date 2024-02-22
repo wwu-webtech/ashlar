@@ -1,6 +1,7 @@
 describe("atoms: CTA links", () => {
   beforeEach(() => {
     cy.visit("/patterns/atoms/links/call-to-action")
+    cy.get(".theme-doc-markdown").should("be.visible")
   })
 
   context("automated accessibility tests", () => {
