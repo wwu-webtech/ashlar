@@ -1,6 +1,7 @@
 describe("atoms: color", () => {
   beforeEach(() => {
     cy.visit("/patterns/atoms/color")
+    cy.get(".theme-doc-markdown").should("be.visible")
   })
 
   context("automated accessibility tests", () => {

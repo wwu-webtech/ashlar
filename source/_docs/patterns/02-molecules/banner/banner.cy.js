@@ -1,6 +1,7 @@
 describe("molecule: banner", () => {
   beforeEach(() => {
     cy.visit("/patterns/molecules/banner")
+    cy.get(".theme-doc-markdown").should("be.visible")
   })
 
   context("automated accessibility tests", () => {

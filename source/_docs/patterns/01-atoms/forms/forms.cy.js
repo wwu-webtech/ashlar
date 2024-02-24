@@ -1,6 +1,7 @@
 describe("atoms: forms", () => {
   beforeEach(() => {
     cy.visit("/patterns/atoms/forms")
+    cy.get(".theme-doc-markdown").should("be.visible")
   })
 
   context("automated accessibility tests", () => {

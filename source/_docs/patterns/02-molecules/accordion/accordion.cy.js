@@ -1,6 +1,7 @@
 describe("molecule: accordion", () => {
   beforeEach(() => {
     cy.visit("/patterns/molecules/accordion")
+    cy.get(".theme-doc-markdown").should("be.visible")
   })
 
   context("automated accessibility tests", () => {

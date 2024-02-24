@@ -1,6 +1,7 @@
 describe("molecule: countdown", () => {
   beforeEach(() => {
     cy.visit("/patterns/molecules/countdown")
+    cy.get(".theme-doc-markdown").should("be.visible")
   })
 
   context("automated accessibility tests", () => {
