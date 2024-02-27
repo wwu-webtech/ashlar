@@ -1,6 +1,7 @@
 describe("molecule: byline", () => {
   beforeEach(() => {
     cy.visit("/patterns/molecules/byline")
+    cy.get(".theme-doc-markdown").should("be.visible")
   })
 
   context("automated accessibility tests", () => {

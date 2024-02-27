@@ -1,6 +1,7 @@
 describe("molecule: schedule", () => {
   beforeEach(() => {
     cy.visit("/patterns/molecules/schedule")
+    cy.get(".theme-doc-markdown").should("be.visible")
   })
 
   context("automated accessibility tests", () => {

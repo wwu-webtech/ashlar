@@ -1,6 +1,7 @@
 describe("molecule: menu", () => {
   beforeEach(() => {
     cy.visit("/patterns/molecules/navigation/menu")
+    cy.get(".theme-doc-markdown").should("be.visible")
   })
 
   context("automated accessibility tests", () => {

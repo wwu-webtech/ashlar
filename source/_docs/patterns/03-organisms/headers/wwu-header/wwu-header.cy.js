@@ -1,6 +1,7 @@
 describe("organism: wwu-header", () => {
   beforeEach(() => {
     cy.visit("/patterns/organisms/headers/wwu-header")
+    cy.get(".theme-doc-markdown").should("be.visible")
   })
 
   context("automated accessibility tests", () => {

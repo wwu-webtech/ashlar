@@ -1,6 +1,7 @@
 describe("atoms: headings", () => {
   beforeEach(() => {
     cy.visit("/patterns/atoms/headings")
+    cy.get(".theme-doc-markdown").should("be.visible")
   })
 
   context("automated accessibility tests", () => {

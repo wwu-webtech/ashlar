@@ -1,6 +1,7 @@
 describe("organism: myWestern menu", () => {
   beforeEach(() => {
     cy.visit("/patterns/organisms/navigation/my-western-menu")
+    cy.get(".theme-doc-markdown").should("be.visible")
   })
 
   context("automated accessibility tests", () => {

@@ -1,6 +1,7 @@
 describe("atoms: overlays", () => {
   beforeEach(() => {
     cy.visit("/patterns/atoms/overlays")
+    cy.get(".theme-doc-markdown").should("be.visible")
   })
 
   context("automated accessibility tests", () => {

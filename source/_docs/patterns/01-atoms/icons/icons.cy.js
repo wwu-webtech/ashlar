@@ -1,6 +1,7 @@
 describe("atoms: icons", () => {
   beforeEach(() => {
     cy.visit("/patterns/atoms/icons")
+    cy.get(".theme-doc-markdown").should("be.visible")
   })
 
   context("automated accessibility tests", () => {

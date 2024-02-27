@@ -1,7 +1,11 @@
 import WWUSocial from "./social-media-icons.js"
 
 # Social Media
-Use these short tags to add social media links to your website. Group should be the name of your department or group, and is used to label the icon for assistive technology users and distinguish it from Western's social media accounts. The icon will be generated automatically based on the URL.
+Use these short tags to add social media links to your website. Group should be the name of your department or group, and is used to label the icon for assistive technology users and distinguish it from Western's social media accounts. The icon will be generated automatically based on the URL. To use social icons, place the following script in your HTML:
+
+```
+<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/social-media-icons.js"></script>
+```
 
 <wwu-social group="Western" url="https://www.facebook.com/westernwashingtonuniversity"></wwu-social>
 <wwu-social group="Western" url="https://www.flickr.com/photos/wwu"></wwu-social>

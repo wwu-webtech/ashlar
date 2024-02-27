@@ -1,0 +1,34 @@
+name: Run Cypress
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, reopened, edited]
+    paths:
+      - '**.md'
+      - '**.scss'
+      - '**.js'
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: npm
+
+      - name: Install Ashlar dependencies
+        run: npm ci
+      - name: Run gulp tasks
+        run: gulp
+      - name: Install dependencies
+        working-directory: source/_docs
+        run: npm ci
+      - name: Run Cypress
+        uses: cypress-io/github-action@v6
+        with:
+          working-directory: source/_docs
+          start: npm run docusaurus start
+          browser: chrome

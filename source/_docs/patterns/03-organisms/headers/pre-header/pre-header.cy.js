@@ -1,6 +1,7 @@
 describe("organism: pre-header", () => {
   beforeEach(() => {
     cy.visit("/patterns/organisms/headers/pre-header")
+    cy.get(".theme-doc-markdown").should("be.visible")
   })
 
   context("automated accessibility tests", () => {

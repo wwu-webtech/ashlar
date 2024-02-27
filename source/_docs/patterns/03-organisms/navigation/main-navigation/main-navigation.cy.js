@@ -1,6 +1,7 @@
 describe("organism: main navigation", () => {
   beforeEach(() => {
     cy.visit("/patterns/organisms/navigation/main-navigation")
+    cy.get(".theme-doc-markdown").should("be.visible")
   })
 
   context("automated accessibility tests", () => {
