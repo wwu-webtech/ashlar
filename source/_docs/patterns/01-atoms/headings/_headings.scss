@@ -101,14 +101,12 @@ h5 + h6 {
 .font-size--regular,
 .font-size--smaller,
 .font-size--larger {
-  /*because the base font size changes for these, 
-  we need to reset scale when the classes are used*/
-  --h1-size: var(--font-size--7xl);
-  --h2-size: var(--font-size--4xl);
-  --h3-size: var(--font-size--3xl);
-  --h4-size: var(--font-size--2xl);
-  --h5-size: var(--font-size--xl);
-  --h6-size: var(--font-size--lg);
+  --h1-size: var(--font-size--4xl);
+  --h2-size: var(--font-size--xl);
+  --h3-size: var(--font-size--lg);
+  --h4-size: var(--font-size--md);
+  --h5-size: var(--font-size--md);
+  --h6-size: var(--font-size--md);
 }
 /*------------------------------------------------------------------------------
 3. Display Preferences
