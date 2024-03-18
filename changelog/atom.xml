@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ashlar.wwu.edu/changelog</id>
     <title>Ashlar Blog</title>
-    <updated>2024-02-27T12:00:00.000Z</updated>
+    <updated>2024-03-18T12:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ashlar.wwu.edu/changelog"/>
     <subtitle>Ashlar Blog</subtitle>
@@ -11,9 +11,16 @@
         <title type="html"><![CDATA[5.3.x Updates]]></title>
         <id>https://ashlar.wwu.edu/changelog/version-5-3</id>
         <link href="https://ashlar.wwu.edu/changelog/version-5-3"/>
-        <updated>2024-02-27T12:00:00.000Z</updated>
-        <summary type="html"><![CDATA[5.3.3]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="533">5.3.3<a href="https://ashlar.wwu.edu/changelog/version-5-3#533" class="hash-link" aria-label="Direct link to 5.3.3" title="Direct link to 5.3.3">​</a></h2>
+        <updated>2024-03-18T12:00:00.000Z</updated>
+        <summary type="html"><![CDATA[5.3.4]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="534">5.3.4<a href="https://ashlar.wwu.edu/changelog/version-5-3#534" class="hash-link" aria-label="Direct link to 5.3.4" title="Direct link to 5.3.4">​</a></h2>
+<p>** March 18, 2024 **</p>
+<ul>
+<li>Adjustment for font-size--smaller in views</li>
+<li>exclude *.cy.js files from gulp builds</li>
+<li>Clarify documentation on Material Icons</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="533">5.3.3<a href="https://ashlar.wwu.edu/changelog/version-5-3#533" class="hash-link" aria-label="Direct link to 5.3.3" title="Direct link to 5.3.3">​</a></h2>
 <p>** February 27, 2024 **</p>
 <ul>
 <li>Cypress automated deployment added</li>
