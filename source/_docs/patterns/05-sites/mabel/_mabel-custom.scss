@@ -122,8 +122,12 @@ Object page tweaks
 }
 .object-details h3,
 .object-details h4,
-.object-details h5, {
+.object-details h5 {
   margin-bottom: 0;
+}
+[data-theme="dark"] .object-details {
+  --h3-color: var(--blue--lighter--20);
+  --h4-color: var(--blue--lighter--20);
 }
 /*------------------------
 Transcripts
