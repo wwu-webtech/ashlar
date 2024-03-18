@@ -116,7 +116,7 @@
    * terser: Options map to pass to the terser plugin.
    */
   config.js = {
-    src: ["source/js/**/*.js", "source/_docs/patterns/**/*.js"],
+    src: ["source/js/**/*.js", "source/_docs/patterns/**/!(*.cy)*.js"],
     dest: "build/js",
     cdndest: "cdn/js",
     watch: ["source/js/**/*.js", "source/_docs/patterns/**/*.js"],
