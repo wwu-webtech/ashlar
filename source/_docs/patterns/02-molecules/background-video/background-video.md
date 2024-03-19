@@ -1,8 +1,11 @@
 import WWUBackgroundVideo from "./background-video.js"
 
 # Background Video
+<div class="wwu-beyond-basics-block block light-green-bg standard-margin standard-padding">
+  <p class="no-margin--bottom"><strong>Important!</strong> See "Pattern Notes" before using on a live site.</p>
+</div>
 
-<wwu-background-video src="https://www.wwu.edu/files/2020-04/Viking%20on%20Mars.mp4" alt="Curiosity Mars Rover crawls along rocky landscape, video" class="min-height--50vh headings--big-and-bold black-overlay">
+<wwu-background-video src="https://www.wwu.edu/files/2020-04/Viking%20on%20Mars.mp4" alt="4-second looping animation. The Mars Rover Curiosity scours for samples as the camera pans to reveal a vast, red landscape" class="min-height--50vh headings--big-and-bold black-overlay">
   <h2>Heading for this Video</h2>
   <p>Some content for this video. Not to be confused with the alt text, which should be a short description of what is going on in the video :)</p>
 </wwu-background-video>
@@ -13,3 +16,14 @@ import WWUBackgroundVideo from "./background-video.js"
   <p>Some content for this video. Not to be confused with the alt text, which should be a short description of what is going on in the video :)</p>
 </wwu-background-video>
   ```
+## Pattern Notes
+
+Using this pattern may decrease site accessibility, usability and performance, depending on the video and content used. Due to video using more bandwidth to load, content creators and editors should ensure the video is adding meaningful content and purpose, in addition to visual aesthetic. 
+
+If a high quality banner image can also convey the intended message, or the purpose is strictly visual flair, image format is preferred over video. With informative/decorative images, alt text is usually enough to make the content accessible (vs. transcripts, captions, audio descriptions, or a combo of the three with video).
+
+If using this pattern, the following accessibility features must be included:
+
+* For short-form video (less than 10 seconds): a text-based description of visuals must be provided through the alt attribute.
+  * Example: "4-second looping animation. The Mars Rover Curiosity scours for samples as the camera pans to reveal a vast, red landscape."
+* For long-form video (10 seconds or longer), a link to an [audio-described video](https://urm.wwu.edu/accessibility/guide/provide-audio-descriptions-time-based-media) must be provided.
