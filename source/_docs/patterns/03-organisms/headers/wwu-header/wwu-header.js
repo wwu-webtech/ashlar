@@ -65,6 +65,7 @@ if (
       
       connectedCallback() {
         let element_exists = this.classList.contains("element-created");
+        console.log("test message");
         /* Create the custom element by appending the template */
         if (!element_exists) {
           this.appendChild(header_template.content.cloneNode(true));
