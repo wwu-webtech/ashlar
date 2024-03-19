@@ -50,7 +50,7 @@ if (
         </div>
         
         <div class="site-name">
-            <a href="/" class="home-link"></a>
+            <a href="/" class="home-link"></a> STEF TEST
         </div>
         
         <div class="western-header-region">
