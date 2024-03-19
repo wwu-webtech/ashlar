@@ -191,5 +191,6 @@ if (
       console.log("element not yet defined, creating");
       window.customElements.define("wwu-header", WWUHeader);
     }
+    console.log("second test message");
   }
   
