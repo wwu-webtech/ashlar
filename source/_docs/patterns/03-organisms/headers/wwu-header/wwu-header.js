@@ -50,7 +50,7 @@ if (
         </div>
         
         <div class="site-name">
-            <a href="/" class="home-link"></a> STEF TEST
+            <a href="/" class="home-link"></a>
         </div>
         
         <div class="western-header-region">
@@ -64,8 +64,7 @@ if (
       }
       
       connectedCallback() {
-        let element_exists = this.classList.contains("element-created");
-        console.log("test message");
+        let element_exists = this.classList.contains("element-created");        
         /* Create the custom element by appending the template */
         if (!element_exists) {
           this.appendChild(header_template.content.cloneNode(true));
@@ -187,10 +186,8 @@ if (
         }
       }
     }
-    if (!window.customElements.get('wwu-header')) {  
-      console.log("element not yet defined, creating");
+    if (!window.customElements.get('wwu-header')) {        
       window.customElements.define("wwu-header", WWUHeader);
-    }
-    console.log("second test message");
+    }    
   }
   
