@@ -18,12 +18,14 @@ import WWUBackgroundVideo from "./background-video.js"
   ```
 ## Pattern Notes
 
-Using this pattern may decrease site accessibility, usability and performance, depending on the video and content used. Due to video using more bandwidth to load, content creators and editors should ensure the video is adding meaningful content and purpose, in addition to visual aesthetic. 
+Using this pattern may decrease site accessibility, usability and performance, depending on the video and content used. 
 
-If a high quality banner image can also convey the intended message, or the purpose is strictly visual flair, image format is preferred over video. With informative/decorative images, alt text is usually enough to make the content accessible (vs. transcripts, captions, audio descriptions, or a combo of the three with video).
+### Performance
+Due to video using more bandwidth to load, content creators and editors should ensure the video is adding meaningful content and purpose, in addition to visual aesthetic. If a high quality banner image can also convey the intended message, or the purpose is strictly visual flair, compressed image formats are preferred over video (WebP, SVG, compressed JPEG/PNG).
 
+### Accessibility
 If using this pattern, the following accessibility features must be included:
 
-* For short-form video (less than 10 seconds): a text-based description of visuals must be provided through the alt attribute.
+* For short-form video (less than 10 seconds): a text-based description of visuals must be provided through the alt attribute. Note: this approach **only meets level A** of the Web Content Accessibility Guidelines, not AA as Western aims for and [is required to meet](https://www.wwu.edu/commitment-accessibility).
   * Example: "4-second looping animation. The Mars Rover Curiosity scours for samples as the camera pans to reveal a vast, red landscape."
 * For long-form video (10 seconds or longer), a link to an [audio-described video](https://urm.wwu.edu/accessibility/guide/provide-audio-descriptions-time-based-media) must be provided.
