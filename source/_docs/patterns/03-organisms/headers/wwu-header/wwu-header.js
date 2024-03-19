@@ -187,6 +187,7 @@ if (
       }
     }
     if (!window.customElements.get('wwu-header')) {  
+      console.log("element not yet defined, creating");
       window.customElements.define("wwu-header", WWUHeader);
     }
   }
