@@ -49,7 +49,9 @@ if (
         }
       }
     }
-    window.customElements.define("wwu-accordion", WWUAccordion);
+    if (!window.customElements.get('wwu-accordion')) {    
+      window.customElements.define("wwu-accordion", WWUAccordion);
+    }
     
     function setup(item) {
       const item_content = item.parentNode.nextElementSibling;         
