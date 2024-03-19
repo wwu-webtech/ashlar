@@ -175,5 +175,7 @@ if (
     }
   }
 
-  window.customElements.define("wwu-switcher", WWUSwitcher);
+  if (!window.customElements.get('wwu-switcher')) {    
+    window.customElements.define("wwu-switcher", WWUSwitcher);
+  }
 }
