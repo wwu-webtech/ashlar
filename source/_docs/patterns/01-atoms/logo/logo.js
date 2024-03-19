@@ -308,5 +308,7 @@ if (
     }
   }
 
-  window.customElements.define("wwu-logo", WWULogo);
+  if (!window.customElements.get('wwu-logo')) {    
+    window.customElements.define("wwu-logo", WWULogo);
+  }    
 }

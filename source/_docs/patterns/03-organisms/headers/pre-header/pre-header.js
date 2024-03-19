@@ -327,5 +327,7 @@ if (
     }
   }
 
-  window.customElements.define("wwu-pre-header", PreHeader);
+  if (!window.customElements.get('wwu-pre-header')) {    
+    window.customElements.define("wwu-pre-header", PreHeader);
+  }
 }
