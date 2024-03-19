@@ -186,7 +186,7 @@ if (
         }
       }
     }
-    if (!customElements.get('wwu-header')) {  
+    if (!window.customElements.get('wwu-header')) {  
       window.customElements.define("wwu-header", WWUHeader);
     }
   }
