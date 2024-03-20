@@ -26,6 +26,6 @@ Due to video using more bandwidth to load, content creators and editors should e
 ### Accessibility
 If using this pattern, the following accessibility features must be included:
 
-* For short-form video (less than 5 seconds): a text-based description of visuals must be provided through the alt attribute.
+* For short-form video (5 seconds or less): a text-based description of visuals must be provided through the alt attribute.
   * Example: "4-second looping animation. The Mars Rover Curiosity crawls over rocky terrain as the camera pans over a vast, red landscape."
-* For long-form video (5 seconds or longer), a link to an [audio-described video](https://urm.wwu.edu/accessibility/guide/provide-audio-descriptions-time-based-media) must be provided.
+* For long-form video (6 seconds or longer), a link to an [audio-described video](https://urm.wwu.edu/accessibility/guide/provide-audio-descriptions-time-based-media) must be provided.
