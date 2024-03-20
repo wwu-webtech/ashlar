@@ -5,13 +5,13 @@ import WWUBackgroundVideo from "./background-video.js"
   <p class="no-margin--bottom"><strong>Important!</strong> See "Pattern Notes" before using on a live site.</p>
 </div>
 
-<wwu-background-video src="https://www.wwu.edu/files/2020-04/Viking%20on%20Mars.mp4" alt="4-second looping animation. The Mars Rover Curiosity scours for samples as the camera pans to reveal a vast, red landscape" class="min-height--50vh headings--big-and-bold black-overlay">
+<wwu-background-video src="https://www.wwu.edu/files/2020-04/Viking%20on%20Mars.mp4" alt="4-second looping animation. The Mars Rover Curiosity crawls over rocky terrain as the camera pans over a vast, red landscape" class="min-height--50vh headings--big-and-bold black-overlay">
   <h2>Heading for this Video</h2>
   <p>Some content for this video. Not to be confused with the alt text, which should be a short description of what is going on in the video :)</p>
 </wwu-background-video>
 
 ```
-<wwu-background-video src="https://www.wwu.edu/files/2020-04/Viking%20on%20Mars.mp4" alt="Curiosity Mars Rover crawls along rocky landscape, video" class="min-height--50vh headings--big-and-bold black-overlay">
+<wwu-background-video src="https://www.wwu.edu/files/2020-04/Viking%20on%20Mars.mp4" alt="The Mars Rover Curiosity crawls over rocky terrain as the camera pans over a vast, red landscape" class="min-height--50vh headings--big-and-bold black-overlay">
   <h2>Heading for this Video</h2>
   <p>Some content for this video. Not to be confused with the alt text, which should be a short description of what is going on in the video :)</p>
 </wwu-background-video>
@@ -27,5 +27,5 @@ Due to video using more bandwidth to load, content creators and editors should e
 If using this pattern, the following accessibility features must be included:
 
 * For short-form video (less than 5 seconds): a text-based description of visuals must be provided through the alt attribute.
-  * Example: "4-second looping animation. The Mars Rover Curiosity scours for samples as the camera pans to reveal a vast, red landscape."
+  * Example: "4-second looping animation. The Mars Rover Curiosity crawls over rocky terrain as the camera pans over a vast, red landscape."
 * For long-form video (5 seconds or longer), a link to an [audio-described video](https://urm.wwu.edu/accessibility/guide/provide-audio-descriptions-time-based-media) must be provided.
