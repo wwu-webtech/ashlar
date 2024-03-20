@@ -18,7 +18,7 @@ import WWUBackgroundVideo from "./background-video.js"
   ```
 ## Pattern Notes
 
-Using this pattern may decrease site accessibility, usability and performance, depending on the video and content used. 
+This pattern needs additional consideration from content creators to maintain site accessibility, usability, and performance.
 
 ### Performance
 Due to video using more bandwidth to load, content creators and editors should ensure the video is adding meaningful content and purpose, in addition to visual aesthetic. If a high quality banner image can also convey the intended message, or the purpose is strictly visual flair, compressed image formats are preferred over video (WebP, SVG, compressed JPEG/PNG).
