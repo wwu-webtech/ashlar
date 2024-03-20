@@ -28,4 +28,5 @@ If using this pattern, the following accessibility features must be included:
 
 * For short-form video (5 seconds or less): a text-based description of visuals must be provided through the alt attribute.
   * Example: "4-second looping animation. The Mars Rover Curiosity crawls over rocky terrain as the camera pans over a vast, red landscape."
-* For long-form video (6 seconds or longer), a link to an [audio-described video](https://urm.wwu.edu/accessibility/guide/provide-audio-descriptions-time-based-media) must be provided.
+* For long-form video (6 seconds or longer), a link to an [audio-described video version](https://urm.wwu.edu/accessibility/guide/provide-audio-descriptions-time-based-media) must be provided.
+* The text overlayed on the video background must meet [color contrast requirements](https://brand.wwu.edu/accessibility/guide/ensure-text-and-controls-have-enough-color-contrast), for both regular and large text.  
