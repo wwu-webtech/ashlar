@@ -64,7 +64,7 @@ if (
       }
       
       connectedCallback() {
-        let element_exists = this.classList.contains("element-created");
+        let element_exists = this.classList.contains("element-created");        
         /* Create the custom element by appending the template */
         if (!element_exists) {
           this.appendChild(header_template.content.cloneNode(true));
@@ -186,7 +186,8 @@ if (
         }
       }
     }
-    
-    window.customElements.define("wwu-header", WWUHeader);
+    if (!window.customElements.get('wwu-header')) {        
+      window.customElements.define("wwu-header", WWUHeader);
+    }    
   }
   

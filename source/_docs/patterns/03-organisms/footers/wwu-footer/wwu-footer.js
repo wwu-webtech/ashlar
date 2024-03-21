@@ -68,5 +68,7 @@ if (
     }
   }
 
-  window.customElements.define("wwu-footer", WWUFooter);
+  if (!window.customElements.get('wwu-footer')) {    
+    window.customElements.define("wwu-footer", WWUFooter);
+  }
 }
