@@ -32,8 +32,9 @@ if (
                 this.querySelector(".visually-hidden").innerText= this.getAttribute("group") + " on " + label;
             }
         }
-        
-        window.customElements.define("wwu-social", WWUSocial);
+        if (!window.customElements.get('wwu-social')) {    
+            window.customElements.define("wwu-social", WWUSocial);
+        }
         
         function select_icon(url) {
             if (url.includes("facebook")) {

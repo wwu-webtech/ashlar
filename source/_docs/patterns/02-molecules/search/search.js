@@ -28,6 +28,7 @@ if (
         }
       }
     }
-
-    window.customElements.define("wwu-search", WWUSearch);
+    if (!window.customElements.get('wwu-search')) {    
+      window.customElements.define("wwu-search", WWUSearch);
+    }
   }
