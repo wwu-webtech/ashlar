@@ -60,6 +60,15 @@ details pre {
   font-size: var(--font-size--xs);
 }
 /*------------------------
+Search in Collections
+------------------------*/
+.views-exposed-form {
+  display: inline-flex;
+}
+.views-exposed-form + .views-exposed-form {
+  transform: translatey(-0.8rem);
+}
+/*------------------------
 Card Tweaks
 ------------------------*/
 .card {
