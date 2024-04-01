@@ -4,7 +4,7 @@
         <title>Ashlar Blog</title>
         <link>https://ashlar.wwu.edu/changelog</link>
         <description>Ashlar Blog</description>
-        <lastBuildDate>Mon, 25 Mar 2024 12:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 01 Apr 2024 12:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,9 +12,15 @@
             <title><![CDATA[5.3.x Updates]]></title>
             <link>https://ashlar.wwu.edu/changelog/version-5-3</link>
             <guid>https://ashlar.wwu.edu/changelog/version-5-3</guid>
-            <pubDate>Mon, 25 Mar 2024 12:00:00 GMT</pubDate>
-            <description><![CDATA[5.3.5]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="535">5.3.5<a href="https://ashlar.wwu.edu/changelog/version-5-3#535" class="hash-link" aria-label="Direct link to 5.3.5" title="Direct link to 5.3.5">​</a></h2>
+            <pubDate>Mon, 01 Apr 2024 12:00:00 GMT</pubDate>
+            <description><![CDATA[5.3.6]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="536">5.3.6<a href="https://ashlar.wwu.edu/changelog/version-5-3#536" class="hash-link" aria-label="Direct link to 5.3.6" title="Direct link to 5.3.6">​</a></h2>
+<p>** April 1, 2024 **</p>
+<ul>
+<li>Adjusted heading size in status alert links</li>
+<li>Small adjustment for testimonial styles</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="535">5.3.5<a href="https://ashlar.wwu.edu/changelog/version-5-3#535" class="hash-link" aria-label="Direct link to 5.3.5" title="Direct link to 5.3.5">​</a></h2>
 <p>** March 25, 2024 **</p>
 <ul>
 <li>Duplicate component error fix</li>
