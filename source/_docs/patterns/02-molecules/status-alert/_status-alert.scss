@@ -4,12 +4,19 @@ Molecule: Status Alert
 1. Dark mode
 ------------------------------------------------------------------------------*/
 .status-alert {
+  --h2-size: var(--font-size--lg);
+  --h3-size: var(--font-size--lg);
+  --h4-size: var(--font-size--lg);
+  --h5-size: var(--font-size--lg);
   h2,
   h3,
   h4,
   h5,
   h6 {
     text-align: center;
+  }
+  a {
+    line-height: 1.6;
   }
   .material-icons {
     display: block;
