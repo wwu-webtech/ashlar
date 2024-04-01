@@ -6,7 +6,6 @@ Molecule: Testimonial
 @import "../../../00-utilities/breakpoints.scss";
 .wwu-testimonial {
   display: flex;
-  overflow-y: hidden;
   flex-flow: column;
   border-style: none;
   @media (min-width: $medium) {
