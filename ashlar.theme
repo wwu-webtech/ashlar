@@ -1,5 +1,7 @@
 <?php
 
+use \Drupal\block_content\BlockContentInterface;
+
 /**
  * @file
  * Functions to support theming in Ashlar.
@@ -381,5 +383,38 @@ function ashlar_preprocess_breadcrumb(&$variables) {
       'text' => $variables['current_page_text']    
     );
     $variables['#cache']['max-age'] = 0;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function ashlar_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  $content = $variables['elements']['content'];
+  if (isset($content['#block_content'])
+    and $content['#block_content'] instanceof BlockContentInterface) {
+    // Add 'block--block-content-BLOCK-TYPE.html.twig'.
+    $block_type_suggestions[] = 'block__block_content_' . $content['#block_content']->bundle();
+
+    // Add 'block--block-content-BLOCK-TYPE--VIEW-MODE.html.twig'.
+    $block_type_suggestions[] = 'block__block_content_' . $content['#block_content']->bundle() . '__' . $content['#view_mode'];
+
+    // Because block__block_content exists twice in $suggestions,
+    // the suggestion arrays are reversed for further processing.
+    $suggestions_rev = array_reverse($suggestions);
+    $block_type_suggestions = array_reverse($block_type_suggestions);
+
+    // Insert the block type and view mode suggestions between
+    // block__block_content and the block instance-specific suggestions.
+    $index = array_search('block__block_content', $suggestions_rev);
+    if (is_numeric($index)) {
+      array_splice($suggestions_rev, $index, 0, $block_type_suggestions);
+      $suggestions = array_reverse($suggestions_rev);
+    }
+    // If block__block_content isn't present as a suggestion.
+    else {
+      $suggestions_rev = array_merge($suggestions_rev, $block_type_suggestions);
+      $suggestions = array_reverse($suggestions_rev);
+    }
   }
 }
