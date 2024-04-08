@@ -13,8 +13,14 @@
             <link>https://ashlar.wwu.edu/changelog/version-5-3</link>
             <guid>https://ashlar.wwu.edu/changelog/version-5-3</guid>
             <pubDate>Mon, 01 Apr 2024 12:00:00 GMT</pubDate>
-            <description><![CDATA[5.3.6]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="536">5.3.6<a href="https://ashlar.wwu.edu/changelog/version-5-3#536" class="hash-link" aria-label="Direct link to 5.3.6" title="Direct link to 5.3.6">​</a></h2>
+            <description><![CDATA[5.3.7]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="537">5.3.7<a href="https://ashlar.wwu.edu/changelog/version-5-3#537" class="hash-link" aria-label="Direct link to 5.3.7" title="Direct link to 5.3.7">​</a></h2>
+<p>** April 8, 2024 **</p>
+<ul>
+<li>Added an option for having accordion items expanded by default</li>
+<li>Replace support for Block Type Templates module with theme suggestion hook</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="536">5.3.6<a href="https://ashlar.wwu.edu/changelog/version-5-3#536" class="hash-link" aria-label="Direct link to 5.3.6" title="Direct link to 5.3.6">​</a></h2>
 <p>** April 1, 2024 **</p>
 <ul>
 <li>Adjusted heading size in status alert links</li>

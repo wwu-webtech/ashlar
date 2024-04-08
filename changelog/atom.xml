@@ -12,8 +12,14 @@
         <id>https://ashlar.wwu.edu/changelog/version-5-3</id>
         <link href="https://ashlar.wwu.edu/changelog/version-5-3"/>
         <updated>2024-04-01T12:00:00.000Z</updated>
-        <summary type="html"><![CDATA[5.3.6]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="536">5.3.6<a href="https://ashlar.wwu.edu/changelog/version-5-3#536" class="hash-link" aria-label="Direct link to 5.3.6" title="Direct link to 5.3.6">​</a></h2>
+        <summary type="html"><![CDATA[5.3.7]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="537">5.3.7<a href="https://ashlar.wwu.edu/changelog/version-5-3#537" class="hash-link" aria-label="Direct link to 5.3.7" title="Direct link to 5.3.7">​</a></h2>
+<p>** April 8, 2024 **</p>
+<ul>
+<li>Added an option for having accordion items expanded by default</li>
+<li>Replace support for Block Type Templates module with theme suggestion hook</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="536">5.3.6<a href="https://ashlar.wwu.edu/changelog/version-5-3#536" class="hash-link" aria-label="Direct link to 5.3.6" title="Direct link to 5.3.6">​</a></h2>
 <p>** April 1, 2024 **</p>
 <ul>
 <li>Adjusted heading size in status alert links</li>
@@ -67,6 +73,9 @@
         </author>
         <author>
             <name>Max Bronsema</name>
+        </author>
+        <author>
+            <name>Nigel Packer</name>
         </author>
         <category label="minor-release" term="minor-release"/>
     </entry>
