@@ -17,6 +17,9 @@ Molecule: Cards - Alternate styles
     grid-template-areas: "image ." "image ." "image ." "image ." "image ." "image .";
     grid-template-columns: 1fr 1fr;
     padding: 0;
+    &.smaller-image {
+      grid-template-columns: 1fr 2fr;
+    }
     .image {
       grid-area: image;
       margin: 0;
