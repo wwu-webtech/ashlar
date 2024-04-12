@@ -8,13 +8,14 @@ acalog:
     dist/js/acalog.js: {}
   dependencies:
     - core/jquery
-    - core/jquery.once
+    - core/once
 accessible-mega-menu:
   version: 1.x
   js:
     dist/js/accessible-mega-menu.js: {}
   dependencies:
     - core/jquery
+    - core/once
 accordion:
   version: 1.x
   css:
@@ -32,6 +33,7 @@ alerts:
     build/js/alerts.js: {}
   dependencies:
     - core/jquery
+    - core/once
 announcement:
   version: 1.x
   css:
@@ -82,7 +84,7 @@ event-tracking:
     build/js/event-tracking.js: {}
   dependencies:
     - core/jquery
-    - core/jquery.once
+    - core/once
 external-links-a11y:
   version: 1.x
   js:
