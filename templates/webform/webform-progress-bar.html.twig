@@ -16,7 +16,7 @@
  * @ingroup themeable
  */
 #}
-{% spaceless %}
+{% apply spaceless %}
 {% if progress|length < max_pages %}
   <ol class="webform-progress-bar" data-steps="{{ progress|length }}">
   {% for index, page in progress %}
@@ -32,4 +32,4 @@
     </li>{% endfor %}
   </ol>
 {% endif %}
-{% endspaceless %}
+{% endapply %}
