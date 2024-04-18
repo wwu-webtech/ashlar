@@ -1,10 +1,7 @@
 acalog:
   version: 1.x
-  css:
-    theme:
-      https://catalog.wwu.edu/widget-api/widget-api.min.css: {}
   js:
-    https://catalog.wwu.edu/widget-api/widget-api.min.js: {}
+    dist/js/acalog-widget-api.min.js: {}
     dist/js/acalog.js: {}
   dependencies:
     - core/jquery

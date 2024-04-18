@@ -30,6 +30,10 @@ SITEIMPROVE;
   if (theme_get_setting('vimeo_tracking')) {
     $attachments['#attached']['library'][] = 'ashlar/vimeo-tracking';
   }
+
+  if (theme_get_setting('enable_acalog_widget')) {
+    $attachments['#attached']['library'][] = 'ashlar/acalog';
+  }
 }
 
 /**
