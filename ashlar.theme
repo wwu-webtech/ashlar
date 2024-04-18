@@ -92,15 +92,6 @@ function ashlar_preprocess_field(&$variables) {
       _ashlar_set_current_page($variables['items']);
     }
   }
-
-  //Invoke acalog code when the when body is present and matches 'acalog'
-  if(!empty($variables['items']['0']['content']['#text'])){
-    if($variables['element']['#field_name'] === 'body') {
-      if(strpos($variables['items']['0']['content']['#text'], 'acalog') !== false) {
-        $variables['#attached']['library'][] = 'ashlar/acalog';
-      }
-    }
-  }
 }
 
 /**
