@@ -1,7 +1,7 @@
 acalog:
   version: 1.x
   js:
-    dist/js/acalog-widget-api.min.js: {}
+    dist/js/acalog-widget-api.js: {}
     dist/js/acalog.js: {}
   dependencies:
     - core/jquery
