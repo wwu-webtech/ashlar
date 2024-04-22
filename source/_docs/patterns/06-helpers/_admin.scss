@@ -25,6 +25,45 @@ Fixes for Drupal administration theme.
   font-size: 0.65rem;
 }
 /*------------------------------------------------------------------------------
+Layout Builder 
+------------------------------------------------------------------------------*/
+#drupal-off-canvas {
+  font-size: 16px;
+}
+#drupal-off-canvas .field--name-field-accordion-item tr.draggable,
+#drupal-off-canvas .field--name-field-content-switcher-item tr.draggable,
+#drupal-off-canvas .field--name-field-statistic tr.draggable,
+#drupal-off-canvas .field--name-field-schedule-item tr.draggable {
+  display: flex;
+}
+#drupal-off-canvas .messages--error {
+  background-repeat: no-repeat;
+  background-position-x: 1%;
+  background-position-y: 50%;
+}
+#drupal-off-canvas .ui-autocomplete li a {
+  color: #63c2ff !important;
+}
+[data-theme="dark"] {
+  .layout-builder {
+    @include black-bg;
+  }
+  .layout-builder,
+  .layout-builder-block,
+  .layout-builder__add-section,
+  .layout-builder__add-block {
+    background-color: var(--dark-gray--darker--80);
+  }
+}
+#drupal-off-canvas a.tabledrag-handle .handle {
+  width: 40px;
+  height: 40px;
+}
+#drupal-off-canvas th:first-child,
+#drupal-off-canvas td:first-child {
+  width: unset;
+}
+/*------------------------------------------------------------------------------
 Media Library
 ------------------------------------------------------------------------------*/
 #media-library-content {
