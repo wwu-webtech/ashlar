@@ -26,13 +26,19 @@ function ashlar_form_system_theme_settings_alter(&$form, FormStateInterface &$fo
 
   $form['theme_settings']['alert_display'] = array(
     '#type' => 'checkbox',
-    '#title' => t('Display Western Alerts'),
+    '#title' => t('Display Western alerts'),
     '#default_value' => theme_get_setting('alert_display'),
   );
 
   $form['theme_settings']['show_manual_login'] = array(
     '#type' => 'checkbox',
-    '#title' => t('Show Manual Login Form'),
+    '#title' => t('Show manual login form'),
     '#default_value' => theme_get_setting('show_manual_login'),
+  );
+
+  $form['theme_settings']['enable_acalog_widget'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Load Javascript for dynamic catalog links'),
+    '#default_value' => theme_get_setting('enable_acalog_widget'),
   );
 }
