@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ashlar.wwu.edu/changelog</id>
     <title>Ashlar Blog</title>
-    <updated>2024-04-01T12:00:00.000Z</updated>
+    <updated>2024-04-22T12:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ashlar.wwu.edu/changelog"/>
     <subtitle>Ashlar Blog</subtitle>
@@ -11,9 +11,17 @@
         <title type="html"><![CDATA[5.3.x Updates]]></title>
         <id>https://ashlar.wwu.edu/changelog/version-5-3</id>
         <link href="https://ashlar.wwu.edu/changelog/version-5-3"/>
-        <updated>2024-04-01T12:00:00.000Z</updated>
-        <summary type="html"><![CDATA[5.3.7]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="537">5.3.7<a href="https://ashlar.wwu.edu/changelog/version-5-3#537" class="hash-link" aria-label="Direct link to 5.3.7" title="Direct link to 5.3.7">​</a></h2>
+        <updated>2024-04-22T12:00:00.000Z</updated>
+        <summary type="html"><![CDATA[5.3.8]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="538">5.3.8<a href="https://ashlar.wwu.edu/changelog/version-5-3#538" class="hash-link" aria-label="Direct link to 5.3.8" title="Direct link to 5.3.8">​</a></h2>
+<p>** April 22, 2024 **</p>
+<ul>
+<li>Added code samples to status alert pattern page</li>
+<li>Fix for list nesting on Wordpress</li>
+<li><a href="https://webtech.wwu.edu/how-create-dynamic-catalog-links" target="_blank" rel="noopener noreferrer">Acalog widget implementation</a></li>
+<li>Remove off canvas reset styles</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="537">5.3.7<a href="https://ashlar.wwu.edu/changelog/version-5-3#537" class="hash-link" aria-label="Direct link to 5.3.7" title="Direct link to 5.3.7">​</a></h2>
 <p>** April 8, 2024 **</p>
 <ul>
 <li>Added an option for having accordion items expanded by default</li>

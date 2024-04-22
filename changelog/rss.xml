@@ -4,7 +4,7 @@
         <title>Ashlar Blog</title>
         <link>https://ashlar.wwu.edu/changelog</link>
         <description>Ashlar Blog</description>
-        <lastBuildDate>Mon, 01 Apr 2024 12:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 22 Apr 2024 12:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,9 +12,17 @@
             <title><![CDATA[5.3.x Updates]]></title>
             <link>https://ashlar.wwu.edu/changelog/version-5-3</link>
             <guid>https://ashlar.wwu.edu/changelog/version-5-3</guid>
-            <pubDate>Mon, 01 Apr 2024 12:00:00 GMT</pubDate>
-            <description><![CDATA[5.3.7]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="537">5.3.7<a href="https://ashlar.wwu.edu/changelog/version-5-3#537" class="hash-link" aria-label="Direct link to 5.3.7" title="Direct link to 5.3.7">​</a></h2>
+            <pubDate>Mon, 22 Apr 2024 12:00:00 GMT</pubDate>
+            <description><![CDATA[5.3.8]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="538">5.3.8<a href="https://ashlar.wwu.edu/changelog/version-5-3#538" class="hash-link" aria-label="Direct link to 5.3.8" title="Direct link to 5.3.8">​</a></h2>
+<p>** April 22, 2024 **</p>
+<ul>
+<li>Added code samples to status alert pattern page</li>
+<li>Fix for list nesting on Wordpress</li>
+<li><a href="https://webtech.wwu.edu/how-create-dynamic-catalog-links" target="_blank" rel="noopener noreferrer">Acalog widget implementation</a></li>
+<li>Remove off canvas reset styles</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="537">5.3.7<a href="https://ashlar.wwu.edu/changelog/version-5-3#537" class="hash-link" aria-label="Direct link to 5.3.7" title="Direct link to 5.3.7">​</a></h2>
 <p>** April 8, 2024 **</p>
 <ul>
 <li>Added an option for having accordion items expanded by default</li>
