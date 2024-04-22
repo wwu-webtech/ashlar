@@ -155,6 +155,16 @@ code {
 /*------------------------------------------------------------------------------
 3. Miscellaneous fixes
 ------------------------------------------------------------------------------*/
-.site-name {  // This is to fix when site's title is missing.
-    display: inline !important;
+.site-name {
+  // This is to fix when site's title is missing.
+  display: inline !important;
+}
+ul {
+  padding-left: var(--space--md);
+}
+ul ul {
+  list-style: circle;
+}
+ul ul ul {
+  list-style: square;
 }
