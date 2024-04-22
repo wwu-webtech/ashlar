@@ -159,8 +159,10 @@ code {
   // This is to fix when site's title is missing.
   display: inline !important;
 }
-ul ul {
+ul {
   padding-left: var(--space--md);
+}
+ul ul {
   list-style: circle;
 }
 ul ul ul {
