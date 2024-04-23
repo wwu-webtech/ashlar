@@ -2,6 +2,15 @@ import WWUSearch from "./search.js"
 
 # Search
 
+## Component Library
+Include the following script to use the search component on your non-Drupal website or application.
+
+```
+<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/search.js">
+```
+
+## Component Markup
+
 <wwu-search role="search" aria-label="Western">
     <noscript>
         <form class="search-area" method="get" action="https://search2.wwu.edu/texis/search/">
