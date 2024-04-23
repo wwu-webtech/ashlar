@@ -7,7 +7,7 @@ import WWUFooter from "./wwu-footer.js"
 <wwu-footer></wwu-footer>
 
 ## Component Markup and Library
-Place inside <footer>
+Place inside &lt;footer&gt;
 
 ```
 <wwu-footer></wwu-footer>
