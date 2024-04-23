@@ -5,7 +5,7 @@ import PreHeader from "./pre-header.js"
 <wwu-pre-header></wwu-pre-header>
 
 ## Component Markup and Library
-Place in <header>
+Place in &lt;header&gt;
 
 ```
 <wwu-pre-header></wwu-pre-header>
