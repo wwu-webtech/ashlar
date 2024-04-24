@@ -6,7 +6,7 @@ import WWUAccordion from "./accordion.js"
 Include the following script to use the accordion component on your non-Drupal website or application.
 
 ```
-<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/accordion.js">
+<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/accordion.js"></script>
 ```
 
 ## Component Markup

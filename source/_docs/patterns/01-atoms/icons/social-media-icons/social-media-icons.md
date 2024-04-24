@@ -7,7 +7,7 @@ Use these short tags to add social media links to your website. Group should be 
 Include the following script to use the social icon component on your non-Drupal website or application.
 
 ```
-<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/social-media-icons.js">
+<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/social-media-icons.js"></script>
 ```
 
 ## Component Markup
