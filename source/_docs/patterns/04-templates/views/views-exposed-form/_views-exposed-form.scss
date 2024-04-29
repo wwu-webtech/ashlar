@@ -12,11 +12,10 @@ Organism: Views - Views exposed form
     margin-right: var(--space--xs);
   }
   .form {
-    gap: var(--space--sm);
-
     display: flex;
     flex-flow: row wrap;
-    align-items: start;
+    gap: var(--space--sm);
+    align-items: flex-start;
   }
   input,
   select,
