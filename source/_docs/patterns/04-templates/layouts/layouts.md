@@ -3,7 +3,7 @@
 ## One Column
 The default one column layout is narrow, in order to optimize characters per line for better readability. If you have a lot of text in a one column layout, then the default is recommended. If you have smaller amounts of text and want margins to line up nicely, then the "full content width" one column layout is also available.
 
-### One column default (narrow)
+### Default (narrow)
 <div className="layout--onecol">
     <div className="layout__region">
         <p>
@@ -29,7 +29,7 @@ The default one column layout is narrow, in order to optimize characters per lin
 </div>
 ```
 
-### One column full content width
+### Full content width (wide)
 <div className="layout--onecol--full">
     <div className="layout__region">  
         <p>
@@ -240,9 +240,206 @@ The default one column layout is narrow, in order to optimize characters per lin
 ## Three Column
 
 ### 33/34/33
+<div className="layout--threecol-section layout--threecol-section--33-34-33">
+    <div className="layout__region--first">
+        <p>
+            Id aliquet risus feugiat in ante metus dictum at tempor. Lectus quam id leo in vitae turpis massa sed. Duis at tellus at urna condimentum. Neque ornare aenean euismod elementum nisi quis eleifend quam adipiscing. 
+        </p>
+    </div>
+    <div className="layout__region--second">
+        <p>
+            Dui nunc mattis enim ut tellus elementum sagittis vitae et. Quam nulla porttitor massa id neque aliquam vestibulum morbi. Risus pretium quam vulputate dignissim suspendisse in est ante. Maecenas volutpat blandit aliquam etiam. Diam sit amet nisl suscipit adipiscing. Massa sapien faucibus et molestie. Tempor orci eu lobortis elementum nibh. 
+        </p>
+    </div>
+    <div className="layout__region--third">
+        <p>
+            Cras adipiscing enim eu turpis egestas pretium. Sollicitudin tempor id eu nisl nunc mi ipsum. Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Purus viverra accumsan in nisl nisi.
+        </p>
+    </div>
+</div>
+
+```
+<div class="layout--threecol-section layout--threecol-section--33-34-33">
+    <div class="layout__region--first">
+        <p>
+            Id aliquet...
+        </p>
+    </div>
+    <div class="layout__region--second">
+        <p>
+            Dui nunc...
+        </p>
+    </div>
+    <div class="layout__region--third">
+        <p>
+            Cras adipiscing...
+        </p>
+    </div>
+</div>
+```
 
 ### 25/50/25
+<div className="layout--threecol-section layout--threecol-section--25-50-25">
+    <div className="layout__region--first">
+        <p>
+            Id aliquet risus feugiat in ante metus dictum at tempor. Lectus quam id leo in vitae turpis massa sed. Duis at tellus at urna condimentum. Neque ornare aenean euismod elementum nisi quis eleifend quam adipiscing. 
+        </p>
+    </div>
+    <div className="layout__region--second">
+        <p>
+            Dui nunc mattis enim ut tellus elementum sagittis vitae et. Quam nulla porttitor massa id neque aliquam vestibulum morbi. Risus pretium quam vulputate dignissim suspendisse in est ante. Maecenas volutpat blandit aliquam etiam. Diam sit amet nisl suscipit adipiscing. Massa sapien faucibus et molestie. Tempor orci eu lobortis elementum nibh. 
+        </p>
+    </div>
+    <div className="layout__region--third">
+        <p>
+            Cras adipiscing enim eu turpis egestas pretium. Sollicitudin tempor id eu nisl nunc mi ipsum. Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Purus viverra accumsan in nisl nisi.
+        </p>
+    </div>
+</div>
+
+```
+<div class="layout--threecol-section layout--threecol-section--25-50-25">
+    <div class="layout__region--first">
+        <p>
+            Id aliquet...
+        </p>
+    </div>
+    <div class="layout__region--second">
+        <p>
+            Dui nunc...
+        </p>
+    </div>
+    <div class="layout__region--third">
+        <p>
+            Cras adipiscing...
+        </p>
+    </div>
+</div>
+```
 
 ### 25/25/50
+<div className="layout--threecol-section layout--threecol-section--25-25-50">
+    <div className="layout__region--first">
+        <p>
+            Id aliquet risus feugiat in ante metus dictum at tempor. Lectus quam id leo in vitae turpis massa sed. Duis at tellus at urna condimentum. Neque ornare aenean euismod elementum nisi quis eleifend quam adipiscing. 
+        </p>
+    </div>
+    <div className="layout__region--second">
+        <p>
+            Dui nunc mattis enim ut tellus elementum sagittis vitae et. Quam nulla porttitor massa id neque aliquam vestibulum morbi. Risus pretium quam vulputate dignissim suspendisse in est ante. Maecenas volutpat blandit aliquam etiam. Diam sit amet nisl suscipit adipiscing. Massa sapien faucibus et molestie. Tempor orci eu lobortis elementum nibh. 
+        </p>
+    </div>
+    <div className="layout__region--third">
+        <p>
+            Cras adipiscing enim eu turpis egestas pretium. Sollicitudin tempor id eu nisl nunc mi ipsum. Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Purus viverra accumsan in nisl nisi.
+        </p>
+    </div>
+</div>
+
+```
+<div class="layout--threecol-section layout--threecol-section--25-25-50">
+    <div class="layout__region--first">
+        <p>
+            Id aliquet...
+        </p>
+    </div>
+    <div class="layout__region--second">
+        <p>
+            Dui nunc...
+        </p>
+    </div>
+    <div class="layout__region--third">
+        <p>
+            Cras adipiscing...
+        </p>
+    </div>
+</div>
+```
 
 ### 50/25/25
+<div className="layout--threecol-section layout--threecol-section--50-25-25">
+    <div className="layout__region--first">
+        <p>
+            Id aliquet risus feugiat in ante metus dictum at tempor. Lectus quam id leo in vitae turpis massa sed. Duis at tellus at urna condimentum. Neque ornare aenean euismod elementum nisi quis eleifend quam adipiscing. 
+        </p>
+    </div>
+    <div className="layout__region--second">
+        <p>
+            Dui nunc mattis enim ut tellus elementum sagittis vitae et. Quam nulla porttitor massa id neque aliquam vestibulum morbi. Risus pretium quam vulputate dignissim suspendisse in est ante. Maecenas volutpat blandit aliquam etiam. Diam sit amet nisl suscipit adipiscing. Massa sapien faucibus et molestie. Tempor orci eu lobortis elementum nibh. 
+        </p>
+    </div>
+    <div className="layout__region--third">
+        <p>
+            Cras adipiscing enim eu turpis egestas pretium. Sollicitudin tempor id eu nisl nunc mi ipsum. Volutpat blandit aliquam etiam erat velit scelerisque in dictum non. Purus viverra accumsan in nisl nisi.
+        </p>
+    </div>
+</div>
+
+```
+<div class="layout--threecol-section layout--threecol-section--50-25-25">
+    <div class="layout__region--first">
+        <p>
+            Id aliquet...
+        </p>
+    </div>
+    <div class="layout__region--second">
+        <p>
+            Dui nunc...
+        </p>
+    </div>
+    <div class="layout__region--third">
+        <p>
+            Cras adipiscing...
+        </p>
+    </div>
+</div>
+```
+
+## Four Column
+<div className="layout--fourcol-section">
+    <div className="layout__region">
+        <p>
+            Sagittis eu volutpat odio facilisis mauris sit amet. Proin sagittis nisl rhoncus mattis rhoncus. Tincidunt eget nullam non nisi est sit. Ac felis donec et odio pellentesque diam volutpat commodo sed. 
+        </p>
+    </div>
+    <div className="layout__region">
+        <p>
+            Commodo elit at imperdiet dui accumsan sit amet nulla facilisi. Orci porta non pulvinar neque laoreet suspendisse interdum. Praesent tristique magna sit amet purus gravida quis. 
+        </p>
+    </div>
+    <div className="layout__region">
+        <p>
+            Curabitur vitae nunc sed velit dignissim sodales. Scelerisque eu ultrices vitae auctor eu augue ut lectus arcu. Nam libero justo laoreet sit amet cursus sit amet. Senectus et netus et malesuada. 
+        </p>
+    </div>
+    <div className="layout__region">
+        <p>
+            Vulputate ut pharetra sit amet aliquam id diam. Faucibus in ornare quam viverra orci sagittis eu volutpat odio.
+        </p>
+    </div>
+</div>
+
+```
+<div class="layout--fourcol-section">
+    <div class="layout__region">
+        <p>
+            Sagittis eu...
+        </p>
+    </div>
+    <div class="layout__region">
+        <p>
+            Commodo elit...
+        </p>
+    </div>
+    <div class="layout__region">
+        <p>
+            Curabitur vitae...
+        </p>
+    </div>
+    <div class="layout__region">
+        <p>
+            Vulputate ut...
+        </p>
+    </div>
+</div>
+```
