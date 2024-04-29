@@ -5,11 +5,15 @@ import WWUHeader from "./wwu-header.js"
 
 <wwu-header sitename='A Western Department' sitename-link='/' regioncontent='<div><p><a href=#>A Website of this Department</a></p></div>'></wwu-header>
 
+## Component Markup and Library
+Place inside &lt;header&gt;
+
 ```
-Place inside <header>
 <wwu-header sitename='A Western Website' sitename-link='/' regioncontent='<div><p><a href=#>Department of this College</a></p></div>'></wwu-header>
+```
 
 Place near bottom of page
+```
 <script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/logo.js"></script>
 <script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/wwu-header.js"></script>
 ```

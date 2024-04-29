@@ -4,6 +4,16 @@ import WWUMainNav from "./main-navigation.js"
 Utilizes Ultimenu for generating the markup and region management in Drupal, and Adobe Megamenu for the interactions/accessibility. 
 The megamenu script cannot currently be loaded in the documentaion, so this is a preview for styles only. 
 
+## Component Library
+Include the following scripts to use the navigation component on your non-Drupal website or application.
+
+```
+<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/accessible-mega-menu.js"></script>
+<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/menu-extras.js"></script>
+<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/main-navigation.js"></script>
+```
+
+## Component Markup
 <wwu-main-nav>
 <a href="#place1a">Menu item 1</a>
 

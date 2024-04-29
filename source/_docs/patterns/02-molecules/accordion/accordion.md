@@ -2,8 +2,15 @@ import WWUAccordion from "./accordion.js"
 
 # Accordion
 
+## Component Library
+Include the following script to use the accordion component on your non-Drupal website or application.
+
+```
+<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/accordion.js"></script>
+```
+
 ## Component Markup
-This is the simplified, preferred markup for using accordions.
+This is the simplified, preferred markup for using accordions. 
 
 <wwu-accordion>
     <wwu-accordion-item label="Cats" heading-level="h3">

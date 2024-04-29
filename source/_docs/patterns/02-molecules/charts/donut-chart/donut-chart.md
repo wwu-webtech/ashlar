@@ -3,6 +3,13 @@ import WWUDonutChart from "./donut-chart.js"
 # Donut Chart
 These donut charts can only display eight values or less. If using as markup, the label attribute is required for accessibility, it should describe what is in the dataset. This is included by default with the Drupal block.
 
+## Component Library
+Include the following script to use the donut chart component on your non-Drupal website or application.
+
+```
+<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/donut-chart.js"></script>
+```
+
 ## Blue (Default)
 <wwu-donut-chart label="Student Population">
     <ul>

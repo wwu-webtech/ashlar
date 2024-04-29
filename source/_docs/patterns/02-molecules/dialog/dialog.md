@@ -2,6 +2,14 @@ import WWUDialog from "./dialog.js"
 
 # Dialog
 
+## Component Library
+Include the following script to use the dialog component on your non-Drupal website or application.
+
+```
+<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/dialog.js"></script>
+```
+
+## Component Markup
 <wwu-dialog label="Anthem Video on Vimeo" button="Play a Vimeo Video" icon="play_arrow">
     <div className="embed-container">
         <iframe src="https://player.vimeo.com/video/668337172?h=15cc98305e&badge=0&autopause=0&player_id=0&app_id=58479/embed" allow="autoplay; fullscreen; picture-in-picture" title="Anthem, Vimeo"></iframe>
