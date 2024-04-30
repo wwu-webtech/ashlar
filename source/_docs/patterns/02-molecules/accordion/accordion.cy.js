@@ -46,5 +46,19 @@ describe("molecule: accordion", () => {
       cy.get(accordion_item_dog).find(".expand").should("have.attr", "aria-expanded", "false") 
       cy.get(accordion_item_dog).siblings(".content").should("not.have.class", "is-expanded")
     })
+
+    it("passes color contrast in dark mode", () => {
+      cy.get('html').invoke('attr', 'data-theme', 'dark')
+      cy.injectAxe()
+      cy.checkA11y('.theme-doc-markdown', {
+        runOnly: {
+          type: 'tag',
+          values: ['wcag2a', 'wcag2aa']
+        },
+        rules: {
+          'color-contrast': {enabled: true}
+        }
+      })
+    })
   })
 })
