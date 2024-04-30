@@ -5,17 +5,31 @@ Molecule: Switcher
 @import "../../00-utilities/breakpoints.scss";
 wwu-switcher {
   button {
+    position: relative;
     flex: 1 1 0;
     width: 100%;
     margin: 0;
+    padding: var(--space--xs) var(--space--lg);
     cursor: default;
     color: var(--link-color);
     border: solid var(--border-width--md) var(--link-decoration-color);
+    border-right-width: var(--border-width--sm);
+    border-left-width: var(--border-width--sm);
     border-radius: 0;
     background: transparent;
     box-shadow: none;
     .component-icon {
       fill: var(--link-color);
+
+      position: absolute;
+      &.up,
+      &.left {
+        left: 0;
+      }
+      &.down,
+      &.right {
+        right: 0;
+      }
     }
     &:active,
     &:focus,
@@ -32,8 +46,11 @@ wwu-switcher {
     &.active {
       font-weight: var(--font-weight--semibold);
     }
-    &:not(:last-of-type) {
-      border-right: none;
+    &:first-of-type {
+      border-left-width: var(--border-width--md);
+    }
+    &:last-of-type {
+      border-right-width: var(--border-width--md);
     }
   }
   .switcher {
@@ -58,14 +75,25 @@ wwu-switcher {
   &[layout="column"] {
     @media (min-width: $small) {
       display: grid;
-      grid-template-columns: auto auto;
+      grid-template-columns: 1fr auto;
       gap: var(--space--sm);
       button {
         display: flex;
         flex-flow: column;
+        padding: var(--space--lg) var(--space--xs);
         &:not(:last-of-type) {
           border-right: solid var(--border-width--md) var(--link-decoration-color);
           border-bottom: none;
+        }
+        .component-icon {
+          &.up {
+            top: 0;
+            left: unset;
+          }
+          &.down {
+            right: unset;
+            bottom: 0;
+          }
         }
       }
       .switcher {
