@@ -46,7 +46,7 @@ describe("molecule: accordion", () => {
 
     it("accordion item closes on Esc press", () => {
      /*
-      * on 2nd click/enter/space 
+      * on Esc press 
       * accordion item content is collapsed, aria-expanded false
       */
       cy.get(".theme-doc-markdown wwu-accordion:first-of-type > [label='Dogs'] > .title > .expand").click()
