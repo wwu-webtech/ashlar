@@ -11,6 +11,12 @@
         // gateway to western catalog
         gateway: 'https://catalog.wwu.edu',
       });
+
+      /* Slightly different class for making course links */
+      $('.acalog-course').attr("data-acalog-data", "courses");
+      $('.acalog-course').acalogWidgetize({
+        gateway: 'https://catalog.wwu.edu',
+      });
     }
   };
 })(jQuery);

@@ -7,16 +7,39 @@ Firefox needs additional reset query, based on /core/themes/stable/css/core/norm
 ------------------------------------------------------------------------------*/
 
 details {
+  --h2-size: var(--font-size--lg);
+  --h3-size: var(--font-size--lg);
+  --h4-size: var(--font-size--md);
+  --h5-size: var(--font-size--md);
+  --h6-size: var(--font-size--sm);
+  
+  padding: var(--space--xs);
+  padding-bottom: 0;
+  > *:last-child {
+    padding-bottom: var(--space--xs);
+  }
   summary {
+    --h2-size: var(--font-size--md);
+    --h3-size: var(--font-size--md);
+    --h4-size: var(--font-size--md);
+    --h5-size: var(--font-size--md);
+    --h6-size: var(--font-size--md);
+    
     display: revert;
+    margin: calc(-1 * var(--space--xs));
     margin-bottom: var(--space--md);
     padding: var(--space--sm);
-    border: var(--border-width--sm) solid var(--h3-color);
+    border: var(--border-width--sm) solid var(--h3-color);;
     @media (min--moz-device-pixel-ratio: 0) {
       display: list-item;
     }
-  }
-  & > *:not(summary) {
-    margin: 0 var(--space--md);
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      display: inline;
+      margin: 0;
+    }
   }
 }
