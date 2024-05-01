@@ -80,7 +80,7 @@ describe("molecule: accordion", () => {
       const accordion_item_cat = ".theme-doc-markdown wwu-accordion:first-of-type > [label='Cats'] > .title"
 
      /*
-      * on click/enter/space: accordion item content expands, aria-expanded true
+      * on Enter: accordion item content expands, aria-expanded true
       */
       cy.window().focus()
       cy.get(accordion_item_cat).find(".expand").click()
@@ -88,9 +88,9 @@ describe("molecule: accordion", () => {
       cy.get(accordion_item_cat).siblings(".content").should("have.class", "is-expanded")
 
      /*
-      * on 2nd click/enter/space: accordion item content collapses, aria-expanded false
+      * on 2nd Enter: accordion item content collapses, aria-expanded false
       */
-      cy.get(accordion_item_cat).find(".expand").realClick()
+      cy.get(accordion_item_cat).find(".expand").realPress("Enter")
       cy.get(accordion_item_cat).find(".expand").should("have.attr", "aria-expanded", "false")
       cy.get(accordion_item_cat).siblings(".content").should("not.have.class", "is-expanded")
     })
