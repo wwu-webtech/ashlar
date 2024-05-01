@@ -21,3 +21,6 @@ import './commands'
 
 // Import axe-core for a11y testing
 import 'cypress-axe'
+
+// Import real-events for keyboard a11y testing
+import 'cypress-real-events'
