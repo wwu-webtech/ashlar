@@ -26,6 +26,19 @@ describe("molecule: accordion", () => {
   })
 
   context("manual accessibility tests", () => {
+    it("accordion items are focusable", () => {
+      const accordion_item1 = ".theme-doc-markdown wwu-accordion:first-of-type > [label='Cats'] > .title"
+      const accordion_item2 = ".theme-doc-markdown wwu-accordion:first-of-type > [label='Dogs'] > .title"
+
+     /*
+      * On Tab: Focus moves from one accordion button to next button 
+      */
+      cy.get(accordion_item1).find(".expand").focus()
+      cy.get(accordion_item1).find(".expand").should("have.focus") 
+      cy.get(accordion_item1).find(".expand").realPress("Tab")
+      cy.get(accordion_item2).find(".expand").should("have.focus")
+    })
+    
     it("accordion item toggles and announces states as expected", () => {
       const accordion_item = ".theme-doc-markdown wwu-accordion:first-of-type > [label='Cats'] > .title"
 
