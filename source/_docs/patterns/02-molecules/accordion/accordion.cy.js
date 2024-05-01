@@ -64,32 +64,36 @@ describe("molecule: accordion", () => {
 
   context("manual accessibility tests", () => {
     it("accordion item toggles and announces states as expected", () => {
+      const accordion_item = ".theme-doc-markdown wwu-accordion:first-of-type > [label='Cats'] > .title"
+
      /*
       * on click/enter/space 
       * accordion item content is expanded, aria-expanded true
       */
-      cy.get(".theme-doc-markdown wwu-accordion:first-of-type > [label='Cats'] > .title > .expand").click()
-      cy.get(".theme-doc-markdown wwu-accordion:first-of-type > [label='Cats'] > .title > .expand").should("have.attr", "aria-expanded", "true")
-      cy.get(".theme-doc-markdown wwu-accordion:first-of-type > [label='Cats'] > .title + .content").should("have.class", "is-expanded")
+      cy.get(accordion_item).find(".expand").click()
+      cy.get(accordion_item).find(".expand").should("have.attr", "aria-expanded", "true")
+      cy.get(accordion_item).siblings(".content").should("have.class", "is-expanded")
 
      /*
       * on 2nd click/enter/space 
       * accordion item content is collapsed, aria-expanded false
       */
-      cy.get(".theme-doc-markdown wwu-accordion:first-of-type > [label='Cats'] > .title > .expand").click()
-      cy.get(".theme-doc-markdown wwu-accordion:first-of-type > [label='Cats'] > .title > .expand").should("have.attr", "aria-expanded", "false")
-      cy.get(".theme-doc-markdown wwu-accordion:first-of-type > [label='Cats'] > .title + .content").should("not.have.class", "is-expanded")
+      cy.get(accordion_item).find(".expand").click()
+      cy.get(accordion_item).find(".expand").should("have.attr", "aria-expanded", "false")
+      cy.get(accordion_item).siblings(".content").should("not.have.class", "is-expanded")
     })
 
     it("accordion item closes on Esc press", () => {
+      const accordion_item = ".theme-doc-markdown wwu-accordion:first-of-type > [label='Dogs'] > .title"
+
      /*
       * on Esc press 
       * accordion item content is collapsed, aria-expanded false
       */
-      cy.get(".theme-doc-markdown wwu-accordion:first-of-type > [label='Dogs'] > .title > .expand").click()
-      cy.get(".theme-doc-markdown wwu-accordion:first-of-type > [label='Dogs'] > .title > .expand").should("have.focus") 
-      cy.get(".theme-doc-markdown wwu-accordion:first-of-type > [label='Dogs'] > .title > .expand").type("{esc}").should("have.attr", "aria-expanded", "false") 
-      cy.get(".theme-doc-markdown wwu-accordion:first-of-type > [label='Dogs'] > .title + .content").should("not.have.class", "is-expanded")
+      cy.get(accordion_item).find(".expand").click()
+      cy.get(accordion_item).find(".expand").should("have.focus") 
+      cy.get(accordion_item).find(".expand").type("{esc}").should("have.attr", "aria-expanded", "false") 
+      cy.get(accordion_item).siblings(".content").should("not.have.class", "is-expanded")
     })
   })
 })
