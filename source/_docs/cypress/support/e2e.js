@@ -19,6 +19,9 @@ import './commands'
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
+// Import global Cypress tests
+import './global'
+
 // Import axe-core for a11y testing
 import 'cypress-axe'
 
