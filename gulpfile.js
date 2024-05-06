@@ -172,7 +172,6 @@
   config.fonts = {
     src: [
       "source/fonts/*.woff2",
-      "source/fonts/*.ttf",
     ],
     dest: "build/fonts",
     cdndest: "cdn/fonts",
