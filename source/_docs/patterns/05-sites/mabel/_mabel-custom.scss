@@ -87,6 +87,9 @@ Card Tweaks
 .card .material-icons {
   font-size: var(--icon-size--2xs);
 }
+.card a {
+  text-underline-offset: unset;
+}
 .horizontal.card {
   grid-template-columns: auto 1fr;
 }

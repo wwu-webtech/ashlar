@@ -113,16 +113,16 @@ if (
         const up_arrow = document.createElement("span");      
         const down_arrow = document.createElement("span");      
         left_arrow.setAttribute("aria-hidden", "true");
-        left_arrow.setAttribute("class", "component-icon");
+        left_arrow.setAttribute("class", "component-icon left");
         left_arrow.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>`;
         right_arrow.setAttribute("aria-hidden", "true");
-        right_arrow.setAttribute("class", "component-icon");
+        right_arrow.setAttribute("class", "component-icon right");
         right_arrow.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>`;
         up_arrow.setAttribute("aria-hidden", "true");
-        up_arrow.setAttribute("class", "component-icon");
+        up_arrow.setAttribute("class", "component-icon up");
         up_arrow.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>`;
         down_arrow.setAttribute("aria-hidden", "true");
-        down_arrow.setAttribute("class", "component-icon");
+        down_arrow.setAttribute("class", "component-icon down");
         down_arrow.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>`;
 
         /* Create tabs & tabpanel from wwu-switcher-item tags */

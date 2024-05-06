@@ -36,13 +36,14 @@
 {% set attributes = attributes.addClass(classes) %}
 {% set title_attributes = title_attributes.addClass('title', block_content.field_heading_font.0.value ) %}
 {% set component_attributes = create_attribute() %}
+{% if field_column_layout %}{% set layout = "column" %}{% endif %}
 {% block template %}
   <div{{ attributes }}>
     {% block title %}
       {% include "@templates/label/label-customized.twig" %}
     {% endblock %}
 
-    <wwu-switcher label="{{ configuration.label }}" {{ component_attributes.addClass(block_content.field_background_color.0.value) }}>
+<wwu-switcher label="{{ configuration.label }}" {{ component_attributes.addClass(block_content.field_background_color.0.value) }} {% if block_content.field_column_layout.0.value %}layout="column"{% endif %}>
     {% block content %}
       {{ content }}
     {% endblock %}

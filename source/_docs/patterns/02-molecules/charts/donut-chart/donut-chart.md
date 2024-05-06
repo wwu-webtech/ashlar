@@ -7,7 +7,7 @@ These donut charts can only display eight values or less. If using as markup, th
 Include the following script to use the donut chart component on your non-Drupal website or application.
 
 ```
-<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/donut-chart.js">
+<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/donut-chart.js"></script>
 ```
 
 ## Blue (Default)

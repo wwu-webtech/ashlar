@@ -6,7 +6,7 @@ import WWUSearch from "./search.js"
 Include the following script to use the search component on your non-Drupal website or application.
 
 ```
-<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/search.js">
+<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/search.js"></script>
 ```
 
 ## Component Markup

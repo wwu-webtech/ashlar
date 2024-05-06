@@ -5,7 +5,7 @@ import WWUSwitcher from "./switcher.js"
 Include the following script to use the search component on your non-Drupal website or application.
 
 ```
-<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/switcher.js">
+<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/switcher.js"></script>
 ```
 
 ## Component Markup

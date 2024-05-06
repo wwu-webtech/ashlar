@@ -6,7 +6,7 @@ import WWUDialog from "./dialog.js"
 Include the following script to use the dialog component on your non-Drupal website or application.
 
 ```
-<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/dialog.js">
+<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/dialog.js"></script>
 ```
 
 ## Component Markup

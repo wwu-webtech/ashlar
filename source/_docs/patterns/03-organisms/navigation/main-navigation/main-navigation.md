@@ -8,9 +8,9 @@ The megamenu script cannot currently be loaded in the documentaion, so this is a
 Include the following scripts to use the navigation component on your non-Drupal website or application.
 
 ```
-<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/accessible-mega-menu.js">
-<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/menu-extras.js">
-<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/main-navigation.js">
+<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/accessible-mega-menu.js"></script>
+<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/menu-extras.js"></script>
+<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/main-navigation.js"></script>
 ```
 
 ## Component Markup

@@ -137,6 +137,16 @@ Molecule: Cards - Alternate styles
     padding-left: var(--space--lg);
   }
 }
+
+// Dark mode fixes for default event card
+[data-theme="dark"] {
+  .card.event,
+  .wwu-card.event {
+    .location {
+      color: var(--blue--lighter--40);
+    }
+  } 
+}
 /*------------------------------------------------------------------------------
 4. Event Alternate
 ------------------------------------------------------------------------------*/
@@ -155,7 +165,7 @@ Molecule: Cards - Alternate styles
 
     display: flex;
     grid-area: title;
-    align-items: end;
+    align-items: flex-end;
     height: 100%;
     margin: 0;
     padding-top: var(--space--md);
@@ -180,7 +190,7 @@ Molecule: Cards - Alternate styles
 
     display: flex;
     grid-area: location;
-    align-items: start;
+    align-items: flex-start;
     height: 100%;
   }
   .body {
@@ -348,6 +358,17 @@ Molecule: Cards - Alternate styles
           transform: translatey(0);
         }
       }
+    }
+  }
+}
+
+// Dark mode fixes for hover card
+[data-theme="dark"] {
+  .hover-card {
+    .body {
+      @include black-bg;
+      
+      background-color: unset;
     }
   }
 }
