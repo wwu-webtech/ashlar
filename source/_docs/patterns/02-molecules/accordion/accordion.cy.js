@@ -15,8 +15,13 @@ describe("molecule: accordion", () => {
 
      // On Tab: Focus moves from one accordion button to next button 
       cy.get(accordion_item1).find(".expand").focus()
-      cy.get(accordion_item1).find(".expand").should("have.focus") 
-      cy.get(accordion_item1).find(".expand").realPress("Tab")
+      cy.get(accordion_item1).find(".expand").should("have.focus")
+      if (Cypress.isBrowser("chrome")) {
+        cy.get(accordion_item1).find(".expand").realPress("Tab")
+      }
+      if (Cypress.isBrowser("!chrome")) {
+        cy.get(accordion_item1).find(".expand").tab()
+      }
       cy.get(accordion_item2).find(".expand").should("have.focus")
     })
     
