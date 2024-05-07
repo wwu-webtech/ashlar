@@ -29,8 +29,13 @@ describe("molecule: accordion", () => {
       const accordion_item_cat = ".theme-doc-markdown wwu-accordion:first-of-type > [label='Cats'] > .title"
 
      // on Enter: accordion item content expands, aria-expanded true
-      cy.window().focus()
-      cy.get(accordion_item_cat).find(".expand").click()
+      cy.get(accordion_item_cat).find(".expand").focus()
+      if (Cypress.isBrowser("chrome")) {
+        cy.get(accordion_item_cat).find(".expand").realPress("Enter")
+      }
+      if (Cypress.isBrowser("!chrome")) {
+        cy.get(accordion_item_cat).find(".expand").type("{enter}")
+      }
       cy.get(accordion_item_cat).find(".expand").should("have.attr", "aria-expanded", "true")
       cy.get(accordion_item_cat).siblings(".content").should("have.class", "is-expanded")
 
