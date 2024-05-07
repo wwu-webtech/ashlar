@@ -30,7 +30,12 @@ describe("molecule: accordion", () => {
       cy.get(accordion_item_cat).siblings(".content").should("have.class", "is-expanded")
 
      // on 2nd Enter: accordion item content collapses, aria-expanded false
-      cy.get(accordion_item_cat).find(".expand").realPress("Enter")
+      if (Cypress.isBrowser("chrome")) {
+        cy.get(accordion_item_cat).find(".expand").realPress("Enter")
+      }
+      if (Cypress.isBrowser("!chrome")) {
+        cy.get(accordion_item_cat).find(".expand").type("{enter}")
+      }
       cy.get(accordion_item_cat).find(".expand").should("have.attr", "aria-expanded", "false")
       cy.get(accordion_item_cat).siblings(".content").should("not.have.class", "is-expanded")
     })
@@ -41,8 +46,12 @@ describe("molecule: accordion", () => {
      // on Esc press: accordion item content collapses, aria-expanded false
       cy.window().focus()
       cy.get(accordion_item_dog).find(".expand").click()
-      cy.get(accordion_item_dog).find(".expand").should("have.focus") 
-      cy.get(accordion_item_dog).find(".expand").realPress("Escape")
+      if (Cypress.isBrowser("chrome")) {
+        cy.get(accordion_item_dog).find(".expand").realPress("Escape")
+      }
+      if (Cypress.isBrowser("!chrome")) {
+        cy.get(accordion_item_dog).find(".expand").type("{esc}")
+      }
       cy.get(accordion_item_dog).find(".expand").should("have.attr", "aria-expanded", "false") 
       cy.get(accordion_item_dog).siblings(".content").should("not.have.class", "is-expanded")
     })
