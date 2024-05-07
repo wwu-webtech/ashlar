@@ -10,19 +10,19 @@ describe("molecule: accordion", () => {
 
   context("manual accessibility tests", () => {
     it("accordion items are focusable", () => {
-      const accordion_item1 = ".theme-doc-markdown wwu-accordion:first-of-type > [label='Cats'] > .title"
-      const accordion_item2 = ".theme-doc-markdown wwu-accordion:first-of-type > [label='Dogs'] > .title"
+      const accordion_item1 = ".theme-doc-markdown wwu-accordion:first-of-type > [label='Cats'] > .title > .expand"
+      const accordion_item2 = ".theme-doc-markdown wwu-accordion:first-of-type > [label='Dogs'] > .title > .expand"
 
      // On Tab: Focus moves from one accordion button to next button 
-      cy.get(accordion_item1).find(".expand").focus()
-      cy.get(accordion_item1).find(".expand").should("have.focus")
+      cy.get(accordion_item1).focus()
+      cy.get(accordion_item1).should("have.focus")
       if (Cypress.isBrowser("chrome")) {
-        cy.get(accordion_item1).find(".expand").realPress("Tab")
+        cy.get(accordion_item1).realPress("Tab")
       }
       if (Cypress.isBrowser("!chrome")) {
-        cy.get(accordion_item1).find(".expand").tab()
+        cy.get(accordion_item1).tab()
       }
-      cy.get(accordion_item2).find(".expand").should("have.focus")
+      cy.get(accordion_item2).should("have.focus")
     })
     
     it("accordion item toggles and announces states as expected", () => {
