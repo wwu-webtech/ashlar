@@ -1,12 +1,9 @@
+import { runAutoA11yTests } from "../../../cypress/support/global"
+
 describe('atoms: fonts', () => {
   beforeEach(() => {
     cy.visit('/patterns/atoms/fonts')
   })
 
-  context('automated accessibility tests', () => {
-    it('passes axe core accessibility tests', () => {
-      cy.injectAxe()
-      cy.checkA11y('.theme-doc-markdown')
-    })
-  })
+  runAutoA11yTests();
 })
