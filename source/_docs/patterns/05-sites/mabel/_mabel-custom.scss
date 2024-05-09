@@ -59,6 +59,11 @@ wwu-search {
 details pre {
   font-size: var(--font-size--xs);
 }
+.block--grid-facet-summary ul {
+  padding: 0;
+  list-style: none;
+  font-size: var(--font-size--sm);
+}
 /*------------------------
 Search in Collections
 ------------------------*/
@@ -75,6 +80,9 @@ Card Tweaks
   --h2-size: var(--font-size--md);
   --h3-size: var(--font-size--md);
 }
+.card a {
+  text-underline-offset: unset;
+}
 .card h3 {
   font-family: var(--font--sans-serif);
 }
@@ -86,9 +94,6 @@ Card Tweaks
 }
 .card .material-icons {
   font-size: var(--icon-size--2xs);
-}
-.card a {
-  text-underline-offset: unset;
 }
 .horizontal.card {
   grid-template-columns: auto 1fr;
