@@ -2,12 +2,13 @@
 Atom: Text - Horizontal Rule
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-hr {
-  @media (min-width: $medium) {
-    border-width: var(--border-width-md);
-  }
-
+hr,
+.hr {
+  display: block;
   margin: var(--space--md) 0;
   border: 0;
   border-bottom: var(--border-width--sm) solid var(--h1-color);
+  @media (min-width: $medium) {
+    border-width: var(--border-width-md);
+  }
 }

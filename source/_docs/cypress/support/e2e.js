@@ -19,5 +19,13 @@ import './commands'
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
+// Import global Cypress tests
+import './global'
+
 // Import axe-core for a11y testing
 import 'cypress-axe'
+
+// Import tab and real-events plugin for keyboard a11y testing
+// See https://github.com/cypress-io/cypress/issues/299
+import 'cypress-plugin-tab'
+import 'cypress-real-events'

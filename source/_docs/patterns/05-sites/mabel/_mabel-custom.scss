@@ -59,6 +59,11 @@ wwu-search {
 details pre {
   font-size: var(--font-size--xs);
 }
+.block--grid-facet-summary ul {
+  padding: 0;
+  list-style: none;
+  font-size: var(--font-size--sm);
+}
 /*------------------------
 Search in Collections
 ------------------------*/
@@ -69,11 +74,61 @@ Search in Collections
   transform: translatey(-0.8rem);
 }
 /*------------------------
+Advanced Search
+------------------------*/
+#views-exposed-form-advanced-search-block-1 > fieldset {
+  width: 100%;
+}
+#views-exposed-form-advanced-search-block-1 > fieldset legend {
+  margin-bottom: -0.5rem;
+}
+#views-exposed-form-advanced-search-block-1 > fieldset legend:has(.visually-hidden) {
+  padding: 0;
+}
+#views-exposed-form-advanced-search-block-1 > fieldset .fieldset-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--space--md);
+  align-items: flex-end;
+}
+#views-exposed-form-advanced-search-block-1 > fieldset input,
+#views-exposed-form-advanced-search-block-1 > fieldset select {
+  max-width: 10rem;
+}
+#views-exposed-form-advanced-search-block-1 .form-item-sort-by {
+  margin-left: var(--space--xs);
+}
+.button {
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-gap: var(--space--2xs);
+  place-items: center;
+  margin: 0 var(--space--sm) var(--space--sm) 0;
+  padding: var(--space--xs);
+  transition: background var(--transition-speed--fast), color var(--transition-speed--fast);
+  text-decoration: none;
+  color: var(--button-color) !important;
+  border: none;
+  border-radius: var(--border-radius--rounder);
+  background-color: var(--button-background-color);
+  box-shadow: var(--shadow--soft);
+}
+.button:active,
+.button:hover,
+.button:focus {
+  color: var(--button-color--active);
+  background: var(--button-background-color--active);
+  box-shadow: var(--shadow--soft--hover);
+}
+/*------------------------
 Card Tweaks
 ------------------------*/
 .card {
   --h2-size: var(--font-size--md);
   --h3-size: var(--font-size--md);
+}
+.card a {
+  text-underline-offset: unset;
 }
 .card h3 {
   font-family: var(--font--sans-serif);
@@ -86,9 +141,6 @@ Card Tweaks
 }
 .card .material-icons {
   font-size: var(--icon-size--2xs);
-}
-.card a {
-  text-underline-offset: unset;
 }
 .horizontal.card {
   grid-template-columns: auto 1fr;
