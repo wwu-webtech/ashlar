@@ -3,6 +3,10 @@ Molecule: Search
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 wwu-search {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
   form {
     display: flex;
     align-items: center;
@@ -12,7 +16,31 @@ wwu-search {
     padding: 0 var(--space--xs);
     font-weight: var(--font-weight--regular);
   }
-  input {
+  #search-box {
     min-width: 6rem;
+  }
+}
+.search-menu {
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  width: 25rem;
+  max-width: 100%;
+  fieldset {
+    margin: var(--space--xs);
+    margin-top: 0;
+  }
+  &.closed {
+    visibility: hidden;
+    overflow: hidden;
+    height: 0;
+    transition: opacity var(--ease--standard) var(--transition-speed--fast);
+    opacity: 0;
+  }
+  &.open {
+    z-index: 2;
+    visibility: visible;
+    transition: opacity var(--ease--standard) var(--transition-speed--fast);
+    opacity: 1;
   }
 }
