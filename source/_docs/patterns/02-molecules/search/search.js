@@ -4,7 +4,7 @@ if (
   ) {
     const search_template = document.createElement("template");
     search_template.innerHTML = `
-    <form class="search-area" method="get" action="https://search.wwu.edu/">
+    <form class="search-area">
       <label for="search-box" class="search-label">Search:</label>
       <input id="search-box" name="q" type="search">
       <button class="submit-search">
@@ -25,7 +25,16 @@ if (
         if (!element_exists) {
           this.appendChild(search_template.content.cloneNode(true));
           this.classList.add("element-created");
+          this.querySelector(".search-area").addEventListener("submit", this.submitSearch.bind(this));
         }
+      }
+      
+      submitSearch(event) {
+        event.preventDefault();
+        var query = this.querySelector("#search-box").value;
+        var subdomain = window.location.hostname.split('.')[0];
+
+        window.location.href = "https://search.wwu.edu/?q=" + encodeURIComponent(query) + " site%3A" + encodeURIComponent(subdomain) + ".wwu.edu";
       }
     }
     if (!window.customElements.get('wwu-search')) {    
