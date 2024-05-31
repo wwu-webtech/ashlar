@@ -38,7 +38,7 @@ wwu-search {
     opacity: 0;
   }
   &.open {
-    z-index: 2;
+    z-index: 3;
     visibility: visible;
     transition: opacity var(--ease--standard) var(--transition-speed--fast);
     opacity: 1;
