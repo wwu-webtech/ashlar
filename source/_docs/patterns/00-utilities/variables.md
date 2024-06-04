@@ -10,6 +10,7 @@ These are the css variables that are available for use in the theme.
 
 Media queries don't allow you to use CSS variables, so they are only available as SASS variables. These are the theme's breakpoints.
 
+    $xsmall: 320px;
     $small: 580px;
     $medium: 950px;
     $large: 1300px;
