@@ -59,6 +59,9 @@ Molecule: Testimonial
       width: 100%;
       height: 100%;
       background: rgba(var(--blue--rgb), 0.15);
+      @media (max-width: $small) {
+        right: -0.75rem;
+      }
     }
     &:after {
       right: -0.5rem;
@@ -66,6 +69,12 @@ Molecule: Testimonial
       width: 120%;
       height: 120%;
       background: rgba(var(--blue--rgb), 0.1);
+      @media (max-width: $small) {
+        right: 0.5rem;
+        bottom: -1.5rem;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
   /*----------------------------------------------------------------------------

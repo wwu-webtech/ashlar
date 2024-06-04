@@ -1,18 +1,21 @@
 # Headings
 
 ## Default Headings
+<div>
+  <h1>Heading Level 1</h1>
+  <h2>Heading Level 2</h2>
+  <h3>Heading Level 3</h3>
+  <h4>Heading Level 4</h4>
+  <h5>Heading Level 5</h5>
+</div>
 
+```
 <h1>Heading Level 1</h1>
 <h2>Heading Level 2</h2>
 <h3>Heading Level 3</h3>
 <h4>Heading Level 4</h4>
 <h5>Heading Level 5</h5>
-
-    <h1>Heading Level 1</h1>
-    <h2>Heading Level 2</h2>
-    <h3>Heading Level 3</h3>
-    <h4>Heading Level 4</h4>
-    <h5>Heading Level 5</h5>
+```
 
 
 ## Big, Bold Headings
@@ -25,13 +28,15 @@
   <h5>Heading Level 5</h5>
 </div>
 
-    <div class="headings--big-and-bold">   
-      <h1>Heading Level 1</h1>
-      <h2>Heading Level 2</h2>
-      <h3>Heading Level 3</h3>
-      <h4>Heading Level 4</h4>
-      <h5>Heading Level 5</h5>
-    </div>
+```
+<div class="headings--big-and-bold">   
+  <h1>Heading Level 1</h1>
+  <h2>Heading Level 2</h2>
+  <h3>Heading Level 3</h3>
+  <h4>Heading Level 4</h4>
+  <h5>Heading Level 5</h5>
+</div>
+```
 
 ## Smaller Font Size
 
@@ -43,13 +48,15 @@
   <h5>Heading Level 5</h5>
 </div>
 
-    <div class="font-size--smaller">   
-      <h1>Heading Level 1</h1>
-      <h2>Heading Level 2</h2>
-      <h3>Heading Level 3</h3>
-      <h4>Heading Level 4</h4>
-      <h5>Heading Level 5</h5>
-    </div>
+```
+<div class="font-size--smaller">   
+  <h1>Heading Level 1</h1>
+  <h2>Heading Level 2</h2>
+  <h3>Heading Level 3</h3>
+  <h4>Heading Level 4</h4>
+  <h5>Heading Level 5</h5>
+</div>
+```
 
 ## Larger Font Size
 
@@ -61,13 +68,15 @@
   <h5>Heading Level 5</h5>
 </div>
 
-    <div class="font-size--larger">   
-      <h1>Heading Level 1</h1>
-      <h2>Heading Level 2</h2>
-      <h3>Heading Level 3</h3>
-      <h4>Heading Level 4</h4>
-      <h5>Heading Level 5</h5>
-    </div>
+```
+<div class="font-size--larger">   
+  <h1>Heading Level 1</h1>
+  <h2>Heading Level 2</h2>
+  <h3>Heading Level 3</h3>
+  <h4>Heading Level 4</h4>
+  <h5>Heading Level 5</h5>
+</div>
+```
 
 ## Display Setting Fonts
 
