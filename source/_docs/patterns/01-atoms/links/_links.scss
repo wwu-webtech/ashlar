@@ -47,6 +47,9 @@ a {
   &:hover {
     outline: var(--outline-width) solid transparent;
   }
+  &[href^="mailto:"] {
+    overflow-wrap: anywhere;
+  }
   &[aria-current="page"] {
     --link-background: var(--link-background--active);
     --link-color: var(--link-color--active);

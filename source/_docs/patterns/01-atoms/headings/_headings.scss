@@ -44,6 +44,9 @@ h6 {
   font-weight: var(--font-weight--semibold);
   font-display: fallback;
   line-height: 1.2;
+  @media (max-width: $small) {
+    overflow-wrap: anywhere;
+  }
   @media print {
     margin-bottom: 0;
     page-break-inside: avoid;
