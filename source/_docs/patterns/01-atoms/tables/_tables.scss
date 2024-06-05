@@ -103,6 +103,10 @@ table {
     }
   }
 }
+div:has(> table) {
+  overflow-x: auto;
+  max-width: calc(100vw - var(--space--xl));
+}
 /*------------------------------------------------------------------------------
 3. Alternates
 ------------------------------------------------------------------------------*/
@@ -147,7 +151,7 @@ table {
   .toolbar-fixed.toolbar-tray-open {
     .sticky-headers {
       th {
-        top: calc(.5rem + var(--space--2xl));
+        top: calc(0.5rem + var(--space--2xl));
       }
     }
   }
