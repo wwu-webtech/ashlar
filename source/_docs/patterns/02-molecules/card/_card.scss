@@ -103,9 +103,6 @@ Molecule: Cards
       position: relative;
       text-underline-offset: 0.1rem;
     }
-    a[href^="mailto:"] {
-      word-break: break-all;
-    }
     p {
       margin-bottom: var(--space--2xs);
       line-height: 1.5;
