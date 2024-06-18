@@ -168,6 +168,10 @@ social-media-icons:
       build/css/components/social-media-icons.css: {}
   js:
     build/js/social-media-icons.js: {}
+table-a11y:
+  version: 1.x
+  js:
+    build/js/table-a11y.js: {}
 testimonial:
   version: 1.x
   css:

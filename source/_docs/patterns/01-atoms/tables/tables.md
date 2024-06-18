@@ -699,7 +699,7 @@ See [A Responsive Accessible Table](https://adrianroselli.com/2017/11/a-responsi
 </div>
 
 ```
-<div className="responsive-table" tabIndex="0" role="region" aria-labelledby="table-example">
+<div class="responsive-table" tabIndex="0" role="region" aria-labelledby="table-example">
     <table>
         <caption id="table-example">Table with responsive-table class</caption>
       <thead>
