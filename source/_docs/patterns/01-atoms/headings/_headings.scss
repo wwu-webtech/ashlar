@@ -21,6 +21,17 @@ Atom: Text - Headings
   --h5-size: var(--font-size--xl);
   --h6-color: var(--blue);
   --h6-size: var(--font-size--lg);
+  @media (max-width: $small) {
+    --h1-size: var(--font-size--5xl);
+  }
+  @media (max-width: $xsmall) {
+    --h1-size: var(--font-size--4xl);
+    --h2-size: var(--font-size--3xl);
+    --h3-size: var(--font-size--2xl);
+    --h4-size: var(--font-size--xl);
+    --h5-size: var(--font-size--lg);
+    --h6-size: var(--font-size--md);
+  }
 }
 h1,
 h2,
@@ -33,6 +44,9 @@ h6 {
   font-weight: var(--font-weight--semibold);
   font-display: fallback;
   line-height: 1.2;
+  @media (max-width: $small) {
+    overflow-wrap: anywhere;
+  }
   @media print {
     margin-bottom: 0;
     page-break-inside: avoid;
@@ -79,12 +93,6 @@ h5 + h6 {
 ------------------------------------------------------------------------------*/
 .headings--big-and-bold,
 .big-bold-headings {
-  --h1-size: var(--font-size--7xl);
-  --h2-size: var(--font-size--6xl);
-  --h3-size: var(--font-size--5xl);
-  --h4-size: var(--font-size--4xl);
-  --h5-size: var(--font-size--3xl);
-  --h6-size: var(--font-size--2xl);
   @media (min-width: $medium) {
     --h1-size: var(--font-size--9xl);
     --h2-size: var(--font-size--8xl);

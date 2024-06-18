@@ -37,6 +37,15 @@ function ashlar_page_attachments_alter(array &$attachments) {
 }
 
 /**
+ * Implements hook_preprocess_html().
+ */
+function ashlar_preprocess_html(&$variables) {
+  // Pass theme settings to html.html.twig template
+  $variables['disable_google_tag_manager'] = theme_get_setting('disable_google_tag_manager');
+}
+
+
+/**
 * Implements hook_preprocess_page().
 */
 function ashlar_preprocess_page(&$variables) {
