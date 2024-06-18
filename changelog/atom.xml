@@ -2,11 +2,44 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ashlar.wwu.edu/changelog</id>
     <title>Ashlar Blog</title>
-    <updated>2024-05-15T12:00:00.000Z</updated>
+    <updated>2024-06-18T12:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ashlar.wwu.edu/changelog"/>
     <subtitle>Ashlar Blog</subtitle>
     <icon>https://ashlar.wwu.edu/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[5.4.x Updates]]></title>
+        <id>https://ashlar.wwu.edu/changelog/version-5-4</id>
+        <link href="https://ashlar.wwu.edu/changelog/version-5-4"/>
+        <updated>2024-06-18T12:00:00.000Z</updated>
+        <summary type="html"><![CDATA[5.4.0]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="540">5.4.0<a href="https://ashlar.wwu.edu/changelog/version-5-4#540" class="hash-link" aria-label="Direct link to 5.4.0" title="Direct link to 5.4.0">​</a></h2>
+<p>** June 18, 2024 **</p>
+<ul>
+<li>New Feature: Search Settings</li>
+<li>New Feature: Option added to disable Google Tag Manager in theme settings</li>
+<li>2D scroll fixes<!-- -->
+<ul>
+<li>Responsive table script added to contain horizontal scroll to table container only</li>
+<li>Reduced font size for large headings on very small screens</li>
+<li>Style adjustements for testimonials and profile photos</li>
+</ul>
+</li>
+</ul>]]></content>
+        <author>
+            <name>Stephanie Paulantis</name>
+        </author>
+        <author>
+            <name>Carly Gerard</name>
+        </author>
+        <author>
+            <name>Max Bronsema</name>
+        </author>
+        <author>
+            <name>Nigel Packer</name>
+        </author>
+        <category label="minor-release" term="minor-release"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[5.3.x Updates]]></title>
         <id>https://ashlar.wwu.edu/changelog/version-5-3</id>
@@ -1203,42 +1236,6 @@
 <ul>
 <li>Active path will now be highlighted in menus</li>
 <li>Responsive containers added to embedded videos by default</li>
-</ul>]]></content>
-        <author>
-            <name>Stephanie Paulantis</name>
-        </author>
-        <author>
-            <name>Carly Gerard</name>
-        </author>
-        <category label="minor-release" term="minor-release"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[3.2.x Updates]]></title>
-        <id>https://ashlar.wwu.edu/changelog/version-3-2</id>
-        <link href="https://ashlar.wwu.edu/changelog/version-3-2"/>
-        <updated>2020-09-28T10:00:00.000Z</updated>
-        <summary type="html"><![CDATA[3.2.2]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="322">3.2.2<a href="https://ashlar.wwu.edu/changelog/version-3-2#322" class="hash-link" aria-label="Direct link to 3.2.2" title="Direct link to 3.2.2">​</a></h2>
-<p><strong>September 28, 2020</strong></p>
-<ul>
-<li>Heading area refactored to remove a duplicate ID</li>
-<li>Bug fixes</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="321">3.2.1<a href="https://ashlar.wwu.edu/changelog/version-3-2#321" class="hash-link" aria-label="Direct link to 3.2.1" title="Direct link to 3.2.1">​</a></h2>
-<p><strong>September 21, 2020</strong></p>
-<ul>
-<li>Fonts, spacing, and other size units have been converted from pixel to em/rem values for better accessibility and to respect user preferences as set in the browser</li>
-<li>Fonts/material icons are now loaded locally within the theme</li>
-<li>Quick search style updates</li>
-<li>Fixes for new lightbox</li>
-<li>Additional column helper classes added</li>
-<li>COVID Attestation banner added</li>
-<li>Report Bias quick links menu item added</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="320">3.2.0<a href="https://ashlar.wwu.edu/changelog/version-3-2#320" class="hash-link" aria-label="Direct link to 3.2.0" title="Direct link to 3.2.0">​</a></h2>
-<p><strong>September 14, 2020</strong></p>
-<ul>
-<li>New and a11y improved lightbox feature</li>
 </ul>]]></content>
         <author>
             <name>Stephanie Paulantis</name>
