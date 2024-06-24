@@ -14,7 +14,6 @@ if (
         <wwu-social size="small" group="Western" url="https://www.instagram.com/westernwashingtonuniversity/"></wwu-social>
         <wwu-social size="small" group="Western" url="https://www.linkedin.com/school/western-washington-university/"></wwu-social>
         <wwu-social size="small" group="Western" url="https://twitter.com/WWU"></wwu-social>
-        <wwu-social size="small" group="Western" url="https://www.threads.net/@westernwashingtonuniversity"></wwu-social>
         <wwu-social size="small" group="Western" url="https://www.tiktok.com/@westernwauniversity"></wwu-social>
         <wwu-social size="small" group="Western" url="https://www.youtube.com/wwu"></wwu-social>
     </div>
