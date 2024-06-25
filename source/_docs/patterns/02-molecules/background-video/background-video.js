@@ -34,7 +34,9 @@ if (
       }
     }
     
-    window.customElements.define("wwu-background-video", WWUBackgroundVideo);  
+    if (!window.customElements.get('wwu-background-video')) {   
+      window.customElements.define("wwu-background-video", WWUBackgroundVideo);  
+    }
     
     function toggle_playback() {
       const video = this.parentNode.querySelector("video");             
