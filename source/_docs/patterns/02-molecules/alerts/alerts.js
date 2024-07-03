@@ -1,5 +1,5 @@
-var emergency = $.getJSON('https://emergency.wwu.edu/api/alert/3');
-var weather = $.getJSON('https://emergency.wwu.edu/api/alert/4');
+var emergency = $.getJSON('https://em.wwu.edu/api/alert/3');
+var weather = $.getJSON('https://em.wwu.edu/api/alert/4');
 
 var handler = {
 
