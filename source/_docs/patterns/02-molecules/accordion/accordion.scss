@@ -61,6 +61,22 @@ wwu-accordion,
       }
     }
   }
+  .expand-all,
+  .collapse-all {
+    background: unset;
+    border: var(--border-width--sm) solid var(--button-background-color);
+    padding: var(--space--2xs);
+    font-size: var(--font-size--xs);
+    color: var(--button-background-color);
+
+    .component-icon {
+      fill: var(--button-background-color);
+    }
+
+    &[disabled] {
+      text-decoration: line-through;
+    }
+  }
 }
 .wwu-accordion[class*="-bg"] {
   padding: var(--space--sm);
