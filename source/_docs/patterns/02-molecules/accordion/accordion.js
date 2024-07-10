@@ -150,32 +150,42 @@ if (
         open_item(items[i]);
       }
     }
-        
-    const close_icon = `<span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span>`;
-    const open_icon = `<span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></span>`;
     
-    let button_collapse_all = document.createElement("button")
-    button_collapse_all.innerHTML = close_icon + 'Collapse all sections';
-    document.querySelector('wwu-accordion').prepend(button_collapse_all);
-
-    let button_expand_all = document.createElement("button");
-    button_expand_all.innerHTML = open_icon + 'Expand all sections';
-    document.querySelector('wwu-accordion').prepend(button_expand_all);
+    // Expand/collapse all accordion items
+    const button_collapse_all = document.createElement("button")
+    button_collapse_all.classList.add('collapse-all');
+    button_collapse_all.innerHTML = `
+      <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span>
+      Collapse all sections
+    `;
+    
+    const button_expand_all = document.createElement("button");
+    button_expand_all.classList.add('expand-all');
+    button_expand_all.innerHTML = `
+      <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></span>
+      Expand all sections
+    `;
+    
+    document.querySelector('wwu-accordion').prepend(button_expand_all, button_collapse_all);
 
     function expand_all_items() {
-      const items = document.querySelectorAll("wwu-accordion-item");        
-          
+      const items = document.querySelectorAll("wwu-accordion-item .expand");        
       for (let i = 0; i < items.length; i++) { 
-        open_item(item[i]);
+        open_item(items[i]);
       }
       button_expand_all.setAttribute('disabled', 'true');
+      button_collapse_all.removeAttribute('disabled');
     }
 
     function collapse_all_items() {
-    // 
+      const items = document.querySelectorAll("wwu-accordion-item .expand");        
+      for (let i = 0; i < items.length; i++) { 
+        close_item(items[i]);
+      }
+      button_collapse_all.setAttribute('disabled', 'true');
+      button_expand_all.removeAttribute('disabled');
     }
 
-    button_collapse_all.addEventListener('click', collapse_all_items);
     button_expand_all.addEventListener('click', expand_all_items);
-
+    button_collapse_all.addEventListener('click', collapse_all_items);
   }
