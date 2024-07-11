@@ -167,7 +167,20 @@ if (
       Expand all sections
     `;
     
-    document.querySelector('wwu-accordion').prepend(button_expand_all, button_collapse_all);
+    // Docusaurus needs timeout function to add buttons when wwu-accordion is loaded
+    const wwu_accordion_check_interval = function() {
+      let wwu_accordion_exists;
+      setTimeout(() => {
+        wwu_accordion_exists = document.querySelector('wwu-accordion') ? true : false;
+        if (wwu_accordion_exists === false) {
+          wwu_accordion_check_interval();
+        } else {
+          clearTimeout();
+          document.querySelector('wwu-accordion.element-created').prepend(button_expand_all, button_collapse_all);
+        }
+      }, 100);
+    }
+    wwu_accordion_check_interval();
 
     button_expand_all.addEventListener('click', function() {
       const items = document.querySelectorAll("wwu-accordion-item .expand");        
