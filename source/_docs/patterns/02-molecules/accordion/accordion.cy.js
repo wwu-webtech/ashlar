@@ -104,10 +104,6 @@ describe("molecule: accordion", () => {
       cy.get(accordion1).find('wwu-accordion-item .content').not(':visible').should('have.length', 3)
       cy.get(accordion1).find("wwu-accordion-item .expand").should("have.attr", "aria-expanded", "false")
       cy.get(".collapse-all").should("have.attr", "disabled")
-      // ensure accordion items are open
-      // press enter on collapse button
-      // for each accordion item, ensure it's closed and has aria-expanded to false
-      // ensure collapse all button is disabled
     })
   })
 })
