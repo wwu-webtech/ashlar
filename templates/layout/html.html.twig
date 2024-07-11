@@ -35,18 +35,6 @@
     <head-placeholder token="{{ placeholder_token|raw }}">
     <title>{{ head_title|safe_join(' | ') }}</title>
 
-    {% if not disable_google_tag_manager %}
-		<!-- Google Tag Manager -->    
-      <script>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-54DXVKS');
-      </script>    
-		<!-- End Google Tag Manager -->
-    {% endif %}
-
     <!-- preload fonts -->
     <!-- Material icons -->
     <link rel="preload" href="/{{ basepath ~ directory }}/build/fonts/fira-sans-normal-400.woff2" as="font" crossorigin>
@@ -60,15 +48,7 @@
     <link rel="icon" href="/{{ basepath ~ directory }}/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/{{ basepath ~ directory }}/apple-touch-icon.png"><!-- 180×180 -->
   </head>
-  <body{{ attributes.addClass(body_classes) }}>    
-    {% if not disable_google_tag_manager %}
-    <!-- Google Tag Manager (noscript) -->    
-      <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54DXVKS" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-      </noscript>    
-  	<!-- End Google Tag Manager (noscript) -->
-    {% endif %}
-    
+  <body{{ attributes.addClass(body_classes) }}>       
     {#
       Keyboard navigation/accessibility link to main content section in
       page.html.twig.
