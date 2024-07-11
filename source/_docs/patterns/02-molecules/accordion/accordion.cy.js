@@ -65,5 +65,49 @@ describe("molecule: accordion", () => {
       cy.get(accordion_item_dog).find(".expand").should("have.attr", "aria-expanded", "false") 
       cy.get(accordion_item_dog).siblings(".content").should("not.have.class", "is-expanded")
     })
+
+    it("expand all button opens all accordion items", () => {
+      const accordion1 = ".theme-doc-markdown wwu-accordion:first-of-type"
+
+      cy.get(accordion1).find('wwu-accordion-item .content').not(':visible').should('have.length', 3)
+      cy.get('.expand-all').should("be.visible")
+      cy.get(".expand-all").focus()
+      if (Cypress.isBrowser("chrome")) {
+        cy.get(".expand-all").realPress("Enter")
+      }
+      if (Cypress.isBrowser("!chrome")) {
+        cy.get(".expand-all").type("{enter}")
+      }
+      cy.get(accordion1).find("wwu-accordion-item .content:visible").should('have.length', 3)
+      cy.get(accordion1).find("wwu-accordion-item .expand").should("have.attr", "aria-expanded", "true")
+      cy.get(".expand-all").should("have.attr", "disabled")
+    })
+
+    it("collapse all button closes all accordion items", () => {
+      const accordion1 = ".theme-doc-markdown wwu-accordion:first-of-type"
+      
+      cy.get(".expand-all").focus()
+      if (Cypress.isBrowser("chrome")) {
+        cy.get(".expand-all").realPress("Enter")
+      }
+      if (Cypress.isBrowser("!chrome")) {
+        cy.get(".expand-all").type("{enter}")
+      }
+      cy.get(accordion1).find("wwu-accordion-item .content:visible").should('have.length', 3)
+      cy.get(".collapse-all").focus()
+      if (Cypress.isBrowser("chrome")) {
+        cy.get(".collapse-all").realPress("Enter")
+      }
+      if (Cypress.isBrowser("!chrome")) {
+        cy.get(".collapse-all").type("{enter}")
+      }
+      cy.get(accordion1).find('wwu-accordion-item .content').not(':visible').should('have.length', 3)
+      cy.get(accordion1).find("wwu-accordion-item .expand").should("have.attr", "aria-expanded", "false")
+      cy.get(".collapse-all").should("have.attr", "disabled")
+      // ensure accordion items are open
+      // press enter on collapse button
+      // for each accordion item, ensure it's closed and has aria-expanded to false
+      // ensure collapse all button is disabled
+    })
   })
 })
