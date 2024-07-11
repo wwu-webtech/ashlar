@@ -150,7 +150,7 @@ if (
     }
     
     // Expand/collapse all accordion items
-    const button_collapse_all = document.createElement("button")
+    const button_collapse_all = document.createElement("button");
     button_collapse_all.classList.add('collapse-all');
     if (!document.querySelector('wwu-accordion-item[expand]')) {
       button_collapse_all.setAttribute('disabled', 'true');
