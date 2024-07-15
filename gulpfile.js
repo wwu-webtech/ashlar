@@ -247,7 +247,7 @@
   });
 
   /**
-   * Generate Js
+   * Generate JS
    */
   gulp.task("js", function (callback) {
     pump(
@@ -309,7 +309,7 @@
   });
 
   /**
-   * Check js for errors
+   * Check JS for errors
    */
   gulp.task('lint', function() {
     return gulp.src(config.js.src)
@@ -318,7 +318,7 @@
   });
 
   /**
-   * Check jquery for errors
+   * Check jQuery for errors
    */
   gulp.task('lint', function() {
     return gulp.src(config.jquery.src)
