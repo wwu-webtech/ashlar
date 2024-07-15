@@ -41,10 +41,4 @@ function ashlar_form_system_theme_settings_alter(&$form, FormStateInterface &$fo
     '#title' => t('Load Javascript for dynamic catalog links'),
     '#default_value' => theme_get_setting('enable_acalog_widget'),
   );
-
-  $form['theme_settings']['disable_google_tag_manager'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Disable Google tag manager'),
-    '#default_value' => theme_get_setting('disable_google_tag_manager'),
-  );
 }
