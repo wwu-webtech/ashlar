@@ -116,10 +116,10 @@
    * terser: Options map to pass to the terser plugin.
    */
   config.js = {
-    src: ["source/js/**/*.js", "source/_docs/patterns/**/!(*.cy)*.js"],
+    src: ["source/_docs/patterns/**/!(*.cy)*.js"],
     dest: "build/js",
     cdndest: "cdn/js",
-    watch: ["source/js/**/*.js", "source/_docs/patterns/**/*.js"],
+    watch: ["source/_docs/patterns/**/*.js"],
     template: {
       src: "source/js/behavior.lodash",
     },
@@ -128,12 +128,6 @@
       suffix: ".min",
     },
     iife: {
-      useStrict: true,
-      trimCode: true,
-      params: ["$", "window", "document", "undefined"],
-      args: ["jQuery", "this", "this.document"],
-    },
-    iifeNoJquery: {
       useStrict: true,
       trimCode: true,
       params: ["window", "document", "undefined"],
@@ -148,6 +142,16 @@
         comments: true,
         indent_level: 2,
       },
+    },
+  };
+  config.jquery = {
+    src: ["source/js/**/*.js"],
+    watch: ["source/js/**/*.js"],
+    iife: {
+      useStrict: true,
+      trimCode: true,
+      params: ["$", "window", "document", "undefined"],
+      args: ["jQuery", "this", "this.document"],
     },
   };
 
@@ -243,7 +247,7 @@
   });
 
   /**
-   * Generate JS.
+   * Generate Js
    */
   gulp.task("js", function (callback) {
     pump(
@@ -274,10 +278,50 @@
   });
 
   /**
+   * Generate jQuery
+   */
+  gulp.task("jquery", function (callback) {
+    pump(
+      gulp.src(config.jquery.src),
+      // Process each file in the source stream.
+      flatmap(function (stream, file) {
+        return pump(
+          stream,
+          // Wrap the JS in Drupal JS Behavior boilerplate.
+          wrap(
+            config.js.template,
+            { name: drupalBehaviorName(file) },
+            { variable: config.js.templateVariable }
+          ),
+          // Remove HTML comments
+          replace(/<!--.*-->/g, ''),
+          // Wrap the JS in an immediately-invoked function expression.
+          iife(config.jquery.iife),
+          // Format the source.
+          terser(config.js.terser)          
+        );
+      }),
+      // Flatten file path globs.
+      flatten(),
+      gulp.dest(config.js.dest),
+      callback
+    );
+  });
+
+  /**
    * Check js for errors
    */
   gulp.task('lint', function() {
     return gulp.src(config.js.src)
+      .pipe(jshint())
+      .pipe(jshint.reporter('default'));
+  });
+
+  /**
+   * Check jquery for errors
+   */
+  gulp.task('lint', function() {
+    return gulp.src(config.jquery.src)
       .pipe(jshint())
       .pipe(jshint.reporter('default'));
   });
@@ -297,7 +341,30 @@
           replace('/-->', '/>'),
           
           // Wrap the JS in an immediately-invoked function expression.
-          iife(config.js.iifeNoJquery),
+          iife(config.js.iife),
+          // Format the source.
+          terser(config.js.terser)
+        );
+      }),
+      // Flatten file path globs.
+      flatten(),
+      gulp.dest(config.js.cdndest),
+      callback
+    );
+  });
+
+  /**
+   * Generate query for non-drupal applications
+   */
+   gulp.task("jq-no-wrap", function (callback) {
+    pump(
+      gulp.src(config.jquery.src),
+      // Process each file in the source stream.
+      flatmap(function (stream, file) {
+        return pump(
+          stream,          
+          // Wrap the JS in an immediately-invoked function expression.
+          iife(config.js.iife),
           // Format the source.
           terser(config.js.terser)
         );
@@ -365,7 +432,7 @@
    */
   gulp.task(
     "default",
-    gulp.parallel(["sass", "sassComponents", "js", "js-no-wrap", "images", "fonts"])
+    gulp.parallel(["sass", "sassComponents", "js", "jquery", "js-no-wrap", "jq-no-wrap", "images", "fonts"])
   );
 
 })();
