@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ashlar.wwu.edu/changelog</id>
     <title>Ashlar Blog</title>
-    <updated>2024-06-18T12:00:00.000Z</updated>
+    <updated>2024-07-15T12:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ashlar.wwu.edu/changelog"/>
     <subtitle>Ashlar Blog</subtitle>
@@ -11,7 +11,7 @@
         <title type="html"><![CDATA[5.4.x Updates]]></title>
         <id>https://ashlar.wwu.edu/changelog/version-5-4</id>
         <link href="https://ashlar.wwu.edu/changelog/version-5-4"/>
-        <updated>2024-06-18T12:00:00.000Z</updated>
+        <updated>2024-07-15T12:00:00.000Z</updated>
         <summary type="html"><![CDATA[5.4.0]]></summary>
         <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="540">5.4.0<a href="https://ashlar.wwu.edu/changelog/version-5-4#540" class="hash-link" aria-label="Direct link to 5.4.0" title="Direct link to 5.4.0">​</a></h2>
 <p>** June 18, 2024 **</p>
@@ -25,6 +25,15 @@
 <li>Style adjustements for testimonials and profile photos</li>
 </ul>
 </li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="541">5.4.1<a href="https://ashlar.wwu.edu/changelog/version-5-4#541" class="hash-link" aria-label="Direct link to 5.4.1" title="Direct link to 5.4.1">​</a></h2>
+<p>** July 15, 2024 **</p>
+<ul>
+<li>Threads removed from WWU footer</li>
+<li>Custom element bug fixed</li>
+<li>Site name added to noscript header</li>
+<li>Tag manager removed from theme</li>
+<li>Converted jQuery to Vanilla JS in a few components</li>
 </ul>]]></content>
         <author>
             <name>Stephanie Paulantis</name>

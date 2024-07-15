@@ -4,7 +4,7 @@
         <title>Ashlar Blog</title>
         <link>https://ashlar.wwu.edu/changelog</link>
         <description>Ashlar Blog</description>
-        <lastBuildDate>Tue, 18 Jun 2024 12:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 15 Jul 2024 12:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,7 +12,7 @@
             <title><![CDATA[5.4.x Updates]]></title>
             <link>https://ashlar.wwu.edu/changelog/version-5-4</link>
             <guid>https://ashlar.wwu.edu/changelog/version-5-4</guid>
-            <pubDate>Tue, 18 Jun 2024 12:00:00 GMT</pubDate>
+            <pubDate>Mon, 15 Jul 2024 12:00:00 GMT</pubDate>
             <description><![CDATA[5.4.0]]></description>
             <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="540">5.4.0<a href="https://ashlar.wwu.edu/changelog/version-5-4#540" class="hash-link" aria-label="Direct link to 5.4.0" title="Direct link to 5.4.0">​</a></h2>
 <p>** June 18, 2024 **</p>
@@ -26,6 +26,15 @@
 <li>Style adjustements for testimonials and profile photos</li>
 </ul>
 </li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="541">5.4.1<a href="https://ashlar.wwu.edu/changelog/version-5-4#541" class="hash-link" aria-label="Direct link to 5.4.1" title="Direct link to 5.4.1">​</a></h2>
+<p>** July 15, 2024 **</p>
+<ul>
+<li>Threads removed from WWU footer</li>
+<li>Custom element bug fixed</li>
+<li>Site name added to noscript header</li>
+<li>Tag manager removed from theme</li>
+<li>Converted jQuery to Vanilla JS in a few components</li>
 </ul>]]></content:encoded>
             <category>minor-release</category>
         </item>
