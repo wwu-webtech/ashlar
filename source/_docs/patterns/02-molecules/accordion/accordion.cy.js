@@ -66,6 +66,7 @@ describe("molecule: accordion", () => {
       cy.get(accordion_item_dog).siblings(".content").should("not.have.class", "is-expanded")
     })
 
+    // On Enter: expand all button opens all items
     it("expand all button opens all accordion items", () => {
       const accordion1_item = ".theme-doc-markdown wwu-accordion:first-of-type wwu-accordion-item"
 
@@ -83,6 +84,7 @@ describe("molecule: accordion", () => {
       cy.get(".expand-all").should("have.attr", "disabled")
     })
 
+    // On Enter: collapse all button closes all items
     it("collapse all button closes all accordion items", () => {
       const accordion1_item = ".theme-doc-markdown wwu-accordion:first-of-type wwu-accordion-item"
       
