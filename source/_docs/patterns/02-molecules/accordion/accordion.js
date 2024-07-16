@@ -135,24 +135,21 @@ if (
       }
       
     }
-    function debounce(func, wait) {
-      let timeout;
-      return function() {
-        const context = this, args = arguments;
-        clearTimeout(timeout);
-        timeout = setTimeout(() => func.apply(context, args), wait);
-      };
-    }
+    
     /* HTML accordion markup support - mainly for Drupal Views, where custom elements are not supported */       
     const items = document.querySelectorAll(".accordion-set div.expand");     
     for (let i = 0; i < items.length; i++) {
-      setup(items[i]);
-      items[i].addEventListener("click", debounce(click_toggle, 300));
-      items[i].addEventListener("keypress", key_toggle);
-      items[i].addEventListener("keyup", key_close);
-      
-      if (items[i].classList.contains("is-expanded")) {
-        open_item(items[i]);
+      if (!items[i].classList.contains("setup")) {
+        setup(items[i]);
+        items[i].addEventListener("click", click_toggle);
+        items[i].addEventListener("keypress", key_toggle);
+        items[i].addEventListener("keyup", key_close);
+        
+        if (items[i].classList.contains("is-expanded")) {
+          open_item(items[i]);
+        }
+        
+        items[i].classList.add("setup");
       }
     }
   }
