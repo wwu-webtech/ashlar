@@ -43,8 +43,8 @@ if (
             items[i].prepend(label);
             
             setup(items[i].querySelector(".expand"));
-            items[i].querySelector(".expand").addEventListener("click", click_toggle, { once });
-            items[i].querySelector(".expand").addEventListener("keyup", key_close, { once });
+            items[i].querySelector(".expand").addEventListener("click", click_toggle);
+            items[i].querySelector(".expand").addEventListener("keyup", key_close);
             
             if (items[i].getAttribute("expand")) {
               open_item(items[i].querySelector(".expand"));
@@ -135,14 +135,21 @@ if (
       }
       
     }
-    
+    function debounce(func, wait) {
+      let timeout;
+      return function() {
+        const context = this, args = arguments;
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(context, args), wait);
+      };
+    }
     /* HTML accordion markup support - mainly for Drupal Views, where custom elements are not supported */       
     const items = document.querySelectorAll(".accordion-set div.expand");     
     for (let i = 0; i < items.length; i++) {
       setup(items[i]);
-      items[i].addEventListener("click", click_toggle, { once });
-      items[i].addEventListener("keypress", key_toggle, { once });
-      items[i].addEventListener("keyup", key_close, { once });
+      items[i].addEventListener("click", debounce(click_toggle, 300));
+      items[i].addEventListener("keypress", key_toggle);
+      items[i].addEventListener("keyup", key_close);
       
       if (items[i].classList.contains("is-expanded")) {
         open_item(items[i]);

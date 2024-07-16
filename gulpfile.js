@@ -130,8 +130,8 @@
     iife: {
       useStrict: true,
       trimCode: true,
-      params: ["window", "document", "undefined", "once"],
-      args: ["this", "this.document", "once"],
+      params: ["window", "document", "undefined"],
+      args: ["this", "this.document"],
     },
     terser: {
       compress: false,
