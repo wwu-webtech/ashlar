@@ -43,8 +43,8 @@ if (
             items[i].prepend(label);
             
             setup(items[i].querySelector(".expand"));
-            items[i].querySelector(".expand").addEventListener("click", click_toggle);
-            items[i].querySelector(".expand").addEventListener("keyup", key_close);
+            items[i].querySelector(".expand").addEventListener("click", click_toggle, { once });
+            items[i].querySelector(".expand").addEventListener("keyup", key_close, { once });
             
             if (items[i].getAttribute("expand")) {
               open_item(items[i].querySelector(".expand"));
@@ -140,9 +140,9 @@ if (
     const items = document.querySelectorAll(".accordion-set div.expand");     
     for (let i = 0; i < items.length; i++) {
       setup(items[i]);
-      items[i].addEventListener("click", click_toggle);
-      items[i].addEventListener("keypress", key_toggle);
-      items[i].addEventListener("keyup", key_close);
+      items[i].addEventListener("click", click_toggle, { once });
+      items[i].addEventListener("keypress", key_toggle, { once });
+      items[i].addEventListener("keyup", key_close, { once });
       
       if (items[i].classList.contains("is-expanded")) {
         open_item(items[i]);
