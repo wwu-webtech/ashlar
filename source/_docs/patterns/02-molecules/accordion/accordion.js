@@ -84,6 +84,7 @@ if (
       } else {
         open_item(this);
       }
+      set_expand_collapse_all_state();
     }    
     function key_close (event) {
       const key_pressed = event.code;
@@ -102,6 +103,7 @@ if (
         } else {
           open_item(this);
         }
+        set_expand_collapse_all_state();
       }
     }
     
@@ -133,7 +135,6 @@ if (
       } else if (item.querySelector(".material-icons")) {
         item.querySelector(".material-icons").innerHTML = open_icon;
       }
-      
     }
     
     /* HTML accordion markup support - mainly for Drupal Views, where custom elements are not supported */       
@@ -152,7 +153,7 @@ if (
     // Expand/collapse all accordion items
     const button_collapse_all = document.createElement("button");
     button_collapse_all.classList.add('collapse-all');
-    if (!document.querySelector('wwu-accordion-item[expand]')) {
+    if (!document.querySelectorAll('wwu-accordion-item .content.is-expanded')) {
       button_collapse_all.setAttribute('disabled', 'true');
     }
     button_collapse_all.innerHTML = `
@@ -182,6 +183,23 @@ if (
     }
     wwu_accordion_check_interval();
 
+    // Disable expand/collapse all button based on how many items are open
+    function set_expand_collapse_all_state() {
+      const items = document.querySelectorAll("wwu-accordion-item");
+      const expanded_items = document.querySelectorAll("wwu-accordion-item .is-expanded");
+      
+      switch(expanded_items.length) {
+        case 0:
+          document.querySelector(".collapse-all").setAttribute("disabled", "true");
+          break;
+        case items.length:
+          document.querySelector(".expand-all").setAttribute("disabled", "true");
+          break;
+        default:
+          document.querySelector(".collapse-all").removeAttribute("disabled");
+      }
+    }
+
     button_expand_all.addEventListener('click', function() {
       const items = document.querySelectorAll("wwu-accordion-item .expand");        
       for (let i = 0; i < items.length; i++) { 
@@ -190,6 +208,7 @@ if (
       button_expand_all.setAttribute('disabled', 'true');
       button_collapse_all.removeAttribute('disabled');
     });
+    
 
     button_collapse_all.addEventListener('click', function() {
       const items = document.querySelectorAll("wwu-accordion-item .expand");        
