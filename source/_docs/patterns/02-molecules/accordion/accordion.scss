@@ -61,15 +61,6 @@ wwu-accordion,
       }
     }
   }
-  .expand-all,
-  .collapse-all {
-    padding: var(--space--2xs);
-    font-size: var(--font-size--xs);
-
-    &[disabled] {
-      text-decoration: line-through;
-    }
-  }
 }
 .wwu-accordion[class*="-bg"] {
   padding: var(--space--sm);
@@ -78,5 +69,15 @@ wwu-accordion,
   }
   wwu-accordion {
     margin-bottom: 0;
+  }
+}
+
+.expand-all,
+.collapse-all {
+  padding: var(--space--2xs);
+  font-size: var(--font-size--xs);
+
+  &[disabled] {
+    text-decoration: line-through;
   }
 }
