@@ -179,8 +179,7 @@ if (
           let block_title = document.querySelector('wwu-accordion').previousElementSibling;
 
           if (accordion_wrapper && block_title.classList.contains("title")) {
-            accordion_wrapper.insertBefore(button_expand_all, block_title);
-            accordion_wrapper.insertBefore(button_collapse_all, block_title);
+            accordion_wrapper.prepend(button_expand_all, button_collapse_all);
           } else {
             document.querySelector('wwu-accordion').prepend(button_expand_all, button_collapse_all);
           }
