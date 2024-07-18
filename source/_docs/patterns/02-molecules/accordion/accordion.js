@@ -198,6 +198,7 @@ if (
           document.querySelector(".expand-all").setAttribute("disabled", "true");
           break;
         default:
+          document.querySelector(".expand-all").removeAttribute("disabled");
           document.querySelector(".collapse-all").removeAttribute("disabled");
       }
     }
