@@ -169,14 +169,15 @@ if (
     const wwu_accordion_check_interval = function() {
       let wwu_accordion_exists;
       let accordion_wrapper = document.querySelector('.block--accordion') || document.querySelector('.accordion-set');
-      let block_title = document.querySelector('wwu-accordion').previousElementSibling;
-
+      
       setTimeout(() => {
         wwu_accordion_exists = document.querySelector('wwu-accordion') ? true : false;
         if (wwu_accordion_exists === false) {
           wwu_accordion_check_interval();
         } else {
           clearTimeout();
+          let block_title = document.querySelector('wwu-accordion').previousElementSibling;
+
           if (accordion_wrapper && block_title.classList.contains("title")) {
             accordion_wrapper.insertBefore(button_expand_all, block_title);
             accordion_wrapper.insertBefore(button_collapse_all, block_title);
