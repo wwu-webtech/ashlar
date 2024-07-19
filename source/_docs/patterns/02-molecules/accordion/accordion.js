@@ -91,6 +91,7 @@ if (
       if (key_pressed == "Escape") {
         close_item(this);
       }
+      set_expand_collapse_all_state();
     }
     function key_toggle(event) {
       const key_pressed = event.code;
