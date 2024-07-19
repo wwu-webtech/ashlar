@@ -212,22 +212,24 @@ if (
       }
     }
 
-    button_expand_all.addEventListener('click', function() {
+    function expand_all_items() {
       const items = document.querySelectorAll("wwu-accordion-item .expand");        
       for (let i = 0; i < items.length; i++) { 
         open_item(items[i]);
       }
       button_expand_all.setAttribute('disabled', 'true');
       button_collapse_all.removeAttribute('disabled');
-    });
+    }
     
-
-    button_collapse_all.addEventListener('click', function() {
+    function collapse_all_items() {
       const items = document.querySelectorAll("wwu-accordion-item .expand");        
       for (let i = 0; i < items.length; i++) { 
         close_item(items[i]);
       }
       button_collapse_all.setAttribute('disabled', 'true');
       button_expand_all.removeAttribute('disabled');
-    });
+    }    
+    
+    button_expand_all.addEventListener('click', expand_all_items);
+    button_collapse_all.addEventListener('click', collapse_all_items);
   }
