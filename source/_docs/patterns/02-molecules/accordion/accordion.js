@@ -230,8 +230,31 @@ if (
       }
       button_collapse_all.setAttribute('disabled', 'true');
       button_expand_all.removeAttribute('disabled');
-    }    
-    
+    }
+
+    // Ctrl + Esc closes all accordion items
+    let control_key_pressed = false;
+
+    function key_close_all(event) {
+      if (event.key === 'Control') {
+          control_key_pressed = true;
+      }
+      if ((event.key === 'Escape') && control_key_pressed) {
+        for (let item of document.querySelectorAll('wwu-accordion-item .expand')) {
+          close_item(item);
+        }
+      }
+      set_expand_collapse_all_state();
+    };
+
+    function check_control_press(event) {
+      if (event.key === 'Control') {
+        control_key_pressed = false;
+      }
+    };
+
     button_expand_all.addEventListener('click', expand_all_items);
     button_collapse_all.addEventListener('click', collapse_all_items);
+    document.addEventListener('keydown', key_close_all);
+    document.addEventListener('keyup', check_control_press);
   }
