@@ -107,5 +107,31 @@ describe("molecule: accordion", () => {
       cy.get(accordion1_item).find(".expand").should("have.attr", "aria-expanded", "false")
       cy.get(".collapse-all").should("have.attr", "disabled")
     })
+
+    // On Ctrl + Esc: all accordion items collapse
+    it("Ctrl + Esc closes all accordion items", () => {
+      const accordion1_item = ".theme-doc-markdown wwu-accordion:first-of-type wwu-accordion-item"
+
+      cy.get(accordion1_item).find(".content").not(":visible").should("have.length", 3)
+      cy.get(".expand-all").focus()
+      if (Cypress.isBrowser("chrome")) {
+        cy.get(".expand-all").realPress("Enter")
+      }
+      if (Cypress.isBrowser("!chrome")) {
+        cy.get(".expand-all").type("{enter}")
+      }
+      cy.get(accordion1_item).find(".content:visible").should('have.length', 3)
+      cy.get(accordion1_item).find(".expand").should("have.attr", "aria-expanded", "true")
+
+      if (Cypress.isBrowser("chrome")) {
+        cy.get(accordion1_item).realPress(["ControlLeft", "Escape"])
+      }
+      if (Cypress.isBrowser("!chrome")) {
+        cy.get(accordion_item1).find(".expand").type("{ctrl}{esc}")
+      }
+      
+      cy.get(accordion1_item).find(".content").not(":visible").should("have.length", 3)
+      cy.get(accordion1_item).find(".expand").should("have.attr", "aria-expanded", "false")
+    })
   })
 })
