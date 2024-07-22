@@ -202,9 +202,11 @@ if (
       switch(expanded_items.length) {
         case 0:
           document.querySelector(".collapse-all").setAttribute("disabled", "true");
+          document.querySelector(".expand-all").removeAttribute("disabled");
           break;
         case items.length:
           document.querySelector(".expand-all").setAttribute("disabled", "true");
+          document.querySelector(".collapse-all").removeAttribute("disabled");
           break;
         default:
           document.querySelector(".collapse-all").removeAttribute("disabled");
