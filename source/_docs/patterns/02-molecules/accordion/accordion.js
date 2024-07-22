@@ -199,18 +199,20 @@ if (
       const items = document.querySelectorAll("wwu-accordion-item");
       const expanded_items = document.querySelectorAll("wwu-accordion-item .is-expanded");
       
-      switch(expanded_items.length) {
-        case 0:
-          document.querySelector(".collapse-all").setAttribute("disabled", "true");
-          document.querySelector(".expand-all").removeAttribute("disabled");
-          break;
-        case items.length:
-          document.querySelector(".expand-all").setAttribute("disabled", "true");
-          document.querySelector(".collapse-all").removeAttribute("disabled");
-          break;
-        default:
-          document.querySelector(".collapse-all").removeAttribute("disabled");
-          document.querySelector(".expand-all").removeAttribute("disabled");
+      if (button_expand_all && button_collapse_all) {
+        switch(expanded_items.length) {
+          case 0:
+            document.querySelector(".collapse-all").setAttribute("disabled", "true");
+            document.querySelector(".expand-all").removeAttribute("disabled");
+            break;
+          case items.length:
+            document.querySelector(".expand-all").setAttribute("disabled", "true");
+            document.querySelector(".collapse-all").removeAttribute("disabled");
+            break;
+          default:
+            document.querySelector(".collapse-all").removeAttribute("disabled");
+            document.querySelector(".expand-all").removeAttribute("disabled");
+        }
       }
     }
 
@@ -243,8 +245,8 @@ if (
         for (let item of document.querySelectorAll('wwu-accordion-item .expand')) {
           close_item(item);
         }
+        set_expand_collapse_all_state();
       }
-      set_expand_collapse_all_state();
     };
 
     function check_control_press(event) {
