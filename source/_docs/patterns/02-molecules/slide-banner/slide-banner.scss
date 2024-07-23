@@ -26,19 +26,26 @@ wwu-slide-banner {
       height: 100%;
     }
   }
+  button {
+    position: absolute;
+    bottom: 0;
+    left: var(--space--sm);
+  }
 }
 @media (prefers-reduced-motion: no-preference) {
-  wwu-slide {
-    $total-slides: 4;
-    $interval: 6s;
+  wwu-slide-banner:has(.play) {
+    wwu-slide {
+      $total-slides: 4;
+      $interval: 6s;
 
-    transform: scale(1.2);
-    animation: slide-fade $total-slides * $interval linear infinite;
-    opacity: 0;
+      transform: scale(1.2);
+      animation: slide-fade $total-slides * $interval linear infinite;
+      opacity: 0;
 
-    @for $i from 1 through $total-slides {
-      &:nth-child(#{$i}) {
-        animation-delay: $interval * ($i - 1);
+      @for $i from 1 through $total-slides {
+        &:nth-child(#{$i}) {
+          animation-delay: $interval * ($i - 1);
+        }
       }
     }
   }
