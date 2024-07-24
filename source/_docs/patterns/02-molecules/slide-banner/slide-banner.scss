@@ -33,32 +33,23 @@ wwu-slide-banner {
   }
 }
 @media (prefers-reduced-motion: no-preference) {
-  wwu-slide-banner:has(.play) {
-    wwu-slide {
-      $total-slides: 4;
-      $interval: 6s;
-
-      transform: scale(1.2);
-      animation: slide-fade $total-slides * $interval linear infinite;
-      opacity: 0;
-
-      @for $i from 1 through $total-slides {
-        &:nth-child(#{$i}) {
-          animation-delay: $interval * ($i - 1);
-        }
-      }
-    }
+  wwu-slide {
+    transform: scale(1.2);
+    animation-name: scale-fade;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    opacity: 0;
   }
 }
-@keyframes slide-fade {
+@keyframes scale-fade {
   10% {
     opacity: 1;
   }
-  25% {
+  50% {
     transform: scale(1);
     opacity: 1;
   }
-  40% {
+  75% {
     transform: scale(1);
     opacity: 0;
   }
