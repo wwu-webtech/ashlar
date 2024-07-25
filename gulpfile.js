@@ -134,7 +134,7 @@
       args: ["this", "this.document"],
     },
     terser: {
-      compress: false,
+      compress: true,
       mangle: false,
       output: {
         beautify: true,
