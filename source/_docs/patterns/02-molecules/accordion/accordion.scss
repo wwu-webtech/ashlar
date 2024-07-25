@@ -81,3 +81,15 @@ wwu-accordion,
     text-decoration: line-through;
   }
 }
+
+.collapse-all {
+  &:focus-visible {
+    + .collapse-all-hint {
+      display: inline-block;
+  }
+}
+  + .collapse-all-hint {
+    display: none;
+    font-size: var(--font-size--xs);
+  }
+}

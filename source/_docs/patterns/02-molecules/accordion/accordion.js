@@ -154,6 +154,7 @@ if (
     // Expand/collapse all accordion items
     const button_collapse_all = document.createElement("button");
     button_collapse_all.classList.add('collapse-all');
+    button_collapse_all.setAttribute("aria-describedby", "collapse_all_hint_text")
     button_collapse_all.innerHTML = `
       <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span>
       Collapse all sections
@@ -165,6 +166,11 @@ if (
       <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></span>
       Expand all sections
     `;
+    
+    const collapse_all_hint = document.createElement("p"); 
+    collapse_all_hint.classList.add("collapse-all-hint");
+    collapse_all_hint.setAttribute("id", "collapse-all-hint-text")
+    collapse_all_hint.innerHTML = "Keyboard: <kbd>Ctrl</kbd> + <kbd>Esc</kbd>";
     
     // Docusaurus needs timeout function to add buttons when wwu-accordion is loaded
     const wwu_accordion_check_interval = function() {
@@ -180,9 +186,9 @@ if (
           let block_title = document.querySelector('wwu-accordion').previousElementSibling;
 
           if (accordion_wrapper && block_title.classList.contains("title")) {
-            accordion_wrapper.prepend(button_expand_all, button_collapse_all);
+            accordion_wrapper.prepend(button_expand_all, button_collapse_all, collapse_all_hint);
           } else {
-            document.querySelector('wwu-accordion').prepend(button_expand_all, button_collapse_all);
+            document.querySelector('wwu-accordion').prepend(button_expand_all, button_collapse_all, collapse_all_hint);
           }
           if (document.querySelectorAll('wwu-accordion-item[expand="true"]').length === 0) {
             button_collapse_all.setAttribute('disabled', 'true');
