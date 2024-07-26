@@ -175,6 +175,10 @@ if (
     collapse_all_hint.classList.add("collapse-all-hint");
     collapse_all_hint.setAttribute("id", "collapse-all-hint-text")
     collapse_all_hint.innerHTML = "Keyboard: <kbd>Ctrl</kbd> + <kbd>Esc</kbd>";
+
+    const controls_group = document.createElement("div");
+    controls_group.classList.add("accordion-controls-group");
+    controls_group.prepend(button_expand_all, button_collapse_all, collapse_all_hint);
     
     // Docusaurus needs timeout function to add buttons when wwu-accordion is loaded
     const wwu_accordion_check_interval = function() {
@@ -188,16 +192,19 @@ if (
         } else {
           clearTimeout();
           let block_title = document.querySelector('wwu-accordion').previousElementSibling;
-
-          if (accordion_wrapper && block_title.classList.contains("title")) {
-            accordion_wrapper.prepend(button_expand_all, button_collapse_all, collapse_all_hint);
-          } else {
-            document.querySelector('wwu-accordion').prepend(button_expand_all, button_collapse_all, collapse_all_hint);
-          }
-          if (document.querySelectorAll('wwu-accordion-item[expand="true"]').length === 0) {
-            button_collapse_all.setAttribute('disabled', 'true');
-          } else {
-            button_collapse_all.removeAttribute('disabled');
+          
+          if (!controls_group.classList.contains("element-exists")) {
+            if (accordion_wrapper && block_title.classList.contains("title")) {
+              accordion_wrapper.prepend(controls_group);
+            } else {
+              document.querySelector('wwu-accordion').prepend(controls_group);
+            }
+            if (document.querySelectorAll('wwu-accordion-item[expand="true"]').length === 0) {
+              button_collapse_all.setAttribute('disabled', 'true');
+            } else {
+              button_collapse_all.removeAttribute('disabled');
+            }
+            controls_group.classList.add("element-exists");
           }
         }
       }, 100);
