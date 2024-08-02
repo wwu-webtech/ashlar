@@ -41,29 +41,43 @@ Layout Builder
 .ck-dropdown__panel {
   --ck-toolbar-dropdown-max-width: 10rem;
 }
-#drupal-off-canvas {
-  font-size: 16px;
+#drupal-off-canvas-wrapper {
+  --drupal-off-canvas-input-font-size: 0.75rem;
+  --off-canvas-title-font-size: 0.75rem;
+  --off-canvas-vertical-spacing-unit: 0.3rem;
+
+  font-size: 14px;
 }
-#drupal-off-canvas .field--name-field-accordion-item tr.draggable,
-#drupal-off-canvas .field--name-field-content-switcher-item tr.draggable,
-#drupal-off-canvas .field--name-field-statistic tr.draggable,
-#drupal-off-canvas .field--name-field-schedule-item tr.draggable {
+#drupal-off-canvas-wrapper label {
+  font-weight: bold;
+}
+#drupal-off-canvas-wrapper .field--name-field-accordion-item tr.draggable,
+#drupal-off-canvas-wrapper .field--name-field-content-switcher-item tr.draggable,
+#drupal-off-canvas-wrapper .field--name-field-statistic tr.draggable,
+#drupal-off-canvas-wrapper .field--name-field-schedule-item tr.draggable {
   display: flex;
 }
-#drupal-off-canvas .messages--error {
+#drupal-off-canvas-wrapper .description,
+#drupal-off-canvas-wrapper .form-item__description {
+  font-size: 0.5rem;
+}
+#drupal-off-canvas-wrapper .messages--error {
   background-repeat: no-repeat;
   background-position-x: 1%;
   background-position-y: 50%;
 }
-#drupal-off-canvas .ui-autocomplete li a {
+#drupal-off-canvas-wrapper-wrapper .ui-autocomplete {
+  color: #333;
+}
+#drupal-off-canvas-wrapper .ui-autocomplete li a {
   color: #63c2ff !important;
 }
-#drupal-off-canvas a.tabledrag-handle .handle {
+#drupal-off-canvas-wrapper a.tabledrag-handle .handle {
   width: 40px;
   height: 40px;
 }
-#drupal-off-canvas th:first-child,
-#drupal-off-canvas td:first-child {
+#drupal-off-canvas-wrapper th:first-child,
+#drupal-off-canvas-wrapper td:first-child {
   width: unset;
 }
 .ui-dialog-off-canvas {
