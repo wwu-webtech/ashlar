@@ -452,3 +452,8 @@ Molecule: Charts - Org Chart
     }
   }
 }
+#drupal-off-canvas-wrapper .org-chart,
+#drupal-off-canvas-wrapper .org-chart *,
+#drupal-off-canvas-wrapper .org-chart *:before {
+  all: unset;
+}
