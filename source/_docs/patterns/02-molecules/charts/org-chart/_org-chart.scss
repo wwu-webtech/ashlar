@@ -48,6 +48,7 @@ Molecule: Charts - Org Chart
         margin: 0;
         text-align: center;
         text-decoration: none;
+        line-height: 1.2;
         @media (min-width: $medium) {
           max-width: none;
         }
@@ -61,6 +62,15 @@ Molecule: Charts - Org Chart
         margin-top: var(--chart-spacing);
         margin-left: var(--chart-spacing);
         padding: calc(var(--chart-spacing) / 2);
+        background: var(--gray--lighter--60);
+        @media (forced-colors: active) {
+          border: var(--border-width--md) solid transparent;
+        }
+      }
+      & > em > span {
+        margin-top: calc( -1 * var(--chart-spacing) / 2);
+        margin-left: var(--chart-spacing);
+        padding-bottom: calc(var(--chart-spacing) / 2);
         background: var(--gray--lighter--60);
         @media (forced-colors: active) {
           border: var(--border-width--md) solid transparent;
