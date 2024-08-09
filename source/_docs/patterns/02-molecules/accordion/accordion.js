@@ -174,7 +174,7 @@ if (
     const collapse_all_hint = document.createElement("p"); 
     collapse_all_hint.classList.add("collapse-all-hint");
     collapse_all_hint.setAttribute("id", "collapse-all-hint-text")
-    collapse_all_hint.innerHTML = "Keyboard: <kbd>Ctrl</kbd> + <kbd>Esc</kbd>";
+    collapse_all_hint.innerHTML = "Keyboard: <kbd>Shift</kbd> + <kbd>Esc</kbd>";
 
     const controls_group = document.createElement("div");
     controls_group.classList.add("accordion-controls-group");
@@ -251,14 +251,15 @@ if (
       button_expand_all.removeAttribute('disabled');
     }
 
-    // Ctrl + Esc closes all accordion items
-    let control_key_pressed = false;
+    // Shift + Esc closes all accordion items
+    let shift_key_pressed = false;
 
     function key_close_all(event) {
-      if (event.key === 'Control') {
-          control_key_pressed = true;
+      if (event.key === 'Shift') {
+          shift_key_pressed = true;
       }
-      if ((event.key === 'Escape') && control_key_pressed) {
+      if ((event.key === 'Escape') && shift_key_pressed) {
+        event.preventDefault();
         for (let item of document.querySelectorAll('wwu-accordion-item .expand')) {
           close_item(item);
         }
@@ -266,14 +267,14 @@ if (
       }
     };
 
-    function check_control_press(event) {
-      if (event.key === 'Control') {
-        control_key_pressed = false;
+    function check_shift_press(event) {
+      if (event.key === 'Shift') {
+        shift_key_pressed = false;
       }
     };
 
     button_expand_all.addEventListener('click', expand_all_items);
     button_collapse_all.addEventListener('click', collapse_all_items);
     document.addEventListener('keydown', key_close_all);
-    document.addEventListener('keyup', check_control_press);
+    document.addEventListener('keyup', check_shift_press);
   }
