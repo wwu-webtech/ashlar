@@ -131,10 +131,10 @@ describe("molecule: accordion", () => {
       cy.get(accordion1_item).find(".expand").should("have.attr", "aria-expanded", "true")
 
       if (Cypress.isBrowser("chrome")) {
-        cy.get(accordion1_item).realPress(["ControlLeft", "Escape"])
+        cy.get(accordion1_item).realPress(["ShiftLeft", "Escape"])
       }
       if (Cypress.isBrowser("!chrome")) {
-        cy.get(accordion_item1).find(".expand").type("{ctrl}{esc}")
+        cy.get(accordion_item1).find(".expand").type("{shift}{esc}")
       }
       
       cy.get(accordion1_item).find(".content").not(":visible").should("have.length", 3)
