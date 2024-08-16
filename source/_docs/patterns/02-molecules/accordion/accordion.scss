@@ -82,14 +82,15 @@ wwu-accordion,
   }
 }
 
-.collapse-all {
+.collapse-all, .expand-all {
   &:focus-visible {
-    + .collapse-all-hint {
+    + p[class$="-hint"] {
       display: inline-block;
+    }
   }
-}
-  + .collapse-all-hint {
+  + p[class$="-hint"] {
     display: none;
     font-size: var(--font-size--xs);
+    margin-right: var(--space--xs);
   }
 }

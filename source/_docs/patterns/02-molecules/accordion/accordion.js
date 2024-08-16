@@ -170,7 +170,12 @@ if (
       <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></span>
       Expand all sections
     `;
-    
+
+    const expand_all_hint = document.createElement("p"); 
+    expand_all_hint.classList.add("expand-all-hint");
+    expand_all_hint.setAttribute("id", "expand-all-hint-text")
+    expand_all_hint.innerHTML = "Keyboard: <kbd>Shift</kbd> + <kbd>Enter</kbd>";
+
     const collapse_all_hint = document.createElement("p"); 
     collapse_all_hint.classList.add("collapse-all-hint");
     collapse_all_hint.setAttribute("id", "collapse-all-hint-text")
@@ -178,7 +183,7 @@ if (
 
     const controls_group = document.createElement("div");
     controls_group.classList.add("accordion-controls-group");
-    controls_group.prepend(button_expand_all, button_collapse_all, collapse_all_hint);
+    controls_group.prepend(button_expand_all, expand_all_hint, button_collapse_all, collapse_all_hint);
     
     // Docusaurus needs timeout function to add buttons when wwu-accordion is loaded
     const wwu_accordion_check_interval = function() {
@@ -251,14 +256,14 @@ if (
       button_expand_all.removeAttribute('disabled');
     }
 
-    // Shift + Esc closes all accordion items
+    // Keyboard handlers for expanding/collapsing all items
     let shift_key_pressed = false;
 
     function key_close_all(event) {
       if (event.key === 'Shift') {
           shift_key_pressed = true;
       }
-      if ((event.key === 'Escape') && shift_key_pressed) {
+      if (shift_key_pressed && (event.key === 'Escape')) {
         event.preventDefault();
         for (let item of document.querySelectorAll('wwu-accordion-item .expand')) {
           close_item(item);
@@ -266,8 +271,21 @@ if (
         set_expand_collapse_all_state();
       }
     };
+  
+    function key_expand_all() {
+      if (event.key === 'Shift') {
+          shift_key_pressed = true;
+      }
+      if (shift_key_pressed && (event.key === 'Enter')) {
+        event.preventDefault();
+        for (let item of document.querySelectorAll('wwu-accordion-item .expand')) {
+          open_item(item);
+        }
+        set_expand_collapse_all_state();
+      }
+    };
 
-    function check_shift_press(event) {
+    function check_shift_press() {
       if (event.key === 'Shift') {
         shift_key_pressed = false;
       }
@@ -275,6 +293,9 @@ if (
 
     button_expand_all.addEventListener('click', expand_all_items);
     button_collapse_all.addEventListener('click', collapse_all_items);
-    document.addEventListener('keydown', key_close_all);
+    document.addEventListener('keydown', () => {
+      key_close_all(event);
+      key_expand_all(event);
+    });
     document.addEventListener('keyup', check_shift_press);
   }
