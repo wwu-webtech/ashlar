@@ -34,6 +34,13 @@
 <li>Site name added to noscript header</li>
 <li>Tag manager removed from theme</li>
 <li>Converted jQuery to Vanilla JS in a few components</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="542">5.4.2<a href="https://ashlar.wwu.edu/changelog/version-5-4#542" class="hash-link" aria-label="Direct link to 5.4.2" title="Direct link to 5.4.2">​</a></h2>
+<p>** August 19, 2024 **</p>
+<ul>
+<li>CKEditor improvements</li>
+<li>Repository fix for windows</li>
+<li>Helper class added</li>
 </ul>]]></content>
         <author>
             <name>Stephanie Paulantis</name>
