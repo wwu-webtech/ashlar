@@ -59,3 +59,30 @@ Any of the available background colors can be used on the body tag
   </div>  
 </div>
 ```
+
+You can also vertically center the content by adding the custom class *align-center*
+
+<div className="wwu-image-with-description align-center">
+  <div className="image">
+    <img src={Placeholder} alt="leaves in water placeholder"/>    
+  </div>
+  
+  <div  className="body">    
+    <h2 className="title">This is a thing</h2>    
+    
+    <p>This gray blob has been representing more interesting images on this site since February 2018.</p>
+  </div>
+</div>
+```
+<div class="wwu-image-with-description align-center">
+  <div class="image">
+    <img src={Placeholder} alt="leaves in water placeholder"/>    
+  </div>
+  
+  <div  class="body">    
+    <h2 class="title">This is a thing</h2>    
+    
+    <p>This gray blob has been representing more interesting images on this site since February 2018.</p>
+  </div>
+</div>
+```
