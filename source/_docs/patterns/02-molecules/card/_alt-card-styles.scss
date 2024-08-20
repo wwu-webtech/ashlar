@@ -1,6 +1,7 @@
 /*------------------------------------------------------------------------------
 Molecule: Cards - Alternate styles
 --------------------------------------------------------------------------------
+0. Bordered
 1. Horizontal variant
 2. Color block title variant
 3. Event
@@ -8,6 +9,19 @@ Molecule: Cards - Alternate styles
 5. Hover variant
 6. Degree variant
 --------------------------------------------------------------------------------
+0. Bordered
+------------------------------------------------------------------------------*/
+.card.bordered,
+.wwu-card.bordered {
+  border: solid var(--gray--lighter--80) var(--border-width--md);
+  .image {
+    flex: 0 1 calc(100% + var(--border-width--md) * 2);
+    margin-top: calc(-1 * var(--border-width--md));
+    margin-right: calc(-2 * var(--border-width--md));
+    margin-left: calc(-1 * var(--border-width--md));
+  }
+}
+/*------------------------------------------------------------------------------
 1. Horizontal
 ------------------------------------------------------------------------------*/
 .card.horizontal,
@@ -23,8 +37,16 @@ Molecule: Cards - Alternate styles
     .image {
       grid-area: image;
       margin: 0;
+      margin-top: calc(-1 * var(--border-width--md));
+      margin-bottom: calc(-1 * var(--border-width--md));
+      margin-left: calc(-2 * var(--border-width--md));
       div {
         height: 100%;
+      }
+    }
+    &.bordered {
+      .title {
+        margin-top: var(--space--sm);
       }
     }
   }
@@ -137,7 +159,6 @@ Molecule: Cards - Alternate styles
     padding-left: var(--space--lg);
   }
 }
-
 // Dark mode fixes for default event card
 [data-theme="dark"] {
   .card.event,
@@ -145,7 +166,7 @@ Molecule: Cards - Alternate styles
     .location {
       color: var(--blue--lighter--40);
     }
-  } 
+  }
 }
 /*------------------------------------------------------------------------------
 4. Event Alternate
@@ -361,13 +382,12 @@ Molecule: Cards - Alternate styles
     }
   }
 }
-
 // Dark mode fixes for hover card
 [data-theme="dark"] {
   .hover-card {
     .body {
       @include black-bg;
-      
+
       background-color: unset;
     }
   }

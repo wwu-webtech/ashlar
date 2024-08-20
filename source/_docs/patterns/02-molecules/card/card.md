@@ -45,10 +45,8 @@ The class full-width can be used to break an element out of the flex container. 
   </div>    
 </div>
 
-<div  className="wwu-card lightest-blue-bg">    
-  <h2  className="title">
-    Unlinked Card
-  </h2>
+<div  className="wwu-card bordered">    
+  <h2  className="title">Unlinked Card</h2>
   
   <div className="image">
     <img src={Placeholder} alt="leaves in water placeholder"/>    
@@ -127,10 +125,42 @@ Will look the same as basic cards on mobile/small screens
   </div>    
 </div>
 
+<div  className="wwu-card horizontal bordered">    
+  <h2 className="title">Unlinked Horizontal Card with border</h2>
+  
+  <div className="image">
+    <img src={Placeholder} alt="leaves in water placeholder" />
+  </div>
+  
+  <div className="taxonomy-terms">
+    <span className="taxonomy-term">Professor</span>
+  </div>   
+  
+  <div className="body">
+    <p>She/her/hers</p>
+    <p><a href="mailto:faolan.griogarach@wwu.edu">faolan.griogarach@wwu.edu</a></p>
+    <p><a href="tel:360-650-6820">360-650-6820</a> <span aria-hidden="true">|</span> OM 360</p>
+  </div>    
+</div>
+
 <div  className="wwu-card horizontal">    
   <h2 className="title">
     <a href="#">Faolan Griogarach, PhD</a>
   </h2>
+  
+  <div className="taxonomy-terms">
+    <span className="taxonomy-term">Professor</span>
+  </div>   
+  
+  <div className="body">
+    <p>She/her/hers</p>
+    <p><a href="mailto:faolan.griogarach@wwu.edu">faolan.griogarach@wwu.edu</a></p>
+    <p><a href="tel:360-650-6820">360-650-6820</a> <span aria-hidden="true">|</span> OM 360</p>
+  </div>    
+</div>
+
+<div  className="wwu-card horizontal">    
+  <h2 className="title">Unlinked Horizontal Card</h2>
   
   <div className="taxonomy-terms">
     <span className="taxonomy-term">Professor</span>
