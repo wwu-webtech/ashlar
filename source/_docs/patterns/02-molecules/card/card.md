@@ -57,7 +57,7 @@ The class full-width can be used to break an element out of the flex container. 
   </div> 
 
   <div className="body">
-    <p>Card body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt <a href="nothing.pdf">ut labore et dolore magna aliqua.</a></p> <p><a href="#" className="cta">Call to Action</a></p>
+    <p>Card body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt <a href="nothing.pdf">ut labore et dolore magna aliqua.</a></p>
   </div>
 </div>
 
@@ -75,7 +75,7 @@ The class full-width can be used to break an element out of the flex container. 
   </div> 
 
   <div className="body">
-    <p>Card body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt <a href="nothing.pdf">ut labore et dolore magna aliqua.</a></p> <p><a href="#" className="cta">Call to Action</a></p>
+    <p>Card body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt <a href="nothing.pdf">ut labore et dolore magna aliqua.</a></p>
   </div>
 </div>
 </div>
@@ -277,6 +277,81 @@ Add the custom class **color-block-title**, and optionally **dark-blue, or light
 
 ```
 <div  class="wwu-card color-block-title light-green">    
+  <h2  class="title">
+    <a href="#">Card Title</a>
+  </h2>
+  
+  <div class="image">
+    <img src={Placeholder} alt="leaves in water"/>    
+  </div>
+  
+  <div class="taxonomy-terms">
+    <a class="taxonomy-term" href="#">Term Link 1</a>
+  </div> 
+
+  <div class="body">
+    <p>Card body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt <a href="nothing.pdf">ut labore et dolore magna aliqua.</a></p> <p><a href="#" class="cta">Call to Action</a></p>
+  </div>
+</div>
+```
+
+## Small Thumbnail Variant
+Add the custom class **small-thumbnail** to use this variant. Works with different backgroud colors.
+
+<div className="card-3col--flex">
+<div  className="wwu-card small-thumbnail">    
+  <h2  className="title">
+    <a href="#new">Card Title</a>
+  </h2>
+  
+  <div className="image">
+    <img src={Placeholder} alt="leaves in water placeholder"/>    
+  </div>
+  
+  <div className="taxonomy-terms">
+    <a className="taxonomy-term" href="#">Term Link 1</a>
+  </div> 
+
+  <div className="body">
+    <p>Card body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt <a href="nothing.pdf">ut labore et dolore magna aliqua.</a></p>
+  </div>
+</div>
+
+<div  className="wwu-card small-thumbnail blue-bg">    
+  <h2  className="title">
+    <a href="#new">Supply Chain Management for Better Business Practices</a>
+  </h2>
+  
+  <div className="image">
+    <img src={Placeholder} alt="leaves in water placeholder"/>    
+  </div>
+  
+  <div className="body text-align-center">
+    <p><em>Non-Credit Program</em></p>
+    <p>In-Person: Mukilteo</p>
+  </div>
+</div>
+
+<div  className="wwu-card small-thumbnail dark-blue-bg">    
+  <h2  className="title">
+    <a href="#new">Card Title</a>
+  </h2>
+  
+  <div className="image">
+    <img src={Placeholder} alt="leaves in water placeholder"/>    
+  </div>
+  
+  <div className="taxonomy-terms">
+    <a className="taxonomy-term" href="#">Term Link 1</a>
+  </div> 
+
+  <div className="body">
+    <p>Card body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt <a href="nothing.pdf">ut labore et dolore magna aliqua.</a></p>
+  </div>
+</div>
+</div>
+```
+<div  class="wwu-card small-thumbnail blue-bg">    
   <h2  class="title">
     <a href="#">Card Title</a>
   </h2>
