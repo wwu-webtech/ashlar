@@ -2,6 +2,7 @@
 Molecule: Banner
 --------------------------------------------------------------------------------
 1. Print styles
+2. Animation option
 ------------------------------------------------------------------------------*/
 @import "../../01-atoms/background-color/background-color-mixins.scss";
 .wwu-banner {
@@ -41,5 +42,32 @@ Molecule: Banner
     .body {
       max-width: none;
     }
+  }
+}
+/*------------------------------------------------------------------------------
+2. Animation options
+------------------------------------------------------------------------------*/
+@media (prefers-reduced-motion: no-preference) {
+  .wwu-banner {
+    &.animated {
+      .background-image {
+        overflow: hidden;
+        img {
+          transform: scale(1) translatex(0);
+          animation-name: motion;
+          animation-duration: 5s;
+          animation-timing-function: linear;
+          animation-iteration-count: 1;
+        }
+      }
+    }
+  }
+}
+@keyframes motion {
+  0% {
+    transform: scale(1.2) translatex(-3%);
+  }
+  100% {
+    transform: scale(1) translatex(0);
   }
 }

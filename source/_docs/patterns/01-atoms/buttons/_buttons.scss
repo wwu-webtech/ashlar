@@ -62,3 +62,17 @@ input[type="reset"],
 input[type="submit"] {
   cursor: default;
 }
+button.playback {
+  --button-background-color: transparent;
+
+  display: flex;
+  flex-flow: column;
+  width: var(--touch-target--min);
+  padding: var(--space--2xs);
+  border: solid var(--border-width--md);
+  border-radius: 0;
+  font-size: var(--font-size--2xs);
+  svg {
+    fill: var(--button-color);
+  }
+}
