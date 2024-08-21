@@ -1,13 +1,29 @@
+@import "../../01-atoms/background-color/background-color-mixins.scss";
 /*------------------------------------------------------------------------------
 Molecule: Cards - Alternate styles
 --------------------------------------------------------------------------------
+0. Bordered
 1. Horizontal variant
 2. Color block title variant
-3. Event
-4. Event alternate
-5. Hover variant
-6. Degree variant
+3. Small thumbnail variant
+4. Event
+5. Event alternate
+6. Hover variant
+7. Degree variant
 --------------------------------------------------------------------------------
+0. Bordered
+------------------------------------------------------------------------------*/
+.card.bordered,
+.wwu-card.bordered {
+  border: solid var(--gray--lighter--80) var(--border-width--md);
+  .image {
+    flex: 0 1 calc(100% + var(--border-width--md) * 2);
+    margin-top: calc(-1 * var(--border-width--md));
+    margin-right: calc(-2 * var(--border-width--md));
+    margin-left: calc(-1 * var(--border-width--md));
+  }
+}
+/*------------------------------------------------------------------------------
 1. Horizontal
 ------------------------------------------------------------------------------*/
 .card.horizontal,
@@ -23,8 +39,16 @@ Molecule: Cards - Alternate styles
     .image {
       grid-area: image;
       margin: 0;
+      margin-top: calc(-1 * var(--border-width--md));
+      margin-bottom: calc(-1 * var(--border-width--md));
+      margin-left: calc(-2 * var(--border-width--md));
       div {
         height: 100%;
+      }
+    }
+    &.bordered {
+      .title {
+        margin-top: var(--space--sm);
       }
     }
   }
@@ -78,7 +102,61 @@ Molecule: Cards - Alternate styles
   }
 }
 /*------------------------------------------------------------------------------
-3. Event
+3. small thumbnail
+------------------------------------------------------------------------------*/
+.card.small-thumbnail,
+.wwu-card.small-thumbnail {
+  --h2-size: var(--font-size--xl);
+  --h3-size: var(--font-size--xl);
+  --h4-size: var(--font-size--xl);
+  --image-size: 4.5rem;
+
+  display: grid;
+  grid-template-areas: "image title"
+  "taxonomy taxonomy"
+  "body body";
+  grid-template-columns: 1fr 3fr;
+  .title {
+    @include dark-blue-bg;
+
+    display: flex;
+    grid-column: 1/span all;
+    grid-row: 1/ span 1;
+    align-items: center;
+    margin-top: var(--space--md);
+    padding: var(--space--sm);
+    padding-left: calc(var(--image-size) + var(--space--md));
+    word-break: break-word;
+    a {
+      --link-color: var(--white);
+    }
+  }
+  .image {
+    z-index: 1;
+    overflow: hidden;
+    grid-area: image;
+    align-self: center;
+    width: var(--image-size);
+    height: var(--image-size);
+    margin-top: var(--space--lg);
+    margin-bottom: var(--space--md);
+    margin-left: var(--space--xs);
+    border-radius: 50%;
+  }
+  .taxonomy-terms {
+    grid-area: taxonomy;
+  }
+  .body {
+    grid-area: body;
+  }
+  &.dark-blue-bg {
+    .title {
+      @include blue-bg;
+    }
+  }
+}
+/*------------------------------------------------------------------------------
+4. Event
 ------------------------------------------------------------------------------*/
 .card.event,
 .wwu-card.event {
@@ -137,7 +215,6 @@ Molecule: Cards - Alternate styles
     padding-left: var(--space--lg);
   }
 }
-
 // Dark mode fixes for default event card
 [data-theme="dark"] {
   .card.event,
@@ -145,10 +222,10 @@ Molecule: Cards - Alternate styles
     .location {
       color: var(--blue--lighter--40);
     }
-  } 
+  }
 }
 /*------------------------------------------------------------------------------
-4. Event Alternate
+5. Event Alternate
 ------------------------------------------------------------------------------*/
 .card.event.alt,
 .wwu-card.event.alt {
@@ -204,7 +281,7 @@ Molecule: Cards - Alternate styles
   }
 }
 /*------------------------------------------------------------------------------
-5. Hover Variant
+6. Hover Variant
 ------------------------------------------------------------------------------*/
 .hover-card {
   --h1-color: var(--white);
@@ -361,19 +438,18 @@ Molecule: Cards - Alternate styles
     }
   }
 }
-
 // Dark mode fixes for hover card
 [data-theme="dark"] {
   .hover-card {
     .body {
       @include black-bg;
-      
+
       background-color: unset;
     }
   }
 }
 /*------------------------------------------------------------------------------
-6. Degree (from wwu.edu/majors individual pages)
+7. Degree (from wwu.edu/majors individual pages)
 ------------------------------------------------------------------------------*/
 .degree-card {
   display: grid;
