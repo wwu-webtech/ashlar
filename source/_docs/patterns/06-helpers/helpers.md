@@ -61,6 +61,7 @@ These classes how much horizontal or vertical space an element takes up.
 * min-height--75vh
 * min-height--100vh
 * max-width--content
+* max-width--content--sm
 * full-vw
 
 ## Space
