@@ -47,18 +47,18 @@ Most development can happen without needing to install a local Drupal instance. 
 2. Install packages `npm install` (note: this command does not run inside a lando container)
 3. Run `npm run docusaurus start`
 
-After a minute or two, a browser window should launch for you pointed at http://localhost:3000/ashlar/
+After a minute or two, a browser window should launch for you pointed at the local site. If the browser doesn't open automatically, the terminal output will have the location. The message will look something like, "Docusaurus website is running at: http://localhost:3000/"
 
 ### Ashlar's File Structure
 
-Everything for basic component development exsists inside the _docs folder. Any given component is composed of up to four files:
+Everything for basic component development exists inside the _docs folder. Any given component is composed of up to four files:
 
 * .md Markdown files are what are displayed in Docusaurus. These contain sample markup and documentation, both for developers and for end users
 * .scss SASS files contain the styles for the component, written in SASS
 * .js JavaScript files contain any interactive scripting, including the custom element scripting for components that use it
 * .cy.js Cypress files contain end-to-end (E2E) tests for components to ensure functionality before going live. See "End-to-End Testing in Ashlar" for more info.
 
-Not all components will have all three of these files. Every component should, at least, have a .scss file. Nearly all components will have .md files, with the rare exception of style overrides that exist specifically for Drupal. Only components that require interactive scripting will have .js files.
+Not all components will have all of these files. Every component should, at least, have a .scss file. Nearly all components will have .md files, with the rare exception of style overrides that exist specifically for Drupal. Only components that require interactive scripting will have .js files.
 
 Any changes to the .md and .js files will reload in real time in the Docusaurus browser, though it is a good idea to refresh the browser after making changes to JavaScript files.
 
