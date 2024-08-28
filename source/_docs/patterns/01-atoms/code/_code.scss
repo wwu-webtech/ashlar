@@ -1,0 +1,20 @@
+/*------------------------------------------------------------------------------
+Atom: Code
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+code {
+  overflow-wrap: anywhere;
+
+  padding: 4px;
+  border-radius: var(--border-radius--round);
+  background-color: var(--table-gray--darker--10);
+  font-size: var(--font-size--xs);
+}
+[data-theme="dark"] {
+  code {
+    background-color: var(--gray);
+  }
+}
+pre {
+  font-size: var(--font-size--xs);
+}
