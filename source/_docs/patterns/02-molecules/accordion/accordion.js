@@ -162,7 +162,7 @@ if (
     // Set up controls markup
     const button_collapse_all = document.createElement("button");
     button_collapse_all.classList.add('collapse-all');
-    button_collapse_all.setAttribute("aria-describedby", "collapse_all_hint_text")
+    button_collapse_all.setAttribute("aria-describedby", "collapse-all-hint-text")
     button_collapse_all.innerHTML = `
       <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></span>
       Collapse all sections
@@ -170,7 +170,7 @@ if (
     
     const button_expand_all = document.createElement("button");
     button_expand_all.classList.add('expand-all');
-    button_expand_all.setAttribute("aria-describedby", "expand_all_hint_text")
+    button_expand_all.setAttribute("aria-describedby", "expand-all-hint-text")
     button_expand_all.innerHTML = `
       <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></span>
       Expand all sections
@@ -275,15 +275,11 @@ if (
           shift_key_pressed = true;
       }
       if (shift_key_pressed && (event.key === 'Escape')) {
+        const accordion = document.querySelector("wwu-accordion") ? "wwu-accordion" : ".accordion-set";
+
         event.preventDefault();
-        if (document.querySelector("wwu-accordion")) {
-          for (let item of document.querySelectorAll('wwu-accordion-item .expand')) {
-            close_item(item);
-          }
-        } else {
-          for (let item of document.querySelectorAll('.accordion-set .expand')) {
-            close_item(item);
-          }
+        for (let item of document.querySelectorAll(`${accordion} .expand`)) {
+          close_item(item);
         }
         set_expand_collapse_all_state();
       }
@@ -294,15 +290,11 @@ if (
           shift_key_pressed = true;
       }
       if (shift_key_pressed && (event.key === 'Enter')) {
+        const accordion = document.querySelector("wwu-accordion") ? "wwu-accordion" : ".accordion-set";
+
         event.preventDefault();
-        if (document.querySelector("wwu-accordion")) {
-          for (let item of document.querySelectorAll('wwu-accordion-item .expand')) {
-            open_item(item);
-          }
-        } else {
-          for (let item of document.querySelectorAll('.accordion-set .expand')) {
-            open_item(item);
-          }
+        for (let item of document.querySelectorAll(`${accordion} .expand`)) {
+          open_item(item);
         }
         set_expand_collapse_all_state();
       }
