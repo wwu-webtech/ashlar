@@ -179,12 +179,12 @@ if (
     const expand_all_hint = document.createElement("p"); 
     expand_all_hint.classList.add("expand-all-hint");
     expand_all_hint.setAttribute("id", "expand-all-hint-text")
-    expand_all_hint.innerHTML = "Keyboard: <kbd>Shift</kbd> + <kbd>Enter</kbd>";
+    expand_all_hint.innerHTML = "<kbd>Shift</kbd> + <kbd>Enter</kbd>";
 
     const collapse_all_hint = document.createElement("p"); 
     collapse_all_hint.classList.add("collapse-all-hint");
     collapse_all_hint.setAttribute("id", "collapse-all-hint-text")
-    collapse_all_hint.innerHTML = "Keyboard: <kbd>Shift</kbd> + <kbd>Esc</kbd>";
+    collapse_all_hint.innerHTML = "<kbd>Shift</kbd> + <kbd>Esc</kbd>";
 
     const controls_group = document.createElement("div");
     controls_group.classList.add("accordion-controls-group");
@@ -269,6 +269,7 @@ if (
 
     // Keyboard handlers for expanding/collapsing all items
     let shift_key_pressed = false;
+    let last_focused = document.activeElement;
 
     function key_close_all(event) {
       if (event.key === 'Shift') {
@@ -281,6 +282,7 @@ if (
         for (let item of document.querySelectorAll(`${accordion} .expand`)) {
           close_item(item);
         }
+        last_focused.focus();
         set_expand_collapse_all_state();
       }
     };
@@ -296,6 +298,7 @@ if (
         for (let item of document.querySelectorAll(`${accordion} .expand`)) {
           open_item(item);
         }
+        last_focused.focus();
         set_expand_collapse_all_state();
       }
     };
