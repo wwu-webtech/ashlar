@@ -245,7 +245,7 @@ if (
     // Docusaurus needs timeout function to add buttons when wwu-accordion is loaded
     const wwu_accordion_check_interval = function() {
       let wwu_accordion_exists;
-      let accordion_wrapper = document.querySelector('.block--accordion');
+      let accordion_wrapper = document.querySelector(".block--accordion") || document.querySelector("wwu-accordion");
       
       setTimeout(() => {
         wwu_accordion_exists = accordion_wrapper ? true : false;
