@@ -1,0 +1,70 @@
+.field-multiple-table td {
+  border: none;
+}
+.field-group-fieldset {
+  font-size: var(--font-size--sm);
+}
+.field-group-fieldset .fieldset-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--space--md);
+}
+.paragraph-type--container .form-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--space--md);
+}
+.paragraph-type--container-item .paragraphs-actions {
+  display: block;
+}
+.paragraphs-dropdown-toggle {
+  margin: 0;
+}
+.paragraphs-dropdown-actions {
+  background: transparent;
+}
+.paragraphs-dropdown-actions input {
+  margin: 0;
+  box-shadow: none;
+}
+.paragraphs-actions &amp;amp;amp;amp;amp;amp;amp;amp;gt; .button + .paragraphs-dropdown {
+  margin-left: var(--space--xl);
+}
+#edit-group-attestations {
+  margin-top: var(--space--lg);
+}
+#edit-group-attestations .fieldset-wrapper {
+  display: block;
+}
+.clearfix {
+  padding: var(--space--xs);
+  color: var(--page-background);
+}
+table tr:nth-of-type(2n) {
+  background: unset;
+}
+.dialog-off-canvas-main-canvas .layout-container,
+.paragraph-type--container input,
+.paragraph-type--container select,
+.field-multiple-table .label,
+.js .paragraphs-subform,
+.js .field--widget-paragraphs .field-multiple-table .field-multiple-table {
+  margin: 0;
+}
+.js .field--widget-paragraphs td {
+  padding: 0;
+}
+table input[type="checkbox"]:checked + label::after,
+.field-multiple-table .field-multiple-table th,
+.paragraph-type--container .form-wrapper.paragraph-info,
+.paragraph-type-label,
+.field-multiple-drag,
+.tabledrag-toggle-weight-wrapper,
+.field-multiple-table th:nth-of-type(2),
+.js-form-type-vertical-tabs,
+#edit-preview,
+#edit-field-status-wrapper,
+input.paragraphs-icon-button-collapse,
+.paragraphs-actions {
+  display: none;
+}
