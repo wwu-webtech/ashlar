@@ -122,14 +122,12 @@ describe("molecule: accordion", () => {
       cy.get(accordion1_item).find(".content").not(":visible").should("have.length", 3)
       cy.get(accordion1_item).find(".expand").should("have.attr", "aria-expanded", "false")
       cy.get(accordion1_item).first().find(".expand").focus()
-      
       if (Cypress.isBrowser("chrome")) {
         cy.get(accordion1_item).realPress(["ShiftLeft", "Enter"])
       }
       if (Cypress.isBrowser("!chrome")) {
         cy.get(accordion1_item).find(".expand").type("{shift}{enter}")
       }
-      
       cy.get(accordion1_item).find(".content:visible").should('have.length', 3)
       cy.get(accordion1_item).find(".expand").should("have.attr", "aria-expanded", "true")
     })
@@ -148,14 +146,12 @@ describe("molecule: accordion", () => {
       }
       cy.get(accordion1_item).find(".content:visible").should('have.length', 3)
       cy.get(accordion1_item).find(".expand").should("have.attr", "aria-expanded", "true")
-
       if (Cypress.isBrowser("chrome")) {
         cy.get(accordion1_item).realPress(["ShiftLeft", "Escape"])
       }
       if (Cypress.isBrowser("!chrome")) {
         cy.get(accordion_item1).find(".expand").type("{shift}{esc}")
       }
-      
       cy.get(accordion1_item).find(".content").not(":visible").should("have.length", 3)
       cy.get(accordion1_item).find(".expand").should("have.attr", "aria-expanded", "false")
     })
