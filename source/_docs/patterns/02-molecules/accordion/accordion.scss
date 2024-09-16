@@ -88,11 +88,22 @@ wwu-accordion,
 
   .expand-all,
   .collapse-all {
-    padding: var(--space--2xs);
-    font-size: var(--font-size--xs);
+    --button-color: var(--link-color);
+    --button-color--active: var(--link-color);
+    background: transparent;
+    box-shadow: none;
     margin-bottom: 0;
+    padding: var(--space--2xs);
+    border: var(--border-width--md) solid var(--link-decoration-color);
+    border-radius: 0;
+    font-size: var(--font-size--xs);
+    color: var(--link-color);
   
     &[disabled] {
+      --button-color: var(--gray--darker--20);
+      --button-color--active: var(--gray--darker--20);
+      border-color: var(--gray--darker--20);
+      color: var(--gray--darker--20);
       text-decoration: line-through;
     }
   
