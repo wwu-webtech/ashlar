@@ -98,10 +98,17 @@ wwu-accordion,
     border-radius: 0;
     font-size: var(--font-size--xs);
     color: var(--link-color);
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: var(--link-background--focus);
+    }
   
     &[disabled] {
       --button-color: var(--gray--darker--20);
       --button-color--active: var(--gray--darker--20);
+      background: transparent;
       border-color: var(--gray--darker--20);
       color: var(--gray--darker--20);
       text-decoration: line-through;
