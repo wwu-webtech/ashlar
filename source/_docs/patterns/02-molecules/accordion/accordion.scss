@@ -86,6 +86,10 @@ wwu-accordion,
     grid-column: 2;
   }
 
+  + .title {
+    margin-top: 0;
+  }
+
   .expand-all,
   .collapse-all {
     --button-color: var(--link-color);
@@ -131,5 +135,9 @@ wwu-accordion,
         padding: var(--space--2xs);
       }
     }
+  }
+
+  .expand-all {
+    margin-right: var(--space--xs);
   }
 }
