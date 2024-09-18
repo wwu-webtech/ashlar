@@ -67,7 +67,12 @@ Molecule: Charts - Org Chart
           border: var(--border-width--md) solid transparent;
         }
       }
-      & > em > span {
+      & > em > span,
+      & > h2 > em > span,
+      & > h3 > em > span,
+      & > h4 > em > span,
+      & > h5 > em > span,
+      & > h6 > em > span {
         margin-top: calc( -1 * var(--chart-spacing) / 2);
         margin-left: var(--chart-spacing);
         padding-bottom: calc(var(--chart-spacing) / 2);
