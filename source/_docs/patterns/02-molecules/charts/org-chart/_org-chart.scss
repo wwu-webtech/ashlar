@@ -222,17 +222,17 @@ Molecule: Charts - Org Chart
     border-left: solid var(--chart-border-width) var(--chart-line-color);
     /* horizontal bar for nested items */
     > span:before,
-    > h2 span:before,
-    > h3 span:before,
-    > h4 span:before,
-    > h5 span:before,
-    > h6 span:before,
+    > h2 > span:before,
+    > h3 > span:before,
+    > h4 > span:before,
+    > h5 > span:before,
+    > h6 > span:before,
     > a:before,
-    > h2 a:before,
-    > h3 a:before,
-    > h4 a:before,
-    > h5 a:before,
-    > h6 a:before {
+    > h2 > a:before,
+    > h3 > a:before,
+    > h4 > a:before,
+    > h5 > a:before,
+    > h6 > a:before {
       position: absolute;
       bottom: 0;
       left: 0;
@@ -414,29 +414,29 @@ Molecule: Charts - Org Chart
       }
       /* vertical bar for second level items */
       > span:before,
-      > h2 span:before,
-      > h3 span:before,
-      > h4 span:before,
-      > h5 span:before,
-      > h6 span:before,
+      > h2 > span:before,
+      > h3 > span:before,
+      > h4 > span:before,
+      > h5 > span:before,
+      > h6 > span:before,
       > a:before,
-      > h2 a:before,
-      > h3 a:before,
-      > h4 a:before,
-      > h5 a:before,
-      > h6 a:before,
+      > h2 > a:before,
+      > h3 > a:before,
+      > h4 > a:before,
+      > h5 > a:before,
+      > h6 > a:before,
       &:last-of-type > span:before,
-      &:last-of-type > h2 span:before,
-      &:last-of-type > h3 span:before,
-      &:last-of-type > h4 span:before,
-      &:last-of-type > h5 span:before,
-      &:last-of-type > h6 span:before,
+      &:last-of-type > h2 > span:before,
+      &:last-of-type > h3 > span:before,
+      &:last-of-type > h4 > span:before,
+      &:last-of-type > h5 > span:before,
+      &:last-of-type > h6 > span:before,
       &:last-of-type > a:before,
-      &:last-of-type > h2 a:before,
-      &:last-of-type > h3 a:before,
-      &:last-of-type > h4 a:before,
-      &:last-of-type > h5 a:before,
-      &:last-of-type > h6 a:before {
+      &:last-of-type > h2 > a:before,
+      &:last-of-type > h3 > a:before,
+      &:last-of-type > h4 > a:before,
+      &:last-of-type > h5 > a:before,
+      &:last-of-type > h6 > a:before {
         position: absolute;
         top: calc(-1 * var(--chart-spacing));
         left: calc(var(--chart-spacing)/2 + 50%);
