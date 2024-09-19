@@ -192,14 +192,13 @@ if (
 
     // Helper expand/collapse-all functions
     function attach_all_controls(elm) {
-      if (!controls_group.classList.contains("element-exists")) {
+      if (!document.querySelector(".accordion-controls-group")) {
         document.querySelector(elm).prepend(controls_group);
         if (document.querySelectorAll('wwu-accordion-item[expand="true"]').length === 0) {
           button_collapse_all.setAttribute('disabled', 'true');
         } else {
           button_collapse_all.removeAttribute('disabled');
         }
-        controls_group.classList.add("element-exists");
       }
     }
 
