@@ -84,12 +84,14 @@ if (
       } else {
         open_item(this);
       }
+      set_expand_collapse_all_state();
     }    
     function key_close (event) {
       const key_pressed = event.code;
       if (key_pressed == "Escape") {
         close_item(this);
       }
+      set_expand_collapse_all_state();
     }
     function key_toggle(event) {
       const key_pressed = event.code;
@@ -102,6 +104,7 @@ if (
         } else {
           open_item(this);
         }
+        set_expand_collapse_all_state();
       }
     }
     
@@ -133,7 +136,6 @@ if (
       } else if (item.querySelector(".material-icons")) {
         item.querySelector(".material-icons").innerHTML = open_icon;
       }
-      
     }
     
     /* HTML accordion markup support - mainly for Drupal Views, where custom elements are not supported */       
@@ -152,4 +154,165 @@ if (
         items[i].classList.add("setup");
       }
     }
+
+    /*
+     * Expand/collapse all controls
+     */
+
+    // Set up controls markup
+    const button_collapse_all = document.createElement("button");
+    button_collapse_all.classList.add('collapse-all');
+    button_collapse_all.setAttribute("aria-describedby", "collapse-all-hint-text")
+    button_collapse_all.innerHTML = `
+      <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><g><rect fill="none" height="24" width="24"/></g><g><path d="M14,10H3v2h11V10z M14,6H3v2h11V6z M3,16h7v-2H3V16z M14.41,22L17,19.41L19.59,22L21,20.59L18.41,18L21,15.41L19.59,14 L17,16.59L14.41,14L13,15.41L15.59,18L13,20.59L14.41,22z"/></g></svg></span>
+      Collapse all sections
+    `;
+    
+    const button_expand_all = document.createElement("button");
+    button_expand_all.classList.add('expand-all');
+    button_expand_all.setAttribute("aria-describedby", "expand-all-hint-text")
+    button_expand_all.innerHTML = `
+      <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><g><rect fill="none" height="24" width="24"/></g><g><path d="M14,10H3v2h11V10z M14,6H3v2h11V6z M18,14v-4h-2v4h-4v2h4v4h2v-4h4v-2H18z M3,16h7v-2H3V16z"/></g></svg></span>
+      Expand all sections
+    `;
+
+    const expand_all_hint = document.createElement("p"); 
+    expand_all_hint.classList.add("expand-all-hint");
+    expand_all_hint.setAttribute("id", "expand-all-hint-text")
+    expand_all_hint.innerHTML = "<kbd>Shift</kbd> + <kbd>Enter</kbd>";
+
+    const collapse_all_hint = document.createElement("p"); 
+    collapse_all_hint.classList.add("collapse-all-hint");
+    collapse_all_hint.setAttribute("id", "collapse-all-hint-text")
+    collapse_all_hint.innerHTML = "<kbd>Shift</kbd> + <kbd>Esc</kbd>";
+
+    const controls_group = document.createElement("div");
+    controls_group.classList.add("accordion-controls-group");
+    controls_group.prepend(button_expand_all, expand_all_hint, button_collapse_all, collapse_all_hint);
+
+    // Helper expand/collapse-all functions
+    function attach_all_controls(elm) {
+      if (!document.querySelector(".accordion-controls-group")) {
+        document.querySelector(elm).prepend(controls_group);
+        if (document.querySelectorAll('wwu-accordion-item[expand="true"]').length === 0) {
+          button_collapse_all.setAttribute('disabled', 'true');
+        } else {
+          button_collapse_all.removeAttribute('disabled');
+        }
+      }
+    }
+
+    function expand_all_items() {
+      const items = document.querySelectorAll(".expand");        
+      for (let i = 0; i < items.length; i++) { 
+        open_item(items[i]);
+      }
+      button_expand_all.setAttribute('disabled', 'true');
+      button_collapse_all.removeAttribute('disabled');
+    }
+    
+    function collapse_all_items() {
+      const items = document.querySelectorAll(".expand");        
+      for (let i = 0; i < items.length; i++) { 
+        close_item(items[i]);
+      }
+      button_collapse_all.setAttribute('disabled', 'true');
+      button_expand_all.removeAttribute('disabled');
+    }
+
+    function set_expand_collapse_all_state() {
+      const items = document.querySelectorAll("wwu-accordion-item") || document.querySelectorAll(".item");
+      const expanded_items = document.querySelectorAll(".is-expanded");
+      
+      if (button_expand_all && button_collapse_all) {
+        switch(expanded_items.length) {
+          case 0:
+            document.querySelector(".collapse-all").setAttribute("disabled", "true");
+            document.querySelector(".expand-all").removeAttribute("disabled");
+            break;
+          case items.length:
+            document.querySelector(".expand-all").setAttribute("disabled", "true");
+            document.querySelector(".collapse-all").removeAttribute("disabled");
+            break;
+          default:
+            document.querySelector(".collapse-all").removeAttribute("disabled");
+            document.querySelector(".expand-all").removeAttribute("disabled");
+        }
+      }
+    }
+    
+    // Docusaurus needs timeout function to add buttons when wwu-accordion is loaded
+    const wwu_accordion_check_interval = function() {
+      let wwu_accordion_exists;
+      let accordion_wrapper = document.querySelector(".block--accordion") || document.querySelector("wwu-accordion");
+      
+      setTimeout(() => {
+        wwu_accordion_exists = accordion_wrapper ? true : false;
+        if (wwu_accordion_exists === false) {
+          wwu_accordion_check_interval();
+        } else {
+          clearTimeout();
+          if (accordion_wrapper && accordion_wrapper.firstElementChild.classList.contains("title")) {
+            attach_all_controls(".block--accordion");
+          } else {
+            attach_all_controls("wwu-accordion");
+          }
+        }
+      }, 100);
+    }
+    wwu_accordion_check_interval();
+
+    if (document.querySelector(".accordion-set")) {
+      attach_all_controls(".accordion-set")
+    }
+
+    // Keyboard handlers for expanding/collapsing all items
+    let shift_key_pressed = false;
+    let last_focused = document.activeElement;
+
+    function key_close_all(event) {
+      if (event.key === 'Shift') {
+          shift_key_pressed = true;
+      }
+      if (shift_key_pressed && (event.key === 'Escape')) {
+        const accordion = document.querySelector("wwu-accordion") ? "wwu-accordion" : ".accordion-set";
+
+        event.preventDefault();
+        for (let item of document.querySelectorAll(`${accordion} .expand`)) {
+          close_item(item);
+        }
+        last_focused.focus();
+        set_expand_collapse_all_state();
+      }
+    };
+  
+    function key_expand_all() {
+      if (event.key === 'Shift') {
+          shift_key_pressed = true;
+      }
+      if (shift_key_pressed && (event.key === 'Enter')) {
+        const accordion = document.querySelector("wwu-accordion") ? "wwu-accordion" : ".accordion-set";
+
+        event.preventDefault();
+        for (let item of document.querySelectorAll(`${accordion} .expand`)) {
+          open_item(item);
+        }
+        last_focused.focus();
+        set_expand_collapse_all_state();
+      }
+    };
+
+    function check_shift_press() {
+      if (event.key === 'Shift') {
+        shift_key_pressed = false;
+      }
+    };
+
+    button_expand_all.addEventListener('click', expand_all_items);
+    button_collapse_all.addEventListener('click', collapse_all_items);
+    document.addEventListener('keydown', () => {
+      key_close_all(event);
+      key_expand_all(event);
+    });
+    document.addEventListener('keyup', check_shift_press);
   }

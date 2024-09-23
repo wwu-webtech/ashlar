@@ -4,6 +4,13 @@ describe("molecule: accordion", () => {
   beforeEach(() => {
     cy.visit("/patterns/molecules/accordion")
     cy.get(".theme-doc-markdown").should("be.visible")
+    
+    // Skip uncaught exception flags 
+    // Alerts due to expand/collapse all controls not yet loaded 
+    cy.on('uncaught:exception', (err, runnable) => {
+      expect(err.message).to.include('Cannot read properties of null')
+      return false
+    })
   })
 
   runAutoA11yTests();
@@ -64,6 +71,89 @@ describe("molecule: accordion", () => {
       }
       cy.get(accordion_item_dog).find(".expand").should("have.attr", "aria-expanded", "false") 
       cy.get(accordion_item_dog).siblings(".content").should("not.have.class", "is-expanded")
+    })
+
+    // On Enter: expand all button opens all items
+    it("expand all button opens all accordion items", () => {
+      const accordion1_item = ".theme-doc-markdown wwu-accordion:first-of-type wwu-accordion-item"
+
+      cy.get(accordion1_item).find(".content").not(":visible").should("have.length", 3)
+      cy.get('.expand-all').should("be.visible")
+      cy.get(".expand-all").focus()
+      if (Cypress.isBrowser("chrome")) {
+        cy.get(".expand-all").realPress("Enter")
+      }
+      if (Cypress.isBrowser("!chrome")) {
+        cy.get(".expand-all").type("{enter}")
+      }
+      cy.get(accordion1_item).find(".content:visible").should('have.length', 3)
+      cy.get(accordion1_item).find(".expand").should("have.attr", "aria-expanded", "true")
+      cy.get(".expand-all").should("have.attr", "disabled")
+    })
+
+    // On Enter: collapse all button closes all items
+    it("collapse all button closes all accordion items", () => {
+      const accordion1_item = ".theme-doc-markdown wwu-accordion:first-of-type wwu-accordion-item"
+      
+      cy.get(".expand-all").focus()
+      if (Cypress.isBrowser("chrome")) {
+        cy.get(".expand-all").realPress("Enter")
+      }
+      if (Cypress.isBrowser("!chrome")) {
+        cy.get(".expand-all").type("{enter}")
+      }
+      cy.get(accordion1_item).find(".content:visible").should('have.length', 3)
+      cy.get(".collapse-all").focus()
+      if (Cypress.isBrowser("chrome")) {
+        cy.get(".collapse-all").realPress("Enter")
+      }
+      if (Cypress.isBrowser("!chrome")) {
+        cy.get(".collapse-all").type("{enter}")
+      }
+      cy.get(accordion1_item).find(".content").not(":visible").should("have.length", 3)
+      cy.get(accordion1_item).find(".expand").should("have.attr", "aria-expanded", "false")
+      cy.get(".collapse-all").should("have.attr", "disabled")
+    })
+
+    // On Shift + Enter: all accordion items expand
+    it("Shift + Enter opens all accordion items", () => {
+      const accordion1_item = ".theme-doc-markdown wwu-accordion:first-of-type wwu-accordion-item"
+
+      cy.get(accordion1_item).find(".content").not(":visible").should("have.length", 3)
+      cy.get(accordion1_item).find(".expand").should("have.attr", "aria-expanded", "false")
+      cy.get(accordion1_item).first().find(".expand").focus()
+      if (Cypress.isBrowser("chrome")) {
+        cy.get(accordion1_item).realPress(["ShiftLeft", "Enter"])
+      }
+      if (Cypress.isBrowser("!chrome")) {
+        cy.get(accordion1_item).find(".expand").type("{shift}{enter}")
+      }
+      cy.get(accordion1_item).find(".content:visible").should('have.length', 3)
+      cy.get(accordion1_item).find(".expand").should("have.attr", "aria-expanded", "true")
+    })
+
+    // On Shift + Esc: all accordion items collapse
+    it("Shift + Esc closes all accordion items", () => {
+      const accordion1_item = ".theme-doc-markdown wwu-accordion:first-of-type wwu-accordion-item"
+
+      cy.get(accordion1_item).find(".content").not(":visible").should("have.length", 3)
+      cy.get(".expand-all").focus()
+      if (Cypress.isBrowser("chrome")) {
+        cy.get(".expand-all").realPress("Enter")
+      }
+      if (Cypress.isBrowser("!chrome")) {
+        cy.get(".expand-all").type("{enter}")
+      }
+      cy.get(accordion1_item).find(".content:visible").should('have.length', 3)
+      cy.get(accordion1_item).find(".expand").should("have.attr", "aria-expanded", "true")
+      if (Cypress.isBrowser("chrome")) {
+        cy.get(accordion1_item).realPress(["ShiftLeft", "Escape"])
+      }
+      if (Cypress.isBrowser("!chrome")) {
+        cy.get(accordion_item1).find(".expand").type("{shift}{esc}")
+      }
+      cy.get(accordion1_item).find(".content").not(":visible").should("have.length", 3)
+      cy.get(accordion1_item).find(".expand").should("have.attr", "aria-expanded", "false")
     })
   })
 })

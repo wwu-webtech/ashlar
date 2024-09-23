@@ -45,10 +45,8 @@ The class full-width can be used to break an element out of the flex container. 
   </div>    
 </div>
 
-<div  className="wwu-card lightest-blue-bg">    
-  <h2  className="title">
-    Unlinked Card
-  </h2>
+<div  className="wwu-card bordered">    
+  <h2  className="title">Unlinked Card</h2>
   
   <div className="image">
     <img src={Placeholder} alt="leaves in water placeholder"/>    
@@ -59,7 +57,7 @@ The class full-width can be used to break an element out of the flex container. 
   </div> 
 
   <div className="body">
-    <p>Card body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt <a href="nothing.pdf">ut labore et dolore magna aliqua.</a></p> <p><a href="#" className="cta">Call to Action</a></p>
+    <p>Card body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt <a href="nothing.pdf">ut labore et dolore magna aliqua.</a></p>
   </div>
 </div>
 
@@ -77,7 +75,7 @@ The class full-width can be used to break an element out of the flex container. 
   </div> 
 
   <div className="body">
-    <p>Card body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt <a href="nothing.pdf">ut labore et dolore magna aliqua.</a></p> <p><a href="#" className="cta">Call to Action</a></p>
+    <p>Card body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt <a href="nothing.pdf">ut labore et dolore magna aliqua.</a></p>
   </div>
 </div>
 </div>
@@ -127,10 +125,42 @@ Will look the same as basic cards on mobile/small screens
   </div>    
 </div>
 
+<div  className="wwu-card horizontal bordered">    
+  <h2 className="title">Unlinked Horizontal Card with border</h2>
+  
+  <div className="image">
+    <img src={Placeholder} alt="leaves in water placeholder" />
+  </div>
+  
+  <div className="taxonomy-terms">
+    <span className="taxonomy-term">Professor</span>
+  </div>   
+  
+  <div className="body">
+    <p>She/her/hers</p>
+    <p><a href="mailto:faolan.griogarach@wwu.edu">faolan.griogarach@wwu.edu</a></p>
+    <p><a href="tel:360-650-6820">360-650-6820</a> <span aria-hidden="true">|</span> OM 360</p>
+  </div>    
+</div>
+
 <div  className="wwu-card horizontal">    
   <h2 className="title">
     <a href="#">Faolan Griogarach, PhD</a>
   </h2>
+  
+  <div className="taxonomy-terms">
+    <span className="taxonomy-term">Professor</span>
+  </div>   
+  
+  <div className="body">
+    <p>She/her/hers</p>
+    <p><a href="mailto:faolan.griogarach@wwu.edu">faolan.griogarach@wwu.edu</a></p>
+    <p><a href="tel:360-650-6820">360-650-6820</a> <span aria-hidden="true">|</span> OM 360</p>
+  </div>    
+</div>
+
+<div  className="wwu-card horizontal">    
+  <h2 className="title">Unlinked Horizontal Card</h2>
   
   <div className="taxonomy-terms">
     <span className="taxonomy-term">Professor</span>
@@ -247,6 +277,81 @@ Add the custom class **color-block-title**, and optionally **dark-blue, or light
 
 ```
 <div  class="wwu-card color-block-title light-green">    
+  <h2  class="title">
+    <a href="#">Card Title</a>
+  </h2>
+  
+  <div class="image">
+    <img src={Placeholder} alt="leaves in water"/>    
+  </div>
+  
+  <div class="taxonomy-terms">
+    <a class="taxonomy-term" href="#">Term Link 1</a>
+  </div> 
+
+  <div class="body">
+    <p>Card body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt <a href="nothing.pdf">ut labore et dolore magna aliqua.</a></p> <p><a href="#" class="cta">Call to Action</a></p>
+  </div>
+</div>
+```
+
+## Small Thumbnail Variant
+Add the custom class **small-thumbnail** to use this variant. Works with different backgroud colors.
+
+<div className="card-3col--flex">
+<div  className="wwu-card small-thumbnail">    
+  <h2  className="title">
+    <a href="#new">Card Title</a>
+  </h2>
+  
+  <div className="image">
+    <img src={Placeholder} alt="leaves in water placeholder"/>    
+  </div>
+  
+  <div className="taxonomy-terms">
+    <a className="taxonomy-term" href="#">Term Link 1</a>
+  </div> 
+
+  <div className="body">
+    <p>Card body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt <a href="nothing.pdf">ut labore et dolore magna aliqua.</a></p>
+  </div>
+</div>
+
+<div  className="wwu-card small-thumbnail blue-bg">    
+  <h2  className="title">
+    <a href="#new">Supply Chain Management for Better Business Practices</a>
+  </h2>
+  
+  <div className="image">
+    <img src={Placeholder} alt="leaves in water placeholder"/>    
+  </div>
+  
+  <div className="body text-align-center">
+    <p><em>Non-Credit Program</em></p>
+    <p>In-Person: Mukilteo</p>
+  </div>
+</div>
+
+<div  className="wwu-card small-thumbnail dark-blue-bg">    
+  <h2  className="title">
+    <a href="#new">Card Title</a>
+  </h2>
+  
+  <div className="image">
+    <img src={Placeholder} alt="leaves in water placeholder"/>    
+  </div>
+  
+  <div className="taxonomy-terms">
+    <a className="taxonomy-term" href="#">Term Link 1</a>
+  </div> 
+
+  <div className="body">
+    <p>Card body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt <a href="nothing.pdf">ut labore et dolore magna aliqua.</a></p>
+  </div>
+</div>
+</div>
+```
+<div  class="wwu-card small-thumbnail blue-bg">    
   <h2  class="title">
     <a href="#">Card Title</a>
   </h2>
@@ -387,7 +492,7 @@ This variant requires different markup from standard cards. It is only available
 </div>
 
 <div className="read-more">
-  <span className='material-icons' aria-hidden='true'>arrow_forward</span>
+  <span className='component-icon' aria-hidden='true'><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></span>
 </div>
 </div>
 <div className="hover-card">
@@ -406,7 +511,7 @@ This variant requires different markup from standard cards. It is only available
 </div>
 
 <div className="read-more">
-  <span className='material-icons' aria-hidden='true'>arrow_forward</span>
+  <span className='component-icon' aria-hidden='true'><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></span>
 </div>
 </div>
 <div className="hover-card">
@@ -425,7 +530,7 @@ This variant requires different markup from standard cards. It is only available
 </div>
 
 <div className="read-more">
-  <span className='material-icons' aria-hidden='true'>arrow_forward</span>
+  <span className='component-icon' aria-hidden='true'><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></span>
 </div>
 </div>
 </div>
@@ -447,7 +552,7 @@ This variant requires different markup from standard cards. It is only available
   </div>
 
   <div class="read-more">
-    <span class='material-icons' aria-hidden='true'>arrow_forward</span>
+    <span class='component-icon' aria-hidden='true'><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></span>
   </div>
 </div>
 ```
@@ -461,7 +566,7 @@ For degrees displayed on majors pages. These style are fairly specific to the co
 </h3>
 
 <div className="taxonomy-terms">
-    <span className="taxonomy-term dark-blue-bg"><span className="visually-hidden">Degree Type:</span><span className="material-icons" aria-hidden="true">school</span> Teaching Endorsement</span>
+    <span className="taxonomy-term dark-blue-bg"><span className="visually-hidden">Degree Type:</span><span className="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#e8eaed"><path d="M0 0h24v24H0z" fill="none"/><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3 1 9l11 6 9-4.91V17h2V9L12 3z"/></svg></span> Teaching Endorsement</span>
 </div>
 
 <div className="body">
@@ -469,10 +574,10 @@ For degrees displayed on majors pages. These style are fairly specific to the co
   
   <div className="department-links">
     <div>
-      <a className="department-link" href="#">Cat Education <span className="material-icons" aria-hidden="true">arrow_forward</span></a>
+      <a className="department-link" href="#">Cat Education</a>
     </div>
     <div>
-      <a className="department-link" href="#">Catology <span className="material-icons" aria-hidden="true">arrow_forward</span></a>
+      <a className="department-link" href="#">Catology</a>
     </div>           
   </div>
     

@@ -1,0 +1,20 @@
+.fieldset__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 4px;
+}
+#edit-group-attestations .fieldset__wrapper {
+  display: block;
+}
+.paragraph-type-label,
+.paragraphs-badge,
+#edit-preview {
+  display: none;
+}
+.field-actions {
+  color: white;
+}
+.paragraph-type--container .field--type-boolean label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}

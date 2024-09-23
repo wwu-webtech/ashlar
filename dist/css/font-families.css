@@ -19,7 +19,7 @@
 
   font-family: "Fira Sans";
   src: local("Fira Sans Regular"), local("FiraSans-Regular"),
-  url(../../build/fonts/fira-sans-normal-400.woff2) format("woff2");
+  url(../../dist/fonts/fira-sans-normal-400.woff2) format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -45,7 +45,7 @@
 
   font-family: "Fira Sans";
   src: local("Fira Sans SemiBold"), local("FiraSans-SemiBold"),
-  url(../../build/fonts/fira-sans-normal-600.woff2) format("woff2");
+  url(../../dist/fonts/fira-sans-normal-600.woff2) format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -71,7 +71,7 @@
 
   font-family: "Fira Sans";
   src: local("Fira Sans Bold"), local("FiraSans-Bold"),
-  url(../../build/fonts/fira-sans-normal-700.woff2) format("woff2");
+  url(../../dist/fonts/fira-sans-normal-700.woff2) format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -97,7 +97,7 @@
 
   font-family: "Fira Sans";
   src: local("Fira Sans Italic"), local("FiraSans-Italic"),
-  url(../../build/fonts/fira-sans-italic.woff2) format("woff2");
+  url(../../dist/fonts/fira-sans-italic.woff2) format("woff2");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -123,7 +123,7 @@
 
   font-family: "Montserrat";
   src: local("Montserrat Bold"), local("Montserrat-Bold"),
-  url(../../build/fonts/montserrat-700.woff2) format("woff2");
+  url(../../dist/fonts/montserrat-700.woff2) format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -149,7 +149,7 @@
 
   font-family: "Montserrat";
   src: local("Montserrat Black"), local("Montserrat-Black"),
-  url(../../build/fonts/montserrat-900.woff2) format("woff2");
+  url(../../dist/fonts/montserrat-900.woff2) format("woff2");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -175,7 +175,7 @@
 
   font-family: "PT Serif";
   src: local("PT Serif"), local("PTSerif-Regular"),
-  url(../../build/fonts/pt-serif-400.woff2) format("woff2");
+  url(../../dist/fonts/pt-serif-400.woff2) format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -201,7 +201,7 @@
 
   font-family: "PT Serif";
   src: local("PT Serif Bold"), local("PTSerif-Bold"),
-  url(../../build/fonts/pt-serif-700.woff2) format("woff2");
+  url(../../dist/fonts/pt-serif-700.woff2) format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -226,7 +226,7 @@
   U+FFFD;
 
   font-family: "Open Dyslexic";
-  src: url(../../build/fonts/OpenDyslexic3-Regular.woff2) format("woff2");
+  src: url(../../dist/fonts/OpenDyslexic3-Regular.woff2) format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -251,7 +251,7 @@
   U+FFFD;
 
   font-family: "Atkinson Hyperlegible";
-  src: url(../../build/fonts/Atkinson-Hyperlegible-Regular-102a.woff2)
+  src: url(../../dist/fonts/Atkinson-Hyperlegible-Regular-102a.woff2)
   format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -277,7 +277,7 @@
   U+FFFD;
 
   font-family: "Atkinson Hyperlegible";
-  src: url(../../build/fonts/Atkinson-Hyperlegible-Bold-102a.woff2)
+  src: url(../../dist/fonts/Atkinson-Hyperlegible-Bold-102a.woff2)
   format("woff2");
   font-weight: 700;
   font-style: normal;
