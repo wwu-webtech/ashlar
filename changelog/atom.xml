@@ -2,16 +2,41 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ashlar.wwu.edu/changelog</id>
     <title>Ashlar Blog</title>
-    <updated>2024-07-15T12:00:00.000Z</updated>
+    <updated>2024-09-23T12:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ashlar.wwu.edu/changelog"/>
     <subtitle>Ashlar Blog</subtitle>
     <icon>https://ashlar.wwu.edu/img/favicon.ico</icon>
     <entry>
+        <title type="html"><![CDATA[5.5.x Updates]]></title>
+        <id>https://ashlar.wwu.edu/changelog/version-5-5</id>
+        <link href="https://ashlar.wwu.edu/changelog/version-5-5"/>
+        <updated>2024-09-23T12:00:00.000Z</updated>
+        <summary type="html"><![CDATA[5.5.0]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="550">5.5.0<a href="https://ashlar.wwu.edu/changelog/version-5-5#550" class="hash-link" aria-label="Direct link to 5.5.0" title="Direct link to 5.5.0">​</a></h2>
+<p>** September 23, 2024 **</p>
+<ul>
+<li>New feature: <a href="https://webtech.wwu.edu/news/accordion-component-new-feature" target="_blank" rel="noopener noreferrer">Expand all accordion buttons</a></li>
+<li>Org chart style fixes</li>
+<li>CORS fix for font loading</li>
+<li>Gulp has been updated to version 5.0, which should reduce vulnerability warnings on npm install</li>
+<li>Improved styles for code blocks</li>
+<li>New card styles added</li>
+<li>New banner styles added</li>
+</ul>]]></content>
+        <author>
+            <name>Stephanie Paulantis</name>
+        </author>
+        <author>
+            <name>Carly Gerard</name>
+        </author>
+        <category label="minor-release" term="minor-release"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[5.4.x Updates]]></title>
         <id>https://ashlar.wwu.edu/changelog/version-5-4</id>
         <link href="https://ashlar.wwu.edu/changelog/version-5-4"/>
-        <updated>2024-07-15T12:00:00.000Z</updated>
+        <updated>2024-08-19T12:00:00.000Z</updated>
         <summary type="html"><![CDATA[5.4.0]]></summary>
         <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="540">5.4.0<a href="https://ashlar.wwu.edu/changelog/version-5-4#540" class="hash-link" aria-label="Direct link to 5.4.0" title="Direct link to 5.4.0">​</a></h2>
 <p>** June 18, 2024 **</p>
@@ -1232,26 +1257,6 @@
 <ul>
 <li>The featherlight library for video lightboxes is no longer supported. We suggest using the Ashlar lightbox pattern instead for video needing to be highlighted in a dialog.</li>
 <li>Additional active path patches.</li>
-</ul>]]></content>
-        <author>
-            <name>Stephanie Paulantis</name>
-        </author>
-        <author>
-            <name>Carly Gerard</name>
-        </author>
-        <category label="minor-release" term="minor-release"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[3.3.x Updates]]></title>
-        <id>https://ashlar.wwu.edu/changelog/version-3-3</id>
-        <link href="https://ashlar.wwu.edu/changelog/version-3-3"/>
-        <updated>2020-10-05T10:00:00.000Z</updated>
-        <summary type="html"><![CDATA[3.3.0]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="330">3.3.0<a href="https://ashlar.wwu.edu/changelog/version-3-3#330" class="hash-link" aria-label="Direct link to 3.3.0" title="Direct link to 3.3.0">​</a></h2>
-<p><strong>October 5, 2020</strong></p>
-<ul>
-<li>Active path will now be highlighted in menus</li>
-<li>Responsive containers added to embedded videos by default</li>
 </ul>]]></content>
         <author>
             <name>Stephanie Paulantis</name>
