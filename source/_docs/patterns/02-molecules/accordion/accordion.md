@@ -1,6 +1,7 @@
 import WWUAccordion from "./accordion.js"
 
 # Accordion
+Pages with accordions will receive Expand All/Collapse All buttons for improved usability. If you are only using a single accordion on a page or in a given section, we recommend using the [Details](patterns/atoms/details) HTML element instead.
 
 ## Component Library
 Include the following script to use the accordion component on your non-Drupal website or application.
