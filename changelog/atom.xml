@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ashlar.wwu.edu/changelog</id>
     <title>Ashlar Blog</title>
-    <updated>2024-09-23T12:00:00.000Z</updated>
+    <updated>2024-10-07T12:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ashlar.wwu.edu/changelog"/>
     <subtitle>Ashlar Blog</subtitle>
@@ -11,9 +11,14 @@
         <title type="html"><![CDATA[5.5.x Updates]]></title>
         <id>https://ashlar.wwu.edu/changelog/version-5-5</id>
         <link href="https://ashlar.wwu.edu/changelog/version-5-5"/>
-        <updated>2024-09-23T12:00:00.000Z</updated>
-        <summary type="html"><![CDATA[5.5.0]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="550">5.5.0<a href="https://ashlar.wwu.edu/changelog/version-5-5#550" class="hash-link" aria-label="Direct link to 5.5.0" title="Direct link to 5.5.0">​</a></h2>
+        <updated>2024-10-07T12:00:00.000Z</updated>
+        <summary type="html"><![CDATA[5.5.1]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="551">5.5.1<a href="https://ashlar.wwu.edu/changelog/version-5-5#551" class="hash-link" aria-label="Direct link to 5.5.1" title="Direct link to 5.5.1">​</a></h2>
+<p>** October 7, 2024 **</p>
+<ul>
+<li>NPM Vulnerability fixes and documentation updates</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="550">5.5.0<a href="https://ashlar.wwu.edu/changelog/version-5-5#550" class="hash-link" aria-label="Direct link to 5.5.0" title="Direct link to 5.5.0">​</a></h2>
 <p>** September 23, 2024 **</p>
 <ul>
 <li>New feature: <a href="https://webtech.wwu.edu/news/accordion-component-new-feature" target="_blank" rel="noopener noreferrer">Expand all accordion buttons</a></li>

@@ -4,7 +4,7 @@
         <title>Ashlar Blog</title>
         <link>https://ashlar.wwu.edu/changelog</link>
         <description>Ashlar Blog</description>
-        <lastBuildDate>Mon, 23 Sep 2024 12:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 07 Oct 2024 12:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,9 +12,14 @@
             <title><![CDATA[5.5.x Updates]]></title>
             <link>https://ashlar.wwu.edu/changelog/version-5-5</link>
             <guid>https://ashlar.wwu.edu/changelog/version-5-5</guid>
-            <pubDate>Mon, 23 Sep 2024 12:00:00 GMT</pubDate>
-            <description><![CDATA[5.5.0]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="550">5.5.0<a href="https://ashlar.wwu.edu/changelog/version-5-5#550" class="hash-link" aria-label="Direct link to 5.5.0" title="Direct link to 5.5.0">​</a></h2>
+            <pubDate>Mon, 07 Oct 2024 12:00:00 GMT</pubDate>
+            <description><![CDATA[5.5.1]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="551">5.5.1<a href="https://ashlar.wwu.edu/changelog/version-5-5#551" class="hash-link" aria-label="Direct link to 5.5.1" title="Direct link to 5.5.1">​</a></h2>
+<p>** October 7, 2024 **</p>
+<ul>
+<li>NPM Vulnerability fixes and documentation updates</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="550">5.5.0<a href="https://ashlar.wwu.edu/changelog/version-5-5#550" class="hash-link" aria-label="Direct link to 5.5.0" title="Direct link to 5.5.0">​</a></h2>
 <p>** September 23, 2024 **</p>
 <ul>
 <li>New feature: <a href="https://webtech.wwu.edu/news/accordion-component-new-feature" target="_blank" rel="noopener noreferrer">Expand all accordion buttons</a></li>
