@@ -46,7 +46,7 @@ Overwrite to reset default ultimenu styles.
   }
   .ultimenu--horizontal {
     .ultimenu__link {
-      .caret {
+      .ultimenu__caret {
         display: none;
       }
     }
@@ -56,12 +56,6 @@ Overwrite to reset default ultimenu styles.
   .ultimenu--htb .ultimenu__region {
     border-radius: 0;
     box-shadow: none;
-  }
-  .ultimenu--hover li:hover > .ultimenu__flyout,
-  .ultimenu--hover li a:active + .ultimenu__flyout,
-  .ultimenu--hover li a:focus + .ultimenu__flyout,
-  .ultimenu--hover li .ultimenu__flyout:focus-within {
-    padding: 0;
   }
   .open {
     visibility: visible;
@@ -76,5 +70,15 @@ Overwrite to reset default ultimenu styles.
 .button {
   &.button--ultimenu {
     display: none;
+  }
+}
+.is-ultidesktop {
+  .is-ultihover:not(.is-ulticaret) {
+    li .ultimenu__flyout:focus,
+    li:hover > .ultimenu__flyout,
+    li a:active + .ultimenu__flyout,
+    li a:focus + .ultimenu__flyout {
+      padding: unset;
+    }
   }
 }
