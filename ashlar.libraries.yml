@@ -149,6 +149,13 @@ search:
       build/css/components/search.css: {}
   js:
     build/js/search.js: {}
+slide-banner:
+  version: 1.x
+  css:
+    theme:
+      build/css/components/slide-banner.css: {}
+  js:
+    build/js/slide-banner.js: {}
 switcher:
   version: 1.x
   css:
