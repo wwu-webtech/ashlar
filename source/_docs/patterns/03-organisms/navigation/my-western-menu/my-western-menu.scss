@@ -2,15 +2,19 @@
 Molecule: Navigation - myWestern Menu
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
+@import "../../../00-utilities/breakpoints.scss";
 .my-western-links {
   display: flex;
   flex-flow: row wrap;
   gap: var(--space--xs);
+  justify-content: center;
   max-width: var(--content-area-max-width--sm);
   margin: var(--space--md) auto;
   font-size: var(--font-size--sm);
   svg {
     fill: var(--link-color);
+
+    min-width: 3rem;
   }
   p {
     display: grid;
@@ -18,12 +22,16 @@ Molecule: Navigation - myWestern Menu
     margin: 0;
     line-height: 1.2;
   }
-  .wwu-card {
-    flex: 1 0 15%;
+  .card {
+    flex: 1 0 30%;
     flex-flow: column;
     align-content: space-between;
+    max-width: 50%;
     padding: 0;
     text-align: center;
+    @media (min-width: $small) {
+      flex: 1 0 15%;
+    }
   }
   .image {
     margin-bottom: var(--space--2xs);
