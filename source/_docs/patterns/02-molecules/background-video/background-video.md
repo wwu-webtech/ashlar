@@ -5,7 +5,7 @@ import WWUBackgroundVideo from "./background-video.js"
   <p class="no-margin--bottom"><strong>Important!</strong> See "Pattern Notes" before using on a live site.</p>
 </div>
 
-<wwu-background-video src="https://www.wwu.edu/files/2020-04/Viking%20on%20Mars.mp4" alt="4-second looping animation. The Mars Rover Curiosity crawls over rocky terrain as the camera pans over a vast, red landscape" class="min-height--50vh headings--big-and-bold black-overlay">
+<wwu-background-video src="https://www.wwu.edu/sites/default/files/2020-04/Viking%20on%20Mars.mp4" alt="4-second looping animation. The Mars Rover Curiosity crawls over rocky terrain as the camera pans over a vast, red landscape" class="min-height--50vh headings--big-and-bold black-overlay">
   <h2>Heading for this Video</h2>
   <p>Some content for this video. Not to be confused with the alt text, which should be a short description of what is going on in the video :)</p>
 </wwu-background-video>
