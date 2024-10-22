@@ -10,20 +10,20 @@ describe("molecule: switcher", () => {
 
   context('manual accessibility tests', () => {
     it('wwu-switcher follows ARIA semantics', () => {
-      for (let switcher of "wwu-switcher:first-of-type .switcher") {
-        cy.get(switcher).should("have.attr", "role", "tablist")
-        cy.get(switcher).should("have.attr", "aria-label").and("not.be.empty")
-        cy.get(switcher).find("button").should("have.attr", "role", "button").and("have.attr", "aria-controls").and("have.id")
-        cy.get(switcher).find("button.active").should("have.attr", "aria-selected", "true").and("not.have.attr", "tabindex")
-        cy.get(switcher).find("button:not(.active)").should("have.attr", "aria-selected", "false").and("have.attr", "tabindex", "-1")
-      }
+      const switcher = "wwu-switcher .switcher"
+      const switcher_panel = "wwu-switcher:first-of-type .switcher-container"
 
-      for (let switcher_panel of "wwu-switcher:first-of-type .switcher-container") {
-        cy.get(switcher_panel).find("div").should("have.attr", "role", "tabpanel").and("have.attr", "tabindex", "0")
-      }
-      cy.get(switcher_panel).first().should("have.attr", "aria-labelledby").should("match", ".wwu-switcher:first .switcher button:first-child[id]")
-      cy.get(switcher_panel).first().next().should("have.attr", "aria-labelledby").should("match", ".wwu-switcher:first .switcher button:first-child + button[id]")
-      cy.get(switcher_panel).last().should("have.attr", "aria-labelledby").should("match", ".wwu-switcher:first .switcher button:last-child[id]")
+      cy.get(switcher).should("have.attr", "role", "tablist")
+      cy.get(switcher).should("have.attr", "aria-label").and("not.be.empty")
+      cy.get(switcher).find("button").should("have.attr", "role", "tab").and("have.attr", "aria-controls")
+      cy.get(switcher).find("button").should("have.attr", "id").and("not.be.empty")
+      cy.get(switcher).find("button.active").should("have.attr", "aria-selected", "true").and("not.have.attr", "tabindex")
+      cy.get(switcher).find("button:not(.active)").should("have.attr", "aria-selected", "false").and("have.attr", "tabindex", "-1")
+      cy.get(switcher_panel).find("div").should("have.attr", "role", "tabpanel").and("have.attr", "tabindex", "0")
+
+      cy.get("wwu-switcher:first-of-type .switcher-container").find("div:first-of-type").should("have.attr", "aria-labelledby", "accessible-label-switch-tab-0")
+      cy.get("wwu-switcher:first-of-type .switcher-container").find("div:first-of-type").next("div").should("have.attr", "aria-labelledby", "accessible-label-switch-tab-1")
+      cy.get("wwu-switcher:first-of-type .switcher-container").find("div:last-of-type").should("have.attr", "aria-labelledby", "accessible-label-switch-tab-2")
 
       cy.get("wwu-switcher:not([layout='column']) .switcher").should("have.attr", "aria-orientation", "horizontal")
       cy.get("wwu-switcher[layout='column'] .switcher").should("have.attr", "aria-orientation", "vertical")
@@ -36,7 +36,7 @@ describe("molecule: switcher", () => {
       cy.get(switcherpanel_1).should("be.visible")
       cy.get(switchertab_1).focus()
       cy.get(switchertab_1).next("button").click()
-      cy.get(switchertab_1).should("not.have.class", "active").and("has.attr", "selected", "false").and("has.attr", "tabindex", "-1")
+      cy.get(switchertab_1).should("not.have.class", "active").and("has.attr", "aria-selected", "false").and("has.attr", "tabindex", "-1")
       cy.get(switcherpanel_1).should("be.hidden").and("not.have.class", "active")
       cy.get(switcherpanel_1).next("div").should("be.visible").and("have.class", "active")
       cy.get(switchertab_1).next("button").should("have.class", "active").and("have.attr", "aria-selected", "true")
