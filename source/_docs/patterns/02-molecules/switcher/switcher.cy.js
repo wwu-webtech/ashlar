@@ -41,9 +41,12 @@ describe("molecule: switcher", () => {
       cy.get(switcherpanel_1).next("div").should("be.visible").and("have.class", "active")
       cy.get(switchertab_1).next("button").should("have.class", "active").and("have.attr", "aria-selected", "true")
     })
-    it('arrow keys move focus between tabs', () => {
+
+    it('right and left arrow keys move focus between tabs in horizontal switcher', () => {
       const switchertab_1 = "wwu-switcher:first-of-type .switcher button:first"
       const switcherpanel_1 = "wwu-switcher:first-of-type .switcher-container div:first"
+      const switchertab_3 = "wwu-switcher:first-of-type .switcher button:last"
+      const switcherpanel_3 = "wwu-switcher:first-of-type .switcher-container div:last"
 
       cy.get(switcherpanel_1).should("be.visible")
       cy.get(switchertab_1).focus()
@@ -55,15 +58,85 @@ describe("molecule: switcher", () => {
       }
       cy.get(switchertab_1).should("not.have.class", "active").and("have.attr", "aria-selected", "false").and("have.attr", "tabindex", "-1")
       cy.get(switcherpanel_1).should("be.hidden").and("not.have.class", "active")
-      cy.get(switcherpanel_1).next("div").should("be.visible").and("have.class", "active")
       cy.get(switchertab_1).next("button").should("have.focus").and("have.class", "active").and("have.attr", "aria-selected", "true")
+      cy.get(switcherpanel_1).next("div").should("be.visible").and("have.class", "active")
+      
       // cycle through to tab 1, should get focus after right key
+      cy.get(switchertab_3).focus().click()
+      cy.get(switcherpanel_3).should("be.visible")
+      if (Cypress.isBrowser("chrome")) {
+        cy.get(switchertab_3).realPress("ArrowRight")
+      }
+      if (Cypress.isBrowser("!chrome")) {
+        cy.get(switchertab_3).type("{rightArrow}")
+      }
+      cy.get(switchertab_3).should("not.have.class", "active").and("have.attr", "aria-selected", "false").and("have.attr", "tabindex", "-1")
+      cy.get(switcherpanel_3).should("be.hidden").and("not.have.class", "active")
+      cy.get(switchertab_1).should("have.focus").and("have.class", "active").and("have.attr", "aria-selected", "true")
+      cy.get(switcherpanel_1).should("be.visible").and("have.class", "active")
+      
       // reverse for left arrow
-      // vertical: focus on tab 1, press down arrow - tab 2 now focused
-      // cycle through to tab 1, should get focus after down key
-      // reverse for up arrow
+      cy.get(switchertab_3).focus().click()
+      cy.get(switcherpanel_3).should("be.visible")
+      if (Cypress.isBrowser("chrome")) {
+        cy.get(switchertab_3).realPress("ArrowLeft")
+      }
+      if (Cypress.isBrowser("!chrome")) {
+        cy.get(switchertab_3).type("{leftArrow}")
+      }
+      cy.get(switchertab_3).should("not.have.class", "active").and("have.attr", "aria-selected", "false").and("have.attr", "tabindex", "-1")
+      cy.get(switcherpanel_3).should("be.hidden").and("not.have.class", "active")
+      cy.get(switchertab_3).prev("button").should("have.focus").and("have.class", "active").and("have.attr", "aria-selected", "true")
+      cy.get(switcherpanel_3).prev("div").should("be.visible").and("have.class", "active")
     })
-    it('', () => {
+    
+    it('up and down arrow keys move focus between tabs in vertical switcher', () => {
+      // vertical: focus on tab 1, press down arrow - tab 2 now focused
+      const switchertab_1 = "wwu-switcher:last-of-type .switcher button:first"
+      const switcherpanel_1 = "wwu-switcher:last-of-type .switcher-container div:first"
+      const switchertab_3 = "wwu-switcher:last-of-type .switcher button:last"
+      const switcherpanel_3 = "wwu-switcher:last-of-type .switcher-container div:last"
+      
+      cy.get(switcherpanel_1).should("be.visible")
+      cy.get(switchertab_1).focus()
+      if (Cypress.isBrowser("chrome")) {
+        cy.get(switchertab_1).realPress("ArrowDown")
+      }
+      if (Cypress.isBrowser("!chrome")) {
+        cy.get(switchertab_1).type("{downArrow}")
+      }
+      cy.get(switchertab_1).should("not.have.class", "active").and("have.attr", "aria-selected", "false").and("have.attr", "tabindex", "-1")
+      cy.get(switcherpanel_1).should("be.hidden").and("not.have.class", "active")
+      cy.get(switchertab_1).next("button").should("have.focus").and("have.class", "active").and("have.attr", "aria-selected", "true")
+      cy.get(switcherpanel_1).next("div").should("be.visible").and("have.class", "active")
+
+      // cycle through to tab 1, should get focus after down key
+      cy.get(switchertab_3).focus().click()
+      cy.get(switcherpanel_3).should("be.visible")
+      if (Cypress.isBrowser("chrome")) {
+        cy.get(switchertab_3).realPress("ArrowDown")
+      }
+      if (Cypress.isBrowser("!chrome")) {
+        cy.get(switchertab_3).type("{downArrow}")
+      }
+      cy.get(switchertab_3).should("not.have.class", "active").and("have.attr", "aria-selected", "false").and("have.attr", "tabindex", "-1")
+      cy.get(switcherpanel_3).should("be.hidden").and("not.have.class", "active")
+      cy.get(switchertab_1).should("have.focus").and("have.class", "active").and("have.attr", "aria-selected", "true")
+      cy.get(switcherpanel_1).should("be.visible").and("have.class", "active")
+      
+      // reverse for up arrow
+      cy.get(switchertab_3).focus().click()
+      cy.get(switcherpanel_3).should("be.visible")
+      if (Cypress.isBrowser("chrome")) {
+        cy.get(switchertab_3).realPress("ArrowUp")
+      }
+      if (Cypress.isBrowser("!chrome")) {
+        cy.get(switchertab_3).type("{upArrow}")
+      }
+      cy.get(switchertab_3).should("not.have.class", "active").and("have.attr", "aria-selected", "false").and("have.attr", "tabindex", "-1")
+      cy.get(switcherpanel_3).should("be.hidden").and("not.have.class", "active")
+      cy.get(switchertab_3).prev("button").should("have.focus").and("have.class", "active").and("have.attr", "aria-selected", "true")
+      cy.get(switcherpanel_3).prev("div").should("be.visible").and("have.class", "active") 
     })
   })
 })
