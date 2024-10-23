@@ -70,7 +70,8 @@ Molecule: Main navigation/ultimenu custom styles
     color: var(--link-color);
     line-height: 1;
     &:active,
-    &:hover {
+    &:hover,
+    &:focus {
       color: var(--link-color--active);
     }
     &.is-active {
