@@ -416,7 +416,7 @@ While we provide this example of complex table markup, in most cases a better pr
 </table>
 
 ```
-<table className="blue auto-layout align-top">
+<table class="blue auto-layout align-top">
   <caption>Custom classes applied to this table: blue fixed align-top</caption>
   <thead>
     <tr>
@@ -546,7 +546,7 @@ While we provide this example of complex table markup, in most cases a better pr
 </table>
 
 ```
-<table className="align-bottom font-size--smaller">
+<table class="align-bottom font-size--smaller">
   <caption>Custom classes applied to this table: align-bottom font-size--smaller</caption>
   <thead>
     <tr>
