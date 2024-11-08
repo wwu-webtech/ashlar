@@ -82,3 +82,10 @@ Overwrite to reset default ultimenu styles.
     }
   }
 }
+html.is-ultimobile .ultimenu > li,
+html.is-ultimobile .ultimenu .ultimenu__link {
+  @media (min-width: 801px) {
+    width: inherit;
+    min-width: unset;
+  }
+}
