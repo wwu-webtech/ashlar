@@ -10,23 +10,7 @@ use \Drupal\block_content\BlockContentInterface;
 /**
 * Implements hook_page_attachments_alter().
 */
-function ashlar_page_attachments_alter(array &$attachments) {
-  
-  $siteimprove = <<<'SITEIMPROVE'
-  (function() {var sz = document.createElement('script');sz.type = 'text/javascript';sz.async = true;sz.src = '//siteimproveanalytics.com/js/siteanalyze_66356517.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(sz, s);})();
-  SITEIMPROVE;
-  
-  if (theme_get_setting('siteimprove_tracking')) {
-    $attachments['#attached']['html_head'][] = array(
-      array(
-        '#type' => 'html_tag',
-        '#tag' => 'script',
-        '#value' => $siteimprove,
-      ),
-      'siteimprove',
-    );
-  }
-  
+function ashlar_page_attachments_alter(array &$attachments) {    
   if (theme_get_setting('vimeo_tracking')) {
     $attachments['#attached']['library'][] = 'ashlar/vimeo-tracking';
   }

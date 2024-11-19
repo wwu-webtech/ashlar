@@ -1,0 +1,20 @@
+<div class="layout-container">
+{% embed '@templates/page-template/page-template.html.twig' %}
+
+{% block main_navigation %}
+<div class="nav--404">
+  {{ page.main_navigation }}
+</div>
+{% endblock %}
+
+{% block content %}
+<main id="main-content">
+    <div class="text-align-center">
+      <h1>403 Access Denied</h1>
+      <p>You are not authorized to access this page. You may need to sign in, and/or use a secured connection.</p>    
+  </div>
+</main>
+{% endblock %}
+
+{% endembed %}
+</div>

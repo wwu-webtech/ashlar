@@ -11,7 +11,7 @@ Molecule: Main navigation/ultimenu custom styles
   }
   & > .menu,
   & > .menu-primary,
-  .ultimenu--horizontal {
+  .ultimenu {
     @include blue-bg;
 
     position: relative;
@@ -46,8 +46,16 @@ Molecule: Main navigation/ultimenu custom styles
     top: auto;
     width: 100%;
     height: auto;
+    .menu > li > a {
+      color: var(--link-color);
+      &:active,
+      &:focus,
+      &:hover {
+        color: var(--link-color--active);
+      }
+    }
   }
-  .ultimenu__link,
+  li .ultimenu__link,
   .top-level-menu-item > a {
     position: relative;
     grid-column: 1 / span all;
@@ -59,7 +67,16 @@ Molecule: Main navigation/ultimenu custom styles
     text-align: left;
     white-space: normal;
     text-decoration: none;
+    color: var(--link-color);
     line-height: 1;
+    &:active,
+    &:hover,
+    &:focus {
+      color: var(--link-color--active);
+    }
+    &.is-active {
+      --link-color: var(--white);
+    }
     @media (min-width: $medium) {
       display: flex;
       align-items: center;
@@ -96,6 +113,9 @@ Molecule: Main navigation/ultimenu custom styles
     @media (min-width: $medium) {
       border-bottom: solid var(--link-background--active) var(--border-width--md);
       border-left: none;
+    }
+    > .ultimenu__link {
+      color: var(--link-color);
     }
   }
 }
