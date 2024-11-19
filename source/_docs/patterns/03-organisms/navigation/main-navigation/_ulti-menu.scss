@@ -10,6 +10,9 @@ Overwrite to reset default ultimenu styles.
     font-size: var(--font-size--sm);
     > li {
       min-width: initial;
+      > .ultimenu__link {
+        z-index: 1;
+      }
     }
     section.ultimenu__flyout {
       z-index: initial;
