@@ -101,8 +101,8 @@ if (
         }  
       } /* End of Connected Callback */      
     }
-    
-    window.customElements.define("wwu-countdown", WWUCountdown);      
-    
+    if (!window.customElements.get('wwu-countdown')) {    
+      window.customElements.define("wwu-countdown", WWUCountdown);      
+    }    
   }
   
