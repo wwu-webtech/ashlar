@@ -29,6 +29,13 @@
 <li>Improved styles for code blocks</li>
 <li>New card styles added</li>
 <li>New banner styles added</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="552">5.5.2<a href="https://ashlar.wwu.edu/changelog/version-5-5#552" class="hash-link" aria-label="Direct link to 5.5.2" title="Direct link to 5.5.2">​</a></h2>
+<p>** November 19, 2024 **</p>
+<ul>
+<li>Support for Ultimenu 3.0.5 upgrade</li>
+<li>New 403 access denied template</li>
+<li>Event list space fix</li>
 </ul>]]></content:encoded>
             <category>minor-release</category>
         </item>
