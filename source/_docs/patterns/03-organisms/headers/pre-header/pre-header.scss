@@ -15,7 +15,7 @@ wwu-pre-header {
   flex-flow: row wrap;
   align-items: center;
   justify-content: flex-end;
-  min-height: var(--touch-target--min);
+  min-height: var(--touch-target--aaa);
   border-bottom: solid var(--border-width--md) transparent;
   font-size: var(--font-size--xs);
   * {
@@ -28,7 +28,7 @@ wwu-pre-header {
   }
   button,
   .radio {
-    min-height: var(--touch-target--min);
+    min-height: var(--touch-target--aaa);
   }
   button,
   input {

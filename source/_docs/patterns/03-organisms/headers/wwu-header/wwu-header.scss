@@ -29,7 +29,7 @@ wwu-header {
     --button-background-color--active: var(--blue);
 
     z-index: 2;
-    min-height: var(--touch-target--min);
+    min-height: var(--touch-target--aaa);
     margin: 0;
     border: var(--border-width--sm) solid var(--link-decoration-color);
     border-radius: 0;
@@ -42,7 +42,7 @@ wwu-header {
     display: flex;
     grid-area: logo;
     place-content: center;
-    margin-top: calc(-1 * var(--touch-target--min));
+    margin-top: calc(-1 * var(--touch-target--aaa));
     @media (min-width: $medium) {
       margin-top: unset;
     }

@@ -378,7 +378,8 @@ Remember: if you adjust <strong>any</strong> colors, you need to make sure that 
 
 ### Touch Targets
 ```
---touch-target--min: 44px;
+--touch-target--aa: 24px;
+--touch-target--aaa: 44px;
 ```
 
 ### Logo
