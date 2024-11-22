@@ -41,6 +41,11 @@ Overwrite to reset default ultimenu styles.
         }
       }
     }
+    .ultimenusub {
+      .ultimenu__item {
+        display: unset;
+      }
+    }
   }
   .ultimenu--basic {
     .region {
