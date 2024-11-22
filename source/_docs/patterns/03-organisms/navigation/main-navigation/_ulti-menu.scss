@@ -97,3 +97,13 @@ html.is-ultimobile .ultimenu .ultimenu__link {
     min-width: unset;
   }
 }
+.is-ultidesktop .is-ultihover .ultimenu__flyout,
+.is-ultidesktop:not(.is-ultimenu--active) .is-ulticaret .ultimenu__flyout {
+  position: relative;
+}
+.is-ultidesktop .is-ultihover:not(.is-ulticaret) li:hover > .ultimenu__flyout {
+  visibility: hidden;
+  min-height: 0;
+  max-height: 0;
+  opacity: 0;
+}
