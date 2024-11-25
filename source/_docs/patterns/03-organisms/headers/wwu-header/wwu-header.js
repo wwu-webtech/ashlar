@@ -98,18 +98,19 @@ if (
           ];
           const mobile_menu = [
             this.querySelector(".wwu-menu"),
-            document.querySelector("wwu-main-nav"),
-            document.querySelector(".main-navigation"),
-            document.querySelector(".main-nav"), // for finaid				
           ];
-          
-          // Wordpress
-          if (document.querySelector(".main-navigation") == null && document.querySelector(".main-nav") == null) {
+
+         
+          // Non-Drupal Applications
+          if (document.querySelector(".is-ultimenu") == null) {
+            waitForElm('.main-navigation').then((elm) => {
+              mobile_menu[1] = document.querySelector(".main-navigation");
+            });
             waitForElm('.nav-primary').then((elm) => {
-                mobile_menu[3] = document.querySelector(".nav-primary");
+                mobile_menu[2] = document.querySelector(".nav-primary"); // Wordpress
             });
           }
-          
+
           function open_menu() {
             menu_toggle.setAttribute("aria-expanded", true);
             menu_toggle.querySelector(".component-icon").innerHTML = close_icon;
