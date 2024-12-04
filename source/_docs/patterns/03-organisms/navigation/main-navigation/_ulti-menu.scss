@@ -87,7 +87,6 @@ Overwrite to reset default ultimenu styles.
     li a:active + .ultimenu__flyout,
     li a:focus + .ultimenu__flyout {
       padding: unset;
-      transition-delay: 0;
     }
   }
 }
@@ -107,4 +106,13 @@ html.is-ultimobile .ultimenu .ultimenu__link {
   min-height: 0;
   max-height: 0;
   opacity: 0;
+}
+.is-ultidesktop .is-ultihover:not(.is-ulticaret) li a.open + .ultimenu__flyout {
+  visibility: visible;
+  overflow: visible;
+  height: auto;
+  min-height: 64px;
+  max-height: none;
+  transition-delay: 0.1s;
+  opacity: 1;
 }
