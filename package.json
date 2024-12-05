@@ -39,6 +39,7 @@
   "license": "GPL-2.0",
   "dependencies": {
     "acorn": "^6.4.2",
+    "gulp-cli": "^3.0.0",
     "prettier": "2.2.1"
   }
 }
