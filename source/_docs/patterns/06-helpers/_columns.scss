@@ -34,9 +34,18 @@ Columns will collapse on mobile.
 .grid-column-count--5,
 .grid-column-count--6 {
   display: grid;
-  grid-column-gap: var(--space--sm);
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
+  gap: var(--space--sm);
   align-items: stretch;
+}
+@media (min-width: $small) {
+  .grid-column-count--2,
+  .grid-column-count--3,
+  .grid-column-count--4,
+  .grid-column-count--5,
+  .grid-column-count--6 {
+    grid-template-columns: auto auto;
+  }
 }
 @media (min-width: $medium) {
   .grid-column-count--2 {
