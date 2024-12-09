@@ -35,6 +35,13 @@
 <li>Support for Ultimenu 3.0.5 upgrade</li>
 <li>New 403 access denied template</li>
 <li>Event list space fix</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="553">5.5.3<a href="https://ashlar.wwu.edu/changelog/version-5-5#553" class="hash-link" aria-label="Direct link to 5.5.3" title="Direct link to 5.5.3">​</a></h2>
+<p>** December 9, 2024 **</p>
+<ul>
+<li>Flickering menu bug fix</li>
+<li>Column helper class fix for small displays</li>
+<li>NPM updates</li>
 </ul>]]></content>
         <author>
             <name>Stephanie Paulantis</name>
