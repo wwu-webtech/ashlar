@@ -41,6 +41,13 @@ Organism: Page-404
   animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  
+  /* Reduced motion: stop the animation completely */
+  @media (prefers-reduced-motion: reduce) {
+    -webkit-animation: none;
+    animation: none;
+    transform: none; /* Ensure it doesn't retain the last state of animation */
+  }
 }
 @keyframes tossingboat {
   0% {
