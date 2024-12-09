@@ -25,7 +25,7 @@ Molecule: Main navigation/ultimenu custom styles
       display: grid;
       grid-template-areas: "link icon"
       "flyout flyout";
-      grid-template-columns: 1fr var(--touch-target--min);
+      grid-template-columns: 1fr var(--touch-target--aaa);
       grid-template-rows: auto auto;
       width: 100%;
       @media (min-width: $medium) {
@@ -61,7 +61,7 @@ Molecule: Main navigation/ultimenu custom styles
     grid-column: 1 / span all;
     grid-row: 1 / span 1;
     width: 100%;
-    min-height: var(--touch-target--min);
+    min-height: var(--touch-target--aaa);
     margin: 0;
     padding: var(--space--sm);
     text-align: left;

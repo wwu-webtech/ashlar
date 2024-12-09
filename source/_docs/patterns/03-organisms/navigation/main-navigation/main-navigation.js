@@ -4,7 +4,7 @@ if (
 ) {
   const main_nav_template = document.createElement("template");
   main_nav_template.innerHTML = `   
-    <nav class="main-navigation" aria-label="Main">
+    <nav class="main-navigation wwu-menu-closed" aria-label="Main">
       <ul class="ultimenu ultimenu--horizontal ultimenu--htb ultimenu--basic">
       </ul>
     </nav>
@@ -23,7 +23,7 @@ if (
 
       if (!element_exists) {
         this.appendChild(main_nav_template.content.cloneNode(true));     
-        this.classList.add("element-created");       
+        this.classList.add("element-created");      
         const top_menu = this.querySelector(".ultimenu");     
               
         for (const item of items) {        
@@ -103,6 +103,8 @@ if (
     }
   }
 
-  window.customElements.define("wwu-main-nav", WWUMainNav);  
+  if (!window.customElements.get('wwu-main-nav')) {      
+    window.customElements.define("wwu-main-nav", WWUMainNav);  
+  }
 
 }
