@@ -64,6 +64,9 @@ Overwrite to reset default ultimenu styles.
   .ultimenu--htb .ultimenu__region {
     border-radius: 0;
     box-shadow: none;
+    a {
+      color: inherit;
+    }
   }
   .open {
     visibility: visible;
