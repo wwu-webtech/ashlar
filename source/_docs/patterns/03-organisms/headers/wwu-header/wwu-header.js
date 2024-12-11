@@ -99,13 +99,12 @@ if (
           const mobile_menu = [
             this.querySelector(".wwu-menu"),
           ];
-
+          waitForElm('.main-navigation').then((elm) => {
+            mobile_menu[1] = document.querySelector(".main-navigation");
+          });
          
           // Non-Drupal Applications
-          if (document.querySelector(".is-ultimenu") == null) {
-            waitForElm('.main-navigation').then((elm) => {
-              mobile_menu[1] = document.querySelector(".main-navigation");
-            });
+          if (document.querySelector(".is-ultimenu") == null) {            
             waitForElm('.nav-primary').then((elm) => {
                 mobile_menu[2] = document.querySelector(".nav-primary"); // Wordpress
             });
