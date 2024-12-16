@@ -10,10 +10,13 @@ ol {
       margin-bottom: var(--space--sm);
     }
   }
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
 }
 li {
   line-height: 1.5;
-
   &:has(a) {
     min-height: var(--touch-target--aa);
   }
