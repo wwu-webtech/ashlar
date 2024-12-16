@@ -4,55 +4,54 @@ Molecule: Navigation - myWestern Menu
 ------------------------------------------------------------------------------*/
 @import "../../../00-utilities/breakpoints.scss";
 .my-western-links {
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space--xs);
   justify-content: center;
-  max-width: var(--content-area-max-width--sm);
   margin: var(--space--md) auto;
   font-size: var(--font-size--sm);
-  svg {
-    fill: var(--link-color);
+}
+.my-western-links svg {
+  fill: var(--link-color);
 
-    min-width: 3rem;
-  }
-  p {
-    display: grid;
-    align-content: center;
-    margin: 0;
-    line-height: 1.2;
-  }
-  .card {
-    flex: 1 0 30%;
-    flex-flow: column;
-    align-content: space-between;
-    max-width: 50%;
-    padding: 0;
-    text-align: center;
-    @media (min-width: $small) {
-      flex: 1 0 15%;
-    }
-  }
-  .image {
-    margin-bottom: var(--space--2xs);
-    padding: var(--space--md) var(--space--md) 0 var(--space--md);
-  }
-  .highlight {
-    min-width: 7rem;
-    .text {
-      position: absolute;
-      top: 2rem;
-      left: 0rem;
-      width: 100%;
-      transform: rotate(-40deg);
-      text-transform: uppercase;
-      opacity: 0.9;
-      color: var(--blue--darker--40);
-      background-color: var(--light-green--lighter--40);
-      font-family: var(--font--title);
-      font-size: var(--font-size--lg);
-      font-weight: var(--font-weight--bold);
-      line-height: 1;
-    }
+  min-width: 3rem;
+}
+.my-western-links p {
+  display: grid;
+  align-content: center;
+  margin: 0;
+  line-height: 1.2;
+}
+.my-western-links .wwu-card {
+  flex-flow: column;
+  align-content: space-between;
+  padding: 0;
+  text-align: center;
+}
+.my-western-links .image {
+  margin-bottom: var(--space--2xs);
+  padding: var(--space--md) var(--space--md) 0 var(--space--md);
+}
+.my-western-links .highlight {
+  min-width: 7rem;
+}
+.my-western-links .highlight .text {
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  width: 100%;
+  transform: rotate(-40deg);
+  text-transform: uppercase;
+  opacity: 0.9;
+  color: var(--blue--darker--40);
+  background-color: var(--light-green--lighter--40);
+  font-family: var(--font--title);
+  font-size: var(--font-size--lg);
+  font-weight: var(--font-weight--bold);
+  line-height: 1;
+}
+@media (min-width: 581px) {
+  .my-western-links {
+    grid-template-columns: repeat(6, 1fr);
   }
 }
