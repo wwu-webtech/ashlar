@@ -4,8 +4,6 @@ Organism: Footers - Site footer
 1. Print
 ------------------------------------------------------------------------------*/
 .site-footer {
-  @include blue-bg;
-
   display: flex;
   flex-flow: row wrap;
   gap: var(--space--lg);
@@ -13,16 +11,6 @@ Organism: Footers - Site footer
   border-top: solid var(--border-width--md) transparent;
   .footer-region {
     flex: 1 1 30%;
-  }
-  .footer-region--bottom {
-    flex: 0 0 100%;
-  }
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-top: 0;
   }
 }
 /*------------------------------------------------------------------------------
