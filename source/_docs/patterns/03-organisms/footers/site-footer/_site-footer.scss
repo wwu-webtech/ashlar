@@ -32,13 +32,13 @@ Organism: Footers - Site footer
     display: block;
     margin-bottom: var(--space--md);
     margin-left: var(--space--md);
-    border-bottom: solid var(--dark-blue) var(--border-width--sm);
+    border-bottom: solid var(--h3-color) var(--border-width--sm);
   }
 }
 .wwu-tagline {
   margin: 0;
   text-transform: uppercase;
-  color: var(--dark-blue);
+  color: var(--h3-color);
   font-family: var(--font--title);
   font-size: var(--h3-size);
   font-weight: var(--font-weight--black);
