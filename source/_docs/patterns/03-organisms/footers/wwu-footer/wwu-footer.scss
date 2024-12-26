@@ -5,10 +5,7 @@ Organism: Footers - Western footer
 @import "../../../00-utilities/breakpoints.scss";
 @import "../../../01-atoms/background-color/_background-color-mixins.scss";
 wwu-footer {
-  @include dark-blue-bg;
-
   display: grid;
-  gap: var(--space--sm);
   text-align: center;
   border-top: solid var(--border-width--md) transparent;
   font-size: var(--font-size--xs);
@@ -16,24 +13,39 @@ wwu-footer {
     margin: 0;
     line-height: 1.5;
   }
-  wwu-logo {
-    margin: auto;
+  .artwork {
+    position: relative;
+    z-index: -2;
+    img {
+      display: block;
+    }
   }
-  .social-media-links {
-    justify-content: center;
+  .footer-waves {
+    fill: var(--dark-blue);
+
+    position: relative;
+    z-index: -1;
+    margin-bottom: -100%;
+    transform: translatey(-2rem);
+  }
+  .social {
+    margin: var(--space--sm);
   }
   .tribal-lands-statement {
-    max-width: var(--content-area-max-width);
+    max-width: var(--content-area-max-width--sm);
     margin: auto;
     padding: var(--space--xs);
   }
-  .footer-bottom {
-    background-color: var(--dark-blue--darker--20);
-  }
   .footer-nav {
+    display: flex;
+    place-content: center;
     width: 100%;
+    a {
+      padding: var(--space--sm);
+      text-decoration: none;
+    }
   }
-  .copy-right {
-    margin-top: var(--space--sm);
+  .copyright {
+    margin: var(--space--sm);
   }
 }

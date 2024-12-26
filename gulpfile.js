@@ -162,7 +162,7 @@
    * dest: Output pattern for image files.
    */
   config.images = {
-    src: ["source/images/**/*.{jpg,jpeg,gif,png,svg}"],
+    src: ["source/images/**/*.{jpg,jpeg,gif,png,svg,webp}"],
     dest: "build/images",
     cdndest: "cdn/images",
   };
