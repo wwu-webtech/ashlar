@@ -29,7 +29,24 @@ wwu-footer {
     transform: translatey(-2rem);
   }
   .social {
+    --icon-background-color: var(--dark-blue);
+    --icon-background-color--active: transparent;
+    --icon-color--active: var(--blue--lighter--60);
+
+    display: flex;
+    gap: var(--space--xs);
+    align-items: center;
+    justify-content: center;
     margin: var(--space--sm);
+    wwu-social:nth-of-type(1) {
+      --icon-background-color: var(--white);
+      --icon-background-color--active: var(--blue--lighter--60);
+      --icon-color: var(--dark-blue);
+      --icon-color--active: var(--dark-blue);
+    }
+    wwu-social:nth-of-type(1) .small {
+      --icon-size--social: var(--icon-size--sm);
+    }
   }
   .tribal-lands-statement {
     max-width: var(--content-area-max-width--sm);

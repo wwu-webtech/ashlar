@@ -19,6 +19,9 @@ wwu-social {
     .wwu-icon-cls-1 {
       fill: var(--icon-background-color--active);
     }
+    .wwu-icon-cls-2 {
+      fill: var(--icon-color--active);
+    }
   }
 }
 .wwu-social-icon {
@@ -37,7 +40,6 @@ wwu-social {
 .wwu-icon-cls-2 {
   fill: var(--icon-color);
 }
-
 @media (forced-colors: active) {
   .wwu-social-link {
     svg {
