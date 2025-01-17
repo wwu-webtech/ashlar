@@ -3,6 +3,7 @@ Organism: Footers - Site footer
 --------------------------------------------------------------------------------
 1. Print
 ------------------------------------------------------------------------------*/
+@import "../../../00-utilities/breakpoints.scss";
 .site-footer {
   --h2-size: var(--font-size--md);
   --h3-size: var(--font-size--md);
@@ -13,11 +14,17 @@ Organism: Footers - Site footer
   flex-flow: row wrap;
   gap: var(--space--lg);
   max-width: var(--content-area-max-width);
-  margin: auto;
+  margin: 0 var(--space--sm);
   border-top: solid var(--border-width--md) transparent;
   font-size: var(--font-size--sm);
+  @media(min-width: $large) {
+    margin: auto;
+  }
   .footer-region {
-    flex: 1 1 30%;
+    flex: 1 1 100%;
+    @media(min-width: $medium) {
+      flex: 1 1 30%;
+    }
   }
   .title {
     margin-top: 0;
@@ -27,7 +34,10 @@ Organism: Footers - Site footer
   display: grid;
   grid-template-columns: auto 1fr;
   max-width: var(--content-area-max-width);
-  margin: auto;
+  margin: 0 var(--space--sm);
+  @media(min-width: $large) {
+    margin: auto;
+  }
   .separator {
     display: block;
     margin-bottom: var(--space--md);

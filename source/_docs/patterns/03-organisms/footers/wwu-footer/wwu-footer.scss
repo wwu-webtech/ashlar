@@ -26,7 +26,7 @@ wwu-footer {
     position: relative;
     z-index: -1;
     margin-bottom: -100%;
-    transform: translatey(-2rem);
+    transform: translatey(-50%);
   }
   .social {
     --icon-background-color: var(--dark-blue);
@@ -55,6 +55,7 @@ wwu-footer {
   }
   .footer-nav {
     display: flex;
+    flex-flow: row wrap;
     place-content: center;
     width: 100%;
     a {
