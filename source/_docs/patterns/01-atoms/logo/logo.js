@@ -9,8 +9,6 @@ if (
   <style>
   .wwu-logo {
     --logo-size: 8rem;
-    --logo--horizontal--width: 25rem;
-    --logo--horizontal--height: 6.25rem;
     
     width: var(--logo-size);
     height: var(--logo-size);
@@ -247,9 +245,7 @@ if (
   wwu_logo_template.innerHTML = `
   <style>
   .wwu-logo {
-    --logo-size: 8rem;
-    --logo--horizontal--width: 25rem;
-    --logo--horizontal--height: 6.25rem;
+    --logo-size: 6rem;
     
     width: var(--logo-size);
     height: var(--logo-size);
@@ -287,6 +283,9 @@ if (
   horizontal_logo_template.innerHTML = `
   <style>
     .wwu-logo.horizontal {
+      --logo--horizontal--width: 25rem;
+      --logo--horizontal--height: 6.25rem;
+      
       width: var(--logo--horizontal--width);
       height: var(--logo--horizontal--height);
     }

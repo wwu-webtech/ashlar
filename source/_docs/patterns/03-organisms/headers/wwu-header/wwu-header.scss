@@ -5,139 +5,24 @@ Organism: Headers - Western header
 @import "../../../00-utilities/breakpoints.scss";
 @import "../../../01-atoms/background-color/_background-color-mixins.scss";
 wwu-header {
-  @include dark-blue-bg;
-
-  position: relative;
   display: grid;
-  grid-template-columns: auto auto;
-  border-bottom: solid var(--border-width--md) transparent;
-  @media (min-width: $medium) {
-    grid-template-columns: var(--logo-size) 1fr;
-    grid-template-rows: auto 1fr;
-    align-items: center;
-    min-height: 11rem;
-  }
-  noscript {
+  grid-auto-flow: column;
+  grid-template-columns: auto 1fr auto;
+  max-width: var(--content-area-max-width);
+  .toggle {
     display: grid;
-    grid-column: 1 / span all;
-    grid-row: 1 / span all;
-    grid-template-columns: var(--logo-size) 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto auto;
+    align-content: start;
+    color: var(--link-color);
+    border-radius: unset;
+    background: transparent;
+    box-shadow: unset;
+    font-size: var(--font-size--xs);
   }
-  .toggle-menu {
-    --button-background-color: var(--dark-blue);
-    --button-background-color--active: var(--blue);
+  .toggle svg {
+    fill: var(--link-color);
 
-    z-index: 2;
-    min-height: var(--touch-target--aaa);
-    margin: 0;
-    border: var(--border-width--sm) solid var(--link-decoration-color);
-    border-radius: 0;
-    box-shadow: none;
-    @media (min-width: $medium) {
-      display: none;
-    }
-  }
-  .western-logo {
-    display: flex;
-    grid-area: logo;
-    place-content: center;
-    margin-top: calc(-1 * var(--touch-target--aaa));
-    @media (min-width: $medium) {
-      margin-top: unset;
-    }
-  }
-  .site-info {
-    --link-color: var(--white);
-    --link-color--visited: var(--white);
-
-    grid-column: 1 / span all;
-    min-height: 9.5rem;
-    @media (min-width: $medium) {
-      display: grid;
-      grid-column-gap: var(--space--sm);
-      grid-row: 1 / span all;
-      grid-template-areas: "logo ........"
-      "logo site-name"
-      "logo region";
-      grid-template-columns: var(--logo-size) auto;
-      grid-template-rows: 1fr auto 1fr;
-    }
-  }
-  .site-name {
-    grid-area: site-name;
-    padding: var(--space--sm);
-    text-align: center;
-    font-size: var(--font-size--xl);
-    line-height: 1.4;
-    @media (min-width: $medium) {
-      padding: 0;
-      text-align: left;
-      font-size: var(--font-size--2xl);
-    }
-  }
-  .home-link {
-    display: block;
-    text-decoration: none;
-    @media (min-width: $medium) {
-      display: inline;
-    }
-  }
-  @media print {
-    display: none;
-  }
-}
-.western-header-region {
-  --link-color: var(--white);
-  --link-color--visited: var(--white);
-  --link-decoration-color: var(--white);
-  --link-decoration-color--visited: var(--white);
-
-  grid-area: region;
-  text-align: center;
-  @media (min-width: $medium) {
-    text-align: initial;
-  }
-  p {
-    margin-bottom: var(--space--2xs);
-  }
-}
-.wwu-home-link {
-  --link-background--focus: none;
-}
-.wwu-menu {
-  --link-color: var(--white);
-  --link-color--visited: var(--white);
-
-  z-index: 1;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  width: 100%;
-  font-size: var(--font-size--xs);
-  @media (min-width: $medium) {
-    grid-column: 2 / span 1;
-    grid-row: 1 / span 1;
-    justify-content: flex-end;
-    padding-right: 0;
-  }
-}
-.wwu-menu-closed {
-  @media (max-width: $medium) {
-    visibility: hidden;
-    overflow: hidden;
-    height: 0;
-    transition: opacity var(--ease--standard) var(--transition-speed--fast);
-    opacity: 0;
-  }
-}
-.wwu-menu-open {
-  @media (max-width: $medium) {
-    visibility: visible;
-    transition: opacity var(--ease--standard) var(--transition-speed--fast);
-    opacity: 1;
-  }
-  & + .site-info {
-    min-height: 0;
+    width: 3rem;
+    height: 3rem;
   }
 }
