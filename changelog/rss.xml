@@ -13,8 +13,14 @@
             <link>https://ashlar.wwu.edu/changelog/version-5-5</link>
             <guid>https://ashlar.wwu.edu/changelog/version-5-5</guid>
             <pubDate>Mon, 07 Oct 2024 12:00:00 GMT</pubDate>
-            <description><![CDATA[5.5.4]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="554">5.5.4<a href="https://ashlar.wwu.edu/changelog/version-5-5#554" class="hash-link" aria-label="Direct link to 5.5.4" title="Direct link to 5.5.4">​</a></h2>
+            <description><![CDATA[5.5.5]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="555">5.5.5<a href="https://ashlar.wwu.edu/changelog/version-5-5#555" class="hash-link" aria-label="Direct link to 5.5.5" title="Direct link to 5.5.5">​</a></h2>
+<p>** January 27, 2025 **</p>
+<ul>
+<li>Handshake added to myWestern menu</li>
+<li>link to report bias updated</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="554">5.5.4<a href="https://ashlar.wwu.edu/changelog/version-5-5#554" class="hash-link" aria-label="Direct link to 5.5.4" title="Direct link to 5.5.4">​</a></h2>
 <p>** December 16, 2024 **</p>
 <ul>
 <li>More ultimenu bug fixes</li>
