@@ -255,14 +255,32 @@ if (
     width: 100%;
     height: 100%;
   }
+  .cls-1 {
+    clip-path: url(#clippath);
+  }
+  .cls-2 {
+    fill: none;
+  }
+  .cls-2,
+  .cls-3,
+  .cls-4 {
+    stroke-width: 0;
+  }
+  .cls-3 {
+    fill: var(--blue);
+  }
+  .cls-4 {
+    fill: var(--dark-blue);
+  }
+  html[data-theme="dark"] .cls-4 {
+    fill: var(--white);
+  }  
   </style>
 
   <div class="wwu-logo">
     <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 151.29 103.9" aria-hidden="true">
       <title>Western Logo</title>
       <defs>
-          <style>.cls-1{clip-path:url(#clippath);}.cls-2{fill:none;}.cls-2,.cls-3,.cls-4{stroke-width:0px;}.cls-3{fill:#2980c3;}.cls-4{fill:#1e4383;}
-          </style>
           <clipPath id="clippath">
               <rect class="cls-2" width="151.29" height="103.9"/>
           </clipPath>

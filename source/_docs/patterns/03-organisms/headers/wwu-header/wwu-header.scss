@@ -5,24 +5,66 @@ Organism: Headers - Western header
 @import "../../../00-utilities/breakpoints.scss";
 @import "../../../01-atoms/background-color/_background-color-mixins.scss";
 wwu-header {
+  --toggle-size: 3.75rem;
+
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: auto 1fr auto;
+  grid-template-areas: "logo site-name menu search"
+  "logo header-region menu search";
+  grid-template-columns: auto 1fr auto auto;
+  grid-template-rows: auto 1fr;
   max-width: var(--content-area-max-width);
+  column-gap: var(--space--md);
+  .western-logo {
+    grid-area: logo;
+  }
+  .site-name {
+    grid-area: site-name;
+    margin-top: var(--space--2xs);
+    text-align: right;
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: var(--link-color);
+      font-size: var(--font-size--xl);
+    }
+  }
+  .western-header-region {
+    grid-area: header-region;
+    text-align: right;
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: var(--link-color);
+    }
+  }
   .toggle {
     display: grid;
     grid-template-rows: auto auto;
     align-content: start;
+    margin: 0;
+    padding: 0;
     color: var(--link-color);
     border-radius: unset;
     background: transparent;
     box-shadow: unset;
     font-size: var(--font-size--xs);
-  }
-  .toggle svg {
-    fill: var(--link-color);
+    svg {
+      fill: var(--link-color);
 
-    width: 3rem;
-    height: 3rem;
+      width: var(--toggle-size);
+      height: var(--toggle-size);
+      margin: calc(-1 * var(--space--xs));
+      margin-bottom: calc(-1 * var(--space--sm));
+    }
+    .toggle-text {
+      text-transform: uppercase;
+    }
+  }
+  .toggle-menu {
+    grid-area: menu;
+  }
+  .toggle-search {
+    grid-area: search;
   }
 }
