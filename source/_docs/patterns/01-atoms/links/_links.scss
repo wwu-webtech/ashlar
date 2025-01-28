@@ -4,57 +4,45 @@ Atom: Text - Links
 1. Print Styles
 ------------------------------------------------------------------------------*/
 :root {
-  --link-background: transparent;
-  --link-background--active: var(--light-green);
-  --link-background--focus: var(--gradient--vertical--light-blue);
   --link-color: var(--blue--darker--20);
   --link-color--active: var(--dark-blue);
   --link-color--focus: var(--dark-blue);
   --link-color--visited: var(--purple);
   --link-decoration-color: var(--blue);
+  --link-decoration-color--active: var(--blue--lighter--80);
   --link-decoration-color--visited: var(--purple--lighter--40);
 }
 a {
   text-decoration-line: underline;
+  text-decoration-skip-ink: none;
   text-decoration-style: solid;
   text-decoration-thickness: var(--border-width--md);
 
   padding: 0.1563rem 0;
-  transition: background-color var(--transition-speed--fast) cubic-bezier(0.33, 0.66, 0.66, 1),
+  transition: all var(--transition-speed--fast) cubic-bezier(0.33, 0.66, 0.66, 1),
   background-image var(--transition-speed--fast) cubic-bezier(0.33, 0.66, 0.66, 1);
   text-decoration-color: var(--link-decoration-color);
   text-underline-offset: 0.3125rem;
   color: var(--link-color);
-  background: var(--link-background);
-  .material-icons {
-    position: relative;
-    top: 0.2em;
-    margin-right: var(--space--2xs);
-    font-size: var(--icon-size--xs);
+  &:active,
+  &:hover,
+  &:focus {
+    text-decoration-thickness: 1.2em;
+
+    text-decoration-color: var(--link-decoration-color--active);
+    text-underline-offset: -1em;
   }
   &:visited {
     text-decoration-color: var(--link-decoration-color--visited);
     color: var(--link-color--visited);
   }
-  &:active,
-  &:hover,
-  &:focus {
-    text-decoration: none;
-    color: var(--link-color--focus);
-    background: var(--link-background--focus);
-  }
   &:focus-visible {
     outline: var(--outline--focus);
-  }
-  &:active,
-  &:hover {
-    outline: var(--outline--unset);
   }
   &[href^="mailto:"] {
     overflow-wrap: anywhere;
   }
   &[aria-current="page"] {
-    --link-background: var(--link-background--active);
     --link-color: var(--link-color--active);
     --link-color--visited: var(--link-color--active);
 
@@ -68,6 +56,12 @@ a {
       top: calc(var(--space--md) / 3);
       left: 0.125rem;
       font-size: inherit;
+    }
+    .material-icons {
+      position: relative;
+      top: 0.2em;
+      margin-right: var(--space--2xs);
+      font-size: var(--icon-size--xs);
     }
   }
   &[href$=".mp4"],

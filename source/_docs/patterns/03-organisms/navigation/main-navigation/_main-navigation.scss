@@ -109,9 +109,7 @@ Molecule: Main navigation/ultimenu custom styles
     }
   }
   .is-active-trail {
-    border-left: solid var(--link-background--active) var(--border-width--lg);
     @media (min-width: $medium) {
-      border-bottom: solid var(--link-background--active) var(--border-width--md);
       border-left: none;
     }
     > .ultimenu__link {
@@ -155,7 +153,6 @@ Molecule: Main navigation/ultimenu custom styles
       color: var(--link-color--focus);
     }
     &.open {
-      background: var(--link-background--focus);
       background-color: unset;
     }
   }
