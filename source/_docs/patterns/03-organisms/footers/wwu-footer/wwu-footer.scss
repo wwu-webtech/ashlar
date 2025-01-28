@@ -7,7 +7,7 @@ Organism: Footers - Western footer
 wwu-footer {
   display: grid;
   text-align: center;
-  border-top: solid var(--border-width--md) transparent;
+  border-top: var(--outline--unset);
   font-size: var(--font-size--xs);
   p {
     margin: 0;

@@ -53,13 +53,12 @@ Molecule: Locations
         transition: background-color var(--locations-transition-speed);
         -webkit-transform: scale(1.03, 1.03);
         transform: scale(1.03, 1.03);
-        outline: var(--outline-width) solid transparent;
+        outline: var(--outline--unset);
         background-color: #d8f1ff;
       }
     }
     &:focus-within {
       .svg-container {
-        outline-style: dotted;
         outline-color: inherit;
       }
     }

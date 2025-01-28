@@ -16,7 +16,7 @@ wwu-pre-header {
   align-items: center;
   justify-content: flex-end;
   min-height: var(--touch-target--aaa);
-  border-bottom: solid var(--border-width--md) transparent;
+  border-bottom: var(--outline--unset);
   font-size: var(--font-size--xs);
   * {
     --oline-color: var(--dark-blue--darker--40);

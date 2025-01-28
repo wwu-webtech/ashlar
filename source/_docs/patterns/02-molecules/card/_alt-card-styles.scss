@@ -316,7 +316,7 @@ Molecule: Cards - Alternate styles
     z-index: 1;
     .title {
       a:after {
-        outline: var(--outline-width) solid transparent;
+        outline: var(--outline--unset);
         outline-offset: var(--space--2xs);
         box-shadow: var(--shadow--soft--hover);
       }

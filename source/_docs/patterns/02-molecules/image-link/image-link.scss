@@ -96,7 +96,7 @@ Molecule: Image Link
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
-    outline: var(--outline-width) solid transparent;
+    outline: var(--outline--unset);
     font-size: var(--image-link-font-size);
     font-weight: bold;
     &:before {
@@ -127,7 +127,7 @@ Molecule: Image Link
       opacity: 0.9;
     }
     &:focus-visible {
-      outline: var(--outline-width) dotted var(--link-color--focus);
+      outline: var(--outline--focus);
       outline-offset: var(--outline-offset--inset);
     }
     @media print {

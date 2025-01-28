@@ -43,9 +43,12 @@ a {
     color: var(--link-color--focus);
     background: var(--link-background--focus);
   }
+  &:focus-visible {
+    outline: var(--outline--focus);
+  }
   &:active,
   &:hover {
-    outline: var(--outline-width) solid transparent;
+    outline: var(--outline--unset);
   }
   &[href^="mailto:"] {
     overflow-wrap: anywhere;

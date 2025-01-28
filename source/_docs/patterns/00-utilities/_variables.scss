@@ -253,9 +253,13 @@ $large: 1300px;
 --border-radius--roundest: 6.25rem;
 --border-radius--rounder: 0.625rem;
 --border-radius--round: 0.125rem;
+--oline-color: var(--link-color);
 --outline-offset--outset: 0.1rem;
 --outline-offset--inset: -0.2rem;
 --outline-width: 0.1rem;
+--outline--focus: solid var(--oline-color) var(--outline-width);
+--outline--forced-colors: solid LinkText var(--outline-width);
+--outline--unset: solid transparent var(--outline-width);
 
 /* b. Shadows ----------------------------------------------------------------*/
 --shadow--hard: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.4),0 0.0625rem 0.125rem rgba(0, 0, 0, 0.5);

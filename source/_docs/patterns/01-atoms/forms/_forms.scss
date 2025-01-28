@@ -124,8 +124,8 @@ input[type="radio"] {
   }
   &:focus-visible {
     + label {
-      outline: dotted var(--oline-color) var(--outline-width);
-      outline-offset: var(--oline-offset);
+      outline: var(--outline--focus);
+      outline-offset: var(--oline-offset);;
     }
   }
 }

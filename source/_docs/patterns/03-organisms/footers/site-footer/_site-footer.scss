@@ -15,7 +15,7 @@ Organism: Footers - Site footer
   gap: var(--space--lg);
   max-width: var(--content-area-max-width);
   margin: 0 var(--space--sm);
-  border-top: solid var(--border-width--md) transparent;
+  border-top: var(--outline--unset);
   font-size: var(--font-size--sm);
   @media(min-width: $large) {
     margin: auto;

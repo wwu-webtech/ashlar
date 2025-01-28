@@ -49,13 +49,10 @@ wwu-social {
     &:hover,
     &:active,
     &:focus {
-      outline: var(--outline-width) solid transparent;
+      outline: var(--outline--unset);
       .wwu-icon-cls-1 {
         fill: Canvas;
       }
-    }
-    &:focus {
-      outline-style: dotted;
     }
     .wwu-icon-cls-1 {
       fill: Canvas;
@@ -109,6 +106,5 @@ wwu-social {
   }
   &:focus {
     outline-width: var(--border-width--md);
-    outline-style: dotted;
   }
 }

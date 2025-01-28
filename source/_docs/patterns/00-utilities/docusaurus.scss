@@ -12,7 +12,10 @@ Resets and styles for things in the docusaurus theme that are troublesome
 .docs-wrapper {
   scroll-padding: var(--ifm-navbar-height);
   body:not(.navigation-with-keyboard) :not(input):focus {
-    outline: dotted var(--oline-color) var(--outline-width);
+    outline: none;
+  }
+  body:not(.navigation-with-keyboard) :not(input):focus-visible {
+    outline: var(--outline--focus);
     outline-offset: var(--oline-offset);
   }
 }
@@ -20,7 +23,7 @@ Resets and styles for things in the docusaurus theme that are troublesome
   margin: unset;
 }
 .prism-code {
-  outline: var(--outline-width) solid transparent;
+  outline: var(--outline--unset);
 }
 .menu {
   overflow-x: unset;
