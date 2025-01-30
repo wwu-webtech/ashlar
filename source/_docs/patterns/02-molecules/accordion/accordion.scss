@@ -39,7 +39,6 @@ wwu-accordion,
 
       color: var(--link-color--focus);
       outline-offset: var(--outline-offset--inset);
-      background: var(--link-background--focus);
     }
   }
   .title {
@@ -98,11 +97,6 @@ wwu-accordion,
     background: transparent;
     box-shadow: none;
     font-size: var(--font-size--xs);
-    &:hover,
-    &:focus,
-    &:active {
-      background: var(--link-background--focus);
-    }
     &[disabled] {
       --button-color: var(--gray--darker--20);
       --button-color--active: var(--gray--darker--20);

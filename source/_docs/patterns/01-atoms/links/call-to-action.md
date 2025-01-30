@@ -3,10 +3,6 @@
 To style a call to action link, add the class ``cta``
 
 <a href="#" className="cta">Apply for this program</a><br/>
-<a href="#" className="cta blue">With .blue class</a><br/>
-<a href="#" className="cta no-animation dark-blue">With .no-animation and .dark-blue class</a><br/>
-<a href="#" className="cta small light-green">With .small and .light-green class</a><br/>
-<a href="#" className="cta small white no-animation">With .small .no-animation .white classes</a><br/>
 
 <a href="something.pdf" className="cta">Contains a pdf</a><br/>
 <a href="something.docx" className="cta">Contains a Word doc</a><br/>

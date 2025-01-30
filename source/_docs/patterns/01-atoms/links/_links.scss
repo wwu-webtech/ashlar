@@ -31,6 +31,7 @@ a {
 
     text-decoration-color: var(--link-decoration-color--active);
     text-underline-offset: -1em;
+    color: var(--link-color--active);
   }
   &:visited {
     text-decoration-color: var(--link-decoration-color--visited);

@@ -63,7 +63,6 @@ Gray, blue, and green backgrounds are gray based.
   --icon-background-color: var(--dark-blue);
   --icon-background-color--active: var(--dark-blue--darker--40);
   --icon-color--active: var(--white);
-  --link-background--focus: var(--gradient--vertical--light-blue);
   --link-color: var(--white);
   --link-color--focus: var(--dark-blue);
   --link-color--visited: var(--white);
@@ -85,8 +84,6 @@ Gray, blue, and green backgrounds are gray based.
 }
 
 @mixin green-bg {
-  --link-background--focus: var(--gradient--vertical--light-green);
-
   @include gray-bg;
 
   background: var(--green);
@@ -105,8 +102,6 @@ backgrounds are light gray based.
   --h4-color: var(--dark-blue--darker--30);
   --h5-color: var(--dark-blue--darker--20);
   --h6-color: var(--dark-blue--darker--10);
-  --link-background--active: var(--blue);
-  --link-background--focus: var(--gradient--vertical--dark-blue);
   --link-color: var(--dark-blue--darker--60);
   --link-color--active: var(--white);
   --link-color--focus: var(--white);

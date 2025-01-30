@@ -17,7 +17,6 @@ Atom: Tables
   --table-text: var(--black);
 }
 table {
-  --link-background--focus: var(--gradient--vertical--light-blue);
   --link-color: var(--blue--darker--20);
   --link-color--focus: var(--dark-blue);
   --link-color--visited: var(--purple);
@@ -161,7 +160,6 @@ table {
 ------------------------------------------------------------------------------*/
 [data-theme="dark"] {
   table {
-    --link-background--focus: var(--gradient--vertical--light-blue);
     --link-color: var(--white);
     --link-color--focus: var(--dark-blue);
     --link-color--visited: var(--white);
