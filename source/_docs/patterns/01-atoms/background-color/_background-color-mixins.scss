@@ -26,11 +26,11 @@ Black, darkest blue, and dark blue are black based and share link/heading colors
   --midtone-text-color: var(--gray--lighter--80);
   --oline-color: var(--white);
   --required-color: var(--blue--lighter--40);
-  --text-accent-color: var(--light-green--lighter--40);
 
   color: var(--white);
   background: var(--black);
 }
+
 
 @mixin darkest-blue-bg {
   @include black-bg;
@@ -81,12 +81,6 @@ Gray, blue, and green backgrounds are gray based.
   @include gray-bg;
 
   background: var(--blue);
-}
-
-@mixin green-bg {
-  @include gray-bg;
-
-  background: var(--green);
 }
 
 /*------------------------------------------------------------------------------

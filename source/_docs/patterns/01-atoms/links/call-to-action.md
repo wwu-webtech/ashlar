@@ -3,7 +3,7 @@
 To style a call to action link, add the class ``cta``
 
 <a href="#" className="cta">Apply for this program</a><br/>
-<a href="#" className="cta blue">With .blue class</a><br/>
+<a href="#" className="cta dark-blue">With .dark-blue class</a><br/>
 <a href="#" className="cta small light-green">With .small and .light-green class</a><br/>
 
 <a href="something.pdf" className="cta">Contains a pdf</a><br/>
@@ -12,7 +12,7 @@ To style a call to action link, add the class ``cta``
 <a href="something.pptx" className="cta">Contains a PowerPoint doc</a><br/>
 
 ```
-<a href="#" class="cta blue">With .blue class</a>
+<a href="#" class="cta dark-blue">With .dark-blue class</a>
 <a href="#" class="cta small light-green">With .small and .light-green class</a>
 
 <a href="something.pdf" class="cta">Contains a pdf</a>

@@ -30,10 +30,6 @@ import WWUSocial from "../icons/social-media-icons/social-media-icons.js"
     <div className="lightest-blue-bg"></div>
 <wwu-background-color color="lightest-blue"></wwu-background-color>
 
-## Green
-    <div className="green-bg"></div>
-<wwu-background-color color="green"></wwu-background-color>
-
 ## Light Green
     <div className="light-green-bg"></div>
 <wwu-background-color color="light-green"></wwu-background-color>
