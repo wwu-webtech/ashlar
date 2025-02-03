@@ -72,7 +72,7 @@ Atom: Background Colors
     @include gray-bg;
   }
   .light-green-bg {
-    @include green-bg;
+    @include gray-bg;
   }
   .blue-bg {
     background-color: var(--blue--darker--60);
