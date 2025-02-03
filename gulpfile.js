@@ -373,7 +373,7 @@
    * Set watch tasks.
    */
   gulp.task("watch", function () {
-    gulp.watch(config.sass.watch, gulp.series(["sass:dev"]));
+    gulp.watch(config.sassComponents.watch, gulp.series(["sass"]));
     gulp.watch(config.js.watch, gulp.series(["js"]));
   });
 
