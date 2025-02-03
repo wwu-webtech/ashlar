@@ -7,12 +7,14 @@ Atom: Call to Action Link
 a.wp-block-button__link {
   --cta-color: var(--blue);
   --link-color: var(--white);
-  --link-color--active: var(--white);
+  --link-color--visited: var(--link-color);
 
+  position: relative;
   display: inline-block;
   margin-right: var(--space--md);
   margin-bottom: var(--space--md);
   padding: var(--space--xs);
+  padding-right: var(--space--lg);
   text-decoration: none;
   background-color: var(--cta-color);
   box-shadow: var(--shadow--hard);
@@ -20,27 +22,61 @@ a.wp-block-button__link {
   &:active,
   &:hover,
   &:focus {
+    --link-color--active: var(--link-color);
+
     text-decoration: none;
     box-shadow: var(--shadow--hard--hover);
+  }
+  &:after {
+    position: absolute;
+    top: 50%;
+    right: var(--space--xs);
+    display: block;
+    width: 0;
+    height: 0;
+    content: "";
+    transform: translatey(-50%);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid var(--link-color);
+  }
+  &.light-green {
+    --cta-color: var(--light-green);
+    --link-color: var(--dark-blue--darker--20);
+  }
+  &.dark-blue {
+    --cta-color: var(--dark-blue);
+    --link-color: var(--white);
+  }
+  &.white {
+    --cta-color: var(--white);
+    --link-color: var(--dark-blue);
+  }
+  &.small {
+    padding: var(--space--2xs);
+    padding-right: var(--space--md);
+    font-size: var(--font-size--sm);
+    line-height: 1em;
+    &:after {
+      right: var(--space--2xs);
+      border-width: 8px;
+    }
   }
   &[href$=".pdf"],
   &[href$=".docx"],
   &[href$=".xlsx"],
   &[href$=".pptx"] {
+    padding-right: var(--space--xl);
     &:after {
-      top: 0.8rem;
-      padding: 0;
-      transform: translatex(-0.3rem);
-      border: none;
-      font-size: var(--font-size--xs);
+      width: unset;
+      height: unset;
+      padding: 2px;
+      border: solid var(--border-width--md) var(--link-color);
+      border-radius: 50%;
+      font-size: 0.45rem;
     }
     .material-icons {
       display: none;
-    }
-    &.small {
-      &:after {
-        top: 0.4rem;
-      }
     }
   }
   &[href$=".pdf"] {
@@ -61,6 +97,22 @@ a.wp-block-button__link {
   &[href$=".pptx"] {
     &::after {
       content: "PPT";
+    }
+  }
+  &.with-icon {
+    padding-right: var(--space--xs);
+    &:after {
+      display: none;
+    }
+    .material-icons {
+      position: relative;
+      top: 3px;
+      font-size: var(--icon-size--xs);
+    }
+    &.small {
+      .material-icons {
+        font-size: var(--icon-size--2xs);
+      }
     }
   }
 }

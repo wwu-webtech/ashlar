@@ -361,10 +361,6 @@ Remember: if you adjust <strong>any</strong> colors, you need to make sure that 
 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.23);
 --shadow--soft--hover: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.12),
 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.24);
---shadow--dark-mode: 0 0.1875rem 0.375rem rgba(0, 122, 200, 0.7),
-0 0.1875rem 0.375rem rgba(0, 63, 135, 0.9);
---shadow--dark-mode--hover: 0 0.0625rem 0.1875rem rgba(0, 122, 200, 0.12),
-0 0.0625rem 0.125rem rgba(0, 63, 135, 0.24);
 ```
 
 ### Icons
