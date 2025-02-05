@@ -6,37 +6,39 @@ Molecule: Announcement
 @import "../../00-utilities/breakpoints.scss";
 @import "../../01-atoms/background-color/background-color-mixins.scss";
 .wwu-announcement {
+  @include blue-bg;
+
   display: grid;
-  grid-template-areas: "icon text";
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: auto;
-  align-items: center;
-  justify-items: center;
+  grid-template-areas: "icon" "text";
+  grid-template-rows: auto auto;
+  place-items: center;
   margin: auto;
+  margin-bottom: var(--space--md);
+  text-align: center;
   border: var(--border-width--md) solid transparent;
-  .title {
-    margin-top: 0;
-    padding-bottom: 0;
-    text-align: center;
+  box-shadow: var(--shadow--hard);
+  @media (min-width: $small) {
+    grid-template-areas: "icon text";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
   }
   .material-icons {
-    @include dark-blue-bg;
+    @include light-green-bg;
 
+    position: relative;
     display: grid;
     grid-area: icon;
     align-content: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
-    color: var(--light-green);
-    border-right: var(--border-width--md) solid transparent;
-    @media (min-width: $medium) {
-      font-size: var(--icon-size--lg);
-    }
+    width: 5rem;
+    height: 5rem;
+    margin: var(--space--sm);
+    color: var(--blue);
+    border: var(--border-width--md) solid transparent;
+    border-radius: 50%;
+    font-size: var(--icon-size--lg);
   }
   .body {
-    @include light-green-bg;
-
     display: grid;
     grid-area: text;
     justify-items: center;
@@ -53,9 +55,9 @@ Molecule: Announcement
 ------------------------------------------------------------------------------*/
 [data-theme="dark"] {
   .wwu-announcement {
-    background-color: var(--green);
-    .body {
-      @include gray-bg;
+    @include dark-blue-bg;
+    .material-icons {
+      color: var(--dark-blue);
     }
   }
 }
