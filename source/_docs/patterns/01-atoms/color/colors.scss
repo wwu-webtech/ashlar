@@ -9,7 +9,6 @@ Atom: Colors
 .color-swatch {
   flex: 1 1 10%;
   padding: var(--space--md);
-  color: var(--white);
   font-size: var(--font-size--xl);
   p {
     margin: 0;
@@ -21,52 +20,72 @@ Atom: Colors
     font-size: var(--font-size--sm);
   }
   &.dark-blue,
-  &.black,
-  &.gray,
-  &.red {
+  &.blue {
     color: var(--white);
     h3 {
       color: var(--white);
     }
   }
-  &.blue,
-  &.light-green,
-  &.white,
-  &.yellow {
+  &.light-green {
     color: var(--black);
     h3 {
       color: var(--black);
     }
   }
   &.dark-blue {
+    flex: 0 0 66%;
     background-color: var(--dark-blue);
     &.gradient {
-      background-image: linear-gradient(to right, var(--dark-blue) 50%, var(--black));
+      flex: 1 1 10%;
+      background-image: linear-gradient(to left, var(--dark-blue) 50%, var(--black));
     }
   }
   &.blue {
+    flex: 0 0 34%;
     background-color: var(--blue);
     &.gradient {
-      background-image: linear-gradient(to left, var(--blue) 50%, white);
+      flex: 1 1 10%;
+      background-image: linear-gradient(to right, var(--blue) 50%, white);
+      p {
+        max-width: 50%;
+      }
     }
   }
-  &.light-green {
-    background-color: var(--light-green);
-  }
-  &.black {
-    background-color: var(--black);
-  }
-  &.gray {
-    background-color: var(--gray);
-  }
   &.white {
+    min-height: 30vh;
     border: solid var(--border-width--md) var(--gray--lighter--90);
     background-color: var(--white);
   }
-  &.red {
-    background-color: var(--red);
+  &.light-green {
+    background-color: var(--light-green);
+    h3,
+    p {
+      display: inline-block;
+    }
+  }
+  &.dark-green {
+    border-top: solid 1rem var(--dark-green);
   }
   &.yellow {
-    background-color: var(--yellow);
+    border-top: solid 1rem var(--yellow);
+  }
+  &.red {
+    border-top: solid 1rem var(--red);
+  }
+  &.black {
+    border-top: solid 1rem var(--black);
+  }
+  &.gray {
+    border-top: solid 1rem var(--gray);
+  }
+  &.bw.gradient {
+    color: var(--white);
+    background-image: linear-gradient(to right, var(--black), var(--gray), white);
+    h3 {
+      color: var(--white);
+    }
+    p {
+      max-width: 50%;
+    }
   }
 }

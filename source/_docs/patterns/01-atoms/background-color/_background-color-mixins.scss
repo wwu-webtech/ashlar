@@ -12,10 +12,10 @@ Black, darkest blue, and dark blue are black based and share link/heading colors
 ------------------------------------------------------------------------------*/
 @mixin black-bg {
   --h1-color: var(--light-green);
-  --h2-color: var(--light-green--lighter--20);
-  --h3-color: var(--light-green--lighter--40);
-  --h4-color: var(--light-green--lighter--60);
-  --h5-color: var(--light-green--lighter--80);
+  --h2-color: var(--light-green);
+  --h3-color: var(--light-green);
+  --h4-color: var(--light-green);
+  --h5-color: var(--light-green);
   --h6-color: var(--light-green);
   --icon-background-color--active: var(--blue--lighter--40);
   --icon-color--active: var(--dark-blue);
@@ -54,10 +54,10 @@ Gray, blue, and green backgrounds are gray based.
   --button-background-color--active: var(--blue--lighter--60);
   --button-color: var(--white);
   --button-color--active: var(--dark-blue--darker--60);
-  --h1-color: var(--light-green--lighter--20);
-  --h2-color: var(--light-green--lighter--40);
-  --h3-color: var(--light-green--lighter--60);
-  --h4-color: var(--light-green--lighter--80);
+  --h1-color: var(--light-green);
+  --h2-color: var(--light-green);
+  --h3-color: var(--light-green);
+  --h4-color: var(--light-green);
   --h5-color: var(--white);
   --h6-color: var(--white);
   --icon-background-color: var(--dark-blue);
@@ -71,7 +71,7 @@ Gray, blue, and green backgrounds are gray based.
   --midtone-text-color: var(--white);
   --oline-color: var(--white);
   --required-color: var(--blue--lighter--80);
-  --text-accent-color: var(--light-green--lighter--80);
+  --text-accent-color: var(--light-green);
 
   color: var(--white);
   background: var(--gray);

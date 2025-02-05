@@ -15,6 +15,7 @@ Atom: Background Colors
 .black-bg {
   @include black-bg;
 }
+.dark-green-bg,
 .dark-blue-bg {
   @include dark-blue-bg;
 }
@@ -24,6 +25,7 @@ Atom: Background Colors
 .gray-bg {
   @include gray-bg;
 }
+.green-bg,
 .blue-bg {
   @include blue-bg;
 }

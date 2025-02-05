@@ -216,23 +216,6 @@
   });
 
   /**
-   * Generate unoptimized CSS.
-   */
-  gulp.task("sass:dev", function (callback) {
-    pump(
-      gulp.src(config.sass.src),
-      sassGlob(),
-      sourcemaps.init(),
-      sass(config.sass.options),
-      sourcemaps.write(),
-      flatten(),
-      gulp.dest(config.sass.dest),
-      gulp.dest(config.sass.cdndest),
-      callback
-    );
-  });
-
-  /**
    * Generate JS
    */
   gulp.task("js", function (callback) {
@@ -373,7 +356,7 @@
    * Set watch tasks.
    */
   gulp.task("watch", function () {
-    gulp.watch(config.sassComponents.watch, gulp.series(["sass"]));
+    gulp.watch(config.sassComponents.watch, gulp.series(["sass"]));    
     gulp.watch(config.js.watch, gulp.series(["js"]));
   });
 

@@ -115,10 +115,10 @@ color: var(--blue--lighter--80);
 --light-green--darker--40: #708206;
 --light-green--darker--20: #95ad08;
 --light-green: #bad80a;
---light-green--lighter--20: #c8e03b;
---light-green--lighter--40: #d6e86c; 
---light-green--lighter--60: #e3ef9d;
---light-green--lighter--80: #f1f7ce;
+--light-green: #c8e03b;
+--light-green: #d6e86c; 
+--light-green: #e3ef9d;
+--light-green: #f1f7ce;
 ```
 
 ### Special Use Colors
@@ -175,7 +175,7 @@ var(--dark-blue) 100%
 
 --gradient--vertical--light-green: linear-gradient(
 to bottom,
-var(--light-green--lighter--20) 0,
+var(--light-green) 0,
 var(--light-green) 100%
 );
 

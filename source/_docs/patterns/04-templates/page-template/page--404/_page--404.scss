@@ -13,7 +13,7 @@ Organism: Page-404
   background: var(--dark-blue);
   h1 {
     padding: 0;
-    color: var(--light-green--lighter--40);
+    color: var(--light-green);
     font-size: var(--font-size--9xl);
   }
   .text {
@@ -41,12 +41,11 @@ Organism: Page-404
   animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-  
   /* Reduced motion: stop the animation completely */
   @media (prefers-reduced-motion: reduce) {
+    transform: none; /* Ensure it doesn't retain the last state of animation */
     -webkit-animation: none;
     animation: none;
-    transform: none; /* Ensure it doesn't retain the last state of animation */
   }
 }
 @keyframes tossingboat {
