@@ -13,7 +13,7 @@ if (
         <wwu-social size="small" group="Western" url="https://www.facebook.com/westernwashingtonuniversity"></wwu-social>
         <wwu-social size="small" group="Western" url="https://www.instagram.com/westernwashingtonuniversity/"></wwu-social>
         <wwu-social size="small" group="Western" url="https://www.linkedin.com/school/western-washington-university/"></wwu-social>        
-        <wwu-social size="small" group="Western" url="https://www.tiktok.com/@westernwauniversity"></wwu-social>
+        <wwu-social size="small" group="Western" url="https://www.tiktok.com/@wwubellingham"></wwu-social>
         <wwu-social size="small" group="Western" url="https://www.youtube.com/wwu"></wwu-social>
     </div>
 
