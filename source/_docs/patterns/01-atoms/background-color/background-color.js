@@ -67,7 +67,7 @@ if (
     <wwu-social group="Western" url="https://www.instagram.com/westernwashingtonuniversity/"></wwu-social>
     <wwu-social group="Western" url="https://www.linkedin.com/school/western-washington-university/"></wwu-social>
     <wwu-social group="Western" url="https://www.snapchat.com/add/"></wwu-social>
-    <wwu-social group="Western" url="https://www.tiktok.com/@westernwauniversity"></wwu-social>
+    <wwu-social group="Western" url="https://www.tiktok.com/@wwubellingham"></wwu-social>
     <wwu-social group="Western" url="https://vimeo.com/user30954810"></wwu-social>
     <wwu-social group="Western" url="https://www.youtube.com/wwu"></wwu-social>
 
