@@ -9,16 +9,18 @@ These should be the most prominent colors in a design, comprising about 90% of t
   <div className="dark-blue color-swatch">
     <h3>Dark Blue</h3>
     <p>~20% of design</p>
-    <p>Pantone 294 C</p>
-    <p>#003f87</p>
+    <p>CMYK(100, 58, 0, 21)</p>
+    <p>rgb(0, 63, 135)</p>
+    <p>#003F87</p>
     <p>CSS: var(--dark-blue)</p>
   </div>
   
   <div className="blue color-swatch">
     <h3>Light Blue</h3>
-    <p>~10% of design</p>
-    <p>Pantone 2925 C</p>
-    <p>#007ac8</p>
+    <p>~20% of design</p>
+    <p>CMYK(85, 24, 0, 0)</p>
+    <p>rgb(0, 122, 200)</p>
+    <p>#007AC8</p>
     <p>CSS: var(--blue)</p>
   </div>
 </div>
@@ -26,7 +28,8 @@ These should be the most prominent colors in a design, comprising about 90% of t
 <div className="swatch-wrapper">
   <div className="white color-swatch">
     <h3>White</h3>
-    <p>~60% of design</p>
+    <p>~50% of design</p>
+    <p>rgb(255, 255, 255)</p>
     <p>#FFFFFF</p>
     <p>CSS: var(--white)</p>
   </div>
@@ -38,28 +41,32 @@ The remaining 10% of the design should be composed of accent colors, with light 
 <div className="swatch-wrapper">
   <div className="light-green accent color-swatch">
     <h3>Light Green </h3>
-    <p>&nbsp;Pantone 382 C ·</p>
-    <p>&nbsp;#bad80a ·</p>
+    <p>&nbsp;CMYK(29, 0, 100, 0) ·</p>
+    <p>&nbsp;rgb(186, 216, 10) ·</p>
+    <p>&nbsp;#BAD80A ·</p>
     <p>&nbsp;CSS: var(--light-green)</p>
   </div>
 </div>
 <div className="swatch-wrapper">
   <div className="dark-green accent color-swatch">
     <h3>Dark Green</h3>
-    <p>Pantone 382 C</p>
-    <p>#bad80a</p>
-    <p>CSS: var(--light-green)</p>
+    <p>CMYK(100, 0, 95, 55)</p>
+    <p>rgb(0, 107, 63)</p>
+    <p>#006B3F</p>
+    <p>CSS: var(--dark-green)</p>
   </div>
   <div className="yellow accent color-swatch">
     <h3>Yellow</h3>
-    <p>Pantone 123 C</p>
+    <p>CMYK(0, 22, 88, 0)</p>
+    <p>rgb(255, 198, 30)</p>
     <p>#FFC61E</p>
     <p>CSS: var(--yellow)</p>
   </div>
   <div className="red accent color-swatch">
     <h3>Red</h3>
-    <p>Pantone 1797 C</p>
-    <p>#cc2d30</p>
+    <p>CMYK(0, 78, 78, 20)</p>
+    <p>rgb(204, 45, 48)</p>
+    <p>#CC2D30</p>
     <p>CSS: var(--red)</p>
   </div>
 </div>
@@ -67,13 +74,15 @@ The remaining 10% of the design should be composed of accent colors, with light 
 <div className="swatch-wrapper">
   <div className="black accent color-swatch">
     <h3>Black</h3>
-    <p>Pantone Process Black C</p>
+    <p>CMYK(20, 9, 0, 86)</p>
+    <p>rgb(28, 32, 35)</p>
     <p>#1C2023</p>
     <p>CSS: var(--black)</p>
   </div>
   <div className="gray accent color-swatch">
     <h3>Gray</h3>
-    <p>Pantone Col Grey 9 C</p>      
+    <p>CMYK(24, 10, 0, 47)</p>      
+    <p>rgb(102, 121, 134)</p>
     <p>#667986</p>
     <p>CSS: var(--gray)</p>
   </div>
@@ -99,3 +108,42 @@ In addition to the base colors, use of the following tints and shades is also ac
     <p>Any shade or tint on the spectrum between the brand black and white, with the brand gray as an intermediate value</p>
   </div>
 </div>
+
+## Notes for Print Colors
+Because of changes in Pantone color processing over time, in general it is preferable to reference the CMYK values when creating designs for print. If needed, the original Pantone values for the brand colors are referenced here.
+
+<table>
+  <caption>Pantone Values</caption>
+  <thead>
+    <tr>
+      <th scope="col">Color</th>
+      <th scope="col">Pantone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Dark Blue</td>
+      <td>294</td>
+    </tr>
+    <tr>
+      <td>Blue</td>
+      <td>2925</td>
+    </tr>
+    <tr>
+      <td>Light Green</td>
+      <td>382</td>
+    </tr>
+    <tr>
+      <td>Dark Green</td>
+      <td>394</td>
+    </tr>
+    <tr>
+      <td>Yellow</td>
+      <td>123</td>
+    </tr>
+    <tr>
+      <td>Red</td>
+      <td>1797</td>
+    </tr>
+  </tbody>
+</table>

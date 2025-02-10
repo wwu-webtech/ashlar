@@ -33,7 +33,7 @@ Atom: Colors
     }
   }
   &.dark-blue {
-    flex: 0 0 66%;
+    flex: 0 0 50%;
     background-color: var(--dark-blue);
     &.gradient {
       flex: 1 1 10%;
@@ -41,7 +41,7 @@ Atom: Colors
     }
   }
   &.blue {
-    flex: 0 0 34%;
+    flex: 0 0 50%;
     background-color: var(--blue);
     &.gradient {
       flex: 1 1 10%;

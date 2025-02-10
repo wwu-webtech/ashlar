@@ -127,15 +127,3 @@ backgrounds are light gray based.
 
   background: var(--blue--lighter--80);
 }
-
-@mixin light-green-bg {
-  @include light-gray-bg;
-
-  background: var(--light-green);
-}
-
-@mixin yellow-bg {
-  @include light-gray-bg;
-
-  background: var(--yellow);
-}
