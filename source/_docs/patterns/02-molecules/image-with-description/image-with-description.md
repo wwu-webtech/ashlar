@@ -30,9 +30,9 @@ import Placeholder from '@site/static/img/placeholder.jpg';
 ```
 
 ## Alternate styles
-Any of the available background colors can be used on the body tag
+Any of the available background colors can be used on the body tag. The block can also be mirrored.
 
-<div className="wwu-image-with-description">
+<div className="wwu-image-with-description mirror">
   <div className="image">
     <img src={Placeholder} alt="leaves in water placeholder"/>    
   </div>
@@ -46,7 +46,7 @@ Any of the available background colors can be used on the body tag
 </div>
 
 ```
-<div class="wwu-image-with-description">
+<div class="wwu-image-with-description mirror">
   <div class="image">
     <img src={Placeholder} alt="leaves in water placeholder"/>    
   </div>

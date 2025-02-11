@@ -23,8 +23,6 @@ Molecule: Announcement
     grid-template-rows: auto;
   }
   .material-icons {
-    @include light-green-bg;
-
     position: relative;
     display: grid;
     grid-area: icon;
@@ -36,6 +34,7 @@ Molecule: Announcement
     color: var(--blue);
     border: var(--border-width--md) solid transparent;
     border-radius: 50%;
+    background: var(--light-green);
     font-size: var(--icon-size--lg);
   }
   .body {
