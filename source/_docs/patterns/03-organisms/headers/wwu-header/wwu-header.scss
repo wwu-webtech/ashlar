@@ -57,9 +57,6 @@ wwu-header {
       margin: calc(-1 * var(--space--xs));
       margin-bottom: calc(-1 * var(--space--sm));
     }
-    .toggle-text {
-      text-transform: uppercase;
-    }
   }
   .toggle-menu {
     grid-area: menu;
