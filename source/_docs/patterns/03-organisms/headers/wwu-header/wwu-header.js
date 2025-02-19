@@ -65,8 +65,16 @@ if (
           /*------------------------------------------------------------------------------
           Mobile menu functionality
           --------------------------------------------------------------------------*/
-          const menu_toggle = this.querySelector(".toggle-menu");
-          const menu_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M172-278v-28h616v28H172Zm0-188v-28h616v28H172Zm0-188v-28h616v28H172Z"/></svg>`;
+          const menu = {
+            toggle_button: this.querySelector(".toggle-menu"), 
+            text: "Menu", 
+            icon: `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M172-278v-28h616v28H172Zm0-188v-28h616v28H172Zm0-188v-28h616v28H172Z"/></svg>`
+          };
+          const search = {
+            toggle_button: this.querySelector(".toggle-search"), 
+            text: "Search", 
+            icon: `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M778-164 528-414q-30 26-69 40t-77 14q-92.23 0-156.12-63.84-63.88-63.83-63.88-156Q162-672 225.84-736q63.83-64 156-64Q474-800 538-736.12q64 63.89 64 156.12 0 41-15 80t-39 66l250 250-20 20ZM382-388q81 0 136.5-55.5T574-580q0-81-55.5-136.5T382-772q-81 0-136.5 55.5T190-580q0 81 55.5 136.5T382-388Z"/></svg>`
+          };
           const close_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z"/></svg>`;
           const site_content = [
             this.querySelector(".site-info"),
@@ -86,12 +94,13 @@ if (
             });
           }
 
-          function open_menu() {
-            menu_toggle.setAttribute("aria-expanded", true);
-            menu_toggle.querySelector(".component-icon").innerHTML = close_icon;
-            menu_toggle.querySelector(".toggle-text").innerHTML = "Close";
+          function open(toggle) {
+            toggle.toggle_button.setAttribute("aria-expanded", true);
+            toggle.toggle_button.querySelector(".component-icon").innerHTML = close_icon;
+            toggle.toggle_button.querySelector(".toggle-text").innerHTML = "Close";
+            toggle.state = "open";
             
-            site_content.forEach(function (item) {
+            /*site_content.forEach(function (item) {
               if (item) {
                 item.classList.remove("wwu-menu-open");
                 item.classList.add("wwu-menu-closed");
@@ -103,15 +112,16 @@ if (
                 item.classList.remove("wwu-menu-closed");
                 item.classList.add("wwu-menu-open");
               }
-            });
+            });*/
           }
           
-          function close_menu() {
-            menu_toggle.setAttribute("aria-expanded", false);
-            menu_toggle.querySelector(".component-icon").innerHTML = menu_icon;
-            menu_toggle.querySelector(".toggle-text").innerHTML = "Menu";
+          function close(toggle) {
+            toggle.toggle_button.setAttribute("aria-expanded", false);
+            toggle.toggle_button.querySelector(".component-icon").innerHTML = toggle.icon;
+            toggle.toggle_button.querySelector(".toggle-text").innerHTML = toggle.text;
+            toggle.state = "closed";
             
-            site_content.forEach(function (item) {
+            /*site_content.forEach(function (item) {
               if (item) {
                 item.classList.remove("wwu-menu-closed");
                 item.classList.add("wwu-menu-open");
@@ -123,15 +133,15 @@ if (
                 item.classList.remove("wwu-menu-open");
                 item.classList.add("wwu-menu-closed");
               }
-            });
+            });*/
           }
           
-          function toggle_menu() {
-            if (menu_toggle.querySelector(".toggle-text").innerHTML == "Menu") {
-              open_menu();
+          function toggle(x) {
+            if (x.state == "closed") {
+              open(x);
               return;
             } else {
-              close_menu();
+              close(x);
               return;
             }
           }
@@ -156,8 +166,11 @@ if (
             });
           }
           
-          close_menu();
-          menu_toggle.addEventListener("click", toggle_menu);            
+          
+          menu.toggle_button.addEventListener("click", function() { toggle(menu); });            
+          search.toggle_button.addEventListener("click", function() { toggle(search); });            
+          close(menu);
+          close(search);
 
         }
       }
