@@ -14,6 +14,7 @@ wwu-header {
   grid-template-columns: auto 1fr auto auto;
   grid-template-rows: auto 1fr;
   max-width: var(--content-area-max-width);
+  margin: auto;
   column-gap: var(--space--md);
   .western-logo {
     grid-area: logo;
