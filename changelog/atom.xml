@@ -12,8 +12,15 @@
         <id>https://ashlar.wwu.edu/changelog/version-5-5</id>
         <link href="https://ashlar.wwu.edu/changelog/version-5-5"/>
         <updated>2024-10-07T12:00:00.000Z</updated>
-        <summary type="html"><![CDATA[5.5.5]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="555">5.5.5<a href="https://ashlar.wwu.edu/changelog/version-5-5#555" class="hash-link" aria-label="Direct link to 5.5.5" title="Direct link to 5.5.5">​</a></h2>
+        <summary type="html"><![CDATA[5.5.6]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="556">5.5.6<a href="https://ashlar.wwu.edu/changelog/version-5-5#556" class="hash-link" aria-label="Direct link to 5.5.6" title="Direct link to 5.5.6">​</a></h2>
+<p>** March 3, 2025 **</p>
+<ul>
+<li>Social media link updates, Bluesky available as an icon</li>
+<li>Reduced motion option for 404 pages</li>
+<li>Update to email signature generator</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="555">5.5.5<a href="https://ashlar.wwu.edu/changelog/version-5-5#555" class="hash-link" aria-label="Direct link to 5.5.5" title="Direct link to 5.5.5">​</a></h2>
 <p>** January 27, 2025 **</p>
 <ul>
 <li>Handshake added to myWestern menu</li>
