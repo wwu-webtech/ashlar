@@ -8,6 +8,8 @@ if (generateButton) {
     var job_title =  document.getElementById('job_title');
     var department =  document.getElementById('department');
     var department_website =  document.getElementById('department_website');
+    var unit =  document.getElementById('unit');
+    var unit_website =  document.getElementById('unit_website');
     var street_address =  document.getElementById('street_address');
     var city =  document.getElementById('city');
     var zip_code =  document.getElementById('zip_code');
@@ -21,6 +23,8 @@ if (generateButton) {
     job_title = (job_title.value) ? job_title.value : '';
     department = (department.value) ? department.value : '';
     department_website = (department_website.value) ? department_website.value : '';
+    unit = (unit.value) ? unit.value : '';
+    unit_website = (unit_website.value) ? unit_website.value : '';
     street_address = (street_address.value) ? street_address.value : '';
     city = (city.value) ? city.value : '';
     zip_code = (zip_code.value) ? zip_code.value : '';
@@ -40,6 +44,7 @@ if (generateButton) {
     document.getElementById('field_pronouns').innerHTML = pronouns;
     document.getElementById('field_job_title').innerText = job_title;
     document.getElementById('field_department').innerText = department;
+    document.getElementById('field_unit').innerText = unit;
     document.getElementById('field_street_address').innerText = street_address;
     document.getElementById('field_city').innerText = city;
     document.getElementById('field_zip_code').innerText = zip_code;
@@ -56,7 +61,8 @@ if (generateButton) {
     if(mail_stop) { document.getElementById('field_mail_stop').innerHTML = ' <span aria-hidden="true">|</span> MS' + mail_stop }
     else { document.getElementById('field_mail_stop').innerText= '' }
 
-    if(department_website) { document.getElementById('field_department').innerHTML = '<a href="' + department_website + '">' + department + '</a>'; }
+    if(department_website) { document.getElementById('field_department').innerHTML = '<a style="color: #ffffff !important; text-decoration: none !important;" href="' + department_website + '">' + department + '</a>'; }
+    if(unit_website) { document.getElementById('field_unit').innerHTML = '<a href="' + unit_website + '">' + unit + '</a>'; }
 
     copyButton.innerText ='Copy to Clipboard';
     copyButton.focus();
