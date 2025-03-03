@@ -11,6 +11,7 @@ Include the following script to use the social icon component on your non-Drupal
 ```
 
 ## Component Markup
+<wwu-social group="Western" url="https://bsky.app/profile/washingtonwashingtonuniversity.bsky.social"></wwu-social>
 <wwu-social group="Western" url="https://www.facebook.com/westernwashingtonuniversity"></wwu-social>
 <wwu-social group="Western" url="https://www.flickr.com/photos/wwu"></wwu-social>
 <wwu-social group="Western" url="https://www.instagram.com/westernwashingtonuniversity/"></wwu-social>
@@ -19,11 +20,12 @@ Include the following script to use the social icon component on your non-Drupal
 <wwu-social group="Western" url="https://www.snapchat.com/add/"></wwu-social>
 <wwu-social group="Western" url="https://www.threads.net/@westernwashingtonuniversity"></wwu-social>
 <wwu-social group="Western" url="https://www.twitter.com/WWU"></wwu-social>
-<wwu-social group="Western" url="https://www.tiktok.com/@westernwauniversity"></wwu-social>
+<wwu-social group="Western" url="https://www.tiktok.com/@wwubellingham"></wwu-social>
 <wwu-social group="Western" url="https://vimeo.com/user30954810"></wwu-social>
 <wwu-social group="Western" url="https://www.youtube.com/wwu"></wwu-social>
 
 ```
+<wwu-social group="Western" url="https://bsky.app/profile/washingtonwashingtonuniversity.bsky.social"></wwu-social>
 <wwu-social group="Western" url="https://www.facebook.com/westernwashingtonuniversity"></wwu-social>
 <wwu-social group="Western" url="https://www.flickr.com/photos/wwu"></wwu-social>
 <wwu-social group="Western" url="https://www.instagram.com/westernwashingtonuniversity/"></wwu-social>
@@ -32,7 +34,7 @@ Include the following script to use the social icon component on your non-Drupal
 <wwu-social group="Western" url="https://www.snapchat.com/add/"></wwu-social>
 <wwu-social group="Western" url="https://www.threads.net/@westernwashingtonuniversity"></wwu-social>
 <wwu-social group="Western" url="https://www.twitter.com/WWU"></wwu-social>
-<wwu-social group="Western" url="https://www.tiktok.com/@westernwauniversity"></wwu-social>
+<wwu-social group="Western" url="https://www.tiktok.com/@wwubellingham"></wwu-social>
 <wwu-social group="Western" url="https://vimeo.com/user30954810"></wwu-social>
 <wwu-social group="Western" url="https://www.youtube.com/wwu"></wwu-social>
 ```
