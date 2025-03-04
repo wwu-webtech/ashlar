@@ -33,6 +33,11 @@ These classes can be placed on content containers to create columns. The column-
 * grid-column-count--5
 * grid-column-count--6
 
+## Images
+Class for image captions
+
+* caption
+
 ## Overlays
 These classes are useful for improving contrast between text and background images for banners, image CTAs, etc.
 

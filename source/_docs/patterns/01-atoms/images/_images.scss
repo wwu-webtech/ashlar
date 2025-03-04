@@ -13,3 +13,9 @@ picture img {
   width: 100%;
   height: auto;
 }
+.caption {
+  margin-bottom: var(--space--sm);
+  text-align: center;
+  font-size: var(--font-size--xs);
+  font-style: italic;
+}
