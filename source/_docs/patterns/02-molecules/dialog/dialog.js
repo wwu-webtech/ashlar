@@ -4,7 +4,6 @@ if (
 ) {
     const wwu_dialog = document.createElement("template");
     wwu_dialog.innerHTML = `
-      <button class="open-button"></button>
       <dialog role="dialog" aria-modal="true">
         <div class="dialog-wrapper">
           <div class="dialog-content"></div>
@@ -33,20 +32,25 @@ if (
                 this.innerHTML = '';
                 this.appendChild(wwu_dialog.content.cloneNode(true));
                 
-                const open_button = this.querySelector(".open-button");
+                const open_button = document.createElement("button");
                 const close_button = document.createElement("button");
                 const icon = document.createElement("span");
                 const dialog = this.querySelector("dialog");
                 const dialog_content = this.querySelector(".dialog-content");
                 
-                open_button.innerText = this.getAttribute("button");
+                if (this.getAttribute("button")) {
+                    open_button.classList.add("open-button");
+                    open_button.innerText = this.getAttribute("button");
+                    this.prepend(open_button);
+                }
+
                 icon.classList.add("material-icons");
                 icon.setAttribute("aria-hidden", true);
-                icon.innerText = this.getAttribute("icon");
-                open_button.appendChild(icon);
+                icon.innerText = this.getAttribute("icon");                
                 
                 close_button.innerHTML = `<span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></span> Close`;
                 close_button.classList.add("close-button");
+
                 dialog.setAttribute("aria-label", this.getAttribute("label"));
                 dialog_content.innerHTML = content;
                 dialog_content.prepend(close_button);
