@@ -53,12 +53,12 @@ Include the following script to use the dialog component on your non-Drupal webs
 ## Open on Load
 <wwu-dialog label="Non-video stuff" autoload="true">
     <h2>This Dialog opens on Page Load</h2>
-    <p>This is just some regular plain old content, no video, just stuff to read or whatever</p>
+    <p>It will not reload after being dismissed unless a new browser session has been started.</p>
 </wwu-dialog>
 
 ```
 <wwu-dialog label="Non-video stuff" autoload="true">
     <h2>This Dialog opens on Page Load</h2>
-    <p>This is just some regular plain old content, no video, just stuff to read or whatever</p>
+    <p>It will not reload after being dismissed unless a new browser session has been started.</p>
 </wwu-dialog>
 ```
