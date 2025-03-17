@@ -37,11 +37,16 @@ if (
                 const icon = document.createElement("span");
                 const dialog = this.querySelector("dialog");
                 const dialog_content = this.querySelector(".dialog-content");
+
+                if (this.getAttribute("autoload") == "true") {
+                    open_dialog(dialog);
+                }
                 
                 if (this.getAttribute("button")) {
                     open_button.classList.add("open-button");
                     open_button.innerText = this.getAttribute("button");
                     this.prepend(open_button);
+                    open_button.addEventListener("click", () => open_dialog(dialog));
                 }
 
                 icon.classList.add("material-icons");
@@ -50,13 +55,14 @@ if (
                 
                 close_button.innerHTML = `<span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></span> Close`;
                 close_button.classList.add("close-button");
+                close_button.addEventListener("click", () => close_dialog(dialog));
 
                 dialog.setAttribute("aria-label", this.getAttribute("label"));
                 dialog_content.innerHTML = content;
                 dialog_content.prepend(close_button);
                 
-                open_button.addEventListener("click", () => open_dialog(dialog));
-                close_button.addEventListener("click", () => close_dialog(dialog));
+                
+                
                 document.addEventListener("click", (e) => {
                     if (e.target.className === "dialog-wrapper") {
                         close_dialog(dialog);
