@@ -1,0 +1,20 @@
+/*------------------------------------------------------------------------------
+Container Queries: These do not currently play well with our build set up,
+so writing them here for now.
+-------------------------------------------------------------------------------*/
+@container (min-width: 280px) {
+    .card.small-thumbnail,
+    .wwu-card.small-thumbnail {
+        --image-size: 4.5rem;
+        display: grid;
+        grid-template-areas: "image title"
+        "taxonomy taxonomy"
+        "body body";
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .card.small-thumbnail .title,
+    .wwu-card.small-thumbnail .title {
+        padding-left: calc(var(--image-size) + var(--space--md));
+    }
+}

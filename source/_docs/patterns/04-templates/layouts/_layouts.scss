@@ -5,6 +5,8 @@ Templates: Layouts
 
 main {
   .layout__region {
+    container-type: inline-size;
+
     min-width: 0;
     max-width: calc(100vw - (var(--space--sm) * 2));
   }
