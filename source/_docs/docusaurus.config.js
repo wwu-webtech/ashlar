@@ -48,9 +48,10 @@ const config = {
         },
         theme: {
           customCss: [            
-            require.resolve('../../dist/css/font-families.css'),
+            require.resolve('../../dist/css/font-families.css'),            
             require.resolve('../../dist/css/material-icons.css'),
             require.resolve('../../build/css/ashlar-base.css'),
+            require.resolve('../../dist/css/container-queries.css'),
             require.resolve('../../build/css/components/docusaurus.css'),
             
             require.resolve('../../build/css/components/accordion.css'),

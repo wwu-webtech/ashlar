@@ -7,6 +7,7 @@ Atom: Forms - Progress Tracker for Drupal Webforms
   --incomplete-color: var(--gray);
 
   display: flex;
+  flex-flow: row wrap;
   grid-gap: var(--space--md);
   justify-content: space-evenly;
   padding: 0;

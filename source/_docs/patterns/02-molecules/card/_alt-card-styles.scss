@@ -109,13 +109,9 @@ Molecule: Cards - Alternate styles
   --h2-size: var(--font-size--xl);
   --h3-size: var(--font-size--xl);
   --h4-size: var(--font-size--xl);
-  --image-size: 4.5rem;
+  --image-size: 8rem;
 
-  display: grid;
-  grid-template-areas: "image title"
-  "taxonomy taxonomy"
-  "body body";
-  grid-template-columns: 1fr 3fr;
+  justify-content: center;
   .title {
     @include dark-blue-bg;
 
@@ -125,7 +121,6 @@ Molecule: Cards - Alternate styles
     align-items: center;
     margin-top: var(--space--md);
     padding: var(--space--sm);
-    padding-left: calc(var(--image-size) + var(--space--md));
     word-break: break-word;
     a {
       --link-color: var(--white);
@@ -134,6 +129,7 @@ Molecule: Cards - Alternate styles
   .image {
     z-index: 1;
     overflow: hidden;
+    flex: unset;
     grid-area: image;
     align-self: center;
     width: var(--image-size);
