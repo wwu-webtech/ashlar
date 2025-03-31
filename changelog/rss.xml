@@ -4,7 +4,7 @@
         <title>Ashlar Blog</title>
         <link>https://ashlar.wwu.edu/changelog</link>
         <description>Ashlar Blog</description>
-        <lastBuildDate>Mon, 07 Oct 2024 12:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 31 Mar 2025 12:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,9 +12,18 @@
             <title><![CDATA[5.5.x Updates]]></title>
             <link>https://ashlar.wwu.edu/changelog/version-5-5</link>
             <guid>https://ashlar.wwu.edu/changelog/version-5-5</guid>
-            <pubDate>Mon, 07 Oct 2024 12:00:00 GMT</pubDate>
-            <description><![CDATA[5.5.6]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="556">5.5.6<a href="https://ashlar.wwu.edu/changelog/version-5-5#556" class="hash-link" aria-label="Direct link to 5.5.6" title="Direct link to 5.5.6">​</a></h2>
+            <pubDate>Mon, 31 Mar 2025 12:00:00 GMT</pubDate>
+            <description><![CDATA[5.5.7]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="557">5.5.7<a href="https://ashlar.wwu.edu/changelog/version-5-5#557" class="hash-link" aria-label="Direct link to 5.5.7" title="Direct link to 5.5.7">​</a></h2>
+<p>** March 31, 2025 **</p>
+<ul>
+<li>Webform Progress Tracker improvements</li>
+<li>Added image caption helper class</li>
+<li>Autoload dialog option added</li>
+<li>Thumbnail card style improvements</li>
+<li>Contact URL in footer updated</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="556">5.5.6<a href="https://ashlar.wwu.edu/changelog/version-5-5#556" class="hash-link" aria-label="Direct link to 5.5.6" title="Direct link to 5.5.6">​</a></h2>
 <p>** March 3, 2025 **</p>
 <ul>
 <li>Social media link updates, Bluesky available as an icon</li>
