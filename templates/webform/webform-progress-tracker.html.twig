@@ -19,6 +19,7 @@
 #}
 {{ attach_library('ashlar/progress-tracker') }}
 
+<h2 class="visually-hidden">Form Progress</h2>
 <ul class="webform-progress-tracker progress-tracker progress-tracker--center" data-webform-progress-steps>
   {% for index, page in progress %}
     {% set is_completed = index < current_index %}
@@ -42,7 +43,7 @@
       {% if progress|length < max_pages %}
         <div class="progress-text">
           <div class="progress-title" data-webform-progress-link>
-            <span class="visually-hidden" data-webform-progress-state>{% if is_active or is_completed %}{{ is_active ? 'Current'|t : 'Completed'|t }}{% endif %}</span>
+            <span class="visually-hidden" data-webform-progress-state>{% if is_active or is_completed %}{{ is_active ? 'Current step: '|t : 'Completed: '|t }}{% endif %}</span>
             {{ page.title }}
           </div>
         </div>

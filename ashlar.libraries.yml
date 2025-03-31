@@ -41,6 +41,7 @@ ashlar-base:
   css:
     theme:
       build/css/ashlar-base.css: {}
+      dist/css/container-queries.css: {}
   dependencies:
     - core/normalize
 banner:

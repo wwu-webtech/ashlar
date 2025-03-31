@@ -45,7 +45,7 @@
       <div class="footer-bottom">
           <nav class="footer-nav" aria-labelledby="wwu-footer-heading">
               <h2 id="wwu-footer-heading" class="visually-hidden">University Links and Policy</h2>
-              <a href="https://www.wwu.edu/wwucontact/">Contact Western</a> 
+              <a href="https://www.wwu.edu/contactwwu/">Contact Western</a> 
               <a href="https://calendar.wwu.edu/">Calendar</a>
               <a href="https://www.wwu.edu/directory">University Directory</a>
               <a href="https://www.wwu.edu/campus-maps">Map</a>
