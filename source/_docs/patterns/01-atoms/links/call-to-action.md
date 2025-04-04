@@ -34,3 +34,14 @@ You can customize the icon in your CTA with material icons. This behavior is eas
 <a href="#" class="cta with-icon"><span class="material-icons" aria-hidden="true">accessibility_new</span> With an Icon</a>
 <a href="#" class="cta small with-icon"><span className="material-icons" aria-hidden="true">park</span> Small with an Icon</a><br/>
 ```
+
+## Inline CTAs
+Inline CTAs are useful for when you want to draw a little extra attention to a link without removing it from the flow of text.
+
+Still exploring? Contact Admissions to <a href="#" className="inline-cta">Request More Information</a>.
+
+```
+Still exploring? Contact Admissions to <a href="#" class="inline-cta">Request More Information</a>.
+```
+
+

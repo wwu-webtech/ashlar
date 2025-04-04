@@ -116,3 +116,12 @@ a.wp-block-button__link {
     }
   }
 }
+.inline-cta {
+  --link-color: var(--dark-blue);
+  text-decoration-thickness: 0.4em;
+
+  text-decoration-color: var(--blue--lighter--80);
+  text-underline-offset: -0.2em;
+  text-transform: uppercase;
+  font-weight: var(--font-weight--semibold);
+}
