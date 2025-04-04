@@ -35,6 +35,17 @@ You can customize the icon in your CTA with material icons. This behavior is eas
 <a href="#" class="cta small with-icon"><span className="material-icons" aria-hidden="true">park</span> Small with an Icon</a><br/>
 ```
 
+## Round CTAs
+A style variant that is available on Drupal Call to Action Link block types. Like CTAs with Icons, these make use of the material icons library, so if you are hard coding this you will need to load that library separately. Text space is limited, if your text doesn't fit you may want to consider someting like an [image link](/patterns/molecules/image-link) or [card](/patterns/molecules/card) instead.
+
+<a href="#" className="round-cta"><span className="material-icons" aria-hidden="true">location_on</span>Round CTA</a><br/>
+<a href="#" className="round-cta small"><span className="material-icons" aria-hidden="true">task_alt</span> Small Round CTA</a><br/>
+
+```
+<a href="#" class="round-cta"><span class="material-icons" aria-hidden="true">accessibility_new</span>Round CTA/a>
+<a href="#" class="round-cta small"><span className="material-icons" aria-hidden="true">park</span>Small Round CTA</a><br/>
+
+
 ## Inline CTAs
 Inline CTAs are useful for when you want to draw a little extra attention to a link without removing it from the flow of text.
 
@@ -43,5 +54,4 @@ Still exploring? Contact Admissions to <a href="#" className="inline-cta">Reques
 ```
 Still exploring? Contact Admissions to <a href="#" class="inline-cta">Request More Information</a>.
 ```
-
 
