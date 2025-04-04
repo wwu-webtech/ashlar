@@ -27,23 +27,23 @@ To style a call to action link, add the class ``cta``
 You can customize the icon in your CTA with material icons. This behavior is easiest when using Drupal block types—just use the included field. Material Icons are not included by default, so if you need to hard code links this way, you will need to load the library on that page via another method such as including another block that has it included, adding it to a view, or adding a ``<link>`` tag to the page via HTML.
 
 
-<a href="#" className="cta with-icon"><span className="material-icons" aria-hidden="true">accessibility_new</span> With an Icon</a><br/>
+<a href="#" className="cta with-icon">With an Icon <span className="material-icons" aria-hidden="true">accessibility_new</span></a><br/>
 <a href="#" className="cta small with-icon"><span className="material-icons" aria-hidden="true">park</span> Small with an Icon</a><br/>
 
 ```
 <a href="#" class="cta with-icon"><span class="material-icons" aria-hidden="true">accessibility_new</span> With an Icon</a>
-<a href="#" class="cta small with-icon"><span className="material-icons" aria-hidden="true">park</span> Small with an Icon</a><br/>
+<a href="#" class="cta small with-icon"><span className="material-icons" aria-hidden="true">park</span> Small with an Icon</a>
 ```
 
 ## Round CTAs
 A style variant that is available on Drupal Call to Action Link block types. Like CTAs with Icons, these make use of the material icons library, so if you are hard coding this you will need to load that library separately. Text space is limited, if your text doesn't fit you may want to consider someting like an [image link](/patterns/molecules/image-link) or [card](/patterns/molecules/card) instead.
 
-<a href="#" className="round-cta"><span className="material-icons" aria-hidden="true">location_on</span>Round CTA</a><br/>
-<a href="#" className="round-cta small"><span className="material-icons" aria-hidden="true">task_alt</span> Small Round CTA</a><br/>
+<a href="#" className="round-cta blue"><span className="material-icons" aria-hidden="true">location_on</span><span className="text">Round CTA</span></a>
+<a href="#" className="round-cta dark-blue small"><span className="material-icons" aria-hidden="true">task_alt</span><span className="text">Small Round CTA</span></a><br/>
 
 ```
-<a href="#" class="round-cta"><span class="material-icons" aria-hidden="true">accessibility_new</span>Round CTA/a>
-<a href="#" class="round-cta small"><span className="material-icons" aria-hidden="true">park</span>Small Round CTA</a><br/>
+<a href="#" class="round-cta blue"><span class="material-icons" aria-hidden="true">accessibility_new</span><span className="text">Round CTA</span></a>
+<a href="#" class="round-cta dark-blue small"><span className="material-icons" aria-hidden="true">park</span><span className="text">Small Round CTA</span></a>
 
 
 ## Inline CTAs

@@ -53,6 +53,13 @@ if (
         <a class="cta white" href="https://wwu.edu/#nowhere">CTA with .white class</a>
     </div>
 
+    <div class="round-ctas">
+        <a class="round-cta small" href="https://wwu.edu/#nowhere"><span>Call to Action</a></span>
+        <a class="round-cta small dark-blue" href="https://wwu.edu/#nowhere"><span>CTA with .dark-blue class</a></span>
+        <a class="round-cta small light-green" href="https://wwu.edu/#nowhere"><span>CTA with .light-green class</a></span>
+        <a class="round-cta small blue" href="https://wwu.edu/#nowhere"><span>CTA with .blue class</a></span>
+    </div>
+
     <div class="buttons">
       <button>Button</button>
       <button class="alt">With .alt class</button>

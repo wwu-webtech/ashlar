@@ -73,7 +73,7 @@ function ashlar_preprocess_field(&$variables) {
     }
     
     if ($bundle === 'button') {
-      _ashlar_set_cta_class($variables['items'], $object);
+      _ashlar_set_cta_classes($variables['items'], $object);
     }
     
     if ($bundle === 'page_menu') {
@@ -106,11 +106,41 @@ function _ashlar_set_custom_classes(&$items, $object) {
 }
 
 /**
-* Helper function to add cta class to links
+* Helper function to add classes to cta links
 */
-function _ashlar_set_cta_class(&$items, $object) {
+function _ashlar_set_cta_classes(&$items, $object) {
+  $class = 'cta';
+  if (!$object->field_variant->isEmpty() && $object->field_variant->value === 'round') {
+    $class = 'round-cta';
+  }
   foreach ($items as &$item) {
-    $item['content']['#options']['attributes']['class'][] = 'cta';
+    $item['content']['#options']['attributes']['class'][] = $class;
+  }
+
+  if (!$object->field_color->isEmpty()) {          
+    foreach ($items as &$item) {      
+      $color = str_replace('_', '-', $object->field_color->value);
+
+      $item['content']['#options']['attributes']['class'][] = $color;
+    }
+  }
+}
+
+/**
+* Helper function to add icons to cta link markup
+*/
+function _ashlar_set_icon(&$items, $object) {  
+  if (!$object->field_icon->isEmpty()) {          
+    foreach ($items as &$item) {
+      if (!$object->field_variant->isEmpty() && $object->field_variant->value === 'round') {
+        $item['content']['#title'] = array('#markup' => ' <span class="material-icons" aria-hidden="true">' . $object->field_icon->value . '</span><span class="text">' . $item['content']['#title'] .  '</span>');
+      } else {
+        $item['content']['#title'] = array('#markup' =>  $item['content']['#title'] . ' <span class="material-icons" aria-hidden="true">' . $object->field_icon->value . '</span>');
+      }
+
+      
+      $item['content']['#options']['attributes']['class'][] = 'with-icon';
+    }
   }
 }
 
@@ -147,17 +177,7 @@ function _ashlar_set_tracking_event_label(&$items, $object) {
   }
 }
 
-/**
-* Helper function to add icons to cta link markup
-*/
-function _ashlar_set_icon(&$items, $object) {  
-  if (!$object->field_icon->isEmpty()) {          
-    foreach ($items as &$item) {
-      $item['content']['#title'] = array('#markup' =>  $item['content']['#title'] . ' <span class="material-icons" aria-hidden="true">' . $object->field_icon->value . '</span>');
-      $item['content']['#options']['attributes']['class'][] = 'cta with-icon';
-    }
-  }
-}
+
 
 /**
 * Implements hook_theme_suggestions_HOOK_alter() for form templates.

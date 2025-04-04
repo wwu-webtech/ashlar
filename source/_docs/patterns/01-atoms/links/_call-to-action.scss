@@ -123,22 +123,27 @@ a.wp-block-button__link {
 1. Round Variant
 ------------------------------------------------------------------------------*/
 .round-cta {
-  --cta-size: 10rem;
-
-  @include dark-blue-bg;
+  --cta-size: 9rem;
 
   position: relative;
-  display: grid;
+  display: inline-grid;
   place-content: center;
   width: var(--cta-size);
   height: var(--cta-size);
+  margin-bottom: var(--space--md);
   text-align: center;
   text-decoration: none;
+  word-spacing: 99rem;
   text-transform: uppercase;
+  color: var(--dark-blue);
   border-radius: 50%;
   background-color: transparent;
   font-size: var(--font-size--2xl);
   font-weight: var(--font-weight--semibold);
+  line-height: 1.1em;
+  span {
+    z-index: 1;
+  }
   .material-icons {
     margin-top: -1rem;
     color: var(--light-green);
@@ -146,19 +151,20 @@ a.wp-block-button__link {
   }
   &:after {
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     display: block;
     width: 100%;
     height: 100%;
     content: "";
     transition: all 0.8s ease;
     border-radius: 50%;
-    background: var(--dark-blue);
+    background: var(--white);
+    box-shadow: var(--shadow--soft);
   }
-  &:hover {
-    @include blue-bg;
-
+  &:hover,
+  &:focus {
     text-decoration: none;
+    color: var(--white);
     background-color: transparent;
     &:after {
       transform: rotateY(180deg);
@@ -170,13 +176,51 @@ a.wp-block-button__link {
 
     font-size: var(--font-size--xs);
     .material-icons {
+      margin-top: unset;
       font-size: var(--icon-size--md);
+    }
+  }
+  &.blue {
+    color: var(--white);
+    &:after {
+      background: var(--blue);
+    }
+    &:hover,
+    &:focus {
+      &:after {
+        background: var(--dark-blue);
+      }
+    }
+  }
+  &.dark-blue {
+    color: var(--white);
+    &:after {
+      background: var(--dark-blue);
+    }
+    &:hover,
+    &:focus {
+      &:after {
+        background: var(--blue);
+      }
+    }
+  }
+  &.light-green {
+    color: var(--dark-blue);
+    &:after {
+      background: var(--light-green);
+    }
+    &:hover,
+    &:focus {
+      color: var(--white);
+      &:after {
+        background: var(--dark-blue);
+      }
     }
   }
 }
 /*------------------------------------------------------------------------------
-2. Inline Variant
-------------------------------------------------------------------------------*/
+  2. Inline Variant
+  ------------------------------------------------------------------------------*/
 .inline-cta {
   --link-color: var(--dark-blue);
   text-decoration-thickness: 0.4em;
