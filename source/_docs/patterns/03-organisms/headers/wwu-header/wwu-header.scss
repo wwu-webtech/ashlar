@@ -5,8 +5,6 @@ Organism: Headers - Western header
 @import "../../../00-utilities/breakpoints.scss";
 @import "../../../01-atoms/background-color/_background-color-mixins.scss";
 wwu-header {
-  --toggle-size: 3.75rem;
-
   display: grid;
   grid-auto-flow: column;
   grid-template-areas: "menu search site-name logo ..."

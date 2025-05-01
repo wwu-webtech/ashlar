@@ -7,4 +7,38 @@ Overwrite to reset default ultimenu styles.
   top: var(--space--md);
   right: unset;
   left: var(--space--md);
+  width: var(--toggle-size);
+  height: var(--toggle-size);
+  text-indent: unset;
+  border-radius: 50%;
+  background: transparent;
+  font-size: var(--font-size--xs);
+  .component-icon {
+    display: block;
+    width: var(--icon-size--md);
+    height: var(--icon-size--md);
+    color: var(--button-color);
+    background: var(--button-background-color);
+  }
+  svg {
+    fill: var(--button-color);
+
+    width: 100%;
+    height: 100%;
+  }
+}
+.button--ultimenu .bars {
+  top: unset;
+  right: unset;
+  left: unset;
+  margin: auto;
+}
+.toolbar-fixed .button.button--ultiburger {
+  top: calc(45px + var(--space--md));
+}
+.toolbar-fixed.toolbar-horizontal .button.button--ultiburger {
+  top: calc(79px + var(--space--md));
+}
+.docs-wrapper .button.button--ultiburger {
+  top: calc(79px + var(--space--md));
 }
