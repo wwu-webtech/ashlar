@@ -61,11 +61,11 @@ if (
           /*------------------------------------------------------------------------------
           Mobile menu functionality
           --------------------------------------------------------------------------*/
-          const menu = {
+         /*const menu = {
             toggle_button: this.querySelector(".toggle-menu"), 
             text: "Menu", 
             icon: `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M172-278v-28h616v28H172Zm0-188v-28h616v28H172Zm0-188v-28h616v28H172Z"/></svg>`
-          };
+          };*/ //TODO: Rejigger this so it only happens if you're not in Drupal using Ultimenu
           const search = {
             toggle_button: this.querySelector(".toggle-search"), 
             text: "Search", 
@@ -82,6 +82,7 @@ if (
           waitForElm('.main-navigation').then((elm) => {
             mobile_menu[1] = document.querySelector(".main-navigation");
           });
+          
          
           // Non-Drupal Applications
           if (document.querySelector(".is-ultimenu") == null) {            
@@ -163,9 +164,9 @@ if (
           }
           
           
-          menu.toggle_button.addEventListener("click", function() { toggle(menu); });            
+          //menu.toggle_button.addEventListener("click", function() { toggle(menu); });            
           search.toggle_button.addEventListener("click", function() { toggle(search); });            
-          close(menu);
+          //close(menu);
           close(search);
 
         }

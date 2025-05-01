@@ -3,3 +3,8 @@ Organism: Navigation - ultimenu
 --------------------------------------------------------------------------------
 Overwrite to reset default ultimenu styles.
 ------------------------------------------------------------------------------*/
+.button.button--ultiburger {
+  top: var(--space--md);
+  right: unset;
+  left: var(--space--md);
+}

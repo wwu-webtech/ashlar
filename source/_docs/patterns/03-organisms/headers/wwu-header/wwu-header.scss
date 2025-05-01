@@ -9,20 +9,17 @@ wwu-header {
 
   display: grid;
   grid-auto-flow: column;
-  grid-template-areas: "logo site-name menu search"
-  "logo header-region menu search";
-  grid-template-columns: auto 1fr auto auto;
-  grid-template-rows: auto 1fr;
-  max-width: var(--content-area-max-width);
-  margin: auto;
+  grid-template-areas: "menu search site-name logo ..."
+  "menu search header-region logo ...";
+  grid-template-columns: var(--toggle-size) var(--toggle-size) 1fr auto var(--content-area--negative-space);
+  grid-template-rows: 1fr 1fr;
   column-gap: var(--space--md);
   .western-logo {
     grid-area: logo;
   }
   .site-name {
     grid-area: site-name;
-    margin-top: var(--space--2xs);
-    text-align: right;
+    align-self: end;
     a {
       text-decoration: none;
       text-transform: uppercase;
@@ -32,7 +29,7 @@ wwu-header {
   }
   .western-header-region {
     grid-area: header-region;
-    text-align: right;
+    align-self: start;
     a {
       text-decoration: none;
       text-transform: uppercase;
