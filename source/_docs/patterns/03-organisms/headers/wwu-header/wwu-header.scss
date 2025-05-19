@@ -7,11 +7,10 @@ Organism: Headers - Western header
 wwu-header {
   display: grid;
   grid-auto-flow: column;
-  grid-template-areas: "menu search site-name logo ..."
-  "menu search header-region logo ...";
-  grid-template-columns: var(--toggle-size) var(--toggle-size) 1fr auto var(--content-area--negative-space);
+  grid-template-areas: "preheader site-name logo ..."
+  "preheader header-region logo ...";
+  grid-template-columns: var(--content-area--negative-space) 1fr auto var(--content-area--negative-space);
   grid-template-rows: 1fr 1fr;
-  column-gap: var(--space--md);
   .western-logo {
     grid-area: logo;
   }
@@ -30,8 +29,8 @@ wwu-header {
     align-self: start;
     a {
       text-decoration: none;
-      text-transform: uppercase;
       color: var(--link-color);
+      font-weight: var(--font-wight--bold);
     }
   }
   .toggle {
@@ -53,11 +52,5 @@ wwu-header {
       margin: calc(-1 * var(--space--xs));
       margin-bottom: calc(-1 * var(--space--sm));
     }
-  }
-  .toggle-menu {
-    grid-area: menu;
-  }
-  .toggle-search {
-    grid-area: search;
   }
 }

@@ -82,10 +82,10 @@ if (
           waitForElm('.main-navigation').then((elm) => {
             mobile_menu[1] = document.querySelector(".main-navigation");
           });
-          waitForElm('.button--ultimenu').then((elm) => {
+          /*waitForElm('.button--ultimenu').then((elm) => {
             const ultimenu_toggle = document.querySelector(".button--ultimenu");
             ultimenu_toggle.innerHTML = `<span class="component-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M172-278v-28h616v28H172Zm0-188v-28h616v28H172Zm0-188v-28h616v28H172Z"/></svg></span><span class="toggle-text">Menu</span>`;
-          });
+          });*/
           
          
           // Non-Drupal Applications

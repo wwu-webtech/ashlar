@@ -2,3 +2,21 @@
 Molecule: Main navigation/ultimenu custom styles
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
+.nav-wrapper.is-ultimenu__canvas-off {
+  display: grid;
+  grid-template-areas: "main prospective"
+  "main prospective"
+  "quick quick";;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto auto;
+}
+.region--main_navigation {
+  grid-area: main;
+}
+.prospective-links {
+  grid-area: prospective;
+  background-color: var(--blue--lighter--80);
+}
+.quick-links {
+  grid-area: quick;
+}

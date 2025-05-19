@@ -3,6 +3,10 @@ Organism: Navigation - ultimenu
 --------------------------------------------------------------------------------
 Overwrite to reset default ultimenu styles.
 ------------------------------------------------------------------------------*/
+:root {
+  --ultibackdrop: transparent;
+  --ulticanvas: var(--white);
+}
 .button.button--ultiburger {
   top: var(--space--md);
   right: unset;
@@ -27,18 +31,46 @@ Overwrite to reset default ultimenu styles.
     height: 100%;
   }
 }
+.is-ultimenu--active {
+  .is-ultimenu__canvas-off {
+    position: fixed;
+    top: calc(79px + var(--logo-size));
+    bottom: 0;
+    left: -100%;
+    overflow-y: auto;
+    max-width: unset;
+    height: 100vh;
+    transition: all 500ms ease;
+  }
+}
+/*
 .button--ultimenu .bars {
   top: unset;
   right: unset;
   left: unset;
   margin: auto;
+}*/
+.toolbar-fixed {
+  .button.button--ultiburger {
+    top: calc(45px + var(--space--md));
+  }
+  .is-ultimenu--active .is-ultimenu__canvas-off {
+    top: calc(45px + var(--logo-size));
+  }
 }
-.toolbar-fixed .button.button--ultiburger {
-  top: calc(45px + var(--space--md));
+.toolbar-fixed.toolbar-horizontal {
+  .button.button--ultiburger {
+    top: calc(79px + var(--space--md));
+  }
+  .is-ultimenu--active .is-ultimenu__canvas-off {
+    top: calc(79px + var(--logo-size));
+  }
 }
-.toolbar-fixed.toolbar-horizontal .button.button--ultiburger {
-  top: calc(79px + var(--space--md));
-}
-.docs-wrapper .button.button--ultiburger {
-  top: calc(79px + var(--space--md));
+.docs-wrapper {
+  .button.button--ultiburger {
+    top: calc(79px + var(--space--md));
+  }
+  .is-ultimenu--active .is-ultimenu__canvas-off {
+    top: calc(79px + var(--logo-size));
+  }
 }
