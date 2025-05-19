@@ -2,7 +2,7 @@
   Drupal.behaviors.acalog = {
     attach: function(context, settings) {
       /* Current Catalog ID. Note this may be a few numbers behind the coid that shows up in the URL */
-      const current_catoid = "19";
+      const current_catoid = "20";
       
       /* Setting these attribnutes in acalogWidgetize just doesn't work, so we are setting them here instead */
       $('.acalog').attr("data-acalog-data", "programs");
