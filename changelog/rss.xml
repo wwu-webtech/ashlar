@@ -4,7 +4,7 @@
         <title>Ashlar Blog</title>
         <link>https://ashlar.wwu.edu/changelog</link>
         <description>Ashlar Blog</description>
-        <lastBuildDate>Mon, 31 Mar 2025 12:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 19 May 2025 12:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,9 +12,16 @@
             <title><![CDATA[5.5.x Updates]]></title>
             <link>https://ashlar.wwu.edu/changelog/version-5-5</link>
             <guid>https://ashlar.wwu.edu/changelog/version-5-5</guid>
-            <pubDate>Mon, 31 Mar 2025 12:00:00 GMT</pubDate>
-            <description><![CDATA[5.5.7]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="557">5.5.7<a href="https://ashlar.wwu.edu/changelog/version-5-5#557" class="hash-link" aria-label="Direct link to 5.5.7" title="Direct link to 5.5.7">​</a></h2>
+            <pubDate>Mon, 19 May 2025 12:00:00 GMT</pubDate>
+            <description><![CDATA[5.5.8]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="558">5.5.8<a href="https://ashlar.wwu.edu/changelog/version-5-5#558" class="hash-link" aria-label="Direct link to 5.5.8" title="Direct link to 5.5.8">​</a></h2>
+<p>** May 19, 2025 **</p>
+<ul>
+<li>catoid updated for catalog links</li>
+<li>Remote access header template saved in theme</li>
+<li>PNG versions of social media icons added</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="557">5.5.7<a href="https://ashlar.wwu.edu/changelog/version-5-5#557" class="hash-link" aria-label="Direct link to 5.5.7" title="Direct link to 5.5.7">​</a></h2>
 <p>** March 31, 2025 **</p>
 <ul>
 <li>Webform Progress Tracker improvements</li>
