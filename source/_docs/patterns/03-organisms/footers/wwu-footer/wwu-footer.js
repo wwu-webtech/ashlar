@@ -7,7 +7,7 @@
     <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/components/wwu-footer.css" /-->
 
     <div class="artwork">
-      <img src="/themes/ashlar/source/images/footer-artwork-temp.webp" alt="Mountains, streams and trees rendered in bold and colorful illustration by Gretchen Leggitt" />
+      <img src="/themes/ashlar/source/images/footer-artwork.webp" alt="Mountains, streams and trees rendered in bold and colorful illustration by Gretchen Leggitt" />
     </div>
 
     <svg class="footer-waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1846 62.99" aria-hidden="true">
