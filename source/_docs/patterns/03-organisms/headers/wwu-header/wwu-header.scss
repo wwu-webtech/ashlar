@@ -7,12 +7,14 @@ Organism: Headers - Western header
 wwu-header {
   display: grid;
   grid-auto-flow: column;
-  grid-template-areas: "preheader site-name logo ..."
-  "preheader header-region logo ...";
-  grid-template-columns: var(--content-area--negative-space) 1fr auto var(--content-area--negative-space);
+  grid-template-areas: "preheader logo site-name"
+  "preheader logo header-region";
+  grid-template-columns: var(--content-area--negative-space) 1fr var(--content-area--negative-space);
   grid-template-rows: 1fr 1fr;
   .western-logo {
+    display: flex;
     grid-area: logo;
+    place-content: center;
   }
   .site-name {
     grid-area: site-name;
@@ -26,7 +28,7 @@ wwu-header {
   }
   .western-header-region {
     grid-area: header-region;
-    align-self: start;
+    align-self: end;
     a {
       text-decoration: none;
       color: var(--link-color);

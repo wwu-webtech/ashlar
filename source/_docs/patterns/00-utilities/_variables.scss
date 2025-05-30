@@ -127,6 +127,12 @@ $large: 1300px;
   rgba(var(--dark-blue--darker--40--rgb), 0.5) 100%
 );
 
+--gradient--vertical--dark-blue-to-transparent: linear-gradient(
+  to bottom,
+  rgba(var(--dark-blue--darker--40--rgb), 1) 0%,
+  transparent 100%
+);
+
 --gradient--diagonal--blue-to-dark-blue: linear-gradient(
   to right bottom,
   #002f5e,
