@@ -29,7 +29,7 @@ if (
                 this.querySelector(".wwu-social-link").setAttribute("href", url);
                 this.querySelector(".wwu-social-icon").innerHTML = icon;
                 this.querySelector(".wwu-social-icon").classList.add(this.getAttribute("size"));
-                this.querySelector(".visually-hidden").innerText= this.getAttribute("group") + " on " + label;
+                this.querySelector(".visually-hidden").innerText= this.getAttribute("group") + "'s " + label;
             }
         }
         if (!window.customElements.get('wwu-social')) {    
@@ -72,6 +72,9 @@ if (
             }
             if (url.includes("youtube")) {
                 return [`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 135 135"><circle class="wwu-icon-cls-1" cx="67.5" cy="67.5" r="67.5"/><path class="wwu-icon-cls-2" d="M110.62,45.84a11.3,11.3,0,0,0-8-8C95.64,36,67.5,36,67.5,36s-28.14,0-35.16,1.88a11.3,11.3,0,0,0-8,8c-1.88,7-1.88,21.66-1.88,21.66s0,14.64,1.88,21.66a11.3,11.3,0,0,0,8,8C39.36,99,67.5,99,67.5,99s28.14,0,35.16-1.88a11.3,11.3,0,0,0,8-8c1.88-7,1.88-21.66,1.88-21.66S112.5,52.86,110.62,45.84ZM58.5,81V54L81.88,67.5Z"/></svg>`, `YouTube`];
+            }
+            if (url.includes("mailto")) {
+                return [`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 135 135"><circle class="wwu-icon-cls-1" cx="67.5" cy="67.5" r="67.5"/><path class="wwu-icon-cls-2" d="M36.28,98.72c-2.94,0-5.44-.95-7.49-2.84s-3.08-4.2-3.08-6.92v-42.92c0-2.72,1.03-5.02,3.08-6.92s4.55-2.84,7.49-2.84h62.44c2.94,0,5.44.95,7.49,2.84,2.05,1.89,3.08,4.2,3.08,6.92v42.92c0,2.72-1.03,5.02-3.08,6.92-2.05,1.89-4.55,2.84-7.49,2.84,0,0-62.44,0-62.44,0ZM67.5,73.42l31.22-18.4v-8.97l-31.22,18.4-31.22-18.4v8.97s31.22,18.4,31.22,18.4Z"/></svg>`, `Email`];
             }
         }
     }
