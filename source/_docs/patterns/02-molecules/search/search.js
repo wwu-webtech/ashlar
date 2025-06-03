@@ -4,6 +4,11 @@ if (
 ) {
   const search_template = document.createElement("template");
   search_template.innerHTML = `
+  <button class="toggle toggle-search" aria-expanded="false">
+      <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M778-164 528-414q-30 26-69 40t-77 14q-92.23 0-156.12-63.84-63.88-63.83-63.88-156Q162-672 225.84-736q63.83-64 156-64Q474-800 538-736.12q64 63.89 64 156.12 0 41-15 80t-39 66l250 250-20 20ZM382-388q81 0 136.5-55.5T574-580q0-81-55.5-136.5T382-772q-81 0-136.5 55.5T190-580q0 81 55.5 136.5T382-388Z"/></svg></span>
+      <span class="toggle-text">Search</span>
+    </button>   
+    
   <form class="search-area">
       <label for="search-box" class="search-label">Search</label>
       <input id="search-box" name="q" type="search">
@@ -41,6 +46,12 @@ if (
         this.appendChild(search_template.content.cloneNode(true));
         this.classList.add("element-created");
         this.querySelector(".search-area").addEventListener("submit", this.submitSearch.bind(this));
+
+        const search = {
+          toggle_button: this.querySelector(".toggle-search"), 
+          text: "Search", 
+          icon: `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M778-164 528-414q-30 26-69 40t-77 14q-92.23 0-156.12-63.84-63.88-63.83-63.88-156Q162-672 225.84-736q63.83-64 156-64Q474-800 538-736.12q64 63.89 64 156.12 0 41-15 80t-39 66l250 250-20 20ZM382-388q81 0 136.5-55.5T574-580q0-81-55.5-136.5T382-772q-81 0-136.5 55.5T190-580q0 81 55.5 136.5T382-388Z"/></svg>`
+        };
 
         var subdomain = window.location.hostname.split('.')[0];
         

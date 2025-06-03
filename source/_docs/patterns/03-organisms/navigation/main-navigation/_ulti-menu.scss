@@ -7,68 +7,26 @@ Overwrite to reset default ultimenu styles.
   --ultibackdrop: transparent;
   --ulticanvas: var(--white);
 }
-.button.button--ultiburger {
-  top: var(--space--md);
-  right: unset;
-  left: var(--space--md);
-  width: var(--toggle-size);
-  height: var(--toggle-size);
-  text-indent: unset;
-  border-radius: 50%;
-  font-size: var(--font-size--xs);
-  .component-icon {
-    display: block;
-    width: var(--icon-size--md);
-    height: var(--icon-size--md);
-    color: var(--button-color);
-    background: var(--button-background-color);
-  }
-  svg {
-    fill: var(--button-color);
-
-    width: 100%;
-    height: 100%;
-  }
-}
-.is-ultimenu--active {
-  .is-ultimenu__canvas-off {
-    position: fixed;
-    top: calc(79px + var(--logo-size));
-    bottom: 0;
-    left: -100%;
-    overflow-y: auto;
-    max-width: unset;
-    height: 100vh;
-    transition: all 500ms ease;
-  }
-}
-/*
-.button--ultimenu .bars {
-  top: unset;
-  right: unset;
-  left: unset;
-  margin: auto;
-}*/
 .toolbar-fixed {
-  .button.button--ultiburger {
+  /*.button.button--ultiburger {
     top: calc(45px + var(--space--md));
-  }
+  }*/
   .is-ultimenu--active .is-ultimenu__canvas-off {
     top: calc(45px + var(--logo-size));
   }
 }
 .toolbar-fixed.toolbar-horizontal {
-  .button.button--ultiburger {
+  /*.button.button--ultiburger {
     top: calc(79px + var(--space--md));
-  }
+  }*/
   .is-ultimenu--active .is-ultimenu__canvas-off {
     top: calc(79px + var(--logo-size));
   }
 }
 .docs-wrapper {
-  .button.button--ultiburger {
+  /*.button.button--ultiburger {
     top: calc(79px + var(--space--md));
-  }
+  }*/
   .is-ultimenu--active .is-ultimenu__canvas-off {
     top: calc(79px + var(--logo-size));
   }
