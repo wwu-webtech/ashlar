@@ -5,20 +5,23 @@ Organism: Headers - Western header
 @import "../../../00-utilities/breakpoints.scss";
 @import "../../../01-atoms/background-color/_background-color-mixins.scss";
 wwu-header {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-auto-flow: column;
-  grid-template-areas: "preheader logo site-name"
-  "preheader logo header-region";
-  grid-template-columns: var(--content-area--negative-space) 1fr var(--content-area--negative-space);
-  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "preheader site-name logo"
+  "preheader header-region logo";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr auto;
   .western-logo {
     display: flex;
     grid-area: logo;
     place-content: center;
   }
   .site-name {
+    place-self: center;
+
     grid-area: site-name;
-    align-self: end;
     a {
       text-decoration: none;
       text-transform: uppercase;
@@ -27,30 +30,27 @@ wwu-header {
     }
   }
   .western-header-region {
+    place-self: center;
+
     grid-area: header-region;
-    align-self: end;
     a {
       text-decoration: none;
       color: var(--link-color);
       font-weight: var(--font-wight--bold);
     }
   }
-  .toggle {
+  .toggle-menu {
     display: grid;
-    grid-template-rows: auto auto;
-    align-content: start;
-    margin: 0;
-    padding: 0;
-    color: var(--link-color);
-    border-radius: unset;
-    background: transparent;
-    box-shadow: unset;
+    grid-auto-flow: row;
+    width: var(--toggle-size);
+    height: var(--toggle-size);
+    margin: var(--space--md);
+    margin-right: 0;
+    border-radius: 50%;
     font-size: var(--font-size--xs);
     svg {
-      fill: var(--link-color);
-
-      width: var(--toggle-size);
-      height: var(--toggle-size);
+      width: 2rem;
+      height: 2rem;
       margin: calc(-1 * var(--space--xs));
       margin-bottom: calc(-1 * var(--space--sm));
     }

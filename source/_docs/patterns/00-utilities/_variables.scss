@@ -58,8 +58,8 @@ $large: 1300px;
 --blue: #007ac8;
 --blue--lighter--20: #079eff;
 --blue--lighter--40: #45b6ff; 
---blue--lighter--60: #83cfff;
---blue--lighter--80: #c1e7ff;
+--blue--lighter--60: #a6d3f0;
+--blue--lighter--80: #deeff9;
 
 --dark-green: #006b3f;
 --light-green: #bad80a;
@@ -213,7 +213,7 @@ $large: 1300px;
 --content-area-max-width: 60rem; 
 --content-area-max-width--sm: 40rem;
 --content-area--negative-space: calc((100vw - var(--content-area-max-width))/2);
---content-area--sm--negative-space: calc((100vw - var(--content-area-max-width--sm))/2);
+--content-area--negative-space--sm: calc((100vw - var(--content-area-max-width--sm))/2);
 
 /* c. Content area grids ----------------------------------------------------*/
 --grid-columns--sm: var(--space--sm) 1fr var(--space--sm);

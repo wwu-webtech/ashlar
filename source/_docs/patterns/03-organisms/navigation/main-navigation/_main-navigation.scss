@@ -9,20 +9,23 @@ Molecule: Main navigation/ultimenu custom styles
   display: grid;
   visibility: visible;
   overflow: auto;
-  height: calc(100vh - var(--logo-size));
+  height: 100vh;
   opacity: 1;
 }
 .header-navigation {
+  position: fixed;
+  top: 0;
   visibility: hidden;
   overflow: hidden;
   grid-template-areas: "main prospective"
-  "main prospective"
-  "quick quick";
+  "main prospective";
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto;
+  width: 100vw;
   height: 0;
   transition: opacity var(--ease--standard) var(--transition-speed--fast);
   opacity: 0;
+  background: var(--white);
 }
 .navigation-open {
   .header-navigation {
@@ -44,11 +47,61 @@ Molecule: Main navigation/ultimenu custom styles
 }
 .region--main_navigation {
   grid-area: main;
+  padding-top: var(--logo-size);
+  nav {
+    border-top: 1px solid var(--blue--lighter--60);
+  }
 }
-.prospective-links {
+.university-links {
   grid-area: prospective;
+  padding-top: var(--logo-size);
   background-color: var(--blue--lighter--80);
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--dark-blue);
+    font-weight: var(--font-weight--bold);
+  }
+  .icon-link {
+    display: grid;
+    grid-auto-flow: row;
+    text-align: center;
+  }
+}
+.action-links {
+  display: flex;
+  flex-flow: column;
+  padding-top: var(--space--md);
+  border-top: 1px solid var(--blue--lighter--60);
+  a {
+    margin: var(--space--sm);
+    font-size: var(--font-size--lg);
+  }
 }
 .quick-links {
-  grid-area: quick;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  &:before {
+    place-self: center;
+
+    display: block;
+    width: 4rem;
+    margin: var(--space--md);
+    content: "";
+    border-top: 1px var(--blue) solid;
+  }
+  a {
+    margin: var(--space--sm);
+  }
+}
+.toolbar-fixed {
+  .header-navigation {
+    top: 45px;
+  }
+}
+.toolbar-horizontal.toolbar-tray-open {
+  .header-navigation {
+    top: 79px;
+  }
 }

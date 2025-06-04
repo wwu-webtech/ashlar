@@ -40,6 +40,15 @@ wwu-social {
 .wwu-icon-cls-2 {
   fill: var(--icon-color);
 }
+.wwu-cls-3 {
+  fill: none;
+  stroke: var(--blue);
+  stroke-miterlimit: 10;
+  stroke-width: 1;
+}
+.wwu-cls-4 {
+  fill: var(--blue--lighter--60);
+}
 @media (forced-colors: active) {
   .wwu-social-link {
     svg {
