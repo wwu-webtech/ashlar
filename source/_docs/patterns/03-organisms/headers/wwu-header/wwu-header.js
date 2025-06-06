@@ -10,10 +10,27 @@ if (
     <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/ashlar-base.css" /-->
     <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/components/wwu-header.css" /-->
   
-    <button class="small toggle-menu" aria-expanded="false">
-        <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></span>
-        <span class="toggle-text">Menu</span>
-    </button>
+    <div class="buttons">
+      <button class="small toggle-menu" aria-expanded="false">
+          <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></span>
+          <span class="toggle-text">Menu</span>
+      </button>
+
+      <wwu-search role="search" aria-label="Western">
+          <noscript>
+              <form class="search-area" method="get" action="https://search2.wwu.edu/texis/search">
+                  <label for="search-box" class="search-label">Search:</label>
+                  <input id="search-box" name="query" type="search">
+                  <button class="submit-search">
+                      <span class="material-icons" aria-hidden="true">search</span>
+                      <span class="toggle-text">Go</span>
+                  </button>
+                  
+                  <input type="hidden" name="pr" value="Default-WWU-Base">
+              </form>
+          </noscript>
+      </wwu-search>
+    </div>
 
     <div class="site-name">
         <a href="/" class="home-link"></a>
@@ -64,11 +81,6 @@ if (
           toggle_button: this.querySelector(".toggle-menu"), 
           text: "Menu", 
           icon: `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M172-278v-28h616v28H172Zm0-188v-28h616v28H172Zm0-188v-28h616v28H172Z"/></svg>`
-        };
-        const search = {
-          toggle_button: this.querySelector(".toggle-search"), 
-          text: "Search", 
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M778-164 528-414q-30 26-69 40t-77 14q-92.23 0-156.12-63.84-63.88-63.83-63.88-156Q162-672 225.84-736q63.83-64 156-64Q474-800 538-736.12q64 63.89 64 156.12 0 41-15 80t-39 66l250 250-20 20ZM382-388q81 0 136.5-55.5T574-580q0-81-55.5-136.5T382-772q-81 0-136.5 55.5T190-580q0 81 55.5 136.5T382-388Z"/></svg>`
         };
         const close_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z"/></svg>`;
         

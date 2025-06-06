@@ -143,13 +143,6 @@ schedule:
   css:
     theme:
       build/css/components/schedule.css: {}
-search:
-  version: 1.x
-  css:
-    theme:
-      build/css/components/search.css: {}
-  js:
-    build/js/search.js: {}
 slide-banner:
   version: 1.x
   css:
@@ -198,11 +191,11 @@ wwu-header:
   version: 1.x
   css:
     theme:
-      build/css/components/pre-header.css: {}
       build/css/components/wwu-header.css: {}
+      build/css/components/search.css: {}
   js:
     build/js/logo.js: {}
-    build/js/pre-header.js: {}
+    build/js/search.js: {}
     build/js/wwu-header.js: {}
 wwu-footer:
   version: 1.x

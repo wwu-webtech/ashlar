@@ -13,6 +13,11 @@ wwu-header {
   "preheader header-region logo";
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr auto;
+  .buttons {
+    display: flex;
+    flex-flow: row wrap;
+    grid-area: preheader;
+  }
   .western-logo {
     place-self: end;
 
