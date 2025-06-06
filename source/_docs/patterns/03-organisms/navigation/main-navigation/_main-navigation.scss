@@ -12,6 +12,12 @@ Molecule: Main navigation/ultimenu custom styles
   height: 100vh;
   opacity: 1;
 }
+@mixin menu-link-decoration-active {
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.4em;
+
+  text-underline-offset: -0.2em;
+}
 .header-navigation {
   position: fixed;
   top: 0;
@@ -26,6 +32,19 @@ Molecule: Main navigation/ultimenu custom styles
   transition: opacity var(--ease--standard) var(--transition-speed--fast);
   opacity: 0;
   background: var(--white);
+  &:after {
+    position: absolute;
+    bottom: 0;
+    left: -1rem;
+    display: block;
+    width: 100vw;
+    height: 10rem;
+    content: "";
+    transform: rotate(-3deg);
+    background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/wave-line-blue.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 .navigation-open {
   .header-navigation {
@@ -70,10 +89,8 @@ Molecule: Main navigation/ultimenu custom styles
       &:focus,
       &:active,
       &[aria-current="page"] {
-        text-decoration-line: underline;
-        text-decoration-thickness: 0.4em;
+        @include menu-link-decoration-active;
 
-        text-underline-offset: -0.2em;
         color: var(--dark-blue);
       }
     }
@@ -88,16 +105,31 @@ Molecule: Main navigation/ultimenu custom styles
   grid-area: prospective;
   padding-top: var(--logo-size);
   background-color: var(--blue--lighter--80);
+  background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/island-bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  .component-icon {
+    transition: all ease 0.1s;
+  }
   a {
     text-decoration: none;
+    text-decoration-color: var(--blue--lighter--60);
     text-transform: uppercase;
     color: var(--dark-blue);
     font-weight: var(--font-weight--bold);
+    &:hover,
+    &:focus,
+    &:active {
+      @include menu-link-decoration-active;
+
+      text-decoration-color: var(--blue--lighter--60);
+    }
   }
   .icon-link {
     display: grid;
     grid-auto-flow: row;
     text-align: center;
+    background: transparent;
   }
 }
 .action-links {

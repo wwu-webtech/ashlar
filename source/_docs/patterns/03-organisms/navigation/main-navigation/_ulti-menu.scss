@@ -3,6 +3,12 @@ Organism: Navigation - ultimenu
 --------------------------------------------------------------------------------
 Overwrite to reset default ultimenu styles.
 ------------------------------------------------------------------------------*/
+@mixin menu-link-decoration-active {
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.4em;
+
+  text-underline-offset: -0.2em;
+}
 .ultimenu {
   --ultisub-normal: var(--blue);
 
@@ -24,10 +30,8 @@ Overwrite to reset default ultimenu styles.
       &:focus,
       &:active,
       &.is-ulink-active {
-        text-decoration-line: underline;
-        text-decoration-thickness: 0.4em;
+        @include menu-link-decoration-active;
 
-        text-underline-offset: -0.2em;
         color: var(--dark-blue);
       }
     }
@@ -63,10 +67,8 @@ Overwrite to reset default ultimenu styles.
 }
 .ultimenu > .is-active-trail > .ultimenu__link,
 .ultimenu__item:has(.menu-item--active-trail) .ultimenu__link {
-  text-decoration-line: underline;
-  text-decoration-thickness: 0.4em;
+  @include menu-link-decoration-active;
 
   text-decoration-color: var(--blue--lighter--80);
-  text-underline-offset: -0.2em;
   color: var(--blue);
 }

@@ -14,9 +14,11 @@ wwu-header {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr auto;
   .western-logo {
+    place-self: end;
+
     display: flex;
     grid-area: logo;
-    place-content: center;
+    margin-right: var(--space--md);
   }
   .site-name {
     place-self: center;
@@ -53,6 +55,19 @@ wwu-header {
       height: 2rem;
       margin: calc(-1 * var(--space--xs));
       margin-bottom: calc(-1 * var(--space--sm));
+    }
+  }
+}
+.navigation-open {
+  wwu-header {
+    .western-logo {
+      place-self: center;
+
+      margin-right: 0;
+    }
+    .site-name {
+      justify-self: end;
+      margin-right: var(--space--lg);
     }
   }
 }
