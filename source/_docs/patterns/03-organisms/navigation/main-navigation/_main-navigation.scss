@@ -59,6 +59,30 @@ Molecule: Main navigation/ultimenu custom styles
     color: var(--blue);
     font-size: var(--font-size--lg);
   }
+  .menu {
+    a {
+      padding-left: unset;
+      transition: all 0.2s ease;
+      text-decoration-color: var(--blue--lighter--80);
+      color: var(--blue);
+      border-left: unset;
+      &:hover,
+      &:focus,
+      &:active,
+      &[aria-current="page"] {
+        text-decoration-line: underline;
+        text-decoration-thickness: 0.4em;
+
+        text-underline-offset: -0.2em;
+        color: var(--dark-blue);
+      }
+    }
+    .menu {
+      a {
+        font-size: var(--font-size--sm);
+      }
+    }
+  }
 }
 .university-links {
   grid-area: prospective;

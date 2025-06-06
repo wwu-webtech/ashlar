@@ -4,6 +4,8 @@ Organism: Navigation - ultimenu
 Overwrite to reset default ultimenu styles.
 ------------------------------------------------------------------------------*/
 .ultimenu {
+  --ultisub-normal: var(--blue);
+
   position: relative;
   li {
     .ultimenu__link {
@@ -11,6 +13,7 @@ Overwrite to reset default ultimenu styles.
       width: 40%;
       padding: var(--space--xs);
       transition: all 0.2s ease;
+      text-decoration-color: var(--blue--lighter--80);
       color: var(--blue);
       font-size: var(--font-size--xl);
       font-weight: var(--font-weight--semibold);
@@ -19,11 +22,11 @@ Overwrite to reset default ultimenu styles.
       }
       &:hover,
       &:focus,
-      &:active {
+      &:active,
+      &.is-ulink-active {
         text-decoration-line: underline;
         text-decoration-thickness: 0.4em;
 
-        text-decoration-color: var(--blue--lighter--80);
         text-underline-offset: -0.2em;
         color: var(--dark-blue);
       }
@@ -38,8 +41,8 @@ Overwrite to reset default ultimenu styles.
 }
 .ultimenu__caret {
   i {
-    --ulticaret-active: var(--gray--lighter--60);
-    --ulticaret-normal: var(--gray--lighter--60);
+    --ulticaret-active: var(--gray--lighter--40);
+    --ulticaret-normal: var(--gray--lighter--40);
 
     transform: rotate(90deg);
   }
@@ -54,4 +57,16 @@ Overwrite to reset default ultimenu styles.
 }
 .is-ulticaret--arrow .is-ulink-active .ultimenu__caret i::before {
   transform: translate(8px, -50%) rotate(45deg);
+}
+.ultimenu--htb .ultimenu__region {
+  box-shadow: unset;
+}
+.ultimenu > .is-active-trail > .ultimenu__link,
+.ultimenu__item:has(.menu-item--active-trail) .ultimenu__link {
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.4em;
+
+  text-decoration-color: var(--blue--lighter--80);
+  text-underline-offset: -0.2em;
+  color: var(--blue);
 }
