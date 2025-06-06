@@ -52,6 +52,14 @@ Molecule: Main navigation/ultimenu custom styles
     border-top: 1px solid var(--blue--lighter--60);
   }
 }
+.main-navigation {
+  h2 {
+    margin-top: 0;
+    text-transform: uppercase;
+    color: var(--blue);
+    font-size: var(--font-size--lg);
+  }
+}
 .university-links {
   grid-area: prospective;
   padding-top: var(--logo-size);

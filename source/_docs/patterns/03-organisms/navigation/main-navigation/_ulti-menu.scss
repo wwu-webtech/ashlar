@@ -3,3 +3,55 @@ Organism: Navigation - ultimenu
 --------------------------------------------------------------------------------
 Overwrite to reset default ultimenu styles.
 ------------------------------------------------------------------------------*/
+.ultimenu {
+  position: relative;
+  li {
+    .ultimenu__link {
+      left: 10%;
+      width: 40%;
+      padding: var(--space--xs);
+      transition: all 0.2s ease;
+      color: var(--blue);
+      font-size: var(--font-size--xl);
+      font-weight: var(--font-weight--semibold);
+      &:focus-visible {
+        outline: var(--outline--focus);
+      }
+      &:hover,
+      &:focus,
+      &:active {
+        text-decoration-line: underline;
+        text-decoration-thickness: 0.4em;
+
+        text-decoration-color: var(--blue--lighter--80);
+        text-underline-offset: -0.2em;
+        color: var(--dark-blue);
+      }
+    }
+  }
+  .ultimenu__flyout {
+    position: absolute;
+    top: 0;
+    left: 60%;
+    width: 40%;
+  }
+}
+.ultimenu__caret {
+  i {
+    --ulticaret-active: var(--gray--lighter--60);
+    --ulticaret-normal: var(--gray--lighter--60);
+
+    transform: rotate(90deg);
+  }
+}
+.is-ulticaret--arrow .ultimenu__caret i::before,
+.is-ulticaret--arrow .ultimenu__caret i::after {
+  width: 1px;
+  height: 14px;
+}
+.is-ulticaret--arrow .ultimenu__caret i::before {
+  transform: translate(-8px, -50%) rotate(45deg);
+}
+.is-ulticaret--arrow .is-ulink-active .ultimenu__caret i::before {
+  transform: translate(8px, -50%) rotate(45deg);
+}

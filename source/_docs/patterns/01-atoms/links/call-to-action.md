@@ -44,7 +44,7 @@ A style variant that is available on Drupal Call to Action Link block types. Lik
 ```
 <a href="#" class="round-cta blue"><span class="material-icons" aria-hidden="true">accessibility_new</span><span className="text">Round CTA</span></a>
 <a href="#" class="round-cta dark-blue small"><span className="material-icons" aria-hidden="true">park</span><span className="text">Small Round CTA</span></a>
-
+```
 
 ## Inline CTAs
 Inline CTAs are useful for when you want to draw a little extra attention to a link without removing it from the flow of text.

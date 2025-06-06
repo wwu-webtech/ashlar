@@ -44,6 +44,10 @@
 {% set id_attributes = attributes.id|clean_id %}
 {% apply spaceless %}
 {% if items -%}
+
+{{ attach_library('ashlar/accessible-mega-menu') }}
+{{ attach_library('ashlar/menu-extras') }}
+
 <nav class="main-navigation" aria-label="Main">
   {% include "@templates/label/label.twig" %}
 
