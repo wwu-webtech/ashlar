@@ -5,15 +5,16 @@ Organism: Headers - Western header
 @import "../../../00-utilities/breakpoints.scss";
 @import "../../../01-atoms/background-color/_background-color-mixins.scss";
 wwu-header {
-  position: relative;
-  z-index: 1;
   display: grid;
   grid-auto-flow: column;
   grid-template-areas: "preheader site-name logo"
   "preheader header-region logo";
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr auto;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
   .buttons {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-flow: row wrap;
     grid-area: preheader;
@@ -26,9 +27,11 @@ wwu-header {
     margin-right: var(--space--md);
   }
   .site-name {
-    place-self: center;
-
     grid-area: site-name;
+    align-self: end;
+    justify-self: center;
+    text-transform: uppercase;
+    font-family: var(--font--title);
     a {
       text-decoration: none;
       text-transform: uppercase;
@@ -37,13 +40,21 @@ wwu-header {
     }
   }
   .western-header-region {
-    place-self: center;
-
     grid-area: header-region;
+    align-self: start;
+    justify-self: center;
+    text-transform: uppercase;
+    color: var(--link-color);
+    font-family: var(--font--title);
+    font-size: var(--font-size--xl);
+    font-weight: var(--font-weight--black);
     a {
       text-decoration: none;
       color: var(--link-color);
       font-weight: var(--font-wight--bold);
+    }
+    p {
+      margin: 0;
     }
   }
   .toggle-menu {
@@ -69,10 +80,6 @@ wwu-header {
       place-self: center;
 
       margin-right: 0;
-    }
-    .site-name {
-      justify-self: end;
-      margin-right: var(--space--lg);
     }
   }
 }

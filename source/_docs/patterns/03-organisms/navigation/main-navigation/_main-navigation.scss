@@ -103,7 +103,6 @@ Molecule: Main navigation/ultimenu custom styles
 }
 .university-links {
   grid-area: prospective;
-  padding-top: var(--logo-size);
   background-color: var(--blue--lighter--80);
   background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/island-bg.webp");
   background-repeat: no-repeat;
@@ -130,6 +129,9 @@ Molecule: Main navigation/ultimenu custom styles
     grid-auto-flow: row;
     text-align: center;
     background: transparent;
+  }
+  .wwu-logo {
+    margin: auto;
   }
 }
 .action-links {
