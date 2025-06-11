@@ -20,6 +20,7 @@ Molecule: Main navigation/ultimenu custom styles
 }
 .header-navigation {
   position: fixed;
+  z-index: 1;
   top: 0;
   visibility: hidden;
   overflow: hidden;
@@ -35,12 +36,10 @@ Molecule: Main navigation/ultimenu custom styles
   &:after {
     position: absolute;
     bottom: 0;
-    left: -1rem;
     display: block;
     width: 100vw;
     height: 10rem;
     content: "";
-    transform: rotate(-3deg);
     background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/wave-line-blue.svg");
     background-repeat: no-repeat;
     background-size: cover;
