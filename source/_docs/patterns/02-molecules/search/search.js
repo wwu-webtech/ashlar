@@ -43,52 +43,85 @@ if (
       if (!element_exists) {
         this.appendChild(search_template.content.cloneNode(true));
         this.classList.add("element-created");
-        this.querySelector(".search-form").addEventListener("submit", this.submitSearch.bind(this));
-
-        const search = {
-          toggle_button: this.querySelector(".toggle-search"), 
-          text: "Search", 
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M778-164 528-414q-30 26-69 40t-77 14q-92.23 0-156.12-63.84-63.88-63.83-63.88-156Q162-672 225.84-736q63.83-64 156-64Q474-800 538-736.12q64 63.89 64 156.12 0 41-15 80t-39 66l250 250-20 20ZM382-388q81 0 136.5-55.5T574-580q0-81-55.5-136.5T382-772q-81 0-136.5 55.5T190-580q0 81 55.5 136.5T382-388Z"/></svg>`
-        };
-        const close_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z"/></svg>`;
+        this.querySelector(".search-form").addEventListener("submit", this.submitSearch.bind(this));        
 
         var subdomain = window.location.hostname.split('.')[0];
+        
+        /*------------------------------------------------------------------------------
+        Search pop-up functionality
+        ------------------------------------------------------------------------------*/
+        const close_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z"/></svg>`;
+        const search_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M778-164 528-414q-30 26-69 40t-77 14q-92.23 0-156.12-63.84-63.88-63.83-63.88-156Q162-672 225.84-736q63.83-64 156-64Q474-800 538-736.12q64 63.89 64 156.12 0 41-15 80t-39 66l250 250-20 20ZM382-388q81 0 136.5-55.5T574-580q0-81-55.5-136.5T382-772q-81 0-136.5 55.5T190-580q0 81 55.5 136.5T382-388Z"/></svg>`;
+        var html = document.querySelector("html");
+        var search_toggle = this.querySelector(".toggle-search");
+        var search_form = this.querySelector(".wwu-search");
         
         if (subdomain == "www" || subdomain == "search") {
           this.querySelector("#site-search").checked = false;
           this.querySelector("#full-search").checked = true;
         }
 
-        function open(toggle) {
-          toggle.toggle_button.setAttribute("aria-expanded", true);
-          toggle.toggle_button.querySelector(".component-icon").innerHTML = close_icon;
-          toggle.toggle_button.querySelector(".toggle-text").innerHTML = "Close";
-          document.querySelector("html").classList.add("search-open");
-          document.querySelector("html").classList.remove("search-closed");
-          toggle.state = "open";         
+        /* Open search -------------------------------------------------------------*/
+        function open() {
+          document.addEventListener("mouseup", click_outside);
+
+          search_toggle.setAttribute("aria-expanded", true);
+          search_toggle.querySelector(".component-icon").innerHTML = close_icon;
+          search_toggle.querySelector(".toggle-text").innerHTML = "Close";
+
+          html.classList.add("search-open");
+          html.classList.remove("search-closed");
+        }
+
+        /* Close search -------------------------------------------------------------*/        
+        function close() {
+          document.removeEventListener("mouseup", click_outside);
+
+          search_toggle.setAttribute("aria-expanded", false);
+          search_toggle.querySelector(".component-icon").innerHTML = search_icon;
+          search_toggle.querySelector(".toggle-text").innerHTML = "Search";
+
+          html.classList.add("search-closed");
+          html.classList.remove("search-open");
+        }
+
+        function keyboard_close(event) {
+          if (event.keyCode == 27 && html.classList.contains("search-open")) {
+            close();
+            search_toggle.focus();
+          }
         }
         
-        function close(toggle) {
-          toggle.toggle_button.setAttribute("aria-expanded", false);
-          toggle.toggle_button.querySelector(".component-icon").innerHTML = toggle.icon;
-          toggle.toggle_button.querySelector(".toggle-text").innerHTML = toggle.text;
-          document.querySelector("html").classList.add("search-closed");
-          document.querySelector("html").classList.remove("search-open");
-          toggle.state = "closed";
-        }
-        
-        function toggle(x) {
-          if (x.state == "closed") {
-            open(x);
-            return;
-          } else {
-            close(x);
-            return;
+        function click_outside(event) {
+          var isClickInside = search_form.contains(event.target);
+          var isClickToggle = search_toggle.contains(event.target);
+          
+          if (
+            html.classList.contains("search-open") &&
+            !isClickInside &&
+            !isClickToggle
+          ) {
+            close();
           }
         }
 
-        search.toggle_button.addEventListener("click", function() { toggle(search); });            
-        close(search);        
+        /* Toggle search -----------------------------------------------------------*/
+        function toggle_search() {
+          if (html.classList.contains("search-closed")) {
+            open();
+            return;
+          } else {
+            close();
+            return;
+          }
+        }
+             
+        if (search_toggle) {
+          search_toggle.addEventListener("click", toggle_search);
+          search_toggle.addEventListener("keyup", keyboard_close);
+          search_form.addEventListener("keyup", keyboard_close);
+        }
+        close();
       }
     }
     

@@ -12,7 +12,7 @@ if (
   
     <div class="buttons">
       <button class="small toggle-menu" aria-expanded="false">
-          <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></span>
+          <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M172-278v-28h616v28H172Zm0-188v-28h616v28H172Zm0-188v-28h616v28H172Z"/></svg></span>
           <span class="toggle-text">Menu</span>
       </button>
 
@@ -77,44 +77,57 @@ if (
         }     
         
         /*------------------------------------------------------------------------------
-        Mobile menu functionality
+        Menu pop-up functionality
         --------------------------------------------------------------------------*/
-        const menu = {
-          toggle_button: this.querySelector(".toggle-menu"), 
-          text: "Menu", 
-          icon: `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M172-278v-28h616v28H172Zm0-188v-28h616v28H172Zm0-188v-28h616v28H172Z"/></svg>`
-        };
         const close_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z"/></svg>`;
-        
+        const menu_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M172-278v-28h616v28H172Zm0-188v-28h616v28H172Zm0-188v-28h616v28H172Z"/></svg>`;
+        var html = document.querySelector("html");
+        var navigation = document.querySelector(".header-navigation");
+        var menu_toggle = this.querySelector(".toggle-menu");
+                
         waitForElm('.button--ultimenu').then((elm) => {
           elm.remove();
-        });
-                
+        });                
         
-        function open(toggle) {
-          toggle.toggle_button.setAttribute("aria-expanded", true);
-          toggle.toggle_button.querySelector(".component-icon").innerHTML = close_icon;
-          toggle.toggle_button.querySelector(".toggle-text").innerHTML = "Close";
-          document.querySelector("html").classList.add("navigation-open");
-          document.querySelector("html").classList.remove("navigation-closed");
-          toggle.state = "open";         
+
+        /* Open menu -------------------------------------------------------------*/
+        function open() {
+          menu_toggle.setAttribute("aria-expanded", true);
+          menu_toggle.querySelector(".component-icon").innerHTML = close_icon;
+          menu_toggle.querySelector(".toggle-text").innerHTML = "Close";
+
+          navigation.removeAttribute("aria-hidden");
+
+          html.classList.add("navigation-open");
+          html.classList.remove("navigation-closed");
+        }
+
+        /* Close menu -------------------------------------------------------------*/        
+        function close() {
+          menu_toggle.setAttribute("aria-expanded", false);
+          menu_toggle.querySelector(".component-icon").innerHTML = menu_icon;
+          menu_toggle.querySelector(".toggle-text").innerHTML = "Menu";
+
+          navigation.setAttribute("aria-hidden", true);
+
+          html.classList.add("navigation-closed");
+          html.classList.remove("navigation-open");
         }
         
-        function close(toggle) {
-          toggle.toggle_button.setAttribute("aria-expanded", false);
-          toggle.toggle_button.querySelector(".component-icon").innerHTML = toggle.icon;
-          toggle.toggle_button.querySelector(".toggle-text").innerHTML = toggle.text;
-          document.querySelector("html").classList.add("navigation-closed");
-          document.querySelector("html").classList.remove("navigation-open");
-          toggle.state = "closed";
+        function keyboard_close(event) {
+          if (event.keyCode == 27 && html.classList.contains("navigation-open")) {
+            close();
+            menu_toggle.focus();
+          }
         }
-        
-        function toggle(x) {
-          if (x.state == "closed") {
-            open(x);
+
+        /* Toggle menu -----------------------------------------------------------*/
+        function toggle_menu() {
+          if (html.classList.contains("navigation-closed")) {
+            open();
             return;
           } else {
-            close(x);
+            close();
             return;
           }
         }
@@ -139,8 +152,12 @@ if (
           });
         }
         
-        menu.toggle_button.addEventListener("click", function() { toggle(menu); });            
-        close(menu);        
+        if (menu_toggle) {
+          menu_toggle.addEventListener("click", toggle_menu);
+          menu_toggle.addEventListener("keyup", keyboard_close);
+          this.addEventListener("keyup", keyboard_close);
+        }     
+        close();
       }
     }
   }

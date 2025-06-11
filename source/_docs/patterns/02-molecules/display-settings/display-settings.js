@@ -13,7 +13,7 @@ if (
       <span class="toggle-text">Settings</span>
   </button>
 
-  <div id="settings-menu" class="settings-menu black-bg closed">
+  <div class="settings-menu">
       <div class="menu-container">
           <fieldset class="theme-selection">
               <legend>Theme</legend>
@@ -80,14 +80,11 @@ if (
         this.appendChild(display_settings_template.content.cloneNode(true));
         this.classList.add("element-created");
         
-
-        const close_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>`;
-        const settings_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M292-172v-28h174v-120H192q-26 0-43-17t-17-43v-348q0-26 17-43t43-17h576q26 0 43 17t17 43v348q0 26-17 43t-43 17H494v120h174v28H292ZM160-380q0 12 10 22t22 10h576q12 0 22-10t10-22v-348q0-12-10-22t-22-10H192q-12 0-22 10t-10 22v348Zm0 0v-380 412-32Z"/></svg>`;        
-              
-        
         /*------------------------------------------------------------------------------
         Menu functionality
         ------------------------------------------------------------------------------*/
+        const close_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z"/></svg>`;
+        const settings_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M292-172v-28h174v-120H192q-26 0-43-17t-17-43v-348q0-26 17-43t43-17h576q26 0 43 17t17 43v348q0 26-17 43t-43 17H494v120h174v28H292ZM160-380q0 12 10 22t22 10h576q12 0 22-10t10-22v-348q0-12-10-22t-22-10H192q-12 0-22 10t-10 22v348Zm0 0v-380 412-32Z"/></svg>`;        
         var display_toggle = this.querySelector(".toggle-settings");
         var settings_menu = this.querySelector(".settings-menu");
         var body = document.querySelector("body");
@@ -104,32 +101,34 @@ if (
         var reset_preferences = this.querySelector(".reset-button");
         
         /* Open the menu -------------------------------------------------------------*/
-        function open_display_settings() {
+        function open() {
           document.addEventListener("mouseup", click_outside);
           
           display_toggle.setAttribute("aria-expanded", true);
           display_toggle.querySelector(".component-icon").innerHTML = close_icon;
           
           settings_menu.removeAttribute("aria-hidden");
-          settings_menu.classList.remove("closed");
-          settings_menu.classList.add("open");
+
+          html.classList.add("settings-open");
+          html.classList.remove("settings-closed");
         }
         
         /* Close the menu -------------------------------------------------------------*/
-        function close_display_settings() {
+        function close() {
           document.removeEventListener("mouseup", click_outside);
           
           display_toggle.setAttribute("aria-expanded", false);
           display_toggle.querySelector(".component-icon").innerHTML = settings_icon;
           
           settings_menu.setAttribute("aria-hidden", true);
-          settings_menu.classList.remove("open");
-          settings_menu.classList.add("closed");
+
+          html.classList.add("settings-closed");
+          html.classList.remove("settings-open");
         }
         
         function keyboard_close(event) {
-          if (event.keyCode == 27 && settings_menu.classList.contains("open")) {
-            close_display_settings();
+          if (event.keyCode == 27 && html.classList.contains("settings-open")) {
+            close();
             display_toggle.focus();
           }
         }
@@ -139,21 +138,21 @@ if (
           var isClickToggle = display_toggle.contains(event.target);
           
           if (
-            settings_menu.classList.contains("open") &&
+            html.classList.contains("settings-open") &&
             !isClickInside &&
             !isClickToggle
           ) {
-            close_display_settings();
+            close();
           }
         }
         
         /* Toggle the menu -----------------------------------------------------------*/
         function toggle_settings() {
-          if (settings_menu.classList.contains("closed")) {
-            open_display_settings();
+          if (html.classList.contains("settings-closed")) {
+            open();
             return;
           } else {
-            close_display_settings();
+            close();
             return;
           }
         }
@@ -304,7 +303,7 @@ if (
           display_toggle.addEventListener("click", toggle_settings);
           display_toggle.addEventListener("keyup", keyboard_close);
           settings_menu.addEventListener("keyup", keyboard_close);
-        }
+        }      
         if (theme_options) {
           theme_options.addEventListener("click", select_theme);
         }
@@ -317,6 +316,7 @@ if (
         
         set_initial_theme(system_theme);
         set_font_preference();
+        close();
       }
     }
   }

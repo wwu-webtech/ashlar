@@ -30,6 +30,6 @@ Organism: Pre-header
     background-color: var(--blue);
   }
 }
-.settings-menu.closed {
+.settings-closed .settings-menu {
   display: none;
 }
