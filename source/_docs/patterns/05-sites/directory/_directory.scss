@@ -12,21 +12,19 @@ Sites: Directory
     width: 1px;
     height: 1px;
     white-space: nowrap;
-    &.focusable {
-      &:focus {
-        clip-path: initial;
+    &:focus {
+      clip-path: initial;
 
-        position: absolute !important;
-        z-index: 3;
-        top: 0;
-        left: var(--space--sm);
-        clip: initial;
-        width: inherit;
-        height: inherit;
-        padding: var(--space--sm);
-        outline-color: var(--dark-blue--darker--60);
-        outline-offset: var(--outline-offset--inset);
-      }
+      position: absolute !important;
+      z-index: 3;
+      top: 0;
+      left: var(--space--sm);
+      clip: initial;
+      width: inherit;
+      height: inherit;
+      padding: var(--space--sm);
+      outline-color: var(--dark-blue--darker--60);
+      outline-offset: var(--outline-offset--inset);
     }
   }
   wwu-pre-header .skip-link.focusable {

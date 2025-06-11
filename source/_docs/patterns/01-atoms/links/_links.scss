@@ -2,6 +2,7 @@
 Atom: Text - Links
 --------------------------------------------------------------------------------
 1. Print Styles
+2. Skip Link
 ------------------------------------------------------------------------------*/
 :root {
   --link-color: var(--blue--darker--20);
@@ -114,5 +115,35 @@ a {
   ul a[href^="http"]:after {
     content: " [" attr(href) "] ";
     font-size: 10pt;
+  }
+}
+/*------------------------------------------------------------------------------
+2. Skip Link
+------------------------------------------------------------------------------*/
+.skip-link {
+  clip-path: inset(50%);
+  --link-color--visited: var(--link-color);
+  --link-decoration-color--visited: var(--blue--lighter--80);
+
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  &:focus {
+    clip-path: unset;
+
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: var(--space--sm);
+    clip: unset;
+    width: inherit;
+    height: inherit;
+    padding: var(--space--sm);
+    outline-color: var(--dark-blue--darker--60);
+    outline-offset: var(--outline-offset--inset);
+    background: var(--blue--lighter--80);
   }
 }

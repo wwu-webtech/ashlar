@@ -30,6 +30,8 @@ if (
               </form>
           </noscript>
       </wwu-search>
+
+      <wwu-display-settings></wwu-display-settings>
     </div>
 
     <div class="site-name">

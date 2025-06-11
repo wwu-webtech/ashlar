@@ -6,8 +6,11 @@
   
   <div class="page">
     {% block header %}
-    <header class="site-header" role="banner">     
-      {% block top %}        
+    <header class="site-header" role="banner">       
+      {% block skip %}       
+      <a href="#main-content" class="skip-link">
+        <span class="skip-link-text">Skip to Content </span>
+      </a> 
       {% endblock %}
       
       {% block wwu_header %}

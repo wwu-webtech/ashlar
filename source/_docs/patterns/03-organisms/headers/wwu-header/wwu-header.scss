@@ -7,10 +7,10 @@ Organism: Headers - Western header
 wwu-header {
   display: grid;
   grid-auto-flow: column;
-  grid-template-areas: "preheader site-name logo"
-  "preheader header-region logo";
+  grid-template-areas: "preheader site-name logo";
   grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
   justify-content: center;
   height: var(--logo-size);
   border-bottom: var(--blue--lighter--60) 1px solid;
@@ -27,15 +27,13 @@ wwu-header {
     align-content: center;
   }
   .western-logo {
-    place-self: end;
-
     display: flex;
     grid-area: logo;
+    justify-self: end;
     margin-right: var(--space--md);
   }
   .site-name {
     grid-area: site-name;
-    align-self: end;
     justify-self: center;
     text-transform: uppercase;
     a {
@@ -47,7 +45,6 @@ wwu-header {
   }
   .western-header-region {
     grid-area: header-region;
-    align-self: start;
     justify-self: center;
     text-transform: uppercase;
     color: var(--link-color);
@@ -71,12 +68,20 @@ wwu-header {
     margin: var(--space--md);
     margin-right: 0;
     border-radius: 50%;
-    font-size: var(--font-size--xs);
+    font-size: var(--font-size--2xs);
     svg {
       width: 2rem;
       height: 2rem;
       margin: calc(-1 * var(--space--xs));
       margin-bottom: calc(-1 * var(--space--sm));
+    }
+  }
+  &:has(.region--wwu_header) {
+    grid-template-areas: "preheader site-name logo"
+    "preheader header-region logo";
+    grid-template-rows: 1fr 1fr;
+    .site-name {
+      align-self: end;
     }
   }
 }

@@ -53,16 +53,6 @@ Molecule: Main navigation/ultimenu custom styles
     display: none;
   }
 }
-.is-ultimenu--hover {
-  @media (min-width: $medium) {
-    .toggle-menu {
-      display: none;
-    }
-    .header-navigation {
-      @include header-visible;
-    }
-  }
-}
 .region--main_navigation {
   grid-area: main;
   padding-top: var(--logo-size);

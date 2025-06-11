@@ -72,3 +72,8 @@ Overwrite to reset default ultimenu styles.
   text-decoration-color: var(--blue--lighter--80);
   color: var(--blue);
 }
+.is-ultimenu .is-ultimenu__canvas-off,
+.is-ultimenu--expanded .is-ultimenu__canvas-off,
+.is-ultimenu--hiding .is-ultimenu__canvas-off {
+  z-index: 1;
+}
