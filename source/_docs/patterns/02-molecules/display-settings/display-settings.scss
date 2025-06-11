@@ -30,6 +30,30 @@ Organism: Pre-header
     background-color: var(--blue);
   }
 }
-.settings-closed .settings-menu {
+.settings-menu {
+  @include lightest-blue-bg;
+
+  position: absolute;
+  top: -10px;
+  left: 0;
   display: none;
+  width: 100vw;
+  padding: var(--space--lg);
+  color: var(--dark-blue);
+  .menu-container {
+    display: flex;
+    flex-flow: row wrap;
+    margin: auto;
+  }
+  .reset-button {
+    margin: auto;
+    padding: var(--space--sm);
+    border-radius: 0;
+  }
+  fieldset {
+    border: none;
+  }
+}
+.settings-open .settings-menu {
+  display: grid;
 }

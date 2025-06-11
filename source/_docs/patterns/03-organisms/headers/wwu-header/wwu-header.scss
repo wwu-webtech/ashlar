@@ -61,6 +61,8 @@ wwu-header {
     }
   }
   .toggle-menu {
+    position: relative;
+    z-index: 1;
     display: grid;
     grid-auto-flow: row;
     width: var(--toggle-size);

@@ -2,14 +2,16 @@
 Molecule: Search
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
+@import "../../01-atoms/background-color/_background-color-mixins.scss";
 .wwu-search {
+  @include lightest-blue-bg;
+
   position: absolute;
   top: -10px;
   left: 0;
   display: none;
   width: 100vw;
   padding: var(--space--lg);
-  background-color: var(--blue--lighter--80);
   .search-form {
     display: grid;
     grid-auto-flow: row;
