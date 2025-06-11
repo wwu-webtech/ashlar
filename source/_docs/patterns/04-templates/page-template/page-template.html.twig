@@ -7,6 +7,9 @@
 <div class="page">
   {% block header %}
     <header class="site-header" role="banner">
+      {% block alerts %}
+        {{ page.alerts }}
+      {% endblock %}
       {% block wwu_pre_header %}
         <wwu-pre-header>
           <noscript>
