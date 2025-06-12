@@ -5,12 +5,21 @@ Molecule: Main navigation/ultimenu custom styles
 @import "../../../00-utilities/breakpoints.scss";
 @import "../../../01-atoms/background-color/_background-color-mixins.scss";
 
-@mixin header-visible {
+/*------------------------------------------------------------------------------
+Mixins
+------------------------------------------------------------------------------*/
+@mixin visible {
   display: grid;
   visibility: visible;
   overflow: auto;
   height: 100vh;
   opacity: 1;
+}
+@mixin hidden {
+  visibility: hidden;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
 }
 @mixin menu-link-decoration-active {
   text-decoration-line: underline;
@@ -18,20 +27,21 @@ Molecule: Main navigation/ultimenu custom styles
 
   text-underline-offset: -0.2em;
 }
-.header-navigation {
+/*------------------------------------------------------------------------------
+1. Hamburger Menu Styles
+------------------------------------------------------------------------------*/
+.navigation-wrapper {
+  @include hidden;
+
   position: fixed;
   z-index: 1;
   top: 0;
-  visibility: hidden;
-  overflow: hidden;
   grid-template-areas: "main prospective"
   "main prospective";
   grid-template-columns: 2fr 1fr;
   grid-template-rows: auto auto;
   width: 100vw;
-  height: 0;
   transition: opacity var(--ease--standard) var(--transition-speed--fast);
-  opacity: 0;
   background: var(--white);
   &:after {
     position: absolute;
@@ -46,11 +56,20 @@ Molecule: Main navigation/ultimenu custom styles
   }
 }
 .navigation-open {
-  .header-navigation {
-    @include header-visible;
+  .navigation-wrapper {
+    @include visible;
   }
   .page-content {
     display: none;
+  }
+  .western-logo {
+    position: relative;
+    z-index: 1;
+  }
+  wwu-header {
+    grid-template-areas: "preheader logo"
+    "site-name site-name";
+    grid-template-columns: 2fr 1fr;
   }
 }
 .region--main_navigation {
@@ -92,6 +111,7 @@ Molecule: Main navigation/ultimenu custom styles
 }
 .university-links {
   grid-area: prospective;
+  padding-top: var(--logo-size);
   background-color: var(--blue--lighter--80);
   background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/island-bg.webp");
   background-repeat: no-repeat;
@@ -151,12 +171,12 @@ Molecule: Main navigation/ultimenu custom styles
   }
 }
 .toolbar-fixed {
-  .header-navigation {
+  .navigation-wrapper {
     top: 45px;
   }
 }
 .toolbar-horizontal.toolbar-tray-open {
-  .header-navigation {
+  .navigation-wrapper {
     top: 79px;
   }
 }
