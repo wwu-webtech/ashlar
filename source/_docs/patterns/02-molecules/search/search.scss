@@ -7,7 +7,7 @@ Molecule: Search
   @include lightest-blue-bg;
 
   position: absolute;
-  top: -10px;
+  top: calc(-1 * var(--space--xs));
   left: 0;
   display: none;
   width: 100vw;

@@ -34,7 +34,7 @@ Organism: Pre-header
   @include lightest-blue-bg;
 
   position: absolute;
-  top: -10px;
+  top: calc(-1 * var(--space--xs));
   left: 0;
   display: none;
   width: 100vw;
@@ -42,7 +42,7 @@ Organism: Pre-header
   color: var(--dark-blue);
   .menu-container {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
     margin: auto;
   }
   .reset-button {
@@ -51,6 +51,9 @@ Organism: Pre-header
     border-radius: 0;
   }
   fieldset {
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--space--sm);
     border: none;
   }
 }

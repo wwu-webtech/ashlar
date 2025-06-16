@@ -245,7 +245,7 @@ if (
   wwu_logo_template.innerHTML = `
   <style>
   .wwu-logo {
-    --logo-size: 6rem;
+    --logo-size: 5.5rem;
     
     width: var(--logo-size);
     height: var(--logo-size);

@@ -12,7 +12,6 @@ wwu-header {
   grid-template-rows: 1fr;
   align-items: center;
   justify-content: center;
-  height: var(--logo-size);
   border-bottom: var(--blue--lighter--60) 1px solid;
   background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/wave-line-blue.svg");
   background-repeat: no-repeat;
@@ -89,10 +88,32 @@ wwu-header {
 }
 .navigation-open {
   wwu-header {
+    grid-template-areas: "preheader logo"
+    "site-name site-name";
+    grid-template-columns: 2fr 1fr;
     .western-logo {
       place-self: center;
 
       margin-right: 0;
+    }
+  }
+}
+/*------------------------------------------------------------------------------
+1. No Hamburger Desktop Menu Styles
+------------------------------------------------------------------------------*/
+.is-ultimenu--hover {
+  @media (min-width: $medium) {
+    wwu-header {
+      grid-template-areas: "wrapper wrapper wrapper"
+      "preheader site-name logo"
+      "preheader header-region logo"
+      "main-nav main-nav main-nav";
+      grid-template-columns: 1fr 4fr 1fr;
+      grid-template-rows: auto;
+      background-position-y: 6.75rem;
+    }
+    .wwu-logo {
+      --logo-size: 5rem;
     }
   }
 }

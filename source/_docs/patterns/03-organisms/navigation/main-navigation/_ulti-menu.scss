@@ -3,74 +3,9 @@ Organism: Navigation - ultimenu
 --------------------------------------------------------------------------------
 Overwrite to reset default ultimenu styles.
 ------------------------------------------------------------------------------*/
-@mixin menu-link-decoration-active {
-  text-decoration-line: underline;
-  text-decoration-thickness: 0.4em;
-
-  text-underline-offset: -0.2em;
-}
-.ultimenu {
-  --ultisub-normal: var(--blue);
-
-  position: relative;
-  li {
-    .ultimenu__link {
-      left: 10%;
-      width: 40%;
-      padding: var(--space--xs);
-      transition: all 0.2s ease;
-      text-decoration-color: var(--blue--lighter--80);
-      color: var(--blue);
-      font-size: var(--font-size--xl);
-      font-weight: var(--font-weight--semibold);
-      &:focus-visible {
-        outline: var(--outline--focus);
-      }
-      &:hover,
-      &:focus,
-      &:active,
-      &.is-ulink-active {
-        @include menu-link-decoration-active;
-
-        color: var(--dark-blue);
-      }
-    }
-  }
-  .ultimenu__flyout {
-    position: absolute;
-    top: 0;
-    left: 60%;
-    width: 40%;
-  }
-}
-.ultimenu__caret {
-  i {
-    --ulticaret-active: var(--gray--lighter--40);
-    --ulticaret-normal: var(--gray--lighter--40);
-
-    transform: rotate(90deg);
-  }
-}
-.is-ulticaret--arrow .ultimenu__caret i::before,
-.is-ulticaret--arrow .ultimenu__caret i::after {
-  width: 1px;
-  height: 14px;
-}
-.is-ulticaret--arrow .ultimenu__caret i::before {
-  transform: translate(-8px, -50%) rotate(45deg);
-}
-.is-ulticaret--arrow .is-ulink-active .ultimenu__caret i::before {
-  transform: translate(8px, -50%) rotate(45deg);
-}
+@import "../../../00-utilities/breakpoints.scss";
 .ultimenu--htb .ultimenu__region {
   box-shadow: unset;
-}
-.ultimenu > .is-active-trail > .ultimenu__link,
-.ultimenu__item:has(.menu-item--active-trail) .ultimenu__link {
-  @include menu-link-decoration-active;
-
-  text-decoration-color: var(--blue--lighter--80);
-  color: var(--blue);
 }
 .is-ultimenu .is-ultimenu__canvas-off,
 .is-ultimenu--expanded .is-ultimenu__canvas-off,
@@ -86,4 +21,22 @@ Overwrite to reset default ultimenu styles.
 #header .is-ultihover .ultimenu__flyout,
 #footer .is-ultihover .ultimenu__flyout {
   min-width: unset;
+}
+.is-ultimenu .is-ultihover:not(.is-ulticaret) li .ultimenu__flyout:focus,
+.is-ultimenu .is-ultihover:not(.is-ulticaret) li:hover > .ultimenu__flyout,
+.is-ultimenu .is-ultihover:not(.is-ulticaret) li a:active + .ultimenu__flyout,
+.is-ultimenu .is-ultihover:not(.is-ulticaret) li a:focus + .ultimenu__flyout {
+  visibility: hidden;
+  min-height: 0;
+  max-height: 0;
+  padding: 0;
+  opacity: 0;
+}
+.is-ultidesktop .is-ultihover:not(.is-ulticaret) li a.open + .ultimenu__flyout {
+  visibility: visible;
+  overflow: visible;
+  height: auto;
+  max-height: unset;
+  transition-delay: 0.1s;
+  opacity: 1;
 }
