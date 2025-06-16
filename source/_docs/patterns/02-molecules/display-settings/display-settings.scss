@@ -3,33 +3,6 @@ Organism: Pre-header
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 @import "../../01-atoms/background-color/_background-color-mixins.scss";
-.toggle-settings {
-  --button-background-color: transparent;
-  --button-background-color--active: var(--blue);
-  --button-color: var(--blue);
-
-  position: relative;
-  z-index: 2;
-  display: grid;
-  grid-auto-flow: row;
-  width: var(--toggle-size);
-  height: var(--toggle-size);
-  margin: var(--space--md);
-  margin-right: 0;
-  border-radius: 50%;
-  box-shadow: none;
-  font-size: var(--font-size--2xs);
-  svg {
-    width: 2rem;
-    height: 2rem;
-    margin: calc(-1 * var(--space--xs));
-    margin-bottom: calc(-1 * var(--space--sm));
-  }
-  &[aria-expanded="true"] {
-    color: var(--white);
-    background-color: var(--blue);
-  }
-}
 .settings-menu {
   @include lightest-blue-bg;
 
@@ -59,4 +32,39 @@ Organism: Pre-header
 }
 .settings-open .settings-menu {
   display: grid;
+}
+.toggle-settings {
+  --button-background-color: transparent;
+  --button-background-color--active: var(--blue);
+  --button-color: var(--blue);
+
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-auto-flow: row;
+  width: var(--toggle-size);
+  height: var(--toggle-size);
+  margin: var(--space--md);
+  margin-right: 0;
+  border-radius: 50%;
+  box-shadow: none;
+  font-size: var(--font-size--2xs);
+  svg {
+    width: 2rem;
+    height: 2rem;
+    margin: calc(-1 * var(--space--xs));
+    margin-bottom: calc(-1 * var(--space--sm));
+  }
+  &[aria-expanded="true"] {
+    color: var(--white);
+    background-color: var(--blue);
+  }
+}
+[data-theme="dark"] {
+  .settings-menu {
+    @include dark-blue-bg;
+  }
+  .toggle-settings {
+    --button-color: var(--white);
+  }
 }

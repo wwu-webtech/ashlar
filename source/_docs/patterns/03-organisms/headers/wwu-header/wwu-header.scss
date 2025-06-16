@@ -5,6 +5,9 @@ Organism: Headers - Western header
 @import "../../../00-utilities/breakpoints.scss";
 @import "../../../01-atoms/background-color/_background-color-mixins.scss";
 wwu-header {
+  --menu-bg-color-1: var(--white);
+  --menu-bg-color-2: var(--blue--lighter--80);
+
   display: grid;
   grid-auto-flow: column;
   grid-template-areas: "preheader site-name logo";
@@ -12,7 +15,7 @@ wwu-header {
   grid-template-rows: 1fr;
   align-items: center;
   justify-content: center;
-  border-bottom: var(--blue--lighter--60) 1px solid;
+  border-bottom: rgba(var(--blue--rgb), 0.4) 1px solid;
   background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/wave-line-blue.svg");
   background-repeat: no-repeat;
   background-position-y: 4.5rem;
@@ -68,9 +71,12 @@ wwu-header {
     height: var(--toggle-size);
     margin: var(--space--md);
     margin-right: 0;
+    color: var(--white);
     border-radius: 50%;
     font-size: var(--font-size--2xs);
     svg {
+      fill: var(--white);
+
       width: 2rem;
       height: 2rem;
       margin: calc(-1 * var(--space--xs));
@@ -89,7 +95,7 @@ wwu-header {
 .navigation-open {
   wwu-header {
     grid-template-areas: "preheader logo"
-    "site-name site-name";
+    "site-name header-region";
     grid-template-columns: 2fr 1fr;
     .western-logo {
       place-self: center;
@@ -116,4 +122,14 @@ wwu-header {
       --logo-size: 5rem;
     }
   }
+}
+/*------------------------------------------------------------------------------
+2. Dark Mode
+------------------------------------------------------------------------------*/
+[data-theme="dark"] wwu-header {
+  --button-color: var(--blue--lighter--80);
+  --menu-bg-color-1: var(--black);
+  --menu-bg-color-2: var(--dark-blue);
+
+  background-color: var(--dark-blue);
 }

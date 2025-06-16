@@ -21,13 +21,13 @@ Molecule: Search
   .search-label {
     margin-bottom: var(--space--md);
     text-align: center;
-    color: var(--dark-blue);
+    color: var(--h2-color);
     font-size: var(--font-size--xl);
   }
   #search-box {
     text-align: center;
     border: none;
-    border-bottom: var(--dark-blue) var(--border-width--md) solid;
+    border-bottom: var(--h2-color) var(--border-width--md) solid;
     border-radius: 0;
     background-color: transparent;
     font-size: var(--font-size--lg);
@@ -81,5 +81,13 @@ Molecule: Search
   &[aria-expanded="true"] {
     color: var(--white);
     background-color: var(--blue);
+  }
+}
+[data-theme="dark"] {
+  .wwu-search {
+    @include dark-blue-bg;
+  }
+  .toggle-search {
+    --button-color: var(--white);
   }
 }

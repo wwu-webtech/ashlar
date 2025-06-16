@@ -31,6 +31,8 @@ Mixins
 1. Hamburger Active Menu Styles
 ------------------------------------------------------------------------------*/
 .navigation-wrapper {
+  --h2-color: var(--blue);
+
   @include hidden;
 
   position: fixed;
@@ -59,6 +61,7 @@ Mixins
 .region--main_navigation {
   grid-area: main;
   padding-top: var(--logo-size);
+  background-color: var(--menu-bg-color-1);
   nav {
     border-top: 1px solid var(--blue--lighter--60);
   }
@@ -67,26 +70,24 @@ Mixins
   h2 {
     margin-top: 0;
     text-transform: uppercase;
-    color: var(--blue);
     font-size: var(--font-size--lg);
   }
   .menu {
+    margin-bottom: var(--space--sm);
     a {
       padding-left: unset;
       transition: all 0.2s ease;
       text-decoration-color: var(--blue--lighter--80);
-      color: var(--blue);
       border-left: unset;
       &:hover,
       &:focus,
       &:active,
       &[aria-current="page"] {
         @include menu-link-decoration-active;
-
-        color: var(--dark-blue);
       }
     }
     .menu {
+      margin: 0;
       a {
         font-size: var(--font-size--sm);
       }
@@ -94,6 +95,8 @@ Mixins
   }
 }
 .university-links {
+  --link-color: var(--dark-blue);
+
   grid-area: prospective;
   padding-top: var(--logo-size);
   background-color: var(--blue--lighter--80);
@@ -155,7 +158,12 @@ Mixins
   }
 }
 .ultimenu {
+  --ultiactive: var(--blue);
   --ultilink-active: var(--link-color);
+  --ultilink-normal: var(--blue);
+  --ultiregion: var(--transparent);
+  --ultiregion-normal: var(--blue);
+  --ultisub-active: var(--link-color);
   --ultisub-normal: var(--blue);
 
   position: relative;
@@ -168,7 +176,6 @@ Mixins
       padding: var(--space--xs);
       transition: all 0.2s ease;
       text-decoration-color: var(--blue--lighter--80);
-      color: var(--blue);
       font-size: var(--font-size--xl);
       font-weight: var(--font-weight--semibold);
       &:focus-visible {
@@ -179,8 +186,6 @@ Mixins
       &:active,
       &.is-ulink-active {
         @include menu-link-decoration-active;
-
-        color: var(--dark-blue);
       }
     }
   }
@@ -195,7 +200,6 @@ Mixins
   @include menu-link-decoration-active;
 
   text-decoration-color: var(--blue--lighter--80);
-  color: var(--blue);
 }
 .is-ulticaret--arrow {
   .ultimenu__caret {
@@ -264,7 +268,7 @@ Mixins
       }
     }
     .main-navigation {
-      background-color: var(--white);
+      background-color: var(--menu-bg-color-1);
       .menu {
         a {
           text-decoration-color: var(--blue--lighter--60);
@@ -313,6 +317,9 @@ Mixins
       padding: 0;
     }
     .ultimenu {
+      --h2-color: var(--dark-blue);
+      --h3-color: var(--dark-blue);
+
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
@@ -329,12 +336,9 @@ Mixins
           &:active,
           &:focus {
             text-decoration: none;
-            background-color: var(--blue--lighter--80);
+            background-color: var(--menu-bg-color-2);
           }
         }
-      }
-      .title {
-        color: var(--dark-blue);
       }
       .ultimenu__flyout {
         --ultiregion: rgba(var(--blue--lighter--80--rgb), 0.98);
@@ -379,5 +383,28 @@ Mixins
         top: 0;
       }
     }
+  }
+}
+/*------------------------------------------------------------------------------
+3. Dark Mode
+------------------------------------------------------------------------------*/
+[data-theme="dark"] {
+  .university-links {
+    @include darkest-blue-bg;
+
+    background-image: none;
+    a {
+      text-decoration-color: var(--dark-blue);
+      color: var(--blue--lighter--60);
+    }
+  }
+  .ultimenu {
+    --ultiactive: var(--blue--lighter--60);
+    --ultilink-active: var(--link-color);
+    --ultilink-normal: var(--blue--lighter--60);
+    --ultiregion: var(--transparent);
+    --ultiregion-normal: var(--blue--lighter--60);
+    --ultisub-active: var(--link-color);
+    --ultisub-normal: var(--blue--lighter--60);
   }
 }
