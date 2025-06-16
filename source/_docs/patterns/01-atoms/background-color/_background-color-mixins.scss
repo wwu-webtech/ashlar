@@ -25,7 +25,7 @@ Black, darkest blue, and dark blue are black based and share link/heading colors
   --link-color--visited: var(--purple--lighter--80);
   --link-decoration-color: var(--blue--lighter--60);
   --midtone-text-color: var(--gray--lighter--80);
-  --oline-color: var(--white);
+  --outline--focus: solid var(--blue--lighter--80) var(--outline-width);
   --required-color: var(--blue--lighter--40);
 
   color: var(--white);

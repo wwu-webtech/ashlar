@@ -52,7 +52,10 @@ Atom: Colors
     }
   }
   &.white {
+    --h3-color: var(--dark-blue);
+
     min-height: 30vh;
+    color: var(--black);
     border: solid var(--border-width--md) var(--gray--lighter--90);
     background-color: var(--white);
   }

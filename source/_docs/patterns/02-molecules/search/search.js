@@ -107,11 +107,11 @@ if (
 
         /* Toggle search -----------------------------------------------------------*/
         function toggle_search() {
-          if (html.classList.contains("search-closed")) {
-            open();
+          if (html.classList.contains("search-open")) {
+            close();
             return;
           } else {
-            close();
+            open();
             return;
           }
         }
