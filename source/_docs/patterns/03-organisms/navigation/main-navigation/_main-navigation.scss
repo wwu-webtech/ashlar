@@ -155,6 +155,7 @@ Mixins
   }
 }
 .ultimenu {
+  --ultilink-active: var(--link-color);
   --ultisub-normal: var(--blue);
 
   position: relative;
@@ -264,6 +265,12 @@ Mixins
     }
     .main-navigation {
       background-color: var(--white);
+      .menu {
+        a {
+          text-decoration-color: var(--blue--lighter--60);
+          color: var(--link-color);
+        }
+      }
     }
     .university-links {
       display: flex;
@@ -291,6 +298,7 @@ Mixins
       flex-flow: row;
       align-items: center;
       a {
+        margin: var(--space--2xs);
         padding: unset;
         text-transform: none;
         font-size: var(--font-size--sm);
@@ -312,8 +320,11 @@ Mixins
         .ultimenu__link {
           left: unset;
           width: unset;
-          font-size: var(--font-size--sm);
+          padding: var(--space--2xs) var(--space--xs);
+          border: solid transparent var(--border-width--md);
+          font-size: var(--font-size--md);
           font-weight: var(--font-weight--regular);
+          line-height: 1.5;
           &:hover,
           &:active,
           &:focus {
@@ -322,14 +333,17 @@ Mixins
           }
         }
       }
+      .title {
+        color: var(--dark-blue);
+      }
       .ultimenu__flyout {
-        --ultiregion: rgba(var(--blue--lighter--80--rgb), 0.95);
+        --ultiregion: rgba(var(--blue--lighter--80--rgb), 0.98);
 
         position: absolute;
         top: 100%;
         left: 0;
         width: unset;
-        width: 100vw;
+        width: 100%;
       }
       .open {
         .ultimenu__flyout {
@@ -339,10 +353,17 @@ Mixins
           opacity: 1;
         }
       }
+      .ultimenu__region {
+        display: flex;
+        flex-flow: row wrap;
+        gap: var(--space--lg);
+        justify-content: center;
+      }
     }
-    .ultimenu__item:has(.menu-item--active-trail) .ultimenu__link {
+    .ultimenu__item:has(.menu-item--active-trail) .ultimenu__link,
+    .ultimenu li .ultimenu__link.is-active {
       text-decoration: none;
-      border-bottom: solid var(--blue) var(--border-width--md);
+      border-bottom-color: var(--blue);
       font-weight: var(--font-weight--bold);
     }
     .toggle-menu {
