@@ -43,7 +43,7 @@
       </div>
     
       <div class="footer-bottom">
-          <nav class="footer-nav" aria-labelledby="wwu-footer-heading">
+          <nav class="footer-nav horizontal menu" aria-labelledby="wwu-footer-heading">
               <h2 id="wwu-footer-heading" class="visually-hidden">University Links and Policy</h2>            
               
               <a href="https://www.wwu.edu/workatwestern">Jobs</a>

@@ -9,6 +9,7 @@ Atom: Text - Links
   --link-color--active: var(--dark-blue);
   --link-color--focus: var(--dark-blue);
   --link-color--visited: var(--purple);
+  --link-color--visited--active: var(--purple);
   --link-decoration-color: var(--blue);
   --link-decoration-color--active: var(--blue--lighter--80);
   --link-decoration-color--visited: var(--purple--lighter--40);
@@ -20,7 +21,8 @@ a {
   text-decoration-thickness: var(--border-width--md);
 
   padding: 0.1563rem 0;
-  transition: all var(--transition-speed--fast) cubic-bezier(0.33, 0.66, 0.66, 1),
+  transition: text-underline-offset var(--transition-speed--fast) cubic-bezier(0.33, 0.66, 0.66, 1),
+  text-decoration var(--transition-speed--fast) cubic-bezier(0.33, 0.66, 0.66, 1),
   background-image var(--transition-speed--fast) cubic-bezier(0.33, 0.66, 0.66, 1);
   text-decoration-color: var(--link-decoration-color);
   text-underline-offset: 0.3125rem;
@@ -37,6 +39,12 @@ a {
   &:visited {
     text-decoration-color: var(--link-decoration-color--visited);
     color: var(--link-color--visited);
+    &:active,
+    &:hover,
+    &:focus {
+      text-decoration-color: var(--link-decoration-color--active);
+      color: var(--link-color--visited--active);
+    }
   }
   &:focus-visible {
     outline: var(--outline--focus);
@@ -45,9 +53,6 @@ a {
     overflow-wrap: anywhere;
   }
   &[aria-current="page"] {
-    --link-color: var(--link-color--active);
-    --link-color--visited: var(--link-color--active);
-
     border: solid var(--border-width--sm) transparent;
     font-weight: var(--font-weight--semibold);
   }

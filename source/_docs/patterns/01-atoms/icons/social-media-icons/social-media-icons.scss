@@ -47,7 +47,15 @@ wwu-social {
   stroke-width: 1;
 }
 .wwu-cls-4 {
-  fill: var(--blue--lighter--60);
+  fill: var(--blue--lighter--40);
+}
+[data-theme="dark"] {
+  .wwu-cls-3 {
+    stroke: var(--white);
+  }
+  .wwu-cls-4 {
+    fill: var(--blue);
+  }
 }
 @media (forced-colors: active) {
   .wwu-social-link {

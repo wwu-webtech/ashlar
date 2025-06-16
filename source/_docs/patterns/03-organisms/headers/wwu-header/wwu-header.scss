@@ -43,6 +43,9 @@ wwu-header {
       text-transform: uppercase;
       color: var(--link-color);
       font-size: var(--font-size--xl);
+      &:visited {
+        color: var(--link-color);
+      }
     }
   }
   .western-header-region {
@@ -57,6 +60,9 @@ wwu-header {
       text-decoration: none;
       color: var(--link-color);
       font-weight: var(--font-wight--bold);
+      &:visited {
+        color: var(--link-color);
+      }
     }
     p {
       margin: 0;

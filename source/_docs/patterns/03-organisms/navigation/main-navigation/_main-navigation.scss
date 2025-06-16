@@ -63,7 +63,7 @@ Mixins
   padding-top: var(--logo-size);
   background-color: var(--menu-bg-color-1);
   nav {
-    border-top: 1px solid var(--blue--lighter--60);
+    border-top: rgba(var(--blue--rgb), 0.4) 1px solid;
   }
 }
 .main-navigation {
@@ -77,13 +77,15 @@ Mixins
     a {
       padding-left: unset;
       transition: all 0.2s ease;
-      text-decoration-color: var(--blue--lighter--80);
+      text-decoration-color: var(--link-decoration-color);
       border-left: unset;
       &:hover,
       &:focus,
       &:active,
       &[aria-current="page"] {
         @include menu-link-decoration-active;
+
+        background-color: unset;
       }
     }
     .menu {
@@ -96,6 +98,8 @@ Mixins
 }
 .university-links {
   --link-color: var(--dark-blue);
+  --link-color--visited: var(--dark-blue);
+  --link-color--visited--active: var(--dark-blue);
 
   grid-area: prospective;
   padding-top: var(--logo-size);
@@ -108,16 +112,15 @@ Mixins
   }
   a {
     text-decoration: none;
-    text-decoration-color: var(--blue--lighter--60);
+    text-decoration-color: var(--blue--lighter--40);
     text-transform: uppercase;
-    color: var(--dark-blue);
     font-weight: var(--font-weight--bold);
     &:hover,
     &:focus,
     &:active {
       @include menu-link-decoration-active;
 
-      text-decoration-color: var(--blue--lighter--60);
+      text-decoration-color: var(--blue--lighter--40);
     }
   }
   .icon-link {
@@ -158,6 +161,7 @@ Mixins
   }
 }
 .ultimenu {
+  --link-decoration-color: var(--blue--lighter--80);
   --ultiactive: var(--blue);
   --ultilink-active: var(--link-color);
   --ultilink-normal: var(--blue);
@@ -175,7 +179,7 @@ Mixins
       width: 40%;
       padding: var(--space--xs);
       transition: all 0.2s ease;
-      text-decoration-color: var(--blue--lighter--80);
+      text-decoration-color: var(--link-decoration-color);
       font-size: var(--font-size--xl);
       font-weight: var(--font-weight--semibold);
       &:focus-visible {
@@ -199,7 +203,7 @@ Mixins
 .ultimenu__item:has(.menu-item--active-trail) .ultimenu__link {
   @include menu-link-decoration-active;
 
-  text-decoration-color: var(--blue--lighter--80);
+  text-decoration-color: var(--link-decoration-color);
 }
 .is-ulticaret--arrow {
   .ultimenu__caret {
@@ -271,7 +275,7 @@ Mixins
       background-color: var(--menu-bg-color-1);
       .menu {
         a {
-          text-decoration-color: var(--blue--lighter--60);
+          text-decoration-color: var(--link-decoration-color);
           color: var(--link-color);
         }
       }
@@ -336,13 +340,11 @@ Mixins
           &:active,
           &:focus {
             text-decoration: none;
-            background-color: var(--menu-bg-color-2);
+            background-color: var(--link-decoration-color);
           }
         }
       }
       .ultimenu__flyout {
-        --ultiregion: rgba(var(--blue--lighter--80--rgb), 0.98);
-
         position: absolute;
         top: 100%;
         left: 0;
@@ -392,13 +394,14 @@ Mixins
   .university-links {
     @include darkest-blue-bg;
 
-    background-image: none;
+    background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/island-bg-dark.webp");
     a {
-      text-decoration-color: var(--dark-blue);
+      text-decoration-color: var(--dark-blue--darker--40);
       color: var(--blue--lighter--60);
     }
   }
   .ultimenu {
+    --link-decoration-color: var(--dark-blue);
     --ultiactive: var(--blue--lighter--60);
     --ultilink-active: var(--link-color);
     --ultilink-normal: var(--blue--lighter--60);
@@ -406,5 +409,18 @@ Mixins
     --ultiregion-normal: var(--blue--lighter--60);
     --ultisub-active: var(--link-color);
     --ultisub-normal: var(--blue--lighter--60);
+  }
+  &.is-ultimenu--hover {
+    @media (min-width: $medium) {
+      .main-navigation {
+        --menu-bg-color-1: var(--dark-blue);
+      }
+      .ultimenu {
+        --h2-color: var(--blue--lighter--60);
+        --h3-color: var(--blue--lighter--60);
+        --link-decoration-color: var(--dark-blue--darker--20);
+        --ultibg: var(--dark-blue);
+      }
+    }
   }
 }
