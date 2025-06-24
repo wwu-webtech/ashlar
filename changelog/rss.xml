@@ -4,7 +4,7 @@
         <title>Ashlar Blog</title>
         <link>https://ashlar.wwu.edu/changelog</link>
         <description>Ashlar Blog</description>
-        <lastBuildDate>Sun, 01 Jun 2025 12:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 24 Jun 2025 12:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,9 +12,15 @@
             <title><![CDATA[5.5.x Updates]]></title>
             <link>https://ashlar.wwu.edu/changelog/version-5-5</link>
             <guid>https://ashlar.wwu.edu/changelog/version-5-5</guid>
-            <pubDate>Sun, 01 Jun 2025 12:00:00 GMT</pubDate>
-            <description><![CDATA[5.5.9]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="559">5.5.9<a href="https://ashlar.wwu.edu/changelog/version-5-5#559" class="hash-link" aria-label="Direct link to 5.5.9" title="Direct link to 5.5.9">​</a></h2>
+            <pubDate>Tue, 24 Jun 2025 12:00:00 GMT</pubDate>
+            <description><![CDATA[5.5.10]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5510">5.5.10<a href="https://ashlar.wwu.edu/changelog/version-5-5#5510" class="hash-link" aria-label="Direct link to 5.5.10" title="Direct link to 5.5.10">​</a></h2>
+<p>** June 24, 2025 **</p>
+<ul>
+<li>Added 403 page template to docs</li>
+<li>Beginning deprecation of headline block, to be replaced by a style option in banners</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="559">5.5.9<a href="https://ashlar.wwu.edu/changelog/version-5-5#559" class="hash-link" aria-label="Direct link to 5.5.9" title="Direct link to 5.5.9">​</a></h2>
 <p>** June 2, 2025 **</p>
 <ul>
 <li>Update banner template to use media field</li>
