@@ -9,7 +9,7 @@ Molecule: Headline
 /*----------------------------------------------------------------------------
 1. Style 1: Box Headline
 ----------------------------------------------------------------------------*/
-.box-headline {
+.box-headline:not(.wwu-banner) {
   @include dark-blue-bg;
 
   align-self: start;

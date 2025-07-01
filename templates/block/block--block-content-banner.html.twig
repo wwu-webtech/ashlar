@@ -46,21 +46,22 @@
 {% block template %}
   <div{{ attributes }}>
     {% block content %}
-      {% block title %}
-        {% include "@templates/label/label-customized.twig" %}
-      {% endblock %}
-      
-      {% block image %}
-        <div class="background-image">
-          {{ content.field_media }}
-          {{ content.field_image }}
-        </div>
-      {% endblock %}
+      <div class="content">
+        {% block title %}
+          {% include "@templates/label/label-customized.twig" %}
+        {% endblock %}     
 
-      <div {{ body_attributes }}>
-        {{ content.body }}
+        <div {{ body_attributes }}>
+          {{ content.body }}
+        </div>
+      </div>    
+    {% endblock %}
+        
+    {% block image %}
+      <div class="background-image">
+        {{ content.field_media }}
+        {{ content.field_image }}
       </div>
     {% endblock %}
-
   </div>
 {% endblock %}
