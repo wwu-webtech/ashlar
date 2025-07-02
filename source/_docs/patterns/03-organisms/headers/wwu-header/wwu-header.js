@@ -183,6 +183,11 @@ if (
           close_menu();
           menu_toggle.addEventListener("click", toggle_menu);            
 
+          const hide_links = this.getAttribute('hidelinks');
+          if (hide_links) {
+            this.querySelector(".wwu-menu").remove();
+          }
+
         }
       }
     }
