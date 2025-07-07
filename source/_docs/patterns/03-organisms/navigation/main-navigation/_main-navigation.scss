@@ -35,27 +35,33 @@ Mixins
 
   @include hidden;
 
-  position: fixed;
+  position: absolute;
   top: 0;
-  grid-template-areas: "main prospective"
-  "main prospective";
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: auto auto;
+  grid-template-areas: "main"
+  "prospective";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
   width: 100vw;
   max-width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   transition: opacity var(--ease--standard) var(--transition-speed--fast);
   background: var(--white);
-  &:after {
-    position: absolute;
-    bottom: 0;
-    display: block;
-    width: 100vw;
-    height: 10rem;
-    content: "";
-    background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/wave-line-blue.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
+  @media (min-width: $medium) {
+    grid-template-areas: "main prospective"
+    "main prospective";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    &:after {
+      position: absolute;
+      bottom: 0;
+      display: block;
+      width: 100vw;
+      height: 10rem;
+      content: "";
+      background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/wave-line-blue.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 }
 .region--main_navigation {
@@ -67,6 +73,7 @@ Mixins
   }
 }
 .main-navigation {
+  text-align: left;
   h2 {
     margin-top: 0;
     text-transform: uppercase;
@@ -102,11 +109,15 @@ Mixins
   --link-color--visited--active: var(--dark-blue);
 
   grid-area: prospective;
-  padding-top: var(--logo-size);
   background-color: var(--blue--lighter--80);
   background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/island-bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
+  font-size: var(--font-size--sm);
+  @media (min-width: $medium) {
+    padding-top: var(--logo-size);
+    font-size: unset;
+  }
   .component-icon {
     transition: all ease 0.1s;
   }
@@ -135,29 +146,44 @@ Mixins
 }
 .action-links {
   display: flex;
-  flex-flow: column;
+  flex-flow: row;
+  justify-content: space-evenly;
   padding-top: var(--space--md);
   border-top: 1px solid var(--blue--lighter--60);
   a {
     margin: var(--space--sm);
     font-size: var(--font-size--lg);
   }
+  @media (min-width: $medium) {
+    flex-flow: column;
+  }
 }
 .quick-links {
   display: flex;
-  flex-flow: column;
+  flex-flow: row wrap;
+  justify-content: center;
   text-align: center;
-  &:before {
-    place-self: center;
-
-    display: block;
-    width: 4rem;
-    margin: var(--space--md);
-    content: "";
-    border-top: 1px var(--blue) solid;
-  }
   a {
-    margin: var(--space--sm);
+    margin: var(--space--xs);
+  }
+  @media (min-width: $medium) {
+    flex-flow: column;
+    a {
+      margin: var(--space--sm);
+    }
+    &:before {
+      place-self: center;
+
+      position: relative;
+      z-index: 1;
+      display: block;
+      flex-flow: row wrap;
+      justify-content: center;
+      width: 4rem;
+      margin: var(--space--md);
+      content: "";
+      border-top: 1px var(--blue) solid;
+    }
   }
 }
 .ultimenu {
@@ -175,8 +201,6 @@ Mixins
   li {
     .ultimenu__link {
       z-index: unset;
-      left: 10%;
-      width: 40%;
       padding: var(--space--xs);
       transition: all 0.2s ease;
       text-decoration-color: var(--link-decoration-color);
@@ -191,13 +215,19 @@ Mixins
       &.is-ulink-active {
         @include menu-link-decoration-active;
       }
+      @media (min-width: $medium) {
+        left: 10%;
+        width: 40%;
+      }
     }
   }
-  .ultimenu__flyout {
-    position: absolute;
-    top: 0;
-    left: 60%;
-    width: 40%;
+  @media(min-width: $medium) {
+    .ultimenu__flyout {
+      position: absolute;
+      top: 0;
+      left: 60%;
+      width: 40%;
+    }
   }
 }
 .ultimenu__item:has(.menu-item--active-trail) .ultimenu__link {
@@ -210,8 +240,9 @@ Mixins
     i {
       --ulticaret-active: var(--gray--lighter--40);
       --ulticaret-normal: var(--gray--lighter--40);
-
-      transform: rotate(90deg);
+      @media (min-width: $medium) {
+        transform: rotate(90deg);
+      }
       &:before {
         width: 1px;
         height: 14px;
@@ -238,22 +269,14 @@ Mixins
   .navigation-wrapper {
     @include visible;
   }
-  .page-content {
+  .page-content,
+  .splash,
+  footer {
     display: none;
   }
   .western-logo {
     position: relative;
     z-index: 1;
-  }
-}
-.toolbar-fixed {
-  .navigation-wrapper {
-    top: 45px;
-  }
-}
-.toolbar-horizontal.toolbar-tray-open {
-  .navigation-wrapper {
-    top: 79px;
   }
 }
 /*------------------------------------------------------------------------------
@@ -266,7 +289,7 @@ Mixins
 
       position: relative;
       grid-area: wrapper;
-      height: unset;
+      min-height: unset;
       &:after {
         display: none;
       }
@@ -422,5 +445,13 @@ Mixins
         --ultibg: var(--dark-blue);
       }
     }
+  }
+}
+.is-uitem-expanded > .ultimenu__flyout,
+.is-uitem-expanded > ul,
+.ultimenu__region {
+  @media (max-width: $small) {
+    padding: 0;
+    padding-left: var(--space--md);
   }
 }

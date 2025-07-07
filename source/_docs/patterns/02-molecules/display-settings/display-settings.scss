@@ -2,17 +2,21 @@
 Organism: Pre-header
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
+@import "../../00-utilities/breakpoints.scss";
 @import "../../01-atoms/background-color/_background-color-mixins.scss";
 .settings-menu {
   @include lightest-blue-bg;
 
   position: absolute;
-  top: calc(-1 * var(--space--xs));
+  top: var(--logo-size);
   left: 0;
   display: none;
   width: 100vw;
   padding: var(--space--lg);
   color: var(--dark-blue);
+  @media (min-width: $large) {
+    top: calc(-1 * var(--space--xs));
+  }
   .menu-container {
     display: flex;
     flex-flow: column;
@@ -42,8 +46,9 @@ Organism: Pre-header
   z-index: 2;
   display: grid;
   grid-auto-flow: row;
-  width: var(--toggle-size);
-  height: var(--toggle-size);
+  place-content: center;
+  width: var(--toggle-size--sm);
+  height: var(--toggle-size--sm);
   margin: var(--space--md);
   margin-right: 0;
   border-radius: 50%;
@@ -58,6 +63,10 @@ Organism: Pre-header
   &[aria-expanded="true"] {
     color: var(--white);
     background-color: var(--blue);
+  }
+  @media (min-width: $medium) {
+    width: var(--toggle-size);
+    height: var(--toggle-size);
   }
 }
 [data-theme="dark"] {

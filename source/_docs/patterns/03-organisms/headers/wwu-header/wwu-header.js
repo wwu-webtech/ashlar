@@ -180,18 +180,24 @@ if (
             });
           });
         }
-        
-        if (html.classList.contains("is-ultimenu--active") || window.innerWidth <= 951) {
-          nav_wrapper.prepend(main_nav);
-        } else {
-          this.append(main_nav);
+
+        function updateNavPosition() {
+          if (html.classList.contains("is-ultimenu--active") || window.innerWidth <= 951) {
+            nav_wrapper.prepend(main_nav);
+            close();
+          } else {                        
+            document.querySelector("wwu-header").append(main_nav);
+          }
         }
+        
+    
         if (menu_toggle) {
           menu_toggle.addEventListener("click", toggle_menu);
           menu_toggle.addEventListener("keyup", keyboard_close);
           this.addEventListener("keyup", keyboard_close);
         }     
-        close();
+        updateNavPosition();
+        window.addEventListener("resize", updateNavPosition);
       }
     }
   }

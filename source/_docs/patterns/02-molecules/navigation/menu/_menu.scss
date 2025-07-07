@@ -7,7 +7,8 @@ Molecule: Menu
   padding: 0;
   list-style: none;
   a {
-    display: block;
+    display: grid;
+    align-items: center;
     min-height: var(--touch-target--aaa);
     padding: var(--space--2xs) var(--space--sm);
     transition: background-color var(--transition-speed--fast) cubic-bezier(0.33, 0.66, 0.66, 1);
@@ -32,8 +33,10 @@ Molecule: Menu
       a {
         display: grid;
         place-content: center;
-        border: none;
       }
+    }
+    a {
+      border: none;
     }
   }
   /*------------------------------------------------------------------------------
