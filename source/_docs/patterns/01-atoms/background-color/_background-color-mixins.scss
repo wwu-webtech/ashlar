@@ -11,20 +11,21 @@ Atom: Background Color Mixins
 Black, darkest blue, and dark blue are black based and share link/heading colors.
 ------------------------------------------------------------------------------*/
 @mixin black-bg {
-  --h1-color: var(--light-green);
-  --h2-color: var(--light-green);
-  --h3-color: var(--light-green);
-  --h4-color: var(--light-green);
-  --h5-color: var(--light-green);
-  --h6-color: var(--light-green);
+  --h1-color: var(--blue--lighter--60);
+  --h2-color: var(--blue--lighter--60);
+  --h3-color: var(--blue--lighter--60);
+  --h4-color: var(--blue--lighter--60);
+  --h5-color: var(--blue--lighter--60);
+  --h6-color: var(--blue--lighter--60);
   --icon-background-color--active: var(--blue--lighter--40);
   --icon-color--active: var(--dark-blue);
   --link-color: var(--blue--lighter--80);
+  --link-color--active: var(--dark-blue);
   --link-color--focus: var(--dark-blue);
   --link-color--visited: var(--purple--lighter--80);
   --link-decoration-color: var(--blue--lighter--60);
   --midtone-text-color: var(--gray--lighter--80);
-  --oline-color: var(--white);
+  --outline--focus: solid var(--blue--lighter--80) var(--outline-width);
   --required-color: var(--blue--lighter--40);
 
   color: var(--white);

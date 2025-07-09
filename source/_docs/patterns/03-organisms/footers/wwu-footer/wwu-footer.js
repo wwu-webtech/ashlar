@@ -7,7 +7,7 @@
     <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/components/wwu-footer.css" /-->
 
     <div class="artwork">
-      <img src="/themes/ashlar/source/images/footer-artwork.webp" alt="Mountains, streams and trees rendered in bold and colorful illustration by Gretchen Leggitt" />
+      <img src="https://ashlar.blob.core.windows.net/ashlar-theme-files/images/footer-artwork.webp" alt="Mountains, streams and trees rendered in bold and colorful illustration by Gretchen Leggitt" />
     </div>
 
     <svg class="footer-waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1846 62.99" aria-hidden="true">
@@ -43,13 +43,12 @@
       </div>
     
       <div class="footer-bottom">
-          <nav class="footer-nav" aria-labelledby="wwu-footer-heading">
-              <h2 id="wwu-footer-heading" class="visually-hidden">University Links and Policy</h2>
-              <a href="https://www.wwu.edu/contactwwu/">Contact Western</a> 
-              <a href="https://calendar.wwu.edu/">Calendar</a>
-              <a href="https://www.wwu.edu/directory">University Directory</a>
-              <a href="https://www.wwu.edu/campus-maps">Map</a>
-              <a href="https://www.wwu.edu/online-privacy-statement">Privacy</a>
+          <nav class="footer-nav horizontal menu" aria-labelledby="wwu-footer-heading">
+              <h2 id="wwu-footer-heading" class="visually-hidden">University Links and Policy</h2>            
+              
+              <a href="https://www.wwu.edu/workatwestern">Jobs</a>
+              <a href="https://equity.wwu.edu/sebrt/report-bias-incident">Report Bias</a>
+              <a href="https://www.wwu.edu/online-privacy-statement">Privacy</a>              
               <a href="https://www.wwu.edu/commitment-accessibility">Accessibility Notice</a>
               <a href="https://www.wwu.edu/equal-opportunity-policy">Equal Employment Opporunity Policy</a>
           </nav>

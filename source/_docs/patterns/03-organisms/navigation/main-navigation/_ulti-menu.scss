@@ -3,119 +3,40 @@ Organism: Navigation - ultimenu
 --------------------------------------------------------------------------------
 Overwrite to reset default ultimenu styles.
 ------------------------------------------------------------------------------*/
-.main-navigation {
-  .ultimenu {
-    z-index: initial;
-    overflow: visible;
-    font-size: var(--font-size--sm);
-    > li {
-      min-width: initial;
-      > .ultimenu__link {
-        z-index: 1;
-      }
-    }
-    section.ultimenu__flyout {
-      z-index: initial;
-      display: block;
-      visibility: hidden;
-      grid-area: flyout;
-      max-height: 0;
-      margin: 0;
-      padding: 0;
-      opacity: 0;
-      border-radius: 0;
-      box-shadow: none;
-      @media (min-width: $medium) {
-        top: 100%;
-        right: 0 !important;
-        display: none !important;
-      }
-      &.open {
-        visibility: visible;
-        max-height: none;
-        opacity: 1;
-        @media (min-width: $medium) {
-          position: absolute;
-          z-index: 2;
-          display: block !important;
-        }
-      }
-    }
-    .ultimenusub {
-      .ultimenu__item {
-        display: unset;
-      }
-    }
-  }
-  .ultimenu--basic {
-    .region {
-      padding: 0;
-    }
-  }
-  .ultimenu--horizontal {
-    .ultimenu__link {
-      .ultimenu__caret {
-        display: none;
-      }
-    }
-  }
-  .ultimenu__region,
-  .ultimenu--htb .ultimenu__flyout,
-  .ultimenu--htb .ultimenu__region {
-    border-radius: 0;
-    box-shadow: none;
-    a {
-      color: inherit;
-    }
-  }
-  .open {
-    visibility: visible;
-    opacity: 1;
-  }
-  #block-ultimenumainnavigation {
-    &.contextual-region {
-      position: inherit;
-    }
-  }
+@import "../../../00-utilities/breakpoints.scss";
+.ultimenu--htb .ultimenu__region {
+  box-shadow: unset;
 }
-.button {
-  &.button--ultimenu {
-    display: none;
-  }
+.is-ultimenu .is-ultimenu__canvas-off,
+.is-ultimenu--expanded .is-ultimenu__canvas-off,
+.is-ultimenu--hiding .is-ultimenu__canvas-off {
+  z-index: 1;
 }
-.is-ultidesktop {
-  .is-ultihover:not(.is-ulticaret) {
-    li .ultimenu__flyout:focus,
-    li:hover > .ultimenu__flyout,
-    li a:active + .ultimenu__flyout,
-    li a:focus + .ultimenu__flyout {
-      padding: unset;
-    }
-  }
+.is-ultimenu .is-ultihover > li {
+  display: block;
 }
-html.is-ultimobile .ultimenu > li,
-html.is-ultimobile .ultimenu .ultimenu__link {
-  @media (min-width: 801px) {
-    width: inherit;
-    min-width: unset;
-  }
+.sidebar .ultimenu__flyout,
+.is-ultihover.ultimenu--offcanvas:not(.ultimenu--vertical),
+.is-ultihover.ultimenu--offcanvas .ultimenu__flyout,
+#header .is-ultihover .ultimenu__flyout,
+#footer .is-ultihover .ultimenu__flyout {
+  min-width: unset;
 }
-.is-ultidesktop .is-ultihover .ultimenu__flyout,
-.is-ultidesktop:not(.is-ultimenu--active) .is-ulticaret .ultimenu__flyout {
-  position: relative;
-}
-.is-ultidesktop .is-ultihover:not(.is-ulticaret) li:hover > .ultimenu__flyout {
+.is-ultimenu .is-ultihover:not(.is-ulticaret) li .ultimenu__flyout:focus,
+.is-ultimenu .is-ultihover:not(.is-ulticaret) li:hover > .ultimenu__flyout,
+.is-ultimenu .is-ultihover:not(.is-ulticaret) li a:active + .ultimenu__flyout,
+.is-ultimenu .is-ultihover:not(.is-ulticaret) li a:focus + .ultimenu__flyout {
   visibility: hidden;
   min-height: 0;
   max-height: 0;
+  padding: 0;
   opacity: 0;
 }
 .is-ultidesktop .is-ultihover:not(.is-ulticaret) li a.open + .ultimenu__flyout {
   visibility: visible;
   overflow: visible;
   height: auto;
-  min-height: 64px;
-  max-height: none;
+  max-height: unset;
   transition-delay: 0.1s;
   opacity: 1;
 }

@@ -1,162 +1,457 @@
 /*------------------------------------------------------------------------------
 Molecule: Main navigation/ultimenu custom styles
 --------------------------------------------------------------------------------
-1. Wordpress
 ------------------------------------------------------------------------------*/
-.main-navigation {
-  grid-area: main-nav;
-  @media (min-width: $medium) {
-    width: 100%;
-    height: inherit;
-  }
-  & > .menu,
-  & > .menu-primary,
-  .ultimenu {
-    @include blue-bg;
+@import "../../../00-utilities/breakpoints.scss";
+@import "../../../01-atoms/background-color/_background-color-mixins.scss";
 
-    position: relative;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin: 0;
-    padding-left: 0;
-    .ultimenu__item,
-    .top-level-menu-item {
-      display: grid;
-      grid-template-areas: "link icon"
-      "flyout flyout";
-      grid-template-columns: 1fr var(--touch-target--aaa);
-      grid-template-rows: auto auto;
-      width: 100%;
-      @media (min-width: $medium) {
-        flex: initial;
-        grid-template-columns: 1fr var(--icon-size--xs);
-        width: inherit;
+/*------------------------------------------------------------------------------
+Mixins
+------------------------------------------------------------------------------*/
+@mixin visible {
+  z-index: 1;
+  display: grid;
+  visibility: visible;
+  overflow: auto;
+  opacity: 1;
+}
+@mixin hidden {
+  z-index: -2;
+  visibility: hidden;
+  overflow: hidden;
+  opacity: 0;
+}
+@mixin menu-link-decoration-active {
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.4em;
+
+  text-underline-offset: -0.2em;
+}
+/*------------------------------------------------------------------------------
+1. Hamburger Active Menu Styles
+------------------------------------------------------------------------------*/
+.navigation-wrapper {
+  --h2-color: var(--blue);
+
+  @include hidden;
+
+  position: absolute;
+  top: 0;
+  grid-template-areas: "main"
+  "prospective";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  width: 100vw;
+  max-width: 100%;
+  min-height: 100vh;
+  transition: opacity var(--ease--standard) var(--transition-speed--fast);
+  background: var(--white);
+  @media (min-width: $medium) {
+    grid-template-areas: "main prospective"
+    "main prospective";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    &:after {
+      position: absolute;
+      bottom: 0;
+      display: block;
+      width: 100vw;
+      height: 10rem;
+      content: "";
+      background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/wave-line-blue.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+.region--main_navigation {
+  grid-area: main;
+  padding-top: var(--logo-size);
+  background-color: var(--menu-bg-color-1);
+  nav {
+    border-top: rgba(var(--blue--rgb), 0.4) 1px solid;
+  }
+}
+.main-navigation {
+  text-align: left;
+  h2 {
+    margin-top: 0;
+    text-transform: uppercase;
+    font-size: var(--font-size--lg);
+  }
+  .menu {
+    margin-bottom: var(--space--sm);
+    a {
+      padding-left: unset;
+      transition: all 0.2s ease;
+      text-decoration-color: var(--link-decoration-color);
+      border-left: unset;
+      &:hover,
+      &:focus,
+      &:active,
+      &[aria-current="page"] {
+        @include menu-link-decoration-active;
+
+        background-color: unset;
+      }
+    }
+    .menu {
+      margin: 0;
+      a {
+        font-size: var(--font-size--sm);
+      }
+    }
+  }
+}
+.university-links {
+  --link-color: var(--dark-blue);
+  --link-color--visited: var(--dark-blue);
+  --link-color--visited--active: var(--dark-blue);
+
+  grid-area: prospective;
+  background-color: var(--blue--lighter--80);
+  background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/island-bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: var(--font-size--sm);
+  @media (min-width: $medium) {
+    padding-top: var(--logo-size);
+    font-size: unset;
+  }
+  .component-icon {
+    transition: all ease 0.1s;
+  }
+  a {
+    text-decoration: none;
+    text-decoration-color: var(--blue--lighter--40);
+    text-transform: uppercase;
+    font-weight: var(--font-weight--bold);
+    &:hover,
+    &:focus,
+    &:active {
+      @include menu-link-decoration-active;
+
+      text-decoration-color: var(--blue--lighter--40);
+    }
+  }
+  .icon-link {
+    display: grid;
+    grid-auto-flow: row;
+    text-align: center;
+    background: transparent;
+  }
+  .wwu-logo {
+    margin: auto;
+  }
+}
+.action-links {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  padding-top: var(--space--md);
+  border-top: 1px solid var(--blue--lighter--60);
+  a {
+    margin: var(--space--sm);
+    font-size: var(--font-size--lg);
+  }
+  @media (min-width: $medium) {
+    flex-flow: column;
+  }
+}
+.quick-links {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  text-align: center;
+  a {
+    margin: var(--space--xs);
+  }
+  @media (min-width: $medium) {
+    flex-flow: column;
+    a {
+      margin: var(--space--sm);
+    }
+    &:before {
+      place-self: center;
+
+      position: relative;
+      z-index: 1;
+      display: block;
+      flex-flow: row wrap;
+      justify-content: center;
+      width: 4rem;
+      margin: var(--space--md);
+      content: "";
+      border-top: 1px var(--blue) solid;
+    }
+  }
+}
+.ultimenu {
+  --link-decoration-color: var(--blue--lighter--80);
+  --ultiactive: var(--blue);
+  --ultilink-active: var(--link-color);
+  --ultilink-normal: var(--blue);
+  --ultiregion: var(--transparent);
+  --ultiregion-normal: var(--blue);
+  --ultisub-active: var(--link-color);
+  --ultisub-normal: var(--blue);
+
+  position: relative;
+  z-index: unset;
+  li {
+    .ultimenu__link {
+      z-index: unset;
+      padding: var(--space--xs);
+      transition: all 0.2s ease;
+      text-decoration-color: var(--link-decoration-color);
+      font-size: var(--font-size--xl);
+      font-weight: var(--font-weight--semibold);
+      &:focus-visible {
+        outline: var(--outline--focus);
       }
       &:hover,
-      &:focus-within {
-        .expand-icon {
-          color: var(--link-color--focus);
+      &:focus,
+      &:active,
+      &.is-ulink-active {
+        @include menu-link-decoration-active;
+      }
+      @media (min-width: $medium) {
+        left: 10%;
+        width: 40%;
+      }
+    }
+  }
+  @media(min-width: $medium) {
+    .ultimenu__flyout {
+      position: absolute;
+      top: 0;
+      left: 60%;
+      width: 40%;
+    }
+  }
+}
+.ultimenu__item:has(.menu-item--active-trail) .ultimenu__link {
+  @include menu-link-decoration-active;
+
+  text-decoration-color: var(--link-decoration-color);
+}
+.is-ulticaret--arrow {
+  .ultimenu__caret {
+    i {
+      --ulticaret-active: var(--gray--lighter--40);
+      --ulticaret-normal: var(--gray--lighter--40);
+      @media (min-width: $medium) {
+        transform: rotate(90deg);
+      }
+      &:before {
+        width: 1px;
+        height: 14px;
+        transform: translate(-5px, -50%) rotate(45deg);
+      }
+      &:after {
+        width: 1px;
+        height: 14px;
+        transform: translate(5px, -50%) rotate(-45deg);
+      }
+    }
+  }
+  .is-ulink-active {
+    .ultimenu__caret {
+      i {
+        &:after {
+          transform: translate(-8px, -50%) rotate(-45deg);
         }
       }
     }
   }
-  .ultimenu__flyout,
-  .ultimenu__region {
-    top: auto;
-    width: 100%;
-    height: auto;
-    .menu > li > a {
-      color: var(--link-color);
-      &:active,
-      &:focus,
-      &:hover {
-        color: var(--link-color--active);
-      }
-    }
+}
+.navigation-open {
+  .navigation-wrapper {
+    @include visible;
   }
-  li .ultimenu__link,
-  .top-level-menu-item > a {
-    position: relative;
-    grid-column: 1 / span all;
-    grid-row: 1 / span 1;
-    width: 100%;
-    min-height: var(--touch-target--aaa);
-    margin: 0;
-    padding: var(--space--sm);
-    text-align: left;
-    white-space: normal;
-    text-decoration: none;
-    color: var(--link-color);
-    line-height: 1;
-    &:active,
-    &:hover,
-    &:focus {
-      color: var(--link-color--active);
-    }
-    &.is-active {
-      --link-color: var(--white);
-    }
-    @media (min-width: $medium) {
-      display: flex;
-      align-items: center;
-      padding: var(--space--sm);
-      padding-right: var(--space--lg);
-      text-align: center;
-    }
+  .page-content,
+  .splash,
+  footer {
+    display: none;
   }
-  .expand-icon {
+  .western-logo {
     position: relative;
     z-index: 1;
-    display: flex;
-    grid-area: icon;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    transition: all var(--transition-speed--fast) cubic-bezier(0.33, 0.66, 0.66, 1);
-    font-size: var(--icon-size--xs);
-    &.desktop {
-      display: none;
-      @media (min-width: $medium) {
-        display: flex;
-      }
-    }
-    &.mobile {
-      @media (min-width: $medium) {
+  }
+}
+/*------------------------------------------------------------------------------
+2. No Hamburger Desktop Menu Styles
+------------------------------------------------------------------------------*/
+.is-ultimenu--hover {
+  @media (min-width: $medium) {
+    .navigation-wrapper {
+      @include visible;
+
+      position: relative;
+      grid-area: wrapper;
+      min-height: unset;
+      &:after {
         display: none;
       }
     }
-  }
-  .is-active-trail {
-    @media (min-width: $medium) {
-      border-left: none;
+    .main-navigation {
+      background-color: var(--menu-bg-color-1);
+      .menu {
+        a {
+          text-decoration-color: var(--link-decoration-color);
+          color: var(--link-color);
+        }
+      }
     }
-    > .ultimenu__link {
-      color: var(--link-color);
+    .university-links {
+      display: flex;
+      grid-column: 1 /span all;
+      justify-content: space-between;
+      width: 100%;
+      padding: unset;
+      background-image: none;
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+      .icon-link {
+        grid-auto-flow: column;
+        margin: 0;
+        text-transform: none;
+        font-size: var(--font-size--sm);
+      }
+    }
+    .action-links {
+      flex-flow: row;
+      padding: 0;
+    }
+    .quick-links {
+      flex-flow: row;
+      align-items: center;
+      a {
+        margin: var(--space--2xs);
+        padding: unset;
+        text-transform: none;
+        font-size: var(--font-size--sm);
+        font-weight: var(--font-weight--regular);
+      }
+      &:before {
+        display: none;
+      }
+    }
+    .region--main_navigation {
+      grid-area: main-nav;
+      padding: 0;
+    }
+    .ultimenu {
+      --h2-color: var(--dark-blue);
+      --h3-color: var(--dark-blue);
+
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      li {
+        .ultimenu__link {
+          left: unset;
+          width: unset;
+          padding: var(--space--2xs) var(--space--xs);
+          border: solid transparent var(--border-width--md);
+          font-size: var(--font-size--md);
+          font-weight: var(--font-weight--regular);
+          line-height: 1.5;
+          &:hover,
+          &:active,
+          &:focus {
+            text-decoration: none;
+            background-color: var(--link-decoration-color);
+          }
+        }
+      }
+      .ultimenu__flyout {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: unset;
+        width: 100%;
+      }
+      .open {
+        .ultimenu__flyout {
+          visibility: visible;
+          height: unset;
+          max-height: unset;
+          opacity: 1;
+        }
+      }
+      .ultimenu__region {
+        display: flex;
+        flex-flow: row wrap;
+        gap: var(--space--lg);
+        justify-content: center;
+      }
+    }
+    .ultimenu__item:has(.menu-item--active-trail) .ultimenu__link,
+    .ultimenu li .ultimenu__link.is-active {
+      text-decoration: none;
+      border-bottom-color: var(--blue);
+      font-weight: var(--font-weight--bold);
+    }
+    .toggle-menu {
+      display: none;
+    }
+    .toolbar-fixed {
+      .navigation-wrapper {
+        top: 0;
+      }
+    }
+    .toolbar-horizontal.toolbar-tray-open {
+      .navigation-wrapper {
+        top: 0;
+      }
     }
   }
 }
 /*------------------------------------------------------------------------------
-1. Wordpress
+3. Dark Mode
 ------------------------------------------------------------------------------*/
-.nav-primary {
-  .sub-nav {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin-top: unset;
-    padding: var(--space--md);
-    border: none;
-    background-color: unset;
-    @media (min-width: $medium) {
-      position: absolute;
-      top: 100%;
-    }
-    ul {
-      width: var(--content-area-max-width--sm);
-      max-width: 100%;
+[data-theme="dark"] {
+  .university-links {
+    @include darkest-blue-bg;
+
+    background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/island-bg-dark.webp");
+    a {
+      text-decoration-color: var(--dark-blue--darker--40);
+      color: var(--blue--lighter--60);
     }
   }
-  .top-level-menu-item > a {
-    position: unset;
-    display: unset;
-    margin: 0;
-    padding: var(--space--sm);
-    text-decoration: none;
-    color: var(--link-color);
-    border: none;
-    &:active,
-    &:hover,
-    &:focus {
-      color: var(--link-color--focus);
-    }
-    &.open {
-      background-color: unset;
+  .ultimenu {
+    --link-decoration-color: var(--dark-blue);
+    --ultiactive: var(--blue--lighter--60);
+    --ultilink-active: var(--link-color);
+    --ultilink-normal: var(--blue--lighter--60);
+    --ultiregion: var(--transparent);
+    --ultiregion-normal: var(--blue--lighter--60);
+    --ultisub-active: var(--link-color);
+    --ultisub-normal: var(--blue--lighter--60);
+  }
+  &.is-ultimenu--hover {
+    @media (min-width: $medium) {
+      .main-navigation {
+        --menu-bg-color-1: var(--dark-blue);
+      }
+      .ultimenu {
+        --h2-color: var(--blue--lighter--60);
+        --h3-color: var(--blue--lighter--60);
+        --link-decoration-color: var(--dark-blue--darker--20);
+        --ultibg: var(--dark-blue);
+      }
     }
   }
 }
-wwu-main-nav {
-  display: block;
+.is-uitem-expanded > .ultimenu__flyout,
+.is-uitem-expanded > ul,
+.ultimenu__region {
+  @media (max-width: $small) {
+    padding: 0;
+    padding-left: var(--space--md);
+  }
 }

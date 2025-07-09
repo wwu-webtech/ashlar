@@ -4,6 +4,7 @@ Molecule: Image with Description
 1. Dark Mode
 ------------------------------------------------------------------------------*/
 @import "../../00-utilities/breakpoints.scss";
+@import "../../01-atoms/background-color/background-color-mixins.scss";
 .wwu-image-with-description {
   display: grid;
   grid-area: body;
@@ -44,6 +45,8 @@ Molecule: Image with Description
       padding-left: var(--space--3xl);
     }
     &:not([class$="-bg"]) {
+      @include lightest-gray-bg;
+
       background: var(--gray--lighter--90);
     }
   }

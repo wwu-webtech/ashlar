@@ -245,7 +245,7 @@ if (
   wwu_logo_template.innerHTML = `
   <style>
   .wwu-logo {
-    --logo-size: 6rem;
+    --logo-size: 5.5rem;
     
     width: var(--logo-size);
     height: var(--logo-size);
@@ -278,6 +278,7 @@ if (
   </style>
 
   <div class="wwu-logo">
+    <span class="visually-hidden">Western Washington University</span>
     <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 151.29 103.9" aria-hidden="true">
       <title>Western Logo</title>
       <defs>

@@ -5,64 +5,176 @@ Organism: Headers - Western header
 @import "../../../00-utilities/breakpoints.scss";
 @import "../../../01-atoms/background-color/_background-color-mixins.scss";
 wwu-header {
-  --toggle-size: 3.75rem;
+  --menu-bg-color-1: var(--white);
+  --menu-bg-color-2: var(--blue--lighter--80);
 
   display: grid;
   grid-auto-flow: column;
-  grid-template-areas: "logo site-name menu search"
-  "logo header-region menu search";
-  grid-template-columns: auto 1fr auto auto;
-  grid-template-rows: auto 1fr;
-  max-width: var(--content-area-max-width);
-  margin: auto;
-  column-gap: var(--space--md);
+  grid-template-areas: "preheader logo"
+  "site-name site-name"
+  "header-region header-region";
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-bottom: rgba(var(--blue--rgb), 0.4) 1px solid;
+  @media (min-width: $large) {
+    grid-template-areas: "preheader site-name logo";
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 1fr;
+    text-align: unset;
+    background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/wave-line-blue.svg");
+    background-repeat: no-repeat;
+    background-position-y: 4.5rem;
+    background-size: contain;;
+    &:has(.region--wwu_header) {
+      grid-template-areas: "preheader site-name logo"
+      "preheader header-region logo";
+      grid-template-rows: 1fr 1fr;
+      .site-name {
+        align-self: end;
+      }
+    }
+  }
+  @media (max-width: $medium) {
+    --logo-size: 4.5rem;
+    .wwu-logo {
+      --logo-size: 4.5rem;
+    }
+  }
+  .buttons {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-flow: row wrap;
+    grid-area: preheader;
+    align-content: center;
+  }
   .western-logo {
+    display: flex;
     grid-area: logo;
+    justify-self: end;
+    margin-right: var(--space--md);
   }
   .site-name {
     grid-area: site-name;
-    margin-top: var(--space--2xs);
-    text-align: right;
+    justify-self: center;
+    text-transform: uppercase;
+    @media (max-width: $medium) {
+      margin-bottom: var(--space--sm);
+      font-size: var(--font-size--xs);
+    }
     a {
       text-decoration: none;
       text-transform: uppercase;
       color: var(--link-color);
       font-size: var(--font-size--xl);
+      &:visited {
+        color: var(--link-color);
+      }
     }
   }
   .western-header-region {
     grid-area: header-region;
-    text-align: right;
+    justify-self: center;
+    text-transform: uppercase;
+    color: var(--link-color);
+    font-family: var(--font--title);
+    font-size: var(--font-size--xl);
+    font-weight: var(--font-weight--black);
     a {
       text-decoration: none;
-      text-transform: uppercase;
       color: var(--link-color);
+      font-weight: var(--font-wight--bold);
+      &:visited {
+        color: var(--link-color);
+      }
     }
-  }
-  .toggle {
-    display: grid;
-    grid-template-rows: auto auto;
-    align-content: start;
-    margin: 0;
-    padding: 0;
-    color: var(--link-color);
-    border-radius: unset;
-    background: transparent;
-    box-shadow: unset;
-    font-size: var(--font-size--xs);
-    svg {
-      fill: var(--link-color);
-
-      width: var(--toggle-size);
-      height: var(--toggle-size);
-      margin: calc(-1 * var(--space--xs));
-      margin-bottom: calc(-1 * var(--space--sm));
+    p {
+      margin: 0;
+    }
+    @media (max-width: $medium) {
+      &:has(.region--wwu_header) {
+        margin-bottom: var(--space--sm);
+      }
+      p {
+        font-size: var(--font-size--sm);
+        line-height: 1.2;
+      }
     }
   }
   .toggle-menu {
-    grid-area: menu;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-auto-flow: row;
+    place-content: center;
+    width: var(--toggle-size--sm);
+    height: var(--toggle-size--sm);
+    margin: var(--space--md);
+    margin-right: 0;
+    color: var(--white);
+    border-radius: 50%;
+    font-size: var(--font-size--2xs);
+    svg {
+      fill: var(--white);
+
+      width: 2rem;
+      height: 2rem;
+      margin: calc(-1 * var(--space--xs));
+      margin-bottom: calc(-1 * var(--space--sm));
+    }
+    @media (min-width: $medium) {
+      width: var(--toggle-size);
+      height: var(--toggle-size);
+    }
   }
-  .toggle-search {
-    grid-area: search;
+}
+.navigation-open {
+  wwu-header,
+  wwu-header:has(.region--wwu_header) {
+    grid-template-areas: "preheader logo"
+    "site-name header-region";
+    grid-template-columns: 2fr 1fr;
+    .western-logo {
+      place-self: center;
+
+      margin-right: 0;
+    }
   }
+  .site-name,
+  .western-header-region {
+    display: none;
+  }
+}
+/*------------------------------------------------------------------------------
+1. No Hamburger Desktop Menu Styles
+------------------------------------------------------------------------------*/
+.is-ultimenu--hover {
+  @media (min-width: $medium) {
+    wwu-header,
+    wwu-header:has(.region--wwu_header) {
+      grid-template-areas: "wrapper wrapper wrapper"
+      "preheader site-name logo"
+      "preheader header-region logo"
+      "main-nav main-nav main-nav";
+      grid-template-columns: auto 1fr auto;
+      grid-template-rows: auto;
+      background-position-y: 6.75rem;
+    }
+    .wwu-logo {
+      --logo-size: 5rem;
+    }
+  }
+}
+/*------------------------------------------------------------------------------
+2. Dark Mode
+------------------------------------------------------------------------------*/
+[data-theme="dark"] wwu-header {
+  --button-color: var(--blue--lighter--80);
+  --menu-bg-color-1: var(--black);
+  --menu-bg-color-2: var(--dark-blue);
+
+  background-color: var(--dark-blue);
 }

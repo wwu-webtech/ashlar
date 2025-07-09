@@ -30,6 +30,8 @@ iframe {
   border: 0;
 }
 body {
+  position: relative;
+  padding-top: var(--drupal-displace-offset-top);
   color: var(--default-text-color);
   background-color: var(--page-background);
 }
@@ -53,4 +55,7 @@ body {
   .region-wrapper {
     grid-area: content;
   }
+}
+.page {
+  position: relative;
 }

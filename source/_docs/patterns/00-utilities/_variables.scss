@@ -56,10 +56,10 @@ $large: 1300px;
 --dark-blue--darker--80: #000d1b;
 
 --blue: #007ac8;
---blue--lighter--20: #079eff;
---blue--lighter--40: #45b6ff; 
---blue--lighter--60: #83cfff;
---blue--lighter--80: #c1e7ff;
+--blue--lighter--20: #3890c9;
+--blue--lighter--40: #6cb3e1; 
+--blue--lighter--60: #a6d3f0;
+--blue--lighter--80: #deeff9;
 
 --dark-green: #006b3f;
 --light-green: #bad80a;
@@ -90,6 +90,7 @@ $large: 1300px;
 --black--rgb: 28, 32, 35;
 --blue--rgb: 0, 122, 200;
 --dark-blue--darker--40--rgb: 0, 38, 81;
+--blue--lighter--80--rgb: 222, 239, 249;
 --green--rgb: 93, 162, 37;
 --light-green--rgb: 186, 216, 10;
 --red--rgb: 204, 45, 48;
@@ -125,6 +126,12 @@ $large: 1300px;
   to right,
   rgba(var(--dark-blue--darker--40--rgb), 1) 0%,
   rgba(var(--dark-blue--darker--40--rgb), 0.5) 100%
+);
+
+--gradient--vertical--dark-blue-to-transparent: linear-gradient(
+  to bottom,
+  rgba(var(--dark-blue--darker--40--rgb), 1) 0%,
+  transparent 100%
 );
 
 --gradient--diagonal--blue-to-dark-blue: linear-gradient(
@@ -207,7 +214,7 @@ $large: 1300px;
 --content-area-max-width: 60rem; 
 --content-area-max-width--sm: 40rem;
 --content-area--negative-space: calc((100vw - var(--content-area-max-width))/2);
---content-area--sm--negative-space: calc((100vw - var(--content-area-max-width--sm))/2);
+--content-area--negative-space--sm: calc((100vw - var(--content-area-max-width--sm))/2);
 
 /* c. Content area grids ----------------------------------------------------*/
 --grid-columns--sm: var(--space--sm) 1fr var(--space--sm);
@@ -251,9 +258,11 @@ $large: 1300px;
 /* d. Touch targets ----------------------------------------------------------------*/
 --touch-target--aa: 24px;
 --touch-target--aaa: 44px;
+--toggle-size: 3.25rem;
+--toggle-size--sm: 2.75rem;
 
 /* e. Logo  ------------------------------------------------------------------*/
---logo-size: 6rem;
+--logo-size: 5.5rem;
 --logo--horizontal--width: 25rem;
 --logo--horizontal--height: 6.25rem;
 

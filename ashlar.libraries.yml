@@ -143,13 +143,6 @@ schedule:
   css:
     theme:
       build/css/components/schedule.css: {}
-search:
-  version: 1.x
-  css:
-    theme:
-      build/css/components/search.css: {}
-  js:
-    build/js/search.js: {}
 slide-banner:
   version: 1.x
   css:
@@ -197,12 +190,14 @@ vimeo-tracking:
 wwu-header:
   version: 1.x
   css:
-    theme:
-      build/css/components/pre-header.css: {}
-      build/css/components/wwu-header.css: {}
+    theme:      
+      build/css/components/display-settings.css: {}
+      build/css/components/search.css: {}
+      build/css/components/wwu-header.css: {}      
   js:
+    build/js/display-settings.js: {}
     build/js/logo.js: {}
-    build/js/pre-header.js: {}
+    build/js/search.js: {}    
     build/js/wwu-header.js: {}
 wwu-footer:
   version: 1.x

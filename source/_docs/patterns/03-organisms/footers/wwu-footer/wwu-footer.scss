@@ -15,7 +15,7 @@ wwu-footer {
   }
   .artwork {
     position: relative;
-    z-index: -2;
+    margin: auto;
     img {
       display: block;
     }
@@ -58,10 +58,6 @@ wwu-footer {
     flex-flow: row wrap;
     place-content: center;
     width: 100%;
-    a {
-      padding: var(--space--sm);
-      text-decoration: none;
-    }
   }
   .copyright {
     margin: var(--space--sm);
