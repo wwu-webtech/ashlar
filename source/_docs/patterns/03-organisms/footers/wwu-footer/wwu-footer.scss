@@ -15,6 +15,7 @@ wwu-footer {
   }
   .artwork {
     position: relative;
+    z-index: -1;
     margin: auto;
     img {
       display: block;
