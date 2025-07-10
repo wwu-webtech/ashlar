@@ -40,3 +40,9 @@ Overwrite to reset default ultimenu styles.
   transition-delay: 0.1s;
   opacity: 1;
 }
+.ultimenu .is-uitem-expanded > .ultimenu__flyout,
+.ultimenu li:hover > .ultimenu__flyout,
+.ultimenu li .ultimenu__flyout:focus-within,
+.ultimenu li a:focus + .ultimenu__flyout {
+  margin-top: 0;
+}

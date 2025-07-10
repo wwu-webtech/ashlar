@@ -5,8 +5,7 @@ Organism: Headers - Western header
 @import "../../../00-utilities/breakpoints.scss";
 @import "../../../01-atoms/background-color/_background-color-mixins.scss";
 wwu-header {
-  --menu-bg-color-1: var(--white);
-  --menu-bg-color-2: var(--blue--lighter--80);
+  --menu-bg-color: var(--white);
 
   display: grid;
   grid-auto-flow: column;
@@ -173,8 +172,7 @@ wwu-header {
 ------------------------------------------------------------------------------*/
 [data-theme="dark"] wwu-header {
   --button-color: var(--blue--lighter--80);
-  --menu-bg-color-1: var(--black);
-  --menu-bg-color-2: var(--dark-blue);
+  --menu-bg-color: var(--black);
 
   background-color: var(--dark-blue);
 }

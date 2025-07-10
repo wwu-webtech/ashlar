@@ -15,6 +15,7 @@ if (
 
   <div class="settings-menu">
       <div class="menu-container">
+          <h2 class="no-margin--top align-center">Display Settings</h2>
           <fieldset class="theme-selection">
               <legend>Theme</legend>
               <div class="radio">

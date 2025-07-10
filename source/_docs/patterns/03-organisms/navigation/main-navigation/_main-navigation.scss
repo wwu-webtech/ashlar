@@ -67,7 +67,7 @@ Mixins
 .region--main_navigation {
   grid-area: main;
   padding-top: var(--logo-size);
-  background-color: var(--menu-bg-color-1);
+  background-color: var(--menu-bg-color);
   nav {
     border-top: rgba(var(--blue--rgb), 0.4) 1px solid;
   }
@@ -227,7 +227,7 @@ Mixins
       top: 0;
       left: 60%;
       width: 40%;
-      background: var(--white);
+      background: var(--menu-bg-color);
     }
   }
 }
@@ -296,7 +296,7 @@ Mixins
       }
     }
     .main-navigation {
-      background-color: var(--menu-bg-color-1);
+      background-color: var(--menu-bg-color);
       .menu {
         a {
           text-decoration-color: var(--link-decoration-color);
@@ -437,7 +437,7 @@ Mixins
   &.is-ultimenu--hover {
     @media (min-width: $medium) {
       .main-navigation {
-        --menu-bg-color-1: var(--dark-blue);
+        --menu-bg-color: var(--dark-blue);
       }
       .ultimenu {
         --h2-color: var(--blue--lighter--60);

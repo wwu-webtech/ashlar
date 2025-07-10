@@ -35,3 +35,7 @@ if (window.location.pathname === $homepage_link.attr('href')) {
     $homepage_link.parent('li').addClass('ultimenu__item--active-page');
     $homepage_link.attr('aria-current', 'page');
 }
+
+// add is-unlinked to top level items without using ultimenu settings panel
+var $top_links = $('.ultimenu__link[href=""]'); 
+$top_links.addClass('is-unlinked');
