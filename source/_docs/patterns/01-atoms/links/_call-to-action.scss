@@ -18,6 +18,7 @@ a.wp-block-button__link {
   margin-bottom: var(--space--md);
   padding: var(--space--xs);
   padding-right: var(--space--lg);
+  transition: all 0.2s ease;
   text-decoration: none;
   background-color: var(--cta-color);
   box-shadow: var(--shadow--hard);
