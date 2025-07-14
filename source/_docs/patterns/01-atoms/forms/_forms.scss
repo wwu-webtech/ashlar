@@ -43,7 +43,7 @@ textarea,
 select {
   display: inline-block;
   box-sizing: border-box;
-  width: 100%;
+  max-width: 20vw;
   margin-bottom: var(--space--md);
   padding: var(--space--xs);
   color: var(--input-text-color);
