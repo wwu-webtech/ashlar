@@ -43,7 +43,7 @@ textarea,
 select {
   display: inline-block;
   box-sizing: border-box;
-  max-width: 20vw;
+  max-width: 90vw;
   margin-bottom: var(--space--md);
   padding: var(--space--xs);
   color: var(--input-text-color);
@@ -175,6 +175,11 @@ input[type="radio"] {
   }
 }
 table {
+  input,
+  textarea,
+  select {
+    max-width: 100%;
+  }
   input[type="checkbox"],
   input[type="radio"] {
     width: unset;
