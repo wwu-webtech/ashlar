@@ -46,7 +46,7 @@ wwu-header {
     position: relative;
     z-index: 2;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     grid-area: preheader;
     align-content: center;
   }
