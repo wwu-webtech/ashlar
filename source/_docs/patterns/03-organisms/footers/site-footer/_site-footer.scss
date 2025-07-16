@@ -3,27 +3,55 @@ Organism: Footers - Site footer
 --------------------------------------------------------------------------------
 1. Print
 ------------------------------------------------------------------------------*/
+@import "../../../00-utilities/breakpoints.scss";
 .site-footer {
-  @include blue-bg;
+  --h2-size: var(--font-size--md);
+  --h3-size: var(--font-size--md);
+  --h4-size: var(--font-size--md);
+  --h5-size: var(--font-size--md);
 
   display: flex;
   flex-flow: row wrap;
   gap: var(--space--lg);
-  padding: var(--space--lg);
-  border-top: solid var(--border-width--md) transparent;
+  max-width: var(--content-area-max-width);
+  margin: 0 var(--space--sm);
+  border-top: var(--outline--unset);
+  font-size: var(--font-size--sm);
+  @media(min-width: $large) {
+    margin: auto;
+  }
   .footer-region {
-    flex: 1 1 30%;
+    flex: 1 1 100%;
+    @media(min-width: $medium) {
+      flex: 1 1 30%;
+    }
   }
-  .footer-region--bottom {
-    flex: 0 0 100%;
-  }
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  .title {
     margin-top: 0;
   }
+}
+.wwu-footer-divider {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  max-width: var(--content-area-max-width);
+  margin: 0 var(--space--sm);
+  @media(min-width: $large) {
+    margin: auto;
+  }
+  .separator {
+    display: block;
+    margin-bottom: var(--space--md);
+    margin-left: var(--space--md);
+    border-bottom: solid var(--h3-color) var(--border-width--sm);
+  }
+}
+.wwu-tagline {
+  margin: 0;
+  text-transform: uppercase;
+  color: var(--h3-color);
+  font-family: var(--font--title);
+  font-size: var(--h3-size);
+  font-weight: var(--font-weight--black);
 }
 /*------------------------------------------------------------------------------
 1. Print

@@ -11,22 +11,23 @@ Atom: Background Colors
 }
 /*------------------------------------------------------------------------------
 1. Classes
+Note: Dark green, green, and light green as background color options were retired
+in 2025. They have been combined with their nearest blue color instead.
 ------------------------------------------------------------------------------*/
 .black-bg {
   @include black-bg;
 }
+.dark-green-bg,
 .dark-blue-bg {
   @include dark-blue-bg;
 }
 .darkest-blue-bg {
   @include darkest-blue-bg;
 }
-.green-bg {
-  @include green-bg;
-}
 .gray-bg {
   @include gray-bg;
 }
+.green-bg,
 .blue-bg {
   @include blue-bg;
 }
@@ -36,17 +37,12 @@ Atom: Background Colors
 .lightest-gray-bg {
   @include lightest-gray-bg;
 }
+.light-green-bg,
 .light-blue-bg {
   @include light-blue-bg;
 }
 .lightest-blue-bg {
   @include lightest-blue-bg;
-}
-.light-green-bg {
-  @include light-green-bg;
-}
-.yellow-bg {
-  @include yellow-bg;
 }
 .dark-blue-gradient-bg {
   @include blue-bg;
@@ -75,16 +71,10 @@ Atom: Background Colors
     @include gray-bg;
   }
   .light-green-bg {
-    @include green-bg;
-  }
-  .green-bg {
-    @include green-bg;
+    @include gray-bg;
   }
   .blue-bg {
     background-color: var(--blue--darker--60);
-  }
-  .yellow-bg {
-    color: var(--black);
   }
 }
 /*------------------------------------------------------------------------------
@@ -100,7 +90,6 @@ Atom: Background Colors
   .blue-bg,
   .light-blue-bg,
   .lightest-blue-bg,
-  .green-bg,
   .light-green-bg,
   .dark-blue-gradient-bg,
   .blue-gradient-bg {
@@ -133,7 +122,6 @@ Atom: Background Colors
   .blue-bg,
   .light-blue-bg,
   .lightest-blue-bg,
-  .green-bg,
   .light-green-bg,
   .dark-blue-gradient-bg,
   .blue-gradient-bg {

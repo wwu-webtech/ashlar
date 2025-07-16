@@ -23,7 +23,7 @@ input[type="submit"] {
   color: var(--button-color);
   border: none;
   border-radius: var(--border-radius--rounder);
-  outline: var(--outline-width) solid transparent;
+  outline: var(--outline--unset);
   background-color: var(--button-background-color);
   box-shadow: var(--shadow--soft);
   font-family: var(--font--sans-serif);
@@ -37,7 +37,7 @@ input[type="submit"] {
   }
   &:active {
     @media (forced-colors: active) {
-      outline: var(--outline-width) solid LinkText;
+      outline: var(--outline--unset);
     }
   }
   &.warning {

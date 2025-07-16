@@ -1,23 +1,25 @@
 /*------------------------------------------------------------------------------
 Molecule: Banner
 --------------------------------------------------------------------------------
-1. Print styles
-2. Animation option
+1. Box headline variant
+2. Print styles
+3. Animation option
 ------------------------------------------------------------------------------*/
+@import "../../00-utilities/breakpoints.scss";
+@import "../../01-atoms/background-color/background-color-mixins.scss";
 .wwu-banner {
   position: relative;
   display: grid;
   place-content: center;
   padding: var(--space--xl);
   text-align: center;
-  .body {
+  .content {
     position: relative;
+    z-index: 1;
+  }
+  .body {
     max-width: var(--content-area-max-width);
     margin: auto;
-  }
-  .body,
-  .title {
-    z-index: 1;
   }
 }
 .banner--page-width {
@@ -27,7 +29,30 @@ Molecule: Banner
   }
 }
 /*------------------------------------------------------------------------------
-1. Print styles
+1. Box headline variant
+------------------------------------------------------------------------------*/
+.wwu-banner {
+  &.box-headline {
+    align-content: center;
+    justify-content: start;
+    text-align: left;
+    .content {
+      @include dark-blue-bg;
+
+      align-self: start;
+      max-width: 50%;
+      margin: var(--space--md);
+      padding: var(--space--lg);
+      outline: solid var(--border-width--md) transparent;
+      background: var(--gradient--horizontal--dark-blue-to-transparent);
+      .title {
+        margin-top: 0;
+      }
+    }
+  }
+}
+/*------------------------------------------------------------------------------
+2. Print styles
 ------------------------------------------------------------------------------*/
 @media print {
   .wwu-banner {
@@ -44,7 +69,7 @@ Molecule: Banner
   }
 }
 /*------------------------------------------------------------------------------
-2. Animation options
+3. Animation options
 ------------------------------------------------------------------------------*/
 @media (prefers-reduced-motion: no-preference) {
   .wwu-banner {

@@ -19,6 +19,9 @@ wwu-social {
     .wwu-icon-cls-1 {
       fill: var(--icon-background-color--active);
     }
+    .wwu-icon-cls-2 {
+      fill: var(--icon-color--active);
+    }
   }
 }
 .wwu-social-icon {
@@ -37,7 +40,23 @@ wwu-social {
 .wwu-icon-cls-2 {
   fill: var(--icon-color);
 }
-
+.wwu-cls-3 {
+  fill: none;
+  stroke: var(--blue);
+  stroke-miterlimit: 10;
+  stroke-width: 1;
+}
+.wwu-cls-4 {
+  fill: var(--blue--lighter--40);
+}
+[data-theme="dark"] {
+  .wwu-cls-3 {
+    stroke: var(--white);
+  }
+  .wwu-cls-4 {
+    fill: var(--blue);
+  }
+}
 @media (forced-colors: active) {
   .wwu-social-link {
     svg {
@@ -47,13 +66,10 @@ wwu-social {
     &:hover,
     &:active,
     &:focus {
-      outline: var(--outline-width) solid transparent;
+      outline: var(--outline--unset);
       .wwu-icon-cls-1 {
         fill: Canvas;
       }
-    }
-    &:focus {
-      outline-style: dotted;
     }
     .wwu-icon-cls-1 {
       fill: Canvas;
@@ -107,6 +123,5 @@ wwu-social {
   }
   &:focus {
     outline-width: var(--border-width--md);
-    outline-style: dotted;
   }
 }

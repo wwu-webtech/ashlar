@@ -20,7 +20,6 @@ Molecule: Image Link
   --image-link-font-size: var(--font-size--lg);
   --image-link-overlay-color: var(--dark-blue--darker--40);
   --image-link-size: 10rem;
-  --link-background--focus: transparent;
   --link-color: var(--white);
   --link-color--focus: var(--white);
   --link-color--visited: var(--white);
@@ -96,7 +95,7 @@ Molecule: Image Link
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
-    outline: var(--outline-width) solid transparent;
+    outline: var(--outline--unset);
     font-size: var(--image-link-font-size);
     font-weight: bold;
     &:before {
@@ -127,7 +126,7 @@ Molecule: Image Link
       opacity: 0.9;
     }
     &:focus-visible {
-      outline: var(--outline-width) dotted var(--link-color--focus);
+      outline: var(--outline--focus);
       outline-offset: var(--outline-offset--inset);
     }
     @media print {

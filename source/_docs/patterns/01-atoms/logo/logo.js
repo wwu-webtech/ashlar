@@ -3,23 +3,16 @@ if (
   && typeof window !== "undefined" // makes it work in Node.js server side rendering
 ) {
   const logo_template = document.createElement("template");
+  const wwu_logo_template = document.createElement("template");
   const horizontal_logo_template = document.createElement("template");
   logo_template.innerHTML = `
   <style>
   .wwu-logo {
     --logo-size: 8rem;
-    --logo--horizontal--width: 25rem;
-    --logo--horizontal--height: 6.25rem;
     
     width: var(--logo-size);
     height: var(--logo-size);
     max-width: 90vw;
-  }
-
-  .wwu-logo.horizontal {
-    width: var(--logo--horizontal--width);
-    height: var(--logo--horizontal--height);
-  }
 
   .wwu-logo svg {
     width: 100%;
@@ -247,8 +240,80 @@ if (
       <line style="fill:none;stroke:#007AC8;stroke-width:4;stroke-miterlimit:10;" x1="60.5" y1="405.1" x2="516.7" y2="405.1"/>
     </svg>
   </div>
-`;
+  `;
+
+  wwu_logo_template.innerHTML = `
+  <style>
+  .wwu-logo {
+    --logo-size: 5.5rem;
+    
+    width: var(--logo-size);
+    height: var(--logo-size);
+    max-width: 90vw;
+  }
+  .wwu-logo svg {
+    width: 100%;
+    height: 100%;
+  }
+  .cls-1 {
+    clip-path: url(#clippath);
+  }
+  .cls-2 {
+    fill: none;
+  }
+  .cls-2,
+  .cls-3,
+  .cls-4 {
+    stroke-width: 0;
+  }
+  .cls-3 {
+    fill: var(--blue);
+  }
+  .cls-4 {
+    fill: var(--dark-blue);
+  }
+  html[data-theme="dark"] .cls-4 {
+    fill: var(--white);
+  }  
+  </style>
+
+  <div class="wwu-logo">
+    <span class="visually-hidden">Western Washington University</span>
+    <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 151.29 103.9" aria-hidden="true">
+      <title>Western Logo</title>
+      <defs>
+          <clipPath id="clippath">
+              <rect class="cls-2" width="151.29" height="103.9"/>
+          </clipPath>
+      </defs>
+      <g class="cls-1">
+          <path class="cls-4" d="M.47,67.33c2.27,0,4.13.23,7.16.23,3.26-.06,4.83-.11,6.17-.17.12.28.12.6,0,.88-1.45.29-1.86.35-2.38.58-.76.35-.99.99-.58,2.5,1.4,5.76,4.95,17.87,6.93,24.45.06-.03.12-.07.17-.11,2.03-5.65,7.98-22.47,9.08-26.78.72.04,1.44.02,2.15-.06,1.05,4.42,7.51,22.41,9.37,27.12.06,0,.17-.06.23-.06,1.46-4.6,5.65-18.4,6.64-23.23.35-1.8.47-3.32-1.05-3.78-1.07-.28-2.15-.5-3.24-.64-.12-.17-.18-.76,0-.88,1.22,0,4.02.17,6.29.17,3.15,0,4.66-.11,5.82-.17.17.27.17.61,0,.88-.95.16-1.88.39-2.79.7-1.22.58-1.8,1.45-2.62,3.78-2.33,6.7-7.86,24.8-9.49,30.73-.74-.04-1.48-.02-2.21.06-1.46-5.12-6.69-20.02-9.37-27.36-.09-.01-.19.03-.23.12-2.09,6.05-7.86,22.29-9.32,27.12-.8-.06-1.6-.05-2.39.06-1.7-7.1-6.7-24.99-8.62-30.44-.99-3.03-1.57-3.78-3.2-4.25-.86-.22-1.74-.39-2.62-.52-.12-.12-.12-.81.11-.93"/>
+          <path class="cls-4" d="M56.9,67.33c2.27,0,4.13.23,7.16.23,3.26-.06,4.83-.11,6.17-.17.12.28.12.6,0,.88-1.45.29-1.86.35-2.38.58-.76.35-.99.99-.58,2.5,1.4,5.76,4.95,17.87,6.93,24.45.06-.03.12-.07.17-.11,2.03-5.65,7.98-22.47,9.08-26.78.72.04,1.44.02,2.15-.06,1.05,4.42,7.51,22.41,9.37,27.12.06,0,.17-.06.23-.06,1.46-4.6,5.65-18.4,6.64-23.23.35-1.8.47-3.32-1.05-3.78-1.07-.28-2.15-.5-3.24-.64-.12-.17-.18-.76,0-.88,1.22,0,4.02.17,6.29.17,3.14,0,4.66-.11,5.82-.17.17.27.17.61,0,.88-.95.16-1.88.39-2.79.7-1.22.58-1.8,1.45-2.62,3.78-2.33,6.7-7.86,24.8-9.49,30.73-.74-.04-1.48-.02-2.21.06-1.46-5.12-6.7-20.02-9.37-27.36-.09-.01-.18.03-.23.12-2.1,6.05-7.86,22.29-9.32,27.12-.8-.06-1.6-.05-2.39.06-1.7-7.1-6.7-24.99-8.62-30.44-.99-3.03-1.57-3.78-3.2-4.25-.86-.22-1.74-.39-2.62-.52-.12-.12-.12-.81.11-.93"/>
+          <path class="cls-4" d="M113.35,67.4c1.03,0,4.22.11,7.04.11s5.17-.18,6.57-.18c.18.43.18.91,0,1.33-.86.12-1.71.29-2.54.52-1.21.34-1.55.98-1.67,3.05-.11,5.17,0,13.95.06,16.96.06,3.01.58,5.24,1.44,6.69,1.45,3.1,4.85,5.17,9.57,5.17,4.96,0,9.52-1.73,9.99-10.61.23-4.38.4-11.37.11-17.19-.06-3.1-.81-3.75-2.54-4.13-.81-.18-1.5-.29-2.71-.46-.16-.41-.13-.87.06-1.27,1.03,0,3.29.11,6.51.11,2.54,0,4.79-.11,5.77-.11.18.41.18.87,0,1.27-.87.17-1.67.34-2.3.52-1.56.4-1.9,1.39-2.07,4.38-.29,11.94-.18,15.8-1.03,19.71-1.45,8.14-7.49,10.62-13.79,10.62-8.82,0-12.91-3.98-13.72-10.44-.47-3.58-.35-17.57-.4-21.34-.06-1.5-.29-2.53-1.56-2.94-.94-.26-1.91-.43-2.88-.52-.17-.42-.13-.89.1-1.27"/>
+          <path class="cls-4" d="M118.74,22.27s12.92,21.52,32.56,29.2c-.02,0-27.24,5.4-32.56-29.2"/>
+          <path class="cls-4" d="M4.87,44.12s28.76-6.48,57.53-41.21c0,0-22.4,51.68-57.53,41.21"/>
+          <path class="cls-4" d="M115.1,17.79s1.84,7.89-9.48,14.47C105.61,32.26,92.37,2.63,73.67,0,73.67,0,88.46,0,103.66,17.38c5.17,5.9,8.28,4.35,11.44.41"/>
+          <path class="cls-3" d="M0,45.25s12.65,4.25,23.93,1.75c22.5-4.99,31.85-13,46.42-15.5,14.56-2.5,17.97-1.43,35.27.75,0,0-3.79-.67-13.24.96-25.43,4.38-38.89,16.47-60.58,18.06C10.12,52.85,0,45.25,0,45.25"/>
+          <path class="cls-3" d="M4.87,49.85s24.11,7.31,37.21,4.38c26.15-5.8,37.02-15.11,53.92-18.02,16.9-2.91,23.54-1.35,43.64,1.18,0,0-7.05-1.08-18.03.81-29.53,5.09-45.18,19.17-70.39,20.99-25.21,1.82-46.35-9.34-46.35-9.34"/>
+      </g>
+    </svg>
+  </div>
+  `
   horizontal_logo_template.innerHTML = `
+  <style>
+    .wwu-logo.horizontal {
+      --logo--horizontal--width: 25rem;
+      --logo--horizontal--height: 6.25rem;
+      
+      width: var(--logo--horizontal--width);
+      height: var(--logo--horizontal--height);
+    }
+
+    .wwu-logo svg {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
   <div class="wwu-logo horizontal">
     <span class="visually-hidden">Western Washington University</span>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 113">
@@ -300,6 +365,9 @@ if (
       /* Create the custom element by appending the template */
       if (this.attributes.type && this.attributes.type.value == "horizontal" && !element_exists) {
         this.appendChild(horizontal_logo_template.content.cloneNode(true));
+        this.classList.add("element-created");
+      } else if (this.attributes.type && this.attributes.type.value == "wwu" && !element_exists) {
+        this.appendChild(wwu_logo_template.content.cloneNode(true));
         this.classList.add("element-created");
       } else if (!element_exists) {
         this.appendChild(logo_template.content.cloneNode(true));

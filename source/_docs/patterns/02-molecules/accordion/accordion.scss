@@ -39,7 +39,6 @@ wwu-accordion,
 
       color: var(--link-color--focus);
       outline-offset: var(--outline-offset--inset);
-      background: var(--link-background--focus);
     }
   }
   .title {
@@ -71,72 +70,58 @@ wwu-accordion,
     margin-bottom: 0;
   }
 }
-
 .accordion-controls-group {
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(2, minmax(var(--touch-target--aaa), calc(var(--space--3xl) * 2.5)));
   grid-auto-flow: column dense;
-  
+  grid-template-columns: repeat(2, minmax(var(--touch-target--aaa), calc(var(--space--3xl) * 2.5)));
+  grid-template-rows: repeat(2, 1fr);
   [class*="expand-all"] {
     grid-column: 1;
   }
-  
   [class*="collapse-all"] {
     grid-column: 2;
   }
-
   + .title {
     margin-top: 0;
   }
-
   .expand-all,
   .collapse-all {
     --button-color: var(--link-color);
     --button-color--active: var(--link-color);
-    background: transparent;
-    box-shadow: none;
+
     margin-bottom: 0;
     padding: var(--space--2xs);
+    color: var(--link-color);
     border: var(--border-width--md) solid var(--link-decoration-color);
     border-radius: 0;
+    background: transparent;
+    box-shadow: none;
     font-size: var(--font-size--xs);
-    color: var(--link-color);
-
-    &:hover,
-    &:focus,
-    &:active {
-      background: var(--link-background--focus);
-    }
-  
     &[disabled] {
       --button-color: var(--gray--darker--20);
       --button-color--active: var(--gray--darker--20);
-      background: transparent;
-      border-color: var(--gray--darker--20);
-      color: var(--gray--darker--20);
+
       text-decoration: line-through;
+      color: var(--gray--darker--20);
+      border-color: var(--gray--darker--20);
+      background: transparent;
     }
-  
     &:focus-visible {
       + p[class$="-hint"] {
         display: unset;
       }
     }
-    
     + p[class$="-hint"] {
       display: none;
-      font-size: calc(var(--font-size--xs) * .8);
       margin: var(--space--xs) var(--space--xs) 0 0;
-
+      font-size: calc(var(--font-size--xs) * 0.8);
       kbd {
+        padding: var(--space--2xs);
         border: var(--border-width--sm) solid;
         border-radius: var(--border-radius--round);
-        padding: var(--space--2xs);
       }
     }
   }
-
   .expand-all {
     margin-right: var(--space--xs);
   }

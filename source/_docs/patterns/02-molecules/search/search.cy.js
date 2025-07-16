@@ -10,45 +10,47 @@ describe("molecule: search", () => {
   
   context("manual accessibility tests", () => {       
     it("search setting menu toggles and announces states as expected", () => {
-      const settings_toggle = ".theme-doc-markdown .toggle-settings"
+      const search_toggle = ".theme-doc-markdown .toggle-search"
+      const html_doc = ".docs-wrapper"
       
       //on Enter: when opened, settings content visible, aria-expanded true
-      cy.get(settings_toggle).focus()
+      cy.get(search_toggle).focus()
       if (Cypress.isBrowser("chrome")) {
-        cy.get(settings_toggle).realPress("Enter")
+        cy.get(search_toggle).realPress("Enter")
       }
       if (Cypress.isBrowser("!chrome")) {
-        cy.get(settings_toggle).type("{enter}")
+        cy.get(search_toggle).type("{enter}")
       }
-      cy.get(settings_toggle).should("have.attr", "aria-expanded", "true")
-      cy.get(settings_toggle).siblings(".search-menu").should("have.class", "open")
+      cy.get(search_toggle).should("have.attr", "aria-expanded", "true")
+      cy.get(html_doc).should("have.class", "search-open")
       
       //on Enter: when closed, settings content hidden, aria-expanded false
       if (Cypress.isBrowser("chrome")) {
-        cy.get(settings_toggle).realPress("Enter")
+        cy.get(search_toggle).realPress("Enter")
       }
       if (Cypress.isBrowser("!chrome")) {
-        cy.get(settings_toggle).type("{enter}")
+        cy.get(search_toggle).type("{enter}")
       }
-      cy.get(settings_toggle).should("have.attr", "aria-expanded", "false")
-      cy.get(settings_toggle).siblings(".search-menu").should("not.have.class", "open")
+      cy.get(search_toggle).should("have.attr", "aria-expanded", "false")
+      cy.get(html_doc).should("not.have.class", "search-open")
     })   
     
     
-    it("search settings menu closes on Esc press", () => {
-      const settings_toggle = ".theme-doc-markdown .toggle-settings"
+    it("search closes on Esc press", () => {
+      const search_toggle = ".theme-doc-markdown .toggle-search"
+      const html_doc = ".docs-wrapper"
       
       //on Esc press: settings content hidden, aria-expanded false
       cy.window().focus()
-      cy.get(settings_toggle).click()
+      cy.get(search_toggle).click()
       if (Cypress.isBrowser("chrome")) {
-        cy.get(settings_toggle).realPress("Escape")
+        cy.get(search_toggle).realPress("Escape")
       }
       if (Cypress.isBrowser("!chrome")) {
-        cy.get(settings_toggle).type("{esc}")
+        cy.get(search_toggle).type("{esc}")
       }
-      cy.get(settings_toggle).should("have.attr", "aria-expanded", "false") 
-      cy.get(settings_toggle).siblings(".search-menu").should("not.have.class", "open")
+      cy.get(search_toggle).should("have.attr", "aria-expanded", "false") 
+      cy.get(html_doc).should("not.have.class", "search-open")
     })
     
     //"go" button has a type attribute that equals submit

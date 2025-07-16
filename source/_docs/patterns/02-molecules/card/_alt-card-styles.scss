@@ -292,7 +292,6 @@ Molecule: Cards - Alternate styles
   --h5-size: var(--font-size--md);
   --h6-color: var(--white);
   --h6-size: var(--font-size--md);
-  --link-background--focus: var(--gradient--vertical--dark-blue);
   --link-color: var(--blue--darker--20);
   --link-color--focus: var(--white);
   --link-color--visited: var(--purple);
@@ -312,7 +311,7 @@ Molecule: Cards - Alternate styles
     z-index: 1;
     .title {
       a:after {
-        outline: var(--outline-width) solid transparent;
+        outline: var(--outline--unset);
         outline-offset: var(--space--2xs);
         box-shadow: var(--shadow--soft--hover);
       }

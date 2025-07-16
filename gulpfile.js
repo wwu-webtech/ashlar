@@ -162,7 +162,7 @@
    * dest: Output pattern for image files.
    */
   config.images = {
-    src: ["source/images/**/*.{jpg,jpeg,gif,png,svg}"],
+    src: ["source/images/**/*.{jpg,jpeg,gif,png,svg,webp}"],
     dest: "build/images",
     cdndest: "cdn/images",
   };
@@ -211,23 +211,6 @@
       flatten(),
       gulp.dest(config.sassComponents.dest),
       gulp.dest(config.sassComponents.cdndest),
-      callback
-    );
-  });
-
-  /**
-   * Generate unoptimized CSS.
-   */
-  gulp.task("sass:dev", function (callback) {
-    pump(
-      gulp.src(config.sass.src),
-      sassGlob(),
-      sourcemaps.init(),
-      sass(config.sass.options),
-      sourcemaps.write(),
-      flatten(),
-      gulp.dest(config.sass.dest),
-      gulp.dest(config.sass.cdndest),
       callback
     );
   });
@@ -373,7 +356,10 @@
    * Set watch tasks.
    */
   gulp.task("watch", function () {
-    gulp.watch(config.sass.watch, gulp.series(["sass:dev"]));
+    gulp.watch(config.sassComponents.watch, gulp.series(["sass"])); 
+    gulp.watch(config.sassComponents.watch, gulp.series(["sassComponents"])); 
+    gulp.watch(config.sass.watch, gulp.series(["sass"])); 
+    gulp.watch(config.sass.watch, gulp.series(["sassComponents"]));    
     gulp.watch(config.js.watch, gulp.series(["js"]));
   });
 
