@@ -13,12 +13,9 @@ Organism: Pre-header
   top: var(--logo-size);
   left: 0;
   display: none;
-  width: 100vw;
+  width: calc(100vw - (2 * var(--toggle-size)) - (2 * var(--space--md)));
   padding: var(--space--lg);
   color: var(--dark-blue);
-  @media (min-width: $large) {
-    top: calc(-1 * var(--space--xs));
-  }
   .menu-container {
     display: flex;
     flex-flow: column;
