@@ -49,6 +49,12 @@ wwu-header {
     flex-flow: row nowrap;
     grid-area: preheader;
     align-content: center;
+    &.secondary {
+      left: calc(var(--toggle-size--sm) + var(--space--md));
+      @media(min-width: $medium) {
+        left: calc(var(--toggle-size) + var(--space--md));
+      }
+    }
   }
   .western-logo {
     display: flex;
