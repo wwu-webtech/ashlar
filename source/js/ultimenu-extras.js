@@ -1,6 +1,8 @@
+console.log('✅ Ultimenu Extras loaded');
 (function ($, Drupal, once) {
   Drupal.behaviors.ultimenuExtras = {
     attach: function (context, settings) {
+      console.log('Ultimenu Extras behavior attached');
       if (Drupal.ultimenu && typeof Drupal.ultimenu.onClickCaret === 'function') {
         Drupal.ultimenu.onClickCaret = function (e) {
           const $caret = e.target;
@@ -26,4 +28,7 @@
       }
     }
   };
+  if (!Drupal.ultimenu) {
+    console.warn('⚠️ Drupal.ultimenu is not defined when ultimenu-extras ran');
+  }
 })(jQuery, Drupal, once);
