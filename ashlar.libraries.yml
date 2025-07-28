@@ -178,6 +178,13 @@ testimonial:
   css:
     theme:
       build/css/components/testimonial.css: {}
+ultimenu_extras:
+  version: 1.x
+  js:
+    build/js/ultimenu-extras.js: {}
+  dependencies:
+    - core/jquery
+    - core/once
 user-login:
   version: 1.x
   js:

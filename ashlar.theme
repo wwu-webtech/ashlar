@@ -11,6 +11,7 @@ use \Drupal\block_content\BlockContentInterface;
 * Implements hook_page_attachments_alter().
 */
 function ashlar_page_attachments_alter(array &$attachments) {    
+  $attachments['#attached']['library'][] = 'ashlar/ultimenu_extras';
   if (theme_get_setting('vimeo_tracking')) {
     $attachments['#attached']['library'][] = 'ashlar/vimeo-tracking';
   }
