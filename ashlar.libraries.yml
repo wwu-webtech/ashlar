@@ -6,7 +6,6 @@ acalog:
   dependencies:
     - core/jquery
     - core/once
-    - ultimenu/base
 accessible-mega-menu:
   version: 1.x
   js:
