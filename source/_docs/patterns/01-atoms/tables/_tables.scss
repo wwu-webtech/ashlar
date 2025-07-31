@@ -85,7 +85,8 @@ table {
 /*------------------------------------------------------------------------------
 2. Responsive table container
 ------------------------------------------------------------------------------*/
-.responsive-table {
+.responsive-table,
+form table {
   overflow-x: scroll;
   @media (min-width: $medium) {
     overflow-x: revert;
