@@ -25,7 +25,7 @@ if (
             Give
           </a>           
         </nav>    
-
+  
         <nav class="quick-links" aria-labelledby="quick-links">            
           <h2 id="quick-links" class="visually-hidden">Quick Links</h2>
           <a href="https://mywestern.wwu.edu">myWestern</a>        
@@ -42,7 +42,7 @@ if (
           <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M172-278v-28h616v28H172Zm0-188v-28h616v28H172Zm0-188v-28h616v28H172Z"/></svg></span>
           <span class="toggle-text">Menu</span>
       </button>
-
+  
       <wwu-search role="search" aria-label="Western">
           <noscript>
               <form class="search-area" method="get" action="https://search2.wwu.edu/texis/search">
@@ -57,10 +57,10 @@ if (
               </form>
           </noscript>
       </wwu-search>
-
+  
       <wwu-display-settings></wwu-display-settings>
     </div>
-
+  
     <div class="site-name">
         <a href="/" class="home-link"></a>
     </div>
@@ -112,33 +112,33 @@ if (
         var nav_wrapper = this.querySelector(".navigation-wrapper");
         var main_nav = document.querySelector(".region--main_navigation");
         var menu_toggle = this.querySelector(".toggle-menu");
-                
+        
         waitForElm(".button--ultimenu").then((elm) => {
           elm.setAttribute("aria-hidden", "true");
           elm.classList.add("visually-hidden");
         });                
         
-
+        
         /* Open menu -------------------------------------------------------------*/
         function open() {
           menu_toggle.setAttribute("aria-expanded", true);
           menu_toggle.querySelector(".component-icon").innerHTML = close_icon;
           menu_toggle.querySelector(".toggle-text").innerHTML = "Close";
-
+          
           nav_wrapper.removeAttribute("aria-hidden");
-
+          
           html.classList.add("navigation-open");
           html.classList.remove("navigation-closed");
         }
-
+        
         /* Close menu -------------------------------------------------------------*/        
         function close() {
           menu_toggle.setAttribute("aria-expanded", false);
           menu_toggle.querySelector(".component-icon").innerHTML = menu_icon;
           menu_toggle.querySelector(".toggle-text").innerHTML = "Menu";
-
+          
           nav_wrapper.setAttribute("aria-hidden", true);
-
+          
           html.classList.add("navigation-closed");
           html.classList.remove("navigation-open");
         }
@@ -149,7 +149,7 @@ if (
             menu_toggle.focus();
           }
         }
-
+        
         /* Toggle menu -----------------------------------------------------------*/
         function toggle_menu() {
           if (html.classList.contains("navigation-closed")) {
@@ -180,7 +180,7 @@ if (
             });
           });
         }
-
+        
         function updateNavPosition() {
           if (html.classList.contains("is-ultimenu--active") || window.innerWidth <= 951) {
             nav_wrapper.prepend(main_nav);
@@ -190,7 +190,7 @@ if (
           }
         }
         
-    
+        
         if (menu_toggle) {
           menu_toggle.addEventListener("click", toggle_menu);
           menu_toggle.addEventListener("keyup", keyboard_close);
@@ -198,6 +198,17 @@ if (
         }     
         updateNavPosition();
         window.addEventListener("resize", updateNavPosition);
+        
+        /* Alternate theme settings */
+        const hide_links = this.getAttribute('hidelinks');
+        const site_logo = this.getAttribute('logo');        
+        if (hide_links) {          
+          this.querySelector(".university-links").remove();          
+        }        
+        if (site_logo != "/") {
+          console.log(site_logo);
+          this.querySelector(".wwu-home-link").innerHTML = `<img src="${site_logo}" alt="${site_name} logo"/>`
+        }
       }
     }
   }

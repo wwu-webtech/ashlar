@@ -73,7 +73,8 @@
 
         const hide = this.getAttribute('hide');
         if (hide) {          
-          this.querySelector("wwu-logo").remove();
+          this.querySelector(".artwork").remove();
+          this.querySelector(".footer-waves").remove();
           this.querySelector(".social").remove();
           this.querySelector(".tribal-lands-statement").remove();
           this.querySelector(".copyright").remove();
