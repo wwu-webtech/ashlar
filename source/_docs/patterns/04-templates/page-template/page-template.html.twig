@@ -14,7 +14,7 @@
       {% endblock %}
       
       {% block wwu_header %}
-      <wwu-header sitename='{{ site_name }}' regioncontent='{{ page.wwu_header }}'>
+      <wwu-header sitename='{{ site_name }}' regioncontent='{{ page.wwu_header }}' hidelinks='{{ hide_quick_links }}' logo='{{ logopath }}'>
         {{ page.main_navigation }}
       </wwu-header>
       {% endblock %}
@@ -34,7 +34,11 @@
     {% block footer %}
     <footer class="page-footer region region--footer" role="contentinfo">
       <div class="wwu-footer-divider">
-        <p class="wwu-tagline">Make Waves.</p>
+        {% if site_slogan %}
+          <p class="wwu-tagline">{{ site_slogan }}</p>
+        {% else %}
+          <p class="wwu-tagline">Make Waves.</p>
+        {% endif %}
         <div class="separator"></div>
       </div>
       {% block site_footer %}
@@ -59,8 +63,9 @@
       </section>
       {% endblock %}
       {% block wwu_footer %}
-      <wwu-footer aria-label="Western footer">
+      <wwu-footer aria-label="Western footer" hide="{{ hide_footer }}">
         <noscript>
+          {% if hide_footer == false %}
           <div class="tribal-lands-statement">
             <h2 class="visually-hidden">Tribal Lands Statement</h2>
             <p>
@@ -74,6 +79,7 @@
               © <span class="copyright-date">{{ "now"|date("Y") }}</span> Western Washington University
             </p>
           </div>
+          {% endif %}
           
           <div class="footer-bottom">
             <nav class="footer-nav" aria-labelledby="wwu-footer-heading-noscript">
