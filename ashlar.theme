@@ -26,6 +26,8 @@ function ashlar_page_attachments_alter(array &$attachments) {
 function ashlar_preprocess_page(&$variables) {
   $variables['site_name'] = \Drupal::config('system.site')->get('name');
   $variables['alert_display'] = (bool) theme_get_setting('alert_display');
+  $variables['hide_quick_links'] = (bool) theme_get_setting('hide_quick_links');
+  $variables['hide_footer'] = (bool) theme_get_setting('hide_footer');  
 }
 
 /**

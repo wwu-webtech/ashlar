@@ -35,4 +35,16 @@ function ashlar_form_system_theme_settings_alter(&$form, FormStateInterface &$fo
     '#title' => t('Load Javascript for dynamic catalog links'),
     '#default_value' => theme_get_setting('enable_acalog_widget'),
   );
+
+  $form['theme_settings']['hide_quick_links'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Hide quick links'),
+    '#default_value' => theme_get_setting('hide_quick_links'),
+  );
+
+  $form['theme_settings']['hide_footer'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Hide Western footer'),
+    '#default_value' => theme_get_setting('hide_footer'),
+  );
 }

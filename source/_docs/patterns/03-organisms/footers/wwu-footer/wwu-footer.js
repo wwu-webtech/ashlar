@@ -70,6 +70,14 @@
         let currentDate = new Date();
         this.querySelector('.copyright-date').innerText =  currentDate.getFullYear();
         this.setAttribute('aria-label', 'Western footer');
+
+        const hide = this.getAttribute('hide');
+        if (hide) {          
+          this.querySelector("wwu-logo").remove();
+          this.querySelector(".social").remove();
+          this.querySelector(".tribal-lands-statement").remove();
+          this.querySelector(".copyright").remove();
+        }
       }
     }
   }
