@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ashlar.wwu.edu/changelog</id>
     <title>Ashlar Blog</title>
-    <updated>2025-06-24T12:00:00.000Z</updated>
+    <updated>2025-08-04T12:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ashlar.wwu.edu/changelog"/>
     <subtitle>Ashlar Blog</subtitle>
@@ -11,9 +11,18 @@
         <title type="html"><![CDATA[5.5.x Updates]]></title>
         <id>https://ashlar.wwu.edu/changelog/version-5-5</id>
         <link href="https://ashlar.wwu.edu/changelog/version-5-5"/>
-        <updated>2025-06-24T12:00:00.000Z</updated>
-        <summary type="html"><![CDATA[5.5.10]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5510">5.5.10<a href="https://ashlar.wwu.edu/changelog/version-5-5#5510" class="hash-link" aria-label="Direct link to 5.5.10" title="Direct link to 5.5.10">​</a></h2>
+        <updated>2025-08-04T12:00:00.000Z</updated>
+        <summary type="html"><![CDATA[5.5.11]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5511">5.5.11<a href="https://ashlar.wwu.edu/changelog/version-5-5#5511" class="hash-link" aria-label="Direct link to 5.5.11" title="Direct link to 5.5.11">​</a></h2>
+<p>** August 4, 2025**</p>
+<ul>
+<li>Course fix for catalog links</li>
+<li>Webform horizontal scroll fix</li>
+<li>Styles for lightcast career widget</li>
+<li>Video style fix</li>
+<li>NPM Vulnerabilities update</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5510">5.5.10<a href="https://ashlar.wwu.edu/changelog/version-5-5#5510" class="hash-link" aria-label="Direct link to 5.5.10" title="Direct link to 5.5.10">​</a></h2>
 <p>** June 24, 2025 **</p>
 <ul>
 <li>Added 403 page template to docs</li>
@@ -98,6 +107,9 @@
         </author>
         <author>
             <name>Rodrigo Ortiz Mendoza</name>
+        </author>
+        <author>
+            <name>Connor Haines</name>
         </author>
         <category label="minor-release" term="minor-release"/>
     </entry>
