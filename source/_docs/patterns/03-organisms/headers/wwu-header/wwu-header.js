@@ -88,7 +88,7 @@ if (
         this.classList.add("element-created");
         let site_name;
         let site_name_link;
-        let region_content;
+        const region_content = this.querySelector('#regioncontent');
         
         if(this.getAttribute("sitename") != null) { 
           site_name = this.getAttribute("sitename"); 
@@ -98,10 +98,9 @@ if (
           site_name_link = this.getAttribute("sitename-link"); 
           this.querySelector(".home-link").setAttribute("href", site_name_link);
         }
-        if(this.getAttribute("regioncontent") != null) { 
-          region_content  = this.getAttribute("regioncontent"); 
-          this.querySelector(".western-header-region").innerHTML = region_content;
-        }     
+        if(region_content) { 
+          this.querySelector(".western-header-region").innerHTML = region_content.innerHTML;
+        }      
         
         /*------------------------------------------------------------------------------
         Menu pop-up functionality

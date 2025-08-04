@@ -14,7 +14,10 @@
       {% endblock %}
       
       {% block wwu_header %}
-      <wwu-header sitename='{{ site_name }}' regioncontent='{{ page.wwu_header }}' hidelinks='{{ hide_quick_links }}' logo='{{ logopath }}'>
+      <wwu-header sitename='{{ site_name }}' hidelinks='{{ hide_quick_links }}' logo='{{ logopath }}'>
+        <template id="regioncontent">
+          {{ page.wwu_header }}
+        </template>
         {{ page.main_navigation }}
       </wwu-header>
       {% endblock %}
