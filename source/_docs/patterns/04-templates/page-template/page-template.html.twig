@@ -24,7 +24,7 @@
       {% endblock %}
 
       {% block wwu_header %}
-        <wwu-header sitename='{{ site_name }}' regioncontent='{{ page.wwu_header }}'>
+        <wwu-header sitename='{{ site_name }}' regioncontent='{{ page.wwu_header }}' hidelinks='{{ hide_quick_links }}'>
             <noscript>
                 <nav class="wwu-menu wwu-menu-closed" aria-label="Western Quick Links">
                     <a class="small icon-link apply-quick-link" href="https://admissions.wwu.edu/apply">
@@ -115,8 +115,9 @@
         </section>
       {% endblock %}
       {% block wwu_footer %}
-        <wwu-footer aria-label="Western footer">
+        <wwu-footer aria-label="Western footer" hide="{{ hide_footer }}">
           <noscript>
+              {% if hide_footer == false %}
               <div class="tribal-lands-statement">
                   <h2 class="visually-hidden">Tribal Lands Statement</h2>
                   <p>
@@ -130,6 +131,7 @@
                       © <span class="copyright-date">{{ "now"|date("Y") }}</span> Western Washington University
                   </p>
               </div>
+              {% endif %}
 
               <div class="footer-bottom">
                 <nav class="footer-nav" aria-labelledby="wwu-footer-heading-noscript">
@@ -144,7 +146,7 @@
                 </nav>
               </div>
           </noscript>
-        </wwu-footer>
+        </wwu-footer>        
       {% endblock %}
     </footer>
   {% endblock %}
