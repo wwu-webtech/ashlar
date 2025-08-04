@@ -24,7 +24,10 @@
       {% endblock %}
 
       {% block wwu_header %}
-        <wwu-header sitename='{{ site_name }}' regioncontent='{{ page.wwu_header }}' hidelinks='{{ hide_quick_links }}'>
+        <wwu-header sitename='{{ site_name }}' hidelinks='{{ hide_quick_links }}'>
+            <template id="regioncontent">
+              {{ page.wwu_header }}
+            </template>
             <noscript>
                 <nav class="wwu-menu wwu-menu-closed" aria-label="Western Quick Links">
                     <a class="small icon-link apply-quick-link" href="https://admissions.wwu.edu/apply">
