@@ -19,6 +19,11 @@ Atom: Forms
   --input-text-color: var(--white);
   --required-color: var(--blue--lighter--40);
 }
+
+[data-theme="dark"] .webform-multiple-table td input[type="image"] {
+  border: var(--border-width--md) solid var(--input-border-color);
+  filter: invert(.5) sepia(1) saturate(1) hue-rotate(177deg) brightness(2);
+}
 /*------------------------------------------------------------------------------
 1. Labels
 ------------------------------------------------------------------------------*/
