@@ -25,3 +25,10 @@ Atom: Section Backgrounds
     background-size: cover;
   }
 }
+[data-theme="dark"] {
+  .wave-bg-1 {
+    &:before {
+      background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/wave-gradient-dark.svg");
+    }
+  }
+}
