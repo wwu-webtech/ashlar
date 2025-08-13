@@ -231,6 +231,18 @@ Mixins
     }
   }
 }
+.ultimenu__flyout {
+  &.open {
+    visibility: visible;
+    overflow: visible;
+    height: auto;
+    min-height: 64px;
+    max-height: 100%;
+    padding: var(--ultispace) 0;
+    transition-delay: 0.1s;
+    opacity: 1;
+  }
+}
 .ultimenu__item:has(.menu-item--active-trail) .ultimenu__link {
   @include menu-link-decoration-active;
 
@@ -361,14 +373,6 @@ Mixins
         left: 0;
         width: unset;
         width: 100%;
-      }
-      .open {
-        .ultimenu__flyout {
-          visibility: visible;
-          height: unset;
-          max-height: unset;
-          opacity: 1;
-        }
       }
       .ultimenu__region {
         display: flex;
