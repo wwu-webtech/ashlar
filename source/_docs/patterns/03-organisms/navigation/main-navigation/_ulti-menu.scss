@@ -12,9 +12,6 @@ Overwrite to reset default ultimenu styles.
 .is-ultimenu--hiding .is-ultimenu__canvas-off {
   z-index: 1;
 }
-.is-ultimenu .is-ultihover > li {
-  display: block;
-}
 .sidebar .ultimenu__flyout,
 .is-ultihover.ultimenu--offcanvas:not(.ultimenu--vertical),
 .is-ultihover.ultimenu--offcanvas .ultimenu__flyout,
