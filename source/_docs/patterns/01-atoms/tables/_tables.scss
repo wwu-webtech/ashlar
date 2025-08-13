@@ -17,10 +17,10 @@ Atom: Tables
   --table-text: var(--black);
 }
 table {
-  --link-color: var(--blue--darker--20);
+  --link-color: var(--dark-blue--darker--20);
   --link-color--focus: var(--dark-blue);
   --link-color--visited: var(--purple);
-  --link-decoration-color: var(--blue--darker--20);
+  --link-decoration-color: var(--dark-blue--darker--20);
   --link-decoration-color--visited: var(--purple);
 
   grid-template-columns: auto;
@@ -172,10 +172,10 @@ table {
     --table-rows--light: var(--gray--darker--80);
     --table-text: var(--white);
     &.blue {
-      --table-headers--dark: var(--blue--darker--20);
-      --table-headers--light: var(--blue--darker--40);
-      --table-rows--dark: var(--blue--darker--60);
-      --table-rows--light: var(--blue--darker--80);
+      --table-headers--dark: var(--dark-blue--darker--20);
+      --table-headers--light: var(--dark-blue--darker--40);
+      --table-rows--dark: var(--dark-blue--darker--60);
+      --table-rows--light: var(--dark-blue--darker--80);
     }
   }
 }

@@ -31,6 +31,7 @@ iframe {
 }
 body {
   position: relative;
+  z-index: 0;
   padding-top: var(--drupal-displace-offset-top);
   color: var(--default-text-color);
   background-color: var(--page-background);
