@@ -7,12 +7,16 @@ Molecule: Search
 .wwu-search {
   @include lightest-blue-bg;
 
-  position: absolute;
-  top: var(--logo-size);
+  position: fixed;
+  top: var(--drupal-displace-offset-top);
   left: 0;
   display: none;
-  width: calc(100vw - (2 * var(--toggle-size)) - (2 * var(--space--md)));
+  width: 100vw;
   padding: var(--space--lg);
+  padding-top: var(--logo-size);
+  @media(min-width: $medium) {
+    padding-top: var(--space--2xl);
+  }
   .search-form {
     display: grid;
     grid-auto-flow: row;
