@@ -198,9 +198,13 @@ Mixins
 
   position: relative;
   z-index: unset;
-  li {
+  > li {
+    display: grid ;
+    grid-template-columns: 1fr auto;
     .ultimenu__link {
       z-index: unset;
+      grid-column: 1 / span all;
+      grid-row: 1;
       padding: var(--space--xs);
       transition: all 0.2s ease;
       text-decoration-color: var(--link-decoration-color);
@@ -215,13 +219,31 @@ Mixins
       &.is-ulink-active {
         @include menu-link-decoration-active;
       }
-      @media (min-width: $medium) {
-        left: 10%;
-        width: 40%;
+    }
+    .expand {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-column: 2 / span 1;
+      grid-row: 1;
+      align-items: center;
+      height: 100%;
+      transition: transform var(--transition-speed--fast) var(--ease--standard);
+      svg {
+        fill: var(--blue--darker--20);
       }
+    }
+    &:has(.open) .expand {
+      transform: rotate(180deg);
     }
   }
   @media(min-width: $medium) {
+    > li {
+      width: 50%;
+      .ultimenu__link {
+        padding-left: var(--space--xl);
+      }
+    }
     .ultimenu__flyout {
       position: absolute;
       top: 0;
@@ -232,6 +254,7 @@ Mixins
   }
 }
 .ultimenu__flyout {
+  top: 0;
   &.open {
     visibility: visible;
     overflow: visible;
@@ -352,16 +375,6 @@ Mixins
             text-decoration: none;
             background-color: var(--link-decoration-color);
           }
-        }
-        .expand {
-          position: relative;
-          z-index: 1;
-          display: grid;
-          grid-column: 2 / span 1;
-          grid-row: 1;
-          align-items: center;
-          height: 100%;
-          transition: transform 0.2s ease;
         }
         &:has(.open) .expand {
           transform: rotate(90deg);

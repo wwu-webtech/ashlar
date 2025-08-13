@@ -55,7 +55,7 @@
     {%- for item in items -%}
       <li{{ item.attributes.addClass(item_classes, item.flyout ? 'has-ultimenu', item.config.is_active == true ? 'ultimenu__item--active-page')}}>
         {% if item.flyout %}
-          <span class="component-icon expand" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#007ac8"><path d="M540-480 356-664l20-20 204 204-204 204-20-20 184-184Z"/></svg></span>
+          <span class="component-icon expand" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px"><path d="M540-480 356-664l20-20 204 204-204 204-20-20 184-184Z"/></svg></span>
         {% endif %}
         {%- if item.link -%}
           {{ item.link }}          
