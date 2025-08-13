@@ -82,6 +82,14 @@ Helpers: Space
 .block.no-margin--left {
   margin-left: 0;
 }
+.negative-margin--top {
+  position: relative;
+  margin-top: -15%;
+}
+.layout-builder .negative-margin--top {
+  margin-top: unset;
+}
+/* Padding -------------------------------------------------------------------*/
 .half-padding,
 .block.half-padding[class*="-bg"],
 .block.half-padding {
@@ -182,7 +190,7 @@ Helpers: Space
 .block.no-padding--left {
   padding-left: 0;
 }
-/* space creating blocks */
+/* Space creating blocks------------------------------------------------------*/
 .vertical-space--1x {
   @media (min-width: $medium) {
     height: var(--space--sm);

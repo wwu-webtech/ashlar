@@ -21,8 +21,10 @@ Molecule: Image Link
   --image-link-overlay-color: var(--dark-blue--darker--40);
   --image-link-size: 10rem;
   --link-color: var(--white);
+  --link-color--active: var(--white);
   --link-color--focus: var(--white);
   --link-color--visited: var(--white);
+  --link-color--visited--active: var(--white);
 
   position: relative;
   width: var(--image-link-size);
@@ -227,7 +229,7 @@ Molecule: Image Link
 }
 .blue {
   .image-link {
-    --image-link-overlay-color: var(--blue--darker--20);
+    --image-link-overlay-color: var(--dark-blue--darker--20);
   }
 }
 /*------------------------------------------------------------------------------

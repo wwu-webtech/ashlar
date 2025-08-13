@@ -42,6 +42,12 @@ For adjusting alignments.
     display: block;
     width: 100%;
   }
+  iframe {
+    aspect-ratio: 16 / 9;
+
+    width: 100%;
+    height: auto;
+  }
 }
 .media-stretch {
   display: grid;
@@ -50,6 +56,12 @@ For adjusting alignments.
   img {
     display: block;
     width: 100%;
+  }
+  iframe {
+    aspect-ratio: 16 / 9;
+
+    width: 100%;
+    height: auto;
   }
 }
 .media-align-left {
@@ -68,6 +80,12 @@ For adjusting alignments.
     justify-self: end;
     width: 100%;
   }
+  iframe {
+    aspect-ratio: 16 / 9;
+
+    width: 100%;
+    height: auto;
+  }
 }
 .media-align-right {
   display: grid;
@@ -84,5 +102,11 @@ For adjusting alignments.
   img {
     display: block;
     width: 100%;
+  }
+  iframe {
+    aspect-ratio: 16 / 9;
+
+    width: 100%;
+    height: auto;
   }
 }

@@ -47,7 +47,6 @@
 
 {{ attach_library('ashlar/accessible-mega-menu') }}
 {{ attach_library('ashlar/menu-extras') }}
-{{ attach_library('ashlar/ultimenu_extras') }}
 
 <nav class="main-navigation" aria-label="Main">
   {% include "@templates/label/label.twig" %}
@@ -55,14 +54,17 @@
   <ul{{ attributes.addClass(classes) }}>
     {%- for item in items -%}
       <li{{ item.attributes.addClass(item_classes, item.flyout ? 'has-ultimenu', item.config.is_active == true ? 'ultimenu__item--active-page')}}>
+        {% if item.flyout %}
+          <span class="component-icon expand" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px"><path d="M540-480 356-664l20-20 204 204-204 204-20-20 184-184Z"/></svg></span>
+        {% endif %}
         {%- if item.link -%}
-          {{ item.link }}
+          {{ item.link }}          
 
           {% if item.below %}
             {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
           {% endif %}
         {%- endif -%}
-        {%- if item.flyout -%}
+        {%- if item.flyout -%}                
           <section{{ item.flyout_attributes.addClass('ultimenu__flyout') }}>
             {{ item.flyout }}
           </section>
