@@ -29,7 +29,9 @@ Overwrite to reset default ultimenu styles.
   padding: 0;
   opacity: 0;
 }
-.is-ultidesktop .is-ultihover:not(.is-ulticaret) li a.open + .ultimenu__flyout {
+.is-ultidesktop .is-ultihover:not(.is-ulticaret) li.has-ultimenu a.open + .ultimenu__flyout,
+.ultimenu .ultimenu__item.has-ultimenu:has(a.open) .ultimenu__flyout
+ {
   visibility: visible;
   overflow: visible;
   height: auto;

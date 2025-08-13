@@ -11,11 +11,8 @@ Molecule: Search
   top: var(--logo-size);
   left: 0;
   display: none;
-  width: 100vw;
+  width: calc(100vw - (2 * var(--toggle-size)) - (2 * var(--space--md)));
   padding: var(--space--lg);
-  @media (min-width: $large) {
-    top: calc(-1 * var(--space--xs));
-  }
   .search-form {
     display: grid;
     grid-auto-flow: row;
