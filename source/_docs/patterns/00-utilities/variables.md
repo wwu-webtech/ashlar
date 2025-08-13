@@ -47,7 +47,7 @@ If you alter an element's color, you *must* make sure that element meets contras
 
 ```
 .change-color {
-color: var(--blue--darker--80);
+color: var(--dark-blue--darker--80);
 }
 
 [data-theme="dark"] .change-color {
@@ -80,10 +80,10 @@ color: var(--blue--lighter--80);
 --dark-blue--lighter--60: #69afff; 
 --dark-blue--lighter--80: #b4d7ff; 
 
---blue--darker--80: #001828;
---blue--darker--60: #003150;
---blue--darker--40: #004978; 
---blue--darker--20: #0062a0; 
+--dark-blue--darker--80: #001828;
+--dark-blue--darker--60: #003150;
+--dark-blue--darker--40: #004978; 
+--dark-blue--darker--20: #0062a0; 
 --blue: #007ac8;
 --blue--lighter--20: #079eff;
 --blue--lighter--40: #45b6ff; 
@@ -269,13 +269,13 @@ We use Fluid Typography, so our font sizes scale directly with the viewport size
 Heading sizes and colors are set using the font size and color variables above. These are their default values the :root
 
 ```
---h1-color: var(--blue--darker--80);
+--h1-color: var(--dark-blue--darker--80);
 --h1-size: var(--font-size--7xl);
---h2-color: var(--blue--darker--60);
+--h2-color: var(--dark-blue--darker--60);
 --h2-size: var(--font-size--4xl);
---h3-color: var(--blue--darker--40);
+--h3-color: var(--dark-blue--darker--40);
 --h3-size: var(--font-size--3xl);
---h4-color: var(--blue--darker--20);
+--h4-color: var(--dark-blue--darker--20);
 --h4-size: var(--font-size--2xl);
 --h5-color: var(--blue);
 --h5-size: var(--font-size--xl);

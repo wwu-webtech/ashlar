@@ -10,7 +10,7 @@ Atom: Forms
   --checkbox-size: 1.2rem;
   --input-background-color: var(--gray--lighter--90);
   --input-border-color: var(--gray--lighter--20);
-  --input-border-color--focus: var(--blue--darker--20);
+  --input-border-color--focus: var(--dark-blue--darker--20);
   --input-text-color: var(--black);
   --required-color: var(--blue);
 }
@@ -43,7 +43,7 @@ textarea,
 select {
   display: inline-block;
   box-sizing: border-box;
-  width: 100%;
+  max-width: 90vw;
   margin-bottom: var(--space--md);
   padding: var(--space--xs);
   color: var(--input-text-color);
@@ -175,6 +175,11 @@ input[type="radio"] {
   }
 }
 table {
+  input,
+  textarea,
+  select {
+    max-width: 100%;
+  }
   input[type="checkbox"],
   input[type="radio"] {
     width: unset;

@@ -11,6 +11,7 @@ a.wp-block-button__link {
   --cta-color: var(--blue);
   --link-color: var(--white);
   --link-color--visited: var(--link-color);
+  --link-color--visited--active: var(--link-color);
 
   position: relative;
   display: inline-block;
@@ -125,6 +126,8 @@ a.wp-block-button__link {
 ------------------------------------------------------------------------------*/
 .round-cta {
   --cta-size: 9rem;
+  --link-color--visited: var(--link-color);
+  --link-color--visited--active: var(--white);
 
   position: relative;
   display: inline-grid;

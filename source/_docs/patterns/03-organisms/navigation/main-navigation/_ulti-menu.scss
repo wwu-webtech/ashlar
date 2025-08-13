@@ -12,9 +12,6 @@ Overwrite to reset default ultimenu styles.
 .is-ultimenu--hiding .is-ultimenu__canvas-off {
   z-index: 1;
 }
-.is-ultimenu .is-ultihover > li {
-  display: block;
-}
 .sidebar .ultimenu__flyout,
 .is-ultihover.ultimenu--offcanvas:not(.ultimenu--vertical),
 .is-ultihover.ultimenu--offcanvas .ultimenu__flyout,
@@ -47,4 +44,15 @@ Overwrite to reset default ultimenu styles.
 .ultimenu li .ultimenu__flyout:focus-within,
 .ultimenu li a:focus + .ultimenu__flyout {
   margin-top: 0;
+}
+.ultimenu__caret {
+  display: none;
+}
+@media (hover: hover) {
+  .is-ultimenu .is-ultihover > li {
+    display: grid;
+  }
+}
+.is-ultimenu .is-ultihover .ultimenu__flyout {
+  position: relative;
 }

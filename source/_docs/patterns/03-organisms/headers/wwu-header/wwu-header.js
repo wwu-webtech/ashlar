@@ -52,10 +52,10 @@ if (
               d="M25.08,45.57c4.29-8.96,24.58-16.47,24.58-31.36S30.87-4.17,25.08,7.51C19.29-4.15.5-.81.5,14.21s20.28,22.4,24.58,31.36" />
             </svg></span>
             Give
-          </a>
-        </nav>
-        
-        <nav class="quick-links" aria-labelledby="quick-links">
+          </a>           
+        </nav>    
+  
+        <nav class="quick-links" aria-labelledby="quick-links">            
           <h2 id="quick-links" class="visually-hidden">Quick Links</h2>
           <a href="https://mywestern.wwu.edu">myWestern</a>
           <a href="https://www.wwu.edu/contactwwu/">Contact WWU</a>
@@ -84,7 +84,7 @@ if (
       
       <wwu-display-settings></wwu-display-settings>
     </div>
-
+  
     <div class="site-name">
       <a href="/" class="home-link"></a>
     </div>
@@ -112,7 +112,7 @@ if (
         this.classList.add("element-created");
         let site_name;
         let site_name_link;
-        let region_content;
+        const region_content = this.querySelector('#regioncontent');
         
         if(this.getAttribute("sitename") != null) { 
           site_name = this.getAttribute("sitename"); 
@@ -122,10 +122,9 @@ if (
           site_name_link = this.getAttribute("sitename-link"); 
           this.querySelector(".home-link").setAttribute("href", site_name_link);
         }
-        if(this.getAttribute("regioncontent") != null) { 
-          region_content  = this.getAttribute("regioncontent"); 
-          this.querySelector(".western-header-region").innerHTML = region_content;
-        }     
+        if(region_content) { 
+          this.querySelector(".western-header-region").innerHTML = region_content.innerHTML;
+        }      
         
         /*------------------------------------------------------------------------------
         Menu pop-up functionality
@@ -137,13 +136,13 @@ if (
         var main_nav = document.querySelector(".region--main_navigation");
         var university_links = this.querySelector(".university-links");
         var menu_toggle = this.querySelector(".toggle-menu");
-                
+        
         waitForElm(".button--ultimenu").then((elm) => {
           elm.setAttribute("aria-hidden", "true");
           elm.classList.add("visually-hidden");
         });                
         
-
+        
         /* Open menu -------------------------------------------------------------*/
         function open() {
           menu_toggle.setAttribute("aria-expanded", true);
@@ -156,7 +155,7 @@ if (
           html.classList.add("navigation-open");
           html.classList.remove("navigation-closed");
         }
-
+        
         /* Close menu -------------------------------------------------------------*/        
         function close() {
           menu_toggle.setAttribute("aria-expanded", false);
@@ -176,7 +175,7 @@ if (
             menu_toggle.focus();
           }
         }
-
+        
         /* Toggle menu -----------------------------------------------------------*/
         function toggle_menu() {
           if (html.classList.contains("navigation-closed")) {
@@ -207,7 +206,7 @@ if (
             });
           });
         }
-
+        
         function updateNavPosition() {
           if (html.classList.contains("is-ultimenu--active") || window.innerWidth <= 951) {
             nav_wrapper.querySelector(".university-links").before(main_nav);
@@ -217,7 +216,7 @@ if (
           }
         }
         
-    
+        
         if (menu_toggle) {
           menu_toggle.addEventListener("click", toggle_menu);
           menu_toggle.addEventListener("keyup", keyboard_close);
@@ -225,6 +224,17 @@ if (
         }     
         updateNavPosition();
         window.addEventListener("resize", updateNavPosition);
+        
+        /* Alternate theme settings */
+        const hide_links = this.getAttribute('hidelinks');
+        const site_logo = this.getAttribute('logo');        
+        if (hide_links) {          
+          this.querySelector(".university-links").remove();          
+        }        
+        if (site_logo != "/") {
+          console.log(site_logo);
+          this.querySelector(".wwu-home-link").innerHTML = `<img src="${site_logo}" alt="${site_name} logo"/>`
+        }
       }
     }
   }
