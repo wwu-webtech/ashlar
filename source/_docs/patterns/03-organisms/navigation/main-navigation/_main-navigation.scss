@@ -261,7 +261,6 @@ Mixins
     height: auto;
     min-height: 64px;
     max-height: 100%;
-    padding: var(--ultispace) 0;
     transition-delay: 0.1s;
     opacity: 1;
   }
@@ -359,6 +358,7 @@ Mixins
       li {
         display: grid;
         grid-template-columns: 1fr auto;
+        width: unset;
         .ultimenu__link {
           left: unset;
           grid-column: 1 / span all;
