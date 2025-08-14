@@ -17,6 +17,7 @@ Organism: Pre-header
   padding: var(--space--lg);
   padding-top: var(--logo-size);
   color: var(--dark-blue);
+  font-size: var(--font-size--sm);
   @media(min-width: $medium) {
     padding-top: var(--space--2xl);
   }
@@ -34,7 +35,6 @@ Organism: Pre-header
     display: flex;
     flex-flow: row wrap;
     gap: var(--space--sm);
-    border: none;
   }
 }
 .settings-open .settings-menu {
