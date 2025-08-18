@@ -142,9 +142,12 @@ function _ashlar_set_icon(&$items, $object) {
       if ($object->hasField('field_variant')) {
         if ($object->field_variant->value === 'round') {
           $item['content']['#title'] = array('#markup' => ' <span class="material-icons" aria-hidden="true">' . $object->field_icon->value . '</span><span class="text">' . $item['content']['#title'] .  '</span>');
-        } else {
+        } 
+        else {
           $item['content']['#title'] = array('#markup' =>  $item['content']['#title'] . ' <span class="material-icons" aria-hidden="true">' . $object->field_icon->value . '</span>');
         }
+      } else {
+        $item['content']['#title'] = array('#markup' =>  $item['content']['#title'] . ' <span class="material-icons" aria-hidden="true">' . $object->field_icon->value . '</span>');
       }
       
       $item['content']['#options']['attributes']['class'][] = 'with-icon';
