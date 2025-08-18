@@ -41,7 +41,7 @@ h5,
 h6 {
   margin: var(--space--xl) 0 var(--space--xs);
   font-family: var(--font--title);
-  font-weight: var(--font-weight--black);
+  font-weight: var(--font-weight--bold);
   font-display: fallback;
   line-height: 1.2;
   @media (max-width: $small) {
@@ -57,6 +57,7 @@ h1 {
   display: block;
   color: var(--h1-color);
   font-size: var(--h1-size);
+  font-weight: var(--font-weight--black);
 }
 h2 {
   color: var(--h2-color);
@@ -101,6 +102,7 @@ h5 + h6 {
   h1,
   h2 {
     text-transform: uppercase;
+    font-weight: var(--font-weight--black);
   }
 }
 .headings--uppercase {
@@ -111,6 +113,7 @@ h5 + h6 {
   h5,
   h6 {
     text-transform: uppercase;
+    font-weight: var(--font-weight--black);
   }
 }
 /*------------------------------------------------------------------------------
