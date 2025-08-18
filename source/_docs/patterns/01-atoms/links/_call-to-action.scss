@@ -49,6 +49,10 @@ a.wp-block-button__link {
     --cta-color: var(--light-green);
     --link-color: var(--dark-blue--darker--20);
   }
+  &.yellow {
+    --cta-color: var(--yellow);
+    --link-color: var(--dark-blue--darker--20);
+  }
   &.dark-blue {
     --cta-color: var(--dark-blue);
     --link-color: var(--white);
@@ -219,6 +223,25 @@ a.wp-block-button__link {
       &:after {
         background: var(--dark-blue);
       }
+    }
+    .material-icons {
+      color: var(--dark-blue);
+    }
+  }
+  &.yellow {
+    color: var(--dark-blue);
+    &:after {
+      background: var(--yellow);
+    }
+    &:hover,
+    &:focus {
+      color: var(--white);
+      &:after {
+        background: var(--dark-blue);
+      }
+    }
+    .material-icons {
+      color: var(--dark-blue);
     }
   }
 }
