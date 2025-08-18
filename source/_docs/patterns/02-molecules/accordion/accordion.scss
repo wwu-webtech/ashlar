@@ -72,10 +72,8 @@ wwu-accordion,
   }
 }
 .accordion-controls-group {
-  display: grid;
-  grid-auto-flow: column dense;
-  grid-template-columns: repeat(2, minmax(var(--touch-target--aaa), calc(var(--space--3xl) * 2.5)));
-  grid-template-rows: repeat(2, 1fr);
+  display: flex;
+  margin-bottom: var(--space--xs);
   [class*="expand-all"] {
     grid-column: 1;
   }
@@ -90,6 +88,7 @@ wwu-accordion,
     --button-color: var(--link-color);
     --button-color--active: var(--link-color);
 
+    min-height: var(--touch-target--aaa);
     margin-bottom: 0;
     padding: var(--space--2xs);
     color: var(--link-color);
@@ -98,6 +97,11 @@ wwu-accordion,
     background: transparent;
     box-shadow: none;
     font-size: var(--font-size--xs);
+    &:hover,
+    &:focus,
+    &:active {
+      background: var(--link-background--focus);
+    }
     &[disabled] {
       --button-color: var(--gray--darker--20);
       --button-color--active: var(--gray--darker--20);
