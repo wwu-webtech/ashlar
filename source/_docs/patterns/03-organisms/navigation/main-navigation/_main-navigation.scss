@@ -74,6 +74,10 @@ Molecule: Main navigation/ultimenu custom styles
     &:focus {
       color: var(--link-color--active);
     }
+    &:focus {
+      outline: dotted var(--oline-color) var(--outline-width);
+      outline-offset: var(--oline-offset);
+    }
     &.is-active {
       --link-color: var(--white);
     }
