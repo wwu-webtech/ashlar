@@ -293,8 +293,10 @@ Molecule: Cards - Alternate styles
   --h6-color: var(--white);
   --h6-size: var(--font-size--md);
   --link-color: var(--dark-blue--darker--20);
+  --link-color--active: var(--white);
   --link-color--focus: var(--white);
   --link-color--visited: var(--purple);
+  --link-color--visited--active: var(--purple--lighter--80);
   --oline-color: var(--white);
   --read-more-size: 2.75rem;
   /* Static/base styles */

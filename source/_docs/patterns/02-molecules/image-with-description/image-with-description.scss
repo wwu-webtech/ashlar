@@ -69,3 +69,10 @@ Molecule: Image with Description
     }
   }
 }
+[data-theme="dark"] {
+  .wwu-image-with-description {
+    .body:not([class$="-bg"]) {
+      @include gray-bg;
+    }
+  }
+}

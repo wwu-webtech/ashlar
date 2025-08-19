@@ -250,6 +250,8 @@ a.wp-block-button__link {
   ------------------------------------------------------------------------------*/
 .inline-cta {
   --link-decoration-color: var(--blue--lighter--60);
+  --link-decoration-color--active: var(--blue--lighter--60);
+  --link-decoration-color--visited: var(--blue--lighter--60);
   text-decoration-thickness: 0.4em;
 
   text-underline-offset: -0.2em;
@@ -258,6 +260,7 @@ a.wp-block-button__link {
 }
 [data-theme="dark"] {
   .inline-cta {
-    --link-decoration-color: var(--blue);
+    --link-decoration-color: var(--dark-blue--darker--20);
+    --link-decoration-color--visited: var(--dark-blue);
   }
 }
