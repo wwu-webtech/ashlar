@@ -7,8 +7,8 @@ Atom: Section Backgrounds
 /*------------------------------------------------------------------------------
 1. Graident Wave
 ------------------------------------------------------------------------------*/
-.wave-bg-1,
-.wave-bg-2 {
+.wave-1,
+.wave-2 {
   position: relative;
   margin-top: var(--space--3xl);
   &:before {
@@ -23,18 +23,18 @@ Atom: Section Backgrounds
     background-size: cover;
   }
 }
-.wave-bg-1:before {
+.wave-1:before {
   top: -25%;
   height: 100%;
   background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/wave-gradient.svg");
 }
-.wave-bg-2:before {
+.wave-2:before {
   height: 10rem;
   opacity: 0.25;
   background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/wave-line-blue.svg");
 }
 [data-theme="dark"] {
-  .wave-bg-1 {
+  .wave-1 {
     &:before {
       background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/wave-gradient-dark.svg");
     }
