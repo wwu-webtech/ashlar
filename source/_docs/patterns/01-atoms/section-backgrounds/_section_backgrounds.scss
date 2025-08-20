@@ -19,16 +19,17 @@ Atom: Section Backgrounds
     display: block;
     width: 100%;
     width: 100vw;
-    height: 100%;
     content: "";
     background-size: cover;
   }
 }
 .wave-bg-1:before {
   top: -25%;
+  height: 100%;
   background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/wave-gradient.svg");
 }
 .wave-bg-2:before {
+  height: 10rem;
   opacity: 0.25;
   background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/wave-line-blue.svg");
 }
