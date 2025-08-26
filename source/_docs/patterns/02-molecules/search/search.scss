@@ -8,7 +8,7 @@ Molecule: Search
   @include lightest-blue-bg;
 
   position: fixed;
-  top: var(--drupal-displace-offset-top);
+  top: 0;
   left: 0;
   display: none;
   width: 100vw;
@@ -99,5 +99,10 @@ Molecule: Search
   }
   .toggle-search {
     --button-color: var(--white);
+  }
+}
+.toolbar-fixed {
+  .wwu-search {
+    top: var(--drupal-displace-offset-top);
   }
 }

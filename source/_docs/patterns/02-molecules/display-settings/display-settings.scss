@@ -10,7 +10,7 @@ Organism: Pre-header
   @include lightest-blue-bg;
 
   position: fixed;
-  top: var(--drupal-displace-offset-top);
+  top: 0;
   left: 0;
   display: none;
   width: 100vw;
@@ -78,5 +78,10 @@ Organism: Pre-header
   }
   .toggle-settings {
     --button-color: var(--white);
+  }
+}
+.toolbar-fixed {
+  .settings-menu {
+    top: var(--drupal-displace-offset-top);
   }
 }

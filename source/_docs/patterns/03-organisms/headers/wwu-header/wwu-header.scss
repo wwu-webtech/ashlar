@@ -65,6 +65,7 @@ wwu-header {
   }
   .western-header-region {
     grid-area: header-region;
+    align-self: start;
     justify-self: center;
     text-transform: uppercase;
     color: var(--link-color);
@@ -72,6 +73,7 @@ wwu-header {
     font-size: var(--font-size--3xl);
     font-weight: var(--font-weight--black);
     a {
+      padding: 0;
       text-decoration: none;
       color: var(--link-color);
       &:visited {
@@ -80,6 +82,7 @@ wwu-header {
     }
     p {
       margin: 0;
+      line-height: 1;
     }
     @media (max-width: $medium) {
       &:has(.region--wwu_header) {
@@ -176,10 +179,7 @@ wwu-header {
         "preheader site-name logo"
         "preheader header-region logo"
         "main-nav main-nav main-nav";
-        grid-template-rows: auto 1fr 1fr auto;
-        .western-header-region {
-          align-self: start;
-        }
+        grid-template-rows: auto 2fr 3fr auto;
       }
       .buttons {
         &.secondary {
