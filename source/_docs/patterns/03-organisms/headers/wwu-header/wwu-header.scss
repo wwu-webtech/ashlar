@@ -18,28 +18,10 @@ wwu-header {
   justify-content: center;
   text-align: center;
   border-bottom: rgba(var(--blue--rgb), 0.4) 1px solid;
-  @media (min-width: $large) {
-    grid-template-areas: "preheader site-name logo";
-    grid-template-columns: auto 1fr auto;
-    grid-template-rows: 1fr;
-    text-align: unset;
-    background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/wave-line-blue.svg");
-    background-repeat: no-repeat;
-    background-position-y: 4.5rem;
-    background-size: contain;;
-    &:has(.region--wwu_header) {
-      grid-template-areas: "preheader site-name logo"
-      "preheader header-region logo";
-      grid-template-rows: 1fr 1fr;
-      .site-name {
-        align-self: end;
-      }
-    }
-  }
-  @media (max-width: $medium) {
-    --logo-size: 4.5rem;
-    .wwu-logo {
-      --logo-size: 4.5rem;
+  &:has(.region--wwu_header) {
+    .site-name {
+      font-size: var(--font-size--md);
+      font-weight: var(--font-weight--regular);
     }
   }
   .buttons {
@@ -66,6 +48,8 @@ wwu-header {
     grid-area: site-name;
     justify-self: center;
     text-transform: uppercase;
+    font-size: var(--font-size--3xl);
+    font-weight: var(--font-weight--black);
     @media (max-width: $medium) {
       margin-bottom: var(--space--sm);
       font-size: var(--font-size--xs);
@@ -74,7 +58,6 @@ wwu-header {
       text-decoration: none;
       text-transform: uppercase;
       color: var(--link-color);
-      font-size: var(--font-size--xl);
       &:visited {
         color: var(--link-color);
       }
@@ -82,22 +65,23 @@ wwu-header {
   }
   .western-header-region {
     grid-area: header-region;
+    align-self: start;
     justify-self: center;
     text-transform: uppercase;
     color: var(--link-color);
     font-family: var(--font--title);
-    font-size: var(--font-size--xl);
+    font-size: var(--font-size--3xl);
     font-weight: var(--font-weight--black);
     a {
       text-decoration: none;
       color: var(--link-color);
-      font-weight: var(--font-wight--bold);
       &:visited {
         color: var(--link-color);
       }
     }
     p {
       margin: 0;
+      line-height: 1.2;
     }
     @media (max-width: $medium) {
       &:has(.region--wwu_header) {
@@ -135,6 +119,30 @@ wwu-header {
       height: var(--toggle-size);
     }
   }
+  @media (max-width: $medium) {
+    --logo-size: 4.5rem;
+    .wwu-logo {
+      --logo-size: 4.5rem;
+    }
+  }
+  @media (min-width: $large) {
+    grid-template-areas: "preheader site-name logo";
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 1fr;
+    text-align: unset;
+    background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/wave-line-blue.svg");
+    background-repeat: no-repeat;
+    background-position-y: 4.5rem;
+    background-size: contain;;
+    &:has(.region--wwu_header) {
+      grid-template-areas: "preheader site-name logo"
+      "preheader header-region logo";
+      grid-template-rows: 1fr 1fr;
+      .site-name {
+        align-self: end;
+      }
+    }
+  }
 }
 .navigation-open {
   wwu-header,
@@ -158,16 +166,27 @@ wwu-header {
 ------------------------------------------------------------------------------*/
 .is-ultimenu--hover {
   @media (min-width: $medium) {
-    wwu-header,
-    wwu-header:has(.region--wwu_header) {
+    wwu-header {
       grid-template-areas: "wrapper wrapper wrapper"
       "preheader site-name logo"
-      "preheader header-region logo"
       "main-nav main-nav main-nav";
       grid-template-columns: auto 1fr auto;
       grid-template-rows: auto;
       background-position-y: 6.75rem;
+      &:has(.region--wwu_header) {
+        grid-template-areas: "wrapper wrapper wrapper"
+        "preheader site-name logo"
+        "preheader header-region logo"
+        "main-nav main-nav main-nav";
+        grid-template-rows: auto 2fr 3fr auto;
+      }
+      .buttons {
+        &.secondary {
+          left: 0;
+        }
+      }
     }
+    wwu-header
     .wwu-logo {
       --logo-size: 5rem;
     }

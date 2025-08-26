@@ -9,7 +9,7 @@ Molecule: Statistic
   display: flex;
   flex-flow: row wrap;
   gap: var(--space--sm);
-  justify-content: center;
+  justify-content: space-evenly;
   .title {
     flex: 0 0 100%;
   }
@@ -18,45 +18,34 @@ Molecule: Statistic
 1. Default
 ------------------------------------------------------------------------------*/
 .wwu-statistic {
-  min-width: 11.25rem;
-  max-width: 15rem;
+  flex: 1 0 20%;
   padding: var(--space--sm);
-  text-align: center;
   border: var(--border-width--md) solid transparent;
-  border-radius: var(--border-radius--rounder);
-  .title {
-    margin-top: 0;
-  }
-  .number {
-    margin-bottom: var(--space--sm);
-    font-size: var(--font-size--lg);
-  }
-  .text {
-    margin-bottom: var(--space--sm);
-    font-size: var(--font-size--sm);
-  }
   .material-icons {
+    position: relative;
+    top: var(--space--xs);
+    margin-bottom: var(--space--sm);
     font-size: var(--icon-size--lg);
   }
   .statistic-heading {
-    position: relative;
-    margin: 0 0 var(--space--sm) 0;
-    padding-bottom: var(--space--md);
-    font-size: var(--font-size--xl);
-    &:after {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      width: 50%;
-      max-width: 12.5rem;
-      content: "";
-      transform: translatex(-50%);
-      border-width: var(--border-width--lg);
-      border-style: solid;
-    }
+    margin-top: 0;
+    margin-bottom: var(--space--2xs);
+    color: var(--text-color--default);
+    font-family: var(--font--title);
+    font-size: var(--font-size--lg);
+    font-weight: var(--font-weight--bold);
   }
   .number {
-    font-weight: var(--font-weight--bold);
+    margin-bottom: var(--space--xs);
+    text-transform: uppercase;
+    font-family: var(--font--title);
+    font-size: var(--font-size--8xl);
+    font-weight: var(--font-weight--black);
+    line-height: 1;
+    p {
+      margin: 0;
+      line-height: 1;
+    }
   }
 }
 /*------------------------------------------------------------------------------
@@ -67,31 +56,28 @@ Molecule: Statistic
   flex-flow: column;
   .wwu-statistic {
     display: grid;
-    grid-column-gap: var(--space--md);
-    grid-template-areas: "heading heading heading" "icon number text";
-    align-items: center;
-    justify-content: left;
-    min-width: unset;
-    max-width: unset;
+    grid-template-areas: "heading heading" "icon number" "text text";
+    grid-template-columns: auto 1fr;
     padding: var(--space--sm) var(--space--md);
     border: var(--border-width--md) solid transparent;
-    border-radius: var(--border-radius--rounder);
     .statistic-heading {
       grid-area: heading;
       padding-bottom: 0;
-      text-align: left;
       text-transform: uppercase;
       &:after {
         display: none;
       }
     }
     .material-icons {
+      top: 0;
       grid-area: icon;
+      ~ .number {
+        margin-left: var(--space--sm);
+      }
     }
     .number {
       grid-area: number;
       margin: 0;
-      font-size: var(--font-size--3xl);
     }
     .text {
       grid-area: text;

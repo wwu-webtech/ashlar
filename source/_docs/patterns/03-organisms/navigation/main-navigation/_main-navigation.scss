@@ -187,6 +187,8 @@ Mixins
   }
 }
 .ultimenu {
+  --link-color--visited: var(--link-color);
+  --link-color--visited--active: var(--link-color);
   --link-decoration-color: var(--blue--lighter--80);
   --ultiactive: var(--blue);
   --ultilink-active: var(--link-color);
@@ -250,6 +252,7 @@ Mixins
       left: 60%;
       width: 40%;
       background: var(--menu-bg-color);
+      box-shadow: var(--shadow--soft);
     }
   }
 }
@@ -367,7 +370,6 @@ Mixins
           padding: var(--space--2xs) var(--space--xs);
           border: solid transparent var(--border-width--md);
           font-size: var(--font-size--md);
-          font-weight: var(--font-weight--regular);
           line-height: 1.5;
           &:hover,
           &:active,
@@ -398,6 +400,7 @@ Mixins
     .ultimenu li .ultimenu__link.is-active {
       text-decoration: none;
       border-bottom-color: var(--blue);
+      background-color: var(--link-decoration-color);
       font-weight: var(--font-weight--bold);
     }
     .toggle-menu {
@@ -429,6 +432,8 @@ Mixins
     }
   }
   .ultimenu {
+    --link-color--visited: var(--blue--lighter--60);
+    --link-color--visited--active: var(--blue--lighter--60);
     --link-decoration-color: var(--dark-blue);
     --ultiactive: var(--blue--lighter--60);
     --ultilink-active: var(--link-color);

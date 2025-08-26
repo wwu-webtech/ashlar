@@ -13,6 +13,8 @@ Molecule: Cards
 ------------------------------------------------------------------------------*/
 .card,
 .wwu-card {
+  break-inside: avoid-column;
+
   position: relative;
   display: flex;
   flex-flow: row wrap;

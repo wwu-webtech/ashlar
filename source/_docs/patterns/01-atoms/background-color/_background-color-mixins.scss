@@ -11,12 +11,12 @@ Atom: Background Color Mixins
 Black, darkest blue, and dark blue are black based and share link/heading colors.
 ------------------------------------------------------------------------------*/
 @mixin black-bg {
-  --h1-color: var(--blue--lighter--60);
-  --h2-color: var(--blue--lighter--60);
-  --h3-color: var(--blue--lighter--60);
-  --h4-color: var(--blue--lighter--60);
-  --h5-color: var(--blue--lighter--60);
-  --h6-color: var(--blue--lighter--60);
+  --h1-color: var(--light-green);
+  --h2-color: var(--light-green);
+  --h3-color: var(--light-green);
+  --h4-color: var(--light-green);
+  --h5-color: var(--light-green);
+  --h6-color: var(--light-green);
   --icon-background-color--active: var(--blue--lighter--40);
   --icon-color--active: var(--dark-blue);
   --link-color: var(--blue--lighter--80);
@@ -98,7 +98,7 @@ backgrounds are light gray based.
   --h5-color: var(--dark-blue--darker--20);
   --h6-color: var(--dark-blue--darker--10);
   --link-color: var(--dark-blue--darker--60);
-  --link-color--active: var(--white);
+  --link-color--active: var(--dark-blue--darker--60);
   --link-color--focus: var(--white);
   --link-decoration-color: var(--dark-blue--darker--60);
   --link-decoration-color--visited: var(--purple);
@@ -124,6 +124,8 @@ backgrounds are light gray based.
 }
 
 @mixin lightest-blue-bg {
+  --link-decoration-color--active: var(--blue--lighter--60);
+
   @include lightest-gray-bg;
 
   background: var(--blue--lighter--80);

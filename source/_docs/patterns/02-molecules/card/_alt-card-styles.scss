@@ -9,6 +9,7 @@ Molecule: Cards - Alternate styles
 4. Event
 5. Event alternate
 6. Hover variant
+7. Alternate hover variant
 7. Degree variant
 --------------------------------------------------------------------------------
 0. Bordered
@@ -280,6 +281,7 @@ Molecule: Cards - Alternate styles
 6. Hover Variant
 ------------------------------------------------------------------------------*/
 .hover-card {
+  break-inside: avoid-column;
   --h1-color: var(--white);
   --h1-size: var(--font-size--md);
   --h2-color: var(--white);
@@ -293,8 +295,10 @@ Molecule: Cards - Alternate styles
   --h6-color: var(--white);
   --h6-size: var(--font-size--md);
   --link-color: var(--dark-blue--darker--20);
+  --link-color--active: var(--white);
   --link-color--focus: var(--white);
   --link-color--visited: var(--purple);
+  --link-color--visited--active: var(--purple--lighter--80);
   --oline-color: var(--white);
   --read-more-size: 2.75rem;
   /* Static/base styles */
@@ -440,6 +444,48 @@ Molecule: Cards - Alternate styles
       @include black-bg;
 
       background-color: unset;
+    }
+  }
+}
+/*------------------------------------------------------------------------------
+6. Hover alternate variant
+------------------------------------------------------------------------------*/
+.hover-card.alt {
+  margin: 0;
+  .content {
+    display: grid;
+    align-content: center;
+    padding: var(--space--md);
+    transform: unset;
+    opacity: 0;
+  }
+  .image {
+    z-index: -1;
+    div {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &:hover {
+    .content {
+      opacity: 1;
+    }
+  }
+  .title {
+    --h2-size: var(--font-size--5xl);
+    --h3-size: var(--font-size--5xl);
+    --h4-size: var(--font-size--5xl);
+    --h5-size: var(--font-size--5xl);
+    --h6-size: var(--font-size--5xl);
+
+    min-height: unset;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: var(--font-weight--black);
+  }
+  .body {
+    p {
+      font-size: var(--font-size--md);
     }
   }
 }
