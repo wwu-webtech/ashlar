@@ -73,7 +73,6 @@ wwu-header {
     font-size: var(--font-size--3xl);
     font-weight: var(--font-weight--black);
     a {
-      padding: 0;
       text-decoration: none;
       color: var(--link-color);
       &:visited {
@@ -82,7 +81,7 @@ wwu-header {
     }
     p {
       margin: 0;
-      line-height: 1;
+      line-height: 1.2;
     }
     @media (max-width: $medium) {
       &:has(.region--wwu_header) {

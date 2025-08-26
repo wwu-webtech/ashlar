@@ -252,6 +252,7 @@ Mixins
       left: 60%;
       width: 40%;
       background: var(--menu-bg-color);
+      box-shadow: var(--shadow--soft);
     }
   }
 }
@@ -369,7 +370,6 @@ Mixins
           padding: var(--space--2xs) var(--space--xs);
           border: solid transparent var(--border-width--md);
           font-size: var(--font-size--md);
-          font-weight: var(--font-weight--regular);
           line-height: 1.5;
           &:hover,
           &:active,
@@ -400,6 +400,7 @@ Mixins
     .ultimenu li .ultimenu__link.is-active {
       text-decoration: none;
       border-bottom-color: var(--blue);
+      background-color: var(--link-decoration-color);
       font-weight: var(--font-weight--bold);
     }
     .toggle-menu {
