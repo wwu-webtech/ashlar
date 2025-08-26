@@ -52,7 +52,7 @@ wwu-header {
     font-weight: var(--font-weight--black);
     @media (max-width: $medium) {
       margin-bottom: var(--space--sm);
-      font-size: var(--font-size--xs);
+      font-size: var(--font-size--md);
     }
     a {
       text-decoration: none;
@@ -141,6 +141,9 @@ wwu-header {
         align-self: end;
       }
     }
+  }
+  @media (min-width: $large) {
+    grid-template-columns: auto 1fr auto;
   }
 }
 .navigation-open {
