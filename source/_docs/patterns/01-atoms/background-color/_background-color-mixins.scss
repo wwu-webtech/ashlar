@@ -98,7 +98,7 @@ backgrounds are light gray based.
   --h5-color: var(--dark-blue--darker--20);
   --h6-color: var(--dark-blue--darker--10);
   --link-color: var(--dark-blue--darker--60);
-  --link-color--active: var(--white);
+  --link-color--active: var(--dark-blue--darker--60);
   --link-color--focus: var(--white);
   --link-decoration-color: var(--dark-blue--darker--60);
   --link-decoration-color--visited: var(--purple);
@@ -124,6 +124,8 @@ backgrounds are light gray based.
 }
 
 @mixin lightest-blue-bg {
+  --link-decoration-color--active: var(--blue--lighter--60);
+
   @include lightest-gray-bg;
 
   background: var(--blue--lighter--80);
