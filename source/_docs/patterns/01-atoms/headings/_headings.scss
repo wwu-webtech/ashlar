@@ -91,14 +91,12 @@ h5 + h6 {
 ------------------------------------------------------------------------------*/
 .headings--big-and-bold,
 .big-bold-headings {
-  @media (min-width: $medium) {
-    --h1-size: var(--font-size--9xl);
-    --h2-size: var(--font-size--8xl);
-    --h3-size: var(--font-size--7xl);
-    --h4-size: var(--font-size--6xl);
-    --h5-size: var(--font-size--5xl);
-    --h6-size: var(--font-size--4xl);
-  }
+  --h1-size: var(--font-size--9xl);
+  --h2-size: var(--font-size--8xl);
+  --h3-size: var(--font-size--7xl);
+  --h4-size: var(--font-size--6xl);
+  --h5-size: var(--font-size--5xl);
+  --h6-size: var(--font-size--4xl);
   h1,
   h2 {
     text-transform: uppercase;
