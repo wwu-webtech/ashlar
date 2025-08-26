@@ -30,3 +30,6 @@ components:
       - source/_docs/patterns/03-organisms
     templates:
       - source/_docs/patterns/04-templates
+entity_print:
+  view:
+    all: 'ashlar/print-styling'
