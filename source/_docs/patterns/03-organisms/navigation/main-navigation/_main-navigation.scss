@@ -168,9 +168,6 @@ Mixins
   }
   @media (min-width: $medium) {
     flex-flow: column;
-    a {
-      margin: var(--space--sm);
-    }
     &:before {
       place-self: center;
 
