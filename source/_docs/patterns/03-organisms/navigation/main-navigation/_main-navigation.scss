@@ -252,7 +252,6 @@ Mixins
       left: 60%;
       width: 40%;
       background: var(--menu-bg-color);
-      box-shadow: var(--shadow--soft);
     }
   }
 }
@@ -388,6 +387,7 @@ Mixins
         left: 0;
         width: unset;
         width: 100%;
+        box-shadow: var(--shadow--soft);
       }
       .ultimenu__region {
         display: flex;
