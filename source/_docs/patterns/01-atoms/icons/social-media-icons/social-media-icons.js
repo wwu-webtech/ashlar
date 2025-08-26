@@ -23,8 +23,10 @@ if (
                 /* Create the custom element by appending the template */
                 this.appendChild(social_template.content.cloneNode(true));
                 
-                const url = this.getAttribute("url");                
-                const [icon, label] = select_icon(url);
+                const url = this.getAttribute("url");  
+                if (url != null) {              
+                    const [icon, label] = select_icon(url);
+                }
                 
                 this.querySelector(".wwu-social-link").setAttribute("href", url);
                 this.querySelector(".wwu-social-icon").innerHTML = icon;
