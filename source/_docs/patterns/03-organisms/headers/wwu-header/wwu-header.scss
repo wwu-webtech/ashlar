@@ -33,6 +33,7 @@ wwu-header {
       grid-template-rows: 1fr 1fr;
       .site-name {
         align-self: end;
+        font-weight: var(--font-weight--black);
       }
     }
   }
@@ -91,7 +92,6 @@ wwu-header {
     a {
       text-decoration: none;
       color: var(--link-color);
-      font-weight: var(--font-wight--bold);
       &:visited {
         color: var(--link-color);
       }
@@ -158,16 +158,26 @@ wwu-header {
 ------------------------------------------------------------------------------*/
 .is-ultimenu--hover {
   @media (min-width: $medium) {
-    wwu-header,
-    wwu-header:has(.region--wwu_header) {
+    wwu-header {
       grid-template-areas: "wrapper wrapper wrapper"
       "preheader site-name logo"
-      "preheader header-region logo"
       "main-nav main-nav main-nav";
       grid-template-columns: auto 1fr auto;
       grid-template-rows: auto;
       background-position-y: 6.75rem;
+      &:has(.region--wwu_header) {
+        grid-template-areas: "wrapper wrapper wrapper"
+        "preheader site-name logo"
+        "preheader header-region logo"
+        "main-nav main-nav main-nav";
+      }
+      .buttons {
+        &.secondary {
+          left: 0;
+        }
+      }
     }
+    wwu-header
     .wwu-logo {
       --logo-size: 5rem;
     }
