@@ -1,3 +1,4 @@
+@use "../../../00-utilities/utilities" as *;
 /*------------------------------------------------------------------------------
 Molecule: Charts - Flow Chart
 --------------------------------------------------------------------------------
@@ -7,26 +8,24 @@ Molecule: Charts - Flow Chart
     text-align: center;
   }
   ol {
-    @media (min-width: $small) {
-      flex-flow: row wrap;
-      justify-content: center;
-    }
-
     display: flex;
     flex-flow: column;
     padding: 0;
     list-style-type: none;
+    @media (min-width: $small) {
+      flex-flow: row wrap;
+      justify-content: center;
+    }
   }
   li {
-    @media (min-width: $small) {
-      flex-flow: row nowrap;
-      margin: var(--space--md) 0 0;
-    }
-
     display: flex;
     flex-flow: column;
     max-width: 22.5rem;
     margin: auto;
+    @media (min-width: $small) {
+      flex-flow: row nowrap;
+      margin: var(--space--md) 0 0;
+    }
     &:last-of-type {
       .flow-right,
       .flow-left {
@@ -45,21 +44,19 @@ Molecule: Charts - Flow Chart
     display: block;
   }
   .flow-down {
-    @media (min-width: $small) {
-      display: none;
-    }
-
     display: block;
     margin: auto;
     padding: var(--space--md);
+    @media (min-width: $small) {
+      display: none;
+    }
   }
   .flow-right {
-    @media (min-width: $small) {
-      display: block;
-    }
-
     display: none;
     align-self: center;
     padding: var(--space--md);
+    @media (min-width: $small) {
+      display: block;
+    }
   }
 }

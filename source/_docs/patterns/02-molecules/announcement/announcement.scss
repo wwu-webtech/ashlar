@@ -1,10 +1,9 @@
+@use "../../00-utilities/utilities" as *;
 /*------------------------------------------------------------------------------
 Molecule: Announcement
 --------------------------------------------------------------------------------
 1. Dark mode
 ------------------------------------------------------------------------------*/
-@import "../../00-utilities/breakpoints.scss";
-@import "../../01-atoms/background-color/background-color-mixins.scss";
 .wwu-announcement {
   @include blue-bg;
 
