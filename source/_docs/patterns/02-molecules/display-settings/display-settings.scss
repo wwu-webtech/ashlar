@@ -1,9 +1,8 @@
+@use "../../00-utilities/utilities" as *;
 /*------------------------------------------------------------------------------
 Organism: Pre-header
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-@import "../../00-utilities/breakpoints.scss";
-@import "../../01-atoms/background-color/_background-color-mixins.scss";
 .settings-menu {
   --h2-size: var(--font-size--lg);
 

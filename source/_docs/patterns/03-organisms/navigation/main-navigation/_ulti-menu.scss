@@ -4,7 +4,6 @@ Organism: Navigation - ultimenu
 --------------------------------------------------------------------------------
 Overwrite to reset default ultimenu styles.
 ------------------------------------------------------------------------------*/
-@import "../../../00-utilities/breakpoints.scss";
 .ultimenu--htb .ultimenu__region {
   box-shadow: unset;
 }
