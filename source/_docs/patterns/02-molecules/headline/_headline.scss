@@ -16,7 +16,7 @@ Molecule: Headline
   max-width: calc((2 * var(--content-area-max-width)) / 3);
   margin: var(--space--md);
   padding: var(--space--lg);
-  outline: solid var(--border-width--md) transparent;
+  outline: var(--outline--unset);
   background-color: rgba(var(--dark-blue--darker--40--rgb), 0.7);
   @media (min-width: $medium) {
     margin-top: 5%;
@@ -39,7 +39,7 @@ Molecule: Headline
   margin-top: 25vh;
   margin-bottom: var(--space--xl);
   padding: var(--space--md);
-  border: solid var(--border-width--md) transparent;
+  border: var(--outline--unset);
   @media (min-width: $large) {
     max-width: 70vw;
   }

@@ -7,13 +7,12 @@ Molecule: Text - Timeline
   display: grid;
 }
 .timeline-block {
-  @media (min-width: $medium) {
-    width: 60%;
-  }
-
   width: 80%;
   padding: var(--space--sm);
   border: var(--border-width--md) solid transparent;
+  @media (min-width: $medium) {
+    width: 60%;
+  }
   &:nth-of-type(odd) {
     @include lightest-blue-bg;
 
@@ -65,13 +64,13 @@ Molecule: Text - Timeline
   .timeline-block:nth-of-type(odd) {
     @include dark-blue-bg;
     .timeline-item--highlighted {
-      background-color: var(--blue--darker--20);
+      background-color: var(--dark-blue--darker--20);
     }
   }
   .timeline-block:nth-of-type(even) {
     @include darkest-blue-bg;
     .timeline-item--highlighted {
-      background-color: var(--blue--darker--20);
+      background-color: var(--dark-blue--darker--20);
     }
   }
 }

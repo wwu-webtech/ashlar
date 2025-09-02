@@ -33,7 +33,7 @@ wwu-dialog {
   width: 100%;
   padding: var(--space--lg);
   color: var(--default-text-color);
-  border: solid var(--border-width--md) transparent;
+  border: var(--outline--unset);
   background-color: var(--page-background);
   @media (min-width: $medium) {
     max-width: 70vw;

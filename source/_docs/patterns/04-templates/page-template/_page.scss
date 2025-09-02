@@ -16,8 +16,8 @@ html {
   * {
     box-sizing: border-box;
     &:focus-visible {
-      outline: dotted var(--oline-color) var(--outline-width);
-      outline-offset: var(--oline-offset);
+      outline: var(--outline--focus);
+      outline-offset: var(--oline-offset);;
     }
   }
 }
@@ -30,6 +30,9 @@ iframe {
   border: 0;
 }
 body {
+  position: relative;
+  z-index: 0;
+  padding-top: var(--drupal-displace-offset-top);
   color: var(--default-text-color);
   background-color: var(--page-background);
 }
@@ -53,4 +56,7 @@ body {
   .region-wrapper {
     grid-area: content;
   }
+}
+.page {
+  position: relative;
 }

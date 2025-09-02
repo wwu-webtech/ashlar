@@ -25,9 +25,12 @@ function ashlar_page_attachments_alter(array &$attachments) {
 */
 function ashlar_preprocess_page(&$variables) {
   $variables['site_name'] = \Drupal::config('system.site')->get('name');
+  $variables['site_slogan'] = \Drupal::config('system.site')->get('slogan');
   $variables['alert_display'] = (bool) theme_get_setting('alert_display');
   $variables['hide_quick_links'] = (bool) theme_get_setting('hide_quick_links');
   $variables['hide_footer'] = (bool) theme_get_setting('hide_footer');  
+
+  $variables['logopath'] = '/' . \Drupal::config('ashlar.settings')->get('logo.path');
 }
 
 /**
@@ -70,12 +73,12 @@ function ashlar_preprocess_field(&$variables) {
     }
     
     if ($object->hasField('field_icon')) {
-      $variables['#attached']['library'][] = 'ashlar/material-icons';  
+      $variables['#attached']['library'][] = 'ashlar/material-icons';
       _ashlar_set_icon($variables['items'], $object);      
     }
     
     if ($bundle === 'button') {
-      _ashlar_set_cta_class($variables['items'], $object);
+      _ashlar_set_cta_classes($variables['items'], $object);
     }
     
     if ($bundle === 'page_menu') {
@@ -108,13 +111,52 @@ function _ashlar_set_custom_classes(&$items, $object) {
 }
 
 /**
-* Helper function to add cta class to links
+* Helper function to add classes to cta links
 */
-function _ashlar_set_cta_class(&$items, $object) {
+function _ashlar_set_cta_classes(&$items, $object) {
+  $class = 'cta';
+  if ($object->hasField('field_variant')) {
+    if ($object->field_variant->value === 'round') {
+      $class = 'round-cta';
+    }
+  }
   foreach ($items as &$item) {
-    $item['content']['#options']['attributes']['class'][] = 'cta';
+    $item['content']['#options']['attributes']['class'][] = $class;
+  }
+
+  if ($object->hasField('field_color')) {          
+    foreach ($items as &$item) {      
+      $color = str_replace('_', '-', $object->field_color->value);
+
+      $item['content']['#options']['attributes']['class'][] = $color;
+    }
   }
 }
+
+/**
+* Helper function to add icons to cta link markup
+*/
+function _ashlar_set_icon(&$items, $object) {  
+  if (!$object->field_icon->isEmpty()) {          
+    foreach ($items as &$item) {
+      if ($object->hasField('field_variant')) {
+        if ($object->field_variant->value === 'round') {
+          $item['content']['#title'] = array('#markup' => ' <span class="material-icons" aria-hidden="true">' . $object->field_icon->value . '</span><span class="text">' . $item['content']['#title'] .  '</span>');
+        } 
+        else {
+          $item['content']['#title'] = array('#markup' =>  $item['content']['#title'] . ' <span class="material-icons" aria-hidden="true">' . $object->field_icon->value . '</span>');
+        }
+      } else {
+        $item['content']['#title'] = array('#markup' =>  $item['content']['#title'] . ' <span class="material-icons" aria-hidden="true">' . $object->field_icon->value . '</span>');
+      }
+      
+      $item['content']['#options']['attributes']['class'][] = 'with-icon';
+    }
+  }
+}
+
+
+
 
 /**
 * Helper function to add tracking event attribute to field.
@@ -149,17 +191,7 @@ function _ashlar_set_tracking_event_label(&$items, $object) {
   }
 }
 
-/**
-* Helper function to add icons to cta link markup
-*/
-function _ashlar_set_icon(&$items, $object) {  
-  if (!$object->field_icon->isEmpty()) {          
-    foreach ($items as &$item) {
-      $item['content']['#title'] = array('#markup' =>  $item['content']['#title'] . ' <span class="material-icons" aria-hidden="true">' . $object->field_icon->value . '</span>');
-      $item['content']['#options']['attributes']['class'][] = 'cta with-icon';
-    }
-  }
-}
+
 
 /**
 * Implements hook_theme_suggestions_HOOK_alter() for form templates.

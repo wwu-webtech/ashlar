@@ -9,17 +9,17 @@ Atom: Text - Headings
 1. Default
 ------------------------------------------------------------------------------*/
 :root {
-  --h1-color: var(--blue--darker--80);
+  --h1-color: var(--dark-blue--darker--80);
   --h1-size: var(--font-size--7xl);
-  --h2-color: var(--blue--darker--60);
+  --h2-color: var(--dark-blue--darker--60);
   --h2-size: var(--font-size--4xl);
-  --h3-color: var(--blue--darker--40);
+  --h3-color: var(--dark-blue--darker--40);
   --h3-size: var(--font-size--3xl);
-  --h4-color: var(--blue--darker--20);
+  --h4-color: var(--dark-blue--darker--20);
   --h4-size: var(--font-size--2xl);
-  --h5-color: var(--blue);
+  --h5-color: var(--dark-blue);
   --h5-size: var(--font-size--xl);
-  --h6-color: var(--blue);
+  --h6-color: var(--dark-blue);
   --h6-size: var(--font-size--lg);
   @media (max-width: $small) {
     --h1-size: var(--font-size--5xl);
@@ -41,7 +41,7 @@ h5,
 h6 {
   margin: var(--space--xl) 0 var(--space--xs);
   font-family: var(--font--title);
-  font-weight: var(--font-weight--semibold);
+  font-weight: var(--font-weight--bold);
   font-display: fallback;
   line-height: 1.2;
   @media (max-width: $small) {
@@ -55,7 +55,6 @@ h6 {
 h1 {
   position: relative;
   display: block;
-  text-transform: uppercase;
   color: var(--h1-color);
   font-size: var(--h1-size);
   font-weight: var(--font-weight--black);
@@ -63,7 +62,6 @@ h1 {
 h2 {
   color: var(--h2-color);
   font-size: var(--h2-size);
-  font-weight: var(--font-weight--bold);
 }
 h3 {
   color: var(--h3-color);
@@ -93,28 +91,28 @@ h5 + h6 {
 ------------------------------------------------------------------------------*/
 .headings--big-and-bold,
 .big-bold-headings {
-  @media (min-width: $medium) {
-    --h1-size: var(--font-size--9xl);
-    --h2-size: var(--font-size--8xl);
-    --h3-size: var(--font-size--7xl);
-    --h4-size: var(--font-size--6xl);
-    --h5-size: var(--font-size--5xl);
-    --h6-size: var(--font-size--4xl);
-  }
+  --h1-size: var(--font-size--9xl);
+  --h2-size: var(--font-size--8xl);
+  --h3-size: var(--font-size--7xl);
+  --h4-size: var(--font-size--6xl);
+  --h5-size: var(--font-size--5xl);
+  --h6-size: var(--font-size--4xl);
+  h1,
   h2 {
     text-transform: uppercase;
     font-weight: var(--font-weight--black);
   }
 }
-.font-size--regular,
-.font-size--smaller,
-.font-size--larger {
-  --h1-size: var(--font-size--4xl);
-  --h2-size: var(--font-size--xl);
-  --h3-size: var(--font-size--lg);
-  --h4-size: var(--font-size--md);
-  --h5-size: var(--font-size--md);
-  --h6-size: var(--font-size--md);
+.headings--uppercase {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-transform: uppercase;
+    font-weight: var(--font-weight--black);
+  }
 }
 /*------------------------------------------------------------------------------
 3. Display Preferences

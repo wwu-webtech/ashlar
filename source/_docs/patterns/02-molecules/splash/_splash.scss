@@ -5,7 +5,6 @@ Molecule: Splash
 .splash,
 .featured-major-splash-area {
   position: relative;
-  z-index: 0;
   display: grid;
   img {
     display: block;
@@ -19,7 +18,6 @@ Molecule: Splash
 }
 .splash > div,
 .featured-major-splash-area > div {
-  z-index: 0;
   grid-column: 1;
   grid-row: 1;
   &:nth-of-type(1) {

@@ -1,27 +1,6 @@
 /*------------------------------------------------------------------------------
 VARIABLES
 --------------------------------------------------------------------------------
-1. Color
-  a. Brand
-  b. Special use
-  c. RGB values
-  d. Gradients
-2. Typography
-  a. Font families
-  b. Font weights
-3. Page layout
-  a. Spacing
-  b. Content areas
-  c. Content area grids
-4. Decoration
-  a. Borders and outlines
-  b. Shadows
-  c. Icons
-  d. Toggles
-  e. Logo
-  f. Forms
-e. Logo
-  5. Animation
 ------------------------------------------------------------------------------*/
 /* Breakpoints, which don't mesh well with CSS variables ---------------------*/
 $xsmall: 320px;
@@ -34,7 +13,8 @@ $large: 1300px;
 1. Color
 ------------------------------------------------------------------------------*/
 /* a. Brand ------------------------------------------------------------------*/
---black: #262b2f;
+--black: #1c2023;
+
 --gray--darker--80: #14181b;
 --gray--darker--60: #293036;
 --gray--darker--40: #3d4950;
@@ -45,69 +25,36 @@ $large: 1300px;
 --gray--lighter--60: #c1cad0; 
 --gray--lighter--80: #e0e4e7; 
 --gray--lighter--90: #f0f2f3;
---white: #fff;
 
---dark-blue--darker--80: #000d1b;
---dark-blue--darker--60: #001936;
---dark-blue--darker--40: #002651;
---dark-blue--darker--20: #00326c; 
+--white: #FFF;
+
 --dark-blue: #003f87;
---dark-blue--lighter--20: #0062d2;
---dark-blue--lighter--40: #1e87ff;
---dark-blue--lighter--60: #69afff; 
---dark-blue--lighter--80: #b4d7ff; 
+--dark-blue--darker--20: #00326c; 
+--dark-blue--darker--40: #002651;
+--dark-blue--darker--60: #001936;
+--dark-blue--darker--80: #000d1b;
 
---blue--darker--80: #001828;
---blue--darker--60: #003150;
---blue--darker--40: #004978; 
---blue--darker--20: #0062a0; 
 --blue: #007ac8;
---blue--lighter--20: #079eff;
---blue--lighter--40: #45b6ff; 
---blue--lighter--60: #83cfff;
---blue--lighter--80: #c1e7ff;
+--blue--lighter--20: #3890c9;
+--blue--lighter--40: #6cb3e1; 
+--blue--lighter--60: #a6d3f0;
+--blue--lighter--80: #deeff9;
 
---dark-green--darker--80: #00150d;
---dark-green--darker--60: #002b19;
---dark-green--darker--40: #004026;
---dark-green--darker--20: #005632;
 --dark-green: #006b3f;
---dark-green--lighter--20: #338965;
---dark-green--lighter--40: #66a68c;
---dark-green--lighter--60: #99c4b2;
---dark-green--lighter--80: #cce1d9;
-
---green--darker--80: #0f1a06;
---green--darker--60: #1e340c;
---green--darker--40: #2c4e12;
---green--darker--20: #3b6818;
---green: #4a821e;
---green--lighter--20: #6e9b4b;
---green--lighter--40: #92b478; 
---green--lighter--60: #b7cda5;
---green--lighter--80: #dbe6d2;
-
---light-green--darker--80: #252b02;
---light-green--darker--60: #4a5604;
---light-green--darker--40: #708206;
---light-green--darker--20: #95ad08;
 --light-green: #bad80a;
---light-green--lighter--20: #c8e03b;
---light-green--lighter--40: #d6e86c;
---light-green--lighter--60: #e3ef9d;
---light-green--lighter--80: #f1f7ce;
+--red: #cc2d30;
+--yellow: #ffc61e;
+
 
 /* b. Special use ------------------------------------------------------------*/
---red: #cc2d30;
-
---yellow: #ffc61e;
 --yellow--lighter--40: #ffe38f;
+--blue--darker--20: #0062a0;
 
---purple--lighter--80: #ebcfee;
---purple--lighter--60: #d79fdc;
---purple--lighter--40: #c26fcb;
---purple--lighter--20: #ae3fb9;
 --purple: #9a0fa8;
+--purple--lighter--20: #ae3fb9;
+--purple--lighter--40: #c26fcb;
+--purple--lighter--60: #d79fdc;
+--purple--lighter--80: #ebcfee;
 
 --table-blue: #edf8ff;
 --table-blue--darker--10: #daecf8;
@@ -122,6 +69,7 @@ $large: 1300px;
 --black--rgb: 28, 32, 35;
 --blue--rgb: 0, 122, 200;
 --dark-blue--darker--40--rgb: 0, 38, 81;
+--blue--lighter--80--rgb: 222, 239, 249;
 --green--rgb: 93, 162, 37;
 --light-green--rgb: 186, 216, 10;
 --red--rgb: 204, 45, 48;
@@ -143,7 +91,7 @@ $large: 1300px;
 
 --gradient--vertical--light-green: linear-gradient(
   to bottom,
-  var(--light-green--lighter--20) 0,
+  var(--light-green) 0,
   var(--light-green) 100%
 );
 
@@ -157,6 +105,12 @@ $large: 1300px;
   to right,
   rgba(var(--dark-blue--darker--40--rgb), 1) 0%,
   rgba(var(--dark-blue--darker--40--rgb), 0.5) 100%
+);
+
+--gradient--vertical--dark-blue-to-transparent: linear-gradient(
+  to bottom,
+  rgba(var(--dark-blue--darker--40--rgb), 1) 0%,
+  transparent 100%
 );
 
 --gradient--diagonal--blue-to-dark-blue: linear-gradient(
@@ -238,6 +192,8 @@ $large: 1300px;
 /* b. Content areas ---------------------------------------------------------*/
 --content-area-max-width: 60rem; 
 --content-area-max-width--sm: 40rem;
+--content-area--negative-space: calc((100vw - var(--content-area-max-width))/2);
+--content-area--negative-space--sm: calc((100vw - var(--content-area-max-width--sm))/2);
 
 /* c. Content area grids ----------------------------------------------------*/
 --grid-columns--sm: var(--space--sm) 1fr var(--space--sm);
@@ -253,20 +209,21 @@ $large: 1300px;
 --border-radius--roundest: 6.25rem;
 --border-radius--rounder: 0.625rem;
 --border-radius--round: 0.125rem;
+--oline-color: var(--link-color);
 --outline-offset--outset: 0.1rem;
 --outline-offset--inset: -0.2rem;
 --outline-width: 0.1rem;
+--outline--focus: solid var(--oline-color) var(--outline-width);
+--outline--forced-colors: solid LinkText var(--outline-width);
+--outline--unset: solid transparent var(--outline-width);
 
 /* b. Shadows ----------------------------------------------------------------*/
---shadow--hard: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.4),0 0.0625rem 0.125rem rgba(0, 0, 0, 0.5);
---shadow--soft: 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.16),
-  0 0.1875rem 0.375rem rgba(0, 0, 0, 0.23);
---shadow--soft--hover: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.12),
-  0 0.0625rem 0.125rem rgba(0, 0, 0, 0.24);
---shadow--dark-mode: 0 0.1875rem 0.375rem rgba(0, 122, 200, 0.7),
-  0 0.1875rem 0.375rem rgba(0, 63, 135, 0.9);
---shadow--dark-mode--hover: 0 0.0625rem 0.1875rem rgba(0, 122, 200, 0.12),
-  0 0.0625rem 0.125rem rgba(0, 63, 135, 0.24);
+--shadow--hard: rgb(var(--dark-blue--darker--40--rgb)) var(--space--xs) var(--space--xs) 0;
+--shadow--hard--hover: rgb(var(--dark-blue--darker--40--rgb)) var(--space--2xs) var(--space--2xs) 0;
+--shadow--soft: 0 0.1875rem 0.375rem rgba(var(--black--rgb), 0.16),
+  0 0.1875rem 0.375rem rgba(var(--black--rgb), 0.23);
+--shadow--soft--hover: 0 0.0625rem 0.1875rem rgba(var(--black--rgb), 0.12),
+  0 0.0625rem 0.125rem rgba(var(--black--rgb), 0.24);  
 
 /* c. Icons ------------------------------------------------------------------*/
 --icon-size--2xs: 1rem;
@@ -275,13 +232,16 @@ $large: 1300px;
 --icon-size--md: 2.25rem; 
 --icon-size--lg: 3rem;
 --icon-size--xl: 3.5rem;
+--icon-size--2xl: 4rem;
 
 /* d. Touch targets ----------------------------------------------------------------*/
 --touch-target--aa: 24px;
 --touch-target--aaa: 44px;
+--toggle-size: 3.25rem;
+--toggle-size--sm: 2.75rem;
 
 /* e. Logo  ------------------------------------------------------------------*/
---logo-size: 8rem;
+--logo-size: 5.5rem;
 --logo--horizontal--width: 25rem;
 --logo--horizontal--height: 6.25rem;
 
@@ -293,7 +253,12 @@ $large: 1300px;
 --transition-speed--fast: 200ms;
 --ease--standard: ease;
 }
+/*------------------------------------------------------------------------------
+6. Dark Mode
+------------------------------------------------------------------------------*/
 [data-theme="dark"] {
-  --shadow--soft: var(--shadow--dark-mode);
-  --shadow--soft--hover: var(--shadow--dark-mode--hover);
+  --shadow--soft: 0 0.1875rem 0.375rem rgba(var(--black--rgb), 0.16),
+  0 0.1875rem 0.375rem rgba(var(--blue--rgb), 0.75);
+  --shadow--soft--hover: 0 0.0625rem 0.1875rem rgba(var(--black--rgb), 0.12),
+  0 0.0625rem 0.125rem rgba(var(--blue--rgb), 0.75);  
 }

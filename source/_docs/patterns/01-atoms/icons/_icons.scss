@@ -20,10 +20,7 @@ Atom: Icons
 .component-icon {
   fill: var(--default-text-color);
 }
-a,
-button.expand,
-.expand,
-.ultimenu__item {
+a {
   .component-icon {
     fill: var(--link-color);
   }

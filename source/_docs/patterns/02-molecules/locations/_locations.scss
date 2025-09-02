@@ -53,13 +53,12 @@ Molecule: Locations
         transition: background-color var(--locations-transition-speed);
         -webkit-transform: scale(1.03, 1.03);
         transform: scale(1.03, 1.03);
-        outline: var(--outline-width) solid transparent;
+        outline: var(--outline--unset);
         background-color: #d8f1ff;
       }
     }
     &:focus-within {
       .svg-container {
-        outline-style: dotted;
         outline-color: inherit;
       }
     }
@@ -96,7 +95,7 @@ Molecule: Locations
     display: inline-block;
     text-align: center;
     text-decoration: none;
-    color: var(--blue--darker--20);
+    color: var(--dark-blue--darker--20);
     outline: 0;
     background-color: transparent;
     font-size: var(--locations-font-size);
@@ -110,7 +109,7 @@ Molecule: Locations
       height: 0.1875rem;
       content: "";
       transition: 0.3s ease all 0.1s;
-      background-color: var(--blue--darker--20);
+      background-color: var(--dark-blue--darker--20);
     }
   }
   .svg-container {
@@ -137,7 +136,7 @@ Molecule: Locations
   .st3,
   .st4 {
     fill: none;
-    stroke: var(--blue--darker--20);
+    stroke: var(--dark-blue--darker--20);
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: var(--stroke-width--heavy);
@@ -149,7 +148,7 @@ Molecule: Locations
   }
   .cls-3 {
     fill: none;
-    stroke: var(--blue--darker--20);
+    stroke: var(--dark-blue--darker--20);
     stroke-linejoin: round;
     stroke-miterlimit: 10;
     stroke-width: var(--stroke-width--medium);

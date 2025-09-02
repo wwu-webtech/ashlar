@@ -13,6 +13,8 @@ Molecule: Cards
 ------------------------------------------------------------------------------*/
 .card,
 .wwu-card {
+  break-inside: avoid-column;
+
   position: relative;
   display: flex;
   flex-flow: row wrap;
@@ -25,7 +27,7 @@ Molecule: Cards
     z-index: 1;
     .title {
       a:after {
-        outline: solid transparent var(--outline-width);
+        outline: var(--outline--unset);
         outline-offset: var(--oline-offset);
         box-shadow: var(--shadow--soft--hover);
       }
@@ -34,7 +36,7 @@ Molecule: Cards
   &:focus-within {
     .title {
       a:after {
-        outline: dotted var(--oline-color) var(--outline-width);
+        outline: var(--outline--focus);;
       }
     }
   }
@@ -101,7 +103,6 @@ Molecule: Cards
     a,
     button {
       position: relative;
-      text-underline-offset: 0.1rem;
     }
     p {
       margin-bottom: var(--space--2xs);

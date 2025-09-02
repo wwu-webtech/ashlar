@@ -66,17 +66,17 @@
 
   {% block field_number %}
     {% if content.field_number %}
-      <p class="number">
+      <div class="number">
         {{ content.field_number.0["#context"].value }}
-      </p>
+      </div>
     {% endif %}
   {% endblock %}
 
   {% block field_text %}
     {% if content.field_text %}
-      <p class="text">
+      <div class="text">
         {{ content.field_text.0["#context"].value }}
-      </p>
+      </div>
     {% endif %}
   {% endblock %}
 </div>
