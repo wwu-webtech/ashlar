@@ -1,9 +1,9 @@
+@use "../../00-utilities/utilities" as *;
 /*------------------------------------------------------------------------------
 Sites: MABEL
 --------------------------------------------------------------------------------
 Child object details (view)
 ------------------------------------------------------------------------------*/
-@import "../../00-utilities/breakpoints.scss";
 .child-object-details {
   --h3-size: var(--font-size--xl);
   --h4-size: var(--font-size--lg);

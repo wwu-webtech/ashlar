@@ -128,6 +128,12 @@ menu-extras:
   version: 1.x
   js:
     build/js/menu-extras.js: {}
+print-styling:
+  version: 1.x
+  css:
+    theme:
+      https://libweb.library.wwu.edu/print-style.css:
+        type: external
 progress-tracker:
   version: 1.x
   css:
