@@ -7,11 +7,8 @@ have trouble recognizing the fonts as being used in the var() declarations alone
 ------------------------------------------------------------------------------*/
 html {
   font-family: var(--font--sans-serif);
-  font-size: calc(1rem + 0.5vw);
+  font-size: clamp(1em, 0.5em + 1vw, 1.3em);
   font-display: auto;
-  @media (min-width: $large) {
-    font-size: calc(1rem + (var(--content-area-max-width) * 0.005));
-  }
   @media (print) {
     font-size: 12pt;
   }

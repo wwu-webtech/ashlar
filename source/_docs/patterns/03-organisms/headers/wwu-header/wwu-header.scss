@@ -52,7 +52,7 @@ wwu-header {
     font-weight: var(--font-weight--black);
     @media (max-width: $medium) {
       margin-bottom: var(--space--sm);
-      font-size: var(--font-size--xs);
+      font-size: var(--font-size--md);
     }
     a {
       text-decoration: none;
@@ -125,11 +125,10 @@ wwu-header {
       --logo-size: 4.5rem;
     }
   }
-  @media (min-width: $large) {
+  @media (min-width: $medium) {
     grid-template-areas: "preheader site-name logo";
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: calc(3 * (var(--toggle-size) + var(--space--md)) + var(--space--md)) 1fr auto;
     grid-template-rows: 1fr;
-    text-align: unset;
     background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/wave-line-blue.svg");
     background-repeat: no-repeat;
     background-position-y: 4.5rem;
@@ -142,6 +141,9 @@ wwu-header {
         align-self: end;
       }
     }
+  }
+  @media (min-width: $large) {
+    grid-template-columns: auto 1fr auto;
   }
 }
 .navigation-open {

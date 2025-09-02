@@ -1,27 +1,6 @@
 /*------------------------------------------------------------------------------
 VARIABLES
 --------------------------------------------------------------------------------
-1. Color
-  a. Brand
-  b. Special use
-  c. RGB values
-  d. Gradients
-2. Typography
-  a. Font families
-  b. Font weights
-3. Page layout
-  a. Spacing
-  b. Content areas
-  c. Content area grids
-4. Decoration
-  a. Borders and outlines
-  b. Shadows
-  c. Icons
-  d. Toggles
-  e. Logo
-  f. Forms
-e. Logo
-  5. Animation
 ------------------------------------------------------------------------------*/
 /* Breakpoints, which don't mesh well with CSS variables ---------------------*/
 $xsmall: 320px;
@@ -273,4 +252,13 @@ $large: 1300px;
 --transition-speed--md: 400ms;
 --transition-speed--fast: 200ms;
 --ease--standard: ease;
+}
+/*------------------------------------------------------------------------------
+6. Dark Mode
+------------------------------------------------------------------------------*/
+[data-theme="dark"] {
+  --shadow--soft: 0 0.1875rem 0.375rem rgba(var(--black--rgb), 0.16),
+  0 0.1875rem 0.375rem rgba(var(--blue--rgb), 0.75);
+  --shadow--soft--hover: 0 0.0625rem 0.1875rem rgba(var(--black--rgb), 0.12),
+  0 0.0625rem 0.125rem rgba(var(--blue--rgb), 0.75);  
 }
