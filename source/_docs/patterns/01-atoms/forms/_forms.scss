@@ -1,3 +1,4 @@
+@use "../../00-utilities/utilities" as *;
 /*------------------------------------------------------------------------------
 Atom: Forms
 --------------------------------------------------------------------------------
@@ -6,7 +7,6 @@ Atom: Forms
 3. Checkboxes & Radios
 4. Fieldsets
 ------------------------------------------------------------------------------*/
-@forward "../00-utilities/breakpoints";
 :root {
   --checkbox-size: 1.2rem;
   --input-background-color: var(--gray--lighter--90);
