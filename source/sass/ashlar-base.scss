@@ -1,7 +1,27 @@
 /**
- * @file
- * sass/ashlar_base.scss
- *
- * Required styles for any site using Ashlar or it's components
- */
+* @file
+* sass/ashlar_base.scss
+*
+* Required styles for any site using Ashlar or it's components
+*/
 
+
+@forward "../_docs/patterns/01-atoms/background-color/background-color";
+@forward "../_docs/patterns/01-atoms/blockquotes/blockquotes";
+//@forward "../_docs/patterns/01-atoms/buttons/buttons";
+//@forward "../_docs/patterns/01-atoms/code/code";
+//@forward "../_docs/patterns/01-atoms/details/details";
+//@forward "../_docs/patterns/01-atoms/field/field";
+//@forward "../_docs/patterns/01-atoms/figures/figures";
+//@use "../_docs/patterns/01-atoms/fonts/fonts";
+//@use "../_docs/patterns/01-atoms/forms/forms";
+//@use "../_docs/patterns/01-atoms/forms/user-login";
+//@use "../_docs/patterns/01-atoms/headings/headings";
+//@use "../_docs/patterns/01-atoms/horizontal-rule/horizontal-rule";
+//@use "../_docs/patterns/01-atoms/icons/icons";
+//@use "../_docs/patterns/01-atoms/images/image-background";
+//@use "../_docs/patterns/01-atoms/images/image-stylized";
+//@use "../_docs/patterns/01-atoms/images/images";
+//@use "../_docs/patterns/01-atoms/links/call-to-action";
+//@use "../_docs/patterns/01-atoms/links/icon-links";
+//@use "../_docs/patterns/01-atoms/links/links";
