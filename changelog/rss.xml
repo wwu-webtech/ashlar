@@ -4,7 +4,7 @@
         <title>Ashlar Blog</title>
         <link>https://ashlar.wwu.edu/changelog</link>
         <description>Ashlar Blog</description>
-        <lastBuildDate>Mon, 18 Aug 2025 12:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 02 Sep 2025 12:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,9 +12,18 @@
             <title><![CDATA[5.5.x Updates]]></title>
             <link>https://ashlar.wwu.edu/changelog/version-5-5</link>
             <guid>https://ashlar.wwu.edu/changelog/version-5-5</guid>
-            <pubDate>Mon, 18 Aug 2025 12:00:00 GMT</pubDate>
-            <description><![CDATA[5.5.12]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5512">5.5.12<a href="https://ashlar.wwu.edu/changelog/version-5-5#5512" class="hash-link" aria-label="Direct link to 5.5.12" title="Direct link to 5.5.12">​</a></h2>
+            <pubDate>Tue, 02 Sep 2025 12:00:00 GMT</pubDate>
+            <description><![CDATA[5.5.13]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5513">5.5.13<a href="https://ashlar.wwu.edu/changelog/version-5-5#5513" class="hash-link" aria-label="Direct link to 5.5.13" title="Direct link to 5.5.13">​</a></h2>
+<p>** September 2, 2025 **</p>
+<ul>
+<li>Fix for table headers</li>
+<li>Fix for CKEDitor font color</li>
+<li>Icon fixed for x.com URLs</li>
+<li>Function call error fixed</li>
+<li>Support for Entity Print module added (in progress)</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5512">5.5.12<a href="https://ashlar.wwu.edu/changelog/version-5-5#5512" class="hash-link" aria-label="Direct link to 5.5.12" title="Direct link to 5.5.12">​</a></h2>
 <p>** August 18, 2025 **</p>
 <ul>
 <li>Webform accessibility fixes (2d scrolling, dark mode)</li>
