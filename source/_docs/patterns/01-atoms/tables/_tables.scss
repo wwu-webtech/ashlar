@@ -86,21 +86,23 @@ table {
 2. Responsive table container
 ------------------------------------------------------------------------------*/
 .responsive-table,
-form table {
-  overflow-x: scroll;
-  @media (min-width: $medium) {
-    overflow-x: revert;
-  }
+form {
   table {
-    width: auto;
+    overflow-x: scroll;
     @media (min-width: $medium) {
-      width: 100%;
+      overflow-x: revert;
     }
-  }
-  caption {
-    text-align: left;
-    @media (min-width: $medium) {
-      text-align: center;
+    table {
+      width: auto;
+      @media (min-width: $medium) {
+        width: 100%;
+      }
+    }
+    caption {
+      text-align: left;
+      @media (min-width: $medium) {
+        text-align: center;
+      }
     }
   }
 }
