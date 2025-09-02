@@ -1,3 +1,4 @@
+@use "../../00-utilities/utilities" as *;
 /*------------------------------------------------------------------------------
 Molecule: Banner
 --------------------------------------------------------------------------------
@@ -5,8 +6,6 @@ Molecule: Banner
 2. Print styles
 3. Animation option
 ------------------------------------------------------------------------------*/
-@use "../../00-utilities/breakpoints.scss" as *;
-@use "../../01-atoms/background-color/background-color-mixins.scss" as *;
 .wwu-banner {
   position: relative;
   display: grid;

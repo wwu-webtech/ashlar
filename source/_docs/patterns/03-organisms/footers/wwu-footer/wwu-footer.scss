@@ -1,9 +1,8 @@
+@use "../../../00-utilities/utilities" as *;
 /*------------------------------------------------------------------------------
 Organism: Footers - Western footer
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-@use "../../../00-utilities/breakpoints.scss" as *;
-@use "../../../01-atoms/background-color/_background-color-mixins.scss" as *;
 wwu-footer {
   @include dark-blue-bg;
 

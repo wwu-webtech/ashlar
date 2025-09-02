@@ -1,9 +1,9 @@
+@use "../../00-utilities/utilities" as *;
 /*------------------------------------------------------------------------------
 Molecule: Schedule
 --------------------------------------------------------------------------------
 1. Dark mode
 ------------------------------------------------------------------------------*/
-@use "../../01-atoms/background-color/background-color-mixins.scss" as *;
 .wwu-schedule {
   .schedule-item {
     @include lightest-gray-bg;

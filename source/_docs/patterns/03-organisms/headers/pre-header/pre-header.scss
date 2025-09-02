@@ -1,8 +1,8 @@
+@use "../../../00-utilities/utilities" as *;
 /*------------------------------------------------------------------------------
 Organism: Pre-header
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-@use "../../../01-atoms/background-color/_background-color-mixins.scss" as *;
 wwu-pre-header {
   --button-background-color: transparent;
   --button-background-color--active: var(--blue--lighter--40);
