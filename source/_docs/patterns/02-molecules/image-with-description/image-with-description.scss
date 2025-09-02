@@ -3,7 +3,7 @@ Molecule: Image with Description
 --------------------------------------------------------------------------------
 1. Dark Mode
 ------------------------------------------------------------------------------*/
-@import "../../00-utilities/breakpoints.scss";
+@use "../../00-utilities/breakpoints.scss" as *;
 .wwu-image-with-description {
   display: grid;
   grid-area: body;

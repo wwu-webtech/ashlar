@@ -2,7 +2,7 @@
 Molecule: Alerts
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-@import "../../01-atoms/background-color/background-color-mixins.scss";
+@use "../../01-atoms/background-color/background-color-mixins.scss" as *;
 .alert {
   --alert-logo-size: 4.25rem;
 

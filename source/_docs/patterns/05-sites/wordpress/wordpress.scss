@@ -4,8 +4,8 @@ Wordpress Coblocks Adjustments
 1. Pullquote
 2. Media & Text
 ------------------------------------------------------------------------------*/
-@import "../../00-utilities/breakpoints.scss";
-@import "../../01-atoms/background-color/background-color-mixins.scss";
+@use "../../00-utilities/breakpoints.scss" as *;
+@use "../../01-atoms/background-color/background-color-mixins.scss" as *;
 /*------------------------------------------------------------------------------
 1. Resets
 2. Pullquote

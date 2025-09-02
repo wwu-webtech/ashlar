@@ -2,7 +2,7 @@
 Molecule: Aside
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-@import "../../01-atoms/background-color/background-color-mixins.scss";
+@use "../../01-atoms/background-color/background-color-mixins.scss" as *;
 .paragraph--type--aside {
   @include lightest-gray-bg;
 

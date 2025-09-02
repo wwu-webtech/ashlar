@@ -2,7 +2,7 @@
 Molecule: Switcher
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-@import "../../00-utilities/breakpoints.scss";
+@use "../../00-utilities/breakpoints.scss" as *;
 wwu-switcher {
   button {
     position: relative;

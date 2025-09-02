@@ -3,8 +3,8 @@ Molecule: Announcement
 --------------------------------------------------------------------------------
 1. Dark mode
 ------------------------------------------------------------------------------*/
-@import "../../00-utilities/breakpoints.scss";
-@import "../../01-atoms/background-color/background-color-mixins.scss";
+@use "../../00-utilities/breakpoints.scss" as *;
+@use "../../01-atoms/background-color/background-color-mixins.scss" as *;
 .wwu-announcement {
   display: grid;
   grid-template-areas: "icon text";

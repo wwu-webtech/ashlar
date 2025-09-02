@@ -2,7 +2,7 @@
 Molecule: Navigation - myWestern Menu
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-@import "../../../00-utilities/breakpoints.scss";
+@use "../../../00-utilities/breakpoints.scss" as *;
 .my-western-links {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

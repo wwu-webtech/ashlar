@@ -2,7 +2,7 @@
 Molecule: Countdown
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-@import "../../00-utilities/breakpoints.scss";
+@use "../../00-utilities/breakpoints.scss" as *;
 wwu-countdown {
   padding: var(--space--xl);
   .timer {

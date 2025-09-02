@@ -3,7 +3,7 @@ Molecule: Testimonial
 --------------------------------------------------------------------------------
 1. Mirror
 ------------------------------------------------------------------------------*/
-@import "../../../00-utilities/breakpoints.scss";
+@use "../../../00-utilities/breakpoints.scss" as *;
 .wwu-testimonial {
   display: flex;
   flex-flow: column;
