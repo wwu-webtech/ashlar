@@ -1,13 +1,13 @@
 {
-  "name": "wwuweb/ashlar",
+  "name": "wwuweb/ashlar-six",
   "type": "drupal-theme",
-  "description": "Ashlar theme for Drupal",
+  "description": "Ashlar v 6.0 theme for Drupal",
   "keywords": [
     "drupal",
     "theme",
     "twig"
   ],
-  "homepage": "https://bitbucket.org/wwuweb/ashlar/",
+  "homepage": "https://bitbucket.org/wwuweb/ashlar_six/",
   "license": "GPL-2.0",
   "authors": [
     {
@@ -16,7 +16,7 @@
   ],
   "support": {
     "issues": "https://wp.wwu.edu/webtech/",
-    "source": "https://bitbucket.org/wwuweb/ashlar/"
+    "source": "https://bitbucket.org/wwuweb/ashlar_six/"
   },
   "minimum-stability": "dev",
   "require": {    
