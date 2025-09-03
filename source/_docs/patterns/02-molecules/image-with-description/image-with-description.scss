@@ -1,9 +1,9 @@
+@use "../../00-utilities/utilities" as *;
 /*------------------------------------------------------------------------------
 Molecule: Image with Description
 --------------------------------------------------------------------------------
 1. Dark Mode
 ------------------------------------------------------------------------------*/
-@import "../../00-utilities/breakpoints.scss";
 .wwu-image-with-description {
   display: grid;
   grid-area: body;
