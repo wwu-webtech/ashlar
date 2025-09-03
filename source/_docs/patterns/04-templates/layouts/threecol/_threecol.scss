@@ -1,3 +1,4 @@
+@use "../../../00-utilities/utilities" as *;
 /*------------------------------------------------------------------------------
 Templates: Layouts - Three column
 --------------------------------------------------------------------------------
@@ -31,11 +32,10 @@ Templates: Layouts - Three column
   &.layout--threecol-section--25-25-50 > .layout__region--second,
   &.layout--threecol-section--50-25-25 > .layout__region--second,
   &.layout--threecol-section--50-25-25 > .layout__region--third {
+    font-size: var(--font-size--sm);
     @media (min-width: $small) {
       flex: 0 1 25%;
     }
-
-    font-size: var(--font-size--sm);
   }
   &.layout--threecol-section--25-50-25 > .layout__region--second,
   &.layout--threecol-section--25-25-50 > .layout__region--third,
@@ -46,31 +46,28 @@ Templates: Layouts - Three column
   }
   &.layout--threecol-section--33-34-33 > .layout__region--first,
   &.layout--threecol-section--33-34-33 > .layout__region--third {
+    font-size: var(--font-size--sm);
     @media (min-width: $small) {
       flex: 0 1 33%;
     }
-
-    font-size: var(--font-size--sm);
   }
   &.layout--threecol-section--33-34-33 > .layout__region--second {
+    font-size: var(--font-size--sm);
     @media (min-width: $small) {
       flex: 0 1 34%;
     }
-
-    font-size: var(--font-size--sm);
   }
 }
 .layout--threecol--page-width {
-  @media (min-width: $large) {
-    margin-right: calc(50% - 50vw - var(--space--xs));
-    margin-left: calc(50% - 50vw - var(--space--xs));
-  }
-
   display: flex;
   flex-wrap: wrap;
   max-width: 100vw;
   margin-right: calc(-1 * var(--space--sm));
   margin-left: calc(-1 * var(--space--sm));
+  @media (min-width: $large) {
+    margin-right: calc(50% - 50vw - var(--space--xs));
+    margin-left: calc(50% - 50vw - var(--space--xs));
+  }
   > .layout__region {
     flex: 1 1 100%;
     max-width: none;

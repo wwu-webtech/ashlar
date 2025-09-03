@@ -1,9 +1,8 @@
+@use "../../00-utilities/utilities" as *;
 /*------------------------------------------------------------------------------
 Molecule: Search
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-@import "../../00-utilities/breakpoints.scss";
-@import "../../01-atoms/background-color/_background-color-mixins.scss";
 .wwu-search {
   @include lightest-blue-bg;
 
