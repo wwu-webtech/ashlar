@@ -29,8 +29,7 @@
           <h2 class="visually-hidden">Western social media links</h2>
           <wwu-social size="small" group="Western" url="https://www.facebook.com/westernwashingtonuniversity" class="fb"></wwu-social>
           <wwu-social size="small" group="Western" url="https://www.instagram.com/westernwashingtonuniversity/"></wwu-social>
-          <wwu-social size="small" group="Western" url="https://www.linkedin.com/school/western-washington-university/"></wwu-social>
-          <wwu-social size="small" group="Western" url="https://twitter.com/WWU"></wwu-social>
+          <wwu-social size="small" group="Western" url="https://www.linkedin.com/school/western-washington-university/"></wwu-social>          
           <wwu-social size="small" group="Western" url="https://www.tiktok.com/@westernwauniversity"></wwu-social>
           <wwu-social size="small" group="Western" url="https://www.youtube.com/wwu"></wwu-social>
       </div>
