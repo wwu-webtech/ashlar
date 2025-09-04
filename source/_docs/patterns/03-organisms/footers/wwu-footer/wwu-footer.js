@@ -7,7 +7,7 @@
     <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/components/wwu-footer.css" /-->
 
     <div class="artwork">
-      <img src="https://ashlar.blob.core.windows.net/ashlar-theme-files/images/footer-artwork.webp" alt="Mountains, streams and trees rendered in bold and colorful illustration by Gretchen Leggitt" />
+      <img src="https://ashlar.blob.core.windows.net/ashlar-theme-files/images/footer-artwork.webp" alt="Mountains, streams and trees rendered in a bold and colorful illustration by Gretchen Leggitt" />
     </div>
 
     <svg class="footer-waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1846 62.99" aria-hidden="true">
@@ -49,7 +49,7 @@
               <a href="https://equity.wwu.edu/sebrt/report-bias-incident">Report Bias</a>
               <a href="https://www.wwu.edu/online-privacy-statement">Privacy</a>              
               <a href="https://www.wwu.edu/commitment-accessibility">Accessibility Notice</a>
-              <a href="https://www.wwu.edu/equal-opportunity-policy">Equal Employment Opporunity Policy</a>
+              <a href="https://www.wwu.edu/equal-opportunity-policy">Equal Employment Opportunity Policy</a>
           </nav>
       </div>    
     </div>
