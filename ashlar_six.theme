@@ -10,33 +10,33 @@ use \Drupal\block_content\BlockContentInterface;
 /**
 * Implements hook_page_attachments_alter().
 */
-function ashlar_page_attachments_alter(array &$attachments) {    
+function ashlar_six_page_attachments_alter(array &$attachments) {    
   if (theme_get_setting('vimeo_tracking')) {
-    $attachments['#attached']['library'][] = 'ashlar/vimeo-tracking';
+    $attachments['#attached']['library'][] = 'ashlar_six/vimeo-tracking';
   }
   
   if (theme_get_setting('enable_acalog_widget')) {
-    $attachments['#attached']['library'][] = 'ashlar/acalog';
+    $attachments['#attached']['library'][] = 'ashlar_six/acalog';
   }
 }
 
 /**
 * Implements hook_preprocess_page().
 */
-function ashlar_preprocess_page(&$variables) {
+function ashlar_six_preprocess_page(&$variables) {
   $variables['site_name'] = \Drupal::config('system.site')->get('name');
   $variables['site_slogan'] = \Drupal::config('system.site')->get('slogan');
   $variables['alert_display'] = (bool) theme_get_setting('alert_display');
   $variables['hide_quick_links'] = (bool) theme_get_setting('hide_quick_links');
   $variables['hide_footer'] = (bool) theme_get_setting('hide_footer');  
 
-  $variables['logopath'] = '/' . \Drupal::config('ashlar.settings')->get('logo.path');
+  $variables['logopath'] = '/' . \Drupal::config('ashlar_six.settings')->get('logo.path');
 }
 
 /**
 * Implements hook_preprocess_block().
 */
-function ashlar_preprocess_block(&$variables) {
+function ashlar_six_preprocess_block(&$variables) {
   if (isset($variables['elements']['content']['#block_content'])) {
     $variables['block_content'] = $variables['elements']['content']['#block_content'];
   }
@@ -45,7 +45,7 @@ function ashlar_preprocess_block(&$variables) {
 /**
 * Implements hook_preprocess_field().
 */
-function ashlar_preprocess_field(&$variables) {
+function ashlar_six_preprocess_field(&$variables) {
   $entity_type = $variables['entity_type'];
   $field_type = $variables['field_type'];
   $field_name = $variables['field_name'];
@@ -54,35 +54,35 @@ function ashlar_preprocess_field(&$variables) {
   $bundle = $element['#bundle'];
   
   if ($object->hasField('field_custom_classes')) {
-    _ashlar_set_custom_classes($variables['items'], $object);
+    _ashlar_six_set_custom_classes($variables['items'], $object);
   }
   
   if ($field_type === 'link') {
     if ($object->hasField('field_tracking_event_enable')) {
-      $variables['#attached']['library'][] = 'ashlar/event-tracking';
-      _ashlar_set_tracking_event_enable($variables['items'], $object);
+      $variables['#attached']['library'][] = 'ashlar_six/event-tracking';
+      _ashlar_six_set_tracking_event_enable($variables['items'], $object);
     }
     
     if ($object->hasField('field_tracking_event_category')) {
-      $variables['#attached']['library'][] = 'ashlar/event-tracking';
-      _ashlar_set_tracking_event_category($variables['items'], $object);
+      $variables['#attached']['library'][] = 'ashlar_six/event-tracking';
+      _ashlar_six_set_tracking_event_category($variables['items'], $object);
     }
     
     if ($object->hasField('field_tracking_event_label')) {
-      _ashlar_set_tracking_event_label($variables['items'], $object);
+      _ashlar_six_set_tracking_event_label($variables['items'], $object);
     }
     
     if ($object->hasField('field_icon')) {
-      $variables['#attached']['library'][] = 'ashlar/material-icons';
-      _ashlar_set_icon($variables['items'], $object);      
+      $variables['#attached']['library'][] = 'ashlar_six/material-icons';
+      _ashlar_six_set_icon($variables['items'], $object);      
     }
     
     if ($bundle === 'button') {
-      _ashlar_set_cta_classes($variables['items'], $object);
+      _ashlar_six_set_cta_classes($variables['items'], $object);
     }
     
     if ($bundle === 'page_menu') {
-      _ashlar_set_current_page($variables['items']);
+      _ashlar_six_set_current_page($variables['items']);
     }
   }
 }
@@ -90,7 +90,7 @@ function ashlar_preprocess_field(&$variables) {
 /**
 * Helper function, adds current page info to page menu block links
 */
-function _ashlar_set_current_page(&$items) {
+function _ashlar_six_set_current_page(&$items) {
   $current_path = \Drupal::request()->getRequestUri();
   foreach ($items as &$item) {
     if ($item['content']['#url']->toString() === $current_path) {
@@ -102,7 +102,7 @@ function _ashlar_set_current_page(&$items) {
 /**
 * Helper function to add custom classes to a block
 */
-function _ashlar_set_custom_classes(&$items, $object) {
+function _ashlar_six_set_custom_classes(&$items, $object) {
   if (!$object->field_custom_classes->isEmpty()) {
     foreach ($items as &$item) {
       $item['content']['#options']['attributes']['class'][] = $object->field_custom_classes->value;
@@ -113,7 +113,7 @@ function _ashlar_set_custom_classes(&$items, $object) {
 /**
 * Helper function to add classes to cta links
 */
-function _ashlar_set_cta_classes(&$items, $object) {
+function _ashlar_six_set_cta_classes(&$items, $object) {
   $class = 'cta';
   if ($object->hasField('field_variant')) {
     if ($object->field_variant->value === 'round') {
@@ -136,7 +136,7 @@ function _ashlar_set_cta_classes(&$items, $object) {
 /**
 * Helper function to add icons to cta link markup
 */
-function _ashlar_set_icon(&$items, $object) {  
+function _ashlar_six_set_icon(&$items, $object) {  
   if (!$object->field_icon->isEmpty()) {          
     foreach ($items as &$item) {
       if ($object->hasField('field_variant')) {
@@ -161,7 +161,7 @@ function _ashlar_set_icon(&$items, $object) {
 /**
 * Helper function to add tracking event attribute to field.
 */
-function _ashlar_set_tracking_event_enable(&$items, $object) {
+function _ashlar_six_set_tracking_event_enable(&$items, $object) {
   if (!$object->field_tracking_event_enable->isEmpty()) {
     foreach ($items as &$item) {
       $item['content']['#options']['attributes']['data-tracking-event-enable'] = '';
@@ -172,7 +172,7 @@ function _ashlar_set_tracking_event_enable(&$items, $object) {
 /**
 * Helper function to add tracking event category attribute to field.
 */
-function _ashlar_set_tracking_event_category(&$items, $object) {
+function _ashlar_six_set_tracking_event_category(&$items, $object) {
   if (!$object->field_tracking_event_category->isEmpty()) {
     foreach ($items as &$item) {
       $item['content']['#options']['attributes']['data-tracking-event-category'] = $object->field_tracking_event_category->value;
@@ -183,7 +183,7 @@ function _ashlar_set_tracking_event_category(&$items, $object) {
 /**
 * Helper function to add tracking event label attribute to field.
 */
-function _ashlar_set_tracking_event_label(&$items, $object) {
+function _ashlar_six_set_tracking_event_label(&$items, $object) {
   if (!$object->field_tracking_event_label->isEmpty()) {
     foreach ($items as &$item) {
       $item['content']['#options']['attributes']['data-tracking-event-label'] = $object->field_tracking_event_label->value;
@@ -198,7 +198,7 @@ function _ashlar_set_tracking_event_label(&$items, $object) {
 *
 * Adds a form id based template suggestion for all forms.
 */
-function ashlar_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+function ashlar_six_theme_suggestions_form_alter(array &$suggestions, array $variables) {
   $suggestions[] = 'form__' . $variables['element']['#form_id'];
 }
 
@@ -207,7 +207,7 @@ function ashlar_theme_suggestions_form_alter(array &$suggestions, array $variabl
 *
 * Suggest template for error pages
 */
-function ashlar_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+function ashlar_six_theme_suggestions_page_alter(array &$suggestions, array $variables) {
   // Get Request Object.
   $request = \Drupal::request();
   
@@ -228,7 +228,7 @@ function ashlar_theme_suggestions_page_alter(array &$suggestions, array $variabl
 * 
 * @inheritdoc
 */
-function ashlar_theme_suggestions_views_view_summary_alter(array &$suggestions, array $variables) {
+function ashlar_six_theme_suggestions_views_view_summary_alter(array &$suggestions, array $variables) {
   $suggestions[] = 'views_view__summary__' . $variables['view']->id();
 }
 
@@ -238,7 +238,7 @@ function ashlar_theme_suggestions_views_view_summary_alter(array &$suggestions, 
 * Adds classes to menu links. This cannot be done in Twig templates without
 * using Drupal specific extensions.
 */
-function ashlar_preprocess_menu(&$variables) {
+function ashlar_six_preprocess_menu(&$variables) {
   _menu_links($variables['items'], 0);
 }
 
@@ -275,7 +275,7 @@ function _menu_links(&$items, $menu_level) {
 * Removes specific attributes from pagers. This cannot be done in Twig
 * templates without using Drupal specific extensions.
 */
-function ashlar_preprocess_pager(&$variables) {
+function ashlar_six_preprocess_pager(&$variables) {
   $keys = [
     'first' => ['href', 'title'],
     'previous' => ['href', 'title', 'rel'],
@@ -311,7 +311,7 @@ function _remove_attributes(&$variables, $key, $remove) {
 * Adds the entity and possible contextual links to PatternContext when using
 * UI Patterns Layouts module.
 */
-function ashlar_preprocess_ds_entity_view(&$variables) {
+function ashlar_six_preprocess_ds_entity_view(&$variables) {
   if (isset($variables['content']['#type']) && $variables['content']['#type'] == 'pattern') {
     $variables['content']['#context']['entity'] = $variables['content']['#entity'];
     if (isset($variables['title_suffix']['contextual_links'])) {
@@ -323,7 +323,7 @@ function ashlar_preprocess_ds_entity_view(&$variables) {
 /**
 * Implements template_preprocess_form().
 */
-function ashlar_preprocess_form(&$variables) {
+function ashlar_six_preprocess_form(&$variables) {
   $form = $variables['element'];
   if ($form['#form_id'] === 'user_login_form') {
     $variables['show_manual_login'] = (bool) theme_get_setting('show_manual_login');
@@ -333,7 +333,7 @@ function ashlar_preprocess_form(&$variables) {
 /**
 * Implements hook_form_alter().
 */
-function ashlar_form_user_login_form_alter(&$form, &$form_state, $form_id) {
+function ashlar_six_form_user_login_form_alter(&$form, &$form_state, $form_id) {
   $form['cas_login_link']['#title'] = 'Universal Login (Western accounts)';
   
   if ((bool) theme_get_setting('show_manual_login')) {
@@ -363,7 +363,7 @@ function _get_view_machine_name ($machine_name = NULL) {
 * Implements hook_views_pre_render().
 * Gets pager name to pass to views-mini-pager.
 */
-function ashlar_preprocess_views_view(&$variables) {  
+function ashlar_six_preprocess_views_view(&$variables) {  
   if (!empty($variables['pager'])) {
     $view_pager_theme = $variables['pager']['#theme'][1];
     
@@ -377,7 +377,7 @@ function ashlar_preprocess_views_view(&$variables) {
 * Implements template_preprocess_views_mini_pager().
 * Adds variable pager_name to use for nav aria-label.
 */
-function ashlar_preprocess_views_mini_pager(&$variables) {
+function ashlar_six_preprocess_views_mini_pager(&$variables) {
   $variables['pager_name'] = _get_view_machine_name();
 }
 
@@ -386,7 +386,7 @@ function ashlar_preprocess_views_mini_pager(&$variables) {
 * Adds current page to end of breadcrumb navigation. See https://www.drupal.org/node/743366, and 
 * https://www.drupal.org/node/743366#comment-11619361 for retiring node-based solution.
 */
-function ashlar_preprocess_breadcrumb(&$variables) {
+function ashlar_six_preprocess_breadcrumb(&$variables) {
   if($variables['breadcrumb']) {
     $request = \Drupal::request();
     $route_match = \Drupal::routeMatch();
@@ -402,7 +402,7 @@ function ashlar_preprocess_breadcrumb(&$variables) {
 /**
 * Implements hook_theme_suggestions_HOOK_alter().
 */
-function ashlar_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+function ashlar_six_theme_suggestions_block_alter(array &$suggestions, array $variables) {
   $content = $variables['elements']['content'];
   if (isset($content['#block_content'])
   and $content['#block_content'] instanceof BlockContentInterface) {
