@@ -80,14 +80,18 @@ in 2025. They have been combined with their nearest blue color instead.
   &[class*="-bg"]:before {
     position: absolute;
     z-index: -1;
-    right: calc(-1 * var(--content-area--negative-space));
-    left: calc(-1 * var(--content-area--negative-space));
+    right: calc(-1 * var(--space--md));
+    left: calc(-1 * var(--space--md));
     display: block;
     width: 100%;
     width: 100vw;
     height: 100%;
     content: "";
     background-size: cover;
+    @media (min-width: $large) {
+      right: calc(-1 * var(--content-area--negative-space));
+      left: calc(-1 * var(--content-area--negative-space));
+    }
   }
 }
 /*------------------------------------------------------------------------------

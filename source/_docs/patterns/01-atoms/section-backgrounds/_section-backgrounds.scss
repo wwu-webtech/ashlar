@@ -1,12 +1,7 @@
+@use "../../00-utilities/utilities" as *;
 /*------------------------------------------------------------------------------
 Atom: Section Backgrounds
---------------------------------------------------------------------------------
-1. Graident Wave
-------------------------------------------------------------------------------*/
-
-/*------------------------------------------------------------------------------
-1. Graident Wave
-------------------------------------------------------------------------------*/
+-------------------------------------------------------------------------------*/
 .wave-1,
 .wave-2 {
   position: relative;
@@ -14,13 +9,17 @@ Atom: Section Backgrounds
   &:before {
     position: absolute;
     z-index: -1;
-    right: calc(-1 * var(--content-area--negative-space));
-    left: calc(-1 * var(--content-area--negative-space));
+    right: calc(-1 * var(--space--md));
+    left: calc(-1 * var(--space--md));
     display: block;
     width: 100%;
     width: 100vw;
     content: "";
     background-size: cover;
+    @media (min-width: $large) {
+      right: calc(-1 * var(--content-area--negative-space));
+      left: calc(-1 * var(--content-area--negative-space));
+    }
   }
 }
 .wave-1:before {
