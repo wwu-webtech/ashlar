@@ -17,11 +17,8 @@
   const terser = require("gulp-terser");
   const sourcemaps = require("gulp-sourcemaps");
   const sass = require('gulp-sass')(require('sass'));
-  const sassGlob = require("gulp-sass-glob");
   const group = require("gulp-group-css-media-queries");
   const cleancss = require("gulp-clean-css");
-  const minify = require("gulp-minify");
-  const jshint = require('gulp-jshint');
   const plumber = require('gulp-plumber');
   const replace = require('gulp-replace');
 
@@ -173,8 +170,6 @@
   gulp.task("sass", function (callback) {
     pump(
       gulp.src(config.sass.src),
-      // Parse globbing patterns in @include statements.
-      sassGlob(),
       // Initialize source maps.
       sourcemaps.init(),
       // Compile Sass.
@@ -195,8 +190,6 @@
   gulp.task("sassComponents", function (callback) {
     pump(
       gulp.src(config.sassComponents.src),
-      // Parse globbing patterns in @include statements.
-      sassGlob(),
       // Initialize source maps.
       sourcemaps.init(),
       // Compile Sass.
@@ -275,24 +268,6 @@
       gulp.dest(config.js.dest),
       callback
     );
-  });
-
-  /**
-   * Check JS for errors
-   */
-  gulp.task('lint', function() {
-    return gulp.src(config.js.src)
-      .pipe(jshint())
-      .pipe(jshint.reporter('default'));
-  });
-
-  /**
-   * Check jQuery for errors
-   */
-  gulp.task('lint', function() {
-    return gulp.src(config.jquery.src)
-      .pipe(jshint())
-      .pipe(jshint.reporter('default'));
   });
 
   /**
