@@ -9,7 +9,7 @@ date: 2025-09-10T10:00
 ## 6.0.0
 ### September 10, 2025 - Major Theme Update! 
 
-WebTech and University Marketing have been working for the past 10 months on a major visual overhaul of Western's Design system and Drupal/Wordpress/Standalone app theme. The most obvious changes with this update are the with the Western Header and Footer, but there are a number of visual updates to block types and components as well. This update is being rolled out to select sites at the beginning of next week. At the time that it goes live on these sites, it will become available on an opt-in basis to other Drupal sites. In December 2025, we will be rolling the theme update out to all Drupal sites. If you would like to opt in to the theme update now, you can 
+WebTech and University Marketing have been working for the past 10 months on a major visual overhaul of Western's Design system and Drupal/Wordpress/Standalone app theme. The most obvious changes with this update are the with the Western Header and Footer, but there are a number of visual updates to block types and components as well. This update is being rolled out to select sites at the beginning of next week. At the time that it goes live on these sites, it will become available on an opt-in basis to other Drupal sites. In December 2025, we will be rolling the theme update out to all Drupal sites. If you would like to [opt-in to the theme update now, fill out this form](https://webtech.wwu.edu/form/opt-in-to-ashlar-6).
 
 #### Header and main navigation changes
 The header has been totally overhauled so that it better utilizes space. 
