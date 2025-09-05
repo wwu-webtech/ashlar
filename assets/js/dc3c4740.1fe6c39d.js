@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkashlar_docs=self.webpackChunkashlar_docs||[]).push([[8948],{5151:e=>{e.exports=JSON.parse('{"permalink":"/changelog/tags/major-release","page":1,"postsPerPage":10,"totalPages":1,"totalCount":5,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

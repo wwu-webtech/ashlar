@@ -2,11 +2,57 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ashlar.wwu.edu/changelog</id>
     <title>Ashlar Blog</title>
-    <updated>2025-09-02T12:00:00.000Z</updated>
+    <updated>2025-09-10T10:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ashlar.wwu.edu/changelog"/>
     <subtitle>Ashlar Blog</subtitle>
     <icon>https://ashlar.wwu.edu/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[6.0.x Updates]]></title>
+        <id>https://ashlar.wwu.edu/changelog/version-6-0</id>
+        <link href="https://ashlar.wwu.edu/changelog/version-6-0"/>
+        <updated>2025-09-10T10:00:00.000Z</updated>
+        <summary type="html"><![CDATA[6.0.0]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="600">6.0.0<a href="https://ashlar.wwu.edu/changelog/version-6-0#600" class="hash-link" aria-label="Direct link to 6.0.0" title="Direct link to 6.0.0">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="september-10-2025---major-theme-update">September 10, 2025 - Major Theme Update!<a href="https://ashlar.wwu.edu/changelog/version-6-0#september-10-2025---major-theme-update" class="hash-link" aria-label="Direct link to September 10, 2025 - Major Theme Update!" title="Direct link to September 10, 2025 - Major Theme Update!">​</a></h3>
+<p>WebTech and University Marketing have been working for the past 10 months on a major visual overhaul of Western's Design system and Drupal/Wordpress/Standalone app theme. The most obvious changes with this update are the with the Western Header and Footer, but there are a number of visual updates to block types and components as well. This update is being rolled out to select sites at the beginning of next week. At the time that it goes live on these sites, it will become available on an opt-in basis to other Drupal sites. In December 2025, we will be rolling the theme update out to all Drupal sites. If you would like to opt in to the theme update now, you can</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="header-and-main-navigation-changes">Header and main navigation changes<a href="https://ashlar.wwu.edu/changelog/version-6-0#header-and-main-navigation-changes" class="hash-link" aria-label="Direct link to Header and main navigation changes" title="Direct link to Header and main navigation changes">​</a></h4>
+<p>The header has been totally overhauled so that it better utilizes space.</p>
+<p>Old:
+<img loading="lazy" alt="Old Western header, with black pre-header, dark blue background and Make Waves logo variant" src="https://ashlar.wwu.edu/assets/images/old-header-a35620e5c1754b9a7e054134b07d77a6.webp" width="2541" height="327" class="img_ev3q"></p>
+<p>New:
+<img loading="lazy" alt="New Western header, with white background and smaller logo variant" src="https://ashlar.wwu.edu/assets/images/new-header-aecfd4a839627a43ea2572a142a572ae.webp" width="2546" height="201" class="img_ev3q"></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="new-menu-option">New menu option<a href="https://ashlar.wwu.edu/changelog/version-6-0#new-menu-option" class="hash-link" aria-label="Direct link to New menu option" title="Direct link to New menu option">​</a></h4>
+<p>The default setting for the new main navigation looks and operates the same way it does now, but with style updates:</p>
+<p><img loading="lazy" alt="New main navigation with a menu item expanded" src="https://ashlar.wwu.edu/assets/images/new-regular-menu-cb7739949001cadf1b41a69e7ff8f6ba.webp" width="1304" height="541" class="img_ev3q"></p>
+<p>We have also introduced a "hamburger always on" option, in which the navigation is toggled by the "menu" button:</p>
+<p><img loading="lazy" alt="New header in desktop with the menu toggle on, a very visually clean look" src="https://ashlar.wwu.edu/assets/images/new-hp-476c0e8da927e0c4d4eaddda25892c00.webp" width="1624" height="998" class="img_ev3q">
+<img loading="lazy" alt="New main navigation behind the toggle, expanded in desktop view" src="https://ashlar.wwu.edu/assets/images/new-hamburger-menu-487cff875653232ef1a545e2b684231d.webp" width="1299" height="899" class="img_ev3q"></p>
+<p>This option better accommodates larger menus with a lot of sub-menu options, and allows users to more quickly see the content of the page. <a href="https://webtech.wwu.edu/blog/how-change-menu-systems-ashlar-6" target="_blank" rel="noopener noreferrer">You can learn how to enable the hamburger always on option here</a>.</p>
+<p>No matter which option is enabled, on smaller screens/mobile devices, the menus will continue to utilize the menu toggle:</p>
+<p><img loading="lazy" alt="New mobile navigation when expanded" src="https://ashlar.wwu.edu/assets/images/new-mobile-menu-56d179f1371bd49d42719666a680bba9.webp" width="480" height="1167" class="img_ev3q"></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="new-footer-styles">New footer styles<a href="https://ashlar.wwu.edu/changelog/version-6-0#new-footer-styles" class="hash-link" aria-label="Direct link to New footer styles" title="Direct link to New footer styles">​</a></h4>
+<p>Our new footer features beautiful artwork by local artist Gretchen Leggitt</p>
+<p><img loading="lazy" alt="New footer with colorfully illustrated depiction of Bellingham Bay" src="https://ashlar.wwu.edu/assets/images/new-footer-d73a3e65ab236da5a6c8ee669af15dfb.webp" width="1548" height="800" class="img_ev3q"></p>
+<p>This update includes changes to the site footer regions that often contain custom content. Most of this content should adapt well to theme changes, but images and identity marks that appear in this area may need to be updated to better suit the background color.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="theme-color-updates">Theme color updates<a href="https://ashlar.wwu.edu/changelog/version-6-0#theme-color-updates" class="hash-link" aria-label="Direct link to Theme color updates" title="Direct link to Theme color updates">​</a></h4>
+<p>In order to simplify and unify the theme visually, the <a href="https://ashlar.wwu.edu/patterns/atoms/color">theme colors</a> have been updated, and essentially reverted to an earlier standard. The medium green has been removed and yellow has been added back. Light green is still available, but it's use on the web has been reduced. For Drupal sites, the available <strong>background colors</strong> on various block types have changed, to reduce visual clutter.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="component-style-updates">Component style updates<a href="https://ashlar.wwu.edu/changelog/version-6-0#component-style-updates" class="hash-link" aria-label="Direct link to Component style updates" title="Direct link to Component style updates">​</a></h4>
+<p>There have been some style updates to components such as <a href="https://ashlar.wwu.edu/patterns/atoms/links">links</a>, <a href="https://ashlar.wwu.edu/patterns/atoms/links/call-to-action">call to action links</a>, <a href="https://ashlar.wwu.edu/patterns/molecules/announcement">announcements</a>, and <a href="https://ashlar.wwu.edu/patterns/molecules/image-with-description">images with descriptions</a>.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="section-classes">Section Classes<a href="https://ashlar.wwu.edu/changelog/version-6-0#section-classes" class="hash-link" aria-label="Direct link to Section Classes" title="Direct link to Section Classes">​</a></h4>
+<p>As we roll out the new theme, we are also rolling out a new feature: Section Classes. These allow you to set background colors and styles on layout <strong>sections</strong> in addition to blocks. This will allow for multiple column layouts with colored backgrounds.</p>
+<p><img loading="lazy" alt="section background featuring wavy lines" src="https://ashlar.wwu.edu/assets/images/section-bg-1-e4472f5912c9193c3ef985c9c2d466e2.webp" width="1844" height="427" class="img_ev3q">
+<img loading="lazy" alt="section background with a gradient wave" src="https://ashlar.wwu.edu/assets/images/section-bg-2-708eb3eb805de4da0d0b371cd40240c7.webp" width="1852" height="543" class="img_ev3q"></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="other-changes">Other changes<a href="https://ashlar.wwu.edu/changelog/version-6-0#other-changes" class="hash-link" aria-label="Direct link to Other changes" title="Direct link to Other changes">​</a></h4>
+<p>The old set up for "box headlines" has been deprecated, it is now a <a href="https://ashlar.wwu.edu/patterns/molecules/banner">style variant on banners</a>. In the long run this should be easier to use. WebTech will handle any conversions from the old set up, and new style options will be added in the future.</p>]]></content>
+        <author>
+            <name>Stephanie Paulantis</name>
+        </author>
+        <author>
+            <name>Carly Gerard</name>
+        </author>
+        <category label="major-release" term="major-release"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[5.5.x Updates]]></title>
         <id>https://ashlar.wwu.edu/changelog/version-5-5</id>
@@ -1324,36 +1370,6 @@
 <ul>
 <li>Added display preferences for selecting fonts, setting dark mode</li>
 <li>Styles for header have also been refactored to allow for more flexibility in the "Western Header" region for secondary site name and menu blocks</li>
-</ul>]]></content>
-        <author>
-            <name>Stephanie Paulantis</name>
-        </author>
-        <author>
-            <name>Carly Gerard</name>
-        </author>
-        <category label="minor-release" term="minor-release"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[3.4.x Updates]]></title>
-        <id>https://ashlar.wwu.edu/changelog/version-3-4</id>
-        <link href="https://ashlar.wwu.edu/changelog/version-3-4"/>
-        <updated>2020-11-09T10:00:00.000Z</updated>
-        <summary type="html"><![CDATA[3.4.2]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="342">3.4.2<a href="https://ashlar.wwu.edu/changelog/version-3-4#342" class="hash-link" aria-label="Direct link to 3.4.2" title="Direct link to 3.4.2">​</a></h2>
-<p><strong>November 9, 2020</strong></p>
-<ul>
-<li>minor style fix for cards</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="341">3.4.1<a href="https://ashlar.wwu.edu/changelog/version-3-4#341" class="hash-link" aria-label="Direct link to 3.4.1" title="Direct link to 3.4.1">​</a></h2>
-<p><strong>October 26, 2020</strong></p>
-<ul>
-<li>Accordion bug fix, images should now load</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="340">3.4.0<a href="https://ashlar.wwu.edu/changelog/version-3-4#340" class="hash-link" aria-label="Direct link to 3.4.0" title="Direct link to 3.4.0">​</a></h2>
-<p><strong>October 12, 2020</strong></p>
-<ul>
-<li>The featherlight library for video lightboxes is no longer supported. We suggest using the Ashlar lightbox pattern instead for video needing to be highlighted in a dialog.</li>
-<li>Additional active path patches.</li>
 </ul>]]></content>
         <author>
             <name>Stephanie Paulantis</name>
