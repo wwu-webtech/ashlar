@@ -51,7 +51,7 @@ In order to simplify and unify the theme visually, the [theme colors](/patterns/
 
 #### Component style updates
 
-There have been some style updates to components such as [links](/patterns/atoms/links), [call to action links](patterns/atoms/links/call-to-action), [announcements](/patterns/molecules/announcement), and [images with descriptions](/patterns/molecules/image-with-description). 
+There have been some style updates to components such as [links](/patterns/atoms/links), [call to action links](/patterns/atoms/links/call-to-action), [announcements](/patterns/molecules/announcement), and [images with descriptions](/patterns/molecules/image-with-description). 
 
 #### Section Classes
 
