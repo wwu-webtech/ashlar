@@ -107,6 +107,7 @@ if (
           
           display_toggle.setAttribute("aria-expanded", true);
           display_toggle.querySelector(".component-icon").innerHTML = close_icon;
+          display_toggle.querySelector(".toggle-text").innerHTML = `Close <span class="visually-hidden">Display </span>Settings`;
           
           settings_menu.removeAttribute("aria-hidden");
 
@@ -120,6 +121,7 @@ if (
           
           display_toggle.setAttribute("aria-expanded", false);
           display_toggle.querySelector(".component-icon").innerHTML = settings_icon;
+          display_toggle.querySelector(".toggle-text").innerHTML = `Settings`;
           
           settings_menu.setAttribute("aria-hidden", true);
 
