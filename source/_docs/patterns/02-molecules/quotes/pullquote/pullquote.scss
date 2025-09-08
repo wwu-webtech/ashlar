@@ -1,3 +1,4 @@
+@use "../../../00-utilities/utilities" as *;
 /*------------------------------------------------------------------------------
 Molecule: Pullquote
 --------------------------------------------------------------------------------
@@ -5,11 +6,13 @@ Molecule: Pullquote
 .wwu-pullquote {
   blockquote {
     margin: var(--space--2xl) 0;
-    padding: var(--space--2xl);
     text-align: center;
     border-left: var(--border-width--sm) transparent;
     border-radius: var(--border-radius--rounder);
     background: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/quote.svg") 50% 50%/contain no-repeat;
+    @media (min-width: $medium) {
+      padding: var(--space--2xl);
+    }
   }
   .body {
     color: var(--h3-color);
