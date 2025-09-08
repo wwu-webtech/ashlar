@@ -67,7 +67,7 @@ if (
 
           search_toggle.setAttribute("aria-expanded", true);
           search_toggle.querySelector(".component-icon").innerHTML = close_icon;
-          search_toggle.querySelector(".toggle-text").innerHTML = "Close";
+          search_toggle.querySelector(".toggle-text").innerHTML = `Close Search`;
 
           html.classList.add("search-open");
           html.classList.remove("search-closed");
