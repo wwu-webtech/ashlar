@@ -37,6 +37,7 @@ Organism: Footers - Site footer
   margin: 0 var(--space--sm);
   @media(min-width: $large) {
     margin: auto;
+    margin-bottom: var(--space--sm);
   }
   .separator {
     display: block;
@@ -52,6 +53,16 @@ Organism: Footers - Site footer
   font-family: var(--font--title);
   font-size: var(--h3-size);
   font-weight: var(--font-weight--black);
+  a {
+    text-decoration: none;
+    color: var(--h2-color);
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline wavy var(--link-decoration-color);
+      text-underline-offset: 3px;
+    }
+  }
 }
 /*------------------------------------------------------------------------------
 1. Print

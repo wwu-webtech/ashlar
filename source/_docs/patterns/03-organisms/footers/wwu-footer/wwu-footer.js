@@ -15,6 +15,12 @@
     </svg>
 
     <div class="dark-blue-bg">
+      <div class="art-credit">
+        <h2 class="visually-hidden">Footer Artwork</h2>
+
+        <p>Artwork by <a href="https://www.gretchenleggitt.com/">Gretchen Leggitt</a></p>
+      </div>
+
       <div class="tribal-lands-statement">
           <h2 class="visually-hidden">Tribal Lands Statement</h2>
           <p>
@@ -22,7 +28,7 @@
               Peoples</a>, who have lived in the Salish Sea basin, all throughout the San Juan Islands and the North Cascades
               watershed from time immemorial. We express our deepest respect and gratitude to our Indigenous neighbors,
               for their enduring care and protection of our shared lands and waterways.
-          </p>
+          </p>          
       </div>
 
       <div class="social">
