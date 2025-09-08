@@ -278,7 +278,7 @@ if (
   </style>
 
   <div class="wwu-logo">
-    <span class="visually-hidden">Western Washington University</span>
+    <span class="visually-hidden">Western Logo</span>
     <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 151.29 103.9" aria-hidden="true">
       <title>Western Logo</title>
       <defs>
@@ -315,7 +315,7 @@ if (
     }
   </style>
   <div class="wwu-logo horizontal">
-    <span class="visually-hidden">Western Washington University</span>
+    <span class="visually-hidden">Western Logo</span>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 113">
       <title>Western Logo</title>
       <rect fill="#003F87" width="520" height="113"/>
