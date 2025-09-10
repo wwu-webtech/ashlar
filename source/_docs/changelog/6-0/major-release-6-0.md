@@ -47,7 +47,7 @@ This update includes changes to the site footer regions that often contain custo
 
 #### Theme color updates
 
-In order to simplify and unify the theme visually, the [theme colors](/patterns/atoms/color) have been updated, and essentially reverted to an earlier standard. The medium green has been removed and yellow has been added back. Light green is still available, but it's use on the web has been reduced. For Drupal sites, the available **background colors** on various block types have changed, to reduce visual clutter.
+In order to simplify and unify the theme visually, the [theme colors](/patterns/atoms/color) have been updated, and essentially reverted to an earlier standard. The medium green has been removed and yellow has been added back. Light green is still available, but it's use on the web has been reduced. For Drupal sites, the available **background colors** on various block types have changed, to reduce visual clutter. Blocks with background colors that have been removed will default to another available color, e.g. light green blocks will become light blue.
 
 #### Component style updates
 
