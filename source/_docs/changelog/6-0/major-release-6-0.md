@@ -39,7 +39,7 @@ No matter which option is enabled, on smaller screens/mobile devices, the menus 
 
 
 #### New footer styles
-Our new footer features beautiful artwork by local artist Gretchen Leggitt
+Our new footer features beautiful artwork by local artist Gretchen Leggitt.
 
 ![New footer with colorfully illustrated depiction of Bellingham Bay](new-footer.webp)
 
