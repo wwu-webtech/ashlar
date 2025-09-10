@@ -12,7 +12,7 @@ date: 2025-09-10T10:00
 WebTech and University Marketing have been working for the past 10 months on a major visual overhaul of Western's Design system and Drupal/Wordpress/Standalone app theme. The most obvious changes with this update are the with the Western Header and Footer, but there are a number of visual updates to block types and components as well. This update is being rolled out to select sites at the beginning of next week. At the time that it goes live on these sites, it will become available on an opt-in basis to other Drupal sites. In December 2025, we will be rolling the theme update out to all Drupal sites. If you would like to [opt-in to the theme update now, fill out this form](https://webtech.wwu.edu/form/opt-in-to-ashlar-6).
 
 #### Header and main navigation changes
-The header has been totally overhauled so that it better utilizes space. 
+The header has been totally overhauled so that it better utilizes space. Various elements of the header have been rearranged, so quick links, university links, search and display settings toggles are in new locations. The logo and site name have changed locations as well.
 
 Old:
 ![Old Western header, with black pre-header, dark blue background and Make Waves logo variant](old-header.webp)
@@ -22,28 +22,28 @@ New:
 
 #### New menu option
 
-The default setting for the new main navigation looks and operates the same way it does now, but with style updates:
+The default setting for the new main navigation looks and operates the same way it does now, but with style updates. Quick links and university links appear first on the page, followed by Search, display settings, the site name and logo. After this comes the main page navigation, before the page content.
 
 ![New main navigation with a menu item expanded](new-regular-menu.webp)
 
-We have also introduced a "hamburger always on" option, in which the navigation is toggled by the "menu" button:
+We have also introduced a "hamburger always on" option, in which the navigation is toggled by the "menu" button. With this option on the quick links, university links, AND main navigation are all placed behind a menu toggle.
 
 ![New header in desktop with the menu toggle on, a very visually clean look](new-hp.webp)
 ![New main navigation behind the toggle, expanded in desktop view](new-hamburger-menu.webp)
 
 This option better accommodates larger menus with a lot of sub-menu options, and allows users to more quickly see the content of the page. [You can learn how to enable the hamburger always on option here](https://webtech.wwu.edu/blog/how-change-menu-systems-ashlar-6).
 
-No matter which option is enabled, on smaller screens/mobile devices, the menus will continue to utilize the menu toggle:
+No matter which option is enabled, on smaller screens/mobile devices all menus will still be located behind the menu toggle.
 
 ![New mobile navigation when expanded](new-mobile-menu.webp)
 
 
 #### New footer styles
-Our new footer features beautiful artwork by local artist Gretchen Leggitt.
+Our new footer features a beautiful and graphic illustration of Sehome hill and Bellingham Bay, by local artist Gretchen Leggitt.
 
 ![New footer with colorfully illustrated depiction of Bellingham Bay](new-footer.webp)
 
-This update includes changes to the site footer regions that often contain custom content. Most of this content should adapt well to theme changes, but images and identity marks that appear in this area may need to be updated to better suit the background color.
+This update includes changes to the site footer regions that often contain custom content. Most of this content should adapt well to theme changes, with the content appearing in the same order and visual location as before, but images and identity marks that appear in this area may need to be updated to better suit the background color.
 
 #### Theme color updates
 
