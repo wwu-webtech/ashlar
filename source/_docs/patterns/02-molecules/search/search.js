@@ -67,7 +67,6 @@ if (
 
           search_toggle.setAttribute("aria-expanded", true);
           search_toggle.querySelector(".component-icon").innerHTML = close_icon;
-          search_toggle.querySelector(".toggle-text").innerHTML = "Close";
 
           html.classList.add("search-open");
           html.classList.remove("search-closed");
@@ -79,7 +78,6 @@ if (
 
           search_toggle.setAttribute("aria-expanded", false);
           search_toggle.querySelector(".component-icon").innerHTML = search_icon;
-          search_toggle.querySelector(".toggle-text").innerHTML = "Search";
 
           html.classList.add("search-closed");
           html.classList.remove("search-open");

@@ -147,7 +147,6 @@ if (
         function open() {
           menu_toggle.setAttribute("aria-expanded", true);
           menu_toggle.querySelector(".component-icon").innerHTML = close_icon;
-          menu_toggle.querySelector(".toggle-text").innerHTML = "Close";
 
           main_nav.removeAttribute("aria-hidden");
           university_links.removeAttribute("aria-hidden");
@@ -160,7 +159,6 @@ if (
         function close() {
           menu_toggle.setAttribute("aria-expanded", false);
           menu_toggle.querySelector(".component-icon").innerHTML = menu_icon;
-          menu_toggle.querySelector(".toggle-text").innerHTML = "Menu";
 
           main_nav.setAttribute("aria-hidden", true);
           university_links.setAttribute("aria-hidden", true);

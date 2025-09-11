@@ -7,7 +7,7 @@
     <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/components/wwu-footer.css" /-->
 
     <div class="artwork">
-      <img src="https://ashlar.blob.core.windows.net/ashlar-theme-files/images/footer-artwork.webp" alt="Mountains, streams and trees rendered in bold and colorful illustration by Gretchen Leggitt" />
+      <img src="https://ashlar.blob.core.windows.net/ashlar-theme-files/images/footer-artwork.webp" alt="Mountains, streams and trees rendered in a bold and colorful illustration by Gretchen Leggitt" />
     </div>
 
     <svg class="footer-waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1846 62.99" aria-hidden="true">
@@ -15,6 +15,12 @@
     </svg>
 
     <div class="dark-blue-bg">
+      <div class="art-credit">
+        <h2 class="visually-hidden">Footer Artwork</h2>
+
+        <p>Artwork by <a href="https://www.gretchenleggitt.com/">Gretchen Leggitt</a></p>
+      </div>
+
       <div class="tribal-lands-statement">
           <h2 class="visually-hidden">Tribal Lands Statement</h2>
           <p>
@@ -22,15 +28,14 @@
               Peoples</a>, who have lived in the Salish Sea basin, all throughout the San Juan Islands and the North Cascades
               watershed from time immemorial. We express our deepest respect and gratitude to our Indigenous neighbors,
               for their enduring care and protection of our shared lands and waterways.
-          </p>
+          </p>          
       </div>
 
       <div class="social">
           <h2 class="visually-hidden">Western social media links</h2>
           <wwu-social size="small" group="Western" url="https://www.facebook.com/westernwashingtonuniversity" class="fb"></wwu-social>
           <wwu-social size="small" group="Western" url="https://www.instagram.com/westernwashingtonuniversity/"></wwu-social>
-          <wwu-social size="small" group="Western" url="https://www.linkedin.com/school/western-washington-university/"></wwu-social>
-          <wwu-social size="small" group="Western" url="https://twitter.com/WWU"></wwu-social>
+          <wwu-social size="small" group="Western" url="https://www.linkedin.com/school/western-washington-university/"></wwu-social>          
           <wwu-social size="small" group="Western" url="https://www.tiktok.com/@westernwauniversity"></wwu-social>
           <wwu-social size="small" group="Western" url="https://www.youtube.com/wwu"></wwu-social>
       </div>
@@ -50,7 +55,7 @@
               <a href="https://equity.wwu.edu/sebrt/report-bias-incident">Report Bias</a>
               <a href="https://www.wwu.edu/online-privacy-statement">Privacy</a>              
               <a href="https://www.wwu.edu/commitment-accessibility">Accessibility Notice</a>
-              <a href="https://www.wwu.edu/equal-opportunity-policy">Equal Employment Opporunity Policy</a>
+              <a href="https://www.wwu.edu/equal-opportunity-policy">Equal Employment Opportunity Policy</a>
           </nav>
       </div>    
     </div>
