@@ -24,6 +24,9 @@ Organism: Footers - Site footer
     flex: 1 1 100%;
     @media(min-width: $medium) {
       flex: 1 1 30%;
+      &.bottom {
+        flex: 0 0 100%;
+      }
     }
   }
   .title {
