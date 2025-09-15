@@ -83,8 +83,7 @@ in 2025. They have been combined with their nearest blue color instead.
     right: calc(-1 * var(--space--md));
     left: calc(-1 * var(--space--md));
     display: block;
-    width: 100%;
-    width: 100vw;
+    width: calc(100vw - 12px);
     height: 100%;
     content: "";
     background-size: cover;
