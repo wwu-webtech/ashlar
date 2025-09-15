@@ -18,6 +18,7 @@ regions:
   footer_left: Left Footer
   footer_center: Center Footer
   footer_right: Right Footer
+  footer_bottom: Bottom Footer
 components:
   namespaces:
     atoms:
