@@ -125,7 +125,8 @@ if (
     
     submitSearch(event) {
       event.preventDefault();
-      var query = this.querySelector("#search-box").value;
+      const form = event.target;
+      const query = form.querySelector("#search-box").value;
       var subdomain = window.location.hostname.split('.')[0];
       
       if (this.querySelector("#site-search").checked) {
