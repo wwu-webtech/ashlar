@@ -156,6 +156,7 @@ Mixins
   }
   @media (min-width: $medium) {
     flex-flow: column;
+    border-top: none;
   }
 }
 .quick-links {
