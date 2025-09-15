@@ -206,7 +206,7 @@ if (
         }
         
         function updateNavPosition() {
-          if (html.classList.contains("is-ultimenu--active") || window.innerWidth <= 951) {
+          if (html.classList.contains("is-ultimenu--active") || window.innerWidth <= 949) {
             nav_wrapper.querySelector(".university-links").before(main_nav);
             close();
           } else {                        
