@@ -109,12 +109,21 @@ in 2025. They have been combined with their nearest blue color instead.
   .light-gray-bg,
   .lightest-gray-bg {
     @include gray-bg;
+    &.layout:before {
+      @include gray-bg;
+    }
   }
   .light-green-bg {
     @include gray-bg;
+    &.layout:before {
+      @include gray-bg;
+    }
   }
   .blue-bg {
     background-color: var(--dark-blue--darker--60);
+    &.layout:before {
+      background-color: var(--dark-blue--darker--60);
+    }
   }
 }
 /*------------------------------------------------------------------------------
