@@ -51,7 +51,6 @@ Mixins
     "main prospective";
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto auto;
-    width: unset;
     &:after {
       position: absolute;
       bottom: 0;
@@ -295,6 +294,7 @@ Mixins
 
       position: relative;
       grid-area: wrapper;
+      width: unset;
       min-height: unset;
       &:after {
         display: none;
