@@ -11,6 +11,8 @@ a.wp-block-button__link {
   --link-color: var(--white);
   --link-color--visited: var(--link-color);
   --link-color--visited--active: var(--link-color);
+  --ultiregion-active: var(--link-color--active);
+  --ultiregion-normal: var(--link-color);
 
   position: relative;
   display: inline-block;
