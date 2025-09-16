@@ -455,9 +455,11 @@ Molecule: Cards - Alternate styles
   .content {
     display: grid;
     align-content: center;
-    padding: var(--space--md);
     transform: unset;
-    opacity: 0;
+    @media (min-width: $small) {
+      padding: var(--space--md);
+      opacity: 0;
+    }
   }
   .image {
     z-index: -1;
@@ -466,7 +468,8 @@ Molecule: Cards - Alternate styles
       height: 100%;
     }
   }
-  &:hover {
+  &:hover,
+  &:focus-within {
     .content {
       opacity: 1;
     }
