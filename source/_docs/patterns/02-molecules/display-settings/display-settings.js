@@ -7,8 +7,8 @@ if (
   <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/components/display-settings.css" /-->
 
   <button class="toggle-settings" aria-expanded="false" aria-controls="settings-menu">
-      <span class="component-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><title>Display</title><path d="M292-172v-28h174v-120H192q-26 0-43-17t-17-43v-348q0-26 17-43t43-17h576q26 0 43 17t17 43v348q0 26-17 43t-43 17H494v120h174v28H292ZM160-380q0 12 10 22t22 10h576q12 0 22-10t10-22v-348q0-12-10-22t-22-10H192q-12 0-22 10t-10 22v348Zm0 0v-380 412-32Z"/></svg>
+      <span class="component-icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M292-172v-28h174v-120H192q-26 0-43-17t-17-43v-348q0-26 17-43t43-17h576q26 0 43 17t17 43v348q0 26-17 43t-43 17H494v120h174v28H292ZM160-380q0 12 10 22t22 10h576q12 0 22-10t10-22v-348q0-12-10-22t-22-10H192q-12 0-22 10t-10 22v348Zm0 0v-380 412-32Z"/></svg>
       </span>
       <span class="toggle-text">Settings</span>
   </button>

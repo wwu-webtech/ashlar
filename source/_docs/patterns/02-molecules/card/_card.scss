@@ -60,7 +60,11 @@ Molecule: Cards
         box-shadow: var(--shadow--soft);
       }
       &:hover,
-      &:active {
+      &:active,
+      &:focus,
+      &:visited:hover,
+      &:visited:active,
+      &:visited:focus {
         color: inherit;
         background: none;
       }

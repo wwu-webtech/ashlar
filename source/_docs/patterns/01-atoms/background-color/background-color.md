@@ -1,5 +1,5 @@
 import WWUBackgroundColor from "./background-color.js"
-import WWUSocial from "../icons/social-media-icons/social-media-icons.js"
+import WWUSocial from "../../02-molecules/social-media-icons/social-media-icons.js"
 
 # Background Color
 
