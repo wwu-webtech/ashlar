@@ -12,7 +12,7 @@ Organism: Footers - Site footer
 
   display: flex;
   flex-flow: row wrap;
-  gap: var(--space--lg);
+  gap: var(--space--xs);
   max-width: var(--content-area-max-width);
   margin: 0 var(--space--sm);
   border-top: var(--outline--unset);
