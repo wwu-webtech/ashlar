@@ -11,6 +11,8 @@ Include the following script to use the social icon component on your non-Drupal
 ```
 
 ## Component Markup
+Change the group attribute to your department or unit
+
 <wwu-social group="Western" url="https://bsky.app/profile/washingtonwashingtonuniversity.bsky.social"></wwu-social>
 <wwu-social group="Western" url="https://www.facebook.com/westernwashingtonuniversity"></wwu-social>
 <wwu-social group="Western" url="https://www.flickr.com/photos/wwu"></wwu-social>
