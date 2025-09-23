@@ -17,7 +17,6 @@ Mixins
 }
 @mixin hidden {
   z-index: -2;
-  display: grid;
   visibility: hidden;
   overflow: hidden;
   opacity: 0;
