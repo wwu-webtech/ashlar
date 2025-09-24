@@ -24,11 +24,6 @@
  */
 #}
 {%
-  set html_classes = [
-    'is-ultimobile',
-  ]
-%}
-{%
   set body_classes = [
     not root_path ? 'path-frontpage' : 'path-' ~ root_path|clean_class,
     node_type ? 'page-node-type-' ~ node_type|clean_class,
@@ -36,7 +31,7 @@
 %}
 
 <!DOCTYPE html>
-<html{{ html_attributes.addClass(html_classes) }}>
+<html{{ html_attributes }}>
   <head>
     <head-placeholder token="{{ placeholder_token|raw }}">
     <title>{{ head_title|safe_join(' | ') }}</title>
