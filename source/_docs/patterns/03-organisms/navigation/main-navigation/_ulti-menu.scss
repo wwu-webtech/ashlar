@@ -61,3 +61,8 @@ Overwrite to reset default ultimenu styles.
 .is-ultimenu .is-ultihover:not(.is-ulticaret) .ultimenu__link {
   padding-right: var(--space--xs);
 }
+html.is-ultimobile .ultimenu > li,
+html.is-ultimobile .ultimenu .ultimenu__link {
+  width: unset;
+  min-width: unset;
+}
