@@ -206,7 +206,7 @@ if (
         }
         
         function updateNavPosition() {
-          if (html.classList.contains("is-ultimobile") || window.innerWidth <= 949) {
+          if (html.classList.contains("is-ultimenu--active") || window.innerWidth <= 949) {
             nav_wrapper.querySelector(".university-links").before(main_nav);
             close();
           } else {                        
@@ -227,7 +227,7 @@ if (
         const htmlObserver = new MutationObserver(mutations => {
           mutations.forEach(mutation => {
             if (mutation.attributeName === 'class') {
-              let currentClassState = mutation.target.classList.contains("is-ultimobile")
+              let currentClassState = mutation.target.classList.contains("is-ultimenu--active")
               if(this.lastClassState !== currentClassState) {
                 this.lastClassState = currentClassState
                 if(currentClassState) {
