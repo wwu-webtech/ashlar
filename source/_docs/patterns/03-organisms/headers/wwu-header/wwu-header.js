@@ -18,7 +18,7 @@ if (
         <span class="toggle-text">Menu</span>
       </button>
     </div>
-
+  
     <div class="navigation-wrapper">    
       <div class="university-links">
         <nav class="action-links" aria-label="Action Links">
@@ -65,7 +65,7 @@ if (
         </nav>
       </div>
     </div>
-
+  
     <div class="buttons secondary">
       <wwu-search role="search" aria-label="Western">
         <noscript>
@@ -88,10 +88,10 @@ if (
     <div class="site-name">
       <a href="/" class="home-link"></a>
     </div>
-
+  
     <div class="western-header-region">
     </div>
-
+  
     <div class="western-logo" type="wwu">
       <a class="wwu-home-link" href="https://www.wwu.edu">
         <wwu-logo type="wwu"></wwu-logo>
@@ -147,10 +147,10 @@ if (
         function open() {
           menu_toggle.setAttribute("aria-expanded", true);
           menu_toggle.querySelector(".component-icon").innerHTML = close_icon;
-
+          
           main_nav.removeAttribute("aria-hidden");
           university_links.removeAttribute("aria-hidden");
-
+          
           html.classList.add("navigation-open");
           html.classList.remove("navigation-closed");
         }
@@ -159,10 +159,10 @@ if (
         function close() {
           menu_toggle.setAttribute("aria-expanded", false);
           menu_toggle.querySelector(".component-icon").innerHTML = menu_icon;
-
+          
           main_nav.setAttribute("aria-hidden", true);
           university_links.setAttribute("aria-hidden", true);
-
+          
           html.classList.add("navigation-closed");
           html.classList.remove("navigation-open");
         }
@@ -214,7 +214,7 @@ if (
           }
         }
         
-        
+        /* Menu Setup on Load */
         if (menu_toggle) {
           menu_toggle.addEventListener("click", toggle_menu);
           menu_toggle.addEventListener("keyup", keyboard_close);
@@ -223,6 +223,26 @@ if (
         updateNavPosition();
         window.addEventListener("resize", updateNavPosition);
         
+        /* Update nav position if ultimenu classes change */        
+        const htmlObserver = new MutationObserver(mutations => {
+          mutations.forEach(mutation => {
+            if (mutation.attributeName === 'class') {
+              let currentClassState = mutation.target.classList.contains("is-ultimenu--active")
+              if(this.lastClassState !== currentClassState) {
+                this.lastClassState = currentClassState
+                if(currentClassState) {
+                  updateNavPosition();
+                }
+                else {
+                  updateNavPosition();
+                }
+              }
+            }
+          })
+        });
+        htmlObserver.observe(html, { attributes: true, attributeFilter: ["class"] });
+        
+        
         /* Alternate theme settings */
         const hide_links = this.getAttribute('hidelinks');
         const site_logo = this.getAttribute('logo');        
@@ -230,7 +250,6 @@ if (
           this.querySelector(".university-links").remove();          
         }        
         if (site_logo != "/") {
-          console.log(site_logo);
           this.querySelector(".wwu-home-link").innerHTML = `<img src="${site_logo}" alt="${site_name} logo"/>`
         }
       }
