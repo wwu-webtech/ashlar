@@ -13,8 +13,8 @@ Molecule: Locations
   --locations-font-size: 1.125rem;
   --locations-icon-spacing: 1.875rem;
   --locations-transition-speed: 500ms;
-  --stroke-width--heavy: 0.75rem;
-  --stroke-width--medium: 0.5rem;
+  --stroke-width--heavy: 0.6rem;
+  --stroke-width--medium: 0.4rem;
 
   max-width: var(--locations-block-width);
   margin: 0 auto;
@@ -96,7 +96,7 @@ Molecule: Locations
     display: inline-block;
     text-align: center;
     text-decoration: none;
-    color: var(--dark-blue--darker--20);
+    color: var(--blue--darker--20);
     outline: 0;
     background-color: transparent;
     font-size: var(--locations-font-size);
@@ -110,7 +110,7 @@ Molecule: Locations
       height: 0.1875rem;
       content: "";
       transition: 0.3s ease all 0.1s;
-      background-color: var(--dark-blue--darker--20);
+      background-color: var(--blue--darker--20);
     }
   }
   .svg-container {
@@ -132,12 +132,13 @@ Molecule: Locations
   }
   .cls-1,
   .cls-2,
+  .st0,
   .st1,
   .st2,
   .st3,
   .st4 {
     fill: none;
-    stroke: var(--dark-blue--darker--20);
+    stroke: var(--blue--darker--20);
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: var(--stroke-width--heavy);
@@ -149,7 +150,7 @@ Molecule: Locations
   }
   .cls-3 {
     fill: none;
-    stroke: var(--dark-blue--darker--20);
+    stroke: var(--blue--darker--20);
     stroke-linejoin: round;
     stroke-miterlimit: 10;
     stroke-width: var(--stroke-width--medium);
