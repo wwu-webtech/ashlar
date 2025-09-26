@@ -22,7 +22,7 @@ if (
     <div class="navigation-wrapper">    
       <div class="university-links">
         <nav class="action-links" aria-label="Action Links">
-          <a class="icon-link apply-quick-link" href="https://admissions.wwu.edu/apply">
+          <a class="icon-link apply-quick-link" href="https://admissions.wwu.edu/visit">
             <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 46.46 66.94" width="48px" height="48px">
               <path class="wwu-cls-4"
