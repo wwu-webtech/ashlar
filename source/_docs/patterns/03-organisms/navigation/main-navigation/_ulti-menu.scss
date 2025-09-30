@@ -23,9 +23,8 @@ Overwrite to reset default ultimenu styles.
 .is-ultimenu .is-ultihover:not(.is-ulticaret) li:hover > .ultimenu__flyout,
 .is-ultimenu .is-ultihover:not(.is-ulticaret) li a:active + .ultimenu__flyout,
 .is-ultimenu .is-ultihover:not(.is-ulticaret) li a:focus + .ultimenu__flyout {
-  visibility: hidden;
-  min-height: 0;
-  max-height: 0;
+  min-height: unset;
+  max-height: unset;
   padding: 0;
   opacity: 0;
 }
