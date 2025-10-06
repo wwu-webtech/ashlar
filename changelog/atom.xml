@@ -58,8 +58,14 @@
         <id>https://ashlar.wwu.edu/changelog/version-5-5</id>
         <link href="https://ashlar.wwu.edu/changelog/version-5-5"/>
         <updated>2025-09-02T12:00:00.000Z</updated>
-        <summary type="html"><![CDATA[5.5.13]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5513">5.5.13<a href="https://ashlar.wwu.edu/changelog/version-5-5#5513" class="hash-link" aria-label="Direct link to 5.5.13" title="Direct link to 5.5.13">​</a></h2>
+        <summary type="html"><![CDATA[5.5.14]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5514">5.5.14<a href="https://ashlar.wwu.edu/changelog/version-5-5#5514" class="hash-link" aria-label="Direct link to 5.5.14" title="Direct link to 5.5.14">​</a></h2>
+<p>** October 6, 2025 **</p>
+<ul>
+<li>Email generator update</li>
+<li>404 page fix</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5513">5.5.13<a href="https://ashlar.wwu.edu/changelog/version-5-5#5513" class="hash-link" aria-label="Direct link to 5.5.13" title="Direct link to 5.5.13">​</a></h2>
 <p>** September 2, 2025 **</p>
 <ul>
 <li>Fix for table headers</li>
