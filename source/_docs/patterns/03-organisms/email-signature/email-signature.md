@@ -127,7 +127,7 @@ This is the markup that gets used on https://marcom.wwu.edu/email-signature
     </tr>
     <tr>
       <td colspan="2">
-        <img src="https://ashlar.blob.core.windows.net/ashlar-theme-files/images/we-are-wwu.png" width="600" height="25" alt="We are WWU" />
+        <img src="https://ashlar.blob.core.windows.net/ashlar-theme-files/images/we-are-wwu.png" width="600" height="25" alt="We are WWU" style="margin-top: 8px; margin-bottom: 8px;" />
       </td>
     </tr>
   </table>
