@@ -61,7 +61,7 @@ if (generateButton) {
     if(mail_stop) { document.getElementById('field_mail_stop').innerHTML = ' <span aria-hidden="true">|</span> MS' + mail_stop }
     else { document.getElementById('field_mail_stop').innerText= '' }
 
-    if(department_website) { document.getElementById('field_department').innerHTML = '<a style="color: #ffffff !important; text-decoration: none !important;" href="' + department_website + '">' + department + '</a>'; }
+    if(department_website) { document.getElementById('field_department').innerHTML = '<a href="' + department_website + '">' + department + '</a>'; }
     if(unit_website) { document.getElementById('field_unit').innerHTML = '<a href="' + unit_website + '">' + unit + '</a>'; }
 
     copyButton.innerText ='Copy to Clipboard';
