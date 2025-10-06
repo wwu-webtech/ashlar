@@ -106,8 +106,8 @@ This is the markup that gets used on https://marcom.wwu.edu/email-signature
 <div id="email_signature">
   <table class="email_signature_table" role="presentation">
     <tr>
-      <td style="vertical-align: top;">
-        <img src="https://designsystem.wwu.edu/files/2020-06/wwu-make-waves.png" width="156" height="148" style="width:156px; height: 148px; margin-right: 8px;" alt="Western Washington University – Make Waves" />
+      <td style="vertical-align: middle;">
+        <img src="https://ashlar.blob.core.windows.net/ashlar-theme-files/wwu-logo.png" width="180" height="127" style="width:180px; height: 127px; margin-right: 8px;" alt="Western Washington University" />
       </td>
      
       <td class="info" style="vertical-align: top;">
