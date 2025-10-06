@@ -4,6 +4,7 @@ Molecule: Charts - Donut Chart
 1. Chart colors
 2. Chart styles
 ------------------------------------------------------------------------------*/
+@use "sass:list";
 /*------------------------------------------------------------------------------
 1. Chart colors
 ------------------------------------------------------------------------------*/
@@ -92,9 +93,9 @@ wwu-donut-chart {
   circle {
     fill: transparent;
     stroke-width: 15.915;
-    @for $i from 1 through length($chart-blues) {
+    @for $i from 1 through list.length($chart-blues) {
       &:nth-of-type(#{$i}) {
-        stroke: nth($chart-blues, $i);
+        stroke: list.nth($chart-blues, $i);
       }
     }
   }
@@ -111,12 +112,12 @@ wwu-donut-chart {
         content: "";
         border: var(--border-width--md) solid transparent;
       }
-      @for $i from 1 through length($chart-blues) {
+      @for $i from 1 through list.length($chart-blues) {
         &:nth-of-type(#{$i}) {
           &:before {
-            background-color: nth($chart-blues, $i);
+            background-color: list.nth($chart-blues, $i);
             @media (forced-colors: active) {
-              background-image: nth($chart-blues-images, $i);
+              background-image: list.nth($chart-blues-images, $i);
             }
           }
         }
@@ -125,20 +126,20 @@ wwu-donut-chart {
   }
   &.green {
     circle {
-      @for $i from 1 through length($chart-greens) {
+      @for $i from 1 through list.length($chart-greens) {
         &:nth-of-type(#{$i}) {
-          stroke: nth($chart-greens, $i);
+          stroke: list.nth($chart-greens, $i);
         }
       }
     }
     ul {
       li {
-        @for $i from 1 through length($chart-greens) {
+        @for $i from 1 through list.length($chart-greens) {
           &:nth-of-type(#{$i}) {
             &:before {
-              background-color: nth($chart-greens, $i);
+              background-color: list.nth($chart-greens, $i);
               @media (forced-colors: active) {
-                background-image: nth($chart-greens-images, $i);
+                background-image: list.nth($chart-greens-images, $i);
               }
             }
           }
@@ -148,20 +149,20 @@ wwu-donut-chart {
   }
   &.light-blue {
     circle {
-      @for $i from 1 through length($chart-light-blues) {
+      @for $i from 1 through list.length($chart-light-blues) {
         &:nth-of-type(#{$i}) {
-          stroke: nth($chart-light-blues, $i);
+          stroke: list.nth($chart-light-blues, $i);
         }
       }
     }
     ul {
       li {
-        @for $i from 1 through length($chart-light-blues) {
+        @for $i from 1 through list.length($chart-light-blues) {
           &:nth-of-type(#{$i}) {
             &:before {
-              background-color: nth($chart-light-blues, $i);
+              background-color: list.nth($chart-light-blues, $i);
               @media (forced-colors: active) {
-                background-image: nth($chart-light-blues-images, $i);
+                background-image: list.nth($chart-light-blues-images, $i);
               }
             }
           }
