@@ -155,11 +155,7 @@ if (
       }
     }
 
-    /*
-     * Expand/collapse all controls
-     */
-
-    // Set up controls markup
+    // Set up expand/collapse all controls
     const button_collapse_all = document.createElement("button");
     button_collapse_all.classList.add('collapse-all');
     button_collapse_all.setAttribute("aria-describedby", "collapse-all-hint-text")
@@ -203,7 +199,7 @@ if (
     }
 
     function expand_all_items() {
-      const items = document.querySelectorAll(".expand");        
+      const items = document.querySelectorAll("wwu-accordion .expand, .accordion-set .expand");        
       for (let i = 0; i < items.length; i++) { 
         open_item(items[i]);
       }
@@ -212,7 +208,7 @@ if (
     }
     
     function collapse_all_items() {
-      const items = document.querySelectorAll(".expand");        
+      const items = document.querySelectorAll("wwu-accordion .expand, .accordion-set .expand");        
       for (let i = 0; i < items.length; i++) { 
         close_item(items[i]);
       }
