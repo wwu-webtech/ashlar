@@ -1,3 +1,4 @@
+@use "../../../00-utilities/utilities" as *;
 /*------------------------------------------------------------------------------
 Organism: Views - Grid format
 --------------------------------------------------------------------------------
@@ -9,58 +10,46 @@ Flex styles for Drupal Views using the Grid Format
   flex-flow: row wrap;
   justify-content: center;
 }
-
 .views-view-grid.vertical .views-row,
 .views-view-grid.horizontal .views-col {
   margin-bottom: var(--space--sm);
 }
-
 .views-view-grid .views-col {
   margin-right: var(--space--sm);
 }
-
 .views-view-grid .views-col:last-of-type {
   margin-right: 0;
 }
-
 @media (min-width: $small) {
   .views-view-grid.cols-1 .views-col {
     flex: 0 1 calc(100% - var(--space--sm));
   }
-
   .views-view-grid.cols-2 .views-col {
     flex: 0 1 calc(50% - var(--space--sm));
   }
-
   .views-view-grid.cols-3 .views-col {
     flex: 0 1 calc(33.333% - var(--space--sm));
   }
   .views-view-grid.cols-4 .views-col {
     flex: 0 1 calc(25% - var(--space--sm));
   }
-
   .views-view-grid.cols-5 .views-col {
     flex: 0 1 calc(20% - var(--space--sm));
   }
 }
-
 @media (min-width: $medium) {
   .views-view-grid.cols-6 .views-col {
     flex: 0 1 calc(16.666% - var(--space--sm));
   }
-
   .views-view-grid.cols-7 .views-col {
     flex: 0 1 calc(14.285% - var(--space--sm));
   }
-
   .views-view-grid.cols-8 .views-col {
     flex: 0 1 calc(12.5% - var(--space--sm));
   }
-
   .views-view-grid.cols-9 .views-col {
     flex: 0 1 calc(11.111% - var(--space--sm));
   }
-
   .views-view-grid.cols-10 .views-col {
     flex: 0 1 calc(10% - var(--space--sm));
   }

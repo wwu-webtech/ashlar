@@ -1,3 +1,4 @@
+@use "../../00-utilities/utilities" as *;
 /*------------------------------------------------------------------------------
 Molecule: Text - Timeline
 --------------------------------------------------------------------------------
@@ -7,13 +8,12 @@ Molecule: Text - Timeline
   display: grid;
 }
 .timeline-block {
-  @media (min-width: $medium) {
-    width: 60%;
-  }
-
   width: 80%;
   padding: var(--space--sm);
   border: var(--border-width--md) solid transparent;
+  @media (min-width: $medium) {
+    width: 60%;
+  }
   &:nth-of-type(odd) {
     @include lightest-blue-bg;
 

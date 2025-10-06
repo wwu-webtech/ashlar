@@ -106,17 +106,15 @@ This is the markup that gets used on https://marcom.wwu.edu/email-signature
 <div id="email_signature">
   <table class="email_signature_table" role="presentation">
     <tr>
-      <td style="vertical-align: top;">
-        <img src="https://designsystem.wwu.edu/files/2020-06/wwu-make-waves.png" width="156" height="148" style="width:156px; height: 148px; margin-right: 8px;" alt="Western Washington University – Make Waves" />
+      <td style="vertical-align: middle; width: 160px;">
+        <img src="https://ashlar.blob.core.windows.net/ashlar-theme-files/wwu-logo.png" width="160" height="113" style="margin-right: 8px;" alt="Western Washington University" />
       </td>
-     
-      <td class="info" style="vertical-align: top;">
-        <p id="field_department" style="font-family: 'Montserrat','Segoe UI Web (West European)',Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; font-size: 16px; text-transform: uppercase; background-color: #007ac8; color: #ffffff; text-align: center; margin: 0; font-weight: bold; padding: 0 8px;">
-          Department Name
-        </p>
-        <p style="font-family: 'Segoe UI Web (West European)',Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; font-size: 14px;">
-          <span id="field_name" style="font-weight: 700;">Full Name</span><span id="field_pronouns"> <span aria-hidden="true">|</span> <span style="font-style: italic;">they/them/theirs</span></span><br />
+      
+      <td class="info" style="vertical-align: top;">        
+        <p style="font-family: 'Segoe UI Web (West European)',Segoe UI,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; font-size: 14px; padding-top: 2px;">
+          <span id="field_name" style="font-weight: 700; font-size: 16px;">Full Name</span><span id="field_pronouns"> <span aria-hidden="true">|</span> <span style="font-style: italic;">they/them/theirs</span></span><br />
           <span id="field_job_title">Job Title</span><br />
+          <span id="field_department" style="font-weight: 700;"">Department Name</span><br/>
           <span id="field_unit">Unit</span><br />
           Western Washington University<br />
           <span id="field_street_address">516 High Street</span>, <span id="field_city">Bellingham</span> WA <span id="field_zip_code">98225</span> <span id="field_mail_stop"><span aria-hidden="true">|</span> MS0000</span><br />
@@ -125,6 +123,11 @@ This is the markup that gets used on https://marcom.wwu.edu/email-signature
           <span id="field_phone_two"> <span aria-hidden="true">|</span> <a href="tel:360-650-xxxx">360-650-xxxx</a></span>
           <span id="field_teams_id"> <span aria-hidden="true">|</span> <a href="https://teams.microsoft.com/l/chat/0/0?users=user@wwu.edu">Message me on Teams</a></span>
         </p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <img src="https://ashlar.blob.core.windows.net/ashlar-theme-files/images/we-are-wwu.png" width="600" height="25" alt="We are WWU" style="margin-top: 8px; margin-bottom: 8px;" />
       </td>
     </tr>
   </table>
