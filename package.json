@@ -1,5 +1,5 @@
 {
-  "name": "ashlar-six-drupal-theme",
+  "name": "ashlar-drupal-theme",
   "version": "1.0.0",
   "description": "Ashlar 6.0 theme for Drupal",
   "devDependencies": {
@@ -30,7 +30,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/wwuweb/ashlar_six/"
+    "url": "https://bitbucket.org/wwuweb/ashlar/"
   },
   "license": "GPL-2.0",
   "dependencies": {

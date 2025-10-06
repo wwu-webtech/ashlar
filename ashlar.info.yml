@@ -1,15 +1,15 @@
-name: Ashlar Six
+name: Ashlar
 type: theme
 description: An atomic design Drupal theme for Western Washington University
 core_version_requirement: ^8.8 || ^9 || ^10
 base theme: false
 libraries:
-  - ashlar_six/ashlar-base
-  - ashlar_six/fonts
-  - ashlar_six/search
-  - ashlar_six/social-media-icons
-  - ashlar_six/wwu-header
-  - ashlar_six/wwu-footer
+  - ashlar/ashlar-base
+  - ashlar/fonts
+  - ashlar/search
+  - ashlar/social-media-icons
+  - ashlar/wwu-header
+  - ashlar/wwu-footer
 regions:
   wwu_header: Western Header
   header: Splash Area
@@ -31,4 +31,4 @@ components:
       - source/_docs/patterns/04-templates
 entity_print:
   view:
-    all: 'ashlar_six/print-styling'
+    all: 'ashlar/print-styling'
