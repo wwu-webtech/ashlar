@@ -53,7 +53,9 @@ Mixins
     &:after {
       position: absolute;
       bottom: 0;
+      left: -2rem;
       display: block;
+      overflow: hidden;
       width: 100vw;
       height: 10rem;
       content: "";
