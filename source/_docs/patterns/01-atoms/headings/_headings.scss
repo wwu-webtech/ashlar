@@ -92,15 +92,14 @@ h5 + h6 {
 ------------------------------------------------------------------------------*/
 .headings--big-and-bold,
 .big-bold-headings {
+  --h1-size: var(--font-size--6xl);
+  --h2-size: var(--font-size--5xl);
+  --h3-size: var(--font-size--4xl);
+  --h4-size: var(--font-size--3xl);
+  --h5-size: var(--font-size--2xl);
+  --h6-size: var(--font-size--2xl);
   h1,
   h2 {
-    --h1-size: var(--font-size--6xl);
-    --h2-size: var(--font-size--5xl);
-    --h3-size: var(--font-size--4xl);
-    --h4-size: var(--font-size--3xl);
-    --h5-size: var(--font-size--2xl);
-    --h6-size: var(--font-size--2xl);
-
     text-transform: uppercase;
     font-weight: var(--font-weight--black);
   }
