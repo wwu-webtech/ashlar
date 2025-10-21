@@ -107,6 +107,7 @@ Mixins
   --link-color--visited: var(--dark-blue);
   --link-color--visited--active: var(--dark-blue);
 
+  z-index: 1;
   grid-area: prospective;
   background-color: var(--blue--lighter--80);
   background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/island-bg.webp");
