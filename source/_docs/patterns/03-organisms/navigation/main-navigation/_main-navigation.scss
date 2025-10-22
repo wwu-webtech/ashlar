@@ -199,8 +199,11 @@ Mixins
   position: relative;
   z-index: unset;
   > li {
-    display: grid ;
-    grid-template-columns: 1fr auto 1fr;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    @media (min-width: $medium) {
+      grid-template-columns: 1fr auto 1fr;
+    }
     .ultimenu__link {
       z-index: unset;
       grid-column: 1 / span 2;
