@@ -222,6 +222,7 @@ Mixins
     }
     .expand {
       position: relative;
+      z-index: 1;
       display: grid;
       grid-column: 2 / span 1;
       grid-row: 1;
@@ -364,6 +365,7 @@ Mixins
           grid-row: 1;
           width: unset;
           padding: var(--space--2xs) var(--space--xs);
+          padding-right: var(--space--lg);
           border: solid transparent var(--border-width--md);
           font-size: var(--font-size--md);
           line-height: 1.5;
