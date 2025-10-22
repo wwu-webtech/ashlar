@@ -285,7 +285,7 @@ Mixins
 /*------------------------------------------------------------------------------
 2. No Hamburger Desktop Menu Styles
 ------------------------------------------------------------------------------*/
-.is-ultimenu--hover {
+.desktop-nav-no-hamburger {
   @media (min-width: $medium) {
     .navigation-wrapper {
       @include visible;
@@ -440,7 +440,7 @@ Mixins
     --ultisub-active: var(--link-color);
     --ultisub-normal: var(--blue--lighter--60);
   }
-  &.is-ultimenu--hover {
+  &.desktop-nav-no-hamburger {
     @media (min-width: $medium) {
       .main-navigation {
         --menu-bg-color: var(--dark-blue);

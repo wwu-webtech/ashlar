@@ -79,6 +79,7 @@
         const hide = this.getAttribute('hide');
         if (hide) {          
           this.querySelector(".artwork").remove();
+          this.querySelector(".art-credit").remove();
           this.querySelector(".footer-waves").remove();
           this.querySelector(".social").remove();
           this.querySelector(".tribal-lands-statement").remove();

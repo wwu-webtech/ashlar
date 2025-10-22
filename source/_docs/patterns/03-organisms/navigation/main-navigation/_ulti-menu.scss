@@ -57,3 +57,6 @@ Overwrite to reset default ultimenu styles.
 .is-ultimenu .is-ultihover:not(.is-ulticaret) .ultimenu__link {
   padding-right: var(--space--xs);
 }
+.button--ultimenu {
+  display: none;
+}

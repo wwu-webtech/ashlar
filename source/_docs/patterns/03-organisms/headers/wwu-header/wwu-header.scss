@@ -165,7 +165,7 @@ wwu-header {
 /*------------------------------------------------------------------------------
 1. No Hamburger Desktop Menu Styles
 ------------------------------------------------------------------------------*/
-.is-ultimenu--hover {
+.desktop-nav-no-hamburger {
   @media (min-width: $medium) {
     wwu-header {
       grid-template-areas: "wrapper wrapper wrapper"
