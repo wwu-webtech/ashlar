@@ -19,6 +19,11 @@ Overwrite to reset default ultimenu styles.
 #footer .is-ultihover .ultimenu__flyout {
   min-width: unset;
 }
+html.is-ultimobile .ultimenu > li,
+html.is-ultimobile .ultimenu .ultimenu__link {
+  width: unset;
+  min-width: unset;
+}
 .is-ultimenu .is-ultihover:not(.is-ulticaret) li .ultimenu__flyout:focus,
 .is-ultimenu .is-ultihover:not(.is-ulticaret) li:hover > .ultimenu__flyout,
 .is-ultimenu .is-ultihover:not(.is-ulticaret) li a:active + .ultimenu__flyout,
@@ -51,9 +56,6 @@ Overwrite to reset default ultimenu styles.
 .is-ultimenu .is-ultihover .ultimenu__flyout {
   position: relative;
 }
-.is-ultimenu .is-ultihover:not(.is-ulticaret) .has-ultimenu .ultimenu__link {
-  padding-right: 1.5em;
-}
-.is-ultimenu .is-ultihover:not(.is-ulticaret) .ultimenu__link {
-  padding-right: var(--space--xs);
+.button.button--ultimenu {
+  display: none;
 }

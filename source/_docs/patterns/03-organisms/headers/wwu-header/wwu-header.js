@@ -135,12 +135,7 @@ if (
         var nav_wrapper = this.querySelector(".navigation-wrapper");
         var main_nav = document.querySelector(".region--main_navigation");
         var university_links = this.querySelector(".university-links");
-        var menu_toggle = this.querySelector(".toggle-menu");
-        
-        waitForElm(".button--ultimenu").then((elm) => {
-          elm.setAttribute("aria-hidden", "true");
-          elm.classList.add("visually-hidden");
-        });                
+        var menu_toggle = this.querySelector(".toggle-menu");              
         
         
         /* Open menu -------------------------------------------------------------*/
@@ -206,7 +201,7 @@ if (
         }
         
         function updateNavPosition() {
-          if (html.classList.contains("is-ultimenu--active") || window.innerWidth <= 949) {
+          if (!html.classList.contains("desktop-nav-no-hamburger") || window.innerWidth <= 949) {
             nav_wrapper.querySelector(".university-links").before(main_nav);
             close();
           } else {                        
@@ -222,26 +217,6 @@ if (
         }     
         updateNavPosition();
         window.addEventListener("resize", updateNavPosition);
-        
-        /* Update nav position if ultimenu classes change */        
-        const htmlObserver = new MutationObserver(mutations => {
-          mutations.forEach(mutation => {
-            if (mutation.attributeName === 'class') {
-              let currentClassState = mutation.target.classList.contains("is-ultimenu--active")
-              if(this.lastClassState !== currentClassState) {
-                this.lastClassState = currentClassState
-                if(currentClassState) {
-                  updateNavPosition();
-                }
-                else {
-                  updateNavPosition();
-                }
-              }
-            }
-          })
-        });
-        htmlObserver.observe(html, { attributes: true, attributeFilter: ["class"] });
-        
         
         /* Alternate theme settings */
         const hide_links = this.getAttribute('hidelinks');

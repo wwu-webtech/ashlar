@@ -201,8 +201,11 @@ Mixins
   position: relative;
   z-index: unset;
   > li {
-    display: grid ;
-    grid-template-columns: 1fr auto 1fr;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    @media (min-width: $medium) {
+      grid-template-columns: 1fr auto 1fr;
+    }
     .ultimenu__link {
       z-index: unset;
       grid-column: 1 / span 2;
@@ -224,6 +227,7 @@ Mixins
     }
     .expand {
       position: relative;
+      z-index: 1;
       display: grid;
       grid-column: 2 / span 1;
       grid-row: 1;
@@ -287,7 +291,7 @@ Mixins
 /*------------------------------------------------------------------------------
 2. No Hamburger Desktop Menu Styles
 ------------------------------------------------------------------------------*/
-.is-ultimenu--hover {
+.desktop-nav-no-hamburger {
   @media (min-width: $medium) {
     .navigation-wrapper {
       @include visible;
@@ -366,6 +370,7 @@ Mixins
           grid-row: 1;
           width: unset;
           padding: var(--space--2xs) var(--space--xs);
+          padding-right: var(--space--lg);
           border: solid transparent var(--border-width--md);
           font-size: var(--font-size--md);
           line-height: 1.5;
@@ -442,7 +447,7 @@ Mixins
     --ultisub-active: var(--link-color);
     --ultisub-normal: var(--blue--lighter--60);
   }
-  &.is-ultimenu--hover {
+  &.desktop-nav-no-hamburger {
     @media (min-width: $medium) {
       .main-navigation {
         --menu-bg-color: var(--dark-blue);
