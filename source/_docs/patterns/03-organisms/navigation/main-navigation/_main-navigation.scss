@@ -84,7 +84,7 @@ Mixins
     margin-bottom: var(--space--sm);
     a {
       padding-left: unset;
-      transition: all 0.2s ease;
+      transition: text-decoration 0.2s ease, text-underline-offset 0.2s ease;
       text-decoration-color: var(--link-decoration-color);
       border-left: unset;
       &:hover,
