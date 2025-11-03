@@ -36,6 +36,7 @@ announcement:
   css:
     theme:
       build/css/components/announcement.css: {}
+      dist/css/material-icons.css: {}
 ashlar-base:
   version: 1.x
   css:
@@ -175,6 +176,7 @@ statistics:
   css:
     theme:
       build/css/components/statistic.css: {}
+      dist/css/material-icons.css: {}
 social-media-icons:
   version: 1.x
   css:
