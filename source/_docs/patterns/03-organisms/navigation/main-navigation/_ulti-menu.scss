@@ -47,8 +47,8 @@ html.is-ultimobile .ultimenu .ultimenu__link {
     display: grid;
   }
 }
-.button.button--ultimenu {
-  display: none;
+.is-ultidesktop .is-ultihover:not(.is-ulticaret) li:hover > .ultimenu__flyout {
+  height: 0;
 }
 @media (hover: hover) {
   .is-ultimenu .is-ultihover:not(.is-ulticaret) li .ultimenu__flyout:focus,
@@ -70,4 +70,7 @@ html.is-ultimobile .ultimenu .ultimenu__link {
     position: absolute;
     height: auto;
   }
+}
+.button.button--ultimenu {
+  display: none;
 }
