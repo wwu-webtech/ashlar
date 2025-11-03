@@ -1,14 +1,65 @@
 /**
- * @file
- * sass/ashlar_base.scss
- *
- * Required styles for any site using Ashlar or it's components
- */
+* @file
+* sass/ashlar_base.scss
+*
+* Required styles for any site using Ashlar or it's components
+*/
+@forward "../_docs/patterns/01-atoms/background-color/background-color";
+@forward "../_docs/patterns/01-atoms/blockquotes/blockquotes";
+@forward "../_docs/patterns/01-atoms/buttons/buttons";
+@forward "../_docs/patterns/01-atoms/code/code";
+@forward "../_docs/patterns/01-atoms/details/details";
+@forward "../_docs/patterns/01-atoms/field/field";
+@forward "../_docs/patterns/01-atoms/figures/figures";
+@forward "../_docs/patterns/01-atoms/fonts/fonts";
+@forward "../_docs/patterns/01-atoms/forms/forms";
+@forward "../_docs/patterns/01-atoms/forms/user-login";
+@forward "../_docs/patterns/01-atoms/headings/headings";
+@forward "../_docs/patterns/01-atoms/horizontal-rule/horizontal-rule";
+@forward "../_docs/patterns/01-atoms/icons/icons";
+@forward "../_docs/patterns/01-atoms/images/image-background";
+@forward "../_docs/patterns/01-atoms/images/image-stylized";
+@forward "../_docs/patterns/01-atoms/images/images";
+@forward "../_docs/patterns/01-atoms/links/call-to-action";
+@forward "../_docs/patterns/01-atoms/links/icon-links";
+@forward "../_docs/patterns/01-atoms/links/links";
+@forward "../_docs/patterns/01-atoms/lists/lists";
+@forward "../_docs/patterns/01-atoms/overlays/overlays";
+@forward "../_docs/patterns/01-atoms/page-title/page-title";
+@forward "../_docs/patterns/01-atoms/paragraphs/paragraphs";
+@forward "../_docs/patterns/01-atoms/tables/tables";
+@forward "../_docs/patterns/01-atoms/taxonomy-term/taxonomy-term";
 
-@import "../_docs/patterns/00-utilities/**/+(_)*.scss";
-@import "../_docs/patterns/01-atoms/**/+(_)*.scss";
-@import "../_docs/patterns/02-molecules/**/+(_)*.scss";
-@import "../_docs/patterns/03-organisms/**/+(_)*.scss";
-@import "../_docs/patterns/04-templates/**/+(_)*.scss";
-@import "../_docs/patterns/05-sites/**/_directory.scss";
-@import "../_docs/patterns/06-helpers/**/+(_)*.scss";
+@forward "../_docs/patterns/02-molecules/aside/aside";
+@forward "../_docs/patterns/02-molecules/background-video/background-video";
+@forward "../_docs/patterns/02-molecules/byline/byline";
+@forward "../_docs/patterns/02-molecules/card/card";
+@forward "../_docs/patterns/02-molecules/charts/flowchart/flowchart";
+@forward "../_docs/patterns/02-molecules/charts/org-chart/org-chart";
+@forward "../_docs/patterns/02-molecules/dialog/dialog";
+@forward "../_docs/patterns/02-molecules/event-list/event-list";
+@forward "../_docs/patterns/02-molecules/headline/headline";
+@forward "../_docs/patterns/02-molecules/locations/locations";
+@forward "../_docs/patterns/02-molecules/media/media";
+@forward "../_docs/patterns/02-molecules/navigation/breadcrumb/breadcrumb";
+@forward "../_docs/patterns/02-molecules/navigation/local-tasks/local-tasks";
+@forward "../_docs/patterns/02-molecules/navigation/menu/menu";
+@forward "../_docs/patterns/02-molecules/navigation/pager/pager";
+@forward "../_docs/patterns/02-molecules/splash/splash";
+@forward "../_docs/patterns/02-molecules/status-alert/status-alert";
+@forward "../_docs/patterns/02-molecules/system-messages/system-messages";
+@forward "../_docs/patterns/02-molecules/timeline/timeline";
+
+@forward "../_docs/patterns/03-organisms/email-signature/email-signature";
+@forward "../_docs/patterns/03-organisms/footers/site-footer/site-footer";
+@forward "../_docs/patterns/03-organisms/navigation/main-navigation/main-navigation";
+@forward "../_docs/patterns/03-organisms/profile/profile";
+
+@forward "../_docs/patterns/04-templates/layouts/layouts";
+@forward "../_docs/patterns/04-templates/page-template/page";
+@forward "../_docs/patterns/04-templates/page-template/page--404/page--404";
+@forward "../_docs/patterns/04-templates/views/views";
+
+@forward "../_docs/patterns/05-sites/directory/directory";
+
+@forward "../_docs/patterns/06-helpers/helpers";
