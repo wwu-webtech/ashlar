@@ -3,66 +3,46 @@
 * @file
 * organisms/profile_profile.scss
 */
-$profile-photo-size--smaller: 18.75rem;
-$profile-photo-size: 25rem;
+.view--profile-page {
+  .tagline {
+    margin-left: 0;
+  }
+}
 .user-profile {
+  --h2-size: var(--font-size--2xl);
+  --h3-size: var(--font-size--xl);
+
+  display: grid;
+  gap: var(--space--sm);
+  @media (min-width: $small) {
+    grid-template-columns: 1fr 2fr;
+  }
+  h2 {
+    border-bottom: var(--border-width--md) solid;
+  }
+}
+.profile-photo {
+  width: 20rem;
+  height: 20rem;
+  margin: auto;
+}
+.profile-right {
+  h2,
+  h3 {
+    margin-top: 0;
+  }
+}
+.office,
+.contact {
   display: flex;
   flex-flow: row wrap;
-  .profile-left {
-    flex: 1 1 33%;
+  h2 {
+    flex: 0 0 100%;
   }
-  .profile-right {
-    flex: 1 1 66%;
-    text-align: center;
-    @media (min-width: $medium) {
-      padding-left: var(--space--md);
-      text-align: left;
-    }
+  div {
+    flex: 0 0 50%;
   }
-  .profile-photo {
-    width: $profile-photo-size--smaller;
-    max-width: 90vw;
-    height: $profile-photo-size--smaller;
-    max-height: 90vw;
-    margin: auto;
-    margin-top: var(--space--lg);
-    @media (min-width: $small) {
-      width: $profile-photo-size;
-      height: $profile-photo-size;
-    }
-    @media (min-width: $medium) {
-      width: $profile-photo-size--smaller;
-      height: $profile-photo-size--smaller;
-    }
-    @media (min-width: $large) {
-      width: $profile-photo-size;
-      height: $profile-photo-size;
-    }
-  }
-  .social-links {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin-top: var(--space--md);
-  }
-  .social-icon {
-    margin-right: var(--space--sm);
-    margin-bottom: var(--space--sm);
-  }
-  .office,
-  .contact,
-  .website {
-    display: flex;
-    flex-flow: row wrap;
-    h2 {
-      flex: 0 0 100%;
-      margin-bottom: 0;
-    }
-    h3 {
-      margin-top: 0;
-    }
-    div {
-      flex: 0 1 50%;
-    }
-  }
+}
+.social-links {
+  display: none;
 }
