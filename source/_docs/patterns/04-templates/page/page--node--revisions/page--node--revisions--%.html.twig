@@ -42,10 +42,8 @@
  */
 #}
 
-{% embed "@templates/page-template/page-template.html.twig" %}
+{% extends "page.html.twig" %}
     
-    {% block content %}
-        {{ page.content|without(page.content['breadcrumbs']['#cache']['keys']) }}
-    {% endblock %}
-
-{% endembed %}
+{% block content %}
+    {{ page.content|without(page.content['breadcrumbs']['#cache']['keys']) }}
+{% endblock %}
