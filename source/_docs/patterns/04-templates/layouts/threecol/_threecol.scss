@@ -65,8 +65,8 @@ Templates: Layouts - Three column
   margin-right: calc(-1 * var(--space--sm));
   margin-left: calc(-1 * var(--space--sm));
   @media (min-width: $large) {
-    margin-right: calc(50% - 50vw - var(--space--xs));
-    margin-left: calc(50% - 50vw - var(--space--xs));
+    margin-right: calc((var(--content-area-max-width)/2) - 50vw);
+    margin-left: calc((var(--content-area-max-width)/2) - 50vw);
   }
   > .layout__region {
     flex: 1 1 100%;
