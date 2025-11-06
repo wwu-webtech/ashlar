@@ -399,11 +399,20 @@ function ashlar_preprocess_breadcrumb(&$variables) {
   if($variables['breadcrumb']) {
     $request = \Drupal::request();
     $route_match = \Drupal::routeMatch();
-    $variables['current_page_text'] = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+    $route = $route_match->getRouteObject();
     
-    $variables['breadcrumb'][] = array(
-      'text' => $variables['current_page_text']    
-    );
+    // Only try to get the title if we have a valid route
+    if ($route) {
+      $variables['current_page_text'] = \Drupal::service('title_resolver')->getTitle($request, $route);
+      $variables['breadcrumb'][] = array(
+        'text' => $variables['current_page_text']    
+      );
+    } else {
+      // For 404 pages or other routes without a route object
+      $variables['breadcrumb'][] = array(
+        'text' => t('Page not found')
+      );
+    }
     $variables['#cache']['max-age'] = 0;
   }
 }

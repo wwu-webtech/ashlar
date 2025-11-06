@@ -1,11 +1,4 @@
-<div class="layout-container">
-{% embed '@templates/page-template/page-template.html.twig' %}
-
-{% block main_navigation %}
-<div class="nav--404">
-  {{ page.main_navigation }}
-</div>
-{% endblock %}
+{% extends 'page.html.twig' %}
 
 {% block content %}
 <main id="main-content" tabindex="-1">
@@ -91,6 +84,3 @@
   </div>
 </main>
 {% endblock %}
-
-{% endembed %}
-</div>
