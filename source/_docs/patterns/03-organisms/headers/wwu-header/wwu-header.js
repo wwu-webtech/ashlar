@@ -223,9 +223,11 @@ if (
         const site_logo = this.getAttribute('logo');        
         if (hide_links) {          
           this.querySelector(".university-links").remove();          
-        }        
-        if (site_logo != "/") {
-          this.querySelector(".wwu-home-link").innerHTML = `<img src="${site_logo}" alt="${site_name} logo"/>`
+        }      
+        if(site_logo != null) {   
+          if (site_logo != "/") {
+            this.querySelector(".wwu-home-link").innerHTML = `<img src="${site_logo}" alt="${site_name} logo"/>`
+          }
         }
       }
     }
