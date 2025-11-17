@@ -3,13 +3,13 @@ import WWUHeader from "./wwu-header.js"
 
 # Western Header
 
-<wwu-header sitename='A Western Department' sitename-link='/' regioncontent='<div><p><a href=#>A Website of this Department</a></p></div>'></wwu-header>
+<wwu-header sitename='A Western Department' sitename-link='/'></wwu-header>
 
 ## Component Markup and Library
 Place inside &lt;header&gt;
 
 ```
-<wwu-header sitename='A Western Website' sitename-link='/' regioncontent='<div><p><a href=#>Department of this College</a></p></div>'></wwu-header>
+<wwu-header sitename='A Western Website' sitename-link='/'></wwu-header>
 ```
 
 Place near bottom of page

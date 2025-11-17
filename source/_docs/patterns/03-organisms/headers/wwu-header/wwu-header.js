@@ -7,8 +7,8 @@ if (
     <!--link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Sans+Extra+Condensed:wght@300;400&family=Fira+Sans:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400&family=Montserrat:wght@700;900&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet" /-->
     <!--link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" /-->
     <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/normalize.css" /-->
-    <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/ashlar-base.css" /-->
-    <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/components/wwu-header.css" /-->
+    <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/version6/css/ashlar-base.css" /-->
+    <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/version6/css/components/wwu-header.css" /-->
     <div class="buttons">
       <button class="small toggle-menu" aria-expanded="false">
         <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
@@ -110,6 +110,7 @@ if (
       if (!element_exists) {
         this.appendChild(header_template.content.cloneNode(true));
         this.classList.add("element-created");
+        
         let site_name;
         let site_name_link;
         const region_content = this.querySelector('#regioncontent');
@@ -124,11 +125,9 @@ if (
         }
         if(region_content) { 
           this.querySelector(".western-header-region").innerHTML = region_content.innerHTML;
-        }      
+        }
         
-        /*------------------------------------------------------------------------------
-        Menu pop-up functionality
-        --------------------------------------------------------------------------*/
+        /* Menu pop-up functionality */
         const close_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z"/></svg>`;
         const menu_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M172-278v-28h616v28H172Zm0-188v-28h616v28H172Zm0-188v-28h616v28H172Z"/></svg>`;
         var html = document.querySelector("html");
@@ -136,8 +135,28 @@ if (
         var nav_wrapper = document.querySelector(".region--main_navigation");
         var main_nav = document.querySelector(".main-navigation");
         var university_links = this.querySelector(".university-links");
-        var menu_toggle = this.querySelector(".toggle-menu");              
+        var menu_toggle = this.querySelector(".toggle-menu");      
         
+        /* Menu Setup on Load */
+        if (menu_toggle) {
+          menu_toggle.addEventListener("click", toggle_menu);
+          menu_toggle.addEventListener("keyup", keyboard_close);
+          this.addEventListener("keyup", keyboard_close);
+        }     
+        updateNavPosition();
+        window.addEventListener("resize", updateNavPosition);
+        
+        /* Alternate theme settings */
+        const hide_links = this.getAttribute('hidelinks');
+        const site_logo = this.getAttribute('logo');        
+        if (hide_links) {          
+          this.querySelector(".university-links").remove();          
+        }      
+        if(site_logo != null) {   
+          if (site_logo != "/") {
+            this.querySelector(".wwu-home-link").innerHTML = `<img src="${site_logo}" alt="${site_name} logo"/>`
+          }
+        }
         
         /* Open menu -------------------------------------------------------------*/
         function open() {
@@ -181,64 +200,14 @@ if (
           }
         }
         
-        function waitForElm(selector) {
-          return new Promise(resolve => {
-            if (document.querySelector(selector)) {
-              return resolve(document.querySelector(selector));
-            }
-            
-            const observer = new MutationObserver(mutations => {
-              if (document.querySelector(selector)) {
-                resolve(document.querySelector(selector));
-                observer.disconnect();
-              }
-            });
-            
-            observer.observe(document.body, {
-              childList: true,
-              subtree: true
-            });
-          });
-        }
-        
         function updateNavPosition() {
           if (html.classList.contains("desktop-hamburger-on") || window.innerWidth <= 949) {
             if(nav_wrapper) {
               university_navigation.querySelector(".university-links").before(nav_wrapper);
             }
-            else {
-              university_navigation.querySelector(".university-links").before(main_nav);
-            }
             close();
-          } else {                       
-            if(nav_wrapper) {
-              document.querySelector("wwu-header").append(nav_wrapper);
-            } else {
-              document.querySelector("wwu-header").append(main_nav);
-            }
-          }
-        }
-        
-        /* Menu Setup on Load */
-        if (menu_toggle) {
-          menu_toggle.addEventListener("click", toggle_menu);
-          menu_toggle.addEventListener("keyup", keyboard_close);
-          this.addEventListener("keyup", keyboard_close);
-        }     
-        updateNavPosition();
-        window.addEventListener("resize", updateNavPosition);
-        
-        /* Alternate theme settings */
-        const hide_links = this.getAttribute('hidelinks');
-        const site_logo = this.getAttribute('logo');        
-        if (hide_links) {          
-          this.querySelector(".university-links").remove();          
+          } 
         }      
-        if(site_logo != null) {   
-          if (site_logo != "/") {
-            this.querySelector(".wwu-home-link").innerHTML = `<img src="${site_logo}" alt="${site_name} logo"/>`
-          }
-        }
       }
     }
   }

@@ -4,10 +4,12 @@ if (
 ) {
   const main_nav_template = document.createElement("template");
   main_nav_template.innerHTML = `   
-    <nav class="main-navgiation" aria-label="Main">
+  <div class="region region--main_navigation">
+    <nav class="main-navigation" aria-label="Main">
       <ul class="ultimenu ultimenu--horizontal ultimenu--htb ultimenu--basic">
       </ul>
     </nav>
+  </div>
   `;
 
   class WWUMainNav extends HTMLElement {
@@ -26,9 +28,10 @@ if (
         this.classList.add("element-created");      
         const top_menu = this.querySelector(".ultimenu");     
 
-        if (this.getAttribute("desktop-hamburger-on")) {          
+
+        if (this.getAttribute("desktop-hamburger-on")) {    
           document.querySelector("html").classList.add("desktop-hamburger-on");
-        }
+        } 
               
         for (const item of items) {        
           if (item.tagName != "NAV") {
