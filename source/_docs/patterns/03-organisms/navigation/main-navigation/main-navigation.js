@@ -26,10 +26,9 @@ if (
       if (!element_exists) {
         this.appendChild(main_nav_template.content.cloneNode(true));     
         this.classList.add("element-created");      
-        const top_menu = this.querySelector(".ultimenu");     
-
-
-        if (this.getAttribute("desktop-hamburger-on")) {    
+        const top_menu = this.querySelector(".ultimenu");    
+        
+        if (this.getAttribute("desktop-hamburger-on") != null) {    
           document.querySelector("html").classList.add("desktop-hamburger-on");
         } 
               

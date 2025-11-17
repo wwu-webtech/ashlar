@@ -132,8 +132,7 @@ if (
         const menu_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M172-278v-28h616v28H172Zm0-188v-28h616v28H172Zm0-188v-28h616v28H172Z"/></svg>`;
         var html = document.querySelector("html");
         var university_navigation = this.querySelector(".university-navigation");
-        var nav_wrapper = document.querySelector(".region--main_navigation");
-        var main_nav = document.querySelector(".main-navigation");
+        var main_nav = document.querySelector(".region--main_navigation");
         var university_links = this.querySelector(".university-links");
         var menu_toggle = this.querySelector(".toggle-menu");      
         
@@ -202,8 +201,8 @@ if (
         
         function updateNavPosition() {
           if (html.classList.contains("desktop-hamburger-on") || window.innerWidth <= 949) {
-            if(nav_wrapper) {
-              university_navigation.querySelector(".university-links").before(nav_wrapper);
+            if(main_nav) {
+              university_navigation.querySelector(".university-links").before(main_nav);
             }
             close();
           } 
