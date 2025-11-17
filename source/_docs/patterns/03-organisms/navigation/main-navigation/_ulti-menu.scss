@@ -74,3 +74,10 @@ html.is-ultimobile .ultimenu .ultimenu__link {
 .button.button--ultimenu {
   display: none;
 }
+@media (max-width: 950px) {
+  .is-ultidesktop .is-ultihover .ultimenu__flyout.open,
+  .is-ultidesktop:not(.is-ultimenu--active) .is-ulticaret .ultimenu__flyout.open {
+    position: relative !important;
+    height: auto !important;
+  }
+}
