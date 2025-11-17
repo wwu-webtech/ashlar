@@ -7,8 +7,8 @@ if (
     <!--link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Sans+Extra+Condensed:wght@300;400&family=Fira+Sans:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400&family=Montserrat:wght@700;900&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet" /-->
     <!--link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" /-->
     <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/normalize.css" /-->
-    <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/version6/css/ashlar-base.css" /-->
-    <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/version6/css/components/wwu-header.css" /-->
+    <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/ashlar-base.css" /-->
+    <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/components/wwu-header.css" /-->
     <div class="buttons">
       <button class="small toggle-menu" aria-expanded="false">
         <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px"

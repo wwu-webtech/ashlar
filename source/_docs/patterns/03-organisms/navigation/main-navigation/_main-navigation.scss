@@ -200,6 +200,9 @@ Mixins
 
   position: relative;
   z-index: unset;
+  .ultimenu__region {
+    padding: var(--space--md);
+  }
   > li {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -207,6 +210,8 @@ Mixins
       grid-template-columns: 1fr auto 1fr;
     }
     .ultimenu__link {
+      text-decoration-line: none;
+
       z-index: unset;
       grid-column: 1 / span 2;
       grid-row: 1;
@@ -365,7 +370,9 @@ html:not(.desktop-hamburger-on) {
         grid-template-columns: 1fr auto;
         width: unset;
         .ultimenu__link {
+          position: relative;
           left: unset;
+          display: block;
           grid-column: 1 / span all;
           grid-row: 1;
           width: unset;
@@ -468,4 +475,14 @@ html:not(.desktop-hamburger-on) {
     padding: 0;
     padding-left: var(--space--md);
   }
+}
+/* These styles are defined in ultimenu's css, but need to be here for non-Drupal/non-ultimenu using applications */
+.ultimenu__flyout {
+  z-index: 2;
+  display: block;
+  visibility: hidden;
+  overflow: hidden;
+  height: 0;
+  max-height: 0;
+  padding: 0;
 }
