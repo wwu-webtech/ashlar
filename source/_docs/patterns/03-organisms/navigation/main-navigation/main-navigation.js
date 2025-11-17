@@ -4,7 +4,7 @@ if (
 ) {
   const main_nav_template = document.createElement("template");
   main_nav_template.innerHTML = `   
-    <nav class="main-navigation" aria-label="Main">
+    <nav class="region--main_navigation" aria-label="Main">
       <ul class="ultimenu ultimenu--horizontal ultimenu--htb ultimenu--basic">
       </ul>
     </nav>
