@@ -25,6 +25,10 @@ if (
         this.appendChild(main_nav_template.content.cloneNode(true));     
         this.classList.add("element-created");      
         const top_menu = this.querySelector(".ultimenu");     
+
+        if (this.getAttribute("desktop-hamburger-on")) {          
+          document.querySelector("html").classList.add("desktop-hamburger-on");
+        }
               
         for (const item of items) {        
           if (item.tagName != "NAV") {

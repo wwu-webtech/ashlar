@@ -63,10 +63,10 @@ html.is-ultimobile .ultimenu .ultimenu__link {
     padding: 0;
     opacity: 0;
   }
-  .desktop-nav-no-hamburger.is-ultimenu .is-ultihover:not(.is-ulticaret) li .ultimenu__flyout:focus,
-  .desktop-nav-no-hamburger.is-ultimenu .is-ultihover:not(.is-ulticaret) li:hover > .ultimenu__flyout,
-  .desktop-nav-no-hamburger.is-ultimenu .is-ultihover:not(.is-ulticaret) li a:active + .ultimenu__flyout,
-  .desktop-nav-no-hamburger.is-ultimenu .is-ultihover:not(.is-ulticaret) li a:focus + .ultimenu__flyout {
+  html:not(.desktop-hamburger-on).is-ultimenu .is-ultihover:not(.is-ulticaret) li .ultimenu__flyout:focus,
+  html:not(.desktop-hamburger-on).is-ultimenu .is-ultihover:not(.is-ulticaret) li:hover > .ultimenu__flyout,
+  html:not(.desktop-hamburger-on).is-ultimenu .is-ultihover:not(.is-ulticaret) li a:active + .ultimenu__flyout,
+  html:not(.desktop-hamburger-on).is-ultimenu .is-ultihover:not(.is-ulticaret) li a:focus + .ultimenu__flyout {
     position: absolute;
     height: auto;
   }

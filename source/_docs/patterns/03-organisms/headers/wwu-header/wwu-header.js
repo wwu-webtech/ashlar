@@ -201,7 +201,7 @@ if (
         }
         
         function updateNavPosition() {
-          if (!html.classList.contains("desktop-nav-no-hamburger") || window.innerWidth <= 949) {
+          if (html.classList.contains("desktop-hamburger-on") || window.innerWidth <= 949) {
             nav_wrapper.querySelector(".university-links").before(main_nav);
             close();
           } else {                        
