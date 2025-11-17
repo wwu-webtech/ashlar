@@ -29,7 +29,7 @@ Mixins
 /*------------------------------------------------------------------------------
 1. Hamburger Active Menu Styles
 ------------------------------------------------------------------------------*/
-.navigation-wrapper {
+.university-navigation {
   --h2-color: var(--blue);
 
   @include hidden;
@@ -275,7 +275,7 @@ Mixins
   text-decoration-color: var(--link-decoration-color);
 }
 .navigation-open {
-  .navigation-wrapper {
+  .university-navigation {
     @include visible;
   }
   .page-content,
@@ -293,7 +293,7 @@ Mixins
 ------------------------------------------------------------------------------*/
 html:not(.desktop-hamburger-on) {
   @media (min-width: $medium) {
-    .navigation-wrapper {
+    .university-navigation {
       @include visible;
 
       position: relative;
@@ -411,12 +411,12 @@ html:not(.desktop-hamburger-on) {
       display: none;
     }
     .toolbar-fixed {
-      .navigation-wrapper {
+      .university-navigation {
         top: 0;
       }
     }
     .toolbar-horizontal.toolbar-tray-open {
-      .navigation-wrapper {
+      .university-navigation {
         top: 0;
       }
     }

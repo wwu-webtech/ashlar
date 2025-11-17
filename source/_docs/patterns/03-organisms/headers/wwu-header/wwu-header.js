@@ -19,7 +19,7 @@ if (
       </button>
     </div>
   
-    <div class="navigation-wrapper">    
+    <div class="university-navigation">    
       <div class="university-links">
         <nav class="action-links" aria-label="Action Links">
           <a class="icon-link apply-quick-link" href="https://admissions.wwu.edu/visit">
@@ -132,8 +132,9 @@ if (
         const close_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z"/></svg>`;
         const menu_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M172-278v-28h616v28H172Zm0-188v-28h616v28H172Zm0-188v-28h616v28H172Z"/></svg>`;
         var html = document.querySelector("html");
-        var nav_wrapper = this.querySelector(".navigation-wrapper");
-        var main_nav = document.querySelector(".region--main_navigation");
+        var university_navigation = this.querySelector(".university-navigation");
+        var nav_wrapper = document.querySelector(".region--main_navigation");
+        var main_nav = document.querySelector(".main-navigation");
         var university_links = this.querySelector(".university-links");
         var menu_toggle = this.querySelector(".toggle-menu");              
         
@@ -202,10 +203,19 @@ if (
         
         function updateNavPosition() {
           if (html.classList.contains("desktop-hamburger-on") || window.innerWidth <= 949) {
-            nav_wrapper.querySelector(".university-links").before(main_nav);
+            if(nav_wrapper) {
+              university_navigation.querySelector(".university-links").before(nav_wrapper);
+            }
+            else {
+              university_navigation.querySelector(".university-links").before(main_nav);
+            }
             close();
-          } else {                        
-            document.querySelector("wwu-header").append(main_nav);
+          } else {                       
+            if(nav_wrapper) {
+              document.querySelector("wwu-header").append(nav_wrapper);
+            } else {
+              document.querySelector("wwu-header").append(main_nav);
+            }
           }
         }
         
