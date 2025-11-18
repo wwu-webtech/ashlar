@@ -31,6 +31,8 @@ iframe {
   border: 0;
 }
 body {
+  container-type: inline-size;
+
   position: relative;
   z-index: 0;
   padding-top: var(--drupal-displace-offset-top);

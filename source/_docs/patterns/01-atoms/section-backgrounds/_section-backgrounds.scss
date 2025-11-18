@@ -12,7 +12,7 @@ Atom: Section Backgrounds
     right: calc(-1 * var(--space--md));
     left: calc(-1 * var(--space--md));
     display: block;
-    width: calc(100vw - 12px);
+    width: 100cqw;
     content: "";
     background-size: cover;
     @media (min-width: $large) {

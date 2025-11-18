@@ -17,12 +17,6 @@ wwu-header {
   justify-content: center;
   text-align: center;
   border-bottom: rgba(var(--blue--rgb), 0.4) 1px solid;
-  &:has(.region--wwu_header) {
-    .site-name {
-      font-size: var(--font-size--md);
-      font-weight: var(--font-weight--regular);
-    }
-  }
   .buttons {
     position: relative;
     z-index: 2;
@@ -31,10 +25,7 @@ wwu-header {
     grid-area: preheader;
     align-content: center;
     &.secondary {
-      left: calc(var(--toggle-size--sm) + var(--space--md));
-      @media(min-width: $medium) {
-        left: calc(var(--toggle-size) + var(--space--md));
-      }
+      left: calc(var(--toggle-size) + var(--space--md));
     }
   }
   .western-logo {
@@ -46,13 +37,11 @@ wwu-header {
   .site-name {
     grid-area: site-name;
     justify-self: center;
+    margin-top: var(--space--xs);
+    margin-bottom: var(--space--sm);
     text-transform: uppercase;
-    font-size: var(--font-size--3xl);
+    font-size: var(--font-size--xl);
     font-weight: var(--font-weight--black);
-    @media (max-width: $medium) {
-      margin-bottom: var(--space--sm);
-      font-size: var(--font-size--md);
-    }
     a {
       text-decoration: none;
       text-transform: uppercase;
@@ -60,6 +49,13 @@ wwu-header {
       &:visited {
         color: var(--link-color);
       }
+    }
+  }
+  &:has(.region--wwu_header) {
+    .site-name {
+      margin-bottom: 0;
+      font-size: var(--font-size--md);
+      font-weight: var(--font-weight--regular);
     }
   }
   .western-header-region {
@@ -98,24 +94,23 @@ wwu-header {
     display: grid;
     grid-auto-flow: row;
     place-content: center;
-    width: var(--toggle-size--sm);
-    height: var(--toggle-size--sm);
+    width: var(--toggle-size);
+    height: var(--toggle-size);
     margin: var(--space--md);
     margin-right: 0;
     color: var(--white);
     border-radius: 50%;
-    font-size: var(--font-size--2xs);
+    font-size: var(--font-size--xs);
+    @media(min-width: $medium) {
+      font-size: var(--font-size--2xs);
+    }
     svg {
       fill: var(--white);
 
-      width: 2rem;
-      height: 2rem;
+      width: 2.25rem;
+      height: 2.25rem;
       margin: calc(-1 * var(--space--xs));
       margin-bottom: calc(-1 * var(--space--sm));
-    }
-    @media (min-width: $medium) {
-      width: var(--toggle-size);
-      height: var(--toggle-size);
     }
   }
   @media (max-width: $medium) {
