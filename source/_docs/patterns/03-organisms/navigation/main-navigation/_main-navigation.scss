@@ -40,7 +40,7 @@ Mixins
   "prospective";
   grid-template-columns: 1fr;
   grid-template-rows: 1fr auto;
-  width: 100vw;
+  width: 100cqw;
   max-width: 100%;
   min-height: 100vh;
   transition: opacity var(--ease--standard) var(--transition-speed--fast);
@@ -56,7 +56,7 @@ Mixins
       left: -2rem;
       display: block;
       overflow: hidden;
-      width: 100vw;
+      width: 100cqw;
       height: 10rem;
       content: "";
       background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/wave-line-blue.svg");

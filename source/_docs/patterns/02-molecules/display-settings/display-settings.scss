@@ -12,7 +12,7 @@ Organism: Pre-header
   top: 0;
   left: 0;
   display: none;
-  width: 100vw;
+  width: 100cqw;
   padding: var(--space--lg);
   padding-top: var(--logo-size);
   color: var(--dark-blue);
@@ -55,7 +55,10 @@ Organism: Pre-header
   margin-right: 0;
   border-radius: 50%;
   box-shadow: none;
-  font-size: var(--font-size--2xs);
+  font-size: var(--font-size--xs);
+  @media(min-width: $medium) {
+    font-size: var(--font-size--2xs);
+  }
   svg {
     width: 2.25rem;
     height: 2.25rem;

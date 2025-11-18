@@ -100,7 +100,10 @@ wwu-header {
     margin-right: 0;
     color: var(--white);
     border-radius: 50%;
-    font-size: var(--font-size--2xs);
+    font-size: var(--font-size--xs);
+    @media(min-width: $medium) {
+      font-size: var(--font-size--2xs);
+    }
     svg {
       fill: var(--white);
 
