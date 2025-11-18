@@ -74,6 +74,8 @@ Mixins
   }
 }
 .main-navigation {
+  --menu-bg-color: var(--white);
+
   text-align: left;
   h2 {
     margin-top: 0;
