@@ -3,9 +3,10 @@
 Organism: Headers - Western header
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-wwu-header {
+:root {
   --menu-bg-color: var(--white);
-
+}
+wwu-header {
   display: grid;
   grid-auto-flow: column;
   grid-template-areas: "preheader logo"
