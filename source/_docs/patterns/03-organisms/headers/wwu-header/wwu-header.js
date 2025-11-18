@@ -19,7 +19,7 @@ if (
       </button>
     </div>
   
-    <div class="navigation-wrapper">    
+    <div class="university-navigation">    
       <div class="university-links">
         <nav class="action-links" aria-label="Action Links">
           <a class="icon-link apply-quick-link" href="https://admissions.wwu.edu/visit">
@@ -110,6 +110,7 @@ if (
       if (!element_exists) {
         this.appendChild(header_template.content.cloneNode(true));
         this.classList.add("element-created");
+        
         let site_name;
         let site_name_link;
         const region_content = this.querySelector('#regioncontent');
@@ -124,19 +125,37 @@ if (
         }
         if(region_content) { 
           this.querySelector(".western-header-region").innerHTML = region_content.innerHTML;
-        }      
+        }
         
-        /*------------------------------------------------------------------------------
-        Menu pop-up functionality
-        --------------------------------------------------------------------------*/
+        /* Menu pop-up functionality */
         const close_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z"/></svg>`;
         const menu_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M172-278v-28h616v28H172Zm0-188v-28h616v28H172Zm0-188v-28h616v28H172Z"/></svg>`;
         var html = document.querySelector("html");
-        var nav_wrapper = this.querySelector(".navigation-wrapper");
+        var university_navigation = this.querySelector(".university-navigation");
         var main_nav = document.querySelector(".region--main_navigation");
         var university_links = this.querySelector(".university-links");
-        var menu_toggle = this.querySelector(".toggle-menu");              
+        var menu_toggle = this.querySelector(".toggle-menu");      
         
+        /* Menu Setup on Load */
+        if (menu_toggle) {
+          menu_toggle.addEventListener("click", toggle_menu);
+          menu_toggle.addEventListener("keyup", keyboard_close);
+          this.addEventListener("keyup", keyboard_close);
+        }     
+        updateNavPosition();
+        window.addEventListener("resize", updateNavPosition);
+        
+        /* Alternate theme settings */
+        const hide_links = this.getAttribute('hidelinks');
+        const site_logo = this.getAttribute('logo');        
+        if (hide_links) {          
+          this.querySelector(".university-links").remove();          
+        }      
+        if(site_logo != null) {   
+          if (site_logo != "/") {
+            this.querySelector(".wwu-home-link").innerHTML = `<img src="${site_logo}" alt="${site_name} logo"/>`
+          }
+        }
         
         /* Open menu -------------------------------------------------------------*/
         function open() {
@@ -180,53 +199,14 @@ if (
           }
         }
         
-        function waitForElm(selector) {
-          return new Promise(resolve => {
-            if (document.querySelector(selector)) {
-              return resolve(document.querySelector(selector));
-            }
-            
-            const observer = new MutationObserver(mutations => {
-              if (document.querySelector(selector)) {
-                resolve(document.querySelector(selector));
-                observer.disconnect();
-              }
-            });
-            
-            observer.observe(document.body, {
-              childList: true,
-              subtree: true
-            });
-          });
-        }
-        
         function updateNavPosition() {
-          if (!html.classList.contains("desktop-nav-no-hamburger") || window.innerWidth <= 949) {
-            nav_wrapper.querySelector(".university-links").before(main_nav);
+          if (html.classList.contains("desktop-hamburger-on") || window.innerWidth <= 949) {
+            if(main_nav) {
+              university_navigation.querySelector(".university-links").before(main_nav);
+            }
             close();
-          } else {                        
-            document.querySelector("wwu-header").append(main_nav);
-          }
-        }
-        
-        /* Menu Setup on Load */
-        if (menu_toggle) {
-          menu_toggle.addEventListener("click", toggle_menu);
-          menu_toggle.addEventListener("keyup", keyboard_close);
-          this.addEventListener("keyup", keyboard_close);
-        }     
-        updateNavPosition();
-        window.addEventListener("resize", updateNavPosition);
-        
-        /* Alternate theme settings */
-        const hide_links = this.getAttribute('hidelinks');
-        const site_logo = this.getAttribute('logo');        
-        if (hide_links) {          
-          this.querySelector(".university-links").remove();          
-        }        
-        if (site_logo != "/") {
-          this.querySelector(".wwu-home-link").innerHTML = `<img src="${site_logo}" alt="${site_name} logo"/>`
-        }
+          } 
+        }      
       }
     }
   }
