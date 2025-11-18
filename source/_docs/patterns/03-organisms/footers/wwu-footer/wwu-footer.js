@@ -52,7 +52,7 @@
               <h2 id="wwu-footer-heading" class="visually-hidden">University Links and Policy</h2>            
               
               <a href="https://www.wwu.edu/workatwestern">Jobs</a>
-              <a href="https://equity.wwu.edu/sebrt/report-bias-incident">Report Bias</a>
+              <a href="https://www.wwu.edu/report-concern">Report Concerns</a>
               <a href="https://www.wwu.edu/online-privacy-statement">Privacy</a>              
               <a href="https://www.wwu.edu/commitment-accessibility">Accessibility Notice</a>
               <a href="https://www.wwu.edu/equal-opportunity-policy">Equal Employment Opportunity Policy</a>
