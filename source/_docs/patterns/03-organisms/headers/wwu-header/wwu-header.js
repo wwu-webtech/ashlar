@@ -202,10 +202,12 @@ if (
         function updateNavPosition() {
           if (html.classList.contains("desktop-hamburger-on") || window.innerWidth <= 949) {
             if(main_nav) {
-              university_navigation.querySelector(".university-links").before(main_nav);
-            }
-            close();
-          } 
+              university_navigation.prepend(main_nav);
+              close();
+            } 
+          } else {                  
+            document.querySelector("wwu-header").append(main_nav);
+          }
         }      
       }
     }
