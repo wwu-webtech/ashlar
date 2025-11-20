@@ -27,6 +27,32 @@ function ashlar_preprocess_html(&$variables) {
   if (!empty(theme_get_setting('navigation_option'))) {
     $variables['html_attributes']['class'][] = 'desktop-hamburger-on';
   }
+
+  /* Checks for field_menu_settings boolean value on any taxonomy term on node. If set to true, turns desktop hamburger on. */
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if (!$node instanceof \Drupal\node\NodeInterface) {
+    return;
+  }
+  foreach ($node->getFieldDefinitions() as $field_name => $field_definition) {
+    $target_type = $field_definition->getSetting('target_type');
+    if ($target_type !== 'taxonomy_term') {
+      continue;
+    }
+    if ($node->get($field_name)->isEmpty()) {
+      continue;
+    }
+
+    $terms = $node->get($field_name)->referencedEntities();
+
+    foreach ($terms as $term) {
+      if ($term->hasField('field_menu_settings') && !$term->get('field_menu_settings')->isEmpty()) {
+        if ((bool) $term->get('field_menu_settings')->value === TRUE) {
+          $variables['html_attributes']['class'][] = 'desktop-hamburger-on';
+          return;
+        }
+      }
+    }
+  }
 }
 
 /**
