@@ -187,6 +187,9 @@ html:not(.desktop-hamburger-on) {
     .wwu-logo {
       --logo-size: 5rem;
     }
+    &[data-theme="dark"] {
+      --menu-bg-color: var(--dark-blue);
+    }
   }
 }
 /*------------------------------------------------------------------------------
