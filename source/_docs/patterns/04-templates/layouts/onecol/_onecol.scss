@@ -22,8 +22,8 @@ Templates: Layouts - One column
   margin-right: calc(-1 * var(--space--sm));
   margin-left: calc(-1 * var(--space--sm));
   @media (min-width: $large) {
-    margin-right: calc((var(--content-area-max-width)/2) - 50vw);
-    margin-left: calc((var(--content-area-max-width)/2) - 50vw);
+    margin-right: calc((var(--content-area-max-width)/2) - 50cqw);
+    margin-left: calc((var(--content-area-max-width)/2) - 50cqw);
   }
   .layout__region {
     max-width: none;
