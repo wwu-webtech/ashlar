@@ -25,6 +25,7 @@ a.wp-block-button__link {
   background-color: var(--cta-color);
   box-shadow: var(--shadow--hard);
   font-weight: var(--font-weight--bold);
+  line-height: 1.15;
   &:active,
   &:hover,
   &:focus {
