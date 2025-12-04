@@ -44,6 +44,8 @@ wwu-switcher {
       }
     }
     &.active {
+      color: var(--link-color--focus);
+      background: var(--link-decoration-color--active);
       font-weight: var(--font-weight--semibold);
     }
     &:first-of-type {
