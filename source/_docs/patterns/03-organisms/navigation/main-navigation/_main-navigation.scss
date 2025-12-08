@@ -200,6 +200,7 @@ Mixins
 
   position: relative;
   z-index: unset;
+  margin-bottom: 0;
   .ultimenu__region {
     padding: var(--space--md);
   }
@@ -228,6 +229,8 @@ Mixins
       &:active,
       &.is-ulink-active {
         @include menu-link-decoration-active;
+
+        color: var(--link-color);
       }
     }
     .expand {
