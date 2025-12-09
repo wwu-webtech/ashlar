@@ -35,6 +35,10 @@ input[type="submit"] {
     background: var(--button-background-color--active);
     box-shadow: var(--shadow--soft--hover);
   }
+  &:focus-visible {
+    outline: var(--outline--focus);
+    outline-offset: var(--outline-offset--outset);
+  }
   &:active {
     @media (forced-colors: active) {
       outline: var(--outline--unset);
