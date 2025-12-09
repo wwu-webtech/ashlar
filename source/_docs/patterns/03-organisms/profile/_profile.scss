@@ -22,9 +22,14 @@
   }
 }
 .profile-photo {
-  width: 20rem;
-  height: 20rem;
-  margin: auto;
+  width: 90vw;
+  height: 90vw;
+  margin: 0;
+  @media (min-width: $small) {
+    width: 20rem;
+    height: 20rem;
+    margin: auto;
+  }
 }
 .profile-right {
   h2,
