@@ -62,7 +62,6 @@
         </template>
         {{ page.main_navigation }}
       </wwu-header>
-      TEST 1
       {% endblock %}
            
       {% block splash %}
@@ -76,21 +75,17 @@
     {% block content %}
       {{ page.content }}
     {% endblock %}
-
-    {% block divider %}
-    <div class="wwu-footer-divider">
-      {% if site_slogan %}
-        <h2 class="wwu-tagline">{{ site_slogan }}</h2>
-      {% else %}
-        <h2 class="wwu-tagline"><a href="https://wwu.edu/makewaves/">Make Waves.</a></h2>
-      {% endif %}
-      <div class="separator"></div>
-    </div>
-    {% endblock %}
-
+    
     {% block footer %}
     <footer class="page-footer region region--footer" role="contentinfo">
-    TEST 2
+      <div class="wwu-footer-divider">
+        {% if site_slogan %}
+          <h2 class="wwu-tagline">{{ site_slogan }}</h2>
+        {% else %}
+          <h2 class="wwu-tagline"><a href="https://wwu.edu/makewaves/">Make Waves.</a></h2>
+        {% endif %}
+        <div class="separator"></div>
+      </div>
       {% block site_footer %}
       <section aria-label="Site Footer" class="site-footer">
         {% block footer_regions %}
@@ -149,7 +144,7 @@
           <div class="copyright">
               <h2 class="visually-hidden">Copyright and Contact Info</h2>
               <p>
-                  © Western Washington University
+                  Â© Western Washington University
               </p>
           </div>
           {% endif %}
