@@ -96,8 +96,9 @@ Molecule: Charts - Org Chart
         &:hover,
         &:focus,
         &:active {
-          color: var(--dark-blue);
+          color: var(--white);
           outline-offset: var(--outline-offset--inset);
+          background-color: var(--dark-blue);
         }
         @media (forced-colors: active) {
           border: var(--border-width--md) solid transparent;

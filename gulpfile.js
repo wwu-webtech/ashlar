@@ -17,11 +17,8 @@
   const terser = require("gulp-terser");
   const sourcemaps = require("gulp-sourcemaps");
   const sass = require('gulp-sass')(require('sass'));
-  const sassGlob = require("gulp-sass-glob");
   const group = require("gulp-group-css-media-queries");
   const cleancss = require("gulp-clean-css");
-  const minify = require("gulp-minify");
-  const jshint = require('gulp-jshint');
   const plumber = require('gulp-plumber');
   const replace = require('gulp-replace');
 
@@ -162,7 +159,7 @@
    * dest: Output pattern for image files.
    */
   config.images = {
-    src: ["source/images/**/*.{jpg,jpeg,gif,png,svg}"],
+    src: ["source/images/**/*.{jpg,jpeg,gif,png,svg,webp}"],
     dest: "build/images",
     cdndest: "cdn/images",
   };
@@ -173,8 +170,6 @@
   gulp.task("sass", function (callback) {
     pump(
       gulp.src(config.sass.src),
-      // Parse globbing patterns in @include statements.
-      sassGlob(),
       // Initialize source maps.
       sourcemaps.init(),
       // Compile Sass.
@@ -195,8 +190,6 @@
   gulp.task("sassComponents", function (callback) {
     pump(
       gulp.src(config.sassComponents.src),
-      // Parse globbing patterns in @include statements.
-      sassGlob(),
       // Initialize source maps.
       sourcemaps.init(),
       // Compile Sass.
@@ -211,23 +204,6 @@
       flatten(),
       gulp.dest(config.sassComponents.dest),
       gulp.dest(config.sassComponents.cdndest),
-      callback
-    );
-  });
-
-  /**
-   * Generate unoptimized CSS.
-   */
-  gulp.task("sass:dev", function (callback) {
-    pump(
-      gulp.src(config.sass.src),
-      sassGlob(),
-      sourcemaps.init(),
-      sass(config.sass.options),
-      sourcemaps.write(),
-      flatten(),
-      gulp.dest(config.sass.dest),
-      gulp.dest(config.sass.cdndest),
       callback
     );
   });
@@ -295,24 +271,6 @@
   });
 
   /**
-   * Check JS for errors
-   */
-  gulp.task('lint', function() {
-    return gulp.src(config.js.src)
-      .pipe(jshint())
-      .pipe(jshint.reporter('default'));
-  });
-
-  /**
-   * Check jQuery for errors
-   */
-  gulp.task('lint', function() {
-    return gulp.src(config.jquery.src)
-      .pipe(jshint())
-      .pipe(jshint.reporter('default'));
-  });
-
-  /**
    * Generate JS for non-drupal applications
    */
    gulp.task("js-no-wrap", function (callback) {
@@ -373,7 +331,10 @@
    * Set watch tasks.
    */
   gulp.task("watch", function () {
-    gulp.watch(config.sass.watch, gulp.series(["sass:dev"]));
+    gulp.watch(config.sassComponents.watch, gulp.series(["sass"])); 
+    gulp.watch(config.sassComponents.watch, gulp.series(["sassComponents"])); 
+    gulp.watch(config.sass.watch, gulp.series(["sass"])); 
+    gulp.watch(config.sass.watch, gulp.series(["sassComponents"]));    
     gulp.watch(config.js.watch, gulp.series(["js"]));
   });
 

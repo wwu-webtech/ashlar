@@ -1,0 +1,357 @@
+/*------------------------------------------------------------------------------
+Organism: Page-404
+--------------------------------------------------------------------------------
+1. Animations
+  a. Boat timing
+  b. Boat waves
+  c. Fog timing
+  d. Big waves
+  e. Rock waves
+2. Colors
+------------------------------------------------------------------------------*/
+.wrapper--404 {
+  margin-bottom: var(--space--md);
+  background: var(--dark-blue);
+  h1 {
+    padding: 0;
+    color: var(--light-green);
+    font-size: var(--font-size--9xl);
+  }
+  .text {
+    padding-bottom: var(--space--lg);
+    text-align: center;
+    .tagline {
+      color: var(--white);
+    }
+  }
+  svg {
+    width: 100%;
+  }
+}
+/*------------------------------------------------------------------------------
+1. Animations
+------------------------------------------------------------------------------*/
+/*  a. Boat timing -----------------------------------------------------------*/
+#tossingboat {
+  transform-origin: 50% 50%;
+  -webkit-animation-name: tossingboat;
+  animation-name: tossingboat;
+  -webkit-animation-duration: 6s;
+  animation-duration: 6s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  /* Reduced motion: stop the animation completely */
+  @media (prefers-reduced-motion: reduce) {
+    transform: none; /* Ensure it doesn't retain the last state of animation */
+    -webkit-animation: none;
+    animation: none;
+  }
+}
+@keyframes tossingboat {
+  0% {
+    transform: rotate(-4deg);
+  }
+  40% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(-4deg);
+  }
+}
+@-webkit-keyframes tossingboat {
+  0% {
+    -webkit-transform: rotate(-4deg);
+  }
+  50% {
+    -webkit-transform: rotate(4deg);
+  }
+  100% {
+    -webkit-transform: rotate(-4deg);
+  }
+}
+/*  b. Boat waves ------------------------------------------------------------*/
+#rockingwaves {
+  -webkit-timing-function: ease-in-out;
+
+  transform-origin: 50% 50%;
+  -webkit-animation-name: rockingwaves;
+  animation-name: rockingwaves;
+  -webkit-animation-duration: 6s;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+@keyframes rockingwaves {
+  0% {
+    transform: rotate(-2.5deg);
+  }
+  40% {
+    transform: rotate(2.5deg);
+  }
+  100% {
+    transform: rotate(-2.5deg);
+  }
+}
+@-webkit-keyframes rockingwaves {
+  0% {
+    -webkit-transform: rotate(-2.5deg);
+  }
+  50% {
+    -webkit-transform: rotate(2.5deg);
+  }
+  100% {
+    -webkit-transform: rotate(-2.5deg);
+  }
+}
+/*  c. Fog timing ------------------------------------------------------------*/
+#fog {
+  -webkit-animation-name: fog;
+  -moz-animation-name: fog;
+  animation-name: fog;
+  -webkit-animation-duration: 60s;
+  -moz-animation-duration: 60s;
+  animation-duration: 60s;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  animation-direction: alternate;
+}
+@keyframes fog {
+  0% {
+    transform: scale3d(0.3, 0.3, 0.3) rotate(4deg);
+    opacity: 0;
+  }
+  30%,
+  50% {
+    transform: scale(1.3) rotate(-4deg) translate3d(-3.125rem, -1rem, -1rem);
+    opacity: 0.4;
+  }
+  40%,
+  70% {
+    transform: scale(1.1) rotate(4deg) translate3d(3.125rem, 1rem, 1rem);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale3d(2, 2, 2);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fog {
+  0% {
+    -webkit-transform: scale3d(0.3, 0.3, 0.3) rotate(4deg);
+    opacity: 0;
+  }
+  30%,
+  50% {
+    -webkit-transform: scale(1.3) rotate(-4deg)
+    translate3d(-3.125, -1rem, -1rem);
+    opacity: 0.4;
+  }
+  40%,
+  70% {
+    -webkit-transform: scale(1.1) rotate(4deg) translate3d(3.125, 1rem, 1rem);
+    opacity: 0.3;
+  }
+  100% {
+    -webkit-transform: scale3d(2, 2, 2);
+    opacity: 0;
+  }
+}
+@-moz-keyframes fog {
+  0% {
+    -moz-transform: scale3d(0.3, 0.3, 0.3) rotate(4deg);
+    opacity: 0;
+  }
+  30%,
+  50% {
+    -moz-transform: scale(1.3) rotate(-4deg) translate3d(-3.125, -1rem, -1rem);
+    opacity: 0.4;
+  }
+  40%,
+  70% {
+    -moz-transform: scale(1.1) rotate(4deg) translate3d(3.125, 1rem, 1rem);
+    opacity: 0.3;
+  }
+  100% {
+    -moz-transform: scale3d(2, 2, 2);
+    opacity: 0;
+  }
+}
+/*  d. Big waves -------------------------------------------------------------*/
+#over_waves {
+  transform-origin: 50% 50%;
+  -webkit-animation-name: wave;
+  animation-name: wave;
+  -webkit-animation-duration: 6s;
+  animation-duration: 6s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+@keyframes wave {
+  0% {
+    transform: rotate(1.1deg);
+  }
+  50% {
+    transform: rotate(-1.1deg);
+  }
+  100% {
+    transform: rotate(1.1deg);
+  }
+}
+@-webkit-keyframes wave {
+  0% {
+    -webkit-transform: rotate(1.1deg);
+  }
+  50% {
+    -webkit-transform: rotate(-1.1deg);
+  }
+  100% {
+    -webkit-transform: rotate(1.1deg);
+  }
+}
+/*  e. Rock waves ------------------------------------------------------------*/
+#backrock_waves {
+  transform-origin: 50% 50%;
+  -webkit-animation-name: backnforth;
+  animation-name: backnforth;
+  -webkit-animation-duration: 30s;
+  animation-duration: 30s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+@keyframes backnforth {
+  from,
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate3d(-1.875rem, -0.0625rem, -0.0625rem);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate3d(1.875rem, 0.0625rem, 0.0625rem);
+  }
+}
+@-webkit-keyframes backnforth {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-1.875rem, 0, 0);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(1.875rem, 0, 0);
+  }
+}
+/*------------------------------------------------------------------------------
+2. Colors
+------------------------------------------------------------------------------*/
+.vik-st0 {
+  fill: var(--dark-blue--darker--20);
+
+  opacity: 1;
+}
+.vik-st1 {
+  fill: var(--gray--lighter--80);
+}
+.vik-st2 {
+  fill: var(--gray--lighter--60);
+}
+.vik-st3 {
+  fill: var(--gray--lighter--40);
+}
+.vik-st4 {
+  fill: var(--gray--lighter--20);
+}
+.vik-st5 {
+  fill: var(--gray--darker--20);
+}
+.vik-st6 {
+  fill: var(--dark-blue);
+}
+.vik-st7 {
+  fill: var(--gray--darker--40);
+}
+.vik-st8 {
+  fill: none;
+  stroke: var(--gray--darker--80);
+  stroke-miterlimit: 10;
+  stroke-width: 2;
+}
+.vik-st9 {
+  opacity: 0.85;
+}
+.vik-st10 {
+  fill: var(--blue);
+}
+.vik-st11 {
+  fill: var(--white);
+}
+.vik-st12 {
+  stroke: var(--gray--darker--80);
+  stroke-miterlimit: 10;
+  stroke-width: 5;
+}
+.vik-st13 {
+  fill: var(--dark-blue);
+
+  opacity: 0.87;
+}
+.vik-st14 {
+  fill: var(--dark-blue);
+
+  opacity: 0.85;
+}
+.vik-st15 {
+  fill: var(--gray--darker--60);
+}
+.vik-st16 {
+  opacity: 0.87;
+}
+.vik-st17 {
+  fill: none;
+}
+.vik-st18 {
+  font-family: "Muli";
+}
+.vik-st19 {
+  font-size: 2.5rem;
+}
+.vik-st22 {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+.vik-st24 {
+  font-size: 6.24rem;
+}
+.vik-st25 {
+  font-size: 3.06rem;
+}
+.vik-st26 {
+  fill: var(--gray--darker--80);
+}

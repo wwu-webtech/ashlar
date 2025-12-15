@@ -4,35 +4,62 @@ Organism: Footers - Western footer
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 wwu-footer {
-  @include dark-blue-bg;
-
   display: grid;
-  gap: var(--space--sm);
   text-align: center;
-  border-top: solid var(--border-width--md) transparent;
+  border-top: var(--outline--unset);
   font-size: var(--font-size--xs);
   p {
     margin: 0;
     line-height: 1.5;
   }
-  wwu-logo {
+  .artwork {
+    position: relative;
+    z-index: -1;
     margin: auto;
+    img {
+      display: block;
+    }
   }
-  .social-media-links {
+  .footer-waves {
+    fill: var(--dark-blue);
+
+    position: relative;
+    z-index: -1;
+    margin-bottom: -100%;
+    transform: translatey(-50%);
+  }
+  .social {
+    --icon-background-color: var(--dark-blue);
+    --icon-background-color--active: transparent;
+    --icon-color--active: var(--blue--lighter--60);
+
+    display: flex;
+    gap: var(--space--xs);
+    align-items: center;
     justify-content: center;
+    margin: var(--space--sm);
+    wwu-social:nth-of-type(1) {
+      --icon-background-color: var(--white);
+      --icon-background-color--active: var(--blue--lighter--60);
+      --icon-color: var(--dark-blue);
+      --icon-color--active: var(--dark-blue);
+    }
+    wwu-social:nth-of-type(1) .small {
+      --icon-size--social: var(--icon-size--sm);
+    }
   }
   .tribal-lands-statement {
-    max-width: var(--content-area-max-width);
+    max-width: var(--content-area-max-width--sm);
     margin: auto;
     padding: var(--space--xs);
   }
-  .footer-bottom {
-    background-color: var(--dark-blue--darker--20);
-  }
   .footer-nav {
+    display: flex;
+    flex-flow: row wrap;
+    place-content: center;
     width: 100%;
   }
-  .copy-right {
-    margin-top: var(--space--sm);
+  .copyright {
+    margin: var(--space--sm);
   }
 }

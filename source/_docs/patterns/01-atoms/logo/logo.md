@@ -14,6 +14,12 @@ To include logos in your project, place this script near the bottom of the page:
 <wwu-logo></wwu-logo>
 ```
 
+<wwu-logo type="wwu"></wwu-logo>
+
+```
+<wwu-logo type="wwu"></wwu-logo>
+```
+
 <wwu-logo type="horizontal"></wwu-logo>
 
 ```

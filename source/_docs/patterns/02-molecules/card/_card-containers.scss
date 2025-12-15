@@ -92,6 +92,14 @@ Molecule: Card Containers
   .hover-card {
     flex: 0 1 100%;
   }
+  &.flex-fill {
+    .card,
+    .wwu-card,
+    .hover-card {
+      flex-grow: 1;
+      flex-shrink: 1;
+    }
+  }
 }
 .card-2col--flex {
   .card,

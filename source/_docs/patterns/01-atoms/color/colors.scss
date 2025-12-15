@@ -5,231 +5,90 @@ Atom: Colors
 .swatch-wrapper {
   display: flex;
   flex-flow: row wrap;
-  margin-top: var(--space--md);
 }
 .color-swatch {
   flex: 1 1 10%;
   padding: var(--space--md);
-  color: var(--white);
   font-size: var(--font-size--xl);
+  p {
+    margin: 0;
+  }
   h3 {
     margin-top: 0;
   }
+  &.accent {
+    font-size: var(--font-size--sm);
+  }
   &.dark-blue,
-  &.blue,
-  &.dark-green,
-  &.green,
-  &.black,
-  &.gray,
-  &.red {
+  &.blue {
     color: var(--white);
     h3 {
       color: var(--white);
     }
   }
-  &.light-green,
-  &.white,
-  &.yellow {
+  &.light-green {
     color: var(--black);
     h3 {
       color: var(--black);
     }
   }
   &.dark-blue {
+    flex: 0 0 50%;
     background-color: var(--dark-blue);
-    &.tint-80 {
-      color: var(--black);
-      background-color: var(--dark-blue--lighter--80);
-    }
-    &.tint-60 {
-      color: var(--black);
-      background-color: var(--dark-blue--lighter--60);
-    }
-    &.tint-40 {
-      color: var(--black);
-      background-color: var(--dark-blue--lighter--40);
-    }
-    &.tint-20 {
-      background-color: var(--dark-blue--lighter--20);
-    }
-    &.shade-80 {
-      background-color: var(--dark-blue--darker--80);
-    }
-    &.shade-60 {
-      background-color: var(--dark-blue--darker--60);
-    }
-    &.shade-40 {
-      background-color: var(--dark-blue--darker--40);
-    }
-    &.shade-20 {
-      background-color: var(--dark-blue--darker--20);
+    &.gradient {
+      flex: 1 1 10%;
+      background-image: linear-gradient(to left, var(--dark-blue) 50%, var(--black));
     }
   }
   &.blue {
+    flex: 0 0 50%;
     background-color: var(--blue);
-    &.tint-80 {
-      color: var(--black);
-      background-color: var(--blue--lighter--80);
-    }
-    &.tint-60 {
-      color: var(--black);
-      background-color: var(--blue--lighter--60);
-    }
-    &.tint-40 {
-      color: var(--black);
-      background-color: var(--blue--lighter--40);
-    }
-    &.tint-20 {
-      color: var(--black);
-      background-color: var(--blue--lighter--20);
-    }
-    &.shade-80 {
-      background-color: var(--blue--darker--80);
-    }
-    &.shade-60 {
-      background-color: var(--blue--darker--60);
-    }
-    &.shade-40 {
-      background-color: var(--blue--darker--40);
-    }
-    &.shade-20 {
-      background-color: var(--blue--darker--20);
-    }
-  }
-  &.dark-green {
-    background-color: var(--dark-green);
-    &.tint-80 {
-      color: var(--black);
-      background-color: var(--dark-green--lighter--80);
-    }
-    &.tint-60 {
-      color: var(--black);
-      background-color: var(--dark-green--lighter--60);
-    }
-    &.tint-40 {
-      color: var(--black);
-      background-color: var(--dark-green--lighter--40);
-    }
-    &.tint-20 {
-      color: var(--black);
-      background-color: var(--dark-green--lighter--20);
-    }
-    &.shade-80 {
-      background-color: var(--dark-green--darker--80);
-    }
-    &.shade-60 {
-      background-color: var(--dark-green--darker--60);
-    }
-    &.shade-40 {
-      background-color: var(--dark-green--darker--40);
-    }
-    &.shade-20 {
-      background-color: var(--dark-green--darker--20);
-    }
-  }
-  &.green {
-    background-color: var(--green);
-    &.tint-80 {
-      color: var(--black);
-      background-color: var(--green--lighter--80);
-    }
-    &.tint-60 {
-      color: var(--black);
-      background-color: var(--green--lighter--60);
-    }
-    &.tint-40 {
-      color: var(--black);
-      background-color: var(--green--lighter--40);
-    }
-    &.tint-20 {
-      color: var(--black);
-      background-color: var(--green--lighter--20);
-    }
-    &.shade-80 {
-      background-color: var(--green--darker--80);
-    }
-    &.shade-60 {
-      background-color: var(--green--darker--60);
-    }
-    &.shade-40 {
-      background-color: var(--green--darker--40);
-    }
-    &.shade-20 {
-      background-color: var(--green--darker--20);
-    }
-  }
-  &.light-green {
-    background-color: var(--light-green);
-    &.tint-80 {
-      background-color: var(--light-green--lighter--80);
-    }
-    &.tint-60 {
-      background-color: var(--light-green--lighter--60);
-    }
-    &.tint-40 {
-      background-color: var(--light-green--lighter--40);
-    }
-    &.tint-20 {
-      background-color: var(--light-green--lighter--20);
-    }
-    &.shade-80 {
-      color: var(--white);
-      background-color: var(--light-green--darker--80);
-    }
-    &.shade-60 {
-      color: var(--white);
-      background-color: var(--light-green--darker--60);
-    }
-    &.shade-40 {
-      color: var(--white);
-      background-color: var(--light-green--darker--40);
-    }
-    &.shade-20 {
-      background-color: var(--light-green--darker--20);
-    }
-  }
-  &.black {
-    background-color: var(--black);
-  }
-  &.gray {
-    background-color: var(--gray);
-    &.tint-80 {
-      color: var(--black);
-      background-color: var(--gray--lighter--80);
-    }
-    &.tint-60 {
-      color: var(--black);
-      background-color: var(--gray--lighter--60);
-    }
-    &.tint-40 {
-      color: var(--black);
-      background-color: var(--gray--lighter--40);
-    }
-    &.tint-20 {
-      color: var(--black);
-      background-color: var(--gray--lighter--20);
-    }
-    &.shade-80 {
-      background-color: var(--gray--darker--80);
-    }
-    &.shade-60 {
-      background-color: var(--gray--darker--60);
-    }
-    &.shade-40 {
-      background-color: var(--gray--darker--40);
-    }
-    &.shade-20 {
-      background-color: var(--gray--darker--20);
+    &.gradient {
+      flex: 1 1 10%;
+      background-image: linear-gradient(to right, var(--blue) 50%, white);
+      p {
+        max-width: 50%;
+      }
     }
   }
   &.white {
+    --h3-color: var(--dark-blue);
+
+    min-height: 30vh;
+    color: var(--black);
     border: solid var(--border-width--md) var(--gray--lighter--90);
     background-color: var(--white);
   }
-  &.red {
-    background-color: var(--red);
+  &.light-green {
+    background-color: var(--light-green);
+    h3,
+    p {
+      display: inline-block;
+    }
+  }
+  &.dark-green {
+    border-top: solid 1rem var(--dark-green);
   }
   &.yellow {
-    background-color: var(--yellow);
+    border-top: solid 1rem var(--yellow);
+  }
+  &.red {
+    border-top: solid 1rem var(--red);
+  }
+  &.black {
+    border-top: solid 1rem var(--black);
+  }
+  &.gray {
+    border-top: solid 1rem var(--gray);
+  }
+  &.bw.gradient {
+    color: var(--white);
+    background-image: linear-gradient(to right, var(--black), var(--gray), white);
+    h3 {
+      color: var(--white);
+    }
+    p {
+      max-width: 50%;
+    }
   }
 }

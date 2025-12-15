@@ -1,0 +1,40 @@
+@use "../../00-utilities/utilities" as *;
+/*------------------------------------------------------------------------------
+Atom: Section Backgrounds
+-------------------------------------------------------------------------------*/
+.wave-1,
+.wave-2 {
+  position: relative;
+  margin-top: var(--space--3xl);
+  &:before {
+    position: absolute;
+    z-index: -1;
+    right: calc(-1 * var(--space--md));
+    left: calc(-1 * var(--space--md));
+    display: block;
+    width: 100cqw;
+    content: "";
+    background-size: cover;
+    @media (min-width: $large) {
+      right: calc(-1 * var(--content-area--negative-space));
+      left: calc(-1 * var(--content-area--negative-space));
+    }
+  }
+}
+.wave-1:before {
+  top: -25%;
+  height: 100%;
+  background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/wave-gradient.svg");
+}
+.wave-2:before {
+  height: 10rem;
+  opacity: 0.25;
+  background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/wave-line-blue.svg");
+}
+[data-theme="dark"] {
+  .wave-1 {
+    &:before {
+      background-image: url("https://ashlar.blob.core.windows.net/ashlar-theme-files/images/wave-gradient-dark.svg");
+    }
+  }
+}

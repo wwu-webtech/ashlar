@@ -4,34 +4,33 @@ if (
 ) {
   const search_template = document.createElement("template");
   search_template.innerHTML = `
-  <button class="toggle-settings" aria-expanded="false" aria-controls="search-menu">
-      <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#e8eaed"><g><path d="M0,0h24v24H0V0z" fill="none" /></g><g><path d="M7,9H2V7h5V9z M7,12H2v2h5V12z M20.59,19l-3.83-3.83C15.96,15.69,15.02,16,14,16c-2.76,0-5-2.24-5-5s2.24-5,5-5s5,2.24,5,5 c0,1.02-0.31,1.96-0.83,2.75L22,17.59L20.59,19z M17,11c0-1.65-1.35-3-3-3s-3,1.35-3,3s1.35,3,3,3S17,12.65,17,11z M2,19h10v-2H2 V19z" /></g></svg></span>
-      <span class="toggle-text">Search Settings</span>
-  </button>
+  <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/components/search.css" /-->
+  <button class="toggle toggle-search" aria-expanded="false">
+      <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M778-164 528-414q-30 26-69 40t-77 14q-92.23 0-156.12-63.84-63.88-63.83-63.88-156Q162-672 225.84-736q63.83-64 156-64Q474-800 538-736.12q64 63.89 64 156.12 0 41-15 80t-39 66l250 250-20 20ZM382-388q81 0 136.5-55.5T574-580q0-81-55.5-136.5T382-772q-81 0-136.5 55.5T190-580q0 81 55.5 136.5T382-388Z"/></svg></span>
+      <span class="toggle-text">Search</span>
+  </button>   
+    
+  <div class="wwu-search">
+    <form class="search-form">
+        <label for="search-box" class="search-label">What can we help you find?</label>
+        <input id="search-box" name="q" type="search">
 
-  <div id="search-menu" class="search-menu black-bg closed">
-      <fieldset class="search-selection">
-          <legend>Search Scope</legend>
+        <fieldset class="search-selection">
+          <legend class="visually-hidden">Search Scope</legend>
           <div class="radio">
               <input id="site-search" name="search-select" value="site" type="radio" checked>
               <label for="site-search">This department or website only</label>
-          </div>
-          
+          </div>          
           <div class="radio">
               <input id="full-search" name="search-select" value="full" type="radio">
               <label for="full-search">All Western Washington University websites</label>
           </div>
-      </fieldset>
+        </fieldset>
+        <button class="submit-search" type="submit">            
+            <span class="toggle-text">Search</span>
+        </button>
+    </form>
   </div>
-
-  <form class="search-area">
-      <label for="search-box" class="search-label">Search:</label>
-      <input id="search-box" name="q" type="search">
-      <button class="submit-search" type="submit">
-          <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none" /><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" /></svg></span>
-          <span class="toggle-text">Go</span>
-      </button>
-  </form>
   `;
   
   class WWUSearch extends HTMLElement {
@@ -45,92 +44,90 @@ if (
       if (!element_exists) {
         this.appendChild(search_template.content.cloneNode(true));
         this.classList.add("element-created");
-        this.querySelector(".search-area").addEventListener("submit", this.submitSearch.bind(this));
+        this.querySelector(".search-form").addEventListener("submit", this.submitSearch.bind(this));        
 
         var subdomain = window.location.hostname.split('.')[0];
         
-        const close_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>`;
-        const settings_icon = `<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#e8eaed"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><path d="M7,9H2V7h5V9z M7,12H2v2h5V12z M20.59,19l-3.83-3.83C15.96,15.69,15.02,16,14,16c-2.76,0-5-2.24-5-5s2.24-5,5-5s5,2.24,5,5 c0,1.02-0.31,1.96-0.83,2.75L22,17.59L20.59,19z M17,11c0-1.65-1.35-3-3-3s-3,1.35-3,3s1.35,3,3,3S17,12.65,17,11z M2,19h10v-2H2 V19z"/></g></svg>`;        
+        /*------------------------------------------------------------------------------
+        Search pop-up functionality
+        ------------------------------------------------------------------------------*/
+        const close_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z"/></svg>`;
+        const search_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M778-164 528-414q-30 26-69 40t-77 14q-92.23 0-156.12-63.84-63.88-63.83-63.88-156Q162-672 225.84-736q63.83-64 156-64Q474-800 538-736.12q64 63.89 64 156.12 0 41-15 80t-39 66l250 250-20 20ZM382-388q81 0 136.5-55.5T574-580q0-81-55.5-136.5T382-772q-81 0-136.5 55.5T190-580q0 81 55.5 136.5T382-388Z"/></svg>`;
+        var html = document.querySelector("html");
+        var search_toggle = this.querySelector(".toggle-search");
+        var search_form = this.querySelector(".wwu-search");
         
         if (subdomain == "www" || subdomain == "search") {
           this.querySelector("#site-search").checked = false;
           this.querySelector("#full-search").checked = true;
         }
 
-        /*------------------------------------------------------------------------------
-        Menu Toggling
-        ------------------------------------------------------------------------------*/
-        var search_toggle = this.querySelector(".toggle-settings");
-        var settings_menu = this.querySelector(".search-menu");
-        
-        /* Open the menu -------------------------------------------------------------*/
-        function open_display_settings() {
+        /* Open search -------------------------------------------------------------*/
+        function open() {
           document.addEventListener("mouseup", click_outside);
-          
+
           search_toggle.setAttribute("aria-expanded", true);
           search_toggle.querySelector(".component-icon").innerHTML = close_icon;
-          
-          settings_menu.removeAttribute("aria-hidden");
-          settings_menu.classList.remove("closed");
-          settings_menu.classList.add("open");
+
+          html.classList.add("search-open");
+          html.classList.remove("search-closed");
         }
-        
-        /* Close the menu -------------------------------------------------------------*/
-        function close_display_settings() {
+
+        /* Close search -------------------------------------------------------------*/        
+        function close() {
           document.removeEventListener("mouseup", click_outside);
-          
+
           search_toggle.setAttribute("aria-expanded", false);
-          search_toggle.querySelector(".component-icon").innerHTML = settings_icon;
-          
-          settings_menu.setAttribute("aria-hidden", true);
-          settings_menu.classList.remove("open");
-          settings_menu.classList.add("closed");
+          search_toggle.querySelector(".component-icon").innerHTML = search_icon;
+
+          html.classList.add("search-closed");
+          html.classList.remove("search-open");
         }
-        
+
         function keyboard_close(event) {
-          if (event.keyCode == 27 && settings_menu.classList.contains("open")) {
-            close_display_settings();
+          if (event.keyCode == 27 && html.classList.contains("search-open")) {
+            close();
             search_toggle.focus();
           }
         }
         
         function click_outside(event) {
-          var isClickInside = settings_menu.contains(event.target);
+          var isClickInside = search_form.contains(event.target);
           var isClickToggle = search_toggle.contains(event.target);
           
           if (
-            settings_menu.classList.contains("open") &&
+            html.classList.contains("search-open") &&
             !isClickInside &&
             !isClickToggle
           ) {
-            close_display_settings();
+            close();
           }
         }
-        
-        /* Toggle the menu -----------------------------------------------------------*/
-        function toggle_settings() {
-          if (settings_menu.classList.contains("closed")) {
-            open_display_settings();
+
+        /* Toggle search -----------------------------------------------------------*/
+        function toggle_search() {
+          if (html.classList.contains("search-open")) {
+            close();
             return;
           } else {
-            close_display_settings();
+            open();
             return;
           }
         }
-        /*------------------------------------------------------------------------------
-        Initialize settings menu
-        ---------------------------------------------------------------------------*/
+             
         if (search_toggle) {
-          search_toggle.addEventListener("click", toggle_settings);
+          search_toggle.addEventListener("click", toggle_search);
           search_toggle.addEventListener("keyup", keyboard_close);
-          settings_menu.addEventListener("keyup", keyboard_close);
+          search_form.addEventListener("keyup", keyboard_close);
         }
+        close();
       }
     }
     
     submitSearch(event) {
       event.preventDefault();
-      var query = this.querySelector("#search-box").value;
+      const form = event.target;
+      const query = form.querySelector("#search-box").value;
       var subdomain = window.location.hostname.split('.')[0];
       
       if (this.querySelector("#site-search").checked) {

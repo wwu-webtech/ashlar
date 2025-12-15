@@ -1,0 +1,128 @@
+/*------------------------------------------------------------------------------
+Atom: Icons - Social Media Icons
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+:root {
+  --icon-background-color: var(--blue);
+  --icon-background-color--active: var(--dark-blue);
+  --icon-color: var(--white);
+  --icon-color--active: var(--white);
+  --icon-size--social: var(--icon-size--lg);
+}
+wwu-social {
+  display: inline-block;
+  margin-right: var(--space--xs);
+}
+.wwu-social-link {
+  &:hover,
+  &:active,
+  &:focus {
+    .wwu-icon-cls-1 {
+      fill: var(--icon-background-color--active);
+    }
+    .wwu-icon-cls-2 {
+      fill: var(--icon-color--active);
+    }
+  }
+}
+.wwu-social-icon {
+  width: var(--icon-size--social);
+  height: var(--icon-size--social);
+  &.small {
+    --icon-size--social: var(--icon-size--md);
+  }
+  &.large {
+    --icon-size--social: var(--icon-size--xl);
+  }
+}
+.wwu-icon-cls-1 {
+  fill: var(--icon-background-color);
+}
+.wwu-icon-cls-2 {
+  fill: var(--icon-color);
+}
+.wwu-cls-3 {
+  fill: none;
+  stroke: var(--blue);
+  stroke-miterlimit: 10;
+  stroke-width: 1;
+}
+.wwu-cls-4 {
+  fill: var(--blue--lighter--40);
+}
+[data-theme="dark"] {
+  .wwu-cls-3 {
+    stroke: var(--white);
+  }
+  .wwu-cls-4 {
+    fill: var(--blue);
+  }
+}
+@media (forced-colors: active) {
+  .wwu-social-link {
+    svg {
+      border: var(--border-width--sm) solid;
+      border-radius: 50%;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      outline: var(--outline--unset);
+      .wwu-icon-cls-1 {
+        fill: Canvas;
+      }
+    }
+    .wwu-icon-cls-1 {
+      fill: Canvas;
+    }
+    .wwu-icon-cls-2 {
+      fill: LinkText;
+    }
+  }
+}
+/* Legacy Icon Styles */
+.social-media-links {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0;
+  list-style: none;
+  .social-icon {
+    margin: var(--space--md) var(--space--md) 0 0;
+  }
+}
+.social-icon {
+  display: block;
+  width: var(--icon-size--lg);
+  height: var(--icon-size--lg);
+  transition: var(--ease-standard) var(--transition-speed--fast) background-color;
+  color: var(--white);
+  border: var(--border-width--sm) solid transparent;
+  background: var(--icon-background-color);
+  svg {
+    fill: var(--icon-color);
+
+    width: 100%;
+    padding: 0.5em;
+    transition: var(--ease-standard) var(--transition-speed--fast) fill;
+    @media print {
+      fill: var(--black);
+    }
+    @media (forced-colors: active) {
+      fill: LinkText;
+    }
+  }
+  &:active,
+  &:focus,
+  &:hover {
+    background: var(--icon-background-color--active);
+    @media (forced-colors: active) {
+      background-color: LinkText;
+      svg {
+        fill: Canvas;
+      }
+    }
+  }
+  &:focus {
+    outline-width: var(--border-width--md);
+  }
+}

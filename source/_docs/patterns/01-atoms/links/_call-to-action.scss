@@ -1,170 +1,93 @@
-/*----------------------------------------
+/*------------------------------------------------------------------------------
 Atom: Call to Action Link
-----------------------------------------
-----------------------------------------*/
+--------------------------------------------------------------------------------
+1. Round CTA Variant
+2. Inline CTA Variant
+------------------------------------------------------------------------------*/
 .cta,
 .cas-login-link,
 a.wp-block-button__link {
-  --cta-arrow-size: 5px;
-  --cta-decoration-adjustment: 0.85rem;
-  --cta-decoration-bg: transparent;
-  --cta-decoration-color: var(--link-color);
-  --cta-decoration-size: 2.3rem;
-  --cta-min-height: 2.5rem;
-  --cta-padding-left: calc(var(--space--lg) + var(--cta-space));
-  --cta-padding-right: calc(var(--space--md) + var(--cta-space));
-  --cta-space: 1.6rem;
+  --cta-color: var(--blue);
+  --link-color: var(--white);
+  --link-color--visited: var(--link-color);
+  --link-color--visited--active: var(--link-color);
+  --ultiregion-active: var(--link-color--active);
+  --ultiregion-normal: var(--link-color);
 
   position: relative;
-  display: inline-grid;
-  grid-auto-flow: column;
-  align-content: center;
-  min-height: var(--cta-min-height);
+  display: inline-block;
+  margin-right: var(--space--md);
   margin-bottom: var(--space--md);
-  padding-right: var(--cta-padding-right);
-  padding-left: var(--cta-padding-left);
-  animation: cta-animate-back 400ms ease-out forwards;
-  text-underline-offset: unset;
-  border-radius: var(--border-radius--roundest);
-  background-size: 0 100%;
-  font-weight: var(--font-weight--semibold);
-  line-height: 1.2;
-  @media (prefers-reduced-motion: reduce) {
-    animation: unset;
-  }
-  &:before {
-    // the circle
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: grid;
-    align-content: center;
-    justify-content: center;
-    width: var(--cta-decoration-size);
-    height: var(--cta-decoration-size);
-    content: "";
-    animation: cta-animate-circle-back 400ms ease-out forwards;
-    border: solid var(--border-width--md) var(--cta-decoration-color);
-    border-radius: 50%;
-    background-color: var(--cta-decoration-bg);
-    box-shadow: var(--shadow--soft);
-    @media (prefers-reduced-motion: reduce) {
-      animation: unset;
-    }
+  padding: var(--space--xs);
+  padding-right: var(--space--lg);
+  transition: all 0.2s ease;
+  text-decoration: none;
+  background-color: var(--cta-color);
+  box-shadow: var(--shadow--hard);
+  font-weight: var(--font-weight--bold);
+  line-height: 1.15;
+  &:active,
+  &:hover,
+  &:focus {
+    --link-color--active: var(--link-color);
+
+    text-decoration: none;
+    box-shadow: var(--shadow--hard--hover);
   }
   &:after {
-    // the arrow
     position: absolute;
-    top: var(--cta-decoration-adjustment);
-    left: var(--cta-decoration-adjustment);
-    display: inline-block;
-    padding: var(--cta-arrow-size);
+    top: 50%;
+    right: var(--space--xs);
+    display: block;
+    width: 0;
+    height: 0;
     content: "";
-    transform: rotate(-45deg);
-    animation: cta-animate-arrow-back 400ms ease-out forwards;
-    border: solid var(--cta-decoration-color);
-    border-width: 0 var(--border-width--md) var(--border-width--md) 0;
-    @media (prefers-reduced-motion: reduce) {
-      animation: unset;
-    }
-  }
-  .material-icons,
-  &[target="_blank"] .material-icons,
-  &[target="blank"] .material-icons {
-    position: absolute;
-    top: 0.65rem;
-    transform: translatex(-0.175rem);
-    animation: cta-animate-arrow-back 400ms ease-out forwards;
-    color: var(--cta-decoration-color);
-    @media (prefers-reduced-motion: reduce) {
-      animation: unset;
-    }
-  }
-  &.with-icon,
-  &[target="_blank"],
-  &[target="blank"] {
-    /* someday we can replace this with :has(.material-icon) */
-    &:after {
-      border: none;
-    }
-  }
-  &:active,
-  &:focus,
-  &:hover {
-    animation: cta-animate 400ms ease-out forwards;
-    text-decoration: none;
-    @media (prefers-reduced-motion: reduce) {
-      animation: unset;
-    }
-    &:before {
-      animation: cta-animate-circle 400ms ease-out forwards;
-      @media (prefers-reduced-motion: reduce) {
-        animation: unset;
-      }
-    }
-    &:after,
-    .material-icons {
-      animation: cta-animate-arrow 400ms ease-out forwards;
-      @media (prefers-reduced-motion: reduce) {
-        animation: unset;
-      }
-    }
-  }
-  &.small {
-    --cta-arrow-size: 4px;
-    --cta-decoration-adjustment: 0.55rem;
-    --cta-decoration-size: 1.5rem;
-    --cta-min-height: 1.7rem;
-    --cta-padding-left: calc(var(--space--md) + var(--cta-space));
-    --cta-padding-right: calc(var(--space--sm) + var(--cta-space));
-    --cta-space: 1.22rem;
-    .material-icons {
-      top: 0.25rem;
-    }
-  }
-  &.blue,
-  &.dark-blue,
-  &.light-green,
-  &.white {
-    &:before {
-      border-color: var(--cta-decoration-bg);
-    }
-  }
-  &.blue {
-    --cta-decoration-bg: var(--blue);
-    --cta-decoration-color: var(--white);
-  }
-  &.dark-blue {
-    --cta-decoration-bg: var(--dark-blue);
-    --cta-decoration-color: var(--light-green--lighter--20);
+    transform: translatey(-50%);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid var(--link-color);
   }
   &.light-green {
-    --cta-decoration-bg: var(--light-green);
-    --cta-decoration-color: var(--dark-blue);
+    --cta-color: var(--light-green);
+    --link-color: var(--dark-blue--darker--20);
+  }
+  &.yellow {
+    --cta-color: var(--yellow);
+    --link-color: var(--dark-blue--darker--20);
+  }
+  &.dark-blue {
+    --cta-color: var(--dark-blue);
+    --link-color: var(--white);
   }
   &.white {
-    --cta-decoration-bg: var(--white);
-    --cta-decoration-color: var(--dark-blue);
+    --cta-color: var(--white);
+    --link-color: var(--dark-blue);
+  }
+  &.small {
+    padding: var(--space--2xs);
+    padding-right: var(--space--md);
+    font-size: var(--font-size--sm);
+    line-height: 1em;
+    &:after {
+      right: var(--space--2xs);
+      border-width: 8px;
+    }
   }
   &[href$=".pdf"],
   &[href$=".docx"],
   &[href$=".xlsx"],
   &[href$=".pptx"] {
+    padding-right: var(--space--xl);
     &:after {
-      top: 0.8rem;
-      padding: 0;
-      transform: translatex(-0.3rem);
-      color: var(--cta-decoration-color);
-      border: none;
-      font-size: var(--font-size--xs);
+      width: unset;
+      height: unset;
+      padding: 2px;
+      border: solid var(--border-width--md) var(--link-color);
+      border-radius: 50%;
+      font-size: 0.45rem;
     }
     .material-icons {
       display: none;
-    }
-    &.small {
-      &:after {
-        top: 0.4rem;
-      }
     }
   }
   &[href$=".pdf"] {
@@ -187,91 +110,159 @@ a.wp-block-button__link {
       content: "PPT";
     }
   }
-}
-@keyframes cta-animate {
-  0% {
-    padding-right: var(--space--md);
-    padding-left: var(--cta-padding-left);
-    background-size: 0;
-  }
-  100% {
-    padding-right: var(--cta-padding-right);
-    padding-left: var(--space--md);
-    background-size: 100%;
-  }
-}
-@keyframes cta-animate-back {
-  0% {
-    padding-right: var(--cta-padding-right);
-    padding-left: var(--space--md);
-    background-size: 100%;
-  }
-  100% {
-    padding-right: var(--space--md);
-    padding-left: var(--cta-padding-left);
-    background-size: 0;
+  &.with-icon {
+    padding-right: var(--space--xs);
+    &:after {
+      display: none;
+    }
+    .material-icons {
+      position: relative;
+      top: 3px;
+      font-size: var(--icon-size--xs);
+    }
+    &.small {
+      .material-icons {
+        font-size: var(--icon-size--2xs);
+      }
+    }
   }
 }
-@keyframes cta-animate-arrow {
-  0% {
-    left: var(--cta-decoration-adjustment);
-  }
-  100% {
-    left: calc(100% - var(--cta-space));
-    border-color: var(--link-color--focus);
-  }
-}
-@keyframes cta-animate-arrow-back {
-  0% {
-    left: calc(100% - var(--cta-space));
-    border-color: var(--link-color--focus);
-  }
-  100% {
-    left: var(--cta-decoration-adjustment);
-  }
-}
-@keyframes cta-animate-circle {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: 100%;
-    transform: translatex(-100%);
-    border: none;
-    background-color: transparent;
-    box-shadow: none;
-  }
-}
-@keyframes cta-animate-circle-back {
-  0% {
-    left: 100%;
-    transform: translatex(-100%);
-    border: none;
-    background-color: transparent;
-    box-shadow: none;
-  }
-  100% {
-    left: 0;
-  }
-}
-.cta.no-animation {
-  animation: unset;
-  &:before,
-  &:after {
-    animation: unset;
+/*------------------------------------------------------------------------------
+1. Round Variant
+------------------------------------------------------------------------------*/
+.round-cta {
+  --cta-size: 9rem;
+  --link-color--visited: var(--link-color);
+  --link-color--visited--active: var(--white);
+
+  position: relative;
+  display: inline-grid;
+  place-content: center;
+  width: var(--cta-size);
+  height: var(--cta-size);
+  margin-bottom: var(--space--md);
+  text-align: center;
+  text-decoration: none;
+  word-spacing: 99rem;
+  text-transform: uppercase;
+  color: var(--dark-blue);
+  border-radius: 50%;
+  background-color: transparent;
+  font-size: var(--font-size--2xl);
+  font-weight: var(--font-weight--semibold);
+  line-height: 1.1em;
+  span {
+    z-index: 1;
   }
   .material-icons {
-    transform: translatex(0.65rem);
-    animation: unset;
+    margin-top: -1rem;
+    color: var(--light-green);
+    font-size: var(--icon-size--2xl);
   }
-  &:active,
+  &:after {
+    position: absolute;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    transition: all 0.8s ease;
+    border-radius: 50%;
+    background: var(--white);
+    box-shadow: var(--shadow--soft);
+  }
   &:hover,
   &:focus {
-    animation: unset;
-    &:before,
-    &:after,
-    .material-icons {
-      animation: unset;
+    text-decoration: none;
+    color: var(--white);
+    background-color: transparent;
+    &:after {
+      transform: rotateY(180deg);
+      background: var(--blue);
     }
+  }
+  &.small {
+    --cta-size: 6rem;
+
+    font-size: var(--font-size--xs);
+    .material-icons {
+      margin-top: unset;
+      font-size: var(--icon-size--md);
+    }
+  }
+  &.blue {
+    color: var(--white);
+    &:after {
+      background: var(--blue);
+    }
+    &:hover,
+    &:focus {
+      &:after {
+        background: var(--dark-blue);
+      }
+    }
+  }
+  &.dark-blue {
+    color: var(--white);
+    &:after {
+      background: var(--dark-blue);
+    }
+    &:hover,
+    &:focus {
+      &:after {
+        background: var(--blue);
+      }
+    }
+  }
+  &.light-green {
+    color: var(--dark-blue);
+    &:after {
+      background: var(--light-green);
+    }
+    &:hover,
+    &:focus {
+      color: var(--white);
+      &:after {
+        background: var(--dark-blue);
+      }
+    }
+    .material-icons {
+      color: var(--dark-blue);
+    }
+  }
+  &.yellow {
+    color: var(--dark-blue);
+    &:after {
+      background: var(--yellow);
+    }
+    &:hover,
+    &:focus {
+      color: var(--white);
+      &:after {
+        background: var(--dark-blue);
+      }
+    }
+    .material-icons {
+      color: var(--dark-blue);
+    }
+  }
+}
+/*------------------------------------------------------------------------------
+  2. Inline Variant
+  ------------------------------------------------------------------------------*/
+.inline-cta {
+  --link-decoration-color: var(--blue--lighter--60);
+  --link-decoration-color--active: var(--blue--lighter--60);
+  --link-decoration-color--visited: var(--blue--lighter--60);
+  text-decoration-thickness: 0.4em;
+
+  text-underline-offset: -0.2em;
+  text-transform: uppercase;
+  font-weight: var(--font-weight--semibold);
+}
+[data-theme="dark"] {
+  .inline-cta {
+    --link-decoration-color: var(--dark-blue--darker--20);
+    --link-decoration-color--visited: var(--dark-blue);
   }
 }

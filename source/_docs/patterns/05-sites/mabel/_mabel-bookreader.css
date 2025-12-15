@@ -77,12 +77,12 @@ Info Boxes
   outline-color: var(--white);
 }
 .BRfloatHead {
-  color: var(--light-green--lighter--40);
+  color: var(--light-green);
   border: none;
   font-size: var(--font-size--2xl);
 }
 .BRfloat {
-  color: var(--light-green--lighter--40);
+  color: var(--light-green);
   font-family: unset;
 }
 .BRfloat .floatShut {
@@ -162,7 +162,7 @@ Mobile Menu
 .mm-menu .mm-listview > li::after,
 .mm-menu .mm-listview > li .mm-arrow::after,
 .mm-menu .mm-listview > li .mm-next::after {
-  border-color: var(--light-green--lighter--40);
+  border-color: var(--light-green);
   border-bottom: none;
 }
 .mm-menu a,
@@ -192,7 +192,7 @@ Mobile Menu
 }
 .BRinfoLabel {
   margin-bottom: var(--space--sm);
-  color: var(--light-green--lighter--40);
+  color: var(--light-green);
   font-size: var(--font-size--xl);
   font-weight: var(--font-weight--bold);
 }
@@ -204,7 +204,7 @@ Mobile Menu
   background: transparent;
 }
 .BRmobileMenu h3 {
-  color: var(--light-green--lighter--40);
+  color: var(--light-green);
 }
 .BRmobileMenu #BRsearch_tray [type="search"] {
   display: inline-block;

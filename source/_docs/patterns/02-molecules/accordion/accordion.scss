@@ -32,6 +32,9 @@ wwu-accordion,
     .material-icons {
       font-size: var(--icon-size--xs);
     }
+    .component-icon {
+      fill: var(--link-color);
+    }
     &:active,
     &:focus,
     &:hover {
@@ -39,7 +42,10 @@ wwu-accordion,
 
       color: var(--link-color--focus);
       outline-offset: var(--outline-offset--inset);
-      background: var(--link-background--focus);
+      background-color: var(--link-decoration-color--active);
+      .component-icon {
+        fill: var(--link-color--active);
+      }
     }
   }
   .title {

@@ -57,12 +57,12 @@ Templates: Layouts - Two column
 .layout--twocol--page-width {
   display: flex;
   flex-wrap: wrap;
-  max-width: 100vw;
+  max-width: 100cqw;
   margin-right: calc(-1 * var(--space--sm));
   margin-left: calc(-1 * var(--space--sm));
   @media (min-width: $large) {
-    margin-right: calc(50% - 50vw - var(--space--xs));
-    margin-left: calc(50% - 50vw + var(--space--xs));
+    margin-right: calc((var(--content-area-max-width)/2) - 50cqw);
+    margin-left: calc((var(--content-area-max-width)/2) - 50cqw);
   }
   > .layout__region {
     flex: 1 1 100%;

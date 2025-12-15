@@ -3,22 +3,17 @@
 To style a call to action link, add the class ``cta``
 
 <a href="#" className="cta">Apply for this program</a><br/>
-<a href="#" className="cta blue">With .blue class</a><br/>
-<a href="#" className="cta no-animation dark-blue">With .no-animation and .dark-blue class</a><br/>
+<a href="#" className="cta dark-blue">With .dark-blue class</a><br/>
 <a href="#" className="cta small light-green">With .small and .light-green class</a><br/>
-<a href="#" className="cta small white no-animation">With .small .no-animation .white classes</a><br/>
 
 <a href="something.pdf" className="cta">Contains a pdf</a><br/>
-<a href="something.docx" className="cta">Contains a Word doc</a><br/>
+<a href="something.docx" className="small cta">Contains a Word doc and is small</a><br/>
 <a href="something.xlsx" className="cta">Contains a Excel doc</a><br/>
 <a href="something.pptx" className="cta">Contains a PowerPoint doc</a><br/>
 
 ```
-<a href="#" class="cta">Apply for this program</a>
-<a href="#" class="cta blue">With .blue class</a>
-<a href="#" class="cta no-animation dark-blue">With .no-animation and .dark-blue class</a>
+<a href="#" class="cta dark-blue">With .dark-blue class</a>
 <a href="#" class="cta small light-green">With .small and .light-green class</a>
-<a href="#" class="cta small white no-animation">With .small .no-animation .white classes</a>
 
 <a href="something.pdf" class="cta">Contains a pdf</a>
 <a href="something.docx" class="cta">Contains a Word doc</a>
@@ -33,11 +28,30 @@ You can customize the icon in your CTA with material icons. This behavior is eas
 
 
 <a href="#" className="cta with-icon">With an Icon <span className="material-icons" aria-hidden="true">accessibility_new</span></a><br/>
-<a href="#" className="cta small with-icon">Small with an Icon <span className="material-icons" aria-hidden="true">park</span></a><br/>
-<a href="#" className="cta align-center with-icon">Centered and with an Icon <span className="material-icons" aria-hidden="true">favorite_border</span></a><br/>
+<a href="#" className="cta small with-icon"><span className="material-icons" aria-hidden="true">park</span> Small with an Icon</a><br/>
 
 ```
-<a href="#" class="cta with-icon">With an Icon <span class="material-icons" aria-hidden="true">accessibility_new</span></a>
-<a href="#" class="cta small with-icon">Small with an Icon <span className="material-icons" aria-hidden="true">park</span></a><br/>
-<a href="#" class="cta align-center with-icon">Centered and with an Icon <span class="material-icons" aria-hidden="true">favorite_border</span></a>
+<a href="#" class="cta with-icon"><span class="material-icons" aria-hidden="true">accessibility_new</span> With an Icon</a>
+<a href="#" class="cta small with-icon"><span className="material-icons" aria-hidden="true">park</span> Small with an Icon</a>
 ```
+
+## Round CTAs
+A style variant that is available on Drupal Call to Action Link block types. Like CTAs with Icons, these make use of the material icons library, so if you are hard coding this you will need to load that library separately. Text space is limited, if your text doesn't fit you may want to consider someting like an [image link](/patterns/molecules/image-link) or [card](/patterns/molecules/card) instead.
+
+<a href="#" className="round-cta blue"><span className="material-icons" aria-hidden="true">location_on</span><span className="text">Round CTA</span></a>
+<a href="#" className="round-cta dark-blue small"><span className="material-icons" aria-hidden="true">task_alt</span><span className="text">Small Round CTA</span></a><br/>
+
+```
+<a href="#" class="round-cta blue"><span class="material-icons" aria-hidden="true">accessibility_new</span><span className="text">Round CTA</span></a>
+<a href="#" class="round-cta dark-blue small"><span className="material-icons" aria-hidden="true">park</span><span className="text">Small Round CTA</span></a>
+```
+
+## Inline CTAs
+Inline CTAs are useful for when you want to draw a little extra attention to a link without removing it from the flow of text.
+
+Still exploring? Contact Admissions to <a href="#" className="inline-cta">Request More Information</a>.
+
+```
+Still exploring? Contact Admissions to <a href="#" class="inline-cta">Request More Information</a>.
+```
+

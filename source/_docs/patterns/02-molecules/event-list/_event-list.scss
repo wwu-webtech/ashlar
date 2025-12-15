@@ -18,15 +18,15 @@ Molecule: Event List
     "icon body";
     grid-template-columns: 4rem auto;
     margin-bottom: var(--space--sm);
-    outline: var(--border-width--md) solid transparent;
+    outline: var(--outline--unset);
     box-shadow: var(--shadow--soft);
     &:hover {
-      outline: var(--outline-width) dotted transparent;
+      outline: var(--outline--unset);
       box-shadow: var(--shadow--soft--hover);
     }
     &:focus-within {
-      outline: dotted var(--oline-color) var(--outline-width);
-      outline-offset: var(--oline-offset);
+      outline: var(--outline--focus);
+      outline-offset: var(--oline-offset);;
     }
     p {
       margin: 0;

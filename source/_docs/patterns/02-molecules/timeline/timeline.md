@@ -48,48 +48,48 @@
 </div>
 
 ```
-<div className="timeline">
-    <div className="timeline-block">
-        <h2 className="timeline-heading">January 2019</h2>
+<div class="timeline">
+    <div class="timeline-block">
+        <h2 class="timeline-heading">January 2019</h2>
         
-        <p className="timeline-item">
+        <p class="timeline-item">
             Go to the zoo
         </p>
-        <p className="timeline-item">  
+        <p class="timeline-item">  
             Eat some <a href="#">ice cream</a>
         </p>
         
-        <p className="timeline-item--highlighted">   
+        <p class="timeline-item--highlighted">   
             See a zebra!
         </p>
         
-        <p className="timeline-item">  
+        <p class="timeline-item">  
             Visit the gift shop
         </p>
         
-        <p className="timeline-item">  
+        <p class="timeline-item">  
             Go home
         </p>
     </div>
-    <div className="timeline-block">
-        <h2 className="timeline-heading">January 2019</h2>
+    <div class="timeline-block">
+        <h2 class="timeline-heading">January 2019</h2>
         
-        <p className="timeline-item">
+        <p class="timeline-item">
             Go to the zoo
         </p>
-        <p className="timeline-item">  
+        <p class="timeline-item">  
             Eat some <a href="#">ice cream</a>
         </p>
         
-        <p className="timeline-item--highlighted">   
+        <p class="timeline-item--highlighted">   
             See a zebra!
         </p>
         
-        <p className="timeline-item">  
+        <p class="timeline-item">  
             Visit the gift shop
         </p>
         
-        <p className="timeline-item">  
+        <p class="timeline-item">  
             Go home
         </p>
     </div>
