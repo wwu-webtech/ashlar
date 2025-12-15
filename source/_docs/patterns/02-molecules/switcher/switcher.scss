@@ -38,12 +38,14 @@ wwu-switcher {
 
       color: var(--link-color--focus);
       outline-offset: var(--outline-offset--inset);
-      background: var(--link-background--focus);
+      background: var(--link-decoration-color--active);
       .component-icon {
         fill: var(--link-color--focus);
       }
     }
     &.active {
+      color: var(--link-color--focus);
+      background: var(--link-decoration-color--active);
       font-weight: var(--font-weight--semibold);
     }
     &:first-of-type {
@@ -75,7 +77,7 @@ wwu-switcher {
   &[layout="column"] {
     @media (min-width: $small) {
       display: grid;
-      grid-template-columns: 1fr auto;
+      grid-template-columns: auto 1fr;
       gap: var(--space--sm);
       button {
         display: flex;
@@ -97,7 +99,7 @@ wwu-switcher {
         }
       }
       .switcher {
-        flex-flow: column;
+        display: unset;
       }
       .switcher-container {
         [role="tabpanel"] {

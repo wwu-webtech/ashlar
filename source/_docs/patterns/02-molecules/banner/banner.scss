@@ -23,6 +23,14 @@ Molecule: Banner
     max-width: var(--content-area-max-width);
     margin: auto;
   }
+  &.text-align-left {
+    place-content: start;
+    text-align: left;
+  }
+  &.text-align-right {
+    place-content: end;
+    text-align: right;
+  }
 }
 .banner--page-width {
   @media (min-width: 40rem) {

@@ -8,11 +8,18 @@ Molecule: Menu
   padding: 0;
   list-style: none;
   a {
-    display: block;
+    display: grid;
+    align-items: center;
     min-height: var(--touch-target--aaa);
     padding: var(--space--2xs) var(--space--sm);
+    transition: background-color var(--transition-speed--fast) cubic-bezier(0.33, 0.66, 0.66, 1);
     text-decoration: none;
     border-left: var(--border-width--md) var(--link-decoration-color) solid;
+    &:active,
+    &:hover,
+    &:focus {
+      background-color: var(--link-decoration-color--active);
+    }
   }
   &.horizontal {
     @media (min-width: $small) {
@@ -25,9 +32,12 @@ Molecule: Menu
         }
       }
       a {
-        display: block;
-        border: none;
+        display: grid;
+        place-content: center;
       }
+    }
+    a {
+      border: none;
     }
   }
   /*------------------------------------------------------------------------------

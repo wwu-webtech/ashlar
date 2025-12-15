@@ -21,13 +21,51 @@ function ashlar_page_attachments_alter(array &$attachments) {
 }
 
 /**
+ * Implements hook_preprocess_html().
+ */
+function ashlar_preprocess_html(&$variables) {    
+  if (!empty(theme_get_setting('navigation_option'))) {
+    $variables['html_attributes']['class'][] = 'desktop-hamburger-on';
+  }
+
+  /* Checks for field_menu_settings boolean value on any taxonomy term on node. If set to true, turns desktop hamburger on. */
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if (!$node instanceof \Drupal\node\NodeInterface) {
+    return;
+  }
+  foreach ($node->getFieldDefinitions() as $field_name => $field_definition) {
+    $target_type = $field_definition->getSetting('target_type');
+    if ($target_type !== 'taxonomy_term') {
+      continue;
+    }
+    if ($node->get($field_name)->isEmpty()) {
+      continue;
+    }
+
+    $terms = $node->get($field_name)->referencedEntities();
+
+    foreach ($terms as $term) {
+      if ($term->hasField('field_menu_settings') && !$term->get('field_menu_settings')->isEmpty()) {
+        if ((bool) $term->get('field_menu_settings')->value === TRUE) {
+          $variables['html_attributes']['class'][] = 'desktop-hamburger-on';
+          return;
+        }
+      }
+    }
+  }
+}
+
+/**
 * Implements hook_preprocess_page().
 */
 function ashlar_preprocess_page(&$variables) {
   $variables['site_name'] = \Drupal::config('system.site')->get('name');
+  $variables['site_slogan'] = \Drupal::config('system.site')->get('slogan');
   $variables['alert_display'] = (bool) theme_get_setting('alert_display');
   $variables['hide_quick_links'] = (bool) theme_get_setting('hide_quick_links');
   $variables['hide_footer'] = (bool) theme_get_setting('hide_footer');  
+
+  $variables['logopath'] = '/' . \Drupal::config('ashlar.settings')->get('logo.path');
 }
 
 /**
@@ -70,12 +108,12 @@ function ashlar_preprocess_field(&$variables) {
     }
     
     if ($object->hasField('field_icon')) {
-      $variables['#attached']['library'][] = 'ashlar/material-icons';  
+      $variables['#attached']['library'][] = 'ashlar/material-icons';
       _ashlar_set_icon($variables['items'], $object);      
     }
     
     if ($bundle === 'button') {
-      _ashlar_set_cta_class($variables['items'], $object);
+      _ashlar_set_cta_classes($variables['items'], $object);
     }
     
     if ($bundle === 'page_menu') {
@@ -108,13 +146,52 @@ function _ashlar_set_custom_classes(&$items, $object) {
 }
 
 /**
-* Helper function to add cta class to links
+* Helper function to add classes to cta links
 */
-function _ashlar_set_cta_class(&$items, $object) {
+function _ashlar_set_cta_classes(&$items, $object) {
+  $class = 'cta';
+  if ($object->hasField('field_variant')) {
+    if ($object->field_variant->value === 'round') {
+      $class = 'round-cta';
+    }
+  }
   foreach ($items as &$item) {
-    $item['content']['#options']['attributes']['class'][] = 'cta';
+    $item['content']['#options']['attributes']['class'][] = $class;
+  }
+
+  if ($object->hasField('field_color')) {          
+    foreach ($items as &$item) {      
+      $color = str_replace('_', '-', $object->field_color->value);
+
+      $item['content']['#options']['attributes']['class'][] = $color;
+    }
   }
 }
+
+/**
+* Helper function to add icons to cta link markup
+*/
+function _ashlar_set_icon(&$items, $object) {  
+  if (!$object->field_icon->isEmpty()) {          
+    foreach ($items as &$item) {
+      if ($object->hasField('field_variant')) {
+        if ($object->field_variant->value === 'round') {
+          $item['content']['#title'] = array('#markup' => ' <span class="material-icons" aria-hidden="true">' . $object->field_icon->value . '</span><span class="text">' . $item['content']['#title'] .  '</span>');
+        } 
+        else {
+          $item['content']['#title'] = array('#markup' =>  $item['content']['#title'] . ' <span class="material-icons" aria-hidden="true">' . $object->field_icon->value . '</span>');
+        }
+      } else {
+        $item['content']['#title'] = array('#markup' =>  $item['content']['#title'] . ' <span class="material-icons" aria-hidden="true">' . $object->field_icon->value . '</span>');
+      }
+      
+      $item['content']['#options']['attributes']['class'][] = 'with-icon';
+    }
+  }
+}
+
+
+
 
 /**
 * Helper function to add tracking event attribute to field.
@@ -149,17 +226,7 @@ function _ashlar_set_tracking_event_label(&$items, $object) {
   }
 }
 
-/**
-* Helper function to add icons to cta link markup
-*/
-function _ashlar_set_icon(&$items, $object) {  
-  if (!$object->field_icon->isEmpty()) {          
-    foreach ($items as &$item) {
-      $item['content']['#title'] = array('#markup' =>  $item['content']['#title'] . ' <span class="material-icons" aria-hidden="true">' . $object->field_icon->value . '</span>');
-      $item['content']['#options']['attributes']['class'][] = 'cta with-icon';
-    }
-  }
-}
+
 
 /**
 * Implements hook_theme_suggestions_HOOK_alter() for form templates.
@@ -358,11 +425,20 @@ function ashlar_preprocess_breadcrumb(&$variables) {
   if($variables['breadcrumb']) {
     $request = \Drupal::request();
     $route_match = \Drupal::routeMatch();
-    $variables['current_page_text'] = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+    $route = $route_match->getRouteObject();
     
-    $variables['breadcrumb'][] = array(
-      'text' => $variables['current_page_text']    
-    );
+    // Only try to get the title if we have a valid route
+    if ($route) {
+      $variables['current_page_text'] = \Drupal::service('title_resolver')->getTitle($request, $route);
+      $variables['breadcrumb'][] = array(
+        'text' => $variables['current_page_text']    
+      );
+    } else {
+      // For 404 pages or other routes without a route object
+      $variables['breadcrumb'][] = array(
+        'text' => t('Page not found')
+      );
+    }
     $variables['#cache']['max-age'] = 0;
   }
 }

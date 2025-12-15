@@ -1,197 +1,219 @@
 if (
   (typeof context == "undefined" || (typeof context != "undefined" && context == document)) // makes it work in Drupal
   && typeof window !== "undefined" // makes it work in Node.js server side rendering
-  ) {
-    const header_template = document.createElement("template");
-    header_template.innerHTML = `
+) {
+  const header_template = document.createElement("template");
+  header_template.innerHTML = `
     <!--link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Sans+Extra+Condensed:wght@300;400&family=Fira+Sans:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400&family=Montserrat:wght@700;900&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet" /-->
     <!--link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" /-->
     <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/normalize.css" /-->
     <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/ashlar-base.css" /-->
     <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/components/wwu-header.css" /-->
-
-    <button class="small toggle-menu" aria-expanded="false">
-        <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></span>
+    <div class="buttons">
+      <button class="toggle-menu" aria-expanded="false">
+        <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+          viewBox="0 -960 960 960" width="24px">
+          <path d="M172-278v-28h616v28H172Zm0-188v-28h616v28H172Zm0-188v-28h616v28H172Z" />
+        </svg></span>
         <span class="toggle-text">Menu</span>
-    </button>
-    
-    <nav class="wwu-menu wwu-menu-closed" aria-label="Western Quick Links">
-        <a class="small icon-link apply-quick-link" href="https://admissions.wwu.edu/apply">
-            <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none" fill-rule="evenodd"/><g fill-rule="evenodd"><path d="M9 17l3-2.94c-.39-.04-.68-.06-1-.06-2.67 0-8 1.34-8 4v2h9l-3-3zm2-5c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4"/><path d="M15.47 20.5L12 17l1.4-1.41 2.07 2.08 5.13-5.17 1.4 1.41z"/></g></svg></span>
-            Apply
-        </a>
-        
-        <a class="small icon-link give-quick-link" href="https://alumniq.wwu.edu/giving/make-a-gift">
-            <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg></span>
-            Give
-        </a>
-        
-        <a class="small icon-link report-bias-quick-link" href="https://www.wwu.edu/report-concern">
-            <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 11H7V9h2v2zm4 0h-2V9h2v2zm4 0h-2V9h2v2z"/></svg></span>
-            Report Concerns
-        </a>
-        
-        <a class="small icon-link my-western-link" href="https://mywestern.wwu.edu">
-            <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2c-4.97 0-9 4.03-9 9 0 4.17 2.84 7.67 6.69 8.69L12 22l2.31-2.31C18.16 18.67 21 15.17 21 11c0-4.97-4.03-9-9-9zm0 2c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.3c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg></span>
-            myWestern
-        </a>
-        
-        <a class="small icon-link jobs-link" href="https://www.wwu.edu/workatwestern">
-            <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0zm10 5h4v2h-4zm0 0h4v2h-4z" fill="none"/><path d="M10 16v-1H3.01L3 19c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2v-4h-7v1h-4zm10-9h-4.01V5l-2-2h-4l-2 2v2H4c-1.1 0-2 .9-2 2v3c0 1.11.89 2 2 2h6v-2h4v2h6c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm-6 0h-4V5h4v2z"/></svg></span>
-            Jobs
-        </a>
-    </nav>
-    
-    <div class="site-info wwu-menu-open">
-        <div class="western-logo">
-            <a class="wwu-home-link" href="https://www.wwu.edu">
-                <wwu-logo></wwu-logo>
-            </a>
-        </div>
-        
-        <div class="site-name">
-            <a href="/" class="home-link"></a>
-        </div>
-        
-        <div class="western-header-region">
-        </div>
+      </button>
     </div>
-    `;
-    
-    class WWUHeader extends HTMLElement {
-      constructor() {
-        super();
-      }
+  
+    <div class="university-navigation">    
+      <div class="university-links">
+        <nav class="action-links" aria-label="Action Links">
+          <a class="icon-link apply-quick-link" href="https://admissions.wwu.edu/visit">
+            <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 46.46 66.94" width="48px" height="48px">
+              <path class="wwu-cls-4"
+              d="M25.98,33.66c-4.24,0-7.68-3.44-7.68-7.68s3.44-7.68,7.68-7.68,7.68,3.44,7.68,7.68-3.44,7.68-7.68,7.68M25.98,66.94c11.6-18.4,20.48-31.23,20.48-41.98S36.73,5.5,25.98,5.5,5.5,14.21,5.5,24.96s8.88,23.58,20.48,41.98" />
+              <path class="wwu-cls-3"
+              d="M20.98,28.66c-4.24,0-7.68-3.44-7.68-7.68s3.44-7.68,7.68-7.68,7.68,3.44,7.68,7.68-3.44,7.68-7.68,7.68ZM20.98.5C10.23.5.5,9.21.5,19.96s8.88,23.58,20.48,41.98c11.6-18.4,20.48-31.23,20.48-41.98S31.73.5,20.98.5Z" />
+            </svg></span>
+            Visit Campus
+          </a>
+          <a class="icon-link apply-quick-link" href="https://admissions.wwu.edu/apply">
+            <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 54.6 50.53" width="48px" height="48px">
+              <path class="wwu-cls-4"
+              d="M27.52,50.53c-12.71,0-23.02-10.31-23.02-23.02S14.8,4.5,27.52,4.5s23.02,10.31,23.02,23.02-10.3,23.02-23.02,23.02" />
+              <polyline class="wwu-cls-3" points="9.5 19.42 23.46 32.84 54.24 1.5" />
+              <path class="wwu-cls-3"
+              d="M46.53,23.52c0,12.71-10.31,23.02-23.02,23.02S.5,36.23.5,23.52,10.81.5,23.52.5s23.02,10.3,23.02,23.02Z" />
+            </svg></span>
+            Apply Today
+          </a>
+          <a class="icon-link give-quick-link" href="https://alumniq.wwu.edu/giving/make-a-gift">
+            <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 53.66 49.57" width="48px" height="48px">
+              <path class="wwu-cls-4"
+              d="M29.08,49.57c4.29-8.96,24.58-16.47,24.58-31.36S34.87-.17,29.08,11.51C23.29-.15,4.5,3.19,4.5,18.21s20.28,22.4,24.58,31.36" />
+              <path class="wwu-cls-3"
+              d="M25.08,45.57c4.29-8.96,24.58-16.47,24.58-31.36S30.87-4.17,25.08,7.51C19.29-4.15.5-.81.5,14.21s20.28,22.4,24.58,31.36" />
+            </svg></span>
+            Give
+          </a>           
+        </nav>    
+  
+        <nav class="quick-links" aria-labelledby="quick-links">            
+          <h2 id="quick-links" class="visually-hidden">Quick Links</h2>
+          <a href="https://mywestern.wwu.edu">myWestern</a>
+          <a href="https://www.wwu.edu/contactwwu/">Contact WWU</a>
+          <a href="https://calendar.wwu.edu/">Calendar</a>
+          <a href="https://www.wwu.edu/directory">Directory</a>
+          <a href="https://www.wwu.edu/campus-maps">Maps</a>
+        </nav>
+      </div>
+    </div>
+  
+    <div class="buttons secondary">
+      <wwu-search role="search" aria-label="Western">
+        <noscript>
+          <form class="search-area" method="get" action="https://search2.wwu.edu/texis/search">
+            <label for="search-box" class="search-label">Search:</label>
+            <input id="search-box" name="query" type="search">
+            <button class="submit-search">
+              <span class="material-icons" aria-hidden="true">search</span>
+              <span class="toggle-text">Go</span>
+            </button>
+            
+            <input type="hidden" name="pr" value="Default-WWU-Base">
+          </form>
+        </noscript>
+      </wwu-search>
       
-      connectedCallback() {
-        let element_exists = this.classList.contains("element-created");        
-        /* Create the custom element by appending the template */
-        if (!element_exists) {
-          this.appendChild(header_template.content.cloneNode(true));
-          this.classList.add("element-created");
-          let site_name;
-          let site_name_link;
-          const region_content = this.querySelector('#regioncontent');
+      <wwu-display-settings></wwu-display-settings>
+    </div>
+  
+    <div class="site-name">
+      <a href="/" class="home-link"></a>
+    </div>
+  
+    <div class="western-header-region">
+    </div>
+  
+    <div class="western-logo" type="wwu">
+      <a class="wwu-home-link" href="https://www.wwu.edu">
+        <wwu-logo type="wwu"></wwu-logo>
+      </a>
+    </div> 
+`;
+  
+  class WWUHeader extends HTMLElement {
+    constructor() {
+      super();
+    }
+    
+    connectedCallback() {
+      let element_exists = this.classList.contains("element-created");        
+      /* Create the custom element by appending the template */
+      if (!element_exists) {
+        this.appendChild(header_template.content.cloneNode(true));
+        this.classList.add("element-created");
+        
+        let site_name;
+        let site_name_link;
+        const region_content = this.querySelector('#regioncontent');
+        
+        if(this.getAttribute("sitename") != null) { 
+          site_name = this.getAttribute("sitename"); 
+          this.querySelector(".home-link").innerText = site_name;
+        }
+        if(this.getAttribute("sitename-link") != null) { 
+          site_name_link = this.getAttribute("sitename-link"); 
+          this.querySelector(".home-link").setAttribute("href", site_name_link);
+        }
+        if(region_content) { 
+          this.querySelector(".western-header-region").innerHTML = region_content.innerHTML;
+        }
+        
+        /* Menu pop-up functionality */
+        const close_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z"/></svg>`;
+        const menu_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M172-278v-28h616v28H172Zm0-188v-28h616v28H172Zm0-188v-28h616v28H172Z"/></svg>`;
+        var html = document.querySelector("html");
+        var university_navigation = this.querySelector(".university-navigation");
+        var main_nav = document.querySelector(".region--main_navigation");
+        var university_links = this.querySelector(".university-links");
+        var menu_toggle = this.querySelector(".toggle-menu");      
+        
+        /* Menu Setup on Load */
+        if (menu_toggle) {
+          menu_toggle.addEventListener("click", toggle_menu);
+          menu_toggle.addEventListener("keyup", keyboard_close);
+          this.addEventListener("keyup", keyboard_close);
+        }     
+        updateNavPosition();
+        window.addEventListener("resize", updateNavPosition);
+        
+        /* Alternate theme settings */
+        const hide_links = this.getAttribute('hidelinks');
+        const site_logo = this.getAttribute('logo');        
+        if (hide_links) {          
+          this.querySelector(".university-links").remove();          
+        }      
+        if(site_logo != null) {   
+          if (site_logo != "/") {
+            this.querySelector(".wwu-home-link").innerHTML = `<img src="${site_logo}" alt="${site_name} logo"/>`
+          }
+        }
+        
+        /* Open menu -------------------------------------------------------------*/
+        function open() {
+          menu_toggle.setAttribute("aria-expanded", true);
+          menu_toggle.querySelector(".component-icon").innerHTML = close_icon;
           
-          if(this.getAttribute("sitename") != null) { 
-            site_name = this.getAttribute("sitename"); 
-            this.querySelector(".home-link").innerText = site_name;
-          }
-          if(this.getAttribute("sitename-link") != null) { 
-            site_name_link = this.getAttribute("sitename-link"); 
-            this.querySelector(".home-link").setAttribute("href", site_name_link);
-          }
-          if(region_content) { 
-            this.querySelector(".western-header-region").innerHTML = region_content.innerHTML;
-          }     
+          main_nav.removeAttribute("aria-hidden");
+          university_links.removeAttribute("aria-hidden");
           
-          /*------------------------------------------------------------------------------
-          Mobile menu functionality
-          --------------------------------------------------------------------------*/
-          const menu_toggle = this.querySelector(".toggle-menu");
-          const menu_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>`;
-          const close_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>`;
-          const site_content = [
-            this.querySelector(".site-info"),
-            document.querySelector(".page-content"),
-          ];
-          const mobile_menu = [
-            this.querySelector(".wwu-menu"),
-          ];
-          waitForElm('.main-navigation').then((elm) => {
-            mobile_menu[1] = document.querySelector(".main-navigation");
-          });
-         
-          // Non-Drupal Applications
-          if (document.querySelector(".is-ultimenu") == null) {            
-            waitForElm('.nav-primary').then((elm) => {
-                mobile_menu[2] = document.querySelector(".nav-primary"); // Wordpress
-            });
-          }
-
-          function open_menu() {
-            menu_toggle.setAttribute("aria-expanded", true);
-            menu_toggle.querySelector(".component-icon").innerHTML = close_icon;
-            menu_toggle.querySelector(".toggle-text").innerHTML = "Close";
-            
-            site_content.forEach(function (item) {
-              if (item) {
-                item.classList.remove("wwu-menu-open");
-                item.classList.add("wwu-menu-closed");
-              }
-            });
-            
-            mobile_menu.forEach(function (item) {
-              if (item) {
-                item.classList.remove("wwu-menu-closed");
-                item.classList.add("wwu-menu-open");
-              }
-            });
-          }
+          html.classList.add("navigation-open");
+          html.classList.remove("navigation-closed");
+        }
+        
+        /* Close menu -------------------------------------------------------------*/        
+        function close() {
+          menu_toggle.setAttribute("aria-expanded", false);
+          menu_toggle.querySelector(".component-icon").innerHTML = menu_icon;
           
-          function close_menu() {
-            menu_toggle.setAttribute("aria-expanded", false);
-            menu_toggle.querySelector(".component-icon").innerHTML = menu_icon;
-            menu_toggle.querySelector(".toggle-text").innerHTML = "Menu";
-            
-            site_content.forEach(function (item) {
-              if (item) {
-                item.classList.remove("wwu-menu-closed");
-                item.classList.add("wwu-menu-open");
-              }
-            });
-            
-            mobile_menu.forEach(function (item) {
-              if (item) {
-                item.classList.remove("wwu-menu-open");
-                item.classList.add("wwu-menu-closed");
-              }
-            });
-          }
+          main_nav.setAttribute("aria-hidden", true);
+          university_links.setAttribute("aria-hidden", true);
           
-          function toggle_menu() {
-            if (menu_toggle.querySelector(".toggle-text").innerHTML == "Menu") {
-              open_menu();
-              return;
-            } else {
-              close_menu();
-              return;
+          html.classList.add("navigation-closed");
+          html.classList.remove("navigation-open");
+        }
+        
+        function keyboard_close(event) {
+          if (event.keyCode == 27 && html.classList.contains("navigation-open")) {
+            close();
+            menu_toggle.focus();
+          }
+        }
+        
+        /* Toggle menu -----------------------------------------------------------*/
+        function toggle_menu() {
+          if (html.classList.contains("navigation-closed")) {
+            open();
+            return;
+          } else {
+            close();
+            return;
+          }
+        }
+        
+        function updateNavPosition() {
+          if(main_nav) {
+            if (html.classList.contains("desktop-hamburger-on") || window.innerWidth <= 949) {
+              university_navigation.prepend(main_nav);
+              close();
+            }
+            else {           
+              document.querySelector("wwu-header").append(main_nav);          
             }
           }
-          
-          function waitForElm(selector) {
-            return new Promise(resolve => {
-              if (document.querySelector(selector)) {
-                return resolve(document.querySelector(selector));
-              }
-              
-              const observer = new MutationObserver(mutations => {
-                if (document.querySelector(selector)) {
-                  resolve(document.querySelector(selector));
-                  observer.disconnect();
-                }
-              });
-              
-              observer.observe(document.body, {
-                childList: true,
-                subtree: true
-              });
-            });
-          }
-          
-          close_menu();
-          menu_toggle.addEventListener("click", toggle_menu);            
-
-          const hide_links = this.getAttribute('hidelinks');
-          if (hide_links) {
-            this.querySelector(".wwu-menu").remove();
-          }
-
-        }
+        }      
       }
     }
-    if (!window.customElements.get('wwu-header')) {        
-      window.customElements.define("wwu-header", WWUHeader);
-    }    
   }
-  
+  if (!window.customElements.get('wwu-header')) {        
+    window.customElements.define("wwu-header", WWUHeader);
+  }    
+}

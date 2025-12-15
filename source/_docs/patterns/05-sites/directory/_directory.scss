@@ -12,21 +12,19 @@ Sites: Directory
     width: 1px;
     height: 1px;
     white-space: nowrap;
-    &.focusable {
-      &:focus {
-        clip-path: initial;
+    &:focus {
+      clip-path: initial;
 
-        position: absolute !important;
-        z-index: 3;
-        top: 0;
-        left: var(--space--sm);
-        clip: initial;
-        width: inherit;
-        height: inherit;
-        padding: var(--space--sm);
-        outline-color: var(--dark-blue--darker--60);
-        outline-offset: var(--outline-offset--inset);
-      }
+      position: absolute !important;
+      z-index: 3;
+      top: 0;
+      left: var(--space--sm);
+      clip: initial;
+      width: inherit;
+      height: inherit;
+      padding: var(--space--sm);
+      outline-color: var(--dark-blue--darker--60);
+      outline-offset: var(--outline-offset--inset);
     }
   }
   wwu-pre-header .skip-link.focusable {
@@ -53,7 +51,7 @@ directory-banner-person-list {
   }
   .mat-tab-group.mat-accent .mat-ink-bar,
   .mat-tab-nav-bar.mat-accent .mat-ink-bar {
-    background-color: var(--light-green--lighter--20);
+    background-color: var(--light-green);
   }
   .mat-filter[_ngcontent-tno-c59] {
     padding: 0;
@@ -115,7 +113,7 @@ western-footer {
       color: var(--white);
     }
     .mat-list-base b {
-      color: var(--light-green--lighter--40);
+      color: var(--light-green);
     }
     .mat-select-arrow {
       color: var(--blue--lighter--40);
@@ -132,7 +130,7 @@ western-footer {
   }
   western-footer {
     .site-footer {
-      background-color: var(--blue--darker--60);
+      background-color: var(--dark-blue--darker--60);
     }
   }
 }

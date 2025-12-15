@@ -1,0 +1,85 @@
+@use "../../00-utilities/utilities" as *;
+/*------------------------------------------------------------------------------
+Organism: Pre-header
+--------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+.settings-menu {
+  --h2-size: var(--font-size--lg);
+
+  @include lightest-blue-bg;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100cqw;
+  padding: var(--space--lg);
+  padding-top: var(--logo-size);
+  color: var(--dark-blue);
+  font-size: var(--font-size--sm);
+  @media(min-width: $medium) {
+    padding-top: var(--space--2xl);
+  }
+  .menu-container {
+    display: flex;
+    flex-flow: column;
+    margin: auto;
+  }
+  .reset-button {
+    margin: auto;
+    padding: var(--space--sm);
+    border-radius: 0;
+  }
+  fieldset {
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--space--sm);
+  }
+}
+.settings-open .settings-menu {
+  display: grid;
+}
+.toggle-settings {
+  --button-background-color: transparent;
+  --button-background-color--active: var(--blue);
+  --button-color: var(--blue);
+
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-auto-flow: row;
+  place-content: center;
+  width: var(--toggle-size);
+  height: var(--toggle-size);
+  margin: var(--space--md);
+  margin-right: 0;
+  border-radius: 50%;
+  box-shadow: none;
+  font-size: var(--font-size--xs);
+  @media(min-width: $medium) {
+    font-size: var(--font-size--2xs);
+  }
+  svg {
+    width: 2.25rem;
+    height: 2.25rem;
+    margin: calc(-1 * var(--space--xs));
+    margin-bottom: calc(-1 * var(--space--sm));
+  }
+  &[aria-expanded="true"] {
+    color: var(--white);
+    background-color: var(--blue);
+  }
+}
+[data-theme="dark"] {
+  .settings-menu {
+    @include dark-blue-bg;
+  }
+  .toggle-settings {
+    --button-color: var(--white);
+  }
+}
+.toolbar-icon-10 {
+  .settings-menu {
+    top: var(--drupal-displace-offset-top);
+  }
+}

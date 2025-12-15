@@ -65,13 +65,13 @@ Molecule: Text - Timeline
   .timeline-block:nth-of-type(odd) {
     @include dark-blue-bg;
     .timeline-item--highlighted {
-      background-color: var(--blue--darker--20);
+      background-color: var(--dark-blue--darker--20);
     }
   }
   .timeline-block:nth-of-type(even) {
     @include darkest-blue-bg;
     .timeline-item--highlighted {
-      background-color: var(--blue--darker--20);
+      background-color: var(--dark-blue--darker--20);
     }
   }
 }

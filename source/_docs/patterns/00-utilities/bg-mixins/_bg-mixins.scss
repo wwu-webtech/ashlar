@@ -12,26 +12,26 @@ Black, darkest blue, and dark blue are black based and share link/heading colors
 ------------------------------------------------------------------------------*/
 @mixin black-bg {
   --h1-color: var(--light-green);
-  --h2-color: var(--light-green--lighter--20);
-  --h3-color: var(--light-green--lighter--40);
-  --h4-color: var(--light-green--lighter--60);
-  --h5-color: var(--light-green--lighter--80);
+  --h2-color: var(--light-green);
+  --h3-color: var(--light-green);
+  --h4-color: var(--light-green);
+  --h5-color: var(--light-green);
   --h6-color: var(--light-green);
   --icon-background-color--active: var(--blue--lighter--40);
   --icon-color--active: var(--dark-blue);
-  --link-background--focus: var(--gradient--vertical--light-blue);
   --link-color: var(--blue--lighter--80);
+  --link-color--active: var(--dark-blue);
   --link-color--focus: var(--dark-blue);
   --link-color--visited: var(--purple--lighter--80);
   --link-decoration-color: var(--blue--lighter--60);
   --midtone-text-color: var(--gray--lighter--80);
-  --oline-color: var(--white);
+  --outline--focus: solid var(--blue--lighter--80) var(--outline-width);
   --required-color: var(--blue--lighter--40);
-  --text-accent-color: var(--light-green--lighter--40);
 
   color: var(--white);
   background: var(--black);
 }
+
 
 @mixin darkest-blue-bg {
   @include black-bg;
@@ -55,16 +55,15 @@ Gray, blue, and green backgrounds are gray based.
   --button-background-color--active: var(--blue--lighter--60);
   --button-color: var(--white);
   --button-color--active: var(--dark-blue--darker--60);
-  --h1-color: var(--light-green--lighter--20);
-  --h2-color: var(--light-green--lighter--40);
-  --h3-color: var(--light-green--lighter--60);
-  --h4-color: var(--light-green--lighter--80);
+  --h1-color: var(--white);
+  --h2-color: var(--white);
+  --h3-color: var(--white);
+  --h4-color: var(--white);
   --h5-color: var(--white);
   --h6-color: var(--white);
   --icon-background-color: var(--dark-blue);
   --icon-background-color--active: var(--dark-blue--darker--40);
   --icon-color--active: var(--white);
-  --link-background--focus: var(--gradient--vertical--light-blue);
   --link-color: var(--white);
   --link-color--focus: var(--dark-blue);
   --link-color--visited: var(--white);
@@ -73,7 +72,7 @@ Gray, blue, and green backgrounds are gray based.
   --midtone-text-color: var(--white);
   --oline-color: var(--white);
   --required-color: var(--blue--lighter--80);
-  --text-accent-color: var(--light-green--lighter--80);
+  --text-accent-color: var(--light-green);
 
   color: var(--white);
   background: var(--gray);
@@ -83,14 +82,6 @@ Gray, blue, and green backgrounds are gray based.
   @include gray-bg;
 
   background: var(--blue);
-}
-
-@mixin green-bg {
-  --link-background--focus: var(--gradient--vertical--light-green);
-
-  @include gray-bg;
-
-  background: var(--green);
 }
 
 /*------------------------------------------------------------------------------
@@ -106,16 +97,14 @@ backgrounds are light gray based.
   --h4-color: var(--dark-blue--darker--30);
   --h5-color: var(--dark-blue--darker--20);
   --h6-color: var(--dark-blue--darker--10);
-  --link-background--active: var(--blue);
-  --link-background--focus: var(--gradient--vertical--dark-blue);
   --link-color: var(--dark-blue--darker--60);
-  --link-color--active: var(--white);
+  --link-color--active: var(--dark-blue--darker--60);
   --link-color--focus: var(--white);
-  --link-decoration-color: var(--blue--darker--60);
+  --link-decoration-color: var(--dark-blue--darker--60);
   --link-decoration-color--visited: var(--purple);
   --midtone-text-color: var(--gray--darker--80);
   --oline-color: var(--dark-blue--darker--60);
-  --required-color: var(--blue--darker--60);
+  --required-color: var(--dark-blue--darker--60);
   --text-accent-color: var(--gray--darker--60);
 
   color: var(--black);
@@ -135,19 +124,9 @@ backgrounds are light gray based.
 }
 
 @mixin lightest-blue-bg {
+  --link-decoration-color--active: var(--blue--lighter--60);
+
   @include lightest-gray-bg;
 
   background: var(--blue--lighter--80);
-}
-
-@mixin light-green-bg {
-  @include light-gray-bg;
-
-  background: var(--light-green);
-}
-
-@mixin yellow-bg {
-  @include light-gray-bg;
-
-  background: var(--yellow);
 }

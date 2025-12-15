@@ -1,14 +1,10 @@
 import WWUBackgroundColor from "./background-color.js"
-import WWUSocial from "../icons/social-media-icons/social-media-icons.js"
+import WWUSocial from "../../02-molecules/social-media-icons/social-media-icons.js"
 
 # Background Color
 
 ## Default
 <wwu-background-color color="white"></wwu-background-color>    
-
-## Black
-    <div className="black-bg"></div>
-<wwu-background-color color="black"></wwu-background-color>
 
 ## Darkest Blue
     <div className="darkest-blue-bg"></div>    
@@ -29,18 +25,6 @@ import WWUSocial from "../icons/social-media-icons/social-media-icons.js"
 ## Lightest Blue
     <div className="lightest-blue-bg"></div>
 <wwu-background-color color="lightest-blue"></wwu-background-color>
-
-## Green
-    <div className="green-bg"></div>
-<wwu-background-color color="green"></wwu-background-color>
-
-## Light Green
-    <div className="light-green-bg"></div>
-<wwu-background-color color="light-green"></wwu-background-color>
-
-## Gray
-    <div className="gray-bg"></div>
-<wwu-background-color color="gray"></wwu-background-color>
 
 ## Light Gray
     <div className="light-gray-bg"></div>

@@ -39,8 +39,8 @@ Molecule: Schedule
       &:focus-visible {
         outline: none;
         &:after {
-          outline: dotted var(--oline-color) var(--outline-width);
-          outline-offset: var(--oline-offset);
+          outline: var(--outline--focus);
+          outline-offset: var(--oline-offset);;
         }
       }
       &:hover:after,
