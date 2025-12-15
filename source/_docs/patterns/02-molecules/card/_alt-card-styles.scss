@@ -345,14 +345,21 @@ Molecule: Cards - Alternate styles
       &:active {
         background: none;
       }
+      &:focus-visible {
+        outline: solid var(--oline-color) var(--outline-width);
+      }
     }
   }
   .body {
+    --link-color--active: var(--dark-blue);
+
     padding: var(--space--sm);
     padding-right: var(--read-more-size);
     a {
       position: relative;
-      text-underline-offset: 0.1rem;
+      &:focus-visible {
+        outline: solid var(--oline-color) var(--outline-width);
+      }
     }
   }
   .read-more {
