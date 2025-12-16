@@ -368,7 +368,7 @@ html:not(.desktop-hamburger-on) {
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
-      li {
+      > li {
         display: grid;
         grid-template-columns: 1fr auto;
         width: unset;
