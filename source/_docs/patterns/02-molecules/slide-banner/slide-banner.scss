@@ -6,7 +6,7 @@ wwu-slide-banner {
   display: grid;
   overflow: hidden;
   place-content: center;
-  padding: var(--space-md) var(--space--xl);
+  padding: var(--space--md) var(--space--xl);
   > * {
     position: relative;
     z-index: 1;
