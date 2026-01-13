@@ -18,16 +18,19 @@ Main Search Form & Results
 wwu-search {
   display: none;
 }
+.splash {
+  background: var(--gradient--diagonal--blue-to-dark-blue);
+}
 .views-exposed-form.block--solr-search-content-ashlar-list,
 .views-exposed-form.block--solr-search-content-ashlar-grid {
   padding-top: var(--space--xl);
   padding-bottom: var(--space--xl);
-  background: var(--gradient--diagonal--blue-to-dark-blue);
 }
 .views-exposed-form.block--solr-search-content-ashlar-list form,
 .views-exposed-form.block--solr-search-content-ashlar-grid form {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
   gap: var(--space--xs);
   width: calc(100% - var(--space--lg));
   max-width: var(--content-area-max-width--sm);
@@ -42,11 +45,15 @@ wwu-search {
   height: 1px;
   margin: 0;
 }
+.views-exposed-form.block--solr-search-content-ashlar-list .search_api_autocomplete {
+  grid-column: 1/span all;
+}
 .views-exposed-form.block--solr-search-content-ashlar-list .search_api_autocomplete,
 .views-exposed-form.block--solr-search-content-ashlar-grid .search_api_autocomplete,
 .views-exposed-form.block--solr-search-content-ashlar-list .form-actions,
 .views-exposed-form.block--solr-search-content-ashlar-grid .form-actions {
   display: inline;
+  align-self: unset;
   margin: 0;
 }
 .views-exposed-form.block--solr-search-content-ashlar-list .search_api_autocomplete input,
@@ -55,6 +62,8 @@ wwu-search {
 .views-exposed-form.block--solr-search-content-ashlar-grid .form-actions input {
   width: 100%;
   margin: 0;
+  text-align: center;
+  font-size: var(--font-size--xl);
 }
 details pre {
   font-size: var(--font-size--xs);
@@ -68,10 +77,16 @@ details pre {
 Search in Collections
 ------------------------*/
 .views-exposed-form {
-  display: inline-flex;
+  display: inline-grid;
+  align-content: center;
+  margin-bottom: 0;
 }
 .views-exposed-form + .views-exposed-form {
   transform: translatey(-0.8rem);
+}
+.views-exposed-form select {
+  width: 100%;
+  margin: 0;
 }
 /*------------------------
 Advanced Search
