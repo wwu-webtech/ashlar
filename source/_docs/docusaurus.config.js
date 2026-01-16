@@ -10,7 +10,6 @@ const config = {
   url: 'https://ashlar.wwu.edu',
   baseUrl: '/',
   onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   
   // GitHub pages deployment config.
@@ -45,6 +44,7 @@ const config = {
           postsPerPage: 10,
           blogSidebarCount: 'ALL',
           blogSidebarTitle: 'Update History',
+          onUntruncatedBlogPosts: 'ignore',
         },
         theme: {
           customCss: [            
