@@ -33,6 +33,7 @@ Resets and styles for things in the docusaurus theme that are troublesome
   }
   .menu__list {
     a {
+      display: flex;
       border: none;
     }
   }

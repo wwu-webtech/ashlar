@@ -1,5 +1,5 @@
 ---
-slug: version-6-0
+slug: version-6
 title: '6.0.x Updates'
 authors: [masons7, gerardc]
 tags: [major-release]
