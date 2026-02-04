@@ -216,6 +216,40 @@ label:after {
   color: var(--link-color--active);
   background-color: var(--link-decoration-color--active);
 }
+#gateway-popup table.td_light,
+#gateway-page table.td_light,
+#gateway-popup td.td_light,
+#gateway-page td.td_light {
+  background-color: var(--table-rows--light);
+}
+#gateway-popup table.td_dark,
+#gateway-popup td.td_dark,
+#gateway-popup td.td_Dark,
+#gateway-popup a.td_dark,
+#gateway-page table.td_dark,
+#gateway-page td.td_dark,
+#gateway-page td.td_Dark,
+#gateway-page a.td_dark {
+  background-color: var(--table-rows--dark);
+}
+#search_form table tbody .td_dark,
+#search_form table tbody .td_light {
+  color: var(--text-color--default);
+  background-color: var(--table-rows--dark);
+}
+#gateway-page #prefix_box,
+#gateway-page #prefix_box table {
+  background-color: var(--table-rows--light);
+}
+.acalog-highlight-ignore .acalog-highlight-search-1,
+.acalog-highlight-ignore .searchword,
+.acalog-highlight-ignore .acalog-highlight-search-2,
+.acalog-highlight-ignore .acalog-highlight-search-3,
+.acalog-highlight-ignore .acalog-highlight-search-4,
+.acalog-highlight-ignore .acalog-highlight-search-5,
+.acalog-highlight-ignore .acalog-highlight-search-6 {
+  color: var(--h3-color);
+}
 /* Western Footer, remove mysterious duplicate */
 .wwu-logo + style + .wwu-logo {
   display: none;

@@ -1,0 +1,106 @@
+body {
+  font-family: var(--font--sans-serif);
+  font-size: 1em;
+}
+ul.action > li > a,
+button,
+input[type="button"],
+input[type="submit"] {
+  font-family: var(--font--sans-serif) !important;
+}
+.action-links a {
+  display: none !important;
+}
+[style*="background-color: #efefef"] {
+  color: var(--black);
+}
+[style*="border-top: 2px solid #e4ecff"] {
+  border-top: none !important;
+}
+[style*="color: rgb(102, 102, 102);"] {
+  color: var(--text-color--default) !important;
+}
+a,
+a:link {
+  color: var(--link-color);
+}
+a.ui-state-default {
+  color: var(--text-color--default) !important;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active {
+  color: var(--white) !important;
+}
+a.ui-state-hover {
+  color: var(--black) !important;
+}
+button.default {
+  background: var(--button-background-color);
+}
+.no-touch button:hover,
+.no-touch button.default:hover
+.no-touch input[type="button"]:hover,
+.no-touch input[type="submit"]:hover {
+  background-color: var(--button-background-color--active);
+}
+.dialog {
+  max-width: 95vw;
+}
+[data-theme="dark"] .dialog,
+[data-theme="dark"] .dialog div.action {
+  background: var(--black);
+}
+@media (max-width: 800px) {
+  :root {
+    --fw-dialog-offset-left: -75vw;
+  }
+}
+table.table > * > tr > th {
+  background-color: var(--table-headers--light);
+}
+table.table > * > tr > th[colspan],
+table.table > * > tr > th[rowspan] {
+  background-color: var(--table-headers--dark);
+}
+table.table > * > tr > td {
+  background-color: unset;
+}
+table.table > * > tr > th,
+table.table > * > tr > td {
+  padding: var(--space--xs);
+}
+table.fixed {
+  width: 100% !important;
+  margin-bottom: var(--space--3xl);
+}
+table.fixed tr,
+table.fixed td {
+  border: none;
+}
+table.fixed h2 {
+  margin-top: var(--space--sm);
+}
+div.report_row > table.table > tbody > tr:nth-of-type(2n+1) {
+  background-color: var(--table-rows--light);
+}
+div.report_row > table.table > tbody > tr:nth-of-type(2n) {
+  background-color: var(--table-rows--dark);
+}
+div.form_page input[type="text"] {
+  max-width: 90vw;
+}
+/* FORMS */
+input[type="text"] {
+  display: inline-block;
+  box-sizing: border-box;
+  max-width: 90vw;
+  margin-bottom: var(--space--md);
+  padding: var(--space--xs);
+  color: var(--input-text-color);
+  border: solid var(--border-width--md) var(--input-border-color);
+  border-radius: var(--border-radius--round);
+  background-color: var(--input-background-color);
+  box-shadow: none;
+  font-family: inherit;
+  font-size: var(--font-size--sm);
+}

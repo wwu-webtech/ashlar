@@ -137,6 +137,14 @@ if (
         item.querySelector(".material-icons").innerHTML = open_icon;
       }
     }
+
+    function resize_open_items() {
+      const open_items = document.querySelectorAll(".is-expanded");
+      
+      open_items.forEach((element) => {
+        element.style.maxHeight = element.scrollHeight + "px";
+      });
+    }
     
     /* HTML accordion markup support - mainly for Drupal Views, where custom elements are not supported */       
     const items = document.querySelectorAll(".accordion-set div.expand");     
@@ -306,6 +314,7 @@ if (
 
     button_expand_all.addEventListener('click', expand_all_items);
     button_collapse_all.addEventListener('click', collapse_all_items);
+    window.addEventListener("resize", resize_open_items);
     document.addEventListener('keydown', () => {
       key_close_all(event);
       key_expand_all(event);
