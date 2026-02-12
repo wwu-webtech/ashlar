@@ -13,7 +13,7 @@ Molecule: Search
   width: 100%;
   max-width: none;
   margin: 0;
-  padding-bottom: var(--space--lg);
+  padding: var(--space--lg);
   border: none;
   &::backdrop {
     opacity: 0.95;
@@ -24,6 +24,9 @@ Molecule: Search
     grid-auto-flow: row;
     max-width: var(--content-area-max-width);
     margin: auto;
+    @media (min-width: $small) {
+      margin-top: calc(-1 * var(--space--2xl));
+    }
   }
   .search-label {
     margin-bottom: var(--space--md);

@@ -13,7 +13,7 @@ if (
       <span class="toggle-text">Display</span>
   </button>
 
-  <div class="settings-menu">
+  <dialog class="settings-menu">
       <div class="menu-container">
           <h2 class="no-margin--top align-center">Display Settings</h2>
           <fieldset class="theme-selection">
@@ -66,7 +66,7 @@ if (
           <path
           d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z" />
       </svg></span> Reset preferences</button>
-  </div>   
+  </dialog>   
   `;
   
   class DisplaySettings extends HTMLElement {
@@ -107,11 +107,12 @@ if (
           
           display_toggle.setAttribute("aria-expanded", true);
           display_toggle.querySelector(".component-icon").innerHTML = close_icon;
-          
-          settings_menu.removeAttribute("aria-hidden");
 
           html.classList.add("settings-open");
           html.classList.remove("settings-closed");
+
+          settings_menu.prepend(display_toggle);
+          settings_menu.showModal();
         }
         
         /* Close the menu -------------------------------------------------------------*/
@@ -120,11 +121,13 @@ if (
           
           display_toggle.setAttribute("aria-expanded", false);
           display_toggle.querySelector(".component-icon").innerHTML = settings_icon;
-          
-          settings_menu.setAttribute("aria-hidden", true);
 
           html.classList.add("settings-closed");
           html.classList.remove("settings-open");
+
+          settings_menu.before(display_toggle);
+          settings_menu.close();
+          display_toggle.focus();
         }
         
         function keyboard_close(event) {
