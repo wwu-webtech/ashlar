@@ -15,7 +15,7 @@
             <a href="#main-content" class="skip-link">
               <span class="skip-link-text">Skip to Content </span>
             </a>
-            <wwu-header sitename="Slate Test">
+            <wwu-header sitename="Student Success" sitename-link="#">
             </wwu-header>
           </header>
           <main id="main-content" class="page-content">

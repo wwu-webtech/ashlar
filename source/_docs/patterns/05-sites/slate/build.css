@@ -89,6 +89,18 @@ div.report_row > table.table > tbody > tr:nth-of-type(2n) {
 div.form_page input[type="text"] {
   max-width: 90vw;
 }
+div.form_page + div.form_page {
+  margin-top: 0;
+}
+.form_container .content {
+  height: 70vh !important;
+  max-height: 700px;
+}
+.form_container input,
+.form_container .form_question {
+  margin-bottom: 0;
+  padding: var(--space--2xs);
+}
 /* FORMS */
 input[type="text"] {
   display: inline-block;
@@ -103,4 +115,16 @@ input[type="text"] {
   box-shadow: none;
   font-family: inherit;
   font-size: var(--font-size--sm);
+}
+#form_response_banner,
+.ui-widget-header,
+.ui-datepicker {
+  color: var(--black) !important;
+  background: var(--table-headers--dark) !important;
+}
+[data-theme="dark"] #form_response_banner,
+[data-theme="dark"] .ui-widget-header,
+[data-theme="dark"] .ui-datepicker {
+  color: var(--white) !important;
+  background: var(--gray) !important;
 }
