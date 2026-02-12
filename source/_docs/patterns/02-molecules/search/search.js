@@ -88,7 +88,6 @@ if (
 
           search_form.before(search_toggle);
           search_form.close();
-          search_toggle.focus();
         }
 
         function keyboard_close(event) {
@@ -107,7 +106,7 @@ if (
             !isClickInside &&
             !isClickToggle
           ) {
-            close();
+            close();        
           }
         }
 
@@ -115,6 +114,7 @@ if (
         function toggle_search() {
           if (html.classList.contains("search-open")) {
             close();
+            search_toggle.focus();
             return;
           } else {
             open();

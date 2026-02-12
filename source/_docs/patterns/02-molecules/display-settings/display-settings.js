@@ -127,7 +127,6 @@ if (
 
           settings_menu.before(display_toggle);
           settings_menu.close();
-          display_toggle.focus();
         }
         
         function keyboard_close(event) {
@@ -157,6 +156,7 @@ if (
             return;
           } else {
             close();
+            display_toggle.focus();
             return;
           }
         }
