@@ -10,11 +10,14 @@ Molecule: Search
   top: 0;
   left: 0;
   display: none;
-  width: 100cqw;
-  padding: var(--space--lg);
-  padding-top: var(--logo-size);
-  @media(min-width: $medium) {
-    padding-top: var(--space--2xl);
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-bottom: var(--space--lg);
+  border: none;
+  &::backdrop {
+    opacity: 0.95;
+    background: var(--page-background);
   }
   .search-form {
     display: grid;
@@ -58,6 +61,9 @@ Molecule: Search
 .search-open {
   .wwu-search {
     display: block;
+  }
+  wwu-display-settings {
+    z-index: -1;
   }
 }
 .toggle-search {
