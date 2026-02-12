@@ -17,7 +17,7 @@ if (
       <div class="menu-container">
           <h2 class="no-margin--top align-center">Display Settings</h2>
           <fieldset class="theme-selection">
-              <legend>Theme</legend>
+              <legend><h3 class="no-margin">Theme</h3></legend>
               <div class="radio">
                   <input id="default-theme" type="radio" name="theme-select" value="default-theme" checked="checked">
                   <label for="default-theme">Default (System)</label>
@@ -33,7 +33,7 @@ if (
           </fieldset>
           
           <fieldset class="font-selection">
-              <legend>Font</legend>
+              <legend><h3 class="no-margin">Font</h3></legend>
               <div class="radio">
                   <input id="font--default" type="radio" name="font-select" value="font--default" checked="checked">
                   <label for="font--default">Default</label>
@@ -53,7 +53,7 @@ if (
           </fieldset>
           
           <!--fieldset class="language-selection">
-              <legend>Language</legend>
+              <legend><h3 class="no-margin">Language</h3></legend>
               <input id="language--english" type="radio" name="font-select" value="language--english" checked="checked">
               <label for="language--english">English</label>
               <input id="language--spanish" type="radio" name="font-select" value="language--spanish">

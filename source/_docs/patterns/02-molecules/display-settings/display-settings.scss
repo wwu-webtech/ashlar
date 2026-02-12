@@ -5,6 +5,7 @@ Organism: Pre-header
 ------------------------------------------------------------------------------*/
 .settings-menu {
   --h2-size: var(--font-size--lg);
+  --h3-size: var(--font-size--md);
 
   @include lightest-blue-bg;
 
