@@ -1,0 +1,466 @@
+@use "../../../00-utilities/utilities" as *;
+/*------------------------------------------------------------------------------
+Molecule: Charts - Org Chart
+--------------------------------------------------------------------------------
+1. Dark Mode
+------------------------------------------------------------------------------*/
+.org-chart {
+  --chart-border-width: 3px;
+  --chart-line-color: var(--gray--lighter--40);
+  --chart-max-size: 18.75rem;
+  --chart-spacing: var(--space--md);
+
+  position: relative;
+  display: grid;
+  justify-content: center;
+  max-width: var(--content-area-max-width);
+  color: var(--black);
+  background: var(--page-background);
+  font-size: var(--font-size--sm);
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--black);
+    font-size: var(--font-size--regular);
+    font-weight: var(--font-weight--regular);
+  }
+  ul {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 0;
+    margin-left: var(--chart-spacing);
+    padding: 0;
+    list-style: none;
+    li {
+      position: relative;
+      span,
+      a,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        position: relative;
+        display: block;
+        max-width: var(--chart-max-size);
+        margin: 0;
+        text-align: center;
+        text-decoration: none;
+        line-height: 1.2;
+        @media (min-width: $medium) {
+          max-width: none;
+        }
+      }
+      & > span,
+      & > h2 span,
+      & > h3 span,
+      & > h4 span,
+      & > h5 span,
+      & > h6 span {
+        margin-top: var(--chart-spacing);
+        margin-left: var(--chart-spacing);
+        padding: calc(var(--chart-spacing) / 2);
+        background: var(--gray--lighter--60);
+        @media (forced-colors: active) {
+          border: var(--border-width--md) solid transparent;
+        }
+      }
+      & > em > span,
+      & > h2 > em > span,
+      & > h3 > em > span,
+      & > h4 > em > span,
+      & > h5 > em > span,
+      & > h6 > em > span {
+        margin-top: calc( -1 * var(--chart-spacing) / 2);
+        margin-left: var(--chart-spacing);
+        padding-bottom: calc(var(--chart-spacing) / 2);
+        background: var(--gray--lighter--60);
+        @media (forced-colors: active) {
+          border: var(--border-width--md) solid transparent;
+        }
+      }
+      & > a,
+      & > h2 a,
+      & > h3 a,
+      & > h4 a,
+      & > h5 a,
+      & > h6 a {
+        margin-top: var(--chart-spacing);
+        margin-left: var(--chart-spacing);
+        padding: calc(var(--chart-spacing) / 2);
+        color: var(--white);
+        background-color: var(--blue);
+        &:hover,
+        &:focus,
+        &:active {
+          color: var(--white);
+          outline-offset: var(--outline-offset--inset);
+          background-color: var(--dark-blue);
+        }
+        @media (forced-colors: active) {
+          border: var(--border-width--md) solid transparent;
+        }
+      }
+      &.dark {
+        & > span,
+        & > h2 span,
+        & > h3 span,
+        & > h4 span,
+        & > h5 span,
+        & > h6 span {
+          color: var(--white);
+          background: var(--gray);
+        }
+        & > a,
+        & > h2 a,
+        & > h3 a,
+        & > h4 a,
+        & > h5 a,
+        & > h6 a {
+          color: var(--white);
+          background-color: var(--dark-blue);
+          &:hover,
+          &:focus,
+          &:active {
+            color: var(--dark-blue);
+          }
+        }
+      }
+      &.light {
+        & > span,
+        & > h2 span,
+        & > h3 span,
+        & > h4 span,
+        & > h5 span,
+        & > h6 span {
+          background: var(--gray--lighter--80);
+        }
+        & > a,
+        & > h2 a,
+        & > h3 a,
+        & > h4 a,
+        & > h5 a,
+        & > h6 a {
+          color: var(--dark-blue--darker--60);
+          background-color: var(--blue--lighter--40);
+          &:hover,
+          &:focus,
+          &:active {
+            color: var(--blue--lighter--80);
+            background-image: var(--gradient--vertical--dark-blue);
+          }
+        }
+      }
+    }
+    &.level-sub-1 {
+      margin-left: 0;
+      @media (min-width: $medium) {
+        display: grid;
+        grid-template-columns: repeat(10, auto);
+        margin-left: 0;
+      }
+    }
+    &.level-1 {
+      margin-left: 0;
+      @media (min-width: $medium) {
+        display: grid;
+        grid-template-columns: repeat(10, auto);
+        margin-left: 0;
+      }
+      .item-level-1 {
+        margin-bottom: var(--chart-spacing);
+        > span,
+        > a {
+          max-width: none;
+          margin: 0;
+          @media (min-width: $medium) {
+            max-width: var(--chart-max-size);
+            margin: auto;
+          }
+        }
+      }
+    }
+    &.level-2 {
+      margin-left: 0;
+      @media (min-width: $medium) {
+        display: grid;
+        grid-template-columns: repeat(10, auto);
+        margin-top: var(--chart-spacing);
+        margin-left: 0;
+      }
+      .item-level-2 {
+        > span > a {
+          max-width: none;
+          margin-right: calc(var(--chart-spacing) / 2);
+          margin-left: var(--chart-spacing);
+        }
+      }
+    }
+    &.level-3 {
+      @media (min-width: $medium) {
+        .level-3 {
+          display: flex;
+          flex-flow: column;
+          margin-left: calc(var(--chart-spacing) / 2);
+        }
+      }
+    }
+  }
+  /* LINES */
+  .item-level-2,
+  .item-level-3,
+  .item-level-4,
+  .item-level-5,
+  .item-level-6,
+  .item-level-7,
+  .item-level-8,
+  .item-level-9,
+  .item-level-10,
+  .item-level-11 {
+    /* vertical bar for nested items */
+    border-left: solid var(--chart-border-width) var(--chart-line-color);
+    /* horizontal bar for nested items */
+    > span:before,
+    > h2 > span:before,
+    > h3 > span:before,
+    > h4 > span:before,
+    > h5 > span:before,
+    > h6 > span:before,
+    > a:before,
+    > h2 > a:before,
+    > h3 > a:before,
+    > h4 > a:before,
+    > h5 > a:before,
+    > h6 > a:before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: calc(var(--chart-spacing) + var(--chart-border-width));
+      height: 50%;
+      content: "";
+      transform: translate(-100%);
+      border-top: solid var(--chart-border-width) var(--chart-line-color);
+      background: transparent;
+    }
+    /* mask vertical bar for end items */
+    &:last-of-type {
+      > span:before,
+      > h2 span:before,
+      > h3 span:before,
+      > h4 span:before,
+      > h5 span:before,
+      > h6 span:before,
+      > a:before,
+      > h2 a:before,
+      > h3 a:before,
+      > h4 a:before,
+      > h5 a:before,
+      > h6 a:before {
+        background: var(--page-background);
+        @media (forced-colors: active) {
+          background: transparent;
+        }
+      }
+    }
+  }
+  /* mask vertical bar for end items */
+  .item-level-2:last-child > .level-3:before,
+  .item-level-3:last-child > .level-4:before,
+  .item-level-4:last-child > .level-5:before,
+  .item-level-5:last-child > .level-6:before,
+  .item-level-6:last-child > .level-7:before,
+  .item-level-7:last-child > .level-8:before,
+  .item-level-8:last-child > .level-9:before,
+  .item-level-9:last-child > .level-10:before,
+  .item-level-10:last-child > .level-11:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: calc(var(--chart-spacing) + var(--chart-border-width));
+    height: 100%;
+    content: "";
+    transform: translate(-100%);
+    background: var(--page-background);
+  }
+}
+@media (min-width: $medium) {
+  .org-chart {
+    /* vertical bar for top level items */
+    .item-level-1 {
+      > span:before,
+      > h2 span:before,
+      > h3 span:before,
+      > h4 span:before,
+      > h5 span:before,
+      > h6 span:before,
+      > a:before,
+      > h2 a:before,
+      > h3 a:before,
+      > h4 a:before,
+      > h5 a:before,
+      > h6 a:before {
+        position: absolute;
+        bottom: 0;
+        left: calc(50% + ((var(--chart-border-width) / 2)));
+        display: block;
+        width: var(--chart-border-width);
+        height: var(--chart-spacing);
+        content: "";
+        transform: translate(-50%, var(--chart-spacing));
+        background: var(--chart-line-color);
+        @media (forced-colors: active) {
+          border-left: var(--border-width--md) solid transparent;
+        }
+      }
+      &.no-children {
+        > span:before,
+        > h2 span:before,
+        > h3 span:before,
+        > h4 span:before,
+        > h5 span:before,
+        > h6 span:before,
+        > a:before,
+        > h2 a:before,
+        > h3 a:before,
+        > h4 a:before,
+        > h5 a:before,
+        > h6 a:before {
+          display: none;
+        }
+      }
+    }
+    .item-level-2 {
+      border-left: none;
+      /* remove second level lines */
+      > span:before,
+      > h2 span:before,
+      > h3 span:before,
+      > h4 span:before,
+      > h5 span:before,
+      > h6 span:before,
+      > a:before,
+      > h2 a:before,
+      > h3 a:before,
+      > h4 a:before,
+      > h5 a:before,
+      > h6 a:before,
+      &:last-of-type > span:before,
+      &:last-of-type > h2 span:before,
+      &:last-of-type > h3 span:before,
+      &:last-of-type > h4 span:before,
+      &:last-of-type > h5 span:before,
+      &:last-of-type > h6 span:before,
+      &:last-of-type > a:before,
+      &:last-of-type > h2 a:before,
+      &:last-of-type > h3 a:before,
+      &:last-of-type > h4 a:before,
+      &:last-of-type > h5 a:before,
+      &:last-of-type > h6 a:before,
+      &:last-child > .level-3:before {
+        display: none;
+      }
+      /* horizontal bar for second level items */
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: var(--chart-border-width);
+        content: "";
+        background: var(--chart-line-color);
+      }
+      &:first-child {
+        &:before {
+          left: calc(
+          (var(--chart-spacing) / 2) + (var(--chart-border-width) / 2) + 50%
+          );
+          display: block;
+          width: 50%;
+          height: var(--chart-border-width);
+          content: "";
+          background: var(--chart-line-color);
+        }
+      }
+      &:last-child {
+        &:before {
+          display: block;
+          width: calc(
+          (var(--chart-spacing) / 2) + (var(--chart-border-width) / 2) + 50%
+          );
+          height: var(--chart-border-width);
+          content: "";
+          background: var(--chart-line-color);
+        }
+      }
+      &:only-child {
+        &:before {
+          display: none;
+        }
+      }
+      @media (forced-colors: active) {
+        &:before {
+          border-top: var(--border-width--md) solid transparent;
+        }
+        &:first-child,
+        &:last-child {
+          &::before {
+            border-top: var(--border-width--md) solid transparent;
+          }
+        }
+      }
+      /* vertical bar for second level items */
+      > span:before,
+      > h2 > span:before,
+      > h3 > span:before,
+      > h4 > span:before,
+      > h5 > span:before,
+      > h6 > span:before,
+      > a:before,
+      > h2 > a:before,
+      > h3 > a:before,
+      > h4 > a:before,
+      > h5 > a:before,
+      > h6 > a:before,
+      &:last-of-type > span:before,
+      &:last-of-type > h2 > span:before,
+      &:last-of-type > h3 > span:before,
+      &:last-of-type > h4 > span:before,
+      &:last-of-type > h5 > span:before,
+      &:last-of-type > h6 > span:before,
+      &:last-of-type > a:before,
+      &:last-of-type > h2 > a:before,
+      &:last-of-type > h3 > a:before,
+      &:last-of-type > h4 > a:before,
+      &:last-of-type > h5 > a:before,
+      &:last-of-type > h6 > a:before {
+        position: absolute;
+        top: calc(-1 * var(--chart-spacing));
+        left: calc(var(--chart-spacing)/2 + 50%);
+        display: block;
+        width: var(--chart-border-width);
+        height: var(--chart-spacing);
+        content: "";
+        transform: translate(
+        calc((var(--chart-spacing) / -2) + (var(--chart-border-width) / 2))
+        );
+        border: none;
+        background: var(--chart-line-color);
+        @media (forced-colors: active) {
+          border-top: 0;
+          border-left: var(--border-width--md) solid transparent;
+        }
+      }
+    }
+  }
+}
+#drupal-off-canvas-wrapper .org-chart,
+#drupal-off-canvas-wrapper .org-chart *,
+#drupal-off-canvas-wrapper .org-chart *:before {
+  all: unset;
+}

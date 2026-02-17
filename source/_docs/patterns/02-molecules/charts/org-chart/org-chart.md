@@ -4,6 +4,49 @@ import WWUOrgChart from "./org-chart.js"
 
 <wwu-org-chart>
     <chart-item
+        id="bot"
+        title="Board of Trustees">    
+        <chart-item
+            title="Internal Audit"
+            name="Priya Sall"
+            connect="bot pres">
+        </chart-item>
+        <chart-item 
+            id="pres"
+            title="President" 
+            name="Sabah Randhawa"
+            link="https://president.wwu.edu/">
+            <chart-item
+                title="Exec. Asst. to President"
+                name="Rayne Rambo"
+                connect="pres"
+                link="https://trustees.wwu.edu/">
+            </chart-item>   
+            <chart-item
+                id="cos"
+                title="Chief of Staff"
+                name="Becca Kenna-Schenk"
+                connect="pres">
+            </chart-item>
+            <chart-item
+                title="Government Relations"
+                name="Nora Selander"
+                connect="cos">
+            </chart-item>             
+        </chart-item> 
+        <chart-item
+            title="Exec./Liaison to Board of Trustees"
+            name="Rebecca Hansen-Zeller"
+            connect="bot pres">
+        </chart-item>        
+    </chart-item>    
+    <chart-item
+        title="Assistant Attorneys General">
+    </chart-item>
+</wwu-org-chart>
+
+<wwu-org-chart>
+    <chart-item
         title="Internal Audit"
         name="Priya Sall"
         connect="bot pres">

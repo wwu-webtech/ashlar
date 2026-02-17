@@ -24,11 +24,11 @@ if (
                 
                 const chart = this.querySelector(".org-chart");
                 
-                const base_list = createList();
+                const base_list = createList(1);
                 chart.append(base_list);
                 
-                const top_level_items = getChildren(this);
-                createNestedLists(top_level_items, base_list);               
+                const top_item = getChildren(this);
+                createNestedLists(top_item, base_list, 1);               
             }
         }
     }
@@ -36,38 +36,44 @@ if (
         window.customElements.define("wwu-org-chart", WWUOrgChart);
     }
     
-    function createNestedLists(items, list) {        
-        for (let i = 0; i < items.length; i++) {
-            if(items[i].hasChildNodes()) {
-                const this_item = createListItem(items[i]);
-                list.append(this_item);                    
-                
-                const new_list = createList();   
-                this_item.append(new_list); 
-
-                const new_top_level_items = getChildren(items[i]);
-
-                createNestedLists(new_top_level_items, new_list);
-            } else {                        
-                list.append(createListItem(items[i]));
-            };
-        }
-    }
-    
-    function getChildren(item) {
-        return item.querySelectorAll(":scope > chart-item");
-    }
-    
-    function createList() {
+    function createList(level) {
         const ul = document.createElement("ul");
+        ul.classList.add(`level-${level}`);
         
         return ul;
     }
     
-    function createListItem(item) {
+    function createNestedLists(items, list, level) {           
+        for (let i = 0; i < items.length; i++) {
+            if(items[i].hasChildNodes()) {
+                const this_item = createListItem(items[i], level);
+                list.append(this_item);                    
+                
+                const new_list = createList(level + 1);   
+                this_item.append(new_list); 
+                
+                const these_items = getChildren(items[i]);                
+                
+                createNestedLists(these_items, new_list, level + 1);
+            } else {                        
+                list.append(createListItem(items[i], level, false));
+            };
+        }
+    }  
+    
+    function createListItem(item, level, children) {
         const li = document.createElement("li");
-        li.innerHTML = `<strong>${item.getAttribute("title")}</strong> <em>${item.getAttribute("name")}</em>`;
+        li.innerHTML = `<span><strong>${item.getAttribute("title")}</strong> <em>${item.getAttribute("name")}</em></span>`;
+        li.classList.add(`item-level-${level}`);
+
+        if (children == false ) {
+            li.classList.add("no-children");
+        }
         
         return li;
+    }
+    
+    function getChildren(item) {
+        return item.querySelectorAll(":scope > chart-item");
     }
 }
