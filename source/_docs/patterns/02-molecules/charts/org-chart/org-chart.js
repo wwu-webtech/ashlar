@@ -63,7 +63,12 @@ if (
     
     function createListItem(item, level, children) {
         const li = document.createElement("li");
-        li.innerHTML = `<span><strong>${item.getAttribute("title")}</strong> <em>${item.getAttribute("name")}</em></span>`;
+        const unit = item.getAttribute("unit") ? `<strong class="uppercase">${item.getAttribute("unit")}</strong><br/>` : "";
+        const name = item.getAttribute("name") ? `<strong>${item.getAttribute("name")}<br/></strong>` : "";
+        const title = item.getAttribute("title") ? `<em>${item.getAttribute("title")}</em>` : "";        
+        const link = item.getAttribute("link") ? `${item.getAttribute("link")}` : "";        
+
+        li.innerHTML = link ? `<a href="${link}">${unit}${name}${title}</a>` : `<span>${unit}${name}${title}</span>`;
         li.classList.add(`item-level-${level}`);
 
         if (children == false ) {

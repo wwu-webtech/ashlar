@@ -5,11 +5,11 @@ import WWUOrgChart from "./org-chart.js"
 <wwu-org-chart>
     <chart-item
         id="bot"
-        title="Board of Trustees">    
+        unit="Board of Trustees">    
         <chart-item
             title="Internal Audit"
             name="Priya Sall"
-            connect="bot pres">
+            connect="after">
         </chart-item>
         <chart-item 
             id="pres"
@@ -37,7 +37,7 @@ import WWUOrgChart from "./org-chart.js"
         <chart-item
             title="Exec./Liaison to Board of Trustees"
             name="Rebecca Hansen-Zeller"
-            connect="bot pres">
+            connect="before">
         </chart-item>        
     </chart-item>    
     <chart-item
@@ -53,7 +53,7 @@ import WWUOrgChart from "./org-chart.js"
     </chart-item>
     <chart-item
         id="bot"
-        title="Board of Trustees">    
+        unit="Board of Trustees">    
         <chart-item
             title="Exec. Asst. to President"
             name="Rayne Rambo"
