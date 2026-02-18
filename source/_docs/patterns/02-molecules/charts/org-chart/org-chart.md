@@ -5,7 +5,8 @@ import WWUOrgChart from "./org-chart.js"
 <wwu-org-chart heading-start="2"> 
     <chart-item
         id="bot"
-        unit="Board of Trustees">    
+        unit="Board of Trustees"
+        link="https://trustees.wwu.edu">    
         <chart-item
             title="Internal Audit"
             name="Priya Sall"
@@ -15,7 +16,8 @@ import WWUOrgChart from "./org-chart.js"
             id="pres"
             title="President" 
             name="Sabah Randhawa"
-            link="https://president.wwu.edu/">
+            link="https://president.wwu.edu/"
+            highlight>
             <chart-item
                 title="Exec. Asst. to President"
                 name="Rayne Rambo"

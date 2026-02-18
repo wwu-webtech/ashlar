@@ -38,7 +38,7 @@ Molecule: Cards
   &:focus-within {
     .title {
       a:after {
-        outline: var(--outline--focus);;
+        outline: var(--outline--focus);
       }
     }
   }

@@ -2,13 +2,12 @@
 /*------------------------------------------------------------------------------
 Molecule: Charts - Org Chart
 --------------------------------------------------------------------------------
-1. Dark Mode
 ------------------------------------------------------------------------------*/
 .org-chart {
-  --chart-border-width: 3px;
+  --chart-border-width: 2px;
+  --chart-item-max-width: 18.75rem;
   --chart-line-color: var(--gray--lighter--40);
-  --chart-max-size: 18.75rem;
-  --chart-spacing: var(--space--md);
+  --chart-spacing: 12px;
 
   position: relative;
   display: grid;
@@ -23,7 +22,9 @@ Molecule: Charts - Org Chart
   h5,
   h6 {
     margin: 0;
+    font-family: var(--font--sans-serif);
     font-size: var(--font-size--sm);
+    font-weight: var(--font-weight--regular);
   }
   ul {
     position: relative;
@@ -33,23 +34,6 @@ Molecule: Charts - Org Chart
     margin-left: var(--chart-spacing);
     padding: 0;
     list-style: none;
-    li {
-      position: relative;
-      div {
-        @include lightest-gray-bg;
-
-        position: relative;
-        display: block;
-        margin-top: var(--chart-spacing);
-        margin-left: var(--chart-spacing);
-        padding: calc(var(--chart-spacing) / 2);
-        text-align: center;
-        line-height: 1.2;
-        @media (forced-colors: active) {
-          border: var(--border-width--md) solid transparent;
-        }
-      }
-    }
     &.level-1 {
       margin-left: 0;
       @media (min-width: $medium) {
@@ -68,19 +52,92 @@ Molecule: Charts - Org Chart
       }
     }
     &.level-3 {
+      margin-left: var(--chart-spacing);
       @media (min-width: $medium) {
         display: flex;
         flex-flow: column;
-        margin-left: calc(var(--chart-spacing) / 2);
       }
     }
   }
-  /* LINES */
-  [class^="item-level-"]:not(.item-level-1) {
+  li {
+    position: relative;
+    .item {
+      position: relative;
+      display: block;
+      margin-top: var(--chart-spacing);
+      margin-left: var(--chart-spacing);
+      padding: var(--space--2xs);
+      text-align: center;
+      line-height: 1.2;
+      @media (forced-colors: active) {
+        border: var(--border-width--md) solid transparent;
+      }
+      a {
+        display: inline-block;
+        text-decoration: none;
+        outline: none;
+        &:after {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          content: "";
+          transition: var(--transition-speed--fast) var(--ease--standard) box-shadow;
+          box-shadow: var(--shadow--soft);
+        }
+      }
+      &:hover,
+      &:focus-within {
+        a:after {
+          outline: var(--outline--unset);
+          outline-offset: var(--oline-offset);
+          box-shadow: var(--shadow--soft--hover);
+        }
+      }
+      &:focus-within {
+        a:after {
+          outline: var(--outline--focus);
+        }
+      }
+    }
+  }
+  .unit {
+    display: block;
+    margin-bottom: var(--space--xs);
+    text-transform: uppercase;
+    font-family: var(--font--title);
+    font-weight: var(--font-weight--bold);
+  }
+  .name {
+    display: block;
+    font-weight: var(--font-weight--bold);
+  }
+  .title {
+    display: block;
+    font-style: italic;
+  }
+  .highlight {
+    background: repeating-linear-gradient(
+    45deg,
+    var(--blue--lighter--60),
+    var(--blue--lighter--60) 5px,
+    var(--blue--lighter--80) 5px,
+    var(--blue--lighter--80) 10px
+    );
+  }
+}
+/*-------------------------------------------------------------------------------
+Draw Lines
+------------------------------------------------------------------------------*/
+.org-chart {
+  /* Lines for vertically nested items */
+  [class^="item-level-"]:not(.item-level-1):not(.item-level-2) {
+    max-width: var(--chart-item-max-width);
     /* vertical bar for nested items */
     border-left: solid var(--chart-border-width) var(--chart-line-color);
     /* horizontal bar for nested items */
-    > div:before {
+    > .item:before {
       position: absolute;
       bottom: 0;
       left: 0;
@@ -94,7 +151,7 @@ Molecule: Charts - Org Chart
     }
     /* mask vertical bar for end items */
     &:last-of-type {
-      > div:before {
+      > .item:before {
         background: var(--page-background);
         @media (forced-colors: active) {
           background: transparent;
@@ -103,7 +160,7 @@ Molecule: Charts - Org Chart
     }
   }
   /* mask vertical bar for end items */
-  [class^="item-level-"]:not(.item-level-1) > ul:before {
+  [class^="item-level-"]:not(.item-level-1):not(.item-level-2) > ul:before {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -117,9 +174,9 @@ Molecule: Charts - Org Chart
 }
 @media (min-width: $medium) {
   .org-chart {
-    /* vertical bar for top level items */
+    /* lower vertical bar for top level items */
     .item-level-1 {
-      > div:before {
+      > .item:before {
         position: absolute;
         bottom: 0;
         left: calc(50% + ((var(--chart-border-width) / 2)));
@@ -134,7 +191,7 @@ Molecule: Charts - Org Chart
         }
       }
       &.no-children {
-        > div:before {
+        > .item:before {
           display: none;
         }
       }
@@ -142,8 +199,8 @@ Molecule: Charts - Org Chart
     .item-level-2 {
       border-left: none;
       /* remove second level lines */
-      > div:before,
-      &:last-of-type > div:before,
+      > .item:before,
+      &:last-of-type > .item:before,
       &:last-child > .level-3:before {
         display: none;
       }
@@ -198,8 +255,8 @@ Molecule: Charts - Org Chart
         }
       }
       /* vertical bar for second level items */
-      > div:before,
-      &:last-of-type > div:before {
+      > .item:before,
+      &:last-of-type > .item:before {
         position: absolute;
         top: calc(-1 * var(--chart-spacing));
         left: calc(var(--chart-spacing)/2 + 50%);

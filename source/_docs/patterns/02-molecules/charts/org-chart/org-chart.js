@@ -65,6 +65,8 @@ if (
     function createListItem(item, level, heading_level, children) {
         const li = document.createElement("li");        
         const div = document.createElement("div");
+            div.classList.add("item");
+            div.classList.add("lightest-gray-bg");
         const heading = heading_level < 7 ? document.createElement(`h${heading_level}`) : document.createElement("span");        
         const unit = item.getAttribute("unit") ? document.createElement("span") : null;
             if(unit) { unit.classList.add("unit"); unit.innerHTML = item.getAttribute("unit"); }
