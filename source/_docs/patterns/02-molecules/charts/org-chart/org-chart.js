@@ -23,12 +23,13 @@ if (
                 this.classList.add("element-created");   
                 
                 const chart = this.querySelector(".org-chart");
+                const heading_level = this.getAttribute("heading-start") ? parseInt(this.getAttribute("heading-start")) : 2;
                 
                 const base_list = createList(1);
                 chart.append(base_list);
                 
                 const top_item = getChildren(this);
-                createNestedLists(top_item, base_list, 1);               
+                createNestedLists(top_item, base_list, 1, heading_level);               
             }
         }
     }
@@ -43,10 +44,10 @@ if (
         return ul;
     }
     
-    function createNestedLists(items, list, level) {           
+    function createNestedLists(items, list, level, heading_level) {           
         for (let i = 0; i < items.length; i++) {
             if(items[i].hasChildNodes()) {
-                const this_item = createListItem(items[i], level);
+                const this_item = createListItem(items[i], level, heading_level);
                 list.append(this_item);                    
                 
                 const new_list = createList(level + 1);   
@@ -54,22 +55,49 @@ if (
                 
                 const these_items = getChildren(items[i]);                
                 
-                createNestedLists(these_items, new_list, level + 1);
+                createNestedLists(these_items, new_list, level + 1, heading_level + 1);
             } else {                        
-                list.append(createListItem(items[i], level, false));
+                list.append(createListItem(items[i], level, heading_level, false));
             };
         }
     }  
     
-    function createListItem(item, level, children) {
-        const li = document.createElement("li");
-        const unit = item.getAttribute("unit") ? `<strong class="uppercase">${item.getAttribute("unit")}</strong><br/>` : "";
-        const name = item.getAttribute("name") ? `<strong>${item.getAttribute("name")}<br/></strong>` : "";
-        const title = item.getAttribute("title") ? `<em>${item.getAttribute("title")}</em>` : "";        
-        const link = item.getAttribute("link") ? `${item.getAttribute("link")}` : "";        
+    function createListItem(item, level, heading_level, children) {
+        const li = document.createElement("li");        
+        const div = document.createElement("div");
+        const heading = heading_level < 7 ? document.createElement(`h${heading_level}`) : document.createElement("span");        
+        const unit = item.getAttribute("unit") ? document.createElement("span") : null;
+            if(unit) { unit.classList.add("unit"); unit.innerHTML = item.getAttribute("unit"); }
+        const name = item.getAttribute("name") ? document.createElement("span") : null;
+            if(name) { name.classList.add("name"); name.innerHTML = item.getAttribute("name"); }
+        const title = item.getAttribute("title") ? document.createElement("span") : null;
+            if(title) { title.classList.add("title"); title.innerHTML = item.getAttribute("title"); }
+        let thing = heading;
 
-        li.innerHTML = link ? `<a href="${link}">${unit}${name}${title}</a>` : `<span>${unit}${name}${title}</span>`;
-        li.classList.add(`item-level-${level}`);
+        li.classList.add(`item-level-${level}`);        
+        li.append(div);        
+        
+        if (item.getAttribute("link")) {
+            const link = document.createElement("a");
+            link.setAttribute("href", item.getAttribute("link"));
+
+            heading.append(link);
+            thing = link;
+        }
+
+        div.append(thing);
+        
+        if (unit) {
+            thing.append(unit);
+            thing = div;
+        } 
+        if (name) {
+            thing.append(name);
+            thing = div;
+        } 
+        if (title) {
+            thing.append(title);
+        }        
 
         if (children == false ) {
             li.classList.add("no-children");
@@ -77,6 +105,7 @@ if (
         
         return li;
     }
+
     
     function getChildren(item) {
         return item.querySelectorAll(":scope > chart-item");
