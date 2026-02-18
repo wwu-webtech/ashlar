@@ -4,10 +4,12 @@ Molecule: Charts - Org Chart
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 .org-chart {
+  --blue-stripes: repeating-linear-gradient( 45deg, var(--blue--lighter--40), var(--blue--lighter--40) 5px, var(--blue--lighter--60) 5px, var(--blue--lighter--60) 10px);
   --chart-border-width: 2px;
   --chart-item-max-width: 18.75rem;
   --chart-line-color: var(--gray--lighter--40);
   --chart-spacing: 12px;
+  --gray-stripes: repeating-linear-gradient( 45deg, var(--gray--lighter--60), var(--gray--lighter--60) 5px, var(--gray--lighter--80) 5px, var(--gray--lighter--80) 10px);
 
   position: relative;
   display: grid;
@@ -61,46 +63,72 @@ Molecule: Charts - Org Chart
   }
   li {
     position: relative;
-    .item {
-      position: relative;
-      display: block;
-      margin-top: var(--chart-spacing);
-      margin-left: var(--chart-spacing);
-      padding: var(--space--2xs);
-      text-align: center;
-      line-height: 1.2;
-      @media (forced-colors: active) {
-        border: var(--border-width--md) solid transparent;
-      }
-      a {
-        display: inline-block;
-        text-decoration: none;
-        outline: none;
-        &:after {
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          content: "";
-          transition: var(--transition-speed--fast) var(--ease--standard) box-shadow;
-          box-shadow: var(--shadow--soft);
-        }
-      }
-      &:hover,
-      &:focus-within {
-        a:after {
-          outline: var(--outline--unset);
-          outline-offset: var(--oline-offset);
-          box-shadow: var(--shadow--soft--hover);
-        }
-      }
-      &:focus-within {
-        a:after {
-          outline: var(--outline--focus);
-        }
+  }
+  .item {
+    @include lightest-gray-bg;
+
+    position: relative;
+    display: block;
+    margin-top: var(--chart-spacing);
+    margin-left: var(--chart-spacing);
+    padding: var(--space--2xs);
+    transition: var(--transition-speed--fast) var(--ease--standard) all;
+    text-align: center;
+    line-height: 1.2;
+    @media (forced-colors: active) {
+      border: var(--border-width--md) solid transparent;
+    }
+    a {
+      display: inline-block;
+      text-decoration: none;
+      outline: none;
+      &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: "";
+        transition: var(--transition-speed--fast) var(--ease--standard) box-shadow;
+        box-shadow: var(--shadow--soft);
       }
     }
+    &:hover,
+    &:focus-within {
+      &:has(a),
+      &:has(a) .content {
+        background-color: var(--blue--lighter--60);
+      }
+      &:has(a).highlight {
+        background: var(--blue-stripes);
+      }
+      a:after {
+        outline: var(--outline--unset);
+        outline-offset: var(--oline-offset);
+        box-shadow: var(--shadow--soft--hover);
+      }
+    }
+    &:focus-within {
+      a:after {
+        outline: var(--outline--focus);
+      }
+    }
+  }
+  .highlight {
+    background: var(--gray-stripes);
+    .content {
+      background: var(--gray--lighter--80);
+    }
+  }
+  .content {
+    --h2-color: var(--black);
+    --h3-color: var(--black);
+    --h4-color: var(--black);
+    --h5-color: var(--black);
+    --h6-color: var(--black);
+    --link-color: var(--dark-blue);
+
+    transition: var(--transition-speed--fast) var(--ease--standard) background-color;
   }
   .unit {
     display: block;
@@ -116,15 +144,6 @@ Molecule: Charts - Org Chart
   .title {
     display: block;
     font-style: italic;
-  }
-  .highlight {
-    background: repeating-linear-gradient(
-    45deg,
-    var(--blue--lighter--60),
-    var(--blue--lighter--60) 5px,
-    var(--blue--lighter--80) 5px,
-    var(--blue--lighter--80) 10px
-    );
   }
 }
 /*-------------------------------------------------------------------------------

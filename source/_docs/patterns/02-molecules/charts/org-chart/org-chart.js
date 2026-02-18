@@ -64,9 +64,11 @@ if (
     
     function createListItem(item, level, heading_level, children) {
         const li = document.createElement("li");        
-        const div = document.createElement("div");
-            div.classList.add("item");
-            div.classList.add("lightest-gray-bg");
+        const outer_div = document.createElement("div");
+            outer_div.classList.add("item");
+            if (item.getAttribute("highlight")) { outer_div.classList.add("highlight"); } 
+        const inner_div = document.createElement("div");
+            inner_div.classList.add("content");
         const heading = heading_level < 7 ? document.createElement(`h${heading_level}`) : document.createElement("span");        
         const unit = item.getAttribute("unit") ? document.createElement("span") : null;
             if(unit) { unit.classList.add("unit"); unit.innerHTML = item.getAttribute("unit"); }
@@ -74,31 +76,33 @@ if (
             if(name) { name.classList.add("name"); name.innerHTML = item.getAttribute("name"); }
         const title = item.getAttribute("title") ? document.createElement("span") : null;
             if(title) { title.classList.add("title"); title.innerHTML = item.getAttribute("title"); }
-        let thing = heading;
+        let current_element = heading;
 
         li.classList.add(`item-level-${level}`);        
-        li.append(div);        
+        li.append(outer_div);    
+        outer_div.append(inner_div);
+            
         
         if (item.getAttribute("link")) {
             const link = document.createElement("a");
             link.setAttribute("href", item.getAttribute("link"));
 
             heading.append(link);
-            thing = link;
+            current_element = link;
         }
 
-        div.append(thing);
+        inner_div.append(current_element);
         
         if (unit) {
-            thing.append(unit);
-            thing = div;
+            current_element.append(unit);
+            current_element = inner_div;
         } 
         if (name) {
-            thing.append(name);
-            thing = div;
+            current_element.append(name);
+            current_element = inner_div;
         } 
         if (title) {
-            thing.append(title);
+            current_element.append(title);
         }        
 
         if (children == false ) {
@@ -107,7 +111,6 @@ if (
         
         return li;
     }
-
     
     function getChildren(item) {
         return item.querySelectorAll(":scope > chart-item");

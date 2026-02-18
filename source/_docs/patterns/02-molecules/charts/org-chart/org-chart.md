@@ -6,7 +6,7 @@ import WWUOrgChart from "./org-chart.js"
     <chart-item
         id="bot"
         unit="Board of Trustees"
-        link="https://trustees.wwu.edu">    
+        link="https://trustees.wwu.edu/never-been-here-before">    
         <chart-item
             title="Internal Audit"
             name="Priya Sall"
