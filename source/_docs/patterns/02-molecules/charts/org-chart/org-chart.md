@@ -8,8 +8,7 @@ import WWUOrgChart from "./org-chart.js"
         link="https://trustees.wwu.edu/never-been-here-before">    
         <chart-item
             title="Internal Audit"
-            name="First Last"
-            connect="after">
+            name="First Last">
         </chart-item>
         <chart-item 
             title="President" 
@@ -19,24 +18,20 @@ import WWUOrgChart from "./org-chart.js"
             <chart-item
                 title="Exec. Asst. to President"
                 name="First Last"
-                connect="pres"
                 link="https://trustees.wwu.edu/">
             </chart-item>   
             <chart-item
                 title="Chief of Staff"
-                name="First Last"
-                connect="pres">
+                name="First Last">
                 <chart-item
                     title="Government Relations"
-                    name="First Last"
-                    connect="cos">
+                    name="First Last">
             </chart-item>  
             </chart-item>           
         </chart-item> 
         <chart-item
             title="Exec./Liaison to Board of Trustees"
-            name="First Last"
-            connect="before">
+            name="First Last">
         </chart-item>        
     </chart-item>    
     <chart-item
