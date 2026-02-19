@@ -6,7 +6,7 @@ if (
     org_chart_template.innerHTML = `
     <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/components/org-chart-new.css" /-->
     
-    <figure class="org-chart"> 
+    <figure class="wwu-org-chart"> 
     </figure>
     `;
     
@@ -22,7 +22,7 @@ if (
                 this.appendChild(org_chart_template.content.cloneNode(true));
                 this.classList.add("element-created");   
                 
-                const chart = this.querySelector(".org-chart");
+                const chart = this.querySelector(".wwu-org-chart");
                 const heading_level = this.getAttribute("heading-start") ? parseInt(this.getAttribute("heading-start")) : 2;
                 
                 const base_list = createList(1);
@@ -76,22 +76,20 @@ if (
             if(name) { name.classList.add("name"); name.innerHTML = item.getAttribute("name"); }
         const title = item.getAttribute("title") ? document.createElement("span") : null;
             if(title) { title.classList.add("title"); title.innerHTML = item.getAttribute("title"); }
-        let current_element = heading;
-
+        
         li.classList.add(`item-level-${level}`);        
         li.append(outer_div);    
         outer_div.append(inner_div);
-            
+        inner_div.append(heading);       
         
+        let current_element = heading;        
         if (item.getAttribute("link")) {
             const link = document.createElement("a");
             link.setAttribute("href", item.getAttribute("link"));
 
             heading.append(link);
             current_element = link;
-        }
-
-        inner_div.append(current_element);
+        }        
         
         if (unit) {
             current_element.append(unit);

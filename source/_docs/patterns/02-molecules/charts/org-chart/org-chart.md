@@ -4,41 +4,38 @@ import WWUOrgChart from "./org-chart.js"
 
 <wwu-org-chart heading-start="2"> 
     <chart-item
-        id="bot"
         unit="Board of Trustees"
         link="https://trustees.wwu.edu/never-been-here-before">    
         <chart-item
             title="Internal Audit"
-            name="Priya Sall"
+            name="First Last"
             connect="after">
         </chart-item>
         <chart-item 
-            id="pres"
             title="President" 
-            name="Sabah Randhawa"
+            name="First Last"
             link="https://president.wwu.edu/"
             highlight>
             <chart-item
                 title="Exec. Asst. to President"
-                name="Rayne Rambo"
+                name="First Last"
                 connect="pres"
                 link="https://trustees.wwu.edu/">
             </chart-item>   
             <chart-item
-                id="cos"
                 title="Chief of Staff"
-                name="Becca Kenna-Schenk"
+                name="First Last"
                 connect="pres">
                 <chart-item
                     title="Government Relations"
-                    name="Nora Selander"
+                    name="First Last"
                     connect="cos">
             </chart-item>  
             </chart-item>           
         </chart-item> 
         <chart-item
             title="Exec./Liaison to Board of Trustees"
-            name="Rebecca Hansen-Zeller"
+            name="First Last"
             connect="before">
         </chart-item>        
     </chart-item>    
@@ -49,41 +46,33 @@ import WWUOrgChart from "./org-chart.js"
 
 <wwu-org-chart>
     <chart-item 
-        id="pres"
         title="President" 
-        name="Sabah Randhawa"
         link="https://president.wwu.edu/">
         <chart-item 
             unit="Aademic Affairs"
             title="Provost & Executive Vice President"
-            name="Brad Johnson">
+            name="First Last">
             <chart-item
-                unit="Academic Affiars"
-                name="Jack Herring">
+                unit="Academic Affiars">
             </chart-item>
             <chart-item
-                unit="Academic Advising & Student Achievement Center"
-                name="Meagan Bryson">
+                unit="Academic Advising & Student Achievement Center">
             </chart-item>
             <chart-item
-                unit="Enrollment Management"
-                name="Shelli Soto">
+                unit="Enrollment Management">
             </chart-item>
         </chart-item>
         <chart-item 
             unit="Business & Financial Affairs"
-            title="Vice President"
-            name="Joyce Lopes">
+            title="Vice President">
         </chart-item>
         <chart-item 
             unit="University Advancement"
-            title="Vice President & CEO Foundation for WWU & Alumni"
-            name="Kim Hill">
+            title="Vice President & CEO Foundation for WWU & Alumni">
         </chart-item>
         <chart-item 
             unit="Office of Equity"
-            title="Chief Diversity Officer"
-            name="Jacqueline Hughes">
+            title="Chief Diversity Officer">
         </chart-item>
     </chart-item>        
 </wwu-org-chart>

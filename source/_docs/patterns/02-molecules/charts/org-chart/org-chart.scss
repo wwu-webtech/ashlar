@@ -3,7 +3,7 @@
 Molecule: Charts - Org Chart
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
-.org-chart {
+.wwu-org-chart {
   --blue-stripes: repeating-linear-gradient( 45deg, var(--blue--lighter--40), var(--blue--lighter--40) 5px, var(--blue--lighter--60) 5px, var(--blue--lighter--60) 10px);
   --chart-border-width: 2px;
   --chart-item-max-width: 18.75rem;
@@ -149,7 +149,7 @@ Molecule: Charts - Org Chart
 /*-------------------------------------------------------------------------------
 Draw Lines
 ------------------------------------------------------------------------------*/
-.org-chart {
+.wwu-org-chart {
   /* Lines for vertically nested items */
   [class^="item-level-"]:not(.item-level-1):not(.item-level-2) {
     max-width: var(--chart-item-max-width);
@@ -192,7 +192,7 @@ Draw Lines
   }
 }
 @media (min-width: $medium) {
-  .org-chart {
+  .wwu-org-chart {
     /* lower vertical bar for top level items */
     .item-level-1 {
       > .item:before {
@@ -296,8 +296,8 @@ Draw Lines
     }
   }
 }
-#drupal-off-canvas-wrapper .org-chart,
-#drupal-off-canvas-wrapper .org-chart *,
-#drupal-off-canvas-wrapper .org-chart *:before {
+#drupal-off-canvas-wrapper .wwu-org-chart,
+#drupal-off-canvas-wrapper .wwu-org-chart *,
+#drupal-off-canvas-wrapper .wwu-org-chart *:before {
   all: unset;
 }
