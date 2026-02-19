@@ -43,8 +43,8 @@
     {% endblock %}
     
 
-    <wwu-org-chart heading-start="{{ content.field_heading_level.0['#markup']|replace({'h': ''}) }}">
-    {% block content %}     
+    <wwu-org-chart heading-start="{{ content.field_heading_level.0['#markup']|replace({'h': ''}) }}" {% if block_content.field_highlighted_item_legend.0.value %}highlight-legend="{{ block_content.field_highlighted_item_legend.0.value }}"{% endif %}>    
+    {% block content %}           
       {{ content.field_item }}
     {% endblock %}
     </wwu-org-chart>

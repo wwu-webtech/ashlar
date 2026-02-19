@@ -66,6 +66,7 @@ const config = {
             require.resolve('../../build/css/components/image-link.css'),
             require.resolve('../../build/css/components/image-with-description.css'),
             require.resolve('../../build/css/components/my-western-menu.css'),
+            require.resolve('../../build/css/components/org-chart.css'),
             require.resolve('../../build/css/components/pullquote.css'),
             require.resolve('../../build/css/components/testimonial.css'),
             require.resolve('../../build/css/components/schedule.css'),

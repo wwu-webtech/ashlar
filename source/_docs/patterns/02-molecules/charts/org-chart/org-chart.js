@@ -4,7 +4,7 @@ if (
 ) {
     const org_chart_template = document.createElement("template");
     org_chart_template.innerHTML = `
-    <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/components/org-chart-new.css" /-->
+    <!--link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/components/org-chart.css" /-->
     
     <figure class="wwu-org-chart"> 
     </figure>
@@ -24,19 +24,22 @@ if (
                 
                 const chart = this.querySelector(".wwu-org-chart");
                 const heading_level = this.getAttribute("heading-start") ? parseInt(this.getAttribute("heading-start")) : 2;
+                const legend_text = this.getAttribute("highlight-legend");                
                 
                 const base_list = createList(1);
                 chart.append(base_list);
                 
                 const top_item = getChildren(this);
-                createNestedLists(top_item, base_list, 1, heading_level);               
+                createNestedLists(top_item, base_list, 1, heading_level, legend_text);               
+
+                if(legend_text) { chart.append(createHighlightLegend(this, legend_text))};
             }
         }
     }
     if (!window.customElements.get('wwu-org-chart')) {    
         window.customElements.define("wwu-org-chart", WWUOrgChart);
     }
-    
+
     function createList(level) {
         const ul = document.createElement("ul");
         ul.classList.add(`level-${level}`);
@@ -65,7 +68,7 @@ if (
     function createListItem(item, level, heading_level, children) {
         const li = document.createElement("li");        
         const outer_div = document.createElement("div");
-            outer_div.classList.add("item");
+            outer_div.classList.add("item");            
             if (item.getAttribute("highlight")) { outer_div.classList.add("highlight"); } 
         const inner_div = document.createElement("div");
             inner_div.classList.add("content");
@@ -105,7 +108,7 @@ if (
 
         if (children == false ) {
             li.classList.add("no-children");
-        }
+        }      
         
         return li;
     }
@@ -113,4 +116,22 @@ if (
     function getChildren(item) {
         return item.querySelectorAll(":scope > chart-item");
     }
+
+    function createHighlightLegend(chart, legend) {
+        const highlights = chart.querySelectorAll(".highlight");
+        const wrapper = document.createElement("div");    
+
+        wrapper.classList.add("highlight-legend");                
+        wrapper.innerHTML=`<span class="highlight"><span class="lightest-gray-bg">Striped item</span></span> indicates ${legend}`;
+
+        for(let i = 0; i < highlights.length; i++) {
+            const item_legend = document.createElement("span");            
+            item_legend.classList.add("visually-hidden");
+            item_legend.innerText = legend;
+
+            highlights[i].append(item_legend);
+        }
+
+        return wrapper;
+    }    
 }

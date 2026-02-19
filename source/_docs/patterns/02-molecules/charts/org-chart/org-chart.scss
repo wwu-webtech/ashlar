@@ -145,6 +145,13 @@ Molecule: Charts - Org Chart
     display: block;
     font-style: italic;
   }
+  .highlight-legend {
+    margin-top: var(--space--md);
+    padding: var(--space--2xs);
+    .highlight {
+      padding: var(--space--2xs);
+    }
+  }
 }
 /*-------------------------------------------------------------------------------
 Draw Lines

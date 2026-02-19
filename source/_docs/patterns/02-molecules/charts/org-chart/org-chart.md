@@ -2,7 +2,7 @@ import WWUOrgChart from "./org-chart.js"
 
 # Organization Chart
 
-<wwu-org-chart heading-start="2"> 
+<wwu-org-chart heading-start="2" highlight-legend="position in the President’s Cabinet"> 
     <chart-item
         unit="Board of Trustees"
         link="https://trustees.wwu.edu/never-been-here-before">    
