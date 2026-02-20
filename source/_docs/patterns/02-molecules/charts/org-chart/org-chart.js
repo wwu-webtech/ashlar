@@ -69,9 +69,10 @@ if (
         const li = document.createElement("li");        
         const outer_div = document.createElement("div");
             outer_div.classList.add("item");            
+            outer_div.classList.add("lightest-gray-bg");
             if (item.getAttribute("highlight")) { outer_div.classList.add("highlight"); } 
         const inner_div = document.createElement("div");
-            inner_div.classList.add("content");
+            inner_div.classList.add("lightest-gray-bg");            
         const heading = heading_level < 7 ? document.createElement(`h${heading_level}`) : document.createElement("span");        
         const unit = item.getAttribute("unit") ? document.createElement("span") : null;
             if(unit) { unit.classList.add("unit"); unit.innerHTML = item.getAttribute("unit"); }

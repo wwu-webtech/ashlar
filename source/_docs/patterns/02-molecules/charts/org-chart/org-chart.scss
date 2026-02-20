@@ -9,13 +9,13 @@ Molecule: Charts - Org Chart
   --chart-item-max-width: 18.75rem;
   --chart-line-color: var(--gray--lighter--40);
   --chart-spacing: 12px;
-  --gray-stripes: repeating-linear-gradient( 45deg, var(--gray--lighter--60), var(--gray--lighter--60) 5px, var(--gray--lighter--80) 5px, var(--gray--lighter--80) 10px);
+  --gray-stripes: repeating-linear-gradient( 45deg, var(--gray--lighter--20), var(--gray--lighter--20) 5px, var(--gray) 5px, var(--gray) 10px);
+  --light-gray-stripes: repeating-linear-gradient( 45deg, var(--gray--lighter--60), var(--gray--lighter--60) 5px, var(--gray--lighter--80) 5px, var(--gray--lighter--80) 10px);
 
   position: relative;
   display: grid;
   justify-content: center;
   max-width: var(--content-area-max-width);
-  color: var(--black);
   background: var(--page-background);
   font-size: var(--font-size--sm);
   h2,
@@ -64,15 +64,15 @@ Molecule: Charts - Org Chart
   li {
     position: relative;
   }
+  div {
+    transition: var(--transition-speed--fast);
+  }
   .item {
-    @include lightest-gray-bg;
-
     position: relative;
     display: block;
     margin-top: var(--chart-spacing);
     margin-left: var(--chart-spacing);
     padding: var(--space--2xs);
-    transition: var(--transition-speed--fast) var(--ease--standard) all;
     text-align: center;
     line-height: 1.2;
     @media (forced-colors: active) {
@@ -96,8 +96,8 @@ Molecule: Charts - Org Chart
     &:hover,
     &:focus-within {
       &:has(a),
-      &:has(a) .content {
-        background-color: var(--blue--lighter--60);
+      &:has(a) div {
+        @include light-blue-bg;
       }
       &:has(a).highlight {
         background: var(--blue-stripes);
@@ -115,18 +115,14 @@ Molecule: Charts - Org Chart
     }
   }
   .highlight {
-    background: var(--gray-stripes);
-    .content {
-      background: var(--gray--lighter--80);
-    }
+    background: var(--light-gray-stripes);
   }
   .content {
-    --h2-color: var(--black);
-    --h3-color: var(--black);
-    --h4-color: var(--black);
-    --h5-color: var(--black);
-    --h6-color: var(--black);
-    --link-color: var(--dark-blue);
+    --h2-color: var(--default-text-color);
+    --h3-color: var(--default-text-color);
+    --h4-color: var(--default-text-color);
+    --h5-color: var(--default-text-color);
+    --h6-color: var(--default-text-color);
 
     transition: var(--transition-speed--fast) var(--ease--standard) background-color;
   }
@@ -300,6 +296,13 @@ Draw Lines
           border-left: var(--border-width--md) solid transparent;
         }
       }
+    }
+  }
+}
+[data-theme="dark"] {
+  .wwu-org-chart {
+    .highlight {
+      background: var(--gray-stripes);
     }
   }
 }
