@@ -34,6 +34,9 @@ a.ui-state-default {
 a.ui-state-hover {
   color: var(--black) !important;
 }
+a[style*="color: #ffffff"] {
+  color: var(--link-color) !important;
+}
 button.default {
   background: var(--button-background-color);
 }
@@ -88,6 +91,7 @@ div.report_row > table.table > tbody > tr:nth-of-type(2n) {
 }
 div.form_page input[type="text"] {
   max-width: 90vw;
+  margin-bottom: 0;
 }
 div.form_page + div.form_page {
   margin-top: 0;

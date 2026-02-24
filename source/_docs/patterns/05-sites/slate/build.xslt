@@ -43,6 +43,8 @@
           </script>
           <script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/wwu-footer.js">
           </script>
+					<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/table-a11y.js">
+					</script>
         </div>
       </body>
     </html>
