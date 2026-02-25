@@ -167,3 +167,14 @@ ul ul {
 ul ul ul {
   list-style: square;
 }
+.frm_forms {
+  --check-label-color: var(--default-text-color);
+  --label-color: var(--default-text-color);
+  --label-padding: var(--space--xs) 0;
+}
+.frm_forms input[type="checkbox"] {
+  opacity: 1;
+}
+.frm_style_formidable-style.with_frm_style div.frm_description {
+  padding: var(--space--xs) 0;
+}

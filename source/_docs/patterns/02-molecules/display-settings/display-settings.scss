@@ -5,6 +5,7 @@ Organism: Pre-header
 ------------------------------------------------------------------------------*/
 .settings-menu {
   --h2-size: var(--font-size--lg);
+  --h3-size: var(--font-size--md);
 
   @include lightest-blue-bg;
 
@@ -12,18 +13,24 @@ Organism: Pre-header
   top: 0;
   left: 0;
   display: none;
-  width: 100cqw;
+  width: 100%;
+  max-width: none;
+  margin: 0;
   padding: var(--space--lg);
-  padding-top: var(--logo-size);
   color: var(--dark-blue);
+  border: none;
   font-size: var(--font-size--sm);
-  @media(min-width: $medium) {
-    padding-top: var(--space--2xl);
+  &::backdrop {
+    opacity: 0.95;
+    background: var(--page-background);
   }
   .menu-container {
     display: flex;
     flex-flow: column;
     margin: auto;
+    @media (min-width: $small) {
+      margin-top: calc(-1 * var(--space--2xl));
+    }
   }
   .reset-button {
     margin: auto;
@@ -36,8 +43,10 @@ Organism: Pre-header
     gap: var(--space--sm);
   }
 }
-.settings-open .settings-menu {
-  display: grid;
+.settings-open {
+  .settings-menu {
+    display: grid;
+  }
 }
 .toggle-settings {
   --button-background-color: transparent;
@@ -80,6 +89,6 @@ Organism: Pre-header
 }
 .toolbar-icon-10 {
   .settings-menu {
-    top: var(--drupal-displace-offset-top);
+    margin-top: var(--drupal-displace-offset-top);
   }
 }

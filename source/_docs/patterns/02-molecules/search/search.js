@@ -10,7 +10,7 @@ if (
       <span class="toggle-text">Search</span>
   </button>   
     
-  <div class="wwu-search">
+  <dialog class="wwu-search">
     <form class="search-form">
         <label for="search-box" class="search-label">What can we help you find?</label>
         <input id="search-box" name="q" type="search">
@@ -30,7 +30,7 @@ if (
             <span class="toggle-text">Search</span>
         </button>
     </form>
-  </div>
+  </dialog>
   `;
   
   class WWUSearch extends HTMLElement {
@@ -65,23 +65,29 @@ if (
         /* Open search -------------------------------------------------------------*/
         function open() {
           document.addEventListener("mouseup", click_outside);
-
+          
           search_toggle.setAttribute("aria-expanded", true);
-          search_toggle.querySelector(".component-icon").innerHTML = close_icon;
-
+          search_toggle.querySelector(".component-icon").innerHTML = close_icon;         
+          
           html.classList.add("search-open");
           html.classList.remove("search-closed");
-        }
 
+          search_form.prepend(search_toggle);
+          search_form.showModal();
+        }
+        
         /* Close search -------------------------------------------------------------*/        
         function close() {
           document.removeEventListener("mouseup", click_outside);
-
+          
           search_toggle.setAttribute("aria-expanded", false);
           search_toggle.querySelector(".component-icon").innerHTML = search_icon;
-
+          
           html.classList.add("search-closed");
           html.classList.remove("search-open");
+
+          search_form.before(search_toggle);
+          search_form.close();
         }
 
         function keyboard_close(event) {
@@ -100,7 +106,7 @@ if (
             !isClickInside &&
             !isClickToggle
           ) {
-            close();
+            close();        
           }
         }
 
@@ -108,6 +114,7 @@ if (
         function toggle_search() {
           if (html.classList.contains("search-open")) {
             close();
+            search_toggle.focus();
             return;
           } else {
             open();
