@@ -111,6 +111,7 @@ a.wp-block-button__link {
     }
   }
   &.with-icon {
+    padding-top: var(--space--2xs);
     padding-right: var(--space--xs);
     &:after {
       display: none;

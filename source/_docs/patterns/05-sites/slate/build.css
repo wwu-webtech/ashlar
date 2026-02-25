@@ -41,7 +41,7 @@ button.default {
 .no-touch button.default:hover
 .no-touch input[type="button"]:hover,
 .no-touch input[type="submit"]:hover {
-  background-color: var(--button-background-color--active);
+  background-color: var(--button-background-color--active) !important;
 }
 .dialog {
   max-width: 95vw;
@@ -53,6 +53,17 @@ button.default {
 @media (max-width: 800px) {
   :root {
     --fw-dialog-offset-left: -75vw;
+  }
+}
+.part .responsive-table {
+  overflow: auto;
+}
+.responsive-table {
+  max-width: calc(100vw - var(--space--lg));
+}
+@media(min-width: 1301px) {
+  .responsive-table {
+    max-width: var(--content-area-max-width);
   }
 }
 table.table > * > tr > th {

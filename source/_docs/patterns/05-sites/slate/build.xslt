@@ -15,7 +15,7 @@
             <a href="#main-content" class="skip-link">
               <span class="skip-link-text">Skip to Content </span>
             </a>
-            <wwu-header sitename="Slate Test">
+            <wwu-header sitename="Student Success" sitename-link="#">
             </wwu-header>
           </header>
           <main id="main-content" class="page-content">
@@ -42,6 +42,8 @@
           <script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/social-media-icons.js">
           </script>
           <script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/wwu-footer.js">
+          </script>
+          <script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/table-a11y.js">
           </script>
         </div>
       </body>
