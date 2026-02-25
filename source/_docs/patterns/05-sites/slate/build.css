@@ -34,9 +34,6 @@ a.ui-state-default {
 a.ui-state-hover {
   color: var(--black) !important;
 }
-a[style*="color: #ffffff"] {
-  color: var(--link-color) !important;
-}
 button.default {
   background: var(--button-background-color);
 }
@@ -44,7 +41,7 @@ button.default {
 .no-touch button.default:hover
 .no-touch input[type="button"]:hover,
 .no-touch input[type="submit"]:hover {
-  background-color: var(--button-background-color--active);
+  background-color: var(--button-background-color--active) !important;
 }
 .dialog {
   max-width: 95vw;
@@ -56,6 +53,17 @@ button.default {
 @media (max-width: 800px) {
   :root {
     --fw-dialog-offset-left: -75vw;
+  }
+}
+.part .responsive-table {
+  overflow: auto;
+}
+.responsive-table {
+  max-width: calc(100vw - var(--space--lg));
+}
+@media(min-width: 1301px) {
+  .responsive-table {
+    max-width: var(--content-area-max-width);
   }
 }
 table.table > * > tr > th {
@@ -91,19 +99,6 @@ div.report_row > table.table > tbody > tr:nth-of-type(2n) {
 }
 div.form_page input[type="text"] {
   max-width: 90vw;
-  margin-bottom: 0;
-}
-div.form_page + div.form_page {
-  margin-top: 0;
-}
-.form_container .content {
-  height: 70vh !important;
-  max-height: 700px;
-}
-.form_container input,
-.form_container .form_question {
-  margin-bottom: 0;
-  padding: var(--space--2xs);
 }
 /* FORMS */
 input[type="text"] {
@@ -119,16 +114,4 @@ input[type="text"] {
   box-shadow: none;
   font-family: inherit;
   font-size: var(--font-size--sm);
-}
-#form_response_banner,
-.ui-widget-header,
-.ui-datepicker {
-  color: var(--black) !important;
-  background: var(--table-headers--dark) !important;
-}
-[data-theme="dark"] #form_response_banner,
-[data-theme="dark"] .ui-widget-header,
-[data-theme="dark"] .ui-datepicker {
-  color: var(--white) !important;
-  background: var(--gray) !important;
 }
