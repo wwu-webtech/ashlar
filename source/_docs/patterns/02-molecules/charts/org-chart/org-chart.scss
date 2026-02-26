@@ -182,7 +182,7 @@ Draw Lines
     }
   }
   /* mask vertical bar for end items */
-  [class^="item-level-"]:not(.item-level-1):not(.item-level-2) > ul:before {
+  [class^="item-level-"]:last-of-type:not(.item-level-1):not(.item-level-2) > ul:before {
     position: absolute;
     bottom: 0;
     left: 0;
