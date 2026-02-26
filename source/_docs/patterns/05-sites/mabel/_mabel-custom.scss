@@ -76,21 +76,6 @@ details pre {
 /*------------------------
 Search in Collections
 ------------------------*/
-.views-exposed-form {
-  display: inline-grid;
-  align-content: center;
-  margin-bottom: 0;
-}
-.views-exposed-form + .views-exposed-form {
-  transform: translatey(-0.8rem);
-}
-.views-exposed-form select {
-  width: 100%;
-  margin: 0;
-}
-/*------------------------
-Advanced Search
-------------------------*/
 #views-exposed-form-advanced-search-block-1 > fieldset {
   width: 100%;
 }
