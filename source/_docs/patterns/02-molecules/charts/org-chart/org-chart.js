@@ -32,7 +32,7 @@ if (
                 const top_item = getChildren(this);
                 createNestedLists(top_item, base_list, 1, heading_level, legend_text);               
 
-                if(legend_text) { chart.append(createHighlightLegend(this, legend_text))};
+                if(legend_text) { chart.append(createHighlightLegend(this, legend_text, heading_level))};
             }
         }
     }
@@ -118,12 +118,12 @@ if (
         return item.querySelectorAll(":scope > chart-item");
     }
 
-    function createHighlightLegend(chart, legend) {
+    function createHighlightLegend(chart, legend, heading_level) {
         const highlights = chart.querySelectorAll(".highlight");
         const wrapper = document.createElement("div");    
 
         wrapper.classList.add("highlight-legend");                
-        wrapper.innerHTML=`<span class="highlight"><span class="lightest-gray-bg">Striped item</span></span> indicates ${legend}`;
+        wrapper.innerHTML=`<h${heading_level} class="visually-hidden">Legend</h${heading_level}><span class="highlight"><span class="lightest-gray-bg">Highlighted item</span></span> indicates ${legend}`;
 
         for(let i = 0; i < highlights.length; i++) {
             const item_legend = document.createElement("span");            
