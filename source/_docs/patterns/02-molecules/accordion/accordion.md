@@ -3,15 +3,12 @@ import WWUAccordion from "./accordion.js"
 # Accordion
 Pages with accordions will receive Expand All/Collapse All buttons for improved usability. If you are only using a single accordion on a page or in a given section, we recommend using the [Details](patterns/atoms/details) HTML element instead.
 
-## Component Library
-Include the following script to use the accordion component on your non-Drupal website or application.
+## Component Markup
+This is the simplified, preferred markup for using accordions. Include the following script to use this component on your non-Drupal website or application.
 
 ```
 <script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/accordion.js"></script>
 ```
-
-## Component Markup
-This is the simplified, preferred markup for using accordions. 
 
 <wwu-accordion>
     <wwu-accordion-item label="Cats" heading-level="h3">
@@ -67,6 +64,8 @@ Background colors can be used on accordions, and individual items can be set to 
     </wwu-accordion-item>
 </wwu-accordion>
 ```
+
+
 
 ## HTML Markup
 This markup can be used when custom elements can't, like in Drupal Views. 

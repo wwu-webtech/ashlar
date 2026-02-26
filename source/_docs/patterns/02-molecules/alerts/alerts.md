@@ -2,7 +2,7 @@
 
 ## Emergency
 
-<div id="alert-emergency" class="alert emergency" style={{ display: 'none' }}>
+<div id="alert-emergency" class="alert emergency">
   <h2 className="alert-header">
     There are no emergency alerts at this time.
   </h2>
@@ -64,7 +64,7 @@
 
 ## Weather
 
-<div id="alert-weather" class="alert weather" style={{ display: 'none' }}>
+<div id="alert-weather" class="alert weather">
   <h2 className="alert-header">
     There are no weather alerts at this time.
   </h2>

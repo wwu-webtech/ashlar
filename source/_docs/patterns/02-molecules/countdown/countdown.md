@@ -2,8 +2,7 @@ import WWUCountdown from "./countdown.js"
 
 # Countdown
 
-## Component Library
-Include the following script to use the countdown component on your non-Drupal website or application.
+Include the following script to use this component on your non-Drupal website or application.
 
 ```
 <script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/countdown.js"></script>

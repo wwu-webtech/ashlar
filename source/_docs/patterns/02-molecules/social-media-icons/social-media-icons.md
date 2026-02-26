@@ -3,7 +3,6 @@ import WWUSocial from "./social-media-icons.js"
 # Social Media
 Use these short tags to add social media links to your website. Group should be the name of your department or group, and is used to label the icon for assistive technology users and distinguish it from Western's social media accounts. The icon will be generated automatically based on the URL. To use social icons, place the following script in your HTML:
 
-## Component Library
 Include the following script to use the social icon component on your non-Drupal website or application.
 
 ```
