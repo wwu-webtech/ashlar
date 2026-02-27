@@ -1,5 +1,11 @@
 # Pullquote
 
+Include the following stylesheet to use this component on your non-Drupal website or application.
+
+```
+<link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/components/pullquote.css">
+```
+
 <div className="wwu-pullquote">
   <h2>Quote Label</h2>
 

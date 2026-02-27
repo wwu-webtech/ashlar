@@ -2,7 +2,6 @@ import WWUDialog from "./dialog.js"
 
 # Dialog
 
-## Component Library
 Include the following script to use the dialog component on your non-Drupal website or application.
 
 ```

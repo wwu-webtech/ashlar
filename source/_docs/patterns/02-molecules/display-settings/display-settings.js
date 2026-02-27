@@ -13,11 +13,11 @@ if (
       <span class="toggle-text">Display</span>
   </button>
 
-  <div class="settings-menu">
+  <dialog class="settings-menu">
       <div class="menu-container">
           <h2 class="no-margin--top align-center">Display Settings</h2>
           <fieldset class="theme-selection">
-              <legend>Theme</legend>
+              <legend><h3 class="no-margin">Theme</h3></legend>
               <div class="radio">
                   <input id="default-theme" type="radio" name="theme-select" value="default-theme" checked="checked">
                   <label for="default-theme">Default (System)</label>
@@ -33,7 +33,7 @@ if (
           </fieldset>
           
           <fieldset class="font-selection">
-              <legend>Font</legend>
+              <legend><h3 class="no-margin">Font</h3></legend>
               <div class="radio">
                   <input id="font--default" type="radio" name="font-select" value="font--default" checked="checked">
                   <label for="font--default">Default</label>
@@ -53,7 +53,7 @@ if (
           </fieldset>
           
           <!--fieldset class="language-selection">
-              <legend>Language</legend>
+              <legend><h3 class="no-margin">Language</h3></legend>
               <input id="language--english" type="radio" name="font-select" value="language--english" checked="checked">
               <label for="language--english">English</label>
               <input id="language--spanish" type="radio" name="font-select" value="language--spanish">
@@ -66,7 +66,7 @@ if (
           <path
           d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z" />
       </svg></span> Reset preferences</button>
-  </div>   
+  </dialog>   
   `;
   
   class DisplaySettings extends HTMLElement {
@@ -107,11 +107,12 @@ if (
           
           display_toggle.setAttribute("aria-expanded", true);
           display_toggle.querySelector(".component-icon").innerHTML = close_icon;
-          
-          settings_menu.removeAttribute("aria-hidden");
 
           html.classList.add("settings-open");
           html.classList.remove("settings-closed");
+
+          settings_menu.prepend(display_toggle);
+          settings_menu.showModal();
         }
         
         /* Close the menu -------------------------------------------------------------*/
@@ -120,11 +121,12 @@ if (
           
           display_toggle.setAttribute("aria-expanded", false);
           display_toggle.querySelector(".component-icon").innerHTML = settings_icon;
-          
-          settings_menu.setAttribute("aria-hidden", true);
 
           html.classList.add("settings-closed");
           html.classList.remove("settings-open");
+
+          settings_menu.before(display_toggle);
+          settings_menu.close();
         }
         
         function keyboard_close(event) {
@@ -154,6 +156,7 @@ if (
             return;
           } else {
             close();
+            display_toggle.focus();
             return;
           }
         }

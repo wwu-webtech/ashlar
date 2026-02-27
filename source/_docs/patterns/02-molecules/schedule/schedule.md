@@ -1,5 +1,11 @@
 # Schedule
 
+Include the following stylesheet to use this component on your non-Drupal website or application.
+
+```
+<link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/components/schedule.css">
+```
+
 <div className="wwu-schedule">
   <h2 className="title">
     Schedule of Events

@@ -6,6 +6,7 @@ wwu-background-video,
 .bg-video-container {
   position: relative;
   display: grid;
+  overflow: hidden;
   place-content: center;
   padding: var(--space--2xl);
   text-align: center;
