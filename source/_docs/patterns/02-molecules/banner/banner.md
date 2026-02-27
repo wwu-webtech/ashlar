@@ -2,6 +2,12 @@ import Placeholder from '@site/static/img/placeholder.jpg';
 
 # Banner
 
+Include the following stylesheet to use this component on your non-Drupal website or application.
+
+```
+<link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/components/banner.css">
+```
+
 <div className="wwu-banner blue-overlay min-height--25vh">
     <div className="content">
         <h2 className="title">A Title for the Banner</h2>

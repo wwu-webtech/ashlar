@@ -1,8 +1,8 @@
 import { runAutoA11yTests } from "../../../../cypress/support/global"
 
-describe("molecule: testimonial", () => {
+describe('molecule: donut chart', () => {
   beforeEach(() => {
-    cy.visit("/patterns/molecules/quotes/testimonial")
+    cy.visit('/patterns/molecules/donut-chart')
     cy.get(".theme-doc-markdown").should("be.visible")
   })
 

@@ -129,6 +129,13 @@ menu-extras:
   version: 1.x
   js:
     build/js/menu-extras.js: {}
+org-chart:
+  version: 1.x
+  css:
+    theme:
+      build/css/components/org-chart.css: {}
+  js:
+    build/js/org-chart.js: {}
 print-styling:
   version: 1.x
   css:
