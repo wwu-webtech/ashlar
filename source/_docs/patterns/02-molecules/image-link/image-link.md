@@ -1,6 +1,13 @@
 import Placeholder from '@site/static/img/placeholder.jpg';
 
 # Image Link
+
+Include the following stylesheet to use this component on your non-Drupal website or application.
+
+```
+<link rel="stylesheet" href="https://ashlar.blob.core.windows.net/ashlar-theme-files/css/components/image-link.css">
+```
+
 <div className="wwu-image-link"> 
   <div className="image-link">
     <a href="#">Prospective Students</a>

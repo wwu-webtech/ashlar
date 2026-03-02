@@ -1,9 +1,15 @@
 import WWUBackgroundVideo from "./background-video.js"
 
 # Background Video
-<div class="wwu-beyond-basics-block block light-green-bg standard-margin standard-padding">
-  <p class="no-margin--bottom"><strong>Important!</strong> See "Pattern Notes" before using on a live site.</p>
+<div class="blue-bg standard-padding text-align-center standard-margin--bottom">
+  <p class="no-margin"><strong>Important!</strong> See <a href="#pattern-notes">Pattern Notes</a> before using on a live site.</p>
 </div>
+
+Include the following script to use this component on your non-Drupal website or application.
+
+```
+<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/background-video.js"></script>
+```
 
 <wwu-background-video src="https://www.wwu.edu/sites/default/files/2020-04/Viking%20on%20Mars.mp4" alt="4-second looping animation. The Mars Rover Curiosity crawls over rocky terrain as the camera pans over a vast, red landscape" class="min-height--50vh headings--big-and-bold black-overlay">
   <h2>Heading for this Video</h2>
@@ -11,7 +17,6 @@ import WWUBackgroundVideo from "./background-video.js"
 </wwu-background-video>
 
 ```
-<script src="https://ashlar.blob.core.windows.net/ashlar-theme-files/js/background-video.js"></script>
 <wwu-background-video src="https://www.wwu.edu/files/2020-04/Viking%20on%20Mars.mp4" alt="4-second looping animation. The Mars Rover Curiosity crawls over rocky terrain as the camera pans over a vast, red landscape" class="min-height--50vh headings--big-and-bold black-overlay">
   <h2>Heading for this Video</h2>
   <p>Some content for this video. Not to be confused with the alt text, which should be a short description of what is going on in the video :)</p>
