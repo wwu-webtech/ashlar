@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkashlar_docs=globalThis.webpackChunkashlar_docs||[]).push([[5832],{9990(a){a.exports=JSON.parse('{"metadata":{"permalink":"/changelog","page":1,"postsPerPage":10,"totalPages":5,"totalCount":45,"nextPage":"/changelog/page/2","blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

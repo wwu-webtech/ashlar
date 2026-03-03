@@ -4,7 +4,7 @@
         <title>Ashlar Blog</title>
         <link>https://ashlar.wwu.edu/changelog</link>
         <description>Ashlar Blog</description>
-        <lastBuildDate>Wed, 10 Sep 2025 10:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 06 Jan 2026 10:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,40 +12,71 @@
             <title><![CDATA[6.0.x Updates]]></title>
             <link>https://ashlar.wwu.edu/changelog/version-6-0</link>
             <guid>https://ashlar.wwu.edu/changelog/version-6-0</guid>
+            <pubDate>Tue, 06 Jan 2026 10:00:00 GMT</pubDate>
+            <description><![CDATA[6.0.3]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="603">6.0.3<a href="https://ashlar.wwu.edu/changelog/version-6-0#603" class="hash-link" aria-label="Direct link to 6.0.3" title="Direct link to 6.0.3" translate="no">​</a></h2>
+<p><strong>March 2, 2026</strong></p>
+<ul>
+<li class="">Documentation for component use updated throughout this site</li>
+<li class="">New org chart styles to accompany block type</li>
+<li class="">Style updates for Slate and MABEL</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="602">6.0.2<a href="https://ashlar.wwu.edu/changelog/version-6-0#602" class="hash-link" aria-label="Direct link to 6.0.2" title="Direct link to 6.0.2" translate="no">​</a></h2>
+<p><strong>February 2, 2026</strong></p>
+<ul>
+<li class="">Docusaurus updated</li>
+<li class="">Styles for MABEL updated for CEDAR launch</li>
+<li class="">Slate style overrides added</li>
+<li class="">Alert icons added</li>
+<li class="">NPM audit</li>
+<li class="">Minor accordion bug fixed</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="601">6.0.1<a href="https://ashlar.wwu.edu/changelog/version-6-0#601" class="hash-link" aria-label="Direct link to 6.0.1" title="Direct link to 6.0.1" translate="no">​</a></h2>
+<p><strong>January 6, 2026</strong></p>
+<ul>
+<li class="">Card, banner, and navigation style fixes</li>
+<li class="">Catalog implementation updates for 6.0 release</li>
+</ul>]]></content:encoded>
+            <category>minor-release</category>
+        </item>
+        <item>
+            <title><![CDATA[6.0.x Updates]]></title>
+            <link>https://ashlar.wwu.edu/changelog/version-6</link>
+            <guid>https://ashlar.wwu.edu/changelog/version-6</guid>
             <pubDate>Wed, 10 Sep 2025 10:00:00 GMT</pubDate>
             <description><![CDATA[6.0.0]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="600">6.0.0<a href="https://ashlar.wwu.edu/changelog/version-6-0#600" class="hash-link" aria-label="Direct link to 6.0.0" title="Direct link to 6.0.0">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="september-10-2025---major-theme-update">September 10, 2025 - Major Theme Update!<a href="https://ashlar.wwu.edu/changelog/version-6-0#september-10-2025---major-theme-update" class="hash-link" aria-label="Direct link to September 10, 2025 - Major Theme Update!" title="Direct link to September 10, 2025 - Major Theme Update!">​</a></h3>
-<p>WebTech and University Marketing have been working for the past 10 months on a major visual overhaul of Western's Design system and Drupal/Wordpress/Standalone app theme. The most obvious changes with this update are the with the Western Header and Footer, but there are a number of visual updates to block types and components as well. This update is being rolled out to select sites at the beginning of next week. At the time that it goes live on these sites, it will become available on an opt-in basis to other Drupal sites. In December 2025, we will be rolling the theme update out to all Drupal sites. If you would like to <a href="https://webtech.wwu.edu/form/opt-in-to-ashlar-6" target="_blank" rel="noopener noreferrer">opt-in to the theme update now, fill out this form</a>.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="header-and-main-navigation-changes">Header and main navigation changes<a href="https://ashlar.wwu.edu/changelog/version-6-0#header-and-main-navigation-changes" class="hash-link" aria-label="Direct link to Header and main navigation changes" title="Direct link to Header and main navigation changes">​</a></h4>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="600">6.0.0<a href="https://ashlar.wwu.edu/changelog/version-6#600" class="hash-link" aria-label="Direct link to 6.0.0" title="Direct link to 6.0.0" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="september-10-2025---major-theme-update">September 10, 2025 - Major Theme Update!<a href="https://ashlar.wwu.edu/changelog/version-6#september-10-2025---major-theme-update" class="hash-link" aria-label="Direct link to September 10, 2025 - Major Theme Update!" title="Direct link to September 10, 2025 - Major Theme Update!" translate="no">​</a></h3>
+<p>WebTech and University Marketing have been working for the past 10 months on a major visual overhaul of Western's Design system and Drupal/Wordpress/Standalone app theme. The most obvious changes with this update are the with the Western Header and Footer, but there are a number of visual updates to block types and components as well. This update is being rolled out to select sites at the beginning of next week. At the time that it goes live on these sites, it will become available on an opt-in basis to other Drupal sites. In December 2025, we will be rolling the theme update out to all Drupal sites. If you would like to <a href="https://webtech.wwu.edu/form/opt-in-to-ashlar-6" target="_blank" rel="noopener noreferrer" class="">opt-in to the theme update now, fill out this form</a>.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="header-and-main-navigation-changes">Header and main navigation changes<a href="https://ashlar.wwu.edu/changelog/version-6#header-and-main-navigation-changes" class="hash-link" aria-label="Direct link to Header and main navigation changes" title="Direct link to Header and main navigation changes" translate="no">​</a></h4>
 <p>The header has been totally overhauled so that it better utilizes space. Various elements of the header have been rearranged, so quick links, university links, search and display settings toggles are in new locations. The logo and site name have changed locations as well.</p>
 <p>Old:
-<img loading="lazy" alt="Old Western header, with black pre-header, dark blue background and Make Waves logo variant" src="https://ashlar.wwu.edu/assets/images/old-header-a35620e5c1754b9a7e054134b07d77a6.webp" width="2541" height="327" class="img_ev3q"></p>
+<img decoding="async" loading="lazy" alt="Old Western header, with black pre-header, dark blue background and Make Waves logo variant" src="https://ashlar.wwu.edu/assets/images/old-header-a35620e5c1754b9a7e054134b07d77a6.webp" width="2541" height="327" class="img_ev3q"></p>
 <p>New:
-<img loading="lazy" alt="New Western header, with white background and smaller logo variant" src="https://ashlar.wwu.edu/assets/images/new-header-aecfd4a839627a43ea2572a142a572ae.webp" width="2546" height="201" class="img_ev3q"></p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="new-menu-option">New menu option<a href="https://ashlar.wwu.edu/changelog/version-6-0#new-menu-option" class="hash-link" aria-label="Direct link to New menu option" title="Direct link to New menu option">​</a></h4>
+<img decoding="async" loading="lazy" alt="New Western header, with white background and smaller logo variant" src="https://ashlar.wwu.edu/assets/images/new-header-aecfd4a839627a43ea2572a142a572ae.webp" width="2546" height="201" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-menu-option">New menu option<a href="https://ashlar.wwu.edu/changelog/version-6#new-menu-option" class="hash-link" aria-label="Direct link to New menu option" title="Direct link to New menu option" translate="no">​</a></h4>
 <p>The default setting for the new main navigation looks and operates the same way it does now, but with style updates. Quick links and university links appear first on the page, followed by Search, display settings, the site name and logo. After this comes the main page navigation, before the page content.</p>
-<p><img loading="lazy" alt="New main navigation with a menu item expanded" src="https://ashlar.wwu.edu/assets/images/new-regular-menu-cb7739949001cadf1b41a69e7ff8f6ba.webp" width="1304" height="541" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="New main navigation with a menu item expanded" src="https://ashlar.wwu.edu/assets/images/new-regular-menu-cb7739949001cadf1b41a69e7ff8f6ba.webp" width="1304" height="541" class="img_ev3q"></p>
 <p>We have also introduced a "hamburger always on" option, in which the navigation is toggled by the "menu" button. With this option on the quick links, university links, AND main navigation are all placed behind a menu toggle.</p>
-<p><img loading="lazy" alt="New header in desktop with the menu toggle on, a very visually clean look" src="https://ashlar.wwu.edu/assets/images/new-hp-476c0e8da927e0c4d4eaddda25892c00.webp" width="1624" height="998" class="img_ev3q">
-<img loading="lazy" alt="New main navigation behind the toggle, expanded in desktop view" src="https://ashlar.wwu.edu/assets/images/new-hamburger-menu-487cff875653232ef1a545e2b684231d.webp" width="1299" height="899" class="img_ev3q"></p>
-<p>This option better accommodates larger menus with a lot of sub-menu options, and allows users to more quickly see the content of the page. <a href="https://webtech.wwu.edu/blog/how-change-menu-systems-ashlar-6" target="_blank" rel="noopener noreferrer">You can learn how to enable the hamburger always on option here</a>.</p>
+<p><img decoding="async" loading="lazy" alt="New header in desktop with the menu toggle on, a very visually clean look" src="https://ashlar.wwu.edu/assets/images/new-hp-476c0e8da927e0c4d4eaddda25892c00.webp" width="1624" height="998" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="New main navigation behind the toggle, expanded in desktop view" src="https://ashlar.wwu.edu/assets/images/new-hamburger-menu-487cff875653232ef1a545e2b684231d.webp" width="1299" height="899" class="img_ev3q"></p>
+<p>This option better accommodates larger menus with a lot of sub-menu options, and allows users to more quickly see the content of the page. <a href="https://webtech.wwu.edu/blog/how-change-menu-systems-ashlar-6" target="_blank" rel="noopener noreferrer" class="">You can learn how to enable the hamburger always on option here</a>.</p>
 <p>No matter which option is enabled, on smaller screens/mobile devices all menus will still be located behind the menu toggle.</p>
-<p><img loading="lazy" alt="New mobile navigation when expanded" src="https://ashlar.wwu.edu/assets/images/new-mobile-menu-56d179f1371bd49d42719666a680bba9.webp" width="480" height="1167" class="img_ev3q"></p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="new-footer-styles">New footer styles<a href="https://ashlar.wwu.edu/changelog/version-6-0#new-footer-styles" class="hash-link" aria-label="Direct link to New footer styles" title="Direct link to New footer styles">​</a></h4>
+<p><img decoding="async" loading="lazy" alt="New mobile navigation when expanded" src="https://ashlar.wwu.edu/assets/images/new-mobile-menu-56d179f1371bd49d42719666a680bba9.webp" width="480" height="1167" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-footer-styles">New footer styles<a href="https://ashlar.wwu.edu/changelog/version-6#new-footer-styles" class="hash-link" aria-label="Direct link to New footer styles" title="Direct link to New footer styles" translate="no">​</a></h4>
 <p>Our new footer features a beautiful and graphic illustration of Sehome hill and Bellingham Bay, by local artist Gretchen Leggitt.</p>
-<p><img loading="lazy" alt="New footer with colorfully illustrated depiction of Bellingham Bay" src="https://ashlar.wwu.edu/assets/images/new-footer-d73a3e65ab236da5a6c8ee669af15dfb.webp" width="1548" height="800" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="New footer with colorfully illustrated depiction of Bellingham Bay" src="https://ashlar.wwu.edu/assets/images/new-footer-d73a3e65ab236da5a6c8ee669af15dfb.webp" width="1548" height="800" class="img_ev3q"></p>
 <p>This update includes changes to the site footer regions that often contain custom content. Most of this content should adapt well to theme changes, with the content appearing in the same order and visual location as before, but images and identity marks that appear in this area may need to be updated to better suit the background color.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="theme-color-updates">Theme color updates<a href="https://ashlar.wwu.edu/changelog/version-6-0#theme-color-updates" class="hash-link" aria-label="Direct link to Theme color updates" title="Direct link to Theme color updates">​</a></h4>
-<p>In order to simplify and unify the theme visually, the <a href="https://ashlar.wwu.edu/patterns/atoms/color">theme colors</a> have been updated, and essentially reverted to an earlier standard. The medium green has been removed and yellow has been added back. Light green is still available, but it's use on the web has been reduced. For Drupal sites, the available <strong>background colors</strong> on various block types have changed, to reduce visual clutter. Blocks with background colors that have been removed will default to another available color, e.g. light green blocks will become light blue.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="component-style-updates">Component style updates<a href="https://ashlar.wwu.edu/changelog/version-6-0#component-style-updates" class="hash-link" aria-label="Direct link to Component style updates" title="Direct link to Component style updates">​</a></h4>
-<p>There have been some style updates to components such as <a href="https://ashlar.wwu.edu/patterns/atoms/links">links</a>, <a href="https://ashlar.wwu.edu/patterns/atoms/links/call-to-action">call to action links</a>, <a href="https://ashlar.wwu.edu/patterns/molecules/announcement">announcements</a>, and <a href="https://ashlar.wwu.edu/patterns/molecules/image-with-description">images with descriptions</a>.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="section-classes">Section Classes<a href="https://ashlar.wwu.edu/changelog/version-6-0#section-classes" class="hash-link" aria-label="Direct link to Section Classes" title="Direct link to Section Classes">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="theme-color-updates">Theme color updates<a href="https://ashlar.wwu.edu/changelog/version-6#theme-color-updates" class="hash-link" aria-label="Direct link to Theme color updates" title="Direct link to Theme color updates" translate="no">​</a></h4>
+<p>In order to simplify and unify the theme visually, the <a class="" href="https://ashlar.wwu.edu/patterns/atoms/color">theme colors</a> have been updated, and essentially reverted to an earlier standard. The medium green has been removed and yellow has been added back. Light green is still available, but it's use on the web has been reduced. For Drupal sites, the available <strong>background colors</strong> on various block types have changed, to reduce visual clutter. Blocks with background colors that have been removed will default to another available color, e.g. light green blocks will become light blue.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="component-style-updates">Component style updates<a href="https://ashlar.wwu.edu/changelog/version-6#component-style-updates" class="hash-link" aria-label="Direct link to Component style updates" title="Direct link to Component style updates" translate="no">​</a></h4>
+<p>There have been some style updates to components such as <a class="" href="https://ashlar.wwu.edu/patterns/atoms/links">links</a>, <a class="" href="https://ashlar.wwu.edu/patterns/atoms/links/call-to-action">call to action links</a>, <a class="" href="https://ashlar.wwu.edu/patterns/molecules/announcement">announcements</a>, and <a class="" href="https://ashlar.wwu.edu/patterns/molecules/image-with-description">images with descriptions</a>.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="section-classes">Section Classes<a href="https://ashlar.wwu.edu/changelog/version-6#section-classes" class="hash-link" aria-label="Direct link to Section Classes" title="Direct link to Section Classes" translate="no">​</a></h4>
 <p>As we roll out the new theme, we are also rolling out a new feature: Section Classes. These allow you to set background colors and styles on layout <strong>sections</strong> in addition to blocks. This will allow for multiple column layouts with colored backgrounds.</p>
-<p><img loading="lazy" alt="section background featuring wavy lines" src="https://ashlar.wwu.edu/assets/images/section-bg-1-e4472f5912c9193c3ef985c9c2d466e2.webp" width="1844" height="427" class="img_ev3q">
-<img loading="lazy" alt="section background with a gradient wave" src="https://ashlar.wwu.edu/assets/images/section-bg-2-708eb3eb805de4da0d0b371cd40240c7.webp" width="1852" height="543" class="img_ev3q"></p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="other-changes">Other changes<a href="https://ashlar.wwu.edu/changelog/version-6-0#other-changes" class="hash-link" aria-label="Direct link to Other changes" title="Direct link to Other changes">​</a></h4>
-<p>The old set up for "box headlines" has been deprecated, it is now a <a href="https://ashlar.wwu.edu/patterns/molecules/banner">style variant on banners</a>. In the long run this should be easier to use. WebTech will handle any conversions from the old set up, and new style options will be added in the future.</p>]]></content:encoded>
+<p><img decoding="async" loading="lazy" alt="section background featuring wavy lines" src="https://ashlar.wwu.edu/assets/images/section-bg-1-e4472f5912c9193c3ef985c9c2d466e2.webp" width="1844" height="427" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="section background with a gradient wave" src="https://ashlar.wwu.edu/assets/images/section-bg-2-708eb3eb805de4da0d0b371cd40240c7.webp" width="1852" height="543" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="other-changes">Other changes<a href="https://ashlar.wwu.edu/changelog/version-6#other-changes" class="hash-link" aria-label="Direct link to Other changes" title="Direct link to Other changes" translate="no">​</a></h4>
+<p>The old set up for "box headlines" has been deprecated, it is now a <a class="" href="https://ashlar.wwu.edu/patterns/molecules/banner">style variant on banners</a>. In the long run this should be easier to use. WebTech will handle any conversions from the old set up, and new style options will be added in the future.</p>]]></content:encoded>
             <category>major-release</category>
         </item>
         <item>
@@ -54,113 +85,113 @@
             <guid>https://ashlar.wwu.edu/changelog/version-5-5</guid>
             <pubDate>Tue, 02 Sep 2025 12:00:00 GMT</pubDate>
             <description><![CDATA[5.5.14]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5514">5.5.14<a href="https://ashlar.wwu.edu/changelog/version-5-5#5514" class="hash-link" aria-label="Direct link to 5.5.14" title="Direct link to 5.5.14">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5514">5.5.14<a href="https://ashlar.wwu.edu/changelog/version-5-5#5514" class="hash-link" aria-label="Direct link to 5.5.14" title="Direct link to 5.5.14" translate="no">​</a></h2>
 <p>** October 6, 2025 **</p>
 <ul>
-<li>Email generator update</li>
-<li>404 page fix</li>
+<li class="">Email generator update</li>
+<li class="">404 page fix</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5513">5.5.13<a href="https://ashlar.wwu.edu/changelog/version-5-5#5513" class="hash-link" aria-label="Direct link to 5.5.13" title="Direct link to 5.5.13">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5513">5.5.13<a href="https://ashlar.wwu.edu/changelog/version-5-5#5513" class="hash-link" aria-label="Direct link to 5.5.13" title="Direct link to 5.5.13" translate="no">​</a></h2>
 <p>** September 2, 2025 **</p>
 <ul>
-<li>Fix for table headers</li>
-<li>Fix for CKEDitor font color</li>
-<li>Icon fixed for x.com URLs</li>
-<li>Function call error fixed</li>
-<li>Support for Entity Print module added (in progress)</li>
+<li class="">Fix for table headers</li>
+<li class="">Fix for CKEDitor font color</li>
+<li class="">Icon fixed for x.com URLs</li>
+<li class="">Function call error fixed</li>
+<li class="">Support for Entity Print module added (in progress)</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5512">5.5.12<a href="https://ashlar.wwu.edu/changelog/version-5-5#5512" class="hash-link" aria-label="Direct link to 5.5.12" title="Direct link to 5.5.12">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5512">5.5.12<a href="https://ashlar.wwu.edu/changelog/version-5-5#5512" class="hash-link" aria-label="Direct link to 5.5.12" title="Direct link to 5.5.12" translate="no">​</a></h2>
 <p>** August 18, 2025 **</p>
 <ul>
-<li>Webform accessibility fixes (2d scrolling, dark mode)</li>
-<li>Focus fix for navigation</li>
-<li>Style fixes for accordion expand/collapse</li>
+<li class="">Webform accessibility fixes (2d scrolling, dark mode)</li>
+<li class="">Focus fix for navigation</li>
+<li class="">Style fixes for accordion expand/collapse</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5511">5.5.11<a href="https://ashlar.wwu.edu/changelog/version-5-5#5511" class="hash-link" aria-label="Direct link to 5.5.11" title="Direct link to 5.5.11">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5511">5.5.11<a href="https://ashlar.wwu.edu/changelog/version-5-5#5511" class="hash-link" aria-label="Direct link to 5.5.11" title="Direct link to 5.5.11" translate="no">​</a></h2>
 <p>** August 4, 2025**</p>
 <ul>
-<li>Course fix for catalog links</li>
-<li>Webform horizontal scroll fix</li>
-<li>Styles for lightcast career widget</li>
-<li>Video style fix</li>
-<li>NPM Vulnerabilities update</li>
+<li class="">Course fix for catalog links</li>
+<li class="">Webform horizontal scroll fix</li>
+<li class="">Styles for lightcast career widget</li>
+<li class="">Video style fix</li>
+<li class="">NPM Vulnerabilities update</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5510">5.5.10<a href="https://ashlar.wwu.edu/changelog/version-5-5#5510" class="hash-link" aria-label="Direct link to 5.5.10" title="Direct link to 5.5.10">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5510">5.5.10<a href="https://ashlar.wwu.edu/changelog/version-5-5#5510" class="hash-link" aria-label="Direct link to 5.5.10" title="Direct link to 5.5.10" translate="no">​</a></h2>
 <p>** June 24, 2025 **</p>
 <ul>
-<li>Added 403 page template to docs</li>
-<li>Beginning deprecation of headline block, to be replaced by a style option in banners</li>
+<li class="">Added 403 page template to docs</li>
+<li class="">Beginning deprecation of headline block, to be replaced by a style option in banners</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="559">5.5.9<a href="https://ashlar.wwu.edu/changelog/version-5-5#559" class="hash-link" aria-label="Direct link to 5.5.9" title="Direct link to 5.5.9">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="559">5.5.9<a href="https://ashlar.wwu.edu/changelog/version-5-5#559" class="hash-link" aria-label="Direct link to 5.5.9" title="Direct link to 5.5.9" translate="no">​</a></h2>
 <p>** June 2, 2025 **</p>
 <ul>
-<li>Update banner template to use media field</li>
-<li>Add email option to social media icons</li>
+<li class="">Update banner template to use media field</li>
+<li class="">Add email option to social media icons</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="558">5.5.8<a href="https://ashlar.wwu.edu/changelog/version-5-5#558" class="hash-link" aria-label="Direct link to 5.5.8" title="Direct link to 5.5.8">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="558">5.5.8<a href="https://ashlar.wwu.edu/changelog/version-5-5#558" class="hash-link" aria-label="Direct link to 5.5.8" title="Direct link to 5.5.8" translate="no">​</a></h2>
 <p>** May 19, 2025 **</p>
 <ul>
-<li>catoid updated for catalog links</li>
-<li>Remote access header template saved in theme</li>
-<li>PNG versions of social media icons added</li>
+<li class="">catoid updated for catalog links</li>
+<li class="">Remote access header template saved in theme</li>
+<li class="">PNG versions of social media icons added</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="557">5.5.7<a href="https://ashlar.wwu.edu/changelog/version-5-5#557" class="hash-link" aria-label="Direct link to 5.5.7" title="Direct link to 5.5.7">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="557">5.5.7<a href="https://ashlar.wwu.edu/changelog/version-5-5#557" class="hash-link" aria-label="Direct link to 5.5.7" title="Direct link to 5.5.7" translate="no">​</a></h2>
 <p>** March 31, 2025 **</p>
 <ul>
-<li>Webform Progress Tracker improvements</li>
-<li>Added image caption helper class</li>
-<li>Autoload dialog option added</li>
-<li>Thumbnail card style improvements</li>
-<li>Contact URL in footer updated</li>
+<li class="">Webform Progress Tracker improvements</li>
+<li class="">Added image caption helper class</li>
+<li class="">Autoload dialog option added</li>
+<li class="">Thumbnail card style improvements</li>
+<li class="">Contact URL in footer updated</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="556">5.5.6<a href="https://ashlar.wwu.edu/changelog/version-5-5#556" class="hash-link" aria-label="Direct link to 5.5.6" title="Direct link to 5.5.6">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="556">5.5.6<a href="https://ashlar.wwu.edu/changelog/version-5-5#556" class="hash-link" aria-label="Direct link to 5.5.6" title="Direct link to 5.5.6" translate="no">​</a></h2>
 <p>** March 3, 2025 **</p>
 <ul>
-<li>Social media link updates, Bluesky available as an icon</li>
-<li>Reduced motion option for 404 pages</li>
-<li>Update to email signature generator</li>
+<li class="">Social media link updates, Bluesky available as an icon</li>
+<li class="">Reduced motion option for 404 pages</li>
+<li class="">Update to email signature generator</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="555">5.5.5<a href="https://ashlar.wwu.edu/changelog/version-5-5#555" class="hash-link" aria-label="Direct link to 5.5.5" title="Direct link to 5.5.5">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="555">5.5.5<a href="https://ashlar.wwu.edu/changelog/version-5-5#555" class="hash-link" aria-label="Direct link to 5.5.5" title="Direct link to 5.5.5" translate="no">​</a></h2>
 <p>** January 27, 2025 **</p>
 <ul>
-<li>Handshake added to myWestern menu</li>
-<li>link to report bias updated</li>
+<li class="">Handshake added to myWestern menu</li>
+<li class="">link to report bias updated</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="554">5.5.4<a href="https://ashlar.wwu.edu/changelog/version-5-5#554" class="hash-link" aria-label="Direct link to 5.5.4" title="Direct link to 5.5.4">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="554">5.5.4<a href="https://ashlar.wwu.edu/changelog/version-5-5#554" class="hash-link" aria-label="Direct link to 5.5.4" title="Direct link to 5.5.4" translate="no">​</a></h2>
 <p>** December 16, 2024 **</p>
 <ul>
-<li>More ultimenu bug fixes</li>
-<li>Reduced motion setting added for 404 animation</li>
+<li class="">More ultimenu bug fixes</li>
+<li class="">Reduced motion setting added for 404 animation</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="553">5.5.3<a href="https://ashlar.wwu.edu/changelog/version-5-5#553" class="hash-link" aria-label="Direct link to 5.5.3" title="Direct link to 5.5.3">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="553">5.5.3<a href="https://ashlar.wwu.edu/changelog/version-5-5#553" class="hash-link" aria-label="Direct link to 5.5.3" title="Direct link to 5.5.3" translate="no">​</a></h2>
 <p>** December 9, 2024 **</p>
 <ul>
-<li>Flickering menu bug fix</li>
-<li>Column helper class fix for small displays</li>
-<li>NPM updates</li>
+<li class="">Flickering menu bug fix</li>
+<li class="">Column helper class fix for small displays</li>
+<li class="">NPM updates</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="552">5.5.2<a href="https://ashlar.wwu.edu/changelog/version-5-5#552" class="hash-link" aria-label="Direct link to 5.5.2" title="Direct link to 5.5.2">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="552">5.5.2<a href="https://ashlar.wwu.edu/changelog/version-5-5#552" class="hash-link" aria-label="Direct link to 5.5.2" title="Direct link to 5.5.2" translate="no">​</a></h2>
 <p>** November 19, 2024 **</p>
 <ul>
-<li>Support for Ultimenu 3.0.5 upgrade</li>
-<li>New 403 access denied template</li>
-<li>Event list space fix</li>
+<li class="">Support for Ultimenu 3.0.5 upgrade</li>
+<li class="">New 403 access denied template</li>
+<li class="">Event list space fix</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="551">5.5.1<a href="https://ashlar.wwu.edu/changelog/version-5-5#551" class="hash-link" aria-label="Direct link to 5.5.1" title="Direct link to 5.5.1">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="551">5.5.1<a href="https://ashlar.wwu.edu/changelog/version-5-5#551" class="hash-link" aria-label="Direct link to 5.5.1" title="Direct link to 5.5.1" translate="no">​</a></h2>
 <p>** October 7, 2024 **</p>
 <ul>
-<li>NPM Vulnerability fixes and documentation updates</li>
+<li class="">NPM Vulnerability fixes and documentation updates</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="550">5.5.0<a href="https://ashlar.wwu.edu/changelog/version-5-5#550" class="hash-link" aria-label="Direct link to 5.5.0" title="Direct link to 5.5.0">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="550">5.5.0<a href="https://ashlar.wwu.edu/changelog/version-5-5#550" class="hash-link" aria-label="Direct link to 5.5.0" title="Direct link to 5.5.0" translate="no">​</a></h2>
 <p>** September 23, 2024 **</p>
 <ul>
-<li>New feature: <a href="https://webtech.wwu.edu/news/accordion-component-new-feature" target="_blank" rel="noopener noreferrer">Expand all accordion buttons</a></li>
-<li>Org chart style fixes</li>
-<li>CORS fix for font loading</li>
-<li>Gulp has been updated to version 5.0, which should reduce vulnerability warnings on npm install</li>
-<li>Improved styles for code blocks</li>
-<li>New card styles added</li>
-<li>New banner styles added</li>
+<li class="">New feature: <a href="https://webtech.wwu.edu/news/accordion-component-new-feature" target="_blank" rel="noopener noreferrer" class="">Expand all accordion buttons</a></li>
+<li class="">Org chart style fixes</li>
+<li class="">CORS fix for font loading</li>
+<li class="">Gulp has been updated to version 5.0, which should reduce vulnerability warnings on npm install</li>
+<li class="">Improved styles for code blocks</li>
+<li class="">New card styles added</li>
+<li class="">New banner styles added</li>
 </ul>]]></content:encoded>
             <category>minor-release</category>
         </item>
@@ -170,34 +201,34 @@
             <guid>https://ashlar.wwu.edu/changelog/version-5-4</guid>
             <pubDate>Mon, 19 Aug 2024 12:00:00 GMT</pubDate>
             <description><![CDATA[5.4.0]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="540">5.4.0<a href="https://ashlar.wwu.edu/changelog/version-5-4#540" class="hash-link" aria-label="Direct link to 5.4.0" title="Direct link to 5.4.0">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="540">5.4.0<a href="https://ashlar.wwu.edu/changelog/version-5-4#540" class="hash-link" aria-label="Direct link to 5.4.0" title="Direct link to 5.4.0" translate="no">​</a></h2>
 <p>** June 18, 2024 **</p>
 <ul>
-<li>New Feature: Search Settings</li>
-<li>New Feature: Option added to disable Google Tag Manager in theme settings</li>
-<li>2D scroll fixes<!-- -->
+<li class="">New Feature: Search Settings</li>
+<li class="">New Feature: Option added to disable Google Tag Manager in theme settings</li>
+<li class="">2D scroll fixes<!-- -->
 <ul>
-<li>Responsive table script added to contain horizontal scroll to table container only</li>
-<li>Reduced font size for large headings on very small screens</li>
-<li>Style adjustements for testimonials and profile photos</li>
+<li class="">Responsive table script added to contain horizontal scroll to table container only</li>
+<li class="">Reduced font size for large headings on very small screens</li>
+<li class="">Style adjustements for testimonials and profile photos</li>
 </ul>
 </li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="541">5.4.1<a href="https://ashlar.wwu.edu/changelog/version-5-4#541" class="hash-link" aria-label="Direct link to 5.4.1" title="Direct link to 5.4.1">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="541">5.4.1<a href="https://ashlar.wwu.edu/changelog/version-5-4#541" class="hash-link" aria-label="Direct link to 5.4.1" title="Direct link to 5.4.1" translate="no">​</a></h2>
 <p>** July 15, 2024 **</p>
 <ul>
-<li>Threads removed from WWU footer</li>
-<li>Custom element bug fixed</li>
-<li>Site name added to noscript header</li>
-<li>Tag manager removed from theme</li>
-<li>Converted jQuery to Vanilla JS in a few components</li>
+<li class="">Threads removed from WWU footer</li>
+<li class="">Custom element bug fixed</li>
+<li class="">Site name added to noscript header</li>
+<li class="">Tag manager removed from theme</li>
+<li class="">Converted jQuery to Vanilla JS in a few components</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="542">5.4.2<a href="https://ashlar.wwu.edu/changelog/version-5-4#542" class="hash-link" aria-label="Direct link to 5.4.2" title="Direct link to 5.4.2">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="542">5.4.2<a href="https://ashlar.wwu.edu/changelog/version-5-4#542" class="hash-link" aria-label="Direct link to 5.4.2" title="Direct link to 5.4.2" translate="no">​</a></h2>
 <p>** August 19, 2024 **</p>
 <ul>
-<li>CKEditor improvements</li>
-<li>Repository fix for windows</li>
-<li>Helper class added</li>
+<li class="">CKEditor improvements</li>
+<li class="">Repository fix for windows</li>
+<li class="">Helper class added</li>
 </ul>]]></content:encoded>
             <category>minor-release</category>
         </item>
@@ -207,82 +238,82 @@
             <guid>https://ashlar.wwu.edu/changelog/version-5-3</guid>
             <pubDate>Wed, 15 May 2024 12:00:00 GMT</pubDate>
             <description><![CDATA[5.3.10]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5310">5.3.10<a href="https://ashlar.wwu.edu/changelog/version-5-3#5310" class="hash-link" aria-label="Direct link to 5.3.10" title="Direct link to 5.3.10">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5310">5.3.10<a href="https://ashlar.wwu.edu/changelog/version-5-3#5310" class="hash-link" aria-label="Direct link to 5.3.10" title="Direct link to 5.3.10" translate="no">​</a></h2>
 <p>** May 15, 2024 **</p>
 <ul>
-<li>Improvements to Cypress testing</li>
-<li>Converted material icons font to woff2 format</li>
-<li>ceditor fix</li>
-<li>styles in preparation for decorative hrs</li>
-<li>fix for duplicated footer id from noscript</li>
+<li class="">Improvements to Cypress testing</li>
+<li class="">Converted material icons font to woff2 format</li>
+<li class="">ceditor fix</li>
+<li class="">styles in preparation for decorative hrs</li>
+<li class="">fix for duplicated footer id from noscript</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="539">5.3.9<a href="https://ashlar.wwu.edu/changelog/version-5-3#539" class="hash-link" aria-label="Direct link to 5.3.9" title="Direct link to 5.3.9">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="539">5.3.9<a href="https://ashlar.wwu.edu/changelog/version-5-3#539" class="hash-link" aria-label="Direct link to 5.3.9" title="Direct link to 5.3.9" translate="no">​</a></h2>
 <p>** May 6, 2024 **</p>
 <ul>
-<li>Update catalog ID to match 2024-25 catalog</li>
-<li>Improvements to Details styles</li>
-<li>Updates to components docs to include scripts</li>
-<li>Improvements to content switcher mobile styles</li>
+<li class="">Update catalog ID to match 2024-25 catalog</li>
+<li class="">Improvements to Details styles</li>
+<li class="">Updates to components docs to include scripts</li>
+<li class="">Improvements to content switcher mobile styles</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="538">5.3.8<a href="https://ashlar.wwu.edu/changelog/version-5-3#538" class="hash-link" aria-label="Direct link to 5.3.8" title="Direct link to 5.3.8">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="538">5.3.8<a href="https://ashlar.wwu.edu/changelog/version-5-3#538" class="hash-link" aria-label="Direct link to 5.3.8" title="Direct link to 5.3.8" translate="no">​</a></h2>
 <p>** April 22, 2024 **</p>
 <ul>
-<li>Added code samples to status alert pattern page</li>
-<li>Fix for list nesting on Wordpress</li>
-<li><a href="https://webtech.wwu.edu/how-create-dynamic-catalog-links" target="_blank" rel="noopener noreferrer">Acalog widget implementation</a></li>
-<li>Remove off canvas reset styles</li>
+<li class="">Added code samples to status alert pattern page</li>
+<li class="">Fix for list nesting on Wordpress</li>
+<li class=""><a href="https://webtech.wwu.edu/how-create-dynamic-catalog-links" target="_blank" rel="noopener noreferrer" class="">Acalog widget implementation</a></li>
+<li class="">Remove off canvas reset styles</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="537">5.3.7<a href="https://ashlar.wwu.edu/changelog/version-5-3#537" class="hash-link" aria-label="Direct link to 5.3.7" title="Direct link to 5.3.7">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="537">5.3.7<a href="https://ashlar.wwu.edu/changelog/version-5-3#537" class="hash-link" aria-label="Direct link to 5.3.7" title="Direct link to 5.3.7" translate="no">​</a></h2>
 <p>** April 8, 2024 **</p>
 <ul>
-<li>Added an option for having accordion items expanded by default</li>
-<li>Replace support for Block Type Templates module with theme suggestion hook</li>
+<li class="">Added an option for having accordion items expanded by default</li>
+<li class="">Replace support for Block Type Templates module with theme suggestion hook</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="536">5.3.6<a href="https://ashlar.wwu.edu/changelog/version-5-3#536" class="hash-link" aria-label="Direct link to 5.3.6" title="Direct link to 5.3.6">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="536">5.3.6<a href="https://ashlar.wwu.edu/changelog/version-5-3#536" class="hash-link" aria-label="Direct link to 5.3.6" title="Direct link to 5.3.6" translate="no">​</a></h2>
 <p>** April 1, 2024 **</p>
 <ul>
-<li>Adjusted heading size in status alert links</li>
-<li>Small adjustment for testimonial styles</li>
+<li class="">Adjusted heading size in status alert links</li>
+<li class="">Small adjustment for testimonial styles</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="535">5.3.5<a href="https://ashlar.wwu.edu/changelog/version-5-3#535" class="hash-link" aria-label="Direct link to 5.3.5" title="Direct link to 5.3.5">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="535">5.3.5<a href="https://ashlar.wwu.edu/changelog/version-5-3#535" class="hash-link" aria-label="Direct link to 5.3.5" title="Direct link to 5.3.5" translate="no">​</a></h2>
 <p>** March 25, 2024 **</p>
 <ul>
-<li>Duplicate component error fix</li>
-<li>Improve documentation for background videos</li>
-<li>Acalog widget API library fix</li>
+<li class="">Duplicate component error fix</li>
+<li class="">Improve documentation for background videos</li>
+<li class="">Acalog widget API library fix</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="534">5.3.4<a href="https://ashlar.wwu.edu/changelog/version-5-3#534" class="hash-link" aria-label="Direct link to 5.3.4" title="Direct link to 5.3.4">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="534">5.3.4<a href="https://ashlar.wwu.edu/changelog/version-5-3#534" class="hash-link" aria-label="Direct link to 5.3.4" title="Direct link to 5.3.4" translate="no">​</a></h2>
 <p>** March 18, 2024 **</p>
 <ul>
-<li>Adjustment for font-size--smaller in views</li>
-<li>exclude *.cy.js files from gulp builds</li>
-<li>Clarify documentation on Material Icons</li>
+<li class="">Adjustment for font-size--smaller in views</li>
+<li class="">exclude *.cy.js files from gulp builds</li>
+<li class="">Clarify documentation on Material Icons</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="533">5.3.3<a href="https://ashlar.wwu.edu/changelog/version-5-3#533" class="hash-link" aria-label="Direct link to 5.3.3" title="Direct link to 5.3.3">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="533">5.3.3<a href="https://ashlar.wwu.edu/changelog/version-5-3#533" class="hash-link" aria-label="Direct link to 5.3.3" title="Direct link to 5.3.3" translate="no">​</a></h2>
 <p>** February 27, 2024 **</p>
 <ul>
-<li>Cypress automated deployment added</li>
-<li>Better header component documentation</li>
+<li class="">Cypress automated deployment added</li>
+<li class="">Better header component documentation</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="532">5.3.2<a href="https://ashlar.wwu.edu/changelog/version-5-3#532" class="hash-link" aria-label="Direct link to 5.3.2" title="Direct link to 5.3.2">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="532">5.3.2<a href="https://ashlar.wwu.edu/changelog/version-5-3#532" class="hash-link" aria-label="Direct link to 5.3.2" title="Direct link to 5.3.2" translate="no">​</a></h2>
 <p>** February 12, 2024 **</p>
 <ul>
-<li>Various styles for MABEL's Archipelago launch</li>
-<li>Component fix to prevent duplication</li>
-<li>Main Navigation component a11y improvement</li>
+<li class="">Various styles for MABEL's Archipelago launch</li>
+<li class="">Component fix to prevent duplication</li>
+<li class="">Main Navigation component a11y improvement</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="531">5.3.1<a href="https://ashlar.wwu.edu/changelog/version-5-3#531" class="hash-link" aria-label="Direct link to 5.3.1" title="Direct link to 5.3.1">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="531">5.3.1<a href="https://ashlar.wwu.edu/changelog/version-5-3#531" class="hash-link" aria-label="Direct link to 5.3.1" title="Direct link to 5.3.1" translate="no">​</a></h2>
 <p>** February 5, 2024 **</p>
 <ul>
-<li>Ultimenu fix for Drupal 9.5</li>
-<li>Helper styles for CKEditor 5</li>
+<li class="">Ultimenu fix for Drupal 9.5</li>
+<li class="">Helper styles for CKEditor 5</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="530">5.3.0<a href="https://ashlar.wwu.edu/changelog/version-5-3#530" class="hash-link" aria-label="Direct link to 5.3.0" title="Direct link to 5.3.0">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="530">5.3.0<a href="https://ashlar.wwu.edu/changelog/version-5-3#530" class="hash-link" aria-label="Direct link to 5.3.0" title="Direct link to 5.3.0" translate="no">​</a></h2>
 <p>** January 29, 2024 **</p>
 <ul>
-<li>New: Cypress Testing integration! Automated testing for component development, woohoo!</li>
-<li>New <a href="https://ashlar.wwu.edu/patterns/molecules/byline">Byline Styles</a> available</li>
-<li>Docusaurus upgraded to version 3.1.0</li>
+<li class="">New: Cypress Testing integration! Automated testing for component development, woohoo!</li>
+<li class="">New <a class="" href="https://ashlar.wwu.edu/patterns/molecules/byline">Byline Styles</a> available</li>
+<li class="">Docusaurus upgraded to version 3.1.0</li>
 </ul>]]></content:encoded>
             <category>minor-release</category>
         </item>
@@ -292,16 +323,16 @@
             <guid>https://ashlar.wwu.edu/changelog/version-5-2</guid>
             <pubDate>Tue, 16 Jan 2024 12:00:00 GMT</pubDate>
             <description><![CDATA[5.2.1]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="521">5.2.1<a href="https://ashlar.wwu.edu/changelog/version-5-2#521" class="hash-link" aria-label="Direct link to 5.2.1" title="Direct link to 5.2.1">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="521">5.2.1<a href="https://ashlar.wwu.edu/changelog/version-5-2#521" class="hash-link" aria-label="Direct link to 5.2.1" title="Direct link to 5.2.1" translate="no">​</a></h2>
 <p>** January 16, 2024 **</p>
 <ul>
-<li>Main navigation now useable as a standalone component</li>
+<li class="">Main navigation now useable as a standalone component</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="520">5.2.0<a href="https://ashlar.wwu.edu/changelog/version-5-2#520" class="hash-link" aria-label="Direct link to 5.2.0" title="Direct link to 5.2.0">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="520">5.2.0<a href="https://ashlar.wwu.edu/changelog/version-5-2#520" class="hash-link" aria-label="Direct link to 5.2.0" title="Direct link to 5.2.0" translate="no">​</a></h2>
 <p>** January 4, 2024 **</p>
 <ul>
-<li>New: Search now uses Google Search Console</li>
-<li>Updates for Drupal 10</li>
+<li class="">New: Search now uses Google Search Console</li>
+<li class="">Updates for Drupal 10</li>
 </ul>]]></content:encoded>
             <category>minor-release</category>
         </item>
@@ -311,149 +342,149 @@
             <guid>https://ashlar.wwu.edu/changelog/version-5-1</guid>
             <pubDate>Mon, 11 Dec 2023 12:00:00 GMT</pubDate>
             <description><![CDATA[5.1.21]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5121">5.1.21<a href="https://ashlar.wwu.edu/changelog/version-5-1#5121" class="hash-link" aria-label="Direct link to 5.1.21" title="Direct link to 5.1.21">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5121">5.1.21<a href="https://ashlar.wwu.edu/changelog/version-5-1#5121" class="hash-link" aria-label="Direct link to 5.1.21" title="Direct link to 5.1.21" translate="no">​</a></h2>
 <p>** December 11, 2023 **</p>
 <ul>
-<li>Layout builder style bug fix</li>
-<li>Pager style fix</li>
-<li>NPM Updates</li>
+<li class="">Layout builder style bug fix</li>
+<li class="">Pager style fix</li>
+<li class="">NPM Updates</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5120">5.1.20<a href="https://ashlar.wwu.edu/changelog/version-5-1#5120" class="hash-link" aria-label="Direct link to 5.1.20" title="Direct link to 5.1.20">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5120">5.1.20<a href="https://ashlar.wwu.edu/changelog/version-5-1#5120" class="hash-link" aria-label="Direct link to 5.1.20" title="Direct link to 5.1.20" translate="no">​</a></h2>
 <p>** November 20, 2023 **</p>
 <ul>
-<li>Further markup fixes for alerts</li>
+<li class="">Further markup fixes for alerts</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5119">5.1.19<a href="https://ashlar.wwu.edu/changelog/version-5-1#5119" class="hash-link" aria-label="Direct link to 5.1.19" title="Direct link to 5.1.19">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5119">5.1.19<a href="https://ashlar.wwu.edu/changelog/version-5-1#5119" class="hash-link" aria-label="Direct link to 5.1.19" title="Direct link to 5.1.19" translate="no">​</a></h2>
 <p>** November 13, 2023 **</p>
 <ul>
-<li>Markup fix for alerts</li>
-<li>Wordpress style fix</li>
-<li>Template declaration path fix</li>
+<li class="">Markup fix for alerts</li>
+<li class="">Wordpress style fix</li>
+<li class="">Template declaration path fix</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5118">5.1.18<a href="https://ashlar.wwu.edu/changelog/version-5-1#5118" class="hash-link" aria-label="Direct link to 5.1.18" title="Direct link to 5.1.18">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5118">5.1.18<a href="https://ashlar.wwu.edu/changelog/version-5-1#5118" class="hash-link" aria-label="Direct link to 5.1.18" title="Direct link to 5.1.18" translate="no">​</a></h2>
 <p>** November 6, 2023 **</p>
 <ul>
-<li>Library cleanup for unused JS file</li>
-<li>Pager style fix for views with cards</li>
-<li>Statistics style fix</li>
+<li class="">Library cleanup for unused JS file</li>
+<li class="">Pager style fix for views with cards</li>
+<li class="">Statistics style fix</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5117">5.1.17<a href="https://ashlar.wwu.edu/changelog/version-5-1#5117" class="hash-link" aria-label="Direct link to 5.1.17" title="Direct link to 5.1.17">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5117">5.1.17<a href="https://ashlar.wwu.edu/changelog/version-5-1#5117" class="hash-link" aria-label="Direct link to 5.1.17" title="Direct link to 5.1.17" translate="no">​</a></h2>
 <p>** October 16, 2023 **</p>
 <ul>
-<li>Font size adjustment for event lists</li>
-<li>NPM vulnerability fixes</li>
+<li class="">Font size adjustment for event lists</li>
+<li class="">NPM vulnerability fixes</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5116">5.1.16<a href="https://ashlar.wwu.edu/changelog/version-5-1#5116" class="hash-link" aria-label="Direct link to 5.1.16" title="Direct link to 5.1.16">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5116">5.1.16<a href="https://ashlar.wwu.edu/changelog/version-5-1#5116" class="hash-link" aria-label="Direct link to 5.1.16" title="Direct link to 5.1.16" translate="no">​</a></h2>
 <p>** October 2, 2023 **</p>
 <ul>
-<li>Backups for catalog customization added</li>
-<li>cta fix</li>
-<li>responsive table fix</li>
+<li class="">Backups for catalog customization added</li>
+<li class="">cta fix</li>
+<li class="">responsive table fix</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5115">5.1.15<a href="https://ashlar.wwu.edu/changelog/version-5-1#5115" class="hash-link" aria-label="Direct link to 5.1.15" title="Direct link to 5.1.15">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5115">5.1.15<a href="https://ashlar.wwu.edu/changelog/version-5-1#5115" class="hash-link" aria-label="Direct link to 5.1.15" title="Direct link to 5.1.15" translate="no">​</a></h2>
 <p>** September 11, 2023 **</p>
 <ul>
-<li>New CTA style options: .small and .no-animation</li>
-<li>Gulp task: removed jQuery from js files in CDN</li>
+<li class="">New CTA style options: .small and .no-animation</li>
+<li class="">Gulp task: removed jQuery from js files in CDN</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5114">5.1.14<a href="https://ashlar.wwu.edu/changelog/version-5-1#5114" class="hash-link" aria-label="Direct link to 5.1.14" title="Direct link to 5.1.14">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5114">5.1.14<a href="https://ashlar.wwu.edu/changelog/version-5-1#5114" class="hash-link" aria-label="Direct link to 5.1.14" title="Direct link to 5.1.14" translate="no">​</a></h2>
 <p>** September 6, 2023 **</p>
 <ul>
-<li>Gulp tasks updated to generate CDN folder</li>
-<li>some material icon fixes</li>
+<li class="">Gulp tasks updated to generate CDN folder</li>
+<li class="">some material icon fixes</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5113">5.1.13<a href="https://ashlar.wwu.edu/changelog/version-5-1#5113" class="hash-link" aria-label="Direct link to 5.1.13" title="Direct link to 5.1.13">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5113">5.1.13<a href="https://ashlar.wwu.edu/changelog/version-5-1#5113" class="hash-link" aria-label="Direct link to 5.1.13" title="Direct link to 5.1.13" translate="no">​</a></h2>
 <p>** August 14, 2023 **</p>
 <ul>
-<li>Centered CTAs with material icons and added additional documentation</li>
-<li>Mobile header height issues fix</li>
+<li class="">Centered CTAs with material icons and added additional documentation</li>
+<li class="">Mobile header height issues fix</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5112">5.1.12<a href="https://ashlar.wwu.edu/changelog/version-5-1#5112" class="hash-link" aria-label="Direct link to 5.1.12" title="Direct link to 5.1.12">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5112">5.1.12<a href="https://ashlar.wwu.edu/changelog/version-5-1#5112" class="hash-link" aria-label="Direct link to 5.1.12" title="Direct link to 5.1.12" translate="no">​</a></h2>
 <p>** August 7, 2023 **</p>
 <ul>
-<li>Adjustments to accordion js, to fix some issues with svg icon/material icon discrepencies when used in views</li>
+<li class="">Adjustments to accordion js, to fix some issues with svg icon/material icon discrepencies when used in views</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5111">5.1.11<a href="https://ashlar.wwu.edu/changelog/version-5-1#5111" class="hash-link" aria-label="Direct link to 5.1.11" title="Direct link to 5.1.11">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5111">5.1.11<a href="https://ashlar.wwu.edu/changelog/version-5-1#5111" class="hash-link" aria-label="Direct link to 5.1.11" title="Direct link to 5.1.11" translate="no">​</a></h2>
 <p>** July 31, 2023 **</p>
 <ul>
-<li>Social media icon updates in WWU footer- Threads added, Twitter icon updated</li>
-<li>Styles added for upcoming MABEL update</li>
-<li>Some small fixes for upcoming WCAG updates</li>
+<li class="">Social media icon updates in WWU footer- Threads added, Twitter icon updated</li>
+<li class="">Styles added for upcoming MABEL update</li>
+<li class="">Some small fixes for upcoming WCAG updates</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5110">5.1.10<a href="https://ashlar.wwu.edu/changelog/version-5-1#5110" class="hash-link" aria-label="Direct link to 5.1.10" title="Direct link to 5.1.10">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5110">5.1.10<a href="https://ashlar.wwu.edu/changelog/version-5-1#5110" class="hash-link" aria-label="Direct link to 5.1.10" title="Direct link to 5.1.10" translate="no">​</a></h2>
 <p>** July 24, 2023 **</p>
 <ul>
-<li>A few material icon fixes from last update</li>
-<li>Readme update to make cloning and install more straitforward</li>
+<li class="">A few material icon fixes from last update</li>
+<li class="">Readme update to make cloning and install more straitforward</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="519">5.1.9<a href="https://ashlar.wwu.edu/changelog/version-5-1#519" class="hash-link" aria-label="Direct link to 5.1.9" title="Direct link to 5.1.9">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="519">5.1.9<a href="https://ashlar.wwu.edu/changelog/version-5-1#519" class="hash-link" aria-label="Direct link to 5.1.9" title="Direct link to 5.1.9" translate="no">​</a></h2>
 <p>** July 17, 2023 **</p>
 <ul>
-<li>Visual fix for org charts</li>
+<li class="">Visual fix for org charts</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="some-performance-improvements-around-how-fonts-are-loaded">Some performance improvements around how fonts are loaded<a href="https://ashlar.wwu.edu/changelog/version-5-1#some-performance-improvements-around-how-fonts-are-loaded" class="hash-link" aria-label="Direct link to Some performance improvements around how fonts are loaded" title="Direct link to Some performance improvements around how fonts are loaded">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="some-performance-improvements-around-how-fonts-are-loaded">Some performance improvements around how fonts are loaded<a href="https://ashlar.wwu.edu/changelog/version-5-1#some-performance-improvements-around-how-fonts-are-loaded" class="hash-link" aria-label="Direct link to Some performance improvements around how fonts are loaded" title="Direct link to Some performance improvements around how fonts are loaded" translate="no">​</a></h3>
 <p>Only essential fonts are preloaded now. The material icons font (which is quite larger) is no longer loaded by default. Instead:</p>
 <ul>
-<li>Components with static icons (like the WWU Header and footer, and some components like content switchers) now use SVG versions of the material icons. So these are still packaged with those components</li>
-<li>Drupal block types that use material icons in an open ended way (like Call to Action links and Announcements) will load the library when they are included in a page</li>
-<li>They are loaded as part of the accordion library. So if you are already loading ashlar/accordion (say, in a view) then you also get material icons</li>
-<li>They can also be included by themselves by loading the ashlar/material-icons library (for example, in a view using the <strong>Views Attach Library</strong> module)</li>
+<li class="">Components with static icons (like the WWU Header and footer, and some components like content switchers) now use SVG versions of the material icons. So these are still packaged with those components</li>
+<li class="">Drupal block types that use material icons in an open ended way (like Call to Action links and Announcements) will load the library when they are included in a page</li>
+<li class="">They are loaded as part of the accordion library. So if you are already loading ashlar/accordion (say, in a view) then you also get material icons</li>
+<li class="">They can also be included by themselves by loading the ashlar/material-icons library (for example, in a view using the <strong>Views Attach Library</strong> module)</li>
 </ul>
 <p>If you notice a page where material icons were loading, but aren't any more, please [mailto<!-- -->:masons7<!-- -->@wwu.edu](contact Stephanie) so she can advise on the best way to get the library loaded in your use case.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="518">5.1.8<a href="https://ashlar.wwu.edu/changelog/version-5-1#518" class="hash-link" aria-label="Direct link to 5.1.8" title="Direct link to 5.1.8">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="518">5.1.8<a href="https://ashlar.wwu.edu/changelog/version-5-1#518" class="hash-link" aria-label="Direct link to 5.1.8" title="Direct link to 5.1.8" translate="no">​</a></h2>
 <p>** July 10, 2023 **</p>
 <ul>
-<li>Author tags unlinked in comments</li>
+<li class="">Author tags unlinked in comments</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="517">5.1.7<a href="https://ashlar.wwu.edu/changelog/version-5-1#517" class="hash-link" aria-label="Direct link to 5.1.7" title="Direct link to 5.1.7">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="517">5.1.7<a href="https://ashlar.wwu.edu/changelog/version-5-1#517" class="hash-link" aria-label="Direct link to 5.1.7" title="Direct link to 5.1.7" translate="no">​</a></h2>
 <p>** July 3, 2023 **</p>
 <ul>
-<li>Sticky header class option/improvements for tables</li>
-<li>Styles added for Wordpress blocks in preparation for Wordpress Ashlar themeing</li>
-<li>Revert views html list template to default</li>
+<li class="">Sticky header class option/improvements for tables</li>
+<li class="">Styles added for Wordpress blocks in preparation for Wordpress Ashlar themeing</li>
+<li class="">Revert views html list template to default</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="516">5.1.6<a href="https://ashlar.wwu.edu/changelog/version-5-1#516" class="hash-link" aria-label="Direct link to 5.1.6" title="Direct link to 5.1.6">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="516">5.1.6<a href="https://ashlar.wwu.edu/changelog/version-5-1#516" class="hash-link" aria-label="Direct link to 5.1.6" title="Direct link to 5.1.6" translate="no">​</a></h2>
 <p>** June 27, 2023 **</p>
 <ul>
-<li>Search fix</li>
+<li class="">Search fix</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="515">5.1.5<a href="https://ashlar.wwu.edu/changelog/version-5-1#515" class="hash-link" aria-label="Direct link to 5.1.5" title="Direct link to 5.1.5">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="515">5.1.5<a href="https://ashlar.wwu.edu/changelog/version-5-1#515" class="hash-link" aria-label="Direct link to 5.1.5" title="Direct link to 5.1.5" translate="no">​</a></h2>
 <p>** June 20, 2023 **</p>
 <ul>
-<li>Keyboard use improvements for content switchers</li>
+<li class="">Keyboard use improvements for content switchers</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="514">5.1.4<a href="https://ashlar.wwu.edu/changelog/version-5-1#514" class="hash-link" aria-label="Direct link to 5.1.4" title="Direct link to 5.1.4">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="514">5.1.4<a href="https://ashlar.wwu.edu/changelog/version-5-1#514" class="hash-link" aria-label="Direct link to 5.1.4" title="Direct link to 5.1.4" translate="no">​</a></h2>
 <p>** June 12, 2023**</p>
 <ul>
-<li>Word break helper class added</li>
-<li>NPM updates</li>
+<li class="">Word break helper class added</li>
+<li class="">NPM updates</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="513">5.1.3<a href="https://ashlar.wwu.edu/changelog/version-5-1#513" class="hash-link" aria-label="Direct link to 5.1.3" title="Direct link to 5.1.3">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="513">5.1.3<a href="https://ashlar.wwu.edu/changelog/version-5-1#513" class="hash-link" aria-label="Direct link to 5.1.3" title="Direct link to 5.1.3" translate="no">​</a></h2>
 <p><strong>June 5, 2023</strong></p>
 <ul>
-<li>Minor style changes for detail elements</li>
-<li>Improvements to variable documentation</li>
-<li>Configuration fix for docusaurus</li>
+<li class="">Minor style changes for detail elements</li>
+<li class="">Improvements to variable documentation</li>
+<li class="">Configuration fix for docusaurus</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="512">5.1.2<a href="https://ashlar.wwu.edu/changelog/version-5-1#512" class="hash-link" aria-label="Direct link to 5.1.2" title="Direct link to 5.1.2">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="512">5.1.2<a href="https://ashlar.wwu.edu/changelog/version-5-1#512" class="hash-link" aria-label="Direct link to 5.1.2" title="Direct link to 5.1.2" translate="no">​</a></h2>
 <p><strong>May 30, 2023</strong></p>
 <ul>
-<li>Styles for new MABEL (not active, just backups for inline styles on Archipelego)</li>
-<li>Card style fixes for hover cards and heading size overrides</li>
-<li>Updates for incoming block configuration syncs</li>
+<li class="">Styles for new MABEL (not active, just backups for inline styles on Archipelego)</li>
+<li class="">Card style fixes for hover cards and heading size overrides</li>
+<li class="">Updates for incoming block configuration syncs</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="511">5.1.1<a href="https://ashlar.wwu.edu/changelog/version-5-1#511" class="hash-link" aria-label="Direct link to 5.1.1" title="Direct link to 5.1.1">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="511">5.1.1<a href="https://ashlar.wwu.edu/changelog/version-5-1#511" class="hash-link" aria-label="Direct link to 5.1.1" title="Direct link to 5.1.1" translate="no">​</a></h2>
 <p><strong>May 15, 2023</strong></p>
 <ul>
-<li>Readme has been updated</li>
-<li>Clean up on block type templates in preparation to block configuration updates</li>
-<li>Updates to docusaurus config for new url (<a href="https://ashlar.wwu.edu/" target="_blank" rel="noopener noreferrer">https://ashlar.wwu.edu</a>)</li>
+<li class="">Readme has been updated</li>
+<li class="">Clean up on block type templates in preparation to block configuration updates</li>
+<li class="">Updates to docusaurus config for new url (<a href="https://ashlar.wwu.edu/" target="_blank" rel="noopener noreferrer" class="">https://ashlar.wwu.edu</a>)</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="510">5.1.0<a href="https://ashlar.wwu.edu/changelog/version-5-1#510" class="hash-link" aria-label="Direct link to 5.1.0" title="Direct link to 5.1.0">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="510">5.1.0<a href="https://ashlar.wwu.edu/changelog/version-5-1#510" class="hash-link" aria-label="Direct link to 5.1.0" title="Direct link to 5.1.0" translate="no">​</a></h2>
 <p><strong>May 8, 2023</strong></p>
 <ul>
-<li>Search profiles are now configurable from Pre-Header &amp; Search components</li>
-<li>Site name links are now configurable from WWU Header component</li>
+<li class="">Search profiles are now configurable from Pre-Header &amp; Search components</li>
+<li class="">Site name links are now configurable from WWU Header component</li>
 </ul>]]></content:encoded>
             <category>minor-release</category>
         </item>
@@ -463,51 +494,51 @@
             <guid>https://ashlar.wwu.edu/changelog/version-5-0</guid>
             <pubDate>Mon, 08 May 2023 10:00:00 GMT</pubDate>
             <description><![CDATA[5.0.4]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="504">5.0.4<a href="https://ashlar.wwu.edu/changelog/version-5-0#504" class="hash-link" aria-label="Direct link to 5.0.4" title="Direct link to 5.0.4">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="504">5.0.4<a href="https://ashlar.wwu.edu/changelog/version-5-0#504" class="hash-link" aria-label="Direct link to 5.0.4" title="Direct link to 5.0.4" translate="no">​</a></h2>
 <p><strong>May 8, 2023</strong></p>
 <ul>
-<li>a11y improvements to accordions</li>
-<li>usability improvements for page menus</li>
-<li>typo fix for noscript footers</li>
-<li>style fixes for degree cards</li>
+<li class="">a11y improvements to accordions</li>
+<li class="">usability improvements for page menus</li>
+<li class="">typo fix for noscript footers</li>
+<li class="">style fixes for degree cards</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="503">5.0.3<a href="https://ashlar.wwu.edu/changelog/version-5-0#503" class="hash-link" aria-label="Direct link to 5.0.3" title="Direct link to 5.0.3">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="503">5.0.3<a href="https://ashlar.wwu.edu/changelog/version-5-0#503" class="hash-link" aria-label="Direct link to 5.0.3" title="Direct link to 5.0.3" translate="no">​</a></h2>
 <p><strong>May 1, 2023</strong></p>
 <ul>
-<li>CTA Styles added for extensions other than PDF</li>
-<li>Forced color improvments for icons</li>
-<li>Template fix for page menus</li>
+<li class="">CTA Styles added for extensions other than PDF</li>
+<li class="">Forced color improvments for icons</li>
+<li class="">Template fix for page menus</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="502">5.0.2<a href="https://ashlar.wwu.edu/changelog/version-5-0#502" class="hash-link" aria-label="Direct link to 5.0.2" title="Direct link to 5.0.2">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="502">5.0.2<a href="https://ashlar.wwu.edu/changelog/version-5-0#502" class="hash-link" aria-label="Direct link to 5.0.2" title="Direct link to 5.0.2" translate="no">​</a></h2>
 <p><strong>April 17, 2023</strong></p>
 <p>Miscellaneous fixes:</p>
 <ul>
-<li>fix tagline color</li>
-<li>better radio buttons</li>
-<li>footer fix</li>
-<li>add padding to land statement</li>
-<li>make ultimenu region selector more specific</li>
-<li>fix testimonial markup in template</li>
-<li>set font color on light gray based bgs"</li>
-<li>hide random ultimenu button again</li>
-<li>tabindex on accordion views</li>
-<li>enter/space key controls for accordion</li>
-<li>change field label to h2</li>
+<li class="">fix tagline color</li>
+<li class="">better radio buttons</li>
+<li class="">footer fix</li>
+<li class="">add padding to land statement</li>
+<li class="">make ultimenu region selector more specific</li>
+<li class="">fix testimonial markup in template</li>
+<li class="">set font color on light gray based bgs"</li>
+<li class="">hide random ultimenu button again</li>
+<li class="">tabindex on accordion views</li>
+<li class="">enter/space key controls for accordion</li>
+<li class="">change field label to h2</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="501">5.0.1<a href="https://ashlar.wwu.edu/changelog/version-5-0#501" class="hash-link" aria-label="Direct link to 5.0.1" title="Direct link to 5.0.1">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="501">5.0.1<a href="https://ashlar.wwu.edu/changelog/version-5-0#501" class="hash-link" aria-label="Direct link to 5.0.1" title="Direct link to 5.0.1" translate="no">​</a></h2>
 <p><strong>April 10, 2023</strong></p>
 <p>Various minor style adjustments and bug fixes for the major release, related to:</p>
 <ul>
-<li>Cards</li>
-<li>Image links</li>
-<li>Statistics</li>
-<li>Footer</li>
-<li>Overlays</li>
-<li>Print Styles</li>
-<li>Call to Action Links</li>
-<li>Font size helper classes</li>
-<li>Background videos</li>
-<li>Accordions (in views, specifically)</li>
+<li class="">Cards</li>
+<li class="">Image links</li>
+<li class="">Statistics</li>
+<li class="">Footer</li>
+<li class="">Overlays</li>
+<li class="">Print Styles</li>
+<li class="">Call to Action Links</li>
+<li class="">Font size helper classes</li>
+<li class="">Background videos</li>
+<li class="">Accordions (in views, specifically)</li>
 </ul>
 <p>There have also been various configuration fixes. Github branch has been updated so that it deploys on the main branch.</p>]]></content:encoded>
             <category>minor-release</category>
@@ -518,125 +549,125 @@
             <guid>https://ashlar.wwu.edu/changelog/version-5</guid>
             <pubDate>Mon, 01 May 2023 10:00:00 GMT</pubDate>
             <description><![CDATA[Ashlar is the university's Drupal theme, and basis for its component library/design system and Brand and Communication Guide. And it is getting a major update this month!]]></description>
-            <content:encoded><![CDATA[<p>Ashlar is the university's Drupal theme, and basis for its <a href="https://ashlar.wwu.edu/patterns/overview">component library/design system</a> and <a href="https://brand.wwu.edu/" target="_blank" rel="noopener noreferrer">Brand and Communication Guide</a>. And it is getting a major update this month!</p>
-<p>Many of the updates are under the  hood. We have refactored almost all the SASS/CSS and Javascript, take advantage of the latest features those languages. We  have also completely redone the documentation and pattern library. We are moving away from Pattern Lab (which hasn't seen many update and is  starting to fall out of maintenance) and into <a href="https://docusaurus.io/" target="_blank" rel="noopener noreferrer">Docusaurus</a>  (the website you're looking at now.)</p>
+            <content:encoded><![CDATA[<p>Ashlar is the university's Drupal theme, and basis for its <a class="" href="https://ashlar.wwu.edu/patterns/overview">component library/design system</a> and <a href="https://brand.wwu.edu/" target="_blank" rel="noopener noreferrer" class="">Brand and Communication Guide</a>. And it is getting a major update this month!</p>
+<p>Many of the updates are under the  hood. We have refactored almost all the SASS/CSS and Javascript, take advantage of the latest features those languages. We  have also completely redone the documentation and pattern library. We are moving away from Pattern Lab (which hasn't seen many update and is  starting to fall out of maintenance) and into <a href="https://docusaurus.io/" target="_blank" rel="noopener noreferrer" class="">Docusaurus</a>  (the website you're looking at now.)</p>
 <p>There have also been some changes  that you will see reflected in the visual styles on Drupal sites. Most  of these are minor, like subtle changes to heading and other text  styles.</p>
 <p>Some will be more noticeable, like changes to some card  styles and Call to Action links. In this post, we outline what to expect.</p>
 <p>We don't have an exact timeline for deploying this update, but you can expect to see the changes on Development sites in March, and on Production sites in late March or early April.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="front-end-changes">Front End Changes<a href="https://ashlar.wwu.edu/changelog/version-5#front-end-changes" class="hash-link" aria-label="Direct link to Front End Changes" title="Direct link to Front End Changes">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="front-end-changes">Front End Changes<a href="https://ashlar.wwu.edu/changelog/version-5#front-end-changes" class="hash-link" aria-label="Direct link to Front End Changes" title="Direct link to Front End Changes" translate="no">​</a></h2>
 <p>These are the style changes that have been made in the theme, that you will probably notice on Western's Drupal websites.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="call-to-action-links-and-buttons">Call to Action links and Buttons<a href="https://ashlar.wwu.edu/changelog/version-5#call-to-action-links-and-buttons" class="hash-link" aria-label="Direct link to Call to Action links and Buttons" title="Direct link to Call to Action links and Buttons">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="call-to-action-links-and-buttons">Call to Action links and Buttons<a href="https://ashlar.wwu.edu/changelog/version-5#call-to-action-links-and-buttons" class="hash-link" aria-label="Direct link to Call to Action links and Buttons" title="Direct link to Call to Action links and Buttons" translate="no">​</a></h3>
 <p>This is one of the biggest style changes. <strong>Call to action links</strong> (or CTAs) have been update so that they no longer resemble buttons. The number of CTA style variants have also been reduced.</p>
 <p>There is an important reason for this change, but it is somewhat technical. In short, links (eg <code>&lt;a&gt;</code> elements) and buttons (eg <code>&lt;button&gt;</code> elements) are semantically different in HTML. This means that assistive technology announces them differently, and they have different interactive behaviors. For sited, mouse-using folks, these differences aren't readily apparent. This means that when links are styled to <em>look like</em> buttons, they get <em>called</em> buttons. But when they are called buttons, it can (and does) create confusion for assistive technology users–particularly users who are site impaired and cannot see the visual button styles. In order reduce the barriers produced by that visual styling, we have opted to re-do call to action styles so that they visually resemble links, while still standing out on page to call attention to the text.</p>
-<p>If you're interested in learning more about this, we recommend reading the article <a href="https://www.isoftstoneinc.com/insights/knowledge-leader/call-to-action-links-are-not-buttons/" target="_blank" rel="noopener noreferrer">A call to action – links are not buttons</a>.</p>
+<p>If you're interested in learning more about this, we recommend reading the article <a href="https://www.isoftstoneinc.com/insights/knowledge-leader/call-to-action-links-are-not-buttons/" target="_blank" rel="noopener noreferrer" class="">A call to action – links are not buttons</a>.</p>
 <p>Along with this change, we have also refreshed the actual semantic <code>&lt;button&gt;</code> styles.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="old-call-to-action-links">Old Call to Action Links<a href="https://ashlar.wwu.edu/changelog/version-5#old-call-to-action-links" class="hash-link" aria-label="Direct link to Old Call to Action Links" title="Direct link to Old Call to Action Links">​</a></h4>
-<p><img loading="lazy" alt="Screenshot of old CTA styles, which looked like buttons" src="https://ashlar.wwu.edu/assets/images/old-cta-dda3e8566b38cfa0ab9ec4325fbed8be.png" width="458" height="84" class="img_ev3q"></p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="new-call-to-action-links">New Call to Action Links<a href="https://ashlar.wwu.edu/changelog/version-5#new-call-to-action-links" class="hash-link" aria-label="Direct link to New Call to Action Links" title="Direct link to New Call to Action Links">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="old-call-to-action-links">Old Call to Action Links<a href="https://ashlar.wwu.edu/changelog/version-5#old-call-to-action-links" class="hash-link" aria-label="Direct link to Old Call to Action Links" title="Direct link to Old Call to Action Links" translate="no">​</a></h4>
+<p><img decoding="async" loading="lazy" alt="Screenshot of old CTA styles, which looked like buttons" src="https://ashlar.wwu.edu/assets/images/old-cta-dda3e8566b38cfa0ab9ec4325fbed8be.png" width="458" height="84" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-call-to-action-links">New Call to Action Links<a href="https://ashlar.wwu.edu/changelog/version-5#new-call-to-action-links" class="hash-link" aria-label="Direct link to New Call to Action Links" title="Direct link to New Call to Action Links" translate="no">​</a></h4>
 <a href="https://ashlar.wwu.edu/changelog/version-5#" class="cta">Call to Action</a>
 <a href="https://ashlar.wwu.edu/changelog/version-5#" class="cta blue">CTA with .blue class</a>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="old-buttons">Old Buttons<a href="https://ashlar.wwu.edu/changelog/version-5#old-buttons" class="hash-link" aria-label="Direct link to Old Buttons" title="Direct link to Old Buttons">​</a></h4>
-<p><img loading="lazy" alt="Screenshot of old button styles" src="https://ashlar.wwu.edu/assets/images/old-buttons-ee688f371e34ae7fbc95d23231f3bec9.png" width="651" height="60" class="img_ev3q"></p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="new-buttons">New Buttons<a href="https://ashlar.wwu.edu/changelog/version-5#new-buttons" class="hash-link" aria-label="Direct link to New Buttons" title="Direct link to New Buttons">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="old-buttons">Old Buttons<a href="https://ashlar.wwu.edu/changelog/version-5#old-buttons" class="hash-link" aria-label="Direct link to Old Buttons" title="Direct link to Old Buttons" translate="no">​</a></h4>
+<p><img decoding="async" loading="lazy" alt="Screenshot of old button styles" src="https://ashlar.wwu.edu/assets/images/old-buttons-ee688f371e34ae7fbc95d23231f3bec9.png" width="651" height="60" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-buttons">New Buttons<a href="https://ashlar.wwu.edu/changelog/version-5#new-buttons" class="hash-link" aria-label="Direct link to New Buttons" title="Direct link to New Buttons" translate="no">​</a></h4>
 <button>Button</button>
 <button class="warning">With .warning class</button>
 <button disabled="">Disabled Button</button>
 <div class="wwu-announcement font-size--smaller"><span class="material-icons" aria-hidden="true">warning</span><div class="body"><p>It can take some time for us to get configuration on Drupal user interfaces synced up with theme changes. You may still notice block types referred to as <strong>Button</strong> or <strong>Image Button</strong> when they should actually be <strong>Call to Action Link</strong> and <strong>Image Link.</strong> Please don't hesitate to <a href="mailto:web.help@wwu.edu">get in touch</a> if you notice this discrepency!</p></div></div>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cards">Cards<a href="https://ashlar.wwu.edu/changelog/version-5#cards" class="hash-link" aria-label="Direct link to Cards" title="Direct link to Cards">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="cards">Cards<a href="https://ashlar.wwu.edu/changelog/version-5#cards" class="hash-link" aria-label="Direct link to Cards" title="Direct link to Cards" translate="no">​</a></h3>
 <p>This is the other major change. We no longer support styles for the following card variants:</p>
 <ul>
-<li>Solid Round Blue/Green</li>
-<li>Tag tile</li>
-<li>Simple</li>
-<li>Information/Split Information</li>
+<li class="">Solid Round Blue/Green</li>
+<li class="">Tag tile</li>
+<li class="">Simple</li>
+<li class="">Information/Split Information</li>
 </ul>
-<p><img loading="lazy" alt="Old solid blue style" src="https://ashlar.wwu.edu/assets/images/round-card-1bd54451a137f6cc2b32aff30f8bd251.png" width="431" height="437" class="img_ev3q">
-<img loading="lazy" alt="Old tag style card" src="https://ashlar.wwu.edu/assets/images/tag-card-6b612c46f7a8823c51648de56512456d.png" width="432" height="306" class="img_ev3q">
-<img loading="lazy" alt="Old simple card" src="https://ashlar.wwu.edu/assets/images/simple-card-5768ea7c25e49cb24781fd7bd1545638.png" width="432" height="417" class="img_ev3q">
-<img loading="lazy" alt="Old info style card" src="https://ashlar.wwu.edu/assets/images/info-card-d1821d2a351940600ea6f5047ede2bde.png" width="433" height="523" class="img_ev3q"></p>
-<p>Anywhere these variants are used will revert to the <a href="https://ashlar.wwu.edu/patterns/molecules/card">basic card styles</a>.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="fonttext-changes">Font/Text Changes<a href="https://ashlar.wwu.edu/changelog/version-5#fonttext-changes" class="hash-link" aria-label="Direct link to Font/Text Changes" title="Direct link to Font/Text Changes">​</a></h3>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="condensed-fonts-removed">Condensed Fonts Removed<a href="https://ashlar.wwu.edu/changelog/version-5#condensed-fonts-removed" class="hash-link" aria-label="Direct link to Condensed Fonts Removed" title="Direct link to Condensed Fonts Removed">​</a></h4>
+<p><img decoding="async" loading="lazy" alt="Old solid blue style" src="https://ashlar.wwu.edu/assets/images/round-card-1bd54451a137f6cc2b32aff30f8bd251.png" width="431" height="437" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Old tag style card" src="https://ashlar.wwu.edu/assets/images/tag-card-6b612c46f7a8823c51648de56512456d.png" width="432" height="306" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Old simple card" src="https://ashlar.wwu.edu/assets/images/simple-card-5768ea7c25e49cb24781fd7bd1545638.png" width="432" height="417" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Old info style card" src="https://ashlar.wwu.edu/assets/images/info-card-d1821d2a351940600ea6f5047ede2bde.png" width="433" height="523" class="img_ev3q"></p>
+<p>Anywhere these variants are used will revert to the <a class="" href="https://ashlar.wwu.edu/patterns/molecules/card">basic card styles</a>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="fonttext-changes">Font/Text Changes<a href="https://ashlar.wwu.edu/changelog/version-5#fonttext-changes" class="hash-link" aria-label="Direct link to Font/Text Changes" title="Direct link to Font/Text Changes" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="condensed-fonts-removed">Condensed Fonts Removed<a href="https://ashlar.wwu.edu/changelog/version-5#condensed-fonts-removed" class="hash-link" aria-label="Direct link to Condensed Fonts Removed" title="Direct link to Condensed Fonts Removed" translate="no">​</a></h4>
 <p>Fira Sans Condensed has been removed for style consistency and improved menu readability. This will be most noticeable in the main navigation.</p>
-<p><img loading="lazy" alt="Old main navigation, with condensed font" src="https://ashlar.wwu.edu/assets/images/old-main-nav-44f256c24e4daf7422fd9806322e6b01.png" width="416" height="76" class="img_ev3q">
-<img loading="lazy" alt="New main navigation, with regular font" src="https://ashlar.wwu.edu/assets/images/new-main-nav-0ee54eb289d9ac410b8081ebf15d1ccf.png" width="532" height="76" class="img_ev3q"></p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="headings">Headings<a href="https://ashlar.wwu.edu/changelog/version-5#headings" class="hash-link" aria-label="Direct link to Headings" title="Direct link to Headings">​</a></h4>
-<p>Styles have been simplified. There are now only <a href="https://ashlar.wwu.edu/patterns/atoms/headings">two variations</a> for headings, and both make use of the title case Montserrat for level 1 headings.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="links">Links<a href="https://ashlar.wwu.edu/changelog/version-5#links" class="hash-link" aria-label="Direct link to Links" title="Direct link to Links">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Old main navigation, with condensed font" src="https://ashlar.wwu.edu/assets/images/old-main-nav-44f256c24e4daf7422fd9806322e6b01.png" width="416" height="76" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="New main navigation, with regular font" src="https://ashlar.wwu.edu/assets/images/new-main-nav-0ee54eb289d9ac410b8081ebf15d1ccf.png" width="532" height="76" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="headings">Headings<a href="https://ashlar.wwu.edu/changelog/version-5#headings" class="hash-link" aria-label="Direct link to Headings" title="Direct link to Headings" translate="no">​</a></h4>
+<p>Styles have been simplified. There are now only <a class="" href="https://ashlar.wwu.edu/patterns/atoms/headings">two variations</a> for headings, and both make use of the title case Montserrat for level 1 headings.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="links">Links<a href="https://ashlar.wwu.edu/changelog/version-5#links" class="hash-link" aria-label="Direct link to Links" title="Direct link to Links" translate="no">​</a></h3>
 <p>Link styles and borders in general have become a little less bold.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="old-link-styles">Old Link Styles<a href="https://ashlar.wwu.edu/changelog/version-5#old-link-styles" class="hash-link" aria-label="Direct link to Old Link Styles" title="Direct link to Old Link Styles">​</a></h4>
-<p><img loading="lazy" alt="Old link styles" src="https://ashlar.wwu.edu/assets/images/old-links-7f4bb0392ef54dd931e6c09b939554ac.png" width="521" height="204" class="img_ev3q"></p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="new-link-styles">New Link Styles<a href="https://ashlar.wwu.edu/changelog/version-5#new-link-styles" class="hash-link" aria-label="Direct link to New Link Styles" title="Direct link to New Link Styles">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="old-link-styles">Old Link Styles<a href="https://ashlar.wwu.edu/changelog/version-5#old-link-styles" class="hash-link" aria-label="Direct link to Old Link Styles" title="Direct link to Old Link Styles" translate="no">​</a></h4>
+<p><img decoding="async" loading="lazy" alt="Old link styles" src="https://ashlar.wwu.edu/assets/images/old-links-7f4bb0392ef54dd931e6c09b939554ac.png" width="521" height="204" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-link-styles">New Link Styles<a href="https://ashlar.wwu.edu/changelog/version-5#new-link-styles" class="hash-link" aria-label="Direct link to New Link Styles" title="Direct link to New Link Styles" translate="no">​</a></h4>
 <div>This <a href="https://ashlar.wwu.edu/changelog/version-5#">link</a> appears outside of a paragraph.</div>
 <p>This is a <a href="https://ashlar.wwu.edu/changelog/version-5#">link is very long, (it may overlap in smaller containers) has a descenders (yjgpq)</a> and is in a regular paragraph of text.</p>
 <ul><li><a href="https://ashlar.wwu.edu/changelog/version-5#">This is a list of links</a></li><li><a href="https://ashlar.wwu.edu/changelog/version-5#">It is not styled as a menu</a></li><li><a href="https://ashlar.wwu.edu/changelog/version-5#">It just has a lot of links</a></li></ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="forms">Forms<a href="https://ashlar.wwu.edu/changelog/version-5#forms" class="hash-link" aria-label="Direct link to Forms" title="Direct link to Forms">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="forms">Forms<a href="https://ashlar.wwu.edu/changelog/version-5#forms" class="hash-link" aria-label="Direct link to Forms" title="Direct link to Forms" translate="no">​</a></h3>
 <p>Minor style updates, particularly with radios and checkboxes which no longer rely on images.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="icons">Icons<a href="https://ashlar.wwu.edu/changelog/version-5#icons" class="hash-link" aria-label="Direct link to Icons" title="Direct link to Icons">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="icons">Icons<a href="https://ashlar.wwu.edu/changelog/version-5#icons" class="hash-link" aria-label="Direct link to Icons" title="Direct link to Icons" translate="no">​</a></h3>
 <p>Icon with text style removed as an atom. Instead, icons line up with text horizontally by default:
 <a href="https://ashlar.wwu.edu/changelog/version-5#" class="icon-link"><span class="material-icons" aria-hidden="true">home</span>Home</a>
 <a href="https://ashlar.wwu.edu/changelog/version-5#" class="icon-link"><span class="material-icons" aria-hidden="true">how_to_reg</span>Apply</a></p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lightbox">Lightbox<a href="https://ashlar.wwu.edu/changelog/version-5#lightbox" class="hash-link" aria-label="Direct link to Lightbox" title="Direct link to Lightbox">​</a></h3>
-<p>Has been replaced with <a href="https://ashlar.wwu.edu/patterns/molecules/dialog">Dialog</a></p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="link-list">Link List<a href="https://ashlar.wwu.edu/changelog/version-5#link-list" class="hash-link" aria-label="Direct link to Link List" title="Direct link to Link List">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="lightbox">Lightbox<a href="https://ashlar.wwu.edu/changelog/version-5#lightbox" class="hash-link" aria-label="Direct link to Lightbox" title="Direct link to Lightbox" translate="no">​</a></h3>
+<p>Has been replaced with <a class="" href="https://ashlar.wwu.edu/patterns/molecules/dialog">Dialog</a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="link-list">Link List<a href="https://ashlar.wwu.edu/changelog/version-5#link-list" class="hash-link" aria-label="Direct link to Link List" title="Direct link to Link List" translate="no">​</a></h3>
 <p>The Link List style has been removed (not widely used, this has already been replaced on pages it was used on)</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="ribbon">Ribbon<a href="https://ashlar.wwu.edu/changelog/version-5#ribbon" class="hash-link" aria-label="Direct link to Ribbon" title="Direct link to Ribbon">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ribbon">Ribbon<a href="https://ashlar.wwu.edu/changelog/version-5#ribbon" class="hash-link" aria-label="Direct link to Ribbon" title="Direct link to Ribbon" translate="no">​</a></h3>
 <p>This style has been removed.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="schedule">Schedule<a href="https://ashlar.wwu.edu/changelog/version-5#schedule" class="hash-link" aria-label="Direct link to Schedule" title="Direct link to Schedule">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="schedule">Schedule<a href="https://ashlar.wwu.edu/changelog/version-5#schedule" class="hash-link" aria-label="Direct link to Schedule" title="Direct link to Schedule" translate="no">​</a></h3>
 <p>Round edges option has been removed.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="social-media-icons">Social Media Icons<a href="https://ashlar.wwu.edu/changelog/version-5#social-media-icons" class="hash-link" aria-label="Direct link to Social Media Icons" title="Direct link to Social Media Icons">​</a></h3>
-<p>A <a href="https://ashlar.wwu.edu/patterns/atoms/icons/social-media-icons">custom element has been created for social media icons</a>, to simplify the markup, and the styles have changed slightly. Old instances of social media markup will still be supported, but we recommend switching to the new markup and styles at your earliest convenience.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="statistics">Statistics<a href="https://ashlar.wwu.edu/changelog/version-5#statistics" class="hash-link" aria-label="Direct link to Statistics" title="Direct link to Statistics">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="social-media-icons">Social Media Icons<a href="https://ashlar.wwu.edu/changelog/version-5#social-media-icons" class="hash-link" aria-label="Direct link to Social Media Icons" title="Direct link to Social Media Icons" translate="no">​</a></h3>
+<p>A <a class="" href="https://ashlar.wwu.edu/patterns/atoms/icons/social-media-icons">custom element has been created for social media icons</a>, to simplify the markup, and the styles have changed slightly. Old instances of social media markup will still be supported, but we recommend switching to the new markup and styles at your earliest convenience.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="statistics">Statistics<a href="https://ashlar.wwu.edu/changelog/version-5#statistics" class="hash-link" aria-label="Direct link to Statistics" title="Direct link to Statistics" translate="no">​</a></h3>
 <p>The markup and CSS for these has been simplified. Drupal blocks will update automatically, but any existing custom markup will need to be replaced.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="switcher">Switcher<a href="https://ashlar.wwu.edu/changelog/version-5#switcher" class="hash-link" aria-label="Direct link to Switcher" title="Direct link to Switcher">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="switcher">Switcher<a href="https://ashlar.wwu.edu/changelog/version-5#switcher" class="hash-link" aria-label="Direct link to Switcher" title="Direct link to Switcher" translate="no">​</a></h3>
 <p>Styles have been updated to better match other component styles. There is also a column layout available now.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="old-switcher">Old Switcher<a href="https://ashlar.wwu.edu/changelog/version-5#old-switcher" class="hash-link" aria-label="Direct link to Old Switcher" title="Direct link to Old Switcher">​</a></h4>
-<p><img loading="lazy" alt="old switcher styles" src="https://ashlar.wwu.edu/assets/images/old-switcher-c55b64dec25c1b61e3427523483fd4a1.png" width="879" height="139" class="img_ev3q"></p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="new-switcher">New Switcher<a href="https://ashlar.wwu.edu/changelog/version-5#new-switcher" class="hash-link" aria-label="Direct link to New Switcher" title="Direct link to New Switcher">​</a></h4>
-<p><img loading="lazy" alt="new switcher styles" src="https://ashlar.wwu.edu/assets/images/new-switcher-98315401eca8195c3fa80d4df646f45e.png" width="874" height="128" class="img_ev3q"></p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="tables">Tables<a href="https://ashlar.wwu.edu/changelog/version-5#tables" class="hash-link" aria-label="Direct link to Tables" title="Direct link to Tables">​</a></h3>
-<p><a href="https://ashlar.wwu.edu/patterns/atoms/tables">Tables</a> are a little lighter by default, with less contrast between cells. Table styles in dark mode have been improved as well.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="western-header">Western Header<a href="https://ashlar.wwu.edu/changelog/version-5#western-header" class="hash-link" aria-label="Direct link to Western Header" title="Direct link to Western Header">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="old-switcher">Old Switcher<a href="https://ashlar.wwu.edu/changelog/version-5#old-switcher" class="hash-link" aria-label="Direct link to Old Switcher" title="Direct link to Old Switcher" translate="no">​</a></h4>
+<p><img decoding="async" loading="lazy" alt="old switcher styles" src="https://ashlar.wwu.edu/assets/images/old-switcher-c55b64dec25c1b61e3427523483fd4a1.png" width="879" height="139" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-switcher">New Switcher<a href="https://ashlar.wwu.edu/changelog/version-5#new-switcher" class="hash-link" aria-label="Direct link to New Switcher" title="Direct link to New Switcher" translate="no">​</a></h4>
+<p><img decoding="async" loading="lazy" alt="new switcher styles" src="https://ashlar.wwu.edu/assets/images/new-switcher-98315401eca8195c3fa80d4df646f45e.png" width="874" height="128" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tables">Tables<a href="https://ashlar.wwu.edu/changelog/version-5#tables" class="hash-link" aria-label="Direct link to Tables" title="Direct link to Tables" translate="no">​</a></h3>
+<p><a class="" href="https://ashlar.wwu.edu/patterns/atoms/tables">Tables</a> are a little lighter by default, with less contrast between cells. Table styles in dark mode have been improved as well.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="western-header">Western Header<a href="https://ashlar.wwu.edu/changelog/version-5#western-header" class="hash-link" aria-label="Direct link to Western Header" title="Direct link to Western Header" translate="no">​</a></h3>
 <p>On both mobile and desktop, the styes for fonts and icons have inherited change from elsewhere in the theme. The site name is also now larger on desktops.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="old-header">Old Header<a href="https://ashlar.wwu.edu/changelog/version-5#old-header" class="hash-link" aria-label="Direct link to Old Header" title="Direct link to Old Header">​</a></h4>
-<p><img loading="lazy" alt="Screenshot of older header styles on small screens" src="https://ashlar.wwu.edu/assets/images/old-mobile-header-6eeabe0aad4dd414f9eb3df278e35f1e.png" width="499" height="209" class="img_ev3q">
-<img loading="lazy" alt="Older header styles on large screens" src="https://ashlar.wwu.edu/assets/images/old-desktop-header-39cd28d16d52867c424017c035b6d251.png" width="1191" height="182" class="img_ev3q"></p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="new-header">New Header<a href="https://ashlar.wwu.edu/changelog/version-5#new-header" class="hash-link" aria-label="Direct link to New Header" title="Direct link to New Header">​</a></h4>
-<p><img loading="lazy" alt="New header styles on large screens" src="https://ashlar.wwu.edu/assets/images/new-header-3f31dfa2e4b12de94cea199d43355e36.png" width="1513" height="171" class="img_ev3q"></p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="western-footer">Western Footer<a href="https://ashlar.wwu.edu/changelog/version-5#western-footer" class="hash-link" aria-label="Direct link to Western Footer" title="Direct link to Western Footer">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="old-header">Old Header<a href="https://ashlar.wwu.edu/changelog/version-5#old-header" class="hash-link" aria-label="Direct link to Old Header" title="Direct link to Old Header" translate="no">​</a></h4>
+<p><img decoding="async" loading="lazy" alt="Screenshot of older header styles on small screens" src="https://ashlar.wwu.edu/assets/images/old-mobile-header-6eeabe0aad4dd414f9eb3df278e35f1e.png" width="499" height="209" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Older header styles on large screens" src="https://ashlar.wwu.edu/assets/images/old-desktop-header-39cd28d16d52867c424017c035b6d251.png" width="1191" height="182" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-header">New Header<a href="https://ashlar.wwu.edu/changelog/version-5#new-header" class="hash-link" aria-label="Direct link to New Header" title="Direct link to New Header" translate="no">​</a></h4>
+<p><img decoding="async" loading="lazy" alt="New header styles on large screens" src="https://ashlar.wwu.edu/assets/images/new-header-3f31dfa2e4b12de94cea199d43355e36.png" width="1513" height="171" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="western-footer">Western Footer<a href="https://ashlar.wwu.edu/changelog/version-5#western-footer" class="hash-link" aria-label="Direct link to Western Footer" title="Direct link to Western Footer" translate="no">​</a></h3>
 <p>The footer has been rearranged, and links have been placed at the bottom of the page.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="old-footer">Old Footer<a href="https://ashlar.wwu.edu/changelog/version-5#old-footer" class="hash-link" aria-label="Direct link to Old Footer" title="Direct link to Old Footer">​</a></h4>
-<p><img loading="lazy" alt="Older footer styles, with content in three columns" src="https://ashlar.wwu.edu/assets/images/old-footer-92eb06221b9a124b7f36cd24f7745003.png" width="1338" height="358" class="img_ev3q"></p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="new-footer">New Footer<a href="https://ashlar.wwu.edu/changelog/version-5#new-footer" class="hash-link" aria-label="Direct link to New Footer" title="Direct link to New Footer">​</a></h4>
-<p><img loading="lazy" alt="New footer styles, with content stacked in a single column" src="https://ashlar.wwu.edu/assets/images/new-footer-7940c73aa0bb2c9e6735a49b772c3aed.png" width="1512" height="427" class="img_ev3q"></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="back-end-changes">Back End Changes<a href="https://ashlar.wwu.edu/changelog/version-5#back-end-changes" class="hash-link" aria-label="Direct link to Back End Changes" title="Direct link to Back End Changes">​</a></h2>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="old-footer">Old Footer<a href="https://ashlar.wwu.edu/changelog/version-5#old-footer" class="hash-link" aria-label="Direct link to Old Footer" title="Direct link to Old Footer" translate="no">​</a></h4>
+<p><img decoding="async" loading="lazy" alt="Older footer styles, with content in three columns" src="https://ashlar.wwu.edu/assets/images/old-footer-92eb06221b9a124b7f36cd24f7745003.png" width="1338" height="358" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-footer">New Footer<a href="https://ashlar.wwu.edu/changelog/version-5#new-footer" class="hash-link" aria-label="Direct link to New Footer" title="Direct link to New Footer" translate="no">​</a></h4>
+<p><img decoding="async" loading="lazy" alt="New footer styles, with content stacked in a single column" src="https://ashlar.wwu.edu/assets/images/new-footer-7940c73aa0bb2c9e6735a49b772c3aed.png" width="1512" height="427" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="back-end-changes">Back End Changes<a href="https://ashlar.wwu.edu/changelog/version-5#back-end-changes" class="hash-link" aria-label="Direct link to Back End Changes" title="Direct link to Back End Changes" translate="no">​</a></h2>
 <p>There have been a LOT of code changes on the back end. Many things have been simplified, reorganized, and condensed.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="css-updates">CSS Updates<a href="https://ashlar.wwu.edu/changelog/version-5#css-updates" class="hash-link" aria-label="Direct link to CSS Updates" title="Direct link to CSS Updates">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="css-updates">CSS Updates<a href="https://ashlar.wwu.edu/changelog/version-5#css-updates" class="hash-link" aria-label="Direct link to CSS Updates" title="Direct link to CSS Updates" translate="no">​</a></h3>
 <p>One big change is that we are now using CSS variables to set things like link colors and font sizes. This makes inheritence a lot more logical, so that a lot less overrides are needed to make sure that things like contrast and font sizes are maintained when different user preferences are set, or in different situations like when a background color changes.</p>
 <p>Another technical change is that we've converted nearly all of our jQuery to vanilla javscript, and many of our components are now available as custom web elements.</p>
 <p>The SASS module Breakpoint has been removed. We are now using vanilla CSS media queries. (Note that the variables are still referred to as breakpoints, we're just not using the sass plugin anymore)</p>
 <p>Support for IE has been removed (eg no more -ms- prefixes cluttering things up).</p>
 <p>These changes, along with dropping out some extra style variants, has lead to a great overall improvement in the file size for our compiled stylesheets. Our <strong>ashlar-base.css</strong> stylesheet will go from  <strong>11,544</strong> lines of code, and <strong>796 kb</strong> to <strong>5991</strong> lines of code, and <strong>452 kb</strong> on this release.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="helper-class-changes">Helper Class Changes<a href="https://ashlar.wwu.edu/changelog/version-5#helper-class-changes" class="hash-link" aria-label="Direct link to Helper Class Changes" title="Direct link to Helper Class Changes">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="helper-class-changes">Helper Class Changes<a href="https://ashlar.wwu.edu/changelog/version-5#helper-class-changes" class="hash-link" aria-label="Direct link to Helper Class Changes" title="Direct link to Helper Class Changes" translate="no">​</a></h3>
 <p>Some class names and helper class names have changed. This will not affect any native Drupal blocks, but if you have custom styles, you may need to update them.</p>
 <ul>
-<li>The "button" class is no longer supported for links. Use "cta" instead.</li>
-<li>.block-- has been updated to .wwu-</li>
-<li>.block__title has been updated to .title</li>
+<li class="">The "button" class is no longer supported for links. Use "cta" instead.</li>
+<li class="">.block-- has been updated to .wwu-</li>
+<li class="">.block__title has been updated to .title</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="file-reorganization">File Reorganization<a href="https://ashlar.wwu.edu/changelog/version-5#file-reorganization" class="hash-link" aria-label="Direct link to File Reorganization" title="Direct link to File Reorganization">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="file-reorganization">File Reorganization<a href="https://ashlar.wwu.edu/changelog/version-5#file-reorganization" class="hash-link" aria-label="Direct link to File Reorganization" title="Direct link to File Reorganization" translate="no">​</a></h3>
 <p>We moved .html.twig templates out of the _docs/patterns folders and directly into the templates folder. Since these are no longer being used for both the component library and Drupal, it makes more sense to me to keep them in the Drupal-only part of the theme files. This makes the templates a little less reusable, but easier to find.</p>
 <p>With the move away from Pattern Lab, we no longer need YAML files. Component documentation lives in Markdown files, alongside the SASS and any Javascript for a component.</p>
 <p>We have also continued to convert components to Custom Elements (eg Web Components, but without shadow DOMs). Generally, anything that requires Javascript to function outside of being a web component (like a content switcher or an accordion) will be scripted as a custom element. What this means is that markup for these types of elements has been greatly simplified, so that they are easier to implement across different platforms. For example, a content switcher previously needed the following markup:</p>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">&lt;div class="block--content-switcher" id="example"&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &lt;div class="content-switcher" role="tablist" aria-label="Title of Content Switcher"&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &lt;/div&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &lt;div class="content-switcher-container"&gt;    </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;button class="switch-1" role="tab" id="switch-button-1" title="switch-button-1" aria-controls="switch-content-1"&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      Content 1</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;/button&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;div class="switch-1 content" role="tabpanel" id="switch-content-1" aria-labelledby="switch-button-1" tabindex="0"&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      We have an infinite amount to learn both from nature and from each other. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next 10.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;/div&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;button class="switch-2" role="tab" id="switch-button-2" title="switch-button-2" aria-controls="switch-content-2"&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      Content 2</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;/button&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;div class="switch-2 content" role="tabpanel" id="switch-content-2" aria-labelledby="switch-button-2" tabindex="0"&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      If you could see the earth illuminated when you were in a place as dark as night, it would look to you more splendid than the moon. Curious that we spend more time congratulating people who have succeeded than encouraging people who have not.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;/div&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;button class="switch-3" role="tab" id="switch-button-3" title="switch-button-3" aria-controls="switch-content-3"&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      Content 3</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;/button&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;div class="switch-3 content" role="tabpanel" id="switch-content-3" aria-labelledby="switch-button-3" tabindex="0"&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      Astronomy compels the soul to look upward, and leads us from this world to another.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;/div&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &lt;/div&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;/div&gt;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">&lt;div class="block--content-switcher" id="example"&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &lt;div class="content-switcher" role="tablist" aria-label="Title of Content Switcher"&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &lt;/div&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &lt;div class="content-switcher-container"&gt;    </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;button class="switch-1" role="tab" id="switch-button-1" title="switch-button-1" aria-controls="switch-content-1"&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      Content 1</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;/button&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;div class="switch-1 content" role="tabpanel" id="switch-content-1" aria-labelledby="switch-button-1" tabindex="0"&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      We have an infinite amount to learn both from nature and from each other. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next 10.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;/div&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;button class="switch-2" role="tab" id="switch-button-2" title="switch-button-2" aria-controls="switch-content-2"&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      Content 2</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;/button&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;div class="switch-2 content" role="tabpanel" id="switch-content-2" aria-labelledby="switch-button-2" tabindex="0"&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      If you could see the earth illuminated when you were in a place as dark as night, it would look to you more splendid than the moon. Curious that we spend more time congratulating people who have succeeded than encouraging people who have not.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;/div&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;button class="switch-3" role="tab" id="switch-button-3" title="switch-button-3" aria-controls="switch-content-3"&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      Content 3</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;/button&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;div class="switch-3 content" role="tabpanel" id="switch-content-3" aria-labelledby="switch-button-3" tabindex="0"&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      Astronomy compels the soul to look upward, and leads us from this world to another.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;/div&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  &lt;/div&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;/div&gt;</span><br></span></code></pre></div></div>
 <p>Now, the same switcher can be marked up as:</p>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">&lt;wwu-accordion&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;wwu-accordion-item label="Cats" heading-level="h3"&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        &lt;p&gt;Purr when being pet claw at curtains stretch and yawn nibble on tuna ignore human bite human hand this is the day hell is other people meowwww. Jump five feet high and sideways when a shadow moves naughty running cat or crash against wall but walk away like nothing happened scratch the box your pillow is now my pet bed. Lick human with sandpaper tongue miaow then turn around and show you my bum rub face on everything. Somehow manage to catch a bird but have no idea what to do next, so play with it until it dies of shock bleghbleghvomit my furball really tie the room together mew hunt anything. Lick plastic bags disappear for four days and return home with an expensive injury; bite the vet but scratch leg; meow for can opener to feed me for shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff eats owners hair then claws head but sleep over your phone and make cute snoring noises. Trip owner up in kitchen i want food human give me attention meow.&lt;/p&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;/wwu-accordion-item&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;wwu-accordion-item label="Dogs" heading-level="h3"&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        &lt;p&gt;Doggo ipsum blep corgo doggo smol borking doggo with a long snoot for pats, the neighborhood pupper what a nice floof boofers, wow very biscit he made many woofs. Boofers thicc fluffer big ol very taste wow extremely cuuuuuute, blep thicc clouds shooberino, vvv extremely cuuuuuute ruff waggy wags. You are doin me a concern bork what a nice floof fluffer puggorino, very hand that feed shibe pupper smol borking doggo with a long snoot for pats pupper, heckin good boys and girls shooberino sub woofer. Blep yapper big ol pupper very hand that feed shibe big ol, doggorino blep doing me a frighten.  Doing me a frighten adorable doggo ruff ur givin me a spook waggy wags, what a nice floof waggy wags noodle horse, shoober doge pupperino.&lt;/p&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;/wwu-accordion-item&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;wwu-accordion-item label="Fish" heading-level="h3"&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        &lt;p&gt;Rough pomfret lemon shark plownose chimaera southern sandfish kokanee northern sea robin Antarctic cod. Yellow-and-black triplefin gulper South American Lungfish mahi-mahi, butterflyfish glass catfish soapfish ling gray mullet! Warbonnet denticle herring spiny-back cod straptail tailor zebra loach sea lamprey.&lt;/p&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;/wwu-accordion-item&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;/wwu-accordion&gt;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">&lt;wwu-accordion&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;wwu-accordion-item label="Cats" heading-level="h3"&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        &lt;p&gt;Purr when being pet claw at curtains stretch and yawn nibble on tuna ignore human bite human hand this is the day hell is other people meowwww. Jump five feet high and sideways when a shadow moves naughty running cat or crash against wall but walk away like nothing happened scratch the box your pillow is now my pet bed. Lick human with sandpaper tongue miaow then turn around and show you my bum rub face on everything. Somehow manage to catch a bird but have no idea what to do next, so play with it until it dies of shock bleghbleghvomit my furball really tie the room together mew hunt anything. Lick plastic bags disappear for four days and return home with an expensive injury; bite the vet but scratch leg; meow for can opener to feed me for shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff eats owners hair then claws head but sleep over your phone and make cute snoring noises. Trip owner up in kitchen i want food human give me attention meow.&lt;/p&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;/wwu-accordion-item&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;wwu-accordion-item label="Dogs" heading-level="h3"&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        &lt;p&gt;Doggo ipsum blep corgo doggo smol borking doggo with a long snoot for pats, the neighborhood pupper what a nice floof boofers, wow very biscit he made many woofs. Boofers thicc fluffer big ol very taste wow extremely cuuuuuute, blep thicc clouds shooberino, vvv extremely cuuuuuute ruff waggy wags. You are doin me a concern bork what a nice floof fluffer puggorino, very hand that feed shibe pupper smol borking doggo with a long snoot for pats pupper, heckin good boys and girls shooberino sub woofer. Blep yapper big ol pupper very hand that feed shibe big ol, doggorino blep doing me a frighten.  Doing me a frighten adorable doggo ruff ur givin me a spook waggy wags, what a nice floof waggy wags noodle horse, shoober doge pupperino.&lt;/p&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;/wwu-accordion-item&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;wwu-accordion-item label="Fish" heading-level="h3"&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        &lt;p&gt;Rough pomfret lemon shark plownose chimaera southern sandfish kokanee northern sea robin Antarctic cod. Yellow-and-black triplefin gulper South American Lungfish mahi-mahi, butterflyfish glass catfish soapfish ling gray mullet! Warbonnet denticle herring spiny-back cod straptail tailor zebra loach sea lamprey.&lt;/p&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    &lt;/wwu-accordion-item&gt;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&lt;/wwu-accordion&gt;</span><br></span></code></pre></div></div>
 <p>There are some components (such as Announcements and Cards) that don't require Javascript for their basic functionality. We have opted for less Javascript over simplified markup, though this may change in the future.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">Conclusion<a href="https://ashlar.wwu.edu/changelog/version-5#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="conclusion">Conclusion<a href="https://ashlar.wwu.edu/changelog/version-5#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion" translate="no">​</a></h2>
 <p>Why the changes? As time passes,  many new styles (and their accompanying code) get introduced to the  theme. Some components become cluttered with many style  variants. Some of those style options get added that strayed from the look and  feel of the theme, and/or don't see much use.</p>
 <p>We've removed certain style variations so that there is more consistency across the theme. This reduces the  complexity for the people who are managing the components. It also reduces the  amount of CSS, which means pages load faster.</p>
 <p>That doesn't  mean we don't want to keep innovating and adding new styles. In fact,  simplifying makes this easier to do. We're  starting from a fresh slate, which means there are less style  conflicts and bugs to worry about.</p>
-<p>If you have any questions, or  notice that something on your page that doesn't just look different, but looks brokenplease reach out to <a href="mailto:Web.Help@wwu.edu" target="_blank" rel="noopener noreferrer">Web.Help@wwu.edu</a> or contact <a href="mailo:masons7@wwu.edu" target="_blank" rel="noopener noreferrer">Stephanie</a> directly.</p>]]></content:encoded>
+<p>If you have any questions, or  notice that something on your page that doesn't just look different, but looks brokenplease reach out to <a href="mailto:Web.Help@wwu.edu" target="_blank" rel="noopener noreferrer" class="">Web.Help@wwu.edu</a> or contact <a href="mailo:masons7@wwu.edu" target="_blank" rel="noopener noreferrer" class="">Stephanie</a> directly.</p>]]></content:encoded>
             <category>major-release</category>
         </item>
         <item>
@@ -645,26 +676,26 @@
             <guid>https://ashlar.wwu.edu/changelog/version-4-6</guid>
             <pubDate>Mon, 06 Mar 2023 10:00:00 GMT</pubDate>
             <description><![CDATA[4.6.3]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="463">4.6.3<a href="https://ashlar.wwu.edu/changelog/version-4-6#463" class="hash-link" aria-label="Direct link to 4.6.3" title="Direct link to 4.6.3">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="463">4.6.3<a href="https://ashlar.wwu.edu/changelog/version-4-6#463" class="hash-link" aria-label="Direct link to 4.6.3" title="Direct link to 4.6.3" translate="no">​</a></h2>
 <p><strong>March 6, 2022</strong></p>
 <ul>
-<li>npm updates</li>
-<li>Facebook tracking pixel removed</li>
+<li class="">npm updates</li>
+<li class="">Facebook tracking pixel removed</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="462">4.6.2<a href="https://ashlar.wwu.edu/changelog/version-4-6#462" class="hash-link" aria-label="Direct link to 4.6.2" title="Direct link to 4.6.2">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="462">4.6.2<a href="https://ashlar.wwu.edu/changelog/version-4-6#462" class="hash-link" aria-label="Direct link to 4.6.2" title="Direct link to 4.6.2" translate="no">​</a></h2>
 <p><strong>February 2, 2022</strong></p>
 <p>Able Player styling</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="461">4.6.1<a href="https://ashlar.wwu.edu/changelog/version-4-6#461" class="hash-link" aria-label="Direct link to 4.6.1" title="Direct link to 4.6.1">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="461">4.6.1<a href="https://ashlar.wwu.edu/changelog/version-4-6#461" class="hash-link" aria-label="Direct link to 4.6.1" title="Direct link to 4.6.1" translate="no">​</a></h2>
 <p><strong>January 23, 2022</strong></p>
 <ul>
-<li>SkipTo plugin removed from theme</li>
-<li>Line heigh reset on cards</li>
+<li class="">SkipTo plugin removed from theme</li>
+<li class="">Line heigh reset on cards</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="460">4.6.0<a href="https://ashlar.wwu.edu/changelog/version-4-6#460" class="hash-link" aria-label="Direct link to 4.6.0" title="Direct link to 4.6.0">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="460">4.6.0<a href="https://ashlar.wwu.edu/changelog/version-4-6#460" class="hash-link" aria-label="Direct link to 4.6.0" title="Direct link to 4.6.0" translate="no">​</a></h2>
 <p><strong>January 11, 2022</strong></p>
 <ul>
-<li>NEW Paragraph templates for banners, media, and headings</li>
-<li>NEW alignment helper classes added</li>
+<li class="">NEW Paragraph templates for banners, media, and headings</li>
+<li class="">NEW alignment helper classes added</li>
 </ul>]]></content:encoded>
             <category>minor-release</category>
         </item>
@@ -674,107 +705,101 @@
             <guid>https://ashlar.wwu.edu/changelog/version-4-5</guid>
             <pubDate>Sun, 01 Jan 2023 10:00:00 GMT</pubDate>
             <description><![CDATA[4.5.20]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4520">4.5.20<a href="https://ashlar.wwu.edu/changelog/version-4-5#4520" class="hash-link" aria-label="Direct link to 4.5.20" title="Direct link to 4.5.20">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4520">4.5.20<a href="https://ashlar.wwu.edu/changelog/version-4-5#4520" class="hash-link" aria-label="Direct link to 4.5.20" title="Direct link to 4.5.20" translate="no">​</a></h2>
 <p><strong>January 11, 2022</strong></p>
 <ul>
-<li>Paragraph templates for banners, media, and headings</li>
-<li>New alignment helper classes added</li>
-<li>NPM updates</li>
-<li>Email template updates</li>
+<li class="">Paragraph templates for banners, media, and headings</li>
+<li class="">New alignment helper classes added</li>
+<li class="">NPM updates</li>
+<li class="">Email template updates</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4519">4.5.19<a href="https://ashlar.wwu.edu/changelog/version-4-5#4519" class="hash-link" aria-label="Direct link to 4.5.19" title="Direct link to 4.5.19">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4519">4.5.19<a href="https://ashlar.wwu.edu/changelog/version-4-5#4519" class="hash-link" aria-label="Direct link to 4.5.19" title="Direct link to 4.5.19" translate="no">​</a></h2>
 <p><strong>December 5, 2022</strong></p>
 <ul>
-<li>
-<p>Styles added for upcoming in-page menu component</p>
-</li>
-<li>
-<p>Minor style updates for cards</p>
-</li>
-<li>
-<p>Minor contrast fixes</p>
-</li>
+<li class="">Styles added for upcoming in-page menu component</li>
+<li class="">Minor style updates for cards</li>
+<li class="">Minor contrast fixes</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4518">4.5.18<a href="https://ashlar.wwu.edu/changelog/version-4-5#4518" class="hash-link" aria-label="Direct link to 4.5.18" title="Direct link to 4.5.18">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4518">4.5.18<a href="https://ashlar.wwu.edu/changelog/version-4-5#4518" class="hash-link" aria-label="Direct link to 4.5.18" title="Direct link to 4.5.18" translate="no">​</a></h2>
 <p><strong>November 14, 2022</strong></p>
 <ul>
-<li>Improvements to email signature for screen readers</li>
+<li class="">Improvements to email signature for screen readers</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4517">4.5.17<a href="https://ashlar.wwu.edu/changelog/version-4-5#4517" class="hash-link" aria-label="Direct link to 4.5.17" title="Direct link to 4.5.17">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4517">4.5.17<a href="https://ashlar.wwu.edu/changelog/version-4-5#4517" class="hash-link" aria-label="Direct link to 4.5.17" title="Direct link to 4.5.17" translate="no">​</a></h2>
 <p><strong>November 7, 2022</strong></p>
 <ul>
-<li>Various dark mode and a11y style fixes</li>
+<li class="">Various dark mode and a11y style fixes</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4516">4.5.16<a href="https://ashlar.wwu.edu/changelog/version-4-5#4516" class="hash-link" aria-label="Direct link to 4.5.16" title="Direct link to 4.5.16">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4516">4.5.16<a href="https://ashlar.wwu.edu/changelog/version-4-5#4516" class="hash-link" aria-label="Direct link to 4.5.16" title="Direct link to 4.5.16" translate="no">​</a></h2>
 <p><strong>October 31, 2022</strong></p>
 <ul>
-<li>More forced colors style improvements</li>
+<li class="">More forced colors style improvements</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4512---13">4.5.12 - 13<a href="https://ashlar.wwu.edu/changelog/version-4-5#4512---13" class="hash-link" aria-label="Direct link to 4.5.12 - 13" title="Direct link to 4.5.12 - 13">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4512---13">4.5.12 - 13<a href="https://ashlar.wwu.edu/changelog/version-4-5#4512---13" class="hash-link" aria-label="Direct link to 4.5.12 - 13" title="Direct link to 4.5.12 - 13" translate="no">​</a></h2>
 <p><strong>October 24, 2022</strong></p>
 <ul>
-<li>Accordion style and markup fixes for views</li>
+<li class="">Accordion style and markup fixes for views</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4511">4.5.11<a href="https://ashlar.wwu.edu/changelog/version-4-5#4511" class="hash-link" aria-label="Direct link to 4.5.11" title="Direct link to 4.5.11">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4511">4.5.11<a href="https://ashlar.wwu.edu/changelog/version-4-5#4511" class="hash-link" aria-label="Direct link to 4.5.11" title="Direct link to 4.5.11" translate="no">​</a></h2>
 <p><strong>October 17, 2022</strong></p>
 <ul>
-<li>Updates for accordion</li>
+<li class="">Updates for accordion</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="459---10">4.5.9 - 10<a href="https://ashlar.wwu.edu/changelog/version-4-5#459---10" class="hash-link" aria-label="Direct link to 4.5.9 - 10" title="Direct link to 4.5.9 - 10">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="459---10">4.5.9 - 10<a href="https://ashlar.wwu.edu/changelog/version-4-5#459---10" class="hash-link" aria-label="Direct link to 4.5.9 - 10" title="Direct link to 4.5.9 - 10" translate="no">​</a></h2>
 <p><strong>October 3, 2022</strong></p>
 <ul>
-<li>Mini pagers have unique aria labels</li>
-<li>Forced color style updates</li>
+<li class="">Mini pagers have unique aria labels</li>
+<li class="">Forced color style updates</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="458">4.5.8<a href="https://ashlar.wwu.edu/changelog/version-4-5#458" class="hash-link" aria-label="Direct link to 4.5.8" title="Direct link to 4.5.8">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="458">4.5.8<a href="https://ashlar.wwu.edu/changelog/version-4-5#458" class="hash-link" aria-label="Direct link to 4.5.8" title="Direct link to 4.5.8" translate="no">​</a></h2>
 <p><strong>September 26, 2022</strong></p>
 <ul>
-<li>Glossary template override created</li>
-<li>Year added to event card displays</li>
+<li class="">Glossary template override created</li>
+<li class="">Year added to event card displays</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="457">4.5.7<a href="https://ashlar.wwu.edu/changelog/version-4-5#457" class="hash-link" aria-label="Direct link to 4.5.7" title="Direct link to 4.5.7">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="457">4.5.7<a href="https://ashlar.wwu.edu/changelog/version-4-5#457" class="hash-link" aria-label="Direct link to 4.5.7" title="Direct link to 4.5.7" translate="no">​</a></h2>
 <p><strong>September 20, 2022</strong></p>
 <ul>
-<li>Breadcrumbs update</li>
+<li class="">Breadcrumbs update</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="456">4.5.6<a href="https://ashlar.wwu.edu/changelog/version-4-5#456" class="hash-link" aria-label="Direct link to 4.5.6" title="Direct link to 4.5.6">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="456">4.5.6<a href="https://ashlar.wwu.edu/changelog/version-4-5#456" class="hash-link" aria-label="Direct link to 4.5.6" title="Direct link to 4.5.6" translate="no">​</a></h2>
 <p><strong>September 13, 2022</strong></p>
 <ul>
-<li>Tugboat removed</li>
-<li>Twig "spaceless" updated for future-proofing</li>
+<li class="">Tugboat removed</li>
+<li class="">Twig "spaceless" updated for future-proofing</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="455">4.5.5<a href="https://ashlar.wwu.edu/changelog/version-4-5#455" class="hash-link" aria-label="Direct link to 4.5.5" title="Direct link to 4.5.5">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="455">4.5.5<a href="https://ashlar.wwu.edu/changelog/version-4-5#455" class="hash-link" aria-label="Direct link to 4.5.5" title="Direct link to 4.5.5" translate="no">​</a></h2>
 <p><strong>September 12, 2022</strong></p>
 <ul>
-<li>404 page fix</li>
-<li>border-bottom helper classes added</li>
+<li class="">404 page fix</li>
+<li class="">border-bottom helper classes added</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="454">4.5.4<a href="https://ashlar.wwu.edu/changelog/version-4-5#454" class="hash-link" aria-label="Direct link to 4.5.4" title="Direct link to 4.5.4">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="454">4.5.4<a href="https://ashlar.wwu.edu/changelog/version-4-5#454" class="hash-link" aria-label="Direct link to 4.5.4" title="Direct link to 4.5.4" translate="no">​</a></h2>
 <p><strong>September 6, 2022</strong></p>
 <ul>
-<li>Bug fix for background video pause feature</li>
-<li>Contrast fix for accordions</li>
+<li class="">Bug fix for background video pause feature</li>
+<li class="">Contrast fix for accordions</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="453">4.5.3<a href="https://ashlar.wwu.edu/changelog/version-4-5#453" class="hash-link" aria-label="Direct link to 4.5.3" title="Direct link to 4.5.3">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="453">4.5.3<a href="https://ashlar.wwu.edu/changelog/version-4-5#453" class="hash-link" aria-label="Direct link to 4.5.3" title="Direct link to 4.5.3" translate="no">​</a></h2>
 <p><strong>August 22, 2022</strong></p>
 <ul>
-<li>Style a11y improvements for accordions, call to actions, split-style information cards, and layouts</li>
+<li class="">Style a11y improvements for accordions, call to actions, split-style information cards, and layouts</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="452">4.5.2<a href="https://ashlar.wwu.edu/changelog/version-4-5#452" class="hash-link" aria-label="Direct link to 4.5.2" title="Direct link to 4.5.2">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="452">4.5.2<a href="https://ashlar.wwu.edu/changelog/version-4-5#452" class="hash-link" aria-label="Direct link to 4.5.2" title="Direct link to 4.5.2" translate="no">​</a></h2>
 <p><strong>August 8, 2022</strong></p>
 <ul>
-<li>Markup fix for schedule component links</li>
+<li class="">Markup fix for schedule component links</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="451">4.5.1<a href="https://ashlar.wwu.edu/changelog/version-4-5#451" class="hash-link" aria-label="Direct link to 4.5.1" title="Direct link to 4.5.1">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="451">4.5.1<a href="https://ashlar.wwu.edu/changelog/version-4-5#451" class="hash-link" aria-label="Direct link to 4.5.1" title="Direct link to 4.5.1" translate="no">​</a></h2>
 <p><strong>July 25, 2022</strong></p>
 <ul>
-<li>Contrast fixes for icons with text</li>
+<li class="">Contrast fixes for icons with text</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="450">4.5.0<a href="https://ashlar.wwu.edu/changelog/version-4-5#450" class="hash-link" aria-label="Direct link to 4.5.0" title="Direct link to 4.5.0">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="450">4.5.0<a href="https://ashlar.wwu.edu/changelog/version-4-5#450" class="hash-link" aria-label="Direct link to 4.5.0" title="Direct link to 4.5.0" translate="no">​</a></h2>
 <p><strong>July 18, 2022</strong></p>
 <ul>
-<li>Modernized embed container styles</li>
-<li>Alternate content switcher layout added</li>
+<li class="">Modernized embed container styles</li>
+<li class="">Alternate content switcher layout added</li>
 </ul>]]></content:encoded>
             <category>minor-release</category>
         </item>
@@ -784,36 +809,36 @@
             <guid>https://ashlar.wwu.edu/changelog/version-4-4</guid>
             <pubDate>Thu, 07 Jul 2022 10:00:00 GMT</pubDate>
             <description><![CDATA[4.4.4-4.4.5]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="444-445">4.4.4-4.4.5<a href="https://ashlar.wwu.edu/changelog/version-4-4#444-445" class="hash-link" aria-label="Direct link to 4.4.4-4.4.5" title="Direct link to 4.4.4-4.4.5">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="444-445">4.4.4-4.4.5<a href="https://ashlar.wwu.edu/changelog/version-4-4#444-445" class="hash-link" aria-label="Direct link to 4.4.4-4.4.5" title="Direct link to 4.4.4-4.4.5" translate="no">​</a></h2>
 <p><strong>July 7, 2022</strong></p>
 <ul>
-<li>Icon contrast fixes</li>
-<li>Horizontal menu fix</li>
+<li class="">Icon contrast fixes</li>
+<li class="">Horizontal menu fix</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="443">4.4.3<a href="https://ashlar.wwu.edu/changelog/version-4-4#443" class="hash-link" aria-label="Direct link to 4.4.3" title="Direct link to 4.4.3">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="443">4.4.3<a href="https://ashlar.wwu.edu/changelog/version-4-4#443" class="hash-link" aria-label="Direct link to 4.4.3" title="Direct link to 4.4.3" translate="no">​</a></h2>
 <p><strong>June 27, 2022</strong></p>
 <ul>
-<li>Manual Login option added to theme's appearance settings</li>
+<li class="">Manual Login option added to theme's appearance settings</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="442">4.4.2<a href="https://ashlar.wwu.edu/changelog/version-4-4#442" class="hash-link" aria-label="Direct link to 4.4.2" title="Direct link to 4.4.2">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="442">4.4.2<a href="https://ashlar.wwu.edu/changelog/version-4-4#442" class="hash-link" aria-label="Direct link to 4.4.2" title="Direct link to 4.4.2" translate="no">​</a></h2>
 <p><strong>June 13, 2022</strong></p>
 <ul>
-<li>Menu fix</li>
+<li class="">Menu fix</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="441">4.4.1<a href="https://ashlar.wwu.edu/changelog/version-4-4#441" class="hash-link" aria-label="Direct link to 4.4.1" title="Direct link to 4.4.1">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="441">4.4.1<a href="https://ashlar.wwu.edu/changelog/version-4-4#441" class="hash-link" aria-label="Direct link to 4.4.1" title="Direct link to 4.4.1" translate="no">​</a></h2>
 <p><strong>June 6, 2022</strong></p>
 <ul>
-<li>Card styles for APICs page</li>
-<li>Manual login toggle added to theme</li>
-<li>Forced color improvements</li>
-<li>Wordpress builds script improvements</li>
+<li class="">Card styles for APICs page</li>
+<li class="">Manual login toggle added to theme</li>
+<li class="">Forced color improvements</li>
+<li class="">Wordpress builds script improvements</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="440">4.4.0<a href="https://ashlar.wwu.edu/changelog/version-4-4#440" class="hash-link" aria-label="Direct link to 4.4.0" title="Direct link to 4.4.0">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="440">4.4.0<a href="https://ashlar.wwu.edu/changelog/version-4-4#440" class="hash-link" aria-label="Direct link to 4.4.0" title="Direct link to 4.4.0" translate="no">​</a></h2>
 <p><strong>May 23, 2022</strong></p>
 <ul>
-<li>Forced color mode styles added</li>
-<li>Content Switchers javascript updated, multiple switchers can now be added to a single page and custom element may be used</li>
-<li>Inline field label styles fixed</li>
+<li class="">Forced color mode styles added</li>
+<li class="">Content Switchers javascript updated, multiple switchers can now be added to a single page and custom element may be used</li>
+<li class="">Inline field label styles fixed</li>
 </ul>]]></content:encoded>
             <category>minor-release</category>
         </item>
@@ -823,30 +848,30 @@
             <guid>https://ashlar.wwu.edu/changelog/version-4-3</guid>
             <pubDate>Mon, 16 May 2022 10:00:00 GMT</pubDate>
             <description><![CDATA[4.3.3]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="433">4.3.3<a href="https://ashlar.wwu.edu/changelog/version-4-3#433" class="hash-link" aria-label="Direct link to 4.3.3" title="Direct link to 4.3.3">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="433">4.3.3<a href="https://ashlar.wwu.edu/changelog/version-4-3#433" class="hash-link" aria-label="Direct link to 4.3.3" title="Direct link to 4.3.3" translate="no">​</a></h2>
 <p><strong>May 16, 2022</strong></p>
 <ul>
-<li>Fixed footer link</li>
-<li>CDN scripting added</li>
+<li class="">Fixed footer link</li>
+<li class="">CDN scripting added</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="432">4.3.2<a href="https://ashlar.wwu.edu/changelog/version-4-3#432" class="hash-link" aria-label="Direct link to 4.3.2" title="Direct link to 4.3.2">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="432">4.3.2<a href="https://ashlar.wwu.edu/changelog/version-4-3#432" class="hash-link" aria-label="Direct link to 4.3.2" title="Direct link to 4.3.2" translate="no">​</a></h2>
 <p><strong>May 9, 2022</strong></p>
 <ul>
-<li>Fix for spacing helper classes</li>
-<li>Typo fix for alerts</li>
-<li>Files added for Azure deployments</li>
-<li>Update component library yaml declaration</li>
+<li class="">Fix for spacing helper classes</li>
+<li class="">Typo fix for alerts</li>
+<li class="">Files added for Azure deployments</li>
+<li class="">Update component library yaml declaration</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="431">4.3.1<a href="https://ashlar.wwu.edu/changelog/version-4-3#431" class="hash-link" aria-label="Direct link to 4.3.1" title="Direct link to 4.3.1">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="431">4.3.1<a href="https://ashlar.wwu.edu/changelog/version-4-3#431" class="hash-link" aria-label="Direct link to 4.3.1" title="Direct link to 4.3.1" translate="no">​</a></h2>
 <p><strong>April 25, 2022</strong></p>
 <ul>
-<li>Minor style fixes for table and org chart</li>
+<li class="">Minor style fixes for table and org chart</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="430">4.3.0<a href="https://ashlar.wwu.edu/changelog/version-4-3#430" class="hash-link" aria-label="Direct link to 4.3.0" title="Direct link to 4.3.0">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="430">4.3.0<a href="https://ashlar.wwu.edu/changelog/version-4-3#430" class="hash-link" aria-label="Direct link to 4.3.0" title="Direct link to 4.3.0" translate="no">​</a></h2>
 <p><strong>April 18, 2022</strong></p>
 <ul>
-<li><code>&lt;wwu-footer&gt;</code> custom element created</li>
-<li>Quicksearch removed from theme</li>
+<li class=""><code>&lt;wwu-footer&gt;</code> custom element created</li>
+<li class="">Quicksearch removed from theme</li>
 </ul>]]></content:encoded>
             <category>minor-release</category>
         </item>
@@ -856,54 +881,54 @@
             <guid>https://ashlar.wwu.edu/changelog/version-4-2</guid>
             <pubDate>Mon, 11 Apr 2022 10:00:00 GMT</pubDate>
             <description><![CDATA[4.2.8]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="428">4.2.8<a href="https://ashlar.wwu.edu/changelog/version-4-2#428" class="hash-link" aria-label="Direct link to 4.2.8" title="Direct link to 4.2.8">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="428">4.2.8<a href="https://ashlar.wwu.edu/changelog/version-4-2#428" class="hash-link" aria-label="Direct link to 4.2.8" title="Direct link to 4.2.8" translate="no">​</a></h2>
 <p><strong>April 11, 2022</strong></p>
 <ul>
-<li>A11y fixes for Ultimenu and taxonomy term styles</li>
+<li class="">A11y fixes for Ultimenu and taxonomy term styles</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="426-427">4.2.6-4.2.7<a href="https://ashlar.wwu.edu/changelog/version-4-2#426-427" class="hash-link" aria-label="Direct link to 4.2.6-4.2.7" title="Direct link to 4.2.6-4.2.7">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="426-427">4.2.6-4.2.7<a href="https://ashlar.wwu.edu/changelog/version-4-2#426-427" class="hash-link" aria-label="Direct link to 4.2.6-4.2.7" title="Direct link to 4.2.6-4.2.7" translate="no">​</a></h2>
 <p><strong>April 6, 2022</strong></p>
 <ul>
-<li>Layout template fix for homepage</li>
-<li>Dark mode css fix for cards</li>
-<li>Accordion fix for views</li>
-<li>Views filter a11y fix</li>
+<li class="">Layout template fix for homepage</li>
+<li class="">Dark mode css fix for cards</li>
+<li class="">Accordion fix for views</li>
+<li class="">Views filter a11y fix</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="425">4.2.5<a href="https://ashlar.wwu.edu/changelog/version-4-2#425" class="hash-link" aria-label="Direct link to 4.2.5" title="Direct link to 4.2.5">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="425">4.2.5<a href="https://ashlar.wwu.edu/changelog/version-4-2#425" class="hash-link" aria-label="Direct link to 4.2.5" title="Direct link to 4.2.5" translate="no">​</a></h2>
 <p><strong>March 21, 2022</strong></p>
 <ul>
-<li>Apple touch icon added</li>
-<li>Styles for new directory, homepage navigation</li>
+<li class="">Apple touch icon added</li>
+<li class="">Styles for new directory, homepage navigation</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="424">4.2.4<a href="https://ashlar.wwu.edu/changelog/version-4-2#424" class="hash-link" aria-label="Direct link to 4.2.4" title="Direct link to 4.2.4">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="424">4.2.4<a href="https://ashlar.wwu.edu/changelog/version-4-2#424" class="hash-link" aria-label="Direct link to 4.2.4" title="Direct link to 4.2.4" translate="no">​</a></h2>
 <p><strong>March 14, 2022</strong></p>
 <ul>
-<li>Performance improvements for skip to link</li>
-<li>Heading structure fixes for aggregator feeds</li>
-<li>Removal of deprecated Ashlar library</li>
+<li class="">Performance improvements for skip to link</li>
+<li class="">Heading structure fixes for aggregator feeds</li>
+<li class="">Removal of deprecated Ashlar library</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="422-423">4.2.2-4.2.3<a href="https://ashlar.wwu.edu/changelog/version-4-2#422-423" class="hash-link" aria-label="Direct link to 4.2.2-4.2.3" title="Direct link to 4.2.2-4.2.3">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="422-423">4.2.2-4.2.3<a href="https://ashlar.wwu.edu/changelog/version-4-2#422-423" class="hash-link" aria-label="Direct link to 4.2.2-4.2.3" title="Direct link to 4.2.2-4.2.3" translate="no">​</a></h2>
 <p><strong>March 7, 2022</strong></p>
 <ul>
-<li>Breadcrumb cacheing issue fix</li>
+<li class="">Breadcrumb cacheing issue fix</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="421">4.2.1<a href="https://ashlar.wwu.edu/changelog/version-4-2#421" class="hash-link" aria-label="Direct link to 4.2.1" title="Direct link to 4.2.1">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="421">4.2.1<a href="https://ashlar.wwu.edu/changelog/version-4-2#421" class="hash-link" aria-label="Direct link to 4.2.1" title="Direct link to 4.2.1" translate="no">​</a></h2>
 <p><strong>February 28, 2022</strong></p>
 <ul>
-<li>A11y patch for visually hidden text running together</li>
-<li>A few css fixes</li>
+<li class="">A11y patch for visually hidden text running together</li>
+<li class="">A few css fixes</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="420">4.2.0<a href="https://ashlar.wwu.edu/changelog/version-4-2#420" class="hash-link" aria-label="Direct link to 4.2.0" title="Direct link to 4.2.0">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="420">4.2.0<a href="https://ashlar.wwu.edu/changelog/version-4-2#420" class="hash-link" aria-label="Direct link to 4.2.0" title="Direct link to 4.2.0" translate="no">​</a></h2>
 <p><strong>February 22, 2022</strong></p>
 <p>The display settings and search will be moved up to a new, pre-header bar. Additionally, the skip to content link will become visible without requiring focus. There has also been a new "Jobs" quick link added to the menu.</p>
 <p>Mobile:</p>
-<p><img loading="lazy" alt="New Mobile Header" src="https://ashlar.wwu.edu/assets/images/mobile-header-21f60ebf913c724e8eb66c84ca0286e7.png" width="427" height="256" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="New Mobile Header" src="https://ashlar.wwu.edu/assets/images/mobile-header-21f60ebf913c724e8eb66c84ca0286e7.png" width="427" height="256" class="img_ev3q"></p>
 <p>Desktop:</p>
-<p><img loading="lazy" alt="New Desktop Header" src="https://ashlar.wwu.edu/assets/images/desktop-header-363e7aa17fc9f93c90cb5b445e68a9e6.png" width="1431" height="219" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="New Desktop Header" src="https://ashlar.wwu.edu/assets/images/desktop-header-363e7aa17fc9f93c90cb5b445e68a9e6.png" width="1431" height="219" class="img_ev3q"></p>
 <p>The mobile menu layout and animation will change from a sliding animation to a fading animation, and the layout of the Western Quick links will change slightly. The site and Western footers will also now be visible when the mobile menu is open:</p>
-<p><img loading="lazy" alt="New Mobile Menu" src="https://ashlar.wwu.edu/assets/images/mobile-menu-30288bf538d23cca1c587100da4770c2.png" width="429" height="723" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="New Mobile Menu" src="https://ashlar.wwu.edu/assets/images/mobile-menu-30288bf538d23cca1c587100da4770c2.png" width="429" height="723" class="img_ev3q"></p>
 <p>The skip to content button now also has additional navigation functionality, for jumping to various headers on a page.</p>
-<p><img loading="lazy" alt="New Skip-to Menu" src="https://ashlar.wwu.edu/assets/images/skip-to-c4f0d6e5e1fea66582da93bdc677b952.png" width="662" height="573" class="img_ev3q"></p>]]></content:encoded>
+<p><img decoding="async" loading="lazy" alt="New Skip-to Menu" src="https://ashlar.wwu.edu/assets/images/skip-to-c4f0d6e5e1fea66582da93bdc677b952.png" width="662" height="573" class="img_ev3q"></p>]]></content:encoded>
             <category>minor-release</category>
         </item>
         <item>
@@ -912,76 +937,76 @@
             <guid>https://ashlar.wwu.edu/changelog/version-4-1</guid>
             <pubDate>Mon, 07 Feb 2022 10:00:00 GMT</pubDate>
             <description><![CDATA[4.1.12]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4112">4.1.12<a href="https://ashlar.wwu.edu/changelog/version-4-1#4112" class="hash-link" aria-label="Direct link to 4.1.12" title="Direct link to 4.1.12">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4112">4.1.12<a href="https://ashlar.wwu.edu/changelog/version-4-1#4112" class="hash-link" aria-label="Direct link to 4.1.12" title="Direct link to 4.1.12" translate="no">​</a></h2>
 <p><strong>February 7, 2022</strong></p>
 <ul>
-<li>Contrast fixes</li>
+<li class="">Contrast fixes</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4111">4.1.11<a href="https://ashlar.wwu.edu/changelog/version-4-1#4111" class="hash-link" aria-label="Direct link to 4.1.11" title="Direct link to 4.1.11">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4111">4.1.11<a href="https://ashlar.wwu.edu/changelog/version-4-1#4111" class="hash-link" aria-label="Direct link to 4.1.11" title="Direct link to 4.1.11" translate="no">​</a></h2>
 <p><strong>January 31, 2022</strong></p>
 <ul>
-<li>Org chart styles adjusted to allow for headings</li>
+<li class="">Org chart styles adjusted to allow for headings</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4110">4.1.10<a href="https://ashlar.wwu.edu/changelog/version-4-1#4110" class="hash-link" aria-label="Direct link to 4.1.10" title="Direct link to 4.1.10">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4110">4.1.10<a href="https://ashlar.wwu.edu/changelog/version-4-1#4110" class="hash-link" aria-label="Direct link to 4.1.10" title="Direct link to 4.1.10" translate="no">​</a></h2>
 <p><strong>January 24, 2022</strong></p>
 <ul>
-<li>Directory style fix</li>
+<li class="">Directory style fix</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="419">4.1.9<a href="https://ashlar.wwu.edu/changelog/version-4-1#419" class="hash-link" aria-label="Direct link to 4.1.9" title="Direct link to 4.1.9">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="419">4.1.9<a href="https://ashlar.wwu.edu/changelog/version-4-1#419" class="hash-link" aria-label="Direct link to 4.1.9" title="Direct link to 4.1.9" translate="no">​</a></h2>
 <p><strong>January 17, 2022</strong></p>
 <ul>
-<li>Unpublished page indicator made more prominent</li>
-<li>imagemin removed from gulp tasks</li>
-<li>SkipTo module added to skip links</li>
+<li class="">Unpublished page indicator made more prominent</li>
+<li class="">imagemin removed from gulp tasks</li>
+<li class="">SkipTo module added to skip links</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="418">4.1.8<a href="https://ashlar.wwu.edu/changelog/version-4-1#418" class="hash-link" aria-label="Direct link to 4.1.8" title="Direct link to 4.1.8">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="418">4.1.8<a href="https://ashlar.wwu.edu/changelog/version-4-1#418" class="hash-link" aria-label="Direct link to 4.1.8" title="Direct link to 4.1.8" translate="no">​</a></h2>
 <p><strong>January 10, 2022</strong></p>
 <ul>
-<li>Link contrast fix</li>
-<li>Webform style fix</li>
+<li class="">Link contrast fix</li>
+<li class="">Webform style fix</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="417">4.1.7<a href="https://ashlar.wwu.edu/changelog/version-4-1#417" class="hash-link" aria-label="Direct link to 4.1.7" title="Direct link to 4.1.7">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="417">4.1.7<a href="https://ashlar.wwu.edu/changelog/version-4-1#417" class="hash-link" aria-label="Direct link to 4.1.7" title="Direct link to 4.1.7" translate="no">​</a></h2>
 <p><strong>December 5, 2021</strong></p>
 <ul>
-<li>Some deprecated files removed from theme: timeline.js, majors layout</li>
-<li>Style improvement for horizontal cards and linked taxonomy terms</li>
+<li class="">Some deprecated files removed from theme: timeline.js, majors layout</li>
+<li class="">Style improvement for horizontal cards and linked taxonomy terms</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="416">4.1.6<a href="https://ashlar.wwu.edu/changelog/version-4-1#416" class="hash-link" aria-label="Direct link to 4.1.6" title="Direct link to 4.1.6">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="416">4.1.6<a href="https://ashlar.wwu.edu/changelog/version-4-1#416" class="hash-link" aria-label="Direct link to 4.1.6" title="Direct link to 4.1.6" translate="no">​</a></h2>
 <p><strong>November 21, 2021</strong></p>
 <ul>
-<li>Spacing fix on multi-column layouts</li>
+<li class="">Spacing fix on multi-column layouts</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="415">4.1.5<a href="https://ashlar.wwu.edu/changelog/version-4-1#415" class="hash-link" aria-label="Direct link to 4.1.5" title="Direct link to 4.1.5">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="415">4.1.5<a href="https://ashlar.wwu.edu/changelog/version-4-1#415" class="hash-link" aria-label="Direct link to 4.1.5" title="Direct link to 4.1.5" translate="no">​</a></h2>
 <p><strong>November 15, 2021</strong></p>
 <ul>
-<li>Spacing improvements for webforms</li>
+<li class="">Spacing improvements for webforms</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="414">4.1.4<a href="https://ashlar.wwu.edu/changelog/version-4-1#414" class="hash-link" aria-label="Direct link to 4.1.4" title="Direct link to 4.1.4">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="414">4.1.4<a href="https://ashlar.wwu.edu/changelog/version-4-1#414" class="hash-link" aria-label="Direct link to 4.1.4" title="Direct link to 4.1.4" translate="no">​</a></h2>
 <p><strong>November 9, 2021</strong></p>
 <ul>
-<li>Alignment fix for image links</li>
-<li>Focus fix for locations component</li>
+<li class="">Alignment fix for image links</li>
+<li class="">Focus fix for locations component</li>
 </ul>
 <p>Unrelated to the theme, but noteworthy in itself: all Drupal 8 production and development sites are now on Drupal 9! 🎉 This major upgrade is mostly under-the-hood, though you may notice some new features in the administration menus.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="413">4.1.3<a href="https://ashlar.wwu.edu/changelog/version-4-1#413" class="hash-link" aria-label="Direct link to 4.1.3" title="Direct link to 4.1.3">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="413">4.1.3<a href="https://ashlar.wwu.edu/changelog/version-4-1#413" class="hash-link" aria-label="Direct link to 4.1.3" title="Direct link to 4.1.3" translate="no">​</a></h2>
 <p><strong>November 1, 2021</strong></p>
 <ul>
-<li>Contrast fix for org charts</li>
+<li class="">Contrast fix for org charts</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="412">4.1.2<a href="https://ashlar.wwu.edu/changelog/version-4-1#412" class="hash-link" aria-label="Direct link to 4.1.2" title="Direct link to 4.1.2">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="412">4.1.2<a href="https://ashlar.wwu.edu/changelog/version-4-1#412" class="hash-link" aria-label="Direct link to 4.1.2" title="Direct link to 4.1.2" translate="no">​</a></h2>
 <p><strong>October 26, 2021</strong></p>
 <ul>
-<li>Video light box fix</li>
-<li>Headline style adjustments</li>
-<li>Accordion a11y improvement</li>
+<li class="">Video light box fix</li>
+<li class="">Headline style adjustments</li>
+<li class="">Accordion a11y improvement</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="410-411">4.1.0-4.1.1<a href="https://ashlar.wwu.edu/changelog/version-4-1#410-411" class="hash-link" aria-label="Direct link to 4.1.0-4.1.1" title="Direct link to 4.1.0-4.1.1">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="410-411">4.1.0-4.1.1<a href="https://ashlar.wwu.edu/changelog/version-4-1#410-411" class="hash-link" aria-label="Direct link to 4.1.0-4.1.1" title="Direct link to 4.1.0-4.1.1" translate="no">​</a></h2>
 <p><strong>October 18, 2021</strong></p>
 <ul>
-<li>gulp-uglify replaced with gulp-terser for preprocess tasks</li>
-<li>Font display set to swap for performance improvements</li>
-<li>A11y fixes for announcements</li>
-<li>Tooling updates for Drupal 9</li>
+<li class="">gulp-uglify replaced with gulp-terser for preprocess tasks</li>
+<li class="">Font display set to swap for performance improvements</li>
+<li class="">A11y fixes for announcements</li>
+<li class="">Tooling updates for Drupal 9</li>
 </ul>]]></content:encoded>
             <category>minor-release</category>
         </item>
@@ -991,34 +1016,34 @@
             <guid>https://ashlar.wwu.edu/changelog/version-4-0</guid>
             <pubDate>Mon, 11 Oct 2021 10:00:00 GMT</pubDate>
             <description><![CDATA[4.0.9]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="409">4.0.9<a href="https://ashlar.wwu.edu/changelog/version-4-0#409" class="hash-link" aria-label="Direct link to 4.0.9" title="Direct link to 4.0.9">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="409">4.0.9<a href="https://ashlar.wwu.edu/changelog/version-4-0#409" class="hash-link" aria-label="Direct link to 4.0.9" title="Direct link to 4.0.9" translate="no">​</a></h2>
 <p><strong>October 11, 2021</strong></p>
 <ul>
-<li>Uglify replaced with Terser for pre-processing</li>
-<li>CTA text color in headlines fixed</li>
+<li class="">Uglify replaced with Terser for pre-processing</li>
+<li class="">CTA text color in headlines fixed</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="408">4.0.8<a href="https://ashlar.wwu.edu/changelog/version-4-0#408" class="hash-link" aria-label="Direct link to 4.0.8" title="Direct link to 4.0.8">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="408">4.0.8<a href="https://ashlar.wwu.edu/changelog/version-4-0#408" class="hash-link" aria-label="Direct link to 4.0.8" title="Direct link to 4.0.8" translate="no">​</a></h2>
 <p><strong>October 4, 2021</strong></p>
 <ul>
-<li>Fix for revisions breadcrumbs error</li>
-<li>Small adjustments for multi-column layout spacing</li>
+<li class="">Fix for revisions breadcrumbs error</li>
+<li class="">Small adjustments for multi-column layout spacing</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="407">4.0.7<a href="https://ashlar.wwu.edu/changelog/version-4-0#407" class="hash-link" aria-label="Direct link to 4.0.7" title="Direct link to 4.0.7">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="407">4.0.7<a href="https://ashlar.wwu.edu/changelog/version-4-0#407" class="hash-link" aria-label="Direct link to 4.0.7" title="Direct link to 4.0.7" translate="no">​</a></h2>
 <p><strong>September 27, 2021</strong></p>
 <ul>
-<li>Code base change for link styles</li>
-<li>Equal Employment Opportunity statement link added to Western Footer</li>
+<li class="">Code base change for link styles</li>
+<li class="">Equal Employment Opportunity statement link added to Western Footer</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="404-406">4.0.4-4.0.6<a href="https://ashlar.wwu.edu/changelog/version-4-0#404-406" class="hash-link" aria-label="Direct link to 4.0.4-4.0.6" title="Direct link to 4.0.4-4.0.6">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="404-406">4.0.4-4.0.6<a href="https://ashlar.wwu.edu/changelog/version-4-0#404-406" class="hash-link" aria-label="Direct link to 4.0.4-4.0.6" title="Direct link to 4.0.4-4.0.6" translate="no">​</a></h2>
 <p><strong>September 20, 2021</strong></p>
 <ul>
-<li>Spacing adjustments</li>
-<li>Manual login button removed from Drupal login screen</li>
+<li class="">Spacing adjustments</li>
+<li class="">Manual login button removed from Drupal login screen</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="403">4.0.3<a href="https://ashlar.wwu.edu/changelog/version-4-0#403" class="hash-link" aria-label="Direct link to 4.0.3" title="Direct link to 4.0.3">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="403">4.0.3<a href="https://ashlar.wwu.edu/changelog/version-4-0#403" class="hash-link" aria-label="Direct link to 4.0.3" title="Direct link to 4.0.3" translate="no">​</a></h2>
 <p><strong>September 13, 2021</strong></p>
 <p>Fixes for some spacing issues, styled links, and accessibility</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="401-402">4.0.1-4.0.2<a href="https://ashlar.wwu.edu/changelog/version-4-0#401-402" class="hash-link" aria-label="Direct link to 4.0.1-4.0.2" title="Direct link to 4.0.1-4.0.2">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="401-402">4.0.1-4.0.2<a href="https://ashlar.wwu.edu/changelog/version-4-0#401-402" class="hash-link" aria-label="Direct link to 4.0.1-4.0.2" title="Direct link to 4.0.1-4.0.2" translate="no">​</a></h2>
 <p><strong>September 7, 2021</strong></p>
 <p>Various bug fixes/style refinements</p>]]></content:encoded>
             <category>minor-release</category>
@@ -1031,12 +1056,12 @@
             <description><![CDATA[Ashlar version 4.0.0 has been deployed. Most of the changes for version 4 are on the back end coding side of things, but there are some front end style updates you may have noticed. Some of these include:]]></description>
             <content:encoded><![CDATA[<p>Ashlar version 4.0.0 has been deployed. Most of the changes for version 4 are on the back end coding side of things, but there are some front end style updates you may have noticed. Some of these include:</p>
 <ul>
-<li>New link styles, including styles for visited links</li>
-<li>Default headings are now sans serif. Serif heading styles can still be used on a per-block basis, or can be set site-wide by WebTech.</li>
-<li>Minor style changes to buttons and call to action links (formerly called "links styled as buttons")</li>
-<li>New custom styles are available for a handful of blocks, including background colors on accordion blocks</li>
-<li>Testimonial styles have a similar look and feel, but have been modified slightly</li>
-<li>If you have selected Dark Mode in your operating system settings, sites will now display in dark mode by default. You can change to light mode using display settings.</li>
+<li class="">New link styles, including styles for visited links</li>
+<li class="">Default headings are now sans serif. Serif heading styles can still be used on a per-block basis, or can be set site-wide by WebTech.</li>
+<li class="">Minor style changes to buttons and call to action links (formerly called "links styled as buttons")</li>
+<li class="">New custom styles are available for a handful of blocks, including background colors on accordion blocks</li>
+<li class="">Testimonial styles have a similar look and feel, but have been modified slightly</li>
+<li class="">If you have selected Dark Mode in your operating system settings, sites will now display in dark mode by default. You can change to light mode using display settings.</li>
 </ul>
 <p>A couple of less-used style variations on components (for example, a headline style) have been removed. In these cases, the components will appear as the default style after the changes go live.</p>]]></content:encoded>
             <category>major-release</category>
@@ -1047,51 +1072,51 @@
             <guid>https://ashlar.wwu.edu/changelog/version-3-9</guid>
             <pubDate>Mon, 02 Aug 2021 10:00:00 GMT</pubDate>
             <description><![CDATA[3.9.29]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3929">3.9.29<a href="https://ashlar.wwu.edu/changelog/version-3-9#3929" class="hash-link" aria-label="Direct link to 3.9.29" title="Direct link to 3.9.29">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3929">3.9.29<a href="https://ashlar.wwu.edu/changelog/version-3-9#3929" class="hash-link" aria-label="Direct link to 3.9.29" title="Direct link to 3.9.29" translate="no">​</a></h2>
 <p><strong>August 2, 2021</strong></p>
 <ul>
-<li>COVID Attestation banner removed</li>
-<li>Bug fix on node titles</li>
+<li class="">COVID Attestation banner removed</li>
+<li class="">Bug fix on node titles</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3928">3.9.28<a href="https://ashlar.wwu.edu/changelog/version-3-9#3928" class="hash-link" aria-label="Direct link to 3.9.28" title="Direct link to 3.9.28">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3928">3.9.28<a href="https://ashlar.wwu.edu/changelog/version-3-9#3928" class="hash-link" aria-label="Direct link to 3.9.28" title="Direct link to 3.9.28" translate="no">​</a></h2>
 <p><strong>July 12, 2021</strong></p>
 <ul>
-<li>General theme fixes</li>
+<li class="">General theme fixes</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3927">3.9.27<a href="https://ashlar.wwu.edu/changelog/version-3-9#3927" class="hash-link" aria-label="Direct link to 3.9.27" title="Direct link to 3.9.27">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3927">3.9.27<a href="https://ashlar.wwu.edu/changelog/version-3-9#3927" class="hash-link" aria-label="Direct link to 3.9.27" title="Direct link to 3.9.27" translate="no">​</a></h2>
 <p><strong>June 21, 2021</strong></p>
 <ul>
-<li>Bug fixes</li>
+<li class="">Bug fixes</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3926">3.9.26<a href="https://ashlar.wwu.edu/changelog/version-3-9#3926" class="hash-link" aria-label="Direct link to 3.9.26" title="Direct link to 3.9.26">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3926">3.9.26<a href="https://ashlar.wwu.edu/changelog/version-3-9#3926" class="hash-link" aria-label="Direct link to 3.9.26" title="Direct link to 3.9.26" translate="no">​</a></h2>
 <p><strong>June 8, 2021</strong></p>
 <ul>
-<li>New styles for Majors pages added</li>
-<li>Skip links fix</li>
-<li>Style fixes for cards in dark mode</li>
+<li class="">New styles for Majors pages added</li>
+<li class="">Skip links fix</li>
+<li class="">Style fixes for cards in dark mode</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3925">3.9.25<a href="https://ashlar.wwu.edu/changelog/version-3-9#3925" class="hash-link" aria-label="Direct link to 3.9.25" title="Direct link to 3.9.25">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3925">3.9.25<a href="https://ashlar.wwu.edu/changelog/version-3-9#3925" class="hash-link" aria-label="Direct link to 3.9.25" title="Direct link to 3.9.25" translate="no">​</a></h2>
 <p><strong>June 7, 2021</strong></p>
 <ul>
-<li>Increase size of menu buttons to meach AAA touch targets</li>
+<li class="">Increase size of menu buttons to meach AAA touch targets</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3924">3.9.24<a href="https://ashlar.wwu.edu/changelog/version-3-9#3924" class="hash-link" aria-label="Direct link to 3.9.24" title="Direct link to 3.9.24">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3924">3.9.24<a href="https://ashlar.wwu.edu/changelog/version-3-9#3924" class="hash-link" aria-label="Direct link to 3.9.24" title="Direct link to 3.9.24" translate="no">​</a></h2>
 <p><strong>May 24, 2021</strong></p>
 <ul>
-<li>Some deprecated styles removed</li>
-<li>Skip link bug fixed</li>
+<li class="">Some deprecated styles removed</li>
+<li class="">Skip link bug fixed</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3923">3.9.23<a href="https://ashlar.wwu.edu/changelog/version-3-9#3923" class="hash-link" aria-label="Direct link to 3.9.23" title="Direct link to 3.9.23">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3923">3.9.23<a href="https://ashlar.wwu.edu/changelog/version-3-9#3923" class="hash-link" aria-label="Direct link to 3.9.23" title="Direct link to 3.9.23" translate="no">​</a></h2>
 <p><strong>May 17, 2021</strong></p>
 <ul>
-<li>Lightbox bug fix</li>
-<li>Taxonomy term style bug fix</li>
+<li class="">Lightbox bug fix</li>
+<li class="">Taxonomy term style bug fix</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3920-3922">3.9.20-3.9.22<a href="https://ashlar.wwu.edu/changelog/version-3-9#3920-3922" class="hash-link" aria-label="Direct link to 3.9.20-3.9.22" title="Direct link to 3.9.20-3.9.22">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3920-3922">3.9.20-3.9.22<a href="https://ashlar.wwu.edu/changelog/version-3-9#3920-3922" class="hash-link" aria-label="Direct link to 3.9.20-3.9.22" title="Direct link to 3.9.20-3.9.22" translate="no">​</a></h2>
 <p><strong>May 3, 2021</strong></p>
 <ul>
-<li>Org chart fixes</li>
-<li>View list fix</li>
+<li class="">Org chart fixes</li>
+<li class="">View list fix</li>
 </ul>]]></content:encoded>
             <category>minor-release</category>
         </item>
@@ -1101,106 +1126,106 @@
             <guid>https://ashlar.wwu.edu/changelog/version-3-7</guid>
             <pubDate>Mon, 12 Apr 2021 10:00:00 GMT</pubDate>
             <description><![CDATA[3.7.19]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3719">3.7.19<a href="https://ashlar.wwu.edu/changelog/version-3-7#3719" class="hash-link" aria-label="Direct link to 3.7.19" title="Direct link to 3.7.19">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3719">3.7.19<a href="https://ashlar.wwu.edu/changelog/version-3-7#3719" class="hash-link" aria-label="Direct link to 3.7.19" title="Direct link to 3.7.19" translate="no">​</a></h2>
 <p><strong>April 12, 2021</strong></p>
 <ul>
-<li>Code cleanup/refactoring</li>
-<li>Google tag manager added</li>
+<li class="">Code cleanup/refactoring</li>
+<li class="">Google tag manager added</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3718">3.7.18<a href="https://ashlar.wwu.edu/changelog/version-3-7#3718" class="hash-link" aria-label="Direct link to 3.7.18" title="Direct link to 3.7.18">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3718">3.7.18<a href="https://ashlar.wwu.edu/changelog/version-3-7#3718" class="hash-link" aria-label="Direct link to 3.7.18" title="Direct link to 3.7.18" translate="no">​</a></h2>
 <p><strong>April 5, 2021</strong></p>
 <ul>
-<li>Several new card styles added</li>
-<li>A11y improvement for background videos</li>
+<li class="">Several new card styles added</li>
+<li class="">A11y improvement for background videos</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3717">3.7.17<a href="https://ashlar.wwu.edu/changelog/version-3-7#3717" class="hash-link" aria-label="Direct link to 3.7.17" title="Direct link to 3.7.17">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3717">3.7.17<a href="https://ashlar.wwu.edu/changelog/version-3-7#3717" class="hash-link" aria-label="Direct link to 3.7.17" title="Direct link to 3.7.17" translate="no">​</a></h2>
 <p><strong>March 29, 2021</strong></p>
 <ul>
-<li>General code refactoring</li>
+<li class="">General code refactoring</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3716">3.7.16<a href="https://ashlar.wwu.edu/changelog/version-3-7#3716" class="hash-link" aria-label="Direct link to 3.7.16" title="Direct link to 3.7.16">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3716">3.7.16<a href="https://ashlar.wwu.edu/changelog/version-3-7#3716" class="hash-link" aria-label="Direct link to 3.7.16" title="Direct link to 3.7.16" translate="no">​</a></h2>
 <p><strong>March 22, 2021</strong></p>
 <ul>
-<li>Side-by-side content viewer added to MABEL objects</li>
-<li>Dark mode style fixes for various components</li>
+<li class="">Side-by-side content viewer added to MABEL objects</li>
+<li class="">Dark mode style fixes for various components</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3715">3.7.15<a href="https://ashlar.wwu.edu/changelog/version-3-7#3715" class="hash-link" aria-label="Direct link to 3.7.15" title="Direct link to 3.7.15">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3715">3.7.15<a href="https://ashlar.wwu.edu/changelog/version-3-7#3715" class="hash-link" aria-label="Direct link to 3.7.15" title="Direct link to 3.7.15" translate="no">​</a></h2>
 <p><strong>March 15, 2021</strong></p>
 <ul>
-<li>Breadcrumb fix for view pages</li>
-<li>Code refactors for background videos</li>
-<li>Styles added for schedule component</li>
+<li class="">Breadcrumb fix for view pages</li>
+<li class="">Code refactors for background videos</li>
+<li class="">Styles added for schedule component</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3714">3.7.14<a href="https://ashlar.wwu.edu/changelog/version-3-7#3714" class="hash-link" aria-label="Direct link to 3.7.14" title="Direct link to 3.7.14">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3714">3.7.14<a href="https://ashlar.wwu.edu/changelog/version-3-7#3714" class="hash-link" aria-label="Direct link to 3.7.14" title="Direct link to 3.7.14" translate="no">​</a></h2>
 <p><strong>March 8, 2021</strong></p>
 <ul>
-<li>Accessibility improvements for forms, ultimenu, quick search, and locations icon links</li>
-<li>Featherlight removed (replaced by in house video code)</li>
+<li class="">Accessibility improvements for forms, ultimenu, quick search, and locations icon links</li>
+<li class="">Featherlight removed (replaced by in house video code)</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3713">3.7.13<a href="https://ashlar.wwu.edu/changelog/version-3-7#3713" class="hash-link" aria-label="Direct link to 3.7.13" title="Direct link to 3.7.13">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3713">3.7.13<a href="https://ashlar.wwu.edu/changelog/version-3-7#3713" class="hash-link" aria-label="Direct link to 3.7.13" title="Direct link to 3.7.13" translate="no">​</a></h2>
 <p><strong>March 1, 2021</strong></p>
 <ul>
-<li>Code improvements</li>
+<li class="">Code improvements</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3712">3.7.12<a href="https://ashlar.wwu.edu/changelog/version-3-7#3712" class="hash-link" aria-label="Direct link to 3.7.12" title="Direct link to 3.7.12">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3712">3.7.12<a href="https://ashlar.wwu.edu/changelog/version-3-7#3712" class="hash-link" aria-label="Direct link to 3.7.12" title="Direct link to 3.7.12" translate="no">​</a></h2>
 <p><strong>February 22, 2021</strong></p>
 <ul>
-<li>Update to breadcrumbs, which now show active page in breadcrumb path</li>
+<li class="">Update to breadcrumbs, which now show active page in breadcrumb path</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3711">3.7.11<a href="https://ashlar.wwu.edu/changelog/version-3-7#3711" class="hash-link" aria-label="Direct link to 3.7.11" title="Direct link to 3.7.11">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3711">3.7.11<a href="https://ashlar.wwu.edu/changelog/version-3-7#3711" class="hash-link" aria-label="Direct link to 3.7.11" title="Direct link to 3.7.11" translate="no">​</a></h2>
 <p><strong>February 15, 2021</strong></p>
 <ul>
-<li>Play link styles fixed for varying background colors</li>
-<li>Overflow bug fix</li>
+<li class="">Play link styles fixed for varying background colors</li>
+<li class="">Overflow bug fix</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3710">3.7.10<a href="https://ashlar.wwu.edu/changelog/version-3-7#3710" class="hash-link" aria-label="Direct link to 3.7.10" title="Direct link to 3.7.10">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3710">3.7.10<a href="https://ashlar.wwu.edu/changelog/version-3-7#3710" class="hash-link" aria-label="Direct link to 3.7.10" title="Direct link to 3.7.10" translate="no">​</a></h2>
 <p><strong>February 8, 2021</strong></p>
 <ul>
-<li>Footer link updated for Flickr</li>
-<li>Flowchart style updates</li>
+<li class="">Footer link updated for Flickr</li>
+<li class="">Flowchart style updates</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="379">3.7.9<a href="https://ashlar.wwu.edu/changelog/version-3-7#379" class="hash-link" aria-label="Direct link to 3.7.9" title="Direct link to 3.7.9">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="379">3.7.9<a href="https://ashlar.wwu.edu/changelog/version-3-7#379" class="hash-link" aria-label="Direct link to 3.7.9" title="Direct link to 3.7.9" translate="no">​</a></h2>
 <p><strong>February 1, 2021</strong></p>
 <ul>
-<li>Minor CSS and HTML updates</li>
+<li class="">Minor CSS and HTML updates</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="378">3.7.8<a href="https://ashlar.wwu.edu/changelog/version-3-7#378" class="hash-link" aria-label="Direct link to 3.7.8" title="Direct link to 3.7.8">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="378">3.7.8<a href="https://ashlar.wwu.edu/changelog/version-3-7#378" class="hash-link" aria-label="Direct link to 3.7.8" title="Direct link to 3.7.8" translate="no">​</a></h2>
 <p><strong>January 19, 2021</strong></p>
 <ul>
-<li>Some basic print styles added</li>
-<li>Bug fixes</li>
+<li class="">Some basic print styles added</li>
+<li class="">Bug fixes</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="377">3.7.7<a href="https://ashlar.wwu.edu/changelog/version-3-7#377" class="hash-link" aria-label="Direct link to 3.7.7" title="Direct link to 3.7.7">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="377">3.7.7<a href="https://ashlar.wwu.edu/changelog/version-3-7#377" class="hash-link" aria-label="Direct link to 3.7.7" title="Direct link to 3.7.7" translate="no">​</a></h2>
 <p><strong>January 11, 2021</strong></p>
 <ul>
-<li>Display setting toggle improvements</li>
+<li class="">Display setting toggle improvements</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="376">3.7.6<a href="https://ashlar.wwu.edu/changelog/version-3-7#376" class="hash-link" aria-label="Direct link to 3.7.6" title="Direct link to 3.7.6">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="376">3.7.6<a href="https://ashlar.wwu.edu/changelog/version-3-7#376" class="hash-link" aria-label="Direct link to 3.7.6" title="Direct link to 3.7.6" translate="no">​</a></h2>
 <p><strong>January 4, 2021</strong></p>
 <ul>
-<li>Bug fixes with pagers and figure captions</li>
+<li class="">Bug fixes with pagers and figure captions</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="375">3.7.5<a href="https://ashlar.wwu.edu/changelog/version-3-7#375" class="hash-link" aria-label="Direct link to 3.7.5" title="Direct link to 3.7.5">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="375">3.7.5<a href="https://ashlar.wwu.edu/changelog/version-3-7#375" class="hash-link" aria-label="Direct link to 3.7.5" title="Direct link to 3.7.5" translate="no">​</a></h2>
 <p><strong>December 28, 2020</strong></p>
 <ul>
-<li>Styles added for statistics block, which will be available soon</li>
+<li class="">Styles added for statistics block, which will be available soon</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="372-374">3.7.2-3.7.4<a href="https://ashlar.wwu.edu/changelog/version-3-7#372-374" class="hash-link" aria-label="Direct link to 3.7.2-3.7.4" title="Direct link to 3.7.2-3.7.4">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="372-374">3.7.2-3.7.4<a href="https://ashlar.wwu.edu/changelog/version-3-7#372-374" class="hash-link" aria-label="Direct link to 3.7.2-3.7.4" title="Direct link to 3.7.2-3.7.4" translate="no">​</a></h2>
 <p><strong>December 21, 2020</strong></p>
 <ul>
-<li>Various bug fixes</li>
+<li class="">Various bug fixes</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="371-">3.7.1-<a href="https://ashlar.wwu.edu/changelog/version-3-7#371-" class="hash-link" aria-label="Direct link to 3.7.1-" title="Direct link to 3.7.1-">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="371-">3.7.1-<a href="https://ashlar.wwu.edu/changelog/version-3-7#371-" class="hash-link" aria-label="Direct link to 3.7.1-" title="Direct link to 3.7.1-" translate="no">​</a></h2>
 <p><strong>December 14, 2020</strong></p>
 <ul>
-<li>Style bug fixes</li>
-<li>New icons added to the desing system for International Audiences</li>
+<li class="">Style bug fixes</li>
+<li class="">New icons added to the desing system for International Audiences</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="370">3.7.0<a href="https://ashlar.wwu.edu/changelog/version-3-7#370" class="hash-link" aria-label="Direct link to 3.7.0" title="Direct link to 3.7.0">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="370">3.7.0<a href="https://ashlar.wwu.edu/changelog/version-3-7#370" class="hash-link" aria-label="Direct link to 3.7.0" title="Direct link to 3.7.0" translate="no">​</a></h2>
 <p><strong>December 7, 2020</strong></p>
 <ul>
-<li>Several bug fixes</li>
-<li>New feature: Countdown Block</li>
+<li class="">Several bug fixes</li>
+<li class="">New feature: Countdown Block</li>
 </ul>]]></content:encoded>
             <category>minor-release</category>
         </item>
@@ -1210,38 +1235,17 @@
             <guid>https://ashlar.wwu.edu/changelog/version-3-6</guid>
             <pubDate>Mon, 23 Nov 2020 10:00:00 GMT</pubDate>
             <description><![CDATA[3.6.1]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="361">3.6.1<a href="https://ashlar.wwu.edu/changelog/version-3-6#361" class="hash-link" aria-label="Direct link to 3.6.1" title="Direct link to 3.6.1">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="361">3.6.1<a href="https://ashlar.wwu.edu/changelog/version-3-6#361" class="hash-link" aria-label="Direct link to 3.6.1" title="Direct link to 3.6.1" translate="no">​</a></h2>
 <p><strong>November 23, 2020</strong></p>
 <ul>
-<li>Skip to main content links moved into header region to prevent false flags or a11y errors</li>
-<li>Made display toggle text more accessible</li>
+<li class="">Skip to main content links moved into header region to prevent false flags or a11y errors</li>
+<li class="">Made display toggle text more accessible</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="360---new-custom-classes">3.6.0 - New custom classes<a href="https://ashlar.wwu.edu/changelog/version-3-6#360---new-custom-classes" class="hash-link" aria-label="Direct link to 3.6.0 - New custom classes" title="Direct link to 3.6.0 - New custom classes">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="360---new-custom-classes">3.6.0 - New custom classes<a href="https://ashlar.wwu.edu/changelog/version-3-6#360---new-custom-classes" class="hash-link" aria-label="Direct link to 3.6.0 - New custom classes" title="Direct link to 3.6.0 - New custom classes" translate="no">​</a></h2>
 <p><strong>November 16, 2020</strong></p>
 <ul>
-<li>.mirror class can be used to swap the direction of testimonial blocks</li>
-<li>.color-block-title class can be used, with or without additonal .dark-blue or .light-green classes, on card blocks</li>
-</ul>]]></content:encoded>
-            <category>minor-release</category>
-        </item>
-        <item>
-            <title><![CDATA[3.5.x Updates]]></title>
-            <link>https://ashlar.wwu.edu/changelog/version-3-5</link>
-            <guid>https://ashlar.wwu.edu/changelog/version-3-5</guid>
-            <pubDate>Mon, 16 Nov 2020 10:00:00 GMT</pubDate>
-            <description><![CDATA[3.5.1-3.5.2]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="351-352">3.5.1-3.5.2<a href="https://ashlar.wwu.edu/changelog/version-3-5#351-352" class="hash-link" aria-label="Direct link to 3.5.1-3.5.2" title="Direct link to 3.5.1-3.5.2">​</a></h2>
-<p><strong>November 16, 2020</strong></p>
-<ul>
-<li>Removed google optimize script</li>
-<li>More fonts added to preload to improve performance</li>
-<li>Style fixes for dark mode</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="350">3.5.0<a href="https://ashlar.wwu.edu/changelog/version-3-5#350" class="hash-link" aria-label="Direct link to 3.5.0" title="Direct link to 3.5.0">​</a></h2>
-<p><strong>November 9, 2020</strong></p>
-<ul>
-<li>Added display preferences for selecting fonts, setting dark mode</li>
-<li>Styles for header have also been refactored to allow for more flexibility in the "Western Header" region for secondary site name and menu blocks</li>
+<li class="">.mirror class can be used to swap the direction of testimonial blocks</li>
+<li class="">.color-block-title class can be used, with or without additonal .dark-blue or .light-green classes, on card blocks</li>
 </ul>]]></content:encoded>
             <category>minor-release</category>
         </item>

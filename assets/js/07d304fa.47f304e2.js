@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkashlar_docs=globalThis.webpackChunkashlar_docs||[]).push([[868],{2925(a){a.exports=JSON.parse('{"tags":[{"label":"minor-release","permalink":"/changelog/tags/minor-release","count":39},{"label":"major-release","permalink":"/changelog/tags/major-release","count":6}]}')}}]);
