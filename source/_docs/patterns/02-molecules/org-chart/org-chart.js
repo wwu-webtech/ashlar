@@ -30,9 +30,9 @@ if (
                 chart.append(base_list);
                 
                 const top_item = getChildren(this);
-                createNestedLists(top_item, base_list, 1, heading_level, legend_text);               
+                createNestedLists(top_item, base_list, 1, heading_level);               
 
-                if(legend_text) { chart.append(createHighlightLegend(this, legend_text, heading_level))};
+                if(legend_text) { chart.prepend(createHighlightLegend(this, legend_text, heading_level))};
             }
         }
     }
@@ -126,7 +126,7 @@ if (
         wrapper.innerHTML=`<h${heading_level} class="visually-hidden">Legend</h${heading_level}><span class="highlight"><span class="lightest-gray-bg">Highlighted item</span></span> indicates ${legend}`;
 
         for(let i = 0; i < highlights.length; i++) {
-            const item_legend = document.createElement("span");            
+            const item_legend = document.createElement("p");            
             item_legend.classList.add("visually-hidden");
             item_legend.innerText = legend;
 
