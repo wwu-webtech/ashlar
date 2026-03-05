@@ -128,7 +128,7 @@ Molecule: Charts - Org Chart
   }
   .unit {
     display: block;
-    margin-bottom: var(--space--xs);
+    margin-bottom: var(--space--2xs);
     text-transform: uppercase;
     font-family: var(--font--title);
     font-weight: var(--font-weight--bold);
@@ -144,6 +144,7 @@ Molecule: Charts - Org Chart
   .highlight-legend {
     margin-top: var(--space--md);
     padding: var(--space--2xs);
+    text-align: right;
     .highlight {
       padding: var(--space--2xs);
     }
