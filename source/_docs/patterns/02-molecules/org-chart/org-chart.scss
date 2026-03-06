@@ -117,12 +117,13 @@ Molecule: Charts - Org Chart
   .highlight {
     background: var(--light-gray-stripes);
   }
-  .content {
+  .lightest-gray-bg {
     --h2-color: var(--default-text-color);
     --h3-color: var(--default-text-color);
     --h4-color: var(--default-text-color);
     --h5-color: var(--default-text-color);
     --h6-color: var(--default-text-color);
+    --link-color--visited: var(--link-color);
 
     transition: var(--transition-speed--fast) var(--ease--standard) background-color;
   }
