@@ -50,12 +50,12 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
+      <div class="title">
       {% if content.field_item_heading_level.0['#markup'] %}
-        <{{ content.field_item_heading_level.0['#markup'] }} class="schedule-heading">
+        <{{ content.field_item_heading_level.0['#markup'] }} class="heading">
           {% if content.field_link.0['#url'] %}
             <a href="{{ content.field_link.0['#url'] }}">
           {% endif %}
-          {{ content.field_time }}
           {{ content.field_item_label }}
           {% if content.field_link.0['#url'] %}
             </a>
@@ -65,16 +65,20 @@
         <div class="schedule-heading">
           {% if content.field_link.0['#url'] %}
             <a href="{{ content.field_link.0['#url'] }}">
-          {% endif %}
-          {{ content.field_time }}
+          {% endif %}          
           {{ content.field_item_label }}
           {% if content.field_link.0['#url'] %}
             </a>
           {% endif %}
         </div>
       {% endif %}
+      </div>
 
-      <div class="content">
+      <div class="time">
+        {{ content.field_time }}
+      </div>
+
+      <div class="body">
         {{ content.field_content }}
       </div>
     {% endblock %}
