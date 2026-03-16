@@ -46,7 +46,8 @@ Molecule: Schedule
     }
   }
   .heading {
-    margin: 0;
+    margin-top: var(--space--sm);
+    margin-bottom: 0;
     font-size: var(--font-size--lg);
   }
   .time {

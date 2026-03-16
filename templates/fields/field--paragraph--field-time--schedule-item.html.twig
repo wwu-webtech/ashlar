@@ -41,22 +41,18 @@
     label_display == 'visually_hidden' ? 'visually-hidden',
   ]
 %}
-{%
-  set classes = [
-    'time',
-  ]
-%}
+
 
 {% if label_hidden %}
   {% if multiple %}
     <span{{ attributes }}>
       {% for item in items %}
-        <span{{ item.attributes.addClass(classes) }}>{{ item.content }}</span>
+        {{ item.content }}
       {% endfor %}
     </span>
   {% else %}
     {% for item in items %}
-      <span{{ attributes.addClass(classes) }}>{{ item.content }}</span>
+      {{ item.content }}
     {% endfor %}
   {% endif %}
 {% else %}
@@ -66,7 +62,7 @@
       <span>
     {% endif %}
     {% for item in items %}
-      <span{{ item.attributes.addClass(classes) }}>{{ item.content }}</span>
+      {{ item.content }}
     {% endfor %}
     {% if multiple %}
   </span>
