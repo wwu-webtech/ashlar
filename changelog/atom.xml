@@ -12,8 +12,14 @@
         <id>https://ashlar.wwu.edu/changelog/version-6-0</id>
         <link href="https://ashlar.wwu.edu/changelog/version-6-0"/>
         <updated>2026-01-06T10:00:00.000Z</updated>
-        <summary type="html"><![CDATA[6.0.3]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="603">6.0.3<a href="https://ashlar.wwu.edu/changelog/version-6-0#603" class="hash-link" aria-label="Direct link to 6.0.3" title="Direct link to 6.0.3" translate="no">​</a></h2>
+        <summary type="html"><![CDATA[6.0.4]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="604">6.0.4<a href="https://ashlar.wwu.edu/changelog/version-6-0#604" class="hash-link" aria-label="Direct link to 6.0.4" title="Direct link to 6.0.4" translate="no">​</a></h2>
+<p><strong>March 16, 2026</strong></p>
+<ul>
+<li class="">Style updates for <a class="" href="https://ashlar.wwu.edu/patterns/molecules/schedule">schedule component</a></li>
+<li class="">Style fixes for announcements and dialogs</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="603">6.0.3<a href="https://ashlar.wwu.edu/changelog/version-6-0#603" class="hash-link" aria-label="Direct link to 6.0.3" title="Direct link to 6.0.3" translate="no">​</a></h2>
 <p><strong>March 2, 2026</strong></p>
 <ul>
 <li class="">Documentation for component use updated throughout this site</li>
