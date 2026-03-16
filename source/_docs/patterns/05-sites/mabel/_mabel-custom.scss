@@ -76,6 +76,13 @@ details pre {
 /*------------------------
 Search in Collections
 ------------------------*/
+.search-within-collection {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  form {
+    grid-column: 2/span 1;
+  }
+}
 #views-exposed-form-advanced-search-block-1 > fieldset {
   width: 100%;
 }

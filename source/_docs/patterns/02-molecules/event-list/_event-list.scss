@@ -45,7 +45,7 @@ Molecule: Event List
       a {
         text-decoration: none;
         &:hover {
-          color: inherit;
+          color: var(--blue);
           background: transparent;
         }
         &:after {
