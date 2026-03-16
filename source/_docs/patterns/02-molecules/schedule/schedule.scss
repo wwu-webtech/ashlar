@@ -69,3 +69,11 @@ Molecule: Schedule
     padding-bottom: var(--space--xs);
   }
 }
+[data-theme="dark"] {
+  .schedule-item {
+    @include gray-bg;
+  }
+  .time {
+    @include dark-blue-bg;
+  }
+}
