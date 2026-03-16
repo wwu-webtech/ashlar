@@ -105,7 +105,7 @@ Include the following stylesheet to use this component on your non-Drupal websit
   <div class="schedule-item">   
     <div class="title">
       <h3 class="heading">
-          Unlinked Heading
+        Unlinked Heading
       </h3>
     </div>
 

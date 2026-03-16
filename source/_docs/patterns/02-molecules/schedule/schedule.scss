@@ -66,5 +66,6 @@ Molecule: Schedule
   }
   .body {
     grid-area: body;
+    padding-bottom: var(--space--xs);
   }
 }
