@@ -36,6 +36,9 @@ Molecule: Announcement
     background: var(--light-green);
     font-size: var(--icon-size--lg);
   }
+  .title {
+    margin-top: var(--space--md);
+  }
   .body {
     display: grid;
     grid-area: text;
