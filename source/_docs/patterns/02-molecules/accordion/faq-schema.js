@@ -7,7 +7,7 @@ if (
     }
     
     function checkForFAQ() {
-        let headings = document.querySelectorAll("h1, h2, h3");
+        let headings = document.querySelectorAll("h1, h2, h3, h4");
         
         for (let i = 0; i < headings.length; i++) {
             const heading_text = headings[i].innerText.toLowerCase();
@@ -27,11 +27,29 @@ if (
         
         const schema = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": []};
 
-        const accordion_items = document.querySelectorAll("wwu-accordion-item");
+        //wwu-accordion component blocks
+        const wwu_acc_items = document.querySelectorAll("wwu-accordion-item");
+        for(let i = 0; i < wwu_acc_items.length; i++) {
+            const question = wwu_acc_items[i].getAttribute("label");
+            const answer = wwu_acc_items[i].querySelector(".field").innerHTML;
 
-        for(let i = 0; i < accordion_items.length; i++) {
-            const question = accordion_items[i].getAttribute("label");
-            const answer = accordion_items[i].querySelector(".field").innerHTML;
+            const item_schema = {
+                "@type": "Question", 
+                "name": question,
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": answer
+                }
+            };
+
+            schema["mainEntity"].push(item_schema);
+        }
+
+        // plain html accordions (eg drupal views based accordions)
+        const div_acc_items = document.querySelectorAll(".accordion-set .item");
+        for(let i = 0; i < div_acc_items.length; i++) {
+            const question = div_acc_items[i].querySelector(".expand").innerText;
+            const answer = div_acc_items[i].querySelector(".content").innerHTML;
 
             const item_schema = {
                 "@type": "Question", 
