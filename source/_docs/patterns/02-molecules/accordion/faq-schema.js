@@ -25,27 +25,26 @@ if (
         script.setAttribute('type', 'application/ld+json');
         document.head.appendChild(script);
         
-        script.innerHTML =
-        `
-        {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [{
-            "@type": "Question",
-            "name": "How to find an apprenticeship?",
-            "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "<p>We provide an official service to search through available apprenticeships. To get started, create an account here, specify the desired region, and your preferences. You will be able to search through all officially registered open apprenticeships.</p>"
-            }
-        }, {
-            "@type": "Question",
-            "name": "Whom to contact?",
-            "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You can contact the apprenticeship office through our official phone hotline above, or with the web-form below. We generally respond to written requests within 7-10 days."
-            }
-        }]
+        const schema = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": []};
+
+        const accordion_items = document.querySelectorAll("wwu-accordion-item");
+
+        for(let i = 0; i < accordion_items.length; i++) {
+            const question = accordion_items[i].getAttribute("label");
+            const answer = accordion_items[i].querySelector(".field").innerHTML;
+
+            const item_schema = {
+                "@type": "Question", 
+                "name": question,
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": answer
+                }
+            };
+
+            schema["mainEntity"].push(item_schema);
         }
-      `
+
+        script.innerHTML = JSON.stringify(schema);
     }
 }
