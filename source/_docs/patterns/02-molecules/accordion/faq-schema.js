@@ -15,8 +15,10 @@ if (
             if(heading_text.search("faq|frequently asked") != -1) {
                 document.querySelector("html").setAttribute("data-faq-active", true);
                 createSchema();
-                return
-            }        
+                return;
+            } else {
+                document.querySelector("html").setAttribute("data-faq-active", false);
+            }
         }
     }   
     
@@ -33,16 +35,7 @@ if (
             const question = wwu_acc_items[i].getAttribute("label");
             const answer = wwu_acc_items[i].querySelector(".field").innerHTML;
 
-            const item_schema = {
-                "@type": "Question", 
-                "name": question,
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": answer
-                }
-            };
-
-            schema["mainEntity"].push(item_schema);
+            schema["mainEntity"].push(createItemSchema(question, answer));
         }
 
         // plain html accordions (eg drupal views based accordions)
@@ -50,19 +43,23 @@ if (
         for(let i = 0; i < div_acc_items.length; i++) {
             const question = div_acc_items[i].querySelector(".expand").innerText;
             const answer = div_acc_items[i].querySelector(".content").innerHTML;
-
-            const item_schema = {
-                "@type": "Question", 
-                "name": question,
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": answer
-                }
-            };
-
-            schema["mainEntity"].push(item_schema);
+            
+            schema["mainEntity"].push(createItemSchema(question, answer));
         }
 
         script.innerHTML = JSON.stringify(schema);
+    }
+
+    function createItemSchema(question, answer) {
+        const item_schema = {
+            "@type": "Question", 
+            "name": question,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": answer
+            }
+        };
+
+        return item_schema;
     }
 }
