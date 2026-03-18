@@ -59,6 +59,11 @@ bg-video:
   version: 1.x
   js:
     build/js/background-video.js: {}
+brightedge:
+  version: 1.x
+  header: true
+  js:
+    https://cdn.bc0a.com/autopilot/f00000000325164/autopilot_sdk.js: {}
 countdown:
   version: 1.x
   css:

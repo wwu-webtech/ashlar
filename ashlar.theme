@@ -18,6 +18,10 @@ function ashlar_page_attachments_alter(array &$attachments) {
   if (theme_get_setting('enable_acalog_widget')) {
     $attachments['#attached']['library'][] = 'ashlar/acalog';
   }
+
+  if (theme_get_setting('enable_brightedge')) {
+    $attachments['#attached']['library'][] = 'ashlar/brightedge';
+  }
 }
 
 /**
