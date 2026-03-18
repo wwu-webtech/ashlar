@@ -41,7 +41,8 @@ if (
         // plain html accordions (eg drupal views based accordions)
         const div_acc_items = document.querySelectorAll(".accordion-set .item");
         for(let i = 0; i < div_acc_items.length; i++) {
-            const question = div_acc_items[i].querySelector(".expand").innerText;
+            const question = div_acc_items[i].querySelector(".expand").innerText.replace("add","");
+            console.log(question);
             const answer = div_acc_items[i].querySelector(".content").innerHTML;
             
             schema["mainEntity"].push(createItemSchema(question, answer));

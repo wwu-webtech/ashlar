@@ -313,3 +313,21 @@ AMI Set User Interface
 #edit-lod-cleanup input[type="radio"] + label:after {
   display: none;
 }
+/*------------------------
+Plumx Widget
+------------------------*/
+.ppp-container {
+  --link-color: var(--blue);
+  --link-color--visited: var(--purple);
+
+  margin: auto;
+}
+.ppp-pop .plx-usage .ppp-title,
+.ppp-pop-shadow .plx-usage .ppp-title {
+  color: var(--dark-blue);
+  font-size: var(--font-size--lg);
+}
+.ppp-pop,
+.ppp-pop-shadow {
+  font-size: var(--font-size--xs);
+}
