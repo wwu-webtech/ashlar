@@ -39,8 +39,8 @@
  */
 #}
 {% block paragraph %}
-  <wwu-accordion-item label="{{ content['field_heading'][0]['#context']['value'] }}" heading-level="{{ content['field_item_heading_level'][0]['#markup'] }}">
+  <wwu-accordion-item label="{{ content['field_heading'][0]['#context']['value'] }}" heading-level="{{ content['field_item_heading_level'][0]['#markup'] }}" {% if content.field_expand_by_default[0]['#markup'] == 'On' %}expanded="true"{% endif %}>
     <noscript><{{ content['field_item_heading_level'][0]['#markup'] }}>{{ content['field_heading'][0]['#context']['value'] }}</{{ content['field_item_heading_level'][0]['#markup'] }}></noscript>
-    {{ content.field_content }}
+    {{ content.field_content }}    
   </wwu-accordion-item>
 {% endblock paragraph %}
