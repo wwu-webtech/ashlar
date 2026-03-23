@@ -165,7 +165,7 @@ function _ashlar_set_cta_classes(&$items, $object) {
 
   if ($object->hasField('field_color')) {          
     foreach ($items as &$item) {      
-      $color = str_replace('_', '-', $object->field_color->value);
+      $color = $object->field_color->value ? str_replace('_', '-', $object->field_color->value): "";
 
       $item['content']['#options']['attributes']['class'][] = $color;
     }
