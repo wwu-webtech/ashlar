@@ -44,6 +44,11 @@ function ashlar_form_system_theme_settings_alter(&$form, FormStateInterface &$fo
     '#title' => t('Always use menu toggle'),
     '#default_value' => theme_get_setting('navigation_option'),
   );
+  $form['ashlar_options']['site_name_option'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Swap emphasis of site names in Western Header'),
+    '#default_value' => theme_get_setting('site_name_option'),
+  );
   $form['ashlar_options']['show_manual_login'] = array(
     '#type' => 'checkbox',
     '#title' => t('Show manual login form'),
