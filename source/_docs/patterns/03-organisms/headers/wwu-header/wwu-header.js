@@ -43,7 +43,7 @@ if (
             </svg></span>
             Apply Today
           </a>
-          <a class="icon-link give-quick-link" href="https://alumniq.wwu.edu/giving/make-a-gift">
+          <a class="icon-link give-quick-link" href="https://alumniq.wwu.edu/p/giving/make-a-gift">
             <span class="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 53.66 49.57" width="48px" height="48px">
               <path class="wwu-cls-4"
