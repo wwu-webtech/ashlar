@@ -21,6 +21,7 @@ accordion:
       dist/css/material-icons.css: {}
   js:
     build/js/accordion.js: {}
+    build/js/faq-schema.js: {}
 alerts:
   version: 1.x
   css:
