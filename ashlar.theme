@@ -31,6 +31,9 @@ function ashlar_preprocess_html(&$variables) {
   if (!empty(theme_get_setting('navigation_option'))) {
     $variables['html_attributes']['class'][] = 'desktop-hamburger-on';
   }
+  if (!empty(theme_get_setting('site_name_option'))) {
+    $variables['html_attributes']['class'][] = 'site-name-swap';
+  }
 
   /* Checks for field_menu_settings boolean value on any taxonomy term on node. If set to true, turns desktop hamburger on. */
   $node = \Drupal::routeMatch()->getParameter('node');
