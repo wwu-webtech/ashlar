@@ -8,6 +8,11 @@ Molecule: Status Alert
   --h3-size: var(--font-size--lg);
   --h4-size: var(--font-size--lg);
   --h5-size: var(--font-size--lg);
+
+  padding: var(--space--md);
+  border: solid var(--border-width--md);
+  border-color: rgba(var(--blue--rgb), 0.75);
+  background-color: rgba(var(--blue--rgb), 0.15);
   h2,
   h3,
   h4,
@@ -41,12 +46,6 @@ Molecule: Status Alert
     text-align: center;
     font-size: var(--font-size--lg);
   }
-}
-.status-alert--message {
-  padding: var(--space--md);
-  border: solid var(--border-width--md);
-  border-color: rgba(var(--blue--rgb), 0.75);
-  background-color: rgba(var(--blue--rgb), 0.15);
   &.status-alert--minor {
     border-color: rgba(var(--blue--rgb), 0.75);
     background-color: rgba(var(--blue--rgb), 0.15);

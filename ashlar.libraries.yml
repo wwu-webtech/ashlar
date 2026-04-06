@@ -21,6 +21,7 @@ accordion:
       dist/css/material-icons.css: {}
   js:
     build/js/accordion.js: {}
+    build/js/faq-schema.js: {}
 alerts:
   version: 1.x
   css:
@@ -59,6 +60,11 @@ bg-video:
   version: 1.x
   js:
     build/js/background-video.js: {}
+brightedge:
+  version: 1.x
+  header: true
+  js:
+    https://cdn.bc0a.com/autopilot/f00000000325164/autopilot_sdk.js: {}
 countdown:
   version: 1.x
   css:

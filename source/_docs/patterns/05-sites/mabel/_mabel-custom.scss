@@ -13,13 +13,51 @@ h1 {
   text-transform: none;
 }
 /*------------------------
+Splash
+------------------------*/
+.splash {
+  background: var(--blue--lighter--80);
+}
+[data-theme="dark"] .splash {
+  background: var(--dark-blue--darker--20);
+}
+.splash-area {
+  display: grid;
+  place-items: center;
+}
+.splash-area > div {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+}
+.splash > div.advanced-search-link {
+  grid-column: 1/ span all;
+  grid-row: 2/ span 1;
+  padding: 0;
+}
+.advanced-search-link p {
+  max-width: var(--content-area-max-width--sm);
+  margin: auto;
+  text-align: right;
+}
+.splash .views-exposed-form {
+  margin: 0;
+  padding-bottom: 0;
+}
+.splash .views-exposed-form.block--solr-search-content-ashlar-list,
+.splash .views-exposed-form.block--solr-search-content-ashlar-grid {
+  z-index: 1;
+  padding-top: var(--space--md);
+  padding-bottom: 0;
+}
+.views-exposed-form.block--solr-search-content-ashlar-list form,
+.views-exposed-form.block--solr-search-content-ashlar-grid form {
+  margin-top: 0 !important;
+}
+/*------------------------
 Main Search Form & Results
 ------------------------*/
 wwu-search {
   display: none;
-}
-.splash {
-  background: var(--gradient--diagonal--blue-to-dark-blue);
 }
 .views-exposed-form.block--solr-search-content-ashlar-list,
 .views-exposed-form.block--solr-search-content-ashlar-grid {
@@ -32,7 +70,7 @@ wwu-search {
   grid-template-columns: 1fr 1fr 2fr;
   grid-template-rows: 1fr 1fr;
   gap: var(--space--xs);
-  width: calc(100% - var(--space--lg));
+  width: 100%;
   max-width: var(--content-area-max-width--sm);
   margin: auto;
 }
@@ -126,6 +164,45 @@ Search in Collections
   color: var(--button-color--active);
   background: var(--button-background-color--active);
   box-shadow: var(--shadow--soft--hover);
+}
+/*------------------------
+Advanced Search
+------------------------*/
+.advanced-search-box fieldset {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.advanced-search-box .fieldset-wrapper {
+  container-type: normal;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: var(--space--sm);
+}
+.advanced-search-box .form-actions {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+.advanced-search-box .fieldset-wrapper select,
+.advanced-search-box .fieldset-wrapper input {
+  width: 100%;
+}
+.advanced-search-box label,
+.advanced-search-box legend {
+  clip-path: inset(50%);
+
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+}
+.advanced-search-box .fieldset-wrapper:has([data-advanced-search-type="op"]) {
+  grid-template-columns: 1fr 2fr 3fr 2fr;
 }
 /*------------------------
 Card Tweaks
@@ -312,4 +389,22 @@ AMI Set User Interface
 #edit-lod-cleanup input[type="checkbox"] + label:after,
 #edit-lod-cleanup input[type="radio"] + label:after {
   display: none;
+}
+/*------------------------
+Plumx Widget
+------------------------*/
+.ppp-container {
+  --link-color: var(--blue);
+  --link-color--visited: var(--purple);
+
+  margin: auto;
+}
+.ppp-pop .plx-usage .ppp-title,
+.ppp-pop-shadow .plx-usage .ppp-title {
+  color: var(--dark-blue);
+  font-size: var(--font-size--lg);
+}
+.ppp-pop,
+.ppp-pop-shadow {
+  font-size: var(--font-size--xs);
 }

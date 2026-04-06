@@ -18,6 +18,10 @@ function ashlar_page_attachments_alter(array &$attachments) {
   if (theme_get_setting('enable_acalog_widget')) {
     $attachments['#attached']['library'][] = 'ashlar/acalog';
   }
+
+  if (theme_get_setting('enable_brightedge')) {
+    $attachments['#attached']['library'][] = 'ashlar/brightedge';
+  }
 }
 
 /**
@@ -26,6 +30,9 @@ function ashlar_page_attachments_alter(array &$attachments) {
 function ashlar_preprocess_html(&$variables) {    
   if (!empty(theme_get_setting('navigation_option'))) {
     $variables['html_attributes']['class'][] = 'desktop-hamburger-on';
+  }
+  if (!empty(theme_get_setting('site_name_option'))) {
+    $variables['html_attributes']['class'][] = 'site-name-swap';
   }
 
   /* Checks for field_menu_settings boolean value on any taxonomy term on node. If set to true, turns desktop hamburger on. */
@@ -161,7 +168,7 @@ function _ashlar_set_cta_classes(&$items, $object) {
 
   if ($object->hasField('field_color')) {          
     foreach ($items as &$item) {      
-      $color = str_replace('_', '-', $object->field_color->value);
+      $color = $object->field_color->value ? str_replace('_', '-', $object->field_color->value): "";
 
       $item['content']['#options']['attributes']['class'][] = $color;
     }
