@@ -13,8 +13,13 @@
             <link>https://ashlar.wwu.edu/changelog/version-6-0</link>
             <guid>https://ashlar.wwu.edu/changelog/version-6-0</guid>
             <pubDate>Tue, 06 Jan 2026 10:00:00 GMT</pubDate>
-            <description><![CDATA[6.0.5]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="605">6.0.5<a href="https://ashlar.wwu.edu/changelog/version-6-0#605" class="hash-link" aria-label="Direct link to 6.0.5" title="Direct link to 6.0.5" translate="no">​</a></h2>
+            <description><![CDATA[6.0.6]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="606">6.0.6<a href="https://ashlar.wwu.edu/changelog/version-6-0#606" class="hash-link" aria-label="Direct link to 6.0.6" title="Direct link to 6.0.6" translate="no">​</a></h2>
+<p>** April 9, 2026**</p>
+<ul>
+<li class="">View template update for MABEL</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="605">6.0.5<a href="https://ashlar.wwu.edu/changelog/version-6-0#605" class="hash-link" aria-label="Direct link to 6.0.5" title="Direct link to 6.0.5" translate="no">​</a></h2>
 <p>** April 6, 2026**</p>
 <ul>
 <li class="">Added automatic FAQ Schema generation on accordions containing FAQs</li>
