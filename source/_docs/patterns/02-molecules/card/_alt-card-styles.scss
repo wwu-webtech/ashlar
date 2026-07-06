@@ -503,32 +503,18 @@ Molecule: Cards - Alternate styles
 7. Degree (from wwu.edu/majors individual pages)
 ------------------------------------------------------------------------------*/
 .degree-card {
-  display: grid;
-  grid-template-areas: "taxonomy"
-  "title"
-  "body"
-  "more";
-  grid-template-rows: auto auto 1fr auto;
-  padding: var(--space--sm);
-  border: var(--border-width--sm) solid transparent;
-  font-size: var(--font-size--sm);
-  .title {
-    grid-area: title;
-    margin-top: var(--space--md);
+  padding: var(--space--md);
+  h3.title {
+    margin-top: 0;
   }
   .taxonomy-terms {
     display: flex;
-    grid-area: taxonomy;
-    margin-top: calc(-1 * var(--space--sm));
-    margin-left: calc(-1 * var(--space--sm));
+    flex-flow: row wrap;
   }
   .taxonomy-term {
-    margin-right: var(--space--xs);
+    padding: var(--space--2xs) var(--space--xs);
   }
   .body {
-    grid-area: body;
-  }
-  .more-link {
-    grid-area: more;
+    margin-top: var(--space--md);
   }
 }

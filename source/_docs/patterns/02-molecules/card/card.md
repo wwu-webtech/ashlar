@@ -572,7 +572,11 @@ For degrees displayed on majors pages. These style are fairly specific to the co
   </h3>
   
   <div className="taxonomy-terms">
-    <span className="taxonomy-term dark-blue-bg"><span className="visually-hidden">Degree Type:</span><span className="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#e8eaed"><path d="M0 0h24v24H0z" fill="none"/><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3 1 9l11 6 9-4.91V17h2V9L12 3z"/></svg></span> Teaching Endorsement</span>
+    <span className="taxonomy-term dark-blue-bg"><span className="visually-hidden">Degree Type:</span><span className="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#e8eaed"><path d="M0 0h24v24H0z" fill="none"/><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3 1 9l11 6 9-4.91V17h2V9L12 3z"/></svg></span> Pets Cats</span>
+    <span className="taxonomy-term dark-blue-bg"><span className="visually-hidden">Degree Type:</span><span className="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#e8eaed"><path d="M0 0h24v24H0z" fill="none"/><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3 1 9l11 6 9-4.91V17h2V9L12 3z"/></svg></span> Feeds Cats</span>
+  </div>
+  <div className="taxonomy-terms">
+    <span className="taxonomy-term dark-blue-bg"><span className="visually-hidden">Degree Type:</span><span className="component-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#e8eaed"><path d="M0 0h24v24H0z" fill="none"/><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3 1 9l11 6 9-4.91V17h2V9L12 3z"/></svg></span> Endorsed by 3 Cats</span>
   </div>
   
   <div className="body">
