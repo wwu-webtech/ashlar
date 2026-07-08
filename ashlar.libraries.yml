@@ -22,16 +22,6 @@ accordion:
   js:
     build/js/accordion.js: {}
     build/js/faq-schema.js: {}
-alerts:
-  version: 1.x
-  css:
-    theme:
-      build/css/components/alerts.css: {}
-  js:
-    build/js/alerts.js: {}
-  dependencies:
-    - core/jquery
-    - core/once
 announcement:
   version: 1.x
   css:

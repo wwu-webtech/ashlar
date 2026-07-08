@@ -38,9 +38,9 @@ wwu-accordion,
     &:active,
     &:focus,
     &:hover {
-      --oline-color: var(--link-color--focus);
+      --oline-color: var(--link-color--active);
 
-      color: var(--link-color--focus);
+      color: var(--link-color--active);
       outline-offset: var(--outline-offset--inset);
       background-color: var(--link-decoration-color--active);
       .component-icon {

@@ -37,13 +37,7 @@
     {% endif %}
     {% for item in items %}
       <li{{ item.attributes }}>
-        {% if item.title == 'home-icon' %}
-          <a href="{{ item.url }}"><span class="material-icons">home</span></a>
-        {% elseif item.attributes.hasClass('menu-item--active-page') %}
-          <a href="{{ item.url }}" aria-current="page">{{ item.title }}</a>
-        {% else %}
-          <a href="{{ item.url }}">{{ item.title }}</a>
-        {% endif %}
+        {{ link(item.title, item.url) }}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}
