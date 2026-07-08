@@ -13,8 +13,16 @@
             <link>https://ashlar.wwu.edu/changelog/version-6-0</link>
             <guid>https://ashlar.wwu.edu/changelog/version-6-0</guid>
             <pubDate>Tue, 06 Jan 2026 10:00:00 GMT</pubDate>
-            <description><![CDATA[6.0.7]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="607">6.0.7<a href="https://ashlar.wwu.edu/changelog/version-6-0#607" class="hash-link" aria-label="Direct link to 6.0.7" title="Direct link to 6.0.7" translate="no">​</a></h2>
+            <description><![CDATA[6.0.8]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="608">6.0.8<a href="https://ashlar.wwu.edu/changelog/version-6-0#608" class="hash-link" aria-label="Direct link to 6.0.8" title="Direct link to 6.0.8" translate="no">​</a></h2>
+<p><strong>July 8, 2026</strong></p>
+<ul>
+<li class="">Old alert implementation removed from theme</li>
+<li class="">Degree card style update</li>
+<li class="">Accordion contrast bug fixed</li>
+<li class="">Menu template updated, removed unused logic</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="607">6.0.7<a href="https://ashlar.wwu.edu/changelog/version-6-0#607" class="hash-link" aria-label="Direct link to 6.0.7" title="Direct link to 6.0.7" translate="no">​</a></h2>
 <p><strong>June 15, 2026</strong></p>
 <ul>
 <li class="">Cypress updates</li>
