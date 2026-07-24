@@ -13,10 +13,10 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
           cache: npm
 
       - name: Install Ashlar dependencies
@@ -27,7 +27,7 @@ jobs:
         working-directory: source/_docs
         run: npm ci
       - name: Run Cypress
-        uses: cypress-io/github-action@v6
+        uses: cypress-io/github-action@v7
         with:
           working-directory: source/_docs
           start: npm run docusaurus start
