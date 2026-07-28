@@ -210,6 +210,10 @@ Mixins
     @media (min-width: $medium) {
       grid-template-columns: 1fr auto 1fr;
     }
+    > .ultimenu__link {
+      font-size: var(--font-size--xl);
+      font-weight: var(--font-weight--semibold);
+    }
     .ultimenu__link {
       text-decoration-line: none;
 
@@ -219,8 +223,6 @@ Mixins
       padding: var(--space--xs);
       transition: all 0.2s ease;
       text-decoration-color: var(--link-decoration-color);
-      font-size: var(--font-size--xl);
-      font-weight: var(--font-weight--semibold);
       &:focus-visible {
         outline: var(--outline--focus);
       }
@@ -277,7 +279,7 @@ Mixins
     opacity: 1;
   }
 }
-.ultimenu__item:has(.menu-item--active-trail) .ultimenu__link {
+.ultimenu > .ultimenu__item:has(.menu-item--active-trail) > .ultimenu__link {
   @include menu-link-decoration-active;
 
   text-decoration-color: var(--link-decoration-color);
@@ -410,7 +412,7 @@ html:not(.desktop-hamburger-on) {
         justify-content: center;
       }
     }
-    .ultimenu__item:has(.menu-item--active-trail) .ultimenu__link,
+    .ultimenu > .ultimenu__item:has(.menu-item--active-trail) > .ultimenu__link,
     .ultimenu li .ultimenu__link.is-active {
       text-decoration: none;
       border-bottom-color: var(--blue);
