@@ -18,3 +18,10 @@ so writing them here for now.
         padding-left: calc(var(--image-size) + var(--space--md));
     }
 }
+@container (min-width: 580px) {
+  .wwu-announcement.wwu-announcement {
+    grid-template-areas: "icon text";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+  }
+}

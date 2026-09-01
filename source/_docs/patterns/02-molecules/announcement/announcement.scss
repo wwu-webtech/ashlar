@@ -16,19 +16,14 @@ Molecule: Announcement
   text-align: center;
   border: var(--border-width--md) solid transparent;
   box-shadow: var(--shadow--hard);
-  @media (min-width: $small) {
-    grid-template-areas: "icon text";
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto;
-  }
   .material-icons {
     position: relative;
     display: grid;
     grid-area: icon;
     align-content: center;
     justify-content: center;
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
     margin: var(--space--sm);
     color: var(--blue);
     border: var(--border-width--md) solid transparent;
@@ -37,7 +32,8 @@ Molecule: Announcement
     font-size: var(--icon-size--lg);
   }
   .title {
-    margin-top: var(--space--md);
+    margin-top: 0;
+    font-size: var(--font-size--xl);
   }
   .body {
     display: grid;
@@ -45,7 +41,10 @@ Molecule: Announcement
     justify-items: center;
     width: 100%;
     height: 100%;
-    padding: var(--space--md);
+    padding: var(--space--xs);
+    p:last-of-type {
+      margin-bottom: 0;
+    }
   }
   &.layout-builder-block {
     padding: 0;

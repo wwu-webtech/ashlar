@@ -188,17 +188,19 @@ wwu-donut-chart {
   radial-gradient(50% 50%,var(--chart-color-7) 0%  5% ,var(--chart-color-6) 6%  15%,var(--chart-color-7) 16% 25%,var(--chart-color-6) 26% 35%,var(--chart-color-7) 36% 45%,
   var(--chart-color-6) 46% 55%,var(--chart-color-7) 56% 65%,var(--chart-color-6) 66% 75%,var(--chart-color-7) 76% 85%,var(--chart-color-6) 86% 95%,
   #0000 96%) 24px 24px;
-  &.light-blue {
+  &.light-blue,
+  &[classname=light-blue] {
     --chart-color-0: #006ebb;
     --chart-color-1: #1681ca;
-    --chart-color-2: #2c93d9;
+    --chart-color-2: #4e4e4e;
     --chart-color-3: #42a6e8;
     --chart-color-4: #57b8f7;
     --chart-color-5: #7ecafa;
     --chart-color-6: #b3d9f1;
     --chart-color-7: #e3e7e9;
   }
-  &.green {
+  &.green,
+  &[classname=green] {
     --chart-color-0: #006b3f;
     --chart-color-1: #358a30;
     --chart-color-2: #6aa921;
