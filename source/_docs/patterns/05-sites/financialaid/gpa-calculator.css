@@ -1,0 +1,60 @@
+.student-info {
+  display: flex;
+  gap: var(--space--md);
+  border-color: var(--table-headers--dark);
+}
+.new-credits {
+  padding: var(--space--2xs);
+  color: var(--white);
+  border: solid var(--dark-blue) var(--border-width--md);
+  background-color: var(--blue);
+}
+.highlight {
+  padding: var(--space--2xs);
+  color: var(--dark-blue);
+  border: dashed var(--dark-blue) var(--border-width--md);
+  background-color: var(--light-green);
+}
+.button-inputs {
+  display: flex;
+  gap: var(--space--md);
+  justify-content: center;
+}
+table input:disabled {
+  background-color: var(--gray--lighter--60);
+}
+.td-center-50 {
+  width: 50%;
+  text-align: center;
+}
+.error {
+  background-color: red;
+}
+.read_only {
+  background-color: var(--gray--lighter--60);
+}
+.moreinfo {
+  display: none;
+  margin-top: 1px;
+  padding: 10px;
+  border-bottom: 2px solid  #0083d6;
+  background-color: #e2f1fa;
+}
+@media print {
+  * {
+    height: 0;
+    margin-top: 0 !important;
+  }
+  body,
+  ed11y-element-panel,
+  .gecko-chat-widget-app {
+    visibility: hidden;
+  }
+  .print-area {
+    position: relative;
+    visibility: visible;
+  }
+  .print-area * {
+    height: unset;
+  }
+}

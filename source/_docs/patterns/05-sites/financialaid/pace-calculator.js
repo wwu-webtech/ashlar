@@ -1,90 +1,89 @@
-<script type="text/javascript">
-    $(document).ready(function(){
-        $(function () {
-            $('.trggr').click(function (e) {
-                if (useKbd(event) === true) {
-                    $(this).toggleClass("switch_img").closest(".divTableRow").next().find('div.moreinfo').slideToggle(300);
-                    return false; 
-                    e.preventDefault();//prevent page from scrolling to top after click
-                }
-            });
+$(document).ready(function(){
+    $(function () {
+        $('.trggr').click(function (e) {
+            if (useKbd(event) === true) {
+                $(this).toggleClass("switch_img").closest(".divTableRow").next().find('div.moreinfo').slideToggle(300);
+                return false; 
+                e.preventDefault();//prevent page from scrolling to top after click
+            }
         });
-        
-        $(function () {
-            $('.trggr2').click(function (e) {
-                if (useKbd(event) === true) {
-                    $(this).toggleClass("switch_img").closest(".hsmi").find('.moreinfo').slideToggle(300);
-                    return false; 
-                    e.preventDefault();//prevent page from scrolling to top after click
-                }
-            });
+    });
+    
+    $(function () {
+        $('.trggr2').click(function (e) {
+            if (useKbd(event) === true) {
+                $(this).toggleClass("switch_img").closest(".hsmi").find('.moreinfo').slideToggle(300);
+                return false; 
+                e.preventDefault();//prevent page from scrolling to top after click
+            }
         });
-        
-        
-        
-        //Function to check is click or keyboard used
-        function useKbd (event){
-            if(event.type === 'click'){
+    });
+    
+    
+    
+    //Function to check is click or keyboard used
+    function useKbd (event){
+        if(event.type === 'click'){
+            return true;
+        }
+        else if(event.type === 'keypress'){
+            var code = event.charCode || event.keyCode;
+            // if Space or Enter key is pressed
+            if((code === 32)|| (code === 13)){
                 return true;
             }
-            else if(event.type === 'keypress'){
-                var code = event.charCode || event.keyCode;
-                // if Space or Enter key is pressed
-                if((code === 32)|| (code === 13)){
-                    return true;
-                }
-            }
-            else {
-                return false;
-            }
         }
-        
-        //Polyfill to fix IE not compatible with isInteger
-        Number.isInteger = Number.isInteger || function(value) {
-            return typeof value === "number" && 
-            isFinite(value) && 
-            Math.floor(value) === value;	
-        };
-        
-        $("input[name=sum_ac]").keyup(function(){
-            var testint = parseFloat($("input[name=sum_ac]").val());
-            if (Number.isInteger(testint) == false) {alert ("Decimal values will be rounded down!");}
-            var totalac = parseInt($("input[name=sum_ac]").val());//use parseFloat to retain decimals
-            $('#totalSum_ac').val(totalac);
-            $("input[name=paceCalc]").val(""); //clear pace if change made to entered attempted credits
-        });
-        
-        $("input[name=sum_cc]").keyup(function(){
-            var testint = parseFloat($("input[name=sum_cc]").val());
-            if (Number.isInteger(testint) == false) {alert ("Decimal values will be rounded down!");}
-            var totalcc = parseInt($("input[name=sum_cc]").val());//use parseFloat to retain decimals
-            $('#totalSum_cc').val(totalcc);
-            $("input[name=paceCalc]").val(""); //clear pace if change made to entered attempted credits
-        });
-        //$("input[name^=sum_cc]").sum("keyup", "#totalSum_cc");//short form of keyup and assigning sum to #totalSum_cc (net total completed credits)
-        
-        $("input[name=sum_cc]").keyup(function(){
-            var totalAC = parseInt($("input[name=totalSum_ac]").val());//use parseFloat to retain decimals
-            var totalCC = parseInt($("input[name=totalSum_cc]").val());//use parseFloat to retain decimals
-            //alert (totalCC + " | " + totalAC);
-            if (totalCC > totalAC){
-                alert ("The number of Completed Credits cannot be greater than the number of Attempted Credits!");
-                //alert (totalCC + " > " + totalAC);
-                $("input[name=sum_cc]").addClass('error'); 
-                $("input[name=totalSum_cc]").val("0");
-            }
-            //clear pace values if changes are made
-            $("input[name=paceCalc]").val(""); 
-            $("input[name=backto80]").val("");
-        });
-        
-        $("#idCalculatePace").click(
+        else {
+            return false;
+        }
+    }
+    
+    //Polyfill to fix IE not compatible with isInteger
+    Number.isInteger = Number.isInteger || function(value) {
+        return typeof value === "number" && 
+        isFinite(value) && 
+        Math.floor(value) === value;	
+    };
+    
+    $("input[name=sum_ac]").keyup(function(){
+        var testint = parseFloat($("input[name=sum_ac]").val());
+        if (Number.isInteger(testint) == false) {alert ("Decimal values will be rounded down!");}
+        var totalac = parseInt($("input[name=sum_ac]").val());//use parseFloat to retain decimals
+        $('#totalSum_ac').val(totalac);
+        $("input[name=paceCalc]").val(""); //clear pace if change made to entered attempted credits
+    });
+    
+    $("input[name=sum_cc]").keyup(function(){
+        var testint = parseFloat($("input[name=sum_cc]").val());
+        if (Number.isInteger(testint) == false) {alert ("Decimal values will be rounded down!");}
+        var totalcc = parseInt($("input[name=sum_cc]").val());//use parseFloat to retain decimals
+        $('#totalSum_cc').val(totalcc);
+        $("input[name=paceCalc]").val(""); //clear pace if change made to entered attempted credits
+    });
+    //$("input[name^=sum_cc]").sum("keyup", "#totalSum_cc");//short form of keyup and assigning sum to #totalSum_cc (net total completed credits)
+    
+    $("input[name=sum_cc]").keyup(function(){
+        var totalAC = parseInt($("input[name=totalSum_ac]").val());//use parseFloat to retain decimals
+        var totalCC = parseInt($("input[name=totalSum_cc]").val());//use parseFloat to retain decimals
+        //alert (totalCC + " | " + totalAC);
+        if (totalCC > totalAC){
+            alert ("The number of Completed Credits cannot be greater than the number of Attempted Credits!");
+            //alert (totalCC + " > " + totalAC);
+            $("input[name=sum_cc]").addClass('error'); 
+            $("input[name=totalSum_cc]").val("0");
+        }
+        //clear pace values if changes are made
+        $("input[name=paceCalc]").val(""); 
+        $("input[name=backto80]").val("");
+    });
+    
+    $("#idCalculatePace").click(
         function (){
             calculate_pace();
         }
-        );
-        
-        $("#btnBackOnPace").click(
+    );
+    
+    $("#btnBackOnPace").click(
         function (){
             back_on_pace();
             var pacecredits = $("[id=backto80]").val();
@@ -96,9 +95,9 @@
                 $(".onpace").show();
             }
         }
-        );
-        
-        $("#btnCreateAPacePlan").click(
+    );
+    
+    $("#btnCreateAPacePlan").click(
         function (){
             //alert("Create Plan Triggered " + $("#btnCreateAPacePlan").val());
             var totalAC = $("input[name=totalSum_ac]").val();
@@ -117,20 +116,20 @@
                 window.location.href='/pace-plan?ac='+totalAC+'&cc='+totalCC+'&pace='+pacecalc+'&nc='+neededc+'&cenc='+current_ec+'&cexc='+cqecc;
             }
         }
-        );
-        
-        $("#idClearForm").click(
+    );
+    
+    $("#idClearForm").click(
         function (){
             $('#frmCalculatePace').get(0).reset();
             $(".paceplan").hide();
             $(".onpace").hide();
             $("input[name=sum_cc]").removeClass('error');
         }
-        );
-    }
     );
-    function calculate_pace(){
-        $("[id=paceCalc]").calc(
+}
+);
+function calculate_pace(){
+    $("[id=paceCalc]").calc(
         // the equation to use for the calculation
         "(totalCC / totalAC) * 100",
         // define the variables used in the equation, these can be a jQuery object
@@ -152,20 +151,20 @@
                 return Math.floor(s) + "%";
             }
         }
-        );
-        
-        $(".paceplan").hide();
-        $(".onpace").hide();
+    );
+    
+    $(".paceplan").hide();
+    $(".onpace").hide();
+}
+function back_on_pace(){
+    //Check if pace is 67% if yes then return
+    var getPaceCalc = parseFloat($("input[name=paceCalc]").val());
+    //alert (getPaceCalc);
+    if (getPaceCalc == 67){
+        $("input[name=backto80]").val("0"); 
+        return;
     }
-    function back_on_pace(){
-        //Check if pace is 67% if yes then return
-        var getPaceCalc = parseFloat($("input[name=paceCalc]").val());
-        //alert (getPaceCalc);
-        if (getPaceCalc == 67){
-            $("input[name=backto80]").val("0"); 
-            return;
-        }
-        $("[id=backto80]").calc(
+    $("[id=backto80]").calc(
         // The Equation:
         //  calculates the number of credits needed to get to 80%
         //  --Use 4*Attempted Credits and 5*Completed Credits because 4/5=80%
@@ -202,6 +201,5 @@
                 return Math.ceil(s);
             }
         }
-        );
-    }
-</script>
+    );
+}
