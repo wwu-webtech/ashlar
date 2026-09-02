@@ -1,0 +1,176 @@
+<style type="text/css">table input {
+  width: 100%;
+}
+.rightjust {
+  text-align: right;
+}
+.bgc2 {
+  padding: var(--space--sm);
+  color: var(--white);
+  background-color: var(--red);
+}
+.bgc {
+  padding: var(--space--sm);
+  background-color: var(--light-green);
+}
+
+</style><script src="/core/assets/vendor/jquery/jquery.min.js?v=3.6.3"></script><script>
+	$(document).ready(function(){
+		$(function () {
+			$('.trggr').click(function (e) {
+				$(this).siblings('.moreinfo').slideToggle('slow');
+				return false; 
+				e.preventDefault();//prevent page from scrolling to top after click
+			});
+		});
+		
+		//Cost Calculator
+		$('.c_cell').bind({
+			keyup:function(){ 
+				//total a single row and column calculation
+				$(".coa_table tr:not(:first, last) td:last-child").text(function () {
+					var totalVal = 0;
+					$(this).prevAll().each(function () {
+						//Comma exception using a regular expression to replace 1 or more commas
+						totalVal +=  parseInt( ($(this).children('.c_cell').val() ||"0").replace(/,/g,"") , 10);
+					});
+					return formatnumber(totalVal);
+				});
+				
+				$(".coa_table tr:last td").text(function (i) {
+					var totalVal = 0;
+					$(this).parent().prevAll().find("td:nth-child(" + (i - 1) + ")").each(function () {
+						//Comma exception using a regular expression to replace 1 or more commas
+						totalVal +=  parseInt( ($(this).children('.c_cell').val() ||"0").replace(/,/g,"") , 10);
+					});
+					return formatnumber(totalVal);
+				});
+				
+				//Total all rows and columns
+				var c_count=0;
+				for(i=1; i<$('.coa_table tr').length; i++){
+					var c_trs=parseInt($('.coa_table tr:eq('+i+')').find('td:last').text().replace(/,/g,""));
+					c_count+=c_trs;
+				}
+				$(".coa_table tr:last td:last").text(formatnumber(c_count)).addClass('boldtext');
+				
+				//Calculate and display difference between grand total COA and R
+				if (isNaN(parseInt($(".r_table tr:last td:last").text().replace(/,/g,"")))){
+					//Clear error message from first entry error
+					$("#coaSUBr").text("").removeClass('error');
+					//Catch if first entry is not a number
+					if (isNaN(c_count)){
+						$("#coaSUBr").text("A non numerical value was entered!").addClass('bgc').addClass('error');
+					} 
+				} else {
+					if (isNaN(c_count)){
+						$("#coaSUBr").text("A non numerical value was entered!").addClass('bgc').addClass('error');
+					} else {
+						var rcount = parseInt($(".r_table tr:last td:last").text().replace(/,/g,""));
+						var dbcar = rcount - c_count;
+						if(rcount>=c_count){
+							$("#coaSUBr").text("$"+formatnumber(dbcar)).removeClass('error').removeClass('bgc2').addClass('bgc');
+						} else {
+							$("#coaSUBr").text("$"+formatnumber(dbcar)).removeClass('error').removeClass('bgc').addClass('bgc2');
+						}
+					}
+				}
+			}
+		});
+		
+		//Resource Calculator
+		$('.r_cell').bind({
+			keyup:function(){ 
+				//total a single row and column calculation
+				$(".r_table tr:not(:first, last) td:last-child").text(function () {
+					var totalVal = 0;
+					$(this).prevAll().each(function () {
+						//Comma exception
+						totalVal +=  parseInt( ($(this).children('.r_cell').val() ||"0").replace(/,/g,"") , 10);
+					});
+					return formatnumber(totalVal);
+				});
+				
+				$(".r_table tr:last td").text(function (i) {
+					var totalVal = 0;
+					$(this).parent().prevAll().find("td:nth-child(" + (++i) + ")").each(function () {
+						//Comma exception
+						totalVal +=  parseInt( ($(this).children('.r_cell').val() ||"0").replace(/,/g,"") , 10);
+					});
+					return formatnumber(totalVal);
+				});
+				
+				//Total all rows and columns
+				var r_count=0;
+				for(i=1; i<$('.r_table tr').length; i++){
+					var r_trs=parseInt($('.r_table tr:eq('+i+')').find('td:last').text().replace(/,/g,""));
+					r_count+=r_trs;
+				}
+				$(".r_table tr:last td:last").text(formatnumber(r_count)).addClass('boldtext');
+				
+				//Calcualte and display difference between grand total COA and R
+				if (isNaN(parseInt($(".coa_table tr:last td:last").text().replace(/,/g,"")))){
+					//Clear error message from first entry error
+					$("#coaSUBr").text("").removeClass('error');
+					//Catch if first entry is not a number
+					if (isNaN(r_count)){
+						$("#coaSUBr").text("A non numerical value was entered!").removeClass('bgc').addClass('error');
+					} 
+				} else {
+					if (isNaN(r_count)){
+						$("#coaSUBr").text("A non numerical value was entered!").removeClass('bgc').addClass('error');
+					} else {
+						var ccount = parseInt($(".coa_table tr:last td:last").text().replace(/,/g,""));
+						var dbcar = r_count - ccount;
+						
+						if(r_count>=ccount){
+							$("#coaSUBr").text("$"+formatnumber(dbcar)).removeClass('error').removeClass('bgc2').addClass('bgc');
+						} else {
+							$("#coaSUBr").text("$"+formatnumber(dbcar)).removeClass('error').removeClass('bgc').addClass('bgc2');
+						}
+					}
+				}
+			}
+		});
+	});
+	
+	//Format Number
+	function formatnumber(num){
+		var str = num.toString().replace("$", ""), parts = false, output = [], i = 1, formatted = null;
+		if(str.indexOf(".") > 0) {
+			parts = str.split(".");
+			str = parts[0];
+		}
+		str = str.split("").reverse();
+		for(var j = 0, len = str.length; j < len; j++) {
+			if(str[j] != ",") {
+				output.push(str[j]);
+				if(i%3 == 0 && j < (len - 1)) {
+					output.push(",");
+				}
+				i++;
+			}
+		}
+		formatted = output.reverse().join("");
+		
+		var formattedNumber = formatted + ((parts) ? "." + parts[1].substr(0, 2) : "");
+		formattedNumber = formattedNumber.replace('-,', '-');
+		return (formattedNumber);
+	}
+	
+	//Check for NaN and return 0 is not a number
+	function checknan(num){
+		if (isNaN(num)){
+			return 0;
+		} else {
+			return (num);
+		}	
+	}
+	
+	//Reload page
+	$("#ClearValues").click(
+	function (){
+		location.reload(true)
+	}
+	);
+</script>
