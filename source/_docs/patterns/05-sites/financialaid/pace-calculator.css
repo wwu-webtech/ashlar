@@ -1,0 +1,19 @@
+.flex-row {
+  display: flex;
+  gap: var(--space--sm);
+}
+.flex-row {
+  justify-content: end;
+}
+.hidden-fields {
+  display: none;
+}
+.messaging {
+  text-align: right;
+}
+.read_only {
+  background-color: var(--gray--lighter--60);
+}
+.error {
+  background-color: red;
+}
