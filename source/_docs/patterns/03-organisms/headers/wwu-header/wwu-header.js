@@ -206,7 +206,7 @@ if (
               close();
             }
             else {           
-              document.querySelector("wwu-header").append(main_nav);          
+              document.querySelector("wwu-header").after(main_nav);          
             }
           }
         }      
