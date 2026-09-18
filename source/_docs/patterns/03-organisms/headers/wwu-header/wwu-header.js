@@ -132,7 +132,7 @@ if (
         const menu_icon = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M172-278v-28h616v28H172Zm0-188v-28h616v28H172Zm0-188v-28h616v28H172Z"/></svg>`;
         var html = document.querySelector("html");
         var university_navigation = this.querySelector(".university-navigation");
-        var main_nav = document.querySelector(".region--main_navigation");
+        var main_nav = document.querySelector(".region--main_navigation") ? document.querySelector(".region--main_navigation") : document.querySelector("wwu-main-nav");
         var university_links = this.querySelector(".university-links");
         var menu_toggle = this.querySelector(".toggle-menu");      
         
