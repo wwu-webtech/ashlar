@@ -149,7 +149,7 @@ a.wp-block-button__link {
   color: var(--dark-blue);
   border-radius: 50%;
   background-color: transparent;
-  font-size: var(--font-size--2xl);
+  font-size: var(--font-size--xl);
   font-weight: var(--font-weight--semibold);
   line-height: 1.1em;
   span {
@@ -158,7 +158,7 @@ a.wp-block-button__link {
   .material-icons {
     margin-top: -1rem;
     color: var(--light-green);
-    font-size: var(--icon-size--2xl);
+    font-size: var(--icon-size--xl);
   }
   &:after {
     position: absolute;

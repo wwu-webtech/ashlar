@@ -14,5 +14,8 @@ main {
 
     min-width: 0;
     max-width: calc(100vw - (var(--space--sm) * 2));
+    &:has(.full-height) {
+      margin-bottom: var(--space--md);
+    }
   }
 }

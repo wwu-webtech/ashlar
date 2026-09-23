@@ -136,6 +136,9 @@ wwu-header {
         align-self: end;
       }
     }
+    wwu-main-nav {
+      grid-area: main-nav;
+    }
   }
   @media (min-width: $large) {
     grid-template-columns: auto 1fr auto;

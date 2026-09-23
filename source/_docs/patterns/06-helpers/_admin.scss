@@ -25,6 +25,9 @@ Fixes for Drupal administration theme.
 .ck-content {
   font-size: 0.65rem;
 }
+.ui-widget.linkit-ui-autocomplete.ck-reset_all-excluded {
+  background: white;
+}
 /*------------------------------------------------------------------------------
 Layout Builder 
 ------------------------------------------------------------------------------*/
@@ -38,6 +41,9 @@ Layout Builder
   .layout-builder__add-block {
     background-color: var(--dark-gray--darker--80);
   }
+}
+.layout-builder__section:has(.full-height) + .layout-builder__add-section {
+  margin-top: 10%;
 }
 .ck-dropdown__panel {
   --ck-toolbar-dropdown-max-width: 10rem;

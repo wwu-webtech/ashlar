@@ -13,7 +13,8 @@ For adjusting alignments.
 .align-center {
   margin-right: auto;
   margin-left: auto;
-  &.cta {
+  &.cta,
+  &.round-cta {
     left: 50%;
     transform: translatex(-50%);
   }
@@ -45,7 +46,6 @@ For adjusting alignments.
   }
   iframe {
     aspect-ratio: 16 / 9;
-
     width: 100%;
     height: auto;
   }
@@ -60,7 +60,6 @@ For adjusting alignments.
   }
   iframe {
     aspect-ratio: 16 / 9;
-
     width: 100%;
     height: auto;
   }
@@ -83,7 +82,6 @@ For adjusting alignments.
   }
   iframe {
     aspect-ratio: 16 / 9;
-
     width: 100%;
     height: auto;
   }
@@ -106,7 +104,6 @@ For adjusting alignments.
   }
   iframe {
     aspect-ratio: 16 / 9;
-
     width: 100%;
     height: auto;
   }

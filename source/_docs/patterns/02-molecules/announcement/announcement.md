@@ -10,7 +10,7 @@ Include the following stylesheet to use this component on your non-Drupal websit
 <span className="material-icons" aria-hidden="true">warning</span>
 
 <div className="body">
-    <h2> This is an Announcement </h2>
+    <h2 className="title"> This is an Announcement </h2>
     <p>Take note of some things</p>
 </div>
 </div>
@@ -20,8 +20,9 @@ Include the following stylesheet to use this component on your non-Drupal websit
     <span class="material-icons" aria-hidden="true">warning</span>
 
     <div class="body">
-        <h2> This is an Announcement </h2>
+        <h2 class="title"> This is an Announcement </h2>
         <p>Take note of some things</p>
     </div>
 </div>
 ```
+

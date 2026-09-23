@@ -35,7 +35,7 @@ Include the following script to use this component on your non-Drupal website or
 ```
 
 ## Light Blue
-<wwu-donut-chart class="light-blue" label="Letters">
+<wwu-donut-chart className="light-blue" label="Letters">
     <wwu-chart-item value="5">A</wwu-chart-item>
     <wwu-chart-item value="2">B</wwu-chart-item>
     <wwu-chart-item value="30">C</wwu-chart-item>
@@ -57,7 +57,7 @@ Include the following script to use this component on your non-Drupal website or
 ```
 
 ## Green
-<wwu-donut-chart class="green" label="Student Population">
+<wwu-donut-chart className="green" label="Student Population">
     <wwu-chart-item value="9.1"> Freshman</wwu-chart-item>
     <wwu-chart-item value="14.8"> Sophomore</wwu-chart-item>
     <wwu-chart-item value="21.9"> Junior</wwu-chart-item>

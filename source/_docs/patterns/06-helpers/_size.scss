@@ -8,6 +8,14 @@ Helpers: Size
 }
 .full-height {
   height: 100%;
+  margin-bottom: 0;
+}
+.full-height-blocks {
+  margin-bottom: var(--space--sm);
+  .block {
+    height: 100%;
+    margin-bottom: 0;
+  }
 }
 .min-height--25vh {
   min-height: 25vh;

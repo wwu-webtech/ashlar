@@ -22,11 +22,6 @@ function ashlar_form_system_theme_settings_alter(&$form, FormStateInterface &$fo
   ];
 
   // Special Script Loading
-  $form['load_scripts']['alert_display'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Display Western alerts'),
-    '#default_value' => theme_get_setting('alert_display'),
-  );
   $form['load_scripts']['enable_acalog_widget'] = array(
     '#type' => 'checkbox',
     '#title' => t('Load Javascript for dynamic catalog links'),
