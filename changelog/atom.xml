@@ -12,8 +12,16 @@
         <id>https://ashlar.wwu.edu/changelog/version-6-0</id>
         <link href="https://ashlar.wwu.edu/changelog/version-6-0"/>
         <updated>2026-01-06T10:00:00.000Z</updated>
-        <summary type="html"><![CDATA[6.0.8]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="608">6.0.8<a href="https://ashlar.wwu.edu/changelog/version-6-0#608" class="hash-link" aria-label="Direct link to 6.0.8" title="Direct link to 6.0.8" translate="no">​</a></h2>
+        <summary type="html"><![CDATA[6.0.9]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="609">6.0.9<a href="https://ashlar.wwu.edu/changelog/version-6-0#609" class="hash-link" aria-label="Direct link to 6.0.9" title="Direct link to 6.0.9" translate="no">​</a></h2>
+<p><strong>September 23, 2026</strong></p>
+<ul>
+<li class="">New helper classes for layout sections</li>
+<li class="">Menu bug fixes</li>
+<li class="">Round CTA style adjustments</li>
+<li class="">Catalog link update</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="608">6.0.8<a href="https://ashlar.wwu.edu/changelog/version-6-0#608" class="hash-link" aria-label="Direct link to 6.0.8" title="Direct link to 6.0.8" translate="no">​</a></h2>
 <p><strong>July 8, 2026</strong></p>
 <ul>
 <li class="">Old alert implementation removed from theme</li>
